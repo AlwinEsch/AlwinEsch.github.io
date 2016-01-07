@@ -144,9 +144,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6509bcadc40df73bb818eb5178d61144"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_add_on_lib___general.html#ga6509bcadc40df73bb818eb5178d61144">GetSettingFloat</a> (const std::string &amp;settingName, float &amp;settingValue, bool global=false)</td></tr>
 <tr class="memdesc:ga6509bcadc40df73bb818eb5178d61144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a float settings value for this add-on.  <a href="#ga6509bcadc40df73bb818eb5178d61144">More...</a><br /></td></tr>
 <tr class="separator:ga6509bcadc40df73bb818eb5178d61144"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1dc10bef8c0de6836ae60130d3bf614f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_add_on_lib___general.html#ga1dc10bef8c0de6836ae60130d3bf614f">QueueNotification</a> (const <a class="el" href="addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8b">queue_msg</a> type, const char *format,...)</td></tr>
-<tr class="memdesc:ga1dc10bef8c0de6836ae60130d3bf614f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue a notification in the GUI.  <a href="#ga1dc10bef8c0de6836ae60130d3bf614f">More...</a><br /></td></tr>
-<tr class="separator:ga1dc10bef8c0de6836ae60130d3bf614f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77d684d8fa22f1163135489601ac6f19"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_add_on_lib___general.html#ga77d684d8fa22f1163135489601ac6f19">QueueFormattedNotification</a> (const <a class="el" href="addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8b">queue_msg</a> type, const char *format,...)</td></tr>
+<tr class="memdesc:ga77d684d8fa22f1163135489601ac6f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the C string pointed by format in the GUI. If format includes format specifiers (subsequences beginning with %), the additional arguments following format are formatted and inserted in the resulting string replacing their respective specifiers.  <a href="#ga77d684d8fa22f1163135489601ac6f19">More...</a><br /></td></tr>
+<tr class="separator:ga77d684d8fa22f1163135489601ac6f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2ab015503072bab77bb699af6a007ab1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_add_on_lib___general.html#ga2ab015503072bab77bb699af6a007ab1">QueueNotification</a> (const <a class="el" href="addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8b">queue_msg</a> type, const std::string &amp;aCaption, const std::string &amp;aDescription, unsigned int displayTime=5000, bool withSound=true, unsigned int messageTime=1000)</td></tr>
 <tr class="memdesc:ga2ab015503072bab77bb699af6a007ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue a notification in the GUI.  <a href="#ga2ab015503072bab77bb699af6a007ab1">More...</a><br /></td></tr>
 <tr class="separator:ga2ab015503072bab77bb699af6a007ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -743,7 +743,7 @@ Functions</h2></td></tr>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_general_8h.html">kodi/addon.api2/General.h</a>&gt;</span></div>
 <div class="line">...</div>
 <div class="line">std::string md5;</div>
-<div class="line"><a class="code" href="group___c_add_on_lib___general.html#ga235c1ccd54660e2316308da64b7ca8ec">CAddOnLib_General::GetLocalizedString</a>(<span class="stringliteral">&quot;Make me as md5&quot;</span>);</div>
+<div class="line"><a class="code" href="group___c_add_on_lib___general.html#gaa0615380fc1f79b6a740e642d8c193eb">CAddOnLib_General::GetMD5</a>(<span class="stringliteral">&quot;Make me as md5&quot;</span>, md5);</div>
 <div class="line">fprintf(stderr, <span class="stringliteral">&quot;My md5 digest is: &#39;%s&#39;&quot;</span>, md5.c_str());</div>
 <div class="line">...</div>
 </div><!-- fragment --> 
@@ -1470,7 +1470,7 @@ Functions</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga1dc10bef8c0de6836ae60130d3bf614f"></a>
+<a class="anchor" id="ga77d684d8fa22f1163135489601ac6f19"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1478,7 +1478,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void QueueNotification </td>
+          <td class="memname">static void QueueFormattedNotification </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8b">queue_msg</a>&#160;</td>
           <td class="paramname"><em>type</em>, </td>
@@ -1508,7 +1508,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Queue a notification in the GUI. </p>
+<p>Writes the C string pointed by format in the GUI. If format includes format specifiers (subsequences beginning with %), the additional arguments following format are formatted and inserted in the resulting string replacing their respective specifiers. </p>
+<p>After the format parameter, the function expects at least as many additional arguments as specified by format.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>The message type. <table class="doxtable">
@@ -1522,14 +1523,74 @@ Functions</h2></td></tr>
 <td align="right">QUEUE_ERROR </td><td>Show error notification message </td></tr>
 </table>
 </td></tr>
-    <tr><td class="paramname">format</td><td>The format of the message to pass to display in Kodi. </td></tr>
-    <tr><td class="paramname">...</td><td>Added string values</td></tr>
+    <tr><td class="paramname">format</td><td>The format of the message to pass to display in Kodi. C string that contains the text to be written to the stream. It can optionally contain embedded format specifiers that are replaced by the values specified in subsequent additional arguments and formatted as requested. <table class="doxtable">
+<tr>
+<th>specifier </th><th>Output </th><th>Example  </th></tr>
+<tr>
+<td>d or i </td><td>Signed decimal integer </td><td>392 </td></tr>
+<tr>
+<td>u </td><td>Unsigned decimal integer </td><td>7235 </td></tr>
+<tr>
+<td>o </td><td>Unsigned octal </td><td>610 </td></tr>
+<tr>
+<td>x </td><td>Unsigned hexadecimal integer </td><td>7fa </td></tr>
+<tr>
+<td>X </td><td>Unsigned hexadecimal integer (uppercase) </td><td>7FA </td></tr>
+<tr>
+<td>f </td><td>Decimal floating point, lowercase </td><td>392.65 </td></tr>
+<tr>
+<td>F </td><td>Decimal floating point, uppercase </td><td>392.65 </td></tr>
+<tr>
+<td>e </td><td>Scientific notation (mantissa/exponent), lowercase </td><td>3.9265e+2 </td></tr>
+<tr>
+<td>E </td><td>Scientific notation (mantissa/exponent), uppercase </td><td>3.9265E+2 </td></tr>
+<tr>
+<td>g </td><td>Use the shortest representation: e or f </td><td>392.65 </td></tr>
+<tr>
+<td>G </td><td>Use the shortest representation: E or F </td><td>392.65 </td></tr>
+<tr>
+<td>a </td><td>Hexadecimal floating point, lowercase </td><td>-0xc.90fep-2 </td></tr>
+<tr>
+<td>A </td><td>Hexadecimal floating point, uppercase </td><td>-0XC.90FEP-2 </td></tr>
+<tr>
+<td>c </td><td>Character </td><td>a </td></tr>
+<tr>
+<td>s </td><td>String of characters </td><td>sample </td></tr>
+<tr>
+<td>p </td><td>Pointer address </td><td>b8000000 </td></tr>
+<tr>
+<td>% </td><td>A % followed by another % character will write a single % to the stream. </td><td>% </td></tr>
+</table>
+The length sub-specifier modifies the length of the data type. This is a chart showing the types used to interpret the corresponding arguments with and without length specifier (if a different type is used, the proper type promotion or conversion is performed, if allowed): <table class="doxtable">
+<tr>
+<th>length</th><th>d i </th><th>u o x X </th><th>f F e E g G a A </th><th>c </th><th>s </th><th>p </th><th>n  </th></tr>
+<tr>
+<td>(none)</td><td>int </td><td>unsigned int </td><td>double </td><td>int </td><td>char* </td><td>void* </td><td>int* </td></tr>
+<tr>
+<td>hh </td><td>signed char </td><td>unsigned char </td><td></td><td></td><td></td><td></td><td>signed char* </td></tr>
+<tr>
+<td>h </td><td>short int </td><td>unsigned short int </td><td></td><td></td><td></td><td></td><td>short int* </td></tr>
+<tr>
+<td>l </td><td>long int </td><td>unsigned long int </td><td></td><td>wint_t</td><td>wchar_t*</td><td></td><td>long int* </td></tr>
+<tr>
+<td>ll </td><td>long long int </td><td>unsigned long long int</td><td></td><td></td><td></td><td></td><td>long long int* </td></tr>
+<tr>
+<td>j </td><td>intmax_t </td><td>uintmax_t </td><td></td><td></td><td></td><td></td><td>intmax_t* </td></tr>
+<tr>
+<td>z </td><td>size_t </td><td>size_t </td><td></td><td></td><td></td><td></td><td>size_t* </td></tr>
+<tr>
+<td>t </td><td>ptrdiff_t </td><td>ptrdiff_t </td><td></td><td></td><td></td><td></td><td>ptrdiff_t* </td></tr>
+<tr>
+<td>L </td><td></td><td></td><td>long double </td><td></td><td></td><td></td><td></td></tr>
+</table>
+<b>Note:</b> that the c specifier takes an int (or wint_t) as argument, but performs the proper conversion to a char value (or a wchar_t) before formatting it for output. </td></tr>
+    <tr><td class="paramname">...</td><td>(additional arguments) Depending on the format string, the function may expect a sequence of additional arguments, each containing a value to be used to replace a format specifier in the format string (or a pointer to a storage location, for n). There should be at least as many of these arguments as the number of values specified in the format specifiers. Additional arguments are ignored by the function.</td></tr>
   </table>
   </dd>
 </dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_general_8h.html">kodi/addon.api2/General.h</a>&gt;</span></div>
 <div class="line">...</div>
-<div class="line">CAddOnLib_General::QueueNotification(<a class="code" href="addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8ba2ffaf3e648ad752d53c2739eeea1f712">QUEUE_WARNING</a>, <span class="stringliteral">&quot;I&#39;m want to inform you&quot;</span>, <span class="stringliteral">&quot;Here a with a test call to show %s&quot;</span>, <span class="stringliteral">&quot;this&quot;</span>);</div>
+<div class="line">CAddOnLib_General::QueueNotification(<a class="code" href="addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8ba2ffaf3e648ad752d53c2739eeea1f712">QUEUE_WARNING</a>, <span class="stringliteral">&quot;I&#39;m want to inform you&quot;</span>, <span class="stringliteral">&quot;Here with a test call to show %s&quot;</span>, <span class="stringliteral">&quot;this&quot;</span>);</div>
 <div class="line">...</div>
 </div><!-- fragment --> 
 </div>
@@ -1614,7 +1675,7 @@ Functions</h2></td></tr>
 </dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_general_8h.html">kodi/addon.api2/General.h</a>&gt;</span></div>
 <div class="line">...</div>
-<div class="line">CAddOnLib_General::QueueNotification(<a class="code" href="addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8ba337175e2eb3336df26c7e387e56cfb6b">QUEUE_INFO</a>, <span class="stringliteral">&quot;I&#39;m want to inform you&quot;</span>, <span class="stringliteral">&quot;Here a with a test call&quot;</span>, 3000, <span class="keyword">false</span>, 1000);</div>
+<div class="line">CAddOnLib_General::QueueNotification(<a class="code" href="addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8ba337175e2eb3336df26c7e387e56cfb6b">QUEUE_INFO</a>, <span class="stringliteral">&quot;I&#39;m want to inform you&quot;</span>, <span class="stringliteral">&quot;Here with a test call&quot;</span>, 3000, <span class="keyword">false</span>, 1000);</div>
 <div class="line">...</div>
 </div><!-- fragment --> 
 </div>
@@ -1661,7 +1722,7 @@ Functions</h2></td></tr>
 </dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_general_8h.html">kodi/addon.api2/General.h</a>&gt;</span></div>
 <div class="line">...</div>
-<div class="line">CAddOnLib_General::QueueNotification(<span class="stringliteral">&quot;I&#39;m want to inform you&quot;</span>, <span class="stringliteral">&quot;Here a with a test call&quot;</span>);</div>
+<div class="line">CAddOnLib_General::QueueNotification(<span class="stringliteral">&quot;I&#39;m want to inform you&quot;</span>, <span class="stringliteral">&quot;Here with a test call&quot;</span>);</div>
 <div class="line">...</div>
 </div><!-- fragment --> 
 </div>
@@ -1736,7 +1797,7 @@ Functions</h2></td></tr>
 </dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_general_8h.html">kodi/addon.api2/General.h</a>&gt;</span></div>
 <div class="line">...</div>
-<div class="line">CAddOnLib_General::QueueNotification(<span class="stringliteral">&quot;./myImage.png&quot;</span>, <span class="stringliteral">&quot;I&#39;m want to inform you&quot;</span>, <span class="stringliteral">&quot;Here a with a test call&quot;</span>, 3000, <span class="keyword">true</span>, 1000);</div>
+<div class="line">CAddOnLib_General::QueueNotification(<span class="stringliteral">&quot;./myImage.png&quot;</span>, <span class="stringliteral">&quot;I&#39;m want to inform you&quot;</span>, <span class="stringliteral">&quot;Here with a test call&quot;</span>, 3000, <span class="keyword">true</span>, 1000);</div>
 <div class="line">...</div>
 </div><!-- fragment --> 
 </div>

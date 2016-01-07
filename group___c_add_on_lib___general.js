@@ -28,7 +28,7 @@ var group___c_add_on_lib___general =
     [ "KodiQuit", "group___c_add_on_lib___general.html#ga92e5be48408124cf9f6f18744abd90d4", null ],
     [ "KodiVersion", "group___c_add_on_lib___general.html#ga399f77b85f988602c4f1d4c98aa18528", null ],
     [ "Log", "group___c_add_on_lib___general.html#gabd930a9f867043a32052b92f3df7e1a2", null ],
-    [ "QueueNotification", "group___c_add_on_lib___general.html#ga1dc10bef8c0de6836ae60130d3bf614f", null ],
+    [ "QueueFormattedNotification", "group___c_add_on_lib___general.html#ga77d684d8fa22f1163135489601ac6f19", null ],
     [ "QueueNotification", "group___c_add_on_lib___general.html#ga2ab015503072bab77bb699af6a007ab1", null ],
     [ "QueueNotification", "group___c_add_on_lib___general.html#ga6264a3e3afd8869f5e9d42cf3aad473b", null ],
     [ "QueueNotification", "group___c_add_on_lib___general.html#ga5d6ee95fc68d50312effa8b01b06bf26", null ],

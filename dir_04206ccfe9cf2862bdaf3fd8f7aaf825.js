@@ -18,9 +18,7 @@ var dir_04206ccfe9cf2862bdaf3fd8f7aaf825 =
       [ "CAddOnLib_File", "class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___file.html", null ]
     ] ],
     [ "General.h", "_general_8h.html", null ],
-    [ "Network.h", "_network_8h.html", [
-      [ "CAddOnLib_Network", "class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___network.html", null ]
-    ] ],
+    [ "Network.h", "_network_8h.html", null ],
     [ "SoundPlay.h", "_sound_play_8h.html", [
       [ "CAddonSoundPlay", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_sound_play.html", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_sound_play" ]
     ] ],

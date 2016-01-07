@@ -16,7 +16,7 @@ var searchData=
   ['dlfcn_5fh',['DLFCN_H',['../dlfcn-win32_8h.html#a9377853cbaba2d5d7bacd4216d6080e7',1,'dlfcn-win32.h']]],
   ['dlopen',['dlopen',['../dlfcn-win32_8cpp.html#a8668245fcfc33ca414d3d27ca038891a',1,'dlopen(const char *file, int mode):&#160;dlfcn-win32.cpp'],['../dlfcn-win32_8h.html#a8668245fcfc33ca414d3d27ca038891a',1,'dlopen(const char *file, int mode):&#160;dlfcn-win32.cpp']]],
   ['dlsym',['dlsym',['../dlfcn-win32_8cpp.html#af130d2e6324246be4262ecaaed674aa4',1,'dlsym(void *handle, const char *name):&#160;dlfcn-win32.cpp'],['../dlfcn-win32_8h.html#af130d2e6324246be4262ecaaed674aa4',1,'dlsym(void *handle, const char *name):&#160;dlfcn-win32.cpp']]],
-  ['dnslookup',['DNSLookup',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___network.html#a39943b1fdb3a928f0c08e54484602a7e',1,'AddOnLIB::V2::CAddOnLib_Network']]],
+  ['dnslookup',['DNSLookup',['../group___c_add_on_lib___network.html#ga39943b1fdb3a928f0c08e54484602a7e',1,'AddOnLIB::V2::CAddOnLib_Network']]],
   ['domodal',['DoModal',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a7b674cb46492e7803db79b7660624e43',1,'GUILIB::V2::CAddonGUIWindow']]],
   ['drain',['Drain',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_addon_a_e_stream.html#a46b4018fedbc6559a1a7eb942e2df1ce',1,'AudioEngineLIB::V2::CAddonAEStream']]],
   ['dvd_5fnopts_5fvalue',['DVD_NOPTS_VALUE',['../_player_lib_8h.html#aa8f3bf7de853346d6bcf7de68b1132da',1,'DVD_NOPTS_VALUE():&#160;PlayerLib.h'],['../_p_v_r_lib_8h.html#aa8f3bf7de853346d6bcf7de68b1132da',1,'DVD_NOPTS_VALUE():&#160;PVRLib.h']]],
