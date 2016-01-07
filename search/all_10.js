@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['wakeonlan',['WakeOnLan',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___network.html#a4b1d515e90cb77bface4914ed4bc0cd0',1,'AddOnLIB::V2::CAddOnLib_Network']]],
-  ['write',['Write',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html#ac7025ec7df110a7a9691adb3f949f24f',1,'AddOnLIB::V2::CVFSFile']]]
+  ['queue_5ferror',['QUEUE_ERROR',['../addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8bad2f91e8feff864772fb0a394bb60cdc5',1,'definations.h']]],
+  ['queue_5finfo',['QUEUE_INFO',['../addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8ba337175e2eb3336df26c7e387e56cfb6b',1,'definations.h']]],
+  ['queue_5fmsg',['queue_msg',['../addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8b',1,'definations.h']]],
+  ['queue_5fwarning',['QUEUE_WARNING',['../addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8ba2ffaf3e648ad752d53c2739eeea1f712',1,'definations.h']]],
+  ['queuenotification',['QueueNotification',['../group___c_add_on_lib___general.html#ga1dc10bef8c0de6836ae60130d3bf614f',1,'AddOnLIB::V2::CAddOnLib_General::QueueNotification(const queue_msg type, const char *format,...)'],['../group___c_add_on_lib___general.html#ga2ab015503072bab77bb699af6a007ab1',1,'AddOnLIB::V2::CAddOnLib_General::QueueNotification(const queue_msg type, const std::string &amp;aCaption, const std::string &amp;aDescription, unsigned int displayTime=5000, bool withSound=true, unsigned int messageTime=1000)'],['../group___c_add_on_lib___general.html#ga6264a3e3afd8869f5e9d42cf3aad473b',1,'AddOnLIB::V2::CAddOnLib_General::QueueNotification(const std::string &amp;aCaption, const std::string &amp;aDescription)'],['../group___c_add_on_lib___general.html#ga5d6ee95fc68d50312effa8b01b06bf26',1,'AddOnLIB::V2::CAddOnLib_General::QueueNotification(const std::string &amp;aImageFile, const std::string &amp;aCaption, const std::string &amp;aDescription, unsigned int displayTime=5000, bool withSound=true, unsigned int messageTime=1000)']]]
 ];

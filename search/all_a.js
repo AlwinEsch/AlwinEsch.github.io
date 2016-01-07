@@ -1,7 +1,25 @@
 var searchData=
 [
-  ['open',['Open',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html#a16246c8951f668cc9fd5d327e99d1c09',1,'AddOnLIB::V2::CVFSFile']]],
-  ['openforwrite',['OpenForWrite',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html#a0a86c00e28867617dc3de61efe5f96ae',1,'AddOnLIB::V2::CVFSFile']]],
-  ['operator_3c',['operator&lt;',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_stream.html#a8c39a1e5e76bc953c53019e4ef318216',1,'PVRLIB::V2::CPVRStream']]],
-  ['operator_3d_3d',['operator==',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_stream.html#a2e56127d518a6487ba46cfe720bb4904',1,'PVRLIB::V2::CPVRStream']]]
+  ['kodi_5faddon_5flibrary',['KODI_ADDON_LIBRARY',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib.html#a0c8b9ce175d01a9b10ce484f86056fed',1,'AddOnLIB::V2::CAddonLib']]],
+  ['kodi_5faudioengine_5flibrary',['KODI_AUDIOENGINE_LIBRARY',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_audio_engine_lib.html#a3d5db3884cc2c788a91a6724e97557f3',1,'AudioEngineLIB::V2::CAudioEngineLib']]],
+  ['kodi_5fcodec',['kodi_codec',['../structkodi__codec.html',1,'']]],
+  ['kodi_5fcodec_5fid',['kodi_codec_id',['../addon_8api2_2definations_8h.html#a5f36d5652cd9f943a40f0a2c4495a74a',1,'definations.h']]],
+  ['kodi_5fcodec_5ftype',['kodi_codec_type',['../addon_8api2_2definations_8h.html#adb311b9a66ccf6cbc77137e0af86be2a',1,'definations.h']]],
+  ['kodi_5fcodec_5ftype_5faudio',['KODI_CODEC_TYPE_AUDIO',['../addon_8api2_2definations_8h.html#adb311b9a66ccf6cbc77137e0af86be2aa1fdc2cbc56014c4fff81f4e7baae441b',1,'definations.h']]],
+  ['kodi_5fcodec_5ftype_5fdata',['KODI_CODEC_TYPE_DATA',['../addon_8api2_2definations_8h.html#adb311b9a66ccf6cbc77137e0af86be2aa283925b3bd6f6ed60e5cebfa6c84001f',1,'definations.h']]],
+  ['kodi_5fcodec_5ftype_5fnb',['KODI_CODEC_TYPE_NB',['../addon_8api2_2definations_8h.html#adb311b9a66ccf6cbc77137e0af86be2aa5db7fcefc33d4838c039fbb9d1e2eadc',1,'definations.h']]],
+  ['kodi_5fcodec_5ftype_5frds',['KODI_CODEC_TYPE_RDS',['../addon_8api2_2definations_8h.html#adb311b9a66ccf6cbc77137e0af86be2aad30c732aede56b620aefac72e4029d8e',1,'definations.h']]],
+  ['kodi_5fcodec_5ftype_5fsubtitle',['KODI_CODEC_TYPE_SUBTITLE',['../addon_8api2_2definations_8h.html#adb311b9a66ccf6cbc77137e0af86be2aa12047086ed4fc5c499f9584a45140cbd',1,'definations.h']]],
+  ['kodi_5fcodec_5ftype_5funknown',['KODI_CODEC_TYPE_UNKNOWN',['../addon_8api2_2definations_8h.html#adb311b9a66ccf6cbc77137e0af86be2aa8f817a79e13ea554b21f9a4ab39825e3',1,'definations.h']]],
+  ['kodi_5fcodec_5ftype_5fvideo',['KODI_CODEC_TYPE_VIDEO',['../addon_8api2_2definations_8h.html#adb311b9a66ccf6cbc77137e0af86be2aad2291cde40a901541cb7a15001bc06b3',1,'definations.h']]],
+  ['kodi_5fgui_5flibrary',['KODI_GUI_LIBRARY',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_g_u_i_lib.html#a267bf58919cb103740f8b7cffc23ef66',1,'GUILIB::V2::CGUILib']]],
+  ['kodi_5fguilib_5fapi_5fversion',['KODI_GUILIB_API_VERSION',['../gui_8api2_2definations_8h.html#ada5a80de1eeb8babb4fd718451a4388f',1,'definations.h']]],
+  ['kodi_5fguilib_5fmin_5fapi_5fversion',['KODI_GUILIB_MIN_API_VERSION',['../gui_8api2_2definations_8h.html#a3726967a855ae6b6a37384d1b515683e',1,'definations.h']]],
+  ['kodi_5finvalid_5fcodec',['KODI_INVALID_CODEC',['../addon_8api2_2definations_8h.html#a016b1e1580692ebe3cac597afb454fc1',1,'definations.h']]],
+  ['kodi_5finvalid_5fcodec_5fid',['KODI_INVALID_CODEC_ID',['../addon_8api2_2definations_8h.html#a5fb528ca862161b4ee16b3dfb97a6e53',1,'definations.h']]],
+  ['kodi_5fplayer_5flibrary',['KODI_PLAYER_LIBRARY',['../class_player_l_i_b_1_1_v2_1_1_c_player_lib.html#a4bce1dde3673c4b78c782a9f5b3a015b',1,'PlayerLIB::V2::CPlayerLib']]],
+  ['kodi_5fpvr_5flibrary',['KODI_PVR_LIBRARY',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib.html#a189371e5d5b4f2016890b37d497b1674',1,'PVRLIB::V2::CPVRLib']]],
+  ['kodi_5fversion',['kodi_version',['../structkodi__version.html',1,'']]],
+  ['kodiquit',['KodiQuit',['../group___c_add_on_lib___general.html#ga92e5be48408124cf9f6f18744abd90d4',1,'AddOnLIB::V2::CAddOnLib_General']]],
+  ['kodiversion',['KodiVersion',['../group___c_add_on_lib___general.html#ga399f77b85f988602c4f1d4c98aa18528',1,'AddOnLIB::V2::CAddOnLib_General']]]
 ];

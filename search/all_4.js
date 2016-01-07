@@ -1,7 +1,25 @@
 var searchData=
 [
-  ['endtime',['endTime',['../struct_e_p_g___t_a_g.html#a1f1e169e482467aaf615639bb3467f09',1,'EPG_TAG']]],
-  ['epg_5ftag',['EPG_TAG',['../struct_e_p_g___t_a_g.html',1,'']]],
-  ['epgentry',['EpgEntry',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___transfer.html#ab55ab3d9f7fa5f1304edf70e39ac6a55',1,'PVRLIB::V2::CPVRLib_Transfer']]],
-  ['epgupdate',['EpgUpdate',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___trigger.html#a49372b48b0c3d939e69dfb83bcda3ed5',1,'PVRLIB::V2::CPVRLib_Trigger']]]
+  ['definations_2eh',['definations.h',['../addon_8api2_2definations_8h.html',1,'']]],
+  ['definations_2eh',['definations.h',['../audioengine_8api2_2definations_8h.html',1,'']]],
+  ['definations_2eh',['definations.h',['../player_8api2_2definations_8h.html',1,'']]],
+  ['definations_2eh',['definations.h',['../pvr_8api2_2definations_8h.html',1,'']]],
+  ['definations_2eh',['definations.h',['../gui_8api2_2definations_8h.html',1,'']]],
+  ['deletefile',['DeleteFile',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___file.html#a83ff1a280df8f4bc766ef3398b976116',1,'AddOnLIB::V2::CAddOnLib_File']]],
+  ['directory_2eh',['Directory.h',['../_directory_8h.html',1,'']]],
+  ['directoryexists',['DirectoryExists',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___directory.html#a5e2010e4942df75e2929c5b13a082c1e',1,'AddOnLIB::V2::CAddOnLib_Directory']]],
+  ['dirty',['Dirty',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_rendering_control.html#a7cea65505e98c9989ab92a87b2f2e99b',1,'GUILIB::V2::CAddonGUIRenderingControl']]],
+  ['dlclose',['dlclose',['../dlfcn-win32_8cpp.html#af483b6c4400965aa885f9f1a144138a5',1,'dlclose(void *handle):&#160;dlfcn-win32.cpp'],['../dlfcn-win32_8h.html#af483b6c4400965aa885f9f1a144138a5',1,'dlclose(void *handle):&#160;dlfcn-win32.cpp']]],
+  ['dlerror',['dlerror',['../dlfcn-win32_8cpp.html#a541c343ae5cdf90926014c65972c86cc',1,'dlerror(void):&#160;dlfcn-win32.cpp'],['../dlfcn-win32_8h.html#a541c343ae5cdf90926014c65972c86cc',1,'dlerror(void):&#160;dlfcn-win32.cpp']]],
+  ['dlfcn_2dwin32_2ecpp',['dlfcn-win32.cpp',['../dlfcn-win32_8cpp.html',1,'']]],
+  ['dlfcn_2dwin32_2eh',['dlfcn-win32.h',['../dlfcn-win32_8h.html',1,'']]],
+  ['dlfcn_5fh',['DLFCN_H',['../dlfcn-win32_8h.html#a9377853cbaba2d5d7bacd4216d6080e7',1,'dlfcn-win32.h']]],
+  ['dlopen',['dlopen',['../dlfcn-win32_8cpp.html#a8668245fcfc33ca414d3d27ca038891a',1,'dlopen(const char *file, int mode):&#160;dlfcn-win32.cpp'],['../dlfcn-win32_8h.html#a8668245fcfc33ca414d3d27ca038891a',1,'dlopen(const char *file, int mode):&#160;dlfcn-win32.cpp']]],
+  ['dlsym',['dlsym',['../dlfcn-win32_8cpp.html#af130d2e6324246be4262ecaaed674aa4',1,'dlsym(void *handle, const char *name):&#160;dlfcn-win32.cpp'],['../dlfcn-win32_8h.html#af130d2e6324246be4262ecaaed674aa4',1,'dlsym(void *handle, const char *name):&#160;dlfcn-win32.cpp']]],
+  ['dnslookup',['DNSLookup',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___network.html#a39943b1fdb3a928f0c08e54484602a7e',1,'AddOnLIB::V2::CAddOnLib_Network']]],
+  ['domodal',['DoModal',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a7b674cb46492e7803db79b7660624e43',1,'GUILIB::V2::CAddonGUIWindow']]],
+  ['drain',['Drain',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_addon_a_e_stream.html#a46b4018fedbc6559a1a7eb942e2df1ce',1,'AudioEngineLIB::V2::CAddonAEStream']]],
+  ['dvd_5fnopts_5fvalue',['DVD_NOPTS_VALUE',['../_player_lib_8h.html#aa8f3bf7de853346d6bcf7de68b1132da',1,'DVD_NOPTS_VALUE():&#160;PlayerLib.h'],['../_p_v_r_lib_8h.html#aa8f3bf7de853346d6bcf7de68b1132da',1,'DVD_NOPTS_VALUE():&#160;PVRLib.h']]],
+  ['dvd_5fstate',['dvd_state',['../addon_8api2_2definations_8h.html#a6854c40ee0b4222220398351339f0aa5',1,'definations.h']]],
+  ['dvd_5ftime_5fbase',['DVD_TIME_BASE',['../_player_lib_8h.html#a2ab735c1c1995b95aa927d15465e4c37',1,'DVD_TIME_BASE():&#160;PlayerLib.h'],['../_p_v_r_lib_8h.html#a2ab735c1c1995b95aa927d15465e4c37',1,'DVD_TIME_BASE():&#160;PVRLib.h']]]
 ];

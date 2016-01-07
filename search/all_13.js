@@ -1,5 +1,12 @@
 var searchData=
 [
-  ['wakeonlan',['WakeOnLan',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___network.html#a4a97993a3e06e1fbd03f195969faba3c',1,'AddOnLIB::V2::CAddOnLib_Network']]],
-  ['write',['Write',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html#ac7025ec7df110a7a9691adb3f949f24f',1,'AddOnLIB::V2::CVFSFile']]]
+  ['tag',['tag',['../structkodi__version.html#ae120f732e7e1c5e4a16fa31d89f655df',1,'kodi_version']]],
+  ['tag_5frevision',['tag_revision',['../structkodi__version.html#a14e85f5a1bb888b4325a87984bccfe81',1,'kodi_version']]],
+  ['text',['Text',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_extended_progress.html#afdfa72709ffc1738c3c198f7ad8b61ec',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
+  ['timerentry',['TimerEntry',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___transfer.html#ae6c3ce0a07ecc854c615f2d65e550147',1,'PVRLIB::V2::CPVRLib_Transfer']]],
+  ['timerupdate',['TimerUpdate',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___trigger.html#a92c110f8654585fdc3f8a126d1ce54bb',1,'PVRLIB::V2::CPVRLib_Trigger']]],
+  ['title',['Title',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_extended_progress.html#a3cb91fb7750df7982baea48c4a3de616',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
+  ['togglemute',['ToggleMute',['../group___c_add_on_lib___general.html#gaa959a7781167f016c271bf1a8c37a681',1,'AddOnLIB::V2::CAddOnLib_General']]],
+  ['translateaddonstatus',['TranslateAddonStatus',['../group___c_add_on_lib___general.html#gaecf9afb07475f94d782c6cf6f4057317',1,'AddOnLIB::V2::CAddOnLib_General']]],
+  ['truncate',['Truncate',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html#a97dbc6093302f0ced52952a2737407ec',1,'AddOnLIB::V2::CVFSFile']]]
 ];

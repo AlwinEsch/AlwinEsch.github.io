@@ -1,7 +1,22 @@
 var searchData=
 [
-  ['timerentry',['TimerEntry',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___transfer.html#ae6c3ce0a07ecc854c615f2d65e550147',1,'PVRLIB::V2::CPVRLib_Transfer']]],
-  ['timerupdate',['TimerUpdate',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___trigger.html#a92c110f8654585fdc3f8a126d1ce54bb',1,'PVRLIB::V2::CPVRLib_Trigger']]],
-  ['translateaddonstatus',['TranslateAddonStatus',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___general.html#aecf9afb07475f94d782c6cf6f4057317',1,'AddOnLIB::V2::CAddOnLib_General']]],
-  ['truncate',['Truncate',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html#a97dbc6093302f0ced52952a2737407ec',1,'AddOnLIB::V2::CVFSFile']]]
+  ['onaction',['OnAction',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#ad3fc2a106ba0143fa5d11d3df32d9c72',1,'GUILIB::V2::CAddonGUIWindow']]],
+  ['onclick',['OnClick',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#ad741fef5d9a1d2bf07449694e9a9e602',1,'GUILIB::V2::CAddonGUIWindow']]],
+  ['onfocus',['OnFocus',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a7f69d7353e186b8fe4a1560767721501',1,'GUILIB::V2::CAddonGUIWindow']]],
+  ['oninit',['OnInit',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a7d98c001ac8d31e48df88346e28bae16',1,'GUILIB::V2::CAddonGUIWindow']]],
+  ['onplaybackended',['OnPlayBackEnded',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a9b673b89fb0c2d810637d97a6144743d',1,'PlayerLIB::V2::CAddonPlayer']]],
+  ['onplaybackpaused',['OnPlayBackPaused',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a535ea86e9170c85e4dfc8b2292466041',1,'PlayerLIB::V2::CAddonPlayer']]],
+  ['onplaybackresumed',['OnPlayBackResumed',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a78de3c74ca811508e2c83bad612af8a0',1,'PlayerLIB::V2::CAddonPlayer']]],
+  ['onplaybackseek',['OnPlayBackSeek',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a1aa2520cecdb44e5f37dd2905146efa6',1,'PlayerLIB::V2::CAddonPlayer']]],
+  ['onplaybackseekchapter',['OnPlayBackSeekChapter',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a36be56af6bfdd7fc943f8d3f1abacfbf',1,'PlayerLIB::V2::CAddonPlayer']]],
+  ['onplaybackspeedchanged',['OnPlayBackSpeedChanged',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a14e0279d2fb9cd6b4a68f9467e07081a',1,'PlayerLIB::V2::CAddonPlayer']]],
+  ['onplaybackstarted',['OnPlayBackStarted',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a670b9e7947764d4d474b7f8cd21c1611',1,'PlayerLIB::V2::CAddonPlayer']]],
+  ['onplaybackstopped',['OnPlayBackStopped',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a5df8f6dd6cf9fb162d1d4d77da58eb2d',1,'PlayerLIB::V2::CAddonPlayer']]],
+  ['onqueuenextitem',['OnQueueNextItem',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a817b2d696d11b166143be2c391a972f9',1,'PlayerLIB::V2::CAddonPlayer']]],
+  ['open',['Open',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html#a16246c8951f668cc9fd5d327e99d1c09',1,'AddOnLIB::V2::CVFSFile::Open()'],['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a5e53001785ff30ae485a113b9b8a0ddc',1,'GUILIB::V2::CAddonGUIDialogProgress::Open()']]],
+  ['openforwrite',['OpenForWrite',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html#a0a86c00e28867617dc3de61efe5f96ae',1,'AddOnLIB::V2::CVFSFile']]],
+  ['operator_3c',['operator&lt;',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_stream.html#a8c39a1e5e76bc953c53019e4ef318216',1,'PVRLIB::V2::CPVRStream']]],
+  ['operator_3d',['operator=',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_stream.html#a7b1eb5fcb43d86807d0df66f0b9c74e6',1,'PVRLIB::V2::CPVRStream']]],
+  ['operator_3d_3d',['operator==',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_stream.html#a2e56127d518a6487ba46cfe720bb4904',1,'PVRLIB::V2::CPVRStream']]],
+  ['operator_5b_5d',['operator[]',['../class_player_l_i_b_1_1_v2_1_1_c_addon_play_list.html#a0fe30656a739ee76ffac247d6c602008',1,'PlayerLIB::V2::CAddonPlayList']]]
 ];

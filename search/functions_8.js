@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pause',['Pause',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_addon_a_e_stream.html#a10fafa7c3ff437e1f0253ab26ee01f1d',1,'AudioEngineLIB::V2::CAddonAEStream']]]
+  ['kodiquit',['KodiQuit',['../group___c_add_on_lib___general.html#ga92e5be48408124cf9f6f18744abd90d4',1,'AddOnLIB::V2::CAddOnLib_General']]],
+  ['kodiversion',['KodiVersion',['../group___c_add_on_lib___general.html#ga399f77b85f988602c4f1d4c98aa18528',1,'AddOnLIB::V2::CAddOnLib_General']]]
 ];

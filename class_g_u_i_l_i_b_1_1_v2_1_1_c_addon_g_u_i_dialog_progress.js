@@ -1,17 +1,17 @@
 var class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress =
 [
-    [ "CAddonGUIDialogProgress", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a16a0ef9ef0dc964174812441c30bba61", null ],
-    [ "~CAddonGUIDialogProgress", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a96323a5833cd8f4cfbc34de1135b014d", null ],
-    [ "Abort", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#afe9686310fd668a5b7cb7f21d61b4f9f", null ],
-    [ "GetPercentage", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#ab2bc0c6d773fb51f5c01a9466a6559fd", null ],
-    [ "IsCanceled", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a888fa6bc1fef1ae3aa54b61c0787510b", null ],
-    [ "Open", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a76a7184c9a458e8d8374d33ea91b82bb", null ],
-    [ "SetCanCancel", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#aa260549d84b18a2d483150cecae80c07", null ],
-    [ "SetHeading", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a85a9a864e233bdbb89bc6968120f71d3", null ],
-    [ "SetLine", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#aadaf05894be06b84de9ba6a229b64113", null ],
-    [ "SetPercentage", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a00c7f52cb72aa94a69e4e855c79613ae", null ],
-    [ "SetProgressAdvance", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a7fd549ad6a4d49c87dfea2b26bb33d8f", null ],
-    [ "SetProgressMax", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#ab3afb6735d873fabaa1810450c32f739", null ],
-    [ "ShowProgressBar", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a5c878afc3f301958f0367420ada376ba", null ],
-    [ "IMPL_GUI_PROGRESS_DIALOG", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a6a97f63b70793058069eb439b44d1b98", null ]
+    [ "CAddonGUIDialogProgress", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#ac076fba6e17d71b4ce5b330855fb8902", null ],
+    [ "~CAddonGUIDialogProgress", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a120fc408bff359c7c29a02551c00e9a0", null ],
+    [ "Abort", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a71e9d732335846eb579f0dd00918b3e7", null ],
+    [ "GetPercentage", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#ae20eeb097c9ebe3506bd1d2bb3d92fda", null ],
+    [ "IsCanceled", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#af76bcf12aaec9ab845ea61853a37a33c", null ],
+    [ "Open", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a5e53001785ff30ae485a113b9b8a0ddc", null ],
+    [ "SetCanCancel", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a13580b7f84c1c13f90c1d030ef61faf8", null ],
+    [ "SetHeading", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#af6377691fa79c14e16aebaeb9d340b33", null ],
+    [ "SetLine", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a845054cd7ff1978a112126086a8ec5ba", null ],
+    [ "SetPercentage", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#adf0353f59469e4b0cab327ea7df9cae8", null ],
+    [ "SetProgressAdvance", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#afe4b80962f0d7bdd3b0a73b83ef06323", null ],
+    [ "SetProgressMax", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#ad397a19fe15c25e5077d34fd43da6e5a", null ],
+    [ "ShowProgressBar", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a4ef9882ff90cb3878eb846335e2b3c07", null ],
+    [ "IMPL_GUI_PROGRESS_DIALOG", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a27285bd51e7308caf726c3597624dfc8", null ]
 ];

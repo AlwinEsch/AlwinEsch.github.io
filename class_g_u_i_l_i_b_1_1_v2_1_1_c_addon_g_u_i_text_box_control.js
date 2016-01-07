@@ -1,12 +1,12 @@
 var class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control =
 [
-    [ "CAddonGUITextBoxControl", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a5deae5efe22adbfb01fee980d16a95f5", null ],
-    [ "~CAddonGUITextBoxControl", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#afe2ae6afa407a0844ac5e6c25e96b138", null ],
-    [ "GetText", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#afb52d1ae9670ce806c12ddfe8de63703", null ],
-    [ "Reset", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a3deb1d3f35c6e48b8b36d369de3a3c52", null ],
-    [ "Scroll", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a1a7812c93b86f988579cefbdff8b63fe", null ],
-    [ "SetAutoScrolling", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a504c23628129579e74f7c714c0ff95b2", null ],
-    [ "SetText", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a07a99fd1ff9eed9769d47e03becc0b1c", null ],
-    [ "SetVisible", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a10c57b27359d21594aecd30c86a7768b", null ],
-    [ "IMPL_GUI_TEXTBOX_CONTROL", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a5a4df47b0465836006e7f905bec479e9", null ]
+    [ "CAddonGUITextBoxControl", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a85a7f71552aca14d74d9233d7adcaa1b", null ],
+    [ "~CAddonGUITextBoxControl", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a301eeec10641f11059c3dbe531400abf", null ],
+    [ "GetText", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a1af3f7fd8b95cc66e7599caca454f8ef", null ],
+    [ "Reset", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "Scroll", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a2b8c674da6e7eb58fcf75d2f812cfd5d", null ],
+    [ "SetAutoScrolling", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#ad3e4bbb4388da7a56e8252018e4fbb00", null ],
+    [ "SetText", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a8008c108280948ebd79830f222068455", null ],
+    [ "SetVisible", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_TEXTBOX_CONTROL", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a62ade28dbd83a582f36b79d05192686d", null ]
 ];
