@@ -9,5 +9,5 @@ var searchData=
   ['togglemute',['ToggleMute',['../group___c_add_on_lib___general.html#gaa959a7781167f016c271bf1a8c37a681',1,'AddOnLIB::V2::CAddOnLib_General']]],
   ['translateaddonstatus',['TranslateAddonStatus',['../group___c_add_on_lib___general.html#gaecf9afb07475f94d782c6cf6f4057317',1,'AddOnLIB::V2::CAddOnLib_General']]],
   ['translatepath',['TranslatePath',['../group___c_add_on_lib___general.html#ga242aca0b394c978780dfbc44b112519d',1,'AddOnLIB::V2::CAddOnLib_General']]],
-  ['truncate',['Truncate',['../group___c_add_on_lib___network.html#ga97dbc6093302f0ced52952a2737407ec',1,'AddOnLIB::V2::CVFSFile']]]
+  ['truncate',['Truncate',['../group___c_add_on_lib___v_f_s_file.html#ga97dbc6093302f0ced52952a2737407ec',1,'AddOnLIB::V2::CAddOnLib_VFSFile']]]
 ];

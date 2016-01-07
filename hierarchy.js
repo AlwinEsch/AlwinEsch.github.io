@@ -37,6 +37,7 @@ var hierarchy =
       [ "CAddonLib", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib.html", null ]
     ] ],
     [ "CAddOnLib_Network", "class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___network.html", null ],
+    [ "CAddOnLib_VFSFile", "class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___v_f_s_file.html", null ],
     [ "CAddOnLib_VFSUtils", "class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___v_f_s_utils.html", null ],
     [ "CAddonPlayer", "class_player_l_i_b_1_1_v2_1_1_c_addon_player.html", null ],
     [ "CAddonPlayList", "class_player_l_i_b_1_1_v2_1_1_c_addon_play_list.html", null ],
@@ -58,7 +59,6 @@ var hierarchy =
     [ "CPVRLib_Trigger", "class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___trigger.html", null ],
     [ "CStreamProperties", "class_p_v_r_l_i_b_1_1_v2_1_1_c_stream_properties.html", null ],
     [ "CVFSDirEntry", "class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_dir_entry.html", null ],
-    [ "CVFSFile", "class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html", null ],
     [ "CVFSProperty", "class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_property.html", null ],
     [ "EPG_TAG", "struct_e_p_g___t_a_g.html", null ],
     [ "kodi_codec", "structkodi__codec.html", null ],

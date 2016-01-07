@@ -20,10 +20,11 @@ var searchData=
   ['caddonguiwindow',['CAddonGUIWindow',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a2d136cfaf121935a6fc5c3fc0fdfc227',1,'GUILIB::V2::CAddonGUIWindow']]],
   ['caddoninfotagmusic',['CAddonInfoTagMusic',['../class_player_l_i_b_1_1_v2_1_1_c_addon_info_tag_music.html#aafa4ebe882c992b1abf9143bb2a28aed',1,'PlayerLIB::V2::CAddonInfoTagMusic']]],
   ['caddoninfotagvideo',['CAddonInfoTagVideo',['../class_player_l_i_b_1_1_v2_1_1_c_addon_info_tag_video.html#acaf922cb3837ecddc23f658ed1828e3e',1,'PlayerLIB::V2::CAddonInfoTagVideo']]],
+  ['caddonlib_5fvfsfile',['CAddOnLib_VFSFile',['../group___c_add_on_lib___v_f_s_file.html#gad18b0d4efc04c68d1b4a928695b752bc',1,'AddOnLIB::V2::CAddOnLib_VFSFile']]],
   ['caddonplayer',['CAddonPlayer',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a9d6d82371862dd548b86a28d9647abe2',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['caddonplaylist',['CAddonPlayList',['../class_player_l_i_b_1_1_v2_1_1_c_addon_play_list.html#a094f884306ca992de579db9d8b071c7d',1,'PlayerLIB::V2::CAddonPlayList']]],
   ['caddonsoundplay',['CAddonSoundPlay',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_sound_play.html#a26bd4149239b1f399a150e5a7a69194e',1,'AddOnLIB::V2::CAddonSoundPlay']]],
-  ['canopendirectory',['CanOpenDirectory',['../group___c_add_on_lib___directory.html#ga1311c9d22d66f8aa9c5c1f7d7c80d811',1,'AddOnLIB::V2::CAddOnLib_Directory']]],
+  ['canopendirectory',['CanOpenDirectory',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___directory.html#a1311c9d22d66f8aa9c5c1f7d7c80d811',1,'AddOnLIB::V2::CAddOnLib_Directory']]],
   ['channelentry',['ChannelEntry',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___transfer.html#afdbc7a9a4d1336f159150988868b1465',1,'PVRLIB::V2::CPVRLib_Transfer']]],
   ['channelgroup',['ChannelGroup',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___transfer.html#abb331d2d9b3ef522da48c0b951ddbe21',1,'PVRLIB::V2::CPVRLib_Transfer']]],
   ['channelgroupmember',['ChannelGroupMember',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___transfer.html#a2d24f5c60e0d4b6d3a416641b489f15e',1,'PVRLIB::V2::CPVRLib_Transfer']]],
@@ -33,7 +34,7 @@ var searchData=
   ['clearlist',['ClearList',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a199504ef3087c0a9a8db24bb3bbf1193',1,'GUILIB::V2::CAddonGUIWindow::ClearList()'],['../class_player_l_i_b_1_1_v2_1_1_c_addon_play_list.html#a2b85ec494201046fd7686395c996c272',1,'PlayerLIB::V2::CAddonPlayList::ClearList()']]],
   ['clearproperties',['ClearProperties',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_list_item.html#adc1bf538e29912b115cab108fee731c2',1,'GUILIB::V2::CAddonGUIListItem::ClearProperties()'],['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#adc1bf538e29912b115cab108fee731c2',1,'GUILIB::V2::CAddonGUIWindow::ClearProperties()']]],
   ['clearproperty',['ClearProperty',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_list_item.html#a67f816b54c4da0c1869fdfd54b209a11',1,'GUILIB::V2::CAddonGUIListItem']]],
-  ['close',['Close',['../group___c_add_on_lib___network.html#ga7f7a3199c392465d0767c6506c1af5b4',1,'AddOnLIB::V2::CVFSFile::Close()'],['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#ace36743954f0a3a2e5d8cba379d5313f',1,'GUILIB::V2::CAddonGUIWindow::Close()']]],
+  ['close',['Close',['../group___c_add_on_lib___v_f_s_file.html#ga7f7a3199c392465d0767c6506c1af5b4',1,'AddOnLIB::V2::CAddOnLib_VFSFile::Close()'],['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#ace36743954f0a3a2e5d8cba379d5313f',1,'GUILIB::V2::CAddonGUIWindow::Close()']]],
   ['codec',['Codec',['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html#a62b7b43b626a9b8beb0f16a8795b9d91',1,'AddOnLIB::V2::CodecDescriptor']]],
   ['codecdescriptor',['CodecDescriptor',['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html#a0ce9286b79ecef72bdf531ffb02e73d3',1,'AddOnLIB::V2::CodecDescriptor::CodecDescriptor(void)'],['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html#a01b78d89cc9425c3b3cce1192f0fa6c4',1,'AddOnLIB::V2::CodecDescriptor::CodecDescriptor(kodi_codec codec, const char *name)']]],
   ['compareformat',['compareFormat',['../struct_audio_engine_format.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64',1,'AudioEngineFormat']]],
@@ -42,6 +43,5 @@ var searchData=
   ['createdirectory',['CreateDirectory',['../group___c_add_on_lib___directory.html#gacbb82bf91432edf4a203b4f144c7d3c4',1,'AddOnLIB::V2::CAddOnLib_Directory']]],
   ['cstreamproperties',['CStreamProperties',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_stream_properties.html#adb5884513f2557e07249fab9f1cc447c',1,'PVRLIB::V2::CStreamProperties']]],
   ['cvfsdirentry',['CVFSDirEntry',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_dir_entry.html#a52a9625fed293dafda5d51e531caa8f5',1,'AddOnLIB::V2::CVFSDirEntry::CVFSDirEntry(const std::string &amp;label=&quot;&quot;, const std::string &amp;path=&quot;&quot;, bool bFolder=false, int64_t size=-1)'],['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_dir_entry.html#a0d75ba3099e37c9a2b2b9b8b4e4fae6d',1,'AddOnLIB::V2::CVFSDirEntry::CVFSDirEntry(const VFSDirEntry &amp;dirEntry)']]],
-  ['cvfsfile',['CVFSFile',['../group___c_add_on_lib___network.html#gacdfefddfde4a4d68ae29a6339dd6e11c',1,'AddOnLIB::V2::CVFSFile']]],
   ['cvfsproperty',['CVFSProperty',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_property.html#a0bd05be0f337611aa68c7de574239d0d',1,'AddOnLIB::V2::CVFSProperty']]]
 ];

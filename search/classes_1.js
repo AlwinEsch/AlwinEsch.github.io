@@ -34,6 +34,7 @@ var searchData=
   ['caddonlib_5ffile',['CAddOnLib_File',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___file.html',1,'AddOnLIB::V2']]],
   ['caddonlib_5fgeneral',['CAddOnLib_General',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___general.html',1,'AddOnLIB::V2']]],
   ['caddonlib_5fnetwork',['CAddOnLib_Network',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___network.html',1,'AddOnLIB::V2']]],
+  ['caddonlib_5fvfsfile',['CAddOnLib_VFSFile',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___v_f_s_file.html',1,'AddOnLIB::V2']]],
   ['caddonlib_5fvfsutils',['CAddOnLib_VFSUtils',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___v_f_s_utils.html',1,'AddOnLIB::V2']]],
   ['caddonplayer',['CAddonPlayer',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html',1,'PlayerLIB::V2']]],
   ['caddonplaylist',['CAddonPlayList',['../class_player_l_i_b_1_1_v2_1_1_c_addon_play_list.html',1,'PlayerLIB::V2']]],
@@ -48,6 +49,5 @@ var searchData=
   ['cpvrstream',['CPVRStream',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_stream.html',1,'PVRLIB::V2']]],
   ['cstreamproperties',['CStreamProperties',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_stream_properties.html',1,'PVRLIB::V2']]],
   ['cvfsdirentry',['CVFSDirEntry',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_dir_entry.html',1,'AddOnLIB::V2']]],
-  ['cvfsfile',['CVFSFile',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html',1,'AddOnLIB::V2']]],
   ['cvfsproperty',['CVFSProperty',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_property.html',1,'AddOnLIB::V2']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['scroll',['Scroll',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a2b8c674da6e7eb58fcf75d2f812cfd5d',1,'GUILIB::V2::CAddonGUITextBoxControl']]],
-  ['seek',['Seek',['../group___c_add_on_lib___network.html#ga48d08591724952c3d51d0823caf17720',1,'AddOnLIB::V2::CVFSFile']]],
+  ['seek',['Seek',['../group___c_add_on_lib___v_f_s_file.html#ga48d08591724952c3d51d0823caf17720',1,'AddOnLIB::V2::CAddOnLib_VFSFile']]],
   ['seektime',['SeekTime',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#aa7bab6149b942aabd374567e858dd6ad',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['select',['Select',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_list_item.html#abac9385c6cd74aea9e1cfb420ff9e7b3',1,'GUILIB::V2::CAddonGUIListItem']]],
   ['sendtexttoactivekeyboard',['SendTextToActiveKeyboard',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_keyboard.html#a3d85e8d21bc1fbdf8f946d3c7755005c',1,'GUILIB::V2::CAddonGUIDialogKeyboard']]],
@@ -86,7 +86,7 @@ var searchData=
   ['soundplay_2eh',['SoundPlay.h',['../_sound_play_8h.html',1,'']]],
   ['startserver',['StartServer',['../group___c_add_on_lib___general.html#ga7dde8afb7cb40c1cb542a13557282f00',1,'AddOnLIB::V2::CAddOnLib_General']]],
   ['starttime',['startTime',['../struct_e_p_g___t_a_g.html#aaf564fc30a2a8624cf917e282281a500',1,'EPG_TAG']]],
-  ['statfile',['StatFile',['../group___c_add_on_lib___network.html#ga779d626c053ee2e3f9329d7f05e3d7d2',1,'AddOnLIB::V2::CAddOnLib_File']]],
+  ['statfile',['StatFile',['../group___c_add_on_lib___file.html#ga779d626c053ee2e3f9329d7f05e3d7d2',1,'AddOnLIB::V2::CAddOnLib_File']]],
   ['stop',['Stop',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_sound_play.html#a17a237457e57625296e6b24feb19c60a',1,'AddOnLIB::V2::CAddonSoundPlay::Stop()'],['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_rendering_control.html#af6f113a64b92a63894b285b4f2a2c3a5',1,'GUILIB::V2::CAddonGUIRenderingControl::Stop()'],['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a17a237457e57625296e6b24feb19c60a',1,'PlayerLIB::V2::CAddonPlayer::Stop()']]],
   ['strcast',['strCast',['../struct_e_p_g___t_a_g.html#a7ab248dcdb6370b18ef4265f3b8f9db0',1,'EPG_TAG']]],
   ['strdirector',['strDirector',['../struct_e_p_g___t_a_g.html#a2e0c072159ba1b00a7c795865fb6ad9b',1,'EPG_TAG']]],

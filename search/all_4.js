@@ -5,7 +5,7 @@ var searchData=
   ['definations_2eh',['definations.h',['../player_8api2_2definations_8h.html',1,'']]],
   ['definations_2eh',['definations.h',['../pvr_8api2_2definations_8h.html',1,'']]],
   ['definations_2eh',['definations.h',['../gui_8api2_2definations_8h.html',1,'']]],
-  ['deletefile',['DeleteFile',['../group___c_add_on_lib___network.html#ga83ff1a280df8f4bc766ef3398b976116',1,'AddOnLIB::V2::CAddOnLib_File']]],
+  ['deletefile',['DeleteFile',['../group___c_add_on_lib___file.html#ga83ff1a280df8f4bc766ef3398b976116',1,'AddOnLIB::V2::CAddOnLib_File']]],
   ['directory_2eh',['Directory.h',['../_directory_8h.html',1,'']]],
   ['directoryexists',['DirectoryExists',['../group___c_add_on_lib___directory.html#ga5e2010e4942df75e2929c5b13a082c1e',1,'AddOnLIB::V2::CAddOnLib_Directory']]],
   ['dirty',['Dirty',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_rendering_control.html#a7cea65505e98c9989ab92a87b2f2e99b',1,'GUILIB::V2::CAddonGUIRenderingControl']]],

@@ -20,10 +20,10 @@ var searchData=
   ['_7ecaddonguiwindow',['~CAddonGUIWindow',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a6e35058632c35b9f054713019a574179',1,'GUILIB::V2::CAddonGUIWindow']]],
   ['_7ecaddoninfotagmusic',['~CAddonInfoTagMusic',['../class_player_l_i_b_1_1_v2_1_1_c_addon_info_tag_music.html#a34f8ed0ff53d197081293452c18494dd',1,'PlayerLIB::V2::CAddonInfoTagMusic']]],
   ['_7ecaddoninfotagvideo',['~CAddonInfoTagVideo',['../class_player_l_i_b_1_1_v2_1_1_c_addon_info_tag_video.html#a115f581246c153208683122affc59708',1,'PlayerLIB::V2::CAddonInfoTagVideo']]],
+  ['_7ecaddonlib_5fvfsfile',['~CAddOnLib_VFSFile',['../group___c_add_on_lib___v_f_s_file.html#gaeaf6f1c006782129ba9afab4cbe2c5f8',1,'AddOnLIB::V2::CAddOnLib_VFSFile']]],
   ['_7ecaddonplayer',['~CAddonPlayer',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a9778d4d10ba4997a76d096f2656e4406',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['_7ecaddonplaylist',['~CAddonPlayList',['../class_player_l_i_b_1_1_v2_1_1_c_addon_play_list.html#a365fab1bc14811a754118cbfad1499b6',1,'PlayerLIB::V2::CAddonPlayList']]],
   ['_7ecaddonsoundplay',['~CAddonSoundPlay',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_sound_play.html#a5340c99de39deda0e40164d69f116d7a',1,'AddOnLIB::V2::CAddonSoundPlay']]],
   ['_7ecodecdescriptor',['~CodecDescriptor',['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html#a8a61d5619aaa653c3e35d65807bf725b',1,'AddOnLIB::V2::CodecDescriptor']]],
-  ['_7ecstreamproperties',['~CStreamProperties',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_stream_properties.html#a6f0282c6d4010650f5ed1075bd19da84',1,'PVRLIB::V2::CStreamProperties']]],
-  ['_7ecvfsfile',['~CVFSFile',['../group___c_add_on_lib___network.html#ga22b091981da61c00e0e53ceb638cbf2e',1,'AddOnLIB::V2::CVFSFile']]]
+  ['_7ecstreamproperties',['~CStreamProperties',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_stream_properties.html#a6f0282c6d4010650f5ed1075bd19da84',1,'PVRLIB::V2::CStreamProperties']]]
 ];

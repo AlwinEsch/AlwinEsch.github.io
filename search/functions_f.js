@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['read',['Read',['../group___c_add_on_lib___network.html#gae8f00c5eb703624dd35f9d5205d56343',1,'AddOnLIB::V2::CVFSFile']]],
-  ['readline',['ReadLine',['../group___c_add_on_lib___network.html#gae3d52fbedd9b4480dc45023814cb78f7',1,'AddOnLIB::V2::CVFSFile']]],
+  ['read',['Read',['../group___c_add_on_lib___v_f_s_file.html#gae8f00c5eb703624dd35f9d5205d56343',1,'AddOnLIB::V2::CAddOnLib_VFSFile']]],
+  ['readline',['ReadLine',['../group___c_add_on_lib___v_f_s_file.html#gae3d52fbedd9b4480dc45023814cb78f7',1,'AddOnLIB::V2::CAddOnLib_VFSFile']]],
   ['recording',['Recording',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib.html#a25527d9a7fb4d25460bab2f036def672',1,'PVRLIB::V2::CPVRLib']]],
   ['recordingentry',['RecordingEntry',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___transfer.html#ad676cb5682d7c7c959d91822342cc753',1,'PVRLIB::V2::CPVRLib_Transfer']]],
   ['recordingupdate',['RecordingUpdate',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___trigger.html#a64219c32345c79a130702741451c9a8e',1,'PVRLIB::V2::CPVRLib_Trigger']]],

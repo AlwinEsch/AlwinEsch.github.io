@@ -12,7 +12,7 @@ var searchData=
   ['impl_5faddon_5fplayer',['IMPL_ADDON_PLAYER',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#acac07c3ce5eca4beecdd01da4c90a723',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['impl_5faddon_5fplaylist',['IMPL_ADDON_PLAYLIST',['../class_player_l_i_b_1_1_v2_1_1_c_addon_play_list.html#af400e0e8cdee074287b8a6492bd70cf0',1,'PlayerLIB::V2::CAddonPlayList']]],
   ['impl_5faddonsoundplay',['IMPL_ADDONSOUNDPLAY',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_sound_play.html#a4a057561facdbb22e35424d8e59a59c1',1,'AddOnLIB::V2::CAddonSoundPlay']]],
-  ['impl_5ffile',['IMPL_FILE',['../group___c_add_on_lib___network.html#ga77ceccaa94b91afd262ae116e288b528',1,'AddOnLIB::V2::CVFSFile']]],
+  ['impl_5ffile',['IMPL_FILE',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___v_f_s_file.html#a77ceccaa94b91afd262ae116e288b528',1,'AddOnLIB::V2::CAddOnLib_VFSFile']]],
   ['impl_5fgui_5fbutton_5fcontrol',['IMPL_GUI_BUTTON_CONTROL',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_button_control.html#a5f336fad3f27a939c70f3b6868478e3e',1,'GUILIB::V2::CAddonGUIButtonControl']]],
   ['impl_5fgui_5fcheck_5fmark_5fcontrol',['IMPL_GUI_CHECK_MARK_CONTROL',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_check_mark_control.html#a4d3900b77d9f25addfa0fabb57323f59',1,'GUILIB::V2::CAddonGUICheckMarkControl']]],
   ['impl_5fgui_5fedit_5fcontrol',['IMPL_GUI_EDIT_CONTROL',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_edit_control.html#a5a4834b7626aa7643b42bd5eb815b7eb',1,'GUILIB::V2::CAddonGUIEditControl']]],
