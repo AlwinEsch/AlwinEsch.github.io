@@ -234,6 +234,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga59454fec88db17ab3b948686d9cb0fc3"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_add_on_lib___general.html#ga59454fec88db17ab3b948686d9cb0fc3">GetAddonInfo</a> (std::string id)</td></tr>
 <tr class="memdesc:ga59454fec88db17ab3b948686d9cb0fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of an addon property as a string.  <a href="#ga59454fec88db17ab3b948686d9cb0fc3">More...</a><br /></td></tr>
 <tr class="separator:ga59454fec88db17ab3b948686d9cb0fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga242aca0b394c978780dfbc44b112519d"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_add_on_lib___general.html#ga242aca0b394c978780dfbc44b112519d">TranslatePath</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:ga242aca0b394c978780dfbc44b112519d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the translated path.  <a href="#ga242aca0b394c978780dfbc44b112519d">More...</a><br /></td></tr>
+<tr class="separator:ga242aca0b394c978780dfbc44b112519d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaecf9afb07475f94d782c6cf6f4057317"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_add_on_lib___general.html#gaecf9afb07475f94d782c6cf6f4057317">TranslateAddonStatus</a> (<a class="el" href="addon_8api2_2definations_8h.html#a33b4234394363f14dd49fb8872f1bced">ADDON_STATUS</a> status)</td></tr>
 <tr class="memdesc:gaecf9afb07475f94d782c6cf6f4057317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translate an add-on status return code into a human-readable string.  <a href="#gaecf9afb07475f94d782c6cf6f4057317">More...</a><br /></td></tr>
 <tr class="separator:gaecf9afb07475f94d782c6cf6f4057317"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2027,6 +2030,49 @@ The length sub-specifier modifies the length of the data type. This is a chart s
 <div class="line">...</div>
 <div class="line">std::string error = <a class="code" href="group___c_add_on_lib___general.html#gaecf9afb07475f94d782c6cf6f4057317">CAddOnLib_General::TranslateAddonStatus</a>(ADDON_STATUS_PERMANENT_FAILURE);</div>
 <div class="line">fprintf(stderr, <span class="stringliteral">&quot;Error is: %s\n&quot;</span>, error.c_str());</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga242aca0b394c978780dfbc44b112519d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string TranslatePath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the translated path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>string or unicode - Path to format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A human-readable string suitable for logging</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Only useful if you are coding for both Linux and Windows. e.g. Converts 'special://masterprofile/script_data' -&gt; '/home/user/.kodi/UserData/script_data' on Linux.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_general_8h.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string path = <a class="code" href="group___c_add_on_lib___general.html#ga242aca0b394c978780dfbc44b112519d">CAddOnLib_General::TranslatePath</a>(<span class="stringliteral">&quot;special://masterprofile/script_data&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Translated path is: %s\n&quot;</span>, path.c_str());</div>
+<div class="line">...</div>
+</div><!-- fragment --><p> or </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_general_8h.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory &#39;special://temp&#39; is &#39;%s&#39;\n&quot;</span>, <a class="code" href="group___c_add_on_lib___general.html#ga242aca0b394c978780dfbc44b112519d">CAddOnLib_General::TranslatePath</a>(<span class="stringliteral">&quot;special://temp&quot;</span>).c_str());</div>
 <div class="line">...</div>
 </div><!-- fragment --> 
 </div>

@@ -25,5 +25,5 @@ var searchData=
   ['_7ecaddonsoundplay',['~CAddonSoundPlay',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_sound_play.html#a5340c99de39deda0e40164d69f116d7a',1,'AddOnLIB::V2::CAddonSoundPlay']]],
   ['_7ecodecdescriptor',['~CodecDescriptor',['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html#a8a61d5619aaa653c3e35d65807bf725b',1,'AddOnLIB::V2::CodecDescriptor']]],
   ['_7ecstreamproperties',['~CStreamProperties',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_stream_properties.html#a6f0282c6d4010650f5ed1075bd19da84',1,'PVRLIB::V2::CStreamProperties']]],
-  ['_7ecvfsfile',['~CVFSFile',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html#a22b091981da61c00e0e53ceb638cbf2e',1,'AddOnLIB::V2::CVFSFile']]]
+  ['_7ecvfsfile',['~CVFSFile',['../group___c_add_on_lib___network.html#ga22b091981da61c00e0e53ceb638cbf2e',1,'AddOnLIB::V2::CVFSFile']]]
 ];

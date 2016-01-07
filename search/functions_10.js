@@ -1,7 +1,7 @@
 var searchData=
 [
   ['scroll',['Scroll',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_text_box_control.html#a2b8c674da6e7eb58fcf75d2f812cfd5d',1,'GUILIB::V2::CAddonGUITextBoxControl']]],
-  ['seek',['Seek',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_file.html#a48d08591724952c3d51d0823caf17720',1,'AddOnLIB::V2::CVFSFile']]],
+  ['seek',['Seek',['../group___c_add_on_lib___network.html#ga48d08591724952c3d51d0823caf17720',1,'AddOnLIB::V2::CVFSFile']]],
   ['seektime',['SeekTime',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#aa7bab6149b942aabd374567e858dd6ad',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['select',['Select',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_list_item.html#abac9385c6cd74aea9e1cfb420ff9e7b3',1,'GUILIB::V2::CAddonGUIListItem']]],
   ['sendtexttoactivekeyboard',['SendTextToActiveKeyboard',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_keyboard.html#a3d85e8d21bc1fbdf8f946d3c7755005c',1,'GUILIB::V2::CAddonGUIDialogKeyboard']]],
@@ -84,6 +84,6 @@ var searchData=
   ['shuffle',['Shuffle',['../class_player_l_i_b_1_1_v2_1_1_c_addon_play_list.html#a9d1841bc5f559c6981b78b895d446033',1,'PlayerLIB::V2::CAddonPlayList']]],
   ['size',['Size',['../class_add_on_l_i_b_1_1_v2_1_1_c_v_f_s_dir_entry.html#ac0ba4f4c78dcb35605e645ee75198b5a',1,'AddOnLIB::V2::CVFSDirEntry']]],
   ['startserver',['StartServer',['../group___c_add_on_lib___general.html#ga7dde8afb7cb40c1cb542a13557282f00',1,'AddOnLIB::V2::CAddOnLib_General']]],
-  ['statfile',['StatFile',['../class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___file.html#a779d626c053ee2e3f9329d7f05e3d7d2',1,'AddOnLIB::V2::CAddOnLib_File']]],
+  ['statfile',['StatFile',['../group___c_add_on_lib___network.html#ga779d626c053ee2e3f9329d7f05e3d7d2',1,'AddOnLIB::V2::CAddOnLib_File']]],
   ['stop',['Stop',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_sound_play.html#a17a237457e57625296e6b24feb19c60a',1,'AddOnLIB::V2::CAddonSoundPlay::Stop()'],['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_rendering_control.html#af6f113a64b92a63894b285b4f2a2c3a5',1,'GUILIB::V2::CAddonGUIRenderingControl::Stop()'],['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html#a17a237457e57625296e6b24feb19c60a',1,'PlayerLIB::V2::CAddonPlayer::Stop()']]]
 ];

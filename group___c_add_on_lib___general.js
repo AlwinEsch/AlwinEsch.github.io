@@ -37,5 +37,6 @@ var group___c_add_on_lib___general =
     [ "StartServer", "group___c_add_on_lib___general.html#ga7dde8afb7cb40c1cb542a13557282f00", null ],
     [ "ToggleMute", "group___c_add_on_lib___general.html#gaa959a7781167f016c271bf1a8c37a681", null ],
     [ "TranslateAddonStatus", "group___c_add_on_lib___general.html#gaecf9afb07475f94d782c6cf6f4057317", null ],
+    [ "TranslatePath", "group___c_add_on_lib___general.html#ga242aca0b394c978780dfbc44b112519d", null ],
     [ "UnknownToUTF8", "group___c_add_on_lib___general.html#gad4d390029ebd9fabec4974c68e5dc6e4", null ]
 ];
