@@ -1,7 +1,7 @@
 var searchData=
 [
   ['kodi_5faddon_5flibrary',['KODI_ADDON_LIBRARY',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib.html#a0c8b9ce175d01a9b10ce484f86056fed',1,'AddOnLIB::V2::CAddonLib']]],
-  ['kodi_5faudioengine_5flibrary',['KODI_AUDIOENGINE_LIBRARY',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_audio_engine_lib.html#a3d5db3884cc2c788a91a6724e97557f3',1,'AudioEngineLIB::V2::CAudioEngineLib']]],
+  ['kodi_5faudioengine_5flibrary',['KODI_AUDIOENGINE_LIBRARY',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_addon_a_e.html#a3d5db3884cc2c788a91a6724e97557f3',1,'AudioEngineLIB::V2::CAddonAE']]],
   ['kodi_5fcodec',['kodi_codec',['../structkodi__codec.html',1,'']]],
   ['kodi_5fcodec_5fid',['kodi_codec_id',['../addon_8api2_2definations_8h.html#a5f36d5652cd9f943a40f0a2c4495a74a',1,'definations.h']]],
   ['kodi_5fcodec_5ftype',['kodi_codec_type',['../addon_8api2_2definations_8h.html#adb311b9a66ccf6cbc77137e0af86be2a',1,'definations.h']]],
@@ -20,6 +20,6 @@ var searchData=
   ['kodi_5fplayer_5flibrary',['KODI_PLAYER_LIBRARY',['../class_player_l_i_b_1_1_v2_1_1_c_player_lib.html#a4bce1dde3673c4b78c782a9f5b3a015b',1,'PlayerLIB::V2::CPlayerLib']]],
   ['kodi_5fpvr_5flibrary',['KODI_PVR_LIBRARY',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib.html#a189371e5d5b4f2016890b37d497b1674',1,'PVRLIB::V2::CPVRLib']]],
   ['kodi_5fversion',['kodi_version',['../structkodi__version.html',1,'']]],
-  ['kodiquit',['KodiQuit',['../group___c_add_on_lib___general.html#ga92e5be48408124cf9f6f18744abd90d4',1,'AddOnLIB::V2::CAddOnLib_General']]],
-  ['kodiversion',['KodiVersion',['../group___c_add_on_lib___general.html#ga399f77b85f988602c4f1d4c98aa18528',1,'AddOnLIB::V2::CAddOnLib_General']]]
+  ['kodiquit',['KodiQuit',['../group___c_addon_lib___general.html#ga92e5be48408124cf9f6f18744abd90d4',1,'AddOnLIB::V2::CAddonLib_General']]],
+  ['kodiversion',['KodiVersion',['../group___c_addon_lib___general.html#ga399f77b85f988602c4f1d4c98aa18528',1,'AddOnLIB::V2::CAddonLib_General']]]
 ];

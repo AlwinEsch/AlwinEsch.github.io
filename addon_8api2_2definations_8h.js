@@ -1,7 +1,7 @@
 var addon_8api2_2definations_8h =
 [
-    [ "kodi_version", "structkodi__version.html", "structkodi__version" ],
     [ "kodi_codec", "structkodi__codec.html", "structkodi__codec" ],
+    [ "kodi_version", "structkodi__version.html", "structkodi__version" ],
     [ "__cdecl", "addon_8api2_2definations_8h.html#a238347d7669f8f1e9c83bfe63a2730c4", null ],
     [ "__declspec", "addon_8api2_2definations_8h.html#ae461537a92f5e7de5f0bec1ff421f34f", null ],
     [ "__stat64", "addon_8api2_2definations_8h.html#a4d284b7e68f051cef7ba92aa96dcfc50", null ],

@@ -101,23 +101,92 @@ $(document).ready(function(){initNavTree('group___add_on_l_i_b.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
 <div class="title">AddOnLIB</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Directory functions.  
-<a href="#details">More...</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p> 
+<h3><span  style="text-decoration: underline;"><span  style="font-style: italic;"><span
+           style="color: rgb(102, 102, 102);">
+Primary add-on helper library with general functions
+           </span></span></span></h3>
+ </p>
+<p>Below is a code example do show what must be done on add-on base function to become support for library:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_addon_lib_8h.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_general_8h.html">kodi/addon.api2/General.h</a>&gt;</span>  <span class="comment">// Needed for CAddOnLib_General::Log</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
+<div class="line">...</div>
+<div class="line"></div>
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (!hdl || !props)</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="group___c_addon_lib.html#gaa0bf67ad4ff0b67b500e4070f873c337">CAddonLib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Example lib call</span></div>
+<div class="line">  CAddOnLib_General::Log(<a class="code" href="addon_8api2_2definations_8h.html#af8526ffb1ee2a785489ac05b6e49d357a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My add-on creation done&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="group___c_addon_lib.html#ga5940787dcdcdb8aa995a07106917489f">CAddonLib::UnRegisterMe</a>();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>To use the add-on on Windows must be the <a class="el" href="dlfcn-win32_8cpp.html">dlfcn-win32.cpp</a> inserted on them. Is required to have translation functions from Windows to dlfcn, requested for access to Kodi! </dd></dl>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___directory.html">CAddOnLib_Directory</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group___c_addon_lib"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_lib.html">CAddonLib</a></td></tr>
+<tr class="memdesc:group___c_addon_lib"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Addon basic library functions</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_addon_lib___codec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_lib___codec.html">CAddonLib_Codec</a></td></tr>
+<tr class="memdesc:group___c_addon_lib___codec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Demux packet handle and codec identification class</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_addon_lib___directory"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_lib___directory.html">CAddonLib_Directory</a></td></tr>
+<tr class="memdesc:group___c_addon_lib___directory"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Directory system Programming</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_addon_lib___file"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_lib___file.html">CAddonLib_File</a></td></tr>
+<tr class="memdesc:group___c_addon_lib___file"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>File system access</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_addon_lib___general"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_lib___general.html">CAddonLib_General</a></td></tr>
+<tr class="memdesc:group___c_addon_lib___general"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>General functions</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_addon_lib___network"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_lib___network.html">CAddonLib_Network</a></td></tr>
+<tr class="memdesc:group___c_addon_lib___network"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Network functions</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_addon_lib___sound_play"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_lib___sound_play.html">CAddonLib_SoundPlay</a></td></tr>
+<tr class="memdesc:group___c_addon_lib___sound_play"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Background sound playback</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_addon_lib___v_f_s_dir_entry"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_lib___v_f_s_dir_entry.html">CAddonLib_VFSDirEntry</a></td></tr>
+<tr class="memdesc:group___c_addon_lib___v_f_s_dir_entry"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system directory entry</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_addon_lib___v_f_s_file"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_lib___v_f_s_file.html">CAddonLib_VFSFile</a></td></tr>
+<tr class="memdesc:group___c_addon_lib___v_f_s_file"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system control</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_addon_lib___v_f_s_property"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_lib___v_f_s_property.html">CAddonLib_VFSProperty</a></td></tr>
+<tr class="memdesc:group___c_addon_lib___v_f_s_property"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system entry property</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___c_addon_lib___v_f_s_utils"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_lib___v_f_s_utils.html">CAddonLib_VFSUtils</a></td></tr>
+<tr class="memdesc:group___c_addon_lib___v_f_s_utils"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system utilities</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group___codec_descriptor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___codec_descriptor.html">CodecDescriptor</a></td></tr>
+<tr class="memdesc:group___codec_descriptor"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Codec type name converter</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__settings__xml"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__settings__xml.html">Settings_xml</a></td></tr>
+<tr class="memdesc:group__settings__xml"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Add-on settings.xml description</b> <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Directory functions. </p>
-<p>The Directory module offers functions that allow you to control it. </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

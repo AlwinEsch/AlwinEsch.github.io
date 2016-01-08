@@ -1,6 +1,5 @@
 var group___c_add_on_lib___file =
 [
-    [ "CAddOnLib_File", "class_add_on_l_i_b_1_1_v2_1_1_c_add_on_lib___file.html", null ],
     [ "DeleteFile", "group___c_add_on_lib___file.html#ga83ff1a280df8f4bc766ef3398b976116", null ],
     [ "FileExists", "group___c_add_on_lib___file.html#ga4f923aa0fd0b7e4cc02c29f580b79190", null ],
     [ "GetChunkSize", "group___c_add_on_lib___file.html#gaf6e6b8b85c14bf77587175c446b04cc9", null ],

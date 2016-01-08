@@ -2,7 +2,6 @@ var searchData=
 [
   ['general_2eh',['General.h',['../_general_8h.html',1,'']]],
   ['guicontrolbutton_2eh',['GUIControlButton.h',['../_g_u_i_control_button_8h.html',1,'']]],
-  ['guicontrolcheckmark_2eh',['GUIControlCheckMark.h',['../_g_u_i_control_check_mark_8h.html',1,'']]],
   ['guicontroledit_2eh',['GUIControlEdit.h',['../_g_u_i_control_edit_8h.html',1,'']]],
   ['guicontrolfadelabel_2eh',['GUIControlFadeLabel.h',['../_g_u_i_control_fade_label_8h.html',1,'']]],
   ['guicontrolimage_2eh',['GUIControlImage.h',['../_g_u_i_control_image_8h.html',1,'']]],
@@ -16,7 +15,6 @@ var searchData=
   ['guicontroltextbox_2eh',['GUIControlTextBox.h',['../_g_u_i_control_text_box_8h.html',1,'']]],
   ['guidialogextendedprogress_2eh',['GUIDialogExtendedProgress.h',['../_g_u_i_dialog_extended_progress_8h.html',1,'']]],
   ['guidialogfilebrowser_2eh',['GUIDialogFileBrowser.h',['../_g_u_i_dialog_file_browser_8h.html',1,'']]],
-  ['guidialoggamepad_2eh',['GUIDialogGamepad.h',['../_g_u_i_dialog_gamepad_8h.html',1,'']]],
   ['guidialogkeyboard_2eh',['GUIDialogKeyboard.h',['../_g_u_i_dialog_keyboard_8h.html',1,'']]],
   ['guidialognumeric_2eh',['GUIDialogNumeric.h',['../_g_u_i_dialog_numeric_8h.html',1,'']]],
   ['guidialogok_2eh',['GUIDialogOK.h',['../_g_u_i_dialog_o_k_8h.html',1,'']]],
