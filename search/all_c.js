@@ -10,7 +10,7 @@ var searchData=
   ['m_5fsamplerate',['m_sampleRate',['../struct_audio_engine_format.html#a046d570c56fd2ae9b813340816ebfdec',1,'AudioEngineFormat']]],
   ['major',['major',['../structkodi__version.html#ac8947941479c38403a09c14a60b03f01',1,'kodi_version']]],
   ['markdirtyregion',['MarkDirtyRegion',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a9078432f423cb2f60ce6ac47e46616b8',1,'GUILIB::V2::CAddonGUIWindow']]],
-  ['markfinished',['MarkFinished',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_extended_progress.html#a40af1bcedea1f61fde8cd5e70e416473',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
+  ['markfinished',['MarkFinished',['../group___c_addon_g_u_i_dialog_extended_progress.html#ga40af1bcedea1f61fde8cd5e70e416473',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
   ['max_5fobjects',['MAX_OBJECTS',['../dlfcn-win32_8cpp.html#acdc7844fbd4d45737d4aa56834d37829',1,'dlfcn-win32.cpp']]],
   ['minor',['minor',['../structkodi__version.html#aec7b96885baf2e6f10efbdef9d935a0b',1,'kodi_version']]]
 ];

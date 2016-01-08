@@ -109,7 +109,577 @@ $(document).ready(function(){initNavTree('group___c_addon_g_u_i_dialog_keyboard.
 <p>The functions listed below have to be permitted by the user for the representation of a keyboard around an input.</p>
 <p>The class supports several kinds, from an easy text choice up to the passport Word production and their confirmation for add-on.</p>
 <p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="_g_u_i_dialog_keyboard_8h.html">#include &lt;kodi/gui.api2/GUIDialogKeyboard.h&gt;</a> be included to enjoy it. </p>
+<p>It has the header <a class="el" href="_g_u_i_dialog_keyboard_8h.html">#include &lt;kodi/gui.api2/GUIDialogKeyboard.h&gt;</a> be included to enjoy it.</p>
+<div class="image">
+<img src="help.GUIDialogKeyboard.png" alt="help.GUIDialogKeyboard.png"/>
+</div>
+ <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga1ec4a068299863443fe39fcf4969e0df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool IsKeyboardActivated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check for visible keyboard on GUI. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if keyboard present, false if not present </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3d85e8d21bc1fbdf8f946d3c7755005c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool SendTextToActiveKeyboard </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>closeKeyboard</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send a text to a visible keyboard. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramname">closeKeyboard</td><td>The open dialog is if also closed on 'true'. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful done, false if unsuccessful or keyboard not present </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa57c673c6a2d27bc9114ca557e9c5852"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ShowAndGetFilter </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>searching</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shows a filter related keyboard. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramname">searchingUse</td><td>dialog for search and send our search message in safe way (only the active window needs it) header name if true is "Enter search string" header name if false is "Enter value" </td></tr>
+    <tr><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga83b1e91927a105607762c38ea9e1dcb7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ShowAndGetInput </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allowEmptyResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hiddenInput</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Show keyboard with initial value <code>text</code> and replace with result string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
+    <tr><td class="paramname">allowEmptyResult</td><td>Whether a blank password is valid or not. </td></tr>
+    <tr><td class="paramname">hiddenInput</td><td>The inserted input is not shown as text. </td></tr>
+    <tr><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">   #include &lt;<a class="code" href="_g_u_i_dialog_keyboard_8h.html">kodi/gui.api2/GUIDialogKeyboard.h</a>&gt;</span></div>
+<div class="line">  </div>
+<div class="line">   <span class="comment">/*</span></div>
+<div class="line"><span class="comment">    * The example shows the display of keyboard call dialog at Kodi from the add-on.</span></div>
+<div class="line"><span class="comment">    * Below all values are set, however, can last two (hidden input = false and autoCloseMs = 0)</span></div>
+<div class="line"><span class="comment">    * to be released if not needed.</span></div>
+<div class="line"><span class="comment">    */</span></div>
+<div class="line">   std::string text = <span class="stringliteral">&quot;Please change me to them want you want&quot;</span>; <span class="comment">/*&lt; It can be leaved empty or a </span></div>
+<div class="line"><span class="comment">*                                                                   entry text added */</span></div>
+<div class="line">   <span class="keywordtype">bool</span> bRet = <a class="code" href="group___c_addon_g_u_i_dialog_keyboard.html#ga83b1e91927a105607762c38ea9e1dcb7">CAddonGUIDialogKeyboard::ShowAndGetInput</a>(text,</div>
+<div class="line">                                                        <span class="stringliteral">&quot;Demonstration text entry&quot;</span>,</div>
+<div class="line">                                                        <span class="keyword">true</span>,</div>
+<div class="line">                                                        <span class="keyword">false</span>,</div>
+<div class="line">                                                        0);</div>
+<div class="line">   fprintf(stderr, <span class="stringliteral">&quot;Written keyboard input is : %s and was %s\n&quot;</span>,</div>
+<div class="line">                     text.c_str(), bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gac455ca6ff288c07edf7de7d5a0f28d80"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ShowAndGetInput </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allowEmptyResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The example shows the display of keyboard call dialog at Kodi from the add-on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramname">hiddenInput</td><td>The inserted input is not shown as text. </td></tr>
+    <tr><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1b75480e0428c2eb657e9e3df1c5f6b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ShowAndGetNewPassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>newPassword</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allowEmptyResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shows keyboard and prompts for a password. Differs from <code><a class="el" href="group___c_addon_g_u_i_dialog_keyboard.html#gaf03bd1a86951ae9a1b5f91a901957e11" title="Show keyboard twice to get and confirm a user-entered password string. ">ShowAndVerifyNewPassword()</a></code> in that no second verification. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newPasswordO</td><td>verwritten with user input if return=true. </td></tr>
+    <tr><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
+    <tr><td class="paramname">allowEmptyResult</td><td>Whether a blank password is valid or not. </td></tr>
+    <tr><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga74b411283e562425ab3f6d2c01d1f229"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ShowAndGetNewPassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>newPassword</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shows keyboard and prompts for a password. Differs from <code><a class="el" href="group___c_addon_g_u_i_dialog_keyboard.html#gaf03bd1a86951ae9a1b5f91a901957e11" title="Show keyboard twice to get and confirm a user-entered password string. ">ShowAndVerifyNewPassword()</a></code> in that no second verification. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newPassword</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf03bd1a86951ae9a1b5f91a901957e11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ShowAndVerifyNewPassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>newPassword</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allowEmptyResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Show keyboard twice to get and confirm a user-entered password string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newPassword</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
+    <tr><td class="paramname">allowEmptyResult</td><td></td></tr>
+    <tr><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_general_8h.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_g_u_i_dialog_keyboard_8h.html">kodi/gui.api2/GUIDialogKeyboard.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * The example below shows the complete use of keyboard dialog for password</span></div>
+<div class="line"><span class="comment"> * check. If only one check from add-on needed can be function with retries</span></div>
+<div class="line"><span class="comment"> * set to &#39;0&#39; called alone.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * The use of MD5 translated password is always required for the check on Kodi!</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Get from Kodi&#39;s global settings the maximum allowed retries for passwords.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keywordtype">int</span> maxretries = 0;</div>
+<div class="line"><span class="keywordflow">if</span> (CAddonLib_General::GetSettingInt(<span class="stringliteral">&quot;masterlock.maxretries&quot;</span>, maxretries, <span class="keyword">true</span>))</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">   * Password names need to be send as md5 sum to kodi.</span></div>
+<div class="line"><span class="comment">   */</span></div>
+<div class="line">  std::string password;</div>
+<div class="line">  CAddonLib_General::GetMD5(<span class="stringliteral">&quot;kodi&quot;</span>, password);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">   * To the loop about password checks.</span></div>
+<div class="line"><span class="comment">   */</span></div>
+<div class="line">  <span class="keywordtype">int</span> ret;</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; maxretries; i++)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Ask the user about the password.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    ret = <a class="code" href="group___c_addon_g_u_i_dialog_keyboard.html#ga48bdcccb89234aad454a6be1cf219928">CAddonGUIDialogKeyboard::ShowAndVerifyPassword</a>(password, <span class="stringliteral">&quot;Demo password call for PW &#39;kodi&#39;&quot;</span>, i, 0);</div>
+<div class="line">    <span class="keywordflow">if</span> (ret == 0)</div>
+<div class="line">    {</div>
+<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Password successfull confirmed after &#39;%i&#39; tries\n&quot;</span>, i+1);</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ret &lt; 0)</div>
+<div class="line">    {</div>
+<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Canceled editing on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="comment">/* if (ret &gt; 0) */</span></div>
+<div class="line">    {</div>
+<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Wrong password entered on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Requested global setting value &#39;masterlock.maxretries&#39; not present!&quot;</span>);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gab0b3eb13c8faa5d58e8e7eb59b7c50a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ShowAndVerifyNewPassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>newPassword</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Show keyboard twice to get and confirm a user-entered password string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newPasswor</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga48bdcccb89234aad454a6be1cf219928"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ShowAndVerifyPassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iRetries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Show keyboard and verify user input against <code>password</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">password</td><td>Value to compare against user input. </td></tr>
+    <tr><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
+    <tr><td class="paramname">iRetries</td><td>If greater than 0, shows "Incorrect password, %d retries left" on dialog line 2, else line 2 is blank. </td></tr>
+    <tr><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if successful display and user input. 1 if unsuccessful input. -1 if no user input or canceled editing. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

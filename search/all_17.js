@@ -13,7 +13,7 @@ var searchData=
   ['_7ecaddonguicontrolslider',['~CAddonGUIControlSlider',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_slider.html#a29c8ebb717db0bcba0a1e7227720366b',1,'GUILIB::V2::CAddonGUIControlSlider']]],
   ['_7ecaddonguicontrolspin',['~CAddonGUIControlSpin',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_spin.html#a9a88528e79119f52c1f7808f78ded9be',1,'GUILIB::V2::CAddonGUIControlSpin']]],
   ['_7ecaddonguicontroltextbox',['~CAddonGUIControlTextBox',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_text_box.html#a671686d3890667392291118ca36b3e41',1,'GUILIB::V2::CAddonGUIControlTextBox']]],
-  ['_7ecaddonguidialogextendedprogress',['~CAddonGUIDialogExtendedProgress',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_extended_progress.html#a86033f373ed6159d52feb585bab2dfda',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
+  ['_7ecaddonguidialogextendedprogress',['~CAddonGUIDialogExtendedProgress',['../group___c_addon_g_u_i_dialog_extended_progress.html#ga86033f373ed6159d52feb585bab2dfda',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
   ['_7ecaddonguidialogprogress',['~CAddonGUIDialogProgress',['../group___c_addon_g_u_i_dialog_progress.html#ga120fc408bff359c7c29a02551c00e9a0',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
   ['_7ecaddonguilistitem',['~CAddonGUIListItem',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_list_item.html#a0ddc3ca294158538edab6e8dbbad6a98',1,'GUILIB::V2::CAddonGUIListItem']]],
   ['_7ecaddonguiwindow',['~CAddonGUIWindow',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a6e35058632c35b9f054713019a574179',1,'GUILIB::V2::CAddonGUIWindow']]],

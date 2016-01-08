@@ -168,8 +168,26 @@ $(document).ready(function(){initNavTree('group___c_addon_g_u_i_dialog_file_brow
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled.</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_g_u_i_dialog_file_browser_8h.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Example show directory selection dialog with on &#39;share&#39; (first value)</span></div>
+<div class="line"><span class="comment"> * defined directory types.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * If this becomes leaved empty and &#39;directory&#39; is empty goes it to the</span></div>
+<div class="line"><span class="comment"> * base path of the hard disk.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Also can be with path written to &#39;directory&#39; before the dialog forced</span></div>
+<div class="line"><span class="comment"> * to a start place.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line">std::string directory;</div>
+<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="group___c_addon_g_u_i_dialog_file_browser.html#gab1c3767a978a71751a8ea550d449eed6">CAddonGUIDialogFileBrowser::ShowAndGetDirectory</a>(<span class="stringliteral">&quot;local|network|removable&quot;</span>,</div>
+<div class="line">                                                   <span class="stringliteral">&quot;Test directory selection&quot;</span>,</div>
+<div class="line">                                                   directory,</div>
+<div class="line">                                                   <span class="keyword">false</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Selected directory is : %s and was %s\n&quot;</span>, directory.c_str(), ret ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="ga5924085e93999a96dc9fc5a6c5f9362b"></a>
