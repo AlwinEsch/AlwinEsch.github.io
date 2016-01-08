@@ -140,108 +140,67 @@ $(document).ready(function(){initNavTree('_g_u_i_dialog_numeric_8h_source.html',
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>V2</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html">   48</a></span>&#160;  <span class="keyword">class </span><a class="code" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html">CAddonGUIDialogNumeric</a></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">     * @brief Show numeric keypad twice to get and confirm a user-entered password string.</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">     * @param strNewPassword String to preload into the keyboard accumulator. Overwritten with user input if return=true.</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">     * @return true if successful display and user input entry/re-entry. false if unsuccessful display, no user input, or canceled editing.</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a85ca517533d779b26944d6fb74fe0abe">ShowAndVerifyNewPassword</a>(</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      std::string&amp;            strNewPassword);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">     * @brief Show numeric keypad and verify user input against strPassword.</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">     * @param strPassword Value to compare against user input.</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">     * @param strHeading String shown on dialog title. Converts to localized string if contains a positive integer.</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">     * @param iRetries If greater than 0, shows &quot;Incorrect password, %d retries left&quot; on dialog line 2, else line 2 is blank.</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">     * @return 0 if successful display and user input. 1 if unsuccessful input. -1 if no user input or canceled editing.</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a28ed908212d6a38156014d5ccc5a7dc7">ShowAndVerifyPassword</a>(</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      std::string&amp;            strPassword,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordtype">int</span>                     iRetries);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">     * @brief Show numeric keypad and verify user input against strToVerify.</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">     * @param strToVerify Value to compare against user input.</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">     * @param strHeading String shown on dialog title.</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">     * @param bVerifyInput If set as true we verify the users input versus strToVerify.</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">     * @return true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a3028013da19a00279961a45d26dcf832">ShowAndVerifyInput</a>(</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      std::string&amp;            strToVerify,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordtype">bool</span>                    bVerifyInput);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">     * @brief Show numeric keypad twice to get time.</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">     * @param time Overwritten with user input if return=true and time inserted.</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">     * @param strHeading String shown on dialog title.</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">     * @return true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a08a9c6abb71eb5a380213e9528b6aecf">ShowAndGetTime</a>(</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      tm&amp;                     time,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">     * @brief Show numeric keypad twice to get date.</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">     * @param date Overwritten with user input if return=true and date inserted.</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">     * @param strHeading String shown on dialog title.</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">     * @return true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a37d6caf6f507938f599915d93eddd596">ShowAndGetDate</a>(</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      tm&amp;                     date,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">     * @brief Show numeric keypad twice to get IP address.</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">     * @param strIPAddress Overwritten with user input if return=true and IP address inserted.</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">     * @param strHeading String shown on dialog title.</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">     * @return true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a1fd8ee824dbbbc1d222fd67583f28614">ShowAndGetIPAddress</a>(</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      std::string&amp;            strIPAddress,</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">     * @brief Show numeric keypad twice to get a number.</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">     * @param strInput Overwritten with user input if return=true.</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">     * @param strHeading String shown on dialog title.</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">     * @param iAutoCloseTimeoutMs To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely.</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">     * @return true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#ab73e260650434df59844c3a2c8b1ba2d">ShowAndGetNumber</a>(</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      std::string&amp;            strInput,</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading,</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>            iAutoCloseTimeoutMs = 0);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">     * @brief Show numeric keypad twice to get seconds.</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">     * @param strTime Overwritten with user input if return=true and time in seconds inserted.</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">     * @param strHeading String shown on dialog title.</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">     * @return true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">     */</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a664586418f4cb12a25a15dcd5effff02">ShowAndGetSeconds</a>(</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      std::string&amp;            strTime,</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  };</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}; <span class="comment">/* namespace V2 */</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}; <span class="comment">/* namespace GUILIB */</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_DialogNumericTail.h&quot;</span></div>
-<div class="ttc" id="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric_html"><div class="ttname"><a href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html">GUILIB::V2::CAddonGUIDialogNumeric</a></div><div class="ttdef"><b>Definition:</b> GUIDialogNumeric.h:48</div></div>
-<div class="ttc" id="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric_html_a1fd8ee824dbbbc1d222fd67583f28614"><div class="ttname"><a href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a1fd8ee824dbbbc1d222fd67583f28614">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndGetIPAddress</a></div><div class="ttdeci">static bool ShowAndGetIPAddress(std::string &amp;strIPAddress, const std::string &amp;strHeading)</div></div>
-<div class="ttc" id="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric_html_a08a9c6abb71eb5a380213e9528b6aecf"><div class="ttname"><a href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a08a9c6abb71eb5a380213e9528b6aecf">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndGetTime</a></div><div class="ttdeci">static bool ShowAndGetTime(tm &amp;time, const std::string &amp;strHeading)</div></div>
-<div class="ttc" id="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric_html_a3028013da19a00279961a45d26dcf832"><div class="ttname"><a href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a3028013da19a00279961a45d26dcf832">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndVerifyInput</a></div><div class="ttdeci">static bool ShowAndVerifyInput(std::string &amp;strToVerify, const std::string &amp;strHeading, bool bVerifyInput)</div></div>
-<div class="ttc" id="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric_html_a37d6caf6f507938f599915d93eddd596"><div class="ttname"><a href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a37d6caf6f507938f599915d93eddd596">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndGetDate</a></div><div class="ttdeci">static bool ShowAndGetDate(tm &amp;date, const std::string &amp;strHeading)</div></div>
-<div class="ttc" id="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric_html_ab73e260650434df59844c3a2c8b1ba2d"><div class="ttname"><a href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#ab73e260650434df59844c3a2c8b1ba2d">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndGetNumber</a></div><div class="ttdeci">static bool ShowAndGetNumber(std::string &amp;strInput, const std::string &amp;strHeading, unsigned int iAutoCloseTimeoutMs=0)</div></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html">   50</a></span>&#160;  <span class="keyword">class </span><a class="code" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html">CAddonGUIDialogNumeric</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">     * \ingroup CAddonGUIDialogNumeric</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">     * @brief Use dialog to get numeric new password</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">     *</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">     * @param strNewPassword String to preload into the keyboard accumulator.</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">     *        Overwritten with user input if return=true.</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">     * @return true if successful display and user input entry/re-entry.</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">     *         false if unsuccessful display, no user input, or canceled editing.</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">     */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a85ca517533d779b26944d6fb74fe0abe">ShowAndVerifyNewPassword</a>(</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      std::string&amp;            strNewPassword);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="group___c_addon_g_u_i_dialog_numeric.html#ga28ed908212d6a38156014d5ccc5a7dc7">ShowAndVerifyPassword</a>(</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      std::string&amp;            strPassword,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading,</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordtype">int</span>                     iRetries);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="group___c_addon_g_u_i_dialog_numeric.html#ga3028013da19a00279961a45d26dcf832">ShowAndVerifyInput</a>(</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      std::string&amp;            strToVerify,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading,</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="keywordtype">bool</span>                    bVerifyInput);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="group___c_addon_g_u_i_dialog_numeric.html#ga08a9c6abb71eb5a380213e9528b6aecf">ShowAndGetTime</a>(</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      tm&amp;                     time,</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="group___c_addon_g_u_i_dialog_numeric.html#ga37d6caf6f507938f599915d93eddd596">ShowAndGetDate</a>(</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      tm&amp;                     date,</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="group___c_addon_g_u_i_dialog_numeric.html#ga1fd8ee824dbbbc1d222fd67583f28614">ShowAndGetIPAddress</a>(</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      std::string&amp;            strIPAddress,</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="group___c_addon_g_u_i_dialog_numeric.html#gab73e260650434df59844c3a2c8b1ba2d">ShowAndGetNumber</a>(</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      std::string&amp;            strInput,</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading,</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>            iAutoCloseTimeoutMs = 0);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="group___c_addon_g_u_i_dialog_numeric.html#ga664586418f4cb12a25a15dcd5effff02">ShowAndGetSeconds</a>(</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      std::string&amp;            strTime,</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keyword">const</span> std::string&amp;      strHeading);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  };</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;}; <span class="comment">/* namespace V2 */</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}; <span class="comment">/* namespace GUILIB */</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_DialogNumericTail.h&quot;</span></div>
+<div class="ttc" id="group___c_addon_g_u_i_dialog_numeric_html_ga3028013da19a00279961a45d26dcf832"><div class="ttname"><a href="group___c_addon_g_u_i_dialog_numeric.html#ga3028013da19a00279961a45d26dcf832">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndVerifyInput</a></div><div class="ttdeci">static bool ShowAndVerifyInput(std::string &amp;strToVerify, const std::string &amp;strHeading, bool bVerifyInput)</div><div class="ttdoc">Use dialog to verify numeric password. </div></div>
+<div class="ttc" id="group___c_addon_g_u_i_dialog_numeric_html_ga37d6caf6f507938f599915d93eddd596"><div class="ttname"><a href="group___c_addon_g_u_i_dialog_numeric.html#ga37d6caf6f507938f599915d93eddd596">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndGetDate</a></div><div class="ttdeci">static bool ShowAndGetDate(tm &amp;date, const std::string &amp;strHeading)</div><div class="ttdoc">Use dialog to get date value. </div></div>
+<div class="ttc" id="group___c_addon_g_u_i_dialog_numeric_html_gab73e260650434df59844c3a2c8b1ba2d"><div class="ttname"><a href="group___c_addon_g_u_i_dialog_numeric.html#gab73e260650434df59844c3a2c8b1ba2d">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndGetNumber</a></div><div class="ttdeci">static bool ShowAndGetNumber(std::string &amp;strInput, const std::string &amp;strHeading, unsigned int iAutoCloseTimeoutMs=0)</div><div class="ttdoc">Use dialog to get normal number. </div></div>
+<div class="ttc" id="group___c_addon_g_u_i_dialog_numeric_html_ga664586418f4cb12a25a15dcd5effff02"><div class="ttname"><a href="group___c_addon_g_u_i_dialog_numeric.html#ga664586418f4cb12a25a15dcd5effff02">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndGetSeconds</a></div><div class="ttdeci">static bool ShowAndGetSeconds(std::string &amp;strTime, const std::string &amp;strHeading)</div><div class="ttdoc">Show numeric keypad to get seconds. </div></div>
+<div class="ttc" id="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric_html"><div class="ttname"><a href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html">GUILIB::V2::CAddonGUIDialogNumeric</a></div><div class="ttdef"><b>Definition:</b> GUIDialogNumeric.h:50</div></div>
+<div class="ttc" id="group___c_addon_g_u_i_dialog_numeric_html_ga08a9c6abb71eb5a380213e9528b6aecf"><div class="ttname"><a href="group___c_addon_g_u_i_dialog_numeric.html#ga08a9c6abb71eb5a380213e9528b6aecf">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndGetTime</a></div><div class="ttdeci">static bool ShowAndGetTime(tm &amp;time, const std::string &amp;strHeading)</div><div class="ttdoc">Use dialog to get time value. </div></div>
+<div class="ttc" id="group___c_addon_g_u_i_dialog_numeric_html_ga1fd8ee824dbbbc1d222fd67583f28614"><div class="ttname"><a href="group___c_addon_g_u_i_dialog_numeric.html#ga1fd8ee824dbbbc1d222fd67583f28614">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndGetIPAddress</a></div><div class="ttdeci">static bool ShowAndGetIPAddress(std::string &amp;strIPAddress, const std::string &amp;strHeading)</div><div class="ttdoc">Use dialog to get a IP. </div></div>
 <div class="ttc" id="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric_html_a85ca517533d779b26944d6fb74fe0abe"><div class="ttname"><a href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a85ca517533d779b26944d6fb74fe0abe">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndVerifyNewPassword</a></div><div class="ttdeci">static bool ShowAndVerifyNewPassword(std::string &amp;strNewPassword)</div></div>
 <div class="ttc" id="namespace_g_u_i_l_i_b_html"><div class="ttname"><a href="namespace_g_u_i_l_i_b.html">GUILIB</a></div><div class="ttdef"><b>Definition:</b> GUIControlButton.h:26</div></div>
 <div class="ttc" id="gui_8api2_2definations_8h_html"><div class="ttname"><a href="gui_8api2_2definations_8h.html">definations.h</a></div></div>
-<div class="ttc" id="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric_html_a664586418f4cb12a25a15dcd5effff02"><div class="ttname"><a href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a664586418f4cb12a25a15dcd5effff02">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndGetSeconds</a></div><div class="ttdeci">static bool ShowAndGetSeconds(std::string &amp;strTime, const std::string &amp;strHeading)</div></div>
-<div class="ttc" id="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric_html_a28ed908212d6a38156014d5ccc5a7dc7"><div class="ttname"><a href="class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html#a28ed908212d6a38156014d5ccc5a7dc7">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndVerifyPassword</a></div><div class="ttdeci">static int ShowAndVerifyPassword(std::string &amp;strPassword, const std::string &amp;strHeading, int iRetries)</div></div>
+<div class="ttc" id="group___c_addon_g_u_i_dialog_numeric_html_ga28ed908212d6a38156014d5ccc5a7dc7"><div class="ttname"><a href="group___c_addon_g_u_i_dialog_numeric.html#ga28ed908212d6a38156014d5ccc5a7dc7">GUILIB::V2::CAddonGUIDialogNumeric::ShowAndVerifyPassword</a></div><div class="ttdeci">static int ShowAndVerifyPassword(std::string &amp;strPassword, const std::string &amp;strHeading, int iRetries)</div><div class="ttdoc">Use dialog to verify numeric password. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

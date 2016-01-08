@@ -1,4 +1,4 @@
 var group___c_addon_g_u_i_dialog_select =
 [
-    [ "CAddonGUIDialogSelect", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_select.html", null ]
+    [ "Show", "group___c_addon_g_u_i_dialog_select.html#ga607e3ded9a30e6246ee21200b0978fd5", null ]
 ];

@@ -108,7 +108,78 @@ $(document).ready(function(){initNavTree('group___c_addon_g_u_i_dialog_select.ht
 <p><b>Selection dialog</b> </p>
 <p>The function listed below permits the call of a dialogue to select of an entry as a key</p>
 <p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="_g_u_i_dialog_select_8h.html">#include &lt;kodi/gui.api2/GUIDialogSelect.h&gt;</a> be included to enjoy it. </p>
+<p>It has the header <a class="el" href="_g_u_i_dialog_select_8h.html">#include &lt;kodi/gui.api2/GUIDialogSelect.h&gt;</a> be included to enjoy it.</p>
+<div class="image">
+<img src="help.GUIDialogSelect.png" alt="help.GUIDialogSelect.png"/>
+</div>
+ <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga607e3ded9a30e6246ee21200b0978fd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int Show </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>entries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>selected</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Show a selection dialog about given parts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heading</td><td>Dialog heading name </td></tr>
+    <tr><td class="paramname">entries</td><td>String list about entries </td></tr>
+    <tr><td class="paramname">selected</td><td>[opt] Predefined selection (default is <code>-1</code> for the first) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The selected entry, if return <code>-1</code> was nothing selected or canceled</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_g_u_i_dialog_select_8h.html">kodi/gui.api2/GUIDialogSelect.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">const</span> std::vector&lt;std::string&gt; entries</div>
+<div class="line">{</div>
+<div class="line">  <span class="stringliteral">&quot;Test 1&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;Test 2&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;Test 3&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;Test 4&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;Test 5&quot;</span></div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> selected = <a class="code" href="group___c_addon_g_u_i_dialog_select.html#ga607e3ded9a30e6246ee21200b0978fd5">CAddonGUIDialogSelect::Show</a>(<span class="stringliteral">&quot;Test selection&quot;</span>, entries, -1);</div>
+<div class="line"><span class="keywordflow">if</span> (selected &lt; 0)</div>
+<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Item selection canceled\n&quot;</span>);</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Selected item is: %i\n&quot;</span>, selected);</div>
+</div><!-- fragment --> 
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -13,7 +13,7 @@ var searchData=
   ['onplaybackstarted',['OnPlayBackStarted',['../group___c_addon_player.html#ga670b9e7947764d4d474b7f8cd21c1611',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['onplaybackstopped',['OnPlayBackStopped',['../group___c_addon_player.html#ga5df8f6dd6cf9fb162d1d4d77da58eb2d',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['onqueuenextitem',['OnQueueNextItem',['../group___c_addon_player.html#ga817b2d696d11b166143be2c391a972f9',1,'PlayerLIB::V2::CAddonPlayer']]],
-  ['open',['Open',['../group___c_addon_lib___v_f_s_file.html#ga16246c8951f668cc9fd5d327e99d1c09',1,'AddOnLIB::V2::CAddonLib_VFSFile::Open()'],['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a5e53001785ff30ae485a113b9b8a0ddc',1,'GUILIB::V2::CAddonGUIDialogProgress::Open()']]],
+  ['open',['Open',['../group___c_addon_lib___v_f_s_file.html#ga16246c8951f668cc9fd5d327e99d1c09',1,'AddOnLIB::V2::CAddonLib_VFSFile::Open()'],['../group___c_addon_g_u_i_dialog_progress.html#ga5e53001785ff30ae485a113b9b8a0ddc',1,'GUILIB::V2::CAddonGUIDialogProgress::Open()']]],
   ['openforwrite',['OpenForWrite',['../group___c_addon_lib___v_f_s_file.html#ga0a86c00e28867617dc3de61efe5f96ae',1,'AddOnLIB::V2::CAddonLib_VFSFile']]],
   ['operator_3c',['operator&lt;',['../group___c_p_v_r_stream.html#ga8c39a1e5e76bc953c53019e4ef318216',1,'PVRLIB::V2::CPVRStream']]],
   ['operator_3d',['operator=',['../group___c_p_v_r_stream.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6',1,'PVRLIB::V2::CPVRStream']]],

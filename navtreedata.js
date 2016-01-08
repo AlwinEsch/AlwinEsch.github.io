@@ -37,8 +37,8 @@ var NAVTREEINDEX =
 [
 "_a_e_stream_8h.html",
 "globals_eval_l.html",
-"group___c_addon_play_list.html#ga7834e166deca3a366bd4d25b061606fd",
-"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43daaf13f08aa8a8513df197169b0698fec4"
+"group___c_addon_lib___v_f_s_file.html#ga48d08591724952c3d51d0823caf17720",
+"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43da8e88149ab5114a4b7fe6aa645cf3fee1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

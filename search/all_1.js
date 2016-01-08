@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['abort',['Abort',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#a71e9d732335846eb579f0dd00918b3e7',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
+  ['abort',['Abort',['../group___c_addon_g_u_i_dialog_progress.html#ga71e9d732335846eb579f0dd00918b3e7',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
   ['adddata',['AddData',['../group___c_addon_a_e___stream.html#ga6a8f84f56490835913cd3af3794e02ac',1,'AudioEngineLIB::V2::CAddonAE_Stream']]],
   ['adddspmenuhook',['AddDSPMenuHook',['../group___c_addon_a_e.html#gad4e7c34b466c7523b48eb38f453c6f8b',1,'AudioEngineLIB::V2::CAddonAE']]],
   ['additem',['AddItem',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#ab5587e8524f863ac8b6fac3e336c2dce',1,'GUILIB::V2::CAddonGUIWindow::AddItem(GUIHANDLE item, int itemPosition=-1)'],['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a7799e39d5fda1a8bf02ca8f341652026',1,'GUILIB::V2::CAddonGUIWindow::AddItem(CAddonGUIListItem *item, int itemPosition=-1)'],['../group___c_addon_play_list.html#gaaa7aba33ed28df8d2adfa6af9b097575',1,'PlayerLIB::V2::CAddonPlayList::AddItem(const std::string &amp;url, int index=-1)'],['../group___c_addon_play_list.html#gac4aeeb4b7e884b74644e14bceb759c5b',1,'PlayerLIB::V2::CAddonPlayList::AddItem(const CAddonGUIListItem *listitem, int index=-1)']]],

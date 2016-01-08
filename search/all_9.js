@@ -37,7 +37,7 @@ var searchData=
   ['infotagvideo_2eh',['InfoTagVideo.h',['../_info_tag_video_8h.html',1,'']]],
   ['iparentalrating',['iParentalRating',['../struct_e_p_g___t_a_g.html#a11861e0214df81ce6441703d8ae97b35',1,'EPG_TAG']]],
   ['isbuffering',['IsBuffering',['../group___c_addon_a_e___stream.html#gaef164590a71f796091fef894f2f7e8a7',1,'AudioEngineLIB::V2::CAddonAE_Stream']]],
-  ['iscanceled',['IsCanceled',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html#af76bcf12aaec9ab845ea61853a37a33c',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
+  ['iscanceled',['IsCanceled',['../group___c_addon_g_u_i_dialog_progress.html#gaf76bcf12aaec9ab845ea61853a37a33c',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
   ['iscleared',['IsCleared',['../group___c_p_v_r_stream.html#ga324d4448e5c2dde1488e1a9b4d26c7ad',1,'PVRLIB::V2::CPVRStream']]],
   ['isdrained',['IsDrained',['../group___c_addon_a_e___stream.html#ga5ca398b4d16422b0ca7a41c5c574ee8c',1,'AudioEngineLIB::V2::CAddonAE_Stream']]],
   ['isdraining',['IsDraining',['../group___c_addon_a_e___stream.html#ga7d06c4e0b7b11e202925929f8913b0aa',1,'AudioEngineLIB::V2::CAddonAE_Stream']]],
