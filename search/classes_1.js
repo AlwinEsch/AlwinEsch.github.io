@@ -26,7 +26,6 @@ var searchData=
   ['caddonguilistitem',['CAddonGUIListItem',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_list_item.html',1,'GUILIB::V2']]],
   ['caddonguiwindow',['CAddonGUIWindow',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html',1,'GUILIB::V2']]],
   ['caddoninfotagmusic',['CAddonInfoTagMusic',['../class_player_l_i_b_1_1_v2_1_1_c_addon_info_tag_music.html',1,'PlayerLIB::V2']]],
-  ['caddoninfotagvideo',['CAddonInfoTagVideo',['../class_player_l_i_b_1_1_v2_1_1_c_addon_info_tag_video.html',1,'PlayerLIB::V2']]],
   ['caddonlib',['CAddonLib',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib.html',1,'AddOnLIB::V2']]],
   ['caddonlib_5fcodec',['CAddonLib_Codec',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___codec.html',1,'AddOnLIB::V2']]],
   ['caddonlib_5fdirectory',['CAddonLib_Directory',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___directory.html',1,'AddOnLIB::V2']]],

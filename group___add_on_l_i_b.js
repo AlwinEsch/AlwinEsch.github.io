@@ -12,5 +12,5 @@ var group___add_on_l_i_b =
     [ "CAddonLib_VFSProperty", "group___c_addon_lib___v_f_s_property.html", "group___c_addon_lib___v_f_s_property" ],
     [ "CAddonLib_VFSUtils", "group___c_addon_lib___v_f_s_utils.html", "group___c_addon_lib___v_f_s_utils" ],
     [ "CodecDescriptor", "group___codec_descriptor.html", "group___codec_descriptor" ],
-    [ "Settings_xml", "group__settings__xml.html", null ]
+    [ "settings.xml", "group__settings__xml.html", null ]
 ];

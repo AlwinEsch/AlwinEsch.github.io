@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['settings_5fxml',['Settings_xml',['../group__settings__xml.html',1,'']]]
+  ['register_20functions',['Register functions',['../group___c_g_u_i_lib__main.html',1,'']]]
 ];

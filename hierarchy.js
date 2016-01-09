@@ -55,7 +55,6 @@ var hierarchy =
     [ "kodi_codec", "structkodi__codec.html", null ],
     [ "kodi_version", "structkodi__version.html", null ],
     [ "CAddonInfoTagMusic", "class_player_l_i_b_1_1_v2_1_1_c_addon_info_tag_music.html", null ],
-    [ "CAddonInfoTagVideo", "class_player_l_i_b_1_1_v2_1_1_c_addon_info_tag_video.html", null ],
     [ "CAddonPlayer", "class_player_l_i_b_1_1_v2_1_1_c_addon_player.html", null ],
     [ "CAddonPlayList", "class_player_l_i_b_1_1_v2_1_1_c_addon_play_list.html", null ],
     [ "PVR_STREAM", null, [

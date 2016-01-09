@@ -8,8 +8,11 @@ var searchData=
   ['m_5fframesamples',['m_frameSamples',['../struct_audio_engine_format.html#a3b6b1929e0fbe39e252645260f4d97d8',1,'AudioEngineFormat']]],
   ['m_5fframesize',['m_frameSize',['../struct_audio_engine_format.html#a7c6321b7fd7f09478ca0bf9931009ee1',1,'AudioEngineFormat']]],
   ['m_5fsamplerate',['m_sampleRate',['../struct_audio_engine_format.html#a046d570c56fd2ae9b813340816ebfdec',1,'AudioEngineFormat']]],
+  ['main_2etxt',['main.txt',['../main_8txt.html',1,'']]],
   ['major',['major',['../structkodi__version.html#ac8947941479c38403a09c14a60b03f01',1,'kodi_version']]],
-  ['markdirtyregion',['MarkDirtyRegion',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a9078432f423cb2f60ce6ac47e46616b8',1,'GUILIB::V2::CAddonGUIWindow']]],
+  ['makelegalfilename',['MakeLegalFileName',['../group___c_addon_lib___file.html#ga4847e33b9790cdee016790ad68709986',1,'AddOnLIB::V2::CAddonLib_File']]],
+  ['makelegalpath',['MakeLegalPath',['../group___c_addon_lib___file.html#ga9d0b0595cd9356c38329d3d8d32ae1e2',1,'AddOnLIB::V2::CAddonLib_File']]],
+  ['markdirtyregion',['MarkDirtyRegion',['../group___c_addon_g_u_i_window.html#ga60ef98c2dd24a36ab0748d21888f10b6',1,'GUILIB::V2::CAddonGUIWindow']]],
   ['markfinished',['MarkFinished',['../group___c_addon_g_u_i_dialog_extended_progress.html#ga40af1bcedea1f61fde8cd5e70e416473',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
   ['max_5fobjects',['MAX_OBJECTS',['../dlfcn-win32_8cpp.html#acdc7844fbd4d45737d4aa56834d37829',1,'dlfcn-win32.cpp']]],
   ['minor',['minor',['../structkodi__version.html#aec7b96885baf2e6f10efbdef9d935a0b',1,'kodi_version']]]
