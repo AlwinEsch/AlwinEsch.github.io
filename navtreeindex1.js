@@ -1,7 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"globals_e.html":[7,1,0,3],
-"globals_enum.html":[7,1,4],
 "globals_eval.html":[7,1,5],
 "globals_eval.html":[7,1,5,0],
 "globals_eval_k.html":[7,1,5,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX1 =
 "group___c_addon_g_u_i_dialog_yes_no.html#gacdb0bcb4ff915c595e075af871d629ea":[4,0,2,20,2],
 "group___c_addon_g_u_i_list_item.html":[4,0,2,21],
 "group___c_addon_g_u_i_list_item.html#ga0208983acdcf01ed6f92494ce693f335":[4,0,2,21,8],
-"group___c_addon_g_u_i_list_item.html#ga043501226133dde1d98cd16f7c5a5fc8":[4,0,2,21,13]
+"group___c_addon_g_u_i_list_item.html#ga043501226133dde1d98cd16f7c5a5fc8":[4,0,2,21,13],
+"group___c_addon_g_u_i_list_item.html#ga0d03d0a645db0f7ba8bc4cd94a77f8d6":[4,0,2,21,12],
+"group___c_addon_g_u_i_list_item.html#ga18fdaf4c6ecb5a97ae1fade2038bf07c":[4,0,2,21,27]
 };

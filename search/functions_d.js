@@ -7,5 +7,5 @@ var searchData=
   ['playnext',['PlayNext',['../group___c_addon_player.html#ga2c3f82c8be6fdc06127deb6b3de785bd',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['playprevious',['PlayPrevious',['../group___c_addon_player.html#ga542b407440e5a73dddbc275a8a0065c4',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['playselected',['PlaySelected',['../group___c_addon_player.html#ga7c18815c4fc2d2a6039939248332de1d',1,'PlayerLIB::V2::CAddonPlayer']]],
-  ['properties',['Properties',['../group___c_addon_lib___v_f_s_dir_entry.html#ga86666b756daf75b4bc270bdc85f7dda1',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry::Properties(void)'],['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___v_f_s_dir_entry.html#ga86666b756daf75b4bc270bdc85f7dda1',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry::Properties(void)']]]
+  ['properties',['Properties',['../group___c_addon_lib___v_f_s_dir_entry.html#gaea9c66f89bd36c6b01a234d0e2ad123a',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry::Properties(void) const '],['../group___c_addon_lib___v_f_s_dir_entry.html#ga682a050b373b13ec1e816d7a9cc47302',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry::Properties(void)']]]
 ];

@@ -107,7 +107,20 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b>Virtual file system directory entry</b> </p>
-<p>It has the header <a class="el" href="_v_f_s_utils_8h.html">#include &lt;kodi/addon.api2/VFSUtils.h&gt;</a> be included to enjoy it. </p>
+<p>This class is used as an entry for files and folders in <a class="el" href="group___c_addon_lib___v_f_s_utils.html#gaf2bd94f3fa601828737bd8179e2a92e1" title="Lists a directory. ">CAddonLib_VFSUtils::GetDirectory</a>(...).</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">std::vector&lt;CAddonLib_VFSDirEntry&gt; items;</div>
+<div class="line"><a class="code" href="group___c_addon_lib___v_f_s_utils.html#gaf2bd94f3fa601828737bd8179e2a92e1">CAddonLib_VFSUtils::GetDirectory</a>(<span class="stringliteral">&quot;special://temp&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, items);</div>
+<div class="line"></div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory have %lu entries\n&quot;</span>, items.size());</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; items.size(); i++)</div>
+<div class="line">{</div>
+<div class="line">  fprintf(stderr, <span class="stringliteral">&quot; - %04lu -- Folder: %s -- Name: %s -- Path: %s\n&quot;</span>,</div>
+<div class="line">            i+1,</div>
+<div class="line">            items[i].IsFolder() ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no &quot;</span>,</div>
+<div class="line">            items[i].Label().c_str(),</div>
+<div class="line">            items[i].Path().c_str());</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>It has the header <a class="el" href="_v_f_s_utils_8h.html">#include &lt;kodi/addon.api2/VFSUtils.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="gac81f1dd62d59a58a0d6f5ef72cfde20b"></a>
 <div class="memitem">
@@ -144,12 +157,14 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor for VFS directory entry. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td></td></tr>
-    <tr><td class="paramname">path</td><td></td></tr>
-    <tr><td class="paramname">bFolder</td><td></td></tr>
-    <tr><td class="paramname">size</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>[opt] Name to use for entry </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>[opt] Used path of the entry </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bFolder</td><td>[opt] If set entry used as folder </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>[opt] If used as file, his size defined there </td></tr>
   </table>
   </dd>
 </dl>
@@ -169,9 +184,11 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor to create own copy. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dirEntry</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dirEntry</td><td>pointer to own class type </td></tr>
   </table>
   </dd>
 </dl>
@@ -191,7 +208,9 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Used to check entry is folder. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if entry is a folder </dd></dl>
 
 </div>
 </div>
@@ -208,7 +227,9 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Get the directory entry name. </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of the entry </dd></dl>
 
 </div>
 </div>
@@ -225,11 +246,13 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Get the path of the entry. </p>
+<dl class="section return"><dt>Returns</dt><dd>File system path of the entry </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga86666b756daf75b4bc270bdc85f7dda1"></a>
+<a class="anchor" id="gaea9c66f89bd36c6b01a234d0e2ad123a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -238,11 +261,32 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the properties of the entry. </p>
+<dl class="section return"><dt>Returns</dt><dd>Not editable array pointer to properties </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga682a050b373b13ec1e816d7a9cc47302"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;CAddonLib_VFSProperty&gt;&amp; Properties </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Get the editable array pointer for the entry. </p>
+<dl class="section return"><dt>Returns</dt><dd>Array pointer to properties </dd></dl>
 
 </div>
 </div>
@@ -259,9 +303,11 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the entry defined as folder. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bFolder</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bFolder</td><td>If true becomes entry defined as folder </td></tr>
   </table>
   </dd>
 </dl>
@@ -281,9 +327,11 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the label name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>name of entry </td></tr>
   </table>
   </dd>
 </dl>
@@ -303,9 +351,11 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the path of the entry. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path of entry </td></tr>
   </table>
   </dd>
 </dl>
@@ -325,9 +375,11 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set a file size for a new entry. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size to set for dir entry </td></tr>
   </table>
   </dd>
 </dl>
@@ -347,7 +399,9 @@ $(document).ready(function(){initNavTree('group___c_addon_lib___v_f_s_dir_entry.
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>If file, the size of the file. </p>
+<dl class="section return"><dt>Returns</dt><dd>Defined file size </dd></dl>
 
 </div>
 </div>

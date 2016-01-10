@@ -24,7 +24,6 @@ var searchData=
   ['caddonlib_5fvfsproperty',['CAddonLib_VFSProperty',['../group___c_addon_lib___v_f_s_property.html#ga965d127e0d0de44d06a0e6da2ca8f829',1,'AddOnLIB::V2::CAddonLib_VFSProperty']]],
   ['caddonplayer',['CAddonPlayer',['../group___c_addon_player.html#ga9d6d82371862dd548b86a28d9647abe2',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['caddonplaylist',['CAddonPlayList',['../group___c_addon_play_list.html#ga094f884306ca992de579db9d8b071c7d',1,'PlayerLIB::V2::CAddonPlayList']]],
-  ['canopendirectory',['CanOpenDirectory',['../group___c_addon_lib___directory.html#ga1311c9d22d66f8aa9c5c1f7d7c80d811',1,'AddOnLIB::V2::CAddonLib_Directory']]],
   ['channelentry',['ChannelEntry',['../group___c_p_v_r_lib___transfer.html#gafdbc7a9a4d1336f159150988868b1465',1,'PVRLIB::V2::CPVRLib_Transfer']]],
   ['channelgroup',['ChannelGroup',['../group___c_p_v_r_lib___transfer.html#gabb331d2d9b3ef522da48c0b951ddbe21',1,'PVRLIB::V2::CPVRLib_Transfer']]],
   ['channelgroupmember',['ChannelGroupMember',['../group___c_p_v_r_lib___transfer.html#ga2d24f5c60e0d4b6d3a416641b489f15e',1,'PVRLIB::V2::CPVRLib_Transfer']]],
@@ -40,6 +39,6 @@ var searchData=
   ['compareformat',['compareFormat',['../struct_audio_engine_format.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64',1,'AudioEngineFormat']]],
   ['cpvrstream',['CPVRStream',['../group___c_p_v_r_stream.html#gaf419611a13a1bca6fe60cd58cb8a952f',1,'PVRLIB::V2::CPVRStream::CPVRStream()'],['../group___c_p_v_r_stream.html#gad8caf56bf234506f41c1fcc64a0d1ad7',1,'PVRLIB::V2::CPVRStream::CPVRStream(const CPVRStream &amp;other)']]],
   ['create',['Create',['../group___c_addon_g_u_i_control_rendering.html#ga12847d560dd43205d13b0963d9e395e1',1,'GUILIB::V2::CAddonGUIControlRendering']]],
-  ['createdirectory',['CreateDirectory',['../group___c_addon_lib___directory.html#gacbb82bf91432edf4a203b4f144c7d3c4',1,'AddOnLIB::V2::CAddonLib_Directory']]],
+  ['createdirectory',['CreateDirectory',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___v_f_s_utils.html#acbb82bf91432edf4a203b4f144c7d3c4',1,'AddOnLIB::V2::CAddonLib_VFSUtils']]],
   ['cstreamproperties',['CStreamProperties',['../group___c_stream_properties.html#gadb5884513f2557e07249fab9f1cc447c',1,'PVRLIB::V2::CStreamProperties']]]
 ];

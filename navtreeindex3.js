@@ -1,7 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"group___c_g_u_i_lib.html":[4,0,2,23],
-"group___c_g_u_i_lib__help.html":[4,0,2,23,0],
 "group___c_g_u_i_lib__help.html#ga0f0cc52a3413a502953495f26270f559":[4,0,2,23,0,3],
 "group___c_g_u_i_lib__help.html#ga452c9c6299140854739860045f060d28":[4,0,2,23,0,1],
 "group___c_g_u_i_lib__help.html#ga4afd43d20b97e20532eeb1fac9ae6c1f":[4,0,2,23,0,0],
@@ -51,10 +49,10 @@ var NAVTREEINDEX3 =
 "group___c_stream_properties.html#ga80239fdfa9f1d2dfea3abb949bb84b94":[4,0,3,4,6],
 "group___c_stream_properties.html#ga8d64e3bab115fb9201d6f688ab350ce5":[4,0,3,4,7],
 "group___c_stream_properties.html#gadb5884513f2557e07249fab9f1cc447c":[4,0,3,4,2],
-"group___codec_descriptor.html":[4,0,0,11],
-"group___codec_descriptor.html#ga542cf7ce73c4f9e04f16bac4583fbb19":[4,0,0,11,1],
-"group___codec_descriptor.html#ga62b7b43b626a9b8beb0f16a8795b9d91":[4,0,0,11,0],
-"group___codec_descriptor.html#gab29906ba5407bb58b86428cb4b4a1e26":[4,0,0,11,2],
+"group___codec_descriptor.html":[4,0,0,10],
+"group___codec_descriptor.html#ga542cf7ce73c4f9e04f16bac4583fbb19":[4,0,0,10,1],
+"group___codec_descriptor.html#ga62b7b43b626a9b8beb0f16a8795b9d91":[4,0,0,10,0],
+"group___codec_descriptor.html#gab29906ba5407bb58b86428cb4b4a1e26":[4,0,0,10,2],
 "group___g_u_i_l_i_b.html":[4,0,2],
 "group___p_v_r_l_i_b.html":[4,0,3],
 "group___player_l_i_b.html":[4,0,4],
@@ -65,7 +63,7 @@ var NAVTREEINDEX3 =
 "group__python__xbmcgui.html":[4,1,2],
 "group__python__xbmcplugin.html":[4,1,3],
 "group__python__xbmcvfs.html":[4,1,4],
-"group__settings__xml.html":[4,0,0,12],
+"group__settings__xml.html":[4,0,0,11],
 "group__skin.html":[4,2],
 "gui_8api2_2definations_8h.html":[7,0,0,2,0],
 "gui_8api2_2definations_8h.html#a3726967a855ae6b6a37384d1b515683e":[7,0,0,2,0,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX3 =
 "gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dacf7fdcdeaee2ce43272608ad71eed87a":[7,0,0,2,0,3,102],
 "gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dacf941adb953ad4b8116c5f151e529937":[7,0,0,2,0,3,207],
 "gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dad2caefcc3d4dbe56558f8264a8d31c18":[7,0,0,2,0,3,95],
-"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dad50e84311ad79d3c8b13439db5280d76":[7,0,0,2,0,3,98]
+"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dad50e84311ad79d3c8b13439db5280d76":[7,0,0,2,0,3,98],
+"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dad51f07ffb53ac61a8fc610f30314a619":[7,0,0,2,0,3,138],
+"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dad8a9f5b7a92cf0b51cf6c148bd10627c":[7,0,0,2,0,3,50]
 };

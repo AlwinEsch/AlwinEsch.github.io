@@ -2,7 +2,6 @@ var group___add_on_l_i_b =
 [
     [ "CAddonLib", "group___c_addon_lib.html", "group___c_addon_lib" ],
     [ "CAddonLib_Codec", "group___c_addon_lib___codec.html", "group___c_addon_lib___codec" ],
-    [ "CAddonLib_Directory", "group___c_addon_lib___directory.html", "group___c_addon_lib___directory" ],
     [ "CAddonLib_File", "group___c_addon_lib___file.html", "group___c_addon_lib___file" ],
     [ "CAddonLib_General", "group___c_addon_lib___general.html", "group___c_addon_lib___general" ],
     [ "CAddonLib_Network", "group___c_addon_lib___network.html", "group___c_addon_lib___network" ],
