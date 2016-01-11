@@ -168,12 +168,5 @@ var NAVTREEINDEX4 =
 "struct_e_p_g___t_a_g.html#aff44b11da9adef57c6766912ab82bf7d":[6,0,6,13],
 "structkodi__codec.html":[6,0,7],
 "structkodi__codec.html#a74ecd8a982f71c56801ba227f4cd8d94":[6,0,7,1],
-"structkodi__codec.html#abb16fc135f202805c438614ff10cf11c":[6,0,7,0],
-"structkodi__version.html":[6,0,8],
-"structkodi__version.html#a14e85f5a1bb888b4325a87984bccfe81":[6,0,8,5],
-"structkodi__version.html#a5061ba1a268eb999ed21e0c4d7bf609e":[6,0,8,3],
-"structkodi__version.html#ac8947941479c38403a09c14a60b03f01":[6,0,8,1],
-"structkodi__version.html#ae120f732e7e1c5e4a16fa31d89f655df":[6,0,8,4],
-"structkodi__version.html#aec7b96885baf2e6f10efbdef9d935a0b":[6,0,8,2],
-"structkodi__version.html#afe9672e29db448c9cc47fbb6cbb5a8f4":[6,0,8,0]
+"structkodi__codec.html#abb16fc135f202805c438614ff10cf11c":[6,0,7,0]
 };
