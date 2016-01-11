@@ -1,7 +1,6 @@
 var hierarchy =
 [
     [ "CAddonLib_Codec", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___codec.html", null ],
-    [ "CAddonLib_File", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___file.html", null ],
     [ "CAddonLib_General", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___general.html", null ],
     [ "CAddonLib_Network", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___network.html", null ],
     [ "CAddonLib_SoundPlay", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___sound_play.html", null ],

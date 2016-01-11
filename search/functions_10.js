@@ -84,6 +84,6 @@ var searchData=
   ['shuffle',['Shuffle',['../group___c_addon_play_list.html#ga9d1841bc5f559c6981b78b895d446033',1,'PlayerLIB::V2::CAddonPlayList']]],
   ['size',['Size',['../group___c_addon_lib___v_f_s_dir_entry.html#gac0ba4f4c78dcb35605e645ee75198b5a',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry']]],
   ['startserver',['StartServer',['../group___c_addon_lib___general.html#ga7dde8afb7cb40c1cb542a13557282f00',1,'AddOnLIB::V2::CAddonLib_General']]],
-  ['statfile',['StatFile',['../group___c_addon_lib___file.html#ga779d626c053ee2e3f9329d7f05e3d7d2',1,'AddOnLIB::V2::CAddonLib_File']]],
+  ['statfile',['StatFile',['../group___c_addon_lib___v_f_s_utils.html#ga779d626c053ee2e3f9329d7f05e3d7d2',1,'AddOnLIB::V2::CAddonLib_VFSUtils']]],
   ['stop',['Stop',['../group___c_addon_lib___sound_play.html#ga17a237457e57625296e6b24feb19c60a',1,'AddOnLIB::V2::CAddonLib_SoundPlay::Stop()'],['../group___c_addon_g_u_i_control_rendering.html#gaf6f113a64b92a63894b285b4f2a2c3a5',1,'GUILIB::V2::CAddonGUIControlRendering::Stop()'],['../group___c_addon_player.html#ga17a237457e57625296e6b24feb19c60a',1,'PlayerLIB::V2::CAddonPlayer::Stop()']]]
 ];

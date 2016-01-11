@@ -88,7 +88,7 @@ var searchData=
   ['soundplay_2eh',['SoundPlay.h',['../_sound_play_8h.html',1,'']]],
   ['startserver',['StartServer',['../group___c_addon_lib___general.html#ga7dde8afb7cb40c1cb542a13557282f00',1,'AddOnLIB::V2::CAddonLib_General']]],
   ['starttime',['startTime',['../struct_e_p_g___t_a_g.html#aaf564fc30a2a8624cf917e282281a500',1,'EPG_TAG']]],
-  ['statfile',['StatFile',['../group___c_addon_lib___file.html#ga779d626c053ee2e3f9329d7f05e3d7d2',1,'AddOnLIB::V2::CAddonLib_File']]],
+  ['statfile',['StatFile',['../group___c_addon_lib___v_f_s_utils.html#ga779d626c053ee2e3f9329d7f05e3d7d2',1,'AddOnLIB::V2::CAddonLib_VFSUtils']]],
   ['stop',['Stop',['../group___c_addon_lib___sound_play.html#ga17a237457e57625296e6b24feb19c60a',1,'AddOnLIB::V2::CAddonLib_SoundPlay::Stop()'],['../group___c_addon_g_u_i_control_rendering.html#gaf6f113a64b92a63894b285b4f2a2c3a5',1,'GUILIB::V2::CAddonGUIControlRendering::Stop()'],['../group___c_addon_player.html#ga17a237457e57625296e6b24feb19c60a',1,'PlayerLIB::V2::CAddonPlayer::Stop()']]],
   ['strcast',['strCast',['../struct_e_p_g___t_a_g.html#a7ab248dcdb6370b18ef4265f3b8f9db0',1,'EPG_TAG']]],
   ['strdirector',['strDirector',['../struct_e_p_g___t_a_g.html#a2e0c072159ba1b00a7c795865fb6ad9b',1,'EPG_TAG']]],

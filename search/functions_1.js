@@ -39,6 +39,6 @@ var searchData=
   ['compareformat',['compareFormat',['../struct_audio_engine_format.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64',1,'AudioEngineFormat']]],
   ['cpvrstream',['CPVRStream',['../group___c_p_v_r_stream.html#gaf419611a13a1bca6fe60cd58cb8a952f',1,'PVRLIB::V2::CPVRStream::CPVRStream()'],['../group___c_p_v_r_stream.html#gad8caf56bf234506f41c1fcc64a0d1ad7',1,'PVRLIB::V2::CPVRStream::CPVRStream(const CPVRStream &amp;other)']]],
   ['create',['Create',['../group___c_addon_g_u_i_control_rendering.html#ga12847d560dd43205d13b0963d9e395e1',1,'GUILIB::V2::CAddonGUIControlRendering']]],
-  ['createdirectory',['CreateDirectory',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___v_f_s_utils.html#acbb82bf91432edf4a203b4f144c7d3c4',1,'AddOnLIB::V2::CAddonLib_VFSUtils']]],
+  ['createdirectory',['CreateDirectory',['../group___c_addon_lib___v_f_s_utils.html#gacbb82bf91432edf4a203b4f144c7d3c4',1,'AddOnLIB::V2::CAddonLib_VFSUtils']]],
   ['cstreamproperties',['CStreamProperties',['../group___c_stream_properties.html#gadb5884513f2557e07249fab9f1cc447c',1,'PVRLIB::V2::CStreamProperties']]]
 ];

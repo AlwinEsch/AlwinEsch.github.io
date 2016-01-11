@@ -29,7 +29,6 @@ var searchData=
   ['caddoninfotagmusic',['CAddonInfoTagMusic',['../group___c_addon_info_tag_music.html',1,'']]],
   ['caddonlib',['CAddonLib',['../group___c_addon_lib.html',1,'']]],
   ['caddonlib_5fcodec',['CAddonLib_Codec',['../group___c_addon_lib___codec.html',1,'']]],
-  ['caddonlib_5ffile',['CAddonLib_File',['../group___c_addon_lib___file.html',1,'']]],
   ['caddonlib_5fgeneral',['CAddonLib_General',['../group___c_addon_lib___general.html',1,'']]],
   ['caddonlib_5fnetwork',['CAddonLib_Network',['../group___c_addon_lib___network.html',1,'']]],
   ['caddonlib_5fsoundplay',['CAddonLib_SoundPlay',['../group___c_addon_lib___sound_play.html',1,'']]],
