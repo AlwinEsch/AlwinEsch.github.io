@@ -135,6 +135,13 @@ $(document).ready(function(){initNavTree('group___c_p_v_r_lib.html','');});
 
 <p>Add or replace a menu hook for the context menu for this add-on. </p>
 <p>Inserted hooks becomes called from Kodi on PVR system with <b><code>PVR_ERROR CallMenuHook(const PVR_MENUHOOK&amp; menuhook, const PVR_MENUHOOK_DATA &amp;item);</code></b></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hook</td><td>The hook to add</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
 <p>Here structure shows the necessary values the Kodi must be handed over around a menu by the PVR system to add. </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment"> * Menu hooks that are available in the context menus while playing a</span></div>
 <div class="line"><span class="comment"> * stream via this add-on and in the Live TV settings dialog</span></div>
@@ -147,9 +154,9 @@ $(document).ready(function(){initNavTree('group___c_p_v_r_lib.html','');});
 <div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>     iLocalizedStringId;   <span class="comment">/* The id of the label for this hook in g_localizeStrings */</span></div>
 <div class="line">  PVR_MENUHOOK_CAT category;             <span class="comment">/* Category of menu hook */</span></div>
 <div class="line">} <a class="code" href="player_8api2_2definations_8h.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_MENUHOOK;</div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">hook</td><td>The hook to add <table class="doxtable">
+</div><!-- fragment --> <hr/>
+<p><b>Hook category Id's (PVR_MENUHOOK_CAT):</b></p>
+<p><b></p><table class="doxtable">
 <tr>
 <th align="right">enum code: </th><th align="center">Id </th><th align="left">Description:  </th></tr>
 <tr>
@@ -167,11 +174,9 @@ $(document).ready(function(){initNavTree('group___c_p_v_r_lib.html','');});
 <tr>
 <td align="right">PVR_MENUHOOK_SETTING </td><td align="center">6 </td><td align="left">For settings </td></tr>
 </table>
-</td></tr>
-  </table>
-  </dd>
-</dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_p_v_r_lib_8h.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<hr/>
+<p></b></p>
+<p><b><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_p_v_r_lib_8h.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
 <div class="line">...</div>
 <div class="line">PVR_MENUHOOK hook;</div>
 <div class="line">hook.iHookId = 1;</div>
@@ -179,7 +184,8 @@ $(document).ready(function(){initNavTree('group___c_p_v_r_lib.html','');});
 <div class="line">hook.iLocalizedStringId = 30107;</div>
 <div class="line"><a class="code" href="group___c_p_v_r_lib.html#gadfd504966cbc097f85cf6f510a1751cd">CPVRLib::AddMenuHook</a>(&amp;hook);</div>
 <div class="line">...</div>
-</div><!-- fragment --> 
+</div><!-- fragment --><p> </b></p>
+
 </div>
 </div>
 <a class="anchor" id="ga25527d9a7fb4d25460bab2f036def672"></a>
@@ -262,6 +268,7 @@ $(document).ready(function(){initNavTree('group___c_p_v_r_lib.html','');});
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True when all methods were resolved, false otherwise.</dd></dl>
+<hr/>
 <p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_addon_lib_8h.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_p_v_r_lib_8h.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
 <div class="line"></div>
@@ -305,6 +312,7 @@ $(document).ready(function(){initNavTree('group___c_p_v_r_lib.html','');});
 </div><div class="memdoc">
 
 <p>Release all callback methods and close handling with them. </p>
+<hr/>
 <p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_addon_lib_8h.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_p_v_r_lib_8h.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
 <div class="line">...</div>

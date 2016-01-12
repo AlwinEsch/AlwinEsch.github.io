@@ -10,12 +10,12 @@ var hierarchy =
     [ "CAddonLib_VFSUtils", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___v_f_s_utils.html", null ],
     [ "CodecDescriptor", "class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html", null ],
     [ "AudioEngineFormat", "struct_audio_engine_format.html", null ],
-    [ "CAddonAE_Stream", "class_audio_engine_l_i_b_1_1_v2_1_1_c_addon_a_e___stream.html", null ],
-    [ "CAddonAE_Internal", null, [
-      [ "CAddonAE", "class_audio_engine_l_i_b_1_1_v2_1_1_c_addon_a_e.html", null ]
-    ] ],
+    [ "CAELib_Stream", "class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html", null ],
     [ "CAddonLib_Internal", null, [
       [ "CAddonLib", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib.html", null ]
+    ] ],
+    [ "CAELib_Internal", null, [
+      [ "CAELib", "class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib.html", null ]
     ] ],
     [ "CGUILib_Internal", null, [
       [ "CGUILib", "class_g_u_i_l_i_b_1_1_v2_1_1_c_g_u_i_lib.html", null ]

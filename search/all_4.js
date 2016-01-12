@@ -24,7 +24,7 @@ var searchData=
   ['doxygen_2dkodi_2d101_5f000_5fmodules_5fcpp_2etxt',['doxygen-kodi-101_000_modules_cpp.txt',['../doxygen-kodi-101__000__modules__cpp_8txt.html',1,'']]],
   ['doxygen_2dkodi_2d102_5f000_5fmodules_5fpython_2etxt',['doxygen-kodi-102_000_modules_python.txt',['../doxygen-kodi-102__000__modules__python_8txt.html',1,'']]],
   ['doxygen_2dkodi_2ddev_2dconfig_2etxt',['doxygen-kodi-dev-config.txt',['../doxygen-kodi-dev-config_8txt.html',1,'']]],
-  ['drain',['Drain',['../group___c_addon_a_e___stream.html#ga46b4018fedbc6559a1a7eb942e2df1ce',1,'AudioEngineLIB::V2::CAddonAE_Stream']]],
+  ['drain',['Drain',['../group___c_a_e_lib___stream.html#ga693180e7abf852dfa2af3e7c35d7db23',1,'AudioEngineLIB::V2::CAELib_Stream']]],
   ['dvd_5fnopts_5fvalue',['DVD_NOPTS_VALUE',['../player_8api2_2definations_8h.html#aa8f3bf7de853346d6bcf7de68b1132da',1,'DVD_NOPTS_VALUE():&#160;definations.h'],['../_p_v_r_lib_8h.html#aa8f3bf7de853346d6bcf7de68b1132da',1,'DVD_NOPTS_VALUE():&#160;PVRLib.h']]],
   ['dvd_5fstate',['dvd_state',['../addon_8api2_2definations_8h.html#a6854c40ee0b4222220398351339f0aa5',1,'definations.h']]],
   ['dvd_5ftime_5fbase',['DVD_TIME_BASE',['../player_8api2_2definations_8h.html#a2ab735c1c1995b95aa927d15465e4c37',1,'DVD_TIME_BASE():&#160;definations.h'],['../_p_v_r_lib_8h.html#a2ab735c1c1995b95aa927d15465e4c37',1,'DVD_TIME_BASE():&#160;PVRLib.h']]]

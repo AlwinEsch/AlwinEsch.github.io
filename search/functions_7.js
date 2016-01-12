@@ -1,11 +1,11 @@
 var searchData=
 [
   ['incrementproperty',['IncrementProperty',['../group___c_addon_g_u_i_list_item.html#ga043501226133dde1d98cd16f7c5a5fc8',1,'GUILIB::V2::CAddonGUIListItem']]],
-  ['isbuffering',['IsBuffering',['../group___c_addon_a_e___stream.html#gaef164590a71f796091fef894f2f7e8a7',1,'AudioEngineLIB::V2::CAddonAE_Stream']]],
+  ['isbuffering',['IsBuffering',['../group___c_a_e_lib___stream.html#ga0a04f8b3e045b68d509dab0b67d077a8',1,'AudioEngineLIB::V2::CAELib_Stream']]],
   ['iscanceled',['IsCanceled',['../group___c_addon_g_u_i_dialog_progress.html#gaf76bcf12aaec9ab845ea61853a37a33c',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
   ['iscleared',['IsCleared',['../group___c_p_v_r_stream.html#ga324d4448e5c2dde1488e1a9b4d26c7ad',1,'PVRLIB::V2::CPVRStream']]],
-  ['isdrained',['IsDrained',['../group___c_addon_a_e___stream.html#ga5ca398b4d16422b0ca7a41c5c574ee8c',1,'AudioEngineLIB::V2::CAddonAE_Stream']]],
-  ['isdraining',['IsDraining',['../group___c_addon_a_e___stream.html#ga7d06c4e0b7b11e202925929f8913b0aa',1,'AudioEngineLIB::V2::CAddonAE_Stream']]],
+  ['isdrained',['IsDrained',['../group___c_a_e_lib___stream.html#gad2f3302fdee3ed4ab1558bc373498057',1,'AudioEngineLIB::V2::CAELib_Stream']]],
+  ['isdraining',['IsDraining',['../group___c_a_e_lib___stream.html#ga3659870694bbf153c0faf470cb4984cc',1,'AudioEngineLIB::V2::CAELib_Stream']]],
   ['isfileitem',['IsFileItem',['../group___c_addon_g_u_i_list_item.html#gafcb84c749b00051b94bc1353b16da631',1,'GUILIB::V2::CAddonGUIListItem']]],
   ['isfinished',['IsFinished',['../group___c_addon_g_u_i_dialog_extended_progress.html#gaabe45b4d47077b54df0bb809eb41b8d5',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
   ['isfolder',['IsFolder',['../group___c_addon_lib___v_f_s_dir_entry.html#gabfbbb37d69862b45d0f1079ab976fa37',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry::IsFolder()'],['../group___c_addon_g_u_i_list_item.html#ga83746525efaa62e4a49358f908e014db',1,'GUILIB::V2::CAddonGUIListItem::IsFolder()']]],

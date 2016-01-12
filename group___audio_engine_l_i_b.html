@@ -109,14 +109,52 @@ $(document).ready(function(){initNavTree('group___audio_engine_l_i_b.html','');}
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b><em>Help functions for audio engine and DSP systems</em></b> </p>
+<p>This library is for Audio DSP add-ons and also include parts for the audio engine. </p><hr/>
+<p><b>Code example:</b></p>
+<p>Below is a code example do show what must be done on add-on base function to become support for library:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_addon_lib_8h.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_general_8h.html">kodi/addon.api2/General.h</a>&gt;</span>  <span class="comment">// Needed for CAddOnLib_General::Log</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="_audio_engine_lib_8h.html">kodi/audioengine.api2/AudioEngineLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
+<div class="line">IMPLEMENT_KODI_AUDIOENGINE_LIBRARY;</div>
+<div class="line">...</div>
+<div class="line"></div>
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (!hdl || !props)</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!CAddonLib::RegisterMe(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="group___c_a_e_lib.html#gaa0bf67ad4ff0b67b500e4070f873c337">CAELib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Example lib call</span></div>
+<div class="line">  CAddOnLib_General::Log(<a class="code" href="addon_8api2_2definations_8h.html#af8526ffb1ee2a785489ac05b6e49d357a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My add-on creation done&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="group___c_a_e_lib.html#ga5940787dcdcdb8aa995a07106917489f">CAELib::UnRegisterMe</a>();</div>
+<div class="line">  CAddonLib::UnRegisterMe();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use this library part must always <a class="el" href="class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib.html">AddOnLIB::V2::CAddonLib</a> be present! </dd></dl>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
-<tr class="memitem:group___c_addon_a_e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_a_e.html">CAddonAE</a></td></tr>
-<tr class="memdesc:group___c_addon_a_e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Audio Engine</b> <br /></td></tr>
+<tr class="memitem:group___c_a_e_lib"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_e_lib.html">CAELib</a></td></tr>
+<tr class="memdesc:group___c_a_e_lib"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Allow use of binary classes and function to use on add-on's</b> <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:group___c_addon_a_e___stream"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_addon_a_e___stream.html">CAddonAE_Stream</a></td></tr>
-<tr class="memdesc:group___c_addon_a_e___stream"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Audio Engine Stream Class</b> <br /></td></tr>
+<tr class="memitem:group___c_a_e_lib___stream"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_e_lib___stream.html">CAELib_Stream</a></td></tr>
+<tr class="memdesc:group___c_a_e_lib___stream"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Audio Engine Stream Class</b> <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

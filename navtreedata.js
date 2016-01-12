@@ -40,7 +40,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_e_stream_8h.html",
-"group___c_addon_a_e___stream.html",
+"group___c_a_e_lib___stream.html",
 "group___c_addon_g_u_i_window.html#ga1f4581c0d5dec157ae050648b9980dda",
 "group___c_addon_player.html#gaa979e669597a42dd85297d907944534e",
 "gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dac776c47cf36a10a480739d422bc97b49"

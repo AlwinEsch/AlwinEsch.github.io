@@ -1,8 +1,8 @@
 var searchData=
 [
   ['abort',['Abort',['../group___c_addon_g_u_i_dialog_progress.html#ga71e9d732335846eb579f0dd00918b3e7',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
-  ['adddata',['AddData',['../group___c_addon_a_e___stream.html#ga6a8f84f56490835913cd3af3794e02ac',1,'AudioEngineLIB::V2::CAddonAE_Stream']]],
-  ['adddspmenuhook',['AddDSPMenuHook',['../group___c_addon_a_e.html#gad4e7c34b466c7523b48eb38f453c6f8b',1,'AudioEngineLIB::V2::CAddonAE']]],
+  ['adddata',['AddData',['../group___c_a_e_lib___stream.html#gaa2503d36e6847a31997d4e9bf60c50b4',1,'AudioEngineLIB::V2::CAELib_Stream']]],
+  ['adddspmenuhook',['AddDSPMenuHook',['../group___c_a_e_lib.html#gad4e7c34b466c7523b48eb38f453c6f8b',1,'AudioEngineLIB::V2::CAELib']]],
   ['additem',['AddItem',['../group___c_addon_g_u_i_window.html#gadab65cba2c648f32428c51a080ad63f3',1,'GUILIB::V2::CAddonGUIWindow::AddItem(GUIHANDLE item, int itemPosition=-1)'],['../group___c_addon_g_u_i_window.html#ga8368f03c5d63a11d9750b0e4ae964dab',1,'GUILIB::V2::CAddonGUIWindow::AddItem(CAddonGUIListItem *item, int itemPosition=-1)'],['../group___c_addon_play_list.html#gaaa7aba33ed28df8d2adfa6af9b097575',1,'PlayerLIB::V2::CAddonPlayList::AddItem(const std::string &amp;url, int index=-1)'],['../group___c_addon_play_list.html#gac4aeeb4b7e884b74644e14bceb759c5b',1,'PlayerLIB::V2::CAddonPlayList::AddItem(const CAddonGUIListItem *listitem, int index=-1)']]],
   ['addlabel',['AddLabel',['../group___c_addon_g_u_i_control_fade_label.html#ga47cfd2f63ce533672996085727a5fdd4',1,'GUILIB::V2::CAddonGUIControlFadeLabel::AddLabel()'],['../group___c_addon_g_u_i_control_spin.html#ga9c5e370148322bad6dbbacdbe88ba5f6',1,'GUILIB::V2::CAddonGUIControlSpin::AddLabel(const std::string &amp;label, const std::string &amp;value)'],['../group___c_addon_g_u_i_control_spin.html#gaeb7d340f29d5051d948b3305dccadd51',1,'GUILIB::V2::CAddonGUIControlSpin::AddLabel(const std::string &amp;label, int value)']]],
   ['addmenuhook',['AddMenuHook',['../group___c_p_v_r_lib.html#gadfd504966cbc097f85cf6f510a1751cd',1,'PVRLIB::V2::CPVRLib']]],

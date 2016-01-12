@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['caddonae',['CAddonAE',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_addon_a_e.html',1,'AudioEngineLIB::V2']]],
-  ['caddonae_5fstream',['CAddonAE_Stream',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_addon_a_e___stream.html',1,'AudioEngineLIB::V2']]],
   ['caddonguicontrolbutton',['CAddonGUIControlButton',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_button.html',1,'GUILIB::V2']]],
   ['caddonguicontroledit',['CAddonGUIControlEdit',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_edit.html',1,'GUILIB::V2']]],
   ['caddonguicontrolfadelabel',['CAddonGUIControlFadeLabel',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_fade_label.html',1,'GUILIB::V2']]],
@@ -37,6 +35,8 @@ var searchData=
   ['caddonlib_5fvfsutils',['CAddonLib_VFSUtils',['../class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___v_f_s_utils.html',1,'AddOnLIB::V2']]],
   ['caddonplayer',['CAddonPlayer',['../class_player_l_i_b_1_1_v2_1_1_c_addon_player.html',1,'PlayerLIB::V2']]],
   ['caddonplaylist',['CAddonPlayList',['../class_player_l_i_b_1_1_v2_1_1_c_addon_play_list.html',1,'PlayerLIB::V2']]],
+  ['caelib',['CAELib',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib.html',1,'AudioEngineLIB::V2']]],
+  ['caelib_5fstream',['CAELib_Stream',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html',1,'AudioEngineLIB::V2']]],
   ['cguilib',['CGUILib',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_g_u_i_lib.html',1,'GUILIB::V2']]],
   ['codecdescriptor',['CodecDescriptor',['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html',1,'AddOnLIB::V2']]],
   ['cplayerlib',['CPlayerLib',['../class_player_l_i_b_1_1_v2_1_1_c_player_lib.html',1,'PlayerLIB::V2']]],

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['caddonae_5fstream',['CAddonAE_Stream',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_addon_a_e___stream.html#a8bed67d8cdc33a06f152bfe88a1977dc',1,'AudioEngineLIB::V2::CAddonAE_Stream']]],
   ['caddonguicontrolbutton',['CAddonGUIControlButton',['../group___c_addon_g_u_i_control_button.html#ga3132552bcc57d1c10aa86871c5dca313',1,'GUILIB::V2::CAddonGUIControlButton']]],
   ['caddonguicontroledit',['CAddonGUIControlEdit',['../group___c_addon_g_u_i_control_edit.html#gaed5a87657d03effa3bf8f3523e8c8f48',1,'GUILIB::V2::CAddonGUIControlEdit']]],
   ['caddonguicontrolfadelabel',['CAddonGUIControlFadeLabel',['../group___c_addon_g_u_i_control_fade_label.html#gad0307142b3766119a0f4062a68f45ce0',1,'GUILIB::V2::CAddonGUIControlFadeLabel']]],
@@ -24,6 +23,7 @@ var searchData=
   ['caddonlib_5fvfsproperty',['CAddonLib_VFSProperty',['../group___c_addon_lib___v_f_s_property.html#ga965d127e0d0de44d06a0e6da2ca8f829',1,'AddOnLIB::V2::CAddonLib_VFSProperty']]],
   ['caddonplayer',['CAddonPlayer',['../group___c_addon_player.html#ga9d6d82371862dd548b86a28d9647abe2',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['caddonplaylist',['CAddonPlayList',['../group___c_addon_play_list.html#ga094f884306ca992de579db9d8b071c7d',1,'PlayerLIB::V2::CAddonPlayList']]],
+  ['caelib_5fstream',['CAELib_Stream',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html#aa67b25eb2b959c0fbc8bb3b4193e66f9',1,'AudioEngineLIB::V2::CAELib_Stream']]],
   ['channelentry',['ChannelEntry',['../group___c_p_v_r_lib___transfer.html#gafdbc7a9a4d1336f159150988868b1465',1,'PVRLIB::V2::CPVRLib_Transfer']]],
   ['channelgroup',['ChannelGroup',['../group___c_p_v_r_lib___transfer.html#gabb331d2d9b3ef522da48c0b951ddbe21',1,'PVRLIB::V2::CPVRLib_Transfer']]],
   ['channelgroupmember',['ChannelGroupMember',['../group___c_p_v_r_lib___transfer.html#ga2d24f5c60e0d4b6d3a416641b489f15e',1,'PVRLIB::V2::CPVRLib_Transfer']]],

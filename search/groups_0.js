@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['caddonae',['CAddonAE',['../group___c_addon_a_e.html',1,'']]],
-  ['caddonae_5fstream',['CAddonAE_Stream',['../group___c_addon_a_e___stream.html',1,'']]],
   ['caddonguicontrolbutton',['CAddonGUIControlButton',['../group___c_addon_g_u_i_control_button.html',1,'']]],
   ['caddonguicontroledit',['CAddonGUIControlEdit',['../group___c_addon_g_u_i_control_edit.html',1,'']]],
   ['caddonguicontrolfadelabel',['CAddonGUIControlFadeLabel',['../group___c_addon_g_u_i_control_fade_label.html',1,'']]],
@@ -39,6 +37,8 @@ var searchData=
   ['caddonplayer',['CAddonPlayer',['../group___c_addon_player.html',1,'']]],
   ['callback_20functions_20from_20kodi_20to_20add_2don',['Callback functions from Kodi to add-on',['../group___c_addon_player__callbacks.html',1,'']]],
   ['caddonplaylist',['CAddonPlayList',['../group___c_addon_play_list.html',1,'']]],
+  ['caelib',['CAELib',['../group___c_a_e_lib.html',1,'']]],
+  ['caelib_5fstream',['CAELib_Stream',['../group___c_a_e_lib___stream.html',1,'']]],
   ['cguilib',['CGUILib',['../group___c_g_u_i_lib.html',1,'']]],
   ['codecdescriptor',['CodecDescriptor',['../group___codec_descriptor.html',1,'']]],
   ['cplayerlib',['CPlayerLib',['../group___c_player_lib.html',1,'']]],
