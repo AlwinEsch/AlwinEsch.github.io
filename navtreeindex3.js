@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"group___c_addon_player.html#ga9778d4d10ba4997a76d096f2656e4406":[4,0,4,2,26],
 "group___c_addon_player.html#ga9d6d82371862dd548b86a28d9647abe2":[4,0,4,2,2],
 "group___c_addon_player.html#gaa7bab6149b942aabd374567e858dd6ad":[4,0,4,2,21],
 "group___c_addon_player.html#gaa979e669597a42dd85297d907944534e":[4,0,4,2,15],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dab838dae5f52bd62ac27595ad03e95d62":[7,0,0,2,0,3,72],
 "gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dab8567c5cb6d1eede1c32b1deecc4a673":[7,0,0,2,0,3,75],
 "gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dab9c41f88a696a4a0287a1662c828b41a":[7,0,0,2,0,3,162],
-"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dabe008d5a24b7ccd36e87fbb13f10e530":[7,0,0,2,0,3,99],
-"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dabe48c98484bac665183b1b3bf4db340a":[7,0,0,2,0,3,30]
+"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43dabe008d5a24b7ccd36e87fbb13f10e530":[7,0,0,2,0,3,99]
 };

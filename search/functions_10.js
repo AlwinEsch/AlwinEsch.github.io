@@ -46,7 +46,7 @@ var searchData=
   ['setpropertybool',['SetPropertyBool',['../group___c_addon_g_u_i_window.html#ga8f37733246a712df31946c12b40d7553',1,'GUILIB::V2::CAddonGUIWindow']]],
   ['setpropertydouble',['SetPropertyDouble',['../group___c_addon_g_u_i_window.html#ga363ee3e1bf219c8f824241f58aebe294',1,'GUILIB::V2::CAddonGUIWindow']]],
   ['setpropertyint',['SetPropertyInt',['../group___c_addon_g_u_i_window.html#ga3d68ad750393fd5293be9d0650cd30a9',1,'GUILIB::V2::CAddonGUIWindow']]],
-  ['setresampleratio',['SetResampleRatio',['../group___c_a_e_lib___stream.html#ga4eb320d8399faf92f3ba4d88b8d4728a',1,'AudioEngineLIB::V2::CAELib_Stream']]],
+  ['setresampleratio',['SetResampleRatio',['../group___c_a_e_lib___stream.html#gaa2f74168cc58c5ac84a4a1e507702d68',1,'AudioEngineLIB::V2::CAELib_Stream']]],
   ['setscrolling',['SetScrolling',['../group___c_addon_g_u_i_control_fade_label.html#ga02685eb001d24047fce8ed6d4899e9af',1,'GUILIB::V2::CAddonGUIControlFadeLabel']]],
   ['setselected',['SetSelected',['../group___c_addon_g_u_i_control_radio_button.html#gada1dfadeefe2948819776785fcdbf547',1,'GUILIB::V2::CAddonGUIControlRadioButton']]],
   ['setsize',['SetSize',['../group___c_addon_lib___v_f_s_dir_entry.html#gaf2fb6ea3061355a5ed4b53ca45e712ac',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry']]],

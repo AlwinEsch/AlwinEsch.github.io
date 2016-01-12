@@ -1,6 +1,6 @@
 var class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream =
 [
-    [ "CAELib_Stream", "group___c_a_e_lib___stream.html#gaa67b25eb2b959c0fbc8bb3b4193e66f9", null ],
+    [ "CAELib_Stream", "group___c_a_e_lib___stream.html#ga24f48c8a2b92ddbbe5453aadf97eb66f", null ],
     [ "~CAELib_Stream", "group___c_a_e_lib___stream.html#ga9f7e169caec98e28f6b92adf8ab140f2", null ],
     [ "AddData", "group___c_a_e_lib___stream.html#gaa2503d36e6847a31997d4e9bf60c50b4", null ],
     [ "Drain", "group___c_a_e_lib___stream.html#ga693180e7abf852dfa2af3e7c35d7db23", null ],
@@ -23,7 +23,7 @@ var class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream =
     [ "Pause", "group___c_a_e_lib___stream.html#ga70babc5227ddd16ca31dccc6cec0bb22", null ],
     [ "Resume", "group___c_a_e_lib___stream.html#ga8af8fb637c7ae9d71a23bf3ac80d3c86", null ],
     [ "SetAmplification", "group___c_a_e_lib___stream.html#ga0afd8b52e36170319c9c3bbe738243a2", null ],
-    [ "SetResampleRatio", "group___c_a_e_lib___stream.html#ga4eb320d8399faf92f3ba4d88b8d4728a", null ],
+    [ "SetResampleRatio", "group___c_a_e_lib___stream.html#gaa2f74168cc58c5ac84a4a1e507702d68", null ],
     [ "SetVolume", "group___c_a_e_lib___stream.html#gae7f642be9aaf5ef9c2e2f1a5afae9053", null ],
     [ "IMPLEMENT_ADDON_AE_STREAM", "class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html#a3808b26fbe1cd877744265373c12757a", null ]
 ];

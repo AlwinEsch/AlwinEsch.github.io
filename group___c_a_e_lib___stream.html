@@ -141,9 +141,9 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
 <p>Add data. </p>
 <p>Add planar or interleaved PCM data to the stream </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Data</td><td>array of pointers to the planes </td></tr>
-    <tr><td class="paramname">Offset</td><td>to frame in frames </td></tr>
-    <tr><td class="paramname">Frames</td><td>number of frames</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Data</td><td>array of pointers to the planes </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Offset</td><td>to frame in frames </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Frames</td><td>number of frames</td></tr>
   </table>
   </dd>
 </dl>
@@ -151,33 +151,15 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
 
 </div>
 </div>
-<a class="anchor" id="gaa67b25eb2b959c0fbc8bb3b4193e66f9"></a>
+<a class="anchor" id="ga24f48c8a2b92ddbbe5453aadf97eb66f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">CAELib_Stream </td>
           <td>(</td>
-          <td class="paramtype">AEDataFormat&#160;</td>
-          <td class="paramname"><em>DataFormat</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>SampleRate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>EncodedSampleRate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">CAEChannelInfo &amp;&#160;</td>
-          <td class="paramname"><em>ChannelLayout</em>, </td>
+          <td class="paramtype"><a class="el" href="struct_audio_engine_format.html">AudioEngineFormat</a>&#160;</td>
+          <td class="paramname"><em>Format</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -196,14 +178,45 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
 <p>Class constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">DataFormat</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">SampleRate</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">EncodedSampleRate</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ChannelLayout</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">[opt]</td><td>Options </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Format</td><td>Used data format for stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Options</td><td>[opt] A bit field of stream options (see: enum AEStreamOptions)</td></tr>
   </table>
   </dd>
 </dl>
+<hr/>
+<p><b>Audio engine format information:</b> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Audio engine format information</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_audio_engine_format.html">AudioEngineFormat</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">enum</span> AEDataFormat m_dataFormat;           <span class="comment">/* The stream&#39;s data format (eg, AE_FMT_S16LE) */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_sampleRate;           <span class="comment">/* The stream&#39;s sample rate (eg, 48000) */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_encodedRate;          <span class="comment">/* The encoded streams sample rate if a bitstream, otherwise undefined */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_channelCount;         <span class="comment">/* The amount of used speaker channels */</span></div>
+<div class="line">  <span class="keyword">enum</span> AEChannel    m_channels[AE_CH_MAX];  <span class="comment">/* The stream&#39;s channel layout */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frames;               <span class="comment">/* The number of frames per period */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frameSamples;         <span class="comment">/* The number of samples in one frame */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frameSize;            <span class="comment">/* The size of one frame in bytes */</span></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">/* Function to compare the format structure with another */</span></div>
+<div class="line">  <span class="keywordtype">bool</span> compareFormat(<span class="keyword">const</span> <a class="code" href="struct_audio_engine_format.html">AudioEngineFormat</a> *fmt);</div>
+<div class="line">} <a class="code" href="struct_audio_engine_format.html">AudioEngineFormat</a>;</div>
+</div><!-- fragment --> <hr/>
+<p><b>Bit options to pass to <a class="el" href="class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html">CAELib_Stream</a> (on Kodi by <code>IAE::MakeStream</code></b></p>
+<table class="doxtable">
+<tr>
+<th align="right">enum AEStreamOptions </th><th align="center">Value: </th><th align="left">Description:  </th></tr>
+<tr>
+<td align="right">AESTREAM_FORCE_RESAMPLE </td><td align="center">1 &lt;&lt; 0 </td><td align="left">Force resample even if rates match </td></tr>
+<tr>
+<td align="right">AESTREAM_PAUSED </td><td align="center">1 &lt;&lt; 1 </td><td align="left">Create the stream paused </td></tr>
+<tr>
+<td align="right">AESTREAM_AUTOSTART </td><td align="center">1 &lt;&lt; 2 </td><td align="left">Autostart the stream when enough data is buffered </td></tr>
+<tr>
+<td align="right">AESTREAM_BYPASS_ADSP </td><td align="center">1 &lt;&lt; 3 </td><td align="left">if this option is set the ADSP-System is bypassed and the raw stream will be passed through IAESink </td></tr>
+</table>
 
 </div>
 </div>
@@ -221,7 +234,13 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
       </table>
 </div><div class="memdoc">
 <p>Start draining the stream</p>
-<dl class="section note"><dt>Note</dt><dd>Once called AddData will not consume more data. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Once called AddData will not consume more data.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Wait</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -412,7 +431,7 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the stream's sample rate, if the stream is using a dynamic sample rate, this value will NOT reflect any changes made by calls to <a class="el" href="group___c_a_e_lib___stream.html#ga4eb320d8399faf92f3ba4d88b8d4728a">SetResampleRatio()</a></p>
+<p>Returns the stream's sample rate, if the stream is using a dynamic sample rate, this value will NOT reflect any changes made by calls to <a class="el" href="group___c_a_e_lib___stream.html#gaa2f74168cc58c5ac84a4a1e507702d68">SetResampleRatio()</a></p>
 <dl class="section return"><dt>Returns</dt><dd>The stream's sample rate (eg, 48000) </dd></dl>
 
 </div>
@@ -484,7 +503,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true if the is stream has finished draining </p>
+<p>Returns true if the is stream has finished draining</p>
+<dl class="section return"><dt>Returns</dt><dd>If draining finished is true, otherwise false </dd></dl>
 
 </div>
 </div>
@@ -500,7 +520,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true if the is stream draining </p>
+<p>Returns true if the is stream draining</p>
+<dl class="section return"><dt>Returns</dt><dd>true if draining, otherwise false </dd></dl>
 
 </div>
 </div>
@@ -552,14 +573,14 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
 <p>Sets the stream's volume amplification in linear units.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">The</td><td>volume amplification factor between 1.0 and 1000.0 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Amplify</td><td>The volume amplification factor between 1.0 and 1000.0 </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga4eb320d8399faf92f3ba4d88b8d4728a"></a>
+<a class="anchor" id="gaa2f74168cc58c5ac84a4a1e507702d68"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -567,7 +588,7 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
           <td class="memname">void SetResampleRatio </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>Ratio</em></td><td>)</td>
+          <td class="paramname"><em>ratio</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -576,7 +597,7 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
 <dl class="section note"><dt>Note</dt><dd>This function may return false if the stream is not resampling, if you wish to use this be sure to set the AESTREAM_FORCE_RESAMPLE option</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ratio</td><td>the new sample rate ratio, calculated by ((double)desiredRate / (double)<a class="el" href="group___c_a_e_lib___stream.html#ga9e8e8a0056da89903383ee7cbb6e9810">GetSampleRate()</a>) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ratio</td><td>the new sample rate ratio, calculated by ((double)desiredRate / (double)<a class="el" href="group___c_a_e_lib___stream.html#ga9e8e8a0056da89903383ee7cbb6e9810">GetSampleRate()</a>) </td></tr>
   </table>
   </dd>
 </dl>
@@ -599,7 +620,7 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
 <p>Set the stream's volume level</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">volume</td><td>The new volume level between 0.0 and 1.0 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">volume</td><td>The new volume level between 0.0 and 1.0 </td></tr>
   </table>
   </dd>
 </dl>

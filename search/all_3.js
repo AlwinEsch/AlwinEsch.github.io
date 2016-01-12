@@ -74,7 +74,7 @@ var searchData=
   ['caddonplaylist',['CAddonPlayList',['../group___c_addon_play_list.html#ga094f884306ca992de579db9d8b071c7d',1,'PlayerLIB::V2::CAddonPlayList::CAddonPlayList()'],['../group___c_addon_play_list.html',1,'(Global Namespace)']]],
   ['caelib',['CAELib',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib.html',1,'AudioEngineLIB::V2']]],
   ['caelib',['CAELib',['../group___c_a_e_lib.html',1,'']]],
-  ['caelib_5fstream',['CAELib_Stream',['../group___c_a_e_lib___stream.html#gaa67b25eb2b959c0fbc8bb3b4193e66f9',1,'AudioEngineLIB::V2::CAELib_Stream::CAELib_Stream()'],['../group___c_a_e_lib___stream.html',1,'(Global Namespace)']]],
+  ['caelib_5fstream',['CAELib_Stream',['../group___c_a_e_lib___stream.html#ga24f48c8a2b92ddbbe5453aadf97eb66f',1,'AudioEngineLIB::V2::CAELib_Stream::CAELib_Stream()'],['../group___c_a_e_lib___stream.html',1,'(Global Namespace)']]],
   ['caelib_5fstream',['CAELib_Stream',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html',1,'AudioEngineLIB::V2']]],
   ['cguilib',['CGUILib',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_g_u_i_lib.html',1,'GUILIB::V2']]],
   ['cguilib',['CGUILib',['../group___c_g_u_i_lib.html',1,'']]],

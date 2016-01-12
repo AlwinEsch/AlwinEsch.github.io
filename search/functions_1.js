@@ -23,7 +23,7 @@ var searchData=
   ['caddonlib_5fvfsproperty',['CAddonLib_VFSProperty',['../group___c_addon_lib___v_f_s_property.html#ga965d127e0d0de44d06a0e6da2ca8f829',1,'AddOnLIB::V2::CAddonLib_VFSProperty']]],
   ['caddonplayer',['CAddonPlayer',['../group___c_addon_player.html#ga9d6d82371862dd548b86a28d9647abe2',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['caddonplaylist',['CAddonPlayList',['../group___c_addon_play_list.html#ga094f884306ca992de579db9d8b071c7d',1,'PlayerLIB::V2::CAddonPlayList']]],
-  ['caelib_5fstream',['CAELib_Stream',['../group___c_a_e_lib___stream.html#gaa67b25eb2b959c0fbc8bb3b4193e66f9',1,'AudioEngineLIB::V2::CAELib_Stream']]],
+  ['caelib_5fstream',['CAELib_Stream',['../group___c_a_e_lib___stream.html#ga24f48c8a2b92ddbbe5453aadf97eb66f',1,'AudioEngineLIB::V2::CAELib_Stream']]],
   ['channelentry',['ChannelEntry',['../group___c_p_v_r_lib___transfer.html#gafdbc7a9a4d1336f159150988868b1465',1,'PVRLIB::V2::CPVRLib_Transfer']]],
   ['channelgroup',['ChannelGroup',['../group___c_p_v_r_lib___transfer.html#gabb331d2d9b3ef522da48c0b951ddbe21',1,'PVRLIB::V2::CPVRLib_Transfer']]],
   ['channelgroupmember',['ChannelGroupMember',['../group___c_p_v_r_lib___transfer.html#ga2d24f5c60e0d4b6d3a416641b489f15e',1,'PVRLIB::V2::CPVRLib_Transfer']]],
