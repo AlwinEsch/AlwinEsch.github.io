@@ -1,7 +1,7 @@
 var class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream =
 [
-    [ "CAELib_Stream", "class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html#aa67b25eb2b959c0fbc8bb3b4193e66f9", null ],
-    [ "~CAELib_Stream", "class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html#a9f7e169caec98e28f6b92adf8ab140f2", null ],
+    [ "CAELib_Stream", "group___c_a_e_lib___stream.html#gaa67b25eb2b959c0fbc8bb3b4193e66f9", null ],
+    [ "~CAELib_Stream", "group___c_a_e_lib___stream.html#ga9f7e169caec98e28f6b92adf8ab140f2", null ],
     [ "AddData", "group___c_a_e_lib___stream.html#gaa2503d36e6847a31997d4e9bf60c50b4", null ],
     [ "Drain", "group___c_a_e_lib___stream.html#ga693180e7abf852dfa2af3e7c35d7db23", null ],
     [ "Flush", "group___c_a_e_lib___stream.html#ga0e2644b2df3c228e8d71a55b60723f31", null ],

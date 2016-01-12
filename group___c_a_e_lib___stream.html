@@ -137,15 +137,73 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Add data. </p>
 <p>Add planar or interleaved PCM data to the stream </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Data</td><td>array of pointers to the planes </td></tr>
     <tr><td class="paramname">Offset</td><td>to frame in frames </td></tr>
-    <tr><td class="paramname">Frames</td><td>number of frames </td></tr>
+    <tr><td class="paramname">Frames</td><td>number of frames</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of frames consumed </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa67b25eb2b959c0fbc8bb3b4193e66f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CAELib_Stream </td>
+          <td>(</td>
+          <td class="paramtype">AEDataFormat&#160;</td>
+          <td class="paramname"><em>DataFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>SampleRate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>EncodedSampleRate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CAEChannelInfo &amp;&#160;</td>
+          <td class="paramname"><em>ChannelLayout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>Options</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">DataFormat</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">SampleRate</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">EncodedSampleRate</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ChannelLayout</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">[opt]</td><td>Options </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -162,7 +220,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Start draining the stream </p><dl class="section note"><dt>Note</dt><dd>Once called AddData will not consume more data. </dd></dl>
+<p>Start draining the stream</p>
+<dl class="section note"><dt>Note</dt><dd>Once called AddData will not consume more data. </dd></dl>
 
 </div>
 </div>
@@ -194,7 +253,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Gets the stream's volume amplification in linear units. </p><dl class="section return"><dt>Returns</dt><dd>The volume amplification factor between 1.0 and 1000.0 </dd></dl>
+<p>Gets the stream's volume amplification in linear units.</p>
+<dl class="section return"><dt>Returns</dt><dd>The volume amplification factor between 1.0 and 1000.0 </dd></dl>
 
 </div>
 </div>
@@ -210,7 +270,9 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the time in seconds that it will take to underrun the cache if no sample is added. </p><dl class="section return"><dt>Returns</dt><dd>seconds </dd></dl>
+<p>the cache time</p>
+<p>Returns the time in seconds that it will take to underrun the cache if no sample is added.</p>
+<dl class="section return"><dt>Returns</dt><dd>seconds </dd></dl>
 
 </div>
 </div>
@@ -226,7 +288,10 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the total time in seconds of the cache </p><dl class="section return"><dt>Returns</dt><dd>seconds </dd></dl>
+
+<p>Get total cache time. </p>
+<p>Returns the total time in seconds of the cache</p>
+<dl class="section return"><dt>Returns</dt><dd>seconds </dd></dl>
 
 </div>
 </div>
@@ -242,7 +307,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the number of channels the stream is configured to accept </p><dl class="section return"><dt>Returns</dt><dd>The channel count </dd></dl>
+<p>Returns the number of channels the stream is configured to accept</p>
+<dl class="section return"><dt>Returns</dt><dd>The channel count </dd></dl>
 
 </div>
 </div>
@@ -258,7 +324,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return the data format the stream has been configured with </p><dl class="section return"><dt>Returns</dt><dd>The stream's data format (eg, AE_FMT_S16LE) </dd></dl>
+<p>Return the data format the stream has been configured with</p>
+<dl class="section return"><dt>Returns</dt><dd>The stream's data format (eg, AE_FMT_S16LE) </dd></dl>
 
 </div>
 </div>
@@ -274,7 +341,10 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the time in seconds that it will take for the next added packet to be heard from the speakers. </p><dl class="section return"><dt>Returns</dt><dd>seconds </dd></dl>
+
+<p>Get current delay. </p>
+<p>Returns the time in seconds that it will take for the next added packet to be heard from the speakers.</p>
+<dl class="section return"><dt>Returns</dt><dd>seconds </dd></dl>
 
 </div>
 </div>
@@ -290,7 +360,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the stream's encoded sample rate if the stream is RAW </p><dl class="section return"><dt>Returns</dt><dd>The stream's encoded sample rate </dd></dl>
+<p>Returns the stream's encoded sample rate if the stream is RAW</p>
+<dl class="section return"><dt>Returns</dt><dd>The stream's encoded sample rate </dd></dl>
 
 </div>
 </div>
@@ -306,7 +377,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the size of one audio frame in bytes (channelCount * resolution) </p><dl class="section return"><dt>Returns</dt><dd>The size in bytes of one frame </dd></dl>
+<p>Returns the size of one audio frame in bytes (channelCount/// resolution)</p>
+<dl class="section return"><dt>Returns</dt><dd>The size in bytes of one frame </dd></dl>
 
 </div>
 </div>
@@ -322,7 +394,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return the resample ratio </p><dl class="section note"><dt>Note</dt><dd>This will return an undefined value if the stream is not resampling </dd></dl>
+<p>Return the resample ratio</p>
+<dl class="section note"><dt>Note</dt><dd>This will return an undefined value if the stream is not resampling</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the current resample ratio or undefined if the stream is not resampling </dd></dl>
 
 </div>
@@ -339,7 +412,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the stream's sample rate, if the stream is using a dynamic sample rate, this value will NOT reflect any changes made by calls to <a class="el" href="group___c_a_e_lib___stream.html#ga4eb320d8399faf92f3ba4d88b8d4728a">SetResampleRatio()</a> </p><dl class="section return"><dt>Returns</dt><dd>The stream's sample rate (eg, 48000) </dd></dl>
+<p>Returns the stream's sample rate, if the stream is using a dynamic sample rate, this value will NOT reflect any changes made by calls to <a class="el" href="group___c_a_e_lib___stream.html#ga4eb320d8399faf92f3ba4d88b8d4728a">SetResampleRatio()</a></p>
+<dl class="section return"><dt>Returns</dt><dd>The stream's sample rate (eg, 48000) </dd></dl>
 
 </div>
 </div>
@@ -355,7 +429,10 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the amount of space available in the stream </p><dl class="section return"><dt>Returns</dt><dd>The number of bytes AddData will consume </dd></dl>
+
+<p>Get space. </p>
+<p>Returns the amount of space available in the stream</p>
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes AddData will consume </dd></dl>
 
 </div>
 </div>
@@ -371,7 +448,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return the stream's current volume level </p><dl class="section return"><dt>Returns</dt><dd>The volume level between 0.0 and 1.0 </dd></dl>
+<p>Return the stream's current volume level</p>
+<dl class="section return"><dt>Returns</dt><dd>The volume level between 0.0 and 1.0 </dd></dl>
 
 </div>
 </div>
@@ -387,7 +465,10 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns if the stream is buffering </p><dl class="section return"><dt>Returns</dt><dd>True if the stream is buffering </dd></dl>
+
+<p>Is buffering. </p>
+<p>Returns if the stream is buffering</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the stream is buffering </dd></dl>
 
 </div>
 </div>
@@ -468,7 +549,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the stream's volume amplification in linear units. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Sets the stream's volume amplification in linear units.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">The</td><td>volume amplification factor between 1.0 and 1000.0 </td></tr>
   </table>
@@ -490,7 +572,8 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the resample ratio </p><dl class="section note"><dt>Note</dt><dd>This function may return false if the stream is not resampling, if you wish to use this be sure to set the AESTREAM_FORCE_RESAMPLE option </dd></dl>
+<p>Sets the resample ratio</p>
+<dl class="section note"><dt>Note</dt><dd>This function may return false if the stream is not resampling, if you wish to use this be sure to set the AESTREAM_FORCE_RESAMPLE option</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ratio</td><td>the new sample rate ratio, calculated by ((double)desiredRate / (double)<a class="el" href="group___c_a_e_lib___stream.html#ga9e8e8a0056da89903383ee7cbb6e9810">GetSampleRate()</a>) </td></tr>
@@ -513,12 +596,30 @@ $(document).ready(function(){initNavTree('group___c_a_e_lib___stream.html','');}
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the stream's volume level </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Set the stream's volume level</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">volume</td><td>The new volume level between 0.0 and 1.0 </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="ga9f7e169caec98e28f6b92adf8ab140f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~CAELib_Stream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class Descructor. </p>
 
 </div>
 </div>

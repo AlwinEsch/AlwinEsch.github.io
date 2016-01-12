@@ -21,7 +21,7 @@ var searchData=
   ['_7ecaddonlib_5fvfsfile',['~CAddonLib_VFSFile',['../group___c_addon_lib___v_f_s_file.html#gaff9977af1409edaace50b30024b00306',1,'AddOnLIB::V2::CAddonLib_VFSFile']]],
   ['_7ecaddonplayer',['~CAddonPlayer',['../group___c_addon_player.html#ga9778d4d10ba4997a76d096f2656e4406',1,'PlayerLIB::V2::CAddonPlayer']]],
   ['_7ecaddonplaylist',['~CAddonPlayList',['../group___c_addon_play_list.html#ga365fab1bc14811a754118cbfad1499b6',1,'PlayerLIB::V2::CAddonPlayList']]],
-  ['_7ecaelib_5fstream',['~CAELib_Stream',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html#a9f7e169caec98e28f6b92adf8ab140f2',1,'AudioEngineLIB::V2::CAELib_Stream']]],
+  ['_7ecaelib_5fstream',['~CAELib_Stream',['../group___c_a_e_lib___stream.html#ga9f7e169caec98e28f6b92adf8ab140f2',1,'AudioEngineLIB::V2::CAELib_Stream']]],
   ['_7ecodecdescriptor',['~CodecDescriptor',['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html#a8a61d5619aaa653c3e35d65807bf725b',1,'AddOnLIB::V2::CodecDescriptor']]],
   ['_7ecstreamproperties',['~CStreamProperties',['../group___c_stream_properties.html#ga6f0282c6d4010650f5ed1075bd19da84',1,'PVRLIB::V2::CStreamProperties']]]
 ];

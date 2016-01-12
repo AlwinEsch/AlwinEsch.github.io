@@ -1,6 +1,7 @@
 var group___c_a_e_lib___stream =
 [
     [ "AddData", "group___c_a_e_lib___stream.html#gaa2503d36e6847a31997d4e9bf60c50b4", null ],
+    [ "CAELib_Stream", "group___c_a_e_lib___stream.html#gaa67b25eb2b959c0fbc8bb3b4193e66f9", null ],
     [ "Drain", "group___c_a_e_lib___stream.html#ga693180e7abf852dfa2af3e7c35d7db23", null ],
     [ "Flush", "group___c_a_e_lib___stream.html#ga0e2644b2df3c228e8d71a55b60723f31", null ],
     [ "GetAmplification", "group___c_a_e_lib___stream.html#ga1f7fd710b8f8efdc125e3e5b8ebc7f72", null ],
@@ -22,5 +23,6 @@ var group___c_a_e_lib___stream =
     [ "Resume", "group___c_a_e_lib___stream.html#ga8af8fb637c7ae9d71a23bf3ac80d3c86", null ],
     [ "SetAmplification", "group___c_a_e_lib___stream.html#ga0afd8b52e36170319c9c3bbe738243a2", null ],
     [ "SetResampleRatio", "group___c_a_e_lib___stream.html#ga4eb320d8399faf92f3ba4d88b8d4728a", null ],
-    [ "SetVolume", "group___c_a_e_lib___stream.html#gae7f642be9aaf5ef9c2e2f1a5afae9053", null ]
+    [ "SetVolume", "group___c_a_e_lib___stream.html#gae7f642be9aaf5ef9c2e2f1a5afae9053", null ],
+    [ "~CAELib_Stream", "group___c_a_e_lib___stream.html#ga9f7e169caec98e28f6b92adf8ab140f2", null ]
 ];
