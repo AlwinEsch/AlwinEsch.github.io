@@ -1,8 +1,8 @@
 var class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video =
 [
-    [ "InfoTagVideo", "group__python___info_tag_video.html#gaaa26e981ea77470001ddc1c55bb358f8", null ],
-    [ "InfoTagVideo", "group__python___info_tag_video.html#ga0569cc066477d7740c94e04d36d800f2", null ],
-    [ "~InfoTagVideo", "group__python___info_tag_video.html#ga4a232a70bc8ac59e1b26d09f60246fe9", null ],
+    [ "InfoTagVideo", "class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html#aaa26e981ea77470001ddc1c55bb358f8", null ],
+    [ "InfoTagVideo", "class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html#a0569cc066477d7740c94e04d36d800f2", null ],
+    [ "~InfoTagVideo", "class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html#a4a232a70bc8ac59e1b26d09f60246fe9", null ],
     [ "getCast", "group__python___info_tag_video.html#ga014e2737672aac5e1fca6c67268ef7ca", null ],
     [ "getDirector", "group__python___info_tag_video.html#gaf9d61e5189c09ef08febcd52087001cd", null ],
     [ "getFile", "group__python___info_tag_video.html#ga723e190c9b450ce6558126ef95b03ec9", null ],

@@ -120,11 +120,9 @@ var NAVTREEINDEX3 =
 "group__python___info_tag_music.html#gafdcd386f038151367af97803c1c13e41":[4,1,0,0,8],
 "group__python___info_tag_video.html":[4,1,0,1],
 "group__python___info_tag_video.html#ga014e2737672aac5e1fca6c67268ef7ca":[4,1,0,1,0],
-"group__python___info_tag_video.html#ga0569cc066477d7740c94e04d36d800f2":[4,1,0,1,21],
 "group__python___info_tag_video.html#ga235125a9aed4cc8c630d4e681e14d196":[4,1,0,1,14],
 "group__python___info_tag_video.html#ga3a5155fe7fa0cdfa1970a6f569f9b666":[4,1,0,1,5],
 "group__python___info_tag_video.html#ga43531ed78e2ffc99da87d0b93293ebf9":[4,1,0,1,17],
-"group__python___info_tag_video.html#ga4a232a70bc8ac59e1b26d09f60246fe9":[4,1,0,1,22],
 "group__python___info_tag_video.html#ga4f96c0aaaf77bdf9d8eef09bb8ac8ecc":[4,1,0,1,7],
 "group__python___info_tag_video.html#ga53172a43145522837b888b7d7f7117ea":[4,1,0,1,19],
 "group__python___info_tag_video.html#ga5de7f223574b5b39917a1e2d284ca2db":[4,1,0,1,15],
@@ -138,7 +136,6 @@ var NAVTREEINDEX3 =
 "group__python___info_tag_video.html#ga888f94790c968e3f0b5de17e509098aa":[4,1,0,1,16],
 "group__python___info_tag_video.html#ga9bf8326fd3213f31cf6c83cd70b7b521":[4,1,0,1,3],
 "group__python___info_tag_video.html#ga9d64a845dd0f805ecfc9dede2fcb683c":[4,1,0,1,12],
-"group__python___info_tag_video.html#gaaa26e981ea77470001ddc1c55bb358f8":[4,1,0,1,20],
 "group__python___info_tag_video.html#gac644258d08f747039e9d0e76bcd49513":[4,1,0,1,10],
 "group__python___info_tag_video.html#gad3ff2085e537bfbfa2f14d0c9a1dfcaa":[4,1,0,1,9],
 "group__python___info_tag_video.html#gaf9d61e5189c09ef08febcd52087001cd":[4,1,0,1,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX3 =
 "gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43da653e9b0a6c2f5671570d4ca24f448d38":[7,0,1,2,0,3,58],
 "gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43da67e36efbf08b6bd30bb9d80fe0162f26":[7,0,1,2,0,3,152],
 "gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43da680d0a5261fc6286decb65ec584040f5":[7,0,1,2,0,3,31],
-"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43da6a16b393bee5dc74b5fac261fae8a336":[7,0,1,2,0,3,86]
+"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43da6a16b393bee5dc74b5fac261fae8a336":[7,0,1,2,0,3,86],
+"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43da6ab65c68e892cb81e18fabc5e63db401":[7,0,1,2,0,3,164],
+"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43da6addeffe666df7bbcf6808e5fd5ffcab":[7,0,1,2,0,3,52],
+"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43da6b5e646d969c836fcd5314c13495b836":[7,0,1,2,0,3,40]
 };

@@ -38,7 +38,7 @@ var searchData=
   ['infotagmusic_2eh',['InfoTagMusic.h',['../interfaces_2legacy_2_info_tag_music_8h.html',1,'']]],
   ['infotagmusic_2eh',['InfoTagMusic.h',['../addons_2kodi-addon-dev-kit_2kodi_2player_8api2_2_info_tag_music_8h.html',1,'']]],
   ['infotagvideo',['InfoTagVideo',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html',1,'XBMCAddon::xbmc']]],
-  ['infotagvideo',['InfoTagVideo',['../group__python___info_tag_video.html#gaaa26e981ea77470001ddc1c55bb358f8',1,'XBMCAddon::xbmc::InfoTagVideo::InfoTagVideo(const CVideoInfoTag &amp;tag)'],['../group__python___info_tag_video.html#ga0569cc066477d7740c94e04d36d800f2',1,'XBMCAddon::xbmc::InfoTagVideo::InfoTagVideo()']]],
+  ['infotagvideo',['InfoTagVideo',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html#aaa26e981ea77470001ddc1c55bb358f8',1,'XBMCAddon::xbmc::InfoTagVideo::InfoTagVideo(const CVideoInfoTag &amp;tag)'],['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html#a0569cc066477d7740c94e04d36d800f2',1,'XBMCAddon::xbmc::InfoTagVideo::InfoTagVideo()']]],
   ['infotagvideo_2eh',['InfoTagVideo.h',['../addons_2kodi-addon-dev-kit_2kodi_2player_8api2_2_info_tag_video_8h.html',1,'']]],
   ['infotagvideo_2eh',['InfoTagVideo.h',['../interfaces_2legacy_2_info_tag_video_8h.html',1,'']]],
   ['iparentalrating',['iParentalRating',['../struct_e_p_g___t_a_g.html#a11861e0214df81ce6441703d8ae97b35',1,'EPG_TAG']]],
