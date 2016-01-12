@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['infotagmusic',['InfoTagMusic',['../group__python___info_tag_music.html',1,'']]],
-  ['infotagvideo',['InfoTagVideo',['../group__python___info_tag_video.html',1,'']]]
+  ['dialog',['Dialog',['../group__python___dialog.html',1,'']]],
+  ['dialogprogress',['DialogProgress',['../group__python___dialog_progress.html',1,'']]],
+  ['dialogprogressbg',['DialogProgressBG',['../group__python___dialog_progress_b_g.html',1,'']]]
 ];

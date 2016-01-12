@@ -15,5 +15,6 @@ var searchData=
   ['markdirtyregion',['MarkDirtyRegion',['../group___c_addon_g_u_i_window.html#ga60ef98c2dd24a36ab0748d21888f10b6',1,'GUILIB::V2::CAddonGUIWindow']]],
   ['markfinished',['MarkFinished',['../group___c_addon_g_u_i_dialog_extended_progress.html#ga40af1bcedea1f61fde8cd5e70e416473',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
   ['max_5fobjects',['MAX_OBJECTS',['../dlfcn-win32_8cpp.html#acdc7844fbd4d45737d4aa56834d37829',1,'dlfcn-win32.cpp']]],
-  ['minor',['minor',['../structkodi__version.html#aec7b96885baf2e6f10efbdef9d935a0b',1,'kodi_version']]]
+  ['minor',['minor',['../structkodi__version.html#aec7b96885baf2e6f10efbdef9d935a0b',1,'kodi_version']]],
+  ['multiselect',['multiselect',['../group__python___dialog.html#gaf6cee72babc023f15a8ed28cbb2cc7f6',1,'XBMCAddon::xbmcgui::Dialog']]]
 ];

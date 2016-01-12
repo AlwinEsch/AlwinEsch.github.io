@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['label',['Label',['../group___c_addon_lib___v_f_s_dir_entry.html#gaacd1b40e1b2e44d82303388beb475e84',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry']]],
-  ['loadplaylist',['LoadPlaylist',['../group___c_player_lib___play_list.html#ga7de3982ed8b225f5fd1580c75847d9db',1,'PlayerLIB::V2::CPlayerLib_PlayList']]],
-  ['lock',['Lock',['../group___c_g_u_i_lib__help.html#gace70db8e92290399a2a070eb0a60df63',1,'GUILIB::V2::CGUILib']]],
-  ['log',['Log',['../group___c_addon_lib___general.html#gabd930a9f867043a32052b92f3df7e1a2',1,'AddOnLIB::V2::CAddonLib_General']]]
+  ['keyboard',['Keyboard',['../class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html#a290b85ded95367e3801ecb1cd5d2d8f1',1,'XBMCAddon::xbmc::Keyboard']]],
+  ['kodiquit',['KodiQuit',['../group___c_addon_lib___general.html#ga92e5be48408124cf9f6f18744abd90d4',1,'AddOnLIB::V2::CAddonLib_General']]],
+  ['kodiversion',['KodiVersion',['../group___c_addon_lib___general.html#ga399f77b85f988602c4f1d4c98aa18528',1,'AddOnLIB::V2::CAddonLib_General']]]
 ];

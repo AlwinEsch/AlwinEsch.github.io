@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['kodi_5fguilib_5fapi_5fversion',['KODI_GUILIB_API_VERSION',['../gui_8api2_2definations_8h.html#ada5a80de1eeb8babb4fd718451a4388f',1,'definations.h']]],
-  ['kodi_5fguilib_5fmin_5fapi_5fversion',['KODI_GUILIB_MIN_API_VERSION',['../gui_8api2_2definations_8h.html#a3726967a855ae6b6a37384d1b515683e',1,'definations.h']]],
-  ['kodi_5finvalid_5fcodec',['KODI_INVALID_CODEC',['../addon_8api2_2definations_8h.html#a016b1e1580692ebe3cac597afb454fc1',1,'definations.h']]],
-  ['kodi_5finvalid_5fcodec_5fid',['KODI_INVALID_CODEC_ID',['../addon_8api2_2definations_8h.html#a5fb528ca862161b4ee16b3dfb97a6e53',1,'definations.h']]]
+  ['input_5falphanum',['INPUT_ALPHANUM',['../_dialog_8h.html#a5e8c06531565c0999dcf5d856d5ae193',1,'Dialog.h']]],
+  ['input_5fdate',['INPUT_DATE',['../_dialog_8h.html#a2f90d04a72989599bdeaa15617002fa7',1,'Dialog.h']]],
+  ['input_5fipaddress',['INPUT_IPADDRESS',['../_dialog_8h.html#a63d7a8385e028c6cf526878657a5f4df',1,'Dialog.h']]],
+  ['input_5fnumeric',['INPUT_NUMERIC',['../_dialog_8h.html#a2729d9408dbf8356d9300eddc29b8949',1,'Dialog.h']]],
+  ['input_5fpassword',['INPUT_PASSWORD',['../_dialog_8h.html#ab47123f5e284659c746ad4fc10bba6c6',1,'Dialog.h']]],
+  ['input_5ftime',['INPUT_TIME',['../_dialog_8h.html#aa7d37e5eb490c505d953edfcde16fc9d',1,'Dialog.h']]]
 ];

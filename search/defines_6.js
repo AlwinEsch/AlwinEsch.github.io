@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['path_5fseparator_5fchar',['PATH_SEPARATOR_CHAR',['../addon_8api2_2definations_8h.html#a581727c17b559af16969b4073417701d',1,'definations.h']]],
-  ['pragma_5fpack',['PRAGMA_PACK',['../player_8api2_2definations_8h.html#a256ebdc0994be33e06dc1ad3f6f188f4',1,'PRAGMA_PACK():&#160;definations.h'],['../pvr_8api2_2definations_8h.html#a256ebdc0994be33e06dc1ad3f6f188f4',1,'PRAGMA_PACK():&#160;definations.h']]],
-  ['pvr_5fapi_5flevels_5factive',['PVR_API_LEVELS_ACTIVE',['../pvr_8api2_2definations_8h.html#a2f85b94a7621eb2bf801ff79b1ed51ad',1,'definations.h']]]
+  ['max_5fobjects',['MAX_OBJECTS',['../dlfcn-win32_8cpp.html#acdc7844fbd4d45737d4aa56834d37829',1,'dlfcn-win32.cpp']]]
 ];

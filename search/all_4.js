@@ -1,11 +1,19 @@
 var searchData=
 [
+  ['deallocating',['deallocating',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress.html#a8b6dbb40347674d0ffc08d6ec7e9a877',1,'XBMCAddon::xbmcgui::DialogProgress::deallocating()'],['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress_b_g.html#a8b6dbb40347674d0ffc08d6ec7e9a877',1,'XBMCAddon::xbmcgui::DialogProgressBG::deallocating()']]],
   ['definations_2eh',['definations.h',['../addon_8api2_2definations_8h.html',1,'']]],
   ['definations_2eh',['definations.h',['../audioengine_8api2_2definations_8h.html',1,'']]],
   ['definations_2eh',['definations.h',['../gui_8api2_2definations_8h.html',1,'']]],
   ['definations_2eh',['definations.h',['../player_8api2_2definations_8h.html',1,'']]],
   ['definations_2eh',['definations.h',['../pvr_8api2_2definations_8h.html',1,'']]],
   ['deletefile',['DeleteFile',['../group___c_addon_lib___v_f_s_utils.html#ga83ff1a280df8f4bc766ef3398b976116',1,'AddOnLIB::V2::CAddonLib_VFSUtils']]],
+  ['dialog',['Dialog',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog.html',1,'XBMCAddon::xbmcgui']]],
+  ['dialog',['Dialog',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog.html#a893649c76b6e54d6a392d5e6c260a016',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['dialog_2eh',['Dialog.h',['../_dialog_8h.html',1,'']]],
+  ['dialogprogress',['DialogProgress',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress.html',1,'XBMCAddon::xbmcgui']]],
+  ['dialogprogress',['DialogProgress',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress.html#ad6806218faf95b933b67927d5ad46a39',1,'XBMCAddon::xbmcgui::DialogProgress']]],
+  ['dialogprogressbg',['DialogProgressBG',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress_b_g.html#a31b7ec67973b011c9efb42dcd96a0342',1,'XBMCAddon::xbmcgui::DialogProgressBG']]],
+  ['dialogprogressbg',['DialogProgressBG',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress_b_g.html',1,'XBMCAddon::xbmcgui']]],
   ['directoryexists',['DirectoryExists',['../group___c_addon_lib___v_f_s_utils.html#ga5e2010e4942df75e2929c5b13a082c1e',1,'AddOnLIB::V2::CAddonLib_VFSUtils']]],
   ['dirty',['Dirty',['../group___c_addon_g_u_i_control_rendering.html#ga7cea65505e98c9989ab92a87b2f2e99b',1,'GUILIB::V2::CAddonGUIControlRendering']]],
   ['dlclose',['dlclose',['../dlfcn-win32_8cpp.html#af483b6c4400965aa885f9f1a144138a5',1,'dlclose(void *handle):&#160;dlfcn-win32.cpp'],['../dlfcn-win32_8h.html#af483b6c4400965aa885f9f1a144138a5',1,'dlclose(void *handle):&#160;dlfcn-win32.cpp']]],
@@ -27,5 +35,8 @@ var searchData=
   ['drain',['Drain',['../group___c_a_e_lib___stream.html#ga693180e7abf852dfa2af3e7c35d7db23',1,'AudioEngineLIB::V2::CAELib_Stream']]],
   ['dvd_5fnopts_5fvalue',['DVD_NOPTS_VALUE',['../player_8api2_2definations_8h.html#aa8f3bf7de853346d6bcf7de68b1132da',1,'DVD_NOPTS_VALUE():&#160;definations.h'],['../_p_v_r_lib_8h.html#aa8f3bf7de853346d6bcf7de68b1132da',1,'DVD_NOPTS_VALUE():&#160;PVRLib.h']]],
   ['dvd_5fstate',['dvd_state',['../addon_8api2_2definations_8h.html#a6854c40ee0b4222220398351339f0aa5',1,'definations.h']]],
-  ['dvd_5ftime_5fbase',['DVD_TIME_BASE',['../player_8api2_2definations_8h.html#a2ab735c1c1995b95aa927d15465e4c37',1,'DVD_TIME_BASE():&#160;definations.h'],['../_p_v_r_lib_8h.html#a2ab735c1c1995b95aa927d15465e4c37',1,'DVD_TIME_BASE():&#160;PVRLib.h']]]
+  ['dvd_5ftime_5fbase',['DVD_TIME_BASE',['../player_8api2_2definations_8h.html#a2ab735c1c1995b95aa927d15465e4c37',1,'DVD_TIME_BASE():&#160;definations.h'],['../_p_v_r_lib_8h.html#a2ab735c1c1995b95aa927d15465e4c37',1,'DVD_TIME_BASE():&#160;PVRLib.h']]],
+  ['dialog',['Dialog',['../group__python___dialog.html',1,'']]],
+  ['dialogprogress',['DialogProgress',['../group__python___dialog_progress.html',1,'']]],
+  ['dialogprogressbg',['DialogProgressBG',['../group__python___dialog_progress_b_g.html',1,'']]]
 ];

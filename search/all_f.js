@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['password_5fverify',['PASSWORD_VERIFY',['../_dialog_8h.html#a9b56413fd47929ac1ed4bb8eceb94acf',1,'Dialog.h']]],
   ['path',['Path',['../group___c_addon_lib___v_f_s_dir_entry.html#ga666f6d222d6e40f592d7ec4c8c670263',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry']]],
   ['path_5fseparator_5fchar',['PATH_SEPARATOR_CHAR',['../addon_8api2_2definations_8h.html#a581727c17b559af16969b4073417701d',1,'definations.h']]],
   ['pause',['Pause',['../group___c_a_e_lib___stream.html#ga70babc5227ddd16ca31dccc6cec0bb22',1,'AudioEngineLIB::V2::CAELib_Stream::Pause()'],['../group___c_player_lib___player.html#ga70babc5227ddd16ca31dccc6cec0bb22',1,'PlayerLIB::V2::CPlayerLib_Player::Pause()']]],
@@ -21,6 +22,6 @@ var searchData=
   ['pvrlib',['PVRLIB',['../namespace_p_v_r_l_i_b.html',1,'']]],
   ['pvrlib_2eh',['PVRLib.h',['../_p_v_r_lib_8h.html',1,'']]],
   ['python_20development',['Python Development',['../group__python.html',1,'']]],
-  ['v2',['V2',['../namespace_player_l_i_b_1_1_v2.html',1,'PlayerLIB']]],
-  ['v2',['V2',['../namespace_p_v_r_l_i_b_1_1_v2.html',1,'PVRLIB']]]
+  ['v2',['V2',['../namespace_p_v_r_l_i_b_1_1_v2.html',1,'PVRLIB']]],
+  ['v2',['V2',['../namespace_player_l_i_b_1_1_v2.html',1,'PlayerLIB']]]
 ];

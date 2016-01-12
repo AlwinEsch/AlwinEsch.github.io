@@ -80,7 +80,7 @@ var searchData=
   ['clearlist',['ClearList',['../group___c_addon_g_u_i_window.html#ga2b85ec494201046fd7686395c996c272',1,'GUILIB::V2::CAddonGUIWindow::ClearList()'],['../group___c_player_lib___play_list.html#ga2b85ec494201046fd7686395c996c272',1,'PlayerLIB::V2::CPlayerLib_PlayList::ClearList()']]],
   ['clearproperties',['ClearProperties',['../group___c_addon_g_u_i_list_item.html#gac08a48ef4dc5afe79c14ffbefdd96f5d',1,'GUILIB::V2::CAddonGUIListItem::ClearProperties()'],['../group___c_addon_g_u_i_window.html#gac08a48ef4dc5afe79c14ffbefdd96f5d',1,'GUILIB::V2::CAddonGUIWindow::ClearProperties()']]],
   ['clearproperty',['ClearProperty',['../group___c_addon_g_u_i_list_item.html#ga881f45cb47b4f775418e65dfc6c8b832',1,'GUILIB::V2::CAddonGUIListItem']]],
-  ['close',['Close',['../group___c_addon_lib___v_f_s_file.html#ga7f7a3199c392465d0767c6506c1af5b4',1,'AddOnLIB::V2::CAddonLib_VFSFile::Close()'],['../group___c_addon_g_u_i_window.html#ga7f7a3199c392465d0767c6506c1af5b4',1,'GUILIB::V2::CAddonGUIWindow::Close()']]],
+  ['close',['close',['../group__python___dialog_progress.html#ga5ae591df94fc66ccb85cbb6565368bca',1,'XBMCAddon::xbmcgui::DialogProgress::close()'],['../group__python___dialog_progress_b_g.html#ga5ae591df94fc66ccb85cbb6565368bca',1,'XBMCAddon::xbmcgui::DialogProgressBG::close()'],['../group___c_addon_lib___v_f_s_file.html#ga7f7a3199c392465d0767c6506c1af5b4',1,'AddOnLIB::V2::CAddonLib_VFSFile::Close()'],['../group___c_addon_g_u_i_window.html#ga7f7a3199c392465d0767c6506c1af5b4',1,'GUILIB::V2::CAddonGUIWindow::Close()']]],
   ['codec',['Codec',['../group___codec_descriptor.html#ga62b7b43b626a9b8beb0f16a8795b9d91',1,'AddOnLIB::V2::CodecDescriptor']]],
   ['codec_2eh',['Codec.h',['../_codec_8h.html',1,'']]],
   ['codec_5fid',['codec_id',['../structkodi__codec.html#abb16fc135f202805c438614ff10cf11c',1,'kodi_codec']]],
@@ -109,7 +109,7 @@ var searchData=
   ['cpvrlib_5ftrigger',['CPVRLib_Trigger',['../group___c_p_v_r_lib___trigger.html',1,'']]],
   ['cpvrstream',['CPVRStream',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_stream.html',1,'PVRLIB::V2']]],
   ['cpvrstream',['CPVRStream',['../group___c_p_v_r_stream.html#gaf419611a13a1bca6fe60cd58cb8a952f',1,'PVRLIB::V2::CPVRStream::CPVRStream()'],['../group___c_p_v_r_stream.html#gad8caf56bf234506f41c1fcc64a0d1ad7',1,'PVRLIB::V2::CPVRStream::CPVRStream(const CPVRStream &amp;other)'],['../group___c_p_v_r_stream.html',1,'(Global Namespace)']]],
-  ['create',['Create',['../group___c_addon_g_u_i_control_rendering.html#ga12847d560dd43205d13b0963d9e395e1',1,'GUILIB::V2::CAddonGUIControlRendering']]],
+  ['create',['create',['../group__python___dialog_progress.html#gad71569b69244d11fe949d0bbd5b75905',1,'XBMCAddon::xbmcgui::DialogProgress::create()'],['../group__python___dialog_progress_b_g.html#gaafb8a184f497bc815d38be07731df561',1,'XBMCAddon::xbmcgui::DialogProgressBG::create()'],['../group___c_addon_g_u_i_control_rendering.html#ga12847d560dd43205d13b0963d9e395e1',1,'GUILIB::V2::CAddonGUIControlRendering::Create()']]],
   ['createdirectory',['CreateDirectory',['../group___c_addon_lib___v_f_s_utils.html#gacbb82bf91432edf4a203b4f144c7d3c4',1,'AddOnLIB::V2::CAddonLib_VFSUtils']]],
   ['cstreamproperties',['CStreamProperties',['../group___c_stream_properties.html#gadb5884513f2557e07249fab9f1cc447c',1,'PVRLIB::V2::CStreamProperties::CStreamProperties()'],['../group___c_stream_properties.html',1,'(Global Namespace)']]],
   ['cstreamproperties',['CStreamProperties',['../class_p_v_r_l_i_b_1_1_v2_1_1_c_stream_properties.html',1,'PVRLIB::V2']]]
