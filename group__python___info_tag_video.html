@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CPlayerLib_InfoTagVideo</title>
+<title>Kodi Development: InfoTagVideo</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('group___c_player_lib___info_tag_video.html','');});
+$(document).ready(function(){initNavTree('group__python___info_tag_video.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -102,23 +102,408 @@ $(document).ready(function(){initNavTree('group___c_player_lib___info_tag_video.
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CPlayerLib_InfoTagVideo<div class="ingroups"><a class="el" href="group__cpp.html">C++ Development</a> &raquo; <a class="el" href="group___player_l_i_b.html">Library - PlayerLIB</a></div></div>  </div>
+<div class="title">InfoTagVideo<div class="ingroups"><a class="el" href="group__python.html">Python Development</a> &raquo; <a class="el" href="group__python__xbmc.html">xbmc</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Used for present video information</b> </p>
-<p>Class contains after request the on Kodi present information of played video.</p>
-<p>It has the header <a class="el" href="interfaces_2legacy_2_info_tag_video_8h.html">#include &lt;kodi/player.api2/InfoTagVideo.h&gt;</a> be included to enjoy it. </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga0c59a9a278244a6f43256556b29cbeb7"></a>
+<h2>Kodi's <a class="el" href="class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html">InfoTagVideo</a> class. </h2>
+<p>To get video info tag data of currently played source.</p>
+<dl class="section note"><dt>Note</dt><dd>Info tag load is only be possible from present player class.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;tag = xbmc.Player().getVideoInfoTag()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;title = tag.getTitle()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;file  = tag.getFile()</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;...</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga014e2737672aac5e1fca6c67268ef7ca"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CPlayerLib_InfoTagVideo </td>
+          <td class="memname">String getCast </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_player_l_i_b_1_1_v2_1_1_c_player_lib___player.html">CPlayerLib_Player</a> *&#160;</td>
-          <td class="paramname"><em>player</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get the cast of the video when available. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Video casts</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gaf9d61e5189c09ef08febcd52087001cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getDirector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get <a href="https://en.wikipedia.org/wiki/Film_director">film director</a> who has made the film (if present). </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Film director name.</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga723e190c9b450ce6558126ef95b03ec9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get the video file name. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] File name</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga9bf8326fd3213f31cf6c83cd70b7b521"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getFirstAired </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns first aired date as string from info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] First aired date</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga724866edc25325e096d7d8a76b4a3234"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getGenre </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get the <a href="https://en.wikipedia.org/wiki/Film_genre">Video Genre</a> if available. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Genre name</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga3a5155fe7fa0cdfa1970a6f569f9b666"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getIMDBNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>[string] To get the <a href="https://en.wikipedia.org/wiki/Internet_Movie_Database">IMDb</a> number of the video (if present).</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga64953074270dc9bc74370b8251c1cd43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getLastPlayed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the last played date / time as string. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Last played date / time</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga4f96c0aaaf77bdf9d8eef09bb8ac8ecc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getOriginalTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get the original title of the video. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Original title</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga6779d0f135fcec6c7f8a8ee49d7af165"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get the path where the video is stored. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Path</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gad3ff2085e537bfbfa2f14d0c9a1dfcaa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getPictureURL </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a picture URL of the video to show as screenshot. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Picture URL</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gac644258d08f747039e9d0e76bcd49513"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getPlayCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get the number of plays of the video. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Play Count</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga7b4144bd89a83e0066a43d674c935453"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getPlot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the plot of the video if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Plot</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga9d64a845dd0f805ecfc9dede2fcb683c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getPlotOutline </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the outline plot of the video if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Outline plot</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga6344c3ab0ba02f7381c09bfc384b0f58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getPremiered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get <a href="https://en.wikipedia.org/wiki/Premiere">premiered</a> date of the video, if available. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string]</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga235125a9aed4cc8c630d4e681e14d196"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double getRating </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the video rating if present as float (double where supported). </p>
+<dl class="section return"><dt>Returns</dt><dd>[float]</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga5de7f223574b5b39917a1e2d284ca2db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getTagLine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get video tag line if available. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Video tag line</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga888f94790c968e3f0b5de17e509098aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the video title. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Video title</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga43531ed78e2ffc99da87d0b93293ebf9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getVotes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the video votes if available from video info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Votes</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga85b8f5a942a429ec2e66cad259fe1fd2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getWritingCredits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the writing credits if present from video info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Writing credits</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga53172a43145522837b888b7d7f7117ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getYear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get production year of video if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Production Year</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gaaa26e981ea77470001ddc1c55bb358f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InfoTagVideo </td>
+          <td>(</td>
+          <td class="paramtype">const CVideoInfoTag &amp;&#160;</td>
+          <td class="paramname"><em>tag</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -126,367 +511,22 @@ $(document).ready(function(){initNavTree('group___c_player_lib___info_tag_video.
 
 </div>
 </div>
-<a class="anchor" id="ga887ee39961b10a4afb9a21c1b4470ad6"></a>
+<a class="anchor" id="ga0569cc066477d7740c94e04d36d800f2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string&amp; GetCast </td>
+          <td class="memname">InfoTagVideo </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ga971b8bd6b97a337cab9b96d8f9070749"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetCountry </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gad6809482e123a8011fff62470ea115eb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetDirector </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gabf8649f509198c0605a0f93c5d29a87c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int GetDuration </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gaa05bee5cb34224a431c82d42d5bca039"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetFile </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga9094522bd49574a67d4c8402ff240cb1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetFirstAired </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga57435c1b02f97861847fffd5fd740123"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetGenre </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga1e5232474372f5364c1d66bcfb01dce1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetIMDBNumber </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga833b68f759c1e3ce0c068fd06e9b0f4a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetLastPlayed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga4546f09c240060376fef6e7be55795bc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetMPAARating </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gabb8b8f9930f07eab44a3341f8ad966e5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetOriginalTitle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga823adc81f55ead9f5978de4b64b279c3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetPath </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga433fa04ffdb92cc4a868e5ba0dfbb4c2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetPictureURL </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga057dc61a69e40c80675a082b6251fc8a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GetPlayCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga35d97a12503c64202fef6c10dc687011"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetPlot </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga64e0da943d733a7a84a9053e2f25ea3b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetPlotOutline </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga51f81b31f3f918368528aaf7b217439a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetPremiered </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga60bd9aab01c1e0890199f2b5b68fbf1b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double GetRating </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga58fabc0438d8a2d9a6e8c956897869f5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetTagLine </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga9272205cb3a71f70bb4c9437da3c9bda"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetTitle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga9a782bb09314f8c944ffbac211fbc1a2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetTrailer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga0dc6d3dd2385ac3606324f004e11346f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetVotes </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gaba0a9bd1392dd9d3aeca8f79bcc6c48c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; GetWritingCredits </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga434e5e24f6205c0685cddb01c68f433a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GetYear </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga7e035ba2734dd8456cbc5cd607df46d0"></a>
+<a class="anchor" id="ga4a232a70bc8ac59e1b26d09f60246fe9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -494,7 +534,7 @@ $(document).ready(function(){initNavTree('group___c_player_lib___info_tag_video.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~CPlayerLib_InfoTagVideo </td>
+          <td class="memname">virtual ~InfoTagVideo </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

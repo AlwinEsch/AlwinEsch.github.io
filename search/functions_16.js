@@ -25,5 +25,7 @@ var searchData=
   ['_7ecplayerlib_5fplayer',['~CPlayerLib_Player',['../group___c_player_lib___player.html#ga86e7a698aa3dfe83659870043eb42ac6',1,'PlayerLIB::V2::CPlayerLib_Player']]],
   ['_7ecplayerlib_5fplaylist',['~CPlayerLib_PlayList',['../group___c_player_lib___play_list.html#gab5aa5368f1de872e97298ab744281ee8',1,'PlayerLIB::V2::CPlayerLib_PlayList']]],
   ['_7ecstreamproperties',['~CStreamProperties',['../group___c_stream_properties.html#ga6f0282c6d4010650f5ed1075bd19da84',1,'PVRLIB::V2::CStreamProperties']]],
+  ['_7einfotagmusic',['~InfoTagMusic',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music.html#a541c6e4089511366c31fef3ed5ca0b69',1,'XBMCAddon::xbmc::InfoTagMusic']]],
+  ['_7einfotagvideo',['~InfoTagVideo',['../group__python___info_tag_video.html#ga4a232a70bc8ac59e1b26d09f60246fe9',1,'XBMCAddon::xbmc::InfoTagVideo']]],
   ['_7ekeyboard',['~Keyboard',['../class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html#acec86b051eb2fd163d5f5b2e19679f9e',1,'XBMCAddon::xbmc::Keyboard']]]
 ];

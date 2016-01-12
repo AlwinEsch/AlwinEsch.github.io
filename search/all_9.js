@@ -33,8 +33,14 @@ var searchData=
   ['implement_5faddon_5fae_5fstream',['IMPLEMENT_ADDON_AE_STREAM',['../class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html#a3808b26fbe1cd877744265373c12757a',1,'AudioEngineLIB::V2::CAELib_Stream']]],
   ['implement_5faddon_5fgui_5fwindow',['IMPLEMENT_ADDON_GUI_WINDOW',['../class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a9c9c299166319c2248b2c62548a69fbb',1,'GUILIB::V2::CAddonGUIWindow']]],
   ['incrementproperty',['IncrementProperty',['../group___c_addon_g_u_i_list_item.html#ga043501226133dde1d98cd16f7c5a5fc8',1,'GUILIB::V2::CAddonGUIListItem']]],
-  ['infotagmusic_2eh',['InfoTagMusic.h',['../_info_tag_music_8h.html',1,'']]],
-  ['infotagvideo_2eh',['InfoTagVideo.h',['../_info_tag_video_8h.html',1,'']]],
+  ['infotagmusic',['InfoTagMusic',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music.html#a4eb60c9d7234a85972b5a0218bec69b0',1,'XBMCAddon::xbmc::InfoTagMusic::InfoTagMusic(const MUSIC_INFO::CMusicInfoTag &amp;tag)'],['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music.html#a62b565326391b112f7897681265fde34',1,'XBMCAddon::xbmc::InfoTagMusic::InfoTagMusic()']]],
+  ['infotagmusic',['InfoTagMusic',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music.html',1,'XBMCAddon::xbmc']]],
+  ['infotagmusic_2eh',['InfoTagMusic.h',['../interfaces_2legacy_2_info_tag_music_8h.html',1,'']]],
+  ['infotagmusic_2eh',['InfoTagMusic.h',['../addons_2kodi-addon-dev-kit_2kodi_2player_8api2_2_info_tag_music_8h.html',1,'']]],
+  ['infotagvideo',['InfoTagVideo',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html',1,'XBMCAddon::xbmc']]],
+  ['infotagvideo',['InfoTagVideo',['../group__python___info_tag_video.html#gaaa26e981ea77470001ddc1c55bb358f8',1,'XBMCAddon::xbmc::InfoTagVideo::InfoTagVideo(const CVideoInfoTag &amp;tag)'],['../group__python___info_tag_video.html#ga0569cc066477d7740c94e04d36d800f2',1,'XBMCAddon::xbmc::InfoTagVideo::InfoTagVideo()']]],
+  ['infotagvideo_2eh',['InfoTagVideo.h',['../addons_2kodi-addon-dev-kit_2kodi_2player_8api2_2_info_tag_video_8h.html',1,'']]],
+  ['infotagvideo_2eh',['InfoTagVideo.h',['../interfaces_2legacy_2_info_tag_video_8h.html',1,'']]],
   ['iparentalrating',['iParentalRating',['../struct_e_p_g___t_a_g.html#a11861e0214df81ce6441703d8ae97b35',1,'EPG_TAG']]],
   ['isbuffering',['IsBuffering',['../group___c_a_e_lib___stream.html#ga0a04f8b3e045b68d509dab0b67d077a8',1,'AudioEngineLIB::V2::CAELib_Stream']]],
   ['iscanceled',['IsCanceled',['../group___c_addon_g_u_i_dialog_progress.html#gaf76bcf12aaec9ab845ea61853a37a33c',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
@@ -55,5 +61,7 @@ var searchData=
   ['isselected',['IsSelected',['../group___c_addon_g_u_i_control_radio_button.html#gad29f489ee580d3d6d01b334aa186c323',1,'GUILIB::V2::CAddonGUIControlRadioButton::IsSelected()'],['../group___c_addon_g_u_i_list_item.html#ga8bd3773d1e4bc4a38c419fd6c92bdee2',1,'GUILIB::V2::CAddonGUIListItem::IsSelected()']]],
   ['istarrating',['iStarRating',['../struct_e_p_g___t_a_g.html#a809cd8ea1c1a8244ef9ab07bc9317cf0',1,'EPG_TAG']]],
   ['iuniquebroadcastid',['iUniqueBroadcastId',['../struct_e_p_g___t_a_g.html#a268e0b240a6196bd5bef6b53a4daadc8',1,'EPG_TAG']]],
-  ['iyear',['iYear',['../struct_e_p_g___t_a_g.html#aff44b11da9adef57c6766912ab82bf7d',1,'EPG_TAG']]]
+  ['iyear',['iYear',['../struct_e_p_g___t_a_g.html#aff44b11da9adef57c6766912ab82bf7d',1,'EPG_TAG']]],
+  ['infotagmusic',['InfoTagMusic',['../group__python___info_tag_music.html',1,'']]],
+  ['infotagvideo',['InfoTagVideo',['../group__python___info_tag_video.html',1,'']]]
 ];

@@ -44,7 +44,8 @@ var NAVTREEINDEX =
 "group___c_a_e_lib.html#gaa0bf67ad4ff0b67b500e4070f873c337",
 "group___c_addon_g_u_i_list_item.html#gad0cc801f1cfa8f4e2cfc1b88fc964403",
 "group___c_player_lib___info_tag_music.html#gad31236e89eaf77e5e65f34aa1fd90426",
-"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43da95f3ad0799d6a489d0150dbeb30152a8"
+"gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43da6ab65c68e892cb81e18fabc5e63db401",
+"structkodi__codec.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

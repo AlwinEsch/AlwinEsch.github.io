@@ -1,6 +1,8 @@
 var hierarchy =
 [
     [ "AddonClass", null, [
+      [ "InfoTagMusic", "class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music.html", null ],
+      [ "InfoTagVideo", "class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html", null ],
       [ "Keyboard", "class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html", null ]
     ] ],
     [ "CAddonLib_Codec", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___codec.html", null ],

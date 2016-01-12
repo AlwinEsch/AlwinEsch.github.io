@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['register_20functions',['Register functions',['../group___c_g_u_i_lib__main.html',1,'']]]
+  ['python_20development',['Python Development',['../group__python.html',1,'']]]
 ];
