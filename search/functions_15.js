@@ -1,27 +1,4 @@
 var searchData=
 [
-  ['_7ecaddonguicontrolbutton',['~CAddonGUIControlButton',['../group___c_addon_g_u_i_control_button.html#gaeb9b958abdc7aa81b76bb43b856edb9a',1,'GUILIB::V2::CAddonGUIControlButton']]],
-  ['_7ecaddonguicontroledit',['~CAddonGUIControlEdit',['../group___c_addon_g_u_i_control_edit.html#ga73829ce82d2eac94bf12aff3d718ba3e',1,'GUILIB::V2::CAddonGUIControlEdit']]],
-  ['_7ecaddonguicontrolfadelabel',['~CAddonGUIControlFadeLabel',['../group___c_addon_g_u_i_control_fade_label.html#gac737d5d712a254b8d555891a953ba685',1,'GUILIB::V2::CAddonGUIControlFadeLabel']]],
-  ['_7ecaddonguicontrolimage',['~CAddonGUIControlImage',['../group___c_addon_g_u_i_control_image.html#gaf4b7097d3f8155be34401f9daab51eb3',1,'GUILIB::V2::CAddonGUIControlImage']]],
-  ['_7ecaddonguicontrollabel',['~CAddonGUIControlLabel',['../group___c_addon_g_u_i_control_label.html#gae46262d2f574f9375e18fd28b3b0244b',1,'GUILIB::V2::CAddonGUIControlLabel']]],
-  ['_7ecaddonguicontrolprogress',['~CAddonGUIControlProgress',['../group___c_addon_g_u_i_control_progress.html#gaa8bf8f60a1fb563174ce41f46acb9558',1,'GUILIB::V2::CAddonGUIControlProgress']]],
-  ['_7ecaddonguicontrolradiobutton',['~CAddonGUIControlRadioButton',['../group___c_addon_g_u_i_control_radio_button.html#ga4412919fbcab408f12771d6664a3cd16',1,'GUILIB::V2::CAddonGUIControlRadioButton']]],
-  ['_7ecaddonguicontrolrendering',['~CAddonGUIControlRendering',['../group___c_addon_g_u_i_control_rendering.html#ga8111f29e2c5fe998d541b21d76f0d353',1,'GUILIB::V2::CAddonGUIControlRendering']]],
-  ['_7ecaddonguicontrolsettingsslider',['~CAddonGUIControlSettingsSlider',['../group___c_addon_g_u_i_control_settings_slider.html#gaea1533f267360e38309e3c0483c27f97',1,'GUILIB::V2::CAddonGUIControlSettingsSlider']]],
-  ['_7ecaddonguicontrolslider',['~CAddonGUIControlSlider',['../group___c_addon_g_u_i_control_slider.html#ga29c8ebb717db0bcba0a1e7227720366b',1,'GUILIB::V2::CAddonGUIControlSlider']]],
-  ['_7ecaddonguicontrolspin',['~CAddonGUIControlSpin',['../group___c_addon_g_u_i_control_spin.html#ga9a88528e79119f52c1f7808f78ded9be',1,'GUILIB::V2::CAddonGUIControlSpin']]],
-  ['_7ecaddonguicontroltextbox',['~CAddonGUIControlTextBox',['../group___c_addon_g_u_i_control_text_box.html#ga671686d3890667392291118ca36b3e41',1,'GUILIB::V2::CAddonGUIControlTextBox']]],
-  ['_7ecaddonguidialogextendedprogress',['~CAddonGUIDialogExtendedProgress',['../group___c_addon_g_u_i_dialog_extended_progress.html#ga86033f373ed6159d52feb585bab2dfda',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
-  ['_7ecaddonguidialogprogress',['~CAddonGUIDialogProgress',['../group___c_addon_g_u_i_dialog_progress.html#ga120fc408bff359c7c29a02551c00e9a0',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
-  ['_7ecaddonguilistitem',['~CAddonGUIListItem',['../group___c_addon_g_u_i_list_item.html#gae5d57fceca241c560feebb8d9cb00874',1,'GUILIB::V2::CAddonGUIListItem']]],
-  ['_7ecaddonguiwindow',['~CAddonGUIWindow',['../group___c_addon_g_u_i_window.html#ga5a70785a8d29e28dacdb27356a609ef8',1,'GUILIB::V2::CAddonGUIWindow']]],
-  ['_7ecaddoninfotagmusic',['~CAddonInfoTagMusic',['../group___c_addon_info_tag_music.html#ga34f8ed0ff53d197081293452c18494dd',1,'PlayerLIB::V2::CAddonInfoTagMusic']]],
-  ['_7ecaddonlib_5fsoundplay',['~CAddonLib_SoundPlay',['../group___c_addon_lib___sound_play.html#ga21c5c23ed3b5c5f06cc66331f8bec712',1,'AddOnLIB::V2::CAddonLib_SoundPlay']]],
-  ['_7ecaddonlib_5fvfsfile',['~CAddonLib_VFSFile',['../group___c_addon_lib___v_f_s_file.html#gaff9977af1409edaace50b30024b00306',1,'AddOnLIB::V2::CAddonLib_VFSFile']]],
-  ['_7ecaddonplayer',['~CAddonPlayer',['../group___c_addon_player.html#ga9778d4d10ba4997a76d096f2656e4406',1,'PlayerLIB::V2::CAddonPlayer']]],
-  ['_7ecaddonplaylist',['~CAddonPlayList',['../group___c_addon_play_list.html#ga365fab1bc14811a754118cbfad1499b6',1,'PlayerLIB::V2::CAddonPlayList']]],
-  ['_7ecaelib_5fstream',['~CAELib_Stream',['../group___c_a_e_lib___stream.html#ga9f7e169caec98e28f6b92adf8ab140f2',1,'AudioEngineLIB::V2::CAELib_Stream']]],
-  ['_7ecodecdescriptor',['~CodecDescriptor',['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html#a8a61d5619aaa653c3e35d65807bf725b',1,'AddOnLIB::V2::CodecDescriptor']]],
-  ['_7ecstreamproperties',['~CStreamProperties',['../group___c_stream_properties.html#ga6f0282c6d4010650f5ed1075bd19da84',1,'PVRLIB::V2::CStreamProperties']]]
+  ['xbmccommons_5fstandard_5fexception',['XBMCCOMMONS_STANDARD_EXCEPTION',['../namespace_x_b_m_c_addon_1_1xbmc.html#af3c0375d913f3a660121fd1153f93059',1,'XBMCAddon::xbmc']]]
 ];

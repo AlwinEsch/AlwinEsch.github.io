@@ -1,5 +1,8 @@
 var hierarchy =
 [
+    [ "AddonClass", null, [
+      [ "Keyboard", "class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html", null ]
+    ] ],
     [ "CAddonLib_Codec", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___codec.html", null ],
     [ "CAddonLib_General", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___general.html", null ],
     [ "CAddonLib_Network", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___network.html", null ],
@@ -52,9 +55,10 @@ var hierarchy =
     [ "CAddonGUIWindow", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html", null ],
     [ "kodi_codec", "structkodi__codec.html", null ],
     [ "kodi_version", "structkodi__version.html", null ],
-    [ "CAddonInfoTagMusic", "class_player_l_i_b_1_1_v2_1_1_c_addon_info_tag_music.html", null ],
-    [ "CAddonPlayer", "class_player_l_i_b_1_1_v2_1_1_c_addon_player.html", null ],
-    [ "CAddonPlayList", "class_player_l_i_b_1_1_v2_1_1_c_addon_play_list.html", null ],
+    [ "CPlayerLib_InfoTagMusic", "class_player_l_i_b_1_1_v2_1_1_c_player_lib___info_tag_music.html", null ],
+    [ "CPlayerLib_InfoTagVideo", "class_player_l_i_b_1_1_v2_1_1_c_player_lib___info_tag_video.html", null ],
+    [ "CPlayerLib_Player", "class_player_l_i_b_1_1_v2_1_1_c_player_lib___player.html", null ],
+    [ "CPlayerLib_PlayList", "class_player_l_i_b_1_1_v2_1_1_c_player_lib___play_list.html", null ],
     [ "PVR_STREAM", null, [
       [ "CPVRStream", "class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_stream.html", null ]
     ] ],

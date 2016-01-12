@@ -8,6 +8,6 @@ var searchData=
   ['dlopen',['dlopen',['../dlfcn-win32_8cpp.html#a8668245fcfc33ca414d3d27ca038891a',1,'dlopen(const char *file, int mode):&#160;dlfcn-win32.cpp'],['../dlfcn-win32_8h.html#a8668245fcfc33ca414d3d27ca038891a',1,'dlopen(const char *file, int mode):&#160;dlfcn-win32.cpp']]],
   ['dlsym',['dlsym',['../dlfcn-win32_8cpp.html#af130d2e6324246be4262ecaaed674aa4',1,'dlsym(void *handle, const char *name):&#160;dlfcn-win32.cpp'],['../dlfcn-win32_8h.html#af130d2e6324246be4262ecaaed674aa4',1,'dlsym(void *handle, const char *name):&#160;dlfcn-win32.cpp']]],
   ['dnslookup',['DNSLookup',['../group___c_addon_lib___network.html#ga39943b1fdb3a928f0c08e54484602a7e',1,'AddOnLIB::V2::CAddonLib_Network']]],
-  ['domodal',['DoModal',['../group___c_addon_g_u_i_window.html#ga856163c733aa826e2ff77a067e09b896',1,'GUILIB::V2::CAddonGUIWindow']]],
+  ['domodal',['DoModal',['../group___c_addon_g_u_i_window.html#ga856163c733aa826e2ff77a067e09b896',1,'GUILIB::V2::CAddonGUIWindow::DoModal()'],['../group__python__keyboard.html#gacc43c0ec49f492cdd85ac0e53a456be3',1,'XBMCAddon::xbmc::Keyboard::doModal()']]],
   ['drain',['Drain',['../group___c_a_e_lib___stream.html#ga693180e7abf852dfa2af3e7c35d7db23',1,'AudioEngineLIB::V2::CAELib_Stream']]]
 ];

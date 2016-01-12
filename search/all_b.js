@@ -8,7 +8,7 @@ var searchData=
   ['lang_5ffmt_5fiso_5f639_5f1',['LANG_FMT_ISO_639_1',['../addon_8api2_2definations_8h.html#ad481b851c163786e65d41b9ab47ed14ea282b7d25014247cf5f26f5ee0fe6ea51',1,'definations.h']]],
   ['lang_5ffmt_5fiso_5f639_5f2',['LANG_FMT_ISO_639_2',['../addon_8api2_2definations_8h.html#ad481b851c163786e65d41b9ab47ed14ea93ccac5fa6affc3908cbd62584c2e92b',1,'definations.h']]],
   ['lang_5fformats',['lang_formats',['../addon_8api2_2definations_8h.html#ad481b851c163786e65d41b9ab47ed14e',1,'definations.h']]],
-  ['loadplaylist',['LoadPlaylist',['../group___c_addon_play_list.html#ga7de3982ed8b225f5fd1580c75847d9db',1,'PlayerLIB::V2::CAddonPlayList']]],
+  ['loadplaylist',['LoadPlaylist',['../group___c_player_lib___play_list.html#ga7de3982ed8b225f5fd1580c75847d9db',1,'PlayerLIB::V2::CPlayerLib_PlayList']]],
   ['lock',['Lock',['../group___c_g_u_i_lib__help.html#gace70db8e92290399a2a070eb0a60df63',1,'GUILIB::V2::CGUILib']]],
   ['log',['Log',['../group___c_addon_lib___general.html#gabd930a9f867043a32052b92f3df7e1a2',1,'AddOnLIB::V2::CAddonLib_General']]],
   ['log_5fdebug',['LOG_DEBUG',['../addon_8api2_2definations_8h.html#af8526ffb1ee2a785489ac05b6e49d357ab9f002c6ffbfd511da8090213227454e',1,'definations.h']]],

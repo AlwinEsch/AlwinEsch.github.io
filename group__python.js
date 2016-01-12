@@ -1,6 +1,6 @@
 var group__python =
 [
-    [ "xbmc", "group__python__xbmc.html", null ],
+    [ "xbmc", "group__python__xbmc.html", "group__python__xbmc" ],
     [ "xbmcaddon", "group__python__xbmcaddon.html", null ],
     [ "xbmcgui", "group__python__xbmcgui.html", null ],
     [ "xbmcplugin", "group__python__xbmcplugin.html", null ],

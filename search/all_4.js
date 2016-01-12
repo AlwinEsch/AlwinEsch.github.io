@@ -16,7 +16,7 @@ var searchData=
   ['dlopen',['dlopen',['../dlfcn-win32_8cpp.html#a8668245fcfc33ca414d3d27ca038891a',1,'dlopen(const char *file, int mode):&#160;dlfcn-win32.cpp'],['../dlfcn-win32_8h.html#a8668245fcfc33ca414d3d27ca038891a',1,'dlopen(const char *file, int mode):&#160;dlfcn-win32.cpp']]],
   ['dlsym',['dlsym',['../dlfcn-win32_8cpp.html#af130d2e6324246be4262ecaaed674aa4',1,'dlsym(void *handle, const char *name):&#160;dlfcn-win32.cpp'],['../dlfcn-win32_8h.html#af130d2e6324246be4262ecaaed674aa4',1,'dlsym(void *handle, const char *name):&#160;dlfcn-win32.cpp']]],
   ['dnslookup',['DNSLookup',['../group___c_addon_lib___network.html#ga39943b1fdb3a928f0c08e54484602a7e',1,'AddOnLIB::V2::CAddonLib_Network']]],
-  ['domodal',['DoModal',['../group___c_addon_g_u_i_window.html#ga856163c733aa826e2ff77a067e09b896',1,'GUILIB::V2::CAddonGUIWindow']]],
+  ['domodal',['DoModal',['../group___c_addon_g_u_i_window.html#ga856163c733aa826e2ff77a067e09b896',1,'GUILIB::V2::CAddonGUIWindow::DoModal()'],['../group__python__keyboard.html#gacc43c0ec49f492cdd85ac0e53a456be3',1,'XBMCAddon::xbmc::Keyboard::doModal()']]],
   ['doxygen_2dkodi_2d001_5f000_5fgetting_5fstarted_2etxt',['doxygen-kodi-001_000_Getting_started.txt',['../doxygen-kodi-001__000___getting__started_8txt.html',1,'']]],
   ['doxygen_2dkodi_2d002_5f000_5fadd_2don_5ftypes_2etxt',['doxygen-kodi-002_000_Add-On_Types.txt',['../doxygen-kodi-002__000___add-_on___types_8txt.html',1,'']]],
   ['doxygen_2dkodi_2d003_5f000_5ftutorials_2etxt',['doxygen-kodi-003_000_Tutorials.txt',['../doxygen-kodi-003__000___tutorials_8txt.html',1,'']]],

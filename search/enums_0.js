@@ -6,6 +6,6 @@ var searchData=
   ['addonguiiconoverlay',['AddonGUIIconOverlay',['../gui_8api2_2definations_8h.html#a84c995b3a9c675a155ac04175b6f036e',1,'definations.h']]],
   ['addonguiinputtype',['AddonGUIInputType',['../gui_8api2_2definations_8h.html#a65e94c0b771b91d3c1f0948113ee838a',1,'definations.h']]],
   ['addonguispincontroltype',['AddonGUISpinControlType',['../group___c_addon_g_u_i_control_spin.html#gaa4d6f1679508cd43d05a49afbb340856',1,'GUILIB::V2']]],
-  ['addonplaylisttype',['AddonPlayListType',['../group___c_addon_play_list.html#gab07b512029688f85c2c460a1d0a8efc1',1,'definations.h']]],
+  ['addonplaylisttype',['AddonPlayListType',['../player_8api2_2definations_8h.html#ab07b512029688f85c2c460a1d0a8efc1',1,'definations.h']]],
   ['audio_5fchannel',['audio_channel',['../group___c_addon_lib___sound_play.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4',1,'definations.h']]]
 ];

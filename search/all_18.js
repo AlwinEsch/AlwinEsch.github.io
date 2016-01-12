@@ -16,12 +16,14 @@ var searchData=
   ['_7ecaddonguidialogprogress',['~CAddonGUIDialogProgress',['../group___c_addon_g_u_i_dialog_progress.html#ga120fc408bff359c7c29a02551c00e9a0',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
   ['_7ecaddonguilistitem',['~CAddonGUIListItem',['../group___c_addon_g_u_i_list_item.html#gae5d57fceca241c560feebb8d9cb00874',1,'GUILIB::V2::CAddonGUIListItem']]],
   ['_7ecaddonguiwindow',['~CAddonGUIWindow',['../group___c_addon_g_u_i_window.html#ga5a70785a8d29e28dacdb27356a609ef8',1,'GUILIB::V2::CAddonGUIWindow']]],
-  ['_7ecaddoninfotagmusic',['~CAddonInfoTagMusic',['../group___c_addon_info_tag_music.html#ga34f8ed0ff53d197081293452c18494dd',1,'PlayerLIB::V2::CAddonInfoTagMusic']]],
   ['_7ecaddonlib_5fsoundplay',['~CAddonLib_SoundPlay',['../group___c_addon_lib___sound_play.html#ga21c5c23ed3b5c5f06cc66331f8bec712',1,'AddOnLIB::V2::CAddonLib_SoundPlay']]],
   ['_7ecaddonlib_5fvfsfile',['~CAddonLib_VFSFile',['../group___c_addon_lib___v_f_s_file.html#gaff9977af1409edaace50b30024b00306',1,'AddOnLIB::V2::CAddonLib_VFSFile']]],
-  ['_7ecaddonplayer',['~CAddonPlayer',['../group___c_addon_player.html#ga9778d4d10ba4997a76d096f2656e4406',1,'PlayerLIB::V2::CAddonPlayer']]],
-  ['_7ecaddonplaylist',['~CAddonPlayList',['../group___c_addon_play_list.html#ga365fab1bc14811a754118cbfad1499b6',1,'PlayerLIB::V2::CAddonPlayList']]],
   ['_7ecaelib_5fstream',['~CAELib_Stream',['../group___c_a_e_lib___stream.html#ga9f7e169caec98e28f6b92adf8ab140f2',1,'AudioEngineLIB::V2::CAELib_Stream']]],
   ['_7ecodecdescriptor',['~CodecDescriptor',['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html#a8a61d5619aaa653c3e35d65807bf725b',1,'AddOnLIB::V2::CodecDescriptor']]],
-  ['_7ecstreamproperties',['~CStreamProperties',['../group___c_stream_properties.html#ga6f0282c6d4010650f5ed1075bd19da84',1,'PVRLIB::V2::CStreamProperties']]]
+  ['_7ecplayerlib_5finfotagmusic',['~CPlayerLib_InfoTagMusic',['../group___c_player_lib___info_tag_music.html#ga0c345f0e0e254a42b005d75d93905b68',1,'PlayerLIB::V2::CPlayerLib_InfoTagMusic']]],
+  ['_7ecplayerlib_5finfotagvideo',['~CPlayerLib_InfoTagVideo',['../group___c_player_lib___info_tag_video.html#ga7e035ba2734dd8456cbc5cd607df46d0',1,'PlayerLIB::V2::CPlayerLib_InfoTagVideo']]],
+  ['_7ecplayerlib_5fplayer',['~CPlayerLib_Player',['../group___c_player_lib___player.html#ga86e7a698aa3dfe83659870043eb42ac6',1,'PlayerLIB::V2::CPlayerLib_Player']]],
+  ['_7ecplayerlib_5fplaylist',['~CPlayerLib_PlayList',['../group___c_player_lib___play_list.html#gab5aa5368f1de872e97298ab744281ee8',1,'PlayerLIB::V2::CPlayerLib_PlayList']]],
+  ['_7ecstreamproperties',['~CStreamProperties',['../group___c_stream_properties.html#ga6f0282c6d4010650f5ed1075bd19da84',1,'PVRLIB::V2::CStreamProperties']]],
+  ['_7ekeyboard',['~Keyboard',['../class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html#acec86b051eb2fd163d5f5b2e19679f9e',1,'XBMCAddon::xbmc::Keyboard']]]
 ];

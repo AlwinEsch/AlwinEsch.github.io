@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['settings_2exml',['settings.xml',['../group__settings__xml.html',1,'']]],
-  ['skin_20development',['Skin Development',['../group__skin.html',1,'']]]
+  ['register_20functions',['Register functions',['../group___c_g_u_i_lib__main.html',1,'']]]
 ];
