@@ -85,8 +85,12 @@ var searchData=
   ['showprogressbar',['ShowProgressBar',['../group___c_addon_g_u_i_dialog_progress.html#ga4ef9882ff90cb3878eb846335e2b3c07',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
   ['showsubtitles',['ShowSubtitles',['../group___c_player_lib___player.html#ga60f53aeeebce6fcc273b10d714ea2008',1,'PlayerLIB::V2::CPlayerLib_Player']]],
   ['shuffle',['Shuffle',['../group___c_player_lib___play_list.html#ga9d1841bc5f559c6981b78b895d446033',1,'PlayerLIB::V2::CPlayerLib_PlayList']]],
+  ['shutdown',['shutdown',['../group__python__xbmc.html#ga7861ee1569802186a619778efc85af13',1,'ModuleXbmc.h']]],
   ['size',['Size',['../group___c_addon_lib___v_f_s_dir_entry.html#gac0ba4f4c78dcb35605e645ee75198b5a',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry']]],
-  ['startserver',['StartServer',['../group___c_addon_lib___general.html#ga7dde8afb7cb40c1cb542a13557282f00',1,'AddOnLIB::V2::CAddonLib_General']]],
+  ['skinhasimage',['skinHasImage',['../group__python__xbmc.html#ga87711c98acae5f0cb3bef1bcbc1874c7',1,'ModuleXbmc.h']]],
+  ['sleep',['sleep',['../group__python__xbmc.html#gac0cd1ce3c7d7beb5da0b2456a8477d16',1,'ModuleXbmc.h']]],
+  ['startserver',['StartServer',['../group___c_addon_lib___general.html#ga7dde8afb7cb40c1cb542a13557282f00',1,'AddOnLIB::V2::CAddonLib_General::StartServer()'],['../group__python__xbmc.html#ga7f7ef28b88ebff7b94290f78912b73a4',1,'startServer():&#160;ModuleXbmc.h']]],
   ['statfile',['StatFile',['../group___c_addon_lib___v_f_s_utils.html#ga779d626c053ee2e3f9329d7f05e3d7d2',1,'AddOnLIB::V2::CAddonLib_VFSUtils']]],
-  ['stop',['Stop',['../group___c_addon_lib___sound_play.html#ga17a237457e57625296e6b24feb19c60a',1,'AddOnLIB::V2::CAddonLib_SoundPlay::Stop()'],['../group___c_addon_g_u_i_control_rendering.html#gaf6f113a64b92a63894b285b4f2a2c3a5',1,'GUILIB::V2::CAddonGUIControlRendering::Stop()'],['../group___c_player_lib___player.html#ga17a237457e57625296e6b24feb19c60a',1,'PlayerLIB::V2::CPlayerLib_Player::Stop()']]]
+  ['stop',['Stop',['../group___c_addon_lib___sound_play.html#ga17a237457e57625296e6b24feb19c60a',1,'AddOnLIB::V2::CAddonLib_SoundPlay::Stop()'],['../group___c_addon_g_u_i_control_rendering.html#gaf6f113a64b92a63894b285b4f2a2c3a5',1,'GUILIB::V2::CAddonGUIControlRendering::Stop()'],['../group___c_player_lib___player.html#ga17a237457e57625296e6b24feb19c60a',1,'PlayerLIB::V2::CPlayerLib_Player::Stop()']]],
+  ['stopsfx',['stopSFX',['../group__python__xbmc.html#ga3ad39f5a4a65222868520149fbdada32',1,'ModuleXbmc.h']]]
 ];

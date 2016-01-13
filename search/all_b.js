@@ -10,7 +10,7 @@ var searchData=
   ['lang_5fformats',['lang_formats',['../addon_8api2_2definations_8h.html#ad481b851c163786e65d41b9ab47ed14e',1,'definations.h']]],
   ['loadplaylist',['LoadPlaylist',['../group___c_player_lib___play_list.html#ga7de3982ed8b225f5fd1580c75847d9db',1,'PlayerLIB::V2::CPlayerLib_PlayList']]],
   ['lock',['Lock',['../group___c_g_u_i_lib__help.html#gace70db8e92290399a2a070eb0a60df63',1,'GUILIB::V2::CGUILib']]],
-  ['log',['Log',['../group___c_addon_lib___general.html#gabd930a9f867043a32052b92f3df7e1a2',1,'AddOnLIB::V2::CAddonLib_General']]],
+  ['log',['Log',['../group___c_addon_lib___general.html#gabd930a9f867043a32052b92f3df7e1a2',1,'AddOnLIB::V2::CAddonLib_General::Log()'],['../_module_xbmc_8h.html#aae1f9e78fc2e0e63f68dfe93f8e65cf9',1,'log():&#160;ModuleXbmc.h']]],
   ['log_5fdebug',['LOG_DEBUG',['../addon_8api2_2definations_8h.html#af8526ffb1ee2a785489ac05b6e49d357ab9f002c6ffbfd511da8090213227454e',1,'definations.h']]],
   ['log_5ferror',['LOG_ERROR',['../addon_8api2_2definations_8h.html#af8526ffb1ee2a785489ac05b6e49d357a230506cce5c68c3bac5a821c42ed3473',1,'definations.h']]],
   ['log_5ffatal',['LOG_FATAL',['../addon_8api2_2definations_8h.html#af8526ffb1ee2a785489ac05b6e49d357ac630750884d91cb9767ef2200bbb048b',1,'definations.h']]],

@@ -26,6 +26,7 @@ var group___c_addon_lib___general =
     [ "KodiQuit", "group___c_addon_lib___general.html#ga92e5be48408124cf9f6f18744abd90d4", null ],
     [ "KodiVersion", "group___c_addon_lib___general.html#ga399f77b85f988602c4f1d4c98aa18528", null ],
     [ "Log", "group___c_addon_lib___general.html#gabd930a9f867043a32052b92f3df7e1a2", null ],
+    [ "OpenSettings", "group___c_addon_lib___general.html#ga4ca62f28eba47ba078428f2fd124856a", null ],
     [ "QueueFormattedNotification", "group___c_addon_lib___general.html#ga77d684d8fa22f1163135489601ac6f19", null ],
     [ "QueueNotification", "group___c_addon_lib___general.html#ga2ab015503072bab77bb699af6a007ab1", null ],
     [ "QueueNotification", "group___c_addon_lib___general.html#ga6264a3e3afd8869f5e9d42cf3aad473b", null ],

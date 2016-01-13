@@ -50,7 +50,7 @@ var searchData=
   ['input_5ftime',['INPUT_TIME',['../_dialog_8h.html#aa7d37e5eb490c505d953edfcde16fc9d',1,'Dialog.h']]],
   ['iparentalrating',['iParentalRating',['../struct_e_p_g___t_a_g.html#a11861e0214df81ce6441703d8ae97b35',1,'EPG_TAG']]],
   ['isbuffering',['IsBuffering',['../group___c_a_e_lib___stream.html#ga0a04f8b3e045b68d509dab0b67d077a8',1,'AudioEngineLIB::V2::CAELib_Stream']]],
-  ['iscanceled',['iscanceled',['../group__python___dialog_progress.html#ga2a944a55da1c28885d3f00d101618ac6',1,'XBMCAddon::xbmcgui::DialogProgress::iscanceled()'],['../group___c_addon_g_u_i_dialog_progress.html#gaf76bcf12aaec9ab845ea61853a37a33c',1,'GUILIB::V2::CAddonGUIDialogProgress::IsCanceled()']]],
+  ['iscanceled',['IsCanceled',['../group___c_addon_g_u_i_dialog_progress.html#gaf76bcf12aaec9ab845ea61853a37a33c',1,'GUILIB::V2::CAddonGUIDialogProgress::IsCanceled()'],['../group__python___dialog_progress.html#ga2a944a55da1c28885d3f00d101618ac6',1,'XBMCAddon::xbmcgui::DialogProgress::iscanceled()']]],
   ['iscleared',['IsCleared',['../group___c_p_v_r_stream.html#ga324d4448e5c2dde1488e1a9b4d26c7ad',1,'PVRLIB::V2::CPVRStream']]],
   ['isconfirmed',['isConfirmed',['../group__python__keyboard.html#gadfdd82b36e1da59f1e1aa139755e49eb',1,'XBMCAddon::xbmc::Keyboard']]],
   ['isdrained',['IsDrained',['../group___c_a_e_lib___stream.html#gad2f3302fdee3ed4ab1558bc373498057',1,'AudioEngineLIB::V2::CAELib_Stream']]],

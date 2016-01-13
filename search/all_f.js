@@ -16,6 +16,7 @@ var searchData=
   ['playnext',['PlayNext',['../group___c_player_lib___player.html#ga2c3f82c8be6fdc06127deb6b3de785bd',1,'PlayerLIB::V2::CPlayerLib_Player']]],
   ['playprevious',['PlayPrevious',['../group___c_player_lib___player.html#ga542b407440e5a73dddbc275a8a0065c4',1,'PlayerLIB::V2::CPlayerLib_Player']]],
   ['playselected',['PlaySelected',['../group___c_player_lib___player.html#ga7c18815c4fc2d2a6039939248332de1d',1,'PlayerLIB::V2::CPlayerLib_Player']]],
+  ['playsfx',['playSFX',['../group__python__xbmc.html#ga30c84926c8fcac04a99d4cf18fc8fae6',1,'ModuleXbmc.h']]],
   ['pragma_5fpack',['PRAGMA_PACK',['../player_8api2_2definations_8h.html#a256ebdc0994be33e06dc1ad3f6f188f4',1,'PRAGMA_PACK():&#160;definations.h'],['../pvr_8api2_2definations_8h.html#a256ebdc0994be33e06dc1ad3f6f188f4',1,'PRAGMA_PACK():&#160;definations.h']]],
   ['properties',['Properties',['../group___c_addon_lib___v_f_s_dir_entry.html#gaea9c66f89bd36c6b01a234d0e2ad123a',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry::Properties(void) const '],['../group___c_addon_lib___v_f_s_dir_entry.html#ga682a050b373b13ec1e816d7a9cc47302',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry::Properties(void)']]],
   ['pvr_5fapi_5flevels_5factive',['PVR_API_LEVELS_ACTIVE',['../pvr_8api2_2definations_8h.html#a2f85b94a7621eb2bf801ff79b1ed51ad',1,'definations.h']]],

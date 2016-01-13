@@ -9,7 +9,7 @@ var searchData=
   ['title',['Title',['../group___c_addon_g_u_i_dialog_extended_progress.html#ga3cb91fb7750df7982baea48c4a3de616',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
   ['togglemute',['ToggleMute',['../group___c_addon_lib___general.html#gaa959a7781167f016c271bf1a8c37a681',1,'AddOnLIB::V2::CAddonLib_General']]],
   ['translateaddonstatus',['TranslateAddonStatus',['../group___c_addon_lib___general.html#gaecf9afb07475f94d782c6cf6f4057317',1,'AddOnLIB::V2::CAddonLib_General']]],
-  ['translatepath',['TranslatePath',['../group___c_addon_lib___general.html#ga242aca0b394c978780dfbc44b112519d',1,'AddOnLIB::V2::CAddonLib_General']]],
+  ['translatepath',['TranslatePath',['../group___c_addon_lib___general.html#ga242aca0b394c978780dfbc44b112519d',1,'AddOnLIB::V2::CAddonLib_General::TranslatePath()'],['../group__python__xbmc.html#ga77f8d61db7757aa22df826a904cc3a8d',1,'translatePath():&#160;ModuleXbmc.h']]],
   ['truncate',['Truncate',['../group___c_addon_lib___v_f_s_file.html#ga97dbc6093302f0ced52952a2737407ec',1,'AddOnLIB::V2::CAddonLib_VFSFile']]],
   ['tutorials',['Tutorials',['../_tutorials.html',1,'index']]]
 ];

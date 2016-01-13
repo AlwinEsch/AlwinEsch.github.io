@@ -311,8 +311,8 @@ var searchData=
   ['audioengineformat',['AudioEngineFormat',['../struct_audio_engine_format.html',1,'AudioEngineFormat'],['../struct_audio_engine_format.html#a485299b0bb8f0c1cf765321c704bcc40',1,'AudioEngineFormat::AudioEngineFormat()']]],
   ['audioenginelib',['AudioEngineLIB',['../namespace_audio_engine_l_i_b.html',1,'']]],
   ['audioenginelib_2eh',['AudioEngineLib.h',['../_audio_engine_lib_8h.html',1,'']]],
-  ['audioresume',['AudioResume',['../group___c_addon_lib___general.html#gaa34c1001d9a7cc1f405ec7d1d743e8b4',1,'AddOnLIB::V2::CAddonLib_General']]],
-  ['audiosuspend',['AudioSuspend',['../group___c_addon_lib___general.html#gac5887e3499c4bd58664b0b14fec7621f',1,'AddOnLIB::V2::CAddonLib_General']]],
+  ['audioresume',['AudioResume',['../group___c_addon_lib___general.html#gaa34c1001d9a7cc1f405ec7d1d743e8b4',1,'AddOnLIB::V2::CAddonLib_General::AudioResume()'],['../group__python__xbmc.html#gaee0301aad7c7ba0deac7b51d046c59b6',1,'audioResume():&#160;ModuleXbmc.h']]],
+  ['audiosuspend',['AudioSuspend',['../group___c_addon_lib___general.html#gac5887e3499c4bd58664b0b14fec7621f',1,'AddOnLIB::V2::CAddonLib_General::AudioSuspend()'],['../group__python__xbmc.html#ga2babadc0bebb8422edc6d40b11d0d2f7',1,'audioSuspend():&#160;ModuleXbmc.h']]],
   ['addon',['Addon',['../group__python___addon.html',1,'']]],
   ['v2',['V2',['../namespace_add_on_l_i_b_1_1_v2.html',1,'AddOnLIB']]],
   ['v2',['V2',['../namespace_audio_engine_l_i_b_1_1_v2.html',1,'AudioEngineLIB']]]

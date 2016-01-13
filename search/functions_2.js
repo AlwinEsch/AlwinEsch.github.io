@@ -34,6 +34,7 @@ var searchData=
   ['codec',['Codec',['../group___codec_descriptor.html#ga62b7b43b626a9b8beb0f16a8795b9d91',1,'AddOnLIB::V2::CodecDescriptor']]],
   ['codecdescriptor',['CodecDescriptor',['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html#a0ce9286b79ecef72bdf531ffb02e73d3',1,'AddOnLIB::V2::CodecDescriptor::CodecDescriptor(void)'],['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html#a01b78d89cc9425c3b3cce1192f0fa6c4',1,'AddOnLIB::V2::CodecDescriptor::CodecDescriptor(kodi_codec codec, const char *name)']]],
   ['compareformat',['compareFormat',['../struct_audio_engine_format.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64',1,'AudioEngineFormat']]],
+  ['convertlanguage',['convertLanguage',['../group__python__xbmc.html#ga368ee3ce640748a6cd595ebd36128eb7',1,'ModuleXbmc.h']]],
   ['cplayerlib_5finfotagmusic',['CPlayerLib_InfoTagMusic',['../group___c_player_lib___info_tag_music.html#gabd1d2ec7c0d0160ae11c80d47cfc6369',1,'PlayerLIB::V2::CPlayerLib_InfoTagMusic']]],
   ['cplayerlib_5finfotagvideo',['CPlayerLib_InfoTagVideo',['../group___c_player_lib___info_tag_video.html#ga0c59a9a278244a6f43256556b29cbeb7',1,'PlayerLIB::V2::CPlayerLib_InfoTagVideo']]],
   ['cplayerlib_5fplayer',['CPlayerLib_Player',['../group___c_player_lib___player.html#ga0aeecab6a213b4e81f6852c83bcaa833',1,'PlayerLIB::V2::CPlayerLib_Player']]],
