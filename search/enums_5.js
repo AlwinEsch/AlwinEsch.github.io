@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queue_5fmsg',['queue_msg',['../addon_8api2_2definations_8h.html#a3a3ad4636a6590c7a30713da82d0cf8b',1,'definations.h']]]
+  ['modifier',['Modifier',['../class_c_key.html#a80f90997871cd543ddb0bf8d282becdd',1,'CKey']]]
 ];

@@ -2,6 +2,7 @@ var searchData=
 [
   ['ejectopticaldrive',['EjectOpticalDrive',['../group___c_addon_lib___general.html#gac2683dbc97e4f57e1b27d30e728b0f76',1,'AddOnLIB::V2::CAddonLib_General']]],
   ['enablenavsounds',['enableNavSounds',['../group__python__xbmc.html#ga8d27375b9d28a87af69d900c4de8758b',1,'ModuleXbmc.h']]],
+  ['endofdirectory',['endOfDirectory',['../group__python__xbmcplugin.html#ga4efbfacead99ce6a469bbf37f63e05eb',1,'ModuleXbmcplugin.h']]],
   ['endtime',['endTime',['../struct_e_p_g___t_a_g.html#a1f1e169e482467aaf615639bb3467f09',1,'EPG_TAG']]],
   ['epg_5fevent_5fcontentmask_5fartsculture',['EPG_EVENT_CONTENTMASK_ARTSCULTURE',['../pvr_8api2_2definations_8h.html#ae9f81b21dddccccaeec0a7c485fceccf',1,'definations.h']]],
   ['epg_5fevent_5fcontentmask_5fchildrenyouth',['EPG_EVENT_CONTENTMASK_CHILDRENYOUTH',['../pvr_8api2_2definations_8h.html#a3019566c15ea47857ed94febc023a341',1,'definations.h']]],
@@ -26,5 +27,7 @@ var searchData=
   ['examples',['Examples',['../_examples.html',1,'index']]],
   ['executebuiltin',['ExecuteBuiltin',['../group___c_addon_lib___general.html#gacf180009e0848622c1e8d1b8fa0b38d4',1,'AddOnLIB::V2::CAddonLib_General::ExecuteBuiltin()'],['../group__python__xbmc.html#ga3437cf59c9fc815524d7aaf98077e210',1,'executebuiltin():&#160;ModuleXbmc.h']]],
   ['executejsonrpc',['ExecuteJSONRPC',['../group___c_addon_lib___general.html#ga8f1e0bb521e6f18a337c0f5f4ec59011',1,'AddOnLIB::V2::CAddonLib_General::ExecuteJSONRPC()'],['../group__python__xbmc.html#gaa95cd758379b99b479c2c01bdf79897e',1,'executeJSONRPC():&#160;ModuleXbmc.h']]],
-  ['executescript',['ExecuteScript',['../group___c_addon_lib___general.html#ga6812432a63f38b31ac2212c6cc2db70b',1,'AddOnLIB::V2::CAddonLib_General::ExecuteScript()'],['../group__python__xbmc.html#gaa3118b469b016e7b610aec2851a0c7de',1,'executescript():&#160;ModuleXbmc.h']]]
+  ['executescript',['ExecuteScript',['../group___c_addon_lib___general.html#ga6812432a63f38b31ac2212c6cc2db70b',1,'AddOnLIB::V2::CAddonLib_General::ExecuteScript()'],['../group__python__xbmc.html#gaa3118b469b016e7b610aec2851a0c7de',1,'executescript():&#160;ModuleXbmc.h']]],
+  ['existingwindow',['existingWindow',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#a5f7db5b7a23342a790c8b067b9ad1379',1,'XBMCAddon::xbmcgui::Window']]],
+  ['exists',['exists',['../group__python__xbmcvfs.html#ga12691f7bf1c5e55da57b18f63f6fbdca',1,'ModuleXbmcvfs.h']]]
 ];

@@ -22,7 +22,7 @@ var _module_xbmc_8h =
     [ "getSkinDir", "group__python__xbmc.html#ga2a0ea95992942d1cbaceb3f0bfaa9240", null ],
     [ "getSupportedMedia", "group__python__xbmc.html#ga77273fcb1269dfb375a644b59a999d24", null ],
     [ "getUserAgent", "group__python__xbmc.html#ga513f9a03c302f3f0d9af3ed6a23e0ee0", null ],
-    [ "log", "_module_xbmc_8h.html#aae1f9e78fc2e0e63f68dfe93f8e65cf9", null ],
+    [ "log", "group__python__xbmc.html#gaae1f9e78fc2e0e63f68dfe93f8e65cf9", null ],
     [ "makeLegalFilename", "group__python__xbmc.html#gabcec0705cb849f38c7f56ff35ddd74cd", null ],
     [ "playSFX", "group__python__xbmc.html#ga30c84926c8fcac04a99d4cf18fc8fae6", null ],
     [ "restart", "group__python__xbmc.html#ga22ee094ca3f45aa4156b97d34fe678bf", null ],

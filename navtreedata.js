@@ -3,7 +3,7 @@ var NAVTREE =
   [ "Kodi Development", "index.html", [
     [ "Getting Started", "_getting_started.html", null ],
     [ "Add-On Types", "_add-_on__types.html", null ],
-    [ "Tutorials", "_tutorials.html", null ],
+    [ "Tutorials", "_tutorials.html", "_tutorials" ],
     [ "Examples", "_examples.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespace Members", "namespacemembers.html", [
@@ -20,7 +20,10 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ]
+        [ "Typedefs", "functions_type.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Enumerator", "functions_eval.html", null ],
+        [ "Related Functions", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", null, [
@@ -32,7 +35,7 @@ var NAVTREE =
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", "globals_eval" ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
   ] ]
@@ -41,11 +44,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_e_stream_8h.html",
-"globals_eval.html",
-"group___c_addon_g_u_i_list_item.html",
-"group___c_p_v_r_lib___trigger.html#ga92c110f8654585fdc3f8a126d1ce54bb",
-"group__python__xbmc.html#gaa95cd758379b99b479c2c01bdf79897e",
-"gui_8api2_2definations_8h.html#a65e94c0b771b91d3c1f0948113ee838aa3896c5adb811ea43d6dc54245bceb30d"
+"class_c_action.html#ac4a8105d590287c80e61d2684def3274",
+"group___c_addon_g_u_i_control_progress.html#gadbcb3c03a1a87a252f94e0274e1e75f8",
+"group___c_addon_lib___general.html#gac2683dbc97e4f57e1b27d30e728b0f76",
+"group___c_player_lib___player__callbacks.html#ga36be56af6bfdd7fc943f8d3f1abacfbf",
+"group__kodi__addon__key__action__ids.html#gga42753b64a4c9b01785035a18e768a43da81d7b1c7c5358d98dcb3d6619f262350",
+"group__kodi__key__action__ids.html#ga10a1cc7d6318463d695e75ab2b256c07",
+"group__kodi__key__action__ids.html#ga76e3dfb1711b5484d7323fa41e951b43",
+"group__kodi__key__action__ids.html#gad82fbfbc5403d95fb86ec342dd0ef483",
+"group__python__xbmc.html#gaae1f9e78fc2e0e63f68dfe93f8e65cf9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

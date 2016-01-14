@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['scr_5finfo',['SCR_INFO',['../struct_s_c_r___i_n_f_o.html',1,'']]],
-  ['scr_5fprops',['SCR_PROPS',['../struct_s_c_r___p_r_o_p_s.html',1,'']]],
-  ['screensaver',['ScreenSaver',['../struct_screen_saver.html',1,'']]]
+  ['keyboard',['Keyboard',['../class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html',1,'XBMCAddon::xbmc']]],
+  ['kodi_5fcodec',['kodi_codec',['../structkodi__codec.html',1,'']]],
+  ['kodi_5fversion',['kodi_version',['../structkodi__version.html',1,'']]]
 ];

@@ -28,5 +28,5 @@ var group___c_addon_g_u_i_window =
     [ "SetPropertyDouble", "group___c_addon_g_u_i_window.html#ga363ee3e1bf219c8f824241f58aebe294", null ],
     [ "SetPropertyInt", "group___c_addon_g_u_i_window.html#ga3d68ad750393fd5293be9d0650cd30a9", null ],
     [ "Show", "group___c_addon_g_u_i_window.html#gaa262f72ef31f1d6ca005f2668e326c41", null ],
-    [ "~CAddonGUIWindow", "group___c_addon_g_u_i_window.html#ga5a70785a8d29e28dacdb27356a609ef8", null ]
+    [ "~CAddonGUIWindow", "group___c_addon_g_u_i_window.html#ga6e35058632c35b9f054713019a574179", null ]
 ];

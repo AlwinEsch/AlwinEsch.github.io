@@ -11,8 +11,10 @@ var searchData=
   ['doxygen_2dkodi_2d001_5f000_5fgetting_5fstarted_2etxt',['doxygen-kodi-001_000_Getting_started.txt',['../doxygen-kodi-001__000___getting__started_8txt.html',1,'']]],
   ['doxygen_2dkodi_2d002_5f000_5fadd_2don_5ftypes_2etxt',['doxygen-kodi-002_000_Add-On_Types.txt',['../doxygen-kodi-002__000___add-_on___types_8txt.html',1,'']]],
   ['doxygen_2dkodi_2d003_5f000_5ftutorials_2etxt',['doxygen-kodi-003_000_Tutorials.txt',['../doxygen-kodi-003__000___tutorials_8txt.html',1,'']]],
+  ['doxygen_2dkodi_2d003_5f010_5fdoxygenonaddon_2etxt',['doxygen-kodi-003_010_DoxygenOnAddon.txt',['../doxygen-kodi-003__010___doxygen_on_addon_8txt.html',1,'']]],
   ['doxygen_2dkodi_2d004_5f000_5fexamples_2etxt',['doxygen-kodi-004_000_Examples.txt',['../doxygen-kodi-004__000___examples_8txt.html',1,'']]],
   ['doxygen_2dkodi_2d101_5f000_5fmodules_5fcpp_2etxt',['doxygen-kodi-101_000_modules_cpp.txt',['../doxygen-kodi-101__000__modules__cpp_8txt.html',1,'']]],
   ['doxygen_2dkodi_2d102_5f000_5fmodules_5fpython_2etxt',['doxygen-kodi-102_000_modules_python.txt',['../doxygen-kodi-102__000__modules__python_8txt.html',1,'']]],
-  ['doxygen_2dkodi_2ddev_2dconfig_2etxt',['doxygen-kodi-dev-config.txt',['../doxygen-kodi-dev-config_8txt.html',1,'']]]
+  ['doxygen_2dkodi_2ddev_2dconfig_2etxt',['doxygen-kodi-dev-config.txt',['../doxygen-kodi-dev-config_8txt.html',1,'']]],
+  ['doxygen_2dkodi_2dxml_2dcontrol_2did_2ddesc_2etxt',['doxygen-kodi-xml-control-id-desc.txt',['../doxygen-kodi-xml-control-id-desc_8txt.html',1,'']]]
 ];

@@ -16,10 +16,11 @@ var searchData=
   ['_7ecaddonguidialogextendedprogress',['~CAddonGUIDialogExtendedProgress',['../group___c_addon_g_u_i_dialog_extended_progress.html#ga86033f373ed6159d52feb585bab2dfda',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
   ['_7ecaddonguidialogprogress',['~CAddonGUIDialogProgress',['../group___c_addon_g_u_i_dialog_progress.html#ga120fc408bff359c7c29a02551c00e9a0',1,'GUILIB::V2::CAddonGUIDialogProgress']]],
   ['_7ecaddonguilistitem',['~CAddonGUIListItem',['../group___c_addon_g_u_i_list_item.html#gae5d57fceca241c560feebb8d9cb00874',1,'GUILIB::V2::CAddonGUIListItem']]],
-  ['_7ecaddonguiwindow',['~CAddonGUIWindow',['../group___c_addon_g_u_i_window.html#ga5a70785a8d29e28dacdb27356a609ef8',1,'GUILIB::V2::CAddonGUIWindow']]],
+  ['_7ecaddonguiwindow',['~CAddonGUIWindow',['../group___c_addon_g_u_i_window.html#ga6e35058632c35b9f054713019a574179',1,'GUILIB::V2::CAddonGUIWindow']]],
   ['_7ecaddonlib_5fsoundplay',['~CAddonLib_SoundPlay',['../group___c_addon_lib___sound_play.html#ga21c5c23ed3b5c5f06cc66331f8bec712',1,'AddOnLIB::V2::CAddonLib_SoundPlay']]],
   ['_7ecaddonlib_5fvfsfile',['~CAddonLib_VFSFile',['../group___c_addon_lib___v_f_s_file.html#gaff9977af1409edaace50b30024b00306',1,'AddOnLIB::V2::CAddonLib_VFSFile']]],
   ['_7ecaelib_5fstream',['~CAELib_Stream',['../group___c_a_e_lib___stream.html#ga9f7e169caec98e28f6b92adf8ab140f2',1,'AudioEngineLIB::V2::CAELib_Stream']]],
+  ['_7eckey',['~CKey',['../class_c_key.html#ac8c15fe71a007c2cc36cc32becd4a1de',1,'CKey']]],
   ['_7ecodecdescriptor',['~CodecDescriptor',['../class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html#a8a61d5619aaa653c3e35d65807bf725b',1,'AddOnLIB::V2::CodecDescriptor']]],
   ['_7ecplayerlib_5finfotagmusic',['~CPlayerLib_InfoTagMusic',['../group___c_player_lib___info_tag_music.html#ga0c345f0e0e254a42b005d75d93905b68',1,'PlayerLIB::V2::CPlayerLib_InfoTagMusic']]],
   ['_7ecplayerlib_5finfotagvideo',['~CPlayerLib_InfoTagVideo',['../group___c_player_lib___info_tag_video.html#ga7e035ba2734dd8456cbc5cd607df46d0',1,'PlayerLIB::V2::CPlayerLib_InfoTagVideo']]],
@@ -29,7 +30,11 @@ var searchData=
   ['_7edialog',['~Dialog',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog.html#a656bf5bf83d73b108733b72a3282c958',1,'XBMCAddon::xbmcgui::Dialog']]],
   ['_7edialogprogress',['~DialogProgress',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress.html#a94b81fdffc22f6260839893fdbf757b7',1,'XBMCAddon::xbmcgui::DialogProgress']]],
   ['_7edialogprogressbg',['~DialogProgressBG',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress_b_g.html#a1ea61272a3fe716659a11170cfb143a5',1,'XBMCAddon::xbmcgui::DialogProgressBG']]],
+  ['_7efile',['~File',['../class_x_b_m_c_addon_1_1xbmcvfs_1_1_file.html#a241d694b0e799c0579a023e76cd97f18',1,'XBMCAddon::xbmcvfs::File']]],
   ['_7einfotagmusic',['~InfoTagMusic',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music.html#a541c6e4089511366c31fef3ed5ca0b69',1,'XBMCAddon::xbmc::InfoTagMusic']]],
+  ['_7einfotagradiords',['~InfoTagRadioRDS',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_radio_r_d_s.html#ac8f53c1806991599c88d0801aea3f4e5',1,'XBMCAddon::xbmc::InfoTagRadioRDS']]],
   ['_7einfotagvideo',['~InfoTagVideo',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html#a4a232a70bc8ac59e1b26d09f60246fe9',1,'XBMCAddon::xbmc::InfoTagVideo']]],
-  ['_7ekeyboard',['~Keyboard',['../class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html#acec86b051eb2fd163d5f5b2e19679f9e',1,'XBMCAddon::xbmc::Keyboard']]]
+  ['_7ekeyboard',['~Keyboard',['../class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html#acec86b051eb2fd163d5f5b2e19679f9e',1,'XBMCAddon::xbmc::Keyboard']]],
+  ['_7emonitor',['~Monitor',['../class_x_b_m_c_addon_1_1xbmc_1_1_monitor.html#a077b287aef30752086c14ed78dd3820e',1,'XBMCAddon::xbmc::Monitor']]],
+  ['_7ewindow',['~Window',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#ae67e8c57b4aea51383f70b688e6a3328',1,'XBMCAddon::xbmcgui::Window']]]
 ];

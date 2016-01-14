@@ -1,7 +1,7 @@
 var searchData=
 [
   ['addon_5flog',['addon_log',['../addon_8api2_2definations_8h.html#af8526ffb1ee2a785489ac05b6e49d357',1,'definations.h']]],
-  ['addonguiactiontype',['AddonGUIActionType',['../gui_8api2_2definations_8h.html#a42753b64a4c9b01785035a18e768a43d',1,'definations.h']]],
+  ['addonguiactiontype',['AddonGUIActionType',['../group__kodi__addon__key__action__ids.html#ga42753b64a4c9b01785035a18e768a43d',1,'definations.h']]],
   ['addonguifontalignment',['AddonGUIFontAlignment',['../gui_8api2_2definations_8h.html#a5e872358567b0569550d7a712e9ec577',1,'definations.h']]],
   ['addonguiiconoverlay',['AddonGUIIconOverlay',['../gui_8api2_2definations_8h.html#a84c995b3a9c675a155ac04175b6f036e',1,'definations.h']]],
   ['addonguiinputtype',['AddonGUIInputType',['../gui_8api2_2definations_8h.html#a65e94c0b771b91d3c1f0948113ee838a',1,'definations.h']]],

@@ -1,7 +1,7 @@
 var class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window =
 [
     [ "CAddonGUIWindow", "group___c_addon_g_u_i_window.html#ga2d136cfaf121935a6fc5c3fc0fdfc227", null ],
-    [ "~CAddonGUIWindow", "group___c_addon_g_u_i_window.html#ga5a70785a8d29e28dacdb27356a609ef8", null ],
+    [ "~CAddonGUIWindow", "group___c_addon_g_u_i_window.html#ga6e35058632c35b9f054713019a574179", null ],
     [ "AddItem", "group___c_addon_g_u_i_window.html#gadab65cba2c648f32428c51a080ad63f3", null ],
     [ "AddItem", "group___c_addon_g_u_i_window.html#ga8368f03c5d63a11d9750b0e4ae964dab", null ],
     [ "AddStringItem", "group___c_addon_g_u_i_window.html#ga51bbed720772f13beb2ee4c5e6006c43", null ],
@@ -33,5 +33,5 @@ var class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window =
     [ "SetPropertyDouble", "group___c_addon_g_u_i_window.html#ga363ee3e1bf219c8f824241f58aebe294", null ],
     [ "SetPropertyInt", "group___c_addon_g_u_i_window.html#ga3d68ad750393fd5293be9d0650cd30a9", null ],
     [ "Show", "group___c_addon_g_u_i_window.html#gaa262f72ef31f1d6ca005f2668e326c41", null ],
-    [ "IMPLEMENT_ADDON_GUI_WINDOW", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html#a9c9c299166319c2248b2c62548a69fbb", null ]
+    [ "IMPLEMENT_ADDON_GUI_WINDOW", "group___c_addon_g_u_i_window__callbacks.html#ga9c9c299166319c2248b2c62548a69fbb", null ]
 ];

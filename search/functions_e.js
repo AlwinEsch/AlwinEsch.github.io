@@ -8,5 +8,7 @@ var searchData=
   ['playprevious',['PlayPrevious',['../group___c_player_lib___player.html#ga542b407440e5a73dddbc275a8a0065c4',1,'PlayerLIB::V2::CPlayerLib_Player']]],
   ['playselected',['PlaySelected',['../group___c_player_lib___player.html#ga7c18815c4fc2d2a6039939248332de1d',1,'PlayerLIB::V2::CPlayerLib_Player']]],
   ['playsfx',['playSFX',['../group__python__xbmc.html#ga30c84926c8fcac04a99d4cf18fc8fae6',1,'ModuleXbmc.h']]],
-  ['properties',['Properties',['../group___c_addon_lib___v_f_s_dir_entry.html#gaea9c66f89bd36c6b01a234d0e2ad123a',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry::Properties(void) const '],['../group___c_addon_lib___v_f_s_dir_entry.html#ga682a050b373b13ec1e816d7a9cc47302',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry::Properties(void)']]]
+  ['popactivewindowid',['popActiveWindowId',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#a09309d4a53608ecb531fcc9bb4ae97b2',1,'XBMCAddon::xbmcgui::Window']]],
+  ['properties',['Properties',['../group___c_addon_lib___v_f_s_dir_entry.html#gaea9c66f89bd36c6b01a234d0e2ad123a',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry::Properties(void) const '],['../group___c_addon_lib___v_f_s_dir_entry.html#ga682a050b373b13ec1e816d7a9cc47302',1,'AddOnLIB::V2::CAddonLib_VFSDirEntry::Properties(void)']]],
+  ['pulseactionevent',['PulseActionEvent',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#aa115acb521768f84e3ef532012b6e7e9',1,'XBMCAddon::xbmcgui::Window']]]
 ];

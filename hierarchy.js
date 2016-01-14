@@ -1,13 +1,20 @@
 var hierarchy =
 [
+    [ "AddonCallback", null, [
+      [ "Monitor", "class_x_b_m_c_addon_1_1xbmc_1_1_monitor.html", null ],
+      [ "Window", "class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html", null ]
+    ] ],
     [ "AddonClass", null, [
       [ "InfoTagMusic", "class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music.html", null ],
+      [ "InfoTagRadioRDS", "class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_radio_r_d_s.html", null ],
       [ "InfoTagVideo", "class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html", null ],
       [ "Keyboard", "class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html", null ],
       [ "Addon", "class_x_b_m_c_addon_1_1xbmcaddon_1_1_addon.html", null ],
+      [ "Action", "class_x_b_m_c_addon_1_1xbmcgui_1_1_action.html", null ],
       [ "Dialog", "class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog.html", null ],
       [ "DialogProgress", "class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress.html", null ],
-      [ "DialogProgressBG", "class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress_b_g.html", null ]
+      [ "DialogProgressBG", "class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress_b_g.html", null ],
+      [ "File", "class_x_b_m_c_addon_1_1xbmcvfs_1_1_file.html", null ]
     ] ],
     [ "CAddonLib_Codec", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___codec.html", null ],
     [ "CAddonLib_General", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___general.html", null ],
@@ -20,6 +27,7 @@ var hierarchy =
     [ "CodecDescriptor", "class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html", null ],
     [ "AudioEngineFormat", "struct_audio_engine_format.html", null ],
     [ "CAELib_Stream", "class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html", null ],
+    [ "CAction", "class_c_action.html", null ],
     [ "CAddonLib_Internal", null, [
       [ "CAddonLib", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib.html", null ]
     ] ],
@@ -29,6 +37,8 @@ var hierarchy =
     [ "CGUILib_Internal", null, [
       [ "CGUILib", "class_g_u_i_l_i_b_1_1_v2_1_1_c_g_u_i_lib.html", null ]
     ] ],
+    [ "CKey", "class_c_key.html", null ],
+    [ "CMouseEvent", "class_c_mouse_event.html", null ],
     [ "CPlayerLib_Internal", null, [
       [ "CPlayerLib", "class_player_l_i_b_1_1_v2_1_1_c_player_lib.html", null ]
     ] ],

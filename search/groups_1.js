@@ -48,5 +48,6 @@ var searchData=
   ['cpvrlib_5ftransfer',['CPVRLib_Transfer',['../group___c_p_v_r_lib___transfer.html',1,'']]],
   ['cpvrlib_5ftrigger',['CPVRLib_Trigger',['../group___c_p_v_r_lib___trigger.html',1,'']]],
   ['cpvrstream',['CPVRStream',['../group___c_p_v_r_stream.html',1,'']]],
-  ['cstreamproperties',['CStreamProperties',['../group___c_stream_properties.html',1,'']]]
+  ['cstreamproperties',['CStreamProperties',['../group___c_stream_properties.html',1,'']]],
+  ['callback_20functions_20from_20kodi_20to_20add_2don',['Callback functions from Kodi to add-on',['../group__python__xbmcgui__window__cb.html',1,'']]]
 ];

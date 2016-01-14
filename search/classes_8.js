@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['xbmc_5fcodec_5ft',['xbmc_codec_t',['../structxbmc__codec__t.html',1,'']]],
-  ['xbmcpvrstream',['XbmcPvrStream',['../class_a_d_d_o_n_1_1_xbmc_pvr_stream.html',1,'ADDON']]],
-  ['xbmcstreamproperties',['XbmcStreamProperties',['../class_a_d_d_o_n_1_1_xbmc_stream_properties.html',1,'ADDON']]]
+  ['window',['Window',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html',1,'XBMCAddon::xbmcgui']]]
 ];

@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['playlist_5fmusic',['PlayList_Music',['../player_8api2_2definations_8h.html#ab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143',1,'definations.h']]],
-  ['playlist_5fpicture',['PlayList_Picture',['../player_8api2_2definations_8h.html#ab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab',1,'definations.h']]],
-  ['playlist_5fvideo',['PlayList_Video',['../player_8api2_2definations_8h.html#ab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b',1,'definations.h']]]
+  ['modifier_5falt',['MODIFIER_ALT',['../class_c_key.html#a80f90997871cd543ddb0bf8d282becddaeef7f95cefee09607005b76d3e2e17e8',1,'CKey']]],
+  ['modifier_5fctrl',['MODIFIER_CTRL',['../class_c_key.html#a80f90997871cd543ddb0bf8d282becddadfa99f109f19bae56c57599c09081702',1,'CKey']]],
+  ['modifier_5flong',['MODIFIER_LONG',['../class_c_key.html#a80f90997871cd543ddb0bf8d282becdda0694a75739c41fd4d555edd1ba246a7d',1,'CKey']]],
+  ['modifier_5fmeta',['MODIFIER_META',['../class_c_key.html#a80f90997871cd543ddb0bf8d282becdda72fe1b283b807259e24619f87766485f',1,'CKey']]],
+  ['modifier_5fralt',['MODIFIER_RALT',['../class_c_key.html#a80f90997871cd543ddb0bf8d282becdda15145d2917e8cae2c69ef80058ae5de9',1,'CKey']]],
+  ['modifier_5fshift',['MODIFIER_SHIFT',['../class_c_key.html#a80f90997871cd543ddb0bf8d282becdda8bb8f661e83a0141db816fb56bf53cd7',1,'CKey']]],
+  ['modifier_5fsuper',['MODIFIER_SUPER',['../class_c_key.html#a80f90997871cd543ddb0bf8d282becddac7c4489a6ddb2042ce3797b4c1cbd0ba',1,'CKey']]]
 ];

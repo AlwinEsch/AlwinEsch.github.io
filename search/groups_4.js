@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['infotagmusic',['InfoTagMusic',['../group__python___info_tag_music.html',1,'']]],
-  ['infotagvideo',['InfoTagVideo',['../group__python___info_tag_video.html',1,'']]]
+  ['help_20functions',['Help functions',['../group___c_g_u_i_lib__help.html',1,'']]]
 ];
