@@ -1,10 +1,10 @@
 var NAVTREE =
 [
   [ "Kodi Development", "index.html", [
-    [ "Getting Started", "_getting_started.html", null ],
-    [ "Add-On Types", "_add-_on__types.html", null ],
-    [ "Tutorials", "_tutorials.html", "_tutorials" ],
-    [ "Examples", "_examples.html", null ],
+    [ "Getting Started", "a00002.html", null ],
+    [ "Add-On Types", "a00004.html", null ],
+    [ "Tutorials", "a00006.html", "a00006" ],
+    [ "Examples", "a00008.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", null ],
@@ -43,16 +43,16 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_a_e_stream_8h.html",
-"class_c_action.html#ac4a8105d590287c80e61d2684def3274",
-"group___c_addon_g_u_i_control_progress.html#gadbcb3c03a1a87a252f94e0274e1e75f8",
-"group___c_addon_lib___general.html#gac2683dbc97e4f57e1b27d30e728b0f76",
-"group___c_player_lib___player__callbacks.html#ga36be56af6bfdd7fc943f8d3f1abacfbf",
-"group__kodi__addon__key__action__ids.html#gga42753b64a4c9b01785035a18e768a43da81d7b1c7c5358d98dcb3d6619f262350",
-"group__kodi__key__action__ids.html#ga10a1cc7d6318463d695e75ab2b256c07",
-"group__kodi__key__action__ids.html#ga76e3dfb1711b5484d7323fa41e951b43",
-"group__kodi__key__action__ids.html#gad82fbfbc5403d95fb86ec342dd0ef483",
-"group__python__xbmc.html#gaae1f9e78fc2e0e63f68dfe93f8e65cf9"
+"a00002.html",
+"a00098_source.html",
+"a00164.html#gac0cd1ce3c7d7beb5da0b2456a8477d16",
+"a00183.html#gae95d0da238b6ffa997911dbf9eedb2d4",
+"a00184.html#gga42753b64a4c9b01785035a18e768a43da910b804bb430009f3cc69f0bba3bf481",
+"a00193.html",
+"a00215.html#ga057dc61a69e40c80675a082b6251fc8a",
+"a00239.html#ga0c70ae94fc709eb8a762172fc89089a7",
+"a00239.html#ga721cd546a2f6ed5e3ddf78d037654dc6",
+"a00239.html#gad4df40e928f6df0a4cfb86c7d473562a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

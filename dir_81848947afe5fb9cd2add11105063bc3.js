@@ -1,12 +1,12 @@
 var dir_81848947afe5fb9cd2add11105063bc3 =
 [
-    [ "AddonLib.h", "_addon_lib_8h.html", null ],
-    [ "Codec.h", "_codec_8h.html", null ],
-    [ "definations.h", "addon_8api2_2definations_8h.html", "addon_8api2_2definations_8h" ],
-    [ "dlfcn-win32.cpp", "dlfcn-win32_8cpp.html", "dlfcn-win32_8cpp" ],
-    [ "dlfcn-win32.h", "dlfcn-win32_8h.html", "dlfcn-win32_8h" ],
-    [ "General.h", "_general_8h.html", null ],
-    [ "Network.h", "_network_8h.html", null ],
-    [ "SoundPlay.h", "_sound_play_8h.html", null ],
-    [ "VFSUtils.h", "_v_f_s_utils_8h.html", null ]
+    [ "AddonLib.h", "a00086.html", null ],
+    [ "Codec.h", "a00087.html", null ],
+    [ "definations.h", "a00088.html", "a00088" ],
+    [ "dlfcn-win32.cpp", "a00093.html", "a00093" ],
+    [ "dlfcn-win32.h", "a00094.html", "a00094" ],
+    [ "General.h", "a00095.html", null ],
+    [ "Network.h", "a00096.html", null ],
+    [ "SoundPlay.h", "a00097.html", null ],
+    [ "VFSUtils.h", "a00098.html", null ]
 ];

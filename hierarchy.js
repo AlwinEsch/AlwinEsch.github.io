@@ -1,84 +1,84 @@
 var hierarchy =
 [
     [ "AddonCallback", null, [
-      [ "Monitor", "class_x_b_m_c_addon_1_1xbmc_1_1_monitor.html", null ],
-      [ "Window", "class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html", null ]
+      [ "Monitor", "a00068.html", null ],
+      [ "Window", "a00074.html", null ]
     ] ],
     [ "AddonClass", null, [
-      [ "InfoTagMusic", "class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music.html", null ],
-      [ "InfoTagRadioRDS", "class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_radio_r_d_s.html", null ],
-      [ "InfoTagVideo", "class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html", null ],
-      [ "Keyboard", "class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html", null ],
-      [ "Addon", "class_x_b_m_c_addon_1_1xbmcaddon_1_1_addon.html", null ],
-      [ "Action", "class_x_b_m_c_addon_1_1xbmcgui_1_1_action.html", null ],
-      [ "Dialog", "class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog.html", null ],
-      [ "DialogProgress", "class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress.html", null ],
-      [ "DialogProgressBG", "class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress_b_g.html", null ],
-      [ "File", "class_x_b_m_c_addon_1_1xbmcvfs_1_1_file.html", null ]
+      [ "InfoTagMusic", "a00064.html", null ],
+      [ "InfoTagRadioRDS", "a00065.html", null ],
+      [ "InfoTagVideo", "a00066.html", null ],
+      [ "Keyboard", "a00067.html", null ],
+      [ "Addon", "a00069.html", null ],
+      [ "Action", "a00070.html", null ],
+      [ "Dialog", "a00071.html", null ],
+      [ "DialogProgress", "a00072.html", null ],
+      [ "DialogProgressBG", "a00073.html", null ],
+      [ "File", "a00075.html", null ]
     ] ],
-    [ "CAddonLib_Codec", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___codec.html", null ],
-    [ "CAddonLib_General", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___general.html", null ],
-    [ "CAddonLib_Network", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___network.html", null ],
-    [ "CAddonLib_SoundPlay", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___sound_play.html", null ],
-    [ "CAddonLib_VFSDirEntry", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___v_f_s_dir_entry.html", null ],
-    [ "CAddonLib_VFSFile", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___v_f_s_file.html", null ],
-    [ "CAddonLib_VFSProperty", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___v_f_s_property.html", null ],
-    [ "CAddonLib_VFSUtils", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib___v_f_s_utils.html", null ],
-    [ "CodecDescriptor", "class_add_on_l_i_b_1_1_v2_1_1_codec_descriptor.html", null ],
-    [ "AudioEngineFormat", "struct_audio_engine_format.html", null ],
-    [ "CAELib_Stream", "class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib___stream.html", null ],
-    [ "CAction", "class_c_action.html", null ],
+    [ "CAddonLib_Codec", "a00012.html", null ],
+    [ "CAddonLib_General", "a00013.html", null ],
+    [ "CAddonLib_Network", "a00014.html", null ],
+    [ "CAddonLib_SoundPlay", "a00015.html", null ],
+    [ "CAddonLib_VFSDirEntry", "a00016.html", null ],
+    [ "CAddonLib_VFSFile", "a00017.html", null ],
+    [ "CAddonLib_VFSProperty", "a00018.html", null ],
+    [ "CAddonLib_VFSUtils", "a00019.html", null ],
+    [ "CodecDescriptor", "a00020.html", null ],
+    [ "AudioEngineFormat", "a00021.html", null ],
+    [ "CAELib_Stream", "a00023.html", null ],
+    [ "CAction", "a00024.html", null ],
     [ "CAddonLib_Internal", null, [
-      [ "CAddonLib", "class_add_on_l_i_b_1_1_v2_1_1_c_addon_lib.html", null ]
+      [ "CAddonLib", "a00011.html", null ]
     ] ],
     [ "CAELib_Internal", null, [
-      [ "CAELib", "class_audio_engine_l_i_b_1_1_v2_1_1_c_a_e_lib.html", null ]
+      [ "CAELib", "a00022.html", null ]
     ] ],
     [ "CGUILib_Internal", null, [
-      [ "CGUILib", "class_g_u_i_l_i_b_1_1_v2_1_1_c_g_u_i_lib.html", null ]
+      [ "CGUILib", "a00051.html", null ]
     ] ],
-    [ "CKey", "class_c_key.html", null ],
-    [ "CMouseEvent", "class_c_mouse_event.html", null ],
+    [ "CKey", "a00025.html", null ],
+    [ "CMouseEvent", "a00026.html", null ],
     [ "CPlayerLib_Internal", null, [
-      [ "CPlayerLib", "class_player_l_i_b_1_1_v2_1_1_c_player_lib.html", null ]
+      [ "CPlayerLib", "a00054.html", null ]
     ] ],
     [ "CPVRLib_Internal", null, [
-      [ "CPVRLib", "class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib.html", null ]
+      [ "CPVRLib", "a00059.html", null ]
     ] ],
-    [ "EPG_TAG", "struct_e_p_g___t_a_g.html", null ],
-    [ "CAddonGUIControlButton", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_button.html", null ],
-    [ "CAddonGUIControlEdit", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_edit.html", null ],
-    [ "CAddonGUIControlFadeLabel", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_fade_label.html", null ],
-    [ "CAddonGUIControlImage", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_image.html", null ],
-    [ "CAddonGUIControlLabel", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_label.html", null ],
-    [ "CAddonGUIControlProgress", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_progress.html", null ],
-    [ "CAddonGUIControlRadioButton", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_radio_button.html", null ],
-    [ "CAddonGUIControlRendering", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_rendering.html", null ],
-    [ "CAddonGUIControlSettingsSlider", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_settings_slider.html", null ],
-    [ "CAddonGUIControlSlider", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_slider.html", null ],
-    [ "CAddonGUIControlSpin", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_spin.html", null ],
-    [ "CAddonGUIControlTextBox", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_control_text_box.html", null ],
-    [ "CAddonGUIDialogExtendedProgress", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_extended_progress.html", null ],
-    [ "CAddonGUIDialogFileBrowser", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_file_browser.html", null ],
-    [ "CAddonGUIDialogKeyboard", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_keyboard.html", null ],
-    [ "CAddonGUIDialogNumeric", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_numeric.html", null ],
-    [ "CAddonGUIDialogOK", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_o_k.html", null ],
-    [ "CAddonGUIDialogProgress", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_progress.html", null ],
-    [ "CAddonGUIDialogSelect", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_select.html", null ],
-    [ "CAddonGUIDialogTextViewer", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_text_viewer.html", null ],
-    [ "CAddonGUIDialogYesNo", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_dialog_yes_no.html", null ],
-    [ "CAddonGUIListItem", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_list_item.html", null ],
-    [ "CAddonGUIWindow", "class_g_u_i_l_i_b_1_1_v2_1_1_c_addon_g_u_i_window.html", null ],
-    [ "kodi_codec", "structkodi__codec.html", null ],
-    [ "kodi_version", "structkodi__version.html", null ],
-    [ "CPlayerLib_InfoTagMusic", "class_player_l_i_b_1_1_v2_1_1_c_player_lib___info_tag_music.html", null ],
-    [ "CPlayerLib_InfoTagVideo", "class_player_l_i_b_1_1_v2_1_1_c_player_lib___info_tag_video.html", null ],
-    [ "CPlayerLib_Player", "class_player_l_i_b_1_1_v2_1_1_c_player_lib___player.html", null ],
-    [ "CPlayerLib_PlayList", "class_player_l_i_b_1_1_v2_1_1_c_player_lib___play_list.html", null ],
+    [ "EPG_TAG", "a00027.html", null ],
+    [ "CAddonGUIControlButton", "a00028.html", null ],
+    [ "CAddonGUIControlEdit", "a00029.html", null ],
+    [ "CAddonGUIControlFadeLabel", "a00030.html", null ],
+    [ "CAddonGUIControlImage", "a00031.html", null ],
+    [ "CAddonGUIControlLabel", "a00032.html", null ],
+    [ "CAddonGUIControlProgress", "a00033.html", null ],
+    [ "CAddonGUIControlRadioButton", "a00034.html", null ],
+    [ "CAddonGUIControlRendering", "a00035.html", null ],
+    [ "CAddonGUIControlSettingsSlider", "a00036.html", null ],
+    [ "CAddonGUIControlSlider", "a00037.html", null ],
+    [ "CAddonGUIControlSpin", "a00038.html", null ],
+    [ "CAddonGUIControlTextBox", "a00039.html", null ],
+    [ "CAddonGUIDialogExtendedProgress", "a00040.html", null ],
+    [ "CAddonGUIDialogFileBrowser", "a00041.html", null ],
+    [ "CAddonGUIDialogKeyboard", "a00042.html", null ],
+    [ "CAddonGUIDialogNumeric", "a00043.html", null ],
+    [ "CAddonGUIDialogOK", "a00044.html", null ],
+    [ "CAddonGUIDialogProgress", "a00045.html", null ],
+    [ "CAddonGUIDialogSelect", "a00046.html", null ],
+    [ "CAddonGUIDialogTextViewer", "a00047.html", null ],
+    [ "CAddonGUIDialogYesNo", "a00048.html", null ],
+    [ "CAddonGUIListItem", "a00049.html", null ],
+    [ "CAddonGUIWindow", "a00050.html", null ],
+    [ "kodi_codec", "a00052.html", null ],
+    [ "kodi_version", "a00053.html", null ],
+    [ "CPlayerLib_InfoTagMusic", "a00055.html", null ],
+    [ "CPlayerLib_InfoTagVideo", "a00056.html", null ],
+    [ "CPlayerLib_Player", "a00057.html", null ],
+    [ "CPlayerLib_PlayList", "a00058.html", null ],
     [ "PVR_STREAM", null, [
-      [ "CPVRStream", "class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_stream.html", null ]
+      [ "CPVRStream", "a00062.html", null ]
     ] ],
-    [ "CPVRLib_Transfer", "class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___transfer.html", null ],
-    [ "CPVRLib_Trigger", "class_p_v_r_l_i_b_1_1_v2_1_1_c_p_v_r_lib___trigger.html", null ],
-    [ "CStreamProperties", "class_p_v_r_l_i_b_1_1_v2_1_1_c_stream_properties.html", null ]
+    [ "CPVRLib_Transfer", "a00060.html", null ],
+    [ "CPVRLib_Trigger", "a00061.html", null ],
+    [ "CStreamProperties", "a00063.html", null ]
 ];

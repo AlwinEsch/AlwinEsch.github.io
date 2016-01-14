@@ -1,16 +1,16 @@
 var annotated =
 [
-    [ "AddOnLIB", "namespace_add_on_l_i_b.html", "namespace_add_on_l_i_b" ],
-    [ "AudioEngineLIB", "namespace_audio_engine_l_i_b.html", "namespace_audio_engine_l_i_b" ],
-    [ "GUILIB", "namespace_g_u_i_l_i_b.html", "namespace_g_u_i_l_i_b" ],
-    [ "PlayerLIB", "namespace_player_l_i_b.html", "namespace_player_l_i_b" ],
-    [ "PVRLIB", "namespace_p_v_r_l_i_b.html", "namespace_p_v_r_l_i_b" ],
-    [ "XBMCAddon", "namespace_x_b_m_c_addon.html", "namespace_x_b_m_c_addon" ],
-    [ "AudioEngineFormat", "struct_audio_engine_format.html", "struct_audio_engine_format" ],
-    [ "CAction", "class_c_action.html", "class_c_action" ],
-    [ "CKey", "class_c_key.html", "class_c_key" ],
-    [ "CMouseEvent", "class_c_mouse_event.html", "class_c_mouse_event" ],
-    [ "EPG_TAG", "struct_e_p_g___t_a_g.html", "struct_e_p_g___t_a_g" ],
-    [ "kodi_codec", "structkodi__codec.html", "structkodi__codec" ],
-    [ "kodi_version", "structkodi__version.html", "structkodi__version" ]
+    [ "AddOnLIB", "a00146.html", "a00146" ],
+    [ "AudioEngineLIB", "a00148.html", "a00148" ],
+    [ "GUILIB", "a00150.html", "a00150" ],
+    [ "PlayerLIB", "a00152.html", "a00152" ],
+    [ "PVRLIB", "a00154.html", "a00154" ],
+    [ "XBMCAddon", "a00156.html", "a00156" ],
+    [ "AudioEngineFormat", "a00021.html", "a00021" ],
+    [ "CAction", "a00024.html", "a00024" ],
+    [ "CKey", "a00025.html", "a00025" ],
+    [ "CMouseEvent", "a00026.html", "a00026" ],
+    [ "EPG_TAG", "a00027.html", "a00027" ],
+    [ "kodi_codec", "a00052.html", "a00052" ],
+    [ "kodi_version", "a00053.html", "a00053" ]
 ];

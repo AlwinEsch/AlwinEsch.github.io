@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['examples',['Examples',['../_examples.html',1,'index']]]
+  ['examples',['Examples',['../a00008.html',1,'index']]]
 ];
