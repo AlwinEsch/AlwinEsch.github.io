@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Keyboard</title>
+<title>Kodi Development: CAddonGUIDialogProgress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,179 +92,314 @@ $(document).ready(function(){initNavTree('a00240.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Keyboard<div class="ingroups"><a class="el" href="a00177.html">Python Development</a> &raquo; <a class="el" href="a00178.html">xbmc</a></div></div>  </div>
+<div class="title">CAddonGUIDialogProgress<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a> &raquo; <a class="el" href="a00244.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's keyboard class.</b> </p>
-<p><b><code>xbmc.Keyboard([default, heading, hidden])</code></b></p>
-<p>Creates a new <a class="el" href="a00067.html">Keyboard</a> object with default text heading and hidden input flag if supplied.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">default</td><td>: [opt] string - default text entry. </td></tr>
-    <tr><td class="paramname">heading</td><td>: [opt] string - keyboard heading. </td></tr>
-    <tr><td class="paramname">hidden</td><td>: [opt] boolean - True for hidden text entry.</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;kb = xbmc.Keyboard(<span class="stringliteral">&#39;default&#39;</span>, <span class="stringliteral">&#39;heading&#39;</span>, <span class="keyword">True</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;kb.setDefault(<span class="stringliteral">&#39;password&#39;</span>) <span class="comment"># optional</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;kb.setHeading(<span class="stringliteral">&#39;Enter password&#39;</span>) <span class="comment"># optional</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;kb.setHiddenInput(<span class="keyword">True</span>) <span class="comment"># optional</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;kb.doModal()</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordflow">if</span> (kb.isConfirmed()):</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  text = kb.getText()</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;..</div>
+<p><b>Progress dialog shown in center</b> </p>
+<p>The with #include <a class="el" href="a00144.html">&lt;kodi/addon.api2/GUIDialogProgress.h&gt;</a> given class are basically used to create Kodi's progress dialog with named text fields.</p>
+<div class="image">
+<img src="help.GUIDialogProgress.png" alt="help.GUIDialogProgress.png"/>
+</div>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon.api2/GUIDialogProgress.h&gt;</span></div>
+<div class="line"></div>
+<div class="line">CAddonGUIDialogProgress *progress = <span class="keyword">new</span> CAddonGUIDialogProgress;</div>
+<div class="line">progress-&gt;SetHeading(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
+<div class="line">progress-&gt;SetLine(1, <span class="stringliteral">&quot;line 1&quot;</span>);</div>
+<div class="line">progress-&gt;SetLine(2, <span class="stringliteral">&quot;line 2&quot;</span>);</div>
+<div class="line">progress-&gt;SetLine(3, <span class="stringliteral">&quot;line 3&quot;</span>);</div>
+<div class="line">progress-&gt;SetCanCancel(<span class="keyword">true</span>);</div>
+<div class="line">progress-&gt;ShowProgressBar(<span class="keyword">true</span>);</div>
+<div class="line">progress-&gt;Open();</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 100; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  progress-&gt;SetPercentage(i);</div>
+<div class="line">  <a class="code" href="a00202.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">delete</span> progress;</div>
 </div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gacc43c0ec49f492cdd85ac0e53a456be3"></a>
+<a class="anchor" id="ga71e9d732335846eb579f0dd00918b3e7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void doModal </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>autoclose</em> = <code>0</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Show keyboard and wait for user action.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">autoclose</td><td>: [opt] integer - milliseconds to autoclose dialog. (default=do not autoclose)</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;kb.doModal(30000)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gafab766445043570e6a82c14851366933"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getText </td>
+          <td class="memname">bool Abort </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the user input as a string.<br />
- </p><dl class="section note"><dt>Note</dt><dd>This will always return the text entry even if you cancel the keyboard. Use the <a class="el" href="a00240.html#gadfdd82b36e1da59f1e1aa139755e49eb">isConfirmed()</a> method to check if user cancelled the keyboard.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;text = kb.getText()</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
+
+<p>To check progress was canceled on work. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if aborted </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="gadfdd82b36e1da59f1e1aa139755e49eb"></a>
+<a class="anchor" id="gac076fba6e17d71b4ce5b330855fb8902"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool isConfirmed </td>
+          <td class="memname">CAddonGUIDialogProgress </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns False if the user cancelled the input.</p>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordflow">if</span> (kb.isConfirmed()):</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  ..</div>
-</div><!-- fragment --> 
+
+<p>Construct a new dialog. </p>
+
 </div>
 </div>
-<a class="anchor" id="ga68992de7211a3a009bba135cd4cfec9a"></a>
+<a class="anchor" id="gae20eeb097c9ebe3506bd1d2bb3d92fda"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void setDefault </td>
+          <td class="memname">int GetPercentage </td>
           <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>line</em> = <code>emptyString</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the current progress position as percent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf76bcf12aaec9ab845ea61853a37a33c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsCanceled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To check dialog for clicked cancel button. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if canceled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5e53001785ff30ae485a113b9b8a0ddc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the default text entry.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">line</td><td>: string - default text entry.</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;kb.setDefault(<span class="stringliteral">&#39;password&#39;</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
+
+<p>To open the dialog. </p>
+
 </div>
 </div>
-<a class="anchor" id="ga242a05d9df9e6d69b1a3645db14833fe"></a>
+<a class="anchor" id="ga13580b7f84c1c13f90c1d030ef61faf8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void setHeading </td>
+          <td class="memname">void SetCanCancel </td>
           <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bCanCancel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To enable and show cancel button on dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bCanCancel</td><td>if true becomes it shown </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf6377691fa79c14e16aebaeb9d340b33"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetHeading </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>heading</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the keyboard heading.</p>
+
+<p>Set the heading title of dialog. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">heading</td><td>: string - keyboard heading.</td></tr>
+    <tr><td class="paramname">heading</td><td>Title string to use </td></tr>
   </table>
   </dd>
 </dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;kb.setHeading(<span class="stringliteral">&#39;Enter password&#39;</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
+
 </div>
 </div>
-<a class="anchor" id="gaf88ac60d6cb1ba83c26e612582a36c24"></a>
+<a class="anchor" id="ga845054cd7ff1978a112126086a8ec5ba"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void setHiddenInput </td>
+          <td class="memname">void SetLine </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>hidden</em> = <code>false</code></td><td>)</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>iLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the line text field on dialog from 0 - 2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iLine</td><td>Line number </td></tr>
+    <tr><td class="paramname">line</td><td>Text string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gadf0353f59469e4b0cab327ea7df9cae8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPercentage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iPercentage</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Allows hidden text entry.</p>
+
+<p>Get the current progress position as percent. </p>
+<dl class="section return"><dt>Returns</dt><dd>Position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gafe4b80962f0d7bdd3b0a73b83ef06323"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProgressAdvance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSteps</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To increase progress bar by defined step size until reach of maximum position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hidden</td><td>: boolean - True for hidden text entry.</td></tr>
+    <tr><td class="paramname">nSteps</td><td>Step size to increase, default is 1 </td></tr>
   </table>
   </dd>
 </dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;kb.setHiddenInput(<span class="keyword">True</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
+
+</div>
+</div>
+<a class="anchor" id="gad397a19fe15c25e5077d34fd43da6e5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProgressMax </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iMax</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the maximum position of progress, needed if <code>SetProgressAdvance(...)</code> is used. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iMax</td><td>Biggest usable position to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4ef9882ff90cb3878eb846335e2b3c07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowProgressBar </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bOnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To show or hide progress bar dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bOnOff</td><td>If true becomes it shown </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga120fc408bff359c7c29a02551c00e9a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~CAddonGUIDialogProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
 </div>
 </div>
 </div><!-- contents -->

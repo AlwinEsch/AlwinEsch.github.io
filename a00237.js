@@ -1,8 +1,13 @@
 var a00237 =
 [
-    [ "ChannelGroupsUpdate", "a00237.html#ga5d29f9d2a7bb423e21cb5dd5a2f5ab4a", null ],
-    [ "ChannelUpdate", "a00237.html#ga046bd435f53dedfbc125a70b6fcd09bb", null ],
-    [ "EpgUpdate", "a00237.html#ga49372b48b0c3d939e69dfb83bcda3ed5", null ],
-    [ "RecordingUpdate", "a00237.html#ga64219c32345c79a130702741451c9a8e", null ],
-    [ "TimerUpdate", "a00237.html#ga92c110f8654585fdc3f8a126d1ce54bb", null ]
+    [ "IsKeyboardActivated", "a00237.html#ga1ec4a068299863443fe39fcf4969e0df", null ],
+    [ "SendTextToActiveKeyboard", "a00237.html#ga3d85e8d21bc1fbdf8f946d3c7755005c", null ],
+    [ "ShowAndGetFilter", "a00237.html#gaa57c673c6a2d27bc9114ca557e9c5852", null ],
+    [ "ShowAndGetInput", "a00237.html#ga83b1e91927a105607762c38ea9e1dcb7", null ],
+    [ "ShowAndGetInput", "a00237.html#gac455ca6ff288c07edf7de7d5a0f28d80", null ],
+    [ "ShowAndGetNewPassword", "a00237.html#ga1b75480e0428c2eb657e9e3df1c5f6b3", null ],
+    [ "ShowAndGetNewPassword", "a00237.html#ga74b411283e562425ab3f6d2c01d1f229", null ],
+    [ "ShowAndVerifyNewPassword", "a00237.html#gaf03bd1a86951ae9a1b5f91a901957e11", null ],
+    [ "ShowAndVerifyNewPassword", "a00237.html#gab0b3eb13c8faa5d58e8e7eb59b7c50a9", null ],
+    [ "ShowAndVerifyPassword", "a00237.html#ga48bdcccb89234aad454a6be1cf219928", null ]
 ];

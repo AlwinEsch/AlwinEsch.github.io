@@ -1,8 +1,12 @@
 var a00100 =
 [
-    [ "MAX_OBJECTS", "a00100.html#acdc7844fbd4d45737d4aa56834d37829", null ],
-    [ "dlclose", "a00100.html#af483b6c4400965aa885f9f1a144138a5", null ],
-    [ "dlerror", "a00100.html#a541c343ae5cdf90926014c65972c86cc", null ],
-    [ "dlopen", "a00100.html#a8668245fcfc33ca414d3d27ca038891a", null ],
-    [ "dlsym", "a00100.html#af130d2e6324246be4262ecaaed674aa4", null ]
+    [ "File", "a00100.html#ad6c06a9065bb77311663bd2a98ef2eb5", null ],
+    [ "~File", "a00100.html#a241d694b0e799c0579a023e76cd97f18", null ],
+    [ "close", "a00270.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
+    [ "getFile", "a00100.html#ae54cc0c6b80386955f27208cbae8f3af", null ],
+    [ "read", "a00270.html#ga691e636b0dffa3c448c648f42d94437a", null ],
+    [ "readBytes", "a00270.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8", null ],
+    [ "seek", "a00270.html#ga8140115d0b4e6cb1ffa9f4298153d009", null ],
+    [ "size", "a00270.html#ga6fdf8e4501d305514d8e7b5d6cde34a6", null ],
+    [ "write", "a00270.html#ga1a6eddca986ff7164d57b9fad625e597", null ]
 ];

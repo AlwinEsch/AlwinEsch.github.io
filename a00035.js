@@ -1,11 +1,9 @@
 var a00035 =
 [
-    [ "CAddonGUIControlRendering", "a00206.html#ga391a8355fbbce5c4a05a01e15188a41b", null ],
-    [ "~CAddonGUIControlRendering", "a00206.html#ga8111f29e2c5fe998d541b21d76f0d353", null ],
-    [ "Create", "a00206.html#ga12847d560dd43205d13b0963d9e395e1", null ],
-    [ "Dirty", "a00206.html#ga7cea65505e98c9989ab92a87b2f2e99b", null ],
-    [ "Render", "a00206.html#ga0bc3f3606d9cf5304dac90cd7a619194", null ],
-    [ "SetIndependentCallbacks", "a00035.html#a10abcb122b56e3f8a6069b888486d5db", null ],
-    [ "Stop", "a00206.html#gaf6f113a64b92a63894b285b4f2a2c3a5", null ],
-    [ "IMPL_GUI_RENDERING_CONTROL", "a00035.html#a446e0068f82fb1cab645123c21f62fd5", null ]
+    [ "CAddonGUIControlImage", "a00226.html#gaaab82074962caa8db7b1fa15b9e14a5c", null ],
+    [ "~CAddonGUIControlImage", "a00226.html#gaf4b7097d3f8155be34401f9daab51eb3", null ],
+    [ "SetColorDiffuse", "a00226.html#ga5f4b9c8309a04af748764bc6dd4ef31c", null ],
+    [ "SetFileName", "a00226.html#ga71ca22e2515e018fdfa6db78fbee75dd", null ],
+    [ "SetVisible", "a00226.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_IMAGE_CONTROL", "a00035.html#a03edd7287e10b477fa1ec8f21d965d42", null ]
 ];

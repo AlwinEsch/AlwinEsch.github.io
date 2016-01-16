@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['dlfcn_5fh',['DLFCN_H',['../a00101.html#a9377853cbaba2d5d7bacd4216d6080e7',1,'dlfcn-win32.h']]],
-  ['dvd_5fnopts_5fvalue',['DVD_NOPTS_VALUE',['../a00098.html#aa8f3bf7de853346d6bcf7de68b1132da',1,'DVD_NOPTS_VALUE():&#160;definations.h'],['../a00140.html#aa8f3bf7de853346d6bcf7de68b1132da',1,'DVD_NOPTS_VALUE():&#160;PVRLib.h']]],
-  ['dvd_5ftime_5fbase',['DVD_TIME_BASE',['../a00098.html#a2ab735c1c1995b95aa927d15465e4c37',1,'DVD_TIME_BASE():&#160;definations.h'],['../a00140.html#a2ab735c1c1995b95aa927d15465e4c37',1,'DVD_TIME_BASE():&#160;PVRLib.h']]]
+  ['control_5ftext_5foffset_5fx',['CONTROL_TEXT_OFFSET_X',['../a00165.html#aa6d4de8d94fd25d7738153dece416e93',1,'Control.h']]],
+  ['control_5ftext_5foffset_5fy',['CONTROL_TEXT_OFFSET_Y',['../a00165.html#afb3bc10df24bc07657621c3e1bb13ddd',1,'Control.h']]]
 ];

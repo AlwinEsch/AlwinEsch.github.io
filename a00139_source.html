@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/PlayList.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/addons/kodi-addon-dev-kit/kodi/gui.api2/GUIDialogExtendedProgress.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,107 +92,91 @@ $(document).ready(function(){initNavTree('a00139_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">PlayList.h</div>  </div>
+<div class="title">GUIDialogExtendedProgress.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00139.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;playlists/PlayList.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;Exception.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;ListItem.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00170.html">XBMCAddon</a></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="a00171.html#af3c0375d913f3a660121fd1153f93059">XBMCCOMMONS_STANDARD_EXCEPTION</a>(PlayListException);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="a00070.html">   62</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00070.html">PlayList</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordtype">long</span> refs;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordtype">int</span> iPlayList;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      PLAYLIST::CPlayList *pPlayList;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <a class="code" href="a00070.html#a5a2b1d9cebb8cfa88add301b5143a559">PlayList</a>(<span class="keywordtype">int</span> playList);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00070.html#a32fcb11cefa02bee25ef859190f927ac">~PlayList</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="a00258.html#ga4d665409e02daa8ea13ce462ca44c914">   78</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="a00258.html#ga4d665409e02daa8ea13ce462ca44c914">getPlayListId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> iPlayList; }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00258.html#ga979e740949519ca0e88da2ff9934a4d5">add</a>(<span class="keyword">const</span> String&amp; url,</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;#ifndef DOXYGEN_SHOULD_SKIP_THIS</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;               <a class="code" href="a00173.html">XBMCAddon::xbmcgui</a>::</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;#endif <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;               ListItem* listitem = NULL,</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;               <span class="keywordtype">int</span> index = -1);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00258.html#ga2eea1635b7df085d42c973352ef10355">load</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordtype">void</span> <span class="keyword">remove</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00258.html#gac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00258.html#gaf4b57d21919c42d55af03391f91a1c08">size</a>();</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00258.html#ga1905fe84eb39f020b32c58baf7a76758">shuffle</a>();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00258.html#ga2401476232ac1b00321c9bfe8158f9c4">unshuffle</a>();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00258.html#ga265b7f39dcd400e1f4edaf4060af9977">getposition</a>();</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <a class="code" href="a00173.html">XBMCAddon::xbmcgui</a>::</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      ListItem* <a class="code" href="a00258.html#gaba5d6f37d582f0512f61f32109a92d92">operator[]</a>(<span class="keywordtype">long</span> i);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    };</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="ttc" id="a00070_html_a32fcb11cefa02bee25ef859190f927ac"><div class="ttname"><a href="a00070.html#a32fcb11cefa02bee25ef859190f927ac">XBMCAddon::xbmc::PlayList::~PlayList</a></div><div class="ttdeci">virtual ~PlayList()</div></div>
-<div class="ttc" id="a00258_html_ga2401476232ac1b00321c9bfe8158f9c4"><div class="ttname"><a href="a00258.html#ga2401476232ac1b00321c9bfe8158f9c4">XBMCAddon::xbmc::PlayList::unshuffle</a></div><div class="ttdeci">void unshuffle()</div><div class="ttdoc">Unshuffle the playlist. </div></div>
-<div class="ttc" id="a00258_html_ga265b7f39dcd400e1f4edaf4060af9977"><div class="ttname"><a href="a00258.html#ga265b7f39dcd400e1f4edaf4060af9977">XBMCAddon::xbmc::PlayList::getposition</a></div><div class="ttdeci">int getposition()</div><div class="ttdoc">Returns the position of the current song in this playlist. </div></div>
-<div class="ttc" id="a00258_html_gaba5d6f37d582f0512f61f32109a92d92"><div class="ttname"><a href="a00258.html#gaba5d6f37d582f0512f61f32109a92d92">XBMCAddon::xbmc::PlayList::operator[]</a></div><div class="ttdeci">ListItem * operator[](long i)</div><div class="ttdoc">Retrieve the item at the given position. A negative index means from the ending rather than from the ...</div></div>
-<div class="ttc" id="a00258_html_ga1905fe84eb39f020b32c58baf7a76758"><div class="ttname"><a href="a00258.html#ga1905fe84eb39f020b32c58baf7a76758">XBMCAddon::xbmc::PlayList::shuffle</a></div><div class="ttdeci">void shuffle()</div><div class="ttdoc">Shuffle the playlist. </div></div>
-<div class="ttc" id="a00258_html_gac8bb3912a3ce86b15842e79d0b421204"><div class="ttname"><a href="a00258.html#gac8bb3912a3ce86b15842e79d0b421204">XBMCAddon::xbmc::PlayList::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clear all items in the playlist. </div></div>
-<div class="ttc" id="a00070_html"><div class="ttname"><a href="a00070.html">XBMCAddon::xbmc::PlayList</a></div><div class="ttdef"><b>Definition:</b> PlayList.h:62</div></div>
-<div class="ttc" id="a00170_html"><div class="ttname"><a href="a00170.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00258_html_ga2eea1635b7df085d42c973352ef10355"><div class="ttname"><a href="a00258.html#ga2eea1635b7df085d42c973352ef10355">XBMCAddon::xbmc::PlayList::load</a></div><div class="ttdeci">bool load(const char *filename)</div><div class="ttdoc">Load a playlist. </div></div>
-<div class="ttc" id="a00258_html_ga979e740949519ca0e88da2ff9934a4d5"><div class="ttname"><a href="a00258.html#ga979e740949519ca0e88da2ff9934a4d5">XBMCAddon::xbmc::PlayList::add</a></div><div class="ttdeci">void add(const String &amp;url, ListItem *listitem=NULL, int index=-1)</div><div class="ttdoc">Adds a new file to the playlist. </div></div>
-<div class="ttc" id="a00070_html_a5a2b1d9cebb8cfa88add301b5143a559"><div class="ttname"><a href="a00070.html#a5a2b1d9cebb8cfa88add301b5143a559">XBMCAddon::xbmc::PlayList::PlayList</a></div><div class="ttdeci">PlayList(int playList)</div></div>
-<div class="ttc" id="a00171_html_af3c0375d913f3a660121fd1153f93059"><div class="ttname"><a href="a00171.html#af3c0375d913f3a660121fd1153f93059">XBMCAddon::xbmc::XBMCCOMMONS_STANDARD_EXCEPTION</a></div><div class="ttdeci">XBMCCOMMONS_STANDARD_EXCEPTION(KeyboardException)</div></div>
-<div class="ttc" id="a00258_html_ga4d665409e02daa8ea13ce462ca44c914"><div class="ttname"><a href="a00258.html#ga4d665409e02daa8ea13ce462ca44c914">XBMCAddon::xbmc::PlayList::getPlayListId</a></div><div class="ttdeci">int getPlayListId() const </div><div class="ttdoc">Get the PlayList Identifier. </div><div class="ttdef"><b>Definition:</b> PlayList.h:78</div></div>
-<div class="ttc" id="a00258_html_gaf4b57d21919c42d55af03391f91a1c08"><div class="ttname"><a href="a00258.html#gaf4b57d21919c42d55af03391f91a1c08">XBMCAddon::xbmc::PlayList::size</a></div><div class="ttdeci">int size()</div><div class="ttdoc">Returns the total number of PlayListItems in this playlist. </div></div>
-<div class="ttc" id="a00173_html"><div class="ttname"><a href="a00173.html">XBMCAddon::xbmcgui</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:43</div></div>
+<a href="a00139.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015 Team KODI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00116.html">definations.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_DialogExtendedProgressHead.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_internal.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00188.html">GUILIB</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>V2</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="a00044.html">   65</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00044.html">CAddonGUIDialogExtendedProgress</a></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="a00235.html#ga2f267cd452ee9736993693fa501ac85e">CAddonGUIDialogExtendedProgress</a>(<span class="keyword">const</span> std::string&amp; title = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="a00235.html#ga86033f373ed6159d52feb585bab2dfda">~CAddonGUIDialogExtendedProgress</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::string <a class="code" href="a00235.html#ga3cb91fb7750df7982baea48c4a3de616">Title</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00235.html#gad8698c0477204fb8b81feb9d81cbe4fd">SetTitle</a>(<span class="keyword">const</span> std::string&amp; strTitle);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    std::string <a class="code" href="a00235.html#gafdfa72709ffc1738c3c198f7ad8b61ec">Text</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00235.html#gaec55d8bf3ca3e04261b66bee36f84368">SetText</a>(<span class="keyword">const</span> std::string&amp; strText);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00235.html#gaabe45b4d47077b54df0bb809eb41b8d5">IsFinished</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00235.html#ga40af1bcedea1f61fde8cd5e70e416473">MarkFinished</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="a00235.html#ga3bf91c353218dceaa271b65321b2f5cf">Percentage</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00235.html#ga74a9a823ab1cd34d62a219a842de5946">SetPercentage</a>(<span class="keywordtype">float</span> fPercentage);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00235.html#gac64c8e121cf5e368cd335c28a0521922">SetProgress</a>(<span class="keywordtype">int</span> currentItem, <span class="keywordtype">int</span> itemCount);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="a00044.html#a346bd1e3888bec90756af8184fec1a69">  153</a></span>&#160;    <a class="code" href="a00044.html#a346bd1e3888bec90756af8184fec1a69">IMPL_GUI_EXTENDED_PROGRESS_DIALOG</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  };</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}; <span class="comment">/* namespace V2 */</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}; <span class="comment">/* namespace GUILIB */</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_DialogExtendedProgressTail.h&quot;</span></div>
+<div class="ttc" id="a00235_html_ga2f267cd452ee9736993693fa501ac85e"><div class="ttname"><a href="a00235.html#ga2f267cd452ee9736993693fa501ac85e">GUILIB::V2::CAddonGUIDialogExtendedProgress::CAddonGUIDialogExtendedProgress</a></div><div class="ttdeci">CAddonGUIDialogExtendedProgress(const std::string &amp;title=&quot;&quot;)</div></div>
+<div class="ttc" id="a00044_html"><div class="ttname"><a href="a00044.html">GUILIB::V2::CAddonGUIDialogExtendedProgress</a></div><div class="ttdef"><b>Definition:</b> GUIDialogExtendedProgress.h:65</div></div>
+<div class="ttc" id="a00235_html_gaec55d8bf3ca3e04261b66bee36f84368"><div class="ttname"><a href="a00235.html#gaec55d8bf3ca3e04261b66bee36f84368">GUILIB::V2::CAddonGUIDialogExtendedProgress::SetText</a></div><div class="ttdeci">void SetText(const std::string &amp;strText)</div><div class="ttdoc">To set the used text information string. </div></div>
+<div class="ttc" id="a00188_html"><div class="ttname"><a href="a00188.html">GUILIB</a></div><div class="ttdef"><b>Definition:</b> GUIControlButton.h:26</div></div>
+<div class="ttc" id="a00235_html_gac64c8e121cf5e368cd335c28a0521922"><div class="ttname"><a href="a00235.html#gac64c8e121cf5e368cd335c28a0521922">GUILIB::V2::CAddonGUIDialogExtendedProgress::SetProgress</a></div><div class="ttdeci">void SetProgress(int currentItem, int itemCount)</div><div class="ttdoc">To set progress position with predefined places. </div></div>
+<div class="ttc" id="a00235_html_ga3cb91fb7750df7982baea48c4a3de616"><div class="ttname"><a href="a00235.html#ga3cb91fb7750df7982baea48c4a3de616">GUILIB::V2::CAddonGUIDialogExtendedProgress::Title</a></div><div class="ttdeci">std::string Title() const </div><div class="ttdoc">Get the used title. </div></div>
+<div class="ttc" id="a00235_html_ga3bf91c353218dceaa271b65321b2f5cf"><div class="ttname"><a href="a00235.html#ga3bf91c353218dceaa271b65321b2f5cf">GUILIB::V2::CAddonGUIDialogExtendedProgress::Percentage</a></div><div class="ttdeci">float Percentage() const </div><div class="ttdoc">Get the current progress position as percent. </div></div>
+<div class="ttc" id="a00235_html_ga74a9a823ab1cd34d62a219a842de5946"><div class="ttname"><a href="a00235.html#ga74a9a823ab1cd34d62a219a842de5946">GUILIB::V2::CAddonGUIDialogExtendedProgress::SetPercentage</a></div><div class="ttdeci">void SetPercentage(float fPercentage)</div><div class="ttdoc">To set the current progress position as percent. </div></div>
+<div class="ttc" id="a00235_html_ga40af1bcedea1f61fde8cd5e70e416473"><div class="ttname"><a href="a00235.html#ga40af1bcedea1f61fde8cd5e70e416473">GUILIB::V2::CAddonGUIDialogExtendedProgress::MarkFinished</a></div><div class="ttdeci">void MarkFinished()</div><div class="ttdoc">Mark progress finished. </div></div>
+<div class="ttc" id="a00235_html_gad8698c0477204fb8b81feb9d81cbe4fd"><div class="ttname"><a href="a00235.html#gad8698c0477204fb8b81feb9d81cbe4fd">GUILIB::V2::CAddonGUIDialogExtendedProgress::SetTitle</a></div><div class="ttdeci">void SetTitle(const std::string &amp;strTitle)</div><div class="ttdoc">To set the title of dialog. </div></div>
+<div class="ttc" id="a00235_html_gaabe45b4d47077b54df0bb809eb41b8d5"><div class="ttname"><a href="a00235.html#gaabe45b4d47077b54df0bb809eb41b8d5">GUILIB::V2::CAddonGUIDialogExtendedProgress::IsFinished</a></div><div class="ttdeci">bool IsFinished() const </div><div class="ttdoc">To ask dialog is finished. </div></div>
+<div class="ttc" id="a00235_html_gafdfa72709ffc1738c3c198f7ad8b61ec"><div class="ttname"><a href="a00235.html#gafdfa72709ffc1738c3c198f7ad8b61ec">GUILIB::V2::CAddonGUIDialogExtendedProgress::Text</a></div><div class="ttdeci">std::string Text() const </div><div class="ttdoc">Get the used text information string. </div></div>
+<div class="ttc" id="a00044_html_a346bd1e3888bec90756af8184fec1a69"><div class="ttname"><a href="a00044.html#a346bd1e3888bec90756af8184fec1a69">GUILIB::V2::CAddonGUIDialogExtendedProgress::IMPL_GUI_EXTENDED_PROGRESS_DIALOG</a></div><div class="ttdeci">IMPL_GUI_EXTENDED_PROGRESS_DIALOG</div><div class="ttdef"><b>Definition:</b> GUIDialogExtendedProgress.h:153</div></div>
+<div class="ttc" id="a00116_html"><div class="ttname"><a href="a00116.html">definations.h</a></div></div>
+<div class="ttc" id="a00235_html_ga86033f373ed6159d52feb585bab2dfda"><div class="ttname"><a href="a00235.html#ga86033f373ed6159d52feb585bab2dfda">GUILIB::V2::CAddonGUIDialogExtendedProgress::~CAddonGUIDialogExtendedProgress</a></div><div class="ttdeci">~CAddonGUIDialogExtendedProgress()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00139.html">PlayList.h</a></li>
+    <li class="navelem"><a class="el" href="dir_3b29b88e633d0e7decc99dfac3f67a6c.html">kodi</a></li><li class="navelem"><a class="el" href="dir_4810bf30586827c60967b28d81c2ef02.html">gui.api2</a></li><li class="navelem"><a class="el" href="a00139.html">GUIDialogExtendedProgress.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

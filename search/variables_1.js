@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['canpulse',['canPulse',['../a00077.html#aa6ae2316c0a1f7208c6c3d02392bb32e',1,'XBMCAddon::xbmcgui::Window']]],
-  ['codec_5fid',['codec_id',['../a00052.html#abb16fc135f202805c438614ff10cf11c',1,'kodi_codec']]],
-  ['codec_5ftype',['codec_type',['../a00052.html#a74ecd8a982f71c56801ba227f4cd8d94',1,'kodi_codec']]],
-  ['compile_5fname',['compile_name',['../a00053.html#afe9672e29db448c9cc47fbb6cbb5a8f4',1,'kodi_version']]],
-  ['control',['control',['../a00073.html#a230a9fedb2da04dce96baad3482327cc',1,'XBMCAddon::xbmcgui::Action']]]
+  ['bconfirmed',['bConfirmed',['../a00071.html#ae6546e334fe9729c6afe0eee76554a60',1,'XBMCAddon::xbmc::Keyboard']]],
+  ['bhaspath',['bHasPath',['../a00085.html#ae83b678a24bce6873c0af1024149043a',1,'XBMCAddon::xbmcgui::ControlLabel']]],
+  ['bhidden',['bHidden',['../a00071.html#af66f90748653d4c3377dff5859b83d26',1,'XBMCAddon::xbmc::Keyboard']]],
+  ['bispassword',['bIsPassword',['../a00081.html#affcbdac561c866d4f010a48e7889020b',1,'XBMCAddon::xbmcgui::ControlEdit']]],
+  ['bmodal',['bModal',['../a00096.html#a143bdb23d8cc3d6803d9cdb5fde42d4f',1,'XBMCAddon::xbmcgui::Window']]],
+  ['bnotify',['bNotify',['../a00031.html#ad273493d2cc94a0960638fc1360a2ec7',1,'EPG_TAG']]],
+  ['buttoncode',['buttonCode',['../a00077.html#a2876b184c855d9cb7113c2b470c25941',1,'XBMCAddon::xbmcgui::Action']]]
 ];

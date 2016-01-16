@@ -1,12 +1,18 @@
 var a00081 =
 [
-    [ "File", "a00081.html#ad6c06a9065bb77311663bd2a98ef2eb5", null ],
-    [ "~File", "a00081.html#a241d694b0e799c0579a023e76cd97f18", null ],
-    [ "close", "a00246.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
-    [ "getFile", "a00081.html#ae54cc0c6b80386955f27208cbae8f3af", null ],
-    [ "read", "a00246.html#ga691e636b0dffa3c448c648f42d94437a", null ],
-    [ "readBytes", "a00246.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8", null ],
-    [ "seek", "a00246.html#ga8140115d0b4e6cb1ffa9f4298153d009", null ],
-    [ "size", "a00246.html#ga6fdf8e4501d305514d8e7b5d6cde34a6", null ],
-    [ "write", "a00246.html#ga1a6eddca986ff7164d57b9fad625e597", null ]
+    [ "ControlEdit", "a00081.html#a49f0c2eb13ed03073366e69266befd0e", null ],
+    [ "ControlEdit", "a00081.html#af2dfe2807aa51f11a84830fac1c85ac8", null ],
+    [ "Create", "a00081.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "getLabel", "a00289.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
+    [ "getText", "a00289.html#gafab766445043570e6a82c14851366933", null ],
+    [ "setLabel", "a00289.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
+    [ "setText", "a00289.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ],
+    [ "align", "a00081.html#a4864c3686205158c9cab83fa95c2a15a", null ],
+    [ "bIsPassword", "a00081.html#affcbdac561c866d4f010a48e7889020b", null ],
+    [ "disabledColor", "a00081.html#a9b7ae35a0c2326e198dab3c2ec50e94c", null ],
+    [ "strFont", "a00081.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "strText", "a00081.html#ab456897f658d865f7c66da9ba85f6cb9", null ],
+    [ "strTextureFocus", "a00081.html#a2c94f7603cfb9d13594e648f67b55e22", null ],
+    [ "strTextureNoFocus", "a00081.html#a51d63e84bd9b53dbdc23a476df4440a9", null ],
+    [ "textColor", "a00081.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
 ];

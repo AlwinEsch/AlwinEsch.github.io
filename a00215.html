@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIDialogOK</title>
+<title>Kodi Development: CAddonLib_VFSProperty</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,36 +92,30 @@ $(document).ready(function(){initNavTree('a00215.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIDialogOK<div class="ingroups"><a class="el" href="a00176.html">C++ Development</a> &raquo; <a class="el" href="a00220.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAddonLib_VFSProperty<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a> &raquo; <a class="el" href="a00207.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>OK dialog</b> </p>
-<p>The functions listed below permit the call of a dialogue of information, a confirmation of the user by press from OK required.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00124.html">#include &lt;kodi/gui.api2/GUIDialogOK.h&gt;</a> be included to enjoy it.</p>
-<div class="image">
-<img src="help.GUIDialogOK.png" alt="help.GUIDialogOK.png"/>
-</div>
- <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gac63575f1ab0693f4900a6f427db53129"></a>
+<p><b>Virtual file system entry property</b> </p>
+<p>The <a class="el" href="a00018.html">CAddonLib_VFSProperty</a> is used to manage additional file information, if present it will be used in <a class="el" href="a00016.html">CAddonLib_VFSDirEntry</a> as a list.</p>
+<p>The additional information will be provided with text, either for the name as well as for the value.</p>
+<p>It has the header <a class="el" href="a00124.html">#include &lt;kodi/addon.api2/VFSUtils.h&gt;</a> be included to enjoy it. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga965d127e0d0de44d06a0e6da2ca8f829"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void ShowAndGetInput </td>
+          <td class="memname">CAddonLib_VFSProperty </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
+          <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -129,85 +123,103 @@ $(document).ready(function(){initNavTree('a00215.html','');});
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Use dialog to inform user with text and confirmation with OK with continued string. </p>
+<p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">heading</td><td>Dialog heading. </td></tr>
-    <tr><td class="paramname">text</td><td>Multi-line text.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Property name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Defined value to use </td></tr>
   </table>
   </dd>
 </dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/gui.api2/GUIDialogOK.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">CAddonGUIDialogOK::ShowAndGetInput(<span class="stringliteral">&quot;Test dialog&quot;</span>, <span class="stringliteral">&quot;Hello World!\nI&#39;m a call from add-on\n :) :D&quot;</span>);</div>
-</div><!-- fragment --> 
+
 </div>
 </div>
-<a class="anchor" id="ga65c79d1d3fcbdf7d9b1304a9abbae042"></a>
+<a class="anchor" id="gab29906ba5407bb58b86428cb4b4a1e26"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void ShowAndGetInput </td>
+          <td class="memname">const std::string&amp; Name </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Use dialog to inform user with text and confirmation with OK with strings separated to the lines. </p>
+<p>Used Name. </p>
+<dl class="section return"><dt>Returns</dt><dd>Defined name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga940d484bb6523277e1d2c742f4f534a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set name to use. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">heading</td><td>Dialog heading. </td></tr>
-    <tr><td class="paramname">line0</td><td>Line #1 text. </td></tr>
-    <tr><td class="paramname">line1</td><td>Line #2 text. </td></tr>
-    <tr><td class="paramname">line2</td><td>Line #3 text.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Property name </td></tr>
   </table>
   </dd>
 </dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/gui.api2/GUIDialogOK.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">CAddonGUIDialogOK::ShowAndGetInput(<span class="stringliteral">&quot;Test dialog&quot;</span>, <span class="stringliteral">&quot;Hello World!&quot;</span>, <span class="stringliteral">&quot;I&#39;m a call from add-on&quot;</span>, <span class="stringliteral">&quot; :) :D&quot;</span>);</div>
-</div><!-- fragment --> 
+
+</div>
+</div>
+<a class="anchor" id="ga69925f195530e698e569191bd4c3470c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetValue </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set defined value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Defined value to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7533eecbdf0c0c538dd01e03fdf8f2ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; Value </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get defined value. </p>
+<dl class="section return"><dt>Returns</dt><dd>Defined value </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->

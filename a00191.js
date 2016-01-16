@@ -1,8 +1,8 @@
 var a00191 =
 [
-    [ "CAddonLib_VFSProperty", "a00191.html#ga965d127e0d0de44d06a0e6da2ca8f829", null ],
-    [ "Name", "a00191.html#gab29906ba5407bb58b86428cb4b4a1e26", null ],
-    [ "SetName", "a00191.html#ga940d484bb6523277e1d2c742f4f534a4", null ],
-    [ "SetValue", "a00191.html#ga69925f195530e698e569191bd4c3470c", null ],
-    [ "Value", "a00191.html#ga7533eecbdf0c0c538dd01e03fdf8f2ad", null ]
+    [ "CPlayerLib", "a00058.html", "a00058" ],
+    [ "CPlayerLib_InfoTagMusic", "a00059.html", "a00059" ],
+    [ "CPlayerLib_InfoTagVideo", "a00060.html", "a00060" ],
+    [ "CPlayerLib_Player", "a00061.html", "a00061" ],
+    [ "CPlayerLib_PlayList", "a00062.html", "a00062" ]
 ];

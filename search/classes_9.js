@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rendercapture',['RenderCapture',['../a00071.html',1,'XBMCAddon::xbmc']]]
+  ['player',['Player',['../a00073.html',1,'XBMCAddon::xbmc']]],
+  ['playlist',['PlayList',['../a00074.html',1,'XBMCAddon::xbmc']]]
 ];

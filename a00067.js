@@ -1,16 +1,13 @@
 var a00067 =
 [
-    [ "Keyboard", "a00067.html#a290b85ded95367e3801ecb1cd5d2d8f1", null ],
-    [ "~Keyboard", "a00067.html#acec86b051eb2fd163d5f5b2e19679f9e", null ],
-    [ "doModal", "a00240.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
-    [ "getText", "a00240.html#gafab766445043570e6a82c14851366933", null ],
-    [ "isConfirmed", "a00240.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
-    [ "setDefault", "a00240.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
-    [ "setHeading", "a00240.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
-    [ "setHiddenInput", "a00240.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ],
-    [ "bConfirmed", "a00067.html#ae6546e334fe9729c6afe0eee76554a60", null ],
-    [ "bHidden", "a00067.html#af66f90748653d4c3377dff5859b83d26", null ],
-    [ "strDefault", "a00067.html#ab4d87e31c184cdc814b32f4dfa7d18b6", null ],
-    [ "strHeading", "a00067.html#a513232d32fcff9f86df46035911255ad", null ],
-    [ "strText", "a00067.html#a8975bd293643341b62e4e5a7810d2efc", null ]
+    [ "stream_vector", "a00263.html#ga1ebf7c021d47165548ca6320162935bb", null ],
+    [ "CStreamProperties", "a00263.html#gadb5884513f2557e07249fab9f1cc447c", null ],
+    [ "~CStreamProperties", "a00263.html#ga6f0282c6d4010650f5ed1075bd19da84", null ],
+    [ "Clear", "a00263.html#ga666736fbd0ebb8dc7e6ff3392423d6c0", null ],
+    [ "GetProperties", "a00263.html#ga4bb870e45a3ef7c81e92563b7a872618", null ],
+    [ "GetStreamById", "a00263.html#ga2e18a0bd69b52870b817c6c8bf0e0db6", null ],
+    [ "GetStreamData", "a00263.html#ga3687926c69b0a5d8a32a73b85ce892b4", null ],
+    [ "GetStreamId", "a00263.html#ga80239fdfa9f1d2dfea3abb949bb84b94", null ],
+    [ "UpdateStreams", "a00263.html#ga8d64e3bab115fb9201d6f688ab350ce5", null ],
+    [ "IMPL_STREAM_PROPS", "a00067.html#a5fa0e464ca4f78c4cd32d2fc4796d700", null ]
 ];

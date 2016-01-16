@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: InfoTagRadioRDS</title>
+<title>Kodi Development: CAddonGUIListItem</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,28 +92,64 @@ $(document).ready(function(){initNavTree('a00248.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">InfoTagRadioRDS<div class="ingroups"><a class="el" href="a00177.html">Python Development</a> &raquo; <a class="el" href="a00178.html">xbmc</a></div></div>  </div>
+<div class="title">CAddonGUIListItem<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a> &raquo; <a class="el" href="a00244.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's radio RDS info tag class.</b> </p>
-<p>To get radio RDS info tag data of currently played PVR radio channel source.</p>
-<dl class="section note"><dt>Note</dt><dd>Info tag load is only be possible from present player class.<br />
- Also is all the data variable from radio channels and not known on begining of radio receiving.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;tag = xbmc.Player().getRadioRDSInfoTag()</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;title  = tag.getTitle()</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;artist = tag.getArtist()</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;...</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga11ac7b770ff2135e877c241ddb5db662"></a>
+<p><b>Selectable window list item</b> </p>
+<p>The list item control is used for creating item lists in Kodi</p>
+<p>The with <a class="el" href="a00150.html">#include &lt;kodi/addon.api2/GUIListItem.h&gt;</a> given class is used to create a item entry for a list on window and to support it's control. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaa99cfb854b91b7b06e08e3a38dca8e26"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getAlbum </td>
+          <td class="memname">CAddonGUIListItem </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>iconImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>thumbnailImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gac08a48ef4dc5afe79c14ffbefdd96f5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearProperties </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -121,17 +157,30 @@ $(document).ready(function(){initNavTree('a00248.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Album of item on air. </p>
-<dl class="section return"><dt>Returns</dt><dd>Album name </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="gac83fd84b63b264bc8ec91b298fcd8264"></a>
+<a class="anchor" id="ga881f45cb47b4f775418e65dfc6c8b832"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int getAlbumTrackNumber </td>
+          <td class="memname">void ClearProperty </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga7e0c3206898d32ef6220258a5df473a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetIconImage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -139,17 +188,14 @@ $(document).ready(function(){initNavTree('a00248.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Get the album track number of currently sended music. </p>
-<dl class="section return"><dt>Returns</dt><dd>Track Number </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga1b9f565753d008491c59887680bd570e"></a>
+<a class="anchor" id="gaf03feece9f59a8e557e91f5d9f7ff643"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getArtist </td>
+          <td class="memname">std::string GetLabel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -157,17 +203,14 @@ $(document).ready(function(){initNavTree('a00248.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Artist of the item on air. </p>
-<dl class="section return"><dt>Returns</dt><dd>Artist </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga569d6df96917effa696e29bbf29faeda"></a>
+<a class="anchor" id="gaca764077c10877a5c50ff334ca2da1a0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getBand </td>
+          <td class="memname">std::string GetLabel2 </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -175,17 +218,14 @@ $(document).ready(function(){initNavTree('a00248.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Band of the item on air. </p>
-<dl class="section return"><dt>Returns</dt><dd>Band </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga50a7366cba8ce27bc48a00e746324f7b"></a>
+<a class="anchor" id="gad0cc801f1cfa8f4e2cfc1b88fc964403"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getComment </td>
+          <td class="memname">std::string GetOverlayImage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -193,17 +233,46 @@ $(document).ready(function(){initNavTree('a00248.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Get Comment text from channel. </p>
-<dl class="section return"><dt>Returns</dt><dd>Comment </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga061292e6e28d5d3048d2e55afc615152"></a>
+<a class="anchor" id="gaf591ccbe1e6d941a2c7c7bb7ac526168"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getComposer </td>
+          <td class="memname">std::string GetProperty </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga0208983acdcf01ed6f92494ce693f335"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasArt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga56e0cc79e6f0d67ab934a22f5db58611"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasIcon </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -211,17 +280,14 @@ $(document).ready(function(){initNavTree('a00248.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Get the Composer of the music. </p>
-<dl class="section return"><dt>Returns</dt><dd>Composer </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga93368a520bde70f6d9820377046de0dd"></a>
+<a class="anchor" id="ga320f1663a24a839ab004303f87018de7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getConductor </td>
+          <td class="memname">bool HasOverlay </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -229,17 +295,14 @@ $(document).ready(function(){initNavTree('a00248.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Get the Conductor of the Band. </p>
-<dl class="section return"><dt>Returns</dt><dd>Conductor </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="gafb4a54820ae04a333e44c7218ecd80c0"></a>
+<a class="anchor" id="gab226449aceca3197243a93c9302bb11d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getEditorialStaff </td>
+          <td class="memname">bool HasProperties </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -247,17 +310,56 @@ $(document).ready(function(){initNavTree('a00248.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Get Editorial Staff names. </p>
-<dl class="section return"><dt>Returns</dt><dd>Editorial Staff </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga13200f81a279b08595a9fdcbf715d106"></a>
+<a class="anchor" id="ga0d03d0a645db0f7ba8bc4cd94a77f8d6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getEMailHotline </td>
+          <td class="memname">bool HasProperty </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga043501226133dde1d98cd16f7c5a5fc8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IncrementProperty </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gafcb84c749b00051b94bc1353b16da631"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsFileItem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -265,17 +367,14 @@ $(document).ready(function(){initNavTree('a00248.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Email address of the radio station's studio. </p>
-<dl class="section return"><dt>Returns</dt><dd>EMail Hotline </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga0f68d5e807e222f3f29ace5ed026804d"></a>
+<a class="anchor" id="ga83746525efaa62e4a49358f908e014db"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getEMailStudio </td>
+          <td class="memname">bool IsFolder </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -283,17 +382,14 @@ $(document).ready(function(){initNavTree('a00248.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Email address of radio station studio. </p>
-<dl class="section return"><dt>Returns</dt><dd>EMail Studio </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="gadbe5a226d385f5c727fa4bc4e013cace"></a>
+<a class="anchor" id="ga8bd3773d1e4bc4a38c419fd6c92bdee2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getInfoCinema </td>
+          <td class="memname">bool IsSelected </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -301,332 +397,236 @@ $(document).ready(function(){initNavTree('a00248.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Get Cinema informations. </p>
-<dl class="section return"><dt>Returns</dt><dd>Cinema Information </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga819f2b5d4da1d9644dc2c4822cdb41df"></a>
+<a class="anchor" id="ga5a9992dbdece030ba42b71ce70a3d816"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getInfoHoroscope </td>
+          <td class="memname">void Select </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bOnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga2d21e6c9e7a2262741f5ba92757c9528"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetArt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga837b4aac429f71372842666c48359c60"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetArtFallback </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gacc81dfb53a4e1222cda54b4bcf67e4f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetIconImage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gab825756e641ba839bfae908492165481"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetLabel </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gadaa65016e969bb31fc41a93e657e79db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetLabel2 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga5f5cac332c7290304cc7d7f84d732f6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetOverlayImage </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bOnOff</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga4a03d7c94fa02df112558bc30818e413"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga7d553225fe861e34410148ca3bbd70fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProperty </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga34d790350da2bc6435c5f76051a4c74e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetSortLabel </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga18fdaf4c6ecb5a97ae1fade2038bf07c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetThumbnailImage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gae5d57fceca241c560feebb8d9cb00874"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~CAddonGUIListItem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Get Horoscope informations. </p>
-<dl class="section return"><dt>Returns</dt><dd>Horoscope Information </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga978969eafd267e9ce21108fc77cd17d9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getInfoLottery </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get Lottery informations. </p>
-<dl class="section return"><dt>Returns</dt><dd>Lottery Information </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaedfa9e9ea918f55d9cd0946d5c4a319f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getInfoNews </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get News informations. </p>
-<dl class="section return"><dt>Returns</dt><dd>News Information </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga2b0046ed8dcd87899605fa06d88de47c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getInfoNewsLocal </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get Local news informations. </p>
-<dl class="section return"><dt>Returns</dt><dd>Local News Information </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaf45dfe55fe0320e865c9f5867c80390e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getInfoOther </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get other informations. </p>
-<dl class="section return"><dt>Returns</dt><dd>Other Information </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga9992182c39e21846ae942bb286f8c2b9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getInfoSport </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get Sport informations. </p>
-<dl class="section return"><dt>Returns</dt><dd>Sport Information </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga810467b321b3e8b1aa3b2ff819600400"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getInfoStock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get Stock informations. </p>
-<dl class="section return"><dt>Returns</dt><dd>Stock Information </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gacde4012f2a219aa80f288a18410425b1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getInfoWeather </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get Weather informations. </p>
-<dl class="section return"><dt>Returns</dt><dd>Weather Information </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga636cf89ccbe8aec5726bbcc1ff5e2baa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getPhoneHotline </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Telephone number of the radio station's hotline. </p>
-<dl class="section return"><dt>Returns</dt><dd>Phone Hotline </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga26f27df2a5669d59bda3175b8c621fdb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getPhoneStudio </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Telephone number of the radio station's studio. </p>
-<dl class="section return"><dt>Returns</dt><dd>Phone Studio </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga4864cf4499a1647e6571a2c325c03927"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getProgHost </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Host of current radio show. </p>
-<dl class="section return"><dt>Returns</dt><dd>Program Host </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gad05fbadd46d56ee35bfd0e8d4f3a605d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getProgNext </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Next program show. </p>
-<dl class="section return"><dt>Returns</dt><dd>Program Next </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gad0e2d31a6bb1008b47147912e2f76dd7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getProgNow </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Current radio program show. </p>
-<dl class="section return"><dt>Returns</dt><dd>Program Now </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga0486fd80088c0a6a6acd1de2b97c5569"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getProgStation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Name describing station. </p>
-<dl class="section return"><dt>Returns</dt><dd>Program Station </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga8670642bc1ee0087d342e7548dfa6ba5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getProgStyle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The the radio channel style currently used. </p>
-<dl class="section return"><dt>Returns</dt><dd>Program Style </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaddedbc487cefb0c7014bad5f76dfa030"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getProgWebsite </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Link to URL (web page) for radio station homepage. </p>
-<dl class="section return"><dt>Returns</dt><dd>Program Website </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga623db082b6ab68cd69fb5e72b8772ca6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getSMSStudio </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>SMS (Text Messaging) number for studio. </p>
-<dl class="section return"><dt>Returns</dt><dd>SMS Studio </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga888f94790c968e3f0b5de17e509098aa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getTitle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Title of the item on the air; i.e. song title. </p>
-<dl class="section return"><dt>Returns</dt><dd>Title </dd></dl>
 
 </div>
 </div>

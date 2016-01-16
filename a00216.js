@@ -1,16 +1,15 @@
 var a00216 =
 [
-    [ "Abort", "a00216.html#ga71e9d732335846eb579f0dd00918b3e7", null ],
-    [ "CAddonGUIDialogProgress", "a00216.html#gac076fba6e17d71b4ce5b330855fb8902", null ],
-    [ "GetPercentage", "a00216.html#gae20eeb097c9ebe3506bd1d2bb3d92fda", null ],
-    [ "IsCanceled", "a00216.html#gaf76bcf12aaec9ab845ea61853a37a33c", null ],
-    [ "Open", "a00216.html#ga5e53001785ff30ae485a113b9b8a0ddc", null ],
-    [ "SetCanCancel", "a00216.html#ga13580b7f84c1c13f90c1d030ef61faf8", null ],
-    [ "SetHeading", "a00216.html#gaf6377691fa79c14e16aebaeb9d340b33", null ],
-    [ "SetLine", "a00216.html#ga845054cd7ff1978a112126086a8ec5ba", null ],
-    [ "SetPercentage", "a00216.html#gadf0353f59469e4b0cab327ea7df9cae8", null ],
-    [ "SetProgressAdvance", "a00216.html#gafe4b80962f0d7bdd3b0a73b83ef06323", null ],
-    [ "SetProgressMax", "a00216.html#gad397a19fe15c25e5077d34fd43da6e5a", null ],
-    [ "ShowProgressBar", "a00216.html#ga4ef9882ff90cb3878eb846335e2b3c07", null ],
-    [ "~CAddonGUIDialogProgress", "a00216.html#ga120fc408bff359c7c29a02551c00e9a0", null ]
+    [ "CAddonLib_VFSDirEntry", "a00216.html#gac81f1dd62d59a58a0d6f5ef72cfde20b", null ],
+    [ "CAddonLib_VFSDirEntry", "a00216.html#ga3d6451c27a24180971c1dd12e8b665ae", null ],
+    [ "IsFolder", "a00216.html#gabfbbb37d69862b45d0f1079ab976fa37", null ],
+    [ "Label", "a00216.html#gaacd1b40e1b2e44d82303388beb475e84", null ],
+    [ "Path", "a00216.html#ga666f6d222d6e40f592d7ec4c8c670263", null ],
+    [ "Properties", "a00216.html#gaea9c66f89bd36c6b01a234d0e2ad123a", null ],
+    [ "Properties", "a00216.html#ga682a050b373b13ec1e816d7a9cc47302", null ],
+    [ "SetFolder", "a00216.html#gadc0bf158b1dc28eea1bc2e3a2c016982", null ],
+    [ "SetLabel", "a00216.html#gab825756e641ba839bfae908492165481", null ],
+    [ "SetPath", "a00216.html#ga4a03d7c94fa02df112558bc30818e413", null ],
+    [ "SetSize", "a00216.html#gaf2fb6ea3061355a5ed4b53ca45e712ac", null ],
+    [ "Size", "a00216.html#gac0ba4f4c78dcb35605e645ee75198b5a", null ]
 ];

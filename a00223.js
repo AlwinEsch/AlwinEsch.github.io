@@ -1,10 +1,11 @@
 var a00223 =
 [
-    [ "GetCurrentWindowDialogId", "a00223.html#ga4afd43d20b97e20532eeb1fac9ae6c1f", null ],
-    [ "GetCurrentWindowId", "a00223.html#ga452c9c6299140854739860045f060d28", null ],
-    [ "GetScreenHeight", "a00223.html#ga7b736bc18cc4c9b1e6229e1af312b6e3", null ],
-    [ "GetScreenWidth", "a00223.html#ga0f0cc52a3413a502953495f26270f559", null ],
-    [ "GetVideoResolution", "a00223.html#ga9e8e637bdd545cf2cd0b922d3496a64b", null ],
-    [ "Lock", "a00223.html#gace70db8e92290399a2a070eb0a60df63", null ],
-    [ "Unlock", "a00223.html#ga50f1fb5a8527c6f1beb7c59393c934a9", null ]
+    [ "CAddonGUIControlButton", "a00223.html#ga3132552bcc57d1c10aa86871c5dca313", null ],
+    [ "GetLabel", "a00223.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
+    [ "GetLabel2", "a00223.html#ga94e3a8c89b6a8d0fb69cb8f44c3d5b1b", null ],
+    [ "SetEnabled", "a00223.html#gaac893222adeffdefc04d749648cce354", null ],
+    [ "SetLabel", "a00223.html#ga0468217482f9a171183b1cda613417e6", null ],
+    [ "SetLabel2", "a00223.html#ga4f36ea518d9c722f2cdc03cac01aabf3", null ],
+    [ "SetVisible", "a00223.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "~CAddonGUIControlButton", "a00223.html#gaeb9b958abdc7aa81b76bb43b856edb9a", null ]
 ];

@@ -1,12 +1,9 @@
 var a00260 =
 [
-    [ "onPlayBackEnded", "a00260.html#gab375f26bb820f640d74700cda4ee6646", null ],
-    [ "onPlayBackPaused", "a00260.html#ga7226102b037bfbca79e0c940f5e912e2", null ],
-    [ "onPlayBackResumed", "a00260.html#ga075576edcd1809ff57e3897aa165e529", null ],
-    [ "onPlayBackSeek", "a00260.html#gaeda52fbaaf9860f7a96e93ba33709fc9", null ],
-    [ "onPlayBackSeekChapter", "a00260.html#ga75a62da626870983e308a62e8c359218", null ],
-    [ "onPlayBackSpeedChanged", "a00260.html#ga852e3252c43deaa541e8cae610b9e0ef", null ],
-    [ "onPlayBackStarted", "a00260.html#ga2d8b5fa98b21f02ce06f7bd7de836d9d", null ],
-    [ "onPlayBackStopped", "a00260.html#ga04dbd49c7486f00911995a56a19536d0", null ],
-    [ "onQueueNextItem", "a00260.html#ga8890f6898fc712522c2d29f57455275d", null ]
+    [ "ChannelEntry", "a00260.html#gafdbc7a9a4d1336f159150988868b1465", null ],
+    [ "ChannelGroup", "a00260.html#gabb331d2d9b3ef522da48c0b951ddbe21", null ],
+    [ "ChannelGroupMember", "a00260.html#ga2d24f5c60e0d4b6d3a416641b489f15e", null ],
+    [ "EpgEntry", "a00260.html#gab55ab3d9f7fa5f1304edf70e39ac6a55", null ],
+    [ "RecordingEntry", "a00260.html#gad676cb5682d7c7c959d91822342cc753", null ],
+    [ "TimerEntry", "a00260.html#gae6c3ce0a07ecc854c615f2d65e550147", null ]
 ];

@@ -1,10 +1,11 @@
 var a00238 =
 [
-    [ "Clear", "a00238.html#gaa71d36872f416feaa853788a7a7a7ef8", null ],
-    [ "CPVRStream", "a00238.html#gaf419611a13a1bca6fe60cd58cb8a952f", null ],
-    [ "CPVRStream", "a00238.html#gad8caf56bf234506f41c1fcc64a0d1ad7", null ],
-    [ "IsCleared", "a00238.html#ga324d4448e5c2dde1488e1a9b4d26c7ad", null ],
-    [ "operator<", "a00238.html#ga8c39a1e5e76bc953c53019e4ef318216", null ],
-    [ "operator=", "a00238.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6", null ],
-    [ "operator==", "a00238.html#ga2e56127d518a6487ba46cfe720bb4904", null ]
+    [ "ShowAndGetDate", "a00238.html#ga37d6caf6f507938f599915d93eddd596", null ],
+    [ "ShowAndGetIPAddress", "a00238.html#ga1fd8ee824dbbbc1d222fd67583f28614", null ],
+    [ "ShowAndGetNumber", "a00238.html#gab73e260650434df59844c3a2c8b1ba2d", null ],
+    [ "ShowAndGetSeconds", "a00238.html#ga664586418f4cb12a25a15dcd5effff02", null ],
+    [ "ShowAndGetTime", "a00238.html#ga08a9c6abb71eb5a380213e9528b6aecf", null ],
+    [ "ShowAndVerifyInput", "a00238.html#ga3028013da19a00279961a45d26dcf832", null ],
+    [ "ShowAndVerifyNewPassword", "a00238.html#ga85ca517533d779b26944d6fb74fe0abe", null ],
+    [ "ShowAndVerifyPassword", "a00238.html#ga28ed908212d6a38156014d5ccc5a7dc7", null ]
 ];

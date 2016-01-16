@@ -1,11 +1,8 @@
 var a00205 =
 [
-    [ "CAddonGUIControlRadioButton", "a00205.html#gaa0b9881d273c8dde39999cdcb8d90257", null ],
-    [ "GetLabel", "a00205.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "IsSelected", "a00205.html#gad29f489ee580d3d6d01b334aa186c323", null ],
-    [ "SetEnabled", "a00205.html#gaac893222adeffdefc04d749648cce354", null ],
-    [ "SetLabel", "a00205.html#gab825756e641ba839bfae908492165481", null ],
-    [ "SetSelected", "a00205.html#gada1dfadeefe2948819776785fcdbf547", null ],
-    [ "SetVisible", "a00205.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlRadioButton", "a00205.html#ga4412919fbcab408f12771d6664a3cd16", null ]
+    [ "getAddonInfo", "a00205.html#gaedb0b112c76349f81e261335a6b240b9", null ],
+    [ "getLocalizedString", "a00205.html#ga79ffd96305af02e364d99c2c9d8b69de", null ],
+    [ "getSetting", "a00205.html#ga6eebe8728b7d19104a482a29abdafce2", null ],
+    [ "openSettings", "a00205.html#ga73eb9124fb7a7a5f5a89c92e0bc1fb2a", null ],
+    [ "setSetting", "a00205.html#gafd6c759c5b268d0ec1467e340323783d", null ]
 ];

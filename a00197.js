@@ -1,10 +1,26 @@
 var a00197 =
 [
-    [ "AddDSPMenuHook", "a00197.html#gad4e7c34b466c7523b48eb38f453c6f8b", null ],
-    [ "GetCurrentSinkFormat", "a00197.html#gaeb11fdb26f8a00296e10ff296c602bb5", null ],
-    [ "RegisterDSPMode", "a00197.html#gae95d0da238b6ffa997911dbf9eedb2d4", null ],
-    [ "RegisterMe", "a00197.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
-    [ "RemoveDSPMenuHook", "a00197.html#ga59fa2e75dbd7ede8adb9488258b55bdd", null ],
-    [ "UnregisterDSPMode", "a00197.html#gae222050a6298ea8a4b7f2085ae5e85b1", null ],
-    [ "UnRegisterMe", "a00197.html#ga5940787dcdcdb8aa995a07106917489f", null ]
+    [ "Action", "a00077.html", "a00077" ],
+    [ "Control", "a00078.html", "a00078" ],
+    [ "ControlButton", "a00079.html", "a00079" ],
+    [ "ControlCheckMark", "a00080.html", "a00080" ],
+    [ "ControlEdit", "a00081.html", "a00081" ],
+    [ "ControlFadeLabel", "a00082.html", "a00082" ],
+    [ "ControlGroup", "a00083.html", "a00083" ],
+    [ "ControlImage", "a00084.html", "a00084" ],
+    [ "ControlLabel", "a00085.html", "a00085" ],
+    [ "ControlList", "a00086.html", "a00086" ],
+    [ "ControlProgress", "a00087.html", "a00087" ],
+    [ "ControlRadioButton", "a00088.html", "a00088" ],
+    [ "ControlSlider", "a00089.html", "a00089" ],
+    [ "ControlSpin", "a00090.html", "a00090" ],
+    [ "ControlTextBox", "a00091.html", "a00091" ],
+    [ "Dialog", "a00092.html", "a00092" ],
+    [ "DialogProgress", "a00093.html", "a00093" ],
+    [ "DialogProgressBG", "a00094.html", "a00094" ],
+    [ "ListItem", "a00095.html", "a00095" ],
+    [ "Window", "a00096.html", "a00096" ],
+    [ "WindowDialog", "a00097.html", "a00097" ],
+    [ "WindowXML", "a00098.html", "a00098" ],
+    [ "WindowXMLDialog", "a00099.html", "a00099" ]
 ];

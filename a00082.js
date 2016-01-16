@@ -1,14 +1,13 @@
 var a00082 =
 [
-    [ "Stat", "a00082.html#a60ce51a2aeed51fe6b3fb97341418ad1", null ],
-    [ "atime", "a00257.html#ga65d49375e5251d4e616a45e3c898d6cc", null ],
-    [ "ctime", "a00257.html#gab24c57af16ac6f88edb819c18e2e438b", null ],
-    [ "mtime", "a00257.html#ga57da69d0b20141a95c0c44a6bb5f3b35", null ],
-    [ "st_dev", "a00257.html#gab17084ec246f2b497d2f13618c5bd220", null ],
-    [ "st_gid", "a00257.html#ga9a7a9ad27402f5a931bcbff38e4e03d3", null ],
-    [ "st_ino", "a00257.html#ga77e336d6274f6fb0e2a3c3546e61e360", null ],
-    [ "st_mode", "a00257.html#ga00b3e20028eaee69c44cdc47a922fe31", null ],
-    [ "st_nlink", "a00257.html#ga34f57426567df63ef5ad1b4679778d18", null ],
-    [ "st_size", "a00257.html#gaeec21543efab31f62a21e533b0d3a537", null ],
-    [ "st_uid", "a00257.html#gaa29c53999dffe4acc12aed2eb60a6c81", null ]
+    [ "ControlFadeLabel", "a00082.html#a75091c3fbf9fafdabb9b98ee28f0a64a", null ],
+    [ "ControlFadeLabel", "a00082.html#a099013f6dfa4b09620df7bed9090abc5", null ],
+    [ "addLabel", "a00291.html#ga5c23c1e6768621ef5114c5b56a66c7c9", null ],
+    [ "Create", "a00082.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "reset", "a00288.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
+    [ "setScrolling", "a00291.html#ga37b258d64c9891a330036b19195913e1", null ],
+    [ "align", "a00082.html#a4864c3686205158c9cab83fa95c2a15a", null ],
+    [ "strFont", "a00082.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "textColor", "a00082.html#ad24d108d90ba89e693640b8aa2ff1d71", null ],
+    [ "vecLabels", "a00082.html#ab73823089fdceaaa9798d5d0bb79d458", null ]
 ];

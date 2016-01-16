@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/addons/kodi-addon-dev-kit/kodi/gui.api2/GUIDialogExtendedProgress.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/addons/kodi-addon-dev-kit/kodi/addon.api2/dlfcn-win32.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,91 +92,65 @@ $(document).ready(function(){initNavTree('a00120_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">GUIDialogExtendedProgress.h</div>  </div>
+<div class="title">dlfcn-win32.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00120.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015 Team KODI</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * dlfcn-win32</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2007 Ramiro Polla</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * This library is free software; you can redistribute it and/or</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * modify it under the terms of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * License as published by the Free Software Foundation; either</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * version 2.1 of the License, or (at your option) any later version.</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * This library is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * Lesser General Public License for more details.</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00097.html">definations.h</a>&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_DialogExtendedProgressHead.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_internal.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00164.html">GUILIB</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>V2</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * You should have received a copy of the GNU Lesser General Public</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * License along with this library; if not, write to the Free Software</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef DLFCN_H</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="a00120.html#a9377853cbaba2d5d7bacd4216d6080e7">   22</a></span>&#160;<span class="preprocessor">#define DLFCN_H</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* POSIX says these are implementation-defined.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> * To simplify use with Windows API, we treat them the same way.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="a00120.html#a5c83709ee3bd7d316f8f47e122f3be20">   28</a></span>&#160;<span class="preprocessor">#define RTLD_LAZY   0</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="a00120.html#a98a6517467cf7d1dd27d6c6dce78a6cf">   29</a></span>&#160;<span class="preprocessor">#define RTLD_NOW    0</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="a00040.html">   65</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00040.html">CAddonGUIDialogExtendedProgress</a></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="a00211.html#ga2f267cd452ee9736993693fa501ac85e">CAddonGUIDialogExtendedProgress</a>(<span class="keyword">const</span> std::string&amp; title = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="a00211.html#ga86033f373ed6159d52feb585bab2dfda">~CAddonGUIDialogExtendedProgress</a>();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::string <a class="code" href="a00211.html#ga3cb91fb7750df7982baea48c4a3de616">Title</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00211.html#gad8698c0477204fb8b81feb9d81cbe4fd">SetTitle</a>(<span class="keyword">const</span> std::string&amp; strTitle);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    std::string <a class="code" href="a00211.html#gafdfa72709ffc1738c3c198f7ad8b61ec">Text</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00211.html#gaec55d8bf3ca3e04261b66bee36f84368">SetText</a>(<span class="keyword">const</span> std::string&amp; strText);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00211.html#gaabe45b4d47077b54df0bb809eb41b8d5">IsFinished</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00211.html#ga40af1bcedea1f61fde8cd5e70e416473">MarkFinished</a>();</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="a00211.html#ga3bf91c353218dceaa271b65321b2f5cf">Percentage</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00211.html#ga74a9a823ab1cd34d62a219a842de5946">SetPercentage</a>(<span class="keywordtype">float</span> fPercentage);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00211.html#gac64c8e121cf5e368cd335c28a0521922">SetProgress</a>(<span class="keywordtype">int</span> currentItem, <span class="keywordtype">int</span> itemCount);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="a00040.html#a346bd1e3888bec90756af8184fec1a69">  153</a></span>&#160;    <a class="code" href="a00040.html#a346bd1e3888bec90756af8184fec1a69">IMPL_GUI_EXTENDED_PROGRESS_DIALOG</a>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  };</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}; <span class="comment">/* namespace V2 */</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}; <span class="comment">/* namespace GUILIB */</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_DialogExtendedProgressTail.h&quot;</span></div>
-<div class="ttc" id="a00211_html_gac64c8e121cf5e368cd335c28a0521922"><div class="ttname"><a href="a00211.html#gac64c8e121cf5e368cd335c28a0521922">GUILIB::V2::CAddonGUIDialogExtendedProgress::SetProgress</a></div><div class="ttdeci">void SetProgress(int currentItem, int itemCount)</div><div class="ttdoc">To set progress position with predefined places. </div></div>
-<div class="ttc" id="a00211_html_gaabe45b4d47077b54df0bb809eb41b8d5"><div class="ttname"><a href="a00211.html#gaabe45b4d47077b54df0bb809eb41b8d5">GUILIB::V2::CAddonGUIDialogExtendedProgress::IsFinished</a></div><div class="ttdeci">bool IsFinished() const </div><div class="ttdoc">To ask dialog is finished. </div></div>
-<div class="ttc" id="a00164_html"><div class="ttname"><a href="a00164.html">GUILIB</a></div><div class="ttdef"><b>Definition:</b> GUIControlButton.h:26</div></div>
-<div class="ttc" id="a00211_html_ga3cb91fb7750df7982baea48c4a3de616"><div class="ttname"><a href="a00211.html#ga3cb91fb7750df7982baea48c4a3de616">GUILIB::V2::CAddonGUIDialogExtendedProgress::Title</a></div><div class="ttdeci">std::string Title() const </div><div class="ttdoc">Get the used title. </div></div>
-<div class="ttc" id="a00211_html_ga3bf91c353218dceaa271b65321b2f5cf"><div class="ttname"><a href="a00211.html#ga3bf91c353218dceaa271b65321b2f5cf">GUILIB::V2::CAddonGUIDialogExtendedProgress::Percentage</a></div><div class="ttdeci">float Percentage() const </div><div class="ttdoc">Get the current progress position as percent. </div></div>
-<div class="ttc" id="a00040_html"><div class="ttname"><a href="a00040.html">GUILIB::V2::CAddonGUIDialogExtendedProgress</a></div><div class="ttdef"><b>Definition:</b> GUIDialogExtendedProgress.h:65</div></div>
-<div class="ttc" id="a00211_html_ga86033f373ed6159d52feb585bab2dfda"><div class="ttname"><a href="a00211.html#ga86033f373ed6159d52feb585bab2dfda">GUILIB::V2::CAddonGUIDialogExtendedProgress::~CAddonGUIDialogExtendedProgress</a></div><div class="ttdeci">~CAddonGUIDialogExtendedProgress()</div></div>
-<div class="ttc" id="a00211_html_gafdfa72709ffc1738c3c198f7ad8b61ec"><div class="ttname"><a href="a00211.html#gafdfa72709ffc1738c3c198f7ad8b61ec">GUILIB::V2::CAddonGUIDialogExtendedProgress::Text</a></div><div class="ttdeci">std::string Text() const </div><div class="ttdoc">Get the used text information string. </div></div>
-<div class="ttc" id="a00040_html_a346bd1e3888bec90756af8184fec1a69"><div class="ttname"><a href="a00040.html#a346bd1e3888bec90756af8184fec1a69">GUILIB::V2::CAddonGUIDialogExtendedProgress::IMPL_GUI_EXTENDED_PROGRESS_DIALOG</a></div><div class="ttdeci">IMPL_GUI_EXTENDED_PROGRESS_DIALOG</div><div class="ttdef"><b>Definition:</b> GUIDialogExtendedProgress.h:153</div></div>
-<div class="ttc" id="a00211_html_gaec55d8bf3ca3e04261b66bee36f84368"><div class="ttname"><a href="a00211.html#gaec55d8bf3ca3e04261b66bee36f84368">GUILIB::V2::CAddonGUIDialogExtendedProgress::SetText</a></div><div class="ttdeci">void SetText(const std::string &amp;strText)</div><div class="ttdoc">To set the used text information string. </div></div>
-<div class="ttc" id="a00097_html"><div class="ttname"><a href="a00097.html">definations.h</a></div></div>
-<div class="ttc" id="a00211_html_ga74a9a823ab1cd34d62a219a842de5946"><div class="ttname"><a href="a00211.html#ga74a9a823ab1cd34d62a219a842de5946">GUILIB::V2::CAddonGUIDialogExtendedProgress::SetPercentage</a></div><div class="ttdeci">void SetPercentage(float fPercentage)</div><div class="ttdoc">To set the current progress position as percent. </div></div>
-<div class="ttc" id="a00211_html_ga2f267cd452ee9736993693fa501ac85e"><div class="ttname"><a href="a00211.html#ga2f267cd452ee9736993693fa501ac85e">GUILIB::V2::CAddonGUIDialogExtendedProgress::CAddonGUIDialogExtendedProgress</a></div><div class="ttdeci">CAddonGUIDialogExtendedProgress(const std::string &amp;title=&quot;&quot;)</div></div>
-<div class="ttc" id="a00211_html_gad8698c0477204fb8b81feb9d81cbe4fd"><div class="ttname"><a href="a00211.html#gad8698c0477204fb8b81feb9d81cbe4fd">GUILIB::V2::CAddonGUIDialogExtendedProgress::SetTitle</a></div><div class="ttdeci">void SetTitle(const std::string &amp;strTitle)</div><div class="ttdoc">To set the title of dialog. </div></div>
-<div class="ttc" id="a00211_html_ga40af1bcedea1f61fde8cd5e70e416473"><div class="ttname"><a href="a00211.html#ga40af1bcedea1f61fde8cd5e70e416473">GUILIB::V2::CAddonGUIDialogExtendedProgress::MarkFinished</a></div><div class="ttdeci">void MarkFinished()</div><div class="ttdoc">Mark progress finished. </div></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="a00120.html#ace65454279c135fe5e6168d456c31263">   31</a></span>&#160;<span class="preprocessor">#define RTLD_GLOBAL (1 &lt;&lt; 1)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="a00120.html#a233010260f7e61c5dab09e2bca10a590">   32</a></span>&#160;<span class="preprocessor">#define RTLD_LOCAL  (1 &lt;&lt; 2)</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/* These two were added in The Open Group Base Specifications Issue 6.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * Note: All other RTLD_* flags in any dlfcn.h are not standard compliant.</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="a00120.html#a58d13c5dcabbb85848fa97b446086247">   38</a></span>&#160;<span class="preprocessor">#define RTLD_DEFAULT    0</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="a00120.html#a51d4212b17b1edeb2fc5a48c7c497267">   39</a></span>&#160;<span class="preprocessor">#define RTLD_NEXT       0</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="a00120.html#a8668245fcfc33ca414d3d27ca038891a">dlopen</a> ( <span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keywordtype">int</span> mode );</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">int</span>   <a class="code" href="a00120.html#af483b6c4400965aa885f9f1a144138a5">dlclose</a>( <span class="keywordtype">void</span> *handle );</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="a00120.html#af130d2e6324246be4262ecaaed674aa4">dlsym</a>  ( <span class="keywordtype">void</span> *handle, <span class="keyword">const</span> <span class="keywordtype">char</span> *name );</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="a00120.html#a541c343ae5cdf90926014c65972c86cc">dlerror</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DLFCN-WIN32_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a00120_html_a8668245fcfc33ca414d3d27ca038891a"><div class="ttname"><a href="a00120.html#a8668245fcfc33ca414d3d27ca038891a">dlopen</a></div><div class="ttdeci">void * dlopen(const char *file, int mode)</div><div class="ttdef"><b>Definition:</b> dlfcn-win32.cpp:91</div></div>
+<div class="ttc" id="a00120_html_a541c343ae5cdf90926014c65972c86cc"><div class="ttname"><a href="a00120.html#a541c343ae5cdf90926014c65972c86cc">dlerror</a></div><div class="ttdeci">char * dlerror(void)</div><div class="ttdef"><b>Definition:</b> dlfcn-win32.cpp:223</div></div>
+<div class="ttc" id="a00120_html_af483b6c4400965aa885f9f1a144138a5"><div class="ttname"><a href="a00120.html#af483b6c4400965aa885f9f1a144138a5">dlclose</a></div><div class="ttdeci">int dlclose(void *handle)</div><div class="ttdef"><b>Definition:</b> dlfcn-win32.cpp:159</div></div>
+<div class="ttc" id="a00120_html_af130d2e6324246be4262ecaaed674aa4"><div class="ttname"><a href="a00120.html#af130d2e6324246be4262ecaaed674aa4">dlsym</a></div><div class="ttdeci">void * dlsym(void *handle, const char *name)</div><div class="ttdef"><b>Definition:</b> dlfcn-win32.cpp:181</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_3b29b88e633d0e7decc99dfac3f67a6c.html">kodi</a></li><li class="navelem"><a class="el" href="dir_4810bf30586827c60967b28d81c2ef02.html">gui.api2</a></li><li class="navelem"><a class="el" href="a00120.html">GUIDialogExtendedProgress.h</a></li>
+    <li class="navelem"><a class="el" href="dir_3b29b88e633d0e7decc99dfac3f67a6c.html">kodi</a></li><li class="navelem"><a class="el" href="dir_81848947afe5fb9cd2add11105063bc3.html">addon.api2</a></li><li class="navelem"><a class="el" href="a00120.html">dlfcn-win32.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

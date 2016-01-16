@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Member List</title>
+<title>Kodi Development: CPVRStream</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('a00025.html','');});
+$(document).ready(function(){initNavTree('a00262.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -92,47 +92,235 @@ $(document).ready(function(){initNavTree('a00025.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CKey Member List</div>  </div>
+<div class="title">CPVRStream<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a> &raquo; <a class="el" href="a00258.html">Library - PVRLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p><b>PVR stream properties data class</b> </p>
+<p>Represents a single stream. It extends the PODS to provide some operators overloads.</p>
+<p>All for one PVR stream needed data can be becomes stored inside this class to have it available on requests.</p>
+<hr/>
+<p><b>PVR stream properties:</b></p>
+<p>Structure here shows the construction that is used on the PVR system and in this class (<a class="el" href="a00066.html">CPVRStream</a>) can be edited. </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * PVR stream properties</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_STREAM_PROPERTIES</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iStreamCount;</div>
+<div class="line">  <span class="keyword">struct </span>PVR_STREAM</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iPhysicalId;        <span class="comment">/* physical index */</span></div>
+<div class="line">    <a class="code" href="a00114.html#adb311b9a66ccf6cbc77137e0af86be2a">kodi_codec_type</a>   iCodecType;         <span class="comment">/* codec type this stream */</span></div>
+<div class="line">    <a class="code" href="a00114.html#a5f36d5652cd9f943a40f0a2c4495a74a">kodi_codec_id</a>     iCodecId;           <span class="comment">/* codec id of this stream */</span></div>
+<div class="line">    <span class="keywordtype">char</span>              strLanguage[4];     <span class="comment">/* language id */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iIdentifier;        <span class="comment">/* stream id */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iFPSScale;          <span class="comment">/* scale of 1000 and a rate of 29970 will result in 29.97 fps */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iFPSRate;           <span class="comment">/* FPS rate */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iHeight;            <span class="comment">/* height of the stream reported by the demuxer */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iWidth;             <span class="comment">/* width of the stream reported by the demuxer */</span></div>
+<div class="line">    <span class="keywordtype">float</span>             fAspect;            <span class="comment">/* display aspect ratio of the stream */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iChannels;          <span class="comment">/* amount of channels */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iSampleRate;        <span class="comment">/* sample rate */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iBlockAlign;        <span class="comment">/* block alignment */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iBitRate;           <span class="comment">/* bit rate */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iBitsPerSample;     <span class="comment">/* bits per sample */</span></div>
+<div class="line">   } stream[PVR_STREAM_MAX_STREAMS];      <span class="comment">/* the streams */</span></div>
+<div class="line">} <a class="code" href="a00117.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_STREAM_PROPERTIES;</div>
+</div><!-- fragment --><p>It has the header <a class="el" href="a00161.html">#include &lt;kodi/pvr.api2/StreamUtils.h&gt;</a> be included to enjoy it.</p>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Note: This is only a example to show the easiest use of them, for</span></div>
+<div class="line"><span class="comment"> * them is always only one and the same stream type present.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * The class CStreamProperties is designed to store several streams</span></div>
+<div class="line"><span class="comment"> * and to alow updates of codec Id&#39;s during usage of them.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00161.html">kodi/pvr.api2/StreamUtils.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line">CStreamProperties activeChannelStreams;</div>
+<div class="line">...</div>
+<div class="line">void UpdateStreams()</div>
+<div class="line">{</div>
+<div class="line">  CodecDescriptor codecId = CodecDescriptor::GetCodecByName(<span class="stringliteral">&quot;pcm_f32le&quot;</span>);</div>
+<div class="line">  <span class="keywordflow">if</span> (codecId.Codec().codec_type == XBMC_CODEC_TYPE_AUDIO)</div>
+<div class="line">  {</div>
+<div class="line">    CPVRStream newStream;</div>
+<div class="line">    <span class="comment">/* Get the stream data if already present and do only update */</span></div>
+<div class="line">    activeChannelStreams.GetStreamData(1, &amp;newStream);</div>
+<div class="line"></div>
+<div class="line">    newStream.iCodecType      = codecId.Codec().codec_type;</div>
+<div class="line">    newStream.iCodecId        = codecId.Codec().codec_id;</div>
+<div class="line">    newStream.iChannels       = 2;</div>
+<div class="line">    newStream.iSampleRate     = 48000;</div>
+<div class="line">    newStream.iBitsPerSample  = 32;</div>
+<div class="line">    newStream.iBitRate        = newStream.iSampleRate * newStream.iChannels * newStream.iBitsPerSample;</div>
+<div class="line">    newStream.strLanguage[0]  = 0;</div>
+<div class="line">    newStream.strLanguage[1]  = 0;</div>
+<div class="line">    newStream.strLanguage[2]  = 0;</div>
+<div class="line">    newStream.strLanguage[3]  = 0;</div>
+<div class="line">    newStream.iIdentifier     = -1;</div>
+<div class="line"></div>
+<div class="line">    newStreams.push_back(newStream);</div>
+<div class="line">    activeChannelStreams.UpdateStreams(newStreams);</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">  {</div>
+<div class="line">    activeChannelStreams.Clear();</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaa71d36872f416feaa853788a7a7a7ef8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clears the present stream data on class. </p>
 
-<p>This is the complete list of members for <a class="el" href="a00025.html">CKey</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#adf21440286f7e36d37ae20af82cc79c8">CKey</a>(void)</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#ab3dbcc1ef47d49ffc499c255aa2b81d0">CKey</a>(uint32_t buttonCode, uint8_t leftTrigger=0, uint8_t rightTrigger=0, float leftThumbX=0.0f, float leftThumbY=0.0f, float rightThumbX=0.0f, float rightThumbY=0.0f, float repeat=0.0f)</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#af41d7e84f795d8e91311dd9c36c6ad52">CKey</a>(uint32_t buttonCode, unsigned int held)</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a738c81fd3cfa470cfd86126b3c576c12">CKey</a>(uint8_t vkey, wchar_t unicode, char ascii, uint32_t modifiers, unsigned int held)</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#ad06ba259624923d25729ecaf34877489">CKey</a>(const CKey &amp;key)</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a20d9df67ea017d6e194632c00fc25fc1">FromKeyboard</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#aaa6431051687d1c428a23df9a973e34b">GetAscii</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#acf82ced540bab1773da7af9c90d52ffa">GetButtonCode</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#abc9f29d3270e7ac7a64908b50a058cbe">GetFromService</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a8246443fad272ae8f69a06c91792e1c4">GetHeld</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#afd3d0001edd28ecbc336d1aa9395b3f3">GetLeftThumbX</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#ac2d3a8ce8215153205fb199fa8d893f9">GetLeftThumbY</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#a6bf626b7f08548e4a3a7b0cc28b6f8fa">GetLeftTrigger</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a5d1a62c17fd0781a764552d9b2da17a4">GetModifiers</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#abe1f5801436a278c993ae412c5db9eb7">GetRepeat</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a1be6521ddc8b2d29c82ddfb9648f8889">GetRightThumbX</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#a51f5c3a4ae5fb464614eca1287dfd4b1">GetRightThumbY</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a230868c8ade9ba0ad7c1464a3626c633">GetRightTrigger</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#ae3f3455d2a31ce0ee26912a51842779b">GetUnicode</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a8b3a3172d168720df93a482d320e873e">GetVKey</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#a19e945478c6ccc42bdc9501838774099">IsAnalogButton</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a3cd14f0820915c58236df1f770ee2bf7">IsIRRemote</a>() const </td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#a80f90997871cd543ddb0bf8d282becdd">Modifier</a> enum name</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a80f90997871cd543ddb0bf8d282becddaeef7f95cefee09607005b76d3e2e17e8">MODIFIER_ALT</a> enum value</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#a80f90997871cd543ddb0bf8d282becddadfa99f109f19bae56c57599c09081702">MODIFIER_CTRL</a> enum value</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a80f90997871cd543ddb0bf8d282becdda0694a75739c41fd4d555edd1ba246a7d">MODIFIER_LONG</a> enum value</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#a80f90997871cd543ddb0bf8d282becdda72fe1b283b807259e24619f87766485f">MODIFIER_META</a> enum value</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a80f90997871cd543ddb0bf8d282becdda15145d2917e8cae2c69ef80058ae5de9">MODIFIER_RALT</a> enum value</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#a80f90997871cd543ddb0bf8d282becdda8bb8f661e83a0141db816fb56bf53cd7">MODIFIER_SHIFT</a> enum value</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a80f90997871cd543ddb0bf8d282becddac7c4489a6ddb2042ce3797b4c1cbd0ba">MODIFIER_SUPER</a> enum value</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#a9658ea45b2a73cd3e7c4a1b4722c6c78">operator=</a>(const CKey &amp;key)</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#a372de693ad40b3f42839c8ec6ac845f4">Reset</a>()</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00025.html#afeb19a869367ed08a204c45d1f5b121f">SetFromService</a>(bool fromService)</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00025.html#ac8c15fe71a007c2cc36cc32becd4a1de">~CKey</a>(void)</td><td class="entry"><a class="el" href="a00025.html">CKey</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-</table></div><!-- contents -->
+</div>
+</div>
+<a class="anchor" id="gaf419611a13a1bca6fe60cd58cb8a952f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPVRStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class constructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="gad8caf56bf234506f41c1fcc64a0d1ad7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPVRStream </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00066.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class constructor to create copy of them. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>The other stream class to copy from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga324d4448e5c2dde1488e1a9b4d26c7ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsCleared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks whether the stream has been cleared or not.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if cleared </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8c39a1e5e76bc953c53019e4ef318216"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00066.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare about Id is above. </p>
+<p>Compares this stream with another one so that video streams are sorted before any other streams and the others are sorted by the physical ID</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Other stream to compare from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the other have a higher Id </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7b1eb5fcb43d86807d0df66f0b9c74e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPVRStream&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00066.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy stream class. </p>
+<p>Overwrite stream class with data from other stream</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>The other stream class to copy from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2e56127d518a6487ba46cfe720bb4904"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00066.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Compares this stream based on another stream</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Other stream to compare from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if equal, otherwise false </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

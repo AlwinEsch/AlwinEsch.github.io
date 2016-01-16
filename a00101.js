@@ -1,14 +1,14 @@
 var a00101 =
 [
-    [ "DLFCN_H", "a00101.html#a9377853cbaba2d5d7bacd4216d6080e7", null ],
-    [ "RTLD_DEFAULT", "a00101.html#a58d13c5dcabbb85848fa97b446086247", null ],
-    [ "RTLD_GLOBAL", "a00101.html#ace65454279c135fe5e6168d456c31263", null ],
-    [ "RTLD_LAZY", "a00101.html#a5c83709ee3bd7d316f8f47e122f3be20", null ],
-    [ "RTLD_LOCAL", "a00101.html#a233010260f7e61c5dab09e2bca10a590", null ],
-    [ "RTLD_NEXT", "a00101.html#a51d4212b17b1edeb2fc5a48c7c497267", null ],
-    [ "RTLD_NOW", "a00101.html#a98a6517467cf7d1dd27d6c6dce78a6cf", null ],
-    [ "dlclose", "a00101.html#af483b6c4400965aa885f9f1a144138a5", null ],
-    [ "dlerror", "a00101.html#a541c343ae5cdf90926014c65972c86cc", null ],
-    [ "dlopen", "a00101.html#a8668245fcfc33ca414d3d27ca038891a", null ],
-    [ "dlsym", "a00101.html#af130d2e6324246be4262ecaaed674aa4", null ]
+    [ "Stat", "a00101.html#a60ce51a2aeed51fe6b3fb97341418ad1", null ],
+    [ "atime", "a00281.html#ga65d49375e5251d4e616a45e3c898d6cc", null ],
+    [ "ctime", "a00281.html#gab24c57af16ac6f88edb819c18e2e438b", null ],
+    [ "mtime", "a00281.html#ga57da69d0b20141a95c0c44a6bb5f3b35", null ],
+    [ "st_dev", "a00281.html#gab17084ec246f2b497d2f13618c5bd220", null ],
+    [ "st_gid", "a00281.html#ga9a7a9ad27402f5a931bcbff38e4e03d3", null ],
+    [ "st_ino", "a00281.html#ga77e336d6274f6fb0e2a3c3546e61e360", null ],
+    [ "st_mode", "a00281.html#ga00b3e20028eaee69c44cdc47a922fe31", null ],
+    [ "st_nlink", "a00281.html#ga34f57426567df63ef5ad1b4679778d18", null ],
+    [ "st_size", "a00281.html#gaeec21543efab31f62a21e533b0d3a537", null ],
+    [ "st_uid", "a00281.html#gaa29c53999dffe4acc12aed2eb60a6c81", null ]
 ];

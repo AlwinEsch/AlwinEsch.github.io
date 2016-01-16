@@ -1,16 +1,19 @@
 var annotated =
 [
-    [ "AddOnLIB", "a00160.html", "a00160" ],
-    [ "AudioEngineLIB", "a00162.html", "a00162" ],
-    [ "GUILIB", "a00164.html", "a00164" ],
-    [ "PlayerLIB", "a00166.html", "a00166" ],
-    [ "PVRLIB", "a00168.html", "a00168" ],
-    [ "XBMCAddon", "a00170.html", "a00170" ],
+    [ "AddOnLIB", "a00184.html", "a00184" ],
+    [ "AudioEngineLIB", "a00186.html", "a00186" ],
+    [ "GUILIB", "a00188.html", "a00188" ],
+    [ "PlayerLIB", "a00190.html", "a00190" ],
+    [ "PVRLIB", "a00192.html", "a00192" ],
+    [ "XBMCAddon", "a00194.html", "a00194" ],
     [ "AudioEngineFormat", "a00021.html", "a00021" ],
     [ "CAction", "a00024.html", "a00024" ],
-    [ "CKey", "a00025.html", "a00025" ],
-    [ "CMouseEvent", "a00026.html", "a00026" ],
-    [ "EPG_TAG", "a00027.html", "a00027" ],
-    [ "kodi_codec", "a00052.html", "a00052" ],
-    [ "kodi_version", "a00053.html", "a00053" ]
+    [ "CGUIFont", "a00025.html", "a00025" ],
+    [ "CGUIListItem", "a00026.html", "a00026" ],
+    [ "CKey", "a00028.html", "a00028" ],
+    [ "CMouseEvent", "a00029.html", "a00029" ],
+    [ "CScrollInfo", "a00030.html", "a00030" ],
+    [ "EPG_TAG", "a00031.html", "a00031" ],
+    [ "kodi_codec", "a00056.html", "a00056" ],
+    [ "kodi_version", "a00057.html", "a00057" ]
 ];

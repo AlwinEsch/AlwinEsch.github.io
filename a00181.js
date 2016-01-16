@@ -1,8 +1,13 @@
 var a00181 =
 [
-    [ "getAddonInfo", "a00181.html#gaedb0b112c76349f81e261335a6b240b9", null ],
-    [ "getLocalizedString", "a00181.html#ga79ffd96305af02e364d99c2c9d8b69de", null ],
-    [ "getSetting", "a00181.html#ga6eebe8728b7d19104a482a29abdafce2", null ],
-    [ "openSettings", "a00181.html#ga73eb9124fb7a7a5f5a89c92e0bc1fb2a", null ],
-    [ "setSetting", "a00181.html#gafd6c759c5b268d0ec1467e340323783d", null ]
+    [ "CAddonLib", "a00011.html", "a00011" ],
+    [ "CAddonLib_Codec", "a00012.html", null ],
+    [ "CAddonLib_General", "a00013.html", null ],
+    [ "CAddonLib_Network", "a00014.html", null ],
+    [ "CAddonLib_SoundPlay", "a00015.html", "a00015" ],
+    [ "CAddonLib_VFSDirEntry", "a00016.html", "a00016" ],
+    [ "CAddonLib_VFSFile", "a00017.html", "a00017" ],
+    [ "CAddonLib_VFSProperty", "a00018.html", "a00018" ],
+    [ "CAddonLib_VFSUtils", "a00019.html", null ],
+    [ "CodecDescriptor", "a00020.html", "a00020" ]
 ];

@@ -1,12 +1,11 @@
 var a00039 =
 [
-    [ "CAddonGUIControlTextBox", "a00210.html#ga06117cea192b1c038b7b9b8d9c2c8dec", null ],
-    [ "~CAddonGUIControlTextBox", "a00210.html#ga671686d3890667392291118ca36b3e41", null ],
-    [ "GetText", "a00210.html#ga1af3f7fd8b95cc66e7599caca454f8ef", null ],
-    [ "Reset", "a00210.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
-    [ "Scroll", "a00210.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d", null ],
-    [ "SetAutoScrolling", "a00210.html#gad3e4bbb4388da7a56e8252018e4fbb00", null ],
-    [ "SetText", "a00210.html#ga8008c108280948ebd79830f222068455", null ],
-    [ "SetVisible", "a00210.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "IMPL_GUI_TEXTBOX_CONTROL", "a00039.html#a62ade28dbd83a582f36b79d05192686d", null ]
+    [ "CAddonGUIControlRendering", "a00230.html#ga391a8355fbbce5c4a05a01e15188a41b", null ],
+    [ "~CAddonGUIControlRendering", "a00230.html#ga8111f29e2c5fe998d541b21d76f0d353", null ],
+    [ "Create", "a00230.html#ga12847d560dd43205d13b0963d9e395e1", null ],
+    [ "Dirty", "a00230.html#ga7cea65505e98c9989ab92a87b2f2e99b", null ],
+    [ "Render", "a00230.html#ga0bc3f3606d9cf5304dac90cd7a619194", null ],
+    [ "SetIndependentCallbacks", "a00039.html#a10abcb122b56e3f8a6069b888486d5db", null ],
+    [ "Stop", "a00230.html#gaf6f113a64b92a63894b285b4f2a2c3a5", null ],
+    [ "IMPL_GUI_RENDERING_CONTROL", "a00039.html#a446e0068f82fb1cab645123c21f62fd5", null ]
 ];

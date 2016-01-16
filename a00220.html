@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Library - GUILIB</title>
+<title>Kodi Development: Library - AudioEngineLIB</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,85 +94,57 @@ $(document).ready(function(){initNavTree('a00220.html','');});
   <div class="summary">
 <a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Library - GUILIB<div class="ingroups"><a class="el" href="a00176.html">C++ Development</a></div></div>  </div>
+<div class="title">Library - AudioEngineLIB<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b><em>Graphical functions for Windows and Dialogs to show</em></b> </p>
+<p><b><em>Help functions for audio engine and DSP systems</em></b> </p>
+<p>This library is for Audio DSP add-ons and also include parts for the audio engine. </p><hr/>
+<p><b>Code example:</b></p>
+<p>Below is a code example do show what must be done on add-on base function to become support for library:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00112.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00121.html">kodi/addon.api2/General.h</a>&gt;</span>  <span class="comment">// Needed for CAddOnLib_General::Log</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00126.html">kodi/audioengine.api2/AudioEngineLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
+<div class="line">IMPLEMENT_KODI_AUDIOENGINE_LIBRARY;</div>
+<div class="line">...</div>
+<div class="line"></div>
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (!hdl || !props)</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!CAddonLib::RegisterMe(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00221.html#gaa0bf67ad4ff0b67b500e4070f873c337">CAELib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Example lib call</span></div>
+<div class="line">  CAddOnLib_General::Log(<a class="code" href="a00114.html#af8526ffb1ee2a785489ac05b6e49d357a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My add-on creation done&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="a00221.html#ga5940787dcdcdb8aa995a07106917489f">CAELib::UnRegisterMe</a>();</div>
+<div class="line">  CAddonLib::UnRegisterMe();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use this library part must always <a class="el" href="a00011.html">AddOnLIB::V2::CAddonLib</a> be present! </dd></dl>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
-<tr class="memitem:a00199"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00199.html">CAddonGUIControlButton</a></td></tr>
-<tr class="memdesc:a00199"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Standard push button control for window</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00200"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00200.html">CAddonGUIControlEdit</a></td></tr>
-<tr class="memdesc:a00200"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Editable window text control used as an input control for the osd keyboard and other input fields</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00201"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00201.html">CAddonGUIControlFadeLabel</a></td></tr>
-<tr class="memdesc:a00201"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Window control used to show multiple pieces of text in the same position, by fading from one to the other</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00202"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00202.html">CAddonGUIControlImage</a></td></tr>
-<tr class="memdesc:a00202"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Window control used to show an image.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00203"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00203.html">CAddonGUIControlLabel</a></td></tr>
-<tr class="memdesc:a00203"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Window control used to show some lines of text.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00204"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00204.html">CAddonGUIControlProgress</a></td></tr>
-<tr class="memdesc:a00204"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Window control to show the progress of a particular operation</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00205"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html">CAddonGUIControlRadioButton</a></td></tr>
-<tr class="memdesc:a00205"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Window control for a radio button (as used for on/off settings)</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00206"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html">CAddonGUIControlRendering</a></td></tr>
-<tr class="memdesc:a00206"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Window control for rendering own parts</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00207"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00207.html">CAddonGUIControlSettingsSlider</a></td></tr>
-<tr class="memdesc:a00207"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Window control for moveable slider with text name</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00208"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00208.html">CAddonGUIControlSlider</a></td></tr>
-<tr class="memdesc:a00208"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Window control for moveable slider</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00209"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html">CAddonGUIControlSpin</a></td></tr>
-<tr class="memdesc:a00209"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Window control used for cycling up/down controls</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00210"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00210.html">CAddonGUIControlTextBox</a></td></tr>
-<tr class="memdesc:a00210"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Used to show a multi-page piece of text</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00211"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00211.html">CAddonGUIDialogExtendedProgress</a></td></tr>
-<tr class="memdesc:a00211"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Progress dialog shown for background work</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00212"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00212.html">CAddonGUIDialogFileBrowser</a></td></tr>
-<tr class="memdesc:a00212"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>File browser dialog</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00213"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00213.html">CAddonGUIDialogKeyboard</a></td></tr>
-<tr class="memdesc:a00213"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Keyboard dialogs</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00214"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00214.html">CAddonGUIDialogNumeric</a></td></tr>
-<tr class="memdesc:a00214"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Numeric dialogs</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00215"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html">CAddonGUIDialogOK</a></td></tr>
-<tr class="memdesc:a00215"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>OK dialog</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00216"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html">CAddonGUIDialogProgress</a></td></tr>
-<tr class="memdesc:a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Progress dialog shown in center</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00217"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00217.html">CAddonGUIDialogSelect</a></td></tr>
-<tr class="memdesc:a00217"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Selection dialog</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00218"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00218.html">CAddonGUIDialogTextViewer</a></td></tr>
-<tr class="memdesc:a00218"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Text viewer dialog</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00219"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00219.html">CAddonGUIDialogYesNo</a></td></tr>
-<tr class="memdesc:a00219"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Yes / No dialog</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00224"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00224.html">CAddonGUIListItem</a></td></tr>
-<tr class="memdesc:a00224"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Selectable window list item</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00225"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00225.html">CAddonGUIWindow</a></td></tr>
-<tr class="memdesc:a00225"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Main window control class</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00221"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00221.html">CGUILib</a></td></tr>
+<tr class="memitem:a00221"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00221.html">CAELib</a></td></tr>
 <tr class="memdesc:a00221"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Allow use of binary classes and function to use on add-on's</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00219"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00219.html">CAELib_Stream</a></td></tr>
+<tr class="memdesc:a00219"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Audio Engine Stream Class</b> <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

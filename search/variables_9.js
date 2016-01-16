@@ -1,19 +1,7 @@
 var searchData=
 [
-  ['starttime',['startTime',['../a00027.html#aaf564fc30a2a8624cf917e282281a500',1,'EPG_TAG']]],
-  ['straction',['strAction',['../a00073.html#a5326dc8fd26effd0de499a98d0e5a032',1,'XBMCAddon::xbmcgui::Action']]],
-  ['strcast',['strCast',['../a00027.html#a7ab248dcdb6370b18ef4265f3b8f9db0',1,'EPG_TAG']]],
-  ['strdefault',['strDefault',['../a00067.html#ab4d87e31c184cdc814b32f4dfa7d18b6',1,'XBMCAddon::xbmc::Keyboard']]],
-  ['strdirector',['strDirector',['../a00027.html#a2e0c072159ba1b00a7c795865fb6ad9b',1,'EPG_TAG']]],
-  ['strepisodename',['strEpisodeName',['../a00027.html#a45c01985a7c6bf6614c4e2e454b6c906',1,'EPG_TAG']]],
-  ['strgenredescription',['strGenreDescription',['../a00027.html#a5de560629a7aa22145e0187d407aa297',1,'EPG_TAG']]],
-  ['strheading',['strHeading',['../a00067.html#a513232d32fcff9f86df46035911255ad',1,'XBMCAddon::xbmc::Keyboard']]],
-  ['striconpath',['strIconPath',['../a00027.html#afdf2a45883a5736c00278c88c23c7a38',1,'EPG_TAG']]],
-  ['strimdbnumber',['strIMDBNumber',['../a00027.html#a2009296928299a11f0e324d4be9ab194',1,'EPG_TAG']]],
-  ['stroriginaltitle',['strOriginalTitle',['../a00027.html#a6c7ed5bd2f2053d2a56768aef693b6d8',1,'EPG_TAG']]],
-  ['strplot',['strPlot',['../a00027.html#a28c101ae1ff9c1d2d51ed23706d45282',1,'EPG_TAG']]],
-  ['strplotoutline',['strPlotOutline',['../a00027.html#a42a4797aea7c6a68e8a0f60991b9da41',1,'EPG_TAG']]],
-  ['strtext',['strText',['../a00067.html#a8975bd293643341b62e4e5a7810d2efc',1,'XBMCAddon::xbmc::Keyboard']]],
-  ['strtitle',['strTitle',['../a00027.html#a1b5060e9a4adc43d68b7c0efbc160d42',1,'EPG_TAG']]],
-  ['strwriter',['strWriter',['../a00027.html#a7bcae282a0ced201072101d0b84dbcc6',1,'EPG_TAG']]]
+  ['pcontrolspin',['pControlSpin',['../a00086.html#a212efc3e998a5726b81033077d76d0ab',1,'XBMCAddon::xbmcgui::ControlList']]],
+  ['pguicontrol',['pGUIControl',['../a00078.html#a47b72ebe2f3bedcdb538271dd3836245',1,'XBMCAddon::xbmcgui::Control']]],
+  ['pixelpos',['pixelPos',['../a00030.html#ac39f2f9544959e6347ab0c97cdbe8ee3',1,'CScrollInfo']]],
+  ['pixelspeed',['pixelSpeed',['../a00030.html#adcd3672aa6367fe29a611c49e0ffbed2',1,'CScrollInfo']]]
 ];

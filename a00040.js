@@ -1,15 +1,20 @@
 var a00040 =
 [
-    [ "CAddonGUIDialogExtendedProgress", "a00211.html#ga2f267cd452ee9736993693fa501ac85e", null ],
-    [ "~CAddonGUIDialogExtendedProgress", "a00211.html#ga86033f373ed6159d52feb585bab2dfda", null ],
-    [ "IsFinished", "a00211.html#gaabe45b4d47077b54df0bb809eb41b8d5", null ],
-    [ "MarkFinished", "a00211.html#ga40af1bcedea1f61fde8cd5e70e416473", null ],
-    [ "Percentage", "a00211.html#ga3bf91c353218dceaa271b65321b2f5cf", null ],
-    [ "SetPercentage", "a00211.html#ga74a9a823ab1cd34d62a219a842de5946", null ],
-    [ "SetProgress", "a00211.html#gac64c8e121cf5e368cd335c28a0521922", null ],
-    [ "SetText", "a00211.html#gaec55d8bf3ca3e04261b66bee36f84368", null ],
-    [ "SetTitle", "a00211.html#gad8698c0477204fb8b81feb9d81cbe4fd", null ],
-    [ "Text", "a00211.html#gafdfa72709ffc1738c3c198f7ad8b61ec", null ],
-    [ "Title", "a00211.html#ga3cb91fb7750df7982baea48c4a3de616", null ],
-    [ "IMPL_GUI_EXTENDED_PROGRESS_DIALOG", "a00040.html#a346bd1e3888bec90756af8184fec1a69", null ]
+    [ "CAddonGUIControlSettingsSlider", "a00231.html#gaccf8cc6a6a808d822712bc1456839f1f", null ],
+    [ "~CAddonGUIControlSettingsSlider", "a00231.html#gaea1533f267360e38309e3c0483c27f97", null ],
+    [ "GetFloatValue", "a00231.html#gadd5b557122d90f9a891d6b981e3ac305", null ],
+    [ "GetIntValue", "a00231.html#ga026ef91588c09c091efb7c40bb73d4dc", null ],
+    [ "GetPercentage", "a00231.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ],
+    [ "Reset", "a00231.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "SetEnabled", "a00231.html#gaac893222adeffdefc04d749648cce354", null ],
+    [ "SetFloatInterval", "a00231.html#ga1642356ec708ec660d47175a676d2b59", null ],
+    [ "SetFloatRange", "a00231.html#gaf4c5b4468e16c51b0d9a163baa082acf", null ],
+    [ "SetFloatValue", "a00231.html#gab050b4b446dc107963b04486dcfbe03d", null ],
+    [ "SetIntInterval", "a00231.html#ga0efbfb870446e5cc7409f0550bf67196", null ],
+    [ "SetIntRange", "a00231.html#ga16ad72259d068519b0797117275651f1", null ],
+    [ "SetIntValue", "a00231.html#ga1bc4fce2dc8738a08b6a9458d66351a1", null ],
+    [ "SetPercentage", "a00231.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
+    [ "SetText", "a00231.html#ga8008c108280948ebd79830f222068455", null ],
+    [ "SetVisible", "a00231.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_SETTINGS_SLIDER_CONTROL", "a00040.html#a7d1192314b81749b731c98a3e98130b9", null ]
 ];

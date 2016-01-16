@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/addons/kodi-addon-dev-kit/kodi/gui.api2/GUIControlSlider.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/addons/kodi-addon-dev-kit/kodi/player.api2/definations.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('a00117_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">GUIControlSlider.h</div>  </div>
+<div class="title">definations.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00117.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
@@ -116,84 +116,66 @@ $(document).ready(function(){initNavTree('a00117_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00097.html">definations.h</a>&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_ControlSliderHead.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_internal.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#undef ATTRIBUTE_PACKED</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#undef PRAGMA_PACK_BEGIN</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#undef PRAGMA_PACK_END</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00164.html">GUILIB</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>V2</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="a00037.html">   47</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00037.html">CAddonGUIControlSlider</a></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="a00208.html#ga07c12260df16cfa4458529725427caa0">CAddonGUIControlSlider</a>(<a class="code" href="a00050.html">CAddonGUIWindow</a>* window, <span class="keywordtype">int</span> controlId);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#if defined(__GNUC__)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#if __GNUC__ &gt; 2 || (__GNUC__ == 2 &amp;&amp; __GNUC_MINOR__ &gt;= 95)</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define ATTRIBUTE_PACKED __attribute__ ((packed))</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define PRAGMA_PACK 0</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#if !defined(ATTRIBUTE_PACKED)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="a00117.html#ad93e9ac33d1a9153bbea517a98260041">   34</a></span>&#160;<span class="preprocessor">#define ATTRIBUTE_PACKED</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="a00117.html#a256ebdc0994be33e06dc1ad3f6f188f4">   35</a></span>&#160;<span class="preprocessor">#define PRAGMA_PACK 1</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00190.html">PlayerLIB</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>V2</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">static</span> constexpr <span class="keyword">const</span> <span class="keywordtype">int</span>   PlayerLIB_apiLevel = 2;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">static</span> constexpr <span class="keyword">const</span> <span class="keywordtype">char</span>* PlayerLIB_version  = <span class="stringliteral">&quot;4.1.0&quot;</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="a00117.html#a9648d7b5459c7be333fa695dd4608b5d">   54</a></span>&#160;  <span class="keyword">typedef</span> <span class="keywordtype">void</span>* <a class="code" href="a00117.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="a00117.html#a2ab735c1c1995b95aa927d15465e4c37">   56</a></span>&#160;<span class="preprocessor">  #define DVD_TIME_BASE 1000000</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="a00117.html#aa8f3bf7de853346d6bcf7de68b1132da">   57</a></span>&#160;<span class="preprocessor">  #define DVD_NOPTS_VALUE    (-1LL&lt;&lt;52) // should be possible to represent in both double and __int64</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="a00208.html#ga29c8ebb717db0bcba0a1e7227720366b">~CAddonGUIControlSlider</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00208.html#ga71a209185b7a98adf0a310d2c44cdbe6">SetVisible</a>(<span class="keywordtype">bool</span> visible);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00208.html#gaac893222adeffdefc04d749648cce354">SetEnabled</a>(<span class="keywordtype">bool</span> enabled);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00208.html#ga372de693ad40b3f42839c8ec6ac845f4">Reset</a>();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    std::string <a class="code" href="a00208.html#ga3d3e509d1084585df516d4da97dd0be3">GetDescription</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00208.html#ga16ad72259d068519b0797117275651f1">SetIntRange</a>(<span class="keywordtype">int</span> start, <span class="keywordtype">int</span> end);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00208.html#ga1bc4fce2dc8738a08b6a9458d66351a1">SetIntValue</a>(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="a00208.html#ga026ef91588c09c091efb7c40bb73d4dc">GetIntValue</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00208.html#ga0efbfb870446e5cc7409f0550bf67196">SetIntInterval</a>(<span class="keywordtype">int</span> interval);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00208.html#ga123bcc2a09c1b721c04b4bc0dd32953d">SetPercentage</a>(<span class="keywordtype">float</span> percent);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="a00208.html#gadbcb3c03a1a87a252f94e0274e1e75f8">GetPercentage</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00208.html#gaf4c5b4468e16c51b0d9a163baa082acf">SetFloatRange</a>(<span class="keywordtype">float</span> start, <span class="keywordtype">float</span> end);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00208.html#gab050b4b446dc107963b04486dcfbe03d">SetFloatValue</a>(<span class="keywordtype">float</span> value);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="a00208.html#gadd5b557122d90f9a891d6b981e3ac305">GetFloatValue</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00208.html#ga1642356ec708ec660d47175a676d2b59">SetFloatInterval</a>(<span class="keywordtype">float</span> interval);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="a00037.html#a7457d5523e04bb8e80031061c8642aa4">  179</a></span>&#160;    <a class="code" href="a00037.html#a7457d5523e04bb8e80031061c8642aa4">IMPL_GUI_SLIDER_CONTROL</a>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  };</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}; <span class="comment">/* namespace V2 */</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}; <span class="comment">/* namespace GUILIB */</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_ControlSliderTail.h&quot;</span></div>
-<div class="ttc" id="a00037_html_a7457d5523e04bb8e80031061c8642aa4"><div class="ttname"><a href="a00037.html#a7457d5523e04bb8e80031061c8642aa4">GUILIB::V2::CAddonGUIControlSlider::IMPL_GUI_SLIDER_CONTROL</a></div><div class="ttdeci">IMPL_GUI_SLIDER_CONTROL</div><div class="ttdef"><b>Definition:</b> GUIControlSlider.h:179</div></div>
-<div class="ttc" id="a00208_html_ga372de693ad40b3f42839c8ec6ac845f4"><div class="ttname"><a href="a00208.html#ga372de693ad40b3f42839c8ec6ac845f4">GUILIB::V2::CAddonGUIControlSlider::Reset</a></div><div class="ttdeci">void Reset()</div></div>
-<div class="ttc" id="a00208_html_ga123bcc2a09c1b721c04b4bc0dd32953d"><div class="ttname"><a href="a00208.html#ga123bcc2a09c1b721c04b4bc0dd32953d">GUILIB::V2::CAddonGUIControlSlider::SetPercentage</a></div><div class="ttdeci">void SetPercentage(float percent)</div></div>
-<div class="ttc" id="a00164_html"><div class="ttname"><a href="a00164.html">GUILIB</a></div><div class="ttdef"><b>Definition:</b> GUIControlButton.h:26</div></div>
-<div class="ttc" id="a00208_html_ga1642356ec708ec660d47175a676d2b59"><div class="ttname"><a href="a00208.html#ga1642356ec708ec660d47175a676d2b59">GUILIB::V2::CAddonGUIControlSlider::SetFloatInterval</a></div><div class="ttdeci">void SetFloatInterval(float interval)</div></div>
-<div class="ttc" id="a00050_html"><div class="ttname"><a href="a00050.html">GUILIB::V2::CAddonGUIWindow</a></div><div class="ttdef"><b>Definition:</b> GUIWindow.h:59</div></div>
-<div class="ttc" id="a00208_html_ga1bc4fce2dc8738a08b6a9458d66351a1"><div class="ttname"><a href="a00208.html#ga1bc4fce2dc8738a08b6a9458d66351a1">GUILIB::V2::CAddonGUIControlSlider::SetIntValue</a></div><div class="ttdeci">void SetIntValue(int value)</div></div>
-<div class="ttc" id="a00208_html_ga29c8ebb717db0bcba0a1e7227720366b"><div class="ttname"><a href="a00208.html#ga29c8ebb717db0bcba0a1e7227720366b">GUILIB::V2::CAddonGUIControlSlider::~CAddonGUIControlSlider</a></div><div class="ttdeci">virtual ~CAddonGUIControlSlider()</div></div>
-<div class="ttc" id="a00208_html_ga0efbfb870446e5cc7409f0550bf67196"><div class="ttname"><a href="a00208.html#ga0efbfb870446e5cc7409f0550bf67196">GUILIB::V2::CAddonGUIControlSlider::SetIntInterval</a></div><div class="ttdeci">void SetIntInterval(int interval)</div></div>
-<div class="ttc" id="a00208_html_ga71a209185b7a98adf0a310d2c44cdbe6"><div class="ttname"><a href="a00208.html#ga71a209185b7a98adf0a310d2c44cdbe6">GUILIB::V2::CAddonGUIControlSlider::SetVisible</a></div><div class="ttdeci">void SetVisible(bool visible)</div></div>
-<div class="ttc" id="a00208_html_gadbcb3c03a1a87a252f94e0274e1e75f8"><div class="ttname"><a href="a00208.html#gadbcb3c03a1a87a252f94e0274e1e75f8">GUILIB::V2::CAddonGUIControlSlider::GetPercentage</a></div><div class="ttdeci">float GetPercentage() const </div></div>
-<div class="ttc" id="a00208_html_gab050b4b446dc107963b04486dcfbe03d"><div class="ttname"><a href="a00208.html#gab050b4b446dc107963b04486dcfbe03d">GUILIB::V2::CAddonGUIControlSlider::SetFloatValue</a></div><div class="ttdeci">void SetFloatValue(float value)</div></div>
-<div class="ttc" id="a00208_html_ga3d3e509d1084585df516d4da97dd0be3"><div class="ttname"><a href="a00208.html#ga3d3e509d1084585df516d4da97dd0be3">GUILIB::V2::CAddonGUIControlSlider::GetDescription</a></div><div class="ttdeci">std::string GetDescription() const </div></div>
-<div class="ttc" id="a00208_html_ga026ef91588c09c091efb7c40bb73d4dc"><div class="ttname"><a href="a00208.html#ga026ef91588c09c091efb7c40bb73d4dc">GUILIB::V2::CAddonGUIControlSlider::GetIntValue</a></div><div class="ttdeci">int GetIntValue() const </div></div>
-<div class="ttc" id="a00208_html_ga16ad72259d068519b0797117275651f1"><div class="ttname"><a href="a00208.html#ga16ad72259d068519b0797117275651f1">GUILIB::V2::CAddonGUIControlSlider::SetIntRange</a></div><div class="ttdeci">void SetIntRange(int start, int end)</div></div>
-<div class="ttc" id="a00037_html"><div class="ttname"><a href="a00037.html">GUILIB::V2::CAddonGUIControlSlider</a></div><div class="ttdef"><b>Definition:</b> GUIControlSlider.h:47</div></div>
-<div class="ttc" id="a00208_html_gaf4c5b4468e16c51b0d9a163baa082acf"><div class="ttname"><a href="a00208.html#gaf4c5b4468e16c51b0d9a163baa082acf">GUILIB::V2::CAddonGUIControlSlider::SetFloatRange</a></div><div class="ttdeci">void SetFloatRange(float start, float end)</div></div>
-<div class="ttc" id="a00208_html_gaac893222adeffdefc04d749648cce354"><div class="ttname"><a href="a00208.html#gaac893222adeffdefc04d749648cce354">GUILIB::V2::CAddonGUIControlSlider::SetEnabled</a></div><div class="ttdeci">void SetEnabled(bool enabled)</div></div>
-<div class="ttc" id="a00208_html_gadd5b557122d90f9a891d6b981e3ac305"><div class="ttname"><a href="a00208.html#gadd5b557122d90f9a891d6b981e3ac305">GUILIB::V2::CAddonGUIControlSlider::GetFloatValue</a></div><div class="ttdeci">float GetFloatValue() const </div></div>
-<div class="ttc" id="a00097_html"><div class="ttname"><a href="a00097.html">definations.h</a></div></div>
-<div class="ttc" id="a00208_html_ga07c12260df16cfa4458529725427caa0"><div class="ttname"><a href="a00208.html#ga07c12260df16cfa4458529725427caa0">GUILIB::V2::CAddonGUIControlSlider::CAddonGUIControlSlider</a></div><div class="ttdeci">CAddonGUIControlSlider(CAddonGUIWindow *window, int controlId)</div></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1">   64</a></span>&#160;  <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1">AddonPlayListType</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  {</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143">   66</a></span>&#160;    <a class="code" href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143">PlayList_Music</a>   = 0,</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b">   67</a></span>&#160;    <a class="code" href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b">PlayList_Video</a>   = 1,</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab">   68</a></span>&#160;    <a class="code" href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab">PlayList_Picture</a> = 2</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  } <a class="code" href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1">AddonPlayListType</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}; <span class="comment">/* extern &quot;C&quot; */</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}; <span class="comment">/* namespace V2 */</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}; <span class="comment">/* namespace PlayerLIB */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#if defined(BUILD_KODI_ADDON)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">using namespace </span><a class="code" href="a00191.html">PlayerLIB::V2</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a00117_html_ab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143"><div class="ttname"><a href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143">PlayList_Music</a></div><div class="ttdef"><b>Definition:</b> definations.h:66</div></div>
+<div class="ttc" id="a00191_html"><div class="ttname"><a href="a00191.html">PlayerLIB::V2</a></div><div class="ttdef"><b>Definition:</b> AddonPlayer.h:31</div></div>
+<div class="ttc" id="a00117_html_ab07b512029688f85c2c460a1d0a8efc1"><div class="ttname"><a href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1">AddonPlayListType</a></div><div class="ttdeci">AddonPlayListType</div><div class="ttdef"><b>Definition:</b> definations.h:64</div></div>
+<div class="ttc" id="a00117_html_a9648d7b5459c7be333fa695dd4608b5d"><div class="ttname"><a href="a00117.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a></div><div class="ttdeci">void * PLAYERHANDLE</div><div class="ttdef"><b>Definition:</b> definations.h:54</div></div>
+<div class="ttc" id="a00117_html_ab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b"><div class="ttname"><a href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b">PlayList_Video</a></div><div class="ttdef"><b>Definition:</b> definations.h:67</div></div>
+<div class="ttc" id="a00190_html"><div class="ttname"><a href="a00190.html">PlayerLIB</a></div><div class="ttdef"><b>Definition:</b> AddonPlayer.h:29</div></div>
+<div class="ttc" id="a00117_html_ab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab"><div class="ttname"><a href="a00117.html#ab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab">PlayList_Picture</a></div><div class="ttdef"><b>Definition:</b> definations.h:68</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_3b29b88e633d0e7decc99dfac3f67a6c.html">kodi</a></li><li class="navelem"><a class="el" href="dir_4810bf30586827c60967b28d81c2ef02.html">gui.api2</a></li><li class="navelem"><a class="el" href="a00117.html">GUIControlSlider.h</a></li>
+    <li class="navelem"><a class="el" href="dir_3b29b88e633d0e7decc99dfac3f67a6c.html">kodi</a></li><li class="navelem"><a class="el" href="dir_190ef0275021a9d8497f84fadf8f87de.html">player.api2</a></li><li class="navelem"><a class="el" href="a00117.html">definations.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

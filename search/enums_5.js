@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['modifier',['Modifier',['../a00025.html#a80f90997871cd543ddb0bf8d282becdd',1,'CKey']]]
+  ['lang_5fformats',['lang_formats',['../a00114.html#ad481b851c163786e65d41b9ab47ed14e',1,'definations.h']]]
 ];

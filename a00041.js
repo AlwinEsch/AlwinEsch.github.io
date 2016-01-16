@@ -1,10 +1,20 @@
 var a00041 =
 [
-    [ "ShowAndGetDirectory", "a00041.html#gab1c3767a978a71751a8ea550d449eed6", null ],
-    [ "ShowAndGetFile", "a00041.html#ga5924085e93999a96dc9fc5a6c5f9362b", null ],
-    [ "ShowAndGetFileFromDir", "a00041.html#ga5ef242152a302da9ab13f61ca77b7ac3", null ],
-    [ "ShowAndGetFileList", "a00041.html#ga11dac37e6c6fd7dcaa18997d54e90b1a", null ],
-    [ "ShowAndGetImage", "a00041.html#ga10785676725a192799092e82ae4a68ba", null ],
-    [ "ShowAndGetImageList", "a00041.html#gad8c149a33ac60207e2953244f72f7a1d", null ],
-    [ "ShowAndGetSource", "a00041.html#gab582e8181c1569b7ff713e8924c4aa73", null ]
+    [ "CAddonGUIControlSlider", "a00232.html#ga07c12260df16cfa4458529725427caa0", null ],
+    [ "~CAddonGUIControlSlider", "a00232.html#ga29c8ebb717db0bcba0a1e7227720366b", null ],
+    [ "GetDescription", "a00232.html#ga3d3e509d1084585df516d4da97dd0be3", null ],
+    [ "GetFloatValue", "a00232.html#gadd5b557122d90f9a891d6b981e3ac305", null ],
+    [ "GetIntValue", "a00232.html#ga026ef91588c09c091efb7c40bb73d4dc", null ],
+    [ "GetPercentage", "a00232.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ],
+    [ "Reset", "a00232.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "SetEnabled", "a00232.html#gaac893222adeffdefc04d749648cce354", null ],
+    [ "SetFloatInterval", "a00232.html#ga1642356ec708ec660d47175a676d2b59", null ],
+    [ "SetFloatRange", "a00232.html#gaf4c5b4468e16c51b0d9a163baa082acf", null ],
+    [ "SetFloatValue", "a00232.html#gab050b4b446dc107963b04486dcfbe03d", null ],
+    [ "SetIntInterval", "a00232.html#ga0efbfb870446e5cc7409f0550bf67196", null ],
+    [ "SetIntRange", "a00232.html#ga16ad72259d068519b0797117275651f1", null ],
+    [ "SetIntValue", "a00232.html#ga1bc4fce2dc8738a08b6a9458d66351a1", null ],
+    [ "SetPercentage", "a00232.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
+    [ "SetVisible", "a00232.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_SLIDER_CONTROL", "a00041.html#a7457d5523e04bb8e80031061c8642aa4", null ]
 ];

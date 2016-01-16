@@ -1,13 +1,29 @@
 var a00098 =
 [
-    [ "ATTRIBUTE_PACKED", "a00098.html#ad93e9ac33d1a9153bbea517a98260041", null ],
-    [ "DVD_NOPTS_VALUE", "a00098.html#aa8f3bf7de853346d6bcf7de68b1132da", null ],
-    [ "DVD_TIME_BASE", "a00098.html#a2ab735c1c1995b95aa927d15465e4c37", null ],
-    [ "PRAGMA_PACK", "a00098.html#a256ebdc0994be33e06dc1ad3f6f188f4", null ],
-    [ "PLAYERHANDLE", "a00098.html#a9648d7b5459c7be333fa695dd4608b5d", null ],
-    [ "AddonPlayListType", "a00098.html#ab07b512029688f85c2c460a1d0a8efc1", [
-      [ "PlayList_Music", "a00098.html#ab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143", null ],
-      [ "PlayList_Video", "a00098.html#ab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b", null ],
-      [ "PlayList_Picture", "a00098.html#ab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab", null ]
-    ] ]
+    [ "WindowXML", "a00098.html#a7bd14e2191a736ac358af7035f0908e7", null ],
+    [ "~WindowXML", "a00098.html#a0b81d08ea2e91ef8a90235c2118c5f23", null ],
+    [ "addItem", "a00278.html#ga87ffff74f065758ae9884ecc87102af1", null ],
+    [ "AllocResources", "a00098.html#ad49427b21f983e61d73119c508009ae4", null ],
+    [ "clearList", "a00278.html#ga612285c5b9d603a0abb0feab44b8412f", null ],
+    [ "FreeResources", "a00098.html#a34616535197e372a8dc5b29e4901fea1", null ],
+    [ "GetContextButtons", "a00098.html#adf7ec51012f9822a3ea52cf7cf69ca91", null ],
+    [ "getCurrentListPosition", "a00278.html#ga860b30302751103052456bb1f1079980", null ],
+    [ "getListItem", "a00278.html#ga37ec44d83350b3e4c5b4f7a2648bfc01", null ],
+    [ "getListSize", "a00278.html#ga7b00dc949b12149360563a1941956fc7", null ],
+    [ "IsMediaWindow", "a00098.html#aef19fec003e392f5b0abdb6155393615", null ],
+    [ "LoadXML", "a00098.html#a4a88d9f86eedb30367ebce61fb060bbb", null ],
+    [ "OnAction", "a00098.html#a5a929bb12b2e74b5d65471b0a4242741", null ],
+    [ "OnClick", "a00098.html#aff276cc1c680ae6ce85173e79e2d7251", null ],
+    [ "OnDoubleClick", "a00098.html#a1c57c6fbc8d351cd01a4a341536dd55b", null ],
+    [ "OnMessage", "a00098.html#a705aa30fc54fcb4cb255efa7992f3e9e", null ],
+    [ "Process", "a00098.html#ad12bb1656cadf7f3e4b33fafb41d686d", null ],
+    [ "removeItem", "a00278.html#ga214d46ad5cb6e318163ba98e0dd780ac", null ],
+    [ "setCurrentListPosition", "a00278.html#gabaeb49593088c3be9c7a232d50152e34", null ],
+    [ "setProperty", "a00278.html#ga3171b661458f56e0f0af6e264ac09bf3", null ],
+    [ "SetupShares", "a00098.html#a40581d43c592d20ae2b4586d044bfb1a", null ],
+    [ "Update", "a00098.html#a8b44e36a9f2c7ee7cf8cc107e851094a", null ],
+    [ "WindowXMLInterceptor", "a00098.html#ab3dce56f075e12824bda4a03e9c711aa", null ],
+    [ "interceptor", "a00098.html#a263d7f15607102f63cf5e0510dab428a", null ],
+    [ "m_mediaDir", "a00098.html#a7a1d2a2834d4d397bada1a8fc10333cc", null ],
+    [ "m_scriptPath", "a00098.html#a8858f11f6724974b26b31c03b2906050", null ]
 ];

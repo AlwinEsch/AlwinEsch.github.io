@@ -1,20 +1,8 @@
 var searchData=
 [
-  ['m_5factionevent',['m_actionEvent',['../a00077.html#a448019f171354c0bcfb90b4ebdf54fc6',1,'XBMCAddon::xbmcgui::Window']]],
-  ['m_5fchannelcount',['m_channelCount',['../a00021.html#a98e4ea22d72d3c5dce2821ae10a802f8',1,'AudioEngineFormat']]],
-  ['m_5fchannels',['m_channels',['../a00021.html#a4a53bc9bcf5fe0c7d808858463f370f7',1,'AudioEngineFormat']]],
-  ['m_5fdataformat',['m_dataFormat',['../a00021.html#a8f4e236f291657200f64cd2f069a8ff7',1,'AudioEngineFormat']]],
-  ['m_5fencodedrate',['m_encodedRate',['../a00021.html#a60bb897389267a5034ef730c956b661a',1,'AudioEngineFormat']]],
-  ['m_5fframes',['m_frames',['../a00021.html#a3fa03b15b439d70dd92e726e1aac9eb5',1,'AudioEngineFormat']]],
-  ['m_5fframesamples',['m_frameSamples',['../a00021.html#a3b6b1929e0fbe39e252645260f4d97d8',1,'AudioEngineFormat']]],
-  ['m_5fframesize',['m_frameSize',['../a00021.html#a7c6321b7fd7f09478ca0bf9931009ee1',1,'AudioEngineFormat']]],
-  ['m_5fid',['m_id',['../a00026.html#aad966617e7e050bedbead762727808a5',1,'CMouseEvent']]],
-  ['m_5fmediadir',['m_mediaDir',['../a00079.html#a7a1d2a2834d4d397bada1a8fc10333cc',1,'XBMCAddon::xbmcgui::WindowXML']]],
-  ['m_5foffsetx',['m_offsetX',['../a00026.html#a632d0c237986191da17de968fb392f58',1,'CMouseEvent']]],
-  ['m_5foffsety',['m_offsetY',['../a00026.html#aed170d76d1e06cf6d2f48a0644005dfd',1,'CMouseEvent']]],
-  ['m_5fsamplerate',['m_sampleRate',['../a00021.html#a046d570c56fd2ae9b813340816ebfdec',1,'AudioEngineFormat']]],
-  ['m_5fscriptpath',['m_scriptPath',['../a00079.html#a8858f11f6724974b26b31c03b2906050',1,'XBMCAddon::xbmcgui::WindowXML']]],
-  ['m_5fstate',['m_state',['../a00026.html#acc4f94200981f2eb41a7df212afc1093',1,'CMouseEvent']]],
-  ['major',['major',['../a00053.html#ac8947941479c38403a09c14a60b03f01',1,'kodi_version']]],
-  ['minor',['minor',['../a00053.html#aec7b96885baf2e6f10efbdef9d935a0b',1,'kodi_version']]]
+  ['kodi_5faddon_5flibrary',['KODI_ADDON_LIBRARY',['../a00011.html#a0c8b9ce175d01a9b10ce484f86056fed',1,'AddOnLIB::V2::CAddonLib']]],
+  ['kodi_5faudioengine_5flibrary',['KODI_AUDIOENGINE_LIBRARY',['../a00022.html#a3d5db3884cc2c788a91a6724e97557f3',1,'AudioEngineLIB::V2::CAELib']]],
+  ['kodi_5fgui_5flibrary',['KODI_GUI_LIBRARY',['../a00055.html#a267bf58919cb103740f8b7cffc23ef66',1,'GUILIB::V2::CGUILib']]],
+  ['kodi_5fplayer_5flibrary',['KODI_PLAYER_LIBRARY',['../a00058.html#a4bce1dde3673c4b78c782a9f5b3a015b',1,'PlayerLIB::V2::CPlayerLib']]],
+  ['kodi_5fpvr_5flibrary',['KODI_PVR_LIBRARY',['../a00063.html#a189371e5d5b4f2016890b37d497b1674',1,'PVRLIB::V2::CPVRLib']]]
 ];

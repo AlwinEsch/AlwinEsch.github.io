@@ -1,8 +1,12 @@
 var a00203 =
 [
-    [ "CAddonGUIControlLabel", "a00203.html#ga3feee4332d158ac43b8d5d5cc20e2d0b", null ],
-    [ "GetLabel", "a00203.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "SetLabel", "a00203.html#ga0468217482f9a171183b1cda613417e6", null ],
-    [ "SetVisible", "a00203.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlLabel", "a00203.html#gae46262d2f574f9375e18fd28b3b0244b", null ]
+    [ "Action", "a00273.html", "a00273" ],
+    [ "Control", "a00286.html", "a00286" ],
+    [ "Dialog", "a00267.html", "a00267" ],
+    [ "DialogProgress", "a00268.html", "a00268" ],
+    [ "DialogProgressBG", "a00269.html", "a00269" ],
+    [ "ListItem", "a00301.html", "a00301" ],
+    [ "Window", "a00274.html", "a00274" ],
+    [ "getCurrentWindowDialogId", "a00203.html#ga8379c35c147def9f607d18571e24678e", null ],
+    [ "getCurrentWindowId", "a00203.html#gab1660e44ef103bd39fff61229809f567", null ]
 ];

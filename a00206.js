@@ -1,9 +1,13 @@
 var a00206 =
 [
-    [ "CAddonGUIControlRendering", "a00206.html#ga391a8355fbbce5c4a05a01e15188a41b", null ],
-    [ "Create", "a00206.html#ga12847d560dd43205d13b0963d9e395e1", null ],
-    [ "Dirty", "a00206.html#ga7cea65505e98c9989ab92a87b2f2e99b", null ],
-    [ "Render", "a00206.html#ga0bc3f3606d9cf5304dac90cd7a619194", null ],
-    [ "Stop", "a00206.html#gaf6f113a64b92a63894b285b4f2a2c3a5", null ],
-    [ "~CAddonGUIControlRendering", "a00206.html#ga8111f29e2c5fe998d541b21d76f0d353", null ]
+    [ "File", "a00270.html", "a00270" ],
+    [ "Stat", "a00281.html", "a00281" ],
+    [ "copy", "a00206.html#ga9188bb84632ebdbc54faca1de9be95c3", null ],
+    [ "deleteFile", "a00206.html#gabf13e7bae1c97bc1c4188f3e4e459f95", null ],
+    [ "exists", "a00206.html#ga12691f7bf1c5e55da57b18f63f6fbdca", null ],
+    [ "listdir", "a00206.html#ga6bb30280e2eb7d5b94cfb0eb6e65b0cb", null ],
+    [ "mkdir", "a00206.html#gaf69897d9a5235e87828a9e75c1cae4ca", null ],
+    [ "mkdirs", "a00206.html#ga229e97a6a47bdff0122f1004c4feda5c", null ],
+    [ "rename", "a00206.html#gaefc98ff66890f353b4ea7fd620b63808", null ],
+    [ "rmdir", "a00206.html#gac83ea5fb566ee294cdd87c74c6697025", null ]
 ];

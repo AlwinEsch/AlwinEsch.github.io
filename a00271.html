@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Member List</title>
+<title>Kodi Development: Monitor</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('a00012.html','');});
+$(document).ready(function(){initNavTree('a00271.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -92,16 +92,444 @@ $(document).ready(function(){initNavTree('a00012.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonLib_Codec Member List</div>  </div>
+<div class="title">Monitor<div class="ingroups"><a class="el" href="a00201.html">Python Development</a> &raquo; <a class="el" href="a00202.html">Library - xbmc</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p><b>Kodi's monitor class.</b> </p>
+<p>Creates a new monitor to notify addon about changes. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga5b1ac2490aae34c81dd3ab6ecc58d8a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool abortRequested </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-<p>This is the complete list of members for <a class="el" href="a00012.html">CAddonLib_Codec</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00185.html#ga4bfc35621cb03e2ef220caa723ad5e2b">AllocateDemuxPacket</a>(int iDataSize)</td><td class="entry"><a class="el" href="a00012.html">CAddonLib_Codec</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="a00185.html#ga5a59f0d8812f3f3c2ecceb2d9287a186">FreeDemuxPacket</a>(DemuxPacket *pPacket)</td><td class="entry"><a class="el" href="a00012.html">CAddonLib_Codec</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00185.html#gabe059bd032457069e06fd2d3c0747f37">GetCodecByName</a>(const std::string &amp;strCodecName)</td><td class="entry"><a class="el" href="a00012.html">CAddonLib_Codec</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-</table></div><!-- contents -->
+<p>Returns True if abort has been requested. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if requested </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gace3ed8fa26883bff89728e0446fc8b81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onAbortRequested </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated, use <a class="el" href="a00271.html#gaef2a905f59250fe9ffbc34edfbdbbb54" title="Wait for Abort. ">waitForAbort()</a> to be notified about this event. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5e89c9b7e06b744f88063e5237977247"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onCleanFinished </td>
+          <td>(</td>
+          <td class="paramtype">const String&#160;</td>
+          <td class="paramname"><em>library</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>onCleanFinished method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">library</td><td>Video / music as string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Will be called when library clean has ended and return video or music to indicate which library has been finished </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5d8eb24ae2e1b1a360a9bf3b4b51d56d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onCleanStarted </td>
+          <td>(</td>
+          <td class="paramtype">const String&#160;</td>
+          <td class="paramname"><em>library</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>onCleanStarted method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">library</td><td>Video / music as string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Will be called when library clean has ended and return video or music to indicate which library has been cleaned </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga74db05abe95497de5e90206cb39ef7d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onDatabaseScanStarted </td>
+          <td>(</td>
+          <td class="paramtype">const String&#160;</td>
+          <td class="paramname"><em>database</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated, use <a class="el" href="a00271.html#ga6d6000ab39593068d3eb3955bed886c4" title="onScanStarted method. ">onScanStarted()</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga18d6bc330604bbe55e63ae6dae11efde"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onDatabaseUpdated </td>
+          <td>(</td>
+          <td class="paramtype">const String&#160;</td>
+          <td class="paramname"><em>database</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated, use <a class="el" href="a00271.html#gaf8242fca7ffb83cd719b43e16ca7a439">onScanFinished()</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga86cc4d6bc72abe7b74c1c50dde951412"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onDPMSActivated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>onDPMSActivated method. </p>
+<p>Will be called when energysaving/DPMS gets active </p>
+
+</div>
+</div>
+<a class="anchor" id="ga3afef1ceaec0fd233dada0f1c415980c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onDPMSDeactivated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>onDPMSDeactivated method. </p>
+<p>Will be called when energysaving/DPMS is turned off </p>
+
+</div>
+</div>
+<a class="anchor" id="ga68122e7f3ea25f8848f99024690f1419"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onNotification </td>
+          <td>(</td>
+          <td class="paramtype">const String&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>onNotification method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sender</td><td>Sender of the notification </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td>Name of the notification </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>JSON-encoded data of the notification</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Will be called when Kodi receives or sends a notification </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf8242fca7ffb83cd719b43e16ca7a439"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onScanFinished </td>
+          <td>(</td>
+          <td class="paramtype">const String&#160;</td>
+          <td class="paramname"><em>library</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>onScanFinished method.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">library</td><td>Video / music as string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Will be called when library clean has ended and return video or music to indicate which library has been scanned </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6d6000ab39593068d3eb3955bed886c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onScanStarted </td>
+          <td>(</td>
+          <td class="paramtype">const String&#160;</td>
+          <td class="paramname"><em>library</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>onScanStarted method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">library</td><td>Video / music as string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Will be called when library clean has ended and return video or music to indicate which library is being scanned </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaec7c0588db39e824757e840bba4c3d0b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onScreensaverActivated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>onScreensaverActivated method. </p>
+<p>Will be called when screensaver kicks in </p>
+
+</div>
+</div>
+<a class="anchor" id="ga72fdab6e25d1882e64768c3b4fc02ada"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onScreensaverDeactivated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>onScreensaverDeactivated method. </p>
+<p>Will be called when screensaver goes off </p>
+
+</div>
+</div>
+<a class="anchor" id="ga0b2faaa5bdb64710395d7b36330324a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void onSettingsChanged </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>onSettingsChanged method. </p>
+<p>Will be called when addon settings are changed </p>
+
+</div>
+</div>
+<a class="anchor" id="gaef2a905f59250fe9ffbc34edfbdbbb54"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool waitForAbort </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>-1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wait for Abort. </p>
+<p>Block until abort is requested, or until timeout occurs. If an abort requested have already been made, return immediately.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>[opt] float - timeout in seconds. Default: no timeout. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True when abort have been requested, False if a timeout is given and the operation times out. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -1,11 +1,12 @@
 var a00043 =
 [
-    [ "ShowAndGetDate", "a00043.html#ga37d6caf6f507938f599915d93eddd596", null ],
-    [ "ShowAndGetIPAddress", "a00043.html#ga1fd8ee824dbbbc1d222fd67583f28614", null ],
-    [ "ShowAndGetNumber", "a00043.html#gab73e260650434df59844c3a2c8b1ba2d", null ],
-    [ "ShowAndGetSeconds", "a00043.html#ga664586418f4cb12a25a15dcd5effff02", null ],
-    [ "ShowAndGetTime", "a00043.html#ga08a9c6abb71eb5a380213e9528b6aecf", null ],
-    [ "ShowAndVerifyInput", "a00043.html#ga3028013da19a00279961a45d26dcf832", null ],
-    [ "ShowAndVerifyNewPassword", "a00043.html#ga85ca517533d779b26944d6fb74fe0abe", null ],
-    [ "ShowAndVerifyPassword", "a00043.html#ga28ed908212d6a38156014d5ccc5a7dc7", null ]
+    [ "CAddonGUIControlTextBox", "a00234.html#ga06117cea192b1c038b7b9b8d9c2c8dec", null ],
+    [ "~CAddonGUIControlTextBox", "a00234.html#ga671686d3890667392291118ca36b3e41", null ],
+    [ "GetText", "a00234.html#ga1af3f7fd8b95cc66e7599caca454f8ef", null ],
+    [ "Reset", "a00234.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "Scroll", "a00234.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d", null ],
+    [ "SetAutoScrolling", "a00234.html#gad3e4bbb4388da7a56e8252018e4fbb00", null ],
+    [ "SetText", "a00234.html#ga8008c108280948ebd79830f222068455", null ],
+    [ "SetVisible", "a00234.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_TEXTBOX_CONTROL", "a00043.html#a62ade28dbd83a582f36b79d05192686d", null ]
 ];

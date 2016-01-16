@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: PlayList</title>
+<title>Kodi Development: Library - PVRLIB</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,273 +91,73 @@ $(document).ready(function(){initNavTree('a00258.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">PlayList<div class="ingroups"><a class="el" href="a00177.html">Python Development</a> &raquo; <a class="el" href="a00178.html">xbmc</a></div></div>  </div>
+<div class="title">Library - PVRLIB<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's Play List class.</b> </p>
-<p><b><code>xbmc.PlayList(playList)</code></b></p>
-<p>To create and edit a playlist which can be handled by the player.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">playList</td><td>[integer] To define the stream type <table class="doxtable">
-<tr>
-<th align="center">Value </th><th align="left">Integer String </th><th align="left">Description  </th></tr>
-<tr>
-<td align="center">0 </td><td align="left">xbmc.PLAYLIST_MUSIC </td><td align="left">Playlist for music files or streams </td></tr>
-<tr>
-<td align="center">1 </td><td align="left">xbmc.PLAYLIST_VIDEO </td><td align="left">Playlist for video files or streams </td></tr>
-</table>
-</td></tr>
-  </table>
-  </dd>
-</dl>
+<p><b><em>PVR add-on related functions to pass data on Kodi</em></b> </p>
+<p>This library is for PVR add-ons to allow cross talk. Becomes needed to inform Kodi about changes on the PVR system.</p>
+<dl class="section note"><dt>Note</dt><dd>This library part is only needed on PVR add-ons, for other types is nothing inside.</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;play=xbmc.PlayList(xbmc.PLAYLIST_VIDEO)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga979e740949519ca0e88da2ff9934a4d5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void add </td>
-          <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>url</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ListItem *&#160;</td>
-          <td class="paramname"><em>listitem</em> = <code>NULL</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em> = <code>-1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Adds a new file to the playlist. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>string or unicode - filename or url to add. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">listitem</td><td>[opt] listitem - used with setInfo() to set different infolabels. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>[opt] integer - position to add playlist item. (default=end)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
- Once you use a keyword, all following arguments require the keyword.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;playlist = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;video = <span class="stringliteral">&#39;F:\\movies\\Ironman.mov&#39;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;listitem = xbmcgui.ListItem(<span class="stringliteral">&#39;Ironman&#39;</span>, thumbnailImage=<span class="stringliteral">&#39;F:\\movies\\Ironman.tbn&#39;</span>)</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;listitem.setInfo(<span class="stringliteral">&#39;video&#39;</span>, {<span class="stringliteral">&#39;Title&#39;</span>: <span class="stringliteral">&#39;Ironman&#39;</span>, <span class="stringliteral">&#39;Genre&#39;</span>: <span class="stringliteral">&#39;Science Fiction&#39;</span>})</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;playlist.add(url=video, listitem=listitem, index=7)n</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gac8bb3912a3ce86b15842e79d0b421204"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void clear </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clear all items in the playlist. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga4d665409e02daa8ea13ce462ca44c914"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getPlayListId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
+<p><b>Code example:</b></p>
+<p>Below is a code example do show what must be done on add-on base function to become support for library:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00112.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00121.html">kodi/addon.api2/General.h</a>&gt;</span>  <span class="comment">// Needed for CAddOnLib_General::Log</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00160.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
+<div class="line">IMPLEMENT_KODI_PVR_LIBRARY;</div>
+<div class="line">...</div>
+<div class="line"></div>
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (!hdl || !props)</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!CAddonLib::RegisterMe(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00259.html#gaa0bf67ad4ff0b67b500e4070f873c337">CPVRLib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Example lib call</span></div>
+<div class="line">  CAddOnLib_General::Log(<a class="code" href="a00114.html#af8526ffb1ee2a785489ac05b6e49d357a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My add-on creation done&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="a00259.html#ga5940787dcdcdb8aa995a07106917489f">CPVRLib::UnRegisterMe</a>();</div>
+<div class="line">  CAddonLib::UnRegisterMe();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use this library part must always <a class="el" href="a00011.html">AddOnLIB::V2::CAddonLib</a> be present! </dd></dl>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00259"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00259.html">CPVRLib</a></td></tr>
+<tr class="memdesc:a00259"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Allow use of binary classes and function to use on add-on's</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00260"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00260.html">CPVRLib_Transfer</a></td></tr>
+<tr class="memdesc:a00260"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Callback functions for PVR add-on</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00261"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00261.html">CPVRLib_Trigger</a></td></tr>
+<tr class="memdesc:a00261"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Funtions to trigger PVR related updates on Kodi</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00262"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html">CPVRStream</a></td></tr>
+<tr class="memdesc:a00262"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>PVR stream properties data class</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00263"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00263.html">CStreamProperties</a></td></tr>
+<tr class="memdesc:a00263"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>PVR stream properties handle class</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><div class="memdoc">
-
-<p>Get the <a class="el" href="a00070.html">PlayList</a> Identifier. </p>
-<dl class="section return"><dt>Returns</dt><dd>Id as an integer. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga265b7f39dcd400e1f4edaf4060af9977"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getposition </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the position of the current song in this playlist. </p>
-<dl class="section return"><dt>Returns</dt><dd>Position of the current song </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga2eea1635b7df085d42c973352ef10355"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool load </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Load a playlist. </p>
-<p>Clear current playlist and copy items from the file to this Playlist filename can be like .pls or .m3u ...</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>File with list to play inside </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>False if unable to load playlist </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaba5d6f37d582f0512f61f32109a92d92"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ListItem* operator[] </td>
-          <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieve the item at the given position. A negative index means from the ending rather than from the start. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Pointer in list </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The selected item on list </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gae363baca6026e43cc1264c5914ff69b9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void remove </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Remove an item with this filename from the playlist. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The file to remove from list. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga1905fe84eb39f020b32c58baf7a76758"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void shuffle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Shuffle the playlist. </p>
-
-</div>
-</div>
-<a class="anchor" id="gaf4b57d21919c42d55af03391f91a1c08"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the total number of PlayListItems in this playlist. </p>
-<dl class="section return"><dt>Returns</dt><dd>Amount of playlist entries. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga2401476232ac1b00321c9bfe8158f9c4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void unshuffle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Unshuffle the playlist. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

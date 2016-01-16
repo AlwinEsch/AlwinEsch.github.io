@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['playerhandle',['PLAYERHANDLE',['../a00098.html#a9648d7b5459c7be333fa695dd4608b5d',1,'definations.h']]],
-  ['playparameter',['PlayParameter',['../a00171.html#a2d10c982e027434a4ad36b054f84623f',1,'XBMCAddon::xbmc']]]
+  ['infolabeldict',['InfoLabelDict',['../a00197.html#a0259569a23d11d6fe3c6291bb83d0374',1,'XBMCAddon::xbmcgui']]],
+  ['infolabelstringortuple',['InfoLabelStringOrTuple',['../a00197.html#a6b81eb53dfd13c02c22ce968ed21259f',1,'XBMCAddon::xbmcgui']]],
+  ['infolabelvalue',['InfoLabelValue',['../a00197.html#a24d34d0abff7eca9852dd07ce6c0515d',1,'XBMCAddon::xbmcgui']]]
 ];
