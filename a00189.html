@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIControlLabel</title>
+<title>Kodi Development: CAddonLib_Network</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,89 +92,16 @@ $(document).ready(function(){initNavTree('a00189.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIControlLabel<div class="ingroups"><a class="el" href="a00162.html">C++ Development</a> &raquo; <a class="el" href="a00206.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAddonLib_Network<div class="ingroups"><a class="el" href="a00176.html">C++ Development</a> &raquo; <a class="el" href="a00183.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Window control used to show some lines of text.</b> </p>
-<p>The label control is used for displaying text in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed.</p>
-<p>It has the header <a class="el" href="a00105.html">#include &lt;kodi/gui.api2/GUIControlLabel.h&gt;</a> be included to enjoy it.</p>
-<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
+<p><b>Network functions</b> </p>
+<p>The network module offers functions that allow you to control it.</p>
+<p>These are pure static functions them no other initialization need.</p>
+<p>It has the header <a class="el" href="a00103.html">#include &lt;kodi/addon.api2/Network.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga3feee4332d158ac43b8d5d5cc20e2d0b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CAddonGUIControlLabel </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00050.html">CAddonGUIWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga6c80f17140ee95a258ff6c13439a2623"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GetLabel </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga0468217482f9a171183b1cda613417e6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetLabel </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga71a209185b7a98adf0a310d2c44cdbe6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetVisible </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>visible</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gae46262d2f574f9375e18fd28b3b0244b"></a>
+<a class="anchor" id="ga39943b1fdb3a928f0c08e54484602a7e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -182,7 +109,58 @@ $(document).ready(function(){initNavTree('a00189.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~CAddonGUIControlLabel </td>
+          <td class="memname">static bool DNSLookup </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strHostName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>strIpAddress</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lookup URL in DNS cache. </p>
+<p>This test will get DNS record for a domain. The DNS lookup is done directly against the domain's authoritative name server, so changes to DNS Records should show up instantly. By default, the DNS lookup tool will return an IP address if you give it a name (e.g. www.example.com)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strHostName</td><td>The code of the message to get. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strIpAddress</td><td>Returned address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successfull</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00103.html">kodi/addon.api2/Network.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string strIpAddress;</div>
+<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00189.html#ga39943b1fdb3a928f0c08e54484602a7e">CAddonLib_Network::DNSLookup</a>(<span class="stringliteral">&quot;www.google.com&quot;</span>, strIpAddress);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;DNSLookup returned for www.google.com the IP &#39;%s&#39;, call was %s\n&quot;</span>, strIpAddress.c_str(), ret ? <span class="stringliteral">&quot;ok&quot;</span> : <span class="stringliteral">&quot;failed&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gad56ffaa14c080ecaff1f5e7534551eff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string GetIPAddress </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -190,10 +168,91 @@ $(document).ready(function(){initNavTree('a00189.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>To the current own ip address as a string. </p>
+<dl class="section return"><dt>Returns</dt><dd>Own system ip.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00103.html">kodi/addon.api2/Network.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string strIpAddress = <a class="code" href="a00189.html#gad56ffaa14c080ecaff1f5e7534551eff">CAddonLib_Network::GetIPAddress</a>();</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;My IP is &#39;%s&#39;\n&quot;</span>, strIpAddress.c_str());</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gab4932f2cf0d39ceca1649ec8dd782acc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string URLEncode </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>URL encodes the given string. </p>
+<p>This function converts the given input string to a URL encoded string and returns that as a new allocated string. All input characters that are not a-z, A-Z, 0-9, '-', '.', '_' or '~' are converted to their "URL escaped" version (NN where NN is a two-digit hexadecimal number).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The code of the message to get. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Encoded URL string</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00103.html">kodi/addon.api2/Network.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string encodedUrl = <a class="code" href="a00189.html#gab4932f2cf0d39ceca1649ec8dd782acc">CAddonLib_Network::URLEncode</a>(<span class="stringliteral">&quot;François&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Encoded URL is &#39;%s&#39;\n&quot;</span>, encodedUrl.c_str());</div>
+<div class="line">...</div>
+</div><!-- fragment --><p> For example, the string: François ,would be encoded as: FranC3A7ois </p>
+
+</div>
+</div>
+<a class="anchor" id="ga55c0502c3db4416ce1971a85f869775b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool WakeOnLan </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>mac</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send WakeOnLan magic packet. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mac</td><td>Network address of the host to wake. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the magic packet was successfully sent, false otherwise. </dd></dl>
 
 </div>
 </div>

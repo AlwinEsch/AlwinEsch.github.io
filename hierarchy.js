@@ -2,19 +2,28 @@ var hierarchy =
 [
     [ "AddonCallback", null, [
       [ "Monitor", "a00068.html", null ],
-      [ "Window", "a00074.html", null ]
+      [ "Player", "a00069.html", null ],
+      [ "Window", "a00077.html", [
+        [ "WindowDialog", "a00078.html", null ],
+        [ "WindowXML", "a00079.html", [
+          [ "WindowXMLDialog", "a00080.html", null ]
+        ] ]
+      ] ]
     ] ],
     [ "AddonClass", null, [
       [ "InfoTagMusic", "a00064.html", null ],
       [ "InfoTagRadioRDS", "a00065.html", null ],
       [ "InfoTagVideo", "a00066.html", null ],
       [ "Keyboard", "a00067.html", null ],
-      [ "Addon", "a00069.html", null ],
-      [ "Action", "a00070.html", null ],
-      [ "Dialog", "a00071.html", null ],
-      [ "DialogProgress", "a00072.html", null ],
-      [ "DialogProgressBG", "a00073.html", null ],
-      [ "File", "a00075.html", null ]
+      [ "PlayList", "a00070.html", null ],
+      [ "RenderCapture", "a00071.html", null ],
+      [ "Addon", "a00072.html", null ],
+      [ "Action", "a00073.html", null ],
+      [ "Dialog", "a00074.html", null ],
+      [ "DialogProgress", "a00075.html", null ],
+      [ "DialogProgressBG", "a00076.html", null ],
+      [ "File", "a00081.html", null ],
+      [ "Stat", "a00082.html", null ]
     ] ],
     [ "CAddonLib_Codec", "a00012.html", null ],
     [ "CAddonLib_General", "a00013.html", null ],
@@ -69,6 +78,9 @@ var hierarchy =
     [ "CAddonGUIDialogYesNo", "a00048.html", null ],
     [ "CAddonGUIListItem", "a00049.html", null ],
     [ "CAddonGUIWindow", "a00050.html", null ],
+    [ "IPlayerCallback", null, [
+      [ "Player", "a00069.html", null ]
+    ] ],
     [ "kodi_codec", "a00052.html", null ],
     [ "kodi_version", "a00053.html", null ],
     [ "CPlayerLib_InfoTagMusic", "a00055.html", null ],
@@ -80,5 +92,9 @@ var hierarchy =
     ] ],
     [ "CPVRLib_Transfer", "a00060.html", null ],
     [ "CPVRLib_Trigger", "a00061.html", null ],
-    [ "CStreamProperties", "a00063.html", null ]
+    [ "CStreamProperties", "a00063.html", null ],
+    [ "WindowDialogMixin", null, [
+      [ "WindowDialog", "a00078.html", null ],
+      [ "WindowXMLDialog", "a00080.html", null ]
+    ] ]
 ];

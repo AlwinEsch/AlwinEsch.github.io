@@ -1,9 +1,10 @@
 var a00226 =
 [
-    [ "doModal", "a00226.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
-    [ "getText", "a00226.html#gafab766445043570e6a82c14851366933", null ],
-    [ "isConfirmed", "a00226.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
-    [ "setDefault", "a00226.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
-    [ "setHeading", "a00226.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
-    [ "setHiddenInput", "a00226.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ]
+    [ "Addon action Id's", "a00198.html", "a00198" ],
+    [ "OnAction", "a00226.html#gad3fc2a106ba0143fa5d11d3df32d9c72", null ],
+    [ "OnClick", "a00226.html#gad741fef5d9a1d2bf07449694e9a9e602", null ],
+    [ "OnFocus", "a00226.html#ga7f69d7353e186b8fe4a1560767721501", null ],
+    [ "OnInit", "a00226.html#ga7d98c001ac8d31e48df88346e28bae16", null ],
+    [ "SetIndependentCallbacks", "a00226.html#ga5daaf4cdd5942017aa0be44ec98a7f95", null ],
+    [ "IMPLEMENT_ADDON_GUI_WINDOW", "a00226.html#ga9c9c299166319c2248b2c62548a69fbb", null ]
 ];

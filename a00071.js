@@ -1,16 +1,12 @@
 var a00071 =
 [
-    [ "Dialog", "a00071.html#a893649c76b6e54d6a392d5e6c260a016", null ],
-    [ "~Dialog", "a00071.html#a656bf5bf83d73b108733b72a3282c958", null ],
-    [ "browse", "a00230.html#ga329bf9f86212595d36708f6ad8977499", null ],
-    [ "browseMultiple", "a00230.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
-    [ "browseSingle", "a00230.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
-    [ "input", "a00230.html#ga2a25e833c92e98a294964d0d285ee1f9", null ],
-    [ "multiselect", "a00230.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
-    [ "notification", "a00230.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
-    [ "numeric", "a00230.html#gad44dd72bef6ada382a1b9704580410db", null ],
-    [ "ok", "a00230.html#ga623449b051874059111f9831a7b91673", null ],
-    [ "select", "a00230.html#ga31bcf740cf64230b40af61377ad701b1", null ],
-    [ "textviewer", "a00230.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
-    [ "yesno", "a00230.html#gaa64342a4b05f1ed49803ea44a25b73db", null ]
+    [ "RenderCapture", "a00071.html#a2f1abd0c5a0590bee396ab3163464e91", null ],
+    [ "~RenderCapture", "a00071.html#adcd111542d35b7dc5fa70d6a8ef054a8", null ],
+    [ "capture", "a00261.html#gad84ac4cd6e43fc4aefe0eeaa0916e187", null ],
+    [ "getAspectRatio", "a00261.html#ga2c8f0f904856b52b41dd852c57bd970b", null ],
+    [ "getHeight", "a00261.html#ga07efb2a4e9a982688c8bb3c3f21d1092", null ],
+    [ "getImage", "a00261.html#gaff2e6e3a8d1c65f17c1709dc727ae69c", null ],
+    [ "getImageFormat", "a00261.html#gaa512bbf517e279b0a5ca7d2ecf07f5b1", null ],
+    [ "GetPixels", "a00071.html#a1ea12b9900fb2903c60aacad0d1ee835", null ],
+    [ "getWidth", "a00261.html#ga67a0997183f24da19b776d96c1052998", null ]
 ];

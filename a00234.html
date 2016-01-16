@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Monitor</title>
+<title>Kodi Development: Library - PVRLIB</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,13 +91,73 @@ $(document).ready(function(){initNavTree('a00234.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Monitor<div class="ingroups"><a class="el" href="a00163.html">Python Development</a> &raquo; <a class="el" href="a00164.html">xbmc</a></div></div>  </div>
+<div class="title">Library - PVRLIB<div class="ingroups"><a class="el" href="a00176.html">C++ Development</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b><a class="el" href="a00068.html">Monitor</a> class.</b> </p>
-<p>Monitor() &ndash; Creates a new <a class="el" href="a00068.html">Monitor</a> to notify addon about changes. </p>
+<p><b><em>PVR add-on related functions to pass data on Kodi</em></b> </p>
+<p>This library is for PVR add-ons to allow cross talk. Becomes needed to inform Kodi about changes on the PVR system.</p>
+<dl class="section note"><dt>Note</dt><dd>This library part is only needed on PVR add-ons, for other types is nothing inside.</dd></dl>
+<hr/>
+<p><b>Code example:</b></p>
+<p>Below is a code example do show what must be done on add-on base function to become support for library:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00093.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00102.html">kodi/addon.api2/General.h</a>&gt;</span>  <span class="comment">// Needed for CAddOnLib_General::Log</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00140.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
+<div class="line">IMPLEMENT_KODI_PVR_LIBRARY;</div>
+<div class="line">...</div>
+<div class="line"></div>
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (!hdl || !props)</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!CAddonLib::RegisterMe(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00235.html#gaa0bf67ad4ff0b67b500e4070f873c337">CPVRLib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Example lib call</span></div>
+<div class="line">  CAddOnLib_General::Log(<a class="code" href="a00095.html#af8526ffb1ee2a785489ac05b6e49d357a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My add-on creation done&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="a00235.html#ga5940787dcdcdb8aa995a07106917489f">CPVRLib::UnRegisterMe</a>();</div>
+<div class="line">  CAddonLib::UnRegisterMe();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use this library part must always <a class="el" href="a00011.html">AddOnLIB::V2::CAddonLib</a> be present! </dd></dl>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00235"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00235.html">CPVRLib</a></td></tr>
+<tr class="memdesc:a00235"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Allow use of binary classes and function to use on add-on's</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00236"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00236.html">CPVRLib_Transfer</a></td></tr>
+<tr class="memdesc:a00236"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Callback functions for PVR add-on</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00237"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00237.html">CPVRLib_Trigger</a></td></tr>
+<tr class="memdesc:a00237"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Funtions to trigger PVR related updates on Kodi</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00238"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00238.html">CPVRStream</a></td></tr>
+<tr class="memdesc:a00238"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>PVR stream properties data class</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00239"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00239.html">CStreamProperties</a></td></tr>
+<tr class="memdesc:a00239"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>PVR stream properties handle class</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

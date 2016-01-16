@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/ModuleXbmc.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/addons/kodi-addon-dev-kit/kodi/pvr.api2/PVRLib.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,187 +92,146 @@ $(document).ready(function(){initNavTree('a00140_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">ModuleXbmc.h</div>  </div>
+<div class="title">PVRLib.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00140.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;Tuple.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//#include &quot;Monitor.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;utils/LangCodeExpander.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;swighelper.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00156.html">XBMCAddon</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// This is a bit of a hack to get around a SWIG problem</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">int</span> lLOGDEBUG;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00164.html#gaae1f9e78fc2e0e63f68dfe93f8e65cf9">log</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* msg, <span class="keywordtype">int</span> level = lLOGDEBUG);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00164.html#ga7861ee1569802186a619778efc85af13">shutdown</a>();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00164.html#ga22ee094ca3f45aa4156b97d34fe678bf">restart</a>();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00164.html#gaa3118b469b016e7b610aec2851a0c7de">executescript</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* script);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00164.html#ga3437cf59c9fc815524d7aaf98077e210">executebuiltin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">function</span>, <span class="keywordtype">bool</span> wait = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    String <a class="code" href="a00164.html#gaa95cd758379b99b479c2c01bdf79897e">executeJSONRPC</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* jsonrpccommand);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00164.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(<span class="keywordtype">long</span> timemillis);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    String <a class="code" href="a00164.html#ga79ffd96305af02e364d99c2c9d8b69de">getLocalizedString</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    String <a class="code" href="a00164.html#ga2a0ea95992942d1cbaceb3f0bfaa9240">getSkinDir</a>();</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    String <a class="code" href="a00164.html#gae3afd43404337c2c800bfeadc68c46f3">getLanguage</a>(<span class="keywordtype">int</span> format = CLangCodeExpander::ENGLISH_NAME, <span class="keywordtype">bool</span> region = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    String <a class="code" href="a00164.html#ga6c0ea0a1473226b04455c61e679450e3">getIPAddress</a>();</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">long</span> <a class="code" href="a00164.html#ga9356056e34f878388950bce99f91d91c">getDVDState</a>();</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordtype">long</span> <a class="code" href="a00164.html#ga1823d67ecf8c303c31892e2f39bc7123">getFreeMem</a>();</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    String <a class="code" href="a00164.html#ga4266cdf4540b57b10de937df1d4dd024">getInfoLabel</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* infotag);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    String <a class="code" href="a00164.html#ga3a7d6dc03a52554f607527314b281e36">getInfoImage</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * infotag);</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00164.html#ga30c84926c8fcac04a99d4cf18fc8fae6">playSFX</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename, <span class="keywordtype">bool</span> useCached = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00164.html#ga3ad39f5a4a65222868520149fbdada32">stopSFX</a>();</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    </div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00164.html#ga8d27375b9d28a87af69d900c4de8758b">enableNavSounds</a>(<span class="keywordtype">bool</span> yesNo);</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00164.html#gac96b749cc54ebd3596e4acefee5123dc">getCondVisibility</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *condition);</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="a00164.html#ga8e11c9b5d2d375b90578bf01a04ba50c">getGlobalIdleTime</a>();</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    String <a class="code" href="a00164.html#gaf3d104f3a22481b0f98d08150811d1a4">getCacheThumbName</a>(<span class="keyword">const</span> String&amp; path);</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    String <a class="code" href="a00164.html#gabcec0705cb849f38c7f56ff35ddd74cd">makeLegalFilename</a>(<span class="keyword">const</span> String&amp; filename,<span class="keywordtype">bool</span> fatX = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    String <a class="code" href="a00164.html#ga77f8d61db7757aa22df826a904cc3a8d">translatePath</a>(<span class="keyword">const</span> String&amp; path);</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    Tuple&lt;String,String&gt; <a class="code" href="a00164.html#ga3393e5440a103195e85dcb93a1819baa">getCleanMovieTitle</a>(<span class="keyword">const</span> String&amp; path, <span class="keywordtype">bool</span> usefoldername = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    String <a class="code" href="a00164.html#ga203ba5035eca7af26370c4480c1302bd">validatePath</a>(<span class="keyword">const</span> String&amp; path);</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    String <a class="code" href="a00164.html#ga28e4561db93f334227e20f8a59444655">getRegion</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    String <a class="code" href="a00164.html#ga77273fcb1269dfb375a644b59a999d24">getSupportedMedia</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mediaType);</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00164.html#ga87711c98acae5f0cb3bef1bcbc1874c7">skinHasImage</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* image);</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00164.html#ga7f7ef28b88ebff7b94290f78912b73a4">startServer</a>(<span class="keywordtype">int</span> iTyp, <span class="keywordtype">bool</span> bStart, <span class="keywordtype">bool</span> bWait = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00164.html#ga2babadc0bebb8422edc6d40b11d0d2f7">audioSuspend</a>();</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00164.html#gaee0301aad7c7ba0deac7b51d046c59b6">audioResume</a>();</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    String <a class="code" href="a00164.html#ga513f9a03c302f3f0d9af3ed6a23e0ee0">getUserAgent</a>();</div>
+<a href="a00140.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015 Team KODI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00099.html">definations.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_pvr_Internal.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="a00168.html">   26</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="a00168.html">PVRLIB</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="a00169.html">   28</a></span>&#160;<span class="keyword">namespace </span>V2</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="a00140.html#a2ab735c1c1995b95aa927d15465e4c37">   30</a></span>&#160;<span class="preprocessor">  #define DVD_TIME_BASE 1000000</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="a00140.html#aa8f3bf7de853346d6bcf7de68b1132da">   31</a></span>&#160;<span class="preprocessor">  #define DVD_NOPTS_VALUE    (-1LL&lt;&lt;52) // should be possible to represent in both double and __int64</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/*\___________________________________________________________________________</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">\*/</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">/*\___________________________________________________________________________</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">\*/</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="a00059.html">  112</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00059.html">CPVRLib</a> : <span class="keyword">protected</span> CPVRLib_Internal</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="a00235.html#gaa0bf67ad4ff0b67b500e4070f873c337">RegisterMe</a>(<span class="keywordtype">void</span> *handle);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00235.html#ga5940787dcdcdb8aa995a07106917489f">UnRegisterMe</a>();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">/*\_________________________________________________________________________</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">    \*/</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00235.html#gadfd504966cbc097f85cf6f510a1751cd">AddMenuHook</a>(</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                         PVR_MENUHOOK*      hook);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00235.html#ga25527d9a7fb4d25460bab2f036def672">Recording</a>(</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                         <span class="keyword">const</span> std::string&amp; strRecordingName,</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                         <span class="keyword">const</span> std::string&amp; strFileName,</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                         <span class="keywordtype">bool</span>               bOn);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="a00059.html#a189371e5d5b4f2016890b37d497b1674">  249</a></span>&#160;    <a class="code" href="a00059.html#a189371e5d5b4f2016890b37d497b1674">KODI_PVR_LIBRARY</a>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  };</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="comment">/*\___________________________________________________________________________</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="comment">  \*/</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="a00060.html">  277</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00060.html">CPVRLib_Transfer</a></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00236.html#gab55ab3d9f7fa5f1304edf70e39ac6a55">EpgEntry</a>(</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                         <span class="keyword">const</span> ADDON_HANDLE handle,</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                         <span class="keyword">const</span> <a class="code" href="a00027.html">EPG_TAG</a>*     entry);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00236.html#gafdbc7a9a4d1336f159150988868b1465">ChannelEntry</a>(</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                         <span class="keyword">const</span> ADDON_HANDLE handle,</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                         <span class="keyword">const</span> PVR_CHANNEL* entry);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00236.html#gae6c3ce0a07ecc854c615f2d65e550147">TimerEntry</a>(</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;                         <span class="keyword">const</span> ADDON_HANDLE handle,</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;                         <span class="keyword">const</span> PVR_TIMER*   entry);</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00236.html#gad676cb5682d7c7c959d91822342cc753">RecordingEntry</a>(</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                         <span class="keyword">const</span> ADDON_HANDLE handle,</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                         <span class="keyword">const</span> PVR_RECORDING* entry);</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00236.html#gabb331d2d9b3ef522da48c0b951ddbe21">ChannelGroup</a>(</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                         <span class="keyword">const</span> ADDON_HANDLE handle,</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;                         <span class="keyword">const</span> PVR_CHANNEL_GROUP* entry);</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    String <a class="code" href="a00164.html#ga368ee3ce640748a6cd595ebd36128eb7">convertLanguage</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* language, <span class="keywordtype">int</span> format); </div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_WEBSERVER);</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_AIRPLAYSERVER);</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_UPNPSERVER);</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_UPNPRENDERER);</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_EVENTSERVER);</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_JSONRPCSERVER);</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_ZEROCONF);</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,PLAYLIST_MUSIC);</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,PLAYLIST_VIDEO);</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,TRAY_OPEN);</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,DRIVE_NOT_READY);</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,TRAY_CLOSED_NO_MEDIA);</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,TRAY_CLOSED_MEDIA_PRESENT);</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGDEBUG);</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGINFO);</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGNOTICE);</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGWARNING);</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGERROR);</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGSEVERE);</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGFATAL);</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGNONE);</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,ISO_639_1);</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,ISO_639_2);</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,ENGLISH_NAME);</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="preprocessor">#if 0</span></div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    <span class="keywordtype">void</span> registerMonitor(Monitor* monitor);</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    <span class="keywordtype">void</span> unregisterMonitor(Monitor* monitor);</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;  }</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;}</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="a00164_html_ga3ad39f5a4a65222868520149fbdada32"><div class="ttname"><a href="a00164.html#ga3ad39f5a4a65222868520149fbdada32">stopSFX</a></div><div class="ttdeci">void stopSFX()</div></div>
-<div class="ttc" id="a00164_html_ga8e11c9b5d2d375b90578bf01a04ba50c"><div class="ttname"><a href="a00164.html#ga8e11c9b5d2d375b90578bf01a04ba50c">getGlobalIdleTime</a></div><div class="ttdeci">int getGlobalIdleTime()</div></div>
-<div class="ttc" id="a00156_html"><div class="ttname"><a href="a00156.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00164_html_ga2babadc0bebb8422edc6d40b11d0d2f7"><div class="ttname"><a href="a00164.html#ga2babadc0bebb8422edc6d40b11d0d2f7">audioSuspend</a></div><div class="ttdeci">void audioSuspend()</div></div>
-<div class="ttc" id="a00164_html_gaae1f9e78fc2e0e63f68dfe93f8e65cf9"><div class="ttname"><a href="a00164.html#gaae1f9e78fc2e0e63f68dfe93f8e65cf9">log</a></div><div class="ttdeci">void log(const char *msg, int level=lLOGDEBUG)</div></div>
-<div class="ttc" id="a00164_html_ga87711c98acae5f0cb3bef1bcbc1874c7"><div class="ttname"><a href="a00164.html#ga87711c98acae5f0cb3bef1bcbc1874c7">skinHasImage</a></div><div class="ttdeci">bool skinHasImage(const char *image)</div></div>
-<div class="ttc" id="a00164_html_ga30c84926c8fcac04a99d4cf18fc8fae6"><div class="ttname"><a href="a00164.html#ga30c84926c8fcac04a99d4cf18fc8fae6">playSFX</a></div><div class="ttdeci">void playSFX(const char *filename, bool useCached=true)</div></div>
-<div class="ttc" id="a00164_html_ga22ee094ca3f45aa4156b97d34fe678bf"><div class="ttname"><a href="a00164.html#ga22ee094ca3f45aa4156b97d34fe678bf">restart</a></div><div class="ttdeci">void restart()</div></div>
-<div class="ttc" id="a00164_html_ga4266cdf4540b57b10de937df1d4dd024"><div class="ttname"><a href="a00164.html#ga4266cdf4540b57b10de937df1d4dd024">getInfoLabel</a></div><div class="ttdeci">String getInfoLabel(const char *infotag)</div></div>
-<div class="ttc" id="a00164_html_ga1823d67ecf8c303c31892e2f39bc7123"><div class="ttname"><a href="a00164.html#ga1823d67ecf8c303c31892e2f39bc7123">getFreeMem</a></div><div class="ttdeci">long getFreeMem()</div></div>
-<div class="ttc" id="a00164_html_gac96b749cc54ebd3596e4acefee5123dc"><div class="ttname"><a href="a00164.html#gac96b749cc54ebd3596e4acefee5123dc">getCondVisibility</a></div><div class="ttdeci">bool getCondVisibility(const char *condition)</div></div>
-<div class="ttc" id="a00164_html_gaa3118b469b016e7b610aec2851a0c7de"><div class="ttname"><a href="a00164.html#gaa3118b469b016e7b610aec2851a0c7de">executescript</a></div><div class="ttdeci">void executescript(const char *script)</div></div>
-<div class="ttc" id="a00164_html_gac0cd1ce3c7d7beb5da0b2456a8477d16"><div class="ttname"><a href="a00164.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a></div><div class="ttdeci">void sleep(long timemillis)</div></div>
-<div class="ttc" id="a00164_html_ga368ee3ce640748a6cd595ebd36128eb7"><div class="ttname"><a href="a00164.html#ga368ee3ce640748a6cd595ebd36128eb7">convertLanguage</a></div><div class="ttdeci">String convertLanguage(const char *language, int format)</div></div>
-<div class="ttc" id="a00164_html_ga203ba5035eca7af26370c4480c1302bd"><div class="ttname"><a href="a00164.html#ga203ba5035eca7af26370c4480c1302bd">validatePath</a></div><div class="ttdeci">String validatePath(const String &amp;path)</div></div>
-<div class="ttc" id="a00164_html_ga77273fcb1269dfb375a644b59a999d24"><div class="ttname"><a href="a00164.html#ga77273fcb1269dfb375a644b59a999d24">getSupportedMedia</a></div><div class="ttdeci">String getSupportedMedia(const char *mediaType)</div></div>
-<div class="ttc" id="a00164_html_ga2a0ea95992942d1cbaceb3f0bfaa9240"><div class="ttname"><a href="a00164.html#ga2a0ea95992942d1cbaceb3f0bfaa9240">getSkinDir</a></div><div class="ttdeci">String getSkinDir()</div></div>
-<div class="ttc" id="a00164_html_ga28e4561db93f334227e20f8a59444655"><div class="ttname"><a href="a00164.html#ga28e4561db93f334227e20f8a59444655">getRegion</a></div><div class="ttdeci">String getRegion(const char *id)</div></div>
-<div class="ttc" id="a00164_html_ga8d27375b9d28a87af69d900c4de8758b"><div class="ttname"><a href="a00164.html#ga8d27375b9d28a87af69d900c4de8758b">enableNavSounds</a></div><div class="ttdeci">void enableNavSounds(bool yesNo)</div></div>
-<div class="ttc" id="a00164_html_ga7f7ef28b88ebff7b94290f78912b73a4"><div class="ttname"><a href="a00164.html#ga7f7ef28b88ebff7b94290f78912b73a4">startServer</a></div><div class="ttdeci">bool startServer(int iTyp, bool bStart, bool bWait=false)</div></div>
-<div class="ttc" id="a00164_html_gaee0301aad7c7ba0deac7b51d046c59b6"><div class="ttname"><a href="a00164.html#gaee0301aad7c7ba0deac7b51d046c59b6">audioResume</a></div><div class="ttdeci">void audioResume()</div></div>
-<div class="ttc" id="a00164_html_gaf3d104f3a22481b0f98d08150811d1a4"><div class="ttname"><a href="a00164.html#gaf3d104f3a22481b0f98d08150811d1a4">getCacheThumbName</a></div><div class="ttdeci">String getCacheThumbName(const String &amp;path)</div></div>
-<div class="ttc" id="a00164_html_gae3afd43404337c2c800bfeadc68c46f3"><div class="ttname"><a href="a00164.html#gae3afd43404337c2c800bfeadc68c46f3">getLanguage</a></div><div class="ttdeci">String getLanguage(int format=CLangCodeExpander::ENGLISH_NAME, bool region=false)</div></div>
-<div class="ttc" id="a00164_html_ga3437cf59c9fc815524d7aaf98077e210"><div class="ttname"><a href="a00164.html#ga3437cf59c9fc815524d7aaf98077e210">executebuiltin</a></div><div class="ttdeci">void executebuiltin(const char *function, bool wait=false)</div></div>
-<div class="ttc" id="a00164_html_ga7861ee1569802186a619778efc85af13"><div class="ttname"><a href="a00164.html#ga7861ee1569802186a619778efc85af13">shutdown</a></div><div class="ttdeci">void shutdown()</div></div>
-<div class="ttc" id="a00164_html_gaa95cd758379b99b479c2c01bdf79897e"><div class="ttname"><a href="a00164.html#gaa95cd758379b99b479c2c01bdf79897e">executeJSONRPC</a></div><div class="ttdeci">String executeJSONRPC(const char *jsonrpccommand)</div></div>
-<div class="ttc" id="a00164_html_ga9356056e34f878388950bce99f91d91c"><div class="ttname"><a href="a00164.html#ga9356056e34f878388950bce99f91d91c">getDVDState</a></div><div class="ttdeci">long getDVDState()</div></div>
-<div class="ttc" id="a00164_html_ga3393e5440a103195e85dcb93a1819baa"><div class="ttname"><a href="a00164.html#ga3393e5440a103195e85dcb93a1819baa">getCleanMovieTitle</a></div><div class="ttdeci">Tuple&lt; String, String &gt; getCleanMovieTitle(const String &amp;path, bool usefoldername=false)</div></div>
-<div class="ttc" id="a00164_html_gabcec0705cb849f38c7f56ff35ddd74cd"><div class="ttname"><a href="a00164.html#gabcec0705cb849f38c7f56ff35ddd74cd">makeLegalFilename</a></div><div class="ttdeci">String makeLegalFilename(const String &amp;filename, bool fatX=true)</div></div>
-<div class="ttc" id="a00164_html_ga79ffd96305af02e364d99c2c9d8b69de"><div class="ttname"><a href="a00164.html#ga79ffd96305af02e364d99c2c9d8b69de">getLocalizedString</a></div><div class="ttdeci">String getLocalizedString(int id)</div></div>
-<div class="ttc" id="a00164_html_ga77f8d61db7757aa22df826a904cc3a8d"><div class="ttname"><a href="a00164.html#ga77f8d61db7757aa22df826a904cc3a8d">translatePath</a></div><div class="ttdeci">String translatePath(const String &amp;path)</div></div>
-<div class="ttc" id="a00164_html_ga513f9a03c302f3f0d9af3ed6a23e0ee0"><div class="ttname"><a href="a00164.html#ga513f9a03c302f3f0d9af3ed6a23e0ee0">getUserAgent</a></div><div class="ttdeci">String getUserAgent()</div></div>
-<div class="ttc" id="a00164_html_ga6c0ea0a1473226b04455c61e679450e3"><div class="ttname"><a href="a00164.html#ga6c0ea0a1473226b04455c61e679450e3">getIPAddress</a></div><div class="ttdeci">String getIPAddress()</div></div>
-<div class="ttc" id="a00164_html_ga3a7d6dc03a52554f607527314b281e36"><div class="ttname"><a href="a00164.html#ga3a7d6dc03a52554f607527314b281e36">getInfoImage</a></div><div class="ttdeci">String getInfoImage(const char *infotag)</div></div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00236.html#ga2d24f5c60e0d4b6d3a416641b489f15e">ChannelGroupMember</a>(</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                         <span class="keyword">const</span> ADDON_HANDLE handle,</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                         <span class="keyword">const</span> PVR_CHANNEL_GROUP_MEMBER* entry);</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;  };</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;  <span class="comment">/*\___________________________________________________________________________</span></div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;<span class="comment">  \*/</span></div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;</div>
+<div class="line"><a name="l00804"></a><span class="lineno"><a class="line" href="a00061.html">  804</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00061.html">CPVRLib_Trigger</a></div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;  {</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00237.html#ga92c110f8654585fdc3f8a126d1ce54bb">TimerUpdate</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00237.html#ga64219c32345c79a130702741451c9a8e">RecordingUpdate</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00237.html#ga046bd435f53dedfbc125a70b6fcd09bb">ChannelUpdate</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00237.html#ga5d29f9d2a7bb423e21cb5dd5a2f5ab4a">ChannelGroupsUpdate</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00237.html#ga49372b48b0c3d939e69dfb83bcda3ed5">EpgUpdate</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iChannelUid);</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;  };</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;  <span class="comment">/*\___________________________________________________________________________</span></div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="comment">  \*/</span></div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;}; <span class="comment">/* namespace V2 */</span></div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;}; <span class="comment">/* namespace PVRLIB */</span></div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_pvr_LibFunc.h&quot;</span></div>
+<div class="ttc" id="a00236_html_gae6c3ce0a07ecc854c615f2d65e550147"><div class="ttname"><a href="a00236.html#gae6c3ce0a07ecc854c615f2d65e550147">PVRLIB::V2::CPVRLib_Transfer::TimerEntry</a></div><div class="ttdeci">static void TimerEntry(const ADDON_HANDLE handle, const PVR_TIMER *entry)</div><div class="ttdoc">Transfer a timer entry from the add-on to Kodi. </div></div>
+<div class="ttc" id="a00237_html_ga92c110f8654585fdc3f8a126d1ce54bb"><div class="ttname"><a href="a00237.html#ga92c110f8654585fdc3f8a126d1ce54bb">PVRLIB::V2::CPVRLib_Trigger::TimerUpdate</a></div><div class="ttdeci">static void TimerUpdate(void)</div><div class="ttdoc">Request Kodi to update it&#39;s list of timers. </div></div>
+<div class="ttc" id="a00168_html"><div class="ttname"><a href="a00168.html">PVRLIB</a></div><div class="ttdef"><b>Definition:</b> PVRLib.h:26</div></div>
+<div class="ttc" id="a00236_html_gafdbc7a9a4d1336f159150988868b1465"><div class="ttname"><a href="a00236.html#gafdbc7a9a4d1336f159150988868b1465">PVRLIB::V2::CPVRLib_Transfer::ChannelEntry</a></div><div class="ttdeci">static void ChannelEntry(const ADDON_HANDLE handle, const PVR_CHANNEL *entry)</div><div class="ttdoc">Transfer a channel entry from the add-on to Kodi. </div></div>
+<div class="ttc" id="a00027_html"><div class="ttname"><a href="a00027.html">EPG_TAG</a></div><div class="ttdoc">Representation of an EPG event. </div><div class="ttdef"><b>Definition:</b> definations.h:114</div></div>
+<div class="ttc" id="a00059_html_a189371e5d5b4f2016890b37d497b1674"><div class="ttname"><a href="a00059.html#a189371e5d5b4f2016890b37d497b1674">PVRLIB::V2::CPVRLib::KODI_PVR_LIBRARY</a></div><div class="ttdeci">KODI_PVR_LIBRARY</div><div class="ttdef"><b>Definition:</b> PVRLib.h:249</div></div>
+<div class="ttc" id="a00059_html"><div class="ttname"><a href="a00059.html">PVRLIB::V2::CPVRLib</a></div><div class="ttdef"><b>Definition:</b> PVRLib.h:112</div></div>
+<div class="ttc" id="a00236_html_gad676cb5682d7c7c959d91822342cc753"><div class="ttname"><a href="a00236.html#gad676cb5682d7c7c959d91822342cc753">PVRLIB::V2::CPVRLib_Transfer::RecordingEntry</a></div><div class="ttdeci">static void RecordingEntry(const ADDON_HANDLE handle, const PVR_RECORDING *entry)</div><div class="ttdoc">Transfer a recording entry from the add-on to Kodi. </div></div>
+<div class="ttc" id="a00237_html_ga64219c32345c79a130702741451c9a8e"><div class="ttname"><a href="a00237.html#ga64219c32345c79a130702741451c9a8e">PVRLIB::V2::CPVRLib_Trigger::RecordingUpdate</a></div><div class="ttdeci">static void RecordingUpdate(void)</div><div class="ttdoc">Request Kodi to update it&#39;s list of recordings. </div></div>
+<div class="ttc" id="a00236_html_ga2d24f5c60e0d4b6d3a416641b489f15e"><div class="ttname"><a href="a00236.html#ga2d24f5c60e0d4b6d3a416641b489f15e">PVRLIB::V2::CPVRLib_Transfer::ChannelGroupMember</a></div><div class="ttdeci">static void ChannelGroupMember(const ADDON_HANDLE handle, const PVR_CHANNEL_GROUP_MEMBER *entry)</div><div class="ttdoc">Transfer a channel group member entry from the add-on to Kodi. The channel will be added to the group...</div></div>
+<div class="ttc" id="a00236_html_gabb331d2d9b3ef522da48c0b951ddbe21"><div class="ttname"><a href="a00236.html#gabb331d2d9b3ef522da48c0b951ddbe21">PVRLIB::V2::CPVRLib_Transfer::ChannelGroup</a></div><div class="ttdeci">static void ChannelGroup(const ADDON_HANDLE handle, const PVR_CHANNEL_GROUP *entry)</div><div class="ttdoc">Transfer a channel group from the add-on to Kodi. The group will be created if it doesn&#39;t exist...</div></div>
+<div class="ttc" id="a00099_html"><div class="ttname"><a href="a00099.html">definations.h</a></div></div>
+<div class="ttc" id="a00237_html_ga49372b48b0c3d939e69dfb83bcda3ed5"><div class="ttname"><a href="a00237.html#ga49372b48b0c3d939e69dfb83bcda3ed5">PVRLIB::V2::CPVRLib_Trigger::EpgUpdate</a></div><div class="ttdeci">static void EpgUpdate(unsigned int iChannelUid)</div><div class="ttdoc">Schedule an EPG update for the given channel channel. </div></div>
+<div class="ttc" id="a00061_html"><div class="ttname"><a href="a00061.html">PVRLIB::V2::CPVRLib_Trigger</a></div><div class="ttdef"><b>Definition:</b> PVRLib.h:804</div></div>
+<div class="ttc" id="a00237_html_ga046bd435f53dedfbc125a70b6fcd09bb"><div class="ttname"><a href="a00237.html#ga046bd435f53dedfbc125a70b6fcd09bb">PVRLIB::V2::CPVRLib_Trigger::ChannelUpdate</a></div><div class="ttdeci">static void ChannelUpdate(void)</div><div class="ttdoc">Request Kodi to update it&#39;s list of channels. </div></div>
+<div class="ttc" id="a00236_html_gab55ab3d9f7fa5f1304edf70e39ac6a55"><div class="ttname"><a href="a00236.html#gab55ab3d9f7fa5f1304edf70e39ac6a55">PVRLIB::V2::CPVRLib_Transfer::EpgEntry</a></div><div class="ttdeci">static void EpgEntry(const ADDON_HANDLE handle, const EPG_TAG *entry)</div><div class="ttdoc">Transfer an EPG tag from the add-on to Kodi. </div></div>
+<div class="ttc" id="a00235_html_ga5940787dcdcdb8aa995a07106917489f"><div class="ttname"><a href="a00235.html#ga5940787dcdcdb8aa995a07106917489f">PVRLIB::V2::CPVRLib::UnRegisterMe</a></div><div class="ttdeci">static void UnRegisterMe()</div><div class="ttdoc">Release all callback methods and close handling with them. </div></div>
+<div class="ttc" id="a00060_html"><div class="ttname"><a href="a00060.html">PVRLIB::V2::CPVRLib_Transfer</a></div><div class="ttdef"><b>Definition:</b> PVRLib.h:277</div></div>
+<div class="ttc" id="a00235_html_gaa0bf67ad4ff0b67b500e4070f873c337"><div class="ttname"><a href="a00235.html#gaa0bf67ad4ff0b67b500e4070f873c337">PVRLIB::V2::CPVRLib::RegisterMe</a></div><div class="ttdeci">static bool RegisterMe(void *handle)</div><div class="ttdoc">Resolve all callback methods. </div></div>
+<div class="ttc" id="a00237_html_ga5d29f9d2a7bb423e21cb5dd5a2f5ab4a"><div class="ttname"><a href="a00237.html#ga5d29f9d2a7bb423e21cb5dd5a2f5ab4a">PVRLIB::V2::CPVRLib_Trigger::ChannelGroupsUpdate</a></div><div class="ttdeci">static void ChannelGroupsUpdate(void)</div><div class="ttdoc">Request Kodi to update it&#39;s list of channel groups. </div></div>
+<div class="ttc" id="a00235_html_ga25527d9a7fb4d25460bab2f036def672"><div class="ttname"><a href="a00235.html#ga25527d9a7fb4d25460bab2f036def672">PVRLIB::V2::CPVRLib::Recording</a></div><div class="ttdeci">static void Recording(const std::string &amp;strRecordingName, const std::string &amp;strFileName, bool bOn)</div><div class="ttdoc">Display a notification in Kodi that a recording started or stopped on the server. ...</div></div>
+<div class="ttc" id="a00235_html_gadfd504966cbc097f85cf6f510a1751cd"><div class="ttname"><a href="a00235.html#gadfd504966cbc097f85cf6f510a1751cd">PVRLIB::V2::CPVRLib::AddMenuHook</a></div><div class="ttdeci">static void AddMenuHook(PVR_MENUHOOK *hook)</div><div class="ttdoc">Add or replace a menu hook for the context menu for this add-on. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00140.html">ModuleXbmc.h</a></li>
+    <li class="navelem"><a class="el" href="dir_3b29b88e633d0e7decc99dfac3f67a6c.html">kodi</a></li><li class="navelem"><a class="el" href="dir_18238faf55c2956d175fb23354f98ed8.html">pvr.api2</a></li><li class="navelem"><a class="el" href="a00140.html">PVRLib.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

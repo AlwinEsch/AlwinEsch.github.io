@@ -1,11 +1,8 @@
 var a00191 =
 [
-    [ "CAddonGUIControlRadioButton", "a00191.html#gaa0b9881d273c8dde39999cdcb8d90257", null ],
-    [ "GetLabel", "a00191.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "IsSelected", "a00191.html#gad29f489ee580d3d6d01b334aa186c323", null ],
-    [ "SetEnabled", "a00191.html#gaac893222adeffdefc04d749648cce354", null ],
-    [ "SetLabel", "a00191.html#gab825756e641ba839bfae908492165481", null ],
-    [ "SetSelected", "a00191.html#gada1dfadeefe2948819776785fcdbf547", null ],
-    [ "SetVisible", "a00191.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlRadioButton", "a00191.html#ga4412919fbcab408f12771d6664a3cd16", null ]
+    [ "CAddonLib_VFSProperty", "a00191.html#ga965d127e0d0de44d06a0e6da2ca8f829", null ],
+    [ "Name", "a00191.html#gab29906ba5407bb58b86428cb4b4a1e26", null ],
+    [ "SetName", "a00191.html#ga940d484bb6523277e1d2c742f4f534a4", null ],
+    [ "SetValue", "a00191.html#ga69925f195530e698e569191bd4c3470c", null ],
+    [ "Value", "a00191.html#ga7533eecbdf0c0c538dd01e03fdf8f2ad", null ]
 ];

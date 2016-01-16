@@ -1,5 +1,7 @@
 var a00170 =
 [
-    [ "RegisterMe", "a00170.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
-    [ "UnRegisterMe", "a00170.html#ga5940787dcdcdb8aa995a07106917489f", null ]
+    [ "xbmc", "a00171.html", "a00171" ],
+    [ "xbmcaddon", "a00172.html", "a00172" ],
+    [ "xbmcgui", "a00173.html", "a00173" ],
+    [ "xbmcvfs", "a00174.html", "a00174" ]
 ];

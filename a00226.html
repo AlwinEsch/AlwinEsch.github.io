@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Keyboard</title>
+<title>Kodi Development: Callback functions from Kodi to add-on</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,180 +91,289 @@ $(document).ready(function(){initNavTree('a00226.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">Keyboard<div class="ingroups"><a class="el" href="a00163.html">Python Development</a> &raquo; <a class="el" href="a00164.html">xbmc</a></div></div>  </div>
+<div class="title">Callback functions from Kodi to add-on<div class="ingroups"><a class="el" href="a00176.html">C++ Development</a> &raquo; <a class="el" href="a00220.html">Library - GUILIB</a> &raquo; <a class="el" href="a00225.html">CAddonGUIWindow</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's keyboard class.</b> </p>
-<p><b><code>xbmc.Keyboard([default, heading, hidden])</code></b></p>
-<p>Creates a new <a class="el" href="a00067.html">Keyboard</a> object with default text heading and hidden input flag if supplied.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">default</td><td>: [opt] string - default text entry. </td></tr>
-    <tr><td class="paramname">heading</td><td>: [opt] string - keyboard heading. </td></tr>
-    <tr><td class="paramname">hidden</td><td>: [opt] boolean - True for hidden text entry.</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;kb = xbmc.Keyboard(<span class="stringliteral">&#39;default&#39;</span>, <span class="stringliteral">&#39;heading&#39;</span>, <span class="keyword">True</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;kb.setDefault(<span class="stringliteral">&#39;password&#39;</span>) <span class="comment"># optional</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;kb.setHeading(<span class="stringliteral">&#39;Enter password&#39;</span>) <span class="comment"># optional</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;kb.setHiddenInput(<span class="keyword">True</span>) <span class="comment"># optional</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;kb.doModal()</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordflow">if</span> (kb.isConfirmed()):</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  text = kb.getText()</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;..</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gacc43c0ec49f492cdd85ac0e53a456be3"></a>
+<p><b>GUI window callback functions.</b> </p>
+<p>Functions to handle control callbacks from Kodi </p><hr/>
+<p><a class="el" href="a00225.html">Go back to normal functions from CAddonGUIWindow</a> </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00198"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00198.html">Addon action Id's</a></td></tr>
+<tr class="memdesc:a00198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actions that we have defined. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga9c9c299166319c2248b2c62548a69fbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html#ga9c9c299166319c2248b2c62548a69fbb">IMPLEMENT_ADDON_GUI_WINDOW</a></td></tr>
+<tr class="separator:ga9c9c299166319c2248b2c62548a69fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gad3fc2a106ba0143fa5d11d3df32d9c72"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void doModal </td>
+          <td class="memname">virtual bool OnAction </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>autoclose</em> = <code>0</code></td><td>)</td>
+          <td class="paramname"><em>actionId</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Show keyboard and wait for user action.</p>
+
+<p>OnAction method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">autoclose</td><td>: [opt] integer - milliseconds to autoclose dialog. (default=do not autoclose)</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">actionId</td><td>The action id to perform, see <a class="el" href="a00252.html">Action Id's</a> to get list of them </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if action was handled there or false to handle them by Kodi itself</dd></dl>
+<p>This method will receive all actions that the main program will send to this window.</p>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>By default, only the <code>PREVIOUS_MENU</code> and <code>NAV_BACK</code> actions are handled.</li>
+<li>Overwrite this method to let your code handle all actions.</li>
+<li>Don't forget to capture <code>ADDON_ACTION_PREVIOUS_MENU</code> or <code>ADDON_ACTION_NAV_BACK</code>, else the user can't close this window.</li>
+</ul>
+</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;kb.doModal(30000)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line"><span class="comment">/* Window used with parent / child way */</span></div>
+<div class="line"><span class="keywordtype">bool</span> cYOUR_CLASS::OnAction(<span class="keywordtype">int</span> actionId)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">switch</span> (action)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="a00198.html#gga42753b64a4c9b01785035a18e768a43da532e6c2f4d77d6eca13b8478e7a05c6a">ADDON_ACTION_PREVIOUS_MENU</a>:</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="a00198.html#gga42753b64a4c9b01785035a18e768a43da916248ef06523f8131316b6fabef634a">ADDON_ACTION_NAV_BACK</a>:</div>
+<div class="line">      printf(<span class="stringliteral">&quot;action recieved: previous&quot;</span>);</div>
+<div class="line">      <a class="code" href="a00225.html#ga7f7a3199c392465d0767c6506c1af5b4">Close</a>();</div>
+<div class="line">      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="a00198.html#gga42753b64a4c9b01785035a18e768a43daa5061b9dfbda0f33a9c8ef8e7a2d8916">ADDON_ACTION_SHOW_INFO</a>:</div>
+<div class="line">      printf(<span class="stringliteral">&quot;action recieved: show info&quot;</span>);</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="a00198.html#gga42753b64a4c9b01785035a18e768a43daae103c89c5ddc6e5e78727eeaea0597f">ADDON_ACTION_STOP</a>:</div>
+<div class="line">      printf(<span class="stringliteral">&quot;action recieved: stop&quot;</span>);</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="a00198.html#gga42753b64a4c9b01785035a18e768a43dadc8bd2ae7cc584ad2f2dab3f8021a006">ADDON_ACTION_PAUSE</a>:</div>
+<div class="line">      printf(<span class="stringliteral">&quot;action recieved: pause&quot;</span>);</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    <span class="keywordflow">default</span>:</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">}</div>
+<div class="line">..</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="gafab766445043570e6a82c14851366933"></a>
+<a class="anchor" id="gad741fef5d9a1d2bf07449694e9a9e602"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String getText </td>
+          <td class="memname">virtual bool OnClick </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OnClick method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>GUI control identifier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if click was handled there or false to handle them by Kodi itself </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7f69d7353e186b8fe4a1560767721501"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool OnFocus </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OnFocus method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>GUI control identifier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if focus condition was handled there or false to handle them by Kodi itself </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7d98c001ac8d31e48df88346e28bae16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool OnInit </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Returns the user input as a string.<br />
- </p><dl class="section note"><dt>Note</dt><dd>This will always return the text entry even if you cancel the keyboard. Use the <a class="el" href="a00226.html#gadfdd82b36e1da59f1e1aa139755e49eb">isConfirmed()</a> method to check if user cancelled the keyboard.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;text = kb.getText()</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
+
+<p>OnInit method. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return true if initialize was done successful </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="gadfdd82b36e1da59f1e1aa139755e49eb"></a>
+<a class="anchor" id="ga5daaf4cdd5942017aa0be44ec98a7f95"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool isConfirmed </td>
+          <td class="memname">void SetIndependentCallbacks </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype"><a class="el" href="a00097.html#a3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a>&#160;</td>
+          <td class="paramname"><em>cbhdl</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns False if the user cancelled the input.</p>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordflow">if</span> (kb.isConfirmed()):</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  ..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga68992de7211a3a009bba135cd4cfec9a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void setDefault </td>
-          <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>line</em> = <code>emptyString</code></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool(*)(<a class="el" href="a00097.html#a3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnInit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(*)(<a class="el" href="a00097.html#a3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, int controlId)&#160;</td>
+          <td class="paramname"><em>CBOnFocus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(*)(<a class="el" href="a00097.html#a3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, int controlId)&#160;</td>
+          <td class="paramname"><em>CBOnClick</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(*)(<a class="el" href="a00097.html#a3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, int actionId)&#160;</td>
+          <td class="paramname"><em>CBOnAction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the default text entry.</p>
+
+<p><b>Set independent callbacks</b> </p>
+<p>If the class is used independent (with "new CAddonGUIWindow") and not as parent (with "cCLASS_own : CAddonGUIWindow") from own must be the callback from Kodi to add-on overdriven with own functions!</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">line</td><td>: string - default text entry.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cbhdl</td><td>The pointer to own handle data structure / class </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">CBOnInit</td><td>Own defined window init function </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">CBOnFocus</td><td>Own defined focus function </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">CBOnClick</td><td>Own defined click function </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">CBOnAction</td><td>Own defined action function</td></tr>
   </table>
   </dd>
 </dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;kb.setDefault(<span class="stringliteral">&#39;password&#39;</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">...</div>
+<div class="line"></div>
+<div class="line">bool <a class="code" href="a00226.html#ga7d98c001ac8d31e48df88346e28bae16">OnInit</a>(<a class="code" href="a00097.html#a3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code" href="a00226.html#ga7f69d7353e186b8fe4a1560767721501">OnFocus</a>(<a class="code" href="a00097.html#a3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code" href="a00226.html#gad741fef5d9a1d2bf07449694e9a9e602">OnClick</a>(<a class="code" href="a00097.html#a3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code" href="a00226.html#gad3fc2a106ba0143fa5d11d3df32d9c72">OnAction</a>(<a class="code" href="a00097.html#a3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line">...</div>
+<div class="line"><span class="comment">/* Somewhere where you create the window */</span></div>
+<div class="line">CAddonGUIWindow myWindow = <span class="keyword">new</span> <a class="code" href="a00225.html#ga2d136cfaf121935a6fc5c3fc0fdfc227">CAddonGUIWindow</a>;</div>
+<div class="line">myWindow-&gt;SetIndependentCallbacks(myWindow, <a class="code" href="a00226.html#ga7d98c001ac8d31e48df88346e28bae16">OnInit</a>, <a class="code" href="a00226.html#ga7f69d7353e186b8fe4a1560767721501">OnFocus</a>, <a class="code" href="a00226.html#gad741fef5d9a1d2bf07449694e9a9e602">OnClick</a>, <a class="code" href="a00226.html#gad3fc2a106ba0143fa5d11d3df32d9c72">OnAction</a>);</div>
+<div class="line">...</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga242a05d9df9e6d69b1a3645db14833fe"></a>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="ga9c9c299166319c2248b2c62548a69fbb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void setHeading </td>
-          <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>heading</em></td><td>)</td>
-          <td></td>
+          <td class="memname">IMPLEMENT_ADDON_GUI_WINDOW</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the keyboard heading.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">heading</td><td>: string - keyboard heading.</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;kb.setHeading(<span class="stringliteral">&#39;Enter password&#39;</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gaf88ac60d6cb1ba83c26e612582a36c24"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setHiddenInput </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>hidden</em> = <code>false</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Allows hidden text entry.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hidden</td><td>: boolean - True for hidden text entry.</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;kb.setHiddenInput(<span class="keyword">True</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
+
 </div>
 </div>
 </div><!-- contents -->

@@ -1,10 +1,7 @@
 var a00187 =
 [
-    [ "AddLabel", "a00187.html#ga47cfd2f63ce533672996085727a5fdd4", null ],
-    [ "CAddonGUIControlFadeLabel", "a00187.html#gad0307142b3766119a0f4062a68f45ce0", null ],
-    [ "GetLabel", "a00187.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "Reset", "a00187.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
-    [ "SetScrolling", "a00187.html#ga02685eb001d24047fce8ed6d4899e9af", null ],
-    [ "SetVisible", "a00187.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlFadeLabel", "a00187.html#gac737d5d712a254b8d555891a953ba685", null ]
+    [ "DNSLookup", "a00187.html#ga39943b1fdb3a928f0c08e54484602a7e", null ],
+    [ "GetIPAddress", "a00187.html#gad56ffaa14c080ecaff1f5e7534551eff", null ],
+    [ "URLEncode", "a00187.html#gab4932f2cf0d39ceca1649ec8dd782acc", null ],
+    [ "WakeOnLan", "a00187.html#ga55c0502c3db4416ce1971a85f869775b", null ]
 ];

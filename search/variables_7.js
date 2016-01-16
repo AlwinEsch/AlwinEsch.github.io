@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m_5factionevent',['m_actionEvent',['../a00074.html#a448019f171354c0bcfb90b4ebdf54fc6',1,'XBMCAddon::xbmcgui::Window']]],
+  ['m_5factionevent',['m_actionEvent',['../a00077.html#a448019f171354c0bcfb90b4ebdf54fc6',1,'XBMCAddon::xbmcgui::Window']]],
   ['m_5fchannelcount',['m_channelCount',['../a00021.html#a98e4ea22d72d3c5dce2821ae10a802f8',1,'AudioEngineFormat']]],
   ['m_5fchannels',['m_channels',['../a00021.html#a4a53bc9bcf5fe0c7d808858463f370f7',1,'AudioEngineFormat']]],
   ['m_5fdataformat',['m_dataFormat',['../a00021.html#a8f4e236f291657200f64cd2f069a8ff7',1,'AudioEngineFormat']]],
@@ -9,9 +9,11 @@ var searchData=
   ['m_5fframesamples',['m_frameSamples',['../a00021.html#a3b6b1929e0fbe39e252645260f4d97d8',1,'AudioEngineFormat']]],
   ['m_5fframesize',['m_frameSize',['../a00021.html#a7c6321b7fd7f09478ca0bf9931009ee1',1,'AudioEngineFormat']]],
   ['m_5fid',['m_id',['../a00026.html#aad966617e7e050bedbead762727808a5',1,'CMouseEvent']]],
+  ['m_5fmediadir',['m_mediaDir',['../a00079.html#a7a1d2a2834d4d397bada1a8fc10333cc',1,'XBMCAddon::xbmcgui::WindowXML']]],
   ['m_5foffsetx',['m_offsetX',['../a00026.html#a632d0c237986191da17de968fb392f58',1,'CMouseEvent']]],
   ['m_5foffsety',['m_offsetY',['../a00026.html#aed170d76d1e06cf6d2f48a0644005dfd',1,'CMouseEvent']]],
   ['m_5fsamplerate',['m_sampleRate',['../a00021.html#a046d570c56fd2ae9b813340816ebfdec',1,'AudioEngineFormat']]],
+  ['m_5fscriptpath',['m_scriptPath',['../a00079.html#a8858f11f6724974b26b31c03b2906050',1,'XBMCAddon::xbmcgui::WindowXML']]],
   ['m_5fstate',['m_state',['../a00026.html#acc4f94200981f2eb41a7df212afc1093',1,'CMouseEvent']]],
   ['major',['major',['../a00053.html#ac8947941479c38403a09c14a60b03f01',1,'kodi_version']]],
   ['minor',['minor',['../a00053.html#aec7b96885baf2e6f10efbdef9d935a0b',1,'kodi_version']]]

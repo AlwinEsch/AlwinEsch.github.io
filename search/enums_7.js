@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setting_5ftype',['SETTING_TYPE',['../class_dll_setting.html#abc3d98656de3fa0efa8fe9e1ea8d00ed',1,'DllSetting']]]
+  ['sort_5fmethod',['SORT_METHOD',['../a00256.html#gaab9f86d413fca4a9765489fb01af8cb6',1,'SortFileItem.h']]]
 ];

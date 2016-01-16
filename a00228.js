@@ -1,23 +1,13 @@
 var a00228 =
 [
-    [ "getCast", "a00228.html#ga014e2737672aac5e1fca6c67268ef7ca", null ],
-    [ "getDirector", "a00228.html#gaf9d61e5189c09ef08febcd52087001cd", null ],
-    [ "getFile", "a00228.html#ga723e190c9b450ce6558126ef95b03ec9", null ],
-    [ "getFirstAired", "a00228.html#ga9bf8326fd3213f31cf6c83cd70b7b521", null ],
-    [ "getGenre", "a00228.html#ga724866edc25325e096d7d8a76b4a3234", null ],
-    [ "getIMDBNumber", "a00228.html#ga3a5155fe7fa0cdfa1970a6f569f9b666", null ],
-    [ "getLastPlayed", "a00228.html#ga64953074270dc9bc74370b8251c1cd43", null ],
-    [ "getOriginalTitle", "a00228.html#ga4f96c0aaaf77bdf9d8eef09bb8ac8ecc", null ],
-    [ "getPath", "a00228.html#ga6779d0f135fcec6c7f8a8ee49d7af165", null ],
-    [ "getPictureURL", "a00228.html#gad3ff2085e537bfbfa2f14d0c9a1dfcaa", null ],
-    [ "getPlayCount", "a00228.html#gac644258d08f747039e9d0e76bcd49513", null ],
-    [ "getPlot", "a00228.html#ga7b4144bd89a83e0066a43d674c935453", null ],
-    [ "getPlotOutline", "a00228.html#ga9d64a845dd0f805ecfc9dede2fcb683c", null ],
-    [ "getPremiered", "a00228.html#ga6344c3ab0ba02f7381c09bfc384b0f58", null ],
-    [ "getRating", "a00228.html#ga235125a9aed4cc8c630d4e681e14d196", null ],
-    [ "getTagLine", "a00228.html#ga5de7f223574b5b39917a1e2d284ca2db", null ],
-    [ "getTitle", "a00228.html#ga888f94790c968e3f0b5de17e509098aa", null ],
-    [ "getVotes", "a00228.html#ga43531ed78e2ffc99da87d0b93293ebf9", null ],
-    [ "getWritingCredits", "a00228.html#ga85b8f5a942a429ec2e66cad259fe1fd2", null ],
-    [ "getYear", "a00228.html#ga53172a43145522837b888b7d7f7117ea", null ]
+    [ "OnPlayBackEnded", "a00228.html#ga9b673b89fb0c2d810637d97a6144743d", null ],
+    [ "OnPlayBackPaused", "a00228.html#ga535ea86e9170c85e4dfc8b2292466041", null ],
+    [ "OnPlayBackResumed", "a00228.html#ga78de3c74ca811508e2c83bad612af8a0", null ],
+    [ "OnPlayBackSeek", "a00228.html#ga1aa2520cecdb44e5f37dd2905146efa6", null ],
+    [ "OnPlayBackSeekChapter", "a00228.html#ga36be56af6bfdd7fc943f8d3f1abacfbf", null ],
+    [ "OnPlayBackSpeedChanged", "a00228.html#ga14e0279d2fb9cd6b4a68f9467e07081a", null ],
+    [ "OnPlayBackStarted", "a00228.html#ga670b9e7947764d4d474b7f8cd21c1611", null ],
+    [ "OnPlayBackStopped", "a00228.html#ga5df8f6dd6cf9fb162d1d4d77da58eb2d", null ],
+    [ "OnQueueNextItem", "a00228.html#ga817b2d696d11b166143be2c391a972f9", null ],
+    [ "SetIndependentCallbacks", "a00228.html#gaa8d87ba3157eed260e7334c1b3d96657", null ]
 ];

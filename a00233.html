@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: File</title>
+<title>Kodi Development: CPlayerLib_PlayList</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,131 +92,29 @@ $(document).ready(function(){initNavTree('a00233.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">File<div class="ingroups"><a class="el" href="a00163.html">Python Development</a> &raquo; <a class="el" href="a00168.html">xbmcvfs</a></div></div>  </div>
+<div class="title">CPlayerLib_PlayList<div class="ingroups"><a class="el" href="a00176.html">C++ Development</a> &raquo; <a class="el" href="a00231.html">Library - PlayerLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's file class.</b> </p>
-<p><b><code>xbmcvfs.File(filepath, [mode])</code></b></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filepath</td><td>: string Selected file path </td></tr>
-    <tr><td class="paramname">mode</td><td>: [opt] string Additional mode options <table class="doxtable">
-<tr>
-<th align="center">Mode </th><th align="left">Description  </th></tr>
-<tr>
-<td align="center">w </td><td align="left">Open for write </td></tr>
-</table>
-</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file, [<span class="stringliteral">&#39;w&#39;</span>])</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga5ae591df94fc66ccb85cbb6565368bca"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void close </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p><a class="el" href="a00233.html#ga5ae591df94fc66ccb85cbb6565368bca">close()</a></p>
-<p>example: f = xbmcvfs.File(file) f.close() </p>
-
-</div>
-</div>
-<a class="anchor" id="ga691e636b0dffa3c448c648f42d94437a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">String read </td>
-          <td>(</td>
-          <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>numBytes</em> = <code>0</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Read file parts as string.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bytes</td><td>: how many bytes to read [opt]- if not set it will read the whole file </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;b = f.read()</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;f.close()</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gafb6cfe2d85d46667aaa8ff4e9ae194e8"></a>
+<p><b>Playpack control list</b> </p>
+<p>Class to create a list of different sources to a continuous playback of this. This also supports a random mode (shuffle) to select the next source.</p>
+<p>It has the header <a class="el" href="a00139.html">#include &lt;kodi/player.api2/PlayList.h&gt;</a> be included to enjoy it. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaaa7aba33ed28df8d2adfa6af9b097575"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">XbmcCommons::Buffer readBytes </td>
+          <td class="memname">void AddItem </td>
           <td>(</td>
-          <td class="paramtype">unsigned long&#160;</td>
-          <td class="paramname"><em>numBytes</em> = <code>0</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>readBytes(numbytes)</p>
-<p>numbytes : how many bytes to read [opt]- if not set it will read the whole file</p>
-<p>returns: bytearray</p>
-<p>example: f = xbmcvfs.File(file) b = f.read() f.close() </p>
-
-</div>
-</div>
-<a class="anchor" id="ga8140115d0b4e6cb1ffa9f4298153d009"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long seek </td>
-          <td>(</td>
-          <td class="paramtype">long long&#160;</td>
-          <td class="paramname"><em>seekBytes</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iWhence</em>&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -224,18 +122,177 @@ $(document).ready(function(){initNavTree('a00233.html','');});
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p><a class="el" href="a00233.html#ga8140115d0b4e6cb1ffa9f4298153d009">seek()</a></p>
-<p>FilePosition : position in the file Whence : where in a file to seek from[0 begining, 1 current , 2 end possition] example: f = xbmcvfs.File(file) result = f.seek(8129, 0) f.close() </p>
 
 </div>
 </div>
-<a class="anchor" id="ga6fdf8e4501d305514d8e7b5d6cde34a6"></a>
+<a class="anchor" id="gac4aeeb4b7e884b74644e14bceb759c5b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddItem </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00049.html">CAddonGUIListItem</a> *&#160;</td>
+          <td class="paramname"><em>listitem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga2b85ec494201046fd7686395c996c272"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga9ed3d2e6831632a37dfd0ea6699ef58f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPlayerLib_PlayList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00098.html#ab07b512029688f85c2c460a1d0a8efc1">AddonPlayListType</a>&#160;</td>
+          <td class="paramname"><em>playList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga3b6ca85032d49dfd758dcaad70db8275"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetListPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga1f4581c0d5dec157ae050648b9980dda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetListSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga1c1d6bcc394fe5e4b75634dca0147427"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00098.html#ab07b512029688f85c2c460a1d0a8efc1">AddonPlayListType</a> GetPlayListType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga7de3982ed8b225f5fd1580c75847d9db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LoadPlaylist </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga0fe30656a739ee76ffac247d6c602008"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00049.html">CAddonGUIListItem</a>* operator[] </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga7834e166deca3a366bd4d25b061606fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveItem </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga9d1841bc5f559c6981b78b895d446033"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shuffle </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>shuffle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gab5aa5368f1de872e97298ab744281ee8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -243,7 +300,7 @@ $(document).ready(function(){initNavTree('a00233.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long size </td>
+          <td class="memname">virtual ~CPlayerLib_PlayList </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -251,32 +308,10 @@ $(document).ready(function(){initNavTree('a00233.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="a00233.html#ga6fdf8e4501d305514d8e7b5d6cde34a6">size()</a></p>
-<p>example: f = xbmcvfs.File(file) s = f.size() f.close() </p>
-
-</div>
-</div>
-<a class="anchor" id="ga1a6eddca986ff7164d57b9fad625e597"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool write </td>
-          <td>(</td>
-          <td class="paramtype">XbmcCommons::Buffer &amp;&#160;</td>
-          <td class="paramname"><em>buffer</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>write(buffer)</p>
-<p>buffer : buffer to write to file</p>
-<p>returns: true on success.</p>
-<p>example: f = <a class="el" href="a00075.html">xbmcvfs.File</a>(file, 'w', True) result = f.write(buffer) f.close() </p>
 
 </div>
 </div>

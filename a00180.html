@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonLib_VFSUtils</title>
+<title>Kodi Development: xbmcplugin</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,162 +91,56 @@ $(document).ready(function(){initNavTree('a00180.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">CAddonLib_VFSUtils<div class="ingroups"><a class="el" href="a00162.html">C++ Development</a> &raquo; <a class="el" href="a00169.html">Library - AddOnLIB</a></div></div>  </div>
+<div class="title">xbmcplugin<div class="ingroups"><a class="el" href="a00177.html">Python Development</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Virtual file system utilities</b> </p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00098.html">#include &lt;kodi/addon.api2/VFSUtils.h&gt;</a> be included to enjoy it. </p>
+<p><b>Plugin functions on Kodi.</b> </p>
+<p>Offers classes and functions that allow a developer to present information through Kodi's standard menu structure. While plugins don't have the same flexibility as scripts, they boast significantly quicker development time and a more consistent user experience. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00256"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00256.html">List Item sort methods.</a></td></tr>
+<tr class="memdesc:a00256"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of sort methods. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gacbb82bf91432edf4a203b4f144c7d3c4"></a>
+<a class="anchor" id="ga0b7759ec71ba6098cd71289f7ffc103d"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool CreateDirectory </td>
+          <td class="memname">bool addDirectoryItem </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPath</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Make a directory. </p>
-<p>The <a class="el" href="a00180.html#gacbb82bf91432edf4a203b4f144c7d3c4" title="Make a directory. ">CAddonLib_VFSUtils::CreateDirectory</a>(...) function shall create a new directory with name path.</p>
-<p>The newly created directory shall be an empty directory.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strPath</td><td>Path to the directory. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Upon successful completion, <a class="el" href="a00180.html#gacbb82bf91432edf4a203b4f144c7d3c4" title="Make a directory. ">CreateDirectory()</a> shall return true. Otherwise,false shall be returned, no directory shall be created, and errno shall be set to indicate the error.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string directory = <span class="stringliteral">&quot;C:\\my_dir&quot;</span>;</div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00180.html#gacbb82bf91432edf4a203b4f144c7d3c4">CAddonLib_VFSUtils::CreateDirectory</a>(directory);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory &#39;%s&#39; successfull created: %s\n&quot;</span>, directory.c_str(), ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
-<div class="line">...</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga83ff1a280df8f4bc766ef3398b976116"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">static bool DeleteFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Deletes a file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename to delete. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The file was successfully deleted.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00114.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00117.html">kodi/gui.api2/GUIDialogOK.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string filename;</div>
-<div class="line"><span class="keywordflow">if</span> (CAddonGUIDialogFileBrowser::ShowAndGetFile(<span class="stringliteral">&quot;local&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line">                                               <span class="stringliteral">&quot;Test File selection and delete of them!&quot;</span>,</div>
-<div class="line">                                               filename))</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">bool</span> successed = <a class="code" href="a00180.html#ga83ff1a280df8f4bc766ef3398b976116">CAddonLib_VFSUtils::DeleteFile</a>(filename);</div>
-<div class="line">  <span class="keywordflow">if</span> (!successed)</div>
-<div class="line">    CAddonGUIDialogOK::ShowAndGetInput(<span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;Delete of File&quot;</span>, filename, <span class="stringliteral">&quot;failed!&quot;</span>);</div>
-<div class="line">  <span class="keywordflow">else</span></div>
-<div class="line">    CAddonGUIDialogOK::ShowAndGetInput(<span class="stringliteral">&quot;Information&quot;</span>, <span class="stringliteral">&quot;Delete of File&quot;</span>, filename, <span class="stringliteral">&quot;successfull done.&quot;</span>);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga5e2010e4942df75e2929c5b13a082c1e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">static bool DirectoryExists </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPath</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Verifying the Existence of a Directory. </p>
-<p>The <a class="el" href="a00180.html#ga5e2010e4942df75e2929c5b13a082c1e" title="Verifying the Existence of a Directory. ">CAddonLib_VFSUtils::DirectoryExists</a>(...) method determines whether a specified folder exists.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strPath</td><td>Path to the directory. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True when it exists, false otherwise.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string directory = <span class="stringliteral">&quot;C:\\my_dir&quot;</span>;</div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00180.html#ga5e2010e4942df75e2929c5b13a082c1e">CAddonLib_VFSUtils::DirectoryExists</a>(directory);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory &#39;%s&#39; present: %s\n&quot;</span>, directory.c_str(), ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
-<div class="line">...</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gac73807ace2f8e3033e9f44e32e0bffeb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool FileExists </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em>, </td>
+          <td class="paramtype">const XBMCAddon::xbmcgui::ListItem *&#160;</td>
+          <td class="paramname"><em>listitem</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bUseCache</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>isFolder</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>totalItems</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -254,92 +148,48 @@ $(document).ready(function(){initNavTree('a00180.html','');});
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Check if a file exists. </p>
+<p>Callback function to pass directory contents back to Kodi.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename to check. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bUseCache</td><td>Check in file cache. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>string - url of the entry. would be <code>plugin://</code> for another virtual directory </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">listitem</td><td>ListItem - item to add. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">isFolder</td><td>[opt] bool - True=folder / False=not a folder(default). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">totalItems</td><td>[opt] integer - total number of items that will be passed.(used for progressbar) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the file exists false otherwise.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">bool <a class="code" href="a00168.html#ga12691f7bf1c5e55da57b18f63f6fbdca">exists</a> = <a class="code" href="a00180.html#gac73807ace2f8e3033e9f44e32e0bffeb">CAddonLib_VFSUtils::FileExists</a>(<span class="stringliteral">&quot;special://temp/kodi.log&quot;</span>);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Log file should be always present, is it present? %s\n&quot;</span>, <a class="code" href="a00168.html#ga12691f7bf1c5e55da57b18f63f6fbdca">exists</a> ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
+<dl class="section return"><dt>Returns</dt><dd>Returns a bool for successful completion.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments. Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordflow">if</span> <span class="keywordflow">not</span> xbmcplugin.addDirectoryItem(int(sys.argv[1]), <span class="stringliteral">&#39;F:\\Trailers\\300.mov&#39;</span>, listitem, totalItems=50): <span class="keywordflow">break</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga036d35d1c5c500c6def14e0622951346"></a>
+<a class="anchor" id="gae65e249416de893f077e2c0010b7f697"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string GetCacheThumbName </td>
+          <td class="memname">bool addDirectoryItems </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns a thumb cache filename. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>path to file </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>cache filename</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00114.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string thumb;</div>
-<div class="line">std::string filename;</div>
-<div class="line"><span class="keywordflow">if</span> (CAddonGUIDialogFileBrowser::ShowAndGetFile(<span class="stringliteral">&quot;local&quot;</span>, <span class="stringliteral">&quot;*.avi|*.mpg|*.mp4&quot;</span>,</div>
-<div class="line">                                               <span class="stringliteral">&quot;Test File selection to get Thumnail&quot;</span>,</div>
-<div class="line">                                               filename))</div>
-<div class="line">{</div>
-<div class="line">  thumb = <a class="code" href="a00180.html#ga036d35d1c5c500c6def14e0622951346">CAddonLib_VFSUtils::GetCacheThumbName</a>(filename);</div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Thumb name of file &#39;%s&#39; is %s\n&quot;</span>, thumb.c_str(), filename.c_str());</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gaf6e6b8b85c14bf77587175c446b04cc9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static unsigned int GetChunkSize </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>chunk</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>minimum</em>&#160;</td>
+          <td class="paramtype">const std::vector&lt; Tuple&lt; String, const XBMCAddon::xbmcgui::ListItem *, bool &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>totalItems</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -347,49 +197,46 @@ $(document).ready(function(){initNavTree('a00180.html','');});
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Return a size aligned to the chunk size at least as large as the chunk size. </p>
+<p>Callback function to pass directory contents back to Kodi as a list.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">chunk</td><td>The chunk size </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">minimum</td><td>The minimum size (or maybe the minimum number of chunks?) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">items</td><td>List - list of (url, listitem[, isFolder]) as a tuple to add. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">totalItems</td><td>[opt] integer - total number of items that will be passed.(used for progressbar) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The aligned size </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>Returns a bool for successful completion.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Large lists benefit over using the standard <a class="el" href="a00180.html#ga0b7759ec71ba6098cd71289f7ffc103d">addDirectoryItem()</a>. You may call this more than once to add items in chunks.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordflow">if</span> <span class="keywordflow">not</span> xbmcplugin.addDirectoryItems(int(sys.argv[1]), [(url, listitem, <span class="keyword">False</span>,)]: <span class="keywordflow">raise</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="gaf2bd94f3fa601828737bd8179e2a92e1"></a>
+<a class="anchor" id="gabc68ce9f13d4d68df93d19a61f53ff8e"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool GetDirectory </td>
+          <td class="memname">void addSortMethod </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sortMethod</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="a00016.html">CAddonLib_VFSDirEntry</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>items</em>&#160;</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>label2Mask</em> = <code>emptyString</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -397,299 +244,51 @@ $(document).ready(function(){initNavTree('a00180.html','');});
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Lists a directory. </p>
-<p>Return the list of files and directories which have been found in the specified directory and which respect the given constraint.</p>
-<p>It can handle the normal OS dependent paths and also the special virtual filesystem from Kodi what starts with <b>special://</b>.</p>
+<p>Adds a sorting method for the media list.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The path in which the files and directories are located. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>Mask to filter out requested files, e.g. "*.avi|*.mpg" to files with this ending. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">items</td><td>The returned list directory entries. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sortMethod</td><td>integer - see available <a class="el" href="a00256.html">here on List of sort methods</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">label2Mask</td><td>[opt] string - the label mask to use for the second label. Defaults to <code>%D</code></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if listing was successful, false otherwise.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">std::vector&lt;CAddonLib_VFSDirEntry&gt; items;</div>
-<div class="line"><a class="code" href="a00180.html#gaf2bd94f3fa601828737bd8179e2a92e1">CAddonLib_VFSUtils::GetDirectory</a>(<span class="stringliteral">&quot;special://temp&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, items);</div>
-<div class="line"></div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory have %lu entries\n&quot;</span>, items.size());</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; items.size(); i++)</div>
-<div class="line">{</div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot; - %04lu -- Folder: %s -- Name: %s -- Path: %s\n&quot;</span>,</div>
-<div class="line">            i+1,</div>
-<div class="line">            items[i].IsFolder() ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no &quot;</span>,</div>
-<div class="line">            items[i].Label().c_str(),</div>
-<div class="line">            items[i].Path().c_str());</div>
-<div class="line">}</div>
+<dl class="section note"><dt>Note</dt><dd>to add multiple sort methods just call the method multiple times.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmcplugin.addSortMethod(int(sys.argv[1]), xbmcplugin.SORTMETHOD_DATEADDED)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga2165e4707f3f910e36f4e98ff0f5aa7c"></a>
+<a class="anchor" id="ga4efbfacead99ce6a469bbf37f63e05eb"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string GetDirectoryName </td>
+          <td class="memname">void endOfDirectory </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the directory name from given complate path string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The complete path include file and directory </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Directory name from path</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string dirName = <a class="code" href="a00180.html#ga2165e4707f3f910e36f4e98ff0f5aa7c">CAddonLib_VFSUtils::GetDirectoryName</a>(<span class="stringliteral">&quot;special://temp/kodi.log&quot;</span>);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory name is &#39;%s&#39;\n&quot;</span>, dirName.c_str());</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga6cd9a2d2fa708d4cfe01e99b229ecaad"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string GetFileMD5 </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Retrieve MD5sum of a file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strPath</td><td>path to the file to MD5sum </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>md5 sum of the file</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00114.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string md5;</div>
-<div class="line">std::string filename;</div>
-<div class="line"><span class="keywordflow">if</span> (CAddonGUIDialogFileBrowser::ShowAndGetFile(<span class="stringliteral">&quot;local&quot;</span>, <span class="stringliteral">&quot;*.avi|*.mpg|*.mp4&quot;</span>,</div>
-<div class="line">                                               <span class="stringliteral">&quot;Test File selection to get MD5&quot;</span>,</div>
-<div class="line">                                               filename))</div>
-<div class="line">{</div>
-<div class="line">  md5 = <a class="code" href="a00180.html#ga6cd9a2d2fa708d4cfe01e99b229ecaad">CAddonLib_VFSUtils::GetFileMD5</a>(filename);</div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;MD5 of file &#39;%s&#39; is %s\n&quot;</span>, md5.c_str(), filename.c_str());</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga99209a445575f8ec40310427bc8ece4a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string GetFileName </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the file name from given complate path string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The complete path include file and directory </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Filename from path</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string fileName = <a class="code" href="a00180.html#ga99209a445575f8ec40310427bc8ece4a">CAddonLib_VFSUtils::GetFileName</a>(<span class="stringliteral">&quot;special://temp/kodi.log&quot;</span>);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;File name is &#39;%s&#39;\n&quot;</span>, fileName.c_str());</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga4847e33b9790cdee016790ad68709986"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string MakeLegalFileName </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Make filename valid. </p>
-<p>Function to replace not valid characters with '_'. It can be also compared with original before in a own loop until it is equal (no invalid characters).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>Filename to check and fix </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The legal filename</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string fileName = <span class="stringliteral">&quot;///\\jk???lj????.mpg&quot;</span>;</div>
-<div class="line">std::string legalName = <a class="code" href="a00180.html#ga4847e33b9790cdee016790ad68709986">CAddonLib_VFSUtils::MakeLegalFileName</a>(fileName);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Legal name of &#39;%s&#39; is &#39;%s&#39;\n&quot;</span>, fileName.c_str(), legalName.c_str());</div>
-<div class="line"></div>
-<div class="line"><span class="comment">/* Returns as legal: &#39;jk___lj____.mpg&#39; */</span></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga9d0b0595cd9356c38329d3d8d32ae1e2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string MakeLegalPath </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Make directory name valid. </p>
-<p>Function to replace not valid characters with '_'. It can be also compared with original before in a own loop until it is equal (no invalid characters).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strPath</td><td>Directory name to check and fix </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The legal directory name</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string path = <span class="stringliteral">&quot;///\\jk???lj????\\hgjkg&quot;</span>;</div>
-<div class="line">std::string legalPath = <a class="code" href="a00180.html#ga9d0b0595cd9356c38329d3d8d32ae1e2">CAddonLib_VFSUtils::MakeLegalPath</a>(path);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Legal name of &#39;%s&#39; is &#39;%s&#39;\n&quot;</span>, path.c_str(), legalPath.c_str());</div>
-<div class="line"></div>
-<div class="line"><span class="comment">/* Returns as legal: &#39;/jk___lj____/hgjkg&#39; */</span></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga96e34c477aa80c8b9adf682f8450af5c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool RemoveDirectory </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Removes a directory. </p>
-<p>The <a class="el" href="a00180.html#ga96e34c477aa80c8b9adf682f8450af5c" title="Removes a directory. ">CAddonLib_VFSUtils::RemoveDirectory</a>(...) function shall remove a directory whose name is given by path.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strPath</td><td>Path to the directory. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Upon successful completion, the function <a class="el" href="a00180.html#ga96e34c477aa80c8b9adf682f8450af5c" title="Removes a directory. ">RemoveDirectory()</a> shall return true. Otherwise, false shall be returned, and errno set to indicate the error. If false is returned, the named directory shall not be changed.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">bool ret = <a class="code" href="a00180.html#ga96e34c477aa80c8b9adf682f8450af5c">CAddonLib_VFSUtils::RemoveDirectory</a>(<span class="stringliteral">&quot;C:\\my_dir&quot;</span>);</div>
-<div class="line">...</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga779d626c053ee2e3f9329d7f05e3d7d2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int StatFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="a00088.html#a4d284b7e68f051cef7ba92aa96dcfc50">__stat64</a> *&#160;</td>
-          <td class="paramname"><em>buffer</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>succeeded</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>updateListing</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cacheToDisc</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -697,75 +296,341 @@ $(document).ready(function(){initNavTree('a00180.html','');});
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Get file status. </p>
-<p>These function return information about a file. Execute (search) permission is required on all of the directories in path that lead to the file.</p>
-<p>The call return a stat structure, which contains the following fields: </p><div class="fragment"><div class="line"><span class="keyword">struct </span><a class="code" href="a00088.html#a4d284b7e68f051cef7ba92aa96dcfc50">__stat64</a> {</div>
-<div class="line">  dev_t     st_dev;     <span class="comment">/* ID of device containing file */</span></div>
-<div class="line">  ino_t     st_ino;     <span class="comment">/* inode number */</span></div>
-<div class="line">  mode_t    st_mode;    <span class="comment">/* protection */</span></div>
-<div class="line">  nlink_t   st_nlink;   <span class="comment">/* number of hard links */</span></div>
-<div class="line">  uid_t     st_uid;     <span class="comment">/* user ID of owner */</span></div>
-<div class="line">  gid_t     st_gid;     <span class="comment">/* group ID of owner */</span></div>
-<div class="line">  dev_t     st_rdev;    <span class="comment">/* device ID (if special file) */</span></div>
-<div class="line">  off_t     st_size;    <span class="comment">/* total size, in bytes */</span></div>
-<div class="line">  blksize_t st_blksize; <span class="comment">/* blocksize for file system I/O */</span></div>
-<div class="line">  blkcnt_t  st_blocks;  <span class="comment">/* number of 512B blocks allocated */</span></div>
-<div class="line">  time_t    st_atime;   <span class="comment">/* time of last access */</span></div>
-<div class="line">  time_t    st_mtime;   <span class="comment">/* time of last modification */</span></div>
-<div class="line">  time_t    st_ctime;   <span class="comment">/* time of last status change */</span></div>
-<div class="line">};</div>
-</div><!-- fragment --><p>The st_dev field describes the device on which this file resides. The st_rdev field describes the device that this file (inode) represents.</p>
-<p>The st_size field gives the size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link (only on Linux and Mac OS X) is the length of the pathname it contains, without a terminating null byte.</p>
-<p>The st_blocks field indicates the number of blocks allocated to the file, 512-byte units. (This may be smaller than st_size/512 when the file has holes.).</p>
-<p>The st_blksize field gives the "preferred" blocksize for efficient file system I/O. (Writing to a file in smaller chunks may cause an inefficient read-modify-rewrite.)</p>
-<dl class="section warning"><dt>Warning</dt><dd>Not all of the OS file systems implement all of the time fields.</dd></dl>
+<p>Callback function to tell Kodi that the end of the directory listing in a virtualPythonFolder module is reached.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename to read the status from. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>The file status is written into this buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">succeeded</td><td>[opt] bool - True=script completed successfully(Default)/False=Script did not. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">updateListing</td><td>[opt] bool - True=this folder should update the current listing/False=Folder is a subfolder(Default). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cacheToDisc</td><td>[opt] bool - True=Folder will cache if extended time(default)/False=this folder will never cache to disc.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>On success, zero is returned. On error, -1 is returned, and errno is set appropriately.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00098.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">struct <a class="code" href="a00088.html#a4d284b7e68f051cef7ba92aa96dcfc50">__stat64</a> statFile;</div>
-<div class="line"><span class="keywordtype">int</span> ret = <a class="code" href="a00180.html#ga779d626c053ee2e3f9329d7f05e3d7d2">CAddonLib_VFSUtils::StatFile</a>(<span class="stringliteral">&quot;special://temp/kodi.log&quot;</span>, &amp;statFile);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;st_dev (ID of device containing file)       = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_ino (inode number)                       = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_mode (protection)                        = %u\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_nlink (number of hard links)             = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_uid (user ID of owner)                   = %u\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_gid (group ID of owner)                  = %u\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_rdev (device ID (if special file))       = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_size (total size, in bytes)              = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_blksize (blocksize for file system I/O)  = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_blocks (number of 512B blocks allocated) = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_atime (time of last access)              = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_mtime (time of last modification)        = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_ctime (time of last status change)       = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;Return value                                = %i\n&quot;</span>,</div>
-<div class="line">                     statFile.st_dev,</div>
-<div class="line">                     statFile.st_ino,</div>
-<div class="line">                     statFile.st_mode,</div>
-<div class="line">                     statFile.st_nlink,</div>
-<div class="line">                     statFile.st_uid,</div>
-<div class="line">                     statFile.st_gid,</div>
-<div class="line">                     statFile.st_rdev,</div>
-<div class="line">                     statFile.st_size,</div>
-<div class="line">                     statFile.st_blksize,</div>
-<div class="line">                     statFile.st_blocks,</div>
-<div class="line">                     statFile.st_atime,</div>
-<div class="line">                     statFile.st_mtime,</div>
-<div class="line">                     statFile.st_ctime,</div>
-<div class="line">                     ret);</div>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmcplugin.endOfDirectory(int(sys.argv[1]), cacheToDisc=<span class="keyword">False</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gac254decc5a7b5cdf14893fe7136aa9dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getSetting </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the value of a setting as a string.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>string - id of the setting that the module needs to access. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Setting value as string</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as a keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;apikey = xbmcplugin.getSetting(int(sys.argv[1]), <span class="stringliteral">&#39;apikey&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga0ee818babc80aab1ead30465b1be416f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setContent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>content</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the plugins content.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>: integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">content</td><td>: string - content type (eg. movies)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Available content strings</dt><dd><table class="doxtable">
+<tr>
+<th align="center"></th><th align="center"></th><th align="center"></th><th align="center"></th></tr>
+<tr>
+<td align="center">files </td><td align="center">songs </td><td align="center">artists </td><td align="center">albums </td></tr>
+<tr>
+<td align="center">movies </td><td align="center">tvshows </td><td align="center">episodes </td><td align="center">musicvideos </td></tr>
+</table>
+</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmcplugin.setContent(int(sys.argv[1]), <span class="stringliteral">&#39;movies&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga2303d9cc58dfd405758375a94b29f14f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPluginCategory </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>category</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the plugins name for skins to display.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>: integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">category</td><td>: string or unicode - plugins sub category.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmcplugin.setPluginCategory(int(sys.argv[1]), <span class="stringliteral">&#39;Comedy&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga2678f7c15eb38fdab9dec474ba7c1ed6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPluginFanart </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>image</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>color1</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>color2</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>color3</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the plugins fanart and color for skins to display.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>: integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>: [opt] string - path to fanart image. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color1</td><td>: [opt] hexstring - color1. (e.g. '0xFFFFFFFF') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color2</td><td>: [opt] hexstring - color2. (e.g. '0xFFFF3300') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color3</td><td>: [opt] hexstring - color3. (e.g. '0xFF000000')</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmcplugin.setPluginFanart(int(sys.argv[1]), <span class="stringliteral">&#39;special://home/addons/plugins/video/Apple movie trailers II/fanart.png&#39;</span>, color2=<span class="stringliteral">&#39;0xFFFF3300&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gad34e6025edb46d622a8ae9f7195d033c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setProperty </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets a container property for this plugin.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>: integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>: string - property name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>: string or unicode - value of property.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmcplugin.setProperty(int(sys.argv[1]), <span class="stringliteral">&#39;Emulator&#39;</span>, <span class="stringliteral">&#39;M.A.M.E.&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga269ab5fd6b88eb1f56e3bc4f5b81701a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setResolvedUrl </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>succeeded</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const XBMCAddon::xbmcgui::ListItem *&#160;</td>
+          <td class="paramname"><em>listitem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Callback function to tell Kodi that the file plugin has been resolved to a url</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">succeeded</td><td>bool - True=script completed successfully/False=Script did not. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">listitem</td><td>ListItem - item the file plugin resolved to for playback.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmcplugin.setResolvedUrl(int(sys.argv[1]), <span class="keyword">True</span>, listitem)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga397670857a9ff2861a9fe55a4c8cf206"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSetting </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets a plugin setting for the current running plugin.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>: integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>: string - id of the setting that the module needs to access. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>: string or unicode - value of the setting.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmcplugin.setSetting(int(sys.argv[1]), id=<span class="stringliteral">&#39;username&#39;</span>, value=<span class="stringliteral">&#39;teamxbmc&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
 </div><!-- fragment --> 
 </div>
 </div>

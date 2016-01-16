@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIControlEdit</title>
+<title>Kodi Development: CodecDescriptor</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,204 +92,100 @@ $(document).ready(function(){initNavTree('a00186.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIControlEdit<div class="ingroups"><a class="el" href="a00162.html">C++ Development</a> &raquo; <a class="el" href="a00206.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CodecDescriptor<div class="ingroups"><a class="el" href="a00176.html">C++ Development</a> &raquo; <a class="el" href="a00183.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Editable window text control used as an input control for the osd keyboard and other input fields</b> </p>
-<p>The edit control allows a user to input text in Kodi. You can choose the font, size, colour, location and header of the text to be displayed.</p>
-<p>It has the header <a class="el" href="a00103.html">#include &lt;kodi/gui.api2/GUIControlFadeLabel.h&gt;</a> be included to enjoy it.</p>
-<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
+<p><b>Codec type name converter</b> </p>
+<p>Some of the backends codec names don't match ffmpeg's, so translate them to something ffmpeg understands.</p>
+<p>Adapter which converts codec names used by several backends into their FFmpeg equivalents.</p>
+<p>This class is optional and is available here for two reasons. One is the some PVR add-ons need this and the other to provide an example if the own add-on also names are used not to ffmpeg are compatible. Then it might be a copy of this class to its own needs.</p>
+<p>It has the header <a class="el" href="a00094.html">#include &lt;kodi/addon.api2/Codec.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gaed5a87657d03effa3bf8f3523e8c8f48"></a>
+<a class="anchor" id="ga62b7b43b626a9b8beb0f16a8795b9d91"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">CAddonGUIControlEdit </td>
+          <td class="memname"><a class="el" href="a00052.html">kodi_codec</a> Codec </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00050.html">CAddonGUIWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga8f49c265d97c7c025da04eb79d86602c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int GetCursorPosition </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga6c80f17140ee95a258ff6c13439a2623"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GetLabel </td>
-          <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Function to retrieve used Kodi codec identification id. </p>
+<dl class="section return"><dt>Returns</dt><dd>identification of codec </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga1af3f7fd8b95cc66e7599caca454f8ef"></a>
+<a class="anchor" id="ga542cf7ce73c4f9e04f16bac4583fbb19"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string GetText </td>
+          <td class="memname">static CodecDescriptor GetCodecByName </td>
           <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>strCodecName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Static function to translate codec names who are different to them on Kodi (ffmpeg). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strCodecName</td><td>The own used codec name, currently this are <b><em>MPEG2AUDIO</em></b>, <b><em>MPEGTS</em></b> and <b><em>TEXTSUB</em></b> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>This class generated with defined Name and Codec identifier </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab29906ba5407bb58b86428cb4b4a1e26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; Name </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="gac0bffd1ac815193d85aa396fcfaf2397"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetCursorPosition </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iPosition</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gaac893222adeffdefc04d749648cce354"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetEnabled </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gaf25d6c30fea27feaa77adc955bb842de"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetInputType </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00090.html#a65e94c0b771b91d3c1f0948113ee838a">AddonGUIInputType</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gab825756e641ba839bfae908492165481"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetLabel </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga8008c108280948ebd79830f222068455"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetText </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga71a209185b7a98adf0a310d2c44cdbe6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetVisible </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>visible</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga73829ce82d2eac94bf12aff3d718ba3e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">~CAddonGUIControlEdit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Function to retrieve used Kodi codec name. </p>
+<dl class="section return"><dt>Returns</dt><dd>The string for codec based upon ffmpeg </dd></dl>
 
 </div>
 </div>

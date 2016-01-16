@@ -1,10 +1,14 @@
 var a00183 =
 [
-    [ "AddDSPMenuHook", "a00183.html#gad4e7c34b466c7523b48eb38f453c6f8b", null ],
-    [ "GetCurrentSinkFormat", "a00183.html#gaeb11fdb26f8a00296e10ff296c602bb5", null ],
-    [ "RegisterDSPMode", "a00183.html#gae95d0da238b6ffa997911dbf9eedb2d4", null ],
-    [ "RegisterMe", "a00183.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
-    [ "RemoveDSPMenuHook", "a00183.html#ga59fa2e75dbd7ede8adb9488258b55bdd", null ],
-    [ "UnregisterDSPMode", "a00183.html#gae222050a6298ea8a4b7f2085ae5e85b1", null ],
-    [ "UnRegisterMe", "a00183.html#ga5940787dcdcdb8aa995a07106917489f", null ]
+    [ "CAddonLib", "a00184.html", "a00184" ],
+    [ "CAddonLib_Codec", "a00185.html", "a00185" ],
+    [ "CAddonLib_General", "a00188.html", "a00188" ],
+    [ "CAddonLib_Network", "a00189.html", "a00189" ],
+    [ "CAddonLib_SoundPlay", "a00190.html", "a00190" ],
+    [ "CAddonLib_VFSDirEntry", "a00192.html", "a00192" ],
+    [ "CAddonLib_VFSFile", "a00193.html", "a00193" ],
+    [ "CAddonLib_VFSProperty", "a00191.html", "a00191" ],
+    [ "CAddonLib_VFSUtils", "a00194.html", "a00194" ],
+    [ "CodecDescriptor", "a00186.html", "a00186" ],
+    [ "settings.xml", "a00187.html", null ]
 ];

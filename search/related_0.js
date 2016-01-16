@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['windowdialogmixin',['WindowDialogMixin',['../a00074.html#ac9c910d78c40fbe5d80606bf053be5a9',1,'XBMCAddon::xbmcgui::Window']]]
+  ['dialogjumper',['DialogJumper',['../a00080.html#a08482f1b5aa6411d68254066f6028095',1,'XBMCAddon::xbmcgui::WindowXMLDialog']]]
 ];

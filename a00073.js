@@ -1,10 +1,17 @@
 var a00073 =
 [
-    [ "DialogProgressBG", "a00073.html#a31b7ec67973b011c9efb42dcd96a0342", null ],
-    [ "~DialogProgressBG", "a00073.html#a1ea61272a3fe716659a11170cfb143a5", null ],
-    [ "close", "a00232.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
-    [ "create", "a00232.html#gaafb8a184f497bc815d38be07731df561", null ],
-    [ "deallocating", "a00073.html#a8b6dbb40347674d0ffc08d6ec7e9a877", null ],
-    [ "isFinished", "a00232.html#ga06926ca87a7be7d8af8ee84670fffa87", null ],
-    [ "update", "a00232.html#ga90d83a72e4151aba7c05422cf34f6684", null ]
+    [ "Action", "a00073.html#a9e72d404d52a0c6d6edefac30f76e02d", null ],
+    [ "Action", "a00073.html#a1e397d04f00323e53e1757ffd48425c5", null ],
+    [ "getAmount1", "a00249.html#ga3ee04d80d5e7af5563ecc098623a90ad", null ],
+    [ "getAmount2", "a00249.html#ga0f5620d911d309e2dadadc44359bce45", null ],
+    [ "getButtonCode", "a00249.html#gab60f32db21659ba5c3f4d145b9e5947b", null ],
+    [ "getId", "a00249.html#gac7a54ea5a10c5c4683f16e3f83f77104", null ],
+    [ "setFromCAction", "a00073.html#a982c0131d2301210e0bbaa23f1fe7017", null ],
+    [ "buttonCode", "a00073.html#a2876b184c855d9cb7113c2b470c25941", null ],
+    [ "control", "a00073.html#a230a9fedb2da04dce96baad3482327cc", null ],
+    [ "fAmount1", "a00073.html#a6e3775826a44f0f4128401b63968de9c", null ],
+    [ "fAmount2", "a00073.html#a04a35e3da4c8c037ea8decd65b04e1dd", null ],
+    [ "fRepeat", "a00073.html#af2e026b2f9b496d6434bf6a78d7758a1", null ],
+    [ "id", "a00073.html#a7350fbd6ad10618f3b750b1f99ca5c3c", null ],
+    [ "strAction", "a00073.html#a5326dc8fd26effd0de499a98d0e5a032", null ]
 ];

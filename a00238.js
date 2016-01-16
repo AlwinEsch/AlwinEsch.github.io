@@ -1,10 +1,10 @@
 var a00238 =
 [
-    [ "Action Id's", "a00239.html", "a00239" ],
-    [ "onAction", "a00238.html#ga46acbc2206f67d5f8e1d44d3ebe4fa68", null ],
-    [ "onClick", "a00238.html#gad031aa7d2b1fcedaac6ad481e2e85757", null ],
-    [ "onControl", "a00238.html#ga3d8a5f47cd756f21b4744eed7ede8634", null ],
-    [ "onDoubleClick", "a00238.html#ga25347e21254d60dc94028d2ed6a0c5ed", null ],
-    [ "onFocus", "a00238.html#ga32655043662a872fb86801fe5e8e1e41", null ],
-    [ "onInit", "a00238.html#ga5a0ef4163216ec8833eb3a524f7fd80e", null ]
+    [ "Clear", "a00238.html#gaa71d36872f416feaa853788a7a7a7ef8", null ],
+    [ "CPVRStream", "a00238.html#gaf419611a13a1bca6fe60cd58cb8a952f", null ],
+    [ "CPVRStream", "a00238.html#gad8caf56bf234506f41c1fcc64a0d1ad7", null ],
+    [ "IsCleared", "a00238.html#ga324d4448e5c2dde1488e1a9b4d26c7ad", null ],
+    [ "operator<", "a00238.html#ga8c39a1e5e76bc953c53019e4ef318216", null ],
+    [ "operator=", "a00238.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6", null ],
+    [ "operator==", "a00238.html#ga2e56127d518a6487ba46cfe720bb4904", null ]
 ];

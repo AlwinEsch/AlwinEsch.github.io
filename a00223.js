@@ -1,8 +1,10 @@
 var a00223 =
 [
-    [ "ChannelGroupsUpdate", "a00223.html#ga5d29f9d2a7bb423e21cb5dd5a2f5ab4a", null ],
-    [ "ChannelUpdate", "a00223.html#ga046bd435f53dedfbc125a70b6fcd09bb", null ],
-    [ "EpgUpdate", "a00223.html#ga49372b48b0c3d939e69dfb83bcda3ed5", null ],
-    [ "RecordingUpdate", "a00223.html#ga64219c32345c79a130702741451c9a8e", null ],
-    [ "TimerUpdate", "a00223.html#ga92c110f8654585fdc3f8a126d1ce54bb", null ]
+    [ "GetCurrentWindowDialogId", "a00223.html#ga4afd43d20b97e20532eeb1fac9ae6c1f", null ],
+    [ "GetCurrentWindowId", "a00223.html#ga452c9c6299140854739860045f060d28", null ],
+    [ "GetScreenHeight", "a00223.html#ga7b736bc18cc4c9b1e6229e1af312b6e3", null ],
+    [ "GetScreenWidth", "a00223.html#ga0f0cc52a3413a502953495f26270f559", null ],
+    [ "GetVideoResolution", "a00223.html#ga9e8e637bdd545cf2cd0b922d3496a64b", null ],
+    [ "Lock", "a00223.html#gace70db8e92290399a2a070eb0a60df63", null ],
+    [ "Unlock", "a00223.html#ga50f1fb5a8527c6f1beb7c59393c934a9", null ]
 ];

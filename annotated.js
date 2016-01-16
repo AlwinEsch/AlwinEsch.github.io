@@ -1,11 +1,11 @@
 var annotated =
 [
-    [ "AddOnLIB", "a00146.html", "a00146" ],
-    [ "AudioEngineLIB", "a00148.html", "a00148" ],
-    [ "GUILIB", "a00150.html", "a00150" ],
-    [ "PlayerLIB", "a00152.html", "a00152" ],
-    [ "PVRLIB", "a00154.html", "a00154" ],
-    [ "XBMCAddon", "a00156.html", "a00156" ],
+    [ "AddOnLIB", "a00160.html", "a00160" ],
+    [ "AudioEngineLIB", "a00162.html", "a00162" ],
+    [ "GUILIB", "a00164.html", "a00164" ],
+    [ "PlayerLIB", "a00166.html", "a00166" ],
+    [ "PVRLIB", "a00168.html", "a00168" ],
+    [ "XBMCAddon", "a00170.html", "a00170" ],
     [ "AudioEngineFormat", "a00021.html", "a00021" ],
     [ "CAction", "a00024.html", "a00024" ],
     [ "CKey", "a00025.html", "a00025" ],

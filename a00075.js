@@ -1,12 +1,10 @@
 var a00075 =
 [
-    [ "File", "a00075.html#ad6c06a9065bb77311663bd2a98ef2eb5", null ],
-    [ "~File", "a00075.html#a241d694b0e799c0579a023e76cd97f18", null ],
-    [ "close", "a00233.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
-    [ "getFile", "a00075.html#ae54cc0c6b80386955f27208cbae8f3af", null ],
-    [ "read", "a00233.html#ga691e636b0dffa3c448c648f42d94437a", null ],
-    [ "readBytes", "a00233.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8", null ],
-    [ "seek", "a00233.html#ga8140115d0b4e6cb1ffa9f4298153d009", null ],
-    [ "size", "a00233.html#ga6fdf8e4501d305514d8e7b5d6cde34a6", null ],
-    [ "write", "a00233.html#ga1a6eddca986ff7164d57b9fad625e597", null ]
+    [ "DialogProgress", "a00075.html#ad6806218faf95b933b67927d5ad46a39", null ],
+    [ "~DialogProgress", "a00075.html#a94b81fdffc22f6260839893fdbf757b7", null ],
+    [ "close", "a00244.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
+    [ "create", "a00244.html#gad71569b69244d11fe949d0bbd5b75905", null ],
+    [ "deallocating", "a00075.html#a8b6dbb40347674d0ffc08d6ec7e9a877", null ],
+    [ "iscanceled", "a00244.html#ga2a944a55da1c28885d3f00d101618ac6", null ],
+    [ "update", "a00244.html#gabf439774a2aca33663c3bb785e6e7465", null ]
 ];

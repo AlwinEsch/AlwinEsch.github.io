@@ -1,17 +1,15 @@
 var a00180 =
 [
-    [ "CreateDirectory", "a00180.html#gacbb82bf91432edf4a203b4f144c7d3c4", null ],
-    [ "DeleteFile", "a00180.html#ga83ff1a280df8f4bc766ef3398b976116", null ],
-    [ "DirectoryExists", "a00180.html#ga5e2010e4942df75e2929c5b13a082c1e", null ],
-    [ "FileExists", "a00180.html#gac73807ace2f8e3033e9f44e32e0bffeb", null ],
-    [ "GetCacheThumbName", "a00180.html#ga036d35d1c5c500c6def14e0622951346", null ],
-    [ "GetChunkSize", "a00180.html#gaf6e6b8b85c14bf77587175c446b04cc9", null ],
-    [ "GetDirectory", "a00180.html#gaf2bd94f3fa601828737bd8179e2a92e1", null ],
-    [ "GetDirectoryName", "a00180.html#ga2165e4707f3f910e36f4e98ff0f5aa7c", null ],
-    [ "GetFileMD5", "a00180.html#ga6cd9a2d2fa708d4cfe01e99b229ecaad", null ],
-    [ "GetFileName", "a00180.html#ga99209a445575f8ec40310427bc8ece4a", null ],
-    [ "MakeLegalFileName", "a00180.html#ga4847e33b9790cdee016790ad68709986", null ],
-    [ "MakeLegalPath", "a00180.html#ga9d0b0595cd9356c38329d3d8d32ae1e2", null ],
-    [ "RemoveDirectory", "a00180.html#ga96e34c477aa80c8b9adf682f8450af5c", null ],
-    [ "StatFile", "a00180.html#ga779d626c053ee2e3f9329d7f05e3d7d2", null ]
+    [ "List Item sort methods.", "a00256.html", "a00256" ],
+    [ "addDirectoryItem", "a00180.html#ga0b7759ec71ba6098cd71289f7ffc103d", null ],
+    [ "addDirectoryItems", "a00180.html#gae65e249416de893f077e2c0010b7f697", null ],
+    [ "addSortMethod", "a00180.html#gabc68ce9f13d4d68df93d19a61f53ff8e", null ],
+    [ "endOfDirectory", "a00180.html#ga4efbfacead99ce6a469bbf37f63e05eb", null ],
+    [ "getSetting", "a00180.html#gac254decc5a7b5cdf14893fe7136aa9dc", null ],
+    [ "setContent", "a00180.html#ga0ee818babc80aab1ead30465b1be416f", null ],
+    [ "setPluginCategory", "a00180.html#ga2303d9cc58dfd405758375a94b29f14f", null ],
+    [ "setPluginFanart", "a00180.html#ga2678f7c15eb38fdab9dec474ba7c1ed6", null ],
+    [ "setProperty", "a00180.html#gad34e6025edb46d622a8ae9f7195d033c", null ],
+    [ "setResolvedUrl", "a00180.html#ga269ab5fd6b88eb1f56e3bc4f5b81701a", null ],
+    [ "setSetting", "a00180.html#ga397670857a9ff2861a9fe55a4c8cf206", null ]
 ];

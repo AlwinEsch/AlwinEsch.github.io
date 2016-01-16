@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CPVRLib_Transfer</title>
+<title>Kodi Development: Register functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,24 +92,14 @@ $(document).ready(function(){initNavTree('a00222.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CPVRLib_Transfer<div class="ingroups"><a class="el" href="a00162.html">C++ Development</a> &raquo; <a class="el" href="a00220.html">Library - PVRLIB</a></div></div>  </div>
+<div class="title">Register functions<div class="ingroups"><a class="el" href="a00176.html">C++ Development</a> &raquo; <a class="el" href="a00220.html">Library - GUILIB</a> &raquo; <a class="el" href="a00221.html">CGUILib</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Callback functions for PVR add-on</b> </p>
-<p>Functions inside this class are used after an Kodi to PVR client request for transfer related data to Kodi.</p>
-<p><em>This is a list of calls related to this class:</em></p><ul>
-<li><code>PVR_ERROR GetChannels(ADDON_HANDLE handle, bool bRadio);</code></li>
-<li><code>PVR_ERROR GetChannelGroups(ADDON_HANDLE handle, bool bRadio);</code></li>
-<li><code>PVR_ERROR GetChannelGroupMembers(ADDON_HANDLE handle, const PVR_CHANNEL_GROUP&amp; group);</code></li>
-<li><code>PVR_ERROR GetEPGForChannel(ADDON_HANDLE handle, const PVR_CHANNEL&amp; channel, time_t iStart, time_t iEnd);</code></li>
-<li><code>PVR_ERROR GetRecordings(ADDON_HANDLE handle, bool deleted);</code></li>
-<li><code>PVR_ERROR GetTimers(ADDON_HANDLE handle);</code></li>
-</ul>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00132.html">#include &lt;kodi/pvr.api2/PVRLib.h&gt;</a> be included to enjoy it </p>
+<p><b>Functions to handle library registration to Kodi</b> </p>
+<p><a class="el" href="a00225.html">Go back to normal functions from CAddonGUIWindow</a> </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gafdbc7a9a4d1336f159150988868b1465"></a>
+<a class="anchor" id="gaa0bf67ad4ff0b67b500e4070f873c337"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -117,21 +107,11 @@ $(document).ready(function(){initNavTree('a00222.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void ChannelEntry </td>
+          <td class="memname">static bool RegisterMe </td>
           <td>(</td>
-          <td class="paramtype">const ADDON_HANDLE&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const PVR_CHANNEL *&#160;</td>
-          <td class="paramname"><em>entry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -141,64 +121,18 @@ $(document).ready(function(){initNavTree('a00222.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Transfer a channel entry from the add-on to Kodi. </p>
-<p>Callback for <b><code>PVR_ERROR GetChannels(ADDON_HANDLE handle, bool bRadio);</code></b> from PVR system.</p>
+<p>Resolve all callback methods. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>The handle parameter that Kodi used when requesting the channel list </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td>The entry to transfer to Kodi</td></tr>
+    <tr><td class="paramname">handle</td><td>Pointer to the add-on </td></tr>
   </table>
   </dd>
 </dl>
-<hr/>
-<p><em>Here structure used for them about requested source:</em> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Representation of a TV or radio channel.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_CHANNEL</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iUniqueId;                                            <span class="comment">/* (required) unique identifier for this channel */</span></div>
-<div class="line">  <span class="keywordtype">bool</span>         bIsRadio;                                             <span class="comment">/* (required) true if this is a radio channel, false if it&#39;s a TV channel */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iChannelNumber;                                       <span class="comment">/* (optional) channel number of this channel on the backend */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iSubChannelNumber;                                    <span class="comment">/* (optional) sub channel number of this channel on the backend (ATSC) */</span></div>
-<div class="line">  <span class="keywordtype">char</span>         strChannelName[PVR_ADDON_NAME_STRING_LENGTH];         <span class="comment">/* (optional) channel name given to this channel */</span></div>
-<div class="line">  <span class="keywordtype">char</span>         strInputFormat[PVR_ADDON_INPUT_FORMAT_STRING_LENGTH]; <span class="comment">/* (optional) input format type. types can be found in ffmpeg/libavformat/allformats.c</span></div>
-<div class="line"><span class="comment">                                                                      * leave empty if unknown */</span></div>
-<div class="line">  <span class="keywordtype">char</span>         strStreamURL[PVR_ADDON_URL_STRING_LENGTH];            <span class="comment">/* (optional) the URL to use to access this channel leave empty to use this add-on to</span></div>
-<div class="line"><span class="comment">                                                                      * access the stream set to a path that&#39;s supported by Kodi otherwise. */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iEncryptionSystem;                                    <span class="comment">/* (optional) the encryption ID or CaID of this channel */</span></div>
-<div class="line">  <span class="keywordtype">char</span>         strIconPath[PVR_ADDON_URL_STRING_LENGTH];             <span class="comment">/* (optional) path to the channel icon (if present) */</span></div>
-<div class="line">  <span class="keywordtype">bool</span>         bIsHidden;                                            <span class="comment">/* (optional) true if this channel is marked as hidden */</span></div>
-<div class="line">} <a class="code" href="a00091.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_CHANNEL;</div>
-</div><!-- fragment --><hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00132.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">PVR_ERROR cVNSIData::GetChannelsList(ADDON_HANDLE handle, <span class="keywordtype">bool</span> radio)</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; &lt;YOUR_AMOUNT_OF_CHANNELS&gt;; ++i)</div>
-<div class="line">  {</div>
-<div class="line">    PVR_CHANNEL tag;</div>
-<div class="line">    memset(&amp;tag, 0 , <span class="keyword">sizeof</span>(tag));</div>
-<div class="line"></div>
-<div class="line">    tag.iChannelNumber    = &lt;YOUR_CHANNEL_NUMBER&gt;;</div>
-<div class="line">    strncpy(tag.strChannelName, &lt;YOUR_CHANNEL_NAME&gt;, <span class="keyword">sizeof</span>(tag.strChannelName) - 1);</div>
-<div class="line">    tag.iUniqueId         = &lt;YOUR_CHANNEL_UNIQUE_ID&gt;;</div>
-<div class="line">    tag.bIsRadio          = &lt;YOUR_CHANNEL_RADIO&gt;;</div>
-<div class="line">    ...</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="a00222.html#gafdbc7a9a4d1336f159150988868b1465">CPVRLib_Transfer::ChannelEntry</a>(handle, &amp;tag);</div>
-<div class="line">  }</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">return</span> PVR_ERROR_NO_ERROR;</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<dl class="section return"><dt>Returns</dt><dd>True when all methods were resolved, false otherwise. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="gabb331d2d9b3ef522da48c0b951ddbe21"></a>
+<a class="anchor" id="ga5940787dcdcdb8aa995a07106917489f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -206,21 +140,10 @@ $(document).ready(function(){initNavTree('a00222.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void ChannelGroup </td>
+          <td class="memname">static void UnRegisterMe </td>
           <td>(</td>
-          <td class="paramtype">const ADDON_HANDLE&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const PVR_CHANNEL_GROUP *&#160;</td>
-          <td class="paramname"><em>entry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -230,485 +153,8 @@ $(document).ready(function(){initNavTree('a00222.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Transfer a channel group from the add-on to Kodi. The group will be created if it doesn't exist. </p>
-<p>Callback for <b><code>GetChannelGroups(ADDON_HANDLE handle, bool bRadio);</code></b> from PVR system.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>The handle parameter that Kodi used when requesting the channel groups list </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td>The entry to transfer to Kodi</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><em>Here structure used for them about requested source:</em> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Structure about channel group</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_CHANNEL_GROUP</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">char</span>         strGroupName[PVR_ADDON_NAME_STRING_LENGTH]; <span class="comment">/* Name of this channel group */</span></div>
-<div class="line">  <span class="keywordtype">bool</span>         bIsRadio;                                   <span class="comment">/* True if this is a radio channel group, false otherwise. */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iPosition;                                  <span class="comment">/* Sort position of the group, is optional (0 indicates that</span></div>
-<div class="line"><span class="comment">                                                            * the backend doesn&#39;t support sorting of groups) */</span></div>
-<div class="line">} <a class="code" href="a00091.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_CHANNEL_GROUP;</div>
-</div><!-- fragment --><hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00132.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">PVR_ERROR GetChannelGroupList(ADDON_HANDLE handle, <span class="keywordtype">bool</span> bRadio)</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; &lt;YOUR_AMOUNT_OF_CHANNEL_GROUPS&gt;; ++i)</div>
-<div class="line">  {</div>
-<div class="line">    PVR_CHANNEL_GROUP tag;</div>
-<div class="line">    memset(&amp;tag, 0, <span class="keyword">sizeof</span>(tag));</div>
-<div class="line"></div>
-<div class="line">    strncpy(tag.strGroupName, &lt;YOUR_GROUP_NAME&gt;, <span class="keyword">sizeof</span>(tag.strGroupName) - 1);</div>
-<div class="line">    tag.bIsRadio = &lt;YOUR_GROUP_FOR_RADIO&gt; ? <span class="keyword">true</span> : <span class="keyword">false</span>;</div>
-<div class="line">    tag.iPosition = &lt;YOUR_OPTIONAL_GROUP_POSITION&gt;;  <span class="comment">// Optional, make 0 if unused</span></div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="a00222.html#gabb331d2d9b3ef522da48c0b951ddbe21">CPVRLib_Transfer::ChannelGroup</a>(handle, &amp;tag);</div>
-<div class="line">  }</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">return</span> PVR_ERROR_NO_ERROR;</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga2d24f5c60e0d4b6d3a416641b489f15e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void ChannelGroupMember </td>
-          <td>(</td>
-          <td class="paramtype">const ADDON_HANDLE&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const PVR_CHANNEL_GROUP_MEMBER *&#160;</td>
-          <td class="paramname"><em>entry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Release all callback methods and close handling with them. </p>
 
-<p>Transfer a channel group member entry from the add-on to Kodi. The channel will be added to the group if the group can be found. </p>
-<p>Callback for <b><code>GetChannelGroupMembers(ADDON_HANDLE handle, const PVR_CHANNEL_GROUP&amp; group);</code></b> from PVR system.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>The handle parameter that Kodi used when requesting the channel group members list </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td>The entry to transfer to Kodi</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><em>Here structure used for them about requested source:</em> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Structure about channel group</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_CHANNEL_GROUP</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">char</span>         strGroupName[PVR_ADDON_NAME_STRING_LENGTH]; <span class="comment">/* Name of this channel group */</span></div>
-<div class="line">  <span class="keywordtype">bool</span>         bIsRadio;                                   <span class="comment">/* True if this is a radio channel group, false otherwise. */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iPosition;                                  <span class="comment">/* Sort position of the group, is optional (0 indicates that</span></div>
-<div class="line"><span class="comment">                                                            * the backend doesn&#39;t support sorting of groups) */</span></div>
-<div class="line">} <a class="code" href="a00091.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_CHANNEL_GROUP;</div>
-</div><!-- fragment --><p><em>And here the structure used for transfer the data to Kodi on this call:</em> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Structure about channel group member channel</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_CHANNEL_GROUP_MEMBER</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">char</span>         strGroupName[PVR_ADDON_NAME_STRING_LENGTH]; <span class="comment">/* Name of the channel group to add the channel to */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iChannelUniqueId;                           <span class="comment">/* Unique id of the member */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iChannelNumber;                             <span class="comment">/* Channel number within the group, is optional  */</span></div>
-<div class="line">} <a class="code" href="a00091.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_CHANNEL_GROUP_MEMBER;</div>
-</div><!-- fragment --><hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00132.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">PVR_ERROR GetChannelGroupMembers(ADDON_HANDLE handle, <span class="keyword">const</span> PVR_CHANNEL_GROUP &amp;group)</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; &lt;YOUR_AMOUNT_OF_CHANNEL_GROUP_MEMBERS&gt;; ++i)</div>
-<div class="line">  {</div>
-<div class="line">    PVR_CHANNEL_GROUP_MEMBER tag;</div>
-<div class="line">    memset(&amp;tag, 0, <span class="keyword">sizeof</span>(tag));</div>
-<div class="line"></div>
-<div class="line">    strncpy(tag.strGroupName, &lt;YOUR_GROUP_NAME&gt;, <span class="keyword">sizeof</span>(tag.strGroupName) - 1);</div>
-<div class="line">    tag.iChannelUniqueId = &lt;YOUR_CHANNEL_UNIQUE_ID&gt;;</div>
-<div class="line">    tag.iChannelNumber = &lt;YOUR_CHANNEL_NUMBER&gt;;</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="a00222.html#ga2d24f5c60e0d4b6d3a416641b489f15e">CPVRLib_Transfer::ChannelGroupMember</a>(handle, &amp;tag);</div>
-<div class="line">  }</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">return</span> PVR_ERROR_NO_ERROR;</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gab55ab3d9f7fa5f1304edf70e39ac6a55"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void EpgEntry </td>
-          <td>(</td>
-          <td class="paramtype">const ADDON_HANDLE&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00027.html">EPG_TAG</a> *&#160;</td>
-          <td class="paramname"><em>entry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Transfer an EPG tag from the add-on to Kodi. </p>
-<p>Callback for <b><code>PVR_ERROR GetChannels(GetEPGForChannel(ADDON_HANDLE handle, const PVR_CHANNEL&amp; channel, time_t iStart, time_t iEnd));</code></b> from PVR system.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>The handle parameter that Kodi used when requesting the EPG data </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td>The entry to transfer to Kodi</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><em>Here structure used for them about requested source:</em> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Representation of a EPG event.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="a00027.html">EPG_TAG</a></div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  iUniqueBroadcastId;  <span class="comment">/* (required) identifier for this event */</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *  strTitle;            <span class="comment">/* (required) this event&#39;s title */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  iChannelNumber;      <span class="comment">/* (required) the number of the channel this event occurs on */</span></div>
-<div class="line">  time_t        startTime;           <span class="comment">/* (required) start time in UTC */</span></div>
-<div class="line">  time_t        endTime;             <span class="comment">/* (required) end time in UTC */</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *  strPlotOutline;      <span class="comment">/* (optional) plot outline */</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *  strPlot;             <span class="comment">/* (optional) plot */</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *  strOriginalTitle;    <span class="comment">/* (optional) originaltitle */</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *  strCast;             <span class="comment">/* (optional) cast */</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *  strDirector;         <span class="comment">/* (optional) director */</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *  strWriter;           <span class="comment">/* (optional) writer */</span></div>
-<div class="line">  <span class="keywordtype">int</span>           iYear;               <span class="comment">/* (optional) year */</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *  strIMDBNumber;       <span class="comment">/* (optional) IMDBNumber */</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *  strIconPath;         <span class="comment">/* (optional) icon path */</span></div>
-<div class="line">  <span class="keywordtype">int</span>           iGenreType;          <span class="comment">/* (optional) genre type */</span></div>
-<div class="line">  <span class="keywordtype">int</span>           iGenreSubType;       <span class="comment">/* (optional) genre sub type */</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *  strGenreDescription; <span class="comment">/* (optional) genre. Will be used only when iGenreType = EPG_GENRE_USE_STRING */</span></div>
-<div class="line">  time_t        firstAired;          <span class="comment">/* (optional) first aired in UTC */</span></div>
-<div class="line">  <span class="keywordtype">int</span>           iParentalRating;     <span class="comment">/* (optional) parental rating */</span></div>
-<div class="line">  <span class="keywordtype">int</span>           iStarRating;         <span class="comment">/* (optional) star rating */</span></div>
-<div class="line">  <span class="keywordtype">bool</span>          bNotify;             <span class="comment">/* (optional) notify the user when this event starts */</span></div>
-<div class="line">  <span class="keywordtype">int</span>           iSeriesNumber;       <span class="comment">/* (optional) series number */</span></div>
-<div class="line">  <span class="keywordtype">int</span>           iEpisodeNumber;      <span class="comment">/* (optional) episode number */</span></div>
-<div class="line">  <span class="keywordtype">int</span>           iEpisodePartNumber;  <span class="comment">/* (optional) episode part number */</span></div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span> *  strEpisodeName;      <span class="comment">/* (optional) episode name */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  iFlags;              <span class="comment">/* (optional) bit field of independent flags associated with the EPG entry */</span></div>
-<div class="line">} <a class="code" href="a00091.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> <a class="code" href="a00027.html">EPG_TAG</a>;</div>
-</div><!-- fragment --><hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00132.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">PVR_ERROR GetEPGForChannel(ADDON_HANDLE handle, <span class="keyword">const</span> PVR_CHANNEL &amp;channel, time_t start, time_t end)</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; &lt;YOUR_AMOUNT_OF_EPG_ENTRIES&gt;; ++i)</div>
-<div class="line">  {</div>
-<div class="line">    EPG_TAG tag;</div>
-<div class="line">    memset(&amp;tag, 0 , <span class="keyword">sizeof</span>(tag));</div>
-<div class="line"></div>
-<div class="line">    tag.<a class="code" href="a00027.html#a08bdcb8628b6bd40f38c25ad6ba319d3">iChannelNumber</a>      = &lt;YOUR_EPG_CHANNEL_NUMBER&gt;;</div>
-<div class="line">    tag.<a class="code" href="a00027.html#a268e0b240a6196bd5bef6b53a4daadc8">iUniqueBroadcastId</a>  = &lt;YOUR_EPG_ID&gt;;</div>
-<div class="line">    tag.<a class="code" href="a00027.html#aaf564fc30a2a8624cf917e282281a500">startTime</a>           = &lt;YOUR_EPG_START_TIME&gt;;</div>
-<div class="line">    tag.<a class="code" href="a00027.html#a1f1e169e482467aaf615639bb3467f09">endTime</a>             = &lt;YOUR_EPG_END_TIME&gt;;</div>
-<div class="line">    tag.<a class="code" href="a00027.html#a1b5060e9a4adc43d68b7c0efbc160d42">strTitle</a>            = &lt;YOUR_EPG_TITLE&gt;;</div>
-<div class="line">    ...</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="a00222.html#gab55ab3d9f7fa5f1304edf70e39ac6a55">CPVRLib_Transfer::EpgEntry</a>(handle, &amp;tag);</div>
-<div class="line">  }</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">return</span> PVR_ERROR_NO_ERROR;</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gad676cb5682d7c7c959d91822342cc753"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void RecordingEntry </td>
-          <td>(</td>
-          <td class="paramtype">const ADDON_HANDLE&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const PVR_RECORDING *&#160;</td>
-          <td class="paramname"><em>entry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Transfer a recording entry from the add-on to Kodi. </p>
-<p>Callback for <b><code>GetRecordings(ADDON_HANDLE handle, bool deleted);</code></b> from PVR system.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>The handle parameter that Kodi used when requesting the recordings list </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td>The entry to transfer to Kodi</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><em>Here structure used for them about requested source:</em> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Representation of a recording.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_RECORDING</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">char</span>   strRecordingId[PVR_ADDON_NAME_STRING_LENGTH];  <span class="comment">/* (required) unique id of the recording on the client. */</span></div>
-<div class="line">  <span class="keywordtype">char</span>   strTitle[PVR_ADDON_NAME_STRING_LENGTH];        <span class="comment">/* (required) the title of this recording */</span></div>
-<div class="line">  <span class="keywordtype">char</span>   strEpisodeName[PVR_ADDON_NAME_STRING_LENGTH];  <span class="comment">/* (optional) episode name (also known as subtitle) */</span></div>
-<div class="line">  <span class="keywordtype">int</span>    iSeriesNumber;                                 <span class="comment">/* (optional) series number (usually called season). Set to &quot;0&quot; for specials/pilot. For &#39;invalid&#39;</span></div>
-<div class="line"><span class="comment">                                                         * see iEpisodeNumber or set to -1 */</span></div>
-<div class="line">  <span class="keywordtype">int</span>    iEpisodeNumber;                                <span class="comment">/* (optional) episode number within the &quot;iSeriesNumber&quot; season. For &#39;invalid&#39; set to -1 or</span></div>
-<div class="line"><span class="comment">                                                         * iSeriesNumber=0 to show both are invalid */</span></div>
-<div class="line">  <span class="keywordtype">int</span>    iYear;                                         <span class="comment">/* (optional) year of first release (use to identify a specific movie re-make) / first airing for</span></div>
-<div class="line"><span class="comment">                                                         * TV shows. Set to &#39;0&#39; for invalid. */</span></div>
-<div class="line"></div>
-<div class="line">  <span class="keywordtype">char</span>   strStreamURL[PVR_ADDON_URL_STRING_LENGTH];     <span class="comment">/* (required) stream URL to access this recording */</span></div>
-<div class="line">  <span class="keywordtype">char</span>   strDirectory[PVR_ADDON_URL_STRING_LENGTH];     <span class="comment">/* (optional) directory of this recording on the client */</span></div>
-<div class="line">  <span class="keywordtype">char</span>   strPlotOutline[PVR_ADDON_DESC_STRING_LENGTH];  <span class="comment">/* (optional) plot outline */</span></div>
-<div class="line">  <span class="keywordtype">char</span>   strPlot[PVR_ADDON_DESC_STRING_LENGTH];         <span class="comment">/* (optional) plot */</span></div>
-<div class="line">  <span class="keywordtype">char</span>   strChannelName[PVR_ADDON_NAME_STRING_LENGTH];  <span class="comment">/* (optional) channel name */</span></div>
-<div class="line">  <span class="keywordtype">char</span>   strIconPath[PVR_ADDON_URL_STRING_LENGTH];      <span class="comment">/* (optional) icon path */</span></div>
-<div class="line">  <span class="keywordtype">char</span>   strThumbnailPath[PVR_ADDON_URL_STRING_LENGTH]; <span class="comment">/* (optional) thumbnail path */</span></div>
-<div class="line">  <span class="keywordtype">char</span>   strFanartPath[PVR_ADDON_URL_STRING_LENGTH];    <span class="comment">/* (optional) fanart path */</span></div>
-<div class="line">  time_t recordingTime;                                 <span class="comment">/* (optional) start time of the recording */</span></div>
-<div class="line">  <span class="keywordtype">int</span>    iDuration;                                     <span class="comment">/* (optional) duration of the recording in seconds */</span></div>
-<div class="line">  <span class="keywordtype">int</span>    iPriority;                                     <span class="comment">/* (optional) priority of this recording (from 0 - 100) */</span></div>
-<div class="line">  <span class="keywordtype">int</span>    iLifetime;                                     <span class="comment">/* (optional) life time in days of this recording */</span></div>
-<div class="line">  <span class="keywordtype">int</span>    iGenreType;                                    <span class="comment">/* (optional) genre type */</span></div>
-<div class="line">  <span class="keywordtype">int</span>    iGenreSubType;                                 <span class="comment">/* (optional) genre sub type */</span></div>
-<div class="line">  <span class="keywordtype">int</span>    iPlayCount;                                    <span class="comment">/* (optional) play count of this recording on the client */</span></div>
-<div class="line">  <span class="keywordtype">int</span>    iLastPlayedPosition;                           <span class="comment">/* (optional) last played position of this recording on the client */</span></div>
-<div class="line">  <span class="keywordtype">bool</span>   bIsDeleted;                                    <span class="comment">/* (optional) shows this recording is deleted and can be undelete */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iEpgEventId;                             <span class="comment">/* (optional) EPG event id associated with this recording */</span></div>
-<div class="line">} <a class="code" href="a00091.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_RECORDING;</div>
-</div><!-- fragment --><hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00132.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">PVR_ERROR GetRecordingsList(ADDON_HANDLE handle)</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; &lt;YOUR_AMOUNT_OF_RECORDINGS&gt;; ++i)</div>
-<div class="line">  {</div>
-<div class="line">    PVR_RECORDING tag;</div>
-<div class="line">    memset(&amp;tag, 0, <span class="keyword">sizeof</span>(tag));</div>
-<div class="line">    tag.recordingTime   = &lt;YOUR_RECORDING_TIME&gt;;</div>
-<div class="line">    tag.iDuration       = &lt;YOUR_RECORDING_DURATION&gt;;</div>
-<div class="line">    tag.bIsDeleted      = &lt;YOUR_RECORDING_DELETED&gt;;</div>
-<div class="line">    ...</div>
-<div class="line"></div>
-<div class="line">    strncpy(tag.strChannelName, &lt;YOUR_RECORDING_TV_CHANNEL&gt;, <span class="keyword">sizeof</span>(tag.strChannelName) - 1);</div>
-<div class="line">    strncpy(tag.strTitle, &lt;YOUR_RECORDING_TITLE&gt;, <span class="keyword">sizeof</span>(tag.strTitle) - 1);</div>
-<div class="line">    strncpy(tag.strPlotOutline, &lt;YOUR_RECORDING_OUTLINE_PLOT&gt;, <span class="keyword">sizeof</span>(tag.strPlotOutline) - 1);</div>
-<div class="line">    strncpy(tag.strPlot, &lt;YOUR_RECORDING_PLOT&gt;, <span class="keyword">sizeof</span>(tag.strPlot) - 1);</div>
-<div class="line">    strncpy(tag.strDirectory, YOUR_RECORDING_DIRECTORY&gt;, <span class="keyword">sizeof</span>(tag.strDirectory) - 1);</div>
-<div class="line">    strncpy(tag.strRecordingId, YOUR_RECORDING_IDENT_STRING&gt;, <span class="keyword">sizeof</span>(tag.strRecordingId) - 1);</div>
-<div class="line">    ...</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="a00222.html#gad676cb5682d7c7c959d91822342cc753">CPVRLib_Transfer::RecordingEntry</a>(handle, &amp;tag);</div>
-<div class="line">  }</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">return</span> PVR_ERROR_NO_ERROR;</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gae6c3ce0a07ecc854c615f2d65e550147"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void TimerEntry </td>
-          <td>(</td>
-          <td class="paramtype">const ADDON_HANDLE&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const PVR_TIMER *&#160;</td>
-          <td class="paramname"><em>entry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Transfer a timer entry from the add-on to Kodi. </p>
-<p>Callback for <b><code>PVR_ERROR GetTimers(ADDON_HANDLE handle);</code></b> from PVR system.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>The handle parameter that Kodi used when requesting the timers list </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td>The entry to transfer to Kodi</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><em>Here structure used for them about requested source:</em> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Representation of a timer event.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_TIMER</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    iClientIndex;                              <span class="comment">/* (required) the index of this timer given by the client. PVR_TIMER_NO_CLIENT_INDEX indicates that the</span></div>
-<div class="line"><span class="comment">                                                              * index was not yet set by the client, for example for new timers created by</span></div>
-<div class="line"><span class="comment">                                                              * Kodi and passed the first time to the client. A valid index must be greater than PVR_TIMER_NO_CLIENT_INDEX. */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    iParentClientIndex;                        <span class="comment">/* (optional) for timers scheduled by a repeating timer, the index of the repeating timer that scheduled this</span></div>
-<div class="line"><span class="comment">                                                              * timer (it&#39;s PVR_TIMER.iClientIndex value). Use PVR_TIMER_NO_PARENT to indicate that this timer was no</span></div>
-<div class="line"><span class="comment">                                                              * scheduled by a repeating timer. */</span></div>
-<div class="line">  <span class="keywordtype">int</span>             iClientChannelUid;                         <span class="comment">/* (optional) unique identifier of the channel to record on. PVR_TIMER_ANY_CHANNEL will denote &quot;any channel&quot;,</span></div>
-<div class="line"><span class="comment">                                                              * not a specifoc one. */</span></div>
-<div class="line">  time_t          startTime;                                 <span class="comment">/* (optional) start time of the recording in UTC. Instant timers that are sent to the add-on by Kodi will have</span></div>
-<div class="line"><span class="comment">                                                              * this value set to 0.*/</span></div>
-<div class="line">  time_t          endTime;                                   <span class="comment">/* (optional) end time of the recording in UTC. */</span></div>
-<div class="line">  <span class="keywordtype">bool</span>            bStartAnyTime;                             <span class="comment">/* (optional) for EPG based (not Manual) timers indicates startTime does not apply. Default = false */</span></div>
-<div class="line">  <span class="keywordtype">bool</span>            bEndAnyTime;                               <span class="comment">/* (optional) for EPG based (not Manual) timers indicates endTime does not apply. Default = false */</span></div>
-<div class="line"></div>
-<div class="line">  PVR_TIMER_STATE state;                                     <span class="comment">/* (required) the state of this timer */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    iTimerType;                                <span class="comment">/* (required) the type of this timer. It is private to the addon and can be freely defined by the addon.</span></div>
-<div class="line"><span class="comment">                                                              * The value must be greater than PVR_TIMER_TYPE_NONE.</span></div>
-<div class="line"><span class="comment">                                                              * Kodi does not interpret this value (except for checking for PVR_TIMER_TYPE_NONE), but will pass the right</span></div>
-<div class="line"><span class="comment">                                                              * id to the addon with every PVR_TIMER instance, thus the addon easily can determine the timer type. */</span></div>
-<div class="line">  <span class="keywordtype">char</span>            strTitle[PVR_ADDON_NAME_STRING_LENGTH];    <span class="comment">/* (required) a title for this timer */</span></div>
-<div class="line">  <span class="keywordtype">char</span>            strEpgSearchString[PVR_ADDON_NAME_STRING_LENGTH]; <span class="comment">/* (optional) a string used to search epg data for repeating epg-based timers. Format is backend-dependent,</span></div>
-<div class="line"><span class="comment">                                                              * for example regexp */</span></div>
-<div class="line">  <span class="keywordtype">bool</span>            bFullTextEpgSearch;                        <span class="comment">/* (optional) indicates, whether strEpgSearchString is to match against the epg episode title only or also</span></div>
-<div class="line"><span class="comment">                                                              * against &quot;other&quot; epg data (backend-dependent) */</span></div>
-<div class="line">  <span class="keywordtype">char</span>            strDirectory[PVR_ADDON_URL_STRING_LENGTH]; <span class="comment">/* (optional) the (relative) directory where the recording will be stored in */</span></div>
-<div class="line">  <span class="keywordtype">char</span>            strSummary[PVR_ADDON_DESC_STRING_LENGTH];  <span class="comment">/* (optional) the summary for this timer */</span></div>
-<div class="line">  <span class="keywordtype">int</span>             iPriority;                                 <span class="comment">/* (optional) the priority of this timer */</span></div>
-<div class="line">  <span class="keywordtype">int</span>             iLifetime;                                 <span class="comment">/* (optional) lifetime of recordings created by this timer. &gt; 0 days after which recordings will be deleted by</span></div>
-<div class="line"><span class="comment">                                                              * the backend, &lt; 0 addon defined integer list reference, == 0 disabled */</span></div>
-<div class="line">  <span class="keywordtype">int</span>             iMaxRecordings;                            <span class="comment">/* (optional) maximum number of recordings this timer shall create. &gt; 0 number of recordings, &lt; 0 addon</span></div>
-<div class="line"><span class="comment">                                                              * defined integer list reference, == 0 disabled */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    iRecordingGroup;                           <span class="comment">/* (optional) integer ref to addon/backend defined list of recording groups*/</span></div>
-<div class="line">  time_t          firstDay;                                  <span class="comment">/* (optional) the first day this timer is active, for repeating timers */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    iWeekdays;                                 <span class="comment">/* (optional) week days, for repeating timers */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    iPreventDuplicateEpisodes;                 <span class="comment">/* (optional) 1 if backend should only record new episodes in case of a repeating epg-based timer, 0 if all</span></div>
-<div class="line"><span class="comment">                                                              * episodes shall be recorded (no duplicate detection). Actual algorithm for duplicate detection is defined by the</span></div>
-<div class="line"><span class="comment">                                                              * backend. Addons may define own values for different duplicate detection algorithms, thus this is not just a bool. */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    iEpgUid;                                   <span class="comment">/* (optional) epg event id. Use PVR_TIMER_NO_EPG_UID to state that there is no EPG event id available for this</span></div>
-<div class="line"><span class="comment">                                                              * timer. Values greater than PVR_TIMER_NO_EPG_UID represent a valid epg event id. */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    iMarginStart;                              <span class="comment">/* (optional) if set, the backend starts the recording iMarginStart minutes before startTime. */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    iMarginEnd;                                <span class="comment">/* (optional) if set, the backend ends the recording iMarginEnd minutes after endTime. */</span></div>
-<div class="line">  <span class="keywordtype">int</span>             iGenreType;                                <span class="comment">/* (optional) genre type */</span></div>
-<div class="line">  <span class="keywordtype">int</span>             iGenreSubType;                             <span class="comment">/* (optional) genre sub type */</span></div>
-<div class="line">} <a class="code" href="a00091.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_TIMER;</div>
-</div><!-- fragment --><hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00132.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">PVR_ERROR GetTimersList(ADDON_HANDLE handle)</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; &lt;YOUR_AMOUNT_OF_TIMERS&gt;; ++i)</div>
-<div class="line">  {</div>
-<div class="line">    {</div>
-<div class="line">      PVR_TIMER tag;</div>
-<div class="line">      memset(&amp;tag, 0, <span class="keyword">sizeof</span>(tag));</div>
-<div class="line"></div>
-<div class="line">      tag.iTimerType        = PVR_TIMER_TYPE_NONE; <span class="comment">//&lt; or &lt;YOUR_TIMER_TYPE&gt;</span></div>
-<div class="line">      tag.iClientIndex      = &lt;YOUR_TIMER_CLIENT_INDEX&gt;;</div>
-<div class="line">      <span class="keywordtype">int</span> iActive           = &lt;YOUR_TIMER_ACTIVE&gt;;</div>
-<div class="line">      <span class="keywordtype">int</span> iRecording        = &lt;YOUR_TIMER_RECORDING&gt;;</div>
-<div class="line">      <span class="keywordtype">int</span> iPending          = &lt;YOUR_TIMER_PENDING&gt;;</div>
-<div class="line">      <span class="keywordflow">if</span> (iRecording)</div>
-<div class="line">        tag.state = PVR_TIMER_STATE_RECORDING;</div>
-<div class="line">      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (iPending || iActive)</div>
-<div class="line">        tag.state = PVR_TIMER_STATE_SCHEDULED;</div>
-<div class="line">      <span class="keywordflow">else</span></div>
-<div class="line">        tag.state = PVR_TIMER_STATE_CANCELLED;</div>
-<div class="line">      tag.startTime         = &lt;YOUR_TIMER_START_TIME&gt;;</div>
-<div class="line">      tag.endTime           = &lt;YOUR_TIMER_END_TIME&gt;;</div>
-<div class="line">      strncpy(tag.strTitle, &lt;YOUR_TIMER_TITLE&gt;, <span class="keyword">sizeof</span>(tag.strTitle) - 1);</div>
-<div class="line">      ...</div>
-<div class="line"></div>
-<div class="line">      <a class="code" href="a00222.html#gae6c3ce0a07ecc854c615f2d65e550147">CPVRLib_Transfer::TimerEntry</a>(handle, &amp;tag);</div>
-<div class="line">    }</div>
-<div class="line">  }</div>
-<div class="line">  <span class="keywordflow">return</span> PVR_ERROR_NO_ERROR;</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

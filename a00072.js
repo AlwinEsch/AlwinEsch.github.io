@@ -1,10 +1,10 @@
 var a00072 =
 [
-    [ "DialogProgress", "a00072.html#ad6806218faf95b933b67927d5ad46a39", null ],
-    [ "~DialogProgress", "a00072.html#a94b81fdffc22f6260839893fdbf757b7", null ],
-    [ "close", "a00231.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
-    [ "create", "a00231.html#gad71569b69244d11fe949d0bbd5b75905", null ],
-    [ "deallocating", "a00072.html#a8b6dbb40347674d0ffc08d6ec7e9a877", null ],
-    [ "iscanceled", "a00231.html#ga2a944a55da1c28885d3f00d101618ac6", null ],
-    [ "update", "a00231.html#gabf439774a2aca33663c3bb785e6e7465", null ]
+    [ "Addon", "a00072.html#a0913381b26757108cd17239bcbf731e4", null ],
+    [ "~Addon", "a00072.html#a31665350e5cb1a6cdacd73dc192a13f6", null ],
+    [ "getAddonInfo", "a00181.html#gaedb0b112c76349f81e261335a6b240b9", null ],
+    [ "getLocalizedString", "a00181.html#ga79ffd96305af02e364d99c2c9d8b69de", null ],
+    [ "getSetting", "a00181.html#ga6eebe8728b7d19104a482a29abdafce2", null ],
+    [ "openSettings", "a00181.html#ga73eb9124fb7a7a5f5a89c92e0bc1fb2a", null ],
+    [ "setSetting", "a00181.html#gafd6c759c5b268d0ec1467e340323783d", null ]
 ];

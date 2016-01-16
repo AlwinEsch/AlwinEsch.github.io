@@ -1,13 +1,11 @@
 var a00199 =
 [
-    [ "IsKeyboardActivated", "a00199.html#ga1ec4a068299863443fe39fcf4969e0df", null ],
-    [ "SendTextToActiveKeyboard", "a00199.html#ga3d85e8d21bc1fbdf8f946d3c7755005c", null ],
-    [ "ShowAndGetFilter", "a00199.html#gaa57c673c6a2d27bc9114ca557e9c5852", null ],
-    [ "ShowAndGetInput", "a00199.html#ga83b1e91927a105607762c38ea9e1dcb7", null ],
-    [ "ShowAndGetInput", "a00199.html#gac455ca6ff288c07edf7de7d5a0f28d80", null ],
-    [ "ShowAndGetNewPassword", "a00199.html#ga1b75480e0428c2eb657e9e3df1c5f6b3", null ],
-    [ "ShowAndGetNewPassword", "a00199.html#ga74b411283e562425ab3f6d2c01d1f229", null ],
-    [ "ShowAndVerifyNewPassword", "a00199.html#gaf03bd1a86951ae9a1b5f91a901957e11", null ],
-    [ "ShowAndVerifyNewPassword", "a00199.html#gab0b3eb13c8faa5d58e8e7eb59b7c50a9", null ],
-    [ "ShowAndVerifyPassword", "a00199.html#ga48bdcccb89234aad454a6be1cf219928", null ]
+    [ "CAddonGUIControlButton", "a00199.html#ga3132552bcc57d1c10aa86871c5dca313", null ],
+    [ "GetLabel", "a00199.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
+    [ "GetLabel2", "a00199.html#ga94e3a8c89b6a8d0fb69cb8f44c3d5b1b", null ],
+    [ "SetEnabled", "a00199.html#gaac893222adeffdefc04d749648cce354", null ],
+    [ "SetLabel", "a00199.html#ga0468217482f9a171183b1cda613417e6", null ],
+    [ "SetLabel2", "a00199.html#ga4f36ea518d9c722f2cdc03cac01aabf3", null ],
+    [ "SetVisible", "a00199.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "~CAddonGUIControlButton", "a00199.html#gaeb9b958abdc7aa81b76bb43b856edb9a", null ]
 ];

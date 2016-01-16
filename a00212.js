@@ -1,10 +1,10 @@
 var a00212 =
 [
-    [ "Addon action Id's", "a00184.html", "a00184" ],
-    [ "OnAction", "a00212.html#gad3fc2a106ba0143fa5d11d3df32d9c72", null ],
-    [ "OnClick", "a00212.html#gad741fef5d9a1d2bf07449694e9a9e602", null ],
-    [ "OnFocus", "a00212.html#ga7f69d7353e186b8fe4a1560767721501", null ],
-    [ "OnInit", "a00212.html#ga7d98c001ac8d31e48df88346e28bae16", null ],
-    [ "SetIndependentCallbacks", "a00212.html#ga5daaf4cdd5942017aa0be44ec98a7f95", null ],
-    [ "IMPLEMENT_ADDON_GUI_WINDOW", "a00212.html#ga9c9c299166319c2248b2c62548a69fbb", null ]
+    [ "ShowAndGetDirectory", "a00212.html#gab1c3767a978a71751a8ea550d449eed6", null ],
+    [ "ShowAndGetFile", "a00212.html#ga5924085e93999a96dc9fc5a6c5f9362b", null ],
+    [ "ShowAndGetFileFromDir", "a00212.html#ga5ef242152a302da9ab13f61ca77b7ac3", null ],
+    [ "ShowAndGetFileList", "a00212.html#ga11dac37e6c6fd7dcaa18997d54e90b1a", null ],
+    [ "ShowAndGetImage", "a00212.html#ga10785676725a192799092e82ae4a68ba", null ],
+    [ "ShowAndGetImageList", "a00212.html#gad8c149a33ac60207e2953244f72f7a1d", null ],
+    [ "ShowAndGetSource", "a00212.html#gab582e8181c1569b7ff713e8924c4aa73", null ]
 ];
