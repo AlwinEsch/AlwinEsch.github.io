@@ -1,13 +1,12 @@
 var a00206 =
 [
-    [ "File", "a00270.html", "a00270" ],
-    [ "Stat", "a00281.html", "a00281" ],
-    [ "copy", "a00206.html#ga9188bb84632ebdbc54faca1de9be95c3", null ],
-    [ "deleteFile", "a00206.html#gabf13e7bae1c97bc1c4188f3e4e459f95", null ],
-    [ "exists", "a00206.html#ga12691f7bf1c5e55da57b18f63f6fbdca", null ],
-    [ "listdir", "a00206.html#ga6bb30280e2eb7d5b94cfb0eb6e65b0cb", null ],
-    [ "mkdir", "a00206.html#gaf69897d9a5235e87828a9e75c1cae4ca", null ],
-    [ "mkdirs", "a00206.html#ga229e97a6a47bdff0122f1004c4feda5c", null ],
-    [ "rename", "a00206.html#gaefc98ff66890f353b4ea7fd620b63808", null ],
-    [ "rmdir", "a00206.html#gac83ea5fb566ee294cdd87c74c6697025", null ]
+    [ "Action", "a00276.html", "a00276" ],
+    [ "Control", "a00289.html", "a00289" ],
+    [ "Dialog", "a00270.html", "a00270" ],
+    [ "DialogProgress", "a00271.html", "a00271" ],
+    [ "DialogProgressBG", "a00272.html", "a00272" ],
+    [ "ListItem", "a00304.html", "a00304" ],
+    [ "Window", "a00277.html", "a00277" ],
+    [ "getCurrentWindowDialogId", "a00206.html#ga8379c35c147def9f607d18571e24678e", null ],
+    [ "getCurrentWindowId", "a00206.html#gab1660e44ef103bd39fff61229809f567", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonLib_VFSProperty</title>
+<title>Kodi Development: CAddonLib_General</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,30 +92,122 @@ $(document).ready(function(){initNavTree('a00215.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonLib_VFSProperty<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a> &raquo; <a class="el" href="a00207.html">Library - AddOnLIB</a></div></div>  </div>
+<div class="title">CAddonLib_General<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a> &raquo; <a class="el" href="a00210.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Virtual file system entry property</b> </p>
-<p>The <a class="el" href="a00018.html">CAddonLib_VFSProperty</a> is used to manage additional file information, if present it will be used in <a class="el" href="a00016.html">CAddonLib_VFSDirEntry</a> as a list.</p>
-<p>The additional information will be provided with text, either for the name as well as for the value.</p>
-<p>It has the header <a class="el" href="a00124.html">#include &lt;kodi/addon.api2/VFSUtils.h&gt;</a> be included to enjoy it. </p>
+<p><b>General functions</b> </p>
+<p>The below listed general functions allow to send your own commands to perform either there commands, or to obtain information.</p>
+<p>These are pure static functions them no other initialization need.</p>
+<p>It has the header <a class="el" href="a00124.html">#include &lt;kodi/addon.api2/General.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga965d127e0d0de44d06a0e6da2ca8f829"></a>
+<a class="anchor" id="gaa34c1001d9a7cc1f405ec7d1d743e8b4"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">CAddonLib_VFSProperty </td>
+          <td class="memname">static void AudioResume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resume Audio engine. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::AudioResume();</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gac5887e3499c4bd58664b0b14fec7621f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void AudioSuspend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Suspend Audio engine. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::AudioSuspend();</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gac2683dbc97e4f57e1b27d30e728b0f76"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool EjectOpticalDrive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send eject signal to optical drive. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if successfull done</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">if (!<a class="code" href="a00215.html#gac2683dbc97e4f57e1b27d30e728b0f76">CAddonLib_General::EjectOpticalDrive</a>())</div>
+<div class="line">  <a class="code" href="a00215.html#gabd930a9f867043a32052b92f3df7e1a2">CAddonLib_General::Log</a>(<a class="code" href="a00117.html#af8526ffb1ee2a785489ac05b6e49d357a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Eject of drive failed!&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gacf180009e0848622c1e8d1b8fa0b38d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ExecuteBuiltin </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramname"><em>function</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>wait</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -123,103 +215,1804 @@ $(document).ready(function(){initNavTree('a00215.html','');});
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Constructor. </p>
+<p>Execute a built in Kodi function. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Property name </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Defined value to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">function</td><td>builtin function to execute </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wait</td><td>[opt] if true wait until finished</td></tr>
   </table>
   </dd>
 </dl>
-
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::ExecuteBuiltin(<span class="stringliteral">&quot;RunXBE(c:\\avalaunch.xbe)&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="gab29906ba5407bb58b86428cb4b4a1e26"></a>
+<a class="anchor" id="ga8f1e0bb521e6f18a337c0f5f4ec59011"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string&amp; Name </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Used Name. </p>
-<dl class="section return"><dt>Returns</dt><dd>Defined name </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga940d484bb6523277e1d2c742f4f534a4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetName </td>
+          <td class="memname">static std::string ExecuteJSONRPC </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramname"><em>jsonrpccommand</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Set name to use. </p>
+<p>Execute an JSONRPC command. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Property name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">jsonrpccommand</td><td>jsonrpc command to execute </td></tr>
   </table>
   </dd>
 </dl>
-
+<dl class="section return"><dt>Returns</dt><dd>From jsonrpc returned string for command</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string response = <a class="code" href="a00215.html#ga8f1e0bb521e6f18a337c0f5f4ec59011">CAddonLib_General::ExecuteJSONRPC</a>(<span class="stringliteral">&#39;{ \&quot;jsonrpc\&quot;: \&quot;2.0\&quot;, \&quot;method\&quot;: \&quot;JSONRPC.Introspect\&quot;, \&quot;id\&quot;: 1 }&#39;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga69925f195530e698e569191bd4c3470c"></a>
+<a class="anchor" id="ga6812432a63f38b31ac2212c6cc2db70b"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SetValue </td>
+          <td class="memname">static void ExecuteScript </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramname"><em>script</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Set defined value. </p>
+<p>Execute a python script. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Defined value to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">script</td><td>filename to execute</td></tr>
   </table>
   </dd>
 </dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::ExecuteScript(<span class="stringliteral">&quot;special://home/scripts/update.py&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga59454fec88db17ab3b948686d9cb0fc3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string GetAddonInfo </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the value of an addon property as a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>id of the property that the module needs to access <table class="doxtable">
+<tr>
+<th align="center"></th><th align="center">Choices are </th><th align="center"></th></tr>
+<tr>
+<td align="center">author </td><td align="center">icon </td><td align="center">stars </td></tr>
+<tr>
+<td align="center">changelog </td><td align="center">id </td><td align="center">summary </td></tr>
+<tr>
+<td align="center">description </td><td align="center">name </td><td align="center">type </td></tr>
+<tr>
+<td align="center">disclaimer </td><td align="center">path </td><td align="center">version </td></tr>
+<tr>
+<td align="center">fanart </td><td align="center">profile </td><td align="center"></td></tr>
+</table>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returned information string</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Throws exception on wrong string value!</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string addonName = <a class="code" href="a00215.html#ga59454fec88db17ab3b948686d9cb0fc3">CAddonLib_General::GetAddonInfo</a>(<span class="stringliteral">&quot;name&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gae11abf988fcaa1296042519b546e1931"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string GetDVDMenuLanguage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the DVD menu language. </p>
+<dl class="section return"><dt>Returns</dt><dd>The DVD menu langauge, or empty if unknown </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga7533eecbdf0c0c538dd01e03fdf8f2ad"></a>
+<a class="anchor" id="ga69fc0e0bc6cd028e330f605d78338bd4"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string&amp; Value </td>
+          <td class="memname">static long GetFreeMem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the amount of free memory in MB as an integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>free memory</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">long freeMem = <a class="code" href="a00215.html#ga69fc0e0bc6cd028e330f605d78338bd4">CAddonLib_General::GetFreeMem</a>();</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga50ba8f68514054203858ed2ac71f1c04"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int GetGlobalIdleTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the elapsed idle time in seconds as an integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>idle time</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">int time = <a class="code" href="a00215.html#ga50ba8f68514054203858ed2ac71f1c04">CAddonLib_General::GetGlobalIdleTime</a>();</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaf5e0a0c5a573ce2b8a518d1976a5d365"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string GetLanguage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00117.html#ad481b851c163786e65d41b9ab47ed14e">lang_formats</a>&#160;</td>
+          <td class="paramname"><em>format</em> = <code><a class="el" href="a00117.html#ad481b851c163786e65d41b9ab47ed14ea8e9dbb43889202ef570c318560f52635">LANG_FMT_ENGLISH_NAME</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>region</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the active language as a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>Used format of the returned language string <table class="doxtable">
+<tr>
+<th align="right">enum code: </th><th>Description:  </th></tr>
+<tr>
+<td align="right">LANG_FMT_ENGLISH_NAME </td><td>full language name in English (Default) </td></tr>
+<tr>
+<td align="right">LANG_FMT_ISO_639_1 </td><td>two letter code as defined in ISO 639-1 </td></tr>
+<tr>
+<td align="right">LANG_FMT_ISO_639_2 </td><td>three letter code as defined in ISO 639-2/T or ISO 639-2/B </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">region</td><td>[opt] append the region delimited by "-" of the language (setting) to the returned language string <em>(default is <b><code>false</code></b>)</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>active language</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string language = <a class="code" href="a00215.html#gaf5e0a0c5a573ce2b8a518d1976a5d365">CAddonLib_General::GetLanguage</a>(<a class="code" href="a00117.html#ad481b851c163786e65d41b9ab47ed14ea282b7d25014247cf5f26f5ee0fe6ea51">LANG_FMT_ISO_639_1</a>, <span class="keyword">false</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga235c1ccd54660e2316308da64b7ca8ec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string GetLocalizedString </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>labelId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strDefault</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an addon's localized 'unicode string'. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">labelId</td><td>for string you want to localize. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strDefault</td><td>[opt] The default message, also helps to identify the code that is used <em>(default is <b><code>empty</code></b>)</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The localized message, or strDefault if the add-on helper fails to return a message</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Label id's <b>30000</b> to <b>30999</b> and <b>32000</b> to <b>32999</b> are related to own add-on included strings inside <b>./resources/language/resource.language.??_??/strings.po</b> all others are from Kodi itself.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string str = <a class="code" href="a00215.html#ga235c1ccd54660e2316308da64b7ca8ec">CAddonLib_General::GetLocalizedString</a>(30005, <span class="stringliteral">&quot;Use me as default&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaa0615380fc1f79b6a740e642d8c193eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void GetMD5 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>md5</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the MD5 digest of the given text. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>text to compute the MD5 for </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">md5</td><td>Returned MD5 digest</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string md5;</div>
+<div class="line"><a class="code" href="a00215.html#gaa0615380fc1f79b6a740e642d8c193eb">CAddonLib_General::GetMD5</a>(<span class="stringliteral">&quot;Make me as md5&quot;</span>, md5);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;My md5 digest is: &#39;%s&#39;&quot;</span>, md5.c_str());</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaf834a4d744c00031ad6fe065ec4811c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00117.html#a6854c40ee0b4222220398351339f0aa5">dvd_state</a> GetOpticalDriveState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the dvd state as an integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current state of drive </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3ca61e2f681d9f4014edd480f2a9037d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string GetRegion </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns your regions setting as a string for the specified id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>id of setting to return <table class="doxtable">
+<tr>
+<th align="center"></th><th align="center">Choices are </th><th align="center"></th></tr>
+<tr>
+<td align="center">dateshort </td><td align="center">time </td><td align="center">tempunit </td></tr>
+<tr>
+<td align="center">datelong </td><td align="center">meridiem </td><td align="center">speedunit </td></tr>
+</table>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>settings string</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Throws exception on wrong string value!</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string timeFormat = <a class="code" href="a00215.html#ga3ca61e2f681d9f4014edd480f2a9037d">CAddonLib_General::GetRegion</a>(<span class="stringliteral">&quot;time&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga07ea8ff122f6054bf0df78334bffb2a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool GetSettingBoolean </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>settingName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>settingValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>global</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a boolean settings value for this add-on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">settingName</td><td>The name of the setting to get. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">settingValue</td><td>The value. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">global</td><td>[opt] If set to true becomes Kodi itself asked about a setting <em>(default is <b><code>false</code></b>)</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successfull done</dd></dl>
+<p><b><em>Boolean type examples for add-on</em></b> <code>./resources/settings.xml</code></p><ul>
+<li><code>bool</code><ul>
+<li>Shows a boolean check point to settings dialog <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting id=&quot;kodion.setup_wizard&quot; type=&quot;bool&quot; label=&quot;30025&quot; default=&quot;true&quot;/&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;setting id=&quot;show-notifications&quot; type=&quot;bool&quot; label=&quot;32018&quot; default=&quot;true&quot; /&gt;</div>
+</div><!-- fragment --><ul>
+<li><b><em><code>id="string"</code></em></b> (required) - the name of the setting</li>
+<li><b><em><code>label="id"</code></em></b> (required) - an id from the language file that indicates which text to display.</li>
+<li><b><em><code>default="true"|"false"</code></em></b> (optional) - the default value.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">bool</span> show_notifications = <span class="keyword">true</span>;</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="a00215.html#ga07ea8ff122f6054bf0df78334bffb2a8">CAddonLib_General::GetSettingBoolean</a>(<span class="stringliteral">&quot;show-notifications&quot;</span>, show_notifications))</div>
+<div class="line">  <a class="code" href="a00215.html#gabd930a9f867043a32052b92f3df7e1a2">CAddonLib_General::Log</a>(<a class="code" href="a00117.html#af8526ffb1ee2a785489ac05b6e49d357a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;show-notifications&#39; setting, falling back to default&quot;</span>);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga6509bcadc40df73bb818eb5178d61144"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool GetSettingFloat </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>settingName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>settingValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>global</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a float settings value for this add-on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">settingName</td><td>The name of the setting to get. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">settingValue</td><td>The value. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">global</td><td>[opt] If set to true becomes Kodi itself asked about a setting <em>(default is <b><code>false</code></b>)</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful done</dd></dl>
+<p><b><em>Floating type examples for add-on</em></b> <code>./resources/settings.xml</code></p><ul>
+<li><code>slider</code><ul>
+<li>Shows a moveable slider control to get values from range <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting id=&quot;kodi.amplication.volume&quot; type=&quot;slider&quot; label=&quot;30024&quot; default=&quot;1.0&quot; range=&quot;0.0,0.1,2.0&quot; option=&quot;float&quot;/&gt;</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+</ul>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">float</span> volume = 1.0;</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="a00215.html#ga6509bcadc40df73bb818eb5178d61144">CAddonLib_General::GetSettingFloat</a>(<span class="stringliteral">&quot;kodi.amplication.volume&quot;</span>, volume))</div>
+<div class="line">  <a class="code" href="a00215.html#gabd930a9f867043a32052b92f3df7e1a2">CAddonLib_General::Log</a>(<a class="code" href="a00117.html#af8526ffb1ee2a785489ac05b6e49d357a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;kodi.amplication.volume&#39; setting, falling back to default&quot;</span>);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gadb7a87e29cdc64dcc85d99c78c627e4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool GetSettingInt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>settingName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>settingValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>global</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Numeric input elements allow a user to enter a number. The "label" attribute must contain an id from the language file that indicates which text to display for the input field. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">settingName</td><td>The name of the setting to get. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">settingValue</td><td>The value. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">global</td><td>[opt] If set to true becomes Kodi itself asked about a setting <em>(default is <b><code>false</code></b>)</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successfull done</dd></dl>
+<p><b><em>Integer type examples for add-on</em></b> <code>./resources/settings.xml</code></p><ul>
+<li><code>number</code><ul>
+<li>To get a numeric entry <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting id=&quot;kodion.view.default&quot; type=&quot;number&quot; label=&quot;30027&quot; default=&quot;50&quot;/&gt;</div>
+</div><!-- fragment --><ul>
+<li><b><em><code>id="string"</code></em></b> (required) - the name of the setting.</li>
+<li><b><em><code>label="id"</code></em></b> (required) - an id from the language file that indicates which text to display.</li>
+<li><b><em><code>default="value"</code></em></b> (optional) - the default value.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>enum</code><ul>
+<li>Shows a spin control about given string values and use a integer value from selection <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting id=&quot;kodion.video.quality&quot; type=&quot;enum&quot; label=&quot;30010&quot; enable=&quot;eq(1,false)&quot; lvalues=&quot;30016|30017|30011|30012|30013&quot; default=&quot;3&quot; /&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;setting id=&quot;notification_length&quot; type=&quot;enum&quot; label=&quot;101&quot; values=&quot;1|2|3|4|5|6|7|8|9|10&quot; default=&quot;5&quot; /&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;&lt;setting id=&quot;time-of-day&quot; type=&quot;enum&quot; values=&quot;All|Day only|Night only|Smart&quot; label=&quot;32006&quot; visible=&quot;true&quot; default=&quot;0&quot;/&gt;</div>
+</div><!-- fragment --><ul>
+<li><b><em><code>id="string"</code></em></b> (required) - the name of the setting</li>
+<li><b><em><code>label="id"</code></em></b> (required) - an id from the language file that indicates which text to display.</li>
+<li><b><em><code>values="value1[|value2[...]]"</code></em></b> - or -</li>
+<li><b><em><code>lvalues="id1[|id2[...]]"</code></em></b> (required):<ul>
+<li>A list of values or language file ids from which the user can choose.</li>
+<li>values="$HOURS" is special case to select hour ( works only for type="enum" )</li>
+</ul>
+</li>
+<li><b><em><code>sort="yes"</code></em></b> - sorts labels ( works only for type="labelenum" )</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>slider</code><ul>
+<li>Allows the user to enter a number using a horizontal sliding bar. <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting id=&quot;kodion.cache.size&quot; type=&quot;slider&quot; label=&quot;30024&quot; default=&quot;5&quot; range=&quot;1,1,20&quot; option=&quot;int&quot;/&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;setting label=&quot;32053&quot; type=&quot;slider&quot; id=&quot;limit&quot; default=&quot;20&quot; range=&quot;5,5,100&quot; option=&quot;int&quot; /&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;&lt;setting label=&quot;32053&quot; type=&quot;slider&quot; id=&quot;limit&quot; default=&quot;20&quot; range=&quot;0,100&quot;/&gt;</div>
+</div><!-- fragment --><ul>
+<li><b><em><code>id="string"</code></em></b> (required) - the name of the setting.</li>
+<li><b><em><code>label="id"</code></em></b> (required) - an id from the language file that indicates which text to display.</li>
+<li><b><em><code>range="min[,step],max"</code></em></b> (required) - specify the range of valid values.</li>
+<li><b><em><code>option="int"|"float"|"percent"</code></em></b> (required) - specifies whether to allow the user to choose between integers, floating point numbers or a percentage.</li>
+<li><b><em><code>default="value"</code></em></b> (optional) - the default value.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> cachesize = 5;</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="a00215.html#gadb7a87e29cdc64dcc85d99c78c627e4a">CAddonLib_General::GetSettingInt</a>(<span class="stringliteral">&quot;kodion.cache.size&quot;</span>, bitrate))</div>
+<div class="line">  <a class="code" href="a00215.html#gabd930a9f867043a32052b92f3df7e1a2">CAddonLib_General::Log</a>(<a class="code" href="a00117.html#af8526ffb1ee2a785489ac05b6e49d357a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;kodion.cache.size&#39; setting, falling back to default&quot;</span>);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga93d864d53355eb2dfd5eb5424f254963"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool GetSettingString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>settingName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>settingValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>global</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a string settings value for this add-on. </p>
+<dl class="section warning"><dt>Warning</dt><dd>For this function and others below is no access on Kodi about passwords, paths and network parts allowed! Text input elements allow a user to input text in various formats. The "label" attribute must contain an id from the language file that indicates which text to display for the input field. To get path from add-on can be from <code>GetSettingString</code> the <code>settingValue</code> <b>__addonpath__</b> used.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">settingName</td><td>The name of the setting to get. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">settingValue</td><td>The value. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">global</td><td>[opt] If set to true becomes Kodi itself asked about a setting <em>(default is <b><code>false</code></b>)</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successfull done</dd></dl>
+<p><b><em>String type examples for add-on</em></b> <code>./resources/settings.xml</code></p><ul>
+<li><code>text</code><ul>
+<li>Allow a user to enter one line of text. <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting id=&quot;addon.language&quot; type=&quot;text&quot; label=&quot;30523&quot; default=&quot;en-US&quot;/&gt;</div>
+</div><!-- fragment --><ul>
+<li><b><em><code>id="string"</code></em></b> (required) - the name of the setting.</li>
+<li><b><em><code>label="id"</code></em></b> (required) - an id from the language file that indicates which text to display.</li>
+<li><b><em><code>option="hidden"|"urlencoded"</code></em></b> (optional)<ul>
+<li>if set to <b><em>"hidden"</em></b>, each characters entered by the user will be obfuscated with an asterisks ("*"), as is usual for entering passwords.</li>
+<li>if set to <b><em>"urlencoded"</em></b>, each non-alphanumeric characters entered by the user will be "escaped" using XX encoding.</li>
+</ul>
+</li>
+<li><b><em><code>default="value"</code></em></b> (optional) - the default value.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>folder</code><ul>
+<li>Allow the user to browse for and select a folder. <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting id=&quot;iconpath&quot; type=&quot;folder&quot; source=&quot;files&quot; label=&quot;30048&quot; default=&quot;&quot; /&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;setting id=&quot;download-folder&quot; type=&quot;folder&quot; label=&quot;32010&quot;/&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;&lt;setting id=&quot;image_path&quot; type=&quot;folder&quot; source=&quot;pictures&quot; label=&quot;32012&quot; visible=&quot;eq(-2,1)&quot; default=&quot;&quot;/&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;&lt;setting label=&quot;32033&quot; type=&quot;folder&quot; id=&quot;folder&quot; source=&quot;auto&quot; option=&quot;writeable&quot;/&gt;</div>
+</div><!-- fragment --><ul>
+<li><b><em><code>id="string"</code></em></b> (required) - the name of the setting</li>
+<li><b><em><code>label="id"</code></em></b> (required) - an id from the language file that indicates which text to display.</li>
+<li><b><em><code>source="auto"|"images"|...</code></em></b> (optional, default="auto") - select a starting folder for the browse dialog. <table class="doxtable">
+<tr>
+<th align="center">Source types </th><th>Description  </th></tr>
+<tr>
+<td align="center">music </td><td>Include music related sources </td></tr>
+<tr>
+<td align="center">video </td><td>Include video related sources </td></tr>
+<tr>
+<td align="center">pictures </td><td>Include pictures related sources </td></tr>
+<tr>
+<td align="center">programs </td><td>Include praograms related sources </td></tr>
+<tr>
+<td align="center">local </td><td>Include local system related sources </td></tr>
+</table>
+</li>
+<li><b><em><code>value="value"</code></em></b> (optional, default="") - the default value.</li>
+<li><b><em><code>option="writeable"</code></em></b> (optional, default="") - the user can be allowed to create and select new folders by setting this argument.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>file</code><ul>
+<li>To select file by the user. <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting id=&quot;rtmp_binary&quot; type=&quot;file&quot; label=&quot;103&quot; default=&quot;&quot; /&gt;</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+<li><code>ipaddress</code><ul>
+<li>To use setting for ip address with the related dialog. <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting id=&quot;hostip&quot; enable=&quot;eq(-1,true)&quot; type=&quot;ipaddress&quot; label=&quot;32302&quot; default=&quot;127.0.0.1&quot; subsetting=&quot;true&quot; /&gt;</div>
+</div><!-- fragment --><ul>
+<li><b><em><code>id="string"</code></em></b> (required) - the name of the setting.</li>
+<li><b><em><code>label="id"</code></em></b> (required) - an id from the language file that indicates which text to display.</li>
+<li><b><em><code>default="value"</code></em></b> (optional) - the default value.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>fileenum</code><ul>
+<li>Display files in a folder as an enum selector. <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;-- Example: List sub-folders of the &#39;resources&#39; folder for this add-on in the settings. --/&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;setting id=&quot;myenum&quot; type=&quot;fileenum&quot; values=&quot;resources&quot; mask=&quot;/&quot;/&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;&lt;setting id=&quot;trailer.ratingMax&quot; label=&quot;32062&quot; type=&quot;fileenum&quot; values=&quot;$PROFILE/settings/ratings&quot; default=&quot;MPAA&quot; mask=&quot;/&quot;/&gt;</div>
+</div><!-- fragment --><ul>
+<li><b><em><code>mask="value"</code></em></b> - filter selectable files. Examples: "/" - display only folders. "*.txt" - display only .txt files.</li>
+<li><b><em><code>option="hideext"</code></em></b> - hide file extensions.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>labelenum</code><ul>
+<li>Shows a spin control about given string values and use a string value from selection. <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting id=&quot;bitrate&quot; type=&quot;labelenum&quot; label=&quot;30003&quot; default=&quot;Max&quot; values=&quot;Min|Max|Select&quot; /&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;setting id=&quot;trailer.quality&quot; label=&quot;32067&quot; type=&quot;labelenum&quot; values=&quot;480p|720p|1080p&quot; default=&quot;720p&quot; /&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;&lt;setting id=&quot;scope&quot; label=&quot;32092&quot; type=&quot;labelenum&quot; values=&quot;16:9|2.35:1|2.40:1&quot; default=&quot;0&quot; /&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;&lt;setting id=&quot;quality&quot; type=&quot;labelenum&quot; label=&quot;$LOCALIZE[622]&quot; values=&quot;720p|480p&quot; default=&quot;720p&quot; /&gt;</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+</ul>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line">std::string bitrate = <span class="stringliteral">&quot;Max&quot;</span>;</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="a00215.html#ga93d864d53355eb2dfd5eb5424f254963">CAddonLib_General::GetSettingString</a>(<span class="stringliteral">&quot;bitrate&quot;</span>, bitrate))</div>
+<div class="line">  <a class="code" href="a00215.html#gabd930a9f867043a32052b92f3df7e1a2">CAddonLib_General::Log</a>(<a class="code" href="a00117.html#af8526ffb1ee2a785489ac05b6e49d357a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;bitrate&#39; setting, falling back to default&quot;</span>);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga72e4fba2b5dc8f89f1b26469ea237702"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float GetVolume </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>percentage</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current global Kodi audio volume. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">percentage</td><td>[opt] if set to false becomes amplication level returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The volume value</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">float percent = <a class="code" href="a00215.html#ga72e4fba2b5dc8f89f1b26469ea237702">CAddonLib_General::GetVolume</a>(<span class="keyword">true</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Current volume is set to %02f %%\n&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaf0c1110b6df360eaa8db90dbc7a5a137"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void HTPCRestart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Restart the htpc. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::HTPCRestart();</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga626f700fcbeefcfa3ffe06886f002036"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void HTPCShutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shutdown the htpc. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::HTPCShutdown();</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gac72227feab4b4b90e842e150eed38ecc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool IsMuted </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ask if Kodi audio is muted. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if audio is muted</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">bool muted = <a class="code" href="a00215.html#gac72227feab4b4b90e842e150eed38ecc">CAddonLib_General::IsMuted</a>();</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga92e5be48408124cf9f6f18744abd90d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void KodiQuit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tell Kodi to stop work, go to exit and stop his work. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Kodi is really quited!</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::KodiQuit();</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga399f77b85f988602c4f1d4c98aa18528"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void KodiVersion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00059.html">kodi_version</a> &amp;&#160;</td>
+          <td class="paramname"><em>version</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get current Kodi informations and versions, returned data from the following <b><code>kodi_version_t version; CAddonLib_General::KodiVersion(version);</code></b> is e.g.: </p>
+<div class="fragment"><div class="line">version.compile_name = Kodi</div>
+<div class="line">version.major        = 16</div>
+<div class="line">version.minor        = 0</div>
+<div class="line">version.revision     = 2015-11-30-74edffb-dirty</div>
+<div class="line">version.tag          = beta</div>
+<div class="line">version.tag_revision = 1</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">version</td><td>structure to store data from kodi</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">kodi_version_t version;</div>
+<div class="line"><a class="code" href="a00215.html#ga399f77b85f988602c4f1d4c98aa18528">CAddonLib_General::KodiVersion</a>(version);</div>
+<div class="line">fprintf(stderr,</div>
+<div class="line">    <span class="stringliteral">&quot;kodi_version_t version;\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;CAddonLib_General::KodiVersion(version);\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot; - version.compile_name = %s\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot; - version.major        = %i\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot; - version.minor        = %i\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot; - version.revision     = %s\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot; - version.tag          = %s\n&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot; - version.tag_revision = %s\n&quot;</span>,</div>
+<div class="line">            version.compile_name.c_str(), version.major, version.minor,</div>
+<div class="line">            version.revision.c_str(), version.tag.c_str(), version.tag_revision.c_str());</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gabd930a9f867043a32052b92f3df7e1a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Log </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00117.html#af8526ffb1ee2a785489ac05b6e49d357">addon_log</a>&#160;</td>
+          <td class="paramname"><em>loglevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a message to <a href="http://kodi.wiki/view/Log_file/Advanced#Log_levels">KODI's log</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">loglevel</td><td>The log level of the message <table class="doxtable">
+<tr>
+<th align="right">enum code: </th><th>Description:  </th></tr>
+<tr>
+<td align="right">LOG_DEBUG </td><td>In depth information about the status of Kodi. This information can pretty much only be deciphered by a developer or long time Kodi power user. </td></tr>
+<tr>
+<td align="right">LOG_INFO </td><td>Something has happened. It's not a problem, we just thought you might want to know. Fairly excessive output that most people won't care about. </td></tr>
+<tr>
+<td align="right">LOG_NOTICE </td><td>Similar to INFO but the average Joe might want to know about these events. This level and above are logged by default. </td></tr>
+<tr>
+<td align="right">LOG_WARNING </td><td>Something potentially bad has happened. If Kodi did something you didn't expect, this is probably why. Watch for errors to follow. </td></tr>
+<tr>
+<td align="right">LOG_ERROR </td><td>This event is bad. Something has failed. You likely noticed problems with the application be it skin artifacts, failure of playback a crash, etc. </td></tr>
+<tr>
+<td align="right">LOG_FATAL </td><td>We're screwed. Kodi is about to crash. </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>The format of the message to pass to KODI. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>Added string values</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::Log(<a class="code" href="a00117.html#af8526ffb1ee2a785489ac05b6e49d357ac630750884d91cb9767ef2200bbb048b">LOG_FATAL</a>, <span class="stringliteral">&quot;Oh my goddess, I&#39;m so fatal ;)&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga4ca62f28eba47ba078428f2fd124856a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void OpenSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Opens this Add-Ons settings dialog. </p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line"><a class="code" href="a00215.html#ga4ca62f28eba47ba078428f2fd124856a">CAddonLib_General::OpenSettings</a>();</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga77d684d8fa22f1163135489601ac6f19"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void QueueFormattedNotification </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00117.html#a3a3ad4636a6590c7a30713da82d0cf8b">queue_msg</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the C string pointed by format in the GUI. If format includes format specifiers (subsequences beginning with %), the additional arguments following format are formatted and inserted in the resulting string replacing their respective specifiers. </p>
+<p>After the format parameter, the function expects at least as many additional arguments as specified by format.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>The message type. <table class="doxtable">
+<tr>
+<th align="right">enum code: </th><th>Description:  </th></tr>
+<tr>
+<td align="right">QUEUE_INFO </td><td>Show info notification message </td></tr>
+<tr>
+<td align="right">QUEUE_WARNING </td><td>Show warning notification message </td></tr>
+<tr>
+<td align="right">QUEUE_ERROR </td><td>Show error notification message </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>The format of the message to pass to display in Kodi. C string that contains the text to be written to the stream. It can optionally contain embedded format specifiers that are replaced by the values specified in subsequent additional arguments and formatted as requested. <table class="doxtable">
+<tr>
+<th>specifier </th><th>Output </th><th>Example  </th></tr>
+<tr>
+<td>d or i </td><td>Signed decimal integer </td><td>392 </td></tr>
+<tr>
+<td>u </td><td>Unsigned decimal integer </td><td>7235 </td></tr>
+<tr>
+<td>o </td><td>Unsigned octal </td><td>610 </td></tr>
+<tr>
+<td>x </td><td>Unsigned hexadecimal integer </td><td>7fa </td></tr>
+<tr>
+<td>X </td><td>Unsigned hexadecimal integer (uppercase) </td><td>7FA </td></tr>
+<tr>
+<td>f </td><td>Decimal floating point, lowercase </td><td>392.65 </td></tr>
+<tr>
+<td>F </td><td>Decimal floating point, uppercase </td><td>392.65 </td></tr>
+<tr>
+<td>e </td><td>Scientific notation (mantissa/exponent), lowercase </td><td>3.9265e+2 </td></tr>
+<tr>
+<td>E </td><td>Scientific notation (mantissa/exponent), uppercase </td><td>3.9265E+2 </td></tr>
+<tr>
+<td>g </td><td>Use the shortest representation: e or f </td><td>392.65 </td></tr>
+<tr>
+<td>G </td><td>Use the shortest representation: E or F </td><td>392.65 </td></tr>
+<tr>
+<td>a </td><td>Hexadecimal floating point, lowercase </td><td>-0xc.90fep-2 </td></tr>
+<tr>
+<td>A </td><td>Hexadecimal floating point, uppercase </td><td>-0XC.90FEP-2 </td></tr>
+<tr>
+<td>c </td><td>Character </td><td>a </td></tr>
+<tr>
+<td>s </td><td>String of characters </td><td>sample </td></tr>
+<tr>
+<td>p </td><td>Pointer address </td><td>b8000000 </td></tr>
+<tr>
+<td>% </td><td>A % followed by another % character will write a single % to the stream. </td><td>% </td></tr>
+</table>
+The length sub-specifier modifies the length of the data type. This is a chart showing the types used to interpret the corresponding arguments with and without length specifier (if a different type is used, the proper type promotion or conversion is performed, if allowed): <table class="doxtable">
+<tr>
+<th>length</th><th>d i </th><th>u o x X </th><th>f F e E g G a A </th><th>c </th><th>s </th><th>p </th><th>n  </th></tr>
+<tr>
+<td>(none)</td><td>int </td><td>unsigned int </td><td>double </td><td>int </td><td>char* </td><td>void* </td><td>int* </td></tr>
+<tr>
+<td>hh </td><td>signed char </td><td>unsigned char </td><td></td><td></td><td></td><td></td><td>signed char* </td></tr>
+<tr>
+<td>h </td><td>short int </td><td>unsigned short int </td><td></td><td></td><td></td><td></td><td>short int* </td></tr>
+<tr>
+<td>l </td><td>long int </td><td>unsigned long int </td><td></td><td>wint_t</td><td>wchar_t*</td><td></td><td>long int* </td></tr>
+<tr>
+<td>ll </td><td>long long int </td><td>unsigned long long int</td><td></td><td></td><td></td><td></td><td>long long int* </td></tr>
+<tr>
+<td>j </td><td>intmax_t </td><td>uintmax_t </td><td></td><td></td><td></td><td></td><td>intmax_t* </td></tr>
+<tr>
+<td>z </td><td>size_t </td><td>size_t </td><td></td><td></td><td></td><td></td><td>size_t* </td></tr>
+<tr>
+<td>t </td><td>ptrdiff_t </td><td>ptrdiff_t </td><td></td><td></td><td></td><td></td><td>ptrdiff_t* </td></tr>
+<tr>
+<td>L </td><td></td><td></td><td>long double </td><td></td><td></td><td></td><td></td></tr>
+</table>
+<b>Note:</b> that the c specifier takes an int (or wint_t) as argument, but performs the proper conversion to a char value (or a wchar_t) before formatting it for output. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>(additional arguments) Depending on the format string, the function may expect a sequence of additional arguments, each containing a value to be used to replace a format specifier in the format string (or a pointer to a storage location, for n). There should be at least as many of these arguments as the number of values specified in the format specifiers. Additional arguments are ignored by the function.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::QueueNotification(<a class="code" href="a00117.html#a3a3ad4636a6590c7a30713da82d0cf8ba2ffaf3e648ad752d53c2739eeea1f712">QUEUE_WARNING</a>, <span class="stringliteral">&quot;I&#39;m want to inform you, here with a test call to show &#39;%s&#39;&quot;</span>, <span class="stringliteral">&quot;this&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga2ab015503072bab77bb699af6a007ab1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void QueueNotification </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00117.html#a3a3ad4636a6590c7a30713da82d0cf8b">queue_msg</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>aCaption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>aDescription</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>displayTime</em> = <code>5000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withSound</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>messageTime</em> = <code>1000</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Queue a notification in the GUI. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>The message type. <table class="doxtable">
+<tr>
+<th align="right">enum code: </th><th>Description:  </th></tr>
+<tr>
+<td align="right">QUEUE_INFO </td><td>Show info notification message </td></tr>
+<tr>
+<td align="right">QUEUE_WARNING </td><td>Show warning notification message </td></tr>
+<tr>
+<td align="right">QUEUE_ERROR </td><td>Show error notification message </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aCaption</td><td>Header Name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDescription</td><td>Message to display on Kodi </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">displayTime</td><td>[opt] The time how long message is displayed <b>(default 5 sec)</b> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">withSound</td><td>[opt] if true also warning sound becomes played <b>(default with sound)</b> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">messageTime</td><td>[opt] how many milli seconds start show of notification <b>(default 1 sec)</b></td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::QueueNotification(<a class="code" href="a00117.html#a3a3ad4636a6590c7a30713da82d0cf8ba337175e2eb3336df26c7e387e56cfb6b">QUEUE_INFO</a>, <span class="stringliteral">&quot;I&#39;m want to inform you&quot;</span>, <span class="stringliteral">&quot;Here with a test call&quot;</span>, 3000, <span class="keyword">false</span>, 1000);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga6264a3e3afd8869f5e9d42cf3aad473b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void QueueNotification </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>aCaption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>aDescription</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Queue a notification in the GUI. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aCaption</td><td>Header Name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDescription</td><td>Message to display on Kodi</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::QueueNotification(<span class="stringliteral">&quot;I&#39;m want to inform you&quot;</span>, <span class="stringliteral">&quot;Here with a test call&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga5d6ee95fc68d50312effa8b01b06bf26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void QueueNotification </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>aImageFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>aCaption</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>aDescription</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>displayTime</em> = <code>5000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>withSound</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>messageTime</em> = <code>1000</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Queue a notification in the GUI. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aImageFile</td><td>The image file to show on message </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aCaption</td><td>Header Name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aDescription</td><td>Message to display on Kodi </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">displayTime</td><td>[opt] The time how long message is displayed in ms <b>(default 5 sec)</b> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">withSound</td><td>[opt] true also warning sound becomes played <b>(default with sound)</b> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">messageTime</td><td>[opt] in how many milli seconds start show of notification in ms <b>(default 1 sec)</b></td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::QueueNotification(<span class="stringliteral">&quot;./myImage.png&quot;</span>, <span class="stringliteral">&quot;I&#39;m want to inform you&quot;</span>, <span class="stringliteral">&quot;Here with a test call&quot;</span>, 3000, <span class="keyword">true</span>, 1000);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gab2c6f267e68ac10ff6e014dbc0b9d229"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SetMute </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>mute</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set Kodi's mute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mute</td><td>with set to true becomes it muted otherwise audio is present</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::SetMute(<span class="keyword">true</span>); <span class="comment">// Enable muted audio</span></div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga760bf5d9ec0d047943cf2fc5fba492b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SetVolume </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isPercentage</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the current global Kodi audio volume. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>the volume to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">isPercentage</td><td>[opt] if set to false becomes amplication level use</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::SetVolume(0.45, <span class="keyword">false</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --><p> <b>or</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::SetVolume(75.0, <span class="keyword">true</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga7dde8afb7cb40c1cb542a13557282f00"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool StartServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00117.html#a6f7280d04d3078fadcfa05418716bb4c">eservers</a>&#160;</td>
+          <td class="paramname"><em>typ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>wait</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start or stop a server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">typ</td><td>Used format of the returned language string <table class="doxtable">
+<tr>
+<th align="right">enum code: </th><th>Description:  </th></tr>
+<tr>
+<td align="right">ADDON_ES_WEBSERVER </td><td><a href="http://kodi.wiki/view/Webserver">To control Kodi's builtin webserver</a> </td></tr>
+<tr>
+<td align="right">ADDON_ES_AIRPLAYSERVER </td><td><a href="http://kodi.wiki/view/AirPlay">AirPlay is a proprietary protocol stack/suite developed by Apple Inc.</a> </td></tr>
+<tr>
+<td align="right">ADDON_ES_JSONRPCSERVER </td><td><a href="http://kodi.wiki/view/JSON-RPC_API">Control JSON-RPC HTTP/TCP socket-based interface</a> </td></tr>
+<tr>
+<td align="right">ADDON_ES_UPNPRENDERER </td><td><a href="http://kodi.wiki/view/UPnP/Client">UPnP client (aka UPnP renderer)</a> </td></tr>
+<tr>
+<td align="right">ADDON_ES_UPNPSERVER </td><td><a href="http://kodi.wiki/view/UPnP/Server">Control built-in UPnP A/V media server (UPnP-server)</a> </td></tr>
+<tr>
+<td align="right">ADDON_ES_EVENTSERVER </td><td><a href="http://kodi.wiki/view/EventServer">Set eventServer part that accepts remote device input on all platforms</a> </td></tr>
+<tr>
+<td align="right">ADDON_ES_ZEROCONF </td><td><a href="http://kodi.wiki/view/Zeroconf">Control Kodi's Avahi Zeroconf</a> </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>start (True) or stop (False) a server </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wait</td><td>[opt] wait on stop before returning (not supported by all servers) <em>(default is <b><code>false</code></b>)</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successfull done</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">if (!<a class="code" href="a00215.html#ga7dde8afb7cb40c1cb542a13557282f00">CAddonLib_General::StartServer</a>(<a class="code" href="a00117.html#a6f7280d04d3078fadcfa05418716bb4cad977f9d16cbfe302e8194178248b506f">ADDON_ES_WEBSERVER</a>, <span class="keyword">true</span>))</div>
+<div class="line">  <a class="code" href="a00215.html#gabd930a9f867043a32052b92f3df7e1a2">CAddonLib_General::Log</a>(<a class="code" href="a00117.html#af8526ffb1ee2a785489ac05b6e49d357a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Start of web server failed!&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaa959a7781167f016c271bf1a8c37a681"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ToggleMute </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Get defined value. </p>
-<dl class="section return"><dt>Returns</dt><dd>Defined value </dd></dl>
+<p>Toggle the audio volume between on and off. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">CAddonLib_General::ToggleMute();</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaecf9afb07475f94d782c6cf6f4057317"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string TranslateAddonStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00117.html#a33b4234394363f14dd49fb8872f1bced">ADDON_STATUS</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
+<p>Translate an add-on status return code into a human-readable string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>The return code </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A human-readable string suitable for logging</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string error = <a class="code" href="a00215.html#gaecf9afb07475f94d782c6cf6f4057317">CAddonLib_General::TranslateAddonStatus</a>(ADDON_STATUS_PERMANENT_FAILURE);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Error is: %s\n&quot;</span>, error.c_str());</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga242aca0b394c978780dfbc44b112519d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string TranslatePath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the translated path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>string or unicode - Path to format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A human-readable string suitable for logging</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Only useful if you are coding for both Linux and Windows. e.g. Converts 'special://masterprofile/script_data' -&gt; '/home/user/.kodi/UserData/script_data' on Linux.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string path = <a class="code" href="a00215.html#ga242aca0b394c978780dfbc44b112519d">CAddonLib_General::TranslatePath</a>(<span class="stringliteral">&quot;special://masterprofile/script_data&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Translated path is: %s\n&quot;</span>, path.c_str());</div>
+<div class="line">...</div>
+</div><!-- fragment --><p> or </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory &#39;special://temp&#39; is &#39;%s&#39;\n&quot;</span>, <a class="code" href="a00215.html#ga242aca0b394c978780dfbc44b112519d">CAddonLib_General::TranslatePath</a>(<span class="stringliteral">&quot;special://temp&quot;</span>).c_str());</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gad4d390029ebd9fabec4974c68e5dc6e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UnknownToUTF8 </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>stringSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>utf8StringDst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>failOnBadChar</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Translate a string with an unknown encoding to UTF8. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">stringSrc</td><td>The string to translate. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">utf8StringDst</td><td>The translated string. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">failOnBadChar</td><td>[opt] return failed if bad character is inside <em>(default is <b><code>false</code></b>)</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if OK</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">std::string ret;</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="a00215.html#gad4d390029ebd9fabec4974c68e5dc6e4">CAddonLib_General::UnknownToUTF8</a>(<span class="stringliteral">&quot;test string&quot;</span>, ret, <span class="keyword">true</span>))</div>
+<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Translation to UTF8 failed!\n&quot;</span>);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

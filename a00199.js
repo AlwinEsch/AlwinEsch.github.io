@@ -1,26 +1,4 @@
 var a00199 =
 [
-    [ "Action", "a00079.html", "a00079" ],
-    [ "Control", "a00080.html", "a00080" ],
-    [ "ControlButton", "a00081.html", "a00081" ],
-    [ "ControlCheckMark", "a00082.html", "a00082" ],
-    [ "ControlEdit", "a00083.html", "a00083" ],
-    [ "ControlFadeLabel", "a00084.html", "a00084" ],
-    [ "ControlGroup", "a00085.html", "a00085" ],
-    [ "ControlImage", "a00086.html", "a00086" ],
-    [ "ControlLabel", "a00087.html", "a00087" ],
-    [ "ControlList", "a00088.html", "a00088" ],
-    [ "ControlProgress", "a00089.html", "a00089" ],
-    [ "ControlRadioButton", "a00090.html", "a00090" ],
-    [ "ControlSlider", "a00091.html", "a00091" ],
-    [ "ControlSpin", "a00092.html", "a00092" ],
-    [ "ControlTextBox", "a00093.html", "a00093" ],
-    [ "Dialog", "a00094.html", "a00094" ],
-    [ "DialogProgress", "a00095.html", "a00095" ],
-    [ "DialogProgressBG", "a00096.html", "a00096" ],
-    [ "ListItem", "a00097.html", "a00097" ],
-    [ "Window", "a00098.html", "a00098" ],
-    [ "WindowDialog", "a00099.html", "a00099" ],
-    [ "WindowXML", "a00100.html", "a00100" ],
-    [ "WindowXMLDialog", "a00101.html", "a00101" ]
+    [ "Addon", "a00078.html", "a00078" ]
 ];

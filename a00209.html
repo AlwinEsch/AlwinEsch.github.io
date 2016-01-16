@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonLib_Codec</title>
+<title>Kodi Development: Library - xbmcvfs</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,128 +91,289 @@ $(document).ready(function(){initNavTree('a00209.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">CAddonLib_Codec<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a> &raquo; <a class="el" href="a00207.html">Library - AddOnLIB</a></div></div>  </div>
+<div class="title">Library - xbmcvfs<div class="ingroups"><a class="el" href="a00204.html">Python Development</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Demux packet handle and codec identification class</b> </p>
-<p>This class brings the support for obtaining required codec identifications and packages for handling stream demuxer.</p>
-<p>Currently, this class is only required under PVR systems where by <a class="el" href="a00209.html#ga4bfc35621cb03e2ef220caa723ad5e2b" title="Allocate a demux packet. Free with FreeDemuxPacket. ">CAddonLib_Codec::AllocateDemuxPacket</a>(...) a package for the function <b><code>DemuxPacket* DemuxRead (void);</code></b> must be provided.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00113.html">#include &lt;kodi/addon.api2/Codec.h&gt;</a> to enjoy it. </p>
+<p><b>Virtual file system functions on Kodi.</b> </p>
+<p>Offers classes and functions offers acces to the Virtual File Server (VFS) which you can use to manipulate files and folders. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00273"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html">File</a></td></tr>
+<tr class="memdesc:a00273"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Kodi's file class.</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00284"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00284.html">Stat</a></td></tr>
+<tr class="memdesc:a00284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file or file system status. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga4bfc35621cb03e2ef220caa723ad5e2b"></a>
+<a class="anchor" id="ga9188bb84632ebdbc54faca1de9be95c3"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static DemuxPacket* AllocateDemuxPacket </td>
+          <td class="memname">bool copy </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iDataSize</em></td><td>)</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>strSource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>strDestnation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Allocate a demux packet. Free with FreeDemuxPacket. </p>
-<p>Create a free demux packet with requested size</p>
+<p>Copy file to destination, returns true/false.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iDataSize</td><td>The size of the data that will go into the packet </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>file to copy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">destination</td><td>destination file </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The allocated packet</dd></dl>
-<p>Here is a view of packet data structure: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>DemuxPacket</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* pData;   <span class="comment">// data</span></div>
-<div class="line">  <span class="keywordtype">int</span> iSize;              <span class="comment">// data size</span></div>
-<div class="line">  <span class="keywordtype">int</span> iStreamId;          <span class="comment">// integer representing the stream index</span></div>
-<div class="line">  <span class="keywordtype">int</span> iGroupId;           <span class="comment">// the group this data belongs to, used to</span></div>
-<div class="line">                          <span class="comment">// group data from different streams together</span></div>
-<div class="line"></div>
-<div class="line">  <span class="keywordtype">double</span> pts;             <span class="comment">// pts in DVD_TIME_BASE</span></div>
-<div class="line">  <span class="keywordtype">double</span> dts;             <span class="comment">// dts in DVD_TIME_BASE</span></div>
-<div class="line">  <span class="keywordtype">double</span> duration;        <span class="comment">// duration in DVD_TIME_BASE if available</span></div>
-<div class="line">} DemuxPacket;</div>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.copy(source, destination)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga5a59f0d8812f3f3c2ecceb2d9287a186"></a>
+<a class="anchor" id="gabf13e7bae1c97bc1c4188f3e4e459f95"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void FreeDemuxPacket </td>
+          <td class="memname">bool deleteFile </td>
           <td>(</td>
-          <td class="paramtype">DemuxPacket *&#160;</td>
-          <td class="paramname"><em>pPacket</em></td><td>)</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Free a packet that was allocated with AllocateDemuxPacket. </p>
+<p>Delete a file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pPacket</td><td>The packet to free </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>File to delete </td></tr>
   </table>
   </dd>
 </dl>
-
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmcvfs.delete(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="gabe059bd032457069e06fd2d3c0747f37"></a>
+<a class="anchor" id="ga12691f7bf1c5e55da57b18f63f6fbdca"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="a00056.html">kodi_codec</a> GetCodecByName </td>
+          <td class="memname">bool exists </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strCodecName</em></td><td>)</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Get the codec id used by Kodi. </p>
-<p>This function is required on registration of streams to Kodi, what is currently needed on the PVR add-on system where the demuxing becomes handled from them.</p>
-<p>About available codec/demuxer names see <a href="https://www.ffmpeg.org/doxygen/2.8/allformats_8c_source.html"><b>see ffmpeg allformats.c</b></a> in function <b><code>void av_register_all(void)</code></b> with on macro <b><code>REGISTER_DEMUXER</code></b> defined values. Further are inside Kodi the two names <b><em>TELETEXT</em></b> and <b><em>RDS</em></b> used to get <a class="el" href="a00056.html" title="Codec identification structure. ">kodi_codec</a> value.</p>
+<p>Check for a file or folder existance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strCodecName</td><td>The name of the codec </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>File or folder (folder must end with slash or backslash) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The codec_id, or a codec_id with 0 values when not supported </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.exists(path)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga6bb30280e2eb7d5b94cfb0eb6e65b0cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tuple&lt;std::vector&lt;String&gt;, std::vector&lt;String&gt; &gt; listdir </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
+<p>Lists content of a folder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folder to get list from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Directory content list</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dirs, files = xbmcvfs.listdir(path)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaf69897d9a5235e87828a9e75c1cae4ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mkdir </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a folder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folder to create </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.mkdir(path)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga229e97a6a47bdff0122f1004c4feda5c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool mkdirs </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Make all directories along the path. </p>
+<p>Create folder(s) - it will create all folders in the path.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folders to create </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.mkdirs(path)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaefc98ff66890f353b4ea7fd620b63808"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rename </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>newFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rename a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>File to rename </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newFileName</td><td>New filename, including the full path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Moving files between different filesystem (eg. local to nfs://) is not possible on all platforms. You may have to do it manually by using the copy and deleteFile functions.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.rename(file,newFileName)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gac83ea5fb566ee294cdd87c74c6697025"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool rmdir </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a folder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folder to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.rmdir(path)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

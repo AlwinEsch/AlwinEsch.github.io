@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/addons/kodi-addon-dev-kit/kodi/gui.api2/GUILib.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/addons/kodi-addon-dev-kit/kodi/gui.api2/GUIDialogSelect.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,13 +92,13 @@ $(document).ready(function(){initNavTree('a00148_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">GUILib.h</div>  </div>
+<div class="title">GUIDialogSelect.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00148.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015 Team KODI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
@@ -111,74 +111,44 @@ $(document).ready(function(){initNavTree('a00148_source.html','');});
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_internal.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00188.html">GUILIB</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>V2</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">class </span>CGUILib : <span class="keyword">protected</span> CGUILib_Internal</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="a00246.html#gaa0bf67ad4ff0b67b500e4070f873c337">RegisterMe</a>(<span class="keywordtype">void</span> *handle);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00246.html#ga5940787dcdcdb8aa995a07106917489f">UnRegisterMe</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">/*\_________________________________________________________________________</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">    \*/</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00247.html#gace70db8e92290399a2a070eb0a60df63">Lock</a>();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="a00247.html#ga50f1fb5a8527c6f1beb7c59393c934a9">Unlock</a>();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">/*\_________________________________________________________________________</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">    \*/</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="a00247.html#ga7b736bc18cc4c9b1e6229e1af312b6e3">GetScreenHeight</a>();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="a00247.html#ga0f0cc52a3413a502953495f26270f559">GetScreenWidth</a>();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="a00247.html#ga9e8e637bdd545cf2cd0b922d3496a64b">GetVideoResolution</a>();</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">/*\_________________________________________________________________________</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">    \*/</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="a00247.html#ga4afd43d20b97e20532eeb1fac9ae6c1f">GetCurrentWindowDialogId</a>();</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="a00247.html#ga452c9c6299140854739860045f060d28">GetCurrentWindowId</a>();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="a00055.html#a267bf58919cb103740f8b7cffc23ef66">  135</a></span>&#160;    <a class="code" href="a00055.html#a267bf58919cb103740f8b7cffc23ef66">KODI_GUI_LIBRARY</a>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  };</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}; <span class="comment">/* namespace V2 */</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}; <span class="comment">/* namespace GUILIB */</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_LibTail.h&quot;</span></div>
-<div class="ttc" id="a00247_html_ga452c9c6299140854739860045f060d28"><div class="ttname"><a href="a00247.html#ga452c9c6299140854739860045f060d28">GUILIB::V2::CGUILib::GetCurrentWindowId</a></div><div class="ttdeci">static int GetCurrentWindowId()</div></div>
-<div class="ttc" id="a00247_html_ga7b736bc18cc4c9b1e6229e1af312b6e3"><div class="ttname"><a href="a00247.html#ga7b736bc18cc4c9b1e6229e1af312b6e3">GUILIB::V2::CGUILib::GetScreenHeight</a></div><div class="ttdeci">static int GetScreenHeight()</div><div class="ttdoc">Return the the current screen height with pixel. </div></div>
-<div class="ttc" id="a00247_html_ga0f0cc52a3413a502953495f26270f559"><div class="ttname"><a href="a00247.html#ga0f0cc52a3413a502953495f26270f559">GUILIB::V2::CGUILib::GetScreenWidth</a></div><div class="ttdeci">static int GetScreenWidth()</div><div class="ttdoc">Return the the current screen width with pixel. </div></div>
-<div class="ttc" id="a00188_html"><div class="ttname"><a href="a00188.html">GUILIB</a></div><div class="ttdef"><b>Definition:</b> GUIControlButton.h:26</div></div>
-<div class="ttc" id="a00247_html_ga4afd43d20b97e20532eeb1fac9ae6c1f"><div class="ttname"><a href="a00247.html#ga4afd43d20b97e20532eeb1fac9ae6c1f">GUILIB::V2::CGUILib::GetCurrentWindowDialogId</a></div><div class="ttdeci">static int GetCurrentWindowDialogId()</div></div>
-<div class="ttc" id="a00246_html_gaa0bf67ad4ff0b67b500e4070f873c337"><div class="ttname"><a href="a00246.html#gaa0bf67ad4ff0b67b500e4070f873c337">GUILIB::V2::CGUILib::RegisterMe</a></div><div class="ttdeci">static bool RegisterMe(void *handle)</div><div class="ttdoc">Resolve all callback methods. </div></div>
-<div class="ttc" id="a00055_html_a267bf58919cb103740f8b7cffc23ef66"><div class="ttname"><a href="a00055.html#a267bf58919cb103740f8b7cffc23ef66">GUILIB::V2::CGUILib::KODI_GUI_LIBRARY</a></div><div class="ttdeci">KODI_GUI_LIBRARY</div><div class="ttdef"><b>Definition:</b> GUILib.h:135</div></div>
-<div class="ttc" id="a00246_html_ga5940787dcdcdb8aa995a07106917489f"><div class="ttname"><a href="a00246.html#ga5940787dcdcdb8aa995a07106917489f">GUILIB::V2::CGUILib::UnRegisterMe</a></div><div class="ttdeci">static void UnRegisterMe()</div><div class="ttdoc">Release all callback methods and close handling with them. </div></div>
-<div class="ttc" id="a00247_html_ga50f1fb5a8527c6f1beb7c59393c934a9"><div class="ttname"><a href="a00247.html#ga50f1fb5a8527c6f1beb7c59393c934a9">GUILIB::V2::CGUILib::Unlock</a></div><div class="ttdeci">static void Unlock()</div><div class="ttdoc">Performs a graphical unlock of previous locked rendering engine. </div></div>
-<div class="ttc" id="a00247_html_ga9e8e637bdd545cf2cd0b922d3496a64b"><div class="ttname"><a href="a00247.html#ga9e8e637bdd545cf2cd0b922d3496a64b">GUILIB::V2::CGUILib::GetVideoResolution</a></div><div class="ttdeci">static int GetVideoResolution()</div><div class="ttdoc">Return the the current screen rendering resolution. </div></div>
-<div class="ttc" id="a00247_html_gace70db8e92290399a2a070eb0a60df63"><div class="ttname"><a href="a00247.html#gace70db8e92290399a2a070eb0a60df63">GUILIB::V2::CGUILib::Lock</a></div><div class="ttdeci">static void Lock()</div><div class="ttdoc">Performs a graphical lock of rendering engine. </div></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00119.html">definations.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_DialogSelectHead.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_internal.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00191.html">GUILIB</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span>V2</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="a00052.html">   49</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00052.html">CAddonGUIDialogSelect</a></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="a00244.html#ga607e3ded9a30e6246ee21200b0978fd5">Show</a>(</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keyword">const</span> std::string&amp;              heading,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; entries,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordtype">int</span>                             selected = -1);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  };</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}; <span class="comment">/* namespace V2 */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}; <span class="comment">/* namespace GUILIB */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_guilib_DialogSelectTail.h&quot;</span></div>
+<div class="ttc" id="a00244_html_ga607e3ded9a30e6246ee21200b0978fd5"><div class="ttname"><a href="a00244.html#ga607e3ded9a30e6246ee21200b0978fd5">GUILIB::V2::CAddonGUIDialogSelect::Show</a></div><div class="ttdeci">static int Show(const std::string &amp;heading, const std::vector&lt; std::string &gt; &amp;entries, int selected=-1)</div><div class="ttdoc">Show a selection dialog about given parts. </div></div>
+<div class="ttc" id="a00191_html"><div class="ttname"><a href="a00191.html">GUILIB</a></div><div class="ttdef"><b>Definition:</b> GUIControlButton.h:26</div></div>
+<div class="ttc" id="a00052_html"><div class="ttname"><a href="a00052.html">GUILIB::V2::CAddonGUIDialogSelect</a></div><div class="ttdef"><b>Definition:</b> GUIDialogSelect.h:49</div></div>
+<div class="ttc" id="a00119_html"><div class="ttname"><a href="a00119.html">definations.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_3b29b88e633d0e7decc99dfac3f67a6c.html">kodi</a></li><li class="navelem"><a class="el" href="dir_4810bf30586827c60967b28d81c2ef02.html">gui.api2</a></li><li class="navelem"><a class="el" href="a00148.html">GUILib.h</a></li>
+    <li class="navelem"><a class="el" href="dir_3b29b88e633d0e7decc99dfac3f67a6c.html">kodi</a></li><li class="navelem"><a class="el" href="dir_4810bf30586827c60967b28d81c2ef02.html">gui.api2</a></li><li class="navelem"><a class="el" href="a00148.html">GUIDialogSelect.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

@@ -1,5 +1,4 @@
 var a00245 =
 [
-    [ "Help functions", "a00247.html", "a00247" ],
-    [ "Register functions", "a00246.html", "a00246" ]
+    [ "Show", "a00245.html#ga140c2c236d639885881d514bffbf5dad", null ]
 ];

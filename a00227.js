@@ -1,8 +1,14 @@
 var a00227 =
 [
-    [ "CAddonGUIControlLabel", "a00227.html#ga3feee4332d158ac43b8d5d5cc20e2d0b", null ],
+    [ "CAddonGUIControlEdit", "a00227.html#gaed5a87657d03effa3bf8f3523e8c8f48", null ],
+    [ "GetCursorPosition", "a00227.html#ga8f49c265d97c7c025da04eb79d86602c", null ],
     [ "GetLabel", "a00227.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "SetLabel", "a00227.html#ga0468217482f9a171183b1cda613417e6", null ],
+    [ "GetText", "a00227.html#ga1af3f7fd8b95cc66e7599caca454f8ef", null ],
+    [ "SetCursorPosition", "a00227.html#gac0bffd1ac815193d85aa396fcfaf2397", null ],
+    [ "SetEnabled", "a00227.html#gaac893222adeffdefc04d749648cce354", null ],
+    [ "SetInputType", "a00227.html#gaf25d6c30fea27feaa77adc955bb842de", null ],
+    [ "SetLabel", "a00227.html#gab825756e641ba839bfae908492165481", null ],
+    [ "SetText", "a00227.html#ga8008c108280948ebd79830f222068455", null ],
     [ "SetVisible", "a00227.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlLabel", "a00227.html#gae46262d2f574f9375e18fd28b3b0244b", null ]
+    [ "~CAddonGUIControlEdit", "a00227.html#ga73829ce82d2eac94bf12aff3d718ba3e", null ]
 ];

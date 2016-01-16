@@ -1,10 +1,7 @@
 var a00262 =
 [
-    [ "Clear", "a00262.html#gaa71d36872f416feaa853788a7a7a7ef8", null ],
-    [ "CPVRStream", "a00262.html#gaf419611a13a1bca6fe60cd58cb8a952f", null ],
-    [ "CPVRStream", "a00262.html#gad8caf56bf234506f41c1fcc64a0d1ad7", null ],
-    [ "IsCleared", "a00262.html#ga324d4448e5c2dde1488e1a9b4d26c7ad", null ],
-    [ "operator<", "a00262.html#ga8c39a1e5e76bc953c53019e4ef318216", null ],
-    [ "operator=", "a00262.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6", null ],
-    [ "operator==", "a00262.html#ga2e56127d518a6487ba46cfe720bb4904", null ]
+    [ "AddMenuHook", "a00262.html#gadfd504966cbc097f85cf6f510a1751cd", null ],
+    [ "Recording", "a00262.html#ga25527d9a7fb4d25460bab2f036def672", null ],
+    [ "RegisterMe", "a00262.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
+    [ "UnRegisterMe", "a00262.html#ga5940787dcdcdb8aa995a07106917489f", null ]
 ];

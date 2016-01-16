@@ -1,7 +1,6 @@
 var a00213 =
 [
-    [ "DNSLookup", "a00213.html#ga39943b1fdb3a928f0c08e54484602a7e", null ],
-    [ "GetIPAddress", "a00213.html#gad56ffaa14c080ecaff1f5e7534551eff", null ],
-    [ "URLEncode", "a00213.html#gab4932f2cf0d39ceca1649ec8dd782acc", null ],
-    [ "WakeOnLan", "a00213.html#ga55c0502c3db4416ce1971a85f869775b", null ]
+    [ "Codec", "a00213.html#ga62b7b43b626a9b8beb0f16a8795b9d91", null ],
+    [ "GetCodecByName", "a00213.html#ga542cf7ce73c4f9e04f16bac4583fbb19", null ],
+    [ "Name", "a00213.html#gab29906ba5407bb58b86428cb4b4a1e26", null ]
 ];

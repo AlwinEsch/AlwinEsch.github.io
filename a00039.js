@@ -1,11 +1,9 @@
 var a00039 =
 [
-    [ "CAddonGUIControlRendering", "a00230.html#ga391a8355fbbce5c4a05a01e15188a41b", null ],
-    [ "~CAddonGUIControlRendering", "a00230.html#ga8111f29e2c5fe998d541b21d76f0d353", null ],
-    [ "Create", "a00230.html#ga12847d560dd43205d13b0963d9e395e1", null ],
-    [ "Dirty", "a00230.html#ga7cea65505e98c9989ab92a87b2f2e99b", null ],
-    [ "Render", "a00230.html#ga0bc3f3606d9cf5304dac90cd7a619194", null ],
-    [ "SetIndependentCallbacks", "a00039.html#a10abcb122b56e3f8a6069b888486d5db", null ],
-    [ "Stop", "a00230.html#gaf6f113a64b92a63894b285b4f2a2c3a5", null ],
-    [ "IMPL_GUI_RENDERING_CONTROL", "a00039.html#a446e0068f82fb1cab645123c21f62fd5", null ]
+    [ "CAddonGUIControlProgress", "a00231.html#ga29f6071fa5e9cb46c7775d82b0b518bc", null ],
+    [ "~CAddonGUIControlProgress", "a00231.html#gaa8bf8f60a1fb563174ce41f46acb9558", null ],
+    [ "GetPercentage", "a00231.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ],
+    [ "SetPercentage", "a00231.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
+    [ "SetVisible", "a00231.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_PROGRESS_CONTROL", "a00039.html#aa59488fb9ff0e229bfcef736b8a3dda4", null ]
 ];

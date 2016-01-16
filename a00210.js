@@ -1,6 +1,14 @@
 var a00210 =
 [
-    [ "Codec", "a00210.html#ga62b7b43b626a9b8beb0f16a8795b9d91", null ],
-    [ "GetCodecByName", "a00210.html#ga542cf7ce73c4f9e04f16bac4583fbb19", null ],
-    [ "Name", "a00210.html#gab29906ba5407bb58b86428cb4b4a1e26", null ]
+    [ "CAddonLib", "a00211.html", "a00211" ],
+    [ "CAddonLib_Codec", "a00212.html", "a00212" ],
+    [ "CAddonLib_General", "a00215.html", "a00215" ],
+    [ "CAddonLib_Network", "a00216.html", "a00216" ],
+    [ "CAddonLib_SoundPlay", "a00217.html", "a00217" ],
+    [ "CAddonLib_VFSDirEntry", "a00219.html", "a00219" ],
+    [ "CAddonLib_VFSFile", "a00220.html", "a00220" ],
+    [ "CAddonLib_VFSProperty", "a00218.html", "a00218" ],
+    [ "CAddonLib_VFSUtils", "a00221.html", "a00221" ],
+    [ "CodecDescriptor", "a00213.html", "a00213" ],
+    [ "settings.xml", "a00214.html", null ]
 ];

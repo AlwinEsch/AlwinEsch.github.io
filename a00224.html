@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIControlEdit</title>
+<title>Kodi Development: CAELib</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,205 +92,397 @@ $(document).ready(function(){initNavTree('a00224.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIControlEdit<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a> &raquo; <a class="el" href="a00244.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAELib<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a> &raquo; <a class="el" href="a00223.html">Library - AudioEngineLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Editable window text control used as an input control for the osd keyboard and other input fields</b> </p>
-<p>The edit control allows a user to input text in Kodi. You can choose the font, size, colour, location and header of the text to be displayed.</p>
-<p>It has the header <a class="el" href="a00129.html">#include &lt;kodi/gui.api2/GUIControlFadeLabel.h&gt;</a> be included to enjoy it.</p>
-<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
+<p><b>Allow use of binary classes and function to use on add-on's</b> </p>
+<p>Permits the use of the required functions of the add-on to Kodi. This class also contains some functions to the control.</p>
+<p>These are pure static functions them no other initialization need.</p>
+<p>It has the header <a class="el" href="a00163.html">#include &lt;kodi/audioengine.api2/AudioEngineLib.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gaed5a87657d03effa3bf8f3523e8c8f48"></a>
+<a class="anchor" id="gad4e7c34b466c7523b48eb38f453c6f8b"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">CAddonGUIControlEdit </td>
+          <td class="memname">static void AddDSPMenuHook </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00054.html">CAddonGUIWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">AE_DSP_MENUHOOK *&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Add or replace a menu hook for the context menu for this add-on. </p>
+<p>Inserted hooks becomes called from Kodi on audio DSP system with <b><code>AE_DSP_ERROR CallMenuHook(const AE_DSP_MENUHOOK&amp; menuhook, const AE_DSP_MENUHOOK_DATA &amp;item);</code></b></p>
+<p>Menu hooks that are available in the menus while playing a stream via this add-on.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hook</td><td>The hook to add</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p>Here structure shows the necessary values the Kodi must be handed over around a menu by the audio DSP system to add. </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Menu hooks that are available in the controls of audio DSP system on</span></div>
+<div class="line"><span class="comment"> * settings and on OSD.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>AE_DSP_MENUHOOK</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        iHookId;                <span class="comment">/* (required) this hook&#39;s identifier */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        iLocalizedStringId;     <span class="comment">/* (required) the id of the label for this hook in g_localizeStrings */</span></div>
+<div class="line">  AE_DSP_MENUHOOK_CAT category;               <span class="comment">/* (required) category of menu hook */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        iRelevantModeId;        <span class="comment">/* (required) except category AE_DSP_MENUHOOK_SETTING and AE_DSP_MENUHOOK_ALL must be the related mode id present here */</span></div>
+<div class="line">  <span class="keywordtype">bool</span>                bNeedPlayback;          <span class="comment">/* (required) set to true if menu hook need playback and active processing */</span></div>
+<div class="line">} <a class="code" href="a00120.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> AE_DSP_MENUHOOK;</div>
+</div><!-- fragment --><hr/>
+<p><b>Audio DSP menu hook categories</b></p>
+<p>Used to identify on AE_DSP_MENUHOOK given add-on related skin dialog/windows. Except AE_DSP_MENUHOOK_ALL and AE_DSP_MENUHOOK_SETTING are the menus available from DSP playback dialogue which can be opened over KODI file context menu and over button on full screen OSD window.</p>
+<p>Menu hook AE_DSP_MENUHOOK_SETTING is available from DSP processing setup dialogue. </p><table class="doxtable">
+<tr>
+<th align="right">enum code: </th><th align="center">Id </th><th align="left">Description:  </th></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_UNKNOWN </td><td align="center">-1 </td><td align="left">Unknown menu hook </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_ALL </td><td align="center">0 </td><td align="left">All categories </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_PRE_PROCESS </td><td align="center">1 </td><td align="left">For pre processing </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_MASTER_PROCESS </td><td align="center">2 </td><td align="left">For master processing </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_POST_PROCESS </td><td align="center">3 </td><td align="left">For post processing </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_RESAMPLE </td><td align="center">4 </td><td align="left">For re sample </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_MISCELLANEOUS </td><td align="center">5 </td><td align="left">For miscellaneous dialogues </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_INFORMATION </td><td align="center">6 </td><td align="left">Dialogue to show processing information </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_SETTING </td><td align="center">7 </td><td align="left">For settings </td></tr>
+</table>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00129.html">kodi/audioengine.api2/AudioEngineLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line">...</div>
+<div class="line">AE_DSP_MENUHOOK hook;</div>
+<div class="line">hook.iHookId            = ID_MENU_SPEAKER_GAIN_SETUP;</div>
+<div class="line">hook.category           = AE_DSP_MENUHOOK_POST_PROCESS;</div>
+<div class="line">hook.iLocalizedStringId = 30011;</div>
+<div class="line">hook.iRelevantModeId    = ID_POST_PROCESS_SPEAKER_CORRECTION;</div>
+<div class="line">hook.bNeedPlayback      = <span class="keyword">false</span>;</div>
+<div class="line">CAddonLib::AddMenuHook(&amp;hook);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaeb11fdb26f8a00296e10ff296c602bb5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool GetCurrentSinkFormat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00023.html">AudioEngineFormat</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinkFormat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current sink data format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">sinkFormat</td><td>Current sink data format. For more details see <a class="el" href="a00023.html">AudioEngineFormat</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true on success, else false.</dd></dl>
+<hr/>
+<p><b>Audio DSP mode information:</b></p>
+<p>Used to get all available modes for current input stream</p>
+<div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Audio engine format information</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="a00023.html">AudioEngineFormat</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">enum</span> AEDataFormat m_dataFormat;           <span class="comment">/* The stream&#39;s data format (eg, AE_FMT_S16LE) */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_sampleRate;           <span class="comment">/* The stream&#39;s sample rate (eg, 48000) */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_encodedRate;          <span class="comment">/* The encoded streams sample rate if a bitstream, otherwise undefined */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_channelCount;         <span class="comment">/* The amount of used speaker channels */</span></div>
+<div class="line">  <span class="keyword">enum</span> AEChannel    m_channels[AE_CH_MAX];  <span class="comment">/* The stream&#39;s channel layout */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frames;               <span class="comment">/* The number of frames per period */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frameSamples;         <span class="comment">/* The number of samples in one frame */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frameSize;            <span class="comment">/* The size of one frame in bytes */</span></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">/* Function to compare the format structure with another */</span></div>
+<div class="line">  <span class="keywordtype">bool</span> compareFormat(<span class="keyword">const</span> <a class="code" href="a00023.html">AudioEngineFormat</a> *fmt);</div>
+<div class="line">} <a class="code" href="a00023.html">AudioEngineFormat</a>;</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gae95d0da238b6ffa997911dbf9eedb2d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void RegisterDSPMode </td>
+          <td>(</td>
+          <td class="paramtype">AE_DSP_MODES::AE_DSP_MODE *&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add or replace mode information inside audio dsp database. </p>
+<p>Becomes identifier written inside mode to iModeID if it was 0 (undefined)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>The master mode to add or update inside database</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Audio DSP mode information:</b></p>
+<p>Used to get all available modes for current input stream</p>
+<div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Audio DSP mode information</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>AE_DSP_MODES</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iModesCount;                                             <span class="comment">/* (required) count of how much modes are in AE_DSP_MODES */</span></div>
+<div class="line">  <span class="keyword">struct </span>AE_DSP_MODE</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordtype">int</span>               iUniqueDBModeId;                                  <span class="comment">/* (required) the inside add-on used identifier for the mode, set by KODI&#39;s audio DSP database */</span></div>
+<div class="line">    AE_DSP_MODE_TYPE  iModeType;                                        <span class="comment">/* (required) the processong mode type, see AE_DSP_MODE_TYPE */</span></div>
+<div class="line">    <span class="keywordtype">char</span>              strModeName[AE_DSP_ADDON_STRING_LENGTH];          <span class="comment">/* (required) the addon name of the mode, used on KODI&#39;s logs  */</span></div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeNumber;                                      <span class="comment">/* (required) number of this mode on the add-on, is used on process functions with value &quot;mode_id&quot; */</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeSupportTypeFlags;                            <span class="comment">/* (required) flags about supported input types for this mode, see AE_DSP_ASTREAM_PRESENT */</span></div>
+<div class="line">    <span class="keywordtype">bool</span>              bHasSettingsDialog;                               <span class="comment">/* (required) if setting dialog(s) are available it must be set to true */</span></div>
+<div class="line">    <span class="keywordtype">bool</span>              bIsDisabled;                                      <span class="comment">/* (optional) true if this mode is marked as disabled and not enabled default, only relevant</span></div>
+<div class="line"><span class="comment">                                                                         * for master processes, all other types always disabled as default */</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeName;                                        <span class="comment">/* (required) the name id of the mode for this hook in g_localizeStrings */</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeSetupName;                                   <span class="comment">/* (optional) the name id of the mode inside settings for this hook in g_localizeStrings */</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeDescription;                                 <span class="comment">/* (optional) the description id of the mode for this hook in g_localizeStrings */</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeHelp;                                        <span class="comment">/* (optional) help string id for inside DSP settings dialog of the mode for </span></div>
+<div class="line"><span class="comment">                                                                         * this hook in g_localizeStrings */</span></div>
+<div class="line">    <span class="keywordtype">char</span>              strOwnModeImage[AE_DSP_ADDON_STRING_LENGTH];      <span class="comment">/* (optional) flag image for the mode */</span></div>
+<div class="line">    <span class="keywordtype">char</span>              strOverrideModeImage[AE_DSP_ADDON_STRING_LENGTH]; <span class="comment">/* (optional) image to override KODI Image for the mode, eg. Dolby Digital with</span></div>
+<div class="line"><span class="comment">                                                                         * Dolby Digital Ex (only used on master modes) */</span></div>
+<div class="line">  } mode[AE_DSP_STREAM_MAX_MODES];                                      <span class="comment">/* Modes array storage */</span></div>
+<div class="line">} <a class="code" href="a00120.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> AE_DSP_MODES;</div>
+</div><!-- fragment --><hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00129.html">kodi/audioengine.api2/AudioEngineLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">struct </span>AE_DSP_MODES::AE_DSP_MODE m_ModeInfoStruct;</div>
+<div class="line"></div>
+<div class="line">...</div>
+<div class="line">std::string imagePath;</div>
+<div class="line"></div>
+<div class="line">m_ModeInfoStruct.iUniqueDBModeId        = -1;         <span class="comment">// set by RegisterMode</span></div>
+<div class="line">m_ModeInfoStruct.iModeType              = AE_DSP_MODE_TYPE_MASTER_PROCESS;</div>
+<div class="line">m_ModeInfoStruct.iModeNumber            = ID_MASTER_PROCESS_FREE_SURROUND;</div>
+<div class="line">m_ModeInfoStruct.bHasSettingsDialog     = <span class="keyword">true</span>;</div>
+<div class="line">m_ModeInfoStruct.iModeDescription       = 30002;</div>
+<div class="line">m_ModeInfoStruct.iModeHelp              = 30003;</div>
+<div class="line">m_ModeInfoStruct.iModeName              = 30000;</div>
+<div class="line">m_ModeInfoStruct.iModeSetupName         = 30001;</div>
+<div class="line">m_ModeInfoStruct.iModeSupportTypeFlags  = AE_DSP_PRSNT_ASTREAM_BASIC | AE_DSP_PRSNT_ASTREAM_MUSIC | AE_DSP_PRSNT_ASTREAM_MOVIE;</div>
+<div class="line">m_ModeInfoStruct.bIsDisabled            = <span class="keyword">false</span>;</div>
+<div class="line"></div>
+<div class="line">strncpy(m_ModeInfoStruct.strModeName, <span class="stringliteral">&quot;Free Surround&quot;</span>, <span class="keyword">sizeof</span>(m_ModeInfoStruct.strModeName) - 1);</div>
+<div class="line">imagePath = g_strAddonPath;</div>
+<div class="line">imagePath += <span class="stringliteral">&quot;/resources/skins/Confluence/media/adsp-freesurround.png&quot;</span>;</div>
+<div class="line">strncpy(m_ModeInfoStruct.strOwnModeImage, imagePath.c_str(), <span class="keyword">sizeof</span>(m_ModeInfoStruct.strOwnModeImage) - 1);</div>
+<div class="line">memset(m_ModeInfoStruct.strOverrideModeImage, 0, <span class="keyword">sizeof</span>(m_ModeInfoStruct.strOwnModeImage)); <span class="comment">// unused</span></div>
+<div class="line">CAddonLib::RegisterMode(&amp;m_ModeInfoStruct);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaa0bf67ad4ff0b67b500e4070f873c337"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool RegisterMe </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resolve all callback methods. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Pointer to the add-on </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True when all methods were resolved, false otherwise.</dd></dl>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00115.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00129.html">kodi/audioengine.api2/AudioEngineLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
+<div class="line">IMPLEMENT_KODI_AUDIOENGINE_LIBRARY;</div>
+<div class="line">...</div>
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!CAddonLib::RegisterMe(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00224.html#gaa0bf67ad4ff0b67b500e4070f873c337">CAELib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use the library must be one time the macro IMPLEMENT_KODI_AUDIOENGINE_LIBRARY and IMPLEMENT_KODI_ADDON_LIBRARY somewhere one time included. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga8f49c265d97c7c025da04eb79d86602c"></a>
+<a class="anchor" id="ga59fa2e75dbd7ede8adb9488258b55bdd"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int GetCursorPosition </td>
+          <td class="memname">static void RemoveDSPMenuHook </td>
+          <td>(</td>
+          <td class="paramtype">AE_DSP_MENUHOOK *&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a menu hook for the context menu for this add-on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hook</td><td>The hook to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gae222050a6298ea8a4b7f2085ae5e85b1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnregisterDSPMode </td>
+          <td>(</td>
+          <td class="paramtype">AE_DSP_MODES::AE_DSP_MODE *&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a mode from audio dsp database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>The Mode to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5940787dcdcdb8aa995a07106917489f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnRegisterMe </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="ga6c80f17140ee95a258ff6c13439a2623"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GetLabel </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga1af3f7fd8b95cc66e7599caca454f8ef"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GetText </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gac0bffd1ac815193d85aa396fcfaf2397"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetCursorPosition </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iPosition</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gaac893222adeffdefc04d749648cce354"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetEnabled </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gaf25d6c30fea27feaa77adc955bb842de"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetInputType </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00116.html#a65e94c0b771b91d3c1f0948113ee838a">AddonGUIInputType</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gab825756e641ba839bfae908492165481"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetLabel </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga8008c108280948ebd79830f222068455"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetText </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga71a209185b7a98adf0a310d2c44cdbe6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetVisible </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>visible</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga73829ce82d2eac94bf12aff3d718ba3e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">~CAddonGUIControlEdit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
+<p>Release all callback methods and close handling with them. </p>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00115.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00129.html">kodi/audioengine.api2/AudioEngineLib.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">void ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="a00224.html#ga5940787dcdcdb8aa995a07106917489f">CAELib::UnRegisterMe</a>();</div>
+<div class="line">  CAddonLib::UnRegisterMe();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

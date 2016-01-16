@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonLib_SoundPlay</title>
+<title>Kodi Development: settings.xml</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,365 +91,120 @@ $(document).ready(function(){initNavTree('a00214.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
-<div class="title">CAddonLib_SoundPlay<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a> &raquo; <a class="el" href="a00207.html">Library - AddOnLIB</a></div></div>  </div>
+<div class="title">settings.xml<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a> &raquo; <a class="el" href="a00210.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Background sound playback</b> </p>
-<p>This class is designed for playback of "wave" audio files to point for the user with sound steps performed or to draw attention to warnings.</p>
-<p>Further allowed this playback on a single selected channel which can be used to identify or also to test. For larger and more extensive audio system testing is recommended but the use of "CAddonAE_Stream" since this is intended specifically for this purpose.</p>
-<dl class="section warning"><dt>Warning</dt><dd>class supports only <b>wave files (*.wav)</b> for play back!</dd></dl>
-<p>It has the header <a class="el" href="a00123.html">#include &lt;kodi/addon.api2/SoundPlay.h&gt;</a> be included to enjoy it.</p>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00123.html">kodi/addon.api2/SoundPlay.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00140.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line"></div>
-<div class="line">void PlaySelectedWaveFile()</div>
-<div class="line">{</div>
-<div class="line">  std::string filename;</div>
-<div class="line">  <span class="keywordflow">if</span> (CAddonGUIDialogFileBrowser::ShowAndGetFile(<span class="stringliteral">&quot;local&quot;</span>, <span class="stringliteral">&quot;*.wav&quot;</span>,</div>
-<div class="line">                                                 <span class="stringliteral">&quot;Test File selection and playback of them&quot;</span>,</div>
-<div class="line">                                                 filename))</div>
-<div class="line">  {</div>
-<div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * The example performs a playback with the value &quot;waitUntilEnd&quot; from</span></div>
-<div class="line"><span class="comment">     * &quot;CAddonLib_SoundPlay::Play(...)&quot; is set to true. This waits for the call</span></div>
-<div class="line"><span class="comment">     * until the playback is complete, so that it is then also possible to</span></div>
-<div class="line"><span class="comment">     * use the class static as in this example.</span></div>
-<div class="line"><span class="comment">     */</span></div>
-<div class="line">    CAddonLib_SoundPlay playback(filename);</div>
-<div class="line">    playback-&gt;Play(<span class="keyword">true</span>);</div>
-<div class="line">  }</div>
-<div class="line">}</div>
-</div><!-- fragment --> <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ga2b5a19d3dea9946ab7cbad0c770a9ad4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00214.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">audio_channel</a> { <br />
-&#160;&#160;<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1ae38b5ca59fd4d7eaf46316030c1943">AUDIO_CH_INVALID</a> = -1, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a51f9b2764c6fb4fedda0a2e26db34d1a">AUDIO_CH_FL</a> = 0, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1af23629a69a7675fdb34091664b54f0">AUDIO_CH_FR</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a30cf31511bec571f29972d5153240c26">AUDIO_CH_FC</a>, 
-<br />
-&#160;&#160;<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a237c6e09d4dcd265e0fe662353979e8a">AUDIO_CH_LFE</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4aa913e9df7d430fb038a46ffd9a6b6c0c">AUDIO_CH_BL</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4ae48795ee1bb60030f6cd9936e425f271">AUDIO_CH_BR</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4abd6293708566f52e3c51e9624abfd46b">AUDIO_CH_FLOC</a>, 
-<br />
-&#160;&#160;<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a319b1573f6d3ab6cb392cde3730c7bbb">AUDIO_CH_FROC</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4aa90c458a48d2ad4c195e766822ff2c33">AUDIO_CH_BC</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1aab0619a0d059b7f63dc45920256546">AUDIO_CH_SL</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1907c53416638e264364401deab8bbfa">AUDIO_CH_SR</a>, 
-<br />
-&#160;&#160;<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4ab1e6f27a436b44c543bfbb5277d14e24">AUDIO_CH_TFL</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1bc8da6e595ab3400326a07d98166932">AUDIO_CH_TFR</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a9b17a5f2cc83a45969811f82f0b98a31">AUDIO_CH_TFC</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a6528079b655067a5734fc7ef83b89b00">AUDIO_CH_TC</a>, 
-<br />
-&#160;&#160;<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a6d282855e499f57213f21a0a407d2c87">AUDIO_CH_TBL</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4aff7630bcc5ced065520e1fd7877a0c43">AUDIO_CH_TBR</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a2e9491a483c0d8ff14f8ed56788ec803">AUDIO_CH_TBC</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a442f0143698374bd20d33700f4ee11dd">AUDIO_CH_BLOC</a>, 
-<br />
-&#160;&#160;<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a0d7223d3ebee5d2737088f2da89b969a">AUDIO_CH_BROC</a>, 
-<a class="el" href="a00214.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a4766a0b96807972582fef922b18250c0">AUDIO_CH_MAX</a>
-<br />
- }</td></tr>
-<tr class="memdesc:ga2b5a19d3dea9946ab7cbad0c770a9ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">For class CAddonLib_SoundPlay used values.  <a href="a00214.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">More...</a><br /></td></tr>
-<tr class="separator:ga2b5a19d3dea9946ab7cbad0c770a9ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ga2b5a19d3dea9946ab7cbad0c770a9ad4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="a00214.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">audio_channel</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>For class CAddonLib_SoundPlay used values. </p>
-<p>The values are used to identify a channel and can also serve as a pointer to memory can be used. Currently supported Kodi not all listed position and are only available in order to avoid major changes after it is placed. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a1ae38b5ca59fd4d7eaf46316030c1943"></a>AUDIO_CH_INVALID&#160;</td><td class="fielddoc">
-<p>Invalid channel identifier, also used on CAddonLib_SoundPlay to reset selection. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a51f9b2764c6fb4fedda0a2e26db34d1a"></a>AUDIO_CH_FL&#160;</td><td class="fielddoc">
-<p>Front left. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a1af23629a69a7675fdb34091664b54f0"></a>AUDIO_CH_FR&#160;</td><td class="fielddoc">
-<p>Front right. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a30cf31511bec571f29972d5153240c26"></a>AUDIO_CH_FC&#160;</td><td class="fielddoc">
-<p>Front center. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a237c6e09d4dcd265e0fe662353979e8a"></a>AUDIO_CH_LFE&#160;</td><td class="fielddoc">
-<p>LFE (Bass) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4aa913e9df7d430fb038a46ffd9a6b6c0c"></a>AUDIO_CH_BL&#160;</td><td class="fielddoc">
-<p>Back left. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4ae48795ee1bb60030f6cd9936e425f271"></a>AUDIO_CH_BR&#160;</td><td class="fielddoc">
-<p>Back right. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4abd6293708566f52e3c51e9624abfd46b"></a>AUDIO_CH_FLOC&#160;</td><td class="fielddoc">
-<p>Front left over center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a319b1573f6d3ab6cb392cde3730c7bbb"></a>AUDIO_CH_FROC&#160;</td><td class="fielddoc">
-<p>Front right over center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4aa90c458a48d2ad4c195e766822ff2c33"></a>AUDIO_CH_BC&#160;</td><td class="fielddoc">
-<p>Back center. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a1aab0619a0d059b7f63dc45920256546"></a>AUDIO_CH_SL&#160;</td><td class="fielddoc">
-<p>Side left. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a1907c53416638e264364401deab8bbfa"></a>AUDIO_CH_SR&#160;</td><td class="fielddoc">
-<p>Side right. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4ab1e6f27a436b44c543bfbb5277d14e24"></a>AUDIO_CH_TFL&#160;</td><td class="fielddoc">
-<p>Top front left (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a1bc8da6e595ab3400326a07d98166932"></a>AUDIO_CH_TFR&#160;</td><td class="fielddoc">
-<p>Top front right (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a9b17a5f2cc83a45969811f82f0b98a31"></a>AUDIO_CH_TFC&#160;</td><td class="fielddoc">
-<p>Top front center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a6528079b655067a5734fc7ef83b89b00"></a>AUDIO_CH_TC&#160;</td><td class="fielddoc">
-<p>Top center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a6d282855e499f57213f21a0a407d2c87"></a>AUDIO_CH_TBL&#160;</td><td class="fielddoc">
-<p>Top back left (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4aff7630bcc5ced065520e1fd7877a0c43"></a>AUDIO_CH_TBR&#160;</td><td class="fielddoc">
-<p>Top back right (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a2e9491a483c0d8ff14f8ed56788ec803"></a>AUDIO_CH_TBC&#160;</td><td class="fielddoc">
-<p>Top back center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a442f0143698374bd20d33700f4ee11dd"></a>AUDIO_CH_BLOC&#160;</td><td class="fielddoc">
-<p>Back left over center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a0d7223d3ebee5d2737088f2da89b969a"></a>AUDIO_CH_BROC&#160;</td><td class="fielddoc">
-<p>Back right over center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a4766a0b96807972582fef922b18250c0"></a>AUDIO_CH_MAX&#160;</td><td class="fielddoc">
-<p>Used as max value for a array size, not a position. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gafb64b7a34ceffbf07ce84e4d25f36d83"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CAddonLib_SoundPlay </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct class. </p>
-<p>Construct the class for background playback of given wave file.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The wave file to play </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga9656546b61377811a68a1cf39dbc1bfc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00214.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">audio_channel</a> GetChannel </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the active channel for playback. </p>
-<p>To set channel position the for a single channel playback of wave file.</p>
-<dl class="section return"><dt>Returns</dt><dd>The channel where currently played </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga7f136ab9899c4abfeeb61d47383f1dd5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float GetVolume </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the volume. </p>
-<p>To get the volume of wave file playback.</p>
-<dl class="section note"><dt>Note</dt><dd>Volume is independent from Kodi's normal volume control and only for the wave file. Also is the volume only on this class and not to all background sounds on Kodi.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The currently active volume of this wave file </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga755f326e8b06e5f2807d64baf8bf582c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IsPlaying </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To check playing is active. </p>
-<p>The check used class during playback of wave file is still playing.</p>
-<dl class="section return"><dt>Returns</dt><dd>true if playing active, otherwise false </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga1cb8088c7f7b1e30a0b7b1a1993326c2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Play </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>waitUntilEnd</em> = <code>false</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Start playback. </p>
-<p>Starts the playback of wave file. Normally returns this function.</p>
-<p>This function ordinarily comes after him begin the sound reproduction immediately again back around other steps to permit. If it itself, however, only around the reproduction of a file acts no other operation required is able by placed of the value "waitUntilEnd" on true by the call are waited to him is ready. This also permits the use of the class statically in the function.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">waitUntilEnd</td><td>[opt] If set to true returns call after end of playback, default is false </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga18c0452db8c88c696ba2f958396ba83d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetChannel </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00214.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">audio_channel</a>&#160;</td>
-          <td class="paramname"><em>channel</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set audio channel for playback. </p>
-<p>To set channel position the for a single channel playback of wave file. To reset selection use "AUDIO_CH_INVALID".</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>The channel identifier to play on </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga6496c97b1bcd7301acfce8671cf90984"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetVolume </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>volume</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the volume. </p>
-<p>To set the volume of wave file playback.</p>
-<dl class="section note"><dt>Note</dt><dd>Volume is independent from Kodi's normal volume control and only for the wave file. Also is the volume only on this class and not to all background sounds on Kodi.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">volume</td><td>The playback volume of wave file </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga17a237457e57625296e6b24feb19c60a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Stop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Stop playback. </p>
-<p>Stops the playback of wave file </p>
-
-</div>
-</div>
-<a class="anchor" id="ga21c5c23ed3b5c5f06cc66331f8bec712"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
+<p><b>Add-on settings.xml description</b> </p>
+<p><code>settings.xml</code> is a XML file that contains the current configuration for the addon and should be placed in the resources direcory. If your addon has configurable items that are set by the user, put them here. This file defines what the user sees when they click on Addon settings for your addon. You don't need to do any coding to utilise this functionality. The format for the settings file is relatively straightforward as can be seen in the following.</p><ul>
+<li><b>Example:</b></li>
+</ul>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;settings&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  &lt;category label=&quot;32100&quot;&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    &lt;setting id=&quot;scrolldelay&quot; type=&quot;slider&quot; label=&quot;32101&quot; option=&quot;int&quot; default=&quot;1&quot; range=&quot;0,10&quot; /&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    &lt;setting id=&quot;scrollmode&quot; type=&quot;enum&quot; label=&quot;32102&quot; lvalues=&quot;32401|32402&quot; default=&quot;0&quot; /&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    &lt;setting id=&quot;navtimeout&quot; type=&quot;slider&quot; label=&quot;32103&quot; option=&quot;int&quot; default=&quot;2&quot; range=&quot;1,10&quot; /&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    &lt;setting id=&quot;refreshrate&quot; type=&quot;slider&quot; label=&quot;32104&quot; option=&quot;int&quot; default=&quot;1&quot; range=&quot;1,20&quot; /&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    &lt;setting id=&quot;sep1&quot; type=&quot;sep&quot; /&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    &lt;setting id=&quot;usealternatecharset&quot; type=&quot;bool&quot; label=&quot;32105&quot; default=&quot;false&quot; /&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    &lt;setting id=&quot;charset&quot; enable=&quot;eq(-1,true)&quot; type=&quot;enum&quot; label=&quot;32106&quot; lvalues=&quot;32411|32412|32413|32414|32415|32416|32417&quot; default=&quot;0&quot; subsetting=&quot;true&quot;/&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    &lt;setting id=&quot;sep2&quot; type=&quot;sep&quot; /&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    &lt;setting id=&quot;useextraelements&quot; type=&quot;bool&quot; label=&quot;32107&quot; default=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  &lt;/category&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  &lt;category label=&quot;32200&quot;&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    &lt;setting label=&quot;32206&quot; type=&quot;lsep&quot; /&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    &lt;setting id=&quot;dimonvideoplayback&quot; type=&quot;bool&quot; label=&quot;32203&quot; default=&quot;false&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    &lt;setting id=&quot;dimonmusicplayback&quot; type=&quot;bool&quot; label=&quot;32204&quot; default=&quot;false&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    &lt;setting id=&quot;dimonscreensaver&quot; type=&quot;bool&quot; label=&quot;32201&quot; default=&quot;false&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    &lt;setting id=&quot;dimdelay&quot; type=&quot;slider&quot; label=&quot;32205&quot; default=&quot;0&quot; range=&quot;0,30&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    &lt;setting id=&quot;sep3&quot; type=&quot;sep&quot; /&gt;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    &lt;setting id=&quot;dimonshutdown&quot; type=&quot;bool&quot; label=&quot;32202&quot; default=&quot;false&quot; /&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  &lt;/category&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  &lt;category label=&quot;32300&quot;&gt;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    &lt;setting id=&quot;remotelcdproc&quot; type=&quot;bool&quot; label=&quot;32301&quot; default=&quot;false&quot; /&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    &lt;setting id=&quot;hostip&quot; enable=&quot;eq(-1,true)&quot; type=&quot;ipaddress&quot; label=&quot;32302&quot; default=&quot;127.0.0.1&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    &lt;setting id=&quot;hostport&quot; enable=&quot;eq(-2,true)&quot; type=&quot;number&quot; label=&quot;32303&quot; default=&quot;13666&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    &lt;setting id=&quot;sep4&quot; type=&quot;sep&quot; /&gt;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    &lt;setting id=&quot;heartbeat&quot; type=&quot;bool&quot; label=&quot;32304&quot; default=&quot;false&quot; /&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    &lt;setting id=&quot;sep5&quot; type=&quot;sep&quot; /&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    &lt;setting id=&quot;hideconnpopups&quot; type=&quot;bool&quot; label=&quot;32305&quot; default=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  &lt;/category&gt;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;&lt;/settings&gt;</div>
+</div><!-- fragment --><p>Settings can have additional attributes:</p>
+<p> 
+<table border="1">
   <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~CAddonLib_SoundPlay </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+    <th>Type</th>                         <th>Description</th>
+  </tr>
+  <tr>
+    <td><b>source=""</b></td>             <td>
+<b>video</b>, <b>music</b>, <b>pictures</b>, <b>programs</b>, <b>files</b>, <b>local</b> or <b>blank</b>.<br>
+If source is blank it will use the type for shares if it is a valid share if not a valid<br>
+share it will use, both local and network drives.<br></td>
+  </tr>
+  <tr>
+    <td><b>visible=""</b></td>            <td><b>true</b>, <b>false</b> or <b>conditional</b>.<br>
+Determines if the setting is displayed in the settings dialog (default = 'true')"<br>
+<br>
+You can also use a conditional statement:<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>visible="System.HasAddon(plugin.video.youtube)"</tt></em></b><br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>visible="eq(-2,true)"</tt></em></b> ( same syntax like for enable="" )<br>
+<br>
+</td>
+  </tr>
+  <tr>
+    <td><b>enable=""</b></td>             <td>
+Allows you to determine whether this setting should be shown based on the value of<br>
+another setting.<br>
+3 comparators are available:<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>eq()</tt></em></b> Equal to<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>gt()</tt></em></b> Greater than<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>lt()</tt></em></b> Less than<br>
+<br>
+You can AND the comparators using the + symbol and negate it using the ! symbol<br>
+ (e.g. !eq()). Each comparator takes 2 operands:<br>
+Relative position of setting to compare<br>
+Value to compare against<br>
+Thus if we place settings in our file in this order:<br>
+&nbsp; &nbsp; &nbsp;- myFirst setting<br>
+&nbsp; &nbsp; &nbsp;- mySecondSetting<br>
+&nbsp; &nbsp; &nbsp;- myThirdSetting<br>
+<br>
+for the third setting we might add the option:<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>enable="gt(-2,3) + lt(-2,10)"</tt></em></b><br>
+<br>
+You can also use a conditional statement:<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>enable="System.HasAddon(plugin.video.youtube)"</tt></em></b><br>
+<br>
+</td>
+  </tr>
+  <tr>
+    <td><b>subsetting="true"</b></td>     <td>Add dash in front of option<br><br></td>
   </tr>
 </table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
-
-</div>
-</div>
+<br>
+</p>
+<p><b><em>Void type examples for add-on</em></b> <code>./resources/settings.xml</code></p><ul>
+<li>Line separators add a horizontal separating line between other element. They are purely user-interface elements that do not allow user input and therefore have no meaningful value as a setting.</li>
+<li><code>lsep</code><ul>
+<li>Shows a horizontal line with a text. <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting label=&quot;32024&quot; type=&quot;lsep&quot;/&gt;</div>
+</div><!-- fragment --></li>
+<li><b><em>label="id"</em></b> (required) - an id from the language file that indicates which text to display.</li>
+</ul>
+</li>
+<li><code>sep</code><ul>
+<li>Shows a horizontal line. <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting type=&quot;sep&quot;/&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;setting id=&quot;sep1&quot; type=&quot;sep&quot; /&gt;</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+<li><code>action</code><ul>
+<li>Adds line to configuration windows which allow to execute action <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting label=&quot;32002&quot; type=&quot;action&quot; id=&quot;backend&quot; action=&quot;XBMC.NotifyAll(service.xbmc.tts,SETTINGS.BACKEND_DIALOG)&quot;/&gt;</div>
+</div><!-- fragment --> </li>
+</ul>
+</li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

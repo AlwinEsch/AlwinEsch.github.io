@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Overlay icon types</title>
+<title>Kodi Development: ListItem</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,62 +92,853 @@ $(document).ready(function(){initNavTree('a00304.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Overlay icon types<div class="ingroups"><a class="el" href="a00203.html">Python Development</a> &raquo; <a class="el" href="a00205.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00303.html">ListItem</a></div></div>  </div>
+<div class="title">ListItem<div class="ingroups"><a class="el" href="a00204.html">Python Development</a> &raquo; <a class="el" href="a00206.html">Library - xbmcgui</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Overlay icon types used on list item. </p>
+<p><b>Selectable window list item.</b> </p>
+<p>The list item control is used for creating item lists in Kodi</p>
+<p><b><code>ListItem([label, label2, iconImage, thumbnailImage, path])</code></b></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>[opt] string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">label2</td><td>[opt] string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iconImage</td><td><b>Deprecated. Use setArt</b> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thumbnailImage</td><td><b>Deprecated. Use setArt</b> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>[opt] string </td></tr>
+  </table>
+  </dd>
+</dl>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:gae31416bf19cd51c7cf656b854c57ebbb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html#gae31416bf19cd51c7cf656b854c57ebbb">GUIIconOverlay</a> { <br />
-&#160;&#160;<a class="el" href="a00304.html#ggae31416bf19cd51c7cf656b854c57ebbba5c57f50a149d379ebca5393b41b3ded6">ICON_OVERLAY_NONE</a> = 0, 
-<a class="el" href="a00304.html#ggae31416bf19cd51c7cf656b854c57ebbba00c71f5584689472fd92f0a11fed7eed">ICON_OVERLAY_RAR</a>, 
-<a class="el" href="a00304.html#ggae31416bf19cd51c7cf656b854c57ebbba9ff1c48934b0d14562350ba43156de76">ICON_OVERLAY_ZIP</a>, 
-<a class="el" href="a00304.html#ggae31416bf19cd51c7cf656b854c57ebbba506cd874ebc9a8a7a0e8704f3f14e4a5">ICON_OVERLAY_LOCKED</a>, 
-<br />
-&#160;&#160;<a class="el" href="a00304.html#ggae31416bf19cd51c7cf656b854c57ebbba4360275f929b32c07c28cdce43672a20">ICON_OVERLAY_UNWATCHED</a>, 
-<a class="el" href="a00304.html#ggae31416bf19cd51c7cf656b854c57ebbbaeee36208741ef2c18f16543c3a04cff9">ICON_OVERLAY_WATCHED</a>, 
-<a class="el" href="a00304.html#ggae31416bf19cd51c7cf656b854c57ebbbada8d2ad11b57bec4e384aa1808ad845d">ICON_OVERLAY_HD</a>
-<br />
- }</td></tr>
-<tr class="separator:gae31416bf19cd51c7cf656b854c57ebbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00305"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html">Overlay icon types</a></td></tr>
+<tr class="memdesc:a00305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overlay icon types used on list item. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00306"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00306.html">Picture info labels</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="gae31416bf19cd51c7cf656b854c57ebbb"></a>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga1365419ee51c2c9017a762d103ff15f0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum GUIIconOverlay</td>
+          <td class="memname">void addContextMenuItems </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Tuple&lt; String, String &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>replaceItems</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggae31416bf19cd51c7cf656b854c57ebbba5c57f50a149d379ebca5393b41b3ded6"></a>ICON_OVERLAY_NONE&#160;</td><td class="fielddoc">
-<p>Value <b>0</b> - No overlay icon. </p>
+
+<p>Adds item(s) to the context menu for media lists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">items</td><td>list - <b><code>[(label, action,)*]</code></b> A list of tuples consisting of label and action pairs.<ul>
+<li><code>label</code> : string or unicode - item's label.</li>
+<li><code>action</code> : string or unicode - any built-in function to perform. </li>
+</ul>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggae31416bf19cd51c7cf656b854c57ebbba00c71f5584689472fd92f0a11fed7eed"></a>ICON_OVERLAY_RAR&#160;</td><td class="fielddoc">
-<p>Value <b>1</b> - Compressed *.rar files. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggae31416bf19cd51c7cf656b854c57ebbba9ff1c48934b0d14562350ba43156de76"></a>ICON_OVERLAY_ZIP&#160;</td><td class="fielddoc">
-<p>Value <b>2</b> - Compressed *.zip files. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggae31416bf19cd51c7cf656b854c57ebbba506cd874ebc9a8a7a0e8704f3f14e4a5"></a>ICON_OVERLAY_LOCKED&#160;</td><td class="fielddoc">
-<p>Value <b>3</b> - Locked files. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggae31416bf19cd51c7cf656b854c57ebbba4360275f929b32c07c28cdce43672a20"></a>ICON_OVERLAY_UNWATCHED&#160;</td><td class="fielddoc">
-<p>Value <b>4</b> - For not watched files. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggae31416bf19cd51c7cf656b854c57ebbbaeee36208741ef2c18f16543c3a04cff9"></a>ICON_OVERLAY_WATCHED&#160;</td><td class="fielddoc">
-<p>Value <b>5</b> - For seen files. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggae31416bf19cd51c7cf656b854c57ebbbada8d2ad11b57bec4e384aa1808ad845d"></a>ICON_OVERLAY_HD&#160;</td><td class="fielddoc">
-<p>Value <b>6</b> - Is on hard disk stored. </p>
-</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">replaceItems</td><td>[opt] bool - True=only your items will show/False=your items will be added to context menu(Default).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><a href="http://kodi.wiki/view/List_of_Built_In_Functions">List of built-in functions</a></p>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># addContextMenuItems([(label, action,)*], replaceItems)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;listitem.addContextMenuItems([(<span class="stringliteral">&#39;Theater Showtimes&#39;</span>, <span class="stringliteral">&#39;RunScript(special://home/scripts/showtimes/default.py,Iron Man)&#39;</span>,)])</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga4ac21e7b69df2ac986952a0a5f0767d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addStreamInfo </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Properties &amp;&#160;</td>
+          <td class="paramname"><em>dictionary</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a stream with details. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>string - type of stream(video/audio/subtitle). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">values</td><td>dictionary - pairs of { label: value }.<ul>
+<li>Video Values: <table class="doxtable">
+<tr>
+<th align="center">Label </th><th align="center">Type </th><th align="left">Example value  </th></tr>
+<tr>
+<td align="center">codec </td><td align="center">string </td><td align="left">h264 </td></tr>
+<tr>
+<td align="center">aspect </td><td align="center">float </td><td align="left">1.78 </td></tr>
+<tr>
+<td align="center">width </td><td align="center">integer </td><td align="left">1280 </td></tr>
+<tr>
+<td align="center">height </td><td align="center">integer </td><td align="left">720 </td></tr>
+<tr>
+<td align="center">duration </td><td align="center">integer </td><td align="left">seconds </td></tr>
 </table>
+</li>
+<li>Audio Values: <table class="doxtable">
+<tr>
+<th align="center">Label </th><th align="center">Type </th><th align="left">Example value  </th></tr>
+<tr>
+<td align="center">codec </td><td align="center">string </td><td align="left">dts </td></tr>
+<tr>
+<td align="center">language </td><td align="center">string </td><td align="left">en </td></tr>
+<tr>
+<td align="center">channels </td><td align="center">integer </td><td align="left">2 </td></tr>
+</table>
+</li>
+<li>Subtitle Values: <table class="doxtable">
+<tr>
+<th align="center">Label </th><th align="center">Type </th><th align="left">Example value  </th></tr>
+<tr>
+<td align="center">language </td><td align="center">string </td><td align="left">en </td></tr>
+</table>
+</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># addStreamInfo(type, values)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.list.getSelectedItem().addStreamInfo(<span class="stringliteral">&#39;video&#39;</span>, { <span class="stringliteral">&#39;codec&#39;</span>: <span class="stringliteral">&#39;h264&#39;</span>, <span class="stringliteral">&#39;width&#39;</span> : 1280 })</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gace6910b8e357d8088be50d2e87029c39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getdescription </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the description of this PlayListItem. </p>
+<dl class="section return"><dt>Returns</dt><dd>Description string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab3b51633b1cd49658697ba8cbe639bdc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getduration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the duration of this PlayListItem. </p>
+<dl class="section return"><dt>Returns</dt><dd>Duration of item as string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab31ccf90a0734f9cb29b3c563b4b9a02"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getfilename </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the filename of this PlayListItem. </p>
+<dl class="section return"><dt>Returns</dt><dd>Filename string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga86ad2cb533724ac728e0f96b2323cceb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getLabel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the listitem label. </p>
+<dl class="section return"><dt>Returns</dt><dd>Label of item</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># getLabel()</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;label = self.list.getSelectedItem().getLabel()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga670b0dee884d131339bbf88d07bbbfc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getLabel2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the second listitem label. </p>
+<dl class="section return"><dt>Returns</dt><dd>Second label of item</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># getLabel2()</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;label = self.list.getSelectedItem().getLabel2()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gae11388c95e616274e5ee0f10b61bf1d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InfoTagMusic* getMusicInfoTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the MusicInfoTag for this item. </p>
+<dl class="section return"><dt>Returns</dt><dd>Music info tag </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6ea42956dc2a3770054d6e0693a70cf3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getProperty </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a listitem property as a string, similar to an infolabel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string - List item property</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive.<br />
+ You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># getProperty(key)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;AspectRatio = self.list.getSelectedItem().getProperty(<span class="stringliteral">&#39;AspectRatio&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga7287b2615a3d76947a1dcd085bfaa337"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InfoTagVideo* getVideoInfoTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the VideoInfoTag for this item. </p>
+<dl class="section return"><dt>Returns</dt><dd>Video info tag </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5dae9e59f17e10bd3838a6fae36d477d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isSelected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the listitem's selected status. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool - true if selected, otherwise false</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># isSelected()</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordflow">is</span> = self.list.getSelectedItem().isSelected()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga1369a01f7175de5180faa3aaac3faec3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void select </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>selected</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the listitem's selected status. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">selected</td><td>bool - True=selected/False=not selected</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># select(selected)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.list.getSelectedItem().select(<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gae4e9bad5ab0b4bd55bb659ec0decf2c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setArt </td>
+          <td>(</td>
+          <td class="paramtype">const Properties &amp;&#160;</td>
+          <td class="paramname"><em>dictionary</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the listitem's art. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">values</td><td>dictionary - pairs of <code>{ label: value }</code>.<ul>
+<li>Some default art values (any string possible): <table class="doxtable">
+<tr>
+<th align="center">Label </th><th align="left">Type  </th></tr>
+<tr>
+<td align="center">thumb </td><td align="left">string - image filename </td></tr>
+<tr>
+<td align="center">poster </td><td align="left">string - image filename </td></tr>
+<tr>
+<td align="center">banner </td><td align="left">string - image filename </td></tr>
+<tr>
+<td align="center">fanart </td><td align="left">string - image filename </td></tr>
+<tr>
+<td align="center">clearart </td><td align="left">string - image filename </td></tr>
+<tr>
+<td align="center">clearlogo </td><td align="left">string - image filename </td></tr>
+<tr>
+<td align="center">landscape </td><td align="left">string - image filename </td></tr>
+<tr>
+<td align="center">icon </td><td align="left">string - image filename </td></tr>
+</table>
+</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setArt(values)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.list.getSelectedItem().setArt({ <span class="stringliteral">&#39;poster&#39;</span>: <span class="stringliteral">&#39;poster.png&#39;</span>, <span class="stringliteral">&#39;banner&#39;</span> : <span class="stringliteral">&#39;banner.png&#39;</span> })</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaf67a4c759dfe7bfe4ca4252e631838c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setContentLookup </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable or disable content lookup for item. </p>
+<p>If disabled, HEAD requests to e.g. determine mime type will not be sent.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool - True = enable, False = disable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0896887d4ffd52dfcc6827fc2e2d9afa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setIconImage </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>iconImage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use setArt </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae8ac78b510d6419d3518f1d0c5671550"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setInfo </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00200.html#a0259569a23d11d6fe3c6291bb83d0374">InfoLabelDict</a> &amp;&#160;</td>
+          <td class="paramname"><em>infoLabels</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the listitem's infoLabels. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>string - type of </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">infoLabels</td><td>dictionary - pairs of <code>{ label: value }</code></td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Available types</b> </p><table class="doxtable">
+<tr>
+<th align="center">Command name </th><th align="left">Description  </th></tr>
+<tr>
+<td align="center">video </td><td align="left">Video information </td></tr>
+<tr>
+<td align="center">music </td><td align="left">Music information </td></tr>
+<tr>
+<td align="center">pictures </td><td align="left">Pictures informantion </td></tr>
+</table>
+<dl class="section note"><dt>Note</dt><dd>To set pictures exif info, prepend <code>exif:</code> to the label. Exif values must be passed as strings, separate value pairs with a comma. <b>(eg. <code>{'exif:resolution': '720,480'}</code></b> See <a class="el" href="a00306.html">Picture info labels</a> for valid strings.<br />
+ <br />
+ You can use the above as keywords for arguments and skip certain optional arguments. Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<p><b>General Values</b> (that apply to all types): </p><table class="doxtable">
+<tr>
+<th align="right">Info label </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">count </td><td align="left">integer (12) - can be used to store an id for later, or for sorting purposes </td></tr>
+<tr>
+<td align="right">size </td><td align="left">long (1024) - size in bytes </td></tr>
+<tr>
+<td align="right">date </td><td align="left">string (d.m.Y / 01.01.2009) - file date </td></tr>
+</table>
+<p><b>Video Values</b>: </p><table class="doxtable">
+<tr>
+<th align="right">Info label </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">genre </td><td align="left">string (Comedy) </td></tr>
+<tr>
+<td align="right">year </td><td align="left">integer (2009) </td></tr>
+<tr>
+<td align="right">episode </td><td align="left">integer (4) </td></tr>
+<tr>
+<td align="right">season </td><td align="left">integer (1) </td></tr>
+<tr>
+<td align="right">top250 </td><td align="left">integer (192) </td></tr>
+<tr>
+<td align="right">tracknumber </td><td align="left">integer (3) </td></tr>
+<tr>
+<td align="right">rating </td><td align="left">float (6.4) - range is 0..10 </td></tr>
+<tr>
+<td align="right">userrating </td><td align="left">integer (9) - range is 1..10 </td></tr>
+<tr>
+<td align="right">watched </td><td align="left">depreciated - use playcount instead </td></tr>
+<tr>
+<td align="right">playcount </td><td align="left">integer (2) - number of times this item has been played </td></tr>
+<tr>
+<td align="right">overlay </td><td align="left">integer (2) - range is <code>0..7</code>. See <a class="el" href="a00305.html">Overlay icon types</a> for values </td></tr>
+<tr>
+<td align="right">cast </td><td align="left">list (["Michal C. Hall","Jennifer Carpenter"]) - if provided a list of tuples cast will be interpreted as castandrole </td></tr>
+<tr>
+<td align="right">castandrole </td><td align="left">list of tuples ([("Michael C. Hall","Dexter"),("Jennifer Carpenter","Debra")]) </td></tr>
+<tr>
+<td align="right">director </td><td align="left">string (Dagur Kari) </td></tr>
+<tr>
+<td align="right">mpaa </td><td align="left">string (PG-13) </td></tr>
+<tr>
+<td align="right">plot </td><td align="left">string (Long Description) </td></tr>
+<tr>
+<td align="right">plotoutline </td><td align="left">string (Short Description) </td></tr>
+<tr>
+<td align="right">title </td><td align="left">string (Big Fan) </td></tr>
+<tr>
+<td align="right">originaltitle </td><td align="left">string (Big Fan) </td></tr>
+<tr>
+<td align="right">sorttitle </td><td align="left">string (Big Fan) </td></tr>
+<tr>
+<td align="right">duration </td><td align="left">integer (245) - duration in seconds </td></tr>
+<tr>
+<td align="right">studio </td><td align="left">string (Warner Bros.) </td></tr>
+<tr>
+<td align="right">tagline </td><td align="left">string (An awesome movie) - short description of movie </td></tr>
+<tr>
+<td align="right">writer </td><td align="left">string (Robert D. Siegel) </td></tr>
+<tr>
+<td align="right">tvshowtitle </td><td align="left">string (Heroes) </td></tr>
+<tr>
+<td align="right">premiered </td><td align="left">string (2005-03-04) </td></tr>
+<tr>
+<td align="right">status </td><td align="left">string (Continuing) - status of a TVshow </td></tr>
+<tr>
+<td align="right">code </td><td align="left">string (tt0110293) - IMDb code </td></tr>
+<tr>
+<td align="right">aired </td><td align="left">string (2008-12-07) </td></tr>
+<tr>
+<td align="right">credits </td><td align="left">string (Andy Kaufman) - writing credits </td></tr>
+<tr>
+<td align="right">lastplayed </td><td align="left">string (Y-m-d h:m:s = 2009-04-05 23:16:04) </td></tr>
+<tr>
+<td align="right">album </td><td align="left">string (The Joshua Tree) </td></tr>
+<tr>
+<td align="right">artist </td><td align="left">list (['U2']) </td></tr>
+<tr>
+<td align="right">votes </td><td align="left">string (12345 votes) </td></tr>
+<tr>
+<td align="right">trailer </td><td align="left">string (/home/user/trailer.avi) </td></tr>
+<tr>
+<td align="right">dateadded </td><td align="left">string (Y-m-d h:m:s = 2009-04-05 23:16:04) </td></tr>
+<tr>
+<td align="right">mediatype </td><td align="left">string - "video", "movie", "tvshow", "season", "episode" or "musicvideo" </td></tr>
+</table>
+<p><b>Music Values</b>: </p><table class="doxtable">
+<tr>
+<th align="right">Info label </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">tracknumber </td><td align="left">integer (8) </td></tr>
+<tr>
+<td align="right">discnumber </td><td align="left">integer (2) </td></tr>
+<tr>
+<td align="right">duration </td><td align="left">integer (245) - duration in seconds </td></tr>
+<tr>
+<td align="right">year </td><td align="left">integer (1998) </td></tr>
+<tr>
+<td align="right">genre </td><td align="left">string (Rock) </td></tr>
+<tr>
+<td align="right">album </td><td align="left">string (Pulse) </td></tr>
+<tr>
+<td align="right">artist </td><td align="left">string (Muse) </td></tr>
+<tr>
+<td align="right">title </td><td align="left">string (American Pie) </td></tr>
+<tr>
+<td align="right">rating </td><td align="left">float - range is between 0 and 10 </td></tr>
+<tr>
+<td align="right">userrating </td><td align="left">integer - range is 1..10 </td></tr>
+<tr>
+<td align="right">lyrics </td><td align="left">string (On a dark desert highway...) </td></tr>
+<tr>
+<td align="right">playcount </td><td align="left">integer (2) - number of times this item has been played </td></tr>
+<tr>
+<td align="right">lastplayed </td><td align="left">string (Y-m-d h:m:s = 2009-04-05 23:16:04) </td></tr>
+</table>
+<p><b>Picture Values</b>: </p><table class="doxtable">
+<tr>
+<th align="right">Info label </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">title </td><td align="left">string (In the last summer-1) </td></tr>
+<tr>
+<td align="right">picturepath </td><td align="left">string (<code>/home/username/pictures/img001.jpg</code>) </td></tr>
+<tr>
+<td align="right">exif* </td><td align="left">string (See <a class="el" href="a00306.html">Picture info labels</a> for valid strings) </td></tr>
+</table>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setInfo(type, infoLabels)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.list.getSelectedItem().setInfo(<span class="stringliteral">&#39;video&#39;</span>, { <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Comedy&#39;</span> })n</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga2026eb8716d1b717960eb10db4384d67"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setLabel </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the listitem's label. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>string or unicode - text string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setLabel(label)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.list.getSelectedItem().setLabel(<span class="stringliteral">&#39;Casino Royale&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaffdc6c1389342833a812729b3f0e311c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setLabel2 </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the listitem's label2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>string or unicode - text string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setLabel2(label)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.list.getSelectedItem().setLabel2(<span class="stringliteral">&#39;Casino Royale&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gac2a03039cc5e9f4a72e1f7e6dd97b566"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setMimeType </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>mimetype</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the listitem's mimetype if known. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mimetype</td><td>string or unicode - mimetype.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If known prehand, this can (but does not have to) avoid HEAD requests being sent to HTTP servers to figure out file type. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaed681fa935325532eecbc21f6c349a58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPath </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the listitem's path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>string or unicode - path, activated when item is clicked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setPath(path)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.list.getSelectedItem().setPath(path=<span class="stringliteral">&#39;ActivateWindow(Weather)&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga117dae419f8322cc06721a8537717f78"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setProperty </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a listitem property, similar to an infolabel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>string or unicode - value of property.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive. You can use the above as keywords for arguments and skip certain<br />
+ optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<p>Some of these are treated internally by Kodi, such as the <b>'StartOffset'</b> property, which is the offset in seconds at which to start playback of an item. Others may be used in the skin to add extra information, such as <b>'WatchedCount'</b> for tvshow items</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setProperty(key, value)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.list.getSelectedItem().<a class="code" href="a00207.html#gad34e6025edb46d622a8ae9f7195d033c">setProperty</a>(<span class="stringliteral">&#39;AspectRatio&#39;</span>, <span class="stringliteral">&#39;1.85 : 1&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;self.list.getSelectedItem().<a class="code" href="a00207.html#gad34e6025edb46d622a8ae9f7195d033c">setProperty</a>(<span class="stringliteral">&#39;StartOffset&#39;</span>, <span class="stringliteral">&#39;256.4&#39;</span>)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gab5fea75d64330f67eb5f36e52bf10c53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSubtitles </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; String &gt; &amp;&#160;</td>
+          <td class="paramname"><em>subtitleFiles</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets subtitles for this listitem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">subtitleFiles</td><td>string - List of subtitles to add</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;listitem.setSubtitles([<span class="stringliteral">&#39;special://temp/example.srt&#39;</span>, <span class="stringliteral">&#39;http://example.com/example.srt&#39;</span>])</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga1f2634119efdde8e432c4a9ec364501d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setThumbnailImage </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>thumbFilename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section warning"><dt>Warning</dt><dd>Deprecated. Use setArt </dd></dl>
 
 </div>
 </div>

@@ -1,14 +1,9 @@
 var a00267 =
 [
-    [ "browse", "a00267.html#ga329bf9f86212595d36708f6ad8977499", null ],
-    [ "browseMultiple", "a00267.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
-    [ "browseSingle", "a00267.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
-    [ "input", "a00267.html#ga2a25e833c92e98a294964d0d285ee1f9", null ],
-    [ "multiselect", "a00267.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
-    [ "notification", "a00267.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
-    [ "numeric", "a00267.html#gad44dd72bef6ada382a1b9704580410db", null ],
-    [ "ok", "a00267.html#ga623449b051874059111f9831a7b91673", null ],
-    [ "select", "a00267.html#ga31bcf740cf64230b40af61377ad701b1", null ],
-    [ "textviewer", "a00267.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
-    [ "yesno", "a00267.html#gaa64342a4b05f1ed49803ea44a25b73db", null ]
+    [ "doModal", "a00267.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
+    [ "getText", "a00267.html#gafab766445043570e6a82c14851366933", null ],
+    [ "isConfirmed", "a00267.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
+    [ "setDefault", "a00267.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
+    [ "setHeading", "a00267.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
+    [ "setHiddenInput", "a00267.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ]
 ];

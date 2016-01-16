@@ -1,7 +1,5 @@
 var a00296 =
 [
-    [ "getSelected", "a00296.html#ga1f9a3346caf72cfe92c1c48e92b71724", null ],
-    [ "setDisabledColor", "a00296.html#gabb99461e652ba261d6322894a64affbe", null ],
-    [ "setLabel", "a00296.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
-    [ "setSelected", "a00296.html#gad42accd39af295a957386c68dac3dcae", null ]
+    [ "setColorDiffuse", "a00296.html#ga3b0c15e0d82d8605f4b3ad82aaa42c16", null ],
+    [ "setImage", "a00296.html#ga7ba591029ef61ca17851a9f02a1fe5dc", null ]
 ];

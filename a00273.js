@@ -1,8 +1,9 @@
 var a00273 =
 [
-    [ "Action Id's", "a00276.html", "a00276" ],
-    [ "getAmount1", "a00273.html#ga3ee04d80d5e7af5563ecc098623a90ad", null ],
-    [ "getAmount2", "a00273.html#ga0f5620d911d309e2dadadc44359bce45", null ],
-    [ "getButtonCode", "a00273.html#gab60f32db21659ba5c3f4d145b9e5947b", null ],
-    [ "getId", "a00273.html#gac7a54ea5a10c5c4683f16e3f83f77104", null ]
+    [ "close", "a00273.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
+    [ "read", "a00273.html#ga691e636b0dffa3c448c648f42d94437a", null ],
+    [ "readBytes", "a00273.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8", null ],
+    [ "seek", "a00273.html#ga8140115d0b4e6cb1ffa9f4298153d009", null ],
+    [ "size", "a00273.html#ga6fdf8e4501d305514d8e7b5d6cde34a6", null ],
+    [ "write", "a00273.html#ga1a6eddca986ff7164d57b9fad625e597", null ]
 ];

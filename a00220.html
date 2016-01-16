@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Library - AudioEngineLIB</title>
+<title>Kodi Development: CAddonLib_VFSFile</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,62 +91,374 @@ $(document).ready(function(){initNavTree('a00220.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Library - AudioEngineLIB<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a></div></div>  </div>
+<div class="title">CAddonLib_VFSFile<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a> &raquo; <a class="el" href="a00210.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b><em>Help functions for audio engine and DSP systems</em></b> </p>
-<p>This library is for Audio DSP add-ons and also include parts for the audio engine. </p><hr/>
-<p><b>Code example:</b></p>
-<p>Below is a code example do show what must be done on add-on base function to become support for library:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00112.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00121.html">kodi/addon.api2/General.h</a>&gt;</span>  <span class="comment">// Needed for CAddOnLib_General::Log</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00126.html">kodi/audioengine.api2/AudioEngineLib.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
-<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
-<div class="line">IMPLEMENT_KODI_AUDIOENGINE_LIBRARY;</div>
-<div class="line">...</div>
-<div class="line"></div>
-<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordflow">if</span> (!hdl || !props)</div>
-<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div>
-<div class="line"></div>
-<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
-<div class="line">  <span class="keywordflow">if</span> (!CAddonLib::RegisterMe(hdl))</div>
-<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
-<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00221.html#gaa0bf67ad4ff0b67b500e4070f873c337">CAELib::RegisterMe</a>(hdl))</div>
-<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
-<div class="line">  ...</div>
-<div class="line"></div>
-<div class="line">  <span class="comment">// Example lib call</span></div>
-<div class="line">  CAddOnLib_General::Log(<a class="code" href="a00114.html#af8526ffb1ee2a785489ac05b6e49d357a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My add-on creation done&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> ADDON_Destroy()</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <a class="code" href="a00221.html#ga5940787dcdcdb8aa995a07106917489f">CAELib::UnRegisterMe</a>();</div>
-<div class="line">  CAddonLib::UnRegisterMe();</div>
-<div class="line">  ...</div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use this library part must always <a class="el" href="a00011.html">AddOnLIB::V2::CAddonLib</a> be present! </dd></dl>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00221"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00221.html">CAELib</a></td></tr>
-<tr class="memdesc:a00221"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Allow use of binary classes and function to use on add-on's</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00219"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00219.html">CAELib_Stream</a></td></tr>
-<tr class="memdesc:a00219"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Audio Engine Stream Class</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<p><b>Virtual file system control</b> </p>
+<p>It has the header <a class="el" href="a00127.html">#include &lt;kodi/addon.api2/VFSUtils.h&gt;</a> be included to enjoy it. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaa4aa9190a8c2c66f86f4ece11645ca19"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CAddonLib_VFSFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new, unopened file. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga7f7a3199c392465d0767c6506c1af5b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close an open file. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga0e2644b2df3c228e8d71a55b60723f31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flush buffered data. </p>
+
+</div>
+</div>
+<a class="anchor" id="gacc37d885ea67ed49de5644a572d904ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetChunkSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the chunk size for an open file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The requested size. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf2332ee14e6eb66707939c8d9625194d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t GetLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the file size of an open file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The requested size. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaab98661a2483587df5d85e6ec8699bce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t GetPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current position in an open file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The requested position. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7964d4fc5936b7e41fd1c01320882d46"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OpenFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open the file with filename via KODI's CFile. Needs to be closed by calling CloseFile() when done. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename to open. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>The flags to pass. Documented in KODI's <a class="el" href="a00127.html">VFSUtils.h</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success or false on failure </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab906912503a475cdb8f0a67c5d81266c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OpenFileForWrite </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bOverWrite</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open the file with filename via KODI's CFile in write mode. Needs to be closed by calling CloseFile() when done. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename to open. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bOverWrite</td><td>True to overwrite, false otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success or false on failure </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae8f00c5eb703624dd35f9d5205d56343"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t Read </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>lpBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>uiBufSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read from an open file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lpBuf</td><td>The buffer to store the data in. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uiBufSize</td><td>The size of the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of successfully read bytes if any bytes were read and stored in buffer, zero if no bytes are available to read (end of file was reached) or undetectable error occur, -1 in case of any explicit error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae3d52fbedd9b4480dc45023814cb78f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ReadLine </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>strLine</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read a string from an open file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strLine</td><td>The buffer to store the data in. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True when a line was read, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga48d08591724952c3d51d0823caf17720"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t Seek </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>iFilePosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iWhence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Seek in an open file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iFilePosition</td><td>The new position. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iWhence</td><td>Seek argument. See stdio.h for possible values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new position. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga97dbc6093302f0ced52952a2737407ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Truncate </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>iSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Truncate a file to the requested size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iSize</td><td>The new max size. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>New size? </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac7025ec7df110a7a9691adb3f949f24f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t Write </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>lpBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>uiBufSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write to a file opened in write mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lpBuf</td><td>The data to write. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uiBufSize</td><td>Size of the data to write. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of successfully written bytes if any bytes were written, zero if no bytes were written and no detectable error occur, -1 in case of any explicit error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaff9977af1409edaace50b30024b00306"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~CAddonLib_VFSFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
 </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00220.html#ga7f7a3199c392465d0767c6506c1af5b4" title="Close an open file. ">Close()</a> is called from the destructor, so explicitly closing the file isn't required. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

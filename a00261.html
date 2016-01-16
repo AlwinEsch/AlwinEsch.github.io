@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CPVRLib_Trigger</title>
+<title>Kodi Development: Library - PVRLIB</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,172 +91,73 @@ $(document).ready(function(){initNavTree('a00261.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">CPVRLib_Trigger<div class="ingroups"><a class="el" href="a00200.html">C++ Development</a> &raquo; <a class="el" href="a00258.html">Library - PVRLIB</a></div></div>  </div>
+<div class="title">Library - PVRLIB<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Funtions to trigger PVR related updates on Kodi</b> </p>
-<p>Call of function in this class informs Kodi to do a update of related parts.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00160.html">#include &lt;kodi/pvr.api2/PVRLib.h&gt;</a> be included to enjoy it </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga5d29f9d2a7bb423e21cb5dd5a2f5ab4a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void ChannelGroupsUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Request Kodi to update it's list of channel groups. </p>
+<p><b><em>PVR add-on related functions to pass data on Kodi</em></b> </p>
+<p>This library is for PVR add-ons to allow cross talk. Becomes needed to inform Kodi about changes on the PVR system.</p>
+<dl class="section note"><dt>Note</dt><dd>This library part is only needed on PVR add-ons, for other types is nothing inside.</dd></dl>
 <hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00160.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<p><b>Code example:</b></p>
+<p>Below is a code example do show what must be done on add-on base function to become support for library:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00115.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span>  <span class="comment">// Needed for CAddOnLib_General::Log</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00163.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
 <div class="line"></div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
+<div class="line">IMPLEMENT_KODI_PVR_LIBRARY;</div>
 <div class="line">...</div>
-<div class="line">CPVRLib_Trigger::ChannelGroupsUpdate();</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga046bd435f53dedfbc125a70b6fcd09bb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void ChannelUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Request Kodi to update it's list of channels. </p>
-<hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00160.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
 <div class="line"></div>
-<div class="line">...</div>
-<div class="line">CPVRLib_Trigger::ChannelUpdate();</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga49372b48b0c3d939e69dfb83bcda3ed5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void EpgUpdate </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iChannelUid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Schedule an EPG update for the given channel channel. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iChannelUid</td><td>The unique id of the channel for this add-on </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga64219c32345c79a130702741451c9a8e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void RecordingUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Request Kodi to update it's list of recordings. </p>
-<hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00160.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (!hdl || !props)</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div>
 <div class="line"></div>
-<div class="line">...</div>
-<div class="line">CPVRLib_Trigger::RecordingUpdate();</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga92c110f8654585fdc3f8a126d1ce54bb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void TimerUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Request Kodi to update it's list of timers. </p>
-<hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00160.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!CAddonLib::RegisterMe(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00262.html#gaa0bf67ad4ff0b67b500e4070f873c337">CPVRLib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
 <div class="line"></div>
-<div class="line">...</div>
-<div class="line">CPVRLib_Trigger::TimerUpdate();</div>
-</div><!-- fragment --> 
-</div>
-</div>
+<div class="line">  <span class="comment">// Example lib call</span></div>
+<div class="line">  CAddOnLib_General::Log(<a class="code" href="a00117.html#af8526ffb1ee2a785489ac05b6e49d357a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My add-on creation done&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="a00262.html#ga5940787dcdcdb8aa995a07106917489f">CPVRLib::UnRegisterMe</a>();</div>
+<div class="line">  CAddonLib::UnRegisterMe();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use this library part must always <a class="el" href="a00013.html">AddOnLIB::V2::CAddonLib</a> be present! </dd></dl>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00262"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00262.html">CPVRLib</a></td></tr>
+<tr class="memdesc:a00262"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Allow use of binary classes and function to use on add-on's</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00263"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00263.html">CPVRLib_Transfer</a></td></tr>
+<tr class="memdesc:a00263"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Callback functions for PVR add-on</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00264"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00264.html">CPVRLib_Trigger</a></td></tr>
+<tr class="memdesc:a00264"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Funtions to trigger PVR related updates on Kodi</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00265"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00265.html">CPVRStream</a></td></tr>
+<tr class="memdesc:a00265"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>PVR stream properties data class</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00266"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00266.html">CStreamProperties</a></td></tr>
+<tr class="memdesc:a00266"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>PVR stream properties handle class</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
