@@ -1,12 +1,9 @@
 var a00287 =
 [
-    [ "onPlayBackEnded", "a00287.html#gab375f26bb820f640d74700cda4ee6646", null ],
-    [ "onPlayBackPaused", "a00287.html#ga7226102b037bfbca79e0c940f5e912e2", null ],
-    [ "onPlayBackResumed", "a00287.html#ga075576edcd1809ff57e3897aa165e529", null ],
-    [ "onPlayBackSeek", "a00287.html#gaeda52fbaaf9860f7a96e93ba33709fc9", null ],
-    [ "onPlayBackSeekChapter", "a00287.html#ga75a62da626870983e308a62e8c359218", null ],
-    [ "onPlayBackSpeedChanged", "a00287.html#ga852e3252c43deaa541e8cae610b9e0ef", null ],
-    [ "onPlayBackStarted", "a00287.html#ga2d8b5fa98b21f02ce06f7bd7de836d9d", null ],
-    [ "onPlayBackStopped", "a00287.html#ga04dbd49c7486f00911995a56a19536d0", null ],
-    [ "onQueueNextItem", "a00287.html#ga8890f6898fc712522c2d29f57455275d", null ]
+    [ "capture", "a00287.html#gad84ac4cd6e43fc4aefe0eeaa0916e187", null ],
+    [ "getAspectRatio", "a00287.html#ga2c8f0f904856b52b41dd852c57bd970b", null ],
+    [ "getHeight", "a00287.html#ga07efb2a4e9a982688c8bb3c3f21d1092", null ],
+    [ "getImage", "a00287.html#gaff2e6e3a8d1c65f17c1709dc727ae69c", null ],
+    [ "getImageFormat", "a00287.html#gaa512bbf517e279b0a5ca7d2ecf07f5b1", null ],
+    [ "getWidth", "a00287.html#ga67a0997183f24da19b776d96c1052998", null ]
 ];

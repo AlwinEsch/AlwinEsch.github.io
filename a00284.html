@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Stat</title>
+<title>Kodi Development: PlayList</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,26 +92,102 @@ $(document).ready(function(){initNavTree('a00284.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Stat<div class="ingroups"><a class="el" href="a00204.html">Python Development</a> &raquo; <a class="el" href="a00209.html">Library - xbmcvfs</a></div></div>  </div>
+<div class="title">PlayList<div class="ingroups"><a class="el" href="a00307.html">Python Development</a> &raquo; <a class="el" href="a00268.html">Library - python_xbmc</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Get file or file system status. </p>
-<p><b><code>xbmcvfs.Stat(path)</code></b></p>
-<p>These class return information about a file. Execute (search) permission is required on all of the directories in path that lead to the file.</p>
+<p><b>Kodi's Play List class.</b> </p>
+<p><b><code>xbmc.PlayList(playList)</code></b></p>
+<p>To create and edit a playlist which can be handled by the player.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>[string] file or folder</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">playList</td><td>[integer] To define the stream type <table class="doxtable">
+<tr>
+<th align="center">Value </th><th align="left">Integer String </th><th align="left">Description  </th></tr>
+<tr>
+<td align="center">0 </td><td align="left">xbmc.PLAYLIST_MUSIC </td><td align="left">Playlist for music files or streams </td></tr>
+<tr>
+<td align="center">1 </td><td align="left">xbmc.PLAYLIST_VIDEO </td><td align="left">Playlist for video files or streams </td></tr>
+</table>
+</td></tr>
   </table>
   </dd>
 </dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  st = xbmcvfs.Stat(path)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  modified = st.st_mtime()</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;play=xbmc.PlayList(xbmc.PLAYLIST_VIDEO)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
 </div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga65d49375e5251d4e616a45e3c898d6cc"></a>
+<a class="anchor" id="ga979e740949519ca0e88da2ff9934a4d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListItem *&#160;</td>
+          <td class="paramname"><em>listitem</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new file to the playlist. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>string or unicode - filename or url to add. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">listitem</td><td>[opt] listitem - used with setInfo() to set different infolabels. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>[opt] integer - position to add playlist item. (default=end)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;playlist = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;video = <span class="stringliteral">&#39;F:\\movies\\Ironman.mov&#39;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;listitem = xbmcgui.ListItem(<span class="stringliteral">&#39;Ironman&#39;</span>, thumbnailImage=<span class="stringliteral">&#39;F:\\movies\\Ironman.tbn&#39;</span>)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;listitem.setInfo(<span class="stringliteral">&#39;video&#39;</span>, {<span class="stringliteral">&#39;Title&#39;</span>: <span class="stringliteral">&#39;Ironman&#39;</span>, <span class="stringliteral">&#39;Genre&#39;</span>: <span class="stringliteral">&#39;Science Fiction&#39;</span>})</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;playlist.add(url=video, listitem=listitem, index=7)n</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gac8bb3912a3ce86b15842e79d0b421204"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear all items in the playlist. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga4d665409e02daa8ea13ce462ca44c914"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -119,10 +195,10 @@ $(document).ready(function(){initNavTree('a00284.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long atime </td>
+          <td class="memname">int getPlayListId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -132,244 +208,153 @@ $(document).ready(function(){initNavTree('a00284.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>To get time of last access. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_atime </dd></dl>
+<p>Get the <a class="el" href="a00078.html">PlayList</a> Identifier. </p>
+<dl class="section return"><dt>Returns</dt><dd>Id as an integer. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gab24c57af16ac6f88edb819c18e2e438b"></a>
+<a class="anchor" id="ga265b7f39dcd400e1f4edaf4060af9977"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long ctime </td>
+          <td class="memname">int getposition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>To get time of last status change. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_ctime </dd></dl>
+<p>Returns the position of the current song in this playlist. </p>
+<dl class="section return"><dt>Returns</dt><dd>Position of the current song </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga57da69d0b20141a95c0c44a6bb5f3b35"></a>
+<a class="anchor" id="ga2eea1635b7df085d42c973352ef10355"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long mtime </td>
+          <td class="memname">bool load </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load a playlist. </p>
+<p>Clear current playlist and copy items from the file to this Playlist filename can be like .pls or .m3u ...</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>File with list to play inside </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if unable to load playlist </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaba5d6f37d582f0512f61f32109a92d92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListItem* operator[] </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the item at the given position. A negative index means from the ending rather than from the start. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Pointer in list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The selected item on list </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae363baca6026e43cc1264c5914ff69b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove an item with this filename from the playlist. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The file to remove from list. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1905fe84eb39f020b32c58baf7a76758"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shuffle </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>To get time of last modification. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_mtime </dd></dl>
+<p>Shuffle the playlist. </p>
 
 </div>
 </div>
-<a class="anchor" id="gab17084ec246f2b497d2f13618c5bd220"></a>
+<a class="anchor" id="gaf4b57d21919c42d55af03391f91a1c08"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_dev </td>
+          <td class="memname">int size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>To get ID of device containing file. </p>
-<p>The st_dev field describes the device on which this file resides.</p>
-<dl class="section return"><dt>Returns</dt><dd>st_dev </dd></dl>
+<p>Returns the total number of PlayListItems in this playlist. </p>
+<dl class="section return"><dt>Returns</dt><dd>Amount of playlist entries. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga9a7a9ad27402f5a931bcbff38e4e03d3"></a>
+<a class="anchor" id="ga2401476232ac1b00321c9bfe8158f9c4"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_gid </td>
+          <td class="memname">void unshuffle </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>To get group ID of owner. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_gid </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga77e336d6274f6fb0e2a3c3546e61e360"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_ino </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get inode number. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_ino </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga00b3e20028eaee69c44cdc47a922fe31"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_mode </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get file protection. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_mode </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga34f57426567df63ef5ad1b4679778d18"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_nlink </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get number of hard links. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_nlink </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaeec21543efab31f62a21e533b0d3a537"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get total size, in bytes. </p>
-<p>The st_size field gives the size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link (only on Linux and Mac OS X) is the length of the pathname it contains, without a terminating null byte.</p>
-<dl class="section return"><dt>Returns</dt><dd>st_size </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaa29c53999dffe4acc12aed2eb60a6c81"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_uid </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get user ID of owner. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_uid </dd></dl>
+<p>Unshuffle the playlist. </p>
 
 </div>
 </div>

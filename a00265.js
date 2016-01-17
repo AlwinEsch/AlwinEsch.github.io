@@ -1,10 +1,14 @@
 var a00265 =
 [
-    [ "Clear", "a00265.html#gaa71d36872f416feaa853788a7a7a7ef8", null ],
-    [ "CPVRStream", "a00265.html#gaf419611a13a1bca6fe60cd58cb8a952f", null ],
-    [ "CPVRStream", "a00265.html#gad8caf56bf234506f41c1fcc64a0d1ad7", null ],
-    [ "IsCleared", "a00265.html#ga324d4448e5c2dde1488e1a9b4d26c7ad", null ],
-    [ "operator<", "a00265.html#ga8c39a1e5e76bc953c53019e4ef318216", null ],
-    [ "operator=", "a00265.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6", null ],
-    [ "operator==", "a00265.html#ga2e56127d518a6487ba46cfe720bb4904", null ]
+    [ "browse", "a00265.html#ga329bf9f86212595d36708f6ad8977499", null ],
+    [ "browseMultiple", "a00265.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
+    [ "browseSingle", "a00265.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
+    [ "input", "a00265.html#ga2a25e833c92e98a294964d0d285ee1f9", null ],
+    [ "multiselect", "a00265.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
+    [ "notification", "a00265.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
+    [ "numeric", "a00265.html#gad44dd72bef6ada382a1b9704580410db", null ],
+    [ "ok", "a00265.html#ga623449b051874059111f9831a7b91673", null ],
+    [ "select", "a00265.html#ga31bcf740cf64230b40af61377ad701b1", null ],
+    [ "textviewer", "a00265.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
+    [ "yesno", "a00265.html#gaa64342a4b05f1ed49803ea44a25b73db", null ]
 ];

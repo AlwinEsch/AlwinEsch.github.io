@@ -1,11 +1,6 @@
 var a00241 =
 [
-    [ "ShowAndGetDate", "a00241.html#ga37d6caf6f507938f599915d93eddd596", null ],
-    [ "ShowAndGetIPAddress", "a00241.html#ga1fd8ee824dbbbc1d222fd67583f28614", null ],
-    [ "ShowAndGetNumber", "a00241.html#gab73e260650434df59844c3a2c8b1ba2d", null ],
-    [ "ShowAndGetSeconds", "a00241.html#ga664586418f4cb12a25a15dcd5effff02", null ],
-    [ "ShowAndGetTime", "a00241.html#ga08a9c6abb71eb5a380213e9528b6aecf", null ],
-    [ "ShowAndVerifyInput", "a00241.html#ga3028013da19a00279961a45d26dcf832", null ],
-    [ "ShowAndVerifyNewPassword", "a00241.html#ga85ca517533d779b26944d6fb74fe0abe", null ],
-    [ "ShowAndVerifyPassword", "a00241.html#ga28ed908212d6a38156014d5ccc5a7dc7", null ]
+    [ "ShowAndGetInput", "a00241.html#gabd70a1306a25efc68e99f5852aeffe9f", null ],
+    [ "ShowAndGetInput", "a00241.html#gab23d9c3e25b9f866b1581d5ff1821d02", null ],
+    [ "ShowAndGetInput", "a00241.html#gacdb0bcb4ff915c595e075af871d629ea", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIDialogNumeric</title>
+<title>Kodi Development: CAddonGUIDialogYesNo</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,20 +92,20 @@ $(document).ready(function(){initNavTree('a00241.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIDialogNumeric<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a> &raquo; <a class="el" href="a00247.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAddonGUIDialogYesNo<div class="ingroups"><a class="el" href="a00306.html">C++ Development</a> &raquo; <a class="el" href="a00242.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Numeric dialogs</b> </p>
-<p>The functions listed below have to be permitted by the user for the representation of a numeric keyboard around an input.</p>
-<p>The class supports several kinds, from an easy number choice up to the passport Word production and their confirmation for add-on.</p>
+<p><b>Yes / No dialog</b> </p>
+<p>The Yes / No dialog can be used to inform the user about questions and get the answer.</p>
+<p>In order to achieve a line break is a <b>\n</b> directly in the text or in the "./resources/language/resource.language.??_??/strings.po" to call with <b>std::string CAddonLib_General::GetLocalizedString(...);</b>.</p>
 <p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00145.html">#include &lt;kodi/gui.api2/GUIDialogNumeric.h&gt;</a> be included to enjoy it.</p>
+<p>It has the header <a class="el" href="a00153.html">#include &lt;kodi/gui.api2/GUIDialogYesNo.h&gt;</a> be included to enjoy it.</p>
 <div class="image">
-<img src="help.GUIDialogNumeric.png" alt="help.GUIDialogNumeric.png"/>
+<img src="help.GUIDialogYesNo.png" alt="help.GUIDialogYesNo.png"/>
 </div>
  <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga37d6caf6f507938f599915d93eddd596"></a>
+<a class="anchor" id="gabd70a1306a25efc68e99f5852aeffe9f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -113,16 +113,34 @@ $(document).ready(function(){initNavTree('a00241.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool ShowAndGetDate </td>
+          <td class="memname">static bool ShowAndGetInput </td>
           <td>(</td>
-          <td class="paramtype">tm &amp;&#160;</td>
-          <td class="paramname"><em>date</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bCanceled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>noLabel</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>yesLabel</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -137,32 +155,35 @@ $(document).ready(function(){initNavTree('a00241.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Use dialog to get date value. </p>
+<p>Use dialog to get numeric new password with one text string shown everywhere and cancel return field. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">date</td><td>Overwritten with user input if return=true and date inserted. </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog heading </td></tr>
+    <tr><td class="paramname">text</td><td>Multi-line text </td></tr>
+    <tr><td class="paramname">bCanceled</td><td>Return value about cancel button </td></tr>
+    <tr><td class="paramname">noLabel</td><td>[opt] label to put on the no button </td></tr>
+    <tr><td class="paramname">yesLabel</td><td>[opt] label to put on the yes button </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* printf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;time.h&gt;</span>       <span class="comment">/* time_t, struct tm, time, localtime, strftime */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00145.html">kodi/gui.api2/GUIDialogNumeric.h</a>&gt;</span></div>
+<dl class="section return"><dt>Returns</dt><dd>Returns True if 'Yes' was pressed, else False</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is preferred to only use this as it is actually a multi-line text.</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00153.html">kodi/gui.api2/GUIDialogYesNo.h</a>&gt;</span></div>
 <div class="line"></div>
-<div class="line">time_t rawtime;</div>
-<div class="line"><span class="keyword">struct </span>tm * timeinfo;</div>
-<div class="line"><span class="keywordtype">char</span> buffer [20];</div>
-<div class="line"></div>
-<div class="line">time (&amp;rawtime);</div>
-<div class="line">timeinfo = localtime(&amp;rawtime);</div>
-<div class="line"><span class="keywordtype">bool</span> bRet = <a class="code" href="a00241.html#ga37d6caf6f507938f599915d93eddd596">CAddonGUIDialogNumeric::ShowAndGetDate</a>(*timeinfo, <span class="stringliteral">&quot;Selected date test call&quot;</span>);</div>
-<div class="line">strftime(buffer, <span class="keyword">sizeof</span>(buffer), <span class="stringliteral">&quot;%Y-%m-%d&quot;</span>, timeinfo);</div>
-<div class="line">printf(<span class="stringliteral">&quot;Selected date it&#39;s %s and was on Dialog %s\n&quot;</span>, buffer, bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
+<div class="line"><span class="keywordtype">bool</span> canceled;</div>
+<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00241.html#gabd70a1306a25efc68e99f5852aeffe9f">CAddonGUIDialogYesNo::ShowAndGetInput</a>(</div>
+<div class="line">   <span class="stringliteral">&quot;Yes / No test call&quot;</span>,   <span class="comment">/* The Header */</span></div>
+<div class="line">   <span class="stringliteral">&quot;You has opened Yes / No dialog for test\n\nIs this OK for you?&quot;</span>,</div>
+<div class="line">   canceled,               <span class="comment">/* return value about cancel button */</span></div>
+<div class="line">   <span class="stringliteral">&quot;Not really&quot;</span>,           <span class="comment">/* No label, is optional and if empty &quot;No&quot; */</span></div>
+<div class="line">   <span class="stringliteral">&quot;Ohhh yes&quot;</span>);            <span class="comment">/* Yes label, also optional and if empty &quot;Yes&quot; */</span></div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;You has called Yes/No, returned &#39;%s&#39; and was %s\n&quot;</span>,</div>
+<div class="line">         ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>,</div>
+<div class="line">         canceled ? <span class="stringliteral">&quot;canceled&quot;</span> : <span class="stringliteral">&quot;not canceled&quot;</span>);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga1fd8ee824dbbbc1d222fd67583f28614"></a>
+<a class="anchor" id="gab23d9c3e25b9f866b1581d5ff1821d02"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -170,16 +191,40 @@ $(document).ready(function(){initNavTree('a00241.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool ShowAndGetIPAddress </td>
+          <td class="memname">static bool ShowAndGetInput </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strIPAddress</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
+          <td class="paramname"><em>line0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>line1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>line2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>noLabel</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>yesLabel</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -194,78 +239,34 @@ $(document).ready(function(){initNavTree('a00241.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Use dialog to get a IP. </p>
+<p>Use dialog to get numeric new password with separated line strings. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">strIPAddress</td><td>Overwritten with user input if return=true and IP address inserted. </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display. </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog heading </td></tr>
+    <tr><td class="paramname">line0</td><td>Line #0 text </td></tr>
+    <tr><td class="paramname">line1</td><td>Line #1 text </td></tr>
+    <tr><td class="paramname">line2</td><td>Line #2 text </td></tr>
+    <tr><td class="paramname">noLabel</td><td>[opt] label to put on the no button. </td></tr>
+    <tr><td class="paramname">yesLabel</td><td>[opt] label to put on the yes button. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gab73e260650434df59844c3a2c8b1ba2d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetNumber </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strInput</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iAutoCloseTimeoutMs</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to get normal number. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strInput</td><td>Overwritten with user input if return=true and time in seconds inserted </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-    <tr><td class="paramname">iAutoCloseTimeoutMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* printf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;stdlib.h&gt;</span>     <span class="comment">/* strtoull (C++11) */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00145.html">kodi/gui.api2/GUIDialogNumeric.h</a>&gt;</span></div>
+<dl class="section return"><dt>Returns</dt><dd>Returns True if 'Yes' was pressed, else False.</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00153.html">kodi/gui.api2/GUIDialogYesNo.h</a>&gt;</span></div>
 <div class="line"></div>
-<div class="line">std::string number;</div>
-<div class="line"><span class="keywordtype">bool</span> bRet = <a class="code" href="a00241.html#gab73e260650434df59844c3a2c8b1ba2d">CAddonGUIDialogNumeric::ShowAndGetNumber</a>(number, <span class="stringliteral">&quot;Number test call&quot;</span>);</div>
-<div class="line">printf(<span class="stringliteral">&quot;Written number input is : %llu and was %s\n&quot;</span>,</div>
-<div class="line">               strtoull(number.c_str(), <span class="keyword">nullptr</span>, 0), bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
+<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00241.html#gabd70a1306a25efc68e99f5852aeffe9f">CAddonGUIDialogYesNo::ShowAndGetInput</a>(</div>
+<div class="line">   <span class="stringliteral">&quot;Yes / No test call&quot;</span>,   <span class="comment">// The Header</span></div>
+<div class="line">   <span class="stringliteral">&quot;You has opened Yes / No dialog for test&quot;</span>,</div>
+<div class="line">   <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line">   <span class="stringliteral">&quot;Is this OK for you?&quot;</span>,</div>
+<div class="line">   <span class="stringliteral">&quot;Not really&quot;</span>,           <span class="comment">// No label, is optional and if empty &quot;No&quot;</span></div>
+<div class="line">   <span class="stringliteral">&quot;Ohhh yes&quot;</span>);            <span class="comment">// Yes label, also optional and if empty &quot;Yes&quot;</span></div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;You has called Yes/No, returned &#39;%s&#39;\n&quot;</span>,</div>
+<div class="line">         ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga664586418f4cb12a25a15dcd5effff02"></a>
+<a class="anchor" id="gacdb0bcb4ff915c595e075af871d629ea"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -273,16 +274,46 @@ $(document).ready(function(){initNavTree('a00241.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool ShowAndGetSeconds </td>
+          <td class="memname">static bool ShowAndGetInput </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strTime</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
+          <td class="paramname"><em>line0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>line1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>line2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bCanceled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>noLabel</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>yesLabel</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -297,259 +328,34 @@ $(document).ready(function(){initNavTree('a00241.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Show numeric keypad to get seconds. </p>
+<p>Use dialog to get numeric new password with separated line strings and cancel return field. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">strTime</td><td>Overwritten with user input if return=true and time in seconds inserted. </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog heading </td></tr>
+    <tr><td class="paramname">line0</td><td>Line #0 text </td></tr>
+    <tr><td class="paramname">line1</td><td>Line #1 text </td></tr>
+    <tr><td class="paramname">line2</td><td>Line #2 text </td></tr>
+    <tr><td class="paramname">bCanceled</td><td>Return value about cancel button </td></tr>
+    <tr><td class="paramname">noLabel</td><td>[opt] label to put on the no button </td></tr>
+    <tr><td class="paramname">yesLabel</td><td>[opt] label to put on the yes button </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga08a9c6abb71eb5a380213e9528b6aecf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetTime </td>
-          <td>(</td>
-          <td class="paramtype">tm &amp;&#160;</td>
-          <td class="paramname"><em>time</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to get time value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">time</td><td>Overwritten with user input if return=true and time inserted. </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* printf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;time.h&gt;</span>       <span class="comment">/* time_t, struct tm, time, localtime, strftime */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00145.html">kodi/gui.api2/GUIDialogNumeric.h</a>&gt;</span></div>
+<dl class="section return"><dt>Returns</dt><dd>Returns True if 'Yes' was pressed, else False</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00153.html">kodi/gui.api2/GUIDialogYesNo.h</a>&gt;</span></div>
 <div class="line"></div>
-<div class="line">time_t rawtime;</div>
-<div class="line"><span class="keyword">struct </span>tm * timeinfo;</div>
-<div class="line"><span class="keywordtype">char</span> buffer [10];</div>
-<div class="line"></div>
-<div class="line">time (&amp;rawtime);</div>
-<div class="line">timeinfo = localtime(&amp;rawtime);</div>
-<div class="line"><span class="keywordtype">bool</span> bRet = <a class="code" href="a00241.html#ga08a9c6abb71eb5a380213e9528b6aecf">CAddonGUIDialogNumeric::ShowAndGetTime</a>(*timeinfo, <span class="stringliteral">&quot;Selected time test call&quot;</span>);</div>
-<div class="line">strftime(buffer, <span class="keyword">sizeof</span>(buffer), <span class="stringliteral">&quot;%H:%M.&quot;</span>, timeinfo);</div>
-<div class="line">printf(<span class="stringliteral">&quot;Selected time it&#39;s %s and was on Dialog %s\n&quot;</span>, buffer, bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga3028013da19a00279961a45d26dcf832"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndVerifyInput </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strToVerify</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bVerifyInput</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to verify numeric password. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strToVerify</td><td>Value to compare against user input. </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-    <tr><td class="paramname">bVerifyInput</td><td>If set as true we verify the users input versus strToVerify. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga85ca517533d779b26944d6fb74fe0abe"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndVerifyNewPassword </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strNewPassword</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to get numeric new password. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strNewPassword</td><td>String to preload into the keyboard accumulator. Overwritten with user input if return=true. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input entry/re-entry. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga28ed908212d6a38156014d5ccc5a7dc7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int ShowAndVerifyPassword </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPassword</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iRetries</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to verify numeric password. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strPassword</td><td>Overwritten with user input if return=tru </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-    <tr><td class="paramname">iRetries</td><td>If greater than 0, shows "Incorrect password, %d retries left" on dialog line 2, else line 2 is blank. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if successful display and user input. 1 if unsuccessful input. -1 if no user input or canceled editing.</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* fprintf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00124.html">kodi/addon.api2/General.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00145.html">kodi/gui.api2/GUIDialogNumeric.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * The example below shows the complete use of keyboard dialog for password</span></div>
-<div class="line"><span class="comment"> * check. If only one check from add-on needed can be function with retries</span></div>
-<div class="line"><span class="comment"> * set to &#39;0&#39; called alone.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * The use of MD5 translated password is always required for the check on Kodi!</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"></div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Get from Kodi&#39;s global settings the maximum allowed retries for passwords.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keywordtype">int</span> maxretries = 0;</div>
-<div class="line"><span class="keywordflow">if</span> (CAddonLib_General::GetSettingInt(<span class="stringliteral">&quot;masterlock.maxretries&quot;</span>, maxretries, <span class="keyword">true</span>))</div>
-<div class="line">{</div>
-<div class="line">  <span class="comment">/*</span></div>
-<div class="line"><span class="comment">   * Password names need to be send as md5 sum to kodi.</span></div>
-<div class="line"><span class="comment">   */</span></div>
-<div class="line">  std::string password;</div>
-<div class="line">  CAddonLib_General::GetMD5(<span class="stringliteral">&quot;1234&quot;</span>, password);</div>
-<div class="line"></div>
-<div class="line">  <span class="comment">/*</span></div>
-<div class="line"><span class="comment">   * To the loop about password checks.</span></div>
-<div class="line"><span class="comment">   */</span></div>
-<div class="line">  <span class="keywordtype">int</span> ret;</div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; maxretries; i++)</div>
-<div class="line">  {</div>
-<div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Ask the user about the password.</span></div>
-<div class="line"><span class="comment">     */</span></div>
-<div class="line">    ret = <a class="code" href="a00241.html#ga28ed908212d6a38156014d5ccc5a7dc7">CAddonGUIDialogNumeric::ShowAndVerifyPassword</a>(password, <span class="stringliteral">&quot;Demo numeric password call for PW &#39;1234&#39;&quot;</span>, i);</div>
-<div class="line">    <span class="keywordflow">if</span> (ret == 0)</div>
-<div class="line">    {</div>
-<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Numeric password successfull confirmed after &#39;%i&#39; tries\n&quot;</span>, i+1);</div>
-<div class="line">      <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ret &lt; 0)</div>
-<div class="line">    {</div>
-<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Canceled editing on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
-<div class="line">      <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">else</span> <span class="comment">/* if (ret &gt; 0) */</span></div>
-<div class="line">    {</div>
-<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Wrong numeric password entered on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
-<div class="line">     }</div>
-<div class="line">  }</div>
-<div class="line">}</div>
-<div class="line"><span class="keywordflow">else</span></div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Requested global setting value &#39;masterlock.maxretries&#39; not present!&quot;</span>);</div>
+<div class="line"><span class="keywordtype">bool</span> canceled;</div>
+<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00241.html#gabd70a1306a25efc68e99f5852aeffe9f">CAddonGUIDialogYesNo::ShowAndGetInput</a>(</div>
+<div class="line">   <span class="stringliteral">&quot;Yes / No test call&quot;</span>,   <span class="comment">// The Header</span></div>
+<div class="line">   <span class="stringliteral">&quot;You has opened Yes / No dialog for test&quot;</span>,</div>
+<div class="line">   <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line">   <span class="stringliteral">&quot;Is this OK for you?&quot;</span>,</div>
+<div class="line">   canceled,               <span class="comment">// return value about cancel button</span></div>
+<div class="line">   <span class="stringliteral">&quot;Not really&quot;</span>,           <span class="comment">// No label, is optional and if empty &quot;No&quot;</span></div>
+<div class="line">   <span class="stringliteral">&quot;Ohhh yes&quot;</span>);            <span class="comment">// Yes label, also optional and if empty &quot;Yes&quot;</span></div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;You has called Yes/No, returned &#39;%s&#39; and was %s\n&quot;</span>,</div>
+<div class="line">         ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>,</div>
+<div class="line">         canceled ? <span class="stringliteral">&quot;canceled&quot;</span> : <span class="stringliteral">&quot;not canceled&quot;</span>);</div>
 </div><!-- fragment --> 
 </div>
 </div>

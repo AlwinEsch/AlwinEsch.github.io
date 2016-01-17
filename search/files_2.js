@@ -1,21 +1,13 @@
 var searchData=
 [
-  ['definations_2eh',['definations.h',['../a00117.html',1,'']]],
-  ['definations_2eh',['definations.h',['../a00118.html',1,'']]],
-  ['definations_2eh',['definations.h',['../a00119.html',1,'']]],
   ['definations_2eh',['definations.h',['../a00120.html',1,'']]],
   ['definations_2eh',['definations.h',['../a00121.html',1,'']]],
-  ['dialog_2eh',['Dialog.h',['../a00169.html',1,'']]],
-  ['dlfcn_2dwin32_2ecpp',['dlfcn-win32.cpp',['../a00122.html',1,'']]],
-  ['dlfcn_2dwin32_2eh',['dlfcn-win32.h',['../a00123.html',1,'']]],
-  ['doxygen_2dkodi_2d001_5f000_5fgetting_5fstarted_2etxt',['doxygen-kodi-001_000_Getting_started.txt',['../a00104.html',1,'']]],
-  ['doxygen_2dkodi_2d002_5f000_5fadd_2don_5ftypes_2etxt',['doxygen-kodi-002_000_Add-On_Types.txt',['../a00105.html',1,'']]],
-  ['doxygen_2dkodi_2d003_5f000_5ftutorials_2etxt',['doxygen-kodi-003_000_Tutorials.txt',['../a00106.html',1,'']]],
-  ['doxygen_2dkodi_2d003_5f002_5fpython_5fhelloworld_5faddon_2etxt',['doxygen-kodi-003_002_Python_HelloWorld_addon.txt',['../a00107.html',1,'']]],
-  ['doxygen_2dkodi_2d003_5f010_5fdoxygenonaddon_2etxt',['doxygen-kodi-003_010_DoxygenOnAddon.txt',['../a00108.html',1,'']]],
-  ['doxygen_2dkodi_2d004_5f000_5fexamples_2etxt',['doxygen-kodi-004_000_Examples.txt',['../a00109.html',1,'']]],
-  ['doxygen_2dkodi_2d101_5f000_5fmodules_5fcpp_2etxt',['doxygen-kodi-101_000_modules_cpp.txt',['../a00110.html',1,'']]],
-  ['doxygen_2dkodi_2d102_5f000_5fmodules_5fpython_2etxt',['doxygen-kodi-102_000_modules_python.txt',['../a00111.html',1,'']]],
-  ['doxygen_2dkodi_2ddev_2dconfig_2etxt',['doxygen-kodi-dev-config.txt',['../a00112.html',1,'']]],
-  ['doxygen_2dkodi_2dxml_2dcontrol_2did_2ddesc_2etxt',['doxygen-kodi-xml-control-id-desc.txt',['../a00113.html',1,'']]]
+  ['definations_2eh',['definations.h',['../a00122.html',1,'']]],
+  ['definations_2eh',['definations.h',['../a00123.html',1,'']]],
+  ['definations_2eh',['definations.h',['../a00124.html',1,'']]],
+  ['dialog_2eh',['Dialog.h',['../a00172.html',1,'']]],
+  ['dlfcn_2dwin32_2ecpp',['dlfcn-win32.cpp',['../a00125.html',1,'']]],
+  ['dlfcn_2dwin32_2eh',['dlfcn-win32.h',['../a00126.html',1,'']]],
+  ['doxygen_2dkodi_2dxml_2dcontrol_2did_2ddesc_2etxt',['doxygen-kodi-xml-control-id-desc.txt',['../a00107.html',1,'']]],
+  ['doxygenonaddon_2etxt',['DoxygenOnAddon.txt',['../a00114.html',1,'']]]
 ];

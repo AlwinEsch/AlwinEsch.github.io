@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CodecDescriptor</title>
+<title>Kodi Development: CAddonLib_VFSProperty</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,82 +92,53 @@ $(document).ready(function(){initNavTree('a00213.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CodecDescriptor<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a> &raquo; <a class="el" href="a00210.html">Library - AddOnLIB</a></div></div>  </div>
+<div class="title">CAddonLib_VFSProperty<div class="ingroups"><a class="el" href="a00306.html">C++ Development</a> &raquo; <a class="el" href="a00205.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Codec type name converter</b> </p>
-<p>Some of the backends codec names don't match ffmpeg's, so translate them to something ffmpeg understands.</p>
-<p>Adapter which converts codec names used by several backends into their FFmpeg equivalents.</p>
-<p>This class is optional and is available here for two reasons. One is the some PVR add-ons need this and the other to provide an example if the own add-on also names are used not to ffmpeg are compatible. Then it might be a copy of this class to its own needs.</p>
-<p>It has the header <a class="el" href="a00116.html">#include &lt;kodi/addon.api2/Codec.h&gt;</a> be included to enjoy it. </p>
+<p><b>Virtual file system entry property</b> </p>
+<p>The <a class="el" href="a00022.html">CAddonLib_VFSProperty</a> is used to manage additional file information, if present it will be used in <a class="el" href="a00020.html">CAddonLib_VFSDirEntry</a> as a list.</p>
+<p>The additional information will be provided with text, either for the name as well as for the value.</p>
+<p>It has the header <a class="el" href="a00130.html">#include &lt;kodi/addon.api2/VFSUtils.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga62b7b43b626a9b8beb0f16a8795b9d91"></a>
+<a class="anchor" id="ga965d127e0d0de44d06a0e6da2ca8f829"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00058.html">kodi_codec</a> Codec </td>
+          <td class="memname">CAddonLib_VFSProperty </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Function to retrieve used Kodi codec identification id. </p>
-<dl class="section return"><dt>Returns</dt><dd>identification of codec </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga542cf7ce73c4f9e04f16bac4583fbb19"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">static CodecDescriptor GetCodecByName </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>strCodecName</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Static function to translate codec names who are different to them on Kodi (ffmpeg). </p>
+<p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strCodecName</td><td>The own used codec name, currently this are <b><em>MPEG2AUDIO</em></b>, <b><em>MPEGTS</em></b> and <b><em>TEXTSUB</em></b> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Property name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Defined value to use </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>This class generated with defined Name and Codec identifier </dd></dl>
 
 </div>
 </div>
 <a class="anchor" id="gab29906ba5407bb58b86428cb4b4a1e26"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const std::string&amp; Name </td>
@@ -177,15 +148,77 @@ $(document).ready(function(){initNavTree('a00213.html','');});
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Function to retrieve used Kodi codec name. </p>
-<dl class="section return"><dt>Returns</dt><dd>The string for codec based upon ffmpeg </dd></dl>
+<p>Used Name. </p>
+<dl class="section return"><dt>Returns</dt><dd>Defined name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga940d484bb6523277e1d2c742f4f534a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set name to use. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Property name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga69925f195530e698e569191bd4c3470c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetValue </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set defined value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Defined value to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7533eecbdf0c0c538dd01e03fdf8f2ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; Value </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get defined value. </p>
+<dl class="section return"><dt>Returns</dt><dd>Defined value </dd></dl>
 
 </div>
 </div>

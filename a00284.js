@@ -1,13 +1,13 @@
 var a00284 =
 [
-    [ "atime", "a00284.html#ga65d49375e5251d4e616a45e3c898d6cc", null ],
-    [ "ctime", "a00284.html#gab24c57af16ac6f88edb819c18e2e438b", null ],
-    [ "mtime", "a00284.html#ga57da69d0b20141a95c0c44a6bb5f3b35", null ],
-    [ "st_dev", "a00284.html#gab17084ec246f2b497d2f13618c5bd220", null ],
-    [ "st_gid", "a00284.html#ga9a7a9ad27402f5a931bcbff38e4e03d3", null ],
-    [ "st_ino", "a00284.html#ga77e336d6274f6fb0e2a3c3546e61e360", null ],
-    [ "st_mode", "a00284.html#ga00b3e20028eaee69c44cdc47a922fe31", null ],
-    [ "st_nlink", "a00284.html#ga34f57426567df63ef5ad1b4679778d18", null ],
-    [ "st_size", "a00284.html#gaeec21543efab31f62a21e533b0d3a537", null ],
-    [ "st_uid", "a00284.html#gaa29c53999dffe4acc12aed2eb60a6c81", null ]
+    [ "add", "a00284.html#ga979e740949519ca0e88da2ff9934a4d5", null ],
+    [ "clear", "a00284.html#gac8bb3912a3ce86b15842e79d0b421204", null ],
+    [ "getPlayListId", "a00284.html#ga4d665409e02daa8ea13ce462ca44c914", null ],
+    [ "getposition", "a00284.html#ga265b7f39dcd400e1f4edaf4060af9977", null ],
+    [ "load", "a00284.html#ga2eea1635b7df085d42c973352ef10355", null ],
+    [ "operator[]", "a00284.html#gaba5d6f37d582f0512f61f32109a92d92", null ],
+    [ "remove", "a00284.html#gae363baca6026e43cc1264c5914ff69b9", null ],
+    [ "shuffle", "a00284.html#ga1905fe84eb39f020b32c58baf7a76758", null ],
+    [ "size", "a00284.html#gaf4b57d21919c42d55af03391f91a1c08", null ],
+    [ "unshuffle", "a00284.html#ga2401476232ac1b00321c9bfe8158f9c4", null ]
 ];

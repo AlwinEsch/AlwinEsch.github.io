@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonLib_VFSUtils</title>
+<title>Kodi Development: CAddonGUIControlButton</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,681 +92,197 @@ $(document).ready(function(){initNavTree('a00221.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonLib_VFSUtils<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a> &raquo; <a class="el" href="a00210.html">Library - AddOnLIB</a></div></div>  </div>
+<div class="title">CAddonGUIControlButton<div class="ingroups"><a class="el" href="a00306.html">C++ Development</a> &raquo; <a class="el" href="a00242.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Virtual file system utilities</b> </p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00127.html">#include &lt;kodi/addon.api2/VFSUtils.h&gt;</a> be included to enjoy it. </p>
+<p><b>Standard push button control for window</b> </p>
+<p>The button control is used for creating push buttons in Kodi. You can choose the position, size, and look of the button, as well as choosing what action(s) should be performed when pushed.</p>
+<p>It has the header <a class="el" href="a00133.html">#include &lt;kodi/gui.api2/GUIControlButton.h&gt;</a> be included to enjoy it.</p>
+<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gacbb82bf91432edf4a203b4f144c7d3c4"></a>
+<a class="anchor" id="ga3132552bcc57d1c10aa86871c5dca313"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool CreateDirectory </td>
+          <td class="memname">CAddonGUIControlButton </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Make a directory. </p>
-<p>The <a class="el" href="a00221.html#gacbb82bf91432edf4a203b4f144c7d3c4" title="Make a directory. ">CAddonLib_VFSUtils::CreateDirectory</a>(...) function shall create a new directory with name path.</p>
-<p>The newly created directory shall be an empty directory.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strPath</td><td>Path to the directory. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Upon successful completion, <a class="el" href="a00221.html#gacbb82bf91432edf4a203b4f144c7d3c4" title="Make a directory. ">CreateDirectory()</a> shall return true. Otherwise,false shall be returned, no directory shall be created, and errno shall be set to indicate the error.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string directory = <span class="stringliteral">&quot;C:\\my_dir&quot;</span>;</div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00221.html#gacbb82bf91432edf4a203b4f144c7d3c4">CAddonLib_VFSUtils::CreateDirectory</a>(directory);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory &#39;%s&#39; successfull created: %s\n&quot;</span>, directory.c_str(), ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
-<div class="line">...</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga83ff1a280df8f4bc766ef3398b976116"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool DeleteFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Deletes a file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename to delete. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The file was successfully deleted.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00143.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00146.html">kodi/gui.api2/GUIDialogOK.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string filename;</div>
-<div class="line"><span class="keywordflow">if</span> (CAddonGUIDialogFileBrowser::ShowAndGetFile(<span class="stringliteral">&quot;local&quot;</span>, <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line">                                               <span class="stringliteral">&quot;Test File selection and delete of them!&quot;</span>,</div>
-<div class="line">                                               filename))</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">bool</span> successed = <a class="code" href="a00221.html#ga83ff1a280df8f4bc766ef3398b976116">CAddonLib_VFSUtils::DeleteFile</a>(filename);</div>
-<div class="line">  <span class="keywordflow">if</span> (!successed)</div>
-<div class="line">    CAddonGUIDialogOK::ShowAndGetInput(<span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;Delete of File&quot;</span>, filename, <span class="stringliteral">&quot;failed!&quot;</span>);</div>
-<div class="line">  <span class="keywordflow">else</span></div>
-<div class="line">    CAddonGUIDialogOK::ShowAndGetInput(<span class="stringliteral">&quot;Information&quot;</span>, <span class="stringliteral">&quot;Delete of File&quot;</span>, filename, <span class="stringliteral">&quot;successfull done.&quot;</span>);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga5e2010e4942df75e2929c5b13a082c1e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool DirectoryExists </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Verifying the Existence of a Directory. </p>
-<p>The <a class="el" href="a00221.html#ga5e2010e4942df75e2929c5b13a082c1e" title="Verifying the Existence of a Directory. ">CAddonLib_VFSUtils::DirectoryExists</a>(...) method determines whether a specified folder exists.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strPath</td><td>Path to the directory. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True when it exists, false otherwise.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string directory = <span class="stringliteral">&quot;C:\\my_dir&quot;</span>;</div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00221.html#ga5e2010e4942df75e2929c5b13a082c1e">CAddonLib_VFSUtils::DirectoryExists</a>(directory);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory &#39;%s&#39; present: %s\n&quot;</span>, directory.c_str(), ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
-<div class="line">...</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gac73807ace2f8e3033e9f44e32e0bffeb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool FileExists </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em>, </td>
+          <td class="paramtype"><a class="el" href="a00058.html">CAddonGUIWindow</a> *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>related window control class </td></tr>
+    <tr><td class="paramname">controlId</td><td>Used skin xml control id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6c80f17140ee95a258ff6c13439a2623"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetLabel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the used text from button. </p>
+<dl class="section return"><dt>Returns</dt><dd>Text shown </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga94e3a8c89b6a8d0fb69cb8f44c3d5b1b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetLabel2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the second label if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>Second label </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaac893222adeffdefc04d749648cce354"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetEnabled </td>
+          <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bUseCache</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Check if a file exists. </p>
+<p>Set's the control's enabled/disabled state. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename to check. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bUseCache</td><td>Check in file cache. </td></tr>
+    <tr><td class="paramname">If</td><td>true enabled, otherwise disabled </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the file exists false otherwise.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">bool <a class="code" href="a00209.html#ga12691f7bf1c5e55da57b18f63f6fbdca">exists</a> = <a class="code" href="a00221.html#gac73807ace2f8e3033e9f44e32e0bffeb">CAddonLib_VFSUtils::FileExists</a>(<span class="stringliteral">&quot;special://temp/kodi.log&quot;</span>);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Log file should be always present, is it present? %s\n&quot;</span>, <a class="code" href="a00209.html#ga12691f7bf1c5e55da57b18f63f6fbdca">exists</a> ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
-</div><!-- fragment --> 
+
 </div>
 </div>
-<a class="anchor" id="ga036d35d1c5c500c6def14e0622951346"></a>
+<a class="anchor" id="ga0468217482f9a171183b1cda613417e6"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string GetCacheThumbName </td>
+          <td class="memname">void SetLabel </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em></td><td>)</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Returns a thumb cache filename. </p>
+<p>To set the text string on button. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>path to file </td></tr>
+    <tr><td class="paramname">Text</td><td>to show </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>cache filename</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00143.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string thumb;</div>
-<div class="line">std::string filename;</div>
-<div class="line"><span class="keywordflow">if</span> (CAddonGUIDialogFileBrowser::ShowAndGetFile(<span class="stringliteral">&quot;local&quot;</span>, <span class="stringliteral">&quot;*.avi|*.mpg|*.mp4&quot;</span>,</div>
-<div class="line">                                               <span class="stringliteral">&quot;Test File selection to get Thumnail&quot;</span>,</div>
-<div class="line">                                               filename))</div>
-<div class="line">{</div>
-<div class="line">  thumb = <a class="code" href="a00221.html#ga036d35d1c5c500c6def14e0622951346">CAddonLib_VFSUtils::GetCacheThumbName</a>(filename);</div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Thumb name of file &#39;%s&#39; is %s\n&quot;</span>, thumb.c_str(), filename.c_str());</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+
 </div>
 </div>
-<a class="anchor" id="gaf6e6b8b85c14bf77587175c446b04cc9"></a>
+<a class="anchor" id="ga4f36ea518d9c722f2cdc03cac01aabf3"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static unsigned int GetChunkSize </td>
+          <td class="memname">void SetLabel2 </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>chunk</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>minimum</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Return a size aligned to the chunk size at least as large as the chunk size. </p>
+<p>If two labels are used for button becomes it set with them. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">chunk</td><td>The chunk size </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">minimum</td><td>The minimum size (or maybe the minimum number of chunks?) </td></tr>
+    <tr><td class="paramname">Text</td><td>for second label </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The aligned size </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gaf2bd94f3fa601828737bd8179e2a92e1"></a>
+<a class="anchor" id="ga71a209185b7a98adf0a310d2c44cdbe6"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool GetDirectory </td>
+          <td class="memname">void SetVisible </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>visible</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="a00018.html">CAddonLib_VFSDirEntry</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>items</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Lists a directory. </p>
-<p>Return the list of files and directories which have been found in the specified directory and which respect the given constraint.</p>
-<p>It can handle the normal OS dependent paths and also the special virtual filesystem from Kodi what starts with <b>special://</b>.</p>
+<p>Set the control on window to visible. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The path in which the files and directories are located. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>Mask to filter out requested files, e.g. "*.avi|*.mpg" to files with this ending. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">items</td><td>The returned list directory entries. </td></tr>
+    <tr><td class="paramname">If</td><td>true visible, otherwise hidden </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if listing was successful, false otherwise.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">std::vector&lt;CAddonLib_VFSDirEntry&gt; items;</div>
-<div class="line"><a class="code" href="a00221.html#gaf2bd94f3fa601828737bd8179e2a92e1">CAddonLib_VFSUtils::GetDirectory</a>(<span class="stringliteral">&quot;special://temp&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, items);</div>
-<div class="line"></div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory have %lu entries\n&quot;</span>, items.size());</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; items.size(); i++)</div>
-<div class="line">{</div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot; - %04lu -- Folder: %s -- Name: %s -- Path: %s\n&quot;</span>,</div>
-<div class="line">            i+1,</div>
-<div class="line">            items[i].IsFolder() ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no &quot;</span>,</div>
-<div class="line">            items[i].Label().c_str(),</div>
-<div class="line">            items[i].Path().c_str());</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+
 </div>
 </div>
-<a class="anchor" id="ga2165e4707f3f910e36f4e98ff0f5aa7c"></a>
+<a class="anchor" id="gaeb9b958abdc7aa81b76bb43b856edb9a"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string GetDirectoryName </td>
+          <td class="memname">~CAddonGUIControlButton </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Return the directory name from given complate path string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The complete path include file and directory </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Directory name from path</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string dirName = <a class="code" href="a00221.html#ga2165e4707f3f910e36f4e98ff0f5aa7c">CAddonLib_VFSUtils::GetDirectoryName</a>(<span class="stringliteral">&quot;special://temp/kodi.log&quot;</span>);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory name is &#39;%s&#39;\n&quot;</span>, dirName.c_str());</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga6cd9a2d2fa708d4cfe01e99b229ecaad"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string GetFileMD5 </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Destructor. </p>
 
-<p>Retrieve MD5sum of a file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strPath</td><td>path to the file to MD5sum </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>md5 sum of the file</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00143.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string md5;</div>
-<div class="line">std::string filename;</div>
-<div class="line"><span class="keywordflow">if</span> (CAddonGUIDialogFileBrowser::ShowAndGetFile(<span class="stringliteral">&quot;local&quot;</span>, <span class="stringliteral">&quot;*.avi|*.mpg|*.mp4&quot;</span>,</div>
-<div class="line">                                               <span class="stringliteral">&quot;Test File selection to get MD5&quot;</span>,</div>
-<div class="line">                                               filename))</div>
-<div class="line">{</div>
-<div class="line">  md5 = <a class="code" href="a00221.html#ga6cd9a2d2fa708d4cfe01e99b229ecaad">CAddonLib_VFSUtils::GetFileMD5</a>(filename);</div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;MD5 of file &#39;%s&#39; is %s\n&quot;</span>, md5.c_str(), filename.c_str());</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga99209a445575f8ec40310427bc8ece4a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string GetFileName </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the file name from given complate path string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The complete path include file and directory </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Filename from path</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string fileName = <a class="code" href="a00221.html#ga99209a445575f8ec40310427bc8ece4a">CAddonLib_VFSUtils::GetFileName</a>(<span class="stringliteral">&quot;special://temp/kodi.log&quot;</span>);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;File name is &#39;%s&#39;\n&quot;</span>, fileName.c_str());</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga4847e33b9790cdee016790ad68709986"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string MakeLegalFileName </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Make filename valid. </p>
-<p>Function to replace not valid characters with '_'. It can be also compared with original before in a own loop until it is equal (no invalid characters).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>Filename to check and fix </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The legal filename</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string fileName = <span class="stringliteral">&quot;///\\jk???lj????.mpg&quot;</span>;</div>
-<div class="line">std::string legalName = <a class="code" href="a00221.html#ga4847e33b9790cdee016790ad68709986">CAddonLib_VFSUtils::MakeLegalFileName</a>(fileName);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Legal name of &#39;%s&#39; is &#39;%s&#39;\n&quot;</span>, fileName.c_str(), legalName.c_str());</div>
-<div class="line"></div>
-<div class="line"><span class="comment">/* Returns as legal: &#39;jk___lj____.mpg&#39; */</span></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga9d0b0595cd9356c38329d3d8d32ae1e2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string MakeLegalPath </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Make directory name valid. </p>
-<p>Function to replace not valid characters with '_'. It can be also compared with original before in a own loop until it is equal (no invalid characters).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strPath</td><td>Directory name to check and fix </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The legal directory name</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string path = <span class="stringliteral">&quot;///\\jk???lj????\\hgjkg&quot;</span>;</div>
-<div class="line">std::string legalPath = <a class="code" href="a00221.html#ga9d0b0595cd9356c38329d3d8d32ae1e2">CAddonLib_VFSUtils::MakeLegalPath</a>(path);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Legal name of &#39;%s&#39; is &#39;%s&#39;\n&quot;</span>, path.c_str(), legalPath.c_str());</div>
-<div class="line"></div>
-<div class="line"><span class="comment">/* Returns as legal: &#39;/jk___lj____/hgjkg&#39; */</span></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga96e34c477aa80c8b9adf682f8450af5c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool RemoveDirectory </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Removes a directory. </p>
-<p>The <a class="el" href="a00221.html#ga96e34c477aa80c8b9adf682f8450af5c" title="Removes a directory. ">CAddonLib_VFSUtils::RemoveDirectory</a>(...) function shall remove a directory whose name is given by path.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strPath</td><td>Path to the directory. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Upon successful completion, the function <a class="el" href="a00221.html#ga96e34c477aa80c8b9adf682f8450af5c" title="Removes a directory. ">RemoveDirectory()</a> shall return true. Otherwise, false shall be returned, and errno set to indicate the error. If false is returned, the named directory shall not be changed.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">bool ret = <a class="code" href="a00221.html#ga96e34c477aa80c8b9adf682f8450af5c">CAddonLib_VFSUtils::RemoveDirectory</a>(<span class="stringliteral">&quot;C:\\my_dir&quot;</span>);</div>
-<div class="line">...</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga779d626c053ee2e3f9329d7f05e3d7d2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int StatFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="a00117.html#a4d284b7e68f051cef7ba92aa96dcfc50">__stat64</a> *&#160;</td>
-          <td class="paramname"><em>buffer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get file status. </p>
-<p>These function return information about a file. Execute (search) permission is required on all of the directories in path that lead to the file.</p>
-<p>The call return a stat structure, which contains the following fields: </p><div class="fragment"><div class="line"><span class="keyword">struct </span><a class="code" href="a00117.html#a4d284b7e68f051cef7ba92aa96dcfc50">__stat64</a> {</div>
-<div class="line">  dev_t     st_dev;     <span class="comment">/* ID of device containing file */</span></div>
-<div class="line">  ino_t     st_ino;     <span class="comment">/* inode number */</span></div>
-<div class="line">  mode_t    st_mode;    <span class="comment">/* protection */</span></div>
-<div class="line">  nlink_t   st_nlink;   <span class="comment">/* number of hard links */</span></div>
-<div class="line">  uid_t     st_uid;     <span class="comment">/* user ID of owner */</span></div>
-<div class="line">  gid_t     st_gid;     <span class="comment">/* group ID of owner */</span></div>
-<div class="line">  dev_t     st_rdev;    <span class="comment">/* device ID (if special file) */</span></div>
-<div class="line">  off_t     st_size;    <span class="comment">/* total size, in bytes */</span></div>
-<div class="line">  blksize_t st_blksize; <span class="comment">/* blocksize for file system I/O */</span></div>
-<div class="line">  blkcnt_t  st_blocks;  <span class="comment">/* number of 512B blocks allocated */</span></div>
-<div class="line">  time_t    st_atime;   <span class="comment">/* time of last access */</span></div>
-<div class="line">  time_t    st_mtime;   <span class="comment">/* time of last modification */</span></div>
-<div class="line">  time_t    st_ctime;   <span class="comment">/* time of last status change */</span></div>
-<div class="line">};</div>
-</div><!-- fragment --><p>The st_dev field describes the device on which this file resides. The st_rdev field describes the device that this file (inode) represents.</p>
-<p>The st_size field gives the size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link (only on Linux and Mac OS X) is the length of the pathname it contains, without a terminating null byte.</p>
-<p>The st_blocks field indicates the number of blocks allocated to the file, 512-byte units. (This may be smaller than st_size/512 when the file has holes.).</p>
-<p>The st_blksize field gives the "preferred" blocksize for efficient file system I/O. (Writing to a file in smaller chunks may cause an inefficient read-modify-rewrite.)</p>
-<dl class="section warning"><dt>Warning</dt><dd>Not all of the OS file systems implement all of the time fields.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename to read the status from. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>The file status is written into this buffer. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>On success, zero is returned. On error, -1 is returned, and errno is set appropriately.</dd></dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">struct <a class="code" href="a00117.html#a4d284b7e68f051cef7ba92aa96dcfc50">__stat64</a> statFile;</div>
-<div class="line"><span class="keywordtype">int</span> ret = <a class="code" href="a00221.html#ga779d626c053ee2e3f9329d7f05e3d7d2">CAddonLib_VFSUtils::StatFile</a>(<span class="stringliteral">&quot;special://temp/kodi.log&quot;</span>, &amp;statFile);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;st_dev (ID of device containing file)       = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_ino (inode number)                       = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_mode (protection)                        = %u\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_nlink (number of hard links)             = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_uid (user ID of owner)                   = %u\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_gid (group ID of owner)                  = %u\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_rdev (device ID (if special file))       = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_size (total size, in bytes)              = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_blksize (blocksize for file system I/O)  = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_blocks (number of 512B blocks allocated) = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_atime (time of last access)              = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_mtime (time of last modification)        = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;st_ctime (time of last status change)       = %lu\n&quot;</span></div>
-<div class="line">                <span class="stringliteral">&quot;Return value                                = %i\n&quot;</span>,</div>
-<div class="line">                     statFile.st_dev,</div>
-<div class="line">                     statFile.st_ino,</div>
-<div class="line">                     statFile.st_mode,</div>
-<div class="line">                     statFile.st_nlink,</div>
-<div class="line">                     statFile.st_uid,</div>
-<div class="line">                     statFile.st_gid,</div>
-<div class="line">                     statFile.st_rdev,</div>
-<div class="line">                     statFile.st_size,</div>
-<div class="line">                     statFile.st_blksize,</div>
-<div class="line">                     statFile.st_blocks,</div>
-<div class="line">                     statFile.st_atime,</div>
-<div class="line">                     statFile.st_mtime,</div>
-<div class="line">                     statFile.st_ctime,</div>
-<div class="line">                     ret);</div>
-</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

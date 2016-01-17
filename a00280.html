@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Subclass - WindowDialog</title>
+<title>Kodi Development: Subclass - WindowXML</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,34 +91,257 @@ $(document).ready(function(){initNavTree('a00280.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Subclass - WindowDialog<div class="ingroups"><a class="el" href="a00204.html">Python Development</a> &raquo; <a class="el" href="a00206.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00277.html">Window</a></div></div>  </div>
+<div class="title">Subclass - WindowXML<div class="ingroups"><a class="el" href="a00307.html">Python Development</a> &raquo; <a class="el" href="a00269.html">Kodi's GUI</a> &raquo; <a class="el" href="a00276.html">Window</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>GUI window dialog class for Add-Ons.</b> </p>
-<p><b><code>xbmcgui.WindowDialog(int windowId):</code></b></p>
-<p>Creates a new window from Add-On usable dialog class. This is to create window for related controls by system calls.</p>
+<p><b>GUI xml window class.</b> </p>
+<p><b><code>xbmcgui.WindowXML(xmlFilename, scriptPath[, defaultSkin, defaultRes])</code></b></p>
+<p>Creates a new xml file based window class.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <b><code><a class="el" href="a00276.html">Window</a></code></b>.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">windowId</td><td>[opt] Specify an id to use an existing window. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xmlFilename</td><td>string - the name of the xml file to look for. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scriptPath</td><td>string - path to script. used to fallback to if the xml doesn't exist in the current skin. (eg xbmcaddon.Addon().getAddonInfo('path').decode('utf-8')) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultSkin</td><td>[opt] string - name of the folder in the skins path to look in for the xml. (default='Default') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultRes</td><td>[opt] string - default skins resolution. (default='720p') </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">ValueError</td><td>if supplied window Id does not exist. </td></tr>
     <tr><td class="paramname">Exception</td><td>if more then 200 windows are created.</td></tr>
   </table>
   </dd>
 </dl>
-<p>Deleting this window will activate the old window that was active and resets (not delete) all controls that are associated with this window.</p>
+<dl class="section remark"><dt>Remarks</dt><dd>Skin folder structure is e.g. <b>resources/skins/Default/720p</b></dd></dl>
+<p>Deleting this window will activate the old window that was active and resets (not delete) all controls that are associated with this window. </p><hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;win = xbmcgui.WindowXML(<span class="stringliteral">&#39;script-Lyrics-main.xml&#39;</span>, xbmcaddon.Addon().getAddonInfo(<span class="stringliteral">&#39;path&#39;</span>).decode(<span class="stringliteral">&#39;utf-8&#39;</span>), <span class="stringliteral">&#39;default&#39;</span>, <span class="stringliteral">&#39;1080p&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;win.doModal()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;del win</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --><hr/>
+<p>On functions defined input variable <b><code>controlId</code> (GUI control identifier)</b> is the on window.xml defined value behind type added with <code><b>id="..."</b></code> and used to identify for changes there and on callbacks.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;label&quot; id=&quot;31&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;description&gt;Title Label&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  ...</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;&lt;/control&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;&lt;control type=&quot;progress&quot; id=&quot;32&quot;&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  &lt;description&gt;progress control&lt;/description&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  ...</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --> <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00281"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00281.html">Subclass - WindowDialogXML</a></td></tr>
+<tr class="memdesc:a00281"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>GUI xml window dialog class.</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga87ffff74f065758ae9884ecc87102af1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addItem </td>
+          <td>(</td>
+          <td class="paramtype">const Alternative&lt; String, const <a class="el" href="a00099.html">ListItem</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em> = <code>INT_MAX</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>addItem(item[, position]) &ndash; Add a new item to this <a class="el" href="a00100.html">Window</a> List.</p>
+<ul>
+<li>item : string, unicode or <a class="el" href="a00099.html">ListItem</a> - item to add.</li>
+<li>position : [opt] integer - position of item to add. (NO Int = Adds to bottom,0 adds to top, 1 adds to one below from top,-1 adds to one above from bottom etc etc )<ul>
+<li>If integer positions are greater than list size, negative positions will add to top of list, positive positions will add to bottom of list</li>
+</ul>
+</li>
+</ul>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.WindowDialog()</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;width = dialog.getWidth()</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
-</div><!-- fragment --> </div><!-- contents -->
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.addItem(<span class="stringliteral">&#39;Reboot Kodi&#39;</span>, 0)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga612285c5b9d603a0abb0feab44b8412f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clearList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="a00280.html#ga612285c5b9d603a0abb0feab44b8412f">clearList()</a> &ndash; Clear the <a class="el" href="a00100.html">Window</a> List.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.clearList()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga860b30302751103052456bb1f1079980"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getCurrentListPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="a00280.html#ga860b30302751103052456bb1f1079980">getCurrentListPosition()</a> &ndash; Gets the current position in the <a class="el" href="a00100.html">Window</a> List.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pos = self.getCurrentListPosition()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga37ec44d83350b3e4c5b4f7a2648bfc01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListItem* getListItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>getListItem(position) &ndash; Returns a given <a class="el" href="a00099.html">ListItem</a> in this <a class="el" href="a00100.html">Window</a> List.</p>
+<p>position : integer - position of item to return.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;listitem = self.getListItem(6)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga7b00dc949b12149360563a1941956fc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getListSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="a00280.html#ga7b00dc949b12149360563a1941956fc7">getListSize()</a> &ndash; Returns the number of items in this <a class="el" href="a00100.html">Window</a> List.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;listSize = self.getListSize()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga214d46ad5cb6e318163ba98e0dd780ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>removeItem(position) &ndash; Removes a specified item based on position, from the <a class="el" href="a00100.html">Window</a> List.</p>
+<p>position : integer - position of item to remove.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.removeItem(5)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gabaeb49593088c3be9c7a232d50152e34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setCurrentListPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>setCurrentListPosition(position) &ndash; Set the current position in the <a class="el" href="a00100.html">Window</a> List.</p>
+<p>position : integer - position of item to set.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.setCurrentListPosition(5)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga3171b661458f56e0f0af6e264ac09bf3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setProperty </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>strProperty</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>strValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>setProperty(key, value) &ndash; Sets a container property, similar to an infolabel.</p>
+<p>key : string - property name. value : string or unicode - value of property.</p>
+<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive.<br />
+You can use the above as keywords for arguments and skip certain optional arguments.<br />
+Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.setProperty(<span class="stringliteral">&#39;Category&#39;</span>, <span class="stringliteral">&#39;Newest&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

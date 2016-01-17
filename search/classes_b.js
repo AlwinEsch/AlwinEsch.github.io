@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stat',['Stat',['../a00103.html',1,'XBMCAddon::xbmcvfs']]]
+  ['stat',['Stat',['../a00105.html',1,'XBMCAddon::xbmcvfs']]]
 ];

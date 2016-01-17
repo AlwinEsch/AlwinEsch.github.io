@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIDialogSelect</title>
+<title>Kodi Development: Register functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,19 +92,14 @@ $(document).ready(function(){initNavTree('a00244.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIDialogSelect<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a> &raquo; <a class="el" href="a00247.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">Register functions<div class="ingroups"><a class="el" href="a00306.html">C++ Development</a> &raquo; <a class="el" href="a00242.html">Library - GUILIB</a> &raquo; <a class="el" href="a00243.html">CGUILib</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Selection dialog</b> </p>
-<p>The function listed below permits the call of a dialogue to select of an entry as a key</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00148.html">#include &lt;kodi/gui.api2/GUIDialogSelect.h&gt;</a> be included to enjoy it.</p>
-<div class="image">
-<img src="help.GUIDialogSelect.png" alt="help.GUIDialogSelect.png"/>
-</div>
- <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga607e3ded9a30e6246ee21200b0978fd5"></a>
+<p><b>Functions to handle library registration to Kodi</b> </p>
+<p><a class="el" href="a00247.html">Go back to normal functions from CAddonGUIWindow</a> </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaa0bf67ad4ff0b67b500e4070f873c337"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -112,27 +107,11 @@ $(document).ready(function(){initNavTree('a00244.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int Show </td>
+          <td class="memname">static bool RegisterMe </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>entries</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>selected</em> = <code>-1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -142,33 +121,40 @@ $(document).ready(function(){initNavTree('a00244.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Show a selection dialog about given parts. </p>
+<p>Resolve all callback methods. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">heading</td><td>Dialog heading name </td></tr>
-    <tr><td class="paramname">entries</td><td>String list about entries </td></tr>
-    <tr><td class="paramname">selected</td><td>[opt] Predefined selection (default is <code>-1</code> for the first) </td></tr>
+    <tr><td class="paramname">handle</td><td>Pointer to the add-on </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The selected entry, if return <code>-1</code> was nothing selected or canceled</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00148.html">kodi/gui.api2/GUIDialogSelect.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keyword">const</span> std::vector&lt;std::string&gt; entries</div>
-<div class="line">{</div>
-<div class="line">  <span class="stringliteral">&quot;Test 1&quot;</span>,</div>
-<div class="line">  <span class="stringliteral">&quot;Test 2&quot;</span>,</div>
-<div class="line">  <span class="stringliteral">&quot;Test 3&quot;</span>,</div>
-<div class="line">  <span class="stringliteral">&quot;Test 4&quot;</span>,</div>
-<div class="line">  <span class="stringliteral">&quot;Test 5&quot;</span></div>
-<div class="line">};</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> selected = <a class="code" href="a00244.html#ga607e3ded9a30e6246ee21200b0978fd5">CAddonGUIDialogSelect::Show</a>(<span class="stringliteral">&quot;Test selection&quot;</span>, entries, -1);</div>
-<div class="line"><span class="keywordflow">if</span> (selected &lt; 0)</div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Item selection canceled\n&quot;</span>);</div>
-<div class="line"><span class="keywordflow">else</span></div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Selected item is: %i\n&quot;</span>, selected);</div>
-</div><!-- fragment --> 
+<dl class="section return"><dt>Returns</dt><dd>True when all methods were resolved, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5940787dcdcdb8aa995a07106917489f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UnRegisterMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Release all callback methods and close handling with them. </p>
+
 </div>
 </div>
 </div><!-- contents -->

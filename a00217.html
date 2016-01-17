@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonLib_SoundPlay</title>
+<title>Kodi Development: CAELib_Stream</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,192 +91,189 @@ $(document).ready(function(){initNavTree('a00217.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
-<div class="title">CAddonLib_SoundPlay<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a> &raquo; <a class="el" href="a00210.html">Library - AddOnLIB</a></div></div>  </div>
+<div class="title">CAELib_Stream<div class="ingroups"><a class="el" href="a00306.html">C++ Development</a> &raquo; <a class="el" href="a00218.html">Library - AudioEngineLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Background sound playback</b> </p>
-<p>This class is designed for playback of "wave" audio files to point for the user with sound steps performed or to draw attention to warnings.</p>
-<p>Further allowed this playback on a single selected channel which can be used to identify or also to test. For larger and more extensive audio system testing is recommended but the use of "CAddonAE_Stream" since this is intended specifically for this purpose.</p>
-<dl class="section warning"><dt>Warning</dt><dd>class supports only <b>wave files (*.wav)</b> for play back!</dd></dl>
-<p>It has the header <a class="el" href="a00126.html">#include &lt;kodi/addon.api2/SoundPlay.h&gt;</a> be included to enjoy it.</p>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00126.html">kodi/addon.api2/SoundPlay.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00143.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line"></div>
-<div class="line">void PlaySelectedWaveFile()</div>
-<div class="line">{</div>
-<div class="line">  std::string filename;</div>
-<div class="line">  <span class="keywordflow">if</span> (CAddonGUIDialogFileBrowser::ShowAndGetFile(<span class="stringliteral">&quot;local&quot;</span>, <span class="stringliteral">&quot;*.wav&quot;</span>,</div>
-<div class="line">                                                 <span class="stringliteral">&quot;Test File selection and playback of them&quot;</span>,</div>
-<div class="line">                                                 filename))</div>
-<div class="line">  {</div>
-<div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * The example performs a playback with the value &quot;waitUntilEnd&quot; from</span></div>
-<div class="line"><span class="comment">     * &quot;CAddonLib_SoundPlay::Play(...)&quot; is set to true. This waits for the call</span></div>
-<div class="line"><span class="comment">     * until the playback is complete, so that it is then also possible to</span></div>
-<div class="line"><span class="comment">     * use the class static as in this example.</span></div>
-<div class="line"><span class="comment">     */</span></div>
-<div class="line">    CAddonLib_SoundPlay playback(filename);</div>
-<div class="line">    playback-&gt;Play(<span class="keyword">true</span>);</div>
-<div class="line">  }</div>
-<div class="line">}</div>
-</div><!-- fragment --> <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ga2b5a19d3dea9946ab7cbad0c770a9ad4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00217.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">audio_channel</a> { <br />
-&#160;&#160;<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1ae38b5ca59fd4d7eaf46316030c1943">AUDIO_CH_INVALID</a> = -1, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a51f9b2764c6fb4fedda0a2e26db34d1a">AUDIO_CH_FL</a> = 0, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1af23629a69a7675fdb34091664b54f0">AUDIO_CH_FR</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a30cf31511bec571f29972d5153240c26">AUDIO_CH_FC</a>, 
-<br />
-&#160;&#160;<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a237c6e09d4dcd265e0fe662353979e8a">AUDIO_CH_LFE</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4aa913e9df7d430fb038a46ffd9a6b6c0c">AUDIO_CH_BL</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4ae48795ee1bb60030f6cd9936e425f271">AUDIO_CH_BR</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4abd6293708566f52e3c51e9624abfd46b">AUDIO_CH_FLOC</a>, 
-<br />
-&#160;&#160;<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a319b1573f6d3ab6cb392cde3730c7bbb">AUDIO_CH_FROC</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4aa90c458a48d2ad4c195e766822ff2c33">AUDIO_CH_BC</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1aab0619a0d059b7f63dc45920256546">AUDIO_CH_SL</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1907c53416638e264364401deab8bbfa">AUDIO_CH_SR</a>, 
-<br />
-&#160;&#160;<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4ab1e6f27a436b44c543bfbb5277d14e24">AUDIO_CH_TFL</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1bc8da6e595ab3400326a07d98166932">AUDIO_CH_TFR</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a9b17a5f2cc83a45969811f82f0b98a31">AUDIO_CH_TFC</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a6528079b655067a5734fc7ef83b89b00">AUDIO_CH_TC</a>, 
-<br />
-&#160;&#160;<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a6d282855e499f57213f21a0a407d2c87">AUDIO_CH_TBL</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4aff7630bcc5ced065520e1fd7877a0c43">AUDIO_CH_TBR</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a2e9491a483c0d8ff14f8ed56788ec803">AUDIO_CH_TBC</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a442f0143698374bd20d33700f4ee11dd">AUDIO_CH_BLOC</a>, 
-<br />
-&#160;&#160;<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a0d7223d3ebee5d2737088f2da89b969a">AUDIO_CH_BROC</a>, 
-<a class="el" href="a00217.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a4766a0b96807972582fef922b18250c0">AUDIO_CH_MAX</a>
-<br />
- }</td></tr>
-<tr class="memdesc:ga2b5a19d3dea9946ab7cbad0c770a9ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">For class CAddonLib_SoundPlay used values.  <a href="a00217.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">More...</a><br /></td></tr>
-<tr class="separator:ga2b5a19d3dea9946ab7cbad0c770a9ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ga2b5a19d3dea9946ab7cbad0c770a9ad4"></a>
+<p><b>Audio Engine Stream Class</b> </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaa2503d36e6847a31997d4e9bf60c50b4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="a00217.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">audio_channel</a></td>
+          <td class="memname">unsigned int AddData </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *const *&#160;</td>
+          <td class="paramname"><em>Data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>Offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>Frames</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>For class CAddonLib_SoundPlay used values. </p>
-<p>The values are used to identify a channel and can also serve as a pointer to memory can be used. Currently supported Kodi not all listed position and are only available in order to avoid major changes after it is placed. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a1ae38b5ca59fd4d7eaf46316030c1943"></a>AUDIO_CH_INVALID&#160;</td><td class="fielddoc">
-<p>Invalid channel identifier, also used on CAddonLib_SoundPlay to reset selection. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a51f9b2764c6fb4fedda0a2e26db34d1a"></a>AUDIO_CH_FL&#160;</td><td class="fielddoc">
-<p>Front left. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a1af23629a69a7675fdb34091664b54f0"></a>AUDIO_CH_FR&#160;</td><td class="fielddoc">
-<p>Front right. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a30cf31511bec571f29972d5153240c26"></a>AUDIO_CH_FC&#160;</td><td class="fielddoc">
-<p>Front center. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a237c6e09d4dcd265e0fe662353979e8a"></a>AUDIO_CH_LFE&#160;</td><td class="fielddoc">
-<p>LFE (Bass) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4aa913e9df7d430fb038a46ffd9a6b6c0c"></a>AUDIO_CH_BL&#160;</td><td class="fielddoc">
-<p>Back left. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4ae48795ee1bb60030f6cd9936e425f271"></a>AUDIO_CH_BR&#160;</td><td class="fielddoc">
-<p>Back right. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4abd6293708566f52e3c51e9624abfd46b"></a>AUDIO_CH_FLOC&#160;</td><td class="fielddoc">
-<p>Front left over center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a319b1573f6d3ab6cb392cde3730c7bbb"></a>AUDIO_CH_FROC&#160;</td><td class="fielddoc">
-<p>Front right over center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4aa90c458a48d2ad4c195e766822ff2c33"></a>AUDIO_CH_BC&#160;</td><td class="fielddoc">
-<p>Back center. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a1aab0619a0d059b7f63dc45920256546"></a>AUDIO_CH_SL&#160;</td><td class="fielddoc">
-<p>Side left. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a1907c53416638e264364401deab8bbfa"></a>AUDIO_CH_SR&#160;</td><td class="fielddoc">
-<p>Side right. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4ab1e6f27a436b44c543bfbb5277d14e24"></a>AUDIO_CH_TFL&#160;</td><td class="fielddoc">
-<p>Top front left (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a1bc8da6e595ab3400326a07d98166932"></a>AUDIO_CH_TFR&#160;</td><td class="fielddoc">
-<p>Top front right (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a9b17a5f2cc83a45969811f82f0b98a31"></a>AUDIO_CH_TFC&#160;</td><td class="fielddoc">
-<p>Top front center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a6528079b655067a5734fc7ef83b89b00"></a>AUDIO_CH_TC&#160;</td><td class="fielddoc">
-<p>Top center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a6d282855e499f57213f21a0a407d2c87"></a>AUDIO_CH_TBL&#160;</td><td class="fielddoc">
-<p>Top back left (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4aff7630bcc5ced065520e1fd7877a0c43"></a>AUDIO_CH_TBR&#160;</td><td class="fielddoc">
-<p>Top back right (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a2e9491a483c0d8ff14f8ed56788ec803"></a>AUDIO_CH_TBC&#160;</td><td class="fielddoc">
-<p>Top back center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a442f0143698374bd20d33700f4ee11dd"></a>AUDIO_CH_BLOC&#160;</td><td class="fielddoc">
-<p>Back left over center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a0d7223d3ebee5d2737088f2da89b969a"></a>AUDIO_CH_BROC&#160;</td><td class="fielddoc">
-<p>Back right over center (currently not supported on Kodi) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga2b5a19d3dea9946ab7cbad0c770a9ad4a4766a0b96807972582fef922b18250c0"></a>AUDIO_CH_MAX&#160;</td><td class="fielddoc">
-<p>Used as max value for a array size, not a position. </p>
-</td></tr>
-</table>
+<p><b>Add data</b> </p>
+<p>Add planar or interleaved PCM data to the stream</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Data</td><td>array of pointers to the planes </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Offset</td><td>to frame in frames </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Frames</td><td>number of frames</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of frames consumed </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gafb64b7a34ceffbf07ce84e4d25f36d83"></a>
+<a class="anchor" id="ga24f48c8a2b92ddbbe5453aadf97eb66f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CAddonLib_SoundPlay </td>
+          <td class="memname">CAELib_Stream </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="a00025.html">AudioEngineFormat</a>&#160;</td>
+          <td class="paramname"><em>Format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>Options</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Format</td><td>Used data format for stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Options</td><td>[opt] A bit field of stream options (see: enum AEStreamOptions)</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Audio engine format information:</b> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Audio engine format information</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="a00025.html">AudioEngineFormat</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">enum</span> AEDataFormat m_dataFormat;           <span class="comment">/* The stream&#39;s data format (eg, AE_FMT_S16LE) */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_sampleRate;           <span class="comment">/* The stream&#39;s sample rate (eg, 48000) */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_encodedRate;          <span class="comment">/* The encoded streams sample rate if a bitstream, otherwise undefined */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_channelCount;         <span class="comment">/* The amount of used speaker channels */</span></div>
+<div class="line">  <span class="keyword">enum</span> AEChannel    m_channels[AE_CH_MAX];  <span class="comment">/* The stream&#39;s channel layout */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frames;               <span class="comment">/* The number of frames per period */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frameSamples;         <span class="comment">/* The number of samples in one frame */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frameSize;            <span class="comment">/* The size of one frame in bytes */</span></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">/* Function to compare the format structure with another */</span></div>
+<div class="line">  <span class="keywordtype">bool</span> compareFormat(<span class="keyword">const</span> <a class="code" href="a00025.html">AudioEngineFormat</a> *fmt);</div>
+<div class="line">} <a class="code" href="a00025.html">AudioEngineFormat</a>;</div>
+</div><!-- fragment --> <hr/>
+<p><b>Bit options to pass to <a class="el" href="a00027.html">CAELib_Stream</a> (on Kodi by <code>IAE::MakeStream</code>)</b></p>
+<table class="doxtable">
+<tr>
+<th align="right">enum AEStreamOptions </th><th align="center">Value: </th><th align="left">Description:  </th></tr>
+<tr>
+<td align="right">AESTREAM_FORCE_RESAMPLE </td><td align="center">1 &lt;&lt; 0 </td><td align="left">Force resample even if rates match </td></tr>
+<tr>
+<td align="right">AESTREAM_PAUSED </td><td align="center">1 &lt;&lt; 1 </td><td align="left">Create the stream paused </td></tr>
+<tr>
+<td align="right">AESTREAM_AUTOSTART </td><td align="center">1 &lt;&lt; 2 </td><td align="left">Autostart the stream when enough data is buffered </td></tr>
+<tr>
+<td align="right">AESTREAM_BYPASS_ADSP </td><td align="center">1 &lt;&lt; 3 </td><td align="left">if this option is set the ADSP-System is bypassed and the raw stream will be passed through IAESink </td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga693180e7abf852dfa2af3e7c35d7db23"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Drain </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>Wait</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Construct class. </p>
-<p>Construct the class for background playback of given wave file.</p>
+<p>Start draining the stream</p>
+<dl class="section note"><dt>Note</dt><dd>Once called AddData will not consume more data.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The wave file to play </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Wait</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga9656546b61377811a68a1cf39dbc1bfc"></a>
+<a class="anchor" id="ga0e2644b2df3c228e8d71a55b60723f31"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00217.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">audio_channel</a> GetChannel </td>
+          <td class="memname">void Flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flush all buffers dropping the audio data </p>
+
+</div>
+</div>
+<a class="anchor" id="ga1f7fd710b8f8efdc125e3e5b8ebc7f72"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GetAmplification </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the stream's volume amplification in linear units.</p>
+<dl class="section return"><dt>Returns</dt><dd>The volume amplification factor between 1.0 and 1000.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab3d46de490a5bf82b850152e275da128"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double GetCacheTime </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -284,9 +281,168 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the active channel for playback. </p>
-<p>To set channel position the for a single channel playback of wave file.</p>
-<dl class="section return"><dt>Returns</dt><dd>The channel where currently played </dd></dl>
+<p><b>Get the cache time</b> </p>
+<p>Returns the time in seconds that it will take to underrun the cache if no sample is added.</p>
+<dl class="section return"><dt>Returns</dt><dd>seconds </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8b7bbe3cf2dc2f0a9098a3399886ed93"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double GetCacheTotal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total time in seconds of the cache. </p>
+<dl class="section return"><dt>Returns</dt><dd>seconds </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4520a1e53d18aa33c193c56b57c5a430"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int GetChannelCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the number of channels the stream is configured to accept</p>
+<dl class="section return"><dt>Returns</dt><dd>The channel count </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga695b307ec353df8caf5015fecae698b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const AEDataFormat GetDataFormat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the data format the stream has been configured with</p>
+<dl class="section return"><dt>Returns</dt><dd>The stream's data format (eg, AE_FMT_S16LE) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa1f58e1e8571b43d51783f0c6629bbd8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double GetDelay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>Get current delay</b> </p>
+<p>Returns the time in seconds that it will take for the next added packet to be heard from the speakers.</p>
+<dl class="section return"><dt>Returns</dt><dd>seconds </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae854bb4797b77954d9df92aa41bc158d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int GetEncodedSampleRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the stream's encoded sample rate if the stream is RAW</p>
+<dl class="section return"><dt>Returns</dt><dd>The stream's encoded sample rate </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae6e8ac740c7409c691511617aa55c000"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int GetFrameSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the size of one audio frame in bytes (channelCount/// resolution)</p>
+<dl class="section return"><dt>Returns</dt><dd>The size in bytes of one frame </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6ebdf9bfe8189e5495f4ec132894e133"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double GetResampleRatio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the resample ratio</p>
+<dl class="section note"><dt>Note</dt><dd>This will return an undefined value if the stream is not resampling</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the current resample ratio or undefined if the stream is not resampling </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga9e8e8a0056da89903383ee7cbb6e9810"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned int GetSampleRate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the stream's sample rate, if the stream is using a dynamic sample rate, this value will NOT reflect any changes made by calls to <a class="el" href="a00217.html#gaa2f74168cc58c5ac84a4a1e507702d68">SetResampleRatio()</a></p>
+<dl class="section return"><dt>Returns</dt><dd>The stream's sample rate (eg, 48000) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8febfd989aa187d9a122ff8597820d53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int GetSpace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>Get space</b> </p>
+<p>Returns the amount of space available in the stream</p>
+<dl class="section return"><dt>Returns</dt><dd>The number of bytes AddData will consume </dd></dl>
 
 </div>
 </div>
@@ -302,20 +458,17 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Get the volume. </p>
-<p>To get the volume of wave file playback.</p>
-<dl class="section note"><dt>Note</dt><dd>Volume is independent from Kodi's normal volume control and only for the wave file. Also is the volume only on this class and not to all background sounds on Kodi.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The currently active volume of this wave file </dd></dl>
+<p>Return the stream's current volume level</p>
+<dl class="section return"><dt>Returns</dt><dd>The volume level between 0.0 and 1.0 </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga755f326e8b06e5f2807d64baf8bf582c"></a>
+<a class="anchor" id="ga0a04f8b3e045b68d509dab0b67d077a8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsPlaying </td>
+          <td class="memname">bool IsBuffering </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -323,64 +476,126 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>To check playing is active. </p>
-<p>The check used class during playback of wave file is still playing.</p>
-<dl class="section return"><dt>Returns</dt><dd>true if playing active, otherwise false </dd></dl>
+<p><b>Is buffering</b> </p>
+<p>Returns if the stream is buffering</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the stream is buffering </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga1cb8088c7f7b1e30a0b7b1a1993326c2"></a>
+<a class="anchor" id="gad2f3302fdee3ed4ab1558bc373498057"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Play </td>
+          <td class="memname">bool IsDrained </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>waitUntilEnd</em> = <code>false</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Returns true if the is stream has finished draining</p>
+<dl class="section return"><dt>Returns</dt><dd>If draining finished is true, otherwise false </dd></dl>
 
-<p>Start playback. </p>
-<p>Starts the playback of wave file. Normally returns this function.</p>
-<p>This function ordinarily comes after him begin the sound reproduction immediately again back around other steps to permit. If it itself, however, only around the reproduction of a file acts no other operation required is able by placed of the value "waitUntilEnd" on true by the call are waited to him is ready. This also permits the use of the class statically in the function.</p>
+</div>
+</div>
+<a class="anchor" id="ga3659870694bbf153c0faf470cb4984cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsDraining </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if the is stream draining</p>
+<dl class="section return"><dt>Returns</dt><dd>true if draining, otherwise false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga70babc5227ddd16ca31dccc6cec0bb22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pauses the stream playback </p>
+
+</div>
+</div>
+<a class="anchor" id="ga8af8fb637c7ae9d71a23bf3ac80d3c86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Resume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Resumes the stream after pausing </p>
+
+</div>
+</div>
+<a class="anchor" id="ga0afd8b52e36170319c9c3bbe738243a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetAmplification </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>Amplify</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the stream's volume amplification in linear units.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">waitUntilEnd</td><td>[opt] If set to true returns call after end of playback, default is false </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Amplify</td><td>The volume amplification factor between 1.0 and 1000.0 </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga18c0452db8c88c696ba2f958396ba83d"></a>
+<a class="anchor" id="gaa2f74168cc58c5ac84a4a1e507702d68"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetChannel </td>
+          <td class="memname">void SetResampleRatio </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00217.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">audio_channel</a>&#160;</td>
-          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ratio</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Set audio channel for playback. </p>
-<p>To set channel position the for a single channel playback of wave file. To reset selection use "AUDIO_CH_INVALID".</p>
+<p>Sets the resample ratio</p>
+<dl class="section note"><dt>Note</dt><dd>This function may return false if the stream is not resampling, if you wish to use this be sure to set the AESTREAM_FORCE_RESAMPLE option</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">channel</td><td>The channel identifier to play on </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ratio</td><td>the new sample rate ratio, calculated by ((double)desiredRate / (double)<a class="el" href="a00217.html#ga9e8e8a0056da89903383ee7cbb6e9810">GetSampleRate()</a>) </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga6496c97b1bcd7301acfce8671cf90984"></a>
+<a class="anchor" id="gae7f642be9aaf5ef9c2e2f1a5afae9053"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -388,30 +603,27 @@ Enumerations</h2></td></tr>
           <td class="memname">void SetVolume </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>volume</em></td><td>)</td>
+          <td class="paramname"><em>Volume</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Set the volume. </p>
-<p>To set the volume of wave file playback.</p>
-<dl class="section note"><dt>Note</dt><dd>Volume is independent from Kodi's normal volume control and only for the wave file. Also is the volume only on this class and not to all background sounds on Kodi.</dd></dl>
+<p>Set the stream's volume level</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">volume</td><td>The playback volume of wave file </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">volume</td><td>The new volume level between 0.0 and 1.0 </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga17a237457e57625296e6b24feb19c60a"></a>
+<a class="anchor" id="ga9f7e169caec98e28f6b92adf8ab140f2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Stop </td>
+          <td class="memname">~CAELib_Stream </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -419,34 +631,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Stop playback. </p>
-<p>Stops the playback of wave file </p>
-
-</div>
-</div>
-<a class="anchor" id="ga21c5c23ed3b5c5f06cc66331f8bec712"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~CAddonLib_SoundPlay </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
+<p>Class Descructor. </p>
 
 </div>
 </div>

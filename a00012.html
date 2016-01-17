@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Python - HelloWorld AddOn</title>
+<title>Kodi Development: Python - Video AddOn</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,152 +92,272 @@ $(document).ready(function(){initNavTree('a00012.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Python - HelloWorld AddOn </div>  </div>
+<div class="title">Python - Video AddOn </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#section1">Introduction</a></li>
-<li class="level1"><a href="#section2">Tools</a></li>
-<li class="level1"><a href="#section3">Installing</a></li>
-<li class="level1"><a href="#section4">Testing</a></li>
-<li class="level1"><a href="#section5">Modifying the Add-On</a></li>
-<li class="level1"><a href="#section6">Structure</a></li>
-<li class="level1"><a href="#section7">Metadata</a></li>
-<li class="level1"><a href="#section8">The Code</a></li>
-<li class="level1"><a href="#section9">Changing the code</a></li>
-<li class="level1"><a href="#section10">Final Thoughts</a></li>
-<li class="level1"><a href="#section11">Extra info</a></li>
+<ul><li class="level1"><a href="#Python_Video_addon_section1">Introduction</a></li>
+<li class="level1"><a href="#Python_Video_addon_section2">Tools</a></li>
+<li class="level1"><a href="#Python_Video_addon_section3">Installing</a></li>
+<li class="level1"><a href="#Python_Video_addon_section4">Testing</a></li>
+<li class="level1"><a href="#Python_Video_addon_section5">Explanation</a></li>
+<li class="level1"><a href="#Python_Video_addon_section6">Structure</a></li>
+<li class="level1"><a href="#Python_Video_addon_section7">The Code</a></li>
+<li class="level1"><a href="#Python_Video_addon_section8">Changing the code</a></li>
+<li class="level1"><a href="#Python_Video_addon_section9">Final Thoughts</a></li>
+<li class="level1"><a href="#Python_Video_addon_section10">Extra info</a></li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="section1"></a>
+<div class="textblock"><h1><a class="anchor" id="Python_Video_addon_section1"></a>
 Introduction</h1>
-<p>This tutorial will explain how to write your first Kodi/XBMC script add-on!</p>
-<p>In case you want to write a plugin addon, please use this tutorial: <a href="http://kodi.wiki/view/Audio-video_add-on_tutorial">http://kodi.wiki/view/Audio-video_add-on_tutorial</a></p>
+<p>This tutorial will explain how to write your first Kodi/XBMC video plugin Add-on</p>
 <hr/>
-<h1><a class="anchor" id="section2"></a>
+<h1><a class="anchor" id="Python_Video_addon_section2"></a>
 Tools</h1>
-<p>I'd advise using a text editor for your first add-on, something like notepad++ or sublime are good due to their text syntaxing. Also make sure you have a version of Kodi installed on your development environment.</p>
+<p>Assuming you have already followed the Hello World Add-on you will have a text editor already setup. Since we are dealing with videos this time its probably a good idea to have a video player setup. We recommend another great open source project for this.</p>
 <ul>
-<li>URL = <a href="http://www.sublimetext.com">http://www.sublimetext.com</a></li>
-<li>URL = <a href="http://notepad-plus-plus.org">http://notepad-plus-plus.org</a></li>
-<li>URL = <a href="https://atom.io">https://atom.io</a></li>
+<li>VLC <a href="http://www.videolan.org/vlc/">http://www.videolan.org/vlc/</a></li>
 </ul>
 <hr/>
-<h1><a class="anchor" id="section3"></a>
+<h1><a class="anchor" id="Python_Video_addon_section3"></a>
 Installing</h1>
-<p>For this example we use the official "Hello World" add-on. You can find the source-code here:</p><ul>
-<li><a href="https://github.com/zag2me/script.hello.world">https://github.com/zag2me/script.hello.world</a></li>
-</ul>
-<p>... and you can download the zip file (for installation in Kodi) here:</p><ul>
-<li><a href="https://github.com/zag2me/script.hello.world/archive/master.zip">https://github.com/zag2me/script.hello.world/archive/master.zip</a></li>
-</ul>
+<p>For this example we will use 2 nice basic video Add-on tutorials You can find the source-code here:</p>
+<p><a href="https://github.com/romanvm/plugin.video.example">https://github.com/romanvm/plugin.video.example</a></p>
+<p>You can either download as a zip and install both of these inside the kodi GUI from the install from zip feature. Or extract the zip into your userdata/add-ons folder.</p>
 <hr/>
-<h1><a class="anchor" id="section4"></a>
+<h1><a class="anchor" id="Python_Video_addon_section4"></a>
 Testing</h1>
-<p>You can first give the add-on a test run by going to: <code>System &gt;&gt; Add-Ons &gt;&gt; Enabled Add-Ons &gt;&gt; Program Add-Ons &gt;&gt; Hello World</code>. You should now see a popup with 3 lines of text.</p>
+<p>You can first give the add-on a test run by going to: <code>System &gt;&gt; Add-Ons &gt;&gt; Enabled Add-Ons &gt;&gt; Video Add-Ons &gt;&gt; Example</code> Kodi video Plugin. You should now be able to watch some test videos hosted from an internet web server.</p>
 <table class="doxtable">
 <tr>
 <th></th></tr>
 <tr>
 <td><div class="image">
-<img src="Helloworld3.jpg" alt="Helloworld3.jpg"/>
+<img src="Videotutorial1.jpg" alt="Videotutorial1.jpg"/>
 </div>
  </td></tr>
 </table>
 <hr/>
-<h1><a class="anchor" id="section5"></a>
-Modifying the Add-On</h1>
-<p>Each time we want to change the add-on you can simply go to the appdata folder and live edit it! No need to even close Kodi. This will allow you to quickly test your add-on modifications. On windows this will be in: C:.hello.world**</p>
-<table class="doxtable">
-<tr>
-<th></th></tr>
-<tr>
-<td><div class="image">
-<img src="Helloworld2.jpg" alt="Helloworld2.jpg"/>
-</div>
- </td></tr>
-</table>
+<h1><a class="anchor" id="Python_Video_addon_section5"></a>
+Explanation</h1>
+<p>So whats happening in this add-on?</p>
+<p>Basically the Add-on is checking a website for the hosted videos. In this example we are directly linking to the videos, but there are possibilities for dynamic content and scraping of just about any online source.</p>
+<p>Once the video link is sent to Kodi, our video player takes over and buffers, then plays the video just like any other media.</p>
 <hr/>
-<h1><a class="anchor" id="section6"></a>
+<h1><a class="anchor" id="Python_Video_addon_section6"></a>
 Structure</h1>
 <table class="doxtable">
 <tr>
 <th>File </th><th>Description  </th></tr>
 <tr>
-<td>addon.py </td><td>This is the actual python code for your Add-On </td></tr>
+<td>main.py </td><td>This is the actual python code for your Add-On </td></tr>
 <tr>
 <td>addon.xml </td><td>This is the Add-Ons metadata </td></tr>
 <tr>
-<td>changelog.txt </td><td>This is a text file with any change-log information in it. We advise updating this on each release. </td></tr>
-<tr>
 <td>icon.png </td><td>A PNG icon for the add-on. It can be 256x256 or 512x512 pixels big. Try to make it look nice! </td></tr>
 <tr>
-<td>LICENSE.txt </td><td>Another text file with the Add-On license text. </td></tr>
-</table>
-<table class="doxtable">
-<tr>
-<th></th></tr>
-<tr>
-<td><div class="image">
-<img src="Helloworld2.jpg" alt="Helloworld2.jpg"/>
-</div>
- </td></tr>
+<td>Readme.md </td><td>The readme text file with a description of the Add-on and install instructions. This shows on the front of the GitHub page and helps users to understand your Add-on before downloading. </td></tr>
 </table>
 <hr/>
-<h1><a class="anchor" id="section7"></a>
-Metadata</h1>
-<p>As we can see from the screenshot below the addon.xml is pretty simple. The main things you want to look at are on the first line of the XML. It's all pretty self-explanatory, just change the fields to your Add-On ID, name, version, and author before you start. The Add-On ID will have to be unique so try to think of a good name here separated by full stops.</p>
-<p>The "Requires" section lets Kodi know what extra Add-On code to import. Since our Add-On is simple we only need the basic "xbmc.python" Add-On.</p>
-<p>The "extension point" simple tells Kodi what type of Add-On you have created. In this case it's an "executable" which we put inside the &lt;provides&gt; field.</p>
-<p>The final section is the extension metadata, again it's all pretty self-explanatory. You can add descriptions, summary and license information in here. You can also add links to the forum thread, source code and email help users who need support for your Add-On.</p>
-<table class="doxtable">
-<tr>
-<th></th></tr>
-<tr>
-<td><div class="image">
-<img src="Helloworld4.png" alt="Helloworld4.png"/>
-</div>
- </td></tr>
-</table>
-<hr/>
-<h1><a class="anchor" id="section8"></a>
+<h1><a class="anchor" id="Python_Video_addon_section7"></a>
 The Code</h1>
-<p>So now we come to the actual Add-On code, this is where most of your Add-on is written and is a simple text file containing python code. It's contained in a file called "addon.py".</p>
-<p>If at this stage you want to learn how to program python, take a look at this excellent website <a href="http://www.codecademy.com/en/tracks/python">http://www.codecademy.com/en/tracks/python</a></p>
-<p>The first 2 lines simply import the code necessary to run an Add-On and display something using the Kodi GUI.</p>
-<p>The next 2 lines of code explain to the system that it's an Add-On and to show the name.</p>
-<p>Lines 7,8 and 9 are where the real magic starts to happen, here we are assigning 3 strings to 3 different variables (line1, line2 and line3).</p>
-<p>The final line of code now displays all these variables in a popup box inside the Kodi GUI using the "xbmcgui.Dialog" function. It also displays the Add-On name in the Popup boxs title and has an OK button.</p>
-<table class="doxtable">
-<tr>
-<th></th></tr>
-<tr>
-<td><div class="image">
-<img src="Helloworld1.png" alt="Helloworld1.png"/>
-</div>
- </td></tr>
-</table>
-<hr/>
-<h1><a class="anchor" id="section9"></a>
+<p>So now we come to the actual Add-On code, this is where most of your Add-on is written and is a simple text file containing python code.</p>
+<p>First we initialize the Add-on and import and bits we need </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> sys</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">from</span> urlparse <span class="keyword">import</span> parse_qsl</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> xbmcgui</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> xbmcplugin</div>
+</div><!-- fragment --><p>Now we do something else... </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment"># Get the plugin url in plugin:// notation.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;__url__ = sys.argv[0]</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"># Get the plugin handle as an integer number.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;__handle__ = int(sys.argv[1])</div>
+</div><!-- fragment --><p>Here we use a fixed set of properties simply for demonstrating purposes. In a <b>"real life"</b> plugin you will need to get info and links to video files / streams from some web-site or online service. </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;VIDEOS = {<span class="stringliteral">&#39;Animals&#39;</span>: [{<span class="stringliteral">&#39;name&#39;</span>: <span class="stringliteral">&#39;Crab&#39;</span>,</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                       <span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/crab.jpg&#39;</span>,</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;                       <span class="stringliteral">&#39;video&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/crab.mp4&#39;</span>,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;                       <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Animals&#39;</span>},</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;                      {<span class="stringliteral">&#39;name&#39;</span>: <span class="stringliteral">&#39;Alligator&#39;</span>,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;                       <span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/alligator.jpg&#39;</span>,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                       <span class="stringliteral">&#39;video&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/alligator.mp4&#39;</span>,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                       <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Animals&#39;</span>},</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                      {<span class="stringliteral">&#39;name&#39;</span>: <span class="stringliteral">&#39;Turtle&#39;</span>,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                       <span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/turtle.jpg&#39;</span>,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                       <span class="stringliteral">&#39;video&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/turtle.mp4&#39;</span>,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                       <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Animals&#39;</span>}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                      ],</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="stringliteral">&#39;Cars&#39;</span>: [{<span class="stringliteral">&#39;name&#39;</span>: <span class="stringliteral">&#39;Postal Truck&#39;</span>,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                      <span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/us_postal.jpg&#39;</span>,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                      <span class="stringliteral">&#39;video&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/us_postal.mp4&#39;</span>,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                      <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Cars&#39;</span>},</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                     {<span class="stringliteral">&#39;name&#39;</span>: <span class="stringliteral">&#39;Traffic&#39;</span>,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                      <span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/traffic1.jpg&#39;</span>,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                      <span class="stringliteral">&#39;video&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/traffic1.avi&#39;</span>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                      <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Cars&#39;</span>},</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                     {<span class="stringliteral">&#39;name&#39;</span>: <span class="stringliteral">&#39;Traffic Arrows&#39;</span>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                      <span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/traffic_arrows.jpg&#39;</span>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                      <span class="stringliteral">&#39;video&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/traffic_arrows.mp4&#39;</span>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                      <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Cars&#39;</span>}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                     ],</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="stringliteral">&#39;Food&#39;</span>: [{<span class="stringliteral">&#39;name&#39;</span>: <span class="stringliteral">&#39;Chicken&#39;</span>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                      <span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/chicken.jpg&#39;</span>,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                      <span class="stringliteral">&#39;video&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/bbqchicken.mp4&#39;</span>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                      <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Food&#39;</span>},</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                     {<span class="stringliteral">&#39;name&#39;</span>: <span class="stringliteral">&#39;Hamburger&#39;</span>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                      <span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/hamburger.jpg&#39;</span>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                      <span class="stringliteral">&#39;video&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/hamburger.mp4&#39;</span>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                      <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Food&#39;</span>},</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                     {<span class="stringliteral">&#39;name&#39;</span>: <span class="stringliteral">&#39;Pizza&#39;</span>,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                      <span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/pizza.jpg&#39;</span>,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                      <span class="stringliteral">&#39;video&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/pizza.mp4&#39;</span>,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                      <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Food&#39;</span>}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                     ]}</div>
+</div><!-- fragment --><p>And now we define something else... </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>get_categories():</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;         <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">         Get the list of video categories.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral">         Here you can insert some parsing code that retrieves</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="stringliteral">         the list of video categories (e.g. &#39;Movies&#39;, &#39;TV-shows&#39;, &#39;Documentaries&#39; etc.)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral">         from some site or server.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="stringliteral">         :return: list</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="stringliteral">         &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;         <span class="keywordflow">return</span> VIDEOS.keys()</div>
+</div><!-- fragment --><p>And now we define something else... </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>get_videos(category):</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">    Get the list of videofiles/streams.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral">    Here you can insert some parsing code that retrieves</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="stringliteral">    the list of videostreams in a given category from some site or server.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral">    :param category: str</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="stringliteral">    :return: list</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> VIDEOS[category]</div>
+</div><!-- fragment --><p>And now we define the list of categories </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>list_categories():</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">    Create the list of video categories in the Kodi interface.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral">    :return: None</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="comment"># Get video categories</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    categories = get_categories()</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment"># Create a list for our items.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    listing = []</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment"># Iterate through categories</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span> category <span class="keywordflow">in</span> categories:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="comment"># Create a list item with a text label and a thumbnail image.</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        list_item = xbmcgui.ListItem(label=category, thumbnailImage=VIDEOS[category][0][<span class="stringliteral">&#39;thumb&#39;</span>])</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="comment"># Set a fanart image for the list item.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment"># Here we use the same image as the thumbnail for simplicity&#39;s sake.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        list_item.setProperty(<span class="stringliteral">&#39;fanart_image&#39;</span>, VIDEOS[category][0][<span class="stringliteral">&#39;thumb&#39;</span>])</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment"># Set additional info for the list item.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment"># Here we use a category name for both properties for for simplicity&#39;s sake.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment"># setInfo allows to set various information for an item.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment"># For available properties see the following link:</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment"># http://mirrors.xbmc.org/docs/python-docs/15.x-isengard/xbmcgui.html#ListItem-setInfo</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        list_item.setInfo(<span class="stringliteral">&#39;video&#39;</span>, {<span class="stringliteral">&#39;title&#39;</span>: category, <span class="stringliteral">&#39;genre&#39;</span>: category})</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment"># Create a URL for the plugin recursive callback.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment"># Example: plugin://plugin.video.example/?action=listing&amp;category=Animals</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        url = <span class="stringliteral">&#39;{0}?action=listing&amp;category={1}&#39;</span>.format(__url__, category)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment"># is_folder = True means that this item opens a sub-list of lower level items.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        is_folder = <span class="keyword">True</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment"># Add our item to the listing as a 3-element tuple.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        listing.append((url, list_item, is_folder))</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment"># Add our listing to Kodi.</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment"># Large lists and/or slower systems benefit from adding all items at once via addDirectoryItems</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment"># instead of adding one by ove via addDirectoryItem.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    xbmcplugin.addDirectoryItems(__handle__, listing, len(listing))</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment"># Add a sort method for the virtual folder items (alphabetically, ignore articles)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    xbmcplugin.addSortMethod(__handle__, xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment"># Finish creating a virtual folder.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    xbmcplugin.endOfDirectory(__handle__)</div>
+</div><!-- fragment --><p>And here we list the videos </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>list_videos(category):</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">    Create the list of playable videos in the Kodi interface.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral">    :param category: str</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="stringliteral">    :return: None</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="comment"># Get the list of videos in the category.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    videos = get_videos(category)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment"># Create a list for our items.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    listing = []</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment"># Iterate through videos.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">for</span> video <span class="keywordflow">in</span> videos:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="comment"># Create a list item with a text label and a thumbnail image.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        list_item = xbmcgui.ListItem(label=video[<span class="stringliteral">&#39;name&#39;</span>], thumbnailImage=video[<span class="stringliteral">&#39;thumb&#39;</span>])</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment"># Set a fanart image for the list item.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment"># Here we use the same image as the thumbnail for simplicity&#39;s sake.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        list_item.setProperty(<span class="stringliteral">&#39;fanart_image&#39;</span>, video[<span class="stringliteral">&#39;thumb&#39;</span>])</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment"># Set additional info for the list item.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        list_item.setInfo(<span class="stringliteral">&#39;video&#39;</span>, {<span class="stringliteral">&#39;title&#39;</span>: video[<span class="stringliteral">&#39;name&#39;</span>], <span class="stringliteral">&#39;genre&#39;</span>: video[<span class="stringliteral">&#39;genre&#39;</span>]})</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment"># Set &#39;IsPlayable&#39; property to &#39;true&#39;.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment"># This is mandatory for playable items!</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        list_item.setProperty(<span class="stringliteral">&#39;IsPlayable&#39;</span>, <span class="stringliteral">&#39;true&#39;</span>)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment"># Create a URL for the plugin recursive callback.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment"># Example: plugin://plugin.video.example/?action=play&amp;video=http://www.vidsplay.com/vids/crab.mp4</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        url = <span class="stringliteral">&#39;{0}?action=play&amp;video={1}&#39;</span>.format(__url__, video[<span class="stringliteral">&#39;video&#39;</span>])</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment"># Add the list item to a virtual Kodi folder.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment"># is_folder = False means that this item won&#39;t open any sub-list.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        is_folder = <span class="keyword">False</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment"># Add our item to the listing as a 3-element tuple.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        listing.append((url, list_item, is_folder))</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment"># Add our listing to Kodi.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment"># Large lists and/or slower systems benefit from adding all items at once via addDirectoryItems</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment"># instead of adding one by ove via addDirectoryItem.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    xbmcplugin.addDirectoryItems(__handle__, listing, len(listing))</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment"># Add a sort method for the virtual folder items (alphabetically, ignore articles)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    xbmcplugin.addSortMethod(__handle__, xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment"># Finish creating a virtual folder.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    xbmcplugin.endOfDirectory(__handle__)</div>
+</div><!-- fragment --><p>Now we tell Kodi how to find the video path to play the videos </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>play_video(path):</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">    Play a video by the provided path.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral">    :param path: str</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="stringliteral">    :return: None</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="comment"># Create a playable item with a path to play.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    play_item = xbmcgui.ListItem(path=path)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment"># Pass the item to the Kodi player.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    xbmcplugin.setResolvedUrl(__handle__, <span class="keyword">True</span>, listitem=play_item)</div>
+</div><!-- fragment --><p>This is the router function </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>router(paramstring):</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">    Router function that calls other functions</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral">    depending on the provided paramstring</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="stringliteral">    :param paramstring:</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral">    :return:</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment"># Parse a URL-encoded paramstring to the dictionary of</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment"># {&lt;parameter&gt;: &lt;value&gt;} elements</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    params = dict(parse_qsl(paramstring[1:]))</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment"># Check the parameters passed to the plugin</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span> params:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">if</span> params[<span class="stringliteral">&#39;action&#39;</span>] == <span class="stringliteral">&#39;listing&#39;</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="comment"># Display the list of videos in a provided category.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            list_videos(params[<span class="stringliteral">&#39;category&#39;</span>])</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">elif</span> params[<span class="stringliteral">&#39;action&#39;</span>] == <span class="stringliteral">&#39;play&#39;</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="comment"># Play a video from a provided URL.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            play_video(params[<span class="stringliteral">&#39;video&#39;</span>])</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="comment"># If the plugin is called from Kodi UI without any parameters,</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment"># display the list of video categories</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        list_categories()</div>
+</div><!-- fragment --><p>Call the router function </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keywordflow">if</span> __name__ == <span class="stringliteral">&#39;__main__&#39;</span>:</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="comment"># Call the router function and pass the plugin call parameters to it.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    router(sys.argv[2])</div>
+</div><!-- fragment --> <hr/>
+<h1><a class="anchor" id="Python_Video_addon_section8"></a>
 Changing the code</h1>
 <p>Hopefully by now you have managed to run the Add-On, understand the structure and can see what the code can do. Now lets trying changing it a little!</p>
 <p>Since we already have the Add-on installed we can go directly to the Kodi userdata folder and edit the python directly. You can also have Kodi open at this time ready to run the Add-on when required. Just switch between your text editor and Kodi any time.</p>
-<p>Now open up the addon.py file from your userdata folder and lets change what the text says.</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;line1 = <span class="stringliteral">&quot;Goodbye World!&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;line2 = <span class="stringliteral">&quot;And welcome back&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;line3 = <span class="stringliteral">&quot;My own Add-On!&quot;</span></div>
-</div><!-- fragment --><p>Click save on your text editor and now try running the Add-On inside Kodi. You should see the new text appear right before your eyes.</p>
-<p>Congratulations! you are now an XBMC/Kodi developer!!</p>
+<p>Now open up the main.py file from your userdata folder and lets change what the text says.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="stringliteral">&#39;Cars&#39;</span>: [{<span class="stringliteral">&#39;name&#39;</span>: <span class="stringliteral">&#39;Postal Truck&#39;</span>,</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;     <span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/us_postal.jpg&#39;</span>,</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;     <span class="stringliteral">&#39;video&#39;</span>: <span class="stringliteral">&#39;http://www.vidsplay.com/vids/us_postal.mp4&#39;</span>,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;     <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Cars&#39;</span>},</div>
+</div><!-- fragment --><p>Try changing some of the links to another jpeg file or hosted online video. Also try to change the genre and see how that effects the view in Kodi.</p>
+<p>Click save on your text editor and now try running the Add-On inside Kodi. You should see the new video links and navigation right away.</p>
+<p>Congratulations! you've just played an online video from your very own Video Add-on.</p>
 <hr/>
-<h1><a class="anchor" id="section10"></a>
+<h1><a class="anchor" id="Python_Video_addon_section9"></a>
 Final Thoughts</h1>
-<p>Obviously this is just a simple Add-On tutorial and you can do much, much more as most Kodi commands are accessible from this python interface. You can also extend Kodi with things like the JSON interface.</p>
-<p>If you have any questions about this tutorial, feel free to discuss it on our forums here: <a href="http://forum.kodi.tv/showthread.php?tid=209948">http://forum.kodi.tv/showthread.php?tid=209948</a></p>
-<hr/>
-<h1><a class="anchor" id="section11"></a>
+<p>Writing a Video Add-on is actually pretty simple once you get the basic structure correct. You can scrape most online sources with Regex, or host your own videos on the web. You can also play youtube clips or vevo videos using some additional easy to use modules.</p>
+<p>If you have any questions about this tutorial, feel free to discuss it on our forums here: <a href="http://forum.kodi.tv/showthread.php?tid=248774">http://forum.kodi.tv/showthread.php?tid=248774</a> </p><hr/>
+<h1><a class="anchor" id="Python_Video_addon_section10"></a>
 Extra info</h1>
-<p>You can find a little extra info on this page for different methods of using the GUI Hello World.</p>
-<p><a href="http://kodi.wiki/view/GUI_Tutorial">http://kodi.wiki/view/GUI_Tutorial</a> </p>
+<p>Just a reminder... <b>IMPORTANT!!!!!!!</b> Do not mix tabs and spaces in python </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

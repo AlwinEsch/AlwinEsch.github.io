@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIDialogFileBrowser</title>
+<title>Kodi Development: CAddonGUIDialogSelect</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,20 +92,19 @@ $(document).ready(function(){initNavTree('a00239.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIDialogFileBrowser<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a> &raquo; <a class="el" href="a00247.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAddonGUIDialogSelect<div class="ingroups"><a class="el" href="a00306.html">C++ Development</a> &raquo; <a class="el" href="a00242.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>File browser dialog</b> </p>
-<p>The functions listed below of the class "CAddonGUIDialogFileBrowser" offer the possibility to select to a file by the user of the add-on.</p>
-<p>It allows all the options that are possible in Kodi itself and offers all support file types.</p>
+<p><b>Selection dialog</b> </p>
+<p>The function listed below permits the call of a dialogue to select of an entry as a key</p>
 <p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00143.html">#include &lt;kodi/gui.api2/GUIDialogFileBrowser.h&gt;</a> be included to enjoy it.</p>
+<p>It has the header <a class="el" href="a00151.html">#include &lt;kodi/gui.api2/GUIDialogSelect.h&gt;</a> be included to enjoy it.</p>
 <div class="image">
-<img src="help.GUIDialogFileBrowser.png" alt="help.GUIDialogFileBrowser.png"/>
+<img src="help.GUIDialogSelect.png" alt="help.GUIDialogSelect.png"/>
 </div>
  <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gab1c3767a978a71751a8ea550d449eed6"></a>
+<a class="anchor" id="ga607e3ded9a30e6246ee21200b0978fd5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -113,28 +112,22 @@ $(document).ready(function(){initNavTree('a00239.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool ShowAndGetDirectory </td>
+          <td class="memname">static int Show </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>shares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>heading</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>entries</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bWriteOnly</em> = <code>false</code>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>selected</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -149,418 +142,33 @@ $(document).ready(function(){initNavTree('a00239.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Directory selection dialog. </p>
+<p>Show a selection dialog about given parts. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected directory </td></tr>
-    <tr><td class="paramname">bWriteOnly</td><td>If set only writeable folders are shown. </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog heading name </td></tr>
+    <tr><td class="paramname">entries</td><td>String list about entries </td></tr>
+    <tr><td class="paramname">selected</td><td>[opt] Predefined selection (default is <code>-1</code> for the first) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled.</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00143.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
+<dl class="section return"><dt>Returns</dt><dd>The selected entry, if return <code>-1</code> was nothing selected or canceled</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00151.html">kodi/gui.api2/GUIDialogSelect.h</a>&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Example show directory selection dialog with on &#39;share&#39; (first value)</span></div>
-<div class="line"><span class="comment"> * defined directory types.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * If this becomes leaved empty and &#39;directory&#39; is empty goes it to the</span></div>
-<div class="line"><span class="comment"> * base path of the hard disk.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Also can be with path written to &#39;directory&#39; before the dialog forced</span></div>
-<div class="line"><span class="comment"> * to a start place.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line">std::string directory;</div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00239.html#gab1c3767a978a71751a8ea550d449eed6">CAddonGUIDialogFileBrowser::ShowAndGetDirectory</a>(<span class="stringliteral">&quot;local|network|removable&quot;</span>,</div>
-<div class="line">                                                   <span class="stringliteral">&quot;Test directory selection&quot;</span>,</div>
-<div class="line">                                                   directory,</div>
-<div class="line">                                                   <span class="keyword">false</span>);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Selected directory is : %s and was %s\n&quot;</span>, directory.c_str(), ret ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
+<div class="line"><span class="keyword">const</span> std::vector&lt;std::string&gt; entries</div>
+<div class="line">{</div>
+<div class="line">  <span class="stringliteral">&quot;Test 1&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;Test 2&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;Test 3&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;Test 4&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;Test 5&quot;</span></div>
+<div class="line">};</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> selected = <a class="code" href="a00239.html#ga607e3ded9a30e6246ee21200b0978fd5">CAddonGUIDialogSelect::Show</a>(<span class="stringliteral">&quot;Test selection&quot;</span>, entries, -1);</div>
+<div class="line"><span class="keywordflow">if</span> (selected &lt; 0)</div>
+<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Item selection canceled\n&quot;</span>);</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Selected item is: %i\n&quot;</span>, selected);</div>
 </div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga5924085e93999a96dc9fc5a6c5f9362b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>shares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>File selection dialog. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected file </td></tr>
-    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
-    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga5ef242152a302da9ab13f61ca77b7ac3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetFileFromDir </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>directory</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>singleList</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>File selection from a directory. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">directory</td><td>The directory name where the dialog start, possible are normal names and kodi's special names. </td></tr>
-    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected file </td></tr>
-    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
-    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
-    <tr><td class="paramname"></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga11dac37e6c6fd7dcaa18997d54e90b1a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetFileList </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>shares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>File selection dialog to get several in to a list. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected files </td></tr>
-    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
-    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga10785676725a192799092e82ae4a68ba"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetImage </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>shares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Image selection dialog. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected image </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gad8c149a33ac60207e2953244f72f7a1d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetImageList </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>shares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>path</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Image selection dialog to get several in to a list. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected images </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gab582e8181c1569b7ff713e8924c4aa73"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetSource </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>allowNetworkShares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>additionalShare</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>type</em> = <code>&quot;&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Source selection dialog. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Return</td><td>value about selected source </td></tr>
-    <tr><td class="paramname">Allow</td><td>also access to network </td></tr>
-    <tr><td class="paramname">With</td><td>additionalShare becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">type</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
-
 </div>
 </div>
 </div><!-- contents -->

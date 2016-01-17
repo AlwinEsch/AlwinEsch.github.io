@@ -1,5 +1,5 @@
 var a00296 =
 [
-    [ "setColorDiffuse", "a00296.html#ga3b0c15e0d82d8605f4b3ad82aaa42c16", null ],
-    [ "setImage", "a00296.html#ga7ba591029ef61ca17851a9f02a1fe5dc", null ]
+    [ "getPercent", "a00296.html#gad3e5815badb78551841c44d9b5ae3742", null ],
+    [ "setPercent", "a00296.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ]
 ];

@@ -1,15 +1,10 @@
 var a00219 =
 [
-    [ "CAddonLib_VFSDirEntry", "a00219.html#gac81f1dd62d59a58a0d6f5ef72cfde20b", null ],
-    [ "CAddonLib_VFSDirEntry", "a00219.html#ga3d6451c27a24180971c1dd12e8b665ae", null ],
-    [ "IsFolder", "a00219.html#gabfbbb37d69862b45d0f1079ab976fa37", null ],
-    [ "Label", "a00219.html#gaacd1b40e1b2e44d82303388beb475e84", null ],
-    [ "Path", "a00219.html#ga666f6d222d6e40f592d7ec4c8c670263", null ],
-    [ "Properties", "a00219.html#gaea9c66f89bd36c6b01a234d0e2ad123a", null ],
-    [ "Properties", "a00219.html#ga682a050b373b13ec1e816d7a9cc47302", null ],
-    [ "SetFolder", "a00219.html#gadc0bf158b1dc28eea1bc2e3a2c016982", null ],
-    [ "SetLabel", "a00219.html#gab825756e641ba839bfae908492165481", null ],
-    [ "SetPath", "a00219.html#ga4a03d7c94fa02df112558bc30818e413", null ],
-    [ "SetSize", "a00219.html#gaf2fb6ea3061355a5ed4b53ca45e712ac", null ],
-    [ "Size", "a00219.html#gac0ba4f4c78dcb35605e645ee75198b5a", null ]
+    [ "AddDSPMenuHook", "a00219.html#gad4e7c34b466c7523b48eb38f453c6f8b", null ],
+    [ "GetCurrentSinkFormat", "a00219.html#gaeb11fdb26f8a00296e10ff296c602bb5", null ],
+    [ "RegisterDSPMode", "a00219.html#gae95d0da238b6ffa997911dbf9eedb2d4", null ],
+    [ "RegisterMe", "a00219.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
+    [ "RemoveDSPMenuHook", "a00219.html#ga59fa2e75dbd7ede8adb9488258b55bdd", null ],
+    [ "UnregisterDSPMode", "a00219.html#gae222050a6298ea8a4b7f2085ae5e85b1", null ],
+    [ "UnRegisterMe", "a00219.html#ga5940787dcdcdb8aa995a07106917489f", null ]
 ];

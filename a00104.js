@@ -1,14 +1,12 @@
 var a00104 =
 [
-    [ "DLFCN_H", "a00104.html#a9377853cbaba2d5d7bacd4216d6080e7", null ],
-    [ "RTLD_DEFAULT", "a00104.html#a58d13c5dcabbb85848fa97b446086247", null ],
-    [ "RTLD_GLOBAL", "a00104.html#ace65454279c135fe5e6168d456c31263", null ],
-    [ "RTLD_LAZY", "a00104.html#a5c83709ee3bd7d316f8f47e122f3be20", null ],
-    [ "RTLD_LOCAL", "a00104.html#a233010260f7e61c5dab09e2bca10a590", null ],
-    [ "RTLD_NEXT", "a00104.html#a51d4212b17b1edeb2fc5a48c7c497267", null ],
-    [ "RTLD_NOW", "a00104.html#a98a6517467cf7d1dd27d6c6dce78a6cf", null ],
-    [ "dlclose", "a00104.html#af483b6c4400965aa885f9f1a144138a5", null ],
-    [ "dlerror", "a00104.html#a541c343ae5cdf90926014c65972c86cc", null ],
-    [ "dlopen", "a00104.html#a8668245fcfc33ca414d3d27ca038891a", null ],
-    [ "dlsym", "a00104.html#af130d2e6324246be4262ecaaed674aa4", null ]
+    [ "File", "a00104.html#ad6c06a9065bb77311663bd2a98ef2eb5", null ],
+    [ "~File", "a00104.html#a241d694b0e799c0579a023e76cd97f18", null ],
+    [ "close", "a00270.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
+    [ "getFile", "a00104.html#ae54cc0c6b80386955f27208cbae8f3af", null ],
+    [ "read", "a00270.html#ga691e636b0dffa3c448c648f42d94437a", null ],
+    [ "readBytes", "a00270.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8", null ],
+    [ "seek", "a00270.html#ga8140115d0b4e6cb1ffa9f4298153d009", null ],
+    [ "size", "a00270.html#ga6fdf8e4501d305514d8e7b5d6cde34a6", null ],
+    [ "write", "a00270.html#ga1a6eddca986ff7164d57b9fad625e597", null ]
 ];

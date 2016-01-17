@@ -1,8 +1,26 @@
 var a00203 =
 [
-    [ "Library - AddOnLIB", "a00210.html", "a00210" ],
-    [ "Library - AudioEngineLIB", "a00223.html", "a00223" ],
-    [ "Library - GUILIB", "a00247.html", "a00247" ],
-    [ "Library - PVRLIB", "a00261.html", "a00261" ],
-    [ "Library - PlayerLIB", "a00258.html", "a00258" ]
+    [ "Action", "a00081.html", "a00081" ],
+    [ "Control", "a00082.html", "a00082" ],
+    [ "ControlButton", "a00083.html", "a00083" ],
+    [ "ControlCheckMark", "a00084.html", "a00084" ],
+    [ "ControlEdit", "a00085.html", "a00085" ],
+    [ "ControlFadeLabel", "a00086.html", "a00086" ],
+    [ "ControlGroup", "a00087.html", "a00087" ],
+    [ "ControlImage", "a00088.html", "a00088" ],
+    [ "ControlLabel", "a00089.html", "a00089" ],
+    [ "ControlList", "a00090.html", "a00090" ],
+    [ "ControlProgress", "a00091.html", "a00091" ],
+    [ "ControlRadioButton", "a00092.html", "a00092" ],
+    [ "ControlSlider", "a00093.html", "a00093" ],
+    [ "ControlSpin", "a00094.html", "a00094" ],
+    [ "ControlTextBox", "a00095.html", "a00095" ],
+    [ "Dialog", "a00096.html", "a00096" ],
+    [ "DialogProgress", "a00097.html", "a00097" ],
+    [ "DialogProgressBG", "a00098.html", "a00098" ],
+    [ "ListItem", "a00099.html", "a00099" ],
+    [ "Window", "a00100.html", "a00100" ],
+    [ "WindowDialog", "a00101.html", "a00101" ],
+    [ "WindowXML", "a00102.html", "a00102" ],
+    [ "WindowXMLDialog", "a00103.html", "a00103" ]
 ];

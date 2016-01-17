@@ -1,13 +1,15 @@
 var a00255 =
 [
-    [ "OnPlayBackEnded", "a00255.html#ga9b673b89fb0c2d810637d97a6144743d", null ],
-    [ "OnPlayBackPaused", "a00255.html#ga535ea86e9170c85e4dfc8b2292466041", null ],
-    [ "OnPlayBackResumed", "a00255.html#ga78de3c74ca811508e2c83bad612af8a0", null ],
-    [ "OnPlayBackSeek", "a00255.html#ga1aa2520cecdb44e5f37dd2905146efa6", null ],
-    [ "OnPlayBackSeekChapter", "a00255.html#ga36be56af6bfdd7fc943f8d3f1abacfbf", null ],
-    [ "OnPlayBackSpeedChanged", "a00255.html#ga14e0279d2fb9cd6b4a68f9467e07081a", null ],
-    [ "OnPlayBackStarted", "a00255.html#ga670b9e7947764d4d474b7f8cd21c1611", null ],
-    [ "OnPlayBackStopped", "a00255.html#ga5df8f6dd6cf9fb162d1d4d77da58eb2d", null ],
-    [ "OnQueueNextItem", "a00255.html#ga817b2d696d11b166143be2c391a972f9", null ],
-    [ "SetIndependentCallbacks", "a00255.html#gaa8d87ba3157eed260e7334c1b3d96657", null ]
+    [ "AddItem", "a00255.html#gaaa7aba33ed28df8d2adfa6af9b097575", null ],
+    [ "AddItem", "a00255.html#gac4aeeb4b7e884b74644e14bceb759c5b", null ],
+    [ "ClearList", "a00255.html#ga2b85ec494201046fd7686395c996c272", null ],
+    [ "CPlayerLib_PlayList", "a00255.html#ga9ed3d2e6831632a37dfd0ea6699ef58f", null ],
+    [ "GetListPosition", "a00255.html#ga3b6ca85032d49dfd758dcaad70db8275", null ],
+    [ "GetListSize", "a00255.html#ga1f4581c0d5dec157ae050648b9980dda", null ],
+    [ "GetPlayListType", "a00255.html#ga1c1d6bcc394fe5e4b75634dca0147427", null ],
+    [ "LoadPlaylist", "a00255.html#ga7de3982ed8b225f5fd1580c75847d9db", null ],
+    [ "operator[]", "a00255.html#ga0fe30656a739ee76ffac247d6c602008", null ],
+    [ "RemoveItem", "a00255.html#ga7834e166deca3a366bd4d25b061606fd", null ],
+    [ "Shuffle", "a00255.html#ga9d1841bc5f559c6981b78b895d446033", null ],
+    [ "~CPlayerLib_PlayList", "a00255.html#gab5aa5368f1de872e97298ab744281ee8", null ]
 ];

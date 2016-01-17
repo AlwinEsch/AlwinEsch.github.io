@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['infotagmusic',['InfoTagMusic',['../a00268.html',1,'']]],
-  ['infotagradiords',['InfoTagRadioRDS',['../a00275.html',1,'']]],
-  ['infotagvideo',['InfoTagVideo',['../a00269.html',1,'']]]
+  ['infotagmusic',['InfoTagMusic',['../a00263.html',1,'']]],
+  ['infotagradiords',['InfoTagRadioRDS',['../a00274.html',1,'']]],
+  ['infotagvideo',['InfoTagVideo',['../a00264.html',1,'']]]
 ];

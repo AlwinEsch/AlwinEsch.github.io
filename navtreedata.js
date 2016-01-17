@@ -3,8 +3,8 @@ var NAVTREE =
   [ "Kodi Development", "index.html", [
     [ "Getting Started", "a00002.html", null ],
     [ "Add-On Types", "a00004.html", null ],
-    [ "Tutorials", "a00006.html", "a00006" ],
-    [ "Examples", "a00008.html", null ],
+    [ "Tutorials", "a00008.html", "a00008" ],
+    [ "Examples", "a00006.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", null ],
@@ -45,18 +45,18 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00002.html",
-"a00117.html#ad481b851c163786e65d41b9ab47ed14ea93ccac5fa6affc3908cbd62584c2e92b",
-"a00166.html#a9e2d6eb68366a75f82b97704ab92125a",
-"a00215.html#ga77d684d8fa22f1163135489601ac6f19",
-"a00225.html#gga42753b64a4c9b01785035a18e768a43da2ec83a9354a22453171bd3631f8bec7d",
-"a00225.html#gga42753b64a4c9b01785035a18e768a43dac9450adda08eb42d14d84dee6d4bc79a",
-"a00239.html#gad8c149a33ac60207e2953244f72f7a1d",
-"a00265.html#gad8caf56bf234506f41c1fcc64a0d1ad7",
-"a00279.html#ga22064d6877bfb210f43356ef0ce22822",
-"a00279.html#ga8795f0b7e4db9ca32bb069ad99cbfebf",
-"a00279.html#gaea12dc6ac5981595b3303458eb8af9bc",
-"a00289.html#ga952a8f722abe01bcdea42f5687d0dd2b",
-"globals_vars.html"
+"a00120.html#a6f7280d04d3078fadcfa05418716bb4c",
+"a00169.html#a6e9f1124dac9aa64429da43033f616c3",
+"a00215.html#gac7025ec7df110a7a9691adb3f949f24f",
+"a00220.html#gga42753b64a4c9b01785035a18e768a43da6f8843f0bfdf2f4effa3187641e99dff",
+"a00222.html",
+"a00247.html#gac08a48ef4dc5afe79c14ffbefdd96f5d",
+"a00268.html#ga77273fcb1269dfb375a644b59a999d24",
+"a00278.html#ga220260c8250b4c016d7f327aea628180",
+"a00278.html#ga86ded2d277dcc1c9c3306f3aa5ccbc05",
+"a00278.html#gaea12dc6ac5981595b3303458eb8af9bc",
+"a00288.html#ga67a0997183f24da19b776d96c1052998",
+"globals_i.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

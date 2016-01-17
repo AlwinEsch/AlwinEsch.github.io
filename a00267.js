@@ -1,9 +1,7 @@
 var a00267 =
 [
-    [ "doModal", "a00267.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
-    [ "getText", "a00267.html#gafab766445043570e6a82c14851366933", null ],
-    [ "isConfirmed", "a00267.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
-    [ "setDefault", "a00267.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
-    [ "setHeading", "a00267.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
-    [ "setHiddenInput", "a00267.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ]
+    [ "close", "a00267.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
+    [ "create", "a00267.html#gaafb8a184f497bc815d38be07731df561", null ],
+    [ "isFinished", "a00267.html#ga06926ca87a7be7d8af8ee84670fffa87", null ],
+    [ "update", "a00267.html#ga90d83a72e4151aba7c05422cf34f6684", null ]
 ];

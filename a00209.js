@@ -1,13 +1,7 @@
 var a00209 =
 [
-    [ "File", "a00273.html", "a00273" ],
-    [ "Stat", "a00284.html", "a00284" ],
-    [ "copy", "a00209.html#ga9188bb84632ebdbc54faca1de9be95c3", null ],
-    [ "deleteFile", "a00209.html#gabf13e7bae1c97bc1c4188f3e4e459f95", null ],
-    [ "exists", "a00209.html#ga12691f7bf1c5e55da57b18f63f6fbdca", null ],
-    [ "listdir", "a00209.html#ga6bb30280e2eb7d5b94cfb0eb6e65b0cb", null ],
-    [ "mkdir", "a00209.html#gaf69897d9a5235e87828a9e75c1cae4ca", null ],
-    [ "mkdirs", "a00209.html#ga229e97a6a47bdff0122f1004c4feda5c", null ],
-    [ "rename", "a00209.html#gaefc98ff66890f353b4ea7fd620b63808", null ],
-    [ "rmdir", "a00209.html#gac83ea5fb566ee294cdd87c74c6697025", null ]
+    [ "DNSLookup", "a00209.html#ga39943b1fdb3a928f0c08e54484602a7e", null ],
+    [ "GetIPAddress", "a00209.html#gad56ffaa14c080ecaff1f5e7534551eff", null ],
+    [ "URLEncode", "a00209.html#gab4932f2cf0d39ceca1649ec8dd782acc", null ],
+    [ "WakeOnLan", "a00209.html#ga55c0502c3db4416ce1971a85f869775b", null ]
 ];

@@ -1,9 +1,18 @@
 var a00263 =
 [
-    [ "ChannelEntry", "a00263.html#gafdbc7a9a4d1336f159150988868b1465", null ],
-    [ "ChannelGroup", "a00263.html#gabb331d2d9b3ef522da48c0b951ddbe21", null ],
-    [ "ChannelGroupMember", "a00263.html#ga2d24f5c60e0d4b6d3a416641b489f15e", null ],
-    [ "EpgEntry", "a00263.html#gab55ab3d9f7fa5f1304edf70e39ac6a55", null ],
-    [ "RecordingEntry", "a00263.html#gad676cb5682d7c7c959d91822342cc753", null ],
-    [ "TimerEntry", "a00263.html#gae6c3ce0a07ecc854c615f2d65e550147", null ]
+    [ "getAlbum", "a00263.html#ga11ac7b770ff2135e877c241ddb5db662", null ],
+    [ "getAlbumArtist", "a00263.html#ga257503de86d218b382fcbbe9f1f68c2d", null ],
+    [ "getArtist", "a00263.html#ga1b9f565753d008491c59887680bd570e", null ],
+    [ "getComment", "a00263.html#ga50a7366cba8ce27bc48a00e746324f7b", null ],
+    [ "getDisc", "a00263.html#gaa2759f95638fb39b74363457af9e7777", null ],
+    [ "getDuration", "a00263.html#ga08c13081c0665a4336a0f022c955fb69", null ],
+    [ "getGenre", "a00263.html#ga724866edc25325e096d7d8a76b4a3234", null ],
+    [ "getLastPlayed", "a00263.html#ga64953074270dc9bc74370b8251c1cd43", null ],
+    [ "getListeners", "a00263.html#gafdcd386f038151367af97803c1c13e41", null ],
+    [ "getLyrics", "a00263.html#gaefe9573a6a972ef63b082d2264baa857", null ],
+    [ "getPlayCount", "a00263.html#gac644258d08f747039e9d0e76bcd49513", null ],
+    [ "getReleaseDate", "a00263.html#gad099adc410738271ffc55e6fb68f77ae", null ],
+    [ "getTitle", "a00263.html#ga888f94790c968e3f0b5de17e509098aa", null ],
+    [ "getTrack", "a00263.html#ga797e19587556ad59c5e3a7b55e8ccae9", null ],
+    [ "getURL", "a00263.html#gafa85bb6aea7b660960562826dcb20cf7", null ]
 ];

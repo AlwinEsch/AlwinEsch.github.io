@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Help functions</title>
+<title>Kodi Development: Callback functions from Kodi to add-on</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,13 +92,14 @@ $(document).ready(function(){initNavTree('a00250.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Help functions<div class="ingroups"><a class="el" href="a00203.html">C++ Development</a> &raquo; <a class="el" href="a00247.html">Library - GUILIB</a> &raquo; <a class="el" href="a00248.html">CGUILib</a></div></div>  </div>
+<div class="title">Callback functions from Kodi to add-on<div class="ingroups"><a class="el" href="a00306.html">C++ Development</a> &raquo; <a class="el" href="a00253.html">Library - PlayerLIB</a> &raquo; <a class="el" href="a00249.html">CPlayerLib_Player</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Functions for GUI</b> </p>
+<p>Functions to handle control callbacks from Kodi. </p>
+<p><a class="el" href="a00249.html">Go back to normal functions from CPlayerLib_Player</a> </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga4afd43d20b97e20532eeb1fac9ae6c1f"></a>
+<a class="anchor" id="ga9b673b89fb0c2d810637d97a6144743d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -106,7 +107,7 @@ $(document).ready(function(){initNavTree('a00250.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int GetCurrentWindowDialogId </td>
+          <td class="memname">virtual void OnPlayBackEnded </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -114,14 +115,14 @@ $(document).ready(function(){initNavTree('a00250.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ga452c9c6299140854739860045f060d28"></a>
+<a class="anchor" id="ga535ea86e9170c85e4dfc8b2292466041"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -129,7 +130,7 @@ $(document).ready(function(){initNavTree('a00250.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int GetCurrentWindowId </td>
+          <td class="memname">virtual void OnPlayBackPaused </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -137,14 +138,14 @@ $(document).ready(function(){initNavTree('a00250.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ga7b736bc18cc4c9b1e6229e1af312b6e3"></a>
+<a class="anchor" id="ga78de3c74ca811508e2c83bad612af8a0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -152,7 +153,7 @@ $(document).ready(function(){initNavTree('a00250.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int GetScreenHeight </td>
+          <td class="memname">virtual void OnPlayBackResumed </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -160,16 +161,14 @@ $(document).ready(function(){initNavTree('a00250.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the the current screen height with pixel. </p>
-
 </div>
 </div>
-<a class="anchor" id="ga0f0cc52a3413a502953495f26270f559"></a>
+<a class="anchor" id="ga1aa2520cecdb44e5f37dd2905146efa6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -177,24 +176,33 @@ $(document).ready(function(){initNavTree('a00250.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int GetScreenWidth </td>
+          <td class="memname">virtual void OnPlayBackSeek </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seekOffset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the the current screen width with pixel. </p>
-
 </div>
 </div>
-<a class="anchor" id="ga9e8e637bdd545cf2cd0b922d3496a64b"></a>
+<a class="anchor" id="ga36be56af6bfdd7fc943f8d3f1abacfbf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -202,24 +210,23 @@ $(document).ready(function(){initNavTree('a00250.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int GetVideoResolution </td>
+          <td class="memname">virtual void OnPlayBackSeekChapter </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iChapter</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the the current screen rendering resolution. </p>
-
 </div>
 </div>
-<a class="anchor" id="gace70db8e92290399a2a070eb0a60df63"></a>
+<a class="anchor" id="ga14e0279d2fb9cd6b4a68f9467e07081a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -227,24 +234,23 @@ $(document).ready(function(){initNavTree('a00250.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Lock </td>
+          <td class="memname">virtual void OnPlayBackSpeedChanged </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iSpeed</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Performs a graphical lock of rendering engine. </p>
-
 </div>
 </div>
-<a class="anchor" id="ga50f1fb5a8527c6f1beb7c59393c934a9"></a>
+<a class="anchor" id="ga670b9e7947764d4d474b7f8cd21c1611"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -252,7 +258,7 @@ $(document).ready(function(){initNavTree('a00250.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Unlock </td>
+          <td class="memname">virtual void OnPlayBackStarted </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -260,12 +266,132 @@ $(document).ready(function(){initNavTree('a00250.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Performs a graphical unlock of previous locked rendering engine. </p>
+</div>
+</div>
+<a class="anchor" id="ga5df8f6dd6cf9fb162d1d4d77da58eb2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void OnPlayBackStopped </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga817b2d696d11b166143be2c391a972f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void OnQueueNextItem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gaa8d87ba3157eed260e7334c1b3d96657"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetIndependentCallbacks </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00123.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a>&#160;</td>
+          <td class="paramname"><em>cbhdl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00123.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackStarted</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00123.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackEnded</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00123.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackStopped</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00123.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackPaused</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00123.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackResumed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00123.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnQueueNextItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00123.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl, int iSpeed)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackSpeedChanged</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00123.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl, int iTime, int seekOffset)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackSeek</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00123.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl, int iChapter)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackSeekChapter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If the class is used independent (with "new CPlayerLib_Player") and not as parent (with "cCLASS_own : CPlayerLib_Player") from own must be the callback from Kodi to add-on overdriven with own functions! </p>
 
 </div>
 </div>

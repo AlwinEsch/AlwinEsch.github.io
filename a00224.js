@@ -1,10 +1,8 @@
 var a00224 =
 [
-    [ "AddDSPMenuHook", "a00224.html#gad4e7c34b466c7523b48eb38f453c6f8b", null ],
-    [ "GetCurrentSinkFormat", "a00224.html#gaeb11fdb26f8a00296e10ff296c602bb5", null ],
-    [ "RegisterDSPMode", "a00224.html#gae95d0da238b6ffa997911dbf9eedb2d4", null ],
-    [ "RegisterMe", "a00224.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
-    [ "RemoveDSPMenuHook", "a00224.html#ga59fa2e75dbd7ede8adb9488258b55bdd", null ],
-    [ "UnregisterDSPMode", "a00224.html#gae222050a6298ea8a4b7f2085ae5e85b1", null ],
-    [ "UnRegisterMe", "a00224.html#ga5940787dcdcdb8aa995a07106917489f", null ]
+    [ "CAddonGUIControlImage", "a00224.html#gaaab82074962caa8db7b1fa15b9e14a5c", null ],
+    [ "SetColorDiffuse", "a00224.html#ga5f4b9c8309a04af748764bc6dd4ef31c", null ],
+    [ "SetFileName", "a00224.html#ga71ca22e2515e018fdfa6db78fbee75dd", null ],
+    [ "SetVisible", "a00224.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "~CAddonGUIControlImage", "a00224.html#gaf4b7097d3f8155be34401f9daab51eb3", null ]
 ];
