@@ -1,13 +1,13 @@
 var a00115 =
 [
-    [ "WindowDialog", "a00115.html#ab0d28825ea9f38bb2df30c87e25ff46a", null ],
-    [ "~WindowDialog", "a00115.html#abd7ac25ecd20ae49f86086da88ddd645", null ],
-    [ "close", "a00115.html#a41f0a9216ff8fd7cfe809259fc6668cc", null ],
-    [ "IsDialog", "a00115.html#a1e8473757c23d67eeaa2ad2eaa0d868b", null ],
-    [ "IsDialogRunning", "a00115.html#af5ade9aaec42bf60e7a6c1b1ae74dd2d", null ],
-    [ "IsModalDialog", "a00115.html#adda02b50c11c92eadfa64088e2b56094", null ],
-    [ "OnAction", "a00115.html#a5a929bb12b2e74b5d65471b0a4242741", null ],
-    [ "OnDeinitWindow", "a00115.html#a9abe87b5ae8d7072807ea356566bed21", null ],
-    [ "OnMessage", "a00115.html#a705aa30fc54fcb4cb255efa7992f3e9e", null ],
-    [ "show", "a00115.html#a9ceb2fdb6907af08ad835270ff1697bc", null ]
+    [ "ControlTextBox", "a00115.html#afd93b8cb98a0ef81f5f44ff700b42922", null ],
+    [ "ControlTextBox", "a00115.html#a7a8982a6c21b048766712f24e8efbd31", null ],
+    [ "autoScroll", "a00338.html#gad492befcc0c8ee0e1fecb0d6a6bd7d1c", null ],
+    [ "Create", "a00115.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "getText", "a00338.html#gafab766445043570e6a82c14851366933", null ],
+    [ "reset", "a00338.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
+    [ "scroll", "a00338.html#gaa4f5d32e79ca1250eaba1a74fdf7f1ec", null ],
+    [ "setText", "a00338.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ],
+    [ "strFont", "a00115.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "textColor", "a00115.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIDialogTextViewer</title>
+<title>Kodi Development: CAddonLib_VFSDirEntry</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,37 +92,55 @@ $(document).ready(function(){initNavTree('a00258.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIDialogTextViewer<div class="ingroups"><a class="el" href="a00324.html">C++ Development</a> &raquo; <a class="el" href="a00260.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAddonLib_VFSDirEntry<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a> &raquo; <a class="el" href="a00249.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Text viewer dialog</b> </p>
-<p>The text viewer dialog can be used to display descriptions, help texts or other larger texts.</p>
-<p>In order to achieve a line break is a <b>\n</b> directly in the text or in the "./resources/language/resource.language.??_??/strings.po" to call with <b>std::string CAddonLib_General::GetLocalizedString(...);</b>.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00170.html">#include &lt;kodi/gui.api2/GUIDialogTextViewer.h&gt;</a> be included to enjoy it.</p>
-<div class="image">
-<img src="help.GUIDialogTextViewer.png" alt="help.GUIDialogTextViewer.png"/>
-</div>
- <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga140c2c236d639885881d514bffbf5dad"></a>
+<p><b>Virtual file system directory entry</b> </p>
+<p>This class is used as an entry for files and folders in <a class="el" href="a00260.html#gaf2bd94f3fa601828737bd8179e2a92e1" title="Lists a directory. ">CAddonLib_VFSUtils::GetDirectory</a>(...).</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00156.html">kodi/addon.api2/VFSUtils.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line">std::vector&lt;CAddonLib_VFSDirEntry&gt; items;</div>
+<div class="line"><a class="code" href="a00260.html#gaf2bd94f3fa601828737bd8179e2a92e1">CAddonLib_VFSUtils::GetDirectory</a>(<span class="stringliteral">&quot;special://temp&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, items);</div>
+<div class="line"></div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory have %lu entries\n&quot;</span>, items.size());</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; items.size(); i++)</div>
+<div class="line">{</div>
+<div class="line">  fprintf(stderr, <span class="stringliteral">&quot; - %04lu -- Folder: %s -- Name: %s -- Path: %s\n&quot;</span>,</div>
+<div class="line">            i+1,</div>
+<div class="line">            items[i].IsFolder() ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no &quot;</span>,</div>
+<div class="line">            items[i].Label().c_str(),</div>
+<div class="line">            items[i].Path().c_str());</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>It has the header <a class="el" href="a00156.html">#include &lt;kodi/addon.api2/VFSUtils.h&gt;</a> be included to enjoy it. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gac81f1dd62d59a58a0d6f5ef72cfde20b"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Show </td>
+          <td class="memname">CAddonLib_VFSDirEntry </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
+          <td class="paramname"><em>label</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em>&#160;</td>
+          <td class="paramname"><em>path</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bFolder</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>size</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -130,62 +148,253 @@ $(document).ready(function(){initNavTree('a00258.html','');});
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Show info text dialog. </p>
+<p>Constructor for VFS directory entry. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">heading</td><td>Small heading text </td></tr>
-    <tr><td class="paramname">text</td><td>Showed text on dialog</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>[opt] Name to use for entry </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>[opt] Used path of the entry </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bFolder</td><td>[opt] If set entry used as folder </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>[opt] If used as file, his size defined there </td></tr>
   </table>
   </dd>
 </dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00170.html">kodi/gui.api2/GUIDialogTextViewer.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><a class="code" href="a00258.html#ga140c2c236d639885881d514bffbf5dad">CAddonGUIDialogTextViewer::Show</a>(<span class="stringliteral">&quot;The Wizard of Oz (1939 film)&quot;</span>,</div>
-<div class="line"> <span class="stringliteral">&quot;The Wizard of Oz is a 1939 American musical comedy-drama fantasy film &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;produced by Metro-Goldwyn-Mayer, and the most well-known and commercially &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;successful adaptation based on the 1900 novel The Wonderful Wizard of Oz &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;by L. Frank Baum. The film stars Judy Garland as Dorothy Gale. The film&quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;co-stars Terry the dog, billed as Toto; Ray Bolger, Jack Haley, Bert Lahr, &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;Frank Morgan, Billie Burke, Margaret Hamilton, with Charley Grapewin and &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;Clara Blandick, and the Singer Midgets as the Munchkins.\n&quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;Notable for its use of Technicolor, fantasy storytelling, musical score and &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;unusual characters, over the years it has become an icon of American popular &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;culture. It was nominated for six Academy Awards, including Best Picture but &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;lost to Gone with the Wind. It did win in two other categories including Best &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;Original Song for \&quot;Over the Rainbow\&quot;. However, the film was a box office &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;disappointment on its initial release, earning only $3,017,000 on a $2,777,000 &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;budget, despite receiving largely positive reviews. It was MGM&#39;s most &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;expensive production at that time, and did not completely recoup the studio&#39;s &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;investment and turn a profit until theatrical re-releases starting in 1949.\n&quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;The 1956 broadcast television premiere of the film on CBS re-introduced the &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;film to the wider public and eventually made the presentation an annual &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;tradition, making it one of the most known films in cinema history. The &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;film was named the most-viewed motion picture on television syndication by &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;the Library of Congress who also included the film in its National Film &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;Registry in its inaugural year in 1989. Designation on the registry calls &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;for efforts to preserve it for being \&quot;culturally, historically, and &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;aesthetically significant\&quot;. It is also one of the few films on UNESCO&#39;s &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;Memory of the World Register.\n&quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;The Wizard of Oz is often ranked on best-movie lists in critics&#39; and public &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;polls. It is the source of many quotes referenced in modern popular culture. &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;It was directed primarily by Victor Fleming (who left production to take &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;over direction on the troubled Gone with the Wind production). Noel Langley, &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;Florence Ryerson and Edgar Allan Woolf received credit for the screenplay, &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;but there were uncredited contributions by others. The songs were written &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;by Edgar \&quot;Yip\&quot; Harburg (lyrics) and Harold Arlen (music). The incidental &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;music, based largely on the songs, was composed by Herbert Stothart, with &quot;</span></div>
-<div class="line"> <span class="stringliteral">&quot;interspersed renderings from classical composers.\n&quot;</span>);</div>
-</div><!-- fragment --> 
+
+</div>
+</div>
+<a class="anchor" id="ga3d6451c27a24180971c1dd12e8b665ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CAddonLib_VFSDirEntry </td>
+          <td>(</td>
+          <td class="paramtype">const VFSDirEntry &amp;&#160;</td>
+          <td class="paramname"><em>dirEntry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor to create own copy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dirEntry</td><td>pointer to own class type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gabfbbb37d69862b45d0f1079ab976fa37"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsFolder </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used to check entry is folder. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if entry is a folder </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaacd1b40e1b2e44d82303388beb475e84"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; Label </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the directory entry name. </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of the entry </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga666f6d222d6e40f592d7ec4c8c670263"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; Path </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the path of the entry. </p>
+<dl class="section return"><dt>Returns</dt><dd>File system path of the entry </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaea9c66f89bd36c6b01a234d0e2ad123a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;CAddonLib_VFSProperty&gt;&amp; Properties </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the properties of the entry. </p>
+<dl class="section return"><dt>Returns</dt><dd>Not editable array pointer to properties </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga682a050b373b13ec1e816d7a9cc47302"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;CAddonLib_VFSProperty&gt;&amp; Properties </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the editable array pointer for the entry. </p>
+<dl class="section return"><dt>Returns</dt><dd>Array pointer to properties </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gadc0bf158b1dc28eea1bc2e3a2c016982"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetFolder </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bFolder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the entry defined as folder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bFolder</td><td>If true becomes entry defined as folder </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gab825756e641ba839bfae908492165481"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetLabel </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the label name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>name of entry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4a03d7c94fa02df112558bc30818e413"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the path of the entry. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path of entry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf2fb6ea3061355a5ed4b53ca45e712ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetSize </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a file size for a new entry. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size to set for dir entry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gac0ba4f4c78dcb35605e645ee75198b5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t Size </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If file, the size of the file. </p>
+<dl class="section return"><dt>Returns</dt><dd>Defined file size </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->

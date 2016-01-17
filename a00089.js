@@ -1,16 +1,16 @@
 var a00089 =
 [
-    [ "Keyboard", "a00089.html#a290b85ded95367e3801ecb1cd5d2d8f1", null ],
-    [ "~Keyboard", "a00089.html#acec86b051eb2fd163d5f5b2e19679f9e", null ],
-    [ "doModal", "a00280.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
-    [ "getText", "a00280.html#gafab766445043570e6a82c14851366933", null ],
-    [ "isConfirmed", "a00280.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
-    [ "setDefault", "a00280.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
-    [ "setHeading", "a00280.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
-    [ "setHiddenInput", "a00280.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ],
-    [ "bConfirmed", "a00089.html#ae6546e334fe9729c6afe0eee76554a60", null ],
-    [ "bHidden", "a00089.html#af66f90748653d4c3377dff5859b83d26", null ],
-    [ "strDefault", "a00089.html#ab4d87e31c184cdc814b32f4dfa7d18b6", null ],
-    [ "strHeading", "a00089.html#a513232d32fcff9f86df46035911255ad", null ],
-    [ "strText", "a00089.html#a8975bd293643341b62e4e5a7810d2efc", null ]
+    [ "CPlayerLib_PlayList", "a00287.html#ga9ed3d2e6831632a37dfd0ea6699ef58f", null ],
+    [ "~CPlayerLib_PlayList", "a00287.html#gab5aa5368f1de872e97298ab744281ee8", null ],
+    [ "AddItem", "a00287.html#gaaa7aba33ed28df8d2adfa6af9b097575", null ],
+    [ "AddItem", "a00287.html#gac4aeeb4b7e884b74644e14bceb759c5b", null ],
+    [ "ClearList", "a00287.html#ga2b85ec494201046fd7686395c996c272", null ],
+    [ "GetListPosition", "a00287.html#ga3b6ca85032d49dfd758dcaad70db8275", null ],
+    [ "GetListSize", "a00287.html#ga1f4581c0d5dec157ae050648b9980dda", null ],
+    [ "GetPlayListType", "a00287.html#ga1c1d6bcc394fe5e4b75634dca0147427", null ],
+    [ "LoadPlaylist", "a00287.html#ga7de3982ed8b225f5fd1580c75847d9db", null ],
+    [ "operator[]", "a00287.html#ga0fe30656a739ee76ffac247d6c602008", null ],
+    [ "RemoveItem", "a00287.html#ga7834e166deca3a366bd4d25b061606fd", null ],
+    [ "Shuffle", "a00287.html#ga9d1841bc5f559c6981b78b895d446033", null ],
+    [ "IMPL_ADDON_PLAYLIST", "a00089.html#af400e0e8cdee074287b8a6492bd70cf0", null ]
 ];

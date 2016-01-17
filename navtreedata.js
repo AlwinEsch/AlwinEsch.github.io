@@ -5,6 +5,8 @@ var NAVTREE =
     [ "Add-On Types", "a00004.html", null ],
     [ "Tutorials", "a00008.html", "a00008" ],
     [ "Examples", "a00006.html", null ],
+    [ "Advanced", "a00032.html", "a00032" ],
+    [ "Ways to access Kodi", "a00030.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", null ],
@@ -45,18 +47,18 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00002.html",
-"a00049.html#a809cd8ea1c1a8244ef9ab07bc9317cf0",
-"a00186.html#ae36cda5a827a0beb292b811a0005161c",
-"a00230.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4abd6293708566f52e3c51e9624abfd46b",
-"a00238.html#gga42753b64a4c9b01785035a18e768a43da60d9815e7932c4e05f12ed57914be05e",
-"a00238.html#gga42753b64a4c9b01785035a18e768a43daf1043becab8212ab620915e1f2eacaf3",
-"a00264.html#gaa99cfb854b91b7b06e08e3a38dca8e26",
-"a00285.html#gaafb8a184f497bc815d38be07731df561",
-"a00296.html#ga123584a12e1eef61283b47bb747a2a72",
-"a00296.html#ga8004fff370a376491871eabde82ba25a",
-"a00296.html#gade24f868fdb2bbd2ec6a4e32c98f711e",
-"a00303.html#gaa5b43aa5da42a2efacddf87ad45daea4",
-"functions_w.html"
+"a00055.html#a261d1328df5a8e389cb6bc5f248d8b27",
+"a00193.html",
+"a00256.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1bc8da6e595ab3400326a07d98166932",
+"a00264.html#gga42753b64a4c9b01785035a18e768a43da50a36e52496b8aecd5ea88a6efa7b9cd",
+"a00264.html#gga42753b64a4c9b01785035a18e768a43dae1b6bf382e37bb5caa466593458a93e1",
+"a00288.html#ga5940787dcdcdb8aa995a07106917489f",
+"a00308.html#ga85b8f5a942a429ec2e66cad259fe1fd2",
+"a00322.html#ga0ac6ba188fa74ffc839a8464ce31bd70",
+"a00322.html#ga6f4eb28b50783745dd45f491ce40e12b",
+"a00322.html#gad3c465ef0399c17b4946fba9f82412ab",
+"a00328.html#ga265b7f39dcd400e1f4edaf4060af9977",
+"functions_l.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

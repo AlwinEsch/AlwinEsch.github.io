@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Callback functions from Kodi to add-on</title>
+<title>Kodi Development: CPlayerLib_InfoTagMusic</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,281 +91,277 @@ $(document).ready(function(){initNavTree('a00295.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Callback functions from Kodi to add-on<div class="ingroups"><a class="el" href="a00325.html">Python Development</a> &raquo; <a class="el" href="a00287.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00294.html">Window</a></div></div>  </div>
+<div class="title">CPlayerLib_InfoTagMusic<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a> &raquo; <a class="el" href="a00297.html">Library - PlayerLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>GUI window callback functions.</b> </p>
-<p>Functions to handle control callbacks from Kodi.</p>
-<p>Likewise, all functions from here as well in the all window classes (<a class="el" href="a00294.html">Window</a>, <a class="el" href="a00297.html">WindowDialog</a>, <a class="el" href="a00298.html">WindowXML</a> and <a class="el" href="a00299.html">WindowXMLDialog</a>) with inserted and available. </p><hr/>
-<p><a class="el" href="a00294.html">Go back to normal functions from window</a> </p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00296"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00296.html">Action Id's</a></td></tr>
-<tr class="memdesc:a00296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actions that we have defined. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p><b>Used for present music information</b> </p>
+<p>Class contains after request the on Kodi present information of played music.</p>
+<p>It has the header <a class="el" href="a00186.html">#include &lt;kodi/player.api2/InfoTagMusic.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga46acbc2206f67d5f8e1d44d3ebe4fa68"></a>
+<a class="anchor" id="gabd1d2ec7c0d0160ae11c80d47cfc6369"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void onAction </td>
+          <td class="memname">CPlayerLib_InfoTagMusic </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00095.html">Action</a> *&#160;</td>
-          <td class="paramname"><em>action</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><b>onAction method.</b> </p>
-<p>This method will receive all actions that the main program will send to this window.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">action</td><td>The action id to perform, see <a class="el" href="a00293.html">Action</a> to get use of them</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd><ul>
-<li>By default, only the <code>PREVIOUS_MENU</code> and <code>NAV_BACK actions</code> are handled.</li>
-<li>Overwrite this method to let your script handle all actions.</li>
-<li>Don't forget to capture <code>ACTION_PREVIOUS_MENU</code> or <code>ACTION_NAV_BACK</code>, else the user can't close this window.</li>
-</ul>
-</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own function where becomes called from Kodi</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onAction(self, action):</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_PREVIOUS_MENU:</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    print(<span class="stringliteral">&#39;action recieved: previous&#39;</span>)</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    self.close()</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_SHOW_INFO:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    print(<span class="stringliteral">&#39;action recieved: show info&#39;</span>)</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_STOP:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    print(<span class="stringliteral">&#39;action recieved: stop&#39;</span>)</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_PAUSE:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    print(<span class="stringliteral">&#39;action recieved: pause&#39;</span>)</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gad031aa7d2b1fcedaac6ad481e2e85757"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onClick </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><b>onClick method.</b> </p>
-<p>This method will receive all click events that the main program will send to this window.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>The one time clicked GUI control identifier</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; <span class="keyword">def </span>onClick(self,controlId):</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;   <span class="keywordflow">if</span> controlId == 10:</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;     print(<span class="stringliteral">&quot;The control with Id 10 is clicked&quot;</span>)</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga3d8a5f47cd756f21b4744eed7ede8634"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onControl </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00096.html">Control</a> *&#160;</td>
-          <td class="paramname"><em>control</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><b>onControl method.</b> </p>
-<p>This method will receive all click events on owned and selected controls when the control itself doesn't handle the message.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">control</td><td>The <a class="el" href="a00096.html">Control</a> class</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onControl(self, control):</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  print(<span class="stringliteral">&quot;Window.onControl(control=[%s])&quot;</span>%control)</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga25347e21254d60dc94028d2ed6a0c5ed"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onDoubleClick </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><b>onDoubleClick method.</b> </p>
-<p>This method will receive all double click events that the main program will send to this window.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>The double clicked GUI control identifier</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onDoubleClick(self,controlId):</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordflow">if</span> controlId == 10:</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    print(<span class="stringliteral">&quot;The control with Id 10 is double clicked&quot;</span>)</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga32655043662a872fb86801fe5e8e1e41"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onFocus </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><b>onFocus method.</b> </p>
-<p>This method will receive all focus events that the main program will send to this window.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>The focused GUI control identifier</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; <span class="keyword">def </span>onDoubleClick(self,controlId):</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;   <span class="keywordflow">if</span> controlId == 10:</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;     print(<span class="stringliteral">&quot;The control with Id 10 is focused&quot;</span>)</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga5a0ef4163216ec8833eb3a524f7fd80e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onInit </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="a00085.html">CPlayerLib_Player</a> *&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><b>onInit method.</b> </p>
-<p>This method will be called to initialize the window</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onInit(self):</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  print(<span class="stringliteral">&quot;Window.onInit method called from Kodi&quot;</span>)</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
-</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaed21becc174c1a9eabb35c10c8fb1dec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetAlbum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga8543d954eab8c5c952c8e87fd7dd2561"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetAlbumArtist </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gad63aca83a431ce2f31c86d0fdc7ed4bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetArtist </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gaab329b82f3bf29e2e56aeca7db59369c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetComment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gabee2b25a6f37093ff91a5caaff417704"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetDisc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga7a0124a69d21b8af01baaf6e35b9c476"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetDuration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga57435c1b02f97861847fffd5fd740123"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetGenre </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga833b68f759c1e3ce0c068fd06e9b0f4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetLastPlayed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gaf92ee71c21a267247e7d06d034143c40"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetListeners </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gad31236e89eaf77e5e65f34aa1fd90426"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetLyrics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga057dc61a69e40c80675a082b6251fc8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetPlayCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga6690df3048b871ac2cacb430d5606afe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetReleaseDate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga9272205cb3a71f70bb4c9437da3c9bda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gad4fce5cb572b03a144c22e81ae70ed88"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetTrack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga0d1d697cb13f61773101e7ad6645f1e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetURL </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga0c345f0e0e254a42b005d75d93905b68"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~CPlayerLib_InfoTagMusic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 </div>
 </div>
 </div><!-- contents -->

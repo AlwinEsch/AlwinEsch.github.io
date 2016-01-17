@@ -1,4 +1,5 @@
 var a00202 =
 [
-    [ "V2", "a00203.html", "a00203" ]
+    [ "CONTROL_TEXT_OFFSET_X", "a00202.html#aa6d4de8d94fd25d7738153dece416e93", null ],
+    [ "CONTROL_TEXT_OFFSET_Y", "a00202.html#afb3bc10df24bc07657621c3e1bb13ddd", null ]
 ];

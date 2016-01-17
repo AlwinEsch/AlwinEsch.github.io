@@ -1,10 +1,26 @@
 var a00094 =
 [
-    [ "Addon", "a00094.html#a0913381b26757108cd17239bcbf731e4", null ],
-    [ "~Addon", "a00094.html#a31665350e5cb1a6cdacd73dc192a13f6", null ],
-    [ "getAddonInfo", "a00326.html#gaedb0b112c76349f81e261335a6b240b9", null ],
-    [ "getLocalizedString", "a00326.html#ga79ffd96305af02e364d99c2c9d8b69de", null ],
-    [ "getSetting", "a00326.html#ga6eebe8728b7d19104a482a29abdafce2", null ],
-    [ "openSettings", "a00326.html#ga73eb9124fb7a7a5f5a89c92e0bc1fb2a", null ],
-    [ "setSetting", "a00326.html#gafd6c759c5b268d0ec1467e340323783d", null ]
+    [ "InfoTagVideo", "a00094.html#aaa26e981ea77470001ddc1c55bb358f8", null ],
+    [ "InfoTagVideo", "a00094.html#a0569cc066477d7740c94e04d36d800f2", null ],
+    [ "~InfoTagVideo", "a00094.html#a4a232a70bc8ac59e1b26d09f60246fe9", null ],
+    [ "getCast", "a00308.html#ga014e2737672aac5e1fca6c67268ef7ca", null ],
+    [ "getDirector", "a00308.html#gaf9d61e5189c09ef08febcd52087001cd", null ],
+    [ "getFile", "a00308.html#ga723e190c9b450ce6558126ef95b03ec9", null ],
+    [ "getFirstAired", "a00308.html#ga9bf8326fd3213f31cf6c83cd70b7b521", null ],
+    [ "getGenre", "a00308.html#ga724866edc25325e096d7d8a76b4a3234", null ],
+    [ "getIMDBNumber", "a00308.html#ga3a5155fe7fa0cdfa1970a6f569f9b666", null ],
+    [ "getLastPlayed", "a00308.html#ga64953074270dc9bc74370b8251c1cd43", null ],
+    [ "getOriginalTitle", "a00308.html#ga4f96c0aaaf77bdf9d8eef09bb8ac8ecc", null ],
+    [ "getPath", "a00308.html#ga6779d0f135fcec6c7f8a8ee49d7af165", null ],
+    [ "getPictureURL", "a00308.html#gad3ff2085e537bfbfa2f14d0c9a1dfcaa", null ],
+    [ "getPlayCount", "a00308.html#gac644258d08f747039e9d0e76bcd49513", null ],
+    [ "getPlot", "a00308.html#ga7b4144bd89a83e0066a43d674c935453", null ],
+    [ "getPlotOutline", "a00308.html#ga9d64a845dd0f805ecfc9dede2fcb683c", null ],
+    [ "getPremiered", "a00308.html#ga6344c3ab0ba02f7381c09bfc384b0f58", null ],
+    [ "getRating", "a00308.html#ga235125a9aed4cc8c630d4e681e14d196", null ],
+    [ "getTagLine", "a00308.html#ga5de7f223574b5b39917a1e2d284ca2db", null ],
+    [ "getTitle", "a00308.html#ga888f94790c968e3f0b5de17e509098aa", null ],
+    [ "getVotes", "a00308.html#ga43531ed78e2ffc99da87d0b93293ebf9", null ],
+    [ "getWritingCredits", "a00308.html#ga85b8f5a942a429ec2e66cad259fe1fd2", null ],
+    [ "getYear", "a00308.html#ga53172a43145522837b888b7d7f7117ea", null ]
 ];

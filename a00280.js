@@ -1,9 +1,11 @@
 var a00280 =
 [
-    [ "doModal", "a00280.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
-    [ "getText", "a00280.html#gafab766445043570e6a82c14851366933", null ],
-    [ "isConfirmed", "a00280.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
-    [ "setDefault", "a00280.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
-    [ "setHeading", "a00280.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
-    [ "setHiddenInput", "a00280.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ]
+    [ "ShowAndGetDate", "a00280.html#ga37d6caf6f507938f599915d93eddd596", null ],
+    [ "ShowAndGetIPAddress", "a00280.html#ga1fd8ee824dbbbc1d222fd67583f28614", null ],
+    [ "ShowAndGetNumber", "a00280.html#gab73e260650434df59844c3a2c8b1ba2d", null ],
+    [ "ShowAndGetSeconds", "a00280.html#ga664586418f4cb12a25a15dcd5effff02", null ],
+    [ "ShowAndGetTime", "a00280.html#ga08a9c6abb71eb5a380213e9528b6aecf", null ],
+    [ "ShowAndVerifyInput", "a00280.html#ga3028013da19a00279961a45d26dcf832", null ],
+    [ "ShowAndVerifyNewPassword", "a00280.html#ga85ca517533d779b26944d6fb74fe0abe", null ],
+    [ "ShowAndVerifyPassword", "a00280.html#ga28ed908212d6a38156014d5ccc5a7dc7", null ]
 ];

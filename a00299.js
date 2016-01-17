@@ -1,9 +1,15 @@
 var a00299 =
 [
-    [ "capture", "a00299.html#gad84ac4cd6e43fc4aefe0eeaa0916e187", null ],
-    [ "getAspectRatio", "a00299.html#ga2c8f0f904856b52b41dd852c57bd970b", null ],
-    [ "getHeight", "a00299.html#ga07efb2a4e9a982688c8bb3c3f21d1092", null ],
-    [ "getImage", "a00299.html#gaff2e6e3a8d1c65f17c1709dc727ae69c", null ],
-    [ "getImageFormat", "a00299.html#gaa512bbf517e279b0a5ca7d2ecf07f5b1", null ],
-    [ "getWidth", "a00299.html#ga67a0997183f24da19b776d96c1052998", null ]
+    [ "AddItem", "a00299.html#gaaa7aba33ed28df8d2adfa6af9b097575", null ],
+    [ "AddItem", "a00299.html#gac4aeeb4b7e884b74644e14bceb759c5b", null ],
+    [ "ClearList", "a00299.html#ga2b85ec494201046fd7686395c996c272", null ],
+    [ "CPlayerLib_PlayList", "a00299.html#ga9ed3d2e6831632a37dfd0ea6699ef58f", null ],
+    [ "GetListPosition", "a00299.html#ga3b6ca85032d49dfd758dcaad70db8275", null ],
+    [ "GetListSize", "a00299.html#ga1f4581c0d5dec157ae050648b9980dda", null ],
+    [ "GetPlayListType", "a00299.html#ga1c1d6bcc394fe5e4b75634dca0147427", null ],
+    [ "LoadPlaylist", "a00299.html#ga7de3982ed8b225f5fd1580c75847d9db", null ],
+    [ "operator[]", "a00299.html#ga0fe30656a739ee76ffac247d6c602008", null ],
+    [ "RemoveItem", "a00299.html#ga7834e166deca3a366bd4d25b061606fd", null ],
+    [ "Shuffle", "a00299.html#ga9d1841bc5f559c6981b78b895d446033", null ],
+    [ "~CPlayerLib_PlayList", "a00299.html#gab5aa5368f1de872e97298ab744281ee8", null ]
 ];

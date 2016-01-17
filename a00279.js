@@ -1,12 +1,13 @@
 var a00279 =
 [
-    [ "stream_vector", "a00279.html#ga1ebf7c021d47165548ca6320162935bb", null ],
-    [ "Clear", "a00279.html#ga666736fbd0ebb8dc7e6ff3392423d6c0", null ],
-    [ "CStreamProperties", "a00279.html#gadb5884513f2557e07249fab9f1cc447c", null ],
-    [ "GetProperties", "a00279.html#ga4bb870e45a3ef7c81e92563b7a872618", null ],
-    [ "GetStreamById", "a00279.html#ga2e18a0bd69b52870b817c6c8bf0e0db6", null ],
-    [ "GetStreamData", "a00279.html#ga3687926c69b0a5d8a32a73b85ce892b4", null ],
-    [ "GetStreamId", "a00279.html#ga80239fdfa9f1d2dfea3abb949bb84b94", null ],
-    [ "UpdateStreams", "a00279.html#ga8d64e3bab115fb9201d6f688ab350ce5", null ],
-    [ "~CStreamProperties", "a00279.html#ga6f0282c6d4010650f5ed1075bd19da84", null ]
+    [ "IsKeyboardActivated", "a00279.html#ga1ec4a068299863443fe39fcf4969e0df", null ],
+    [ "SendTextToActiveKeyboard", "a00279.html#ga3d85e8d21bc1fbdf8f946d3c7755005c", null ],
+    [ "ShowAndGetFilter", "a00279.html#gaa57c673c6a2d27bc9114ca557e9c5852", null ],
+    [ "ShowAndGetInput", "a00279.html#ga83b1e91927a105607762c38ea9e1dcb7", null ],
+    [ "ShowAndGetInput", "a00279.html#gac455ca6ff288c07edf7de7d5a0f28d80", null ],
+    [ "ShowAndGetNewPassword", "a00279.html#ga1b75480e0428c2eb657e9e3df1c5f6b3", null ],
+    [ "ShowAndGetNewPassword", "a00279.html#ga74b411283e562425ab3f6d2c01d1f229", null ],
+    [ "ShowAndVerifyNewPassword", "a00279.html#gaf03bd1a86951ae9a1b5f91a901957e11", null ],
+    [ "ShowAndVerifyNewPassword", "a00279.html#gab0b3eb13c8faa5d58e8e7eb59b7c50a9", null ],
+    [ "ShowAndVerifyPassword", "a00279.html#ga48bdcccb89234aad454a6be1cf219928", null ]
 ];

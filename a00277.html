@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CPVRLib_Trigger</title>
+<title>Kodi Development: CAddonGUIDialogExtendedProgress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,169 +92,268 @@ $(document).ready(function(){initNavTree('a00277.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CPVRLib_Trigger<div class="ingroups"><a class="el" href="a00324.html">C++ Development</a> &raquo; <a class="el" href="a00274.html">Library - PVRLIB</a></div></div>  </div>
+<div class="title">CAddonGUIDialogExtendedProgress<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a> &raquo; <a class="el" href="a00286.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Funtions to trigger PVR related updates on Kodi</b> </p>
-<p>Call of function in this class informs Kodi to do a update of related parts.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00184.html">#include &lt;kodi/pvr.api2/PVRLib.h&gt;</a> be included to enjoy it </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga5d29f9d2a7bb423e21cb5dd5a2f5ab4a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void ChannelGroupsUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Request Kodi to update it's list of channel groups. </p>
-<hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00184.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<p><b>Progress dialog shown for background work</b> </p>
+<p>The with <a class="el" href="a00171.html">#include &lt;kodi/addon.api2/GUIDialogExtendedProgress.h&gt;</a> given class are basically used to create Kodi's extended progress</p>
+<div class="image">
+<img src="help.GUIDialogExtendedProgress.png" alt="help.GUIDialogExtendedProgress.png"/>
+</div>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon.api2/GUIDialogExtendedProgress.h&gt;</span></div>
 <div class="line"></div>
-<div class="line">...</div>
-<div class="line">CPVRLib_Trigger::ChannelGroupsUpdate();</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga046bd435f53dedfbc125a70b6fcd09bb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void ChannelUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Request Kodi to update it's list of channels. </p>
-<hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00184.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line">CAddonGUIDialogExtendedProgress *ext_progress = <span class="keyword">new</span> CAddonGUIDialogExtendedProgress(<span class="stringliteral">&quot;Test Extended progress&quot;</span>);</div>
+<div class="line">ext_progress-&gt;SetText(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 50; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  ext_progress-&gt;SetProgress(i, 100);</div>
+<div class="line">  <a class="code" href="a00312.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
+<div class="line">}</div>
 <div class="line"></div>
-<div class="line">...</div>
-<div class="line">CPVRLib_Trigger::ChannelUpdate();</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga49372b48b0c3d939e69dfb83bcda3ed5"></a>
+<div class="line">ext_progress-&gt;SetTitle(<span class="stringliteral">&quot;Test Extended progress - Second round&quot;</span>);</div>
+<div class="line">ext_progress-&gt;SetText(<span class="stringliteral">&quot;Test progress - Step 2&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 50; i &lt; 100; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  ext_progress-&gt;SetProgress(i, 100);</div>
+<div class="line">  <a class="code" href="a00312.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">delete</span> ext_progress;</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga2f267cd452ee9736993693fa501ac85e"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void EpgUpdate </td>
+          <td class="memname">CAddonGUIDialogExtendedProgress </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iChannelUid</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em> = <code>&quot;&quot;</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Schedule an EPG update for the given channel channel. </p>
+<p>Construct a new dialog</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iChannelUid</td><td>The unique id of the channel for this add-on </td></tr>
+    <tr><td class="paramname">title</td><td>Title string </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga64219c32345c79a130702741451c9a8e"></a>
+<a class="anchor" id="gaabe45b4d47077b54df0bb809eb41b8d5"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void RecordingUpdate </td>
+          <td class="memname">bool IsFinished </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To ask dialog is finished. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if on end </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga40af1bcedea1f61fde8cd5e70e416473"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MarkFinished </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Request Kodi to update it's list of recordings. </p>
-<hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00184.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">CPVRLib_Trigger::RecordingUpdate();</div>
-</div><!-- fragment --> 
+<p>Mark progress finished. </p>
+
 </div>
 </div>
-<a class="anchor" id="ga92c110f8654585fdc3f8a126d1ce54bb"></a>
+<a class="anchor" id="ga3bf91c353218dceaa271b65321b2f5cf"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void TimerUpdate </td>
+          <td class="memname">float Percentage </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current progress position as percent. </p>
+<dl class="section return"><dt>Returns</dt><dd>Position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga74a9a823ab1cd34d62a219a842de5946"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPercentage </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fPercentage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the current progress position as percent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gac64c8e121cf5e368cd335c28a0521922"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProgress </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>itemCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set progress position with predefined places. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentItem</td><td>Place position to use </td></tr>
+    <tr><td class="paramname">itemCount</td><td>Amount of used places </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaec55d8bf3ca3e04261b66bee36f84368"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetText </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strText</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the used text information string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strText</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gad8698c0477204fb8b81feb9d81cbe4fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTitle </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strTitle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the title of dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strTitle</td><td>Title string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gafdfa72709ffc1738c3c198f7ad8b61ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Text </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the used text information string. </p>
+<dl class="section return"><dt>Returns</dt><dd>Text string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3cb91fb7750df7982baea48c4a3de616"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Title </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the used title. </p>
+<dl class="section return"><dt>Returns</dt><dd>Title string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga86033f373ed6159d52feb585bab2dfda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~CAddonGUIDialogExtendedProgress </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<p>Destructor </p>
 
-<p>Request Kodi to update it's list of timers. </p>
-<hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00184.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">CPVRLib_Trigger::TimerUpdate();</div>
-</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

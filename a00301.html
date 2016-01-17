@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Stat</title>
+<title>Kodi Development: CPVRLib</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,26 +92,93 @@ $(document).ready(function(){initNavTree('a00301.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Stat<div class="ingroups"><a class="el" href="a00325.html">Python Development</a> &raquo; <a class="el" href="a00290.html">Library - xbmcvfs</a></div></div>  </div>
+<div class="title">CPVRLib<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a> &raquo; <a class="el" href="a00300.html">Library - PVRLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Get file or file system status. </p>
-<p><b><code>xbmcvfs.Stat(path)</code></b></p>
-<p>These class return information about a file. Execute (search) permission is required on all of the directories in path that lead to the file.</p>
+<p><b>Allow use of binary classes and function to use on add-on's</b> </p>
+<p>Permits the use of the required functions of the add-on to Kodi. This class also contains some functions to the control.</p>
+<p>These are pure static functions them no other initialization need.</p>
+<p>It has the header <a class="el" href="a00192.html">#include &lt;kodi/pvr.api2/PVRLib.h&gt;</a> be included to enjoy it </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gadfd504966cbc097f85cf6f510a1751cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void AddMenuHook </td>
+          <td>(</td>
+          <td class="paramtype">PVR_MENUHOOK *&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add or replace a menu hook for the context menu for this add-on. </p>
+<p>Inserted hooks becomes called from Kodi on PVR system with <b><code>PVR_ERROR CallMenuHook(const PVR_MENUHOOK&amp; menuhook, const PVR_MENUHOOK_DATA &amp;item);</code></b></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>[string] file or folder</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hook</td><td>The hook to add</td></tr>
   </table>
   </dd>
 </dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  st = xbmcvfs.Stat(path)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  modified = st.st_mtime()</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga65d49375e5251d4e616a45e3c898d6cc"></a>
+<p>Here structure shows the necessary values the Kodi must be handed over around a menu by the PVR system to add. </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Menu hooks that are available in the context menus while playing a</span></div>
+<div class="line"><span class="comment"> * stream via this add-on and in the Live TV settings dialog</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_MENUHOOK</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>     iHookId;              <span class="comment">/* This hook&#39;s identifier */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>     iLocalizedStringId;   <span class="comment">/* The id of the label for this hook in g_localizeStrings */</span></div>
+<div class="line">  PVR_MENUHOOK_CAT category;             <span class="comment">/* Category of menu hook */</span></div>
+<div class="line">} <a class="code" href="a00149.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_MENUHOOK;</div>
+</div><!-- fragment --> <hr/>
+<p><b>Hook category Id's (PVR_MENUHOOK_CAT):</b></p>
+<p><b></p><table class="doxtable">
+<tr>
+<th align="right">enum code: </th><th align="center">Id </th><th align="left">Description:  </th></tr>
+<tr>
+<td align="right">PVR_MENUHOOK_ALL </td><td align="center">0 </td><td align="left">All categories </td></tr>
+<tr>
+<td align="right">PVR_MENUHOOK_CHANNEL </td><td align="center">1 </td><td align="left">For channels </td></tr>
+<tr>
+<td align="right">PVR_MENUHOOK_TIMER </td><td align="center">2 </td><td align="left">For timers </td></tr>
+<tr>
+<td align="right">PVR_MENUHOOK_EPG </td><td align="center">3 </td><td align="left">For EPG </td></tr>
+<tr>
+<td align="right">PVR_MENUHOOK_RECORDING </td><td align="center">4 </td><td align="left">For recordings </td></tr>
+<tr>
+<td align="right">PVR_MENUHOOK_DELETED_RECORDING </td><td align="center">5 </td><td align="left">For deleted recordings </td></tr>
+<tr>
+<td align="right">PVR_MENUHOOK_SETTING </td><td align="center">6 </td><td align="left">For settings </td></tr>
+</table>
+<hr/>
+<p></b></p>
+<p><b><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00192.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">PVR_MENUHOOK hook;</div>
+<div class="line">hook.iHookId = 1;</div>
+<div class="line">hook.category = PVR_MENUHOOK_SETTING;</div>
+<div class="line">hook.iLocalizedStringId = 30107;</div>
+<div class="line"><a class="code" href="a00301.html#gadfd504966cbc097f85cf6f510a1751cd">CPVRLib::AddMenuHook</a>(&amp;hook);</div>
+<div class="line">...</div>
+</div><!-- fragment --><p> </b></p>
+
+</div>
+</div>
+<a class="anchor" id="ga25527d9a7fb4d25460bab2f036def672"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -119,25 +186,49 @@ $(document).ready(function(){initNavTree('a00301.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long atime </td>
+          <td class="memname">static void Recording </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strRecordingName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bOn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get time of last access. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_atime </dd></dl>
+<p>Display a notification in Kodi that a recording started or stopped on the server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strRecordingName</td><td>The name of the recording to display </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename of the recording </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bOn</td><td>True when recording started, false when it stopped </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="gab24c57af16ac6f88edb819c18e2e438b"></a>
+<a class="anchor" id="gaa0bf67ad4ff0b67b500e4070f873c337"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -145,25 +236,51 @@ $(document).ready(function(){initNavTree('a00301.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long ctime </td>
+          <td class="memname">static bool RegisterMe </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get time of last status change. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_ctime </dd></dl>
+<p>Resolve all callback methods. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Pointer to the add-on </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True when all methods were resolved, false otherwise.</dd></dl>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00144.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00192.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
+<div class="line">IMPLEMENT_KODI_PVR_LIBRARY;</div>
+<div class="line">...</div>
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!CAddonLib::RegisterMe(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00301.html#gaa0bf67ad4ff0b67b500e4070f873c337">CPVRLib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use the library must be one time the macro IMPLEMENT_KODI_PVR_LIBRARY and IMPLEMENT_KODI_ADDON_LIBRARY somewhere one time included. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga57da69d0b20141a95c0c44a6bb5f3b35"></a>
+<a class="anchor" id="ga5940787dcdcdb8aa995a07106917489f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -171,7 +288,7 @@ $(document).ready(function(){initNavTree('a00301.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long mtime </td>
+          <td class="memname">static void UnRegisterMe </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -179,198 +296,24 @@ $(document).ready(function(){initNavTree('a00301.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get time of last modification. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_mtime </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gab17084ec246f2b497d2f13618c5bd220"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_dev </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get ID of device containing file. </p>
-<p>The st_dev field describes the device on which this file resides.</p>
-<dl class="section return"><dt>Returns</dt><dd>st_dev </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga9a7a9ad27402f5a931bcbff38e4e03d3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_gid </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get group ID of owner. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_gid </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga77e336d6274f6fb0e2a3c3546e61e360"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_ino </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get inode number. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_ino </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga00b3e20028eaee69c44cdc47a922fe31"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_mode </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get file protection. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_mode </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga34f57426567df63ef5ad1b4679778d18"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_nlink </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get number of hard links. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_nlink </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaeec21543efab31f62a21e533b0d3a537"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get total size, in bytes. </p>
-<p>The st_size field gives the size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link (only on Linux and Mac OS X) is the length of the pathname it contains, without a terminating null byte.</p>
-<dl class="section return"><dt>Returns</dt><dd>st_size </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaa29c53999dffe4acc12aed2eb60a6c81"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_uid </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get user ID of owner. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_uid </dd></dl>
-
+<p>Release all callback methods and close handling with them. </p>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00144.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00192.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">void ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="a00301.html#ga5940787dcdcdb8aa995a07106917489f">CPVRLib::UnRegisterMe</a>();</div>
+<div class="line">  CAddonLib::UnRegisterMe();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

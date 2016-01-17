@@ -1,15 +1,18 @@
 var a00105 =
 [
-    [ "ControlProgress", "a00105.html#a8f64177aa9c9fdecd0b8ede01cb25b92", null ],
-    [ "ControlProgress", "a00105.html#abef3214d1c9bccc3777c244126d76e4d", null ],
+    [ "ControlEdit", "a00105.html#a49f0c2eb13ed03073366e69266befd0e", null ],
+    [ "ControlEdit", "a00105.html#af2dfe2807aa51f11a84830fac1c85ac8", null ],
     [ "Create", "a00105.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "getPercent", "a00314.html#gad3e5815badb78551841c44d9b5ae3742", null ],
-    [ "setPercent", "a00314.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ],
-    [ "aspectRatio", "a00105.html#a62de7670850188b84202355774caa6a8", null ],
-    [ "colorDiffuse", "a00105.html#aeb3be9119c45fbe967380716174f877f", null ],
-    [ "strTextureBg", "a00105.html#a2e7730cc4604a2ce37a5af98556a878f", null ],
-    [ "strTextureLeft", "a00105.html#a5355840cd96b1dc3dd54bffbb317b93b", null ],
-    [ "strTextureMid", "a00105.html#a03fbb21bc4a963512d54452bbb6ee6fb", null ],
-    [ "strTextureOverlay", "a00105.html#a2c1fea102a7cf036617c3c534292aa20", null ],
-    [ "strTextureRight", "a00105.html#ac1685244f6b420ce72a08ccb2beb849a", null ]
+    [ "getLabel", "a00335.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
+    [ "getText", "a00335.html#gafab766445043570e6a82c14851366933", null ],
+    [ "setLabel", "a00335.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
+    [ "setText", "a00335.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ],
+    [ "align", "a00105.html#a4864c3686205158c9cab83fa95c2a15a", null ],
+    [ "bIsPassword", "a00105.html#affcbdac561c866d4f010a48e7889020b", null ],
+    [ "disabledColor", "a00105.html#a9b7ae35a0c2326e198dab3c2ec50e94c", null ],
+    [ "strFont", "a00105.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "strText", "a00105.html#ab456897f658d865f7c66da9ba85f6cb9", null ],
+    [ "strTextureFocus", "a00105.html#a2c94f7603cfb9d13594e648f67b55e22", null ],
+    [ "strTextureNoFocus", "a00105.html#a51d63e84bd9b53dbdc23a476df4440a9", null ],
+    [ "textColor", "a00105.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
 ];

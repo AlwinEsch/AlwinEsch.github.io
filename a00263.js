@@ -1,10 +1,10 @@
 var a00263 =
 [
-    [ "GetCurrentWindowDialogId", "a00263.html#ga4afd43d20b97e20532eeb1fac9ae6c1f", null ],
-    [ "GetCurrentWindowId", "a00263.html#ga452c9c6299140854739860045f060d28", null ],
-    [ "GetScreenHeight", "a00263.html#ga7b736bc18cc4c9b1e6229e1af312b6e3", null ],
-    [ "GetScreenWidth", "a00263.html#ga0f0cc52a3413a502953495f26270f559", null ],
-    [ "GetVideoResolution", "a00263.html#ga9e8e637bdd545cf2cd0b922d3496a64b", null ],
-    [ "Lock", "a00263.html#gace70db8e92290399a2a070eb0a60df63", null ],
-    [ "Unlock", "a00263.html#ga50f1fb5a8527c6f1beb7c59393c934a9", null ]
+    [ "AddDSPMenuHook", "a00263.html#gad4e7c34b466c7523b48eb38f453c6f8b", null ],
+    [ "GetCurrentSinkFormat", "a00263.html#gaeb11fdb26f8a00296e10ff296c602bb5", null ],
+    [ "RegisterDSPMode", "a00263.html#gae95d0da238b6ffa997911dbf9eedb2d4", null ],
+    [ "RegisterMe", "a00263.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
+    [ "RemoveDSPMenuHook", "a00263.html#ga59fa2e75dbd7ede8adb9488258b55bdd", null ],
+    [ "UnregisterDSPMode", "a00263.html#gae222050a6298ea8a4b7f2085ae5e85b1", null ],
+    [ "UnRegisterMe", "a00263.html#ga5940787dcdcdb8aa995a07106917489f", null ]
 ];

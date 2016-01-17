@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: RenderCapture</title>
+<title>Kodi Development: CStreamProperties</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,32 +91,156 @@ $(document).ready(function(){initNavTree('a00305.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
-<div class="title">RenderCapture<div class="ingroups"><a class="el" href="a00325.html">Python Development</a> &raquo; <a class="el" href="a00286.html">Library - xbmc</a></div></div>  </div>
+<div class="title">CStreamProperties<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a> &raquo; <a class="el" href="a00300.html">Library - PVRLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's render capture class.</b> </p>
-<hr/>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gad84ac4cd6e43fc4aefe0eeaa0916e187"></a>
+<p><b>PVR stream properties handle class</b> </p>
+<p>This can be used to view the available streams from their own system for the playback to store and a call to <code><b>PVR_ERROR GetStreamProperties(PVR_STREAM_PROPERTIES pProperties*)</b></code> by encoding the data requested with <a class="el" href="a00305.html#ga4bb870e45a3ef7c81e92563b7a872618" title="To populates properties for Kodi. ">CStreamProperties::GetProperties</a>(...).</p>
+<p>It has the header <a class="el" href="a00193.html">#include &lt;kodi/pvr.api2/StreamUtils.h&gt;</a> be included to enjoy it. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga1ebf7c021d47165548ca6320162935bb"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; CPVRStream &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html#ga1ebf7c021d47165548ca6320162935bb">stream_vector</a></td></tr>
+<tr class="memdesc:ga1ebf7c021d47165548ca6320162935bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type defination for stream_vector.  <a href="#ga1ebf7c021d47165548ca6320162935bb">More...</a><br /></td></tr>
+<tr class="separator:ga1ebf7c021d47165548ca6320162935bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="ga1ebf7c021d47165548ca6320162935bb"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void capture </td>
+          <td class="memname">typedef std::vector&lt;CPVRStream&gt; stream_vector</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type defination for stream_vector. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga666736fbd0ebb8dc7e6ff3392423d6c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Clear </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>width</em>, </td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear stored stream list. </p>
+<p>Resets all the stored streams. </p>
+
+</div>
+</div>
+<a class="anchor" id="gadb5884513f2557e07249fab9f1cc447c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CStreamProperties </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class constructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga4bb870e45a3ef7c81e92563b7a872618"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetProperties </td>
+          <td>(</td>
+          <td class="paramtype">PVR_STREAM_PROPERTIES *&#160;</td>
+          <td class="paramname"><em>props</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To populates properties for Kodi. </p>
+<p>Populates props with the current streams and returns whether there are any streams at the moment or not.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">props</td><td>Address where the PVR system stream properties becomes stored </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed, otherwise false</dd></dl>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00193.html">kodi/pvr.api2/StreamUtils.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="a00305.html#gadb5884513f2557e07249fab9f1cc447c">CStreamProperties</a> activeChannelStreams;</div>
+<div class="line">...</div>
+<div class="line"><span class="comment">/* The function here is for calls from Kodi to add-on on PVR system.</span></div>
+<div class="line"><span class="comment"> * Therefore asks Kodi the available data of the running streams.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line">PVR_ERROR GetStreamProperties(PVR_STREAM_PROPERTIES* pProperties)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">return</span> (activeChannelStreams.GetProperties(pProperties) ? PVR_ERROR_NO_ERROR : PVR_ERROR_SERVER_ERROR);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga2e18a0bd69b52870b817c6c8bf0e0db6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPVRStream* GetStreamById </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>iPhysicalId</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the stored stream if present. </p>
+<p>Returns the stream with the specified physical ID, or null if no such stream exists</p>
+<dl class="section note"><dt>Note</dt><dd>Call returns data constant and is not editable.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iPhysicalId</td><td>The own used physical Id to identify </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The stored stream data or null if not exist </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3687926c69b0a5d8a32a73b85ce892b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetStreamData </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>iPhysicalId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>height</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="a00090.html">CPVRStream</a> *&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -124,113 +248,113 @@ $(document).ready(function(){initNavTree('a00305.html','');});
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Issue capture request. </p>
+<p>To populates the specified stream. </p>
+<p>Populates the specified stream with the stream having the specified physical ID. If the stream is not found only target stream's physical ID will be populated.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>Width capture image should be rendered to </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>Height capture image should should be rendered to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iPhysicalId</td><td>The own used physical Id to identify </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">stream</td><td>Place to store stream data </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga2c8f0f904856b52b41dd852c57bd970b"></a>
+<a class="anchor" id="ga80239fdfa9f1d2dfea3abb949bb84b94"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float getAspectRatio </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get aspect ratio of currently displayed video. </p>
-<dl class="section return"><dt>Returns</dt><dd>Aspect ratio </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This may be called prior to calling <a class="el" href="a00305.html#gad84ac4cd6e43fc4aefe0eeaa0916e187" title="Issue capture request. ">RenderCapture.capture()</a>. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga07efb2a4e9a982688c8bb3c3f21d1092"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getHeight </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get height. </p>
-<p>To get height of captured image as set during <a class="el" href="a00305.html#gad84ac4cd6e43fc4aefe0eeaa0916e187" title="Issue capture request. ">RenderCapture.capture()</a>. Returns 0 prior to calling capture.</p>
-<dl class="section return"><dt>Returns</dt><dd>height or 0 prior to calling capture </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaff2e6e3a8d1c65f17c1709dc727ae69c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">XbmcCommons::Buffer getImage </td>
+          <td class="memname">int GetStreamId </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>msecs</em> = <code>0</code></td><td>)</td>
-          <td></td>
+          <td class="paramname"><em>iPhysicalId</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Returns captured image as a bytearray. </p>
+<p>Returns the index of the stream. </p>
+<p>Returns the index of the stream with the specified physical ID, or -1 if there no stream is found. This method is called very often which is why we keep a separate map for this.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">msecs</td><td>[opt] Milliseconds to wait. Waits 1000ms if not specified </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iPhysicalId</td><td>The own used physical Id to identify </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Captured image as a bytearray</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The size of the image is m_width * m_height * 4 </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Kodi's used stream Id if present, or -1 if not found </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gaa512bbf517e279b0a5ca7d2ecf07f5b1"></a>
+<a class="anchor" id="ga8d64e3bab115fb9201d6f688ab350ce5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateStreams </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00305.html#ga1ebf7c021d47165548ca6320162935bb">stream_vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>newStreams</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update streams. </p>
+<p>Merges new streams into the current list of streams. Identical streams will retain their respective indexes and new streams will replace unused indexes or be appended.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">newStreams</td><td>New stream data to add</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Note: This is only a example to show the easiest use of them, for</span></div>
+<div class="line"><span class="comment"> * them is always only one and the same stream type present.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * The class CStreamProperties is designed to store several streams</span></div>
+<div class="line"><span class="comment"> * and to alow updates of codec Id&#39;s during usage of them.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00193.html">kodi/pvr.api2/StreamUtils.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="a00305.html#gadb5884513f2557e07249fab9f1cc447c">CStreamProperties</a> activeChannelStreams;</div>
+<div class="line">...</div>
+<div class="line">void <a class="code" href="a00305.html#ga8d64e3bab115fb9201d6f688ab350ce5">UpdateStreams</a>()</div>
+<div class="line">{</div>
+<div class="line">  CodecDescriptor codecId = CodecDescriptor::GetCodecByName(<span class="stringliteral">&quot;pcm_f32le&quot;</span>);</div>
+<div class="line">  <span class="keywordflow">if</span> (codecId.Codec().codec_type == XBMC_CODEC_TYPE_AUDIO)</div>
+<div class="line">  {</div>
+<div class="line">    CPVRStream newStream;</div>
+<div class="line">    <span class="comment">/* Get the stream data if already present and do only update */</span></div>
+<div class="line">    activeChannelStreams.GetStreamData(1, &amp;newStream);</div>
+<div class="line"></div>
+<div class="line">    newStream.iCodecType      = codecId.Codec().codec_type;</div>
+<div class="line">    newStream.iCodecId        = codecId.Codec().codec_id;</div>
+<div class="line">    newStream.iChannels       = 2;</div>
+<div class="line">    newStream.iSampleRate     = 48000;</div>
+<div class="line">    newStream.iBitsPerSample  = 32;</div>
+<div class="line">    newStream.iBitRate        = newStream.iSampleRate * newStream.iChannels * newStream.iBitsPerSample;</div>
+<div class="line">    newStream.strLanguage[0]  = 0;</div>
+<div class="line">    newStream.strLanguage[1]  = 0;</div>
+<div class="line">    newStream.strLanguage[2]  = 0;</div>
+<div class="line">    newStream.strLanguage[3]  = 0;</div>
+<div class="line">    newStream.iIdentifier     = -1;</div>
+<div class="line"></div>
+<div class="line">    newStreams.push_back(newStream);</div>
+<div class="line">    activeChannelStreams.UpdateStreams(newStreams);</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">  {</div>
+<div class="line">    activeChannelStreams.Clear();</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga6f0282c6d4010650f5ed1075bd19da84"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -238,48 +362,21 @@ $(document).ready(function(){initNavTree('a00305.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char* getImageFormat </td>
+          <td class="memname">virtual ~CStreamProperties </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get image format. </p>
-<dl class="section return"><dt>Returns</dt><dd>Format of captured image: 'BGRA' </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga67a0997183f24da19b776d96c1052998"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getWidth </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get width. </p>
-<p>To get width of captured image as set during <a class="el" href="a00305.html#gad84ac4cd6e43fc4aefe0eeaa0916e187" title="Issue capture request. ">RenderCapture.capture()</a>. Returns 0 prior to calling capture.</p>
-<dl class="section return"><dt>Returns</dt><dd>Width or 0 prior to calling capture </dd></dl>
+<p>Class Descructor. </p>
 
 </div>
 </div>

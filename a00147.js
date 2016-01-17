@@ -1,4 +1,5 @@
 var a00147 =
 [
-    [ "XBMCCOMMONS_STANDARD_EXCEPTION", "a00147.html#ac1f063aee96369fa44708f98ad303e7e", null ]
+    [ "AudioEngineFormat", "a00045.html", "a00045" ],
+    [ "AEStreamHandle", "a00147.html#a09549ee338c637b62a65826fd6a4b38c", null ]
 ];

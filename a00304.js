@@ -1,12 +1,10 @@
 var a00304 =
 [
-    [ "onPlayBackEnded", "a00304.html#gab375f26bb820f640d74700cda4ee6646", null ],
-    [ "onPlayBackPaused", "a00304.html#ga7226102b037bfbca79e0c940f5e912e2", null ],
-    [ "onPlayBackResumed", "a00304.html#ga075576edcd1809ff57e3897aa165e529", null ],
-    [ "onPlayBackSeek", "a00304.html#gaeda52fbaaf9860f7a96e93ba33709fc9", null ],
-    [ "onPlayBackSeekChapter", "a00304.html#ga75a62da626870983e308a62e8c359218", null ],
-    [ "onPlayBackSpeedChanged", "a00304.html#ga852e3252c43deaa541e8cae610b9e0ef", null ],
-    [ "onPlayBackStarted", "a00304.html#ga2d8b5fa98b21f02ce06f7bd7de836d9d", null ],
-    [ "onPlayBackStopped", "a00304.html#ga04dbd49c7486f00911995a56a19536d0", null ],
-    [ "onQueueNextItem", "a00304.html#ga8890f6898fc712522c2d29f57455275d", null ]
+    [ "Clear", "a00304.html#gaa71d36872f416feaa853788a7a7a7ef8", null ],
+    [ "CPVRStream", "a00304.html#gaf419611a13a1bca6fe60cd58cb8a952f", null ],
+    [ "CPVRStream", "a00304.html#gad8caf56bf234506f41c1fcc64a0d1ad7", null ],
+    [ "IsCleared", "a00304.html#ga324d4448e5c2dde1488e1a9b4d26c7ad", null ],
+    [ "operator<", "a00304.html#ga8c39a1e5e76bc953c53019e4ef318216", null ],
+    [ "operator=", "a00304.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6", null ],
+    [ "operator==", "a00304.html#ga2e56127d518a6487ba46cfe720bb4904", null ]
 ];

@@ -1,5 +1,11 @@
 var a00108 =
 [
-    [ "~ControlSpin", "a00108.html#ac2017792c57c49f92d0983c0d1be92f0", null ],
-    [ "setTextures", "a00307.html#ga746d4f8a847155ef12f04370bd2417b4", null ]
+    [ "ControlImage", "a00108.html#a9be115122b3309a7a738fb31643d81d1", null ],
+    [ "ControlImage", "a00108.html#ae6699f77d4ffa346eed9e00b7cadc7ef", null ],
+    [ "Create", "a00108.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "setColorDiffuse", "a00339.html#ga3b0c15e0d82d8605f4b3ad82aaa42c16", null ],
+    [ "setImage", "a00339.html#ga7ba591029ef61ca17851a9f02a1fe5dc", null ],
+    [ "aspectRatio", "a00108.html#a62de7670850188b84202355774caa6a8", null ],
+    [ "colorDiffuse", "a00108.html#aeb3be9119c45fbe967380716174f877f", null ],
+    [ "strFileName", "a00108.html#a0faec04d22e256f2777cddfaeab1d673", null ]
 ];

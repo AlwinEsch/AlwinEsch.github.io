@@ -1,16 +1,10 @@
 var a00117 =
 [
-    [ "WindowXMLDialog", "a00117.html#a8b8fa85bda49679d837f979611e5f8b1", null ],
-    [ "~WindowXMLDialog", "a00117.html#a310432dff16af9483d895540ff76be15", null ],
-    [ "close", "a00117.html#a41f0a9216ff8fd7cfe809259fc6668cc", null ],
-    [ "IsDialog", "a00117.html#a1e8473757c23d67eeaa2ad2eaa0d868b", null ],
-    [ "IsDialogRunning", "a00117.html#af5ade9aaec42bf60e7a6c1b1ae74dd2d", null ],
-    [ "IsMediaWindow", "a00117.html#aef19fec003e392f5b0abdb6155393615", null ],
-    [ "IsModalDialog", "a00117.html#adda02b50c11c92eadfa64088e2b56094", null ],
-    [ "LoadXML", "a00117.html#a4a88d9f86eedb30367ebce61fb060bbb", null ],
-    [ "OnAction", "a00117.html#a5a929bb12b2e74b5d65471b0a4242741", null ],
-    [ "OnDeinitWindow", "a00117.html#a9abe87b5ae8d7072807ea356566bed21", null ],
-    [ "OnMessage", "a00117.html#a705aa30fc54fcb4cb255efa7992f3e9e", null ],
-    [ "show", "a00117.html#a9ceb2fdb6907af08ad835270ff1697bc", null ],
-    [ "DialogJumper", "a00117.html#a08482f1b5aa6411d68254066f6028095", null ]
+    [ "DialogProgress", "a00117.html#ad6806218faf95b933b67927d5ad46a39", null ],
+    [ "~DialogProgress", "a00117.html#a94b81fdffc22f6260839893fdbf757b7", null ],
+    [ "close", "a00310.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
+    [ "create", "a00310.html#gad71569b69244d11fe949d0bbd5b75905", null ],
+    [ "deallocating", "a00117.html#a8b6dbb40347674d0ffc08d6ec7e9a877", null ],
+    [ "iscanceled", "a00310.html#ga2a944a55da1c28885d3f00d101618ac6", null ],
+    [ "update", "a00310.html#gabf439774a2aca33663c3bb785e6e7465", null ]
 ];

@@ -1,13 +1,8 @@
 var a00253 =
 [
-    [ "IsKeyboardActivated", "a00253.html#ga1ec4a068299863443fe39fcf4969e0df", null ],
-    [ "SendTextToActiveKeyboard", "a00253.html#ga3d85e8d21bc1fbdf8f946d3c7755005c", null ],
-    [ "ShowAndGetFilter", "a00253.html#gaa57c673c6a2d27bc9114ca557e9c5852", null ],
-    [ "ShowAndGetInput", "a00253.html#ga83b1e91927a105607762c38ea9e1dcb7", null ],
-    [ "ShowAndGetInput", "a00253.html#gac455ca6ff288c07edf7de7d5a0f28d80", null ],
-    [ "ShowAndGetNewPassword", "a00253.html#ga1b75480e0428c2eb657e9e3df1c5f6b3", null ],
-    [ "ShowAndGetNewPassword", "a00253.html#ga74b411283e562425ab3f6d2c01d1f229", null ],
-    [ "ShowAndVerifyNewPassword", "a00253.html#gaf03bd1a86951ae9a1b5f91a901957e11", null ],
-    [ "ShowAndVerifyNewPassword", "a00253.html#gab0b3eb13c8faa5d58e8e7eb59b7c50a9", null ],
-    [ "ShowAndVerifyPassword", "a00253.html#ga48bdcccb89234aad454a6be1cf219928", null ]
+    [ "CAddonGUIControlImage", "a00253.html#gaaab82074962caa8db7b1fa15b9e14a5c", null ],
+    [ "SetColorDiffuse", "a00253.html#ga5f4b9c8309a04af748764bc6dd4ef31c", null ],
+    [ "SetFileName", "a00253.html#ga71ca22e2515e018fdfa6db78fbee75dd", null ],
+    [ "SetVisible", "a00253.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "~CAddonGUIControlImage", "a00253.html#gaf4b7097d3f8155be34401f9daab51eb3", null ]
 ];

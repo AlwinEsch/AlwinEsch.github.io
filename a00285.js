@@ -1,7 +1,6 @@
 var a00285 =
 [
-    [ "close", "a00285.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
-    [ "create", "a00285.html#gaafb8a184f497bc815d38be07731df561", null ],
-    [ "isFinished", "a00285.html#ga06926ca87a7be7d8af8ee84670fffa87", null ],
-    [ "update", "a00285.html#ga90d83a72e4151aba7c05422cf34f6684", null ]
+    [ "ShowAndGetInput", "a00285.html#gabd70a1306a25efc68e99f5852aeffe9f", null ],
+    [ "ShowAndGetInput", "a00285.html#gab23d9c3e25b9f866b1581d5ff1821d02", null ],
+    [ "ShowAndGetInput", "a00285.html#gacdb0bcb4ff915c595e075af871d629ea", null ]
 ];

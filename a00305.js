@@ -1,9 +1,12 @@
 var a00305 =
 [
-    [ "capture", "a00305.html#gad84ac4cd6e43fc4aefe0eeaa0916e187", null ],
-    [ "getAspectRatio", "a00305.html#ga2c8f0f904856b52b41dd852c57bd970b", null ],
-    [ "getHeight", "a00305.html#ga07efb2a4e9a982688c8bb3c3f21d1092", null ],
-    [ "getImage", "a00305.html#gaff2e6e3a8d1c65f17c1709dc727ae69c", null ],
-    [ "getImageFormat", "a00305.html#gaa512bbf517e279b0a5ca7d2ecf07f5b1", null ],
-    [ "getWidth", "a00305.html#ga67a0997183f24da19b776d96c1052998", null ]
+    [ "stream_vector", "a00305.html#ga1ebf7c021d47165548ca6320162935bb", null ],
+    [ "Clear", "a00305.html#ga666736fbd0ebb8dc7e6ff3392423d6c0", null ],
+    [ "CStreamProperties", "a00305.html#gadb5884513f2557e07249fab9f1cc447c", null ],
+    [ "GetProperties", "a00305.html#ga4bb870e45a3ef7c81e92563b7a872618", null ],
+    [ "GetStreamById", "a00305.html#ga2e18a0bd69b52870b817c6c8bf0e0db6", null ],
+    [ "GetStreamData", "a00305.html#ga3687926c69b0a5d8a32a73b85ce892b4", null ],
+    [ "GetStreamId", "a00305.html#ga80239fdfa9f1d2dfea3abb949bb84b94", null ],
+    [ "UpdateStreams", "a00305.html#ga8d64e3bab115fb9201d6f688ab350ce5", null ],
+    [ "~CStreamProperties", "a00305.html#ga6f0282c6d4010650f5ed1075bd19da84", null ]
 ];

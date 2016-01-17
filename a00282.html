@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: InfoTagVideo</title>
+<title>Kodi Development: CAddonGUIDialogProgress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,27 +92,38 @@ $(document).ready(function(){initNavTree('a00282.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">InfoTagVideo<div class="ingroups"><a class="el" href="a00325.html">Python Development</a> &raquo; <a class="el" href="a00286.html">Library - xbmc</a></div></div>  </div>
+<div class="title">CAddonGUIDialogProgress<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a> &raquo; <a class="el" href="a00286.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's video info tag class.</b> </p>
-<p>To get video info tag data of currently played source.</p>
-<dl class="section note"><dt>Note</dt><dd>Info tag load is only be possible from present player class.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;tag = xbmc.Player().getVideoInfoTag()</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;title = tag.getTitle()</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;file  = tag.getFile()</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;...</div>
+<p><b>Progress dialog shown in center</b> </p>
+<p>The with #include <a class="el" href="a00176.html">&lt;kodi/addon.api2/GUIDialogProgress.h&gt;</a> given class are basically used to create Kodi's progress dialog with named text fields.</p>
+<div class="image">
+<img src="help.GUIDialogProgress.png" alt="help.GUIDialogProgress.png"/>
+</div>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon.api2/GUIDialogProgress.h&gt;</span></div>
+<div class="line"></div>
+<div class="line">CAddonGUIDialogProgress *progress = <span class="keyword">new</span> CAddonGUIDialogProgress;</div>
+<div class="line">progress-&gt;SetHeading(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
+<div class="line">progress-&gt;SetLine(1, <span class="stringliteral">&quot;line 1&quot;</span>);</div>
+<div class="line">progress-&gt;SetLine(2, <span class="stringliteral">&quot;line 2&quot;</span>);</div>
+<div class="line">progress-&gt;SetLine(3, <span class="stringliteral">&quot;line 3&quot;</span>);</div>
+<div class="line">progress-&gt;SetCanCancel(<span class="keyword">true</span>);</div>
+<div class="line">progress-&gt;ShowProgressBar(<span class="keyword">true</span>);</div>
+<div class="line">progress-&gt;Open();</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 100; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  progress-&gt;SetPercentage(i);</div>
+<div class="line">  <a class="code" href="a00312.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">delete</span> progress;</div>
 </div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga014e2737672aac5e1fca6c67268ef7ca"></a>
+<a class="anchor" id="ga71e9d732335846eb579f0dd00918b3e7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getCast </td>
+          <td class="memname">bool Abort </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -120,18 +131,17 @@ $(document).ready(function(){initNavTree('a00282.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>To get the cast of the video when available. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Video casts</dd></dl>
-<hr/>
- 
+<p>To check progress was canceled on work. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if aborted </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="gaf9d61e5189c09ef08febcd52087001cd"></a>
+<a class="anchor" id="gac076fba6e17d71b4ce5b330855fb8902"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getDirector </td>
+          <td class="memname">CAddonGUIDialogProgress </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -139,18 +149,57 @@ $(document).ready(function(){initNavTree('a00282.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Get <a href="https://en.wikipedia.org/wiki/Film_director">film director</a> who has made the film (if present). </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Film director name.</dd></dl>
-<hr/>
- 
+<p>Construct a new dialog. </p>
+
 </div>
 </div>
-<a class="anchor" id="ga723e190c9b450ce6558126ef95b03ec9"></a>
+<a class="anchor" id="gae20eeb097c9ebe3506bd1d2bb3d92fda"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getFile </td>
+          <td class="memname">int GetPercentage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the current progress position as percent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf76bcf12aaec9ab845ea61853a37a33c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsCanceled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To check dialog for clicked cancel button. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if canceled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5e53001785ff30ae485a113b9b8a0ddc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Open </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -158,18 +207,190 @@ $(document).ready(function(){initNavTree('a00282.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>To get the video file name. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] File name</dd></dl>
-<hr/>
- 
+<p>To open the dialog. </p>
+
 </div>
 </div>
-<a class="anchor" id="ga9bf8326fd3213f31cf6c83cd70b7b521"></a>
+<a class="anchor" id="ga13580b7f84c1c13f90c1d030ef61faf8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getFirstAired </td>
+          <td class="memname">void SetCanCancel </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bCanCancel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To enable and show cancel button on dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bCanCancel</td><td>if true becomes it shown </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf6377691fa79c14e16aebaeb9d340b33"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetHeading </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the heading title of dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heading</td><td>Title string to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga845054cd7ff1978a112126086a8ec5ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetLine </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>iLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the line text field on dialog from 0 - 2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iLine</td><td>Line number </td></tr>
+    <tr><td class="paramname">line</td><td>Text string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gadf0353f59469e4b0cab327ea7df9cae8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPercentage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iPercentage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current progress position as percent. </p>
+<dl class="section return"><dt>Returns</dt><dd>Position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gafe4b80962f0d7bdd3b0a73b83ef06323"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProgressAdvance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSteps</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To increase progress bar by defined step size until reach of maximum position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nSteps</td><td>Step size to increase, default is 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gad397a19fe15c25e5077d34fd43da6e5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProgressMax </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iMax</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the maximum position of progress, needed if <code>SetProgressAdvance(...)</code> is used. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iMax</td><td>Biggest usable position to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4ef9882ff90cb3878eb846335e2b3c07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowProgressBar </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bOnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To show or hide progress bar dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bOnOff</td><td>If true becomes it shown </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga120fc408bff359c7c29a02551c00e9a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~CAddonGUIDialogProgress </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -177,314 +398,8 @@ $(document).ready(function(){initNavTree('a00282.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Returns first aired date as string from info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] First aired date</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga724866edc25325e096d7d8a76b4a3234"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getGenre </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Destructor. </p>
 
-<p>To get the <a href="https://en.wikipedia.org/wiki/Film_genre">Video Genre</a> if available. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Genre name</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga3a5155fe7fa0cdfa1970a6f569f9b666"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getIMDBNumber </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get the <a href="https://en.wikipedia.org/wiki/Internet_Movie_Database">IMDb</a> number of the video (if present). </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] IMDb number</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga64953074270dc9bc74370b8251c1cd43"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getLastPlayed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the last played date / time as string. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Last played date / time</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga4f96c0aaaf77bdf9d8eef09bb8ac8ecc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getOriginalTitle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get the original title of the video. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Original title</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga6779d0f135fcec6c7f8a8ee49d7af165"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getPath </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get the path where the video is stored. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Path</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gad3ff2085e537bfbfa2f14d0c9a1dfcaa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getPictureURL </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get a picture URL of the video to show as screenshot. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Picture URL</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gac644258d08f747039e9d0e76bcd49513"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getPlayCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get the number of plays of the video. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Play Count</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga7b4144bd89a83e0066a43d674c935453"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getPlot </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the plot of the video if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Plot</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga9d64a845dd0f805ecfc9dede2fcb683c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getPlotOutline </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the outline plot of the video if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Outline plot</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga6344c3ab0ba02f7381c09bfc384b0f58"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getPremiered </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get <a href="https://en.wikipedia.org/wiki/Premiere">premiered</a> date of the video, if available. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string]</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga235125a9aed4cc8c630d4e681e14d196"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double getRating </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the video rating if present as float (double where supported). </p>
-<dl class="section return"><dt>Returns</dt><dd>[float] The rating of the video</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga5de7f223574b5b39917a1e2d284ca2db"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getTagLine </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get video tag line if available. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Video tag line</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga888f94790c968e3f0b5de17e509098aa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getTitle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the video title. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Video title</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga43531ed78e2ffc99da87d0b93293ebf9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getVotes </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the video votes if available from video info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Votes</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga85b8f5a942a429ec2e66cad259fe1fd2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getWritingCredits </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the writing credits if present from video info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Writing credits</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga53172a43145522837b888b7d7f7117ea"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getYear </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get production year of video if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Production Year</dd></dl>
-<hr/>
- 
 </div>
 </div>
 </div><!-- contents -->

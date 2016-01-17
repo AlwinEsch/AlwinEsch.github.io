@@ -1,4 +1,5 @@
 var a00206 =
 [
-    [ "V2", "a00207.html", "a00207" ]
+    [ "getCurrentWindowDialogId", "a00298.html#ga8379c35c147def9f607d18571e24678e", null ],
+    [ "getCurrentWindowId", "a00298.html#gab1660e44ef103bd39fff61229809f567", null ]
 ];

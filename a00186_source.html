@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/guilib/GUIFont.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/InfoTagMusic.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,218 +92,109 @@ $(document).ready(function(){initNavTree('a00186_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">GUIFont.h</div>  </div>
+<div class="title">InfoTagMusic.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00186.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef CGUILIB_GUIFONT_H</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define CGUILIB_GUIFONT_H</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *      Copyright (C) 2003-2013 Team XBMC</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  any later version.</span></div>
+<a href="a00186.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="a00186.html#a8474b4a97988b997d2dce6faa81e9dfd">   36</a></span>&#160;<span class="keyword">typedef</span> uint32_t <a class="code" href="a00186.html#a8474b4a97988b997d2dce6faa81e9dfd">character_t</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="a00186.html#a8795f711ef385216d09794142679adf1">   37</a></span>&#160;<span class="keyword">typedef</span> uint32_t <a class="code" href="a00186.html#a8795f711ef385216d09794142679adf1">color_t</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="a00186.html#a08930b7e4fc405d6ff4fc5de977059f9">   38</a></span>&#160;<span class="keyword">typedef</span> std::vector&lt;character_t&gt; <a class="code" href="a00186.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="a00186.html#af951888aa2fcd4ec769b1e4cb73644df">   39</a></span>&#160;<span class="keyword">typedef</span> std::vector&lt;color_t&gt; <a class="code" href="a00186.html#af951888aa2fcd4ec769b1e4cb73644df">vecColors</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span>CGUIFontTTFBase;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="a00320.html#gad5207c71b383451e25d9d7a85134ebe0">   51</a></span>&#160;<span class="preprocessor">#define XBFONT_LEFT       0x00000000 </span></div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="a00320.html#ga1867c471415f6499f7cd56e162d469a4">   52</a></span>&#160;<span class="preprocessor">#define XBFONT_RIGHT      0x00000001 </span></div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="a00320.html#ga687578b0a798bdeda43f70753d14ab0e">   53</a></span>&#160;<span class="preprocessor">#define XBFONT_CENTER_X   0x00000002 </span></div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="a00320.html#gab31f42c7e7b24529472d72bce221dadd">   54</a></span>&#160;<span class="preprocessor">#define XBFONT_CENTER_Y   0x00000004 </span></div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="a00320.html#gaa533383607587f0c0704213463e8747d">   55</a></span>&#160;<span class="preprocessor">#define XBFONT_TRUNCATED  0x00000008 </span></div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="a00320.html#gaadd26dee845564d68f1a100d62742f98">   56</a></span>&#160;<span class="preprocessor">#define XBFONT_JUSTIFIED  0x00000010 </span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// flags for font style. lower 16 bits are the unicode code</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// points, 16-24 are color bits and 24-32 are style bits</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="a00186.html#afa65b731c8ff872b58fa2bfa19f40d19">   61</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_NORMAL       0</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="a00186.html#a8425d980c6a71d021becb713bb2ca3f4">   62</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_BOLD         1</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="a00186.html#a964b2511a3395b4ed6148086509729e5">   63</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_ITALICS      2</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="a00186.html#a24211745bd783907a2941c06b097694d">   64</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_LIGHT        4</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="a00186.html#aa051f6a35f12ee780736f1fa9ba0cad5">   65</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_UPPERCASE    8</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="a00186.html#a738ac9d4a4b628cc3542e7cb2877accc">   66</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_LOWERCASE    16</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="a00186.html#acb7e051dc06448f74e0e680c3a9ed520">   67</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_CAPITALIZE   32</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="a00186.html#ae36cda5a827a0beb292b811a0005161c">   68</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_MASK         0xFF</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="a00048.html">   70</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00048.html">CScrollInfo</a></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="a00048.html#a1155d01fb5d7e3bb3ea3ed0b925a5de1">CScrollInfo</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> wait = 50, <span class="keywordtype">float</span> pos = 0, <span class="keywordtype">int</span> speed = <a class="code" href="a00048.html#a14d2a4782b3fe7f624094bf6c624c50b">defaultSpeed</a>, <span class="keyword">const</span> std::string &amp;scrollSuffix = <span class="stringliteral">&quot; | &quot;</span>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="a00048.html#a64be5578c1c726e0d16e64c2554688b5">   75</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00048.html#a64be5578c1c726e0d16e64c2554688b5">SetSpeed</a>(<span class="keywordtype">int</span> speed)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="a00048.html#adcd3672aa6367fe29a611c49e0ffbed2">pixelSpeed</a> = speed * 0.001f;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="a00048.html#a372de693ad40b3f42839c8ec6ac845f4">   79</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00048.html#a372de693ad40b3f42839c8ec6ac845f4">Reset</a>()</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="a00048.html#a3dd2bf8b269e3fa033cdf888d425c0a1">waitTime</a> = <a class="code" href="a00048.html#a5434e54a256e16c48f868cfb33696a89">initialWait</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// pixelPos is where we start the current letter, so is measured</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// to the left of the text rendering&#39;s left edge.  Thus, a negative</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// value will mean the text starts to the right</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="a00048.html#ac39f2f9544959e6347ab0c97cdbe8ee3">pixelPos</a> = -<a class="code" href="a00048.html#a4fa0f8cf55d2664548ffe6ffe87815b5">initialPos</a>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// privates:</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    m_averageFrameTime = 1000.f / fabs((<span class="keywordtype">float</span>)<a class="code" href="a00048.html#a14d2a4782b3fe7f624094bf6c624c50b">defaultSpeed</a>);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    m_lastFrameTime = 0;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="a00048.html#ac5c07b3de3d7b54a3c1f7fd7ff299dc0">m_textWidth</a> = 0;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="a00048.html#a120b18c698618870c64c077be6622a2d">m_totalWidth</a> = 0;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="a00048.html#ad2407675b2b26b51c47eba10f619d443">m_widthValid</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00048.html#a72d8f551c98130d0942e37c7c7400a91">GetPixelsPerFrame</a>();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="a00048.html#ac39f2f9544959e6347ab0c97cdbe8ee3">   95</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00048.html#ac39f2f9544959e6347ab0c97cdbe8ee3">pixelPos</a>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="a00048.html#adcd3672aa6367fe29a611c49e0ffbed2">   96</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00048.html#adcd3672aa6367fe29a611c49e0ffbed2">pixelSpeed</a>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="a00048.html#a3dd2bf8b269e3fa033cdf888d425c0a1">   97</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00048.html#a3dd2bf8b269e3fa033cdf888d425c0a1">waitTime</a>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="a00048.html#a5434e54a256e16c48f868cfb33696a89">   98</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00048.html#a5434e54a256e16c48f868cfb33696a89">initialWait</a>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="a00048.html#a4fa0f8cf55d2664548ffe6ffe87815b5">   99</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00048.html#a4fa0f8cf55d2664548ffe6ffe87815b5">initialPos</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="a00048.html#ab211ce571d513824da669aeb6c3af673">  100</a></span>&#160;  <a class="code" href="a00186.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> <a class="code" href="a00048.html#ab211ce571d513824da669aeb6c3af673">suffix</a>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="a00048.html#ac5c07b3de3d7b54a3c1f7fd7ff299dc0">  101</a></span>&#160;  <span class="keyword">mutable</span> <span class="keywordtype">float</span> <a class="code" href="a00048.html#ac5c07b3de3d7b54a3c1f7fd7ff299dc0">m_textWidth</a>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="a00048.html#a120b18c698618870c64c077be6622a2d">  102</a></span>&#160;  <span class="keyword">mutable</span> <span class="keywordtype">float</span> <a class="code" href="a00048.html#a120b18c698618870c64c077be6622a2d">m_totalWidth</a>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="a00048.html#ad2407675b2b26b51c47eba10f619d443">  103</a></span>&#160;  <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="a00048.html#ad2407675b2b26b51c47eba10f619d443">m_widthValid</a>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="a00048.html#a14d2a4782b3fe7f624094bf6c624c50b">  105</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="a00048.html#a14d2a4782b3fe7f624094bf6c624c50b">defaultSpeed</a> = 60;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">float</span> m_averageFrameTime;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  uint32_t m_lastFrameTime;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="a00043.html">  115</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00043.html">CGUIFont</a></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="a00043.html#a88f7110e613989f54998ab285da25fcd">CGUIFont</a>(<span class="keyword">const</span> std::string&amp; strFontName, uint32_t style, <a class="code" href="a00186.html#a8795f711ef385216d09794142679adf1">color_t</a> textColor,</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;       <a class="code" href="a00186.html#a8795f711ef385216d09794142679adf1">color_t</a> shadowColor, <span class="keywordtype">float</span> lineSpacing, <span class="keywordtype">float</span> origHeight, CGUIFontTTFBase *font);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="a00043.html#aeaa51aa5e4c14312d2a703c6a96698f2">~CGUIFont</a>();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  std::string&amp; <a class="code" href="a00043.html#adb32cf7cb38e0fed26b56c602e06492f">GetFontName</a>();</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="a00043.html#a316c7247b879e05d74e1291bdab37cf2">  124</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00043.html#a316c7247b879e05d74e1291bdab37cf2">DrawText</a>( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <a class="code" href="a00186.html#a8795f711ef385216d09794142679adf1">color_t</a> color, <a class="code" href="a00186.html#a8795f711ef385216d09794142679adf1">color_t</a> shadowColor,</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                 <span class="keyword">const</span> <a class="code" href="a00186.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> &amp;text, uint32_t alignment, <span class="keywordtype">float</span> maxPixelWidth)</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="a00186.html#af951888aa2fcd4ec769b1e4cb73644df">vecColors</a> colors;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    colors.push_back(color);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="a00043.html#a316c7247b879e05d74e1291bdab37cf2">DrawText</a>(x, y, colors, shadowColor, text, alignment, maxPixelWidth);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  };</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00043.html#a316c7247b879e05d74e1291bdab37cf2">DrawText</a>( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keyword">const</span> <a class="code" href="a00186.html#af951888aa2fcd4ec769b1e4cb73644df">vecColors</a> &amp;colors, <a class="code" href="a00186.html#a8795f711ef385216d09794142679adf1">color_t</a> shadowColor,</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                 <span class="keyword">const</span> <a class="code" href="a00186.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> &amp;text, uint32_t alignment, <span class="keywordtype">float</span> maxPixelWidth);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00043.html#a7014647d74c84ee01495690088193d81">DrawScrollingText</a>( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keyword">const</span> <a class="code" href="a00186.html#af951888aa2fcd4ec769b1e4cb73644df">vecColors</a> &amp;colors, <a class="code" href="a00186.html#a8795f711ef385216d09794142679adf1">color_t</a> shadowColor,</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                 <span class="keyword">const</span> <a class="code" href="a00186.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> &amp;text, uint32_t alignment, <span class="keywordtype">float</span> maxPixelWidth, <span class="keyword">const</span> <a class="code" href="a00048.html">CScrollInfo</a> &amp;scrollInfo);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="a00043.html#ab8e740d040a9b1ff3d84a3ab60aa0e16">UpdateScrollInfo</a>(<span class="keyword">const</span> <a class="code" href="a00186.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> &amp;text, <a class="code" href="a00048.html">CScrollInfo</a> &amp;scrollInfo);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00043.html#aa3b7ca6c67dd055e399255013bf3ec0f">GetTextWidth</a>( <span class="keyword">const</span> <a class="code" href="a00186.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> &amp;text );</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00043.html#ab53e86f875ad47c509e5a660cc72bcb7">GetCharWidth</a>( <a class="code" href="a00186.html#a8474b4a97988b997d2dce6faa81e9dfd">character_t</a> ch );</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00043.html#abbf1d95451eee706e790eb03e9d6e01e">GetTextHeight</a>(<span class="keywordtype">int</span> numLines) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00043.html#a4d6849b6644d20937f317be0f2d8483b">GetTextBaseLine</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00043.html#a6b53885a61f58e1ad5e90b9e208fa1d0">GetLineHeight</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00043.html#a8118b8523ffc7d10ea3208e6f23b1944">GetScaleFactor</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;music/tags/MusicInfoTag.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00244.html">XBMCAddon</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="a00092.html">   53</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00092.html">InfoTagMusic</a> : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      MUSIC_INFO::CMusicInfoTag* infoTag;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <a class="code" href="a00092.html#a62b565326391b112f7897681265fde34">InfoTagMusic</a>(<span class="keyword">const</span> MUSIC_INFO::CMusicInfoTag&amp; tag);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <a class="code" href="a00092.html#a62b565326391b112f7897681265fde34">InfoTagMusic</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00092.html#a541c6e4089511366c31fef3ed5ca0b69">~InfoTagMusic</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      String <a class="code" href="a00307.html#gafa85bb6aea7b660960562826dcb20cf7">getURL</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      String <a class="code" href="a00307.html#ga888f94790c968e3f0b5de17e509098aa">getTitle</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      String <a class="code" href="a00307.html#ga1b9f565753d008491c59887680bd570e">getArtist</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      String <a class="code" href="a00307.html#ga11ac7b770ff2135e877c241ddb5db662">getAlbum</a>();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      String <a class="code" href="a00307.html#ga257503de86d218b382fcbbe9f1f68c2d">getAlbumArtist</a>();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      String <a class="code" href="a00307.html#ga724866edc25325e096d7d8a76b4a3234">getGenre</a>();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00307.html#ga08c13081c0665a4336a0f022c955fb69">getDuration</a>();</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00043.html#a1149e1e7da0129dfcc98c047dcdf9c79">Begin</a>();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00043.html#afc12d18e19e10b35d361fbb09c7c1d54">End</a>();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="a00043.html#a3919c5244543a5db893675cdae362402">  152</a></span>&#160;  uint32_t <a class="code" href="a00043.html#a3919c5244543a5db893675cdae362402">GetStyle</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="a00043.html#a2563c5297855f5d78d25b72a3e54a5d1">m_style</a>; };</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">wchar_t</span> <a class="code" href="a00043.html#a04f14781ea14541fa06e63ad9913daa3">RemapGlyph</a>(<span class="keywordtype">wchar_t</span> letter);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="a00043.html#ae0eb03a422fa71fcfd01a58fac04e7f3">  156</a></span>&#160;  CGUIFontTTFBase* <a class="code" href="a00043.html#ae0eb03a422fa71fcfd01a58fac04e7f3">GetFont</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a00043.html#acfc487861132ce3652a1cee9a4e38bb3">m_font</a>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00307.html#ga797e19587556ad59c5e3a7b55e8ccae9">getTrack</a>();</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00043.html#a089e4ad0190a4be414dc50698aa31bd4">SetFont</a>(CGUIFontTTFBase* font);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="a00043.html#a102cdc9634a84c692b2c92549feced99">  164</a></span>&#160;  std::string <a class="code" href="a00043.html#a102cdc9634a84c692b2c92549feced99">m_strFontName</a>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="a00043.html#a2563c5297855f5d78d25b72a3e54a5d1">  165</a></span>&#160;  uint32_t <a class="code" href="a00043.html#a2563c5297855f5d78d25b72a3e54a5d1">m_style</a>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="a00043.html#a2036a47825cfd560167de29fea7e5c5e">  166</a></span>&#160;  <a class="code" href="a00186.html#a8795f711ef385216d09794142679adf1">color_t</a> <a class="code" href="a00043.html#a2036a47825cfd560167de29fea7e5c5e">m_shadowColor</a>;</div>
-<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="a00043.html#a88423fecb7ec0fb50b7357a9331c0889">  167</a></span>&#160;  <a class="code" href="a00186.html#a8795f711ef385216d09794142679adf1">color_t</a> <a class="code" href="a00043.html#a88423fecb7ec0fb50b7357a9331c0889">m_textColor</a>;</div>
-<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="a00043.html#ad47bc51dc17824af0b87bc6dc923ff77">  168</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00043.html#ad47bc51dc17824af0b87bc6dc923ff77">m_lineSpacing</a>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="a00043.html#a39f32255414465c481b2c759ab6c698a">  169</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00043.html#a39f32255414465c481b2c759ab6c698a">m_origHeight</a>;</div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="a00043.html#acfc487861132ce3652a1cee9a4e38bb3">  170</a></span>&#160;  CGUIFontTTFBase *<a class="code" href="a00043.html#acfc487861132ce3652a1cee9a4e38bb3">m_font</a>; <span class="comment">// the font object has the size information</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordtype">bool</span> ClippedRegionIsEmpty(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> width, uint32_t alignment) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;};</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="a00048_html_ac5c07b3de3d7b54a3c1f7fd7ff299dc0"><div class="ttname"><a href="a00048.html#ac5c07b3de3d7b54a3c1f7fd7ff299dc0">CScrollInfo::m_textWidth</a></div><div class="ttdeci">float m_textWidth</div><div class="ttdef"><b>Definition:</b> GUIFont.h:101</div></div>
-<div class="ttc" id="a00048_html_a4fa0f8cf55d2664548ffe6ffe87815b5"><div class="ttname"><a href="a00048.html#a4fa0f8cf55d2664548ffe6ffe87815b5">CScrollInfo::initialPos</a></div><div class="ttdeci">float initialPos</div><div class="ttdef"><b>Definition:</b> GUIFont.h:99</div></div>
-<div class="ttc" id="a00043_html_a102cdc9634a84c692b2c92549feced99"><div class="ttname"><a href="a00043.html#a102cdc9634a84c692b2c92549feced99">CGUIFont::m_strFontName</a></div><div class="ttdeci">std::string m_strFontName</div><div class="ttdef"><b>Definition:</b> GUIFont.h:164</div></div>
-<div class="ttc" id="a00186_html_af951888aa2fcd4ec769b1e4cb73644df"><div class="ttname"><a href="a00186.html#af951888aa2fcd4ec769b1e4cb73644df">vecColors</a></div><div class="ttdeci">std::vector&lt; color_t &gt; vecColors</div><div class="ttdef"><b>Definition:</b> GUIFont.h:39</div></div>
-<div class="ttc" id="a00043_html_a316c7247b879e05d74e1291bdab37cf2"><div class="ttname"><a href="a00043.html#a316c7247b879e05d74e1291bdab37cf2">CGUIFont::DrawText</a></div><div class="ttdeci">void DrawText(float x, float y, color_t color, color_t shadowColor, const vecText &amp;text, uint32_t alignment, float maxPixelWidth)</div><div class="ttdef"><b>Definition:</b> GUIFont.h:124</div></div>
-<div class="ttc" id="a00043_html_a3919c5244543a5db893675cdae362402"><div class="ttname"><a href="a00043.html#a3919c5244543a5db893675cdae362402">CGUIFont::GetStyle</a></div><div class="ttdeci">uint32_t GetStyle() const </div><div class="ttdef"><b>Definition:</b> GUIFont.h:152</div></div>
-<div class="ttc" id="a00043_html_a2036a47825cfd560167de29fea7e5c5e"><div class="ttname"><a href="a00043.html#a2036a47825cfd560167de29fea7e5c5e">CGUIFont::m_shadowColor</a></div><div class="ttdeci">color_t m_shadowColor</div><div class="ttdef"><b>Definition:</b> GUIFont.h:166</div></div>
-<div class="ttc" id="a00186_html_a8795f711ef385216d09794142679adf1"><div class="ttname"><a href="a00186.html#a8795f711ef385216d09794142679adf1">color_t</a></div><div class="ttdeci">uint32_t color_t</div><div class="ttdef"><b>Definition:</b> GUIFont.h:37</div></div>
-<div class="ttc" id="a00043_html_ab8e740d040a9b1ff3d84a3ab60aa0e16"><div class="ttname"><a href="a00043.html#ab8e740d040a9b1ff3d84a3ab60aa0e16">CGUIFont::UpdateScrollInfo</a></div><div class="ttdeci">bool UpdateScrollInfo(const vecText &amp;text, CScrollInfo &amp;scrollInfo)</div></div>
-<div class="ttc" id="a00186_html_a08930b7e4fc405d6ff4fc5de977059f9"><div class="ttname"><a href="a00186.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a></div><div class="ttdeci">std::vector&lt; character_t &gt; vecText</div><div class="ttdef"><b>Definition:</b> GUIFont.h:38</div></div>
-<div class="ttc" id="a00043_html_abbf1d95451eee706e790eb03e9d6e01e"><div class="ttname"><a href="a00043.html#abbf1d95451eee706e790eb03e9d6e01e">CGUIFont::GetTextHeight</a></div><div class="ttdeci">float GetTextHeight(int numLines) const </div></div>
-<div class="ttc" id="a00048_html_a1155d01fb5d7e3bb3ea3ed0b925a5de1"><div class="ttname"><a href="a00048.html#a1155d01fb5d7e3bb3ea3ed0b925a5de1">CScrollInfo::CScrollInfo</a></div><div class="ttdeci">CScrollInfo(unsigned int wait=50, float pos=0, int speed=defaultSpeed, const std::string &amp;scrollSuffix=&quot; | &quot;)</div></div>
-<div class="ttc" id="a00048_html_a5434e54a256e16c48f868cfb33696a89"><div class="ttname"><a href="a00048.html#a5434e54a256e16c48f868cfb33696a89">CScrollInfo::initialWait</a></div><div class="ttdeci">unsigned int initialWait</div><div class="ttdef"><b>Definition:</b> GUIFont.h:98</div></div>
-<div class="ttc" id="a00043_html_ae0eb03a422fa71fcfd01a58fac04e7f3"><div class="ttname"><a href="a00043.html#ae0eb03a422fa71fcfd01a58fac04e7f3">CGUIFont::GetFont</a></div><div class="ttdeci">CGUIFontTTFBase * GetFont() const </div><div class="ttdef"><b>Definition:</b> GUIFont.h:156</div></div>
-<div class="ttc" id="a00043_html_adb32cf7cb38e0fed26b56c602e06492f"><div class="ttname"><a href="a00043.html#adb32cf7cb38e0fed26b56c602e06492f">CGUIFont::GetFontName</a></div><div class="ttdeci">std::string &amp; GetFontName()</div></div>
-<div class="ttc" id="a00043_html"><div class="ttname"><a href="a00043.html">CGUIFont</a></div><div class="ttdef"><b>Definition:</b> GUIFont.h:115</div></div>
-<div class="ttc" id="a00043_html_aa3b7ca6c67dd055e399255013bf3ec0f"><div class="ttname"><a href="a00043.html#aa3b7ca6c67dd055e399255013bf3ec0f">CGUIFont::GetTextWidth</a></div><div class="ttdeci">float GetTextWidth(const vecText &amp;text)</div></div>
-<div class="ttc" id="a00043_html_a6b53885a61f58e1ad5e90b9e208fa1d0"><div class="ttname"><a href="a00043.html#a6b53885a61f58e1ad5e90b9e208fa1d0">CGUIFont::GetLineHeight</a></div><div class="ttdeci">float GetLineHeight() const </div></div>
-<div class="ttc" id="a00043_html_a4d6849b6644d20937f317be0f2d8483b"><div class="ttname"><a href="a00043.html#a4d6849b6644d20937f317be0f2d8483b">CGUIFont::GetTextBaseLine</a></div><div class="ttdeci">float GetTextBaseLine() const </div></div>
-<div class="ttc" id="a00043_html_a8118b8523ffc7d10ea3208e6f23b1944"><div class="ttname"><a href="a00043.html#a8118b8523ffc7d10ea3208e6f23b1944">CGUIFont::GetScaleFactor</a></div><div class="ttdeci">float GetScaleFactor() const </div><div class="ttdoc">get font scale factor (rendered height / original height) </div></div>
-<div class="ttc" id="a00048_html_ab211ce571d513824da669aeb6c3af673"><div class="ttname"><a href="a00048.html#ab211ce571d513824da669aeb6c3af673">CScrollInfo::suffix</a></div><div class="ttdeci">vecText suffix</div><div class="ttdef"><b>Definition:</b> GUIFont.h:100</div></div>
-<div class="ttc" id="a00048_html_a14d2a4782b3fe7f624094bf6c624c50b"><div class="ttname"><a href="a00048.html#a14d2a4782b3fe7f624094bf6c624c50b">CScrollInfo::defaultSpeed</a></div><div class="ttdeci">static const int defaultSpeed</div><div class="ttdef"><b>Definition:</b> GUIFont.h:105</div></div>
-<div class="ttc" id="a00186_html_a8474b4a97988b997d2dce6faa81e9dfd"><div class="ttname"><a href="a00186.html#a8474b4a97988b997d2dce6faa81e9dfd">character_t</a></div><div class="ttdeci">uint32_t character_t</div><div class="ttdef"><b>Definition:</b> GUIFont.h:36</div></div>
-<div class="ttc" id="a00043_html_afc12d18e19e10b35d361fbb09c7c1d54"><div class="ttname"><a href="a00043.html#afc12d18e19e10b35d361fbb09c7c1d54">CGUIFont::End</a></div><div class="ttdeci">void End()</div></div>
-<div class="ttc" id="a00043_html_a88f7110e613989f54998ab285da25fcd"><div class="ttname"><a href="a00043.html#a88f7110e613989f54998ab285da25fcd">CGUIFont::CGUIFont</a></div><div class="ttdeci">CGUIFont(const std::string &amp;strFontName, uint32_t style, color_t textColor, color_t shadowColor, float lineSpacing, float origHeight, CGUIFontTTFBase *font)</div></div>
-<div class="ttc" id="a00043_html_a04f14781ea14541fa06e63ad9913daa3"><div class="ttname"><a href="a00043.html#a04f14781ea14541fa06e63ad9913daa3">CGUIFont::RemapGlyph</a></div><div class="ttdeci">static wchar_t RemapGlyph(wchar_t letter)</div></div>
-<div class="ttc" id="a00043_html_acfc487861132ce3652a1cee9a4e38bb3"><div class="ttname"><a href="a00043.html#acfc487861132ce3652a1cee9a4e38bb3">CGUIFont::m_font</a></div><div class="ttdeci">CGUIFontTTFBase * m_font</div><div class="ttdef"><b>Definition:</b> GUIFont.h:170</div></div>
-<div class="ttc" id="a00043_html_a2563c5297855f5d78d25b72a3e54a5d1"><div class="ttname"><a href="a00043.html#a2563c5297855f5d78d25b72a3e54a5d1">CGUIFont::m_style</a></div><div class="ttdeci">uint32_t m_style</div><div class="ttdef"><b>Definition:</b> GUIFont.h:165</div></div>
-<div class="ttc" id="a00043_html_aeaa51aa5e4c14312d2a703c6a96698f2"><div class="ttname"><a href="a00043.html#aeaa51aa5e4c14312d2a703c6a96698f2">CGUIFont::~CGUIFont</a></div><div class="ttdeci">virtual ~CGUIFont()</div></div>
-<div class="ttc" id="a00043_html_a1149e1e7da0129dfcc98c047dcdf9c79"><div class="ttname"><a href="a00043.html#a1149e1e7da0129dfcc98c047dcdf9c79">CGUIFont::Begin</a></div><div class="ttdeci">void Begin()</div></div>
-<div class="ttc" id="a00043_html_a089e4ad0190a4be414dc50698aa31bd4"><div class="ttname"><a href="a00043.html#a089e4ad0190a4be414dc50698aa31bd4">CGUIFont::SetFont</a></div><div class="ttdeci">void SetFont(CGUIFontTTFBase *font)</div></div>
-<div class="ttc" id="a00048_html_ad2407675b2b26b51c47eba10f619d443"><div class="ttname"><a href="a00048.html#ad2407675b2b26b51c47eba10f619d443">CScrollInfo::m_widthValid</a></div><div class="ttdeci">bool m_widthValid</div><div class="ttdef"><b>Definition:</b> GUIFont.h:103</div></div>
-<div class="ttc" id="a00048_html_adcd3672aa6367fe29a611c49e0ffbed2"><div class="ttname"><a href="a00048.html#adcd3672aa6367fe29a611c49e0ffbed2">CScrollInfo::pixelSpeed</a></div><div class="ttdeci">float pixelSpeed</div><div class="ttdef"><b>Definition:</b> GUIFont.h:96</div></div>
-<div class="ttc" id="a00048_html_a72d8f551c98130d0942e37c7c7400a91"><div class="ttname"><a href="a00048.html#a72d8f551c98130d0942e37c7c7400a91">CScrollInfo::GetPixelsPerFrame</a></div><div class="ttdeci">float GetPixelsPerFrame()</div></div>
-<div class="ttc" id="a00048_html_a372de693ad40b3f42839c8ec6ac845f4"><div class="ttname"><a href="a00048.html#a372de693ad40b3f42839c8ec6ac845f4">CScrollInfo::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> GUIFont.h:79</div></div>
-<div class="ttc" id="a00048_html_a3dd2bf8b269e3fa033cdf888d425c0a1"><div class="ttname"><a href="a00048.html#a3dd2bf8b269e3fa033cdf888d425c0a1">CScrollInfo::waitTime</a></div><div class="ttdeci">unsigned int waitTime</div><div class="ttdef"><b>Definition:</b> GUIFont.h:97</div></div>
-<div class="ttc" id="a00048_html_ac39f2f9544959e6347ab0c97cdbe8ee3"><div class="ttname"><a href="a00048.html#ac39f2f9544959e6347ab0c97cdbe8ee3">CScrollInfo::pixelPos</a></div><div class="ttdeci">float pixelPos</div><div class="ttdef"><b>Definition:</b> GUIFont.h:95</div></div>
-<div class="ttc" id="a00043_html_ad47bc51dc17824af0b87bc6dc923ff77"><div class="ttname"><a href="a00043.html#ad47bc51dc17824af0b87bc6dc923ff77">CGUIFont::m_lineSpacing</a></div><div class="ttdeci">float m_lineSpacing</div><div class="ttdef"><b>Definition:</b> GUIFont.h:168</div></div>
-<div class="ttc" id="a00048_html_a64be5578c1c726e0d16e64c2554688b5"><div class="ttname"><a href="a00048.html#a64be5578c1c726e0d16e64c2554688b5">CScrollInfo::SetSpeed</a></div><div class="ttdeci">void SetSpeed(int speed)</div><div class="ttdef"><b>Definition:</b> GUIFont.h:75</div></div>
-<div class="ttc" id="a00043_html_a7014647d74c84ee01495690088193d81"><div class="ttname"><a href="a00043.html#a7014647d74c84ee01495690088193d81">CGUIFont::DrawScrollingText</a></div><div class="ttdeci">void DrawScrollingText(float x, float y, const vecColors &amp;colors, color_t shadowColor, const vecText &amp;text, uint32_t alignment, float maxPixelWidth, const CScrollInfo &amp;scrollInfo)</div></div>
-<div class="ttc" id="a00048_html_a120b18c698618870c64c077be6622a2d"><div class="ttname"><a href="a00048.html#a120b18c698618870c64c077be6622a2d">CScrollInfo::m_totalWidth</a></div><div class="ttdeci">float m_totalWidth</div><div class="ttdef"><b>Definition:</b> GUIFont.h:102</div></div>
-<div class="ttc" id="a00043_html_a88423fecb7ec0fb50b7357a9331c0889"><div class="ttname"><a href="a00043.html#a88423fecb7ec0fb50b7357a9331c0889">CGUIFont::m_textColor</a></div><div class="ttdeci">color_t m_textColor</div><div class="ttdef"><b>Definition:</b> GUIFont.h:167</div></div>
-<div class="ttc" id="a00043_html_ab53e86f875ad47c509e5a660cc72bcb7"><div class="ttname"><a href="a00043.html#ab53e86f875ad47c509e5a660cc72bcb7">CGUIFont::GetCharWidth</a></div><div class="ttdeci">float GetCharWidth(character_t ch)</div></div>
-<div class="ttc" id="a00048_html"><div class="ttname"><a href="a00048.html">CScrollInfo</a></div><div class="ttdef"><b>Definition:</b> GUIFont.h:70</div></div>
-<div class="ttc" id="a00043_html_a39f32255414465c481b2c759ab6c698a"><div class="ttname"><a href="a00043.html#a39f32255414465c481b2c759ab6c698a">CGUIFont::m_origHeight</a></div><div class="ttdeci">float m_origHeight</div><div class="ttdef"><b>Definition:</b> GUIFont.h:169</div></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00307.html#gaa2759f95638fb39b74363457af9e7777">getDisc</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      String <a class="code" href="a00307.html#gad099adc410738271ffc55e6fb68f77ae">getReleaseDate</a>();</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00307.html#gafdcd386f038151367af97803c1c13e41">getListeners</a>();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00307.html#gac644258d08f747039e9d0e76bcd49513">getPlayCount</a>();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      String <a class="code" href="a00307.html#ga64953074270dc9bc74370b8251c1cd43">getLastPlayed</a>();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      String <a class="code" href="a00307.html#ga50a7366cba8ce27bc48a00e746324f7b">getComment</a>();</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      String <a class="code" href="a00307.html#gaefe9573a6a972ef63b082d2264baa857">getLyrics</a>();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    };</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
+<div class="ttc" id="a00307_html_gac644258d08f747039e9d0e76bcd49513"><div class="ttname"><a href="a00307.html#gac644258d08f747039e9d0e76bcd49513">XBMCAddon::xbmc::InfoTagMusic::getPlayCount</a></div><div class="ttdeci">int getPlayCount()</div><div class="ttdoc">Returns the number of carried out playbacks. </div></div>
+<div class="ttc" id="a00244_html"><div class="ttname"><a href="a00244.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
+<div class="ttc" id="a00092_html_a62b565326391b112f7897681265fde34"><div class="ttname"><a href="a00092.html#a62b565326391b112f7897681265fde34">XBMCAddon::xbmc::InfoTagMusic::InfoTagMusic</a></div><div class="ttdeci">InfoTagMusic()</div></div>
+<div class="ttc" id="a00307_html_ga11ac7b770ff2135e877c241ddb5db662"><div class="ttname"><a href="a00307.html#ga11ac7b770ff2135e877c241ddb5db662">XBMCAddon::xbmc::InfoTagMusic::getAlbum</a></div><div class="ttdeci">String getAlbum()</div><div class="ttdoc">Returns the album from music tag as string if present. </div></div>
+<div class="ttc" id="a00307_html_ga724866edc25325e096d7d8a76b4a3234"><div class="ttname"><a href="a00307.html#ga724866edc25325e096d7d8a76b4a3234">XBMCAddon::xbmc::InfoTagMusic::getGenre</a></div><div class="ttdeci">String getGenre()</div><div class="ttdoc">Returns the genre name from music tag as string if present. </div></div>
+<div class="ttc" id="a00307_html_gafdcd386f038151367af97803c1c13e41"><div class="ttname"><a href="a00307.html#gafdcd386f038151367af97803c1c13e41">XBMCAddon::xbmc::InfoTagMusic::getListeners</a></div><div class="ttdeci">int getListeners()</div><div class="ttdoc">Returns the listeners as integer from music info tag. </div></div>
+<div class="ttc" id="a00307_html_ga08c13081c0665a4336a0f022c955fb69"><div class="ttname"><a href="a00307.html#ga08c13081c0665a4336a0f022c955fb69">XBMCAddon::xbmc::InfoTagMusic::getDuration</a></div><div class="ttdeci">int getDuration()</div><div class="ttdoc">Returns the duration of music as integer from info tag. </div></div>
+<div class="ttc" id="a00307_html_ga257503de86d218b382fcbbe9f1f68c2d"><div class="ttname"><a href="a00307.html#ga257503de86d218b382fcbbe9f1f68c2d">XBMCAddon::xbmc::InfoTagMusic::getAlbumArtist</a></div><div class="ttdeci">String getAlbumArtist()</div><div class="ttdoc">Returns the album artist from music tag as string if present. </div></div>
+<div class="ttc" id="a00307_html_gad099adc410738271ffc55e6fb68f77ae"><div class="ttname"><a href="a00307.html#gad099adc410738271ffc55e6fb68f77ae">XBMCAddon::xbmc::InfoTagMusic::getReleaseDate</a></div><div class="ttdeci">String getReleaseDate()</div><div class="ttdoc">Returns the release date as string from music info tag (if present). </div></div>
+<div class="ttc" id="a00307_html_ga50a7366cba8ce27bc48a00e746324f7b"><div class="ttname"><a href="a00307.html#ga50a7366cba8ce27bc48a00e746324f7b">XBMCAddon::xbmc::InfoTagMusic::getComment</a></div><div class="ttdeci">String getComment()</div><div class="ttdoc">Returns comment as string from music info tag. </div></div>
+<div class="ttc" id="a00307_html_gaefe9573a6a972ef63b082d2264baa857"><div class="ttname"><a href="a00307.html#gaefe9573a6a972ef63b082d2264baa857">XBMCAddon::xbmc::InfoTagMusic::getLyrics</a></div><div class="ttdeci">String getLyrics()</div><div class="ttdoc">Returns a string from lyrics. </div></div>
+<div class="ttc" id="a00307_html_ga888f94790c968e3f0b5de17e509098aa"><div class="ttname"><a href="a00307.html#ga888f94790c968e3f0b5de17e509098aa">XBMCAddon::xbmc::InfoTagMusic::getTitle</a></div><div class="ttdeci">String getTitle()</div><div class="ttdoc">Returns the title from music as string on info tag. </div></div>
+<div class="ttc" id="a00307_html_ga797e19587556ad59c5e3a7b55e8ccae9"><div class="ttname"><a href="a00307.html#ga797e19587556ad59c5e3a7b55e8ccae9">XBMCAddon::xbmc::InfoTagMusic::getTrack</a></div><div class="ttdeci">int getTrack()</div><div class="ttdoc">Returns the track number (if present) from music info tag as integer. </div></div>
+<div class="ttc" id="a00307_html_ga1b9f565753d008491c59887680bd570e"><div class="ttname"><a href="a00307.html#ga1b9f565753d008491c59887680bd570e">XBMCAddon::xbmc::InfoTagMusic::getArtist</a></div><div class="ttdeci">String getArtist()</div><div class="ttdoc">Returns the artist from music as string if present. </div></div>
+<div class="ttc" id="a00307_html_gaa2759f95638fb39b74363457af9e7777"><div class="ttname"><a href="a00307.html#gaa2759f95638fb39b74363457af9e7777">XBMCAddon::xbmc::InfoTagMusic::getDisc</a></div><div class="ttdeci">int getDisc()</div><div class="ttdoc">Returns the disk number (if present) from music info tag as integer. </div></div>
+<div class="ttc" id="a00307_html_gafa85bb6aea7b660960562826dcb20cf7"><div class="ttname"><a href="a00307.html#gafa85bb6aea7b660960562826dcb20cf7">XBMCAddon::xbmc::InfoTagMusic::getURL</a></div><div class="ttdeci">String getURL()</div><div class="ttdoc">Returns url of source as string from music info tag. </div></div>
+<div class="ttc" id="a00092_html_a541c6e4089511366c31fef3ed5ca0b69"><div class="ttname"><a href="a00092.html#a541c6e4089511366c31fef3ed5ca0b69">XBMCAddon::xbmc::InfoTagMusic::~InfoTagMusic</a></div><div class="ttdeci">virtual ~InfoTagMusic()</div></div>
+<div class="ttc" id="a00092_html"><div class="ttname"><a href="a00092.html">XBMCAddon::xbmc::InfoTagMusic</a></div><div class="ttdef"><b>Definition:</b> InfoTagMusic.h:53</div></div>
+<div class="ttc" id="a00307_html_ga64953074270dc9bc74370b8251c1cd43"><div class="ttname"><a href="a00307.html#ga64953074270dc9bc74370b8251c1cd43">XBMCAddon::xbmc::InfoTagMusic::getLastPlayed</a></div><div class="ttdeci">String getLastPlayed()</div><div class="ttdoc">Returns last played time as string from music info tag. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_f2016486728b9ee4b575939ac5eeb448.html">guilib</a></li><li class="navelem"><a class="el" href="a00186.html">GUIFont.h</a></li>
+    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00186.html">InfoTagMusic.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

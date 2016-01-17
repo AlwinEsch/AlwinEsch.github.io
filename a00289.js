@@ -1,18 +1,10 @@
 var a00289 =
 [
-    [ "abortRequested", "a00289.html#ga5b1ac2490aae34c81dd3ab6ecc58d8a5", null ],
-    [ "onAbortRequested", "a00289.html#gace3ed8fa26883bff89728e0446fc8b81", null ],
-    [ "onCleanFinished", "a00289.html#ga5e89c9b7e06b744f88063e5237977247", null ],
-    [ "onCleanStarted", "a00289.html#ga5d8eb24ae2e1b1a360a9bf3b4b51d56d", null ],
-    [ "onDatabaseScanStarted", "a00289.html#ga74db05abe95497de5e90206cb39ef7d4", null ],
-    [ "onDatabaseUpdated", "a00289.html#ga18d6bc330604bbe55e63ae6dae11efde", null ],
-    [ "onDPMSActivated", "a00289.html#ga86cc4d6bc72abe7b74c1c50dde951412", null ],
-    [ "onDPMSDeactivated", "a00289.html#ga3afef1ceaec0fd233dada0f1c415980c", null ],
-    [ "onNotification", "a00289.html#ga68122e7f3ea25f8848f99024690f1419", null ],
-    [ "onScanFinished", "a00289.html#gaf8242fca7ffb83cd719b43e16ca7a439", null ],
-    [ "onScanStarted", "a00289.html#ga6d6000ab39593068d3eb3955bed886c4", null ],
-    [ "onScreensaverActivated", "a00289.html#gaec7c0588db39e824757e840bba4c3d0b", null ],
-    [ "onScreensaverDeactivated", "a00289.html#ga72fdab6e25d1882e64768c3b4fc02ada", null ],
-    [ "onSettingsChanged", "a00289.html#ga0b2faaa5bdb64710395d7b36330324a5", null ],
-    [ "waitForAbort", "a00289.html#gaef2a905f59250fe9ffbc34edfbdbbb54", null ]
+    [ "GetCurrentWindowDialogId", "a00289.html#ga4afd43d20b97e20532eeb1fac9ae6c1f", null ],
+    [ "GetCurrentWindowId", "a00289.html#ga452c9c6299140854739860045f060d28", null ],
+    [ "GetScreenHeight", "a00289.html#ga7b736bc18cc4c9b1e6229e1af312b6e3", null ],
+    [ "GetScreenWidth", "a00289.html#ga0f0cc52a3413a502953495f26270f559", null ],
+    [ "GetVideoResolution", "a00289.html#ga9e8e637bdd545cf2cd0b922d3496a64b", null ],
+    [ "Lock", "a00289.html#gace70db8e92290399a2a070eb0a60df63", null ],
+    [ "Unlock", "a00289.html#ga50f1fb5a8527c6f1beb7c59393c934a9", null ]
 ];

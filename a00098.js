@@ -1,20 +1,15 @@
 var a00098 =
 [
-    [ "ControlCheckMark", "a00098.html#a231bb25d7c85ca842488e9f6849511ab", null ],
-    [ "ControlCheckMark", "a00098.html#a2c40dc851393b09267d08813cae7b6ee", null ],
-    [ "canAcceptMessages", "a00098.html#a61158df74e0e53d710d19a7b4da37dc3", null ],
-    [ "Create", "a00098.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "getSelected", "a00316.html#ga1f9a3346caf72cfe92c1c48e92b71724", null ],
-    [ "setDisabledColor", "a00316.html#gabb99461e652ba261d6322894a64affbe", null ],
-    [ "setLabel", "a00316.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
-    [ "setSelected", "a00316.html#gad42accd39af295a957386c68dac3dcae", null ],
-    [ "align", "a00098.html#a4864c3686205158c9cab83fa95c2a15a", null ],
-    [ "checkHeight", "a00098.html#a1086fcf0dbee5eda21cb357a3dc9580c", null ],
-    [ "checkWidth", "a00098.html#a8ea46066f7b0b5addbe972c9e4cd1bb0", null ],
-    [ "disabledColor", "a00098.html#a9b7ae35a0c2326e198dab3c2ec50e94c", null ],
-    [ "strFont", "a00098.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
-    [ "strText", "a00098.html#ab456897f658d865f7c66da9ba85f6cb9", null ],
-    [ "strTextureFocus", "a00098.html#a2c94f7603cfb9d13594e648f67b55e22", null ],
-    [ "strTextureNoFocus", "a00098.html#a51d63e84bd9b53dbdc23a476df4440a9", null ],
-    [ "textColor", "a00098.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
+    [ "PlayList", "a00098.html#a5a2b1d9cebb8cfa88add301b5143a559", null ],
+    [ "~PlayList", "a00098.html#a32fcb11cefa02bee25ef859190f927ac", null ],
+    [ "add", "a00328.html#ga979e740949519ca0e88da2ff9934a4d5", null ],
+    [ "clear", "a00328.html#gac8bb3912a3ce86b15842e79d0b421204", null ],
+    [ "getPlayListId", "a00328.html#ga4d665409e02daa8ea13ce462ca44c914", null ],
+    [ "getposition", "a00328.html#ga265b7f39dcd400e1f4edaf4060af9977", null ],
+    [ "load", "a00328.html#ga2eea1635b7df085d42c973352ef10355", null ],
+    [ "operator[]", "a00328.html#gaba5d6f37d582f0512f61f32109a92d92", null ],
+    [ "remove", "a00328.html#gae363baca6026e43cc1264c5914ff69b9", null ],
+    [ "shuffle", "a00328.html#ga1905fe84eb39f020b32c58baf7a76758", null ],
+    [ "size", "a00328.html#gaf4b57d21919c42d55af03391f91a1c08", null ],
+    [ "unshuffle", "a00328.html#ga2401476232ac1b00321c9bfe8158f9c4", null ]
 ];

@@ -1,10 +1,14 @@
 var a00266 =
 [
-    [ "Addon action Id's", "a00238.html", "a00238" ],
-    [ "OnAction", "a00266.html#gad3fc2a106ba0143fa5d11d3df32d9c72", null ],
-    [ "OnClick", "a00266.html#gad741fef5d9a1d2bf07449694e9a9e602", null ],
-    [ "OnFocus", "a00266.html#ga7f69d7353e186b8fe4a1560767721501", null ],
-    [ "OnInit", "a00266.html#ga7d98c001ac8d31e48df88346e28bae16", null ],
-    [ "SetIndependentCallbacks", "a00266.html#ga5daaf4cdd5942017aa0be44ec98a7f95", null ],
-    [ "IMPLEMENT_ADDON_GUI_WINDOW", "a00266.html#ga9c9c299166319c2248b2c62548a69fbb", null ]
+    [ "CAddonGUIControlEdit", "a00266.html#gaed5a87657d03effa3bf8f3523e8c8f48", null ],
+    [ "GetCursorPosition", "a00266.html#ga8f49c265d97c7c025da04eb79d86602c", null ],
+    [ "GetLabel", "a00266.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
+    [ "GetText", "a00266.html#ga1af3f7fd8b95cc66e7599caca454f8ef", null ],
+    [ "SetCursorPosition", "a00266.html#gac0bffd1ac815193d85aa396fcfaf2397", null ],
+    [ "SetEnabled", "a00266.html#gaac893222adeffdefc04d749648cce354", null ],
+    [ "SetInputType", "a00266.html#gaf25d6c30fea27feaa77adc955bb842de", null ],
+    [ "SetLabel", "a00266.html#gab825756e641ba839bfae908492165481", null ],
+    [ "SetText", "a00266.html#ga8008c108280948ebd79830f222068455", null ],
+    [ "SetVisible", "a00266.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "~CAddonGUIControlEdit", "a00266.html#ga73829ce82d2eac94bf12aff3d718ba3e", null ]
 ];

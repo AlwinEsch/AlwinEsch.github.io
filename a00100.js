@@ -1,13 +1,10 @@
 var a00100 =
 [
-    [ "ControlFadeLabel", "a00100.html#a75091c3fbf9fafdabb9b98ee28f0a64a", null ],
-    [ "ControlFadeLabel", "a00100.html#a099013f6dfa4b09620df7bed9090abc5", null ],
-    [ "addLabel", "a00311.html#ga5c23c1e6768621ef5114c5b56a66c7c9", null ],
-    [ "Create", "a00100.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "reset", "a00308.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
-    [ "setScrolling", "a00311.html#ga37b258d64c9891a330036b19195913e1", null ],
-    [ "align", "a00100.html#a4864c3686205158c9cab83fa95c2a15a", null ],
-    [ "strFont", "a00100.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
-    [ "textColor", "a00100.html#ad24d108d90ba89e693640b8aa2ff1d71", null ],
-    [ "vecLabels", "a00100.html#ab73823089fdceaaa9798d5d0bb79d458", null ]
+    [ "Addon", "a00100.html#a0913381b26757108cd17239bcbf731e4", null ],
+    [ "~Addon", "a00100.html#a31665350e5cb1a6cdacd73dc192a13f6", null ],
+    [ "getAddonInfo", "a00352.html#gaedb0b112c76349f81e261335a6b240b9", null ],
+    [ "getLocalizedString", "a00352.html#ga79ffd96305af02e364d99c2c9d8b69de", null ],
+    [ "getSetting", "a00352.html#ga6eebe8728b7d19104a482a29abdafce2", null ],
+    [ "openSettings", "a00352.html#ga73eb9124fb7a7a5f5a89c92e0bc1fb2a", null ],
+    [ "setSetting", "a00352.html#gafd6c759c5b268d0ec1467e340323783d", null ]
 ];

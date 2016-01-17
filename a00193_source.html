@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/Keyboard.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/addons/kodi-addon-dev-kit/kodi/pvr.api2/StreamUtils.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,97 +92,120 @@ $(document).ready(function(){initNavTree('a00193_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Keyboard.h</div>  </div>
+<div class="title">StreamUtils.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00193.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="a00193.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015 Team KODI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;Exception.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span>CGUIDialogKeyboardGeneric;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00153.html">kodi/addon.api2/General.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00145.html">kodi/addon.api2/Codec.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00150.html">definations.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;xbmc_pvr_types.h&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="a00218.html">   29</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="a00218.html">XBMCAddon</a></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="a00219.html">   31</a></span>&#160;  <span class="keyword">namespace </span>xbmc</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="a00219.html#af3c0375d913f3a660121fd1153f93059">XBMCCOMMONS_STANDARD_EXCEPTION</a>(KeyboardException);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="a00089.html">   66</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00089.html">Keyboard</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="a00089.html#ab4d87e31c184cdc814b32f4dfa7d18b6">   70</a></span>&#160;      String <a class="code" href="a00089.html#ab4d87e31c184cdc814b32f4dfa7d18b6">strDefault</a>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="a00089.html#a513232d32fcff9f86df46035911255ad">   71</a></span>&#160;      String <a class="code" href="a00089.html#a513232d32fcff9f86df46035911255ad">strHeading</a>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="a00089.html#af66f90748653d4c3377dff5859b83d26">   72</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00089.html#af66f90748653d4c3377dff5859b83d26">bHidden</a>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="a00089.html#a8975bd293643341b62e4e5a7810d2efc">   73</a></span>&#160;      String <a class="code" href="a00089.html#a8975bd293643341b62e4e5a7810d2efc">strText</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="a00089.html#ae6546e334fe9729c6afe0eee76554a60">   74</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00089.html#ae6546e334fe9729c6afe0eee76554a60">bConfirmed</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <a class="code" href="a00089.html#a290b85ded95367e3801ecb1cd5d2d8f1">Keyboard</a>(<span class="keyword">const</span> String&amp; line = emptyString, <span class="keyword">const</span> String&amp; heading = emptyString, <span class="keywordtype">bool</span> hidden = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00089.html#acec86b051eb2fd163d5f5b2e19679f9e">~Keyboard</a>();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00280.html#gacc43c0ec49f492cdd85ac0e53a456be3">doModal</a>(<span class="keywordtype">int</span> autoclose = 0);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="comment">// setDefault() Method</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"></span>      <span class="keywordtype">void</span> <a class="code" href="a00280.html#ga68992de7211a3a009bba135cd4cfec9a">setDefault</a>(<span class="keyword">const</span> String&amp; line = emptyString);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00280.html#gaf88ac60d6cb1ba83c26e612582a36c24">setHiddenInput</a>(<span class="keywordtype">bool</span> hidden = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="comment">// setHeading() Method</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"></span>      <span class="keywordtype">void</span> <a class="code" href="a00280.html#ga242a05d9df9e6d69b1a3645db14833fe">setHeading</a>(<span class="keyword">const</span> String&amp; heading);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_pvr_StreamUtilsHead.h&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00242.html">PVRLIB</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">namespace </span>V2</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="a00090.html">  137</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00090.html">CPVRStream</a> : <span class="keyword">public</span> PVR_STREAM_PROPERTIES::PVR_STREAM</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="a00304.html#gaf419611a13a1bca6fe60cd58cb8a952f">CPVRStream</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="a00304.html#gaf419611a13a1bca6fe60cd58cb8a952f">CPVRStream</a>(<span class="keyword">const</span> <a class="code" href="a00090.html">CPVRStream</a> &amp;other);</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      <span class="comment">// getText() Method</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment"></span>      String <a class="code" href="a00280.html#gafab766445043570e6a82c14851366933">getText</a>();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="a00090.html">CPVRStream</a>&amp; <a class="code" href="a00304.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6">operator=</a>(<span class="keyword">const</span> <a class="code" href="a00090.html">CPVRStream</a> &amp;other);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00304.html#ga2e56127d518a6487ba46cfe720bb4904">operator==</a>(<span class="keyword">const</span> <a class="code" href="a00090.html">CPVRStream</a> &amp;other) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="comment">// isConfirmed() Method</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment"></span>      <span class="keywordtype">bool</span> <a class="code" href="a00280.html#gadfdd82b36e1da59f1e1aa139755e49eb">isConfirmed</a>();</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    };</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
-<div class="ttc" id="a00219_html_af3c0375d913f3a660121fd1153f93059"><div class="ttname"><a href="a00219.html#af3c0375d913f3a660121fd1153f93059">XBMCAddon::xbmc::XBMCCOMMONS_STANDARD_EXCEPTION</a></div><div class="ttdeci">XBMCCOMMONS_STANDARD_EXCEPTION(KeyboardException)</div></div>
-<div class="ttc" id="a00089_html_ae6546e334fe9729c6afe0eee76554a60"><div class="ttname"><a href="a00089.html#ae6546e334fe9729c6afe0eee76554a60">XBMCAddon::xbmc::Keyboard::bConfirmed</a></div><div class="ttdeci">bool bConfirmed</div><div class="ttdef"><b>Definition:</b> Keyboard.h:74</div></div>
-<div class="ttc" id="a00280_html_gadfdd82b36e1da59f1e1aa139755e49eb"><div class="ttname"><a href="a00280.html#gadfdd82b36e1da59f1e1aa139755e49eb">XBMCAddon::xbmc::Keyboard::isConfirmed</a></div><div class="ttdeci">bool isConfirmed()</div></div>
-<div class="ttc" id="a00218_html"><div class="ttname"><a href="a00218.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00280_html_ga242a05d9df9e6d69b1a3645db14833fe"><div class="ttname"><a href="a00280.html#ga242a05d9df9e6d69b1a3645db14833fe">XBMCAddon::xbmc::Keyboard::setHeading</a></div><div class="ttdeci">void setHeading(const String &amp;heading)</div></div>
-<div class="ttc" id="a00089_html_ab4d87e31c184cdc814b32f4dfa7d18b6"><div class="ttname"><a href="a00089.html#ab4d87e31c184cdc814b32f4dfa7d18b6">XBMCAddon::xbmc::Keyboard::strDefault</a></div><div class="ttdeci">String strDefault</div><div class="ttdef"><b>Definition:</b> Keyboard.h:70</div></div>
-<div class="ttc" id="a00280_html_gaf88ac60d6cb1ba83c26e612582a36c24"><div class="ttname"><a href="a00280.html#gaf88ac60d6cb1ba83c26e612582a36c24">XBMCAddon::xbmc::Keyboard::setHiddenInput</a></div><div class="ttdeci">void setHiddenInput(bool hidden=false)</div></div>
-<div class="ttc" id="a00089_html_a8975bd293643341b62e4e5a7810d2efc"><div class="ttname"><a href="a00089.html#a8975bd293643341b62e4e5a7810d2efc">XBMCAddon::xbmc::Keyboard::strText</a></div><div class="ttdeci">String strText</div><div class="ttdef"><b>Definition:</b> Keyboard.h:73</div></div>
-<div class="ttc" id="a00089_html_a290b85ded95367e3801ecb1cd5d2d8f1"><div class="ttname"><a href="a00089.html#a290b85ded95367e3801ecb1cd5d2d8f1">XBMCAddon::xbmc::Keyboard::Keyboard</a></div><div class="ttdeci">Keyboard(const String &amp;line=emptyString, const String &amp;heading=emptyString, bool hidden=false)</div></div>
-<div class="ttc" id="a00280_html_gacc43c0ec49f492cdd85ac0e53a456be3"><div class="ttname"><a href="a00280.html#gacc43c0ec49f492cdd85ac0e53a456be3">XBMCAddon::xbmc::Keyboard::doModal</a></div><div class="ttdeci">void doModal(int autoclose=0)</div></div>
-<div class="ttc" id="a00089_html_a513232d32fcff9f86df46035911255ad"><div class="ttname"><a href="a00089.html#a513232d32fcff9f86df46035911255ad">XBMCAddon::xbmc::Keyboard::strHeading</a></div><div class="ttdeci">String strHeading</div><div class="ttdef"><b>Definition:</b> Keyboard.h:71</div></div>
-<div class="ttc" id="a00089_html_acec86b051eb2fd163d5f5b2e19679f9e"><div class="ttname"><a href="a00089.html#acec86b051eb2fd163d5f5b2e19679f9e">XBMCAddon::xbmc::Keyboard::~Keyboard</a></div><div class="ttdeci">virtual ~Keyboard()</div></div>
-<div class="ttc" id="a00089_html_af66f90748653d4c3377dff5859b83d26"><div class="ttname"><a href="a00089.html#af66f90748653d4c3377dff5859b83d26">XBMCAddon::xbmc::Keyboard::bHidden</a></div><div class="ttdeci">bool bHidden</div><div class="ttdef"><b>Definition:</b> Keyboard.h:72</div></div>
-<div class="ttc" id="a00089_html"><div class="ttname"><a href="a00089.html">XBMCAddon::xbmc::Keyboard</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:66</div></div>
-<div class="ttc" id="a00280_html_gafab766445043570e6a82c14851366933"><div class="ttname"><a href="a00280.html#gafab766445043570e6a82c14851366933">XBMCAddon::xbmc::Keyboard::getText</a></div><div class="ttdeci">String getText()</div></div>
-<div class="ttc" id="a00280_html_ga68992de7211a3a009bba135cd4cfec9a"><div class="ttname"><a href="a00280.html#ga68992de7211a3a009bba135cd4cfec9a">XBMCAddon::xbmc::Keyboard::setDefault</a></div><div class="ttdeci">void setDefault(const String &amp;line=emptyString)</div></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00304.html#ga8c39a1e5e76bc953c53019e4ef318216">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="a00090.html">CPVRStream</a> &amp;other) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00304.html#gaa71d36872f416feaa853788a7a7a7ef8">Clear</a>();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00304.html#ga324d4448e5c2dde1488e1a9b4d26c7ad">IsCleared</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  };</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="comment">/*\___________________________________________________________________________</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment">  \*/</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="a00091.html">  220</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00091.html">CStreamProperties</a></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="a00305.html#ga1ebf7c021d47165548ca6320162935bb">  227</a></span>&#160;    <span class="keyword">typedef</span> std::vector&lt;CPVRStream&gt; <a class="code" href="a00305.html#ga1ebf7c021d47165548ca6320162935bb">stream_vector</a>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <a class="code" href="a00305.html#gadb5884513f2557e07249fab9f1cc447c">CStreamProperties</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="a00305.html#ga6f0282c6d4010650f5ed1075bd19da84">~CStreamProperties</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00305.html#ga666736fbd0ebb8dc7e6ff3392423d6c0">Clear</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="a00305.html#ga80239fdfa9f1d2dfea3abb949bb84b94">GetStreamId</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iPhysicalId) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="a00090.html">CPVRStream</a>* <a class="code" href="a00305.html#ga2e18a0bd69b52870b817c6c8bf0e0db6">GetStreamById</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iPhysicalId) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00305.html#ga3687926c69b0a5d8a32a73b85ce892b4">GetStreamData</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iPhysicalId, <a class="code" href="a00090.html">CPVRStream</a>* stream);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00305.html#ga4bb870e45a3ef7c81e92563b7a872618">GetProperties</a>(PVR_STREAM_PROPERTIES* props);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00305.html#ga8d64e3bab115fb9201d6f688ab350ce5">UpdateStreams</a>(stream_vector &amp;newStreams);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
+<div class="line"><a name="l00378"></a><span class="lineno"><a class="line" href="a00091.html#a5fa0e464ca4f78c4cd32d2fc4796d700">  378</a></span>&#160;    <a class="code" href="a00091.html#a5fa0e464ca4f78c4cd32d2fc4796d700">IMPL_STREAM_PROPS</a>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  };</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}; <span class="comment">/* namespace V2 */</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;}; <span class="comment">/* namespace PVRLIB */</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_pvr_StreamUtils.hpp&quot;</span></div>
+<div class="ttc" id="a00091_html"><div class="ttname"><a href="a00091.html">PVRLIB::V2::CStreamProperties</a></div><div class="ttdef"><b>Definition:</b> StreamUtils.h:220</div></div>
+<div class="ttc" id="a00304_html_gaa71d36872f416feaa853788a7a7a7ef8"><div class="ttname"><a href="a00304.html#gaa71d36872f416feaa853788a7a7a7ef8">PVRLIB::V2::CPVRStream::Clear</a></div><div class="ttdeci">void Clear()</div></div>
+<div class="ttc" id="a00242_html"><div class="ttname"><a href="a00242.html">PVRLIB</a></div><div class="ttdef"><b>Definition:</b> PVRLib.h:26</div></div>
+<div class="ttc" id="a00304_html_ga8c39a1e5e76bc953c53019e4ef318216"><div class="ttname"><a href="a00304.html#ga8c39a1e5e76bc953c53019e4ef318216">PVRLIB::V2::CPVRStream::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const CPVRStream &amp;other) const </div><div class="ttdoc">Compare about Id is above. </div></div>
+<div class="ttc" id="a00304_html_gaf419611a13a1bca6fe60cd58cb8a952f"><div class="ttname"><a href="a00304.html#gaf419611a13a1bca6fe60cd58cb8a952f">PVRLIB::V2::CPVRStream::CPVRStream</a></div><div class="ttdeci">CPVRStream()</div><div class="ttdoc">Class constructor. </div></div>
+<div class="ttc" id="a00305_html_ga80239fdfa9f1d2dfea3abb949bb84b94"><div class="ttname"><a href="a00305.html#ga80239fdfa9f1d2dfea3abb949bb84b94">PVRLIB::V2::CStreamProperties::GetStreamId</a></div><div class="ttdeci">int GetStreamId(unsigned int iPhysicalId) const </div><div class="ttdoc">Returns the index of the stream. </div></div>
+<div class="ttc" id="a00150_html"><div class="ttname"><a href="a00150.html">definations.h</a></div></div>
+<div class="ttc" id="a00305_html_ga666736fbd0ebb8dc7e6ff3392423d6c0"><div class="ttname"><a href="a00305.html#ga666736fbd0ebb8dc7e6ff3392423d6c0">PVRLIB::V2::CStreamProperties::Clear</a></div><div class="ttdeci">void Clear(void)</div><div class="ttdoc">Clear stored stream list. </div></div>
+<div class="ttc" id="a00090_html"><div class="ttname"><a href="a00090.html">PVRLIB::V2::CPVRStream</a></div><div class="ttdef"><b>Definition:</b> StreamUtils.h:137</div></div>
+<div class="ttc" id="a00304_html_ga324d4448e5c2dde1488e1a9b4d26c7ad"><div class="ttname"><a href="a00304.html#ga324d4448e5c2dde1488e1a9b4d26c7ad">PVRLIB::V2::CPVRStream::IsCleared</a></div><div class="ttdeci">bool IsCleared() const </div></div>
+<div class="ttc" id="a00091_html_a5fa0e464ca4f78c4cd32d2fc4796d700"><div class="ttname"><a href="a00091.html#a5fa0e464ca4f78c4cd32d2fc4796d700">PVRLIB::V2::CStreamProperties::IMPL_STREAM_PROPS</a></div><div class="ttdeci">IMPL_STREAM_PROPS</div><div class="ttdef"><b>Definition:</b> StreamUtils.h:378</div></div>
+<div class="ttc" id="a00305_html_ga3687926c69b0a5d8a32a73b85ce892b4"><div class="ttname"><a href="a00305.html#ga3687926c69b0a5d8a32a73b85ce892b4">PVRLIB::V2::CStreamProperties::GetStreamData</a></div><div class="ttdeci">void GetStreamData(unsigned int iPhysicalId, CPVRStream *stream)</div><div class="ttdoc">To populates the specified stream. </div></div>
+<div class="ttc" id="a00305_html_gadb5884513f2557e07249fab9f1cc447c"><div class="ttname"><a href="a00305.html#gadb5884513f2557e07249fab9f1cc447c">PVRLIB::V2::CStreamProperties::CStreamProperties</a></div><div class="ttdeci">CStreamProperties(void)</div><div class="ttdoc">Class constructor. </div></div>
+<div class="ttc" id="a00305_html_ga6f0282c6d4010650f5ed1075bd19da84"><div class="ttname"><a href="a00305.html#ga6f0282c6d4010650f5ed1075bd19da84">PVRLIB::V2::CStreamProperties::~CStreamProperties</a></div><div class="ttdeci">virtual ~CStreamProperties(void)</div><div class="ttdoc">Class Descructor. </div></div>
+<div class="ttc" id="a00145_html"><div class="ttname"><a href="a00145.html">Codec.h</a></div></div>
+<div class="ttc" id="a00153_html"><div class="ttname"><a href="a00153.html">General.h</a></div></div>
+<div class="ttc" id="a00304_html_ga2e56127d518a6487ba46cfe720bb4904"><div class="ttname"><a href="a00304.html#ga2e56127d518a6487ba46cfe720bb4904">PVRLIB::V2::CPVRStream::operator==</a></div><div class="ttdeci">bool operator==(const CPVRStream &amp;other) const </div></div>
+<div class="ttc" id="a00304_html_ga7b1eb5fcb43d86807d0df66f0b9c74e6"><div class="ttname"><a href="a00304.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6">PVRLIB::V2::CPVRStream::operator=</a></div><div class="ttdeci">CPVRStream &amp; operator=(const CPVRStream &amp;other)</div><div class="ttdoc">Copy stream class. </div></div>
+<div class="ttc" id="a00305_html_ga4bb870e45a3ef7c81e92563b7a872618"><div class="ttname"><a href="a00305.html#ga4bb870e45a3ef7c81e92563b7a872618">PVRLIB::V2::CStreamProperties::GetProperties</a></div><div class="ttdeci">bool GetProperties(PVR_STREAM_PROPERTIES *props)</div><div class="ttdoc">To populates properties for Kodi. </div></div>
+<div class="ttc" id="a00305_html_ga1ebf7c021d47165548ca6320162935bb"><div class="ttname"><a href="a00305.html#ga1ebf7c021d47165548ca6320162935bb">PVRLIB::V2::CStreamProperties::stream_vector</a></div><div class="ttdeci">std::vector&lt; CPVRStream &gt; stream_vector</div><div class="ttdoc">Type defination for stream_vector. </div><div class="ttdef"><b>Definition:</b> StreamUtils.h:227</div></div>
+<div class="ttc" id="a00305_html_ga2e18a0bd69b52870b817c6c8bf0e0db6"><div class="ttname"><a href="a00305.html#ga2e18a0bd69b52870b817c6c8bf0e0db6">PVRLIB::V2::CStreamProperties::GetStreamById</a></div><div class="ttdeci">CPVRStream * GetStreamById(unsigned int iPhysicalId) const </div><div class="ttdoc">Get the stored stream if present. </div></div>
+<div class="ttc" id="a00305_html_ga8d64e3bab115fb9201d6f688ab350ce5"><div class="ttname"><a href="a00305.html#ga8d64e3bab115fb9201d6f688ab350ce5">PVRLIB::V2::CStreamProperties::UpdateStreams</a></div><div class="ttdeci">void UpdateStreams(stream_vector &amp;newStreams)</div><div class="ttdoc">Update streams. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00193.html">Keyboard.h</a></li>
+    <li class="navelem"><a class="el" href="dir_3b29b88e633d0e7decc99dfac3f67a6c.html">kodi</a></li><li class="navelem"><a class="el" href="dir_18238faf55c2956d175fb23354f98ed8.html">pvr.api2</a></li><li class="navelem"><a class="el" href="a00193.html">StreamUtils.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

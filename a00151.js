@@ -1,11 +1,8 @@
 var a00151 =
 [
-    [ "copy", "a00182.html#ga9188bb84632ebdbc54faca1de9be95c3", null ],
-    [ "deleteFile", "a00182.html#gabf13e7bae1c97bc1c4188f3e4e459f95", null ],
-    [ "exists", "a00182.html#ga12691f7bf1c5e55da57b18f63f6fbdca", null ],
-    [ "listdir", "a00182.html#ga6bb30280e2eb7d5b94cfb0eb6e65b0cb", null ],
-    [ "mkdir", "a00182.html#gaf69897d9a5235e87828a9e75c1cae4ca", null ],
-    [ "mkdirs", "a00182.html#ga229e97a6a47bdff0122f1004c4feda5c", null ],
-    [ "rename", "a00182.html#gaefc98ff66890f353b4ea7fd620b63808", null ],
-    [ "rmdir", "a00182.html#gac83ea5fb566ee294cdd87c74c6697025", null ]
+    [ "MAX_OBJECTS", "a00151.html#acdc7844fbd4d45737d4aa56834d37829", null ],
+    [ "dlclose", "a00151.html#af483b6c4400965aa885f9f1a144138a5", null ],
+    [ "dlerror", "a00151.html#a541c343ae5cdf90926014c65972c86cc", null ],
+    [ "dlopen", "a00151.html#a8668245fcfc33ca414d3d27ca038891a", null ],
+    [ "dlsym", "a00151.html#af130d2e6324246be4262ecaaed674aa4", null ]
 ];

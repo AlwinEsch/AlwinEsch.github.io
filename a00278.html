@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CPVRStream</title>
+<title>Kodi Development: CAddonGUIDialogFileBrowser</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,231 +92,474 @@ $(document).ready(function(){initNavTree('a00278.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CPVRStream<div class="ingroups"><a class="el" href="a00324.html">C++ Development</a> &raquo; <a class="el" href="a00274.html">Library - PVRLIB</a></div></div>  </div>
+<div class="title">CAddonGUIDialogFileBrowser<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a> &raquo; <a class="el" href="a00286.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>PVR stream properties data class</b> </p>
-<p>Represents a single stream. It extends the PODS to provide some operators overloads.</p>
-<p>All for one PVR stream needed data can be becomes stored inside this class to have it available on requests.</p>
-<hr/>
-<p><b>PVR stream properties:</b></p>
-<p>Structure here shows the construction that is used on the PVR system and in this class (<a class="el" href="a00084.html">CPVRStream</a>) can be edited. </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * PVR stream properties</span></div>
+<p><b>File browser dialog</b> </p>
+<p>The functions listed below of the class "CAddonGUIDialogFileBrowser" offer the possibility to select to a file by the user of the add-on.</p>
+<p>It allows all the options that are possible in Kodi itself and offers all support file types.</p>
+<p>These are pure static functions them no other initialization need.</p>
+<p>It has the header <a class="el" href="a00172.html">#include &lt;kodi/gui.api2/GUIDialogFileBrowser.h&gt;</a> be included to enjoy it.</p>
+<div class="image">
+<img src="help.GUIDialogFileBrowser.png" alt="help.GUIDialogFileBrowser.png"/>
+</div>
+ <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gab1c3767a978a71751a8ea550d449eed6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ShowAndGetDirectory </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shares</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bWriteOnly</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Directory selection dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected directory </td></tr>
+    <tr><td class="paramname">bWriteOnly</td><td>If set only writeable folders are shown. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled.</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00172.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Example show directory selection dialog with on &#39;share&#39; (first value)</span></div>
+<div class="line"><span class="comment"> * defined directory types.</span></div>
 <div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_STREAM_PROPERTIES</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iStreamCount;</div>
-<div class="line">  <span class="keyword">struct </span>PVR_STREAM</div>
-<div class="line">  {</div>
-<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iPhysicalId;        <span class="comment">/* physical index */</span></div>
-<div class="line">    <a class="code" href="a00138.html#adb311b9a66ccf6cbc77137e0af86be2a">kodi_codec_type</a>   iCodecType;         <span class="comment">/* codec type this stream */</span></div>
-<div class="line">    <a class="code" href="a00138.html#a5f36d5652cd9f943a40f0a2c4495a74a">kodi_codec_id</a>     iCodecId;           <span class="comment">/* codec id of this stream */</span></div>
-<div class="line">    <span class="keywordtype">char</span>              strLanguage[4];     <span class="comment">/* language id */</span></div>
-<div class="line">    <span class="keywordtype">int</span>               iIdentifier;        <span class="comment">/* stream id */</span></div>
-<div class="line">    <span class="keywordtype">int</span>               iFPSScale;          <span class="comment">/* scale of 1000 and a rate of 29970 will result in 29.97 fps */</span></div>
-<div class="line">    <span class="keywordtype">int</span>               iFPSRate;           <span class="comment">/* FPS rate */</span></div>
-<div class="line">    <span class="keywordtype">int</span>               iHeight;            <span class="comment">/* height of the stream reported by the demuxer */</span></div>
-<div class="line">    <span class="keywordtype">int</span>               iWidth;             <span class="comment">/* width of the stream reported by the demuxer */</span></div>
-<div class="line">    <span class="keywordtype">float</span>             fAspect;            <span class="comment">/* display aspect ratio of the stream */</span></div>
-<div class="line">    <span class="keywordtype">int</span>               iChannels;          <span class="comment">/* amount of channels */</span></div>
-<div class="line">    <span class="keywordtype">int</span>               iSampleRate;        <span class="comment">/* sample rate */</span></div>
-<div class="line">    <span class="keywordtype">int</span>               iBlockAlign;        <span class="comment">/* block alignment */</span></div>
-<div class="line">    <span class="keywordtype">int</span>               iBitRate;           <span class="comment">/* bit rate */</span></div>
-<div class="line">    <span class="keywordtype">int</span>               iBitsPerSample;     <span class="comment">/* bits per sample */</span></div>
-<div class="line">   } stream[PVR_STREAM_MAX_STREAMS];      <span class="comment">/* the streams */</span></div>
-<div class="line">} <a class="code" href="a00141.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_STREAM_PROPERTIES;</div>
-</div><!-- fragment --><p>It has the header <a class="el" href="a00185.html">#include &lt;kodi/pvr.api2/StreamUtils.h&gt;</a> be included to enjoy it.</p>
-<hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Note: This is only a example to show the easiest use of them, for</span></div>
-<div class="line"><span class="comment"> * them is always only one and the same stream type present.</span></div>
+<div class="line"><span class="comment"> * If this becomes leaved empty and &#39;directory&#39; is empty goes it to the</span></div>
+<div class="line"><span class="comment"> * base path of the hard disk.</span></div>
 <div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * The class CStreamProperties is designed to store several streams</span></div>
-<div class="line"><span class="comment"> * and to alow updates of codec Id&#39;s during usage of them.</span></div>
+<div class="line"><span class="comment"> * Also can be with path written to &#39;directory&#39; before the dialog forced</span></div>
+<div class="line"><span class="comment"> * to a start place.</span></div>
 <div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00185.html">kodi/pvr.api2/StreamUtils.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">CStreamProperties activeChannelStreams;</div>
-<div class="line">...</div>
-<div class="line">void UpdateStreams()</div>
-<div class="line">{</div>
-<div class="line">  CodecDescriptor codecId = CodecDescriptor::GetCodecByName(<span class="stringliteral">&quot;pcm_f32le&quot;</span>);</div>
-<div class="line">  <span class="keywordflow">if</span> (codecId.Codec().codec_type == XBMC_CODEC_TYPE_AUDIO)</div>
-<div class="line">  {</div>
-<div class="line">    CPVRStream newStream;</div>
-<div class="line">    <span class="comment">/* Get the stream data if already present and do only update */</span></div>
-<div class="line">    activeChannelStreams.GetStreamData(1, &amp;newStream);</div>
-<div class="line"></div>
-<div class="line">    newStream.iCodecType      = codecId.Codec().codec_type;</div>
-<div class="line">    newStream.iCodecId        = codecId.Codec().codec_id;</div>
-<div class="line">    newStream.iChannels       = 2;</div>
-<div class="line">    newStream.iSampleRate     = 48000;</div>
-<div class="line">    newStream.iBitsPerSample  = 32;</div>
-<div class="line">    newStream.iBitRate        = newStream.iSampleRate * newStream.iChannels * newStream.iBitsPerSample;</div>
-<div class="line">    newStream.strLanguage[0]  = 0;</div>
-<div class="line">    newStream.strLanguage[1]  = 0;</div>
-<div class="line">    newStream.strLanguage[2]  = 0;</div>
-<div class="line">    newStream.strLanguage[3]  = 0;</div>
-<div class="line">    newStream.iIdentifier     = -1;</div>
-<div class="line"></div>
-<div class="line">    newStreams.push_back(newStream);</div>
-<div class="line">    activeChannelStreams.UpdateStreams(newStreams);</div>
-<div class="line">  }</div>
-<div class="line">  <span class="keywordflow">else</span></div>
-<div class="line">  {</div>
-<div class="line">    activeChannelStreams.Clear();</div>
-<div class="line">  }</div>
-<div class="line">}</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gaa71d36872f416feaa853788a7a7a7ef8"></a>
+<div class="line">std::string directory;</div>
+<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00278.html#gab1c3767a978a71751a8ea550d449eed6">CAddonGUIDialogFileBrowser::ShowAndGetDirectory</a>(<span class="stringliteral">&quot;local|network|removable&quot;</span>,</div>
+<div class="line">                                                   <span class="stringliteral">&quot;Test directory selection&quot;</span>,</div>
+<div class="line">                                                   directory,</div>
+<div class="line">                                                   <span class="keyword">false</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Selected directory is : %s and was %s\n&quot;</span>, directory.c_str(), ret ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga5924085e93999a96dc9fc5a6c5f9362b"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Clear </td>
+          <td class="memname">static bool ShowAndGetFile </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shares</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Clears the present stream data on class. </p>
-
-</div>
-</div>
-<a class="anchor" id="gaf419611a13a1bca6fe60cd58cb8a952f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">CPVRStream </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Class constructor. </p>
-
-</div>
-</div>
-<a class="anchor" id="gad8caf56bf234506f41c1fcc64a0d1ad7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">CPVRStream </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00084.html">CPVRStream</a> &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Class constructor to create copy of them. </p>
+<p>File selection dialog. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>The other stream class to copy from </td></tr>
+    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected file </td></tr>
+    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
+    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5ef242152a302da9ab13f61ca77b7ac3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ShowAndGetFileFromDir </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>directory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>singleList</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File selection from a directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">directory</td><td>The directory name where the dialog start, possible are normal names and kodi's special names. </td></tr>
+    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected file </td></tr>
+    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
+    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
+    <tr><td class="paramname"></td><td></td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga324d4448e5c2dde1488e1a9b4d26c7ad"></a>
+<a class="anchor" id="ga11dac37e6c6fd7dcaa18997d54e90b1a"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsCleared </td>
+          <td class="memname">static bool ShowAndGetFileList </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shares</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-<p>Checks whether the stream has been cleared or not.</p>
-<dl class="section return"><dt>Returns</dt><dd>true if cleared </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga8c39a1e5e76bc953c53019e4ef318216"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">bool operator&lt; </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00084.html">CPVRStream</a> &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compare about Id is above. </p>
-<p>Compares this stream with another one so that video streams are sorted before any other streams and the others are sorted by the physical ID</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Other stream to compare from </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the other have a higher Id </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga7b1eb5fcb43d86807d0df66f0b9c74e6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CPVRStream&amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00084.html">CPVRStream</a> &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Copy stream class. </p>
-<p>Overwrite stream class with data from other stream</p>
+<p>File selection dialog to get several in to a list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>The other stream class to copy from </td></tr>
+    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected files </td></tr>
+    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
+    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga2e56127d518a6487ba46cfe720bb4904"></a>
+<a class="anchor" id="ga10785676725a192799092e82ae4a68ba"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool operator== </td>
+          <td class="memname">static bool ShowAndGetImage </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00084.html">CPVRStream</a> &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shares</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Compares this stream based on another stream</p>
+
+<p>Image selection dialog. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Other stream to compare from </td></tr>
+    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected image </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if equal, otherwise false </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad8c149a33ac60207e2953244f72f7a1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ShowAndGetImageList </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shares</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Image selection dialog to get several in to a list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected images </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab582e8181c1569b7ff713e8924c4aa73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ShowAndGetSource </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allowNetworkShares</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>additionalShare</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>type</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Source selection dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Return</td><td>value about selected source </td></tr>
+    <tr><td class="paramname">Allow</td><td>also access to network </td></tr>
+    <tr><td class="paramname">With</td><td>additionalShare becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">type</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
 
 </div>
 </div>
