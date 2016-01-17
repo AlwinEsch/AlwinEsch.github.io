@@ -1,11 +1,15 @@
 var a00093 =
 [
-    [ "ControlSlider", "a00093.html#ac45505fb23d3fd20687337c35f347f7e", null ],
-    [ "ControlSlider", "a00093.html#a37a27a85a4dd0d13f7233061e749f865", null ],
+    [ "ControlProgress", "a00093.html#a8f64177aa9c9fdecd0b8ede01cb25b92", null ],
+    [ "ControlProgress", "a00093.html#abef3214d1c9bccc3777c244126d76e4d", null ],
     [ "Create", "a00093.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "getPercent", "a00301.html#gad3e5815badb78551841c44d9b5ae3742", null ],
-    [ "setPercent", "a00301.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ],
-    [ "strTexture", "a00093.html#aca02fb07ae30257c0fa2adfa82de925c", null ],
-    [ "strTextureBack", "a00093.html#a5dae9258f23ccac9d94586346b015fc3", null ],
-    [ "strTextureFoc", "a00093.html#a5403da28109017430519960b7e555354", null ]
+    [ "getPercent", "a00299.html#gad3e5815badb78551841c44d9b5ae3742", null ],
+    [ "setPercent", "a00299.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ],
+    [ "aspectRatio", "a00093.html#a62de7670850188b84202355774caa6a8", null ],
+    [ "colorDiffuse", "a00093.html#aeb3be9119c45fbe967380716174f877f", null ],
+    [ "strTextureBg", "a00093.html#a2e7730cc4604a2ce37a5af98556a878f", null ],
+    [ "strTextureLeft", "a00093.html#a5355840cd96b1dc3dd54bffbb317b93b", null ],
+    [ "strTextureMid", "a00093.html#a03fbb21bc4a963512d54452bbb6ee6fb", null ],
+    [ "strTextureOverlay", "a00093.html#a2c1fea102a7cf036617c3c534292aa20", null ],
+    [ "strTextureRight", "a00093.html#ac1685244f6b420ce72a08ccb2beb849a", null ]
 ];

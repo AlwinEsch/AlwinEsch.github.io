@@ -1,16 +1,13 @@
 var a00238 =
 [
-    [ "Abort", "a00238.html#ga71e9d732335846eb579f0dd00918b3e7", null ],
-    [ "CAddonGUIDialogProgress", "a00238.html#gac076fba6e17d71b4ce5b330855fb8902", null ],
-    [ "GetPercentage", "a00238.html#gae20eeb097c9ebe3506bd1d2bb3d92fda", null ],
-    [ "IsCanceled", "a00238.html#gaf76bcf12aaec9ab845ea61853a37a33c", null ],
-    [ "Open", "a00238.html#ga5e53001785ff30ae485a113b9b8a0ddc", null ],
-    [ "SetCanCancel", "a00238.html#ga13580b7f84c1c13f90c1d030ef61faf8", null ],
-    [ "SetHeading", "a00238.html#gaf6377691fa79c14e16aebaeb9d340b33", null ],
-    [ "SetLine", "a00238.html#ga845054cd7ff1978a112126086a8ec5ba", null ],
-    [ "SetPercentage", "a00238.html#gadf0353f59469e4b0cab327ea7df9cae8", null ],
-    [ "SetProgressAdvance", "a00238.html#gafe4b80962f0d7bdd3b0a73b83ef06323", null ],
-    [ "SetProgressMax", "a00238.html#gad397a19fe15c25e5077d34fd43da6e5a", null ],
-    [ "ShowProgressBar", "a00238.html#ga4ef9882ff90cb3878eb846335e2b3c07", null ],
-    [ "~CAddonGUIDialogProgress", "a00238.html#ga120fc408bff359c7c29a02551c00e9a0", null ]
+    [ "IsKeyboardActivated", "a00238.html#ga1ec4a068299863443fe39fcf4969e0df", null ],
+    [ "SendTextToActiveKeyboard", "a00238.html#ga3d85e8d21bc1fbdf8f946d3c7755005c", null ],
+    [ "ShowAndGetFilter", "a00238.html#gaa57c673c6a2d27bc9114ca557e9c5852", null ],
+    [ "ShowAndGetInput", "a00238.html#ga83b1e91927a105607762c38ea9e1dcb7", null ],
+    [ "ShowAndGetInput", "a00238.html#gac455ca6ff288c07edf7de7d5a0f28d80", null ],
+    [ "ShowAndGetNewPassword", "a00238.html#ga1b75480e0428c2eb657e9e3df1c5f6b3", null ],
+    [ "ShowAndGetNewPassword", "a00238.html#ga74b411283e562425ab3f6d2c01d1f229", null ],
+    [ "ShowAndVerifyNewPassword", "a00238.html#gaf03bd1a86951ae9a1b5f91a901957e11", null ],
+    [ "ShowAndVerifyNewPassword", "a00238.html#gab0b3eb13c8faa5d58e8e7eb59b7c50a9", null ],
+    [ "ShowAndVerifyPassword", "a00238.html#ga48bdcccb89234aad454a6be1cf219928", null ]
 ];

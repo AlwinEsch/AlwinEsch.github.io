@@ -1,7 +1,8 @@
 var a00200 =
 [
-    [ "xbmc", "a00201.html", "a00201" ],
-    [ "xbmcaddon", "a00202.html", "a00202" ],
-    [ "xbmcgui", "a00203.html", "a00203" ],
-    [ "xbmcvfs", "a00204.html", "a00204" ]
+    [ "CPlayerLib", "a00064.html", "a00064" ],
+    [ "CPlayerLib_InfoTagMusic", "a00065.html", "a00065" ],
+    [ "CPlayerLib_InfoTagVideo", "a00066.html", "a00066" ],
+    [ "CPlayerLib_Player", "a00067.html", "a00067" ],
+    [ "CPlayerLib_PlayList", "a00068.html", "a00068" ]
 ];

@@ -1,8 +1,9 @@
 var a00024 =
 [
-    [ "CodecDescriptor", "a00024.html#a0ce9286b79ecef72bdf531ffb02e73d3", null ],
-    [ "CodecDescriptor", "a00024.html#a01b78d89cc9425c3b3cce1192f0fa6c4", null ],
-    [ "~CodecDescriptor", "a00024.html#a8a61d5619aaa653c3e35d65807bf725b", null ],
-    [ "Codec", "a00208.html#ga62b7b43b626a9b8beb0f16a8795b9d91", null ],
-    [ "Name", "a00208.html#gab29906ba5407bb58b86428cb4b4a1e26", null ]
+    [ "CAddonLib_VFSProperty", "a00216.html#ga965d127e0d0de44d06a0e6da2ca8f829", null ],
+    [ "Name", "a00216.html#gab29906ba5407bb58b86428cb4b4a1e26", null ],
+    [ "SetName", "a00216.html#ga940d484bb6523277e1d2c742f4f534a4", null ],
+    [ "SetValue", "a00216.html#ga69925f195530e698e569191bd4c3470c", null ],
+    [ "Value", "a00216.html#ga7533eecbdf0c0c538dd01e03fdf8f2ad", null ],
+    [ "IMPL_VFS_PROPERTY", "a00024.html#a6f6cad3c4a0e6b003c8617cd277d0b38", null ]
 ];

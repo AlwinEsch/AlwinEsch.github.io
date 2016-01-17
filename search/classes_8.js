@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['monitor',['Monitor',['../a00076.html',1,'XBMCAddon::xbmc']]]
+  ['monitor',['Monitor',['../a00078.html',1,'XBMCAddon::xbmc']]]
 ];

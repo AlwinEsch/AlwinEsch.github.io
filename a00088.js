@@ -1,11 +1,13 @@
 var a00088 =
 [
-    [ "ControlImage", "a00088.html#a9be115122b3309a7a738fb31643d81d1", null ],
-    [ "ControlImage", "a00088.html#ae6699f77d4ffa346eed9e00b7cadc7ef", null ],
+    [ "ControlFadeLabel", "a00088.html#a75091c3fbf9fafdabb9b98ee28f0a64a", null ],
+    [ "ControlFadeLabel", "a00088.html#a099013f6dfa4b09620df7bed9090abc5", null ],
+    [ "addLabel", "a00296.html#ga5c23c1e6768621ef5114c5b56a66c7c9", null ],
     [ "Create", "a00088.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "setColorDiffuse", "a00295.html#ga3b0c15e0d82d8605f4b3ad82aaa42c16", null ],
-    [ "setImage", "a00295.html#ga7ba591029ef61ca17851a9f02a1fe5dc", null ],
-    [ "aspectRatio", "a00088.html#a62de7670850188b84202355774caa6a8", null ],
-    [ "colorDiffuse", "a00088.html#aeb3be9119c45fbe967380716174f877f", null ],
-    [ "strFileName", "a00088.html#a0faec04d22e256f2777cddfaeab1d673", null ]
+    [ "reset", "a00293.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
+    [ "setScrolling", "a00296.html#ga37b258d64c9891a330036b19195913e1", null ],
+    [ "align", "a00088.html#a4864c3686205158c9cab83fa95c2a15a", null ],
+    [ "strFont", "a00088.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "textColor", "a00088.html#ad24d108d90ba89e693640b8aa2ff1d71", null ],
+    [ "vecLabels", "a00088.html#ab73823089fdceaaa9798d5d0bb79d458", null ]
 ];

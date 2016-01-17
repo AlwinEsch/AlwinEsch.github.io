@@ -1,8 +1,8 @@
 var a00256 =
 [
-    [ "CPVRLib", "a00257.html", "a00257" ],
-    [ "CPVRLib_Transfer", "a00258.html", "a00258" ],
-    [ "CPVRLib_Trigger", "a00259.html", "a00259" ],
-    [ "CPVRStream", "a00260.html", "a00260" ],
-    [ "CStreamProperties", "a00261.html", "a00261" ]
+    [ "CPlayerLib", "a00257.html", "a00257" ],
+    [ "CPlayerLib_InfoTagMusic", "a00254.html", "a00254" ],
+    [ "CPlayerLib_InfoTagVideo", "a00255.html", "a00255" ],
+    [ "CPlayerLib_PlayList", "a00258.html", "a00258" ],
+    [ "CPlayerLib_Player", "a00252.html", "a00252" ]
 ];

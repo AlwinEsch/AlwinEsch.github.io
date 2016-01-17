@@ -1,12 +1,10 @@
 var a00280 =
 [
-    [ "Subclass - WindowDialogXML", "a00281.html", null ],
-    [ "addItem", "a00280.html#ga87ffff74f065758ae9884ecc87102af1", null ],
-    [ "clearList", "a00280.html#ga612285c5b9d603a0abb0feab44b8412f", null ],
-    [ "getCurrentListPosition", "a00280.html#ga860b30302751103052456bb1f1079980", null ],
-    [ "getListItem", "a00280.html#ga37ec44d83350b3e4c5b4f7a2648bfc01", null ],
-    [ "getListSize", "a00280.html#ga7b00dc949b12149360563a1941956fc7", null ],
-    [ "removeItem", "a00280.html#ga214d46ad5cb6e318163ba98e0dd780ac", null ],
-    [ "setCurrentListPosition", "a00280.html#gabaeb49593088c3be9c7a232d50152e34", null ],
-    [ "setProperty", "a00280.html#ga3171b661458f56e0f0af6e264ac09bf3", null ]
+    [ "Action Id's", "a00281.html", "a00281" ],
+    [ "onAction", "a00280.html#ga46acbc2206f67d5f8e1d44d3ebe4fa68", null ],
+    [ "onClick", "a00280.html#gad031aa7d2b1fcedaac6ad481e2e85757", null ],
+    [ "onControl", "a00280.html#ga3d8a5f47cd756f21b4744eed7ede8634", null ],
+    [ "onDoubleClick", "a00280.html#ga25347e21254d60dc94028d2ed6a0c5ed", null ],
+    [ "onFocus", "a00280.html#ga32655043662a872fb86801fe5e8e1e41", null ],
+    [ "onInit", "a00280.html#ga5a0ef4163216ec8833eb3a524f7fd80e", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/ModuleXbmcvfs.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/ModuleXbmc.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('a00180_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">ModuleXbmcvfs.h</div>  </div>
+<div class="title">ModuleXbmc.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00180.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
@@ -115,57 +115,167 @@ $(document).ready(function(){initNavTree('a00180_source.html','');});
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;Tuple.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00200.html">XBMCAddon</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">namespace </span>xbmcvfs</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00272.html#ga9188bb84632ebdbc54faca1de9be95c3">copy</a>(<span class="keyword">const</span> String&amp; strSource, <span class="keyword">const</span> String&amp; strDestnation);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00272.html#gabf13e7bae1c97bc1c4188f3e4e459f95">deleteFile</a>(<span class="keyword">const</span> String&amp; file);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;Tuple.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//#include &quot;Monitor.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;utils/LangCodeExpander.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;swighelper.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00203.html">XBMCAddon</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// This is a bit of a hack to get around a SWIG problem</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">int</span> lLOGDEBUG;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00271.html#gaae1f9e78fc2e0e63f68dfe93f8e65cf9">log</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* msg, <span class="keywordtype">int</span> level = lLOGDEBUG);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00272.html#gaefc98ff66890f353b4ea7fd620b63808">rename</a>(<span class="keyword">const</span> String&amp; file, <span class="keyword">const</span> String&amp; newFile);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00272.html#ga12691f7bf1c5e55da57b18f63f6fbdca">exists</a>(<span class="keyword">const</span> String&amp; path);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00272.html#gaf69897d9a5235e87828a9e75c1cae4ca">mkdir</a>(<span class="keyword">const</span> String&amp; path);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00272.html#ga229e97a6a47bdff0122f1004c4feda5c">mkdirs</a>(<span class="keyword">const</span> String&amp; path);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00272.html#gac83ea5fb566ee294cdd87c74c6697025">rmdir</a>(<span class="keyword">const</span> String&amp; path, <span class="keywordtype">bool</span> force = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    Tuple&lt;std::vector&lt;String&gt;, std::vector&lt;String&gt; &gt; <a class="code" href="a00272.html#ga6bb30280e2eb7d5b94cfb0eb6e65b0cb">listdir</a>(<span class="keyword">const</span> String&amp; path);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="a00272_html_ga9188bb84632ebdbc54faca1de9be95c3"><div class="ttname"><a href="a00272.html#ga9188bb84632ebdbc54faca1de9be95c3">copy</a></div><div class="ttdeci">bool copy(const String &amp;strSource, const String &amp;strDestnation)</div></div>
-<div class="ttc" id="a00272_html_ga229e97a6a47bdff0122f1004c4feda5c"><div class="ttname"><a href="a00272.html#ga229e97a6a47bdff0122f1004c4feda5c">mkdirs</a></div><div class="ttdeci">bool mkdirs(const String &amp;path)</div><div class="ttdoc">Make all directories along the path. </div></div>
-<div class="ttc" id="a00272_html_gaf69897d9a5235e87828a9e75c1cae4ca"><div class="ttname"><a href="a00272.html#gaf69897d9a5235e87828a9e75c1cae4ca">mkdir</a></div><div class="ttdeci">bool mkdir(const String &amp;path)</div><div class="ttdoc">Create a folder. </div></div>
-<div class="ttc" id="a00272_html_gabf13e7bae1c97bc1c4188f3e4e459f95"><div class="ttname"><a href="a00272.html#gabf13e7bae1c97bc1c4188f3e4e459f95">deleteFile</a></div><div class="ttdeci">bool deleteFile(const String &amp;file)</div><div class="ttdoc">Delete a file. </div></div>
-<div class="ttc" id="a00272_html_ga6bb30280e2eb7d5b94cfb0eb6e65b0cb"><div class="ttname"><a href="a00272.html#ga6bb30280e2eb7d5b94cfb0eb6e65b0cb">listdir</a></div><div class="ttdeci">Tuple&lt; std::vector&lt; String &gt;, std::vector&lt; String &gt; &gt; listdir(const String &amp;path)</div><div class="ttdoc">Lists content of a folder. </div></div>
-<div class="ttc" id="a00200_html"><div class="ttname"><a href="a00200.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00272_html_gaefc98ff66890f353b4ea7fd620b63808"><div class="ttname"><a href="a00272.html#gaefc98ff66890f353b4ea7fd620b63808">rename</a></div><div class="ttdeci">bool rename(const String &amp;file, const String &amp;newFile)</div><div class="ttdoc">Rename a file. </div></div>
-<div class="ttc" id="a00272_html_gac83ea5fb566ee294cdd87c74c6697025"><div class="ttname"><a href="a00272.html#gac83ea5fb566ee294cdd87c74c6697025">rmdir</a></div><div class="ttdeci">bool rmdir(const String &amp;path, bool force=false)</div><div class="ttdoc">Remove a folder. </div></div>
-<div class="ttc" id="a00272_html_ga12691f7bf1c5e55da57b18f63f6fbdca"><div class="ttname"><a href="a00272.html#ga12691f7bf1c5e55da57b18f63f6fbdca">exists</a></div><div class="ttdeci">bool exists(const String &amp;path)</div><div class="ttdoc">Check for a file or folder existance. </div></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00271.html#ga7861ee1569802186a619778efc85af13">shutdown</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00271.html#ga22ee094ca3f45aa4156b97d34fe678bf">restart</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00271.html#gaa3118b469b016e7b610aec2851a0c7de">executescript</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* script);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00271.html#ga3437cf59c9fc815524d7aaf98077e210">executebuiltin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keyword">function</span>, <span class="keywordtype">bool</span> wait = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    String <a class="code" href="a00271.html#gaa95cd758379b99b479c2c01bdf79897e">executeJSONRPC</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* jsonrpccommand);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00271.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(<span class="keywordtype">long</span> timemillis);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    String <a class="code" href="a00271.html#ga79ffd96305af02e364d99c2c9d8b69de">getLocalizedString</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    String <a class="code" href="a00271.html#ga2a0ea95992942d1cbaceb3f0bfaa9240">getSkinDir</a>();</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    String <a class="code" href="a00271.html#gae3afd43404337c2c800bfeadc68c46f3">getLanguage</a>(<span class="keywordtype">int</span> format = CLangCodeExpander::ENGLISH_NAME, <span class="keywordtype">bool</span> region = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    String <a class="code" href="a00271.html#ga6c0ea0a1473226b04455c61e679450e3">getIPAddress</a>();</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordtype">long</span> <a class="code" href="a00271.html#ga9356056e34f878388950bce99f91d91c">getDVDState</a>();</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordtype">long</span> <a class="code" href="a00271.html#ga1823d67ecf8c303c31892e2f39bc7123">getFreeMem</a>();</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    String <a class="code" href="a00271.html#ga4266cdf4540b57b10de937df1d4dd024">getInfoLabel</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* infotag);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    String <a class="code" href="a00271.html#ga3a7d6dc03a52554f607527314b281e36">getInfoImage</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* infotag);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00271.html#ga30c84926c8fcac04a99d4cf18fc8fae6">playSFX</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename, <span class="keywordtype">bool</span> useCached = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00271.html#ga3ad39f5a4a65222868520149fbdada32">stopSFX</a>();</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00271.html#ga8d27375b9d28a87af69d900c4de8758b">enableNavSounds</a>(<span class="keywordtype">bool</span> yesNo);</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00271.html#gac96b749cc54ebd3596e4acefee5123dc">getCondVisibility</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* condition);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="a00271.html#ga8e11c9b5d2d375b90578bf01a04ba50c">getGlobalIdleTime</a>();</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    String <a class="code" href="a00271.html#gaf3d104f3a22481b0f98d08150811d1a4">getCacheThumbName</a>(<span class="keyword">const</span> String&amp; path);</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    String <a class="code" href="a00271.html#gabcec0705cb849f38c7f56ff35ddd74cd">makeLegalFilename</a>(<span class="keyword">const</span> String&amp; filename,<span class="keywordtype">bool</span> fatX = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    String <a class="code" href="a00271.html#ga77f8d61db7757aa22df826a904cc3a8d">translatePath</a>(<span class="keyword">const</span> String&amp; path);</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    Tuple&lt;String,String&gt; <a class="code" href="a00271.html#ga3393e5440a103195e85dcb93a1819baa">getCleanMovieTitle</a>(<span class="keyword">const</span> String&amp; path, <span class="keywordtype">bool</span> usefoldername = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    String <a class="code" href="a00271.html#ga203ba5035eca7af26370c4480c1302bd">validatePath</a>(<span class="keyword">const</span> String&amp; path);</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    String <a class="code" href="a00271.html#ga28e4561db93f334227e20f8a59444655">getRegion</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    String <a class="code" href="a00271.html#ga77273fcb1269dfb375a644b59a999d24">getSupportedMedia</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* mediaType);</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00271.html#ga87711c98acae5f0cb3bef1bcbc1874c7">skinHasImage</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* image);</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00271.html#ga7f7ef28b88ebff7b94290f78912b73a4">startServer</a>(<span class="keywordtype">int</span> iTyp, <span class="keywordtype">bool</span> bStart, <span class="keywordtype">bool</span> bWait = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00271.html#ga2babadc0bebb8422edc6d40b11d0d2f7">audioSuspend</a>();</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00271.html#gaee0301aad7c7ba0deac7b51d046c59b6">audioResume</a>();</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    String <a class="code" href="a00271.html#ga513f9a03c302f3f0d9af3ed6a23e0ee0">getUserAgent</a>();</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    String <a class="code" href="a00271.html#ga368ee3ce640748a6cd595ebd36128eb7">convertLanguage</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* language, <span class="keywordtype">int</span> format);</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_WEBSERVER);</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_AIRPLAYSERVER);</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_UPNPSERVER);</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_UPNPRENDERER);</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_EVENTSERVER);</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_JSONRPCSERVER);</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,SERVER_ZEROCONF);</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,PLAYLIST_MUSIC);</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,PLAYLIST_VIDEO);</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,TRAY_OPEN);</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,DRIVE_NOT_READY);</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,TRAY_CLOSED_NO_MEDIA);</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,TRAY_CLOSED_MEDIA_PRESENT);</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGDEBUG);</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGINFO);</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGNOTICE);</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGWARNING);</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGERROR);</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGSEVERE);</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGFATAL);</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,LOGNONE);</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,ISO_639_1);</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,ISO_639_2);</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    SWIG_CONSTANT_FROM_GETTER(<span class="keywordtype">int</span>,ENGLISH_NAME);</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;<span class="preprocessor">#if 0</span></div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    <span class="keywordtype">void</span> registerMonitor(Monitor* monitor);</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    <span class="keywordtype">void</span> unregisterMonitor(Monitor* monitor);</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;  }</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;}</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a00271_html_ga8d27375b9d28a87af69d900c4de8758b"><div class="ttname"><a href="a00271.html#ga8d27375b9d28a87af69d900c4de8758b">enableNavSounds</a></div><div class="ttdeci">void enableNavSounds(bool yesNo)</div></div>
+<div class="ttc" id="a00271_html_ga87711c98acae5f0cb3bef1bcbc1874c7"><div class="ttname"><a href="a00271.html#ga87711c98acae5f0cb3bef1bcbc1874c7">skinHasImage</a></div><div class="ttdeci">bool skinHasImage(const char *image)</div></div>
+<div class="ttc" id="a00271_html_ga2a0ea95992942d1cbaceb3f0bfaa9240"><div class="ttname"><a href="a00271.html#ga2a0ea95992942d1cbaceb3f0bfaa9240">getSkinDir</a></div><div class="ttdeci">String getSkinDir()</div></div>
+<div class="ttc" id="a00203_html"><div class="ttname"><a href="a00203.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
+<div class="ttc" id="a00271_html_gaf3d104f3a22481b0f98d08150811d1a4"><div class="ttname"><a href="a00271.html#gaf3d104f3a22481b0f98d08150811d1a4">getCacheThumbName</a></div><div class="ttdeci">String getCacheThumbName(const String &amp;path)</div></div>
+<div class="ttc" id="a00271_html_ga9356056e34f878388950bce99f91d91c"><div class="ttname"><a href="a00271.html#ga9356056e34f878388950bce99f91d91c">getDVDState</a></div><div class="ttdeci">long getDVDState()</div></div>
+<div class="ttc" id="a00271_html_ga3393e5440a103195e85dcb93a1819baa"><div class="ttname"><a href="a00271.html#ga3393e5440a103195e85dcb93a1819baa">getCleanMovieTitle</a></div><div class="ttdeci">Tuple&lt; String, String &gt; getCleanMovieTitle(const String &amp;path, bool usefoldername=false)</div></div>
+<div class="ttc" id="a00271_html_ga22ee094ca3f45aa4156b97d34fe678bf"><div class="ttname"><a href="a00271.html#ga22ee094ca3f45aa4156b97d34fe678bf">restart</a></div><div class="ttdeci">void restart()</div></div>
+<div class="ttc" id="a00271_html_ga203ba5035eca7af26370c4480c1302bd"><div class="ttname"><a href="a00271.html#ga203ba5035eca7af26370c4480c1302bd">validatePath</a></div><div class="ttdeci">String validatePath(const String &amp;path)</div></div>
+<div class="ttc" id="a00271_html_ga79ffd96305af02e364d99c2c9d8b69de"><div class="ttname"><a href="a00271.html#ga79ffd96305af02e364d99c2c9d8b69de">getLocalizedString</a></div><div class="ttdeci">String getLocalizedString(int id)</div></div>
+<div class="ttc" id="a00271_html_ga1823d67ecf8c303c31892e2f39bc7123"><div class="ttname"><a href="a00271.html#ga1823d67ecf8c303c31892e2f39bc7123">getFreeMem</a></div><div class="ttdeci">long getFreeMem()</div></div>
+<div class="ttc" id="a00271_html_gae3afd43404337c2c800bfeadc68c46f3"><div class="ttname"><a href="a00271.html#gae3afd43404337c2c800bfeadc68c46f3">getLanguage</a></div><div class="ttdeci">String getLanguage(int format=CLangCodeExpander::ENGLISH_NAME, bool region=false)</div></div>
+<div class="ttc" id="a00271_html_gac96b749cc54ebd3596e4acefee5123dc"><div class="ttname"><a href="a00271.html#gac96b749cc54ebd3596e4acefee5123dc">getCondVisibility</a></div><div class="ttdeci">bool getCondVisibility(const char *condition)</div></div>
+<div class="ttc" id="a00271_html_gabcec0705cb849f38c7f56ff35ddd74cd"><div class="ttname"><a href="a00271.html#gabcec0705cb849f38c7f56ff35ddd74cd">makeLegalFilename</a></div><div class="ttdeci">String makeLegalFilename(const String &amp;filename, bool fatX=true)</div></div>
+<div class="ttc" id="a00271_html_gaa95cd758379b99b479c2c01bdf79897e"><div class="ttname"><a href="a00271.html#gaa95cd758379b99b479c2c01bdf79897e">executeJSONRPC</a></div><div class="ttdeci">String executeJSONRPC(const char *jsonrpccommand)</div></div>
+<div class="ttc" id="a00271_html_ga3437cf59c9fc815524d7aaf98077e210"><div class="ttname"><a href="a00271.html#ga3437cf59c9fc815524d7aaf98077e210">executebuiltin</a></div><div class="ttdeci">void executebuiltin(const char *function, bool wait=false)</div></div>
+<div class="ttc" id="a00271_html_ga3ad39f5a4a65222868520149fbdada32"><div class="ttname"><a href="a00271.html#ga3ad39f5a4a65222868520149fbdada32">stopSFX</a></div><div class="ttdeci">void stopSFX()</div></div>
+<div class="ttc" id="a00271_html_ga30c84926c8fcac04a99d4cf18fc8fae6"><div class="ttname"><a href="a00271.html#ga30c84926c8fcac04a99d4cf18fc8fae6">playSFX</a></div><div class="ttdeci">void playSFX(const char *filename, bool useCached=true)</div></div>
+<div class="ttc" id="a00271_html_ga8e11c9b5d2d375b90578bf01a04ba50c"><div class="ttname"><a href="a00271.html#ga8e11c9b5d2d375b90578bf01a04ba50c">getGlobalIdleTime</a></div><div class="ttdeci">int getGlobalIdleTime()</div></div>
+<div class="ttc" id="a00271_html_ga513f9a03c302f3f0d9af3ed6a23e0ee0"><div class="ttname"><a href="a00271.html#ga513f9a03c302f3f0d9af3ed6a23e0ee0">getUserAgent</a></div><div class="ttdeci">String getUserAgent()</div><div class="ttdoc">Returns Kodi&#39;s HTTP UserAgent string. </div></div>
+<div class="ttc" id="a00271_html_gaee0301aad7c7ba0deac7b51d046c59b6"><div class="ttname"><a href="a00271.html#gaee0301aad7c7ba0deac7b51d046c59b6">audioResume</a></div><div class="ttdeci">void audioResume()</div></div>
+<div class="ttc" id="a00271_html_gaa3118b469b016e7b610aec2851a0c7de"><div class="ttname"><a href="a00271.html#gaa3118b469b016e7b610aec2851a0c7de">executescript</a></div><div class="ttdeci">void executescript(const char *script)</div></div>
+<div class="ttc" id="a00271_html_ga77273fcb1269dfb375a644b59a999d24"><div class="ttname"><a href="a00271.html#ga77273fcb1269dfb375a644b59a999d24">getSupportedMedia</a></div><div class="ttdeci">String getSupportedMedia(const char *mediaType)</div></div>
+<div class="ttc" id="a00271_html_gaae1f9e78fc2e0e63f68dfe93f8e65cf9"><div class="ttname"><a href="a00271.html#gaae1f9e78fc2e0e63f68dfe93f8e65cf9">log</a></div><div class="ttdeci">void log(const char *msg, int level=lLOGDEBUG)</div></div>
+<div class="ttc" id="a00271_html_ga77f8d61db7757aa22df826a904cc3a8d"><div class="ttname"><a href="a00271.html#ga77f8d61db7757aa22df826a904cc3a8d">translatePath</a></div><div class="ttdeci">String translatePath(const String &amp;path)</div></div>
+<div class="ttc" id="a00271_html_ga7f7ef28b88ebff7b94290f78912b73a4"><div class="ttname"><a href="a00271.html#ga7f7ef28b88ebff7b94290f78912b73a4">startServer</a></div><div class="ttdeci">bool startServer(int iTyp, bool bStart, bool bWait=false)</div></div>
+<div class="ttc" id="a00271_html_ga3a7d6dc03a52554f607527314b281e36"><div class="ttname"><a href="a00271.html#ga3a7d6dc03a52554f607527314b281e36">getInfoImage</a></div><div class="ttdeci">String getInfoImage(const char *infotag)</div></div>
+<div class="ttc" id="a00271_html_ga2babadc0bebb8422edc6d40b11d0d2f7"><div class="ttname"><a href="a00271.html#ga2babadc0bebb8422edc6d40b11d0d2f7">audioSuspend</a></div><div class="ttdeci">void audioSuspend()</div></div>
+<div class="ttc" id="a00271_html_ga4266cdf4540b57b10de937df1d4dd024"><div class="ttname"><a href="a00271.html#ga4266cdf4540b57b10de937df1d4dd024">getInfoLabel</a></div><div class="ttdeci">String getInfoLabel(const char *infotag)</div></div>
+<div class="ttc" id="a00271_html_ga6c0ea0a1473226b04455c61e679450e3"><div class="ttname"><a href="a00271.html#ga6c0ea0a1473226b04455c61e679450e3">getIPAddress</a></div><div class="ttdeci">String getIPAddress()</div></div>
+<div class="ttc" id="a00271_html_ga28e4561db93f334227e20f8a59444655"><div class="ttname"><a href="a00271.html#ga28e4561db93f334227e20f8a59444655">getRegion</a></div><div class="ttdeci">String getRegion(const char *id)</div></div>
+<div class="ttc" id="a00271_html_gac0cd1ce3c7d7beb5da0b2456a8477d16"><div class="ttname"><a href="a00271.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a></div><div class="ttdeci">void sleep(long timemillis)</div></div>
+<div class="ttc" id="a00271_html_ga368ee3ce640748a6cd595ebd36128eb7"><div class="ttname"><a href="a00271.html#ga368ee3ce640748a6cd595ebd36128eb7">convertLanguage</a></div><div class="ttdeci">String convertLanguage(const char *language, int format)</div></div>
+<div class="ttc" id="a00271_html_ga7861ee1569802186a619778efc85af13"><div class="ttname"><a href="a00271.html#ga7861ee1569802186a619778efc85af13">shutdown</a></div><div class="ttdeci">void shutdown()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00180.html">ModuleXbmcvfs.h</a></li>
+    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00180.html">ModuleXbmc.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

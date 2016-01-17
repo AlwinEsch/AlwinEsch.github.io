@@ -1,18 +1,13 @@
 var a00021 =
 [
-    [ "CAddonLib_VFSFile", "a00215.html#gaa4aa9190a8c2c66f86f4ece11645ca19", null ],
-    [ "~CAddonLib_VFSFile", "a00215.html#gaff9977af1409edaace50b30024b00306", null ],
-    [ "Close", "a00215.html#ga7f7a3199c392465d0767c6506c1af5b4", null ],
-    [ "Flush", "a00215.html#ga0e2644b2df3c228e8d71a55b60723f31", null ],
-    [ "GetChunkSize", "a00215.html#gacc37d885ea67ed49de5644a572d904ee", null ],
-    [ "GetLength", "a00215.html#gaf2332ee14e6eb66707939c8d9625194d", null ],
-    [ "GetPosition", "a00215.html#gaab98661a2483587df5d85e6ec8699bce", null ],
-    [ "OpenFile", "a00215.html#ga7964d4fc5936b7e41fd1c01320882d46", null ],
-    [ "OpenFileForWrite", "a00215.html#gab906912503a475cdb8f0a67c5d81266c", null ],
-    [ "Read", "a00215.html#gae8f00c5eb703624dd35f9d5205d56343", null ],
-    [ "ReadLine", "a00215.html#gae3d52fbedd9b4480dc45023814cb78f7", null ],
-    [ "Seek", "a00215.html#ga48d08591724952c3d51d0823caf17720", null ],
-    [ "Truncate", "a00215.html#ga97dbc6093302f0ced52952a2737407ec", null ],
-    [ "Write", "a00215.html#gac7025ec7df110a7a9691adb3f949f24f", null ],
-    [ "IMPL_FILE", "a00021.html#a77ceccaa94b91afd262ae116e288b528", null ]
+    [ "CAddonLib_SoundPlay", "a00215.html#gafb64b7a34ceffbf07ce84e4d25f36d83", null ],
+    [ "~CAddonLib_SoundPlay", "a00215.html#ga21c5c23ed3b5c5f06cc66331f8bec712", null ],
+    [ "GetChannel", "a00215.html#ga9656546b61377811a68a1cf39dbc1bfc", null ],
+    [ "GetVolume", "a00215.html#ga7f136ab9899c4abfeeb61d47383f1dd5", null ],
+    [ "IsPlaying", "a00215.html#ga755f326e8b06e5f2807d64baf8bf582c", null ],
+    [ "Play", "a00215.html#ga1cb8088c7f7b1e30a0b7b1a1993326c2", null ],
+    [ "SetChannel", "a00215.html#ga18c0452db8c88c696ba2f958396ba83d", null ],
+    [ "SetVolume", "a00215.html#ga6496c97b1bcd7301acfce8671cf90984", null ],
+    [ "Stop", "a00215.html#ga17a237457e57625296e6b24feb19c60a", null ],
+    [ "IMPL_ADDONSOUNDPLAY", "a00021.html#a4a057561facdbb22e35424d8e59a59c1", null ]
 ];

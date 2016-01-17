@@ -1,12 +1,9 @@
 var a00042 =
 [
-    [ "CAddonGUIControlRadioButton", "a00227.html#gaa0b9881d273c8dde39999cdcb8d90257", null ],
-    [ "~CAddonGUIControlRadioButton", "a00227.html#ga4412919fbcab408f12771d6664a3cd16", null ],
-    [ "GetLabel", "a00227.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "IsSelected", "a00227.html#gad29f489ee580d3d6d01b334aa186c323", null ],
-    [ "SetEnabled", "a00227.html#gaac893222adeffdefc04d749648cce354", null ],
-    [ "SetLabel", "a00227.html#gab825756e641ba839bfae908492165481", null ],
-    [ "SetSelected", "a00227.html#gada1dfadeefe2948819776785fcdbf547", null ],
-    [ "SetVisible", "a00227.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "IMPL_GUI_RADIO_BUTTON_CONTROL", "a00042.html#a73a2fd8e07dce1982d597be1b4511145", null ]
+    [ "CAddonGUIControlLabel", "a00228.html#ga3feee4332d158ac43b8d5d5cc20e2d0b", null ],
+    [ "~CAddonGUIControlLabel", "a00228.html#gae46262d2f574f9375e18fd28b3b0244b", null ],
+    [ "GetLabel", "a00228.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
+    [ "SetLabel", "a00228.html#ga0468217482f9a171183b1cda613417e6", null ],
+    [ "SetVisible", "a00228.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_LABEL_CONTROL", "a00042.html#a98677d76131bb756d160614fdda04f6e", null ]
 ];

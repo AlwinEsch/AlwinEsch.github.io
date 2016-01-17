@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Library - AddOnLIB</title>
+<title>Kodi Development: XBMCAddon::xbmcaddon Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,88 +92,46 @@ $(document).ready(function(){initNavTree('a00205.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#groups">Modules</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Library - AddOnLIB<div class="ingroups"><a class="el" href="a00306.html">C++ Development</a></div></div>  </div>
+<div class="title">XBMCAddon::xbmcaddon Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b><em>Primary add-on helper library with general functions</em></b> </p>
-<hr/>
-<p><b>Code example:</b></p>
-<p>Below is a code example do show what must be done on add-on base function to become support for library:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00118.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00127.html">kodi/addon.api2/General.h</a>&gt;</span>  <span class="comment">// Needed for CAddOnLib_General::Log</span></div>
-<div class="line"></div>
-<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
-<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
-<div class="line">...</div>
-<div class="line"></div>
-<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordflow">if</span> (!hdl || !props)</div>
-<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div>
-<div class="line"></div>
-<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
-<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00206.html#gaa0bf67ad4ff0b67b500e4070f873c337">CAddonLib::RegisterMe</a>(hdl))</div>
-<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
-<div class="line">  ...</div>
-<div class="line"></div>
-<div class="line">  <span class="comment">// Example lib call</span></div>
-<div class="line">  CAddOnLib_General::Log(<a class="code" href="a00120.html#af8526ffb1ee2a785489ac05b6e49d357a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My add-on creation done&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> ADDON_Destroy()</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <a class="code" href="a00206.html#ga5940787dcdcdb8aa995a07106917489f">CAddonLib::UnRegisterMe</a>();</div>
-<div class="line">  ...</div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>To use the add-on on Windows must be the <a class="el" href="a00125.html">dlfcn-win32.cpp</a> inserted on them. Is required to have translation functions from Windows to dlfcn, requested for access to Kodi! </dd></dl>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00206"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00206.html">CAddonLib</a></td></tr>
-<tr class="memdesc:a00206"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Addon basic library functions</b> <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00082.html">Addon</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00207"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00207.html">CAddonLib_Codec</a></td></tr>
-<tr class="memdesc:a00207"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Demux packet handle and codec identification class</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00210"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00210.html">CAddonLib_General</a></td></tr>
-<tr class="memdesc:a00210"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>General functions</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00211"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00211.html">CAddonLib_Network</a></td></tr>
-<tr class="memdesc:a00211"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Network functions</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00212"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00212.html">CAddonLib_SoundPlay</a></td></tr>
-<tr class="memdesc:a00212"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Background sound playback</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00214"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00214.html">CAddonLib_VFSDirEntry</a></td></tr>
-<tr class="memdesc:a00214"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system directory entry</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00215"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00215.html">CAddonLib_VFSFile</a></td></tr>
-<tr class="memdesc:a00215"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system control</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00213"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00213.html">CAddonLib_VFSProperty</a></td></tr>
-<tr class="memdesc:a00213"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system entry property</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00216"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00216.html">CAddonLib_VFSUtils</a></td></tr>
-<tr class="memdesc:a00216"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system utilities</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00208"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00208.html">CodecDescriptor</a></td></tr>
-<tr class="memdesc:a00208"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Codec type name converter</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00209"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00209.html">settings.xml</a></td></tr>
-<tr class="memdesc:a00209"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Add-on settings.xml description</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac1f063aee96369fa44708f98ad303e7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00205.html#ac1f063aee96369fa44708f98ad303e7e">XBMCCOMMONS_STANDARD_EXCEPTION</a> (AddonException)</td></tr>
+<tr class="separator:ac1f063aee96369fa44708f98ad303e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ac1f063aee96369fa44708f98ad303e7e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XBMCAddon::xbmcaddon::XBMCCOMMONS_STANDARD_EXCEPTION </td>
+          <td>(</td>
+          <td class="paramtype">AddonException&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00203.html">XBMCAddon</a></li><li class="navelem"><a class="el" href="a00205.html">xbmcaddon</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

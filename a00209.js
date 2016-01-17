@@ -1,7 +1,5 @@
 var a00209 =
 [
-    [ "DNSLookup", "a00209.html#ga39943b1fdb3a928f0c08e54484602a7e", null ],
-    [ "GetIPAddress", "a00209.html#gad56ffaa14c080ecaff1f5e7534551eff", null ],
-    [ "URLEncode", "a00209.html#gab4932f2cf0d39ceca1649ec8dd782acc", null ],
-    [ "WakeOnLan", "a00209.html#ga55c0502c3db4416ce1971a85f869775b", null ]
+    [ "RegisterMe", "a00209.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
+    [ "UnRegisterMe", "a00209.html#ga5940787dcdcdb8aa995a07106917489f", null ]
 ];

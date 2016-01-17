@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonLib_Codec</title>
+<title>Kodi Development: XBMCAddon::xbmcvfs Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,135 +91,26 @@ $(document).ready(function(){initNavTree('a00207.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<div class="title">CAddonLib_Codec<div class="ingroups"><a class="el" href="a00306.html">C++ Development</a> &raquo; <a class="el" href="a00205.html">Library - AddOnLIB</a></div></div>  </div>
+<div class="title">XBMCAddon::xbmcvfs Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Demux packet handle and codec identification class</b> </p>
-<p>This class brings the support for obtaining required codec identifications and packages for handling stream demuxer.</p>
-<p>Currently, this class is only required under PVR systems where by <a class="el" href="a00207.html#ga4bfc35621cb03e2ef220caa723ad5e2b" title="Allocate a demux packet. Free with FreeDemuxPacket. ">CAddonLib_Codec::AllocateDemuxPacket</a>(...) a package for the function <b><code>DemuxPacket* DemuxRead (void);</code></b> must be provided.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00119.html">#include &lt;kodi/addon.api2/Codec.h&gt;</a> to enjoy it. </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga4bfc35621cb03e2ef220caa723ad5e2b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static DemuxPacket* AllocateDemuxPacket </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iDataSize</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00106.html">File</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00107.html">Stat</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><div class="memdoc">
-
-<p>Allocate a demux packet. Free with FreeDemuxPacket. </p>
-<p>Create a free demux packet with requested size</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iDataSize</td><td>The size of the data that will go into the packet </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The allocated packet</dd></dl>
-<p>Here is a view of packet data structure: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>DemuxPacket</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* pData;   <span class="comment">// data</span></div>
-<div class="line">  <span class="keywordtype">int</span> iSize;              <span class="comment">// data size</span></div>
-<div class="line">  <span class="keywordtype">int</span> iStreamId;          <span class="comment">// integer representing the stream index</span></div>
-<div class="line">  <span class="keywordtype">int</span> iGroupId;           <span class="comment">// the group this data belongs to, used to</span></div>
-<div class="line">                          <span class="comment">// group data from different streams together</span></div>
-<div class="line"></div>
-<div class="line">  <span class="keywordtype">double</span> pts;             <span class="comment">// pts in DVD_TIME_BASE</span></div>
-<div class="line">  <span class="keywordtype">double</span> dts;             <span class="comment">// dts in DVD_TIME_BASE</span></div>
-<div class="line">  <span class="keywordtype">double</span> duration;        <span class="comment">// duration in DVD_TIME_BASE if available</span></div>
-<div class="line">} DemuxPacket;</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga5a59f0d8812f3f3c2ecceb2d9287a186"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void FreeDemuxPacket </td>
-          <td>(</td>
-          <td class="paramtype">DemuxPacket *&#160;</td>
-          <td class="paramname"><em>pPacket</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Free a packet that was allocated with AllocateDemuxPacket. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pPacket</td><td>The packet to free </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gabe059bd032457069e06fd2d3c0747f37"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="a00060.html">kodi_codec</a> GetCodecByName </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strCodecName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the codec id used by Kodi. </p>
-<p>This function is required on registration of streams to Kodi, what is currently needed on the PVR add-on system where the demuxing becomes handled from them.</p>
-<p>About available codec/demuxer names see <a href="https://www.ffmpeg.org/doxygen/2.8/allformats_8c_source.html"><b>see ffmpeg allformats.c</b></a> in function <b><code>void av_register_all(void)</code></b> with on macro <b><code>REGISTER_DEMUXER</code></b> defined values. Further are inside Kodi the two names <b><em>TELETEXT</em></b> and <b><em>RDS</em></b> used to get <a class="el" href="a00060.html" title="Codec identification structure. ">kodi_codec</a> value.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strCodecName</td><td>The name of the codec </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The codec_id, or a codec_id with 0 values when not supported </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00203.html">XBMCAddon</a></li><li class="navelem"><a class="el" href="a00207.html">xbmcvfs</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

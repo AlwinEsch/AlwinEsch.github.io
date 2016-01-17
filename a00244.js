@@ -1,5 +1,6 @@
 var a00244 =
 [
-    [ "RegisterMe", "a00244.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
-    [ "UnRegisterMe", "a00244.html#ga5940787dcdcdb8aa995a07106917489f", null ]
+    [ "ShowAndGetInput", "a00244.html#gabd70a1306a25efc68e99f5852aeffe9f", null ],
+    [ "ShowAndGetInput", "a00244.html#gab23d9c3e25b9f866b1581d5ff1821d02", null ],
+    [ "ShowAndGetInput", "a00244.html#gacdb0bcb4ff915c595e075af871d629ea", null ]
 ];

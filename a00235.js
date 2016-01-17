@@ -1,13 +1,11 @@
 var a00235 =
 [
-    [ "IsKeyboardActivated", "a00235.html#ga1ec4a068299863443fe39fcf4969e0df", null ],
-    [ "SendTextToActiveKeyboard", "a00235.html#ga3d85e8d21bc1fbdf8f946d3c7755005c", null ],
-    [ "ShowAndGetFilter", "a00235.html#gaa57c673c6a2d27bc9114ca557e9c5852", null ],
-    [ "ShowAndGetInput", "a00235.html#ga83b1e91927a105607762c38ea9e1dcb7", null ],
-    [ "ShowAndGetInput", "a00235.html#gac455ca6ff288c07edf7de7d5a0f28d80", null ],
-    [ "ShowAndGetNewPassword", "a00235.html#ga1b75480e0428c2eb657e9e3df1c5f6b3", null ],
-    [ "ShowAndGetNewPassword", "a00235.html#ga74b411283e562425ab3f6d2c01d1f229", null ],
-    [ "ShowAndVerifyNewPassword", "a00235.html#gaf03bd1a86951ae9a1b5f91a901957e11", null ],
-    [ "ShowAndVerifyNewPassword", "a00235.html#gab0b3eb13c8faa5d58e8e7eb59b7c50a9", null ],
-    [ "ShowAndVerifyPassword", "a00235.html#ga48bdcccb89234aad454a6be1cf219928", null ]
+    [ "CAddonGUIControlTextBox", "a00235.html#ga06117cea192b1c038b7b9b8d9c2c8dec", null ],
+    [ "GetText", "a00235.html#ga1af3f7fd8b95cc66e7599caca454f8ef", null ],
+    [ "Reset", "a00235.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "Scroll", "a00235.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d", null ],
+    [ "SetAutoScrolling", "a00235.html#gad3e4bbb4388da7a56e8252018e4fbb00", null ],
+    [ "SetText", "a00235.html#ga8008c108280948ebd79830f222068455", null ],
+    [ "SetVisible", "a00235.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "~CAddonGUIControlTextBox", "a00235.html#ga671686d3890667392291118ca36b3e41", null ]
 ];

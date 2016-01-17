@@ -1,4 +1,5 @@
 var a00181 =
 [
-    [ "XBMCCOMMONS_STANDARD_EXCEPTION", "a00181.html#a67a923f6908b846604d50c880348f6e4", null ]
+    [ "getCurrentWindowDialogId", "a00272.html#ga8379c35c147def9f607d18571e24678e", null ],
+    [ "getCurrentWindowId", "a00272.html#gab1660e44ef103bd39fff61229809f567", null ]
 ];

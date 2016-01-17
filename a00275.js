@@ -1,8 +1,13 @@
 var a00275 =
 [
-    [ "Action Id's", "a00278.html", "a00278" ],
-    [ "getAmount1", "a00275.html#ga3ee04d80d5e7af5563ecc098623a90ad", null ],
-    [ "getAmount2", "a00275.html#ga0f5620d911d309e2dadadc44359bce45", null ],
-    [ "getButtonCode", "a00275.html#gab60f32db21659ba5c3f4d145b9e5947b", null ],
-    [ "getId", "a00275.html#gac7a54ea5a10c5c4683f16e3f83f77104", null ]
+    [ "File", "a00273.html", "a00273" ],
+    [ "Stat", "a00286.html", "a00286" ],
+    [ "copy", "a00275.html#ga9188bb84632ebdbc54faca1de9be95c3", null ],
+    [ "deleteFile", "a00275.html#gabf13e7bae1c97bc1c4188f3e4e459f95", null ],
+    [ "exists", "a00275.html#ga12691f7bf1c5e55da57b18f63f6fbdca", null ],
+    [ "listdir", "a00275.html#ga6bb30280e2eb7d5b94cfb0eb6e65b0cb", null ],
+    [ "mkdir", "a00275.html#gaf69897d9a5235e87828a9e75c1cae4ca", null ],
+    [ "mkdirs", "a00275.html#ga229e97a6a47bdff0122f1004c4feda5c", null ],
+    [ "rename", "a00275.html#gaefc98ff66890f353b4ea7fd620b63808", null ],
+    [ "rmdir", "a00275.html#gac83ea5fb566ee294cdd87c74c6697025", null ]
 ];

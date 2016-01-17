@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIControlProgress</title>
+<title>Kodi Development: CAddonGUIControlFadeLabel</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,23 +92,39 @@ $(document).ready(function(){initNavTree('a00226.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIControlProgress<div class="ingroups"><a class="el" href="a00306.html">C++ Development</a> &raquo; <a class="el" href="a00242.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAddonGUIControlFadeLabel<div class="ingroups"><a class="el" href="a00309.html">C++ Development</a> &raquo; <a class="el" href="a00245.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Window control to show the progress of a particular operation</b> </p>
-<p>The progress control is used to show the progress of an item that may take a long time, or to show how far through a movie you are. You can choose the position, size, and look of the progress control.</p>
-<p>It has the header <a class="el" href="a00138.html">#include &lt;kodi/gui.api2/GUIControlProgress.h&gt;</a> be included to enjoy it.</p>
+<p><b>Window control used to show multiple pieces of text in the same position, by fading from one to the other</b> </p>
+<p>The fade label control is used for displaying multiple pieces of text in the same space in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed. The first piece of information to display fades in over 50 frames, then scrolls off to the left. Once it is finished scrolling off screen, the second piece of information fades in and the process repeats. A fade label control is not supported in a list container.</p>
+<p>It has the header <a class="el" href="a00138.html">#include &lt;kodi/gui.api2/GUIControlFadeLabel.h&gt;</a> be included to enjoy it.</p>
 <dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga29f6071fa5e9cb46c7775d82b0b518bc"></a>
+<a class="anchor" id="ga47cfd2f63ce533672996085727a5fdd4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CAddonGUIControlProgress </td>
+          <td class="memname">void AddLabel </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00058.html">CAddonGUIWindow</a> *&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="gad0307142b3766119a0f4062a68f45ce0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CAddonGUIControlFadeLabel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00060.html">CAddonGUIWindow</a> *&#160;</td>
           <td class="paramname"><em>window</em>, </td>
         </tr>
         <tr>
@@ -127,12 +143,12 @@ $(document).ready(function(){initNavTree('a00226.html','');});
 
 </div>
 </div>
-<a class="anchor" id="gadbcb3c03a1a87a252f94e0274e1e75f8"></a>
+<a class="anchor" id="ga6c80f17140ee95a258ff6c13439a2623"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float GetPercentage </td>
+          <td class="memname">std::string GetLabel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -142,15 +158,30 @@ $(document).ready(function(){initNavTree('a00226.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ga123bcc2a09c1b721c04b4bc0dd32953d"></a>
+<a class="anchor" id="ga372de693ad40b3f42839c8ec6ac845f4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetPercentage </td>
+          <td class="memname">void Reset </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>percent</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga02685eb001d24047fce8ed6d4899e9af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetScrolling </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>scroll</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -174,7 +205,7 @@ $(document).ready(function(){initNavTree('a00226.html','');});
 
 </div>
 </div>
-<a class="anchor" id="gaa8bf8f60a1fb563174ce41f46acb9558"></a>
+<a class="anchor" id="gac737d5d712a254b8d555891a953ba685"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -182,7 +213,7 @@ $(document).ready(function(){initNavTree('a00226.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~CAddonGUIControlProgress </td>
+          <td class="memname">virtual ~CAddonGUIControlFadeLabel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

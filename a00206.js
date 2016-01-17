@@ -1,5 +1,26 @@
 var a00206 =
 [
-    [ "RegisterMe", "a00206.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
-    [ "UnRegisterMe", "a00206.html#ga5940787dcdcdb8aa995a07106917489f", null ]
+    [ "Action", "a00083.html", "a00083" ],
+    [ "Control", "a00084.html", "a00084" ],
+    [ "ControlButton", "a00085.html", "a00085" ],
+    [ "ControlCheckMark", "a00086.html", "a00086" ],
+    [ "ControlEdit", "a00087.html", "a00087" ],
+    [ "ControlFadeLabel", "a00088.html", "a00088" ],
+    [ "ControlGroup", "a00089.html", "a00089" ],
+    [ "ControlImage", "a00090.html", "a00090" ],
+    [ "ControlLabel", "a00091.html", "a00091" ],
+    [ "ControlList", "a00092.html", "a00092" ],
+    [ "ControlProgress", "a00093.html", "a00093" ],
+    [ "ControlRadioButton", "a00094.html", "a00094" ],
+    [ "ControlSlider", "a00095.html", "a00095" ],
+    [ "ControlSpin", "a00096.html", "a00096" ],
+    [ "ControlTextBox", "a00097.html", "a00097" ],
+    [ "Dialog", "a00098.html", "a00098" ],
+    [ "DialogProgress", "a00099.html", "a00099" ],
+    [ "DialogProgressBG", "a00100.html", "a00100" ],
+    [ "ListItem", "a00101.html", "a00101" ],
+    [ "Window", "a00102.html", "a00102" ],
+    [ "WindowDialog", "a00103.html", "a00103" ],
+    [ "WindowXML", "a00104.html", "a00104" ],
+    [ "WindowXMLDialog", "a00105.html", "a00105" ]
 ];

@@ -1,10 +1,13 @@
 var a00097 =
 [
-    [ "DialogProgress", "a00097.html#ad6806218faf95b933b67927d5ad46a39", null ],
-    [ "~DialogProgress", "a00097.html#a94b81fdffc22f6260839893fdbf757b7", null ],
-    [ "close", "a00266.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
-    [ "create", "a00266.html#gad71569b69244d11fe949d0bbd5b75905", null ],
-    [ "deallocating", "a00097.html#a8b6dbb40347674d0ffc08d6ec7e9a877", null ],
-    [ "iscanceled", "a00266.html#ga2a944a55da1c28885d3f00d101618ac6", null ],
-    [ "update", "a00266.html#gabf439774a2aca33663c3bb785e6e7465", null ]
+    [ "ControlTextBox", "a00097.html#afd93b8cb98a0ef81f5f44ff700b42922", null ],
+    [ "ControlTextBox", "a00097.html#a7a8982a6c21b048766712f24e8efbd31", null ],
+    [ "autoScroll", "a00297.html#gad492befcc0c8ee0e1fecb0d6a6bd7d1c", null ],
+    [ "Create", "a00097.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "getText", "a00297.html#gafab766445043570e6a82c14851366933", null ],
+    [ "reset", "a00297.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
+    [ "scroll", "a00297.html#gaa4f5d32e79ca1250eaba1a74fdf7f1ec", null ],
+    [ "setText", "a00297.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ],
+    [ "strFont", "a00097.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "textColor", "a00097.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
 ];

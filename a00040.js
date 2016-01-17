@@ -1,9 +1,11 @@
 var a00040 =
 [
-    [ "CAddonGUIControlLabel", "a00225.html#ga3feee4332d158ac43b8d5d5cc20e2d0b", null ],
-    [ "~CAddonGUIControlLabel", "a00225.html#gae46262d2f574f9375e18fd28b3b0244b", null ],
-    [ "GetLabel", "a00225.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "SetLabel", "a00225.html#ga0468217482f9a171183b1cda613417e6", null ],
-    [ "SetVisible", "a00225.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "IMPL_GUI_LABEL_CONTROL", "a00040.html#a98677d76131bb756d160614fdda04f6e", null ]
+    [ "CAddonGUIControlFadeLabel", "a00226.html#gad0307142b3766119a0f4062a68f45ce0", null ],
+    [ "~CAddonGUIControlFadeLabel", "a00226.html#gac737d5d712a254b8d555891a953ba685", null ],
+    [ "AddLabel", "a00226.html#ga47cfd2f63ce533672996085727a5fdd4", null ],
+    [ "GetLabel", "a00226.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
+    [ "Reset", "a00226.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "SetScrolling", "a00226.html#ga02685eb001d24047fce8ed6d4899e9af", null ],
+    [ "SetVisible", "a00226.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_FADELABEL_CONTROL", "a00040.html#a35b213437b6113bd52fd6ad4a512b043", null ]
 ];
