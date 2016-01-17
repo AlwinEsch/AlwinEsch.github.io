@@ -53,8 +53,8 @@ var searchData=
   ['key_5funicode',['KEY_UNICODE',['../a00172.html#a77654215ca6bdb1a31744bb97e755a18',1,'Key.h']]],
   ['key_5fvkey',['KEY_VKEY',['../a00172.html#a24c98bd261d0c10a5257a40c2f5c7703',1,'Key.h']]],
   ['key_5fvmouse',['KEY_VMOUSE',['../a00172.html#a6e792d06e44c4da47ba7019aa5b5e4d6',1,'Key.h']]],
-  ['keyboard',['Keyboard',['../a00077.html',1,'XBMCAddon::xbmc']]],
   ['keyboard',['Keyboard',['../a00077.html#a290b85ded95367e3801ecb1cd5d2d8f1',1,'XBMCAddon::xbmc::Keyboard']]],
+  ['keyboard',['Keyboard',['../a00077.html',1,'XBMCAddon::xbmc']]],
   ['keyboard_2eh',['Keyboard.h',['../a00178.html',1,'']]],
   ['kodi_5faddon_5flibrary',['KODI_ADDON_LIBRARY',['../a00017.html#a0c8b9ce175d01a9b10ce484f86056fed',1,'AddOnLIB::V2::CAddonLib']]],
   ['kodi_5faudioengine_5flibrary',['KODI_AUDIOENGINE_LIBRARY',['../a00028.html#a3d5db3884cc2c788a91a6724e97557f3',1,'AudioEngineLIB::V2::CAELib']]],
@@ -78,6 +78,5 @@ var searchData=
   ['kodi_5fversion',['kodi_version',['../a00063.html',1,'']]],
   ['kodiquit',['KodiQuit',['../a00213.html#ga92e5be48408124cf9f6f18744abd90d4',1,'AddOnLIB::V2::CAddonLib_General']]],
   ['kodiversion',['KodiVersion',['../a00213.html#ga399f77b85f988602c4f1d4c98aa18528',1,'AddOnLIB::V2::CAddonLib_General']]],
-  ['keyboard',['Keyboard',['../a00265.html',1,'']]],
-  ['kodi_27s_20gui',['Kodi&apos;s GUI',['../a00272.html',1,'']]]
+  ['keyboard',['Keyboard',['../a00265.html',1,'']]]
 ];
