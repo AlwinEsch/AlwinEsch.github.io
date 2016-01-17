@@ -1,15 +1,9 @@
 var a00276 =
 [
-    [ "List Item sort methods.", "a00285.html", "a00285" ],
-    [ "addDirectoryItem", "a00276.html#ga0b7759ec71ba6098cd71289f7ffc103d", null ],
-    [ "addDirectoryItems", "a00276.html#gae65e249416de893f077e2c0010b7f697", null ],
-    [ "addSortMethod", "a00276.html#gabc68ce9f13d4d68df93d19a61f53ff8e", null ],
-    [ "endOfDirectory", "a00276.html#ga4efbfacead99ce6a469bbf37f63e05eb", null ],
-    [ "getSetting", "a00276.html#gac254decc5a7b5cdf14893fe7136aa9dc", null ],
-    [ "setContent", "a00276.html#ga0ee818babc80aab1ead30465b1be416f", null ],
-    [ "setPluginCategory", "a00276.html#ga2303d9cc58dfd405758375a94b29f14f", null ],
-    [ "setPluginFanart", "a00276.html#ga2678f7c15eb38fdab9dec474ba7c1ed6", null ],
-    [ "setProperty", "a00276.html#gad34e6025edb46d622a8ae9f7195d033c", null ],
-    [ "setResolvedUrl", "a00276.html#ga269ab5fd6b88eb1f56e3bc4f5b81701a", null ],
-    [ "setSetting", "a00276.html#ga397670857a9ff2861a9fe55a4c8cf206", null ]
+    [ "ChannelEntry", "a00276.html#gafdbc7a9a4d1336f159150988868b1465", null ],
+    [ "ChannelGroup", "a00276.html#gabb331d2d9b3ef522da48c0b951ddbe21", null ],
+    [ "ChannelGroupMember", "a00276.html#ga2d24f5c60e0d4b6d3a416641b489f15e", null ],
+    [ "EpgEntry", "a00276.html#gab55ab3d9f7fa5f1304edf70e39ac6a55", null ],
+    [ "RecordingEntry", "a00276.html#gad676cb5682d7c7c959d91822342cc753", null ],
+    [ "TimerEntry", "a00276.html#gae6c3ce0a07ecc854c615f2d65e550147", null ]
 ];

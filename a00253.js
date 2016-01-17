@@ -1,13 +1,13 @@
 var a00253 =
 [
-    [ "OnPlayBackEnded", "a00253.html#ga9b673b89fb0c2d810637d97a6144743d", null ],
-    [ "OnPlayBackPaused", "a00253.html#ga535ea86e9170c85e4dfc8b2292466041", null ],
-    [ "OnPlayBackResumed", "a00253.html#ga78de3c74ca811508e2c83bad612af8a0", null ],
-    [ "OnPlayBackSeek", "a00253.html#ga1aa2520cecdb44e5f37dd2905146efa6", null ],
-    [ "OnPlayBackSeekChapter", "a00253.html#ga36be56af6bfdd7fc943f8d3f1abacfbf", null ],
-    [ "OnPlayBackSpeedChanged", "a00253.html#ga14e0279d2fb9cd6b4a68f9467e07081a", null ],
-    [ "OnPlayBackStarted", "a00253.html#ga670b9e7947764d4d474b7f8cd21c1611", null ],
-    [ "OnPlayBackStopped", "a00253.html#ga5df8f6dd6cf9fb162d1d4d77da58eb2d", null ],
-    [ "OnQueueNextItem", "a00253.html#ga817b2d696d11b166143be2c391a972f9", null ],
-    [ "SetIndependentCallbacks", "a00253.html#gaa8d87ba3157eed260e7334c1b3d96657", null ]
+    [ "IsKeyboardActivated", "a00253.html#ga1ec4a068299863443fe39fcf4969e0df", null ],
+    [ "SendTextToActiveKeyboard", "a00253.html#ga3d85e8d21bc1fbdf8f946d3c7755005c", null ],
+    [ "ShowAndGetFilter", "a00253.html#gaa57c673c6a2d27bc9114ca557e9c5852", null ],
+    [ "ShowAndGetInput", "a00253.html#ga83b1e91927a105607762c38ea9e1dcb7", null ],
+    [ "ShowAndGetInput", "a00253.html#gac455ca6ff288c07edf7de7d5a0f28d80", null ],
+    [ "ShowAndGetNewPassword", "a00253.html#ga1b75480e0428c2eb657e9e3df1c5f6b3", null ],
+    [ "ShowAndGetNewPassword", "a00253.html#ga74b411283e562425ab3f6d2c01d1f229", null ],
+    [ "ShowAndVerifyNewPassword", "a00253.html#gaf03bd1a86951ae9a1b5f91a901957e11", null ],
+    [ "ShowAndVerifyNewPassword", "a00253.html#gab0b3eb13c8faa5d58e8e7eb59b7c50a9", null ],
+    [ "ShowAndVerifyPassword", "a00253.html#ga48bdcccb89234aad454a6be1cf219928", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Python - HelloWorld AddOn</title>
+<title>Kodi Development: Binary C++ Tutorials</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,153 +92,10 @@ $(document).ready(function(){initNavTree('a00010.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Python - HelloWorld AddOn </div>  </div>
+<div class="title">Binary C++ Tutorials </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#section1">Introduction</a></li>
-<li class="level1"><a href="#section2">Tools</a></li>
-<li class="level1"><a href="#section3">Installing</a></li>
-<li class="level1"><a href="#section4">Testing</a></li>
-<li class="level1"><a href="#section5">Modifying the Add-On</a></li>
-<li class="level1"><a href="#section6">Structure</a></li>
-<li class="level1"><a href="#section7">Metadata</a></li>
-<li class="level1"><a href="#section8">The Code</a></li>
-<li class="level1"><a href="#section9">Changing the code</a></li>
-<li class="level1"><a href="#section10">Final Thoughts</a></li>
-<li class="level1"><a href="#section11">Extra info</a></li>
-</ul>
-</div>
-<div class="textblock"><h1><a class="anchor" id="section1"></a>
-Introduction</h1>
-<p>This tutorial will explain how to write your first Kodi/XBMC script add-on!</p>
-<p>In case you want to write a plugin addon, please use this tutorial: <a href="http://kodi.wiki/view/Audio-video_add-on_tutorial">http://kodi.wiki/view/Audio-video_add-on_tutorial</a></p>
-<hr/>
-<h1><a class="anchor" id="section2"></a>
-Tools</h1>
-<p>I'd advise using a text editor for your first add-on, something like notepad++ or sublime are good due to their text syntaxing. Also make sure you have a version of Kodi installed on your development environment.</p>
-<ul>
-<li>URL = <a href="http://www.sublimetext.com">http://www.sublimetext.com</a></li>
-<li>URL = <a href="http://notepad-plus-plus.org">http://notepad-plus-plus.org</a></li>
-<li>URL = <a href="https://atom.io">https://atom.io</a></li>
-</ul>
-<hr/>
-<h1><a class="anchor" id="section3"></a>
-Installing</h1>
-<p>For this example we use the official "Hello World" add-on. You can find the source-code here:</p><ul>
-<li><a href="https://github.com/zag2me/script.hello.world">https://github.com/zag2me/script.hello.world</a></li>
-</ul>
-<p>... and you can download the zip file (for installation in Kodi) here:</p><ul>
-<li><a href="https://github.com/zag2me/script.hello.world/archive/master.zip">https://github.com/zag2me/script.hello.world/archive/master.zip</a></li>
-</ul>
-<hr/>
-<h1><a class="anchor" id="section4"></a>
-Testing</h1>
-<p>You can first give the add-on a test run by going to: <code>System &gt;&gt; Add-Ons &gt;&gt; Enabled Add-Ons &gt;&gt; Program Add-Ons &gt;&gt; Hello World</code>. You should now see a popup with 3 lines of text.</p>
-<table class="doxtable">
-<tr>
-<th></th></tr>
-<tr>
-<td><div class="image">
-<img src="Helloworld3.jpg" alt="Helloworld3.jpg"/>
-</div>
- </td></tr>
-</table>
-<hr/>
-<h1><a class="anchor" id="section5"></a>
-Modifying the Add-On</h1>
-<p>Each time we want to change the add-on you can simply go to the appdata folder and live edit it! No need to even close Kodi. This will allow you to quickly test your add-on modifications. On windows this will be in: <b>C:\Users\user\AppData\Roaming\XBMC\addons\script.hello.world</b></p>
-<table class="doxtable">
-<tr>
-<th></th></tr>
-<tr>
-<td><div class="image">
-<img src="Helloworld2.jpg" alt="Helloworld2.jpg"/>
-</div>
- </td></tr>
-</table>
-<hr/>
-<h1><a class="anchor" id="section6"></a>
-Structure</h1>
-<table class="doxtable">
-<tr>
-<th>File </th><th>Description  </th></tr>
-<tr>
-<td>addon.py </td><td>This is the actual python code for your Add-On </td></tr>
-<tr>
-<td>addon.xml </td><td>This is the Add-Ons metadata </td></tr>
-<tr>
-<td>changelog.txt </td><td>This is a text file with any change-log information in it. We advise updating this on each release. </td></tr>
-<tr>
-<td>icon.png </td><td>A PNG icon for the add-on. It can be 256x256 or 512x512 pixels big. Try to make it look nice! </td></tr>
-<tr>
-<td>LICENSE.txt </td><td>Another text file with the Add-On license text. </td></tr>
-</table>
-<table class="doxtable">
-<tr>
-<th></th></tr>
-<tr>
-<td><div class="image">
-<img src="Helloworld2.jpg" alt="Helloworld2.jpg"/>
-</div>
- </td></tr>
-</table>
-<hr/>
-<h1><a class="anchor" id="section7"></a>
-Metadata</h1>
-<p>As we can see from the screenshot below the <code>addon.xml</code> is pretty simple. The main things you want to look at are on the first line of the XML. It's all pretty self-explanatory, just change the fields to your Add-On ID, name, version, and author before you start. The Add-On ID will have to be unique so try to think of a good name here separated by full stops.</p>
-<p>The "Requires" section lets Kodi know what extra Add-On code to import. Since our Add-On is simple we only need the basic "xbmc.python" Add-On.</p>
-<p>The "extension point" simple tells Kodi what type of Add-On you have created. In this case it's an "executable" which we put inside the <code>&lt;provides&gt;</code> field.</p>
-<p>The final section is the extension metadata, again it's all pretty self-explanatory. You can add descriptions, summary and license information in here. You can also add links to the forum thread, source code and email help users who need support for your Add-On.</p>
-<table class="doxtable">
-<tr>
-<th></th></tr>
-<tr>
-<td><div class="image">
-<img src="Helloworld4.png" alt="Helloworld4.png"/>
-</div>
- </td></tr>
-</table>
-<hr/>
-<h1><a class="anchor" id="section8"></a>
-The Code</h1>
-<p>So now we come to the actual Add-On code, this is where most of your Add-on is written and is a simple text file containing python code. It's contained in a file called "addon.py".</p>
-<p>If at this stage you want to learn how to program python, take a look at this excellent website <a href="http://www.codecademy.com/en/tracks/python">http://www.codecademy.com/en/tracks/python</a></p>
-<p>The first 2 lines simply import the code necessary to run an Add-On and display something using the Kodi GUI.</p>
-<p>The next 2 lines of code explain to the system that it's an Add-On and to show the name.</p>
-<p>Lines 7,8 and 9 are where the real magic starts to happen, here we are assigning 3 strings to 3 different variables (line1, line2 and line3).</p>
-<p>The final line of code now displays all these variables in a popup box inside the Kodi GUI using the "xbmcgui.Dialog" function. It also displays the Add-On name in the Popup boxs title and has an OK button.</p>
-<table class="doxtable">
-<tr>
-<th></th></tr>
-<tr>
-<td><div class="image">
-<img src="Helloworld1.png" alt="Helloworld1.png"/>
-</div>
- </td></tr>
-</table>
-<hr/>
-<h1><a class="anchor" id="section9"></a>
-Changing the code</h1>
-<p>Hopefully by now you have managed to run the Add-On, understand the structure and can see what the code can do. Now lets trying changing it a little!</p>
-<p>Since we already have the Add-on installed we can go directly to the Kodi userdata folder and edit the python directly. You can also have Kodi open at this time ready to run the Add-on when required. Just switch between your text editor and Kodi any time.</p>
-<p>Now open up the addon.py file from your userdata folder and lets change what the text says.</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;line1 = <span class="stringliteral">&quot;Goodbye World!&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;line2 = <span class="stringliteral">&quot;And welcome back&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;line3 = <span class="stringliteral">&quot;My own Add-On!&quot;</span></div>
-</div><!-- fragment --><p>Click save on your text editor and now try running the Add-On inside Kodi. You should see the new text appear right before your eyes.</p>
-<p>Congratulations! you are now an XBMC/Kodi developer!!</p>
-<hr/>
-<h1><a class="anchor" id="section10"></a>
-Final Thoughts</h1>
-<p>Obviously this is just a simple Add-On tutorial and you can do much, much more as most Kodi commands are accessible from this python interface. You can also extend Kodi with things like the JSON interface.</p>
-<p>If you have any questions about this tutorial, feel free to discuss it on our forums here: <a href="http://forum.kodi.tv/showthread.php?tid=209948">http://forum.kodi.tv/showthread.php?tid=209948</a></p>
-<hr/>
-<h1><a class="anchor" id="section11"></a>
-Extra info</h1>
-<p>You can find a little extra info on this page for different methods of using the GUI Hello World.</p>
-<p><a href="http://kodi.wiki/view/GUI_Tutorial">http://kodi.wiki/view/GUI_Tutorial</a> </p>
-</div></div><!-- contents -->
+<div class="textblock"></div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

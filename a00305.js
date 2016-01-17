@@ -1,9 +1,9 @@
 var a00305 =
 [
-    [ "XBFONT_CENTER_X", "a00305.html#ga687578b0a798bdeda43f70753d14ab0e", null ],
-    [ "XBFONT_CENTER_Y", "a00305.html#gab31f42c7e7b24529472d72bce221dadd", null ],
-    [ "XBFONT_JUSTIFIED", "a00305.html#gaadd26dee845564d68f1a100d62742f98", null ],
-    [ "XBFONT_LEFT", "a00305.html#gad5207c71b383451e25d9d7a85134ebe0", null ],
-    [ "XBFONT_RIGHT", "a00305.html#ga1867c471415f6499f7cd56e162d469a4", null ],
-    [ "XBFONT_TRUNCATED", "a00305.html#gaa533383607587f0c0704213463e8747d", null ]
+    [ "capture", "a00305.html#gad84ac4cd6e43fc4aefe0eeaa0916e187", null ],
+    [ "getAspectRatio", "a00305.html#ga2c8f0f904856b52b41dd852c57bd970b", null ],
+    [ "getHeight", "a00305.html#ga07efb2a4e9a982688c8bb3c3f21d1092", null ],
+    [ "getImage", "a00305.html#gaff2e6e3a8d1c65f17c1709dc727ae69c", null ],
+    [ "getImageFormat", "a00305.html#gaa512bbf517e279b0a5ca7d2ecf07f5b1", null ],
+    [ "getWidth", "a00305.html#ga67a0997183f24da19b776d96c1052998", null ]
 ];

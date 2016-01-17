@@ -1,8 +1,7 @@
 var a00229 =
 [
-    [ "CAddonGUIControlProgress", "a00229.html#ga29f6071fa5e9cb46c7775d82b0b518bc", null ],
-    [ "GetPercentage", "a00229.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ],
-    [ "SetPercentage", "a00229.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
-    [ "SetVisible", "a00229.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlProgress", "a00229.html#gaa8bf8f60a1fb563174ce41f46acb9558", null ]
+    [ "DNSLookup", "a00229.html#ga39943b1fdb3a928f0c08e54484602a7e", null ],
+    [ "GetIPAddress", "a00229.html#gad56ffaa14c080ecaff1f5e7534551eff", null ],
+    [ "URLEncode", "a00229.html#gab4932f2cf0d39ceca1649ec8dd782acc", null ],
+    [ "WakeOnLan", "a00229.html#ga55c0502c3db4416ce1971a85f869775b", null ]
 ];

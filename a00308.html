@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Picture info labels</title>
+<title>Kodi Development: Subclass - ControlLabel</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,134 +92,167 @@ $(document).ready(function(){initNavTree('a00308.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Picture info labels<div class="ingroups"><a class="el" href="a00310.html">Python Development</a> &raquo; <a class="el" href="a00272.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00306.html">ListItem</a></div></div>  </div>
+<div class="title">Subclass - ControlLabel<div class="ingroups"><a class="el" href="a00325.html">Python Development</a> &raquo; <a class="el" href="a00287.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00306.html">Control</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>Picture info labels</p>
-<table class="doxtable">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p><b>Used to show some lines of text.</b> </p>
+<p><b><code><a class="el" href="a00103.html">ControlLabel</a>(x, y, width, height, label[, font, textColor, disabledColor, alignment, hasPath, angle])</code></b></p>
+<p>The label control is used for displaying text in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00306.html">Control</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>string or unicode - text string. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>[opt] string - font used for label text. (e.g. 'font13') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textColor</td><td>[opt] hexstring - color of enabled label's label. (e.g. '0xFFFFFFFF') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">disabledColor</td><td>[opt] hexstring - color of disabled label's label. (e.g. '0xFFFF3300') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alignment</td><td>[opt] integer - alignment of label<ul>
+<li><a class="el" href="a00320.html">Flags for alignment</a> used as bits to have several together: <table class="doxtable">
 <tr>
-<th>Picture string value </th><th>Enumerator </th><th>Description  </th></tr>
+<th>Defination name </th><th align="center">Bitflag </th><th align="left">Description  </th></tr>
 <tr>
-<td>filename </td><td>SLIDE_FILE_NAME </td><td>To get the file name info label </td></tr>
+<td>XBFONT_LEFT </td><td align="center">0x00000000 </td><td align="left">Align X left </td></tr>
 <tr>
-<td>path </td><td>SLIDE_FILE_PATH </td><td>To get path name </td></tr>
+<td>XBFONT_RIGHT </td><td align="center">0x00000001 </td><td align="left">Align X right </td></tr>
 <tr>
-<td>filesize </td><td>SLIDE_FILE_SIZE </td><td>Get the size of the file </td></tr>
+<td>XBFONT_CENTER_X </td><td align="center">0x00000002 </td><td align="left">Align X center </td></tr>
 <tr>
-<td>filedate </td><td>SLIDE_FILE_DATE </td><td>Get the creation date of the file </td></tr>
+<td>XBFONT_CENTER_Y </td><td align="center">0x00000004 </td><td align="left">Align Y center </td></tr>
 <tr>
-<td>slideindex </td><td>SLIDE_INDEX </td><td></td></tr>
+<td>XBFONT_TRUNCATED </td><td align="center">0x00000008 </td><td align="left">Truncated text </td></tr>
 <tr>
-<td>resolution </td><td>SLIDE_RESOLUTION </td><td>Picture resolution </td></tr>
-<tr>
-<td>slidecomment </td><td>SLIDE_COMMENT </td><td></td></tr>
-<tr>
-<td>colour </td><td>SLIDE_COLOUR </td><td></td></tr>
-<tr>
-<td>process </td><td>SLIDE_PROCESS </td><td></td></tr>
-<tr>
-<td>exiftime </td><td>SLIDE_EXIF_DATE_TIME </td><td></td></tr>
-<tr>
-<td>exifdate </td><td>SLIDE_EXIF_DATE </td><td></td></tr>
-<tr>
-<td>longexiftime </td><td>SLIDE_EXIF_LONG_DATE_TIME </td><td></td></tr>
-<tr>
-<td>longexifdate </td><td>SLIDE_EXIF_LONG_DATE </td><td></td></tr>
-<tr>
-<td>exifdescription </td><td>SLIDE_EXIF_DESCRIPTION </td><td></td></tr>
-<tr>
-<td>cameramake </td><td>SLIDE_EXIF_CAMERA_MAKE </td><td></td></tr>
-<tr>
-<td>cameramodel </td><td>SLIDE_EXIF_CAMERA_MODEL </td><td></td></tr>
-<tr>
-<td>exifcomment </td><td>SLIDE_EXIF_COMMENT </td><td></td></tr>
-<tr>
-<td>exifsoftware </td><td>SLIDE_EXIF_SOFTWARE </td><td></td></tr>
-<tr>
-<td>aperture </td><td>SLIDE_EXIF_APERTURE </td><td></td></tr>
-<tr>
-<td>focallength </td><td>SLIDE_EXIF_FOCAL_LENGTH </td><td></td></tr>
-<tr>
-<td>focusdistance </td><td>SLIDE_EXIF_FOCUS_DIST </td><td></td></tr>
-<tr>
-<td>exposure </td><td>SLIDE_EXIF_EXPOSURE </td><td></td></tr>
-<tr>
-<td>exposuretime </td><td>SLIDE_EXIF_EXPOSURE_TIME </td><td></td></tr>
-<tr>
-<td>exposurebias </td><td>SLIDE_EXIF_EXPOSURE_BIAS </td><td></td></tr>
-<tr>
-<td>exposuremode </td><td>SLIDE_EXIF_EXPOSURE_MODE </td><td></td></tr>
-<tr>
-<td>flashused </td><td>SLIDE_EXIF_FLASH_USED </td><td></td></tr>
-<tr>
-<td>whitebalance </td><td>SLIDE_EXIF_WHITE_BALANCE </td><td></td></tr>
-<tr>
-<td>lightsource </td><td>SLIDE_EXIF_LIGHT_SOURCE </td><td></td></tr>
-<tr>
-<td>meteringmode </td><td>SLIDE_EXIF_METERING_MODE </td><td></td></tr>
-<tr>
-<td>isoequivalence </td><td>SLIDE_EXIF_ISO_EQUIV </td><td></td></tr>
-<tr>
-<td>digitalzoom </td><td>SLIDE_EXIF_DIGITAL_ZOOM </td><td></td></tr>
-<tr>
-<td>ccdwidth </td><td>SLIDE_EXIF_CCD_WIDTH </td><td></td></tr>
-<tr>
-<td>orientation </td><td>SLIDE_EXIF_ORIENTATION </td><td></td></tr>
-<tr>
-<td>supplementalcategories </td><td>SLIDE_IPTC_SUP_CATEGORIES </td><td></td></tr>
-<tr>
-<td>keywords </td><td>SLIDE_IPTC_KEYWORDS </td><td></td></tr>
-<tr>
-<td>caption </td><td>SLIDE_IPTC_CAPTION </td><td></td></tr>
-<tr>
-<td>author </td><td>SLIDE_IPTC_AUTHOR </td><td></td></tr>
-<tr>
-<td>headline </td><td>SLIDE_IPTC_HEADLINE </td><td></td></tr>
-<tr>
-<td>specialinstructions </td><td>SLIDE_IPTC_SPEC_INSTR </td><td></td></tr>
-<tr>
-<td>category </td><td>SLIDE_IPTC_CATEGORY </td><td></td></tr>
-<tr>
-<td>byline </td><td>SLIDE_IPTC_BYLINE </td><td></td></tr>
-<tr>
-<td>bylinetitle </td><td>SLIDE_IPTC_BYLINE_TITLE </td><td></td></tr>
-<tr>
-<td>credit </td><td>SLIDE_IPTC_CREDIT </td><td></td></tr>
-<tr>
-<td>source </td><td>SLIDE_IPTC_SOURCE </td><td></td></tr>
-<tr>
-<td>copyrightnotice </td><td>SLIDE_IPTC_COPYRIGHT_NOTICE </td><td></td></tr>
-<tr>
-<td>objectname </td><td>SLIDE_IPTC_OBJECT_NAME </td><td></td></tr>
-<tr>
-<td>city </td><td>SLIDE_IPTC_CITY </td><td></td></tr>
-<tr>
-<td>state </td><td>SLIDE_IPTC_STATE </td><td></td></tr>
-<tr>
-<td>country </td><td>SLIDE_IPTC_COUNTRY </td><td></td></tr>
-<tr>
-<td>transmissionreference </td><td>SLIDE_IPTC_TX_REFERENCE </td><td></td></tr>
-<tr>
-<td>iptcdate </td><td>SLIDE_IPTC_DATE </td><td></td></tr>
-<tr>
-<td>urgency </td><td>SLIDE_IPTC_URGENCY </td><td></td></tr>
-<tr>
-<td>countrycode </td><td>SLIDE_IPTC_COUNTRY_CODE </td><td></td></tr>
-<tr>
-<td>referenceservice </td><td>SLIDE_IPTC_REF_SERVICE </td><td></td></tr>
-<tr>
-<td>latitude </td><td>SLIDE_EXIF_GPS_LATITUDE </td><td></td></tr>
-<tr>
-<td>longitude </td><td>SLIDE_EXIF_GPS_LONGITUDE </td><td></td></tr>
-<tr>
-<td>altitude </td><td>SLIDE_EXIF_GPS_ALTITUDE </td><td></td></tr>
-<tr>
-<td>timecreated </td><td>SLIDE_IPTC_TIMECREATED </td><td></td></tr>
-<tr>
-<td>sublocation </td><td>SLIDE_IPTC_SUBLOCATION </td><td></td></tr>
-<tr>
-<td>imagetype </td><td>SLIDE_IPTC_IMAGETYPE </td><td>Used image type </td></tr>
+<td>XBFONT_JUSTIFIED </td><td align="center">0x00000010 </td><td align="left">Justify text </td></tr>
 </table>
+</li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hasPath</td><td>[opt] bool - True=stores a path / False=no path </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">angle</td><td>[opt] integer - angle of control. (<b>+</b> rotates CCW, <b>-</b> rotates C)</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># ControlLabel(x, y, width, height, label[, font, textColor,</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">#              disabledColor, alignment, hasPath, angle])</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;self.label = xbmcgui.ControlLabel(100, 250, 125, 75, <span class="stringliteral">&#39;Status&#39;</span>, angle=45)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;...</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga86ad2cb533724ac728e0f96b2323cceb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getLabel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the text value for this label. </p>
+<dl class="section return"><dt>Returns</dt><dd>This label</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;label = self.label.getLabel()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gad20897c5c8bd47f5d4005989bead0e55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear this fade label. </p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.fadelabel.reset()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaa1d736865ab85f96ecbe8c66769b068b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setLabel </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>label</em> = <code>emptyString</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>font</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>textColor</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>disabledColor</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>shadowColor</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>focusedColor</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>label2</em> = <code>emptyString</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set's text for this label. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>string or unicode - text string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.label.setLabel(<span class="stringliteral">&#39;Status&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

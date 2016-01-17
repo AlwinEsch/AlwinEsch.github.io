@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['file',['File',['../a00106.html',1,'XBMCAddon::xbmcvfs']]]
+  ['file',['File',['../a00118.html',1,'XBMCAddon::xbmcvfs']]]
 ];

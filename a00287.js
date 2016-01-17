@@ -1,13 +1,12 @@
 var a00287 =
 [
-    [ "add", "a00287.html#ga979e740949519ca0e88da2ff9934a4d5", null ],
-    [ "clear", "a00287.html#gac8bb3912a3ce86b15842e79d0b421204", null ],
-    [ "getPlayListId", "a00287.html#ga4d665409e02daa8ea13ce462ca44c914", null ],
-    [ "getposition", "a00287.html#ga265b7f39dcd400e1f4edaf4060af9977", null ],
-    [ "load", "a00287.html#ga2eea1635b7df085d42c973352ef10355", null ],
-    [ "operator[]", "a00287.html#gaba5d6f37d582f0512f61f32109a92d92", null ],
-    [ "remove", "a00287.html#gae363baca6026e43cc1264c5914ff69b9", null ],
-    [ "shuffle", "a00287.html#ga1905fe84eb39f020b32c58baf7a76758", null ],
-    [ "size", "a00287.html#gaf4b57d21919c42d55af03391f91a1c08", null ],
-    [ "unshuffle", "a00287.html#ga2401476232ac1b00321c9bfe8158f9c4", null ]
+    [ "Action", "a00293.html", "a00293" ],
+    [ "Control", "a00306.html", "a00306" ],
+    [ "Dialog", "a00283.html", "a00283" ],
+    [ "DialogProgress", "a00284.html", "a00284" ],
+    [ "DialogProgressBG", "a00285.html", "a00285" ],
+    [ "ListItem", "a00321.html", "a00321" ],
+    [ "Window", "a00294.html", "a00294" ],
+    [ "getCurrentWindowDialogId", "a00287.html#ga8379c35c147def9f607d18571e24678e", null ],
+    [ "getCurrentWindowId", "a00287.html#gab1660e44ef103bd39fff61229809f567", null ]
 ];

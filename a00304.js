@@ -1,5 +1,12 @@
 var a00304 =
 [
-    [ "getPercent", "a00304.html#gad3e5815badb78551841c44d9b5ae3742", null ],
-    [ "setPercent", "a00304.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ]
+    [ "onPlayBackEnded", "a00304.html#gab375f26bb820f640d74700cda4ee6646", null ],
+    [ "onPlayBackPaused", "a00304.html#ga7226102b037bfbca79e0c940f5e912e2", null ],
+    [ "onPlayBackResumed", "a00304.html#ga075576edcd1809ff57e3897aa165e529", null ],
+    [ "onPlayBackSeek", "a00304.html#gaeda52fbaaf9860f7a96e93ba33709fc9", null ],
+    [ "onPlayBackSeekChapter", "a00304.html#ga75a62da626870983e308a62e8c359218", null ],
+    [ "onPlayBackSpeedChanged", "a00304.html#ga852e3252c43deaa541e8cae610b9e0ef", null ],
+    [ "onPlayBackStarted", "a00304.html#ga2d8b5fa98b21f02ce06f7bd7de836d9d", null ],
+    [ "onPlayBackStopped", "a00304.html#ga04dbd49c7486f00911995a56a19536d0", null ],
+    [ "onQueueNextItem", "a00304.html#ga8890f6898fc712522c2d29f57455275d", null ]
 ];

@@ -1,8 +1,18 @@
 var a00035 =
 [
-    [ "CMouseEvent", "a00035.html#ac26acaa3931609c7fcadfd5c1b9c09c3", null ],
-    [ "m_id", "a00035.html#aad966617e7e050bedbead762727808a5", null ],
-    [ "m_offsetX", "a00035.html#a632d0c237986191da17de968fb392f58", null ],
-    [ "m_offsetY", "a00035.html#aed170d76d1e06cf6d2f48a0644005dfd", null ],
-    [ "m_state", "a00035.html#acc4f94200981f2eb41a7df212afc1093", null ]
+    [ "CAddonLib_VFSFile", "a00233.html#gaa4aa9190a8c2c66f86f4ece11645ca19", null ],
+    [ "~CAddonLib_VFSFile", "a00233.html#gaff9977af1409edaace50b30024b00306", null ],
+    [ "Close", "a00233.html#ga7f7a3199c392465d0767c6506c1af5b4", null ],
+    [ "Flush", "a00233.html#ga0e2644b2df3c228e8d71a55b60723f31", null ],
+    [ "GetChunkSize", "a00233.html#gacc37d885ea67ed49de5644a572d904ee", null ],
+    [ "GetLength", "a00233.html#gaf2332ee14e6eb66707939c8d9625194d", null ],
+    [ "GetPosition", "a00233.html#gaab98661a2483587df5d85e6ec8699bce", null ],
+    [ "OpenFile", "a00233.html#ga7964d4fc5936b7e41fd1c01320882d46", null ],
+    [ "OpenFileForWrite", "a00233.html#gab906912503a475cdb8f0a67c5d81266c", null ],
+    [ "Read", "a00233.html#gae8f00c5eb703624dd35f9d5205d56343", null ],
+    [ "ReadLine", "a00233.html#gae3d52fbedd9b4480dc45023814cb78f7", null ],
+    [ "Seek", "a00233.html#ga48d08591724952c3d51d0823caf17720", null ],
+    [ "Truncate", "a00233.html#ga97dbc6093302f0ced52952a2737407ec", null ],
+    [ "Write", "a00233.html#gac7025ec7df110a7a9691adb3f949f24f", null ],
+    [ "IMPL_FILE", "a00035.html#a77ceccaa94b91afd262ae116e288b528", null ]
 ];

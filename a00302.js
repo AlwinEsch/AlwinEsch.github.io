@@ -1,9 +1,13 @@
 var a00302 =
 [
-    [ "XBFONT_CENTER_X", "a00302.html#ga687578b0a798bdeda43f70753d14ab0e", null ],
-    [ "XBFONT_CENTER_Y", "a00302.html#gab31f42c7e7b24529472d72bce221dadd", null ],
-    [ "XBFONT_JUSTIFIED", "a00302.html#gaadd26dee845564d68f1a100d62742f98", null ],
-    [ "XBFONT_LEFT", "a00302.html#gad5207c71b383451e25d9d7a85134ebe0", null ],
-    [ "XBFONT_RIGHT", "a00302.html#ga1867c471415f6499f7cd56e162d469a4", null ],
-    [ "XBFONT_TRUNCATED", "a00302.html#gaa533383607587f0c0704213463e8747d", null ]
+    [ "add", "a00302.html#ga979e740949519ca0e88da2ff9934a4d5", null ],
+    [ "clear", "a00302.html#gac8bb3912a3ce86b15842e79d0b421204", null ],
+    [ "getPlayListId", "a00302.html#ga4d665409e02daa8ea13ce462ca44c914", null ],
+    [ "getposition", "a00302.html#ga265b7f39dcd400e1f4edaf4060af9977", null ],
+    [ "load", "a00302.html#ga2eea1635b7df085d42c973352ef10355", null ],
+    [ "operator[]", "a00302.html#gaba5d6f37d582f0512f61f32109a92d92", null ],
+    [ "remove", "a00302.html#gae363baca6026e43cc1264c5914ff69b9", null ],
+    [ "shuffle", "a00302.html#ga1905fe84eb39f020b32c58baf7a76758", null ],
+    [ "size", "a00302.html#gaf4b57d21919c42d55af03391f91a1c08", null ],
+    [ "unshuffle", "a00302.html#ga2401476232ac1b00321c9bfe8158f9c4", null ]
 ];

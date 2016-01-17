@@ -1,13 +1,16 @@
 var a00103 =
 [
-    [ "WindowDialog", "a00103.html#ab0d28825ea9f38bb2df30c87e25ff46a", null ],
-    [ "~WindowDialog", "a00103.html#abd7ac25ecd20ae49f86086da88ddd645", null ],
-    [ "close", "a00103.html#a41f0a9216ff8fd7cfe809259fc6668cc", null ],
-    [ "IsDialog", "a00103.html#a1e8473757c23d67eeaa2ad2eaa0d868b", null ],
-    [ "IsDialogRunning", "a00103.html#af5ade9aaec42bf60e7a6c1b1ae74dd2d", null ],
-    [ "IsModalDialog", "a00103.html#adda02b50c11c92eadfa64088e2b56094", null ],
-    [ "OnAction", "a00103.html#a5a929bb12b2e74b5d65471b0a4242741", null ],
-    [ "OnDeinitWindow", "a00103.html#a9abe87b5ae8d7072807ea356566bed21", null ],
-    [ "OnMessage", "a00103.html#a705aa30fc54fcb4cb255efa7992f3e9e", null ],
-    [ "show", "a00103.html#a9ceb2fdb6907af08ad835270ff1697bc", null ]
+    [ "ControlLabel", "a00103.html#a14eddb7045362abca91fb06f7df6e481", null ],
+    [ "~ControlLabel", "a00103.html#aed2a5cf3dd6f2825242e1c9cd83b79f4", null ],
+    [ "ControlLabel", "a00103.html#a4f6dacd3944c4362f2770a621b8c774a", null ],
+    [ "Create", "a00103.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "getLabel", "a00308.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
+    [ "setLabel", "a00308.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
+    [ "align", "a00103.html#a4864c3686205158c9cab83fa95c2a15a", null ],
+    [ "bHasPath", "a00103.html#ae83b678a24bce6873c0af1024149043a", null ],
+    [ "disabledColor", "a00103.html#a9b7ae35a0c2326e198dab3c2ec50e94c", null ],
+    [ "iAngle", "a00103.html#a52ffec3a2b42dce2829c4a46b9b7815e", null ],
+    [ "strFont", "a00103.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "strText", "a00103.html#ab456897f658d865f7c66da9ba85f6cb9", null ],
+    [ "textColor", "a00103.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
 ];

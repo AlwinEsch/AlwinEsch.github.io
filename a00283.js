@@ -1,12 +1,14 @@
 var a00283 =
 [
-    [ "Subclass - WindowDialogXML", "a00284.html", null ],
-    [ "addItem", "a00283.html#ga87ffff74f065758ae9884ecc87102af1", null ],
-    [ "clearList", "a00283.html#ga612285c5b9d603a0abb0feab44b8412f", null ],
-    [ "getCurrentListPosition", "a00283.html#ga860b30302751103052456bb1f1079980", null ],
-    [ "getListItem", "a00283.html#ga37ec44d83350b3e4c5b4f7a2648bfc01", null ],
-    [ "getListSize", "a00283.html#ga7b00dc949b12149360563a1941956fc7", null ],
-    [ "removeItem", "a00283.html#ga214d46ad5cb6e318163ba98e0dd780ac", null ],
-    [ "setCurrentListPosition", "a00283.html#gabaeb49593088c3be9c7a232d50152e34", null ],
-    [ "setProperty", "a00283.html#ga3171b661458f56e0f0af6e264ac09bf3", null ]
+    [ "browse", "a00283.html#ga329bf9f86212595d36708f6ad8977499", null ],
+    [ "browseMultiple", "a00283.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
+    [ "browseSingle", "a00283.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
+    [ "input", "a00283.html#ga2a25e833c92e98a294964d0d285ee1f9", null ],
+    [ "multiselect", "a00283.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
+    [ "notification", "a00283.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
+    [ "numeric", "a00283.html#gad44dd72bef6ada382a1b9704580410db", null ],
+    [ "ok", "a00283.html#ga623449b051874059111f9831a7b91673", null ],
+    [ "select", "a00283.html#ga31bcf740cf64230b40af61377ad701b1", null ],
+    [ "textviewer", "a00283.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
+    [ "yesno", "a00283.html#gaa64342a4b05f1ed49803ea44a25b73db", null ]
 ];

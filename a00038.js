@@ -1,12 +1,8 @@
 var a00038 =
 [
-    [ "CAddonGUIControlButton", "a00224.html#ga3132552bcc57d1c10aa86871c5dca313", null ],
-    [ "~CAddonGUIControlButton", "a00224.html#gaeb9b958abdc7aa81b76bb43b856edb9a", null ],
-    [ "GetLabel", "a00224.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "GetLabel2", "a00224.html#ga94e3a8c89b6a8d0fb69cb8f44c3d5b1b", null ],
-    [ "SetEnabled", "a00224.html#gaac893222adeffdefc04d749648cce354", null ],
-    [ "SetLabel", "a00224.html#ga0468217482f9a171183b1cda613417e6", null ],
-    [ "SetLabel2", "a00224.html#ga4f36ea518d9c722f2cdc03cac01aabf3", null ],
-    [ "SetVisible", "a00224.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "IMPL_GUI_BUTTON_CONTROL", "a00038.html#a5f336fad3f27a939c70f3b6868478e3e", null ]
+    [ "CodecDescriptor", "a00038.html#a0ce9286b79ecef72bdf531ffb02e73d3", null ],
+    [ "CodecDescriptor", "a00038.html#a01b78d89cc9425c3b3cce1192f0fa6c4", null ],
+    [ "~CodecDescriptor", "a00038.html#a8a61d5619aaa653c3e35d65807bf725b", null ],
+    [ "Codec", "a00226.html#ga62b7b43b626a9b8beb0f16a8795b9d91", null ],
+    [ "Name", "a00226.html#gab29906ba5407bb58b86428cb4b4a1e26", null ]
 ];

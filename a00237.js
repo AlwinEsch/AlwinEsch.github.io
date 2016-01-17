@@ -1,10 +1,10 @@
 var a00237 =
 [
-    [ "ShowAndGetDirectory", "a00237.html#gab1c3767a978a71751a8ea550d449eed6", null ],
-    [ "ShowAndGetFile", "a00237.html#ga5924085e93999a96dc9fc5a6c5f9362b", null ],
-    [ "ShowAndGetFileFromDir", "a00237.html#ga5ef242152a302da9ab13f61ca77b7ac3", null ],
-    [ "ShowAndGetFileList", "a00237.html#ga11dac37e6c6fd7dcaa18997d54e90b1a", null ],
-    [ "ShowAndGetImage", "a00237.html#ga10785676725a192799092e82ae4a68ba", null ],
-    [ "ShowAndGetImageList", "a00237.html#gad8c149a33ac60207e2953244f72f7a1d", null ],
-    [ "ShowAndGetSource", "a00237.html#gab582e8181c1569b7ff713e8924c4aa73", null ]
+    [ "AddDSPMenuHook", "a00237.html#gad4e7c34b466c7523b48eb38f453c6f8b", null ],
+    [ "GetCurrentSinkFormat", "a00237.html#gaeb11fdb26f8a00296e10ff296c602bb5", null ],
+    [ "RegisterDSPMode", "a00237.html#gae95d0da238b6ffa997911dbf9eedb2d4", null ],
+    [ "RegisterMe", "a00237.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
+    [ "RemoveDSPMenuHook", "a00237.html#ga59fa2e75dbd7ede8adb9488258b55bdd", null ],
+    [ "UnregisterDSPMode", "a00237.html#gae222050a6298ea8a4b7f2085ae5e85b1", null ],
+    [ "UnRegisterMe", "a00237.html#ga5940787dcdcdb8aa995a07106917489f", null ]
 ];

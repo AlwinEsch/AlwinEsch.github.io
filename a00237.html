@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIDialogFileBrowser</title>
+<title>Kodi Development: CAELib</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,20 +92,16 @@ $(document).ready(function(){initNavTree('a00237.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIDialogFileBrowser<div class="ingroups"><a class="el" href="a00309.html">C++ Development</a> &raquo; <a class="el" href="a00245.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAELib<div class="ingroups"><a class="el" href="a00324.html">C++ Development</a> &raquo; <a class="el" href="a00236.html">Library - AudioEngineLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>File browser dialog</b> </p>
-<p>The functions listed below of the class "CAddonGUIDialogFileBrowser" offer the possibility to select to a file by the user of the add-on.</p>
-<p>It allows all the options that are possible in Kodi itself and offers all support file types.</p>
+<p><b>Allow use of binary classes and function to use on add-on's</b> </p>
+<p>Permits the use of the required functions of the add-on to Kodi. This class also contains some functions to the control.</p>
 <p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00149.html">#include &lt;kodi/gui.api2/GUIDialogFileBrowser.h&gt;</a> be included to enjoy it.</p>
-<div class="image">
-<img src="help.GUIDialogFileBrowser.png" alt="help.GUIDialogFileBrowser.png"/>
-</div>
- <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gab1c3767a978a71751a8ea550d449eed6"></a>
+<p>It has the header <a class="el" href="a00184.html">#include &lt;kodi/audioengine.api2/AudioEngineLib.h&gt;</a> be included to enjoy it. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gad4e7c34b466c7523b48eb38f453c6f8b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -113,33 +109,11 @@ $(document).ready(function(){initNavTree('a00237.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool ShowAndGetDirectory </td>
+          <td class="memname">static void AddDSPMenuHook </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>shares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">AE_DSP_MENUHOOK *&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bWriteOnly</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -149,39 +123,71 @@ $(document).ready(function(){initNavTree('a00237.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Directory selection dialog. </p>
+<p>Add or replace a menu hook for the context menu for this add-on. </p>
+<p>Inserted hooks becomes called from Kodi on audio DSP system with <b><code>AE_DSP_ERROR CallMenuHook(const AE_DSP_MENUHOOK&amp; menuhook, const AE_DSP_MENUHOOK_DATA &amp;item);</code></b></p>
+<p>Menu hooks that are available in the menus while playing a stream via this add-on.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected directory </td></tr>
-    <tr><td class="paramname">bWriteOnly</td><td>If set only writeable folders are shown. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hook</td><td>The hook to add</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled.</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00149.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Example show directory selection dialog with on &#39;share&#39; (first value)</span></div>
-<div class="line"><span class="comment"> * defined directory types.</span></div>
+<hr/>
+<p>Here structure shows the necessary values the Kodi must be handed over around a menu by the audio DSP system to add. </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Menu hooks that are available in the controls of audio DSP system on</span></div>
+<div class="line"><span class="comment"> * settings and on OSD.</span></div>
 <div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * If this becomes leaved empty and &#39;directory&#39; is empty goes it to the</span></div>
-<div class="line"><span class="comment"> * base path of the hard disk.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Also can be with path written to &#39;directory&#39; before the dialog forced</span></div>
-<div class="line"><span class="comment"> * to a start place.</span></div>
+<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
 <div class="line"><span class="comment"> */</span></div>
-<div class="line">std::string directory;</div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00237.html#gab1c3767a978a71751a8ea550d449eed6">CAddonGUIDialogFileBrowser::ShowAndGetDirectory</a>(<span class="stringliteral">&quot;local|network|removable&quot;</span>,</div>
-<div class="line">                                                   <span class="stringliteral">&quot;Test directory selection&quot;</span>,</div>
-<div class="line">                                                   directory,</div>
-<div class="line">                                                   <span class="keyword">false</span>);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Selected directory is : %s and was %s\n&quot;</span>, directory.c_str(), ret ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>AE_DSP_MENUHOOK</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        iHookId;                <span class="comment">/* (required) this hook&#39;s identifier */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        iLocalizedStringId;     <span class="comment">/* (required) the id of the label for this hook in g_localizeStrings */</span></div>
+<div class="line">  AE_DSP_MENUHOOK_CAT category;               <span class="comment">/* (required) category of menu hook */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        iRelevantModeId;        <span class="comment">/* (required) except category AE_DSP_MENUHOOK_SETTING and AE_DSP_MENUHOOK_ALL must be the related mode id present here */</span></div>
+<div class="line">  <span class="keywordtype">bool</span>                bNeedPlayback;          <span class="comment">/* (required) set to true if menu hook need playback and active processing */</span></div>
+<div class="line">} <a class="code" href="a00141.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> AE_DSP_MENUHOOK;</div>
+</div><!-- fragment --><hr/>
+<p><b>Audio DSP menu hook categories</b></p>
+<p>Used to identify on AE_DSP_MENUHOOK given add-on related skin dialog/windows. Except AE_DSP_MENUHOOK_ALL and AE_DSP_MENUHOOK_SETTING are the menus available from DSP playback dialogue which can be opened over KODI file context menu and over button on full screen OSD window.</p>
+<p>Menu hook AE_DSP_MENUHOOK_SETTING is available from DSP processing setup dialogue. </p><table class="doxtable">
+<tr>
+<th align="right">enum code: </th><th align="center">Id </th><th align="left">Description:  </th></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_UNKNOWN </td><td align="center">-1 </td><td align="left">Unknown menu hook </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_ALL </td><td align="center">0 </td><td align="left">All categories </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_PRE_PROCESS </td><td align="center">1 </td><td align="left">For pre processing </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_MASTER_PROCESS </td><td align="center">2 </td><td align="left">For master processing </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_POST_PROCESS </td><td align="center">3 </td><td align="left">For post processing </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_RESAMPLE </td><td align="center">4 </td><td align="left">For re sample </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_MISCELLANEOUS </td><td align="center">5 </td><td align="left">For miscellaneous dialogues </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_INFORMATION </td><td align="center">6 </td><td align="left">Dialogue to show processing information </td></tr>
+<tr>
+<td align="right">AE_DSP_MENUHOOK_SETTING </td><td align="center">7 </td><td align="left">For settings </td></tr>
+</table>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00150.html">kodi/audioengine.api2/AudioEngineLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line">...</div>
+<div class="line">AE_DSP_MENUHOOK hook;</div>
+<div class="line">hook.iHookId            = ID_MENU_SPEAKER_GAIN_SETUP;</div>
+<div class="line">hook.category           = AE_DSP_MENUHOOK_POST_PROCESS;</div>
+<div class="line">hook.iLocalizedStringId = 30011;</div>
+<div class="line">hook.iRelevantModeId    = ID_POST_PROCESS_SPEAKER_CORRECTION;</div>
+<div class="line">hook.bNeedPlayback      = <span class="keyword">false</span>;</div>
+<div class="line">CAddonLib::AddMenuHook(&amp;hook);</div>
+<div class="line">...</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga5924085e93999a96dc9fc5a6c5f9362b"></a>
+<a class="anchor" id="gaeb11fdb26f8a00296e10ff296c602bb5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -189,45 +195,11 @@ $(document).ready(function(){initNavTree('a00237.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool ShowAndGetFile </td>
+          <td class="memname">static bool GetCurrentSinkFormat </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>shares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"><a class="el" href="a00039.html">AudioEngineFormat</a> &amp;&#160;</td>
+          <td class="paramname"><em>sinkFormat</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -237,23 +209,40 @@ $(document).ready(function(){initNavTree('a00237.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>File selection dialog. </p>
+<p>Get the current sink data format. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected file </td></tr>
-    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
-    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">sinkFormat</td><td>Current sink data format. For more details see <a class="el" href="a00039.html">AudioEngineFormat</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>Returns true on success, else false.</dd></dl>
+<hr/>
+<p><b>Audio DSP mode information:</b></p>
+<p>Used to get all available modes for current input stream</p>
+<div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Audio engine format information</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="a00039.html">AudioEngineFormat</a></div>
+<div class="line">{</div>
+<div class="line">  <span class="keyword">enum</span> AEDataFormat m_dataFormat;           <span class="comment">/* The stream&#39;s data format (eg, AE_FMT_S16LE) */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_sampleRate;           <span class="comment">/* The stream&#39;s sample rate (eg, 48000) */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_encodedRate;          <span class="comment">/* The encoded streams sample rate if a bitstream, otherwise undefined */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_channelCount;         <span class="comment">/* The amount of used speaker channels */</span></div>
+<div class="line">  <span class="keyword">enum</span> AEChannel    m_channels[AE_CH_MAX];  <span class="comment">/* The stream&#39;s channel layout */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frames;               <span class="comment">/* The number of frames per period */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frameSamples;         <span class="comment">/* The number of samples in one frame */</span></div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      m_frameSize;            <span class="comment">/* The size of one frame in bytes */</span></div>
+<div class="line"></div>
+<div class="line">  <span class="comment">/* Function to compare the format structure with another */</span></div>
+<div class="line">  <span class="keywordtype">bool</span> compareFormat(<span class="keyword">const</span> <a class="code" href="a00039.html">AudioEngineFormat</a> *fmt);</div>
+<div class="line">} <a class="code" href="a00039.html">AudioEngineFormat</a>;</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga5ef242152a302da9ab13f61ca77b7ac3"></a>
+<a class="anchor" id="gae95d0da238b6ffa997911dbf9eedb2d4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -261,51 +250,11 @@ $(document).ready(function(){initNavTree('a00237.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool ShowAndGetFileFromDir </td>
+          <td class="memname">static void RegisterDSPMode </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>directory</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">AE_DSP_MODES::AE_DSP_MODE *&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>singleList</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -315,23 +264,76 @@ $(document).ready(function(){initNavTree('a00237.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>File selection from a directory. </p>
+<p>Add or replace mode information inside audio dsp database. </p>
+<p>Becomes identifier written inside mode to iModeID if it was 0 (undefined)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">directory</td><td>The directory name where the dialog start, possible are normal names and kodi's special names. </td></tr>
-    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected file </td></tr>
-    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
-    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>The master mode to add or update inside database</td></tr>
   </table>
   </dd>
 </dl>
-
+<hr/>
+<p><b>Audio DSP mode information:</b></p>
+<p>Used to get all available modes for current input stream</p>
+<div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Audio DSP mode information</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>AE_DSP_MODES</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iModesCount;                                             <span class="comment">/* (required) count of how much modes are in AE_DSP_MODES */</span></div>
+<div class="line">  <span class="keyword">struct </span>AE_DSP_MODE</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordtype">int</span>               iUniqueDBModeId;                                  <span class="comment">/* (required) the inside add-on used identifier for the mode, set by KODI&#39;s audio DSP database */</span></div>
+<div class="line">    AE_DSP_MODE_TYPE  iModeType;                                        <span class="comment">/* (required) the processong mode type, see AE_DSP_MODE_TYPE */</span></div>
+<div class="line">    <span class="keywordtype">char</span>              strModeName[AE_DSP_ADDON_STRING_LENGTH];          <span class="comment">/* (required) the addon name of the mode, used on KODI&#39;s logs  */</span></div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeNumber;                                      <span class="comment">/* (required) number of this mode on the add-on, is used on process functions with value &quot;mode_id&quot; */</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeSupportTypeFlags;                            <span class="comment">/* (required) flags about supported input types for this mode, see AE_DSP_ASTREAM_PRESENT */</span></div>
+<div class="line">    <span class="keywordtype">bool</span>              bHasSettingsDialog;                               <span class="comment">/* (required) if setting dialog(s) are available it must be set to true */</span></div>
+<div class="line">    <span class="keywordtype">bool</span>              bIsDisabled;                                      <span class="comment">/* (optional) true if this mode is marked as disabled and not enabled default, only relevant</span></div>
+<div class="line"><span class="comment">                                                                         * for master processes, all other types always disabled as default */</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeName;                                        <span class="comment">/* (required) the name id of the mode for this hook in g_localizeStrings */</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeSetupName;                                   <span class="comment">/* (optional) the name id of the mode inside settings for this hook in g_localizeStrings */</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeDescription;                                 <span class="comment">/* (optional) the description id of the mode for this hook in g_localizeStrings */</span></div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iModeHelp;                                        <span class="comment">/* (optional) help string id for inside DSP settings dialog of the mode for </span></div>
+<div class="line"><span class="comment">                                                                         * this hook in g_localizeStrings */</span></div>
+<div class="line">    <span class="keywordtype">char</span>              strOwnModeImage[AE_DSP_ADDON_STRING_LENGTH];      <span class="comment">/* (optional) flag image for the mode */</span></div>
+<div class="line">    <span class="keywordtype">char</span>              strOverrideModeImage[AE_DSP_ADDON_STRING_LENGTH]; <span class="comment">/* (optional) image to override KODI Image for the mode, eg. Dolby Digital with</span></div>
+<div class="line"><span class="comment">                                                                         * Dolby Digital Ex (only used on master modes) */</span></div>
+<div class="line">  } mode[AE_DSP_STREAM_MAX_MODES];                                      <span class="comment">/* Modes array storage */</span></div>
+<div class="line">} <a class="code" href="a00141.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> AE_DSP_MODES;</div>
+</div><!-- fragment --><hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00150.html">kodi/audioengine.api2/AudioEngineLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">struct </span>AE_DSP_MODES::AE_DSP_MODE m_ModeInfoStruct;</div>
+<div class="line"></div>
+<div class="line">...</div>
+<div class="line">std::string imagePath;</div>
+<div class="line"></div>
+<div class="line">m_ModeInfoStruct.iUniqueDBModeId        = -1;         <span class="comment">// set by RegisterMode</span></div>
+<div class="line">m_ModeInfoStruct.iModeType              = AE_DSP_MODE_TYPE_MASTER_PROCESS;</div>
+<div class="line">m_ModeInfoStruct.iModeNumber            = ID_MASTER_PROCESS_FREE_SURROUND;</div>
+<div class="line">m_ModeInfoStruct.bHasSettingsDialog     = <span class="keyword">true</span>;</div>
+<div class="line">m_ModeInfoStruct.iModeDescription       = 30002;</div>
+<div class="line">m_ModeInfoStruct.iModeHelp              = 30003;</div>
+<div class="line">m_ModeInfoStruct.iModeName              = 30000;</div>
+<div class="line">m_ModeInfoStruct.iModeSetupName         = 30001;</div>
+<div class="line">m_ModeInfoStruct.iModeSupportTypeFlags  = AE_DSP_PRSNT_ASTREAM_BASIC | AE_DSP_PRSNT_ASTREAM_MUSIC | AE_DSP_PRSNT_ASTREAM_MOVIE;</div>
+<div class="line">m_ModeInfoStruct.bIsDisabled            = <span class="keyword">false</span>;</div>
+<div class="line"></div>
+<div class="line">strncpy(m_ModeInfoStruct.strModeName, <span class="stringliteral">&quot;Free Surround&quot;</span>, <span class="keyword">sizeof</span>(m_ModeInfoStruct.strModeName) - 1);</div>
+<div class="line">imagePath = g_strAddonPath;</div>
+<div class="line">imagePath += <span class="stringliteral">&quot;/resources/skins/Confluence/media/adsp-freesurround.png&quot;</span>;</div>
+<div class="line">strncpy(m_ModeInfoStruct.strOwnModeImage, imagePath.c_str(), <span class="keyword">sizeof</span>(m_ModeInfoStruct.strOwnModeImage) - 1);</div>
+<div class="line">memset(m_ModeInfoStruct.strOverrideModeImage, 0, <span class="keyword">sizeof</span>(m_ModeInfoStruct.strOwnModeImage)); <span class="comment">// unused</span></div>
+<div class="line">CAddonLib::RegisterMode(&amp;m_ModeInfoStruct);</div>
+<div class="line">...</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga11dac37e6c6fd7dcaa18997d54e90b1a"></a>
+<a class="anchor" id="gaa0bf67ad4ff0b67b500e4070f873c337"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -339,45 +341,11 @@ $(document).ready(function(){initNavTree('a00237.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool ShowAndGetFileList </td>
+          <td class="memname">static bool RegisterMe </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>shares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>mask</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -387,23 +355,37 @@ $(document).ready(function(){initNavTree('a00237.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>File selection dialog to get several in to a list. </p>
+<p>Resolve all callback methods. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected files </td></tr>
-    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
-    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Pointer to the add-on </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True when all methods were resolved, false otherwise.</dd></dl>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00136.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00150.html">kodi/audioengine.api2/AudioEngineLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
+<div class="line">IMPLEMENT_KODI_AUDIOENGINE_LIBRARY;</div>
+<div class="line">...</div>
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!CAddonLib::RegisterMe(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00237.html#gaa0bf67ad4ff0b67b500e4070f873c337">CAELib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use the library must be one time the macro IMPLEMENT_KODI_AUDIOENGINE_LIBRARY and IMPLEMENT_KODI_ADDON_LIBRARY somewhere one time included. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga10785676725a192799092e82ae4a68ba"></a>
+<a class="anchor" id="ga59fa2e75dbd7ede8adb9488258b55bdd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -411,27 +393,11 @@ $(document).ready(function(){initNavTree('a00237.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool ShowAndGetImage </td>
+          <td class="memname">static void RemoveDSPMenuHook </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>shares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">AE_DSP_MENUHOOK *&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -441,20 +407,17 @@ $(document).ready(function(){initNavTree('a00237.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Image selection dialog. </p>
+<p>Remove a menu hook for the context menu for this add-on. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected image </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hook</td><td>The hook to remove </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gad8c149a33ac60207e2953244f72f7a1d"></a>
+<a class="anchor" id="gae222050a6298ea8a4b7f2085ae5e85b1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -462,27 +425,11 @@ $(document).ready(function(){initNavTree('a00237.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool ShowAndGetImageList </td>
+          <td class="memname">static void UnregisterDSPMode </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>shares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">AE_DSP_MODES::AE_DSP_MODE *&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>path</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -492,20 +439,17 @@ $(document).ready(function(){initNavTree('a00237.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Image selection dialog to get several in to a list. </p>
+<p>Remove a mode from audio dsp database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
-    <tr><td class="paramname">path</td><td>Return value about selected images </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>The Mode to remove </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gab582e8181c1569b7ff713e8924c4aa73"></a>
+<a class="anchor" id="ga5940787dcdcdb8aa995a07106917489f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -513,33 +457,10 @@ $(document).ready(function(){initNavTree('a00237.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool ShowAndGetSource </td>
+          <td class="memname">static void UnRegisterMe </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>allowNetworkShares</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>additionalShare</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>type</em> = <code>&quot;&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -549,18 +470,19 @@ $(document).ready(function(){initNavTree('a00237.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Source selection dialog. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Return</td><td>value about selected source </td></tr>
-    <tr><td class="paramname">Allow</td><td>also access to network </td></tr>
-    <tr><td class="paramname">With</td><td>additionalShare becomes the available start folders be set. </td></tr>
-    <tr><td class="paramname">type</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
-
+<p>Release all callback methods and close handling with them. </p>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00136.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00150.html">kodi/audioengine.api2/AudioEngineLib.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">void ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="a00237.html#ga5940787dcdcdb8aa995a07106917489f">CAELib::UnRegisterMe</a>();</div>
+<div class="line">  CAddonLib::UnRegisterMe();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

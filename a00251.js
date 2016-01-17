@@ -1,10 +1,14 @@
 var a00251 =
 [
-    [ "Addon action Id's", "a00223.html", "a00223" ],
-    [ "OnAction", "a00251.html#gad3fc2a106ba0143fa5d11d3df32d9c72", null ],
-    [ "OnClick", "a00251.html#gad741fef5d9a1d2bf07449694e9a9e602", null ],
-    [ "OnFocus", "a00251.html#ga7f69d7353e186b8fe4a1560767721501", null ],
-    [ "OnInit", "a00251.html#ga7d98c001ac8d31e48df88346e28bae16", null ],
-    [ "SetIndependentCallbacks", "a00251.html#ga5daaf4cdd5942017aa0be44ec98a7f95", null ],
-    [ "IMPLEMENT_ADDON_GUI_WINDOW", "a00251.html#ga9c9c299166319c2248b2c62548a69fbb", null ]
+    [ "CAddonGUIDialogExtendedProgress", "a00251.html#ga2f267cd452ee9736993693fa501ac85e", null ],
+    [ "IsFinished", "a00251.html#gaabe45b4d47077b54df0bb809eb41b8d5", null ],
+    [ "MarkFinished", "a00251.html#ga40af1bcedea1f61fde8cd5e70e416473", null ],
+    [ "Percentage", "a00251.html#ga3bf91c353218dceaa271b65321b2f5cf", null ],
+    [ "SetPercentage", "a00251.html#ga74a9a823ab1cd34d62a219a842de5946", null ],
+    [ "SetProgress", "a00251.html#gac64c8e121cf5e368cd335c28a0521922", null ],
+    [ "SetText", "a00251.html#gaec55d8bf3ca3e04261b66bee36f84368", null ],
+    [ "SetTitle", "a00251.html#gad8698c0477204fb8b81feb9d81cbe4fd", null ],
+    [ "Text", "a00251.html#gafdfa72709ffc1738c3c198f7ad8b61ec", null ],
+    [ "Title", "a00251.html#ga3cb91fb7750df7982baea48c4a3de616", null ],
+    [ "~CAddonGUIDialogExtendedProgress", "a00251.html#ga86033f373ed6159d52feb585bab2dfda", null ]
 ];

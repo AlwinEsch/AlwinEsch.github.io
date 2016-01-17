@@ -1,10 +1,6 @@
 var a00226 =
 [
-    [ "AddLabel", "a00226.html#ga47cfd2f63ce533672996085727a5fdd4", null ],
-    [ "CAddonGUIControlFadeLabel", "a00226.html#gad0307142b3766119a0f4062a68f45ce0", null ],
-    [ "GetLabel", "a00226.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "Reset", "a00226.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
-    [ "SetScrolling", "a00226.html#ga02685eb001d24047fce8ed6d4899e9af", null ],
-    [ "SetVisible", "a00226.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlFadeLabel", "a00226.html#gac737d5d712a254b8d555891a953ba685", null ]
+    [ "Codec", "a00226.html#ga62b7b43b626a9b8beb0f16a8795b9d91", null ],
+    [ "GetCodecByName", "a00226.html#ga542cf7ce73c4f9e04f16bac4583fbb19", null ],
+    [ "Name", "a00226.html#gab29906ba5407bb58b86428cb4b4a1e26", null ]
 ];

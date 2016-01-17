@@ -1,5 +1,13 @@
 var a00209 =
 [
-    [ "RegisterMe", "a00209.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
-    [ "UnRegisterMe", "a00209.html#ga5940787dcdcdb8aa995a07106917489f", null ]
+    [ "CAddonLib", "a00029.html", "a00029" ],
+    [ "CAddonLib_Codec", "a00030.html", null ],
+    [ "CAddonLib_General", "a00031.html", null ],
+    [ "CAddonLib_Network", "a00032.html", null ],
+    [ "CAddonLib_SoundPlay", "a00033.html", "a00033" ],
+    [ "CAddonLib_VFSDirEntry", "a00034.html", "a00034" ],
+    [ "CAddonLib_VFSFile", "a00035.html", "a00035" ],
+    [ "CAddonLib_VFSProperty", "a00036.html", "a00036" ],
+    [ "CAddonLib_VFSUtils", "a00037.html", null ],
+    [ "CodecDescriptor", "a00038.html", "a00038" ]
 ];

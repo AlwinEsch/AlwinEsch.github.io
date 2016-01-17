@@ -1,20 +1,11 @@
 var a00254 =
 [
-    [ "CPlayerLib_InfoTagMusic", "a00254.html#gabd1d2ec7c0d0160ae11c80d47cfc6369", null ],
-    [ "GetAlbum", "a00254.html#gaed21becc174c1a9eabb35c10c8fb1dec", null ],
-    [ "GetAlbumArtist", "a00254.html#ga8543d954eab8c5c952c8e87fd7dd2561", null ],
-    [ "GetArtist", "a00254.html#gad63aca83a431ce2f31c86d0fdc7ed4bc", null ],
-    [ "GetComment", "a00254.html#gaab329b82f3bf29e2e56aeca7db59369c", null ],
-    [ "GetDisc", "a00254.html#gabee2b25a6f37093ff91a5caaff417704", null ],
-    [ "GetDuration", "a00254.html#ga7a0124a69d21b8af01baaf6e35b9c476", null ],
-    [ "GetGenre", "a00254.html#ga57435c1b02f97861847fffd5fd740123", null ],
-    [ "GetLastPlayed", "a00254.html#ga833b68f759c1e3ce0c068fd06e9b0f4a", null ],
-    [ "GetListeners", "a00254.html#gaf92ee71c21a267247e7d06d034143c40", null ],
-    [ "GetLyrics", "a00254.html#gad31236e89eaf77e5e65f34aa1fd90426", null ],
-    [ "GetPlayCount", "a00254.html#ga057dc61a69e40c80675a082b6251fc8a", null ],
-    [ "GetReleaseDate", "a00254.html#ga6690df3048b871ac2cacb430d5606afe", null ],
-    [ "GetTitle", "a00254.html#ga9272205cb3a71f70bb4c9437da3c9bda", null ],
-    [ "GetTrack", "a00254.html#gad4fce5cb572b03a144c22e81ae70ed88", null ],
-    [ "GetURL", "a00254.html#ga0d1d697cb13f61773101e7ad6645f1e6", null ],
-    [ "~CPlayerLib_InfoTagMusic", "a00254.html#ga0c345f0e0e254a42b005d75d93905b68", null ]
+    [ "ShowAndGetDate", "a00254.html#ga37d6caf6f507938f599915d93eddd596", null ],
+    [ "ShowAndGetIPAddress", "a00254.html#ga1fd8ee824dbbbc1d222fd67583f28614", null ],
+    [ "ShowAndGetNumber", "a00254.html#gab73e260650434df59844c3a2c8b1ba2d", null ],
+    [ "ShowAndGetSeconds", "a00254.html#ga664586418f4cb12a25a15dcd5effff02", null ],
+    [ "ShowAndGetTime", "a00254.html#ga08a9c6abb71eb5a380213e9528b6aecf", null ],
+    [ "ShowAndVerifyInput", "a00254.html#ga3028013da19a00279961a45d26dcf832", null ],
+    [ "ShowAndVerifyNewPassword", "a00254.html#ga85ca517533d779b26944d6fb74fe0abe", null ],
+    [ "ShowAndVerifyPassword", "a00254.html#ga28ed908212d6a38156014d5ccc5a7dc7", null ]
 ];

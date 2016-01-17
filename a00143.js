@@ -1,9 +1,8 @@
 var a00143 =
 [
-    [ "AddonGUISpinControlType", "a00143.html#gaa4d6f1679508cd43d05a49afbb340856", [
-      [ "ADDON_SPIN_CONTROL_TYPE_INT", "a00143.html#ggaa4d6f1679508cd43d05a49afbb340856acfcb3ed0153f23488da1d6eeaff42600", null ],
-      [ "ADDON_SPIN_CONTROL_TYPE_FLOAT", "a00143.html#ggaa4d6f1679508cd43d05a49afbb340856ae233f8620001f7fafe35e57e367d1fcb", null ],
-      [ "ADDON_SPIN_CONTROL_TYPE_TEXT", "a00143.html#ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a", null ],
-      [ "ADDON_SPIN_CONTROL_TYPE_PAGE", "a00143.html#ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109", null ]
-    ] ]
+    [ "MAX_OBJECTS", "a00143.html#acdc7844fbd4d45737d4aa56834d37829", null ],
+    [ "dlclose", "a00143.html#af483b6c4400965aa885f9f1a144138a5", null ],
+    [ "dlerror", "a00143.html#a541c343ae5cdf90926014c65972c86cc", null ],
+    [ "dlopen", "a00143.html#a8668245fcfc33ca414d3d27ca038891a", null ],
+    [ "dlsym", "a00143.html#af130d2e6324246be4262ecaaed674aa4", null ]
 ];

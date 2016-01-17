@@ -1,13 +1,13 @@
 var a00027 =
 [
-    [ "AudioEngineFormat", "a00027.html#a485299b0bb8f0c1cf765321c704bcc40", null ],
-    [ "compareFormat", "a00027.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64", null ],
-    [ "m_channelCount", "a00027.html#a98e4ea22d72d3c5dce2821ae10a802f8", null ],
-    [ "m_channels", "a00027.html#a4a53bc9bcf5fe0c7d808858463f370f7", null ],
-    [ "m_dataFormat", "a00027.html#a8f4e236f291657200f64cd2f069a8ff7", null ],
-    [ "m_encodedRate", "a00027.html#a60bb897389267a5034ef730c956b661a", null ],
-    [ "m_frames", "a00027.html#a3fa03b15b439d70dd92e726e1aac9eb5", null ],
-    [ "m_frameSamples", "a00027.html#a3b6b1929e0fbe39e252645260f4d97d8", null ],
-    [ "m_frameSize", "a00027.html#a7c6321b7fd7f09478ca0bf9931009ee1", null ],
-    [ "m_sampleRate", "a00027.html#a046d570c56fd2ae9b813340816ebfdec", null ]
+    [ "CAddonLib_SoundPlay", "a00224.html#gafb64b7a34ceffbf07ce84e4d25f36d83", null ],
+    [ "~CAddonLib_SoundPlay", "a00224.html#ga21c5c23ed3b5c5f06cc66331f8bec712", null ],
+    [ "GetChannel", "a00224.html#ga9656546b61377811a68a1cf39dbc1bfc", null ],
+    [ "GetVolume", "a00224.html#ga7f136ab9899c4abfeeb61d47383f1dd5", null ],
+    [ "IsPlaying", "a00224.html#ga755f326e8b06e5f2807d64baf8bf582c", null ],
+    [ "Play", "a00224.html#ga1cb8088c7f7b1e30a0b7b1a1993326c2", null ],
+    [ "SetChannel", "a00224.html#ga18c0452db8c88c696ba2f958396ba83d", null ],
+    [ "SetVolume", "a00224.html#ga6496c97b1bcd7301acfce8671cf90984", null ],
+    [ "Stop", "a00224.html#ga17a237457e57625296e6b24feb19c60a", null ],
+    [ "IMPL_ADDONSOUNDPLAY", "a00027.html#a4a057561facdbb22e35424d8e59a59c1", null ]
 ];

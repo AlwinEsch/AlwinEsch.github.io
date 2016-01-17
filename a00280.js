@@ -1,10 +1,9 @@
 var a00280 =
 [
-    [ "Action Id's", "a00281.html", "a00281" ],
-    [ "onAction", "a00280.html#ga46acbc2206f67d5f8e1d44d3ebe4fa68", null ],
-    [ "onClick", "a00280.html#gad031aa7d2b1fcedaac6ad481e2e85757", null ],
-    [ "onControl", "a00280.html#ga3d8a5f47cd756f21b4744eed7ede8634", null ],
-    [ "onDoubleClick", "a00280.html#ga25347e21254d60dc94028d2ed6a0c5ed", null ],
-    [ "onFocus", "a00280.html#ga32655043662a872fb86801fe5e8e1e41", null ],
-    [ "onInit", "a00280.html#ga5a0ef4163216ec8833eb3a524f7fd80e", null ]
+    [ "doModal", "a00280.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
+    [ "getText", "a00280.html#gafab766445043570e6a82c14851366933", null ],
+    [ "isConfirmed", "a00280.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
+    [ "setDefault", "a00280.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
+    [ "setHeading", "a00280.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
+    [ "setHiddenInput", "a00280.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ]
 ];

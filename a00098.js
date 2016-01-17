@@ -1,16 +1,20 @@
 var a00098 =
 [
-    [ "Dialog", "a00098.html#a893649c76b6e54d6a392d5e6c260a016", null ],
-    [ "~Dialog", "a00098.html#a656bf5bf83d73b108733b72a3282c958", null ],
-    [ "browse", "a00268.html#ga329bf9f86212595d36708f6ad8977499", null ],
-    [ "browseMultiple", "a00268.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
-    [ "browseSingle", "a00268.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
-    [ "input", "a00268.html#ga2a25e833c92e98a294964d0d285ee1f9", null ],
-    [ "multiselect", "a00268.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
-    [ "notification", "a00268.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
-    [ "numeric", "a00268.html#gad44dd72bef6ada382a1b9704580410db", null ],
-    [ "ok", "a00268.html#ga623449b051874059111f9831a7b91673", null ],
-    [ "select", "a00268.html#ga31bcf740cf64230b40af61377ad701b1", null ],
-    [ "textviewer", "a00268.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
-    [ "yesno", "a00268.html#gaa64342a4b05f1ed49803ea44a25b73db", null ]
+    [ "ControlCheckMark", "a00098.html#a231bb25d7c85ca842488e9f6849511ab", null ],
+    [ "ControlCheckMark", "a00098.html#a2c40dc851393b09267d08813cae7b6ee", null ],
+    [ "canAcceptMessages", "a00098.html#a61158df74e0e53d710d19a7b4da37dc3", null ],
+    [ "Create", "a00098.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "getSelected", "a00316.html#ga1f9a3346caf72cfe92c1c48e92b71724", null ],
+    [ "setDisabledColor", "a00316.html#gabb99461e652ba261d6322894a64affbe", null ],
+    [ "setLabel", "a00316.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
+    [ "setSelected", "a00316.html#gad42accd39af295a957386c68dac3dcae", null ],
+    [ "align", "a00098.html#a4864c3686205158c9cab83fa95c2a15a", null ],
+    [ "checkHeight", "a00098.html#a1086fcf0dbee5eda21cb357a3dc9580c", null ],
+    [ "checkWidth", "a00098.html#a8ea46066f7b0b5addbe972c9e4cd1bb0", null ],
+    [ "disabledColor", "a00098.html#a9b7ae35a0c2326e198dab3c2ec50e94c", null ],
+    [ "strFont", "a00098.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "strText", "a00098.html#ab456897f658d865f7c66da9ba85f6cb9", null ],
+    [ "strTextureFocus", "a00098.html#a2c94f7603cfb9d13594e648f67b55e22", null ],
+    [ "strTextureNoFocus", "a00098.html#a51d63e84bd9b53dbdc23a476df4440a9", null ],
+    [ "textColor", "a00098.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
 ];

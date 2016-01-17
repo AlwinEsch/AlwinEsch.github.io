@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/WindowXML.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/Dialog.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('a00190_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">WindowXML.h</div>  </div>
+<div class="title">Dialog.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="a00190.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; <span class="comment">/*</span></div>
@@ -117,212 +117,171 @@ $(document).ready(function(){initNavTree('a00190_source.html','');});
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;limits.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00188.html">Window.h</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;windows/GUIMediaWindow.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;swighelper.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;WindowDialogMixin.h&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00203.html">XBMCAddon</a></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">namespace </span>xbmcgui</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">class </span>ListItem;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">class </span>WindowXMLInterceptor;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="a00104.html">   97</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00104.html">WindowXML</a> : <span class="keyword">public</span> <a class="code" href="a00102.html">Window</a></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      std::string sFallBackPath;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="a00104.html#a507ab35d41a0baaa7a32b16ca78aee24">lockingGetNextAvailableWindowId</a>();</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="a00104.html#a263d7f15607102f63cf5e0510dab428a">  109</a></span>&#160;      <a class="code" href="a00104.html#ab3dce56f075e12824bda4a03e9c711aa">WindowXMLInterceptor</a>* <a class="code" href="a00104.html#a263d7f15607102f63cf5e0510dab428a">interceptor</a>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;     <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <a class="code" href="a00104.html#a7bd14e2191a736ac358af7035f0908e7">WindowXML</a>(<span class="keyword">const</span> String&amp; xmlFilename, <span class="keyword">const</span> String&amp; scriptPath,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keyword">const</span> String&amp; defaultSkin = <span class="stringliteral">&quot;Default&quot;</span>,</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <span class="keyword">const</span> String&amp; defaultRes = <span class="stringliteral">&quot;720p&quot;</span>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00104.html#a0b81d08ea2e91ef8a90235c2118c5f23">~WindowXML</a>();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      SWIGHIDDENVIRTUAL</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00283.html#ga87ffff74f065758ae9884ecc87102af1">addItem</a>(<span class="keyword">const</span> Alternative&lt;String, const ListItem*&gt;&amp; item, <span class="keywordtype">int</span> position = INT_MAX);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="comment">// these calls represent the python interface</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment"></span><span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      SWIGHIDDENVIRTUAL</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00283.html#ga214d46ad5cb6e318163ba98e0dd780ac">removeItem</a>(<span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      SWIGHIDDENVIRTUAL</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00283.html#ga860b30302751103052456bb1f1079980">getCurrentListPosition</a>();</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      SWIGHIDDENVIRTUAL</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00283.html#gabaeb49593088c3be9c7a232d50152e34">setCurrentListPosition</a>(<span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      SWIGHIDDENVIRTUAL</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <a class="code" href="a00101.html">ListItem</a>* <a class="code" href="a00283.html#ga37ec44d83350b3e4c5b4f7a2648bfc01">getListItem</a>(<span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      SWIGHIDDENVIRTUAL</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00283.html#ga7b00dc949b12149360563a1941956fc7">getListSize</a>();</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      SWIGHIDDENVIRTUAL</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00283.html#ga612285c5b9d603a0abb0feab44b8412f">clearList</a>();</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      SWIGHIDDENVIRTUAL</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00283.html#ga3171b661458f56e0f0af6e264ac09bf3">setProperty</a>(<span class="keyword">const</span> String &amp;strProperty, <span class="keyword">const</span> String &amp;strValue);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;      <span class="comment">// CGUIWindow</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>      <a class="code" href="a00104.html#a705aa30fc54fcb4cb255efa7992f3e9e">OnMessage</a>(CGUIMessage&amp; message);</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>      <a class="code" href="a00104.html#a5a929bb12b2e74b5d65471b0a4242741">OnAction</a>(<span class="keyword">const</span> <a class="code" href="a00030.html">CAction</a> &amp;action);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span>      <a class="code" href="a00104.html#ad49427b21f983e61d73119c508009ae4">AllocResources</a>(<span class="keywordtype">bool</span> forceLoad = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span>      <a class="code" href="a00104.html#a34616535197e372a8dc5b29e4901fea1">FreeResources</a>(<span class="keywordtype">bool</span> forceUnLoad = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>      <a class="code" href="a00104.html#aff276cc1c680ae6ce85173e79e2d7251">OnClick</a>(<span class="keywordtype">int</span> iItem);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>      <a class="code" href="a00104.html#a1c57c6fbc8d351cd01a4a341536dd55b">OnDoubleClick</a>(<span class="keywordtype">int</span> iItem);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span>      <a class="code" href="a00104.html#ad12bb1656cadf7f3e4b33fafb41d686d">Process</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> currentTime, CDirtyRegionList &amp;dirtyregions);</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
-<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="a00104.html#aef19fec003e392f5b0abdb6155393615">  305</a></span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span> <a class="code" href="a00104.html#aef19fec003e392f5b0abdb6155393615">IsMediaWindow</a>()<span class="keyword"> const </span>{ XBMC_TRACE; <span class="keywordflow">return</span> <span class="keyword">true</span>; };</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      <span class="comment">// This method is identical to the Window::OnDeinitWindow method</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <span class="comment">//  except it passes the message on to their respective parents.</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      <span class="comment">// Since the respective parent differences are handled by the</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      <span class="comment">// interceptor there&#39;s no reason to define this one here.</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="comment">//      SWIGHIDDENVIRTUAL void    OnDeinitWindow(int nextWindowID);</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      <span class="comment">// CGUIWindow</span></div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>     <a class="code" href="a00104.html#a4a88d9f86eedb30367ebce61fb060bbb">LoadXML</a>(<span class="keyword">const</span> String &amp;strPath, <span class="keyword">const</span> String &amp;strPathLower);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      <span class="comment">// CGUIMediaWindow</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span>     <a class="code" href="a00104.html#adf7ec51012f9822a3ea52cf7cf69ca91">GetContextButtons</a>(<span class="keywordtype">int</span> itemNumber, CContextButtons &amp;buttons);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>     <a class="code" href="a00104.html#a8b44e36a9f2c7ee7cf8cc107e851094a">Update</a>(<span class="keyword">const</span> String &amp;strPath);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      <span class="keywordtype">void</span>             <a class="code" href="a00104.html#a40581d43c592d20ae2b4586d044bfb1a">SetupShares</a>();</div>
-<div class="line"><a name="l00323"></a><span class="lineno"><a class="line" href="a00104.html#a8858f11f6724974b26b31c03b2906050">  323</a></span>&#160;      String       <a class="code" href="a00104.html#a8858f11f6724974b26b31c03b2906050">m_scriptPath</a>;</div>
-<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="a00104.html#a7a1d2a2834d4d397bada1a8fc10333cc">  324</a></span>&#160;      String       <a class="code" href="a00104.html#a7a1d2a2834d4d397bada1a8fc10333cc">m_mediaDir</a>;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
-<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="a00104.html#ab3dce56f075e12824bda4a03e9c711aa">  326</a></span>&#160;      <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="a00104.html#ab3dce56f075e12824bda4a03e9c711aa">WindowXMLInterceptor</a>;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    };</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="comment">// Ideally what we want here is a Dialog/Media Window. The problem is that these</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="comment">//  are two orthogonal discriminations of CGUIWindow and there wasn&#39;t a previous</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="comment">//  accounting for this possibility through the use of making CGUIWindow a</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="comment">//  virtual base class of the pertinent subclasses. So now we&#39;re left with</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="comment">//  no good solution.</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="comment">// &lt;strike&gt;So here we&#39;re going to have the &#39;main&#39; hierarchy (the one visible to SWIG)</span></div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="comment">//  go the way intended - through WindowXML, but we&#39;re going to borrow dialog</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="comment">//  functionality from CGUIDialog by using it as a Mixin.&lt;/strike&gt;</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="comment">// jmarshall says that this class has no reason to inherit from CGUIMediaWindow.</span></div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="comment">//  At some point this entire hierarchy needs to be reworked. The XML handling</span></div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">//  routines should be put in a mixin.</span></div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno"><a class="line" href="a00105.html">  400</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00105.html">WindowXMLDialog</a> : <span class="keyword">public</span> <a class="code" href="a00104.html">WindowXML</a>, <span class="keyword">private</span> WindowDialogMixin</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    {</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;      <a class="code" href="a00105.html#a8b8fa85bda49679d837f979611e5f8b1">WindowXMLDialog</a>(<span class="keyword">const</span> String&amp; xmlFilename, <span class="keyword">const</span> String&amp; scriptPath,</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                      <span class="keyword">const</span> String&amp; defaultSkin = <span class="stringliteral">&quot;Default&quot;</span>,</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                      <span class="keyword">const</span> String&amp; defaultRes = <span class="stringliteral">&quot;720p&quot;</span>);</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00105.html#a310432dff16af9483d895540ff76be15">~WindowXMLDialog</a>();</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>    <a class="code" href="a00105.html#a705aa30fc54fcb4cb255efa7992f3e9e">OnMessage</a>(CGUIMessage &amp;message);</div>
-<div class="line"><a name="l00411"></a><span class="lineno"><a class="line" href="a00105.html#af5ade9aaec42bf60e7a6c1b1ae74dd2d">  411</a></span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>    <a class="code" href="a00105.html#af5ade9aaec42bf60e7a6c1b1ae74dd2d">IsDialogRunning</a>()<span class="keyword"> const </span>{ XBMC_TRACE; <span class="keywordflow">return</span> WindowDialogMixin::IsDialogRunning(); }</div>
-<div class="line"><a name="l00412"></a><span class="lineno"><a class="line" href="a00105.html#a1e8473757c23d67eeaa2ad2eaa0d868b">  412</a></span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>    <a class="code" href="a00105.html#a1e8473757c23d67eeaa2ad2eaa0d868b">IsDialog</a>()<span class="keyword"> const </span>{ XBMC_TRACE; <span class="keywordflow">return</span> <span class="keyword">true</span>;};</div>
-<div class="line"><a name="l00413"></a><span class="lineno"><a class="line" href="a00105.html#adda02b50c11c92eadfa64088e2b56094">  413</a></span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>    <a class="code" href="a00105.html#adda02b50c11c92eadfa64088e2b56094">IsModalDialog</a>()<span class="keyword"> const </span>{ XBMC_TRACE; <span class="keywordflow">return</span> <span class="keyword">true</span>; };</div>
-<div class="line"><a name="l00414"></a><span class="lineno"><a class="line" href="a00105.html#aef19fec003e392f5b0abdb6155393615">  414</a></span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>    <a class="code" href="a00105.html#aef19fec003e392f5b0abdb6155393615">IsMediaWindow</a>()<span class="keyword"> const </span>{ XBMC_TRACE; <span class="keywordflow">return</span> <span class="keyword">false</span>; };</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>    <a class="code" href="a00105.html#a5a929bb12b2e74b5d65471b0a4242741">OnAction</a>(<span class="keyword">const</span> <a class="code" href="a00030.html">CAction</a> &amp;action);</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span>    <a class="code" href="a00105.html#a9abe87b5ae8d7072807ea356566bed21">OnDeinitWindow</a>(<span class="keywordtype">int</span> nextWindowID);</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span>    <a class="code" href="a00105.html#a4a88d9f86eedb30367ebce61fb060bbb">LoadXML</a>(<span class="keyword">const</span> String &amp;strPath, <span class="keyword">const</span> String &amp;strPathLower);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;dialogs/GUIDialogProgress.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;dialogs/GUIDialogExtendedProgressBar.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;Alternative.h&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="a00190.html#a5e8c06531565c0999dcf5d856d5ae193">   31</a></span>&#160;<span class="preprocessor">#define INPUT_ALPHANUM        0</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="a00190.html#a2729d9408dbf8356d9300eddc29b8949">   32</a></span>&#160;<span class="preprocessor">#define INPUT_NUMERIC         1</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="a00190.html#a2f90d04a72989599bdeaa15617002fa7">   33</a></span>&#160;<span class="preprocessor">#define INPUT_DATE            2</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="a00190.html#aa7d37e5eb490c505d953edfcde16fc9d">   34</a></span>&#160;<span class="preprocessor">#define INPUT_TIME            3</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="a00190.html#a63d7a8385e028c6cf526878657a5f4df">   35</a></span>&#160;<span class="preprocessor">#define INPUT_IPADDRESS       4</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="a00190.html#ab47123f5e284659c746ad4fc10bba6c6">   36</a></span>&#160;<span class="preprocessor">#define INPUT_PASSWORD        5</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="a00190.html#a9b56413fd47929ac1ed4bb8eceb94acf">   38</a></span>&#160;<span class="preprocessor">#define PASSWORD_VERIFY       1</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="a00190.html#a8840e1e2e3354a816f2d3e7eabbd8381">   39</a></span>&#160;<span class="preprocessor">#define ALPHANUM_HIDE_INPUT   2</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00218.html">XBMCAddon</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="a00221.html">   43</a></span>&#160;  <span class="keyword">namespace </span>xbmcgui</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  {</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="a00110.html">   52</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00110.html">Dialog</a> : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="a00110.html#a893649c76b6e54d6a392d5e6c260a016">   56</a></span>&#160;      <span class="keyword">inline</span> <a class="code" href="a00110.html#a893649c76b6e54d6a392d5e6c260a016">Dialog</a>() {}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00110.html#a656bf5bf83d73b108733b72a3282c958">~Dialog</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00283.html#gaa64342a4b05f1ed49803ea44a25b73db">yesno</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1, </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                 <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                 <span class="keyword">const</span> String&amp; line3 = emptyString,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                 <span class="keyword">const</span> String&amp; nolabel = emptyString,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                 <span class="keyword">const</span> String&amp; yeslabel = emptyString,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                 <span class="keywordtype">int</span> autoclose = 0);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00283.html#ga31bcf740cf64230b40af61377ad701b1">select</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> std::vector&lt;String&gt;&amp; list, <span class="keywordtype">int</span> autoclose=0);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      std::unique_ptr&lt;std::vector&lt;int&gt; &gt; <a class="code" href="a00283.html#gaf6cee72babc023f15a8ed28cbb2cc7f6">multiselect</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> std::vector&lt;String&gt;&amp; options, <span class="keywordtype">int</span> autoclose=0);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00283.html#ga623449b051874059111f9831a7b91673">ok</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1, </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;              <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;              <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00283.html#gad212e84e36d2fc96b8f2e24b9dd67b47">textviewer</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; text);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      Alternative&lt;String, std::vector&lt;String&gt; &gt; <a class="code" href="a00283.html#ga329bf9f86212595d36708f6ad8977499">browse</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                          <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                          <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, <span class="keyword">const</span> String&amp; sDefault = emptyString,</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                          <span class="keywordtype">bool</span> enableMultiple = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      String <a class="code" href="a00283.html#ga8a8334ae223a82e7df728e032e167bbf">browseSingle</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                          <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                          <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                          <span class="keyword">const</span> String&amp; defaultt = emptyString );</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00283.html#ga804e86cf03fe10961d7a7ca1d00fffa3">browseMultiple</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                                         <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                                         <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                                         <span class="keyword">const</span> String&amp; defaultt = emptyString );</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      String <a class="code" href="a00283.html#gad44dd72bef6ada382a1b9704580410db">numeric</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; defaultt = emptyString);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00283.html#ga0a385fe365c4fba6583fdd25e8ad072b">notification</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; message, <span class="keyword">const</span> String&amp; icon = emptyString, <span class="keywordtype">int</span> time = 0, <span class="keywordtype">bool</span> sound = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      String <a class="code" href="a00283.html#ga2a25e833c92e98a294964d0d285ee1f9">input</a>(<span class="keyword">const</span> String&amp; heading,</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                   <span class="keyword">const</span> String&amp; defaultt = emptyString,</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                   <span class="keywordtype">int</span> type = <a class="code" href="a00190.html#a5e8c06531565c0999dcf5d856d5ae193">INPUT_ALPHANUM</a>,</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                   <span class="keywordtype">int</span> option = 0,</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                   <span class="keywordtype">int</span> autoclose = 0);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    };</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
+<div class="line"><a name="l00407"></a><span class="lineno"><a class="line" href="a00111.html">  407</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00111.html">DialogProgress</a> : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    {</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;      CGUIDialogProgress* dlg;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      <span class="keywordtype">bool</span>                open;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00111.html#a8b6dbb40347674d0ffc08d6ec7e9a877">deallocating</a>();</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
+<div class="line"><a name="l00417"></a><span class="lineno"><a class="line" href="a00111.html#ad6806218faf95b933b67927d5ad46a39">  417</a></span>&#160;      <a class="code" href="a00111.html#ad6806218faf95b933b67927d5ad46a39">DialogProgress</a>() : dlg(NULL), open(false) {}</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00111.html#a94b81fdffc22f6260839893fdbf757b7">~DialogProgress</a>();</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
-<div class="line"><a name="l00420"></a><span class="lineno"><a class="line" href="a00105.html#a9ceb2fdb6907af08ad835270ff1697bc">  420</a></span>&#160;      SWIGHIDDENVIRTUAL <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="a00105.html#a9ceb2fdb6907af08ad835270ff1697bc">show</a>() { XBMC_TRACE; WindowDialogMixin::show(); }</div>
-<div class="line"><a name="l00421"></a><span class="lineno"><a class="line" href="a00105.html#a41f0a9216ff8fd7cfe809259fc6668cc">  421</a></span>&#160;      SWIGHIDDENVIRTUAL <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="a00105.html#a41f0a9216ff8fd7cfe809259fc6668cc">close</a>() { XBMC_TRACE; WindowDialogMixin::close(); }</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
-<div class="line"><a name="l00423"></a><span class="lineno"><a class="line" href="a00105.html#a08482f1b5aa6411d68254066f6028095">  423</a></span>&#160;      <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="a00105.html#a08482f1b5aa6411d68254066f6028095">DialogJumper</a>;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    };</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  }</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;}</div>
-<div class="ttc" id="a00104_html_ad49427b21f983e61d73119c508009ae4"><div class="ttname"><a href="a00104.html#ad49427b21f983e61d73119c508009ae4">XBMCAddon::xbmcgui::WindowXML::AllocResources</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL void AllocResources(bool forceLoad=false)</div></div>
-<div class="ttc" id="a00283_html_ga612285c5b9d603a0abb0feab44b8412f"><div class="ttname"><a href="a00283.html#ga612285c5b9d603a0abb0feab44b8412f">XBMCAddon::xbmcgui::WindowXML::clearList</a></div><div class="ttdeci">void clearList()</div></div>
-<div class="ttc" id="a00104_html_ab3dce56f075e12824bda4a03e9c711aa"><div class="ttname"><a href="a00104.html#ab3dce56f075e12824bda4a03e9c711aa">XBMCAddon::xbmcgui::WindowXML::WindowXMLInterceptor</a></div><div class="ttdeci">friend class WindowXMLInterceptor</div><div class="ttdef"><b>Definition:</b> WindowXML.h:326</div></div>
-<div class="ttc" id="a00203_html"><div class="ttname"><a href="a00203.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00030_html"><div class="ttname"><a href="a00030.html">CAction</a></div><div class="ttdoc">class encapsulating information regarding a particular user action to be sent to windows and controls...</div><div class="ttdef"><b>Definition:</b> Key.h:404</div></div>
-<div class="ttc" id="a00101_html"><div class="ttname"><a href="a00101.html">XBMCAddon::xbmcgui::ListItem</a></div><div class="ttdef"><b>Definition:</b> ListItem.h:71</div></div>
-<div class="ttc" id="a00188_html"><div class="ttname"><a href="a00188.html">Window.h</a></div></div>
-<div class="ttc" id="a00283_html_ga37ec44d83350b3e4c5b4f7a2648bfc01"><div class="ttname"><a href="a00283.html#ga37ec44d83350b3e4c5b4f7a2648bfc01">XBMCAddon::xbmcgui::WindowXML::getListItem</a></div><div class="ttdeci">ListItem * getListItem(int position)</div></div>
-<div class="ttc" id="a00105_html_a705aa30fc54fcb4cb255efa7992f3e9e"><div class="ttname"><a href="a00105.html#a705aa30fc54fcb4cb255efa7992f3e9e">XBMCAddon::xbmcgui::WindowXMLDialog::OnMessage</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool OnMessage(CGUIMessage &amp;message)</div></div>
-<div class="ttc" id="a00105_html_a41f0a9216ff8fd7cfe809259fc6668cc"><div class="ttname"><a href="a00105.html#a41f0a9216ff8fd7cfe809259fc6668cc">XBMCAddon::xbmcgui::WindowXMLDialog::close</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL void close()</div><div class="ttdef"><b>Definition:</b> WindowXML.h:421</div></div>
-<div class="ttc" id="a00105_html_adda02b50c11c92eadfa64088e2b56094"><div class="ttname"><a href="a00105.html#adda02b50c11c92eadfa64088e2b56094">XBMCAddon::xbmcgui::WindowXMLDialog::IsModalDialog</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool IsModalDialog() const </div><div class="ttdef"><b>Definition:</b> WindowXML.h:413</div></div>
-<div class="ttc" id="a00105_html_a9abe87b5ae8d7072807ea356566bed21"><div class="ttname"><a href="a00105.html#a9abe87b5ae8d7072807ea356566bed21">XBMCAddon::xbmcgui::WindowXMLDialog::OnDeinitWindow</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL void OnDeinitWindow(int nextWindowID)</div></div>
-<div class="ttc" id="a00105_html_a1e8473757c23d67eeaa2ad2eaa0d868b"><div class="ttname"><a href="a00105.html#a1e8473757c23d67eeaa2ad2eaa0d868b">XBMCAddon::xbmcgui::WindowXMLDialog::IsDialog</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool IsDialog() const </div><div class="ttdef"><b>Definition:</b> WindowXML.h:412</div></div>
-<div class="ttc" id="a00104_html_a507ab35d41a0baaa7a32b16ca78aee24"><div class="ttname"><a href="a00104.html#a507ab35d41a0baaa7a32b16ca78aee24">XBMCAddon::xbmcgui::WindowXML::lockingGetNextAvailableWindowId</a></div><div class="ttdeci">static int lockingGetNextAvailableWindowId()</div></div>
-<div class="ttc" id="a00283_html_ga7b00dc949b12149360563a1941956fc7"><div class="ttname"><a href="a00283.html#ga7b00dc949b12149360563a1941956fc7">XBMCAddon::xbmcgui::WindowXML::getListSize</a></div><div class="ttdeci">int getListSize()</div></div>
-<div class="ttc" id="a00283_html_ga3171b661458f56e0f0af6e264ac09bf3"><div class="ttname"><a href="a00283.html#ga3171b661458f56e0f0af6e264ac09bf3">XBMCAddon::xbmcgui::WindowXML::setProperty</a></div><div class="ttdeci">void setProperty(const String &amp;strProperty, const String &amp;strValue)</div></div>
-<div class="ttc" id="a00105_html_af5ade9aaec42bf60e7a6c1b1ae74dd2d"><div class="ttname"><a href="a00105.html#af5ade9aaec42bf60e7a6c1b1ae74dd2d">XBMCAddon::xbmcgui::WindowXMLDialog::IsDialogRunning</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool IsDialogRunning() const </div><div class="ttdef"><b>Definition:</b> WindowXML.h:411</div></div>
-<div class="ttc" id="a00104_html_a40581d43c592d20ae2b4586d044bfb1a"><div class="ttname"><a href="a00104.html#a40581d43c592d20ae2b4586d044bfb1a">XBMCAddon::xbmcgui::WindowXML::SetupShares</a></div><div class="ttdeci">void SetupShares()</div></div>
-<div class="ttc" id="a00105_html_a9ceb2fdb6907af08ad835270ff1697bc"><div class="ttname"><a href="a00105.html#a9ceb2fdb6907af08ad835270ff1697bc">XBMCAddon::xbmcgui::WindowXMLDialog::show</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL void show()</div><div class="ttdef"><b>Definition:</b> WindowXML.h:420</div></div>
-<div class="ttc" id="a00283_html_ga860b30302751103052456bb1f1079980"><div class="ttname"><a href="a00283.html#ga860b30302751103052456bb1f1079980">XBMCAddon::xbmcgui::WindowXML::getCurrentListPosition</a></div><div class="ttdeci">int getCurrentListPosition()</div></div>
-<div class="ttc" id="a00104_html_a0b81d08ea2e91ef8a90235c2118c5f23"><div class="ttname"><a href="a00104.html#a0b81d08ea2e91ef8a90235c2118c5f23">XBMCAddon::xbmcgui::WindowXML::~WindowXML</a></div><div class="ttdeci">virtual ~WindowXML()</div></div>
-<div class="ttc" id="a00104_html_a1c57c6fbc8d351cd01a4a341536dd55b"><div class="ttname"><a href="a00104.html#a1c57c6fbc8d351cd01a4a341536dd55b">XBMCAddon::xbmcgui::WindowXML::OnDoubleClick</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool OnDoubleClick(int iItem)</div></div>
-<div class="ttc" id="a00105_html_a5a929bb12b2e74b5d65471b0a4242741"><div class="ttname"><a href="a00105.html#a5a929bb12b2e74b5d65471b0a4242741">XBMCAddon::xbmcgui::WindowXMLDialog::OnAction</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool OnAction(const CAction &amp;action)</div></div>
-<div class="ttc" id="a00104_html_a8858f11f6724974b26b31c03b2906050"><div class="ttname"><a href="a00104.html#a8858f11f6724974b26b31c03b2906050">XBMCAddon::xbmcgui::WindowXML::m_scriptPath</a></div><div class="ttdeci">String m_scriptPath</div><div class="ttdef"><b>Definition:</b> WindowXML.h:323</div></div>
-<div class="ttc" id="a00104_html_ad12bb1656cadf7f3e4b33fafb41d686d"><div class="ttname"><a href="a00104.html#ad12bb1656cadf7f3e4b33fafb41d686d">XBMCAddon::xbmcgui::WindowXML::Process</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL void Process(unsigned int currentTime, CDirtyRegionList &amp;dirtyregions)</div></div>
-<div class="ttc" id="a00105_html_a8b8fa85bda49679d837f979611e5f8b1"><div class="ttname"><a href="a00105.html#a8b8fa85bda49679d837f979611e5f8b1">XBMCAddon::xbmcgui::WindowXMLDialog::WindowXMLDialog</a></div><div class="ttdeci">WindowXMLDialog(const String &amp;xmlFilename, const String &amp;scriptPath, const String &amp;defaultSkin=&quot;Default&quot;, const String &amp;defaultRes=&quot;720p&quot;)</div></div>
-<div class="ttc" id="a00104_html_a705aa30fc54fcb4cb255efa7992f3e9e"><div class="ttname"><a href="a00104.html#a705aa30fc54fcb4cb255efa7992f3e9e">XBMCAddon::xbmcgui::WindowXML::OnMessage</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool OnMessage(CGUIMessage &amp;message)</div></div>
-<div class="ttc" id="a00104_html_a7bd14e2191a736ac358af7035f0908e7"><div class="ttname"><a href="a00104.html#a7bd14e2191a736ac358af7035f0908e7">XBMCAddon::xbmcgui::WindowXML::WindowXML</a></div><div class="ttdeci">WindowXML(const String &amp;xmlFilename, const String &amp;scriptPath, const String &amp;defaultSkin=&quot;Default&quot;, const String &amp;defaultRes=&quot;720p&quot;)</div></div>
-<div class="ttc" id="a00104_html_a8b44e36a9f2c7ee7cf8cc107e851094a"><div class="ttname"><a href="a00104.html#a8b44e36a9f2c7ee7cf8cc107e851094a">XBMCAddon::xbmcgui::WindowXML::Update</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool Update(const String &amp;strPath)</div></div>
-<div class="ttc" id="a00105_html_a310432dff16af9483d895540ff76be15"><div class="ttname"><a href="a00105.html#a310432dff16af9483d895540ff76be15">XBMCAddon::xbmcgui::WindowXMLDialog::~WindowXMLDialog</a></div><div class="ttdeci">virtual ~WindowXMLDialog()</div></div>
-<div class="ttc" id="a00283_html_gabaeb49593088c3be9c7a232d50152e34"><div class="ttname"><a href="a00283.html#gabaeb49593088c3be9c7a232d50152e34">XBMCAddon::xbmcgui::WindowXML::setCurrentListPosition</a></div><div class="ttdeci">void setCurrentListPosition(int position)</div></div>
-<div class="ttc" id="a00283_html_ga87ffff74f065758ae9884ecc87102af1"><div class="ttname"><a href="a00283.html#ga87ffff74f065758ae9884ecc87102af1">XBMCAddon::xbmcgui::WindowXML::addItem</a></div><div class="ttdeci">void addItem(const Alternative&lt; String, const ListItem * &gt; &amp;item, int position=INT_MAX)</div></div>
-<div class="ttc" id="a00105_html_aef19fec003e392f5b0abdb6155393615"><div class="ttname"><a href="a00105.html#aef19fec003e392f5b0abdb6155393615">XBMCAddon::xbmcgui::WindowXMLDialog::IsMediaWindow</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool IsMediaWindow() const </div><div class="ttdef"><b>Definition:</b> WindowXML.h:414</div></div>
-<div class="ttc" id="a00104_html_adf7ec51012f9822a3ea52cf7cf69ca91"><div class="ttname"><a href="a00104.html#adf7ec51012f9822a3ea52cf7cf69ca91">XBMCAddon::xbmcgui::WindowXML::GetContextButtons</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL void GetContextButtons(int itemNumber, CContextButtons &amp;buttons)</div></div>
-<div class="ttc" id="a00105_html"><div class="ttname"><a href="a00105.html">XBMCAddon::xbmcgui::WindowXMLDialog</a></div><div class="ttdef"><b>Definition:</b> WindowXML.h:400</div></div>
-<div class="ttc" id="a00104_html_a34616535197e372a8dc5b29e4901fea1"><div class="ttname"><a href="a00104.html#a34616535197e372a8dc5b29e4901fea1">XBMCAddon::xbmcgui::WindowXML::FreeResources</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL void FreeResources(bool forceUnLoad=false)</div></div>
-<div class="ttc" id="a00104_html_aff276cc1c680ae6ce85173e79e2d7251"><div class="ttname"><a href="a00104.html#aff276cc1c680ae6ce85173e79e2d7251">XBMCAddon::xbmcgui::WindowXML::OnClick</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool OnClick(int iItem)</div></div>
-<div class="ttc" id="a00283_html_ga214d46ad5cb6e318163ba98e0dd780ac"><div class="ttname"><a href="a00283.html#ga214d46ad5cb6e318163ba98e0dd780ac">XBMCAddon::xbmcgui::WindowXML::removeItem</a></div><div class="ttdeci">void removeItem(int position)</div></div>
-<div class="ttc" id="a00104_html_a4a88d9f86eedb30367ebce61fb060bbb"><div class="ttname"><a href="a00104.html#a4a88d9f86eedb30367ebce61fb060bbb">XBMCAddon::xbmcgui::WindowXML::LoadXML</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool LoadXML(const String &amp;strPath, const String &amp;strPathLower)</div></div>
-<div class="ttc" id="a00105_html_a4a88d9f86eedb30367ebce61fb060bbb"><div class="ttname"><a href="a00105.html#a4a88d9f86eedb30367ebce61fb060bbb">XBMCAddon::xbmcgui::WindowXMLDialog::LoadXML</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool LoadXML(const String &amp;strPath, const String &amp;strPathLower)</div></div>
-<div class="ttc" id="a00104_html_aef19fec003e392f5b0abdb6155393615"><div class="ttname"><a href="a00104.html#aef19fec003e392f5b0abdb6155393615">XBMCAddon::xbmcgui::WindowXML::IsMediaWindow</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool IsMediaWindow() const </div><div class="ttdef"><b>Definition:</b> WindowXML.h:305</div></div>
-<div class="ttc" id="a00104_html_a263d7f15607102f63cf5e0510dab428a"><div class="ttname"><a href="a00104.html#a263d7f15607102f63cf5e0510dab428a">XBMCAddon::xbmcgui::WindowXML::interceptor</a></div><div class="ttdeci">WindowXMLInterceptor * interceptor</div><div class="ttdef"><b>Definition:</b> WindowXML.h:109</div></div>
-<div class="ttc" id="a00104_html_a5a929bb12b2e74b5d65471b0a4242741"><div class="ttname"><a href="a00104.html#a5a929bb12b2e74b5d65471b0a4242741">XBMCAddon::xbmcgui::WindowXML::OnAction</a></div><div class="ttdeci">SWIGHIDDENVIRTUAL bool OnAction(const CAction &amp;action)</div></div>
-<div class="ttc" id="a00105_html_a08482f1b5aa6411d68254066f6028095"><div class="ttname"><a href="a00105.html#a08482f1b5aa6411d68254066f6028095">XBMCAddon::xbmcgui::WindowXMLDialog::DialogJumper</a></div><div class="ttdeci">friend class DialogJumper</div><div class="ttdef"><b>Definition:</b> WindowXML.h:423</div></div>
-<div class="ttc" id="a00104_html"><div class="ttname"><a href="a00104.html">XBMCAddon::xbmcgui::WindowXML</a></div><div class="ttdef"><b>Definition:</b> WindowXML.h:97</div></div>
-<div class="ttc" id="a00102_html"><div class="ttname"><a href="a00102.html">XBMCAddon::xbmcgui::Window</a></div><div class="ttdef"><b>Definition:</b> Window.h:170</div></div>
-<div class="ttc" id="a00104_html_a7a1d2a2834d4d397bada1a8fc10333cc"><div class="ttname"><a href="a00104.html#a7a1d2a2834d4d397bada1a8fc10333cc">XBMCAddon::xbmcgui::WindowXML::m_mediaDir</a></div><div class="ttdeci">String m_mediaDir</div><div class="ttdef"><b>Definition:</b> WindowXML.h:324</div></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00284.html#gad71569b69244d11fe949d0bbd5b75905">create</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1 = emptyString, </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                  <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                  <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00284.html#gabf439774a2aca33663c3bb785e6e7465">update</a>(<span class="keywordtype">int</span> percent, <span class="keyword">const</span> String&amp; line1 = emptyString, </div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                  <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                  <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00284.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00284.html#ga2a944a55da1c28885d3f00d101618ac6">iscanceled</a>();</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    };</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
+<div class="line"><a name="l00517"></a><span class="lineno"><a class="line" href="a00112.html">  517</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00112.html">DialogProgressBG</a> : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    {</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;      CGUIDialogExtendedProgressBar* dlg;</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;      CGUIDialogProgressBarHandle* handle;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;      <span class="keywordtype">bool</span> open;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00112.html#a8b6dbb40347674d0ffc08d6ec7e9a877">deallocating</a>();</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;</div>
+<div class="line"><a name="l00528"></a><span class="lineno"><a class="line" href="a00112.html#a31b7ec67973b011c9efb42dcd96a0342">  528</a></span>&#160;      <a class="code" href="a00112.html#a31b7ec67973b011c9efb42dcd96a0342">DialogProgressBG</a>() : dlg(NULL), handle(NULL), open(false) {}</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00112.html#a1ea61272a3fe716659a11170cfb143a5">~DialogProgressBG</a>();</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00285.html#gaafb8a184f497bc815d38be07731df561">create</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; message = emptyString);</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00285.html#ga90d83a72e4151aba7c05422cf34f6684">update</a>(<span class="keywordtype">int</span> percent = 0, <span class="keyword">const</span> String&amp; heading = emptyString, <span class="keyword">const</span> String&amp; message = emptyString);</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00285.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00285.html#ga06926ca87a7be7d8af8ee84670fffa87">isFinished</a>();</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    };</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;  }</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;}</div>
+<div class="ttc" id="a00112_html_a31b7ec67973b011c9efb42dcd96a0342"><div class="ttname"><a href="a00112.html#a31b7ec67973b011c9efb42dcd96a0342">XBMCAddon::xbmcgui::DialogProgressBG::DialogProgressBG</a></div><div class="ttdeci">DialogProgressBG()</div><div class="ttdef"><b>Definition:</b> Dialog.h:528</div></div>
+<div class="ttc" id="a00283_html_gaa64342a4b05f1ed49803ea44a25b73db"><div class="ttname"><a href="a00283.html#gaa64342a4b05f1ed49803ea44a25b73db">XBMCAddon::xbmcgui::Dialog::yesno</a></div><div class="ttdeci">bool yesno(const String &amp;heading, const String &amp;line1, const String &amp;line2=emptyString, const String &amp;line3=emptyString, const String &amp;nolabel=emptyString, const String &amp;yeslabel=emptyString, int autoclose=0)</div></div>
+<div class="ttc" id="a00112_html_a8b6dbb40347674d0ffc08d6ec7e9a877"><div class="ttname"><a href="a00112.html#a8b6dbb40347674d0ffc08d6ec7e9a877">XBMCAddon::xbmcgui::DialogProgressBG::deallocating</a></div><div class="ttdeci">virtual void deallocating()</div></div>
+<div class="ttc" id="a00283_html_gad44dd72bef6ada382a1b9704580410db"><div class="ttname"><a href="a00283.html#gad44dd72bef6ada382a1b9704580410db">XBMCAddon::xbmcgui::Dialog::numeric</a></div><div class="ttdeci">String numeric(int type, const String &amp;heading, const String &amp;defaultt=emptyString)</div></div>
+<div class="ttc" id="a00110_html"><div class="ttname"><a href="a00110.html">XBMCAddon::xbmcgui::Dialog</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:52</div></div>
+<div class="ttc" id="a00283_html_ga623449b051874059111f9831a7b91673"><div class="ttname"><a href="a00283.html#ga623449b051874059111f9831a7b91673">XBMCAddon::xbmcgui::Dialog::ok</a></div><div class="ttdeci">bool ok(const String &amp;heading, const String &amp;line1, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
+<div class="ttc" id="a00284_html_gad71569b69244d11fe949d0bbd5b75905"><div class="ttname"><a href="a00284.html#gad71569b69244d11fe949d0bbd5b75905">XBMCAddon::xbmcgui::DialogProgress::create</a></div><div class="ttdeci">void create(const String &amp;heading, const String &amp;line1=emptyString, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
+<div class="ttc" id="a00112_html_a1ea61272a3fe716659a11170cfb143a5"><div class="ttname"><a href="a00112.html#a1ea61272a3fe716659a11170cfb143a5">XBMCAddon::xbmcgui::DialogProgressBG::~DialogProgressBG</a></div><div class="ttdeci">virtual ~DialogProgressBG()</div></div>
+<div class="ttc" id="a00284_html_ga5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="a00284.html#ga5ae591df94fc66ccb85cbb6565368bca">XBMCAddon::xbmcgui::DialogProgress::close</a></div><div class="ttdeci">void close()</div></div>
+<div class="ttc" id="a00283_html_ga0a385fe365c4fba6583fdd25e8ad072b"><div class="ttname"><a href="a00283.html#ga0a385fe365c4fba6583fdd25e8ad072b">XBMCAddon::xbmcgui::Dialog::notification</a></div><div class="ttdeci">void notification(const String &amp;heading, const String &amp;message, const String &amp;icon=emptyString, int time=0, bool sound=true)</div></div>
+<div class="ttc" id="a00218_html"><div class="ttname"><a href="a00218.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
+<div class="ttc" id="a00283_html_ga804e86cf03fe10961d7a7ca1d00fffa3"><div class="ttname"><a href="a00283.html#ga804e86cf03fe10961d7a7ca1d00fffa3">XBMCAddon::xbmcgui::Dialog::browseMultiple</a></div><div class="ttdeci">std::vector&lt; String &gt; browseMultiple(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;defaultt=emptyString)</div></div>
+<div class="ttc" id="a00111_html_a94b81fdffc22f6260839893fdbf757b7"><div class="ttname"><a href="a00111.html#a94b81fdffc22f6260839893fdbf757b7">XBMCAddon::xbmcgui::DialogProgress::~DialogProgress</a></div><div class="ttdeci">virtual ~DialogProgress()</div></div>
+<div class="ttc" id="a00190_html_a5e8c06531565c0999dcf5d856d5ae193"><div class="ttname"><a href="a00190.html#a5e8c06531565c0999dcf5d856d5ae193">INPUT_ALPHANUM</a></div><div class="ttdeci">#define INPUT_ALPHANUM</div><div class="ttdef"><b>Definition:</b> Dialog.h:31</div></div>
+<div class="ttc" id="a00111_html_a8b6dbb40347674d0ffc08d6ec7e9a877"><div class="ttname"><a href="a00111.html#a8b6dbb40347674d0ffc08d6ec7e9a877">XBMCAddon::xbmcgui::DialogProgress::deallocating</a></div><div class="ttdeci">virtual void deallocating()</div></div>
+<div class="ttc" id="a00111_html_ad6806218faf95b933b67927d5ad46a39"><div class="ttname"><a href="a00111.html#ad6806218faf95b933b67927d5ad46a39">XBMCAddon::xbmcgui::DialogProgress::DialogProgress</a></div><div class="ttdeci">DialogProgress()</div><div class="ttdef"><b>Definition:</b> Dialog.h:417</div></div>
+<div class="ttc" id="a00112_html"><div class="ttname"><a href="a00112.html">XBMCAddon::xbmcgui::DialogProgressBG</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:517</div></div>
+<div class="ttc" id="a00285_html_ga5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="a00285.html#ga5ae591df94fc66ccb85cbb6565368bca">XBMCAddon::xbmcgui::DialogProgressBG::close</a></div><div class="ttdeci">void close()</div></div>
+<div class="ttc" id="a00283_html_gaf6cee72babc023f15a8ed28cbb2cc7f6"><div class="ttname"><a href="a00283.html#gaf6cee72babc023f15a8ed28cbb2cc7f6">XBMCAddon::xbmcgui::Dialog::multiselect</a></div><div class="ttdeci">std::unique_ptr&lt; std::vector&lt; int &gt; &gt; multiselect(const String &amp;heading, const std::vector&lt; String &gt; &amp;options, int autoclose=0)</div></div>
+<div class="ttc" id="a00285_html_ga06926ca87a7be7d8af8ee84670fffa87"><div class="ttname"><a href="a00285.html#ga06926ca87a7be7d8af8ee84670fffa87">XBMCAddon::xbmcgui::DialogProgressBG::isFinished</a></div><div class="ttdeci">bool isFinished()</div></div>
+<div class="ttc" id="a00284_html_ga2a944a55da1c28885d3f00d101618ac6"><div class="ttname"><a href="a00284.html#ga2a944a55da1c28885d3f00d101618ac6">XBMCAddon::xbmcgui::DialogProgress::iscanceled</a></div><div class="ttdeci">bool iscanceled()</div></div>
+<div class="ttc" id="a00110_html_a656bf5bf83d73b108733b72a3282c958"><div class="ttname"><a href="a00110.html#a656bf5bf83d73b108733b72a3282c958">XBMCAddon::xbmcgui::Dialog::~Dialog</a></div><div class="ttdeci">virtual ~Dialog()</div></div>
+<div class="ttc" id="a00283_html_ga329bf9f86212595d36708f6ad8977499"><div class="ttname"><a href="a00283.html#ga329bf9f86212595d36708f6ad8977499">XBMCAddon::xbmcgui::Dialog::browse</a></div><div class="ttdeci">Alternative&lt; String, std::vector&lt; String &gt; &gt; browse(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;sDefault=emptyString, bool enableMultiple=false)</div></div>
+<div class="ttc" id="a00285_html_gaafb8a184f497bc815d38be07731df561"><div class="ttname"><a href="a00285.html#gaafb8a184f497bc815d38be07731df561">XBMCAddon::xbmcgui::DialogProgressBG::create</a></div><div class="ttdeci">void create(const String &amp;heading, const String &amp;message=emptyString)</div></div>
+<div class="ttc" id="a00111_html"><div class="ttname"><a href="a00111.html">XBMCAddon::xbmcgui::DialogProgress</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:407</div></div>
+<div class="ttc" id="a00284_html_gabf439774a2aca33663c3bb785e6e7465"><div class="ttname"><a href="a00284.html#gabf439774a2aca33663c3bb785e6e7465">XBMCAddon::xbmcgui::DialogProgress::update</a></div><div class="ttdeci">void update(int percent, const String &amp;line1=emptyString, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
+<div class="ttc" id="a00283_html_ga2a25e833c92e98a294964d0d285ee1f9"><div class="ttname"><a href="a00283.html#ga2a25e833c92e98a294964d0d285ee1f9">XBMCAddon::xbmcgui::Dialog::input</a></div><div class="ttdeci">String input(const String &amp;heading, const String &amp;defaultt=emptyString, int type=INPUT_ALPHANUM, int option=0, int autoclose=0)</div></div>
+<div class="ttc" id="a00285_html_ga90d83a72e4151aba7c05422cf34f6684"><div class="ttname"><a href="a00285.html#ga90d83a72e4151aba7c05422cf34f6684">XBMCAddon::xbmcgui::DialogProgressBG::update</a></div><div class="ttdeci">void update(int percent=0, const String &amp;heading=emptyString, const String &amp;message=emptyString)</div></div>
+<div class="ttc" id="a00283_html_gad212e84e36d2fc96b8f2e24b9dd67b47"><div class="ttname"><a href="a00283.html#gad212e84e36d2fc96b8f2e24b9dd67b47">XBMCAddon::xbmcgui::Dialog::textviewer</a></div><div class="ttdeci">void textviewer(const String &amp;heading, const String &amp;text)</div></div>
+<div class="ttc" id="a00283_html_ga8a8334ae223a82e7df728e032e167bbf"><div class="ttname"><a href="a00283.html#ga8a8334ae223a82e7df728e032e167bbf">XBMCAddon::xbmcgui::Dialog::browseSingle</a></div><div class="ttdeci">String browseSingle(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;defaultt=emptyString)</div></div>
+<div class="ttc" id="a00110_html_a893649c76b6e54d6a392d5e6c260a016"><div class="ttname"><a href="a00110.html#a893649c76b6e54d6a392d5e6c260a016">XBMCAddon::xbmcgui::Dialog::Dialog</a></div><div class="ttdeci">Dialog()</div><div class="ttdef"><b>Definition:</b> Dialog.h:56</div></div>
+<div class="ttc" id="a00283_html_ga31bcf740cf64230b40af61377ad701b1"><div class="ttname"><a href="a00283.html#ga31bcf740cf64230b40af61377ad701b1">XBMCAddon::xbmcgui::Dialog::select</a></div><div class="ttdeci">int select(const String &amp;heading, const std::vector&lt; String &gt; &amp;list, int autoclose=0)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00190.html">WindowXML.h</a></li>
+    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00190.html">Dialog.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

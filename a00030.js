@@ -1,19 +1,9 @@
 var a00030 =
 [
-    [ "CAction", "a00030.html#ac1218988dbb4d8b60c2b90c4d1ac2ee1", null ],
-    [ "CAction", "a00030.html#a68a32927c4449caec8f3bc033a282b1e", null ],
-    [ "CAction", "a00030.html#ac65361059abdede2b6737df0c797c548", null ],
-    [ "CAction", "a00030.html#ade0a31b38add5ab560578bff5919e0bf", null ],
-    [ "CAction", "a00030.html#ac12bcc0c31fa6095b246dd8cdf26a4ea", null ],
-    [ "GetAmount", "a00030.html#a66ccf2326af5e02727679d058caf8f90", null ],
-    [ "GetButtonCode", "a00030.html#ac4a8105d590287c80e61d2684def3274", null ],
-    [ "GetHoldTime", "a00030.html#ad81aa176a736250d37cc4a043396c414", null ],
-    [ "GetID", "a00030.html#a66b85eda9d21e72ed1561bd85c64566a", null ],
-    [ "GetName", "a00030.html#a8b9389d7613c0942dded4c6af39d7ab1", null ],
-    [ "GetRepeat", "a00030.html#abe1f5801436a278c993ae412c5db9eb7", null ],
-    [ "GetText", "a00030.html#a868015000b325012e2e3194bbdfca8b2", null ],
-    [ "GetUnicode", "a00030.html#ae3f3455d2a31ce0ee26912a51842779b", null ],
-    [ "IsGesture", "a00030.html#ab162ac8ceda1b1a031be2e9aacc902cd", null ],
-    [ "IsMouse", "a00030.html#a43969fb0716f0d3595065e361b4debc6", null ],
-    [ "SetText", "a00030.html#a8008c108280948ebd79830f222068455", null ]
+    [ "CAddonLib_VFSProperty", "a00225.html#ga965d127e0d0de44d06a0e6da2ca8f829", null ],
+    [ "Name", "a00225.html#gab29906ba5407bb58b86428cb4b4a1e26", null ],
+    [ "SetName", "a00225.html#ga940d484bb6523277e1d2c742f4f534a4", null ],
+    [ "SetValue", "a00225.html#ga69925f195530e698e569191bd4c3470c", null ],
+    [ "Value", "a00225.html#ga7533eecbdf0c0c538dd01e03fdf8f2ad", null ],
+    [ "IMPL_VFS_PROPERTY", "a00030.html#a6f6cad3c4a0e6b003c8617cd277d0b38", null ]
 ];

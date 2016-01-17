@@ -1,4 +1,9 @@
 var a00069 =
 [
-    [ "KODI_PVR_LIBRARY", "a00069.html#a189371e5d5b4f2016890b37d497b1674", null ]
+    [ "compile_name", "a00069.html#afe9672e29db448c9cc47fbb6cbb5a8f4", null ],
+    [ "major", "a00069.html#ac8947941479c38403a09c14a60b03f01", null ],
+    [ "minor", "a00069.html#aec7b96885baf2e6f10efbdef9d935a0b", null ],
+    [ "revision", "a00069.html#a5061ba1a268eb999ed21e0c4d7bf609e", null ],
+    [ "tag", "a00069.html#ae120f732e7e1c5e4a16fa31d89f655df", null ],
+    [ "tag_revision", "a00069.html#a14e85f5a1bb888b4325a87984bccfe81", null ]
 ];

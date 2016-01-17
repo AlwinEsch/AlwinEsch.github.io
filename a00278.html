@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Action</title>
+<title>Kodi Development: CPVRStream</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,131 +91,233 @@ $(document).ready(function(){initNavTree('a00278.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Action<div class="ingroups"><a class="el" href="a00310.html">Python Development</a> &raquo; <a class="el" href="a00272.html">Library - xbmcgui</a></div></div>  </div>
+<div class="title">CPVRStream<div class="ingroups"><a class="el" href="a00324.html">C++ Development</a> &raquo; <a class="el" href="a00274.html">Library - PVRLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b><a class="el" href="a00083.html">Action</a> class.</b> </p>
-<p><b><code>xbmcgui.Action():</code></b></p>
-<p>This class serves in addition to identify carried out <a class="el" href="a00281.html">Action Id's</a> of Kodi and to be able to carry out thereby own necessary steps.</p>
-<p>The data of this class are always transmitted by callback <a class="el" href="a00280.html#ga46acbc2206f67d5f8e1d44d3ebe4fa68" title="onAction method. ">Window::onAction</a> at a window. </p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00281"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00281.html">Action Id's</a></td></tr>
-<tr class="memdesc:a00281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actions that we have defined. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga3ee04d80d5e7af5563ecc098623a90ad"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float getAmount1 </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the first amount of force applied to the thumbstick. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga0f5620d911d309e2dadadc44359bce45"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float getAmount2 </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the second amount of force applied to the thumbstick. </p>
-
-</div>
-</div>
-<a class="anchor" id="gab60f32db21659ba5c3f4d145b9e5947b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long getButtonCode </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the button code for this action. </p>
-
-</div>
-</div>
-<a class="anchor" id="gac7a54ea5a10c5c4683f16e3f83f77104"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long getId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get <a class="el" href="a00281.html">Action Id's</a>. </p>
-<p>This function returns the identification code used by the explained order, it is necessary to determine the type of command from <a class="el" href="a00281.html">Action Id's</a>.</p>
-<dl class="section return"><dt>Returns</dt><dd>The action's current id as a long or 0 if no action is mapped in the xml's.</dd></dl>
+<p><b>PVR stream properties data class</b> </p>
+<p>Represents a single stream. It extends the PODS to provide some operators overloads.</p>
+<p>All for one PVR stream needed data can be becomes stored inside this class to have it available on requests.</p>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">def </span>onAction(self, action):</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_PREVIOUS_MENU:</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    print(<span class="stringliteral">&#39;action recieved: previous&#39;</span>)</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
-</div><!-- fragment --> 
+<p><b>PVR stream properties:</b></p>
+<p>Structure here shows the construction that is used on the PVR system and in this class (<a class="el" href="a00084.html">CPVRStream</a>) can be edited. </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * PVR stream properties</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_STREAM_PROPERTIES</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iStreamCount;</div>
+<div class="line">  <span class="keyword">struct </span>PVR_STREAM</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iPhysicalId;        <span class="comment">/* physical index */</span></div>
+<div class="line">    <a class="code" href="a00138.html#adb311b9a66ccf6cbc77137e0af86be2a">kodi_codec_type</a>   iCodecType;         <span class="comment">/* codec type this stream */</span></div>
+<div class="line">    <a class="code" href="a00138.html#a5f36d5652cd9f943a40f0a2c4495a74a">kodi_codec_id</a>     iCodecId;           <span class="comment">/* codec id of this stream */</span></div>
+<div class="line">    <span class="keywordtype">char</span>              strLanguage[4];     <span class="comment">/* language id */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iIdentifier;        <span class="comment">/* stream id */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iFPSScale;          <span class="comment">/* scale of 1000 and a rate of 29970 will result in 29.97 fps */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iFPSRate;           <span class="comment">/* FPS rate */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iHeight;            <span class="comment">/* height of the stream reported by the demuxer */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iWidth;             <span class="comment">/* width of the stream reported by the demuxer */</span></div>
+<div class="line">    <span class="keywordtype">float</span>             fAspect;            <span class="comment">/* display aspect ratio of the stream */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iChannels;          <span class="comment">/* amount of channels */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iSampleRate;        <span class="comment">/* sample rate */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iBlockAlign;        <span class="comment">/* block alignment */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iBitRate;           <span class="comment">/* bit rate */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iBitsPerSample;     <span class="comment">/* bits per sample */</span></div>
+<div class="line">   } stream[PVR_STREAM_MAX_STREAMS];      <span class="comment">/* the streams */</span></div>
+<div class="line">} <a class="code" href="a00141.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_STREAM_PROPERTIES;</div>
+</div><!-- fragment --><p>It has the header <a class="el" href="a00185.html">#include &lt;kodi/pvr.api2/StreamUtils.h&gt;</a> be included to enjoy it.</p>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Note: This is only a example to show the easiest use of them, for</span></div>
+<div class="line"><span class="comment"> * them is always only one and the same stream type present.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * The class CStreamProperties is designed to store several streams</span></div>
+<div class="line"><span class="comment"> * and to alow updates of codec Id&#39;s during usage of them.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00185.html">kodi/pvr.api2/StreamUtils.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line">CStreamProperties activeChannelStreams;</div>
+<div class="line">...</div>
+<div class="line">void UpdateStreams()</div>
+<div class="line">{</div>
+<div class="line">  CodecDescriptor codecId = CodecDescriptor::GetCodecByName(<span class="stringliteral">&quot;pcm_f32le&quot;</span>);</div>
+<div class="line">  <span class="keywordflow">if</span> (codecId.Codec().codec_type == XBMC_CODEC_TYPE_AUDIO)</div>
+<div class="line">  {</div>
+<div class="line">    CPVRStream newStream;</div>
+<div class="line">    <span class="comment">/* Get the stream data if already present and do only update */</span></div>
+<div class="line">    activeChannelStreams.GetStreamData(1, &amp;newStream);</div>
+<div class="line"></div>
+<div class="line">    newStream.iCodecType      = codecId.Codec().codec_type;</div>
+<div class="line">    newStream.iCodecId        = codecId.Codec().codec_id;</div>
+<div class="line">    newStream.iChannels       = 2;</div>
+<div class="line">    newStream.iSampleRate     = 48000;</div>
+<div class="line">    newStream.iBitsPerSample  = 32;</div>
+<div class="line">    newStream.iBitRate        = newStream.iSampleRate * newStream.iChannels * newStream.iBitsPerSample;</div>
+<div class="line">    newStream.strLanguage[0]  = 0;</div>
+<div class="line">    newStream.strLanguage[1]  = 0;</div>
+<div class="line">    newStream.strLanguage[2]  = 0;</div>
+<div class="line">    newStream.strLanguage[3]  = 0;</div>
+<div class="line">    newStream.iIdentifier     = -1;</div>
+<div class="line"></div>
+<div class="line">    newStreams.push_back(newStream);</div>
+<div class="line">    activeChannelStreams.UpdateStreams(newStreams);</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">  {</div>
+<div class="line">    activeChannelStreams.Clear();</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaa71d36872f416feaa853788a7a7a7ef8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clears the present stream data on class. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf419611a13a1bca6fe60cd58cb8a952f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPVRStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class constructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="gad8caf56bf234506f41c1fcc64a0d1ad7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPVRStream </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00084.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class constructor to create copy of them. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>The other stream class to copy from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga324d4448e5c2dde1488e1a9b4d26c7ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsCleared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks whether the stream has been cleared or not.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if cleared </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8c39a1e5e76bc953c53019e4ef318216"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00084.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare about Id is above. </p>
+<p>Compares this stream with another one so that video streams are sorted before any other streams and the others are sorted by the physical ID</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Other stream to compare from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the other have a higher Id </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7b1eb5fcb43d86807d0df66f0b9c74e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPVRStream&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00084.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy stream class. </p>
+<p>Overwrite stream class with data from other stream</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>The other stream class to copy from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2e56127d518a6487ba46cfe720bb4904"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00084.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Compares this stream based on another stream</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Other stream to compare from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if equal, otherwise false </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->

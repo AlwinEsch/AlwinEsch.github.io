@@ -1,12 +1,18 @@
 var a00289 =
 [
-    [ "onPlayBackEnded", "a00289.html#gab375f26bb820f640d74700cda4ee6646", null ],
-    [ "onPlayBackPaused", "a00289.html#ga7226102b037bfbca79e0c940f5e912e2", null ],
-    [ "onPlayBackResumed", "a00289.html#ga075576edcd1809ff57e3897aa165e529", null ],
-    [ "onPlayBackSeek", "a00289.html#gaeda52fbaaf9860f7a96e93ba33709fc9", null ],
-    [ "onPlayBackSeekChapter", "a00289.html#ga75a62da626870983e308a62e8c359218", null ],
-    [ "onPlayBackSpeedChanged", "a00289.html#ga852e3252c43deaa541e8cae610b9e0ef", null ],
-    [ "onPlayBackStarted", "a00289.html#ga2d8b5fa98b21f02ce06f7bd7de836d9d", null ],
-    [ "onPlayBackStopped", "a00289.html#ga04dbd49c7486f00911995a56a19536d0", null ],
-    [ "onQueueNextItem", "a00289.html#ga8890f6898fc712522c2d29f57455275d", null ]
+    [ "abortRequested", "a00289.html#ga5b1ac2490aae34c81dd3ab6ecc58d8a5", null ],
+    [ "onAbortRequested", "a00289.html#gace3ed8fa26883bff89728e0446fc8b81", null ],
+    [ "onCleanFinished", "a00289.html#ga5e89c9b7e06b744f88063e5237977247", null ],
+    [ "onCleanStarted", "a00289.html#ga5d8eb24ae2e1b1a360a9bf3b4b51d56d", null ],
+    [ "onDatabaseScanStarted", "a00289.html#ga74db05abe95497de5e90206cb39ef7d4", null ],
+    [ "onDatabaseUpdated", "a00289.html#ga18d6bc330604bbe55e63ae6dae11efde", null ],
+    [ "onDPMSActivated", "a00289.html#ga86cc4d6bc72abe7b74c1c50dde951412", null ],
+    [ "onDPMSDeactivated", "a00289.html#ga3afef1ceaec0fd233dada0f1c415980c", null ],
+    [ "onNotification", "a00289.html#ga68122e7f3ea25f8848f99024690f1419", null ],
+    [ "onScanFinished", "a00289.html#gaf8242fca7ffb83cd719b43e16ca7a439", null ],
+    [ "onScanStarted", "a00289.html#ga6d6000ab39593068d3eb3955bed886c4", null ],
+    [ "onScreensaverActivated", "a00289.html#gaec7c0588db39e824757e840bba4c3d0b", null ],
+    [ "onScreensaverDeactivated", "a00289.html#ga72fdab6e25d1882e64768c3b4fc02ada", null ],
+    [ "onSettingsChanged", "a00289.html#ga0b2faaa5bdb64710395d7b36330324a5", null ],
+    [ "waitForAbort", "a00289.html#gaef2a905f59250fe9ffbc34edfbdbbb54", null ]
 ];

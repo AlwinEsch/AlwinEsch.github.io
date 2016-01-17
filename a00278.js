@@ -1,8 +1,10 @@
 var a00278 =
 [
-    [ "Action Id's", "a00281.html", "a00281" ],
-    [ "getAmount1", "a00278.html#ga3ee04d80d5e7af5563ecc098623a90ad", null ],
-    [ "getAmount2", "a00278.html#ga0f5620d911d309e2dadadc44359bce45", null ],
-    [ "getButtonCode", "a00278.html#gab60f32db21659ba5c3f4d145b9e5947b", null ],
-    [ "getId", "a00278.html#gac7a54ea5a10c5c4683f16e3f83f77104", null ]
+    [ "Clear", "a00278.html#gaa71d36872f416feaa853788a7a7a7ef8", null ],
+    [ "CPVRStream", "a00278.html#gaf419611a13a1bca6fe60cd58cb8a952f", null ],
+    [ "CPVRStream", "a00278.html#gad8caf56bf234506f41c1fcc64a0d1ad7", null ],
+    [ "IsCleared", "a00278.html#ga324d4448e5c2dde1488e1a9b4d26c7ad", null ],
+    [ "operator<", "a00278.html#ga8c39a1e5e76bc953c53019e4ef318216", null ],
+    [ "operator=", "a00278.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6", null ],
+    [ "operator==", "a00278.html#ga2e56127d518a6487ba46cfe720bb4904", null ]
 ];

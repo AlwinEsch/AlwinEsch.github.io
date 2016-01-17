@@ -1,16 +1,10 @@
 var a00241 =
 [
-    [ "Abort", "a00241.html#ga71e9d732335846eb579f0dd00918b3e7", null ],
-    [ "CAddonGUIDialogProgress", "a00241.html#gac076fba6e17d71b4ce5b330855fb8902", null ],
-    [ "GetPercentage", "a00241.html#gae20eeb097c9ebe3506bd1d2bb3d92fda", null ],
-    [ "IsCanceled", "a00241.html#gaf76bcf12aaec9ab845ea61853a37a33c", null ],
-    [ "Open", "a00241.html#ga5e53001785ff30ae485a113b9b8a0ddc", null ],
-    [ "SetCanCancel", "a00241.html#ga13580b7f84c1c13f90c1d030ef61faf8", null ],
-    [ "SetHeading", "a00241.html#gaf6377691fa79c14e16aebaeb9d340b33", null ],
-    [ "SetLine", "a00241.html#ga845054cd7ff1978a112126086a8ec5ba", null ],
-    [ "SetPercentage", "a00241.html#gadf0353f59469e4b0cab327ea7df9cae8", null ],
-    [ "SetProgressAdvance", "a00241.html#gafe4b80962f0d7bdd3b0a73b83ef06323", null ],
-    [ "SetProgressMax", "a00241.html#gad397a19fe15c25e5077d34fd43da6e5a", null ],
-    [ "ShowProgressBar", "a00241.html#ga4ef9882ff90cb3878eb846335e2b3c07", null ],
-    [ "~CAddonGUIDialogProgress", "a00241.html#ga120fc408bff359c7c29a02551c00e9a0", null ]
+    [ "AddLabel", "a00241.html#ga47cfd2f63ce533672996085727a5fdd4", null ],
+    [ "CAddonGUIControlFadeLabel", "a00241.html#gad0307142b3766119a0f4062a68f45ce0", null ],
+    [ "GetLabel", "a00241.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
+    [ "Reset", "a00241.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "SetScrolling", "a00241.html#ga02685eb001d24047fce8ed6d4899e9af", null ],
+    [ "SetVisible", "a00241.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "~CAddonGUIControlFadeLabel", "a00241.html#gac737d5d712a254b8d555891a953ba685", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIControlButton</title>
+<title>Kodi Development: CAddonLib</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,197 +92,95 @@ $(document).ready(function(){initNavTree('a00224.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIControlButton<div class="ingroups"><a class="el" href="a00309.html">C++ Development</a> &raquo; <a class="el" href="a00245.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAddonLib<div class="ingroups"><a class="el" href="a00324.html">C++ Development</a> &raquo; <a class="el" href="a00223.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Standard push button control for window</b> </p>
-<p>The button control is used for creating push buttons in Kodi. You can choose the position, size, and look of the button, as well as choosing what action(s) should be performed when pushed.</p>
-<p>It has the header <a class="el" href="a00136.html">#include &lt;kodi/gui.api2/GUIControlButton.h&gt;</a> be included to enjoy it.</p>
-<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
+<p><b>Addon basic library functions</b> </p>
+<p>Permits the use of the required functions of the add-on to Kodi.</p>
+<p>These are pure static functions them no other initialization need.</p>
+<p>It has the header <a class="el" href="a00136.html">#include &lt;kodi/addon.api2/AddonLib.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga3132552bcc57d1c10aa86871c5dca313"></a>
+<a class="anchor" id="gaa0bf67ad4ff0b67b500e4070f873c337"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">CAddonGUIControlButton </td>
+          <td class="memname">static bool RegisterMe </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00060.html">CAddonGUIWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Construct a new control. </p>
+<p>Resolve all callback methods. </p>
+<p>This function link the all functions from library to kodi and without this call are them note usable.</p>
+<dl class="section note"><dt>Note</dt><dd>The required handle becomes only be send from ADDON_Create call.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">window</td><td>related window control class </td></tr>
-    <tr><td class="paramname">controlId</td><td>Used skin xml control id </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Pointer to the add-on </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>True when all methods were resolved, false otherwise.</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00136.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
+<div class="line">...</div>
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00224.html#gaa0bf67ad4ff0b67b500e4070f873c337">CAddonLib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use the library must be one time the macro IMPLEMENT_KODI_ADDON_LIBRARY somewhere included. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga6c80f17140ee95a258ff6c13439a2623"></a>
+<a class="anchor" id="ga5940787dcdcdb8aa995a07106917489f"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string GetLabel </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the used text from button. </p>
-<dl class="section return"><dt>Returns</dt><dd>Text shown </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga94e3a8c89b6a8d0fb69cb8f44c3d5b1b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GetLabel2 </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the second label if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>Second label </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaac893222adeffdefc04d749648cce354"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetEnabled </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set's the control's enabled/disabled state. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">If</td><td>true enabled, otherwise disabled </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga0468217482f9a171183b1cda613417e6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetLabel </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the text string on button. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Text</td><td>to show </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga4f36ea518d9c722f2cdc03cac01aabf3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetLabel2 </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>If two labels are used for button becomes it set with them. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Text</td><td>for second label </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga71a209185b7a98adf0a310d2c44cdbe6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetVisible </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>visible</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the control on window to visible. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">If</td><td>true visible, otherwise hidden </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gaeb9b958abdc7aa81b76bb43b856edb9a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">~CAddonGUIControlButton </td>
+          <td class="memname">static void UnRegisterMe </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Destructor. </p>
-
+<p>Release all callback methods and close handling with them. </p>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00136.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line">...</div>
+<div class="line">void ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="a00224.html#ga5940787dcdcdb8aa995a07106917489f">CAddonLib::UnRegisterMe</a>();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

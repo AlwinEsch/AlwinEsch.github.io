@@ -1,15 +1,12 @@
 var a00093 =
 [
-    [ "ControlProgress", "a00093.html#a8f64177aa9c9fdecd0b8ede01cb25b92", null ],
-    [ "ControlProgress", "a00093.html#abef3214d1c9bccc3777c244126d76e4d", null ],
-    [ "Create", "a00093.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "getPercent", "a00299.html#gad3e5815badb78551841c44d9b5ae3742", null ],
-    [ "setPercent", "a00299.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ],
-    [ "aspectRatio", "a00093.html#a62de7670850188b84202355774caa6a8", null ],
-    [ "colorDiffuse", "a00093.html#aeb3be9119c45fbe967380716174f877f", null ],
-    [ "strTextureBg", "a00093.html#a2e7730cc4604a2ce37a5af98556a878f", null ],
-    [ "strTextureLeft", "a00093.html#a5355840cd96b1dc3dd54bffbb317b93b", null ],
-    [ "strTextureMid", "a00093.html#a03fbb21bc4a963512d54452bbb6ee6fb", null ],
-    [ "strTextureOverlay", "a00093.html#a2c1fea102a7cf036617c3c534292aa20", null ],
-    [ "strTextureRight", "a00093.html#ac1685244f6b420ce72a08ccb2beb849a", null ]
+    [ "RenderCapture", "a00093.html#a2f1abd0c5a0590bee396ab3163464e91", null ],
+    [ "~RenderCapture", "a00093.html#adcd111542d35b7dc5fa70d6a8ef054a8", null ],
+    [ "capture", "a00305.html#gad84ac4cd6e43fc4aefe0eeaa0916e187", null ],
+    [ "getAspectRatio", "a00305.html#ga2c8f0f904856b52b41dd852c57bd970b", null ],
+    [ "getHeight", "a00305.html#ga07efb2a4e9a982688c8bb3c3f21d1092", null ],
+    [ "getImage", "a00305.html#gaff2e6e3a8d1c65f17c1709dc727ae69c", null ],
+    [ "getImageFormat", "a00305.html#gaa512bbf517e279b0a5ca7d2ecf07f5b1", null ],
+    [ "GetPixels", "a00093.html#a1ea12b9900fb2903c60aacad0d1ee835", null ],
+    [ "getWidth", "a00305.html#ga67a0997183f24da19b776d96c1052998", null ]
 ];

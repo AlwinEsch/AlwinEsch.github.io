@@ -1,15 +1,12 @@
 var a00050 =
 [
-    [ "CAddonGUIDialogExtendedProgress", "a00236.html#ga2f267cd452ee9736993693fa501ac85e", null ],
-    [ "~CAddonGUIDialogExtendedProgress", "a00236.html#ga86033f373ed6159d52feb585bab2dfda", null ],
-    [ "IsFinished", "a00236.html#gaabe45b4d47077b54df0bb809eb41b8d5", null ],
-    [ "MarkFinished", "a00236.html#ga40af1bcedea1f61fde8cd5e70e416473", null ],
-    [ "Percentage", "a00236.html#ga3bf91c353218dceaa271b65321b2f5cf", null ],
-    [ "SetPercentage", "a00236.html#ga74a9a823ab1cd34d62a219a842de5946", null ],
-    [ "SetProgress", "a00236.html#gac64c8e121cf5e368cd335c28a0521922", null ],
-    [ "SetText", "a00236.html#gaec55d8bf3ca3e04261b66bee36f84368", null ],
-    [ "SetTitle", "a00236.html#gad8698c0477204fb8b81feb9d81cbe4fd", null ],
-    [ "Text", "a00236.html#gafdfa72709ffc1738c3c198f7ad8b61ec", null ],
-    [ "Title", "a00236.html#ga3cb91fb7750df7982baea48c4a3de616", null ],
-    [ "IMPL_GUI_EXTENDED_PROGRESS_DIALOG", "a00050.html#a346bd1e3888bec90756af8184fec1a69", null ]
+    [ "CAddonGUIControlButton", "a00239.html#ga3132552bcc57d1c10aa86871c5dca313", null ],
+    [ "~CAddonGUIControlButton", "a00239.html#gaeb9b958abdc7aa81b76bb43b856edb9a", null ],
+    [ "GetLabel", "a00239.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
+    [ "GetLabel2", "a00239.html#ga94e3a8c89b6a8d0fb69cb8f44c3d5b1b", null ],
+    [ "SetEnabled", "a00239.html#gaac893222adeffdefc04d749648cce354", null ],
+    [ "SetLabel", "a00239.html#ga0468217482f9a171183b1cda613417e6", null ],
+    [ "SetLabel2", "a00239.html#ga4f36ea518d9c722f2cdc03cac01aabf3", null ],
+    [ "SetVisible", "a00239.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_BUTTON_CONTROL", "a00050.html#a5f336fad3f27a939c70f3b6868478e3e", null ]
 ];

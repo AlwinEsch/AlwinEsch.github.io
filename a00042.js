@@ -1,9 +1,19 @@
 var a00042 =
 [
-    [ "CAddonGUIControlLabel", "a00228.html#ga3feee4332d158ac43b8d5d5cc20e2d0b", null ],
-    [ "~CAddonGUIControlLabel", "a00228.html#gae46262d2f574f9375e18fd28b3b0244b", null ],
-    [ "GetLabel", "a00228.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "SetLabel", "a00228.html#ga0468217482f9a171183b1cda613417e6", null ],
-    [ "SetVisible", "a00228.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "IMPL_GUI_LABEL_CONTROL", "a00042.html#a98677d76131bb756d160614fdda04f6e", null ]
+    [ "CAction", "a00042.html#ac1218988dbb4d8b60c2b90c4d1ac2ee1", null ],
+    [ "CAction", "a00042.html#a68a32927c4449caec8f3bc033a282b1e", null ],
+    [ "CAction", "a00042.html#ac65361059abdede2b6737df0c797c548", null ],
+    [ "CAction", "a00042.html#ade0a31b38add5ab560578bff5919e0bf", null ],
+    [ "CAction", "a00042.html#ac12bcc0c31fa6095b246dd8cdf26a4ea", null ],
+    [ "GetAmount", "a00042.html#a66ccf2326af5e02727679d058caf8f90", null ],
+    [ "GetButtonCode", "a00042.html#ac4a8105d590287c80e61d2684def3274", null ],
+    [ "GetHoldTime", "a00042.html#ad81aa176a736250d37cc4a043396c414", null ],
+    [ "GetID", "a00042.html#a66b85eda9d21e72ed1561bd85c64566a", null ],
+    [ "GetName", "a00042.html#a8b9389d7613c0942dded4c6af39d7ab1", null ],
+    [ "GetRepeat", "a00042.html#abe1f5801436a278c993ae412c5db9eb7", null ],
+    [ "GetText", "a00042.html#a868015000b325012e2e3194bbdfca8b2", null ],
+    [ "GetUnicode", "a00042.html#ae3f3455d2a31ce0ee26912a51842779b", null ],
+    [ "IsGesture", "a00042.html#ab162ac8ceda1b1a031be2e9aacc902cd", null ],
+    [ "IsMouse", "a00042.html#a43969fb0716f0d3595065e361b4debc6", null ],
+    [ "SetText", "a00042.html#a8008c108280948ebd79830f222068455", null ]
 ];

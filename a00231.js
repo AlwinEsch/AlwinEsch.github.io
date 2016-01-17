@@ -1,9 +1,8 @@
 var a00231 =
 [
-    [ "CAddonGUIControlRendering", "a00231.html#ga391a8355fbbce5c4a05a01e15188a41b", null ],
-    [ "Create", "a00231.html#ga12847d560dd43205d13b0963d9e395e1", null ],
-    [ "Dirty", "a00231.html#ga7cea65505e98c9989ab92a87b2f2e99b", null ],
-    [ "Render", "a00231.html#ga0bc3f3606d9cf5304dac90cd7a619194", null ],
-    [ "Stop", "a00231.html#gaf6f113a64b92a63894b285b4f2a2c3a5", null ],
-    [ "~CAddonGUIControlRendering", "a00231.html#ga8111f29e2c5fe998d541b21d76f0d353", null ]
+    [ "CAddonLib_VFSProperty", "a00231.html#ga965d127e0d0de44d06a0e6da2ca8f829", null ],
+    [ "Name", "a00231.html#gab29906ba5407bb58b86428cb4b4a1e26", null ],
+    [ "SetName", "a00231.html#ga940d484bb6523277e1d2c742f4f534a4", null ],
+    [ "SetValue", "a00231.html#ga69925f195530e698e569191bd4c3470c", null ],
+    [ "Value", "a00231.html#ga7533eecbdf0c0c538dd01e03fdf8f2ad", null ]
 ];

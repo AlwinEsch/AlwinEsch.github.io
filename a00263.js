@@ -1,10 +1,10 @@
 var a00263 =
 [
-    [ "Clear", "a00263.html#gaa71d36872f416feaa853788a7a7a7ef8", null ],
-    [ "CPVRStream", "a00263.html#gaf419611a13a1bca6fe60cd58cb8a952f", null ],
-    [ "CPVRStream", "a00263.html#gad8caf56bf234506f41c1fcc64a0d1ad7", null ],
-    [ "IsCleared", "a00263.html#ga324d4448e5c2dde1488e1a9b4d26c7ad", null ],
-    [ "operator<", "a00263.html#ga8c39a1e5e76bc953c53019e4ef318216", null ],
-    [ "operator=", "a00263.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6", null ],
-    [ "operator==", "a00263.html#ga2e56127d518a6487ba46cfe720bb4904", null ]
+    [ "GetCurrentWindowDialogId", "a00263.html#ga4afd43d20b97e20532eeb1fac9ae6c1f", null ],
+    [ "GetCurrentWindowId", "a00263.html#ga452c9c6299140854739860045f060d28", null ],
+    [ "GetScreenHeight", "a00263.html#ga7b736bc18cc4c9b1e6229e1af312b6e3", null ],
+    [ "GetScreenWidth", "a00263.html#ga0f0cc52a3413a502953495f26270f559", null ],
+    [ "GetVideoResolution", "a00263.html#ga9e8e637bdd545cf2cd0b922d3496a64b", null ],
+    [ "Lock", "a00263.html#gace70db8e92290399a2a070eb0a60df63", null ],
+    [ "Unlock", "a00263.html#ga50f1fb5a8527c6f1beb7c59393c934a9", null ]
 ];

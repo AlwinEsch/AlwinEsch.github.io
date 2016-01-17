@@ -1,15 +1,16 @@
 var a00080 =
 [
-    [ "PlayList", "a00080.html#a5a2b1d9cebb8cfa88add301b5143a559", null ],
-    [ "~PlayList", "a00080.html#a32fcb11cefa02bee25ef859190f927ac", null ],
-    [ "add", "a00287.html#ga979e740949519ca0e88da2ff9934a4d5", null ],
-    [ "clear", "a00287.html#gac8bb3912a3ce86b15842e79d0b421204", null ],
-    [ "getPlayListId", "a00287.html#ga4d665409e02daa8ea13ce462ca44c914", null ],
-    [ "getposition", "a00287.html#ga265b7f39dcd400e1f4edaf4060af9977", null ],
-    [ "load", "a00287.html#ga2eea1635b7df085d42c973352ef10355", null ],
-    [ "operator[]", "a00287.html#gaba5d6f37d582f0512f61f32109a92d92", null ],
-    [ "remove", "a00287.html#gae363baca6026e43cc1264c5914ff69b9", null ],
-    [ "shuffle", "a00287.html#ga1905fe84eb39f020b32c58baf7a76758", null ],
-    [ "size", "a00287.html#gaf4b57d21919c42d55af03391f91a1c08", null ],
-    [ "unshuffle", "a00287.html#ga2401476232ac1b00321c9bfe8158f9c4", null ]
+    [ "CPlayerLib_PlayList", "a00273.html#ga9ed3d2e6831632a37dfd0ea6699ef58f", null ],
+    [ "~CPlayerLib_PlayList", "a00273.html#gab5aa5368f1de872e97298ab744281ee8", null ],
+    [ "AddItem", "a00273.html#gaaa7aba33ed28df8d2adfa6af9b097575", null ],
+    [ "AddItem", "a00273.html#gac4aeeb4b7e884b74644e14bceb759c5b", null ],
+    [ "ClearList", "a00273.html#ga2b85ec494201046fd7686395c996c272", null ],
+    [ "GetListPosition", "a00273.html#ga3b6ca85032d49dfd758dcaad70db8275", null ],
+    [ "GetListSize", "a00273.html#ga1f4581c0d5dec157ae050648b9980dda", null ],
+    [ "GetPlayListType", "a00273.html#ga1c1d6bcc394fe5e4b75634dca0147427", null ],
+    [ "LoadPlaylist", "a00273.html#ga7de3982ed8b225f5fd1580c75847d9db", null ],
+    [ "operator[]", "a00273.html#ga0fe30656a739ee76ffac247d6c602008", null ],
+    [ "RemoveItem", "a00273.html#ga7834e166deca3a366bd4d25b061606fd", null ],
+    [ "Shuffle", "a00273.html#ga9d1841bc5f559c6981b78b895d446033", null ],
+    [ "IMPL_ADDON_PLAYLIST", "a00080.html#af400e0e8cdee074287b8a6492bd70cf0", null ]
 ];

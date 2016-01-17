@@ -1,14 +1,13 @@
 var a00268 =
 [
-    [ "browse", "a00268.html#ga329bf9f86212595d36708f6ad8977499", null ],
-    [ "browseMultiple", "a00268.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
-    [ "browseSingle", "a00268.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
-    [ "input", "a00268.html#ga2a25e833c92e98a294964d0d285ee1f9", null ],
-    [ "multiselect", "a00268.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
-    [ "notification", "a00268.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
-    [ "numeric", "a00268.html#gad44dd72bef6ada382a1b9704580410db", null ],
-    [ "ok", "a00268.html#ga623449b051874059111f9831a7b91673", null ],
-    [ "select", "a00268.html#ga31bcf740cf64230b40af61377ad701b1", null ],
-    [ "textviewer", "a00268.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
-    [ "yesno", "a00268.html#gaa64342a4b05f1ed49803ea44a25b73db", null ]
+    [ "OnPlayBackEnded", "a00268.html#ga9b673b89fb0c2d810637d97a6144743d", null ],
+    [ "OnPlayBackPaused", "a00268.html#ga535ea86e9170c85e4dfc8b2292466041", null ],
+    [ "OnPlayBackResumed", "a00268.html#ga78de3c74ca811508e2c83bad612af8a0", null ],
+    [ "OnPlayBackSeek", "a00268.html#ga1aa2520cecdb44e5f37dd2905146efa6", null ],
+    [ "OnPlayBackSeekChapter", "a00268.html#ga36be56af6bfdd7fc943f8d3f1abacfbf", null ],
+    [ "OnPlayBackSpeedChanged", "a00268.html#ga14e0279d2fb9cd6b4a68f9467e07081a", null ],
+    [ "OnPlayBackStarted", "a00268.html#ga670b9e7947764d4d474b7f8cd21c1611", null ],
+    [ "OnPlayBackStopped", "a00268.html#ga5df8f6dd6cf9fb162d1d4d77da58eb2d", null ],
+    [ "OnQueueNextItem", "a00268.html#ga817b2d696d11b166143be2c391a972f9", null ],
+    [ "SetIndependentCallbacks", "a00268.html#gaa8d87ba3157eed260e7334c1b3d96657", null ]
 ];

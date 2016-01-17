@@ -1,8 +1,6 @@
 var a00259 =
 [
-    [ "CPVRLib", "a00260.html", "a00260" ],
-    [ "CPVRLib_Transfer", "a00261.html", "a00261" ],
-    [ "CPVRLib_Trigger", "a00262.html", "a00262" ],
-    [ "CPVRStream", "a00263.html", "a00263" ],
-    [ "CStreamProperties", "a00264.html", "a00264" ]
+    [ "ShowAndGetInput", "a00259.html#gabd70a1306a25efc68e99f5852aeffe9f", null ],
+    [ "ShowAndGetInput", "a00259.html#gab23d9c3e25b9f866b1581d5ff1821d02", null ],
+    [ "ShowAndGetInput", "a00259.html#gacdb0bcb4ff915c595e075af871d629ea", null ]
 ];
