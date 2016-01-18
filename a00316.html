@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Library - xbmcvfs</title>
+<title>Kodi Development: CPlayerLib_PlayList</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,226 +91,30 @@ $(document).ready(function(){initNavTree('a00316.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Library - xbmcvfs<div class="ingroups"><a class="el" href="a00351.html">Python Development</a></div></div>  </div>
+<div class="title">CPlayerLib_PlayList<div class="ingroups"><a class="el" href="a00370.html">C++ Development</a> &raquo; <a class="el" href="a00314.html">Library - PlayerLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Virtual file system functions on Kodi.</b> </p>
-<p>Offers classes and functions offers acces to the Virtual File Server (VFS) which you can use to manipulate files and folders. </p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00314"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html">File</a></td></tr>
-<tr class="memdesc:a00314"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Kodi's file class.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00327"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00327.html">Stat</a></td></tr>
-<tr class="memdesc:a00327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file or file system status. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p><b>Playpack control list</b> </p>
+<p>Class to create a list of different sources to a continuous playback of this. This also supports a random mode (shuffle) to select the next source.</p>
+<p>It has the header <a class="el" href="a00207.html">#include &lt;kodi/player.api2/PlayList.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga9188bb84632ebdbc54faca1de9be95c3"></a>
+<a class="anchor" id="gaaa7aba33ed28df8d2adfa6af9b097575"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool copy </td>
+          <td class="memname">void AddItem </td>
           <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>strSource</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>strDestnation</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Copy file to destination, returns true/false.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>file to copy. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">destination</td><td>destination file </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.copy(source, destination)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gabf13e7bae1c97bc1c4188f3e4e459f95"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool deleteFile </td>
-          <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Delete a file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>File to delete </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmcvfs.delete(file)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga12691f7bf1c5e55da57b18f63f6fbdca"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool exists </td>
-          <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check for a file or folder existance. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>File or folder (folder must end with slash or backslash) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.exists(path)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga6bb30280e2eb7d5b94cfb0eb6e65b0cb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Tuple&lt;std::vector&lt;String&gt;, std::vector&lt;String&gt; &gt; listdir </td>
-          <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Lists content of a folder. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folder to get list from </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Directory content list</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dirs, files = xbmcvfs.listdir(path)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gaf69897d9a5235e87828a9e75c1cae4ca"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool mkdir </td>
-          <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a folder. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folder to create </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.mkdir(path)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga229e97a6a47bdff0122f1004c4feda5c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool mkdirs </td>
-          <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Make all directories along the path. </p>
-<p>Create folder(s) - it will create all folders in the path.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folders to create </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.mkdirs(path)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gaefc98ff66890f353b4ea7fd620b63808"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool rename </td>
-          <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>newFile</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -320,60 +124,195 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Rename a file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>File to rename </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">newFileName</td><td>New filename, including the full path </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Moving files between different filesystem (eg. local to nfs://) is not possible on all platforms. You may have to do it manually by using the copy and deleteFile functions.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.rename(file,newFileName)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="gac83ea5fb566ee294cdd87c74c6697025"></a>
+<a class="anchor" id="gac4aeeb4b7e884b74644e14bceb759c5b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool rmdir </td>
+          <td class="memname">void AddItem </td>
           <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
+          <td class="paramtype">const <a class="el" href="a00083.html">CAddonGUIListItem</a> *&#160;</td>
+          <td class="paramname"><em>listitem</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga2b85ec494201046fd7686395c996c272"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga9ed3d2e6831632a37dfd0ea6699ef58f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPlayerLib_PlayList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00165.html#ab07b512029688f85c2c460a1d0a8efc1">AddonPlayListType</a>&#160;</td>
+          <td class="paramname"><em>playList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga3b6ca85032d49dfd758dcaad70db8275"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetListPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga1f4581c0d5dec157ae050648b9980dda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetListSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga1c1d6bcc394fe5e4b75634dca0147427"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00165.html#ab07b512029688f85c2c460a1d0a8efc1">AddonPlayListType</a> GetPlayListType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga7de3982ed8b225f5fd1580c75847d9db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LoadPlaylist </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga0fe30656a739ee76ffac247d6c602008"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00083.html">CAddonGUIListItem</a>* operator[] </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga7834e166deca3a366bd4d25b061606fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveItem </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga9d1841bc5f559c6981b78b895d446033"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shuffle </td>
+          <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>force</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>shuffle</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Remove a folder. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folder to remove </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.rmdir(path)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
-</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gab5aa5368f1de872e97298ab744281ee8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~CPlayerLib_PlayList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 </div>
 </div>
 </div><!-- contents -->

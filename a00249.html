@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Library - AddOnLIB</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/utils/SortUtils.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,88 +92,228 @@ $(document).ready(function(){initNavTree('a00249.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#groups">Modules</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
-<div class="title">Library - AddOnLIB<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a></div></div>  </div>
+<div class="title">SortUtils.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b><em>Primary add-on helper library with general functions</em></b> </p>
-<hr/>
-<p><b>Code example:</b></p>
-<p>Below is a code example do show what must be done on add-on base function to become support for library:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00144.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00153.html">kodi/addon.api2/General.h</a>&gt;</span>  <span class="comment">// Needed for CAddOnLib_General::Log</span></div>
-<div class="line"></div>
-<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
-<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
-<div class="line">...</div>
-<div class="line"></div>
-<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordflow">if</span> (!hdl || !props)</div>
-<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div>
-<div class="line"></div>
-<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
-<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00250.html#gaa0bf67ad4ff0b67b500e4070f873c337">CAddonLib::RegisterMe</a>(hdl))</div>
-<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
-<div class="line">  ...</div>
-<div class="line"></div>
-<div class="line">  <span class="comment">// Example lib call</span></div>
-<div class="line">  CAddOnLib_General::Log(<a class="code" href="a00146.html#af8526ffb1ee2a785489ac05b6e49d357a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My add-on creation done&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> ADDON_Destroy()</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <a class="code" href="a00250.html#ga5940787dcdcdb8aa995a07106917489f">CAddonLib::UnRegisterMe</a>();</div>
-<div class="line">  ...</div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>To use the add-on on Windows must be the <a class="el" href="a00151.html">dlfcn-win32.cpp</a> inserted on them. Is required to have translation functions from Windows to dlfcn, requested for access to Kodi! </dd></dl>
+<div class="textblock"><code>#include &lt;map&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;DatabaseUtils.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="a00247_source.html">SortFileItem.h</a>&quot;</code><br />
+<code>#include &quot;LabelFormatter.h&quot;</code><br />
+</div>
+<p><a href="a00249_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00250"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00250.html">CAddonLib</a></td></tr>
-<tr class="memdesc:a00250"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Addon basic library functions</b> <br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00086.html">GUIViewSortDetails</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00251"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00251.html">CAddonLib_Codec</a></td></tr>
-<tr class="memdesc:a00251"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Demux packet handle and codec identification class</b> <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00100.html">SortDescription</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00254"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00254.html">CAddonLib_General</a></td></tr>
-<tr class="memdesc:a00254"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>General functions</b> <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00101.html">SortUtils</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00255"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00255.html">CAddonLib_Network</a></td></tr>
-<tr class="memdesc:a00255"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Network functions</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00256"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00256.html">CAddonLib_SoundPlay</a></td></tr>
-<tr class="memdesc:a00256"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Background sound playback</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00258"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00258.html">CAddonLib_VFSDirEntry</a></td></tr>
-<tr class="memdesc:a00258"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system directory entry</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00259"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00259.html">CAddonLib_VFSFile</a></td></tr>
-<tr class="memdesc:a00259"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system control</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00257"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00257.html">CAddonLib_VFSProperty</a></td></tr>
-<tr class="memdesc:a00257"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system entry property</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00260"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00260.html">CAddonLib_VFSUtils</a></td></tr>
-<tr class="memdesc:a00260"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system utilities</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00252"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00252.html">CodecDescriptor</a></td></tr>
-<tr class="memdesc:a00252"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Codec type name converter</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00253"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00253.html">settings.xml</a></td></tr>
-<tr class="memdesc:a00253"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Add-on settings.xml description</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a18d1c140c4ef1ec1b4063a24d9e02365"><td class="memItemLeft" align="right" valign="top">typedef DatabaseResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00249.html#a18d1c140c4ef1ec1b4063a24d9e02365">SortItem</a></td></tr>
+<tr class="separator:a18d1c140c4ef1ec1b4063a24d9e02365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93aded15aa869e6273c501686af9e5ab"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; <a class="el" href="a00249.html#a18d1c140c4ef1ec1b4063a24d9e02365">SortItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00249.html#a93aded15aa869e6273c501686af9e5ab">SortItemPtr</a></td></tr>
+<tr class="separator:a93aded15aa869e6273c501686af9e5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4fb186545f66f921551e84f49764a2"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="a00249.html#a93aded15aa869e6273c501686af9e5ab">SortItemPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00249.html#a4a4fb186545f66f921551e84f49764a2">SortItems</a></td></tr>
+<tr class="separator:a4a4fb186545f66f921551e84f49764a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a84fb46fea6502dad87ba308cee2c65b4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00249.html#a84fb46fea6502dad87ba308cee2c65b4">SortAttribute</a> { <a class="el" href="a00249.html#a84fb46fea6502dad87ba308cee2c65b4abb0551ad57480b4c4725134c9d81b879">SortAttributeNone</a> = 0x0, 
+<a class="el" href="a00249.html#a84fb46fea6502dad87ba308cee2c65b4ae6e28ac28f127085171bb0e07e3f3446">SortAttributeIgnoreArticle</a> = 0x1, 
+<a class="el" href="a00249.html#a84fb46fea6502dad87ba308cee2c65b4a630c5ca42313574de65378a59d7896ca">SortAttributeIgnoreFolders</a> = 0x2
+ }</td></tr>
+<tr class="separator:a84fb46fea6502dad87ba308cee2c65b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa514365130b94e17b142d49e6aba9c6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00366.html#gaaa514365130b94e17b142d49e6aba9c6">SortBy</a> { <br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6ad18c11ed6451827557a9fc4ebd6dc4dc">SortByNone</a> = 0, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a67f4b3badd9a8b231517d8ed55b75810">SortByLabel</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a871ac9d091fa41a216b567e8e4a57c84">SortByDate</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a8b7b8102dd328ebe8486506d9cca8037">SortBySize</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6aa3e6398cf3f49acbcdd696bcddaf65ff">SortByFile</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a4ffcaf868ef137a8aa4d0853f7c03d6f">SortByPath</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6ab36b347f483a8bc587f6e3d1c0745082">SortByDriveType</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6aa89f9f0a3cb258f4d4c2e57b9c7cd5ca">SortByTitle</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a6b24e66b9bf8a15c99f1a90360fef216">SortByTrackNumber</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a155e6b989a6f994699e83dae0dd058ee">SortByTime</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a0723dfaef1a132b976c33f5f70466cb7">SortByArtist</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6aafb626fc6d93c47dfe7cd85ea2b490fe">SortByArtistThenYear</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a3a678017833dbc96ba5bf60f2e1de3e3">SortByAlbum</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a650883a4e08a5dfb12125490c56cefcf">SortByAlbumType</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6adfd1bf76f9d636e931749acf0969c7c7">SortByGenre</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6aa3ede592bfc5ab4a7865c0b763953946">SortByCountry</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6ab0d80dc86c90520acd1dad3c60243925">SortByYear</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a8b8cb925ae6a6ac3297d4b232e1a68e3">SortByRating</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a4fc1b5bb0bb51ebdc8e3ebd4e63be7e5">SortByUserRating</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a29c16513e70e82888908d3c4f6334a7e">SortByVotes</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a501602e376d61cf7e4d9f8f14a643bfd">SortByTop250</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a5db353cc4f9b4bf477be696072f67491">SortByProgramCount</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a211b945c5b6605f0260723e8a2e345bc">SortByPlaylistOrder</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a2890f85e64a227b5624caf49e4c6b56d">SortByEpisodeNumber</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a20a23a0a814406a8203042bfba8b002f">SortBySeason</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a06471aa38acce0d907f1779441efcfb5">SortByNumberOfEpisodes</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6ac3bbab747fec6519d60e9c92cfe083d7">SortByNumberOfWatchedEpisodes</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6af65d058ee51352a0968f956b851843d7">SortByTvShowStatus</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a588226140ac53af980f70678a6fdb9d8">SortByTvShowTitle</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a18ed86ef59460dde9c144d3712f955d6">SortBySortTitle</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a50b9146ee375450df782eccfa05bffe1">SortByProductionCode</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6aea05819add64191723df61b87b626954">SortByMPAA</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a3545bbba8f5ecaa2c58e17946de241dc">SortByVideoResolution</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a8a7379ea9fbe48cf03af679b97d08832">SortByVideoCodec</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6ae8feb96c9690d0f713054efb8f33b2b3">SortByVideoAspectRatio</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a23b91555ecd6da2ef5be64ca1471862d">SortByAudioChannels</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6ad87f0e2471ea85c2a67868cbbd13a89e">SortByAudioCodec</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6adaf18363902ab9919726778d3af1ea12">SortByAudioLanguage</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a16d517ab564374d504917b9c49c68757">SortBySubtitleLanguage</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a4d239941eb09afaaa5d90048245cfbf3">SortByStudio</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a031b9753e47a1ea8f296317cf854ab0c">SortByDateAdded</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6aee85e445d74dd8a077084fb3ae92c150">SortByLastPlayed</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a7b6ed44b51955a909ebd6a5c8cc369ba">SortByPlaycount</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6ab8a827723186acf20f69ff2fa8c639b6">SortByListeners</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a540a11457b1215974f726649f7eef69f">SortByBitrate</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a33ca769b9d7faf9f7552c50eced1c7ed">SortByRandom</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6aaddb623589a56b7d4a8cb6287096297d">SortByChannel</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6aaa9a34e6fdb8905c5118d325705b4047">SortByChannelNumber</a>, 
+<br />
+&#160;&#160;<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a29c5a859653f2159e70948819a084225">SortByDateTaken</a>, 
+<a class="el" href="a00366.html#ggaaa514365130b94e17b142d49e6aba9c6a9a2ac62a86f5d02123ede0c93926d62d">SortByRelevance</a>
+<br />
+ }</td></tr>
+<tr class="separator:gaaa514365130b94e17b142d49e6aba9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9be72f666a31b4318bbc8e8a16a9472"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00249.html#ad9be72f666a31b4318bbc8e8a16a9472">SortOrder</a> { <a class="el" href="a00249.html#ad9be72f666a31b4318bbc8e8a16a9472a663b7c43e6afb1344900b6f829094bcb">SortOrderNone</a> = 0, 
+<a class="el" href="a00249.html#ad9be72f666a31b4318bbc8e8a16a9472a9917dc0d1b32b2f8cb28083e0335c24a">SortOrderAscending</a>, 
+<a class="el" href="a00249.html#ad9be72f666a31b4318bbc8e8a16a9472a3422ac5c03eb24f59e6601673c35ca83">SortOrderDescending</a>
+ }</td></tr>
+<tr class="separator:ad9be72f666a31b4318bbc8e8a16a9472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ffe0daacf1c2de56c55a2d8d12e3556"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00249.html#a2ffe0daacf1c2de56c55a2d8d12e3556">SortSpecial</a> { <a class="el" href="a00249.html#a2ffe0daacf1c2de56c55a2d8d12e3556a2e2cf2c261dc801f3946082c8346cda0">SortSpecialNone</a> = 0, 
+<a class="el" href="a00249.html#a2ffe0daacf1c2de56c55a2d8d12e3556a812f3a3e87f35d51e8a781ea504ef891">SortSpecialOnTop</a> = 1, 
+<a class="el" href="a00249.html#a2ffe0daacf1c2de56c55a2d8d12e3556a84eec773008bb146f71ebae16d5ab224">SortSpecialOnBottom</a> = 2
+ }</td></tr>
+<tr class="separator:a2ffe0daacf1c2de56c55a2d8d12e3556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a18d1c140c4ef1ec1b4063a24d9e02365"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef DatabaseResult <a class="el" href="a00249.html#a18d1c140c4ef1ec1b4063a24d9e02365">SortItem</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a93aded15aa869e6273c501686af9e5ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;<a class="el" href="a00249.html#a18d1c140c4ef1ec1b4063a24d9e02365">SortItem</a>&gt; <a class="el" href="a00249.html#a93aded15aa869e6273c501686af9e5ab">SortItemPtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4a4fb186545f66f921551e84f49764a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="a00249.html#a93aded15aa869e6273c501686af9e5ab">SortItemPtr</a>&gt; <a class="el" href="a00249.html#a4a4fb186545f66f921551e84f49764a2">SortItems</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a84fb46fea6502dad87ba308cee2c65b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="a00249.html#a84fb46fea6502dad87ba308cee2c65b4">SortAttribute</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a84fb46fea6502dad87ba308cee2c65b4abb0551ad57480b4c4725134c9d81b879"></a>SortAttributeNone&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a84fb46fea6502dad87ba308cee2c65b4ae6e28ac28f127085171bb0e07e3f3446"></a>SortAttributeIgnoreArticle&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a84fb46fea6502dad87ba308cee2c65b4a630c5ca42313574de65378a59d7896ca"></a>SortAttributeIgnoreFolders&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ad9be72f666a31b4318bbc8e8a16a9472"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="a00249.html#ad9be72f666a31b4318bbc8e8a16a9472">SortOrder</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ad9be72f666a31b4318bbc8e8a16a9472a663b7c43e6afb1344900b6f829094bcb"></a>SortOrderNone&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad9be72f666a31b4318bbc8e8a16a9472a9917dc0d1b32b2f8cb28083e0335c24a"></a>SortOrderAscending&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad9be72f666a31b4318bbc8e8a16a9472a3422ac5c03eb24f59e6601673c35ca83"></a>SortOrderDescending&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a2ffe0daacf1c2de56c55a2d8d12e3556"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="a00249.html#a2ffe0daacf1c2de56c55a2d8d12e3556">SortSpecial</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a2ffe0daacf1c2de56c55a2d8d12e3556a2e2cf2c261dc801f3946082c8346cda0"></a>SortSpecialNone&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2ffe0daacf1c2de56c55a2d8d12e3556a812f3a3e87f35d51e8a781ea504ef891"></a>SortSpecialOnTop&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2ffe0daacf1c2de56c55a2d8d12e3556a84eec773008bb146f71ebae16d5ab224"></a>SortSpecialOnBottom&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_5f6f9ef23b2fd0fbaf6c8c2c5561a948.html">utils</a></li><li class="navelem"><a class="el" href="a00249.html">SortUtils.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

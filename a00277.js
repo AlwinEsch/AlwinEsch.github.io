@@ -1,14 +1,17 @@
 var a00277 =
 [
-    [ "CAddonGUIDialogExtendedProgress", "a00277.html#ga2f267cd452ee9736993693fa501ac85e", null ],
-    [ "IsFinished", "a00277.html#gaabe45b4d47077b54df0bb809eb41b8d5", null ],
-    [ "MarkFinished", "a00277.html#ga40af1bcedea1f61fde8cd5e70e416473", null ],
-    [ "Percentage", "a00277.html#ga3bf91c353218dceaa271b65321b2f5cf", null ],
-    [ "SetPercentage", "a00277.html#ga74a9a823ab1cd34d62a219a842de5946", null ],
-    [ "SetProgress", "a00277.html#gac64c8e121cf5e368cd335c28a0521922", null ],
-    [ "SetText", "a00277.html#gaec55d8bf3ca3e04261b66bee36f84368", null ],
-    [ "SetTitle", "a00277.html#gad8698c0477204fb8b81feb9d81cbe4fd", null ],
-    [ "Text", "a00277.html#gafdfa72709ffc1738c3c198f7ad8b61ec", null ],
-    [ "Title", "a00277.html#ga3cb91fb7750df7982baea48c4a3de616", null ],
-    [ "~CAddonGUIDialogExtendedProgress", "a00277.html#ga86033f373ed6159d52feb585bab2dfda", null ]
+    [ "CAddonLib_VFSFile", "a00277.html#gaa4aa9190a8c2c66f86f4ece11645ca19", null ],
+    [ "Close", "a00277.html#ga7f7a3199c392465d0767c6506c1af5b4", null ],
+    [ "Flush", "a00277.html#ga0e2644b2df3c228e8d71a55b60723f31", null ],
+    [ "GetChunkSize", "a00277.html#gacc37d885ea67ed49de5644a572d904ee", null ],
+    [ "GetLength", "a00277.html#gaf2332ee14e6eb66707939c8d9625194d", null ],
+    [ "GetPosition", "a00277.html#gaab98661a2483587df5d85e6ec8699bce", null ],
+    [ "OpenFile", "a00277.html#ga7964d4fc5936b7e41fd1c01320882d46", null ],
+    [ "OpenFileForWrite", "a00277.html#gab906912503a475cdb8f0a67c5d81266c", null ],
+    [ "Read", "a00277.html#gae8f00c5eb703624dd35f9d5205d56343", null ],
+    [ "ReadLine", "a00277.html#gae3d52fbedd9b4480dc45023814cb78f7", null ],
+    [ "Seek", "a00277.html#ga48d08591724952c3d51d0823caf17720", null ],
+    [ "Truncate", "a00277.html#ga97dbc6093302f0ced52952a2737407ec", null ],
+    [ "Write", "a00277.html#gac7025ec7df110a7a9691adb3f949f24f", null ],
+    [ "~CAddonLib_VFSFile", "a00277.html#gaff9977af1409edaace50b30024b00306", null ]
 ];

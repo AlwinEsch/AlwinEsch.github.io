@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/Player.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/Dialog.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,10 +92,10 @@ $(document).ready(function(){initNavTree('a00224_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Player.h</div>  </div>
+<div class="title">Dialog.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00224.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="a00224.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; <span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
@@ -117,244 +117,171 @@ $(document).ready(function(){initNavTree('a00224_source.html','');});
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00218.html">ListItem.h</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00191.html">PlayList.h</a>&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00188.html">InfoTagVideo.h</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;Exception.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00186.html">InfoTagMusic.h</a>&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00216.html">InfoTagRadioRDS.h</a>&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;AddonCallback.h&quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;Alternative.h&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;swighelper.h&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;cores/IPlayerCallback.h&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00244.html">XBMCAddon</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="a00245.html#af3c0375d913f3a660121fd1153f93059">XBMCCOMMONS_STANDARD_EXCEPTION</a>(PlayerException);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="a00245.html#a2d10c982e027434a4ad36b054f84623f">   43</a></span>&#160;    <span class="keyword">typedef</span> Alternative&lt;String, const PlayList* &gt; <a class="code" href="a00245.html#a2d10c982e027434a4ad36b054f84623f">PlayParameter</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// This class is a merge of what was previously in xbmcmodule/player.h</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//  and xbmcmodule/PythonPlayer.h without the python references. The</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//  queuing and handling of asynchronous callbacks is done internal to</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//  this class.</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="a00097.html">   71</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00097.html">Player</a> : <span class="keyword">public</span> AddonCallback, <span class="keyword">public</span> IPlayerCallback</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordtype">int</span> iPlayList;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordtype">void</span> playStream(<span class="keyword">const</span> String&amp; item = emptyString, <span class="keyword">const</span> <a class="code" href="a00119.html">XBMCAddon::xbmcgui::ListItem</a>* listitem = NULL, <span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordtype">void</span> playPlaylist(<span class="keyword">const</span> <a class="code" href="a00098.html">PlayList</a>* playlist = NULL,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                        <span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>, <span class="keywordtype">int</span> startpos=-1);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordtype">void</span> playCurrent(<span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#if !defined SWIG &amp;&amp; !defined DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keyword">static</span> PlayParameter defaultPlayParameter;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="comment">// Construct a Player proxying the given generated binding. The </span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="comment">//  construction of a Player needs to identify whether or not any </span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="comment">//  callbacks will be executed asynchronously or not.</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <a class="code" href="a00097.html">Player</a>(<span class="keywordtype">int</span> playerCore = 0);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00097.html">Player</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#gaaee24c75f696af5fedbc354b5b48e20d">play</a>(<span class="keyword">const</span> PlayParameter&amp; item = Player::defaultPlayParameter,</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;#ifndef DOXYGEN_SHOULD_SKIP_THIS</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <span class="keyword">const</span> <a class="code" href="a00247.html">XBMCAddon::xbmcgui</a>::</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;#endif <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                ListItem* listitem = NULL,</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keywordtype">int</span> startpos = -1);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;dialogs/GUIDialogProgress.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;dialogs/GUIDialogExtendedProgressBar.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;Alternative.h&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="a00224.html#a5e8c06531565c0999dcf5d856d5ae193">   31</a></span>&#160;<span class="preprocessor">#define INPUT_ALPHANUM        0</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="a00224.html#a2729d9408dbf8356d9300eddc29b8949">   32</a></span>&#160;<span class="preprocessor">#define INPUT_NUMERIC         1</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="a00224.html#a2f90d04a72989599bdeaa15617002fa7">   33</a></span>&#160;<span class="preprocessor">#define INPUT_DATE            2</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="a00224.html#aa7d37e5eb490c505d953edfcde16fc9d">   34</a></span>&#160;<span class="preprocessor">#define INPUT_TIME            3</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="a00224.html#a63d7a8385e028c6cf526878657a5f4df">   35</a></span>&#160;<span class="preprocessor">#define INPUT_IPADDRESS       4</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="a00224.html#ab47123f5e284659c746ad4fc10bba6c6">   36</a></span>&#160;<span class="preprocessor">#define INPUT_PASSWORD        5</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="a00224.html#a9b56413fd47929ac1ed4bb8eceb94acf">   38</a></span>&#160;<span class="preprocessor">#define PASSWORD_VERIFY       1</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="a00224.html#a8840e1e2e3354a816f2d3e7eabbd8381">   39</a></span>&#160;<span class="preprocessor">#define ALPHANUM_HIDE_INPUT   2</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00256.html">XBMCAddon</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="a00259.html">   43</a></span>&#160;  <span class="keyword">namespace </span>xbmcgui</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  {</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="a00122.html">   52</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00122.html">Dialog</a> : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="a00122.html#a893649c76b6e54d6a392d5e6c260a016">   56</a></span>&#160;      <span class="keyword">inline</span> <a class="code" href="a00122.html#a893649c76b6e54d6a392d5e6c260a016">Dialog</a>() {}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00122.html#a656bf5bf83d73b108733b72a3282c958">~Dialog</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00320.html#gaa64342a4b05f1ed49803ea44a25b73db">yesno</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1, </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                 <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                 <span class="keyword">const</span> String&amp; line3 = emptyString,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                 <span class="keyword">const</span> String&amp; nolabel = emptyString,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                 <span class="keyword">const</span> String&amp; yeslabel = emptyString,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                 <span class="keywordtype">int</span> autoclose = 0);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00320.html#ga31bcf740cf64230b40af61377ad701b1">select</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> std::vector&lt;String&gt;&amp; list, <span class="keywordtype">int</span> autoclose=0);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      std::unique_ptr&lt;std::vector&lt;int&gt; &gt; <a class="code" href="a00320.html#gaf6cee72babc023f15a8ed28cbb2cc7f6">multiselect</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> std::vector&lt;String&gt;&amp; options, <span class="keywordtype">int</span> autoclose=0);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga8c528baf37154d347366083f0f816846">stop</a>();</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga7167f5c196fc5e167bfabde1a730e81d">pause</a>();</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga1387dec220717864f672de1df7a71faf">playnext</a>();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#gaa5b43aa5da42a2efacddf87ad45daea4">playprevious</a>();</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga8cbc3620e75e5a03e2beaba8bde78231">playselected</a>(<span class="keywordtype">int</span> selected);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="comment">//</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment"></span>      <span class="comment">//</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga2d8b5fa98b21f02ce06f7bd7de836d9d">onPlayBackStarted</a>();</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga2d8b5fa98b21f02ce06f7bd7de836d9d">onPlayBackStarted</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00330.html#gab375f26bb820f640d74700cda4ee6646">onPlayBackEnded</a>();</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00330.html#gab375f26bb820f640d74700cda4ee6646">onPlayBackEnded</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga04dbd49c7486f00911995a56a19536d0">onPlayBackStopped</a>();</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga04dbd49c7486f00911995a56a19536d0">onPlayBackStopped</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga7226102b037bfbca79e0c940f5e912e2">onPlayBackPaused</a>();</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga7226102b037bfbca79e0c940f5e912e2">onPlayBackPaused</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga075576edcd1809ff57e3897aa165e529">onPlayBackResumed</a>();</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga075576edcd1809ff57e3897aa165e529">onPlayBackResumed</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga8890f6898fc712522c2d29f57455275d">onQueueNextItem</a>();</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga8890f6898fc712522c2d29f57455275d">onQueueNextItem</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00320.html#ga623449b051874059111f9831a7b91673">ok</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1, </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;              <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;              <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00320.html#gad212e84e36d2fc96b8f2e24b9dd67b47">textviewer</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; text);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      Alternative&lt;String, std::vector&lt;String&gt; &gt; <a class="code" href="a00320.html#ga329bf9f86212595d36708f6ad8977499">browse</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                          <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                          <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, <span class="keyword">const</span> String&amp; sDefault = emptyString,</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                          <span class="keywordtype">bool</span> enableMultiple = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      String <a class="code" href="a00320.html#ga8a8334ae223a82e7df728e032e167bbf">browseSingle</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                          <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                          <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                          <span class="keyword">const</span> String&amp; defaultt = emptyString );</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga852e3252c43deaa541e8cae610b9e0ef">onPlayBackSpeedChanged</a>(<span class="keywordtype">int</span> speed);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga852e3252c43deaa541e8cae610b9e0ef">onPlayBackSpeedChanged</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>, <span class="keywordtype">int</span> speed); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00330.html#gaeda52fbaaf9860f7a96e93ba33709fc9">onPlayBackSeek</a>(<span class="keywordtype">int</span> time, <span class="keywordtype">int</span> seekOffset);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00330.html#gaeda52fbaaf9860f7a96e93ba33709fc9">onPlayBackSeek</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>, <span class="keywordtype">int</span> time, <span class="keywordtype">int</span> seekOffset); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00320.html#ga804e86cf03fe10961d7a7ca1d00fffa3">browseMultiple</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                                         <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                                         <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                                         <span class="keyword">const</span> String&amp; defaultt = emptyString );</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga75a62da626870983e308a62e8c359218">onPlayBackSeekChapter</a>(<span class="keywordtype">int</span> chapter);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00330.html#ga75a62da626870983e308a62e8c359218">onPlayBackSeekChapter</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>, <span class="keywordtype">int</span> chapter); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00329.html#ga8438e3403946accc1986a05b89ee7b03">isPlaying</a>();</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00329.html#ga480d8fce2c836db07fd00754481295a5">isPlayingAudio</a>();</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00329.html#ga8f1c0037ad362eaadde1ec827db6f70c">isPlayingVideo</a>();</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00329.html#ga4adfa5f4e52074c9c1e2bdfb139a857b">isPlayingRDS</a>();</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      String <a class="code" href="a00329.html#gae6a8ac0668d2ae6fcbde97b61de5b4ee">getPlayingFile</a>();</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      <span class="keywordtype">double</span> <a class="code" href="a00329.html#ga4437edd7fd2832790c13ba3179bcc64d">getTime</a>();</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga88dd78acfd022c25ea0bbb95b88207ca">seekTime</a>(<span class="keywordtype">double</span> <a class="code" href="a00329.html#ga88dd78acfd022c25ea0bbb95b88207ca">seekTime</a>);</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga7181caa6357d359e1fa528585af327c4">setSubtitles</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* subtitleFile);</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#gadcaef0ad224ff20f4dc01028a5995157">showSubtitles</a>(<span class="keywordtype">bool</span> bVisible);</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;      String <a class="code" href="a00329.html#ga81495e1edeffea020f9f5b01c521ad24">getSubtitles</a>();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      String <a class="code" href="a00320.html#gad44dd72bef6ada382a1b9704580410db">numeric</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; defaultt = emptyString);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00320.html#ga0a385fe365c4fba6583fdd25e8ad072b">notification</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; message, <span class="keyword">const</span> String&amp; icon = emptyString, <span class="keywordtype">int</span> time = 0, <span class="keywordtype">bool</span> sound = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      String <a class="code" href="a00320.html#ga2a25e833c92e98a294964d0d285ee1f9">input</a>(<span class="keyword">const</span> String&amp; heading,</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                   <span class="keyword">const</span> String&amp; defaultt = emptyString,</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                   <span class="keywordtype">int</span> type = <a class="code" href="a00224.html#a5e8c06531565c0999dcf5d856d5ae193">INPUT_ALPHANUM</a>,</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                   <span class="keywordtype">int</span> option = 0,</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                   <span class="keywordtype">int</span> autoclose = 0);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    };</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
+<div class="line"><a name="l00407"></a><span class="lineno"><a class="line" href="a00123.html">  407</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00123.html">DialogProgress</a> : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    {</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;      CGUIDialogProgress* dlg;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      <span class="keywordtype">bool</span>                open;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00123.html#a8b6dbb40347674d0ffc08d6ec7e9a877">deallocating</a>();</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga7b199d0d15f55de2ab6c9a205dff01f1">disableSubtitles</a>();</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00329.html#ga7327895e6b06bc5be33fbbd66c1da98f">getAvailableSubtitleStreams</a>();</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga1ee8a463c7974e8bd88a0906b84909da">setSubtitleStream</a>(<span class="keywordtype">int</span> iStream);</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;      <a class="code" href="a00094.html">InfoTagVideo</a>* <a class="code" href="a00329.html#ga7287b2615a3d76947a1dcd085bfaa337">getVideoInfoTag</a>();</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;      <a class="code" href="a00092.html">InfoTagMusic</a>* <a class="code" href="a00329.html#gae11388c95e616274e5ee0f10b61bf1d8">getMusicInfoTag</a>();</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;      <a class="code" href="a00093.html">InfoTagRadioRDS</a>* <a class="code" href="a00329.html#gabaefcfb5922aabc776d850b1f0869bf0">getRadioRDSInfoTag</a>() <span class="keywordflow">throw</span> (PlayerException);</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;      <span class="keywordtype">double</span> <a class="code" href="a00329.html#ga101be6ee4c35b85828fc45c67cfaded5">getTotalTime</a>();</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00329.html#ga8e79a9287b85f65d632441eda0aa00cd">getAvailableAudioStreams</a>();</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga1d0ef4583b20c163169af1e089e034dc">setAudioStream</a>(<span class="keywordtype">int</span> iStream);</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;<span class="preprocessor">#if !defined SWIG &amp;&amp; !defined DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackStarted();</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackEnded();</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackStopped();</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackPaused();</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackResumed();</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnQueueNextItem();</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackSpeedChanged(<span class="keywordtype">int</span> iSpeed);</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackSeek(<span class="keywordtype">int</span> iTime, <span class="keywordtype">int</span> seekOffset);</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackSeekChapter(<span class="keywordtype">int</span> iChapter);</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    };</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;  }</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;}</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
-<div class="ttc" id="a00330_html_ga075576edcd1809ff57e3897aa165e529"><div class="ttname"><a href="a00330.html#ga075576edcd1809ff57e3897aa165e529">XBMCAddon::xbmc::Player::onPlayBackResumed</a></div><div class="ttdeci">void onPlayBackResumed(void *self)</div><div class="ttdoc">onPlayBackResumed method. </div></div>
-<div class="ttc" id="a00329_html_ga1ee8a463c7974e8bd88a0906b84909da"><div class="ttname"><a href="a00329.html#ga1ee8a463c7974e8bd88a0906b84909da">XBMCAddon::xbmc::Player::setSubtitleStream</a></div><div class="ttdeci">void setSubtitleStream(int iStream)</div><div class="ttdoc">Set Subtitle Stream. </div></div>
-<div class="ttc" id="a00329_html_ga4adfa5f4e52074c9c1e2bdfb139a857b"><div class="ttname"><a href="a00329.html#ga4adfa5f4e52074c9c1e2bdfb139a857b">XBMCAddon::xbmc::Player::isPlayingRDS</a></div><div class="ttdeci">bool isPlayingRDS()</div><div class="ttdoc">Check for playing radio data system (RDS). </div></div>
-<div class="ttc" id="a00093_html"><div class="ttname"><a href="a00093.html">XBMCAddon::xbmc::InfoTagRadioRDS</a></div><div class="ttdef"><b>Definition:</b> InfoTagRadioRDS.h:55</div></div>
-<div class="ttc" id="a00191_html"><div class="ttname"><a href="a00191.html">PlayList.h</a></div></div>
-<div class="ttc" id="a00244_html"><div class="ttname"><a href="a00244.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00329_html_ga8438e3403946accc1986a05b89ee7b03"><div class="ttname"><a href="a00329.html#ga8438e3403946accc1986a05b89ee7b03">XBMCAddon::xbmc::Player::isPlaying</a></div><div class="ttdeci">bool isPlaying()</div><div class="ttdoc">Check Kodi is playing something. </div></div>
-<div class="ttc" id="a00330_html_ga8890f6898fc712522c2d29f57455275d"><div class="ttname"><a href="a00330.html#ga8890f6898fc712522c2d29f57455275d">XBMCAddon::xbmc::Player::onQueueNextItem</a></div><div class="ttdeci">void onQueueNextItem(void *self)</div><div class="ttdoc">onQueueNextItem method. </div></div>
-<div class="ttc" id="a00245_html_af3c0375d913f3a660121fd1153f93059"><div class="ttname"><a href="a00245.html#af3c0375d913f3a660121fd1153f93059">XBMCAddon::xbmc::XBMCCOMMONS_STANDARD_EXCEPTION</a></div><div class="ttdeci">XBMCCOMMONS_STANDARD_EXCEPTION(KeyboardException)</div></div>
-<div class="ttc" id="a00188_html"><div class="ttname"><a href="a00188.html">InfoTagVideo.h</a></div></div>
-<div class="ttc" id="a00330_html_ga7226102b037bfbca79e0c940f5e912e2"><div class="ttname"><a href="a00330.html#ga7226102b037bfbca79e0c940f5e912e2">XBMCAddon::xbmc::Player::onPlayBackPaused</a></div><div class="ttdeci">void onPlayBackPaused(void *self)</div><div class="ttdoc">onPlayBackPaused method. </div></div>
-<div class="ttc" id="a00247_html"><div class="ttname"><a href="a00247.html">XBMCAddon::xbmcgui</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:43</div></div>
-<div class="ttc" id="a00329_html_ga1387dec220717864f672de1df7a71faf"><div class="ttname"><a href="a00329.html#ga1387dec220717864f672de1df7a71faf">XBMCAddon::xbmc::Player::playnext</a></div><div class="ttdeci">void playnext()</div><div class="ttdoc">Play next item in playlist. </div></div>
-<div class="ttc" id="a00329_html_ga1d0ef4583b20c163169af1e089e034dc"><div class="ttname"><a href="a00329.html#ga1d0ef4583b20c163169af1e089e034dc">XBMCAddon::xbmc::Player::setAudioStream</a></div><div class="ttdeci">void setAudioStream(int iStream)</div><div class="ttdoc">Set Audio Stream. </div></div>
-<div class="ttc" id="a00329_html_ga8f1c0037ad362eaadde1ec827db6f70c"><div class="ttname"><a href="a00329.html#ga8f1c0037ad362eaadde1ec827db6f70c">XBMCAddon::xbmc::Player::isPlayingVideo</a></div><div class="ttdeci">bool isPlayingVideo()</div><div class="ttdoc">Check for playing video. </div></div>
-<div class="ttc" id="a00329_html_ga8e79a9287b85f65d632441eda0aa00cd"><div class="ttname"><a href="a00329.html#ga8e79a9287b85f65d632441eda0aa00cd">XBMCAddon::xbmc::Player::getAvailableAudioStreams</a></div><div class="ttdeci">std::vector&lt; String &gt; getAvailableAudioStreams()</div><div class="ttdoc">Get Audio stream names. </div></div>
-<div class="ttc" id="a00245_html_a2d10c982e027434a4ad36b054f84623f"><div class="ttname"><a href="a00245.html#a2d10c982e027434a4ad36b054f84623f">XBMCAddon::xbmc::PlayParameter</a></div><div class="ttdeci">Alternative&lt; String, const PlayList * &gt; PlayParameter</div><div class="ttdef"><b>Definition:</b> Player.h:43</div></div>
-<div class="ttc" id="a00330_html_ga75a62da626870983e308a62e8c359218"><div class="ttname"><a href="a00330.html#ga75a62da626870983e308a62e8c359218">XBMCAddon::xbmc::Player::onPlayBackSeekChapter</a></div><div class="ttdeci">void onPlayBackSeekChapter(void *self, int chapter)</div><div class="ttdoc">onPlayBackSeekChapter method. </div></div>
-<div class="ttc" id="a00329_html_ga7287b2615a3d76947a1dcd085bfaa337"><div class="ttname"><a href="a00329.html#ga7287b2615a3d76947a1dcd085bfaa337">XBMCAddon::xbmc::Player::getVideoInfoTag</a></div><div class="ttdeci">InfoTagVideo * getVideoInfoTag()</div><div class="ttdoc">To get video info tag. </div></div>
-<div class="ttc" id="a00329_html_gaa5b43aa5da42a2efacddf87ad45daea4"><div class="ttname"><a href="a00329.html#gaa5b43aa5da42a2efacddf87ad45daea4">XBMCAddon::xbmc::Player::playprevious</a></div><div class="ttdeci">void playprevious()</div><div class="ttdoc">Play previous item in playlist. </div></div>
-<div class="ttc" id="a00218_html"><div class="ttname"><a href="a00218.html">ListItem.h</a></div></div>
-<div class="ttc" id="a00330_html_gaeda52fbaaf9860f7a96e93ba33709fc9"><div class="ttname"><a href="a00330.html#gaeda52fbaaf9860f7a96e93ba33709fc9">XBMCAddon::xbmc::Player::onPlayBackSeek</a></div><div class="ttdeci">void onPlayBackSeek(void *self, int time, int seekOffset)</div><div class="ttdoc">onPlayBackSeek method. </div></div>
-<div class="ttc" id="a00329_html_ga7181caa6357d359e1fa528585af327c4"><div class="ttname"><a href="a00329.html#ga7181caa6357d359e1fa528585af327c4">XBMCAddon::xbmc::Player::setSubtitles</a></div><div class="ttdeci">void setSubtitles(const char *subtitleFile)</div><div class="ttdoc">Set subtitle file and enable subtitles. </div></div>
-<div class="ttc" id="a00329_html_ga88dd78acfd022c25ea0bbb95b88207ca"><div class="ttname"><a href="a00329.html#ga88dd78acfd022c25ea0bbb95b88207ca">XBMCAddon::xbmc::Player::seekTime</a></div><div class="ttdeci">void seekTime(double seekTime)</div><div class="ttdoc">Seek time. </div></div>
-<div class="ttc" id="a00329_html_ga8cbc3620e75e5a03e2beaba8bde78231"><div class="ttname"><a href="a00329.html#ga8cbc3620e75e5a03e2beaba8bde78231">XBMCAddon::xbmc::Player::playselected</a></div><div class="ttdeci">void playselected(int selected)</div><div class="ttdoc">Play a certain item from the current playlist. </div></div>
-<div class="ttc" id="a00329_html_ga7b199d0d15f55de2ab6c9a205dff01f1"><div class="ttname"><a href="a00329.html#ga7b199d0d15f55de2ab6c9a205dff01f1">XBMCAddon::xbmc::Player::disableSubtitles</a></div><div class="ttdeci">void disableSubtitles()</div><div class="ttdoc">Disable subtitles. </div></div>
-<div class="ttc" id="a00329_html_ga480d8fce2c836db07fd00754481295a5"><div class="ttname"><a href="a00329.html#ga480d8fce2c836db07fd00754481295a5">XBMCAddon::xbmc::Player::isPlayingAudio</a></div><div class="ttdeci">bool isPlayingAudio()</div><div class="ttdoc">Check for playing audio. </div></div>
-<div class="ttc" id="a00329_html_ga7167f5c196fc5e167bfabde1a730e81d"><div class="ttname"><a href="a00329.html#ga7167f5c196fc5e167bfabde1a730e81d">XBMCAddon::xbmc::Player::pause</a></div><div class="ttdeci">void pause()</div><div class="ttdoc">Pause or resume playing if already paused. </div></div>
-<div class="ttc" id="a00329_html_gaaee24c75f696af5fedbc354b5b48e20d"><div class="ttname"><a href="a00329.html#gaaee24c75f696af5fedbc354b5b48e20d">XBMCAddon::xbmc::Player::play</a></div><div class="ttdeci">void play(const PlayParameter &amp;item=Player::defaultPlayParameter, ListItem *listitem=NULL, bool windowed=false, int startpos=-1)</div><div class="ttdoc">Play a item. </div></div>
-<div class="ttc" id="a00330_html_ga852e3252c43deaa541e8cae610b9e0ef"><div class="ttname"><a href="a00330.html#ga852e3252c43deaa541e8cae610b9e0ef">XBMCAddon::xbmc::Player::onPlayBackSpeedChanged</a></div><div class="ttdeci">void onPlayBackSpeedChanged(void *self, int speed)</div><div class="ttdoc">onPlayBackSpeedChanged method. </div></div>
-<div class="ttc" id="a00329_html_gae6a8ac0668d2ae6fcbde97b61de5b4ee"><div class="ttname"><a href="a00329.html#gae6a8ac0668d2ae6fcbde97b61de5b4ee">XBMCAddon::xbmc::Player::getPlayingFile</a></div><div class="ttdeci">String getPlayingFile()</div><div class="ttdoc">Returns the current playing file as a string. </div></div>
-<div class="ttc" id="a00330_html_gab375f26bb820f640d74700cda4ee6646"><div class="ttname"><a href="a00330.html#gab375f26bb820f640d74700cda4ee6646">XBMCAddon::xbmc::Player::onPlayBackEnded</a></div><div class="ttdeci">void onPlayBackEnded(void *self)</div><div class="ttdoc">onPlayBackEnded method. </div></div>
-<div class="ttc" id="a00329_html_ga4437edd7fd2832790c13ba3179bcc64d"><div class="ttname"><a href="a00329.html#ga4437edd7fd2832790c13ba3179bcc64d">XBMCAddon::xbmc::Player::getTime</a></div><div class="ttdeci">double getTime()</div><div class="ttdoc">Get playing time. </div></div>
-<div class="ttc" id="a00098_html"><div class="ttname"><a href="a00098.html">XBMCAddon::xbmc::PlayList</a></div><div class="ttdef"><b>Definition:</b> PlayList.h:62</div></div>
-<div class="ttc" id="a00186_html"><div class="ttname"><a href="a00186.html">InfoTagMusic.h</a></div></div>
-<div class="ttc" id="a00329_html_gabaefcfb5922aabc776d850b1f0869bf0"><div class="ttname"><a href="a00329.html#gabaefcfb5922aabc776d850b1f0869bf0">XBMCAddon::xbmc::Player::getRadioRDSInfoTag</a></div><div class="ttdeci">InfoTagRadioRDS * getRadioRDSInfoTag()</div><div class="ttdoc">To get Radio RDS info tag. </div></div>
-<div class="ttc" id="a00329_html_ga7327895e6b06bc5be33fbbd66c1da98f"><div class="ttname"><a href="a00329.html#ga7327895e6b06bc5be33fbbd66c1da98f">XBMCAddon::xbmc::Player::getAvailableSubtitleStreams</a></div><div class="ttdeci">std::vector&lt; String &gt; getAvailableSubtitleStreams()</div><div class="ttdoc">Get Subtitle stream names. </div></div>
-<div class="ttc" id="a00094_html"><div class="ttname"><a href="a00094.html">XBMCAddon::xbmc::InfoTagVideo</a></div><div class="ttdef"><b>Definition:</b> InfoTagVideo.h:54</div></div>
-<div class="ttc" id="a00329_html_gadcaef0ad224ff20f4dc01028a5995157"><div class="ttname"><a href="a00329.html#gadcaef0ad224ff20f4dc01028a5995157">XBMCAddon::xbmc::Player::showSubtitles</a></div><div class="ttdeci">void showSubtitles(bool bVisible)</div><div class="ttdoc">Enable / disable subtitles. </div></div>
-<div class="ttc" id="a00329_html_ga8c528baf37154d347366083f0f816846"><div class="ttname"><a href="a00329.html#ga8c528baf37154d347366083f0f816846">XBMCAddon::xbmc::Player::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stop playing. </div></div>
-<div class="ttc" id="a00092_html"><div class="ttname"><a href="a00092.html">XBMCAddon::xbmc::InfoTagMusic</a></div><div class="ttdef"><b>Definition:</b> InfoTagMusic.h:53</div></div>
-<div class="ttc" id="a00329_html_ga101be6ee4c35b85828fc45c67cfaded5"><div class="ttname"><a href="a00329.html#ga101be6ee4c35b85828fc45c67cfaded5">XBMCAddon::xbmc::Player::getTotalTime</a></div><div class="ttdeci">double getTotalTime()</div><div class="ttdoc">To get total playing time. </div></div>
-<div class="ttc" id="a00330_html_ga2d8b5fa98b21f02ce06f7bd7de836d9d"><div class="ttname"><a href="a00330.html#ga2d8b5fa98b21f02ce06f7bd7de836d9d">XBMCAddon::xbmc::Player::onPlayBackStarted</a></div><div class="ttdeci">void onPlayBackStarted(void *self)</div><div class="ttdoc">onPlayBackStarted method. </div></div>
-<div class="ttc" id="a00216_html"><div class="ttname"><a href="a00216.html">InfoTagRadioRDS.h</a></div></div>
-<div class="ttc" id="a00329_html_ga81495e1edeffea020f9f5b01c521ad24"><div class="ttname"><a href="a00329.html#ga81495e1edeffea020f9f5b01c521ad24">XBMCAddon::xbmc::Player::getSubtitles</a></div><div class="ttdeci">String getSubtitles()</div><div class="ttdoc">Get subtitle stream name. </div></div>
-<div class="ttc" id="a00330_html_ga04dbd49c7486f00911995a56a19536d0"><div class="ttname"><a href="a00330.html#ga04dbd49c7486f00911995a56a19536d0">XBMCAddon::xbmc::Player::onPlayBackStopped</a></div><div class="ttdeci">void onPlayBackStopped(void *self)</div><div class="ttdoc">onPlayBackStopped method. </div></div>
-<div class="ttc" id="a00097_html"><div class="ttname"><a href="a00097.html">XBMCAddon::xbmc::Player</a></div><div class="ttdef"><b>Definition:</b> Player.h:71</div></div>
-<div class="ttc" id="a00119_html"><div class="ttname"><a href="a00119.html">XBMCAddon::xbmcgui::ListItem</a></div><div class="ttdef"><b>Definition:</b> ListItem.h:71</div></div>
-<div class="ttc" id="a00329_html_gae11388c95e616274e5ee0f10b61bf1d8"><div class="ttname"><a href="a00329.html#gae11388c95e616274e5ee0f10b61bf1d8">XBMCAddon::xbmc::Player::getMusicInfoTag</a></div><div class="ttdeci">InfoTagMusic * getMusicInfoTag()</div><div class="ttdoc">To get music info tag. </div></div>
+<div class="line"><a name="l00417"></a><span class="lineno"><a class="line" href="a00123.html#ad6806218faf95b933b67927d5ad46a39">  417</a></span>&#160;      <a class="code" href="a00123.html#ad6806218faf95b933b67927d5ad46a39">DialogProgress</a>() : dlg(NULL), open(false) {}</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00123.html#a94b81fdffc22f6260839893fdbf757b7">~DialogProgress</a>();</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00321.html#gad71569b69244d11fe949d0bbd5b75905">create</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1 = emptyString, </div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                  <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                  <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00321.html#gabf439774a2aca33663c3bb785e6e7465">update</a>(<span class="keywordtype">int</span> percent, <span class="keyword">const</span> String&amp; line1 = emptyString, </div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                  <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                  <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00321.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00321.html#ga2a944a55da1c28885d3f00d101618ac6">iscanceled</a>();</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    };</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
+<div class="line"><a name="l00517"></a><span class="lineno"><a class="line" href="a00124.html">  517</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00124.html">DialogProgressBG</a> : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    {</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;      CGUIDialogExtendedProgressBar* dlg;</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;      CGUIDialogProgressBarHandle* handle;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;      <span class="keywordtype">bool</span> open;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00124.html#a8b6dbb40347674d0ffc08d6ec7e9a877">deallocating</a>();</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;</div>
+<div class="line"><a name="l00528"></a><span class="lineno"><a class="line" href="a00124.html#a31b7ec67973b011c9efb42dcd96a0342">  528</a></span>&#160;      <a class="code" href="a00124.html#a31b7ec67973b011c9efb42dcd96a0342">DialogProgressBG</a>() : dlg(NULL), handle(NULL), open(false) {}</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00124.html#a1ea61272a3fe716659a11170cfb143a5">~DialogProgressBG</a>();</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00322.html#gaafb8a184f497bc815d38be07731df561">create</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; message = emptyString);</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00322.html#ga90d83a72e4151aba7c05422cf34f6684">update</a>(<span class="keywordtype">int</span> percent = 0, <span class="keyword">const</span> String&amp; heading = emptyString, <span class="keyword">const</span> String&amp; message = emptyString);</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00322.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00322.html#ga06926ca87a7be7d8af8ee84670fffa87">isFinished</a>();</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    };</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;  }</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;}</div>
+<div class="ttc" id="a00124_html"><div class="ttname"><a href="a00124.html">XBMCAddon::xbmcgui::DialogProgressBG</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:517</div></div>
+<div class="ttc" id="a00122_html"><div class="ttname"><a href="a00122.html">XBMCAddon::xbmcgui::Dialog</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:52</div></div>
+<div class="ttc" id="a00321_html_ga2a944a55da1c28885d3f00d101618ac6"><div class="ttname"><a href="a00321.html#ga2a944a55da1c28885d3f00d101618ac6">XBMCAddon::xbmcgui::DialogProgress::iscanceled</a></div><div class="ttdeci">bool iscanceled()</div></div>
+<div class="ttc" id="a00123_html_a8b6dbb40347674d0ffc08d6ec7e9a877"><div class="ttname"><a href="a00123.html#a8b6dbb40347674d0ffc08d6ec7e9a877">XBMCAddon::xbmcgui::DialogProgress::deallocating</a></div><div class="ttdeci">virtual void deallocating()</div></div>
+<div class="ttc" id="a00256_html"><div class="ttname"><a href="a00256.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
+<div class="ttc" id="a00124_html_a8b6dbb40347674d0ffc08d6ec7e9a877"><div class="ttname"><a href="a00124.html#a8b6dbb40347674d0ffc08d6ec7e9a877">XBMCAddon::xbmcgui::DialogProgressBG::deallocating</a></div><div class="ttdeci">virtual void deallocating()</div></div>
+<div class="ttc" id="a00320_html_ga31bcf740cf64230b40af61377ad701b1"><div class="ttname"><a href="a00320.html#ga31bcf740cf64230b40af61377ad701b1">XBMCAddon::xbmcgui::Dialog::select</a></div><div class="ttdeci">int select(const String &amp;heading, const std::vector&lt; String &gt; &amp;list, int autoclose=0)</div></div>
+<div class="ttc" id="a00321_html_gad71569b69244d11fe949d0bbd5b75905"><div class="ttname"><a href="a00321.html#gad71569b69244d11fe949d0bbd5b75905">XBMCAddon::xbmcgui::DialogProgress::create</a></div><div class="ttdeci">void create(const String &amp;heading, const String &amp;line1=emptyString, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
+<div class="ttc" id="a00123_html"><div class="ttname"><a href="a00123.html">XBMCAddon::xbmcgui::DialogProgress</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:407</div></div>
+<div class="ttc" id="a00320_html_ga804e86cf03fe10961d7a7ca1d00fffa3"><div class="ttname"><a href="a00320.html#ga804e86cf03fe10961d7a7ca1d00fffa3">XBMCAddon::xbmcgui::Dialog::browseMultiple</a></div><div class="ttdeci">std::vector&lt; String &gt; browseMultiple(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;defaultt=emptyString)</div></div>
+<div class="ttc" id="a00322_html_ga5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="a00322.html#ga5ae591df94fc66ccb85cbb6565368bca">XBMCAddon::xbmcgui::DialogProgressBG::close</a></div><div class="ttdeci">void close()</div></div>
+<div class="ttc" id="a00320_html_ga623449b051874059111f9831a7b91673"><div class="ttname"><a href="a00320.html#ga623449b051874059111f9831a7b91673">XBMCAddon::xbmcgui::Dialog::ok</a></div><div class="ttdeci">bool ok(const String &amp;heading, const String &amp;line1, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
+<div class="ttc" id="a00322_html_ga90d83a72e4151aba7c05422cf34f6684"><div class="ttname"><a href="a00322.html#ga90d83a72e4151aba7c05422cf34f6684">XBMCAddon::xbmcgui::DialogProgressBG::update</a></div><div class="ttdeci">void update(int percent=0, const String &amp;heading=emptyString, const String &amp;message=emptyString)</div></div>
+<div class="ttc" id="a00320_html_gad44dd72bef6ada382a1b9704580410db"><div class="ttname"><a href="a00320.html#gad44dd72bef6ada382a1b9704580410db">XBMCAddon::xbmcgui::Dialog::numeric</a></div><div class="ttdeci">String numeric(int type, const String &amp;heading, const String &amp;defaultt=emptyString)</div></div>
+<div class="ttc" id="a00224_html_a5e8c06531565c0999dcf5d856d5ae193"><div class="ttname"><a href="a00224.html#a5e8c06531565c0999dcf5d856d5ae193">INPUT_ALPHANUM</a></div><div class="ttdeci">#define INPUT_ALPHANUM</div><div class="ttdef"><b>Definition:</b> Dialog.h:31</div></div>
+<div class="ttc" id="a00320_html_ga2a25e833c92e98a294964d0d285ee1f9"><div class="ttname"><a href="a00320.html#ga2a25e833c92e98a294964d0d285ee1f9">XBMCAddon::xbmcgui::Dialog::input</a></div><div class="ttdeci">String input(const String &amp;heading, const String &amp;defaultt=emptyString, int type=INPUT_ALPHANUM, int option=0, int autoclose=0)</div></div>
+<div class="ttc" id="a00123_html_a94b81fdffc22f6260839893fdbf757b7"><div class="ttname"><a href="a00123.html#a94b81fdffc22f6260839893fdbf757b7">XBMCAddon::xbmcgui::DialogProgress::~DialogProgress</a></div><div class="ttdeci">virtual ~DialogProgress()</div></div>
+<div class="ttc" id="a00322_html_gaafb8a184f497bc815d38be07731df561"><div class="ttname"><a href="a00322.html#gaafb8a184f497bc815d38be07731df561">XBMCAddon::xbmcgui::DialogProgressBG::create</a></div><div class="ttdeci">void create(const String &amp;heading, const String &amp;message=emptyString)</div></div>
+<div class="ttc" id="a00320_html_ga329bf9f86212595d36708f6ad8977499"><div class="ttname"><a href="a00320.html#ga329bf9f86212595d36708f6ad8977499">XBMCAddon::xbmcgui::Dialog::browse</a></div><div class="ttdeci">Alternative&lt; String, std::vector&lt; String &gt; &gt; browse(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;sDefault=emptyString, bool enableMultiple=false)</div></div>
+<div class="ttc" id="a00320_html_gaa64342a4b05f1ed49803ea44a25b73db"><div class="ttname"><a href="a00320.html#gaa64342a4b05f1ed49803ea44a25b73db">XBMCAddon::xbmcgui::Dialog::yesno</a></div><div class="ttdeci">bool yesno(const String &amp;heading, const String &amp;line1, const String &amp;line2=emptyString, const String &amp;line3=emptyString, const String &amp;nolabel=emptyString, const String &amp;yeslabel=emptyString, int autoclose=0)</div></div>
+<div class="ttc" id="a00320_html_ga0a385fe365c4fba6583fdd25e8ad072b"><div class="ttname"><a href="a00320.html#ga0a385fe365c4fba6583fdd25e8ad072b">XBMCAddon::xbmcgui::Dialog::notification</a></div><div class="ttdeci">void notification(const String &amp;heading, const String &amp;message, const String &amp;icon=emptyString, int time=0, bool sound=true)</div></div>
+<div class="ttc" id="a00322_html_ga06926ca87a7be7d8af8ee84670fffa87"><div class="ttname"><a href="a00322.html#ga06926ca87a7be7d8af8ee84670fffa87">XBMCAddon::xbmcgui::DialogProgressBG::isFinished</a></div><div class="ttdeci">bool isFinished()</div></div>
+<div class="ttc" id="a00320_html_gad212e84e36d2fc96b8f2e24b9dd67b47"><div class="ttname"><a href="a00320.html#gad212e84e36d2fc96b8f2e24b9dd67b47">XBMCAddon::xbmcgui::Dialog::textviewer</a></div><div class="ttdeci">void textviewer(const String &amp;heading, const String &amp;text)</div></div>
+<div class="ttc" id="a00124_html_a1ea61272a3fe716659a11170cfb143a5"><div class="ttname"><a href="a00124.html#a1ea61272a3fe716659a11170cfb143a5">XBMCAddon::xbmcgui::DialogProgressBG::~DialogProgressBG</a></div><div class="ttdeci">virtual ~DialogProgressBG()</div></div>
+<div class="ttc" id="a00123_html_ad6806218faf95b933b67927d5ad46a39"><div class="ttname"><a href="a00123.html#ad6806218faf95b933b67927d5ad46a39">XBMCAddon::xbmcgui::DialogProgress::DialogProgress</a></div><div class="ttdeci">DialogProgress()</div><div class="ttdef"><b>Definition:</b> Dialog.h:417</div></div>
+<div class="ttc" id="a00122_html_a656bf5bf83d73b108733b72a3282c958"><div class="ttname"><a href="a00122.html#a656bf5bf83d73b108733b72a3282c958">XBMCAddon::xbmcgui::Dialog::~Dialog</a></div><div class="ttdeci">virtual ~Dialog()</div></div>
+<div class="ttc" id="a00320_html_ga8a8334ae223a82e7df728e032e167bbf"><div class="ttname"><a href="a00320.html#ga8a8334ae223a82e7df728e032e167bbf">XBMCAddon::xbmcgui::Dialog::browseSingle</a></div><div class="ttdeci">String browseSingle(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;defaultt=emptyString)</div></div>
+<div class="ttc" id="a00320_html_gaf6cee72babc023f15a8ed28cbb2cc7f6"><div class="ttname"><a href="a00320.html#gaf6cee72babc023f15a8ed28cbb2cc7f6">XBMCAddon::xbmcgui::Dialog::multiselect</a></div><div class="ttdeci">std::unique_ptr&lt; std::vector&lt; int &gt; &gt; multiselect(const String &amp;heading, const std::vector&lt; String &gt; &amp;options, int autoclose=0)</div></div>
+<div class="ttc" id="a00321_html_ga5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="a00321.html#ga5ae591df94fc66ccb85cbb6565368bca">XBMCAddon::xbmcgui::DialogProgress::close</a></div><div class="ttdeci">void close()</div></div>
+<div class="ttc" id="a00124_html_a31b7ec67973b011c9efb42dcd96a0342"><div class="ttname"><a href="a00124.html#a31b7ec67973b011c9efb42dcd96a0342">XBMCAddon::xbmcgui::DialogProgressBG::DialogProgressBG</a></div><div class="ttdeci">DialogProgressBG()</div><div class="ttdef"><b>Definition:</b> Dialog.h:528</div></div>
+<div class="ttc" id="a00122_html_a893649c76b6e54d6a392d5e6c260a016"><div class="ttname"><a href="a00122.html#a893649c76b6e54d6a392d5e6c260a016">XBMCAddon::xbmcgui::Dialog::Dialog</a></div><div class="ttdeci">Dialog()</div><div class="ttdef"><b>Definition:</b> Dialog.h:56</div></div>
+<div class="ttc" id="a00321_html_gabf439774a2aca33663c3bb785e6e7465"><div class="ttname"><a href="a00321.html#gabf439774a2aca33663c3bb785e6e7465">XBMCAddon::xbmcgui::DialogProgress::update</a></div><div class="ttdeci">void update(int percent, const String &amp;line1=emptyString, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00224.html">Player.h</a></li>
+    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00224.html">Dialog.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

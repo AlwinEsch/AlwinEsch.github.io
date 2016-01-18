@@ -1,19 +1,4 @@
 var searchData=
 [
-  ['picturebuiltins_2ecpp',['PictureBuiltins.cpp',['../a00205.html',1,'']]],
-  ['pictureinfotag_2ecpp',['PictureInfoTag.cpp',['../a00230.html',1,'']]],
-  ['player_2eh',['Player.h',['../a00224.html',1,'']]],
-  ['playerbuiltins_2ecpp',['PlayerBuiltins.cpp',['../a00206.html',1,'']]],
-  ['playerlib_2eh',['PlayerLib.h',['../a00189.html',1,'']]],
-  ['playlist_2eh',['PlayList.h',['../a00191.html',1,'']]],
-  ['playlist_2eh',['PlayList.h',['../a00190.html',1,'']]],
-  ['profilebuiltins_2ecpp',['ProfileBuiltins.cpp',['../a00207.html',1,'']]],
-  ['pvrbuiltins_2ecpp',['PVRBuiltins.cpp',['../a00208.html',1,'']]],
-  ['pvrlib_2eh',['PVRLib.h',['../a00192.html',1,'']]],
-  ['python_5f3rd_5fparty_5ftutorials_2etxt',['Python_3rd_Party_Tutorials.txt',['../a00137.html',1,'']]],
-  ['python_5faudio_5faddon_2etxt',['Python_Audio_addon.txt',['../a00138.html',1,'']]],
-  ['python_5fgeneral_5faddon_2etxt',['Python_General_addon.txt',['../a00139.html',1,'']]],
-  ['python_5fhelloworld_5faddon_2etxt',['Python_HelloWorld_addon.txt',['../a00140.html',1,'']]],
-  ['python_5fvideo_5faddon_2etxt',['Python_Video_addon.txt',['../a00141.html',1,'']]],
-  ['python_5fvisualisation_5faddon_2etxt',['Python_Visualisation_addon.txt',['../a00142.html',1,'']]]
+  ['opticalbuiltins_2ecpp',['OpticalBuiltins.cpp',['../a00220.html',1,'']]]
 ];

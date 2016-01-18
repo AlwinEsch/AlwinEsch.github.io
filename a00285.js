@@ -1,6 +1,8 @@
 var a00285 =
 [
-    [ "ShowAndGetInput", "a00285.html#gabd70a1306a25efc68e99f5852aeffe9f", null ],
-    [ "ShowAndGetInput", "a00285.html#gab23d9c3e25b9f866b1581d5ff1821d02", null ],
-    [ "ShowAndGetInput", "a00285.html#gacdb0bcb4ff915c595e075af871d629ea", null ]
+    [ "CAddonGUIControlImage", "a00285.html#gaaab82074962caa8db7b1fa15b9e14a5c", null ],
+    [ "SetColorDiffuse", "a00285.html#ga5f4b9c8309a04af748764bc6dd4ef31c", null ],
+    [ "SetFileName", "a00285.html#ga71ca22e2515e018fdfa6db78fbee75dd", null ],
+    [ "SetVisible", "a00285.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "~CAddonGUIControlImage", "a00285.html#gaf4b7097d3f8155be34401f9daab51eb3", null ]
 ];

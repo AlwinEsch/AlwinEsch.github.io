@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CPlayerLib_Player</title>
+<title>Kodi Development: CAddonGUIControlTextBox</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,45 +91,63 @@ $(document).ready(function(){initNavTree('a00293.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">CPlayerLib_Player<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a> &raquo; <a class="el" href="a00297.html">Library - PlayerLIB</a></div></div>  </div>
+<div class="title">CAddonGUIControlTextBox<div class="ingroups"><a class="el" href="a00370.html">C++ Development</a> &raquo; <a class="el" href="a00303.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Creates a new Player</b> </p>
-<p>It has the header <a class="el" href="a00184.html">#include &lt;kodi/player.api2/AddonPlayer.h&gt;</a> be included to enjoy it. </p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00294"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00294.html">Callback functions from Kodi to add-on</a></td></tr>
-<tr class="memdesc:a00294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions to handle control callbacks from Kodi. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p><b>Used to show a multi-page piece of text</b> </p>
+<p>The text box control can be used to display descriptions, help texts or other larger texts. It corresponds to the representation which is also to be seen on the <a class="el" href="a00081.html">CAddonGUIDialogTextViewer</a>.</p>
+<p>It has the header <a class="el" href="a00186.html">#include &lt;kodi/gui.api2/GUIControlTextBox.h&gt;</a> be included to enjoy it.</p>
+<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga7fc1a1b4474880715e723651ad8111f8"></a>
+<a class="anchor" id="ga06117cea192b1c038b7b9b8d9c2c8dec"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddSubtitle </td>
+          <td class="memname">CAddonGUIControlTextBox </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>subPath</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="a00084.html">CAddonGUIWindow</a> *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ga0aeecab6a213b4e81f6852c83bcaa833"></a>
+<a class="anchor" id="ga1af3f7fd8b95cc66e7599caca454f8ef"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CPlayerLib_Player </td>
+          <td class="memname">std::string GetText </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga372de693ad40b3f42839c8ec6ac845f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Reset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -139,15 +157,15 @@ Modules</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga5e90d0a436280dba59280c1ba1741f29"></a>
+<a class="anchor" id="ga2b8c674da6e7eb58fcf75d2f812cfd5d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool GetAvailableAudioStreams </td>
+          <td class="memname">void Scroll </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>streams</em></td><td>)</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -155,275 +173,47 @@ Modules</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga87c7afc85e6de9864c7aad7584a74d6d"></a>
+<a class="anchor" id="gad3e4bbb4388da7a56e8252018e4fbb00"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool GetAvailableSubtitleStreams </td>
+          <td class="memname">void SetAutoScrolling </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>streams</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>repeat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ga3e6946a02a8cc5fe7f12302858f414a3"></a>
+<a class="anchor" id="ga8008c108280948ebd79830f222068455"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool GetCurrentSubtitleName </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gadba412ffc2f454b25c41853d19ad561d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool GetPlayingFile </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gaf21730c4b70932b8fb707b78ea1dc977"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static std::string GetSupportedMedia </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00149.html#ab07b512029688f85c2c460a1d0a8efc1">AddonPlayListType</a>&#160;</td>
-          <td class="paramname"><em>mediaType</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga0e47c74b5a3e6246b9936d96ff4c66b1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double GetTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga2fd121ba12d93e8aee2bf8e7b7cf0d52"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double GetTotalTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga755f326e8b06e5f2807d64baf8bf582c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IsPlaying </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga64d2795d7a491c9b86cf31e7907cae1b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IsPlayingAudio </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gaae4a0dff198fb9394cfcb70a173509fe"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IsPlayingRDS </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga0bb55e1048a2c76fb6685f772292cbde"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IsPlayingVideo </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga70babc5227ddd16ca31dccc6cec0bb22"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Pause </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gaa979e669597a42dd85297d907944534e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Play </td>
+          <td class="memname">void SetText </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>item</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>windowed</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga27c9089850654203f68744ff2e2df735"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Play </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00077.html">CAddonGUIListItem</a> *&#160;</td>
-          <td class="paramname"><em>listitem</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>windowed</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga16d4a8125d488591fcb8fa5a0ebf29f9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Play </td>
-          <td>(</td>
-          <td class="paramtype">const CAddonPlayList *&#160;</td>
-          <td class="paramname"><em>list</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>windowed</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>startpos</em> = <code>-1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga2c3f82c8be6fdc06127deb6b3de785bd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PlayNext </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -431,94 +221,15 @@ Modules</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga542b407440e5a73dddbc275a8a0065c4"></a>
+<a class="anchor" id="ga71a209185b7a98adf0a310d2c44cdbe6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void PlayPrevious </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga7c18815c4fc2d2a6039939248332de1d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PlaySelected </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>selected</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gaa7bab6149b942aabd374567e858dd6ad"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SeekTime </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>seekTime</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga77d665ddda61d15264f5ddd8c95b8398"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetAudioStream </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iStream</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gafcb9739d54b1eebfa57eaa757940bc3e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetSubtitleStream </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iStream</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga60f53aeeebce6fcc273b10d714ea2008"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShowSubtitles </td>
+          <td class="memname">void SetVisible </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bVisible</em></td><td>)</td>
+          <td class="paramname"><em>visible</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -526,22 +237,7 @@ Modules</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga17a237457e57625296e6b24feb19c60a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Stop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga86e7a698aa3dfe83659870043eb42ac6"></a>
+<a class="anchor" id="ga671686d3890667392291118ca36b3e41"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -549,7 +245,7 @@ Modules</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~CPlayerLib_Player </td>
+          <td class="memname">virtual ~CAddonGUIControlTextBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

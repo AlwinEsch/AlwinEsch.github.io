@@ -1,12 +1,9 @@
 var a00067 =
 [
-    [ "CAddonGUIControlTextBox", "a00276.html#ga06117cea192b1c038b7b9b8d9c2c8dec", null ],
-    [ "~CAddonGUIControlTextBox", "a00276.html#ga671686d3890667392291118ca36b3e41", null ],
-    [ "GetText", "a00276.html#ga1af3f7fd8b95cc66e7599caca454f8ef", null ],
-    [ "Reset", "a00276.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
-    [ "Scroll", "a00276.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d", null ],
-    [ "SetAutoScrolling", "a00276.html#gad3e4bbb4388da7a56e8252018e4fbb00", null ],
-    [ "SetText", "a00276.html#ga8008c108280948ebd79830f222068455", null ],
-    [ "SetVisible", "a00276.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "IMPL_GUI_TEXTBOX_CONTROL", "a00067.html#a62ade28dbd83a582f36b79d05192686d", null ]
+    [ "CAddonGUIControlProgress", "a00287.html#ga29f6071fa5e9cb46c7775d82b0b518bc", null ],
+    [ "~CAddonGUIControlProgress", "a00287.html#gaa8bf8f60a1fb563174ce41f46acb9558", null ],
+    [ "GetPercentage", "a00287.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ],
+    [ "SetPercentage", "a00287.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
+    [ "SetVisible", "a00287.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_PROGRESS_CONTROL", "a00067.html#aa59488fb9ff0e229bfcef736b8a3dda4", null ]
 ];

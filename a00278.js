@@ -1,10 +1,17 @@
 var a00278 =
 [
-    [ "ShowAndGetDirectory", "a00278.html#gab1c3767a978a71751a8ea550d449eed6", null ],
-    [ "ShowAndGetFile", "a00278.html#ga5924085e93999a96dc9fc5a6c5f9362b", null ],
-    [ "ShowAndGetFileFromDir", "a00278.html#ga5ef242152a302da9ab13f61ca77b7ac3", null ],
-    [ "ShowAndGetFileList", "a00278.html#ga11dac37e6c6fd7dcaa18997d54e90b1a", null ],
-    [ "ShowAndGetImage", "a00278.html#ga10785676725a192799092e82ae4a68ba", null ],
-    [ "ShowAndGetImageList", "a00278.html#gad8c149a33ac60207e2953244f72f7a1d", null ],
-    [ "ShowAndGetSource", "a00278.html#gab582e8181c1569b7ff713e8924c4aa73", null ]
+    [ "CreateDirectory", "a00278.html#gacbb82bf91432edf4a203b4f144c7d3c4", null ],
+    [ "DeleteFile", "a00278.html#ga83ff1a280df8f4bc766ef3398b976116", null ],
+    [ "DirectoryExists", "a00278.html#ga5e2010e4942df75e2929c5b13a082c1e", null ],
+    [ "FileExists", "a00278.html#gac73807ace2f8e3033e9f44e32e0bffeb", null ],
+    [ "GetCacheThumbName", "a00278.html#ga036d35d1c5c500c6def14e0622951346", null ],
+    [ "GetChunkSize", "a00278.html#gaf6e6b8b85c14bf77587175c446b04cc9", null ],
+    [ "GetDirectory", "a00278.html#gaf2bd94f3fa601828737bd8179e2a92e1", null ],
+    [ "GetDirectoryName", "a00278.html#ga2165e4707f3f910e36f4e98ff0f5aa7c", null ],
+    [ "GetFileMD5", "a00278.html#ga6cd9a2d2fa708d4cfe01e99b229ecaad", null ],
+    [ "GetFileName", "a00278.html#ga99209a445575f8ec40310427bc8ece4a", null ],
+    [ "MakeLegalFileName", "a00278.html#ga4847e33b9790cdee016790ad68709986", null ],
+    [ "MakeLegalPath", "a00278.html#ga9d0b0595cd9356c38329d3d8d32ae1e2", null ],
+    [ "RemoveDirectory", "a00278.html#ga96e34c477aa80c8b9adf682f8450af5c", null ],
+    [ "StatFile", "a00278.html#ga779d626c053ee2e3f9329d7f05e3d7d2", null ]
 ];

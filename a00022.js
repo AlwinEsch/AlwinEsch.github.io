@@ -1,16 +1,28 @@
 var a00022 =
 [
-    [ "CAddonLib_VFSDirEntry", "a00217.html#gac81f1dd62d59a58a0d6f5ef72cfde20b", null ],
-    [ "CAddonLib_VFSDirEntry", "a00217.html#ga3d6451c27a24180971c1dd12e8b665ae", null ],
-    [ "IsFolder", "a00217.html#gabfbbb37d69862b45d0f1079ab976fa37", null ],
-    [ "Label", "a00217.html#gaacd1b40e1b2e44d82303388beb475e84", null ],
-    [ "Path", "a00217.html#ga666f6d222d6e40f592d7ec4c8c670263", null ],
-    [ "Properties", "a00217.html#gaea9c66f89bd36c6b01a234d0e2ad123a", null ],
-    [ "Properties", "a00217.html#ga682a050b373b13ec1e816d7a9cc47302", null ],
-    [ "SetFolder", "a00217.html#gadc0bf158b1dc28eea1bc2e3a2c016982", null ],
-    [ "SetLabel", "a00217.html#gab825756e641ba839bfae908492165481", null ],
-    [ "SetPath", "a00217.html#ga4a03d7c94fa02df112558bc30818e413", null ],
-    [ "SetSize", "a00217.html#gaf2fb6ea3061355a5ed4b53ca45e712ac", null ],
-    [ "Size", "a00217.html#gac0ba4f4c78dcb35605e645ee75198b5a", null ],
-    [ "IMPL_VFS_DIR_ENTRY", "a00022.html#abbcd7b09679a798a8283ea489ff4d577", null ]
+    [ "Git usage", "a00006.html", [
+      [ "Git windows guide", "a00006.html#Git_usage_sect1", null ],
+      [ "Clone the Kodi main repository", "a00006.html#Git_usage_sect2", null ],
+      [ "Fetch old branches and extra history", "a00006.html#Git_usage_sect3", null ],
+      [ "Platform Settings", "a00006.html#Git_usage_sect4", [
+        [ "Case Insensitive File Systems", "a00006.html#Git_usage_sect4_1", null ],
+        [ "Line Endings", "a00006.html#Git_usage_sect4_2", null ]
+      ] ],
+      [ "Updating", "a00006.html#Git_usage_sect5", null ],
+      [ "Pushing", "a00006.html#Git_usage_sect6", null ],
+      [ "Merging", "a00006.html#Git_usage_sect7", null ],
+      [ "Advanced", "a00006.html#Git_usage_sect8", [
+        [ "Maintaining a rebased version of a merge branch", "a00006.html#Git_usage_sect8_1", null ]
+      ] ]
+    ] ],
+    [ "Submit a patch", "a00008.html", [
+      [ "Code submissions", "a00008.html#Submit_a_patch_sect1", [
+        [ "Minimum requirements", "a00008.html#Submit_a_patch_sect1_1", null ],
+        [ "Code documentation", "a00008.html#Submit_a_patch_sect1_2", null ],
+        [ "Code guide-lines and formatting conventions", "a00008.html#Submit_a_patch_sect1_3", null ],
+        [ "Patch format", "a00008.html#Submit_a_patch_sect1_4", null ]
+      ] ],
+      [ "External Links", "a00008.html#Submit_a_patch_sect2", null ]
+    ] ],
+    [ "Doxygen on Kodi's Add-On headers", "a00036.html", null ]
 ];

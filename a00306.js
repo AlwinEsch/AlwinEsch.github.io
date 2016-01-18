@@ -1,9 +1,10 @@
 var a00306 =
 [
-    [ "doModal", "a00306.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
-    [ "getText", "a00306.html#gafab766445043570e6a82c14851366933", null ],
-    [ "isConfirmed", "a00306.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
-    [ "setDefault", "a00306.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
-    [ "setHeading", "a00306.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
-    [ "setHiddenInput", "a00306.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ]
+    [ "GetCurrentWindowDialogId", "a00306.html#ga4afd43d20b97e20532eeb1fac9ae6c1f", null ],
+    [ "GetCurrentWindowId", "a00306.html#ga452c9c6299140854739860045f060d28", null ],
+    [ "GetScreenHeight", "a00306.html#ga7b736bc18cc4c9b1e6229e1af312b6e3", null ],
+    [ "GetScreenWidth", "a00306.html#ga0f0cc52a3413a502953495f26270f559", null ],
+    [ "GetVideoResolution", "a00306.html#ga9e8e637bdd545cf2cd0b922d3496a64b", null ],
+    [ "Lock", "a00306.html#gace70db8e92290399a2a070eb0a60df63", null ],
+    [ "Unlock", "a00306.html#ga50f1fb5a8527c6f1beb7c59393c934a9", null ]
 ];

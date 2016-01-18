@@ -1,5 +1,5 @@
 var a00236 =
 [
-    [ "CAELib", "a00046.html", "a00046" ],
-    [ "CAELib_Stream", "a00047.html", "a00047" ]
+    [ "getCurrentWindowDialogId", "a00330.html#ga8379c35c147def9f607d18571e24678e", null ],
+    [ "getCurrentWindowId", "a00330.html#gab1660e44ef103bd39fff61229809f567", null ]
 ];

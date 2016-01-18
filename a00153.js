@@ -1,23 +1,80 @@
 var a00153 =
 [
-    [ "EPG_TAG", "a00058.html", "a00058" ],
-    [ "ATTRIBUTE_PACKED", "a00153.html#ad93e9ac33d1a9153bbea517a98260041", null ],
-    [ "EPG_EVENT_CONTENTMASK_ARTSCULTURE", "a00153.html#ae9f81b21dddccccaeec0a7c485fceccf", null ],
-    [ "EPG_EVENT_CONTENTMASK_CHILDRENYOUTH", "a00153.html#a3019566c15ea47857ed94febc023a341", null ],
-    [ "EPG_EVENT_CONTENTMASK_EDUCATIONALSCIENCE", "a00153.html#a9cb8e40be2cb8b8da96c4db5afa18226", null ],
-    [ "EPG_EVENT_CONTENTMASK_LEISUREHOBBIES", "a00153.html#ab15ce403ea4f3b4031fea6c890d65cf1", null ],
-    [ "EPG_EVENT_CONTENTMASK_MOVIEDRAMA", "a00153.html#a902f6bce87a7001700f4a4fb834cdb41", null ],
-    [ "EPG_EVENT_CONTENTMASK_MUSICBALLETDANCE", "a00153.html#a38270fd3f5ea7b2832c926bab1574656", null ],
-    [ "EPG_EVENT_CONTENTMASK_NEWSCURRENTAFFAIRS", "a00153.html#a4b17dc961b2a9087a2b063175e29bfef", null ],
-    [ "EPG_EVENT_CONTENTMASK_SHOW", "a00153.html#a99e91345452c1da8f49278d526d257c4", null ],
-    [ "EPG_EVENT_CONTENTMASK_SOCIALPOLITICALECONOMICS", "a00153.html#a72ef84c2dfbb318c93083aa7401d2411", null ],
-    [ "EPG_EVENT_CONTENTMASK_SPECIAL", "a00153.html#a443aef4f73319e53102f0db585b01783", null ],
-    [ "EPG_EVENT_CONTENTMASK_SPORTS", "a00153.html#ad1dd8f303ee24ec7ec8fb2fbc4fefc8f", null ],
-    [ "EPG_EVENT_CONTENTMASK_UNDEFINED", "a00153.html#a1a28ed2ccebb92d83a60c5ebccdcb53a", null ],
-    [ "EPG_EVENT_CONTENTMASK_USERDEFINED", "a00153.html#a66f8c0dc7f3a14733efd4b7cc7ff6bf3", null ],
-    [ "EPG_GENRE_USE_STRING", "a00153.html#a2acd3601f02e7ee245ecde488e3f7906", null ],
-    [ "PRAGMA_PACK", "a00153.html#a256ebdc0994be33e06dc1ad3f6f188f4", null ],
-    [ "PVR_API_LEVELS_ACTIVE", "a00153.html#a2f85b94a7621eb2bf801ff79b1ed51ad", null ],
-    [ "EPG_TAG_FLAG_IS_SERIES", "a00153.html#a5a25443ab6a33158ce0c3b55c7770580", null ],
-    [ "EPG_TAG_FLAG_UNDEFINED", "a00153.html#a34d8cce03366c78716c6c18247bb67ae", null ]
+    [ "kodi_codec", "a00081.html", "a00081" ],
+    [ "__cdecl", "a00153.html#a238347d7669f8f1e9c83bfe63a2730c4", null ],
+    [ "__declspec", "a00153.html#ae461537a92f5e7de5f0bec1ff421f34f", null ],
+    [ "__stat64", "a00153.html#a4d284b7e68f051cef7ba92aa96dcfc50", null ],
+    [ "KODI_INVALID_CODEC", "a00153.html#a016b1e1580692ebe3cac597afb454fc1", null ],
+    [ "KODI_INVALID_CODEC_ID", "a00153.html#a5fb528ca862161b4ee16b3dfb97a6e53", null ],
+    [ "PATH_SEPARATOR_CHAR", "a00153.html#a581727c17b559af16969b4073417701d", null ],
+    [ "ADDON_STATUS", "a00153.html#a33b4234394363f14dd49fb8872f1bced", null ],
+    [ "kodi_codec_id", "a00153.html#a5f36d5652cd9f943a40f0a2c4495a74a", null ],
+    [ "addon_log", "a00153.html#af8526ffb1ee2a785489ac05b6e49d357", [
+      [ "LOG_DEBUG", "a00153.html#af8526ffb1ee2a785489ac05b6e49d357ab9f002c6ffbfd511da8090213227454e", null ],
+      [ "LOG_INFO", "a00153.html#af8526ffb1ee2a785489ac05b6e49d357a6e98ff471e3ce6c4ef2d75c37ee51837", null ],
+      [ "LOG_NOTICE", "a00153.html#af8526ffb1ee2a785489ac05b6e49d357acf862042315b7b30a2b7d395dcef3198", null ],
+      [ "LOG_WARNING", "a00153.html#af8526ffb1ee2a785489ac05b6e49d357a8f6fe15bfe15104da6d1b360194a5400", null ],
+      [ "LOG_ERROR", "a00153.html#af8526ffb1ee2a785489ac05b6e49d357a230506cce5c68c3bac5a821c42ed3473", null ],
+      [ "LOG_SEVERE", "a00153.html#af8526ffb1ee2a785489ac05b6e49d357a028bd3a01cf648cc0351c29bff941005", null ],
+      [ "LOG_FATAL", "a00153.html#af8526ffb1ee2a785489ac05b6e49d357ac630750884d91cb9767ef2200bbb048b", null ]
+    ] ],
+    [ "audio_channel", "a00265.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4", [
+      [ "AUDIO_CH_INVALID", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1ae38b5ca59fd4d7eaf46316030c1943", null ],
+      [ "AUDIO_CH_FL", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a51f9b2764c6fb4fedda0a2e26db34d1a", null ],
+      [ "AUDIO_CH_FR", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1af23629a69a7675fdb34091664b54f0", null ],
+      [ "AUDIO_CH_FC", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a30cf31511bec571f29972d5153240c26", null ],
+      [ "AUDIO_CH_LFE", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a237c6e09d4dcd265e0fe662353979e8a", null ],
+      [ "AUDIO_CH_BL", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4aa913e9df7d430fb038a46ffd9a6b6c0c", null ],
+      [ "AUDIO_CH_BR", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4ae48795ee1bb60030f6cd9936e425f271", null ],
+      [ "AUDIO_CH_FLOC", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4abd6293708566f52e3c51e9624abfd46b", null ],
+      [ "AUDIO_CH_FROC", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a319b1573f6d3ab6cb392cde3730c7bbb", null ],
+      [ "AUDIO_CH_BC", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4aa90c458a48d2ad4c195e766822ff2c33", null ],
+      [ "AUDIO_CH_SL", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1aab0619a0d059b7f63dc45920256546", null ],
+      [ "AUDIO_CH_SR", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1907c53416638e264364401deab8bbfa", null ],
+      [ "AUDIO_CH_TFL", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4ab1e6f27a436b44c543bfbb5277d14e24", null ],
+      [ "AUDIO_CH_TFR", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1bc8da6e595ab3400326a07d98166932", null ],
+      [ "AUDIO_CH_TFC", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a9b17a5f2cc83a45969811f82f0b98a31", null ],
+      [ "AUDIO_CH_TC", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a6528079b655067a5734fc7ef83b89b00", null ],
+      [ "AUDIO_CH_TBL", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a6d282855e499f57213f21a0a407d2c87", null ],
+      [ "AUDIO_CH_TBR", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4aff7630bcc5ced065520e1fd7877a0c43", null ],
+      [ "AUDIO_CH_TBC", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a2e9491a483c0d8ff14f8ed56788ec803", null ],
+      [ "AUDIO_CH_BLOC", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a442f0143698374bd20d33700f4ee11dd", null ],
+      [ "AUDIO_CH_BROC", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a0d7223d3ebee5d2737088f2da89b969a", null ],
+      [ "AUDIO_CH_MAX", "a00265.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a4766a0b96807972582fef922b18250c0", null ]
+    ] ],
+    [ "dvd_state", "a00153.html#a6854c40ee0b4222220398351339f0aa5", [
+      [ "ADDON_DRIVE_NOT_READY", "a00153.html#a6854c40ee0b4222220398351339f0aa5a5fd5603726cf9205fd6f48f87a357fbf", null ],
+      [ "ADDON_DRIVE_CLOSED_NO_MEDIA", "a00153.html#a6854c40ee0b4222220398351339f0aa5a1579d3768fc4bd6e8cd712ffb128573c", null ],
+      [ "ADDON_TRAY_OPEN", "a00153.html#a6854c40ee0b4222220398351339f0aa5a8872e84c585119639428ccb551eecccc", null ],
+      [ "ADDON_TRAY_CLOSED_NO_MEDIA", "a00153.html#a6854c40ee0b4222220398351339f0aa5a3a452cf71c7d950e422c7313fdc09e9e", null ],
+      [ "ADDON_TRAY_CLOSED_MEDIA_PRESENT", "a00153.html#a6854c40ee0b4222220398351339f0aa5afff6efbe20f4a1144b7e4dceda19ff17", null ]
+    ] ],
+    [ "eservers", "a00153.html#a6f7280d04d3078fadcfa05418716bb4c", [
+      [ "ADDON_ES_WEBSERVER", "a00153.html#a6f7280d04d3078fadcfa05418716bb4cad977f9d16cbfe302e8194178248b506f", null ],
+      [ "ADDON_ES_AIRPLAYSERVER", "a00153.html#a6f7280d04d3078fadcfa05418716bb4ca3bdff893a2bcd91c10c360c5f479ce78", null ],
+      [ "ADDON_ES_JSONRPCSERVER", "a00153.html#a6f7280d04d3078fadcfa05418716bb4cade509f8f38e2af85457a57e8ff9e81aa", null ],
+      [ "ADDON_ES_UPNPRENDERER", "a00153.html#a6f7280d04d3078fadcfa05418716bb4cadda2cc5bf8c7bb2ca59b33509e4d2645", null ],
+      [ "ADDON_ES_UPNPSERVER", "a00153.html#a6f7280d04d3078fadcfa05418716bb4cae4ffdb7a6ecf388128f4a66f82005dd0", null ],
+      [ "ADDON_ES_EVENTSERVER", "a00153.html#a6f7280d04d3078fadcfa05418716bb4ca0f05af6f103b15d29591d1f1b70bd467", null ],
+      [ "ADDON_ES_ZEROCONF", "a00153.html#a6f7280d04d3078fadcfa05418716bb4ca46f07c7c7c3d6db1a95474651f68a26a", null ]
+    ] ],
+    [ "kodi_codec_type", "a00153.html#adb311b9a66ccf6cbc77137e0af86be2a", [
+      [ "KODI_CODEC_TYPE_UNKNOWN", "a00153.html#adb311b9a66ccf6cbc77137e0af86be2aa8f817a79e13ea554b21f9a4ab39825e3", null ],
+      [ "KODI_CODEC_TYPE_VIDEO", "a00153.html#adb311b9a66ccf6cbc77137e0af86be2aad2291cde40a901541cb7a15001bc06b3", null ],
+      [ "KODI_CODEC_TYPE_AUDIO", "a00153.html#adb311b9a66ccf6cbc77137e0af86be2aa1fdc2cbc56014c4fff81f4e7baae441b", null ],
+      [ "KODI_CODEC_TYPE_DATA", "a00153.html#adb311b9a66ccf6cbc77137e0af86be2aa283925b3bd6f6ed60e5cebfa6c84001f", null ],
+      [ "KODI_CODEC_TYPE_SUBTITLE", "a00153.html#adb311b9a66ccf6cbc77137e0af86be2aa12047086ed4fc5c499f9584a45140cbd", null ],
+      [ "KODI_CODEC_TYPE_RDS", "a00153.html#adb311b9a66ccf6cbc77137e0af86be2aad30c732aede56b620aefac72e4029d8e", null ],
+      [ "KODI_CODEC_TYPE_NB", "a00153.html#adb311b9a66ccf6cbc77137e0af86be2aa5db7fcefc33d4838c039fbb9d1e2eadc", null ]
+    ] ],
+    [ "lang_formats", "a00153.html#ad481b851c163786e65d41b9ab47ed14e", [
+      [ "LANG_FMT_ISO_639_1", "a00153.html#ad481b851c163786e65d41b9ab47ed14ea282b7d25014247cf5f26f5ee0fe6ea51", null ],
+      [ "LANG_FMT_ISO_639_2", "a00153.html#ad481b851c163786e65d41b9ab47ed14ea93ccac5fa6affc3908cbd62584c2e92b", null ],
+      [ "LANG_FMT_ENGLISH_NAME", "a00153.html#ad481b851c163786e65d41b9ab47ed14ea8e9dbb43889202ef570c318560f52635", null ]
+    ] ],
+    [ "queue_msg", "a00153.html#a3a3ad4636a6590c7a30713da82d0cf8b", [
+      [ "QUEUE_INFO", "a00153.html#a3a3ad4636a6590c7a30713da82d0cf8ba337175e2eb3336df26c7e387e56cfb6b", null ],
+      [ "QUEUE_WARNING", "a00153.html#a3a3ad4636a6590c7a30713da82d0cf8ba2ffaf3e648ad752d53c2739eeea1f712", null ],
+      [ "QUEUE_ERROR", "a00153.html#a3a3ad4636a6590c7a30713da82d0cf8bad2f91e8feff864772fb0a394bb60cdc5", null ]
+    ] ]
 ];

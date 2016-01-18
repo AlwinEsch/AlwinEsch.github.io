@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIDialogExtendedProgress</title>
+<title>Kodi Development: CAddonLib_VFSFile</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,150 +92,133 @@ $(document).ready(function(){initNavTree('a00277.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIDialogExtendedProgress<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a> &raquo; <a class="el" href="a00286.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAddonLib_VFSFile<div class="ingroups"><a class="el" href="a00370.html">C++ Development</a> &raquo; <a class="el" href="a00267.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Progress dialog shown for background work</b> </p>
-<p>The with <a class="el" href="a00171.html">#include &lt;kodi/addon.api2/GUIDialogExtendedProgress.h&gt;</a> given class are basically used to create Kodi's extended progress</p>
-<div class="image">
-<img src="help.GUIDialogExtendedProgress.png" alt="help.GUIDialogExtendedProgress.png"/>
-</div>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon.api2/GUIDialogExtendedProgress.h&gt;</span></div>
-<div class="line"></div>
-<div class="line">CAddonGUIDialogExtendedProgress *ext_progress = <span class="keyword">new</span> CAddonGUIDialogExtendedProgress(<span class="stringliteral">&quot;Test Extended progress&quot;</span>);</div>
-<div class="line">ext_progress-&gt;SetText(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 50; i += 10)</div>
-<div class="line">{</div>
-<div class="line">  ext_progress-&gt;SetProgress(i, 100);</div>
-<div class="line">  <a class="code" href="a00312.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line">ext_progress-&gt;SetTitle(<span class="stringliteral">&quot;Test Extended progress - Second round&quot;</span>);</div>
-<div class="line">ext_progress-&gt;SetText(<span class="stringliteral">&quot;Test progress - Step 2&quot;</span>);</div>
-<div class="line"></div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 50; i &lt; 100; i += 10)</div>
-<div class="line">{</div>
-<div class="line">  ext_progress-&gt;SetProgress(i, 100);</div>
-<div class="line">  <a class="code" href="a00312.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
-<div class="line">}</div>
-<div class="line"><span class="keyword">delete</span> ext_progress;</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga2f267cd452ee9736993693fa501ac85e"></a>
+<p><b>Virtual file system control</b> </p>
+<p>It has the header <a class="el" href="a00172.html">#include &lt;kodi/addon.api2/VFSUtils.h&gt;</a> be included to enjoy it. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaa4aa9190a8c2c66f86f4ece11645ca19"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CAddonGUIDialogExtendedProgress </td>
+          <td class="memname">CAddonLib_VFSFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new, unopened file. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga7f7a3199c392465d0767c6506c1af5b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close an open file. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga0e2644b2df3c228e8d71a55b60723f31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flush buffered data. </p>
+
+</div>
+</div>
+<a class="anchor" id="gacc37d885ea67ed49de5644a572d904ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetChunkSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the chunk size for an open file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The requested size. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf2332ee14e6eb66707939c8d9625194d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t GetLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the file size of an open file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The requested size. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaab98661a2483587df5d85e6ec8699bce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t GetPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current position in an open file. </p>
+<dl class="section return"><dt>Returns</dt><dd>The requested position. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7964d4fc5936b7e41fd1c01320882d46"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OpenFile </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em> = <code>&quot;&quot;</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Construct a new dialog</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">title</td><td>Title string </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gaabe45b4d47077b54df0bb809eb41b8d5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IsFinished </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To ask dialog is finished. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if on end </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga40af1bcedea1f61fde8cd5e70e416473"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MarkFinished </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Mark progress finished. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga3bf91c353218dceaa271b65321b2f5cf"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Percentage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the current progress position as percent. </p>
-<dl class="section return"><dt>Returns</dt><dd>Position </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga74a9a823ab1cd34d62a219a842de5946"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetPercentage </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>fPercentage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the current progress position as percent. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gac64c8e121cf5e368cd335c28a0521922"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetProgress </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>currentItem</em>, </td>
+          <td class="paramname"><em>strFileName</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>itemCount</em>&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>flags</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -245,114 +228,234 @@ $(document).ready(function(){initNavTree('a00277.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>To set progress position with predefined places. </p>
+<p>Open the file with filename via KODI's CFile. Needs to be closed by calling CloseFile() when done. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">currentItem</td><td>Place position to use </td></tr>
-    <tr><td class="paramname">itemCount</td><td>Amount of used places </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename to open. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>The flags to pass. Documented in KODI's <a class="el" href="a00172.html">VFSUtils.h</a> </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success or false on failure </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gaec55d8bf3ca3e04261b66bee36f84368"></a>
+<a class="anchor" id="gab906912503a475cdb8f0a67c5d81266c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetText </td>
+          <td class="memname">bool OpenFileForWrite </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strText</em></td><td>)</td>
+          <td class="paramname"><em>strFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bOverWrite</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To set the used text information string. </p>
+<p>Open the file with filename via KODI's CFile in write mode. Needs to be closed by calling CloseFile() when done. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">strText</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename to open. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bOverWrite</td><td>True to overwrite, false otherwise. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success or false on failure </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gad8698c0477204fb8b81feb9d81cbe4fd"></a>
+<a class="anchor" id="gae8f00c5eb703624dd35f9d5205d56343"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetTitle </td>
+          <td class="memname">ssize_t Read </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strTitle</em></td><td>)</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>lpBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>uiBufSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To set the title of dialog. </p>
+<p>Read from an open file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">strTitle</td><td>Title string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lpBuf</td><td>The buffer to store the data in. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uiBufSize</td><td>The size of the buffer. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>number of successfully read bytes if any bytes were read and stored in buffer, zero if no bytes are available to read (end of file was reached) or undetectable error occur, -1 in case of any explicit error </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gafdfa72709ffc1738c3c198f7ad8b61ec"></a>
+<a class="anchor" id="gae3d52fbedd9b4480dc45023814cb78f7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Text </td>
+          <td class="memname">bool ReadLine </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>strLine</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the used text information string. </p>
-<dl class="section return"><dt>Returns</dt><dd>Text string </dd></dl>
+<p>Read a string from an open file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strLine</td><td>The buffer to store the data in. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True when a line was read, false otherwise. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga3cb91fb7750df7982baea48c4a3de616"></a>
+<a class="anchor" id="ga48d08591724952c3d51d0823caf17720"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Title </td>
+          <td class="memname">int64_t Seek </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>iFilePosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iWhence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the used title. </p>
-<dl class="section return"><dt>Returns</dt><dd>Title string </dd></dl>
+<p>Seek in an open file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iFilePosition</td><td>The new position. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iWhence</td><td>Seek argument. See stdio.h for possible values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new position. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga86033f373ed6159d52feb585bab2dfda"></a>
+<a class="anchor" id="ga97dbc6093302f0ced52952a2737407ec"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">~CAddonGUIDialogExtendedProgress </td>
+          <td class="memname">int Truncate </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>iSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Truncate a file to the requested size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iSize</td><td>The new max size. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>New size? </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac7025ec7df110a7a9691adb3f949f24f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t Write </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>lpBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>uiBufSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write to a file opened in write mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lpBuf</td><td>The data to write. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uiBufSize</td><td>Size of the data to write. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>number of successfully written bytes if any bytes were written, zero if no bytes were written and no detectable error occur, -1 in case of any explicit error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaff9977af1409edaace50b30024b00306"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~CAddonLib_VFSFile </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>Destructor </p>
+
+<p><a class="el" href="a00277.html#ga7f7a3199c392465d0767c6506c1af5b4" title="Close an open file. ">Close()</a> is called from the destructor, so explicitly closing the file isn't required. </p>
 
 </div>
 </div>

@@ -1,13 +1,15 @@
 var a00121 =
 [
-    [ "WindowDialog", "a00121.html#ab0d28825ea9f38bb2df30c87e25ff46a", null ],
-    [ "~WindowDialog", "a00121.html#abd7ac25ecd20ae49f86086da88ddd645", null ],
-    [ "close", "a00121.html#a41f0a9216ff8fd7cfe809259fc6668cc", null ],
-    [ "IsDialog", "a00121.html#a1e8473757c23d67eeaa2ad2eaa0d868b", null ],
-    [ "IsDialogRunning", "a00121.html#af5ade9aaec42bf60e7a6c1b1ae74dd2d", null ],
-    [ "IsModalDialog", "a00121.html#adda02b50c11c92eadfa64088e2b56094", null ],
-    [ "OnAction", "a00121.html#a5a929bb12b2e74b5d65471b0a4242741", null ],
-    [ "OnDeinitWindow", "a00121.html#a9abe87b5ae8d7072807ea356566bed21", null ],
-    [ "OnMessage", "a00121.html#a705aa30fc54fcb4cb255efa7992f3e9e", null ],
-    [ "show", "a00121.html#a9ceb2fdb6907af08ad835270ff1697bc", null ]
+    [ "ControlProgress", "a00121.html#a8f64177aa9c9fdecd0b8ede01cb25b92", null ],
+    [ "ControlProgress", "a00121.html#abef3214d1c9bccc3777c244126d76e4d", null ],
+    [ "Create", "a00121.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "getPercent", "a00357.html#gad3e5815badb78551841c44d9b5ae3742", null ],
+    [ "setPercent", "a00357.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ],
+    [ "aspectRatio", "a00121.html#a62de7670850188b84202355774caa6a8", null ],
+    [ "colorDiffuse", "a00121.html#aeb3be9119c45fbe967380716174f877f", null ],
+    [ "strTextureBg", "a00121.html#a2e7730cc4604a2ce37a5af98556a878f", null ],
+    [ "strTextureLeft", "a00121.html#a5355840cd96b1dc3dd54bffbb317b93b", null ],
+    [ "strTextureMid", "a00121.html#a03fbb21bc4a963512d54452bbb6ee6fb", null ],
+    [ "strTextureOverlay", "a00121.html#a2c1fea102a7cf036617c3c534292aa20", null ],
+    [ "strTextureRight", "a00121.html#ac1685244f6b420ce72a08ccb2beb849a", null ]
 ];

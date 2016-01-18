@@ -1,16 +1,65 @@
 var a00018 =
 [
-    [ "CAddonLib_VFSDirEntry", "a00212.html#gac81f1dd62d59a58a0d6f5ef72cfde20b", null ],
-    [ "CAddonLib_VFSDirEntry", "a00212.html#ga3d6451c27a24180971c1dd12e8b665ae", null ],
-    [ "IsFolder", "a00212.html#gabfbbb37d69862b45d0f1079ab976fa37", null ],
-    [ "Label", "a00212.html#gaacd1b40e1b2e44d82303388beb475e84", null ],
-    [ "Path", "a00212.html#ga666f6d222d6e40f592d7ec4c8c670263", null ],
-    [ "Properties", "a00212.html#gaea9c66f89bd36c6b01a234d0e2ad123a", null ],
-    [ "Properties", "a00212.html#ga682a050b373b13ec1e816d7a9cc47302", null ],
-    [ "SetFolder", "a00212.html#gadc0bf158b1dc28eea1bc2e3a2c016982", null ],
-    [ "SetLabel", "a00212.html#gab825756e641ba839bfae908492165481", null ],
-    [ "SetPath", "a00212.html#ga4a03d7c94fa02df112558bc30818e413", null ],
-    [ "SetSize", "a00212.html#gaf2fb6ea3061355a5ed4b53ca45e712ac", null ],
-    [ "Size", "a00212.html#gac0ba4f4c78dcb35605e645ee75198b5a", null ],
-    [ "IMPL_VFS_DIR_ENTRY", "a00018.html#abbcd7b09679a798a8283ea489ff4d577", null ]
+    [ "Python - HelloWorld AddOn", "a00022.html", [
+      [ "Introduction", "a00022.html#Python_HelloWorld_section1", null ],
+      [ "Tools", "a00022.html#Python_HelloWorld_section2", null ],
+      [ "Installing", "a00022.html#Python_HelloWorld_section3", null ],
+      [ "Testing", "a00022.html#Python_HelloWorld_section4", null ],
+      [ "Modifying the Add-On", "a00022.html#Python_HelloWorld_section5", null ],
+      [ "Structure", "a00022.html#Python_HelloWorld_section6", null ],
+      [ "Metadata", "a00022.html#Python_HelloWorld_section7", null ],
+      [ "The Code", "a00022.html#Python_HelloWorld_section8", null ],
+      [ "Changing the code", "a00022.html#Python_HelloWorld_section9", null ],
+      [ "Final Thoughts", "a00022.html#Python_HelloWorld_section10", null ],
+      [ "Extra info", "a00022.html#Python_HelloWorld_section11", null ]
+    ] ],
+    [ "Python - General AddOn", "a00024.html", [
+      [ "Before we get started", "a00024.html#Python_General_addon_section1", null ],
+      [ "Hello, World!", "a00024.html#Python_General_addon_section2", null ],
+      [ "Navigating between pages", "a00024.html#Python_General_addon_section3", [
+        [ "Retrieving arguments", "a00024.html#Python_General_addon_section3_sub1", [
+          [ "Multiple content types", "a00024.html#Python_General_addon_section3_sub1_sub1", null ]
+        ] ],
+        [ "Passing arguments", "a00024.html#Python_General_addon_section3_sub2", null ]
+      ] ],
+      [ "Working with user settings", "a00024.html#Python_General_addon_section4", null ],
+      [ "Showing additional metadata", "a00024.html#Python_General_addon_section5", [
+        [ "Icons, thumbnails and artwork", "a00024.html#Python_General_addon_section5_sub1", null ],
+        [ "Info labels", "a00024.html#Python_General_addon_section5_sub2", null ],
+        [ "Stream info", "a00024.html#Python_General_addon_section5_sub3", null ]
+      ] ],
+      [ "Adding context menus", "a00024.html#Python_General_addon_section6", null ]
+    ] ],
+    [ "Python - Audio AddOn", "a00028.html", [
+      [ "Introduction", "a00028.html#Python_Audio_addon_section1", null ],
+      [ "Tools", "a00028.html#Python_Audio_addon_section2", null ],
+      [ "Installing", "a00028.html#Python_Audio_addon_section3", null ],
+      [ "Testing", "a00028.html#Python_Audio_addon_section4", null ],
+      [ "Explanation", "a00028.html#Python_Audio_addon_section5", null ],
+      [ "Structure", "a00028.html#Python_Audio_addon_section6", null ],
+      [ "The Code", "a00028.html#Python_Audio_addon_section7", null ],
+      [ "Final Thoughts", "a00028.html#Python_Audio_addon_section8", null ]
+    ] ],
+    [ "Python - Video AddOn", "a00026.html", [
+      [ "Introduction", "a00026.html#Python_Video_addon_section1", null ],
+      [ "Tools", "a00026.html#Python_Video_addon_section2", null ],
+      [ "Installing", "a00026.html#Python_Video_addon_section3", null ],
+      [ "Testing", "a00026.html#Python_Video_addon_section4", null ],
+      [ "Explanation", "a00026.html#Python_Video_addon_section5", null ],
+      [ "Structure", "a00026.html#Python_Video_addon_section6", null ],
+      [ "The Code", "a00026.html#Python_Video_addon_section7", null ],
+      [ "Changing the code", "a00026.html#Python_Video_addon_section8", null ],
+      [ "Final Thoughts", "a00026.html#Python_Video_addon_section9", null ],
+      [ "Extra info", "a00026.html#Python_Video_addon_section10", null ]
+    ] ],
+    [ "Python - Visualisation AddOn", "a00030.html", [
+      [ "Introduction", "a00030.html#Python_Visualisation_addon_section1", null ],
+      [ "Tools", "a00030.html#Python_Visualisation_addon_section2", null ],
+      [ "Installing", "a00030.html#Python_Visualisation_addon_section3", null ],
+      [ "Extra info", "a00030.html#Python_Visualisation_addon_section4", null ]
+    ] ],
+    [ "Python - 3rd Party Tutorials", "a00032.html", [
+      [ "3rd Party Add-on Tutorial Links", "a00032.html#Python_3rd_party_section1", null ],
+      [ "Magazine Add-on Developer Guides", "a00032.html#Python_3rd_party_section2", null ]
+    ] ]
 ];

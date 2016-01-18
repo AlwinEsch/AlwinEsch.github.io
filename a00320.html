@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Window</title>
+<title>Kodi Development: CPVRLib_Trigger</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,656 +91,170 @@ $(document).ready(function(){initNavTree('a00320.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Window<div class="ingroups"><a class="el" href="a00351.html">Python Development</a> &raquo; <a class="el" href="a00313.html">Library - xbmcgui</a></div></div>  </div>
+<div class="title">CPVRLib_Trigger<div class="ingroups"><a class="el" href="a00370.html">C++ Development</a> &raquo; <a class="el" href="a00317.html">Library - PVRLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>GUI window class for Add-Ons.</b> </p>
-<p>This class allows over their functions to create and edit windows that can be accessed from an Add-On.</p>
-<p>Likewise, all functions from here as well in the other window classes <a class="el" href="a00121.html">WindowDialog</a>, <a class="el" href="a00122.html">WindowXML</a> and <a class="el" href="a00123.html">WindowXMLDialog</a> with inserted and available.</p>
-<hr/>
- <h2>Class constructor for window </h2>
-<p><b><code>xbmcgui.Window(int windowId):</code></b></p>
-<p>Creates a new from Add-On usable window class. This is to create window for related controls by system calls.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">existingWindowId</td><td>[opt] Specify an id to use an existing window. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">ValueError</td><td>if supplied window Id does not exist. </td></tr>
-    <tr><td class="paramname">Exception</td><td>if more then 200 windows are created.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Deleting this window will activate the old window that was active and resets (not delete) all controls that are associated with this window.</p>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;win = xbmcgui.Window()</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;width = win.getWidth()</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
-</div><!-- fragment --> <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00321"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00321.html">Callback functions from Kodi to add-on</a></td></tr>
-<tr class="memdesc:a00321"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>GUI window callback functions.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00323"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00323.html">Subclass - WindowDialog</a></td></tr>
-<tr class="memdesc:a00323"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>GUI window dialog class for Add-Ons.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00324"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00324.html">Subclass - WindowXML</a></td></tr>
-<tr class="memdesc:a00324"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>GUI xml window class.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p><b>Funtions to trigger PVR related updates on Kodi</b> </p>
+<p>Call of function in this class informs Kodi to do a update of related parts.</p>
+<p>These are pure static functions them no other initialization need.</p>
+<p>It has the header <a class="el" href="a00208.html">#include &lt;kodi/pvr.api2/PVRLib.h&gt;</a> be included to enjoy it </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gac37d32aa4a0f2292f1812c1f1af9f3ca"></a>
+<a class="anchor" id="ga5d29f9d2a7bb423e21cb5dd5a2f5ab4a"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void addControl </td>
+          <td class="memname">static void ChannelGroupsUpdate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00102.html">Control</a> *&#160;</td>
-          <td class="paramname"><em>pControl</em></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Add a <a class="el" href="a00102.html">Control</a> to this window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pControl</td><td><a class="el" href="a00102.html">Control</a> to add </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">TypeError</td><td>If supplied argument is not a <a class="el" href="a00102.html">Control</a> type </td></tr>
-    <tr><td class="paramname">ReferenceError</td><td>If control is already used in another window </td></tr>
-    <tr><td class="paramname">RuntimeError</td><td>Should not happen :-)</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>The next controls can be added to a window atm </p><table class="doxtable">
-<tr>
-<th><a class="el" href="a00102.html">Control</a> class </th><th>Description  </th></tr>
-<tr>
-<td><a class="el" href="a00334.html">ControlLabel</a> </td><td>Label control to show text </td></tr>
-<tr>
-<td><a class="el" href="a00337.html">ControlFadeLabel</a> </td><td>The fadelabel has multiple labels which it cycles through. </td></tr>
-<tr>
-<td><a class="el" href="a00338.html">ControlTextBox</a> </td><td>To show bigger text field </td></tr>
-<tr>
-<td><a class="el" href="a00341.html">ControlButton</a> </td><td>Brings a button to do some actions </td></tr>
-<tr>
-<td><a class="el" href="a00336.html">ControlList</a> </td><td>Add a list for something like files </td></tr>
-<tr>
-<td><a class="el" href="a00343.html">ControlGroup</a> </td><td>Is for a group which brings the others together </td></tr>
-<tr>
-<td><a class="el" href="a00339.html">ControlImage</a> </td><td>Controls a image on skin </td></tr>
-<tr>
-<td><a class="el" href="a00344.html">ControlRadioButton</a> </td><td>For a radio button which handle boolean values </td></tr>
-<tr>
-<td><a class="el" href="a00340.html">ControlProgress</a> </td><td>Progress bar for a performed work or something else </td></tr>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
 </table>
-
-</div>
-</div>
-<a class="anchor" id="gacfd7c99ea69252b8c195f9863af5e012"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void addControls </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="a00102.html">Control</a> * &gt;&#160;</td>
-          <td class="paramname"><em>pControls</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
-<p>Add a list of Controls to this window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pControls</td><td>List with controls to add </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">TypeError</td><td>If supplied argument is not of List type, or a control is not of <a class="el" href="a00102.html">Control</a> type </td></tr>
-    <tr><td class="paramname">ReferenceError</td><td>If control is already used in another window </td></tr>
-    <tr><td class="paramname">RuntimeError</td><td>Should not happen :-) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga08051d9d0c9864b7aa7444239938dd9b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void clearProperties </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clears all window properties. </p>
+<p>Request Kodi to update it's list of channel groups. </p>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;win = xbmcgui.Window(xbmcgui.getCurrentWindowId())</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;win.clearProperties()</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00208.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line">...</div>
+<div class="line">CPVRLib_Trigger::ChannelGroupsUpdate();</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga99d0d60007e7b2cefdf8b695383c9347"></a>
+<a class="anchor" id="ga046bd435f53dedfbc125a70b6fcd09bb"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void clearProperty </td>
+          <td class="memname">static void ChannelUpdate </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clears the specific window property. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive. Equivalent to setProperty(key,'') You can use the above as keywords for arguments and skip certain optional arguments. Once you use a keyword, all following arguments require the keyword.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;win = xbmcgui.Window(xbmcgui.getCurrentWindowId())</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;win.clearProperty(<span class="stringliteral">&#39;Category&#39;</span>)</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga5ae591df94fc66ccb85cbb6565368bca"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void close </td>
-          <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Closes this window. </p>
-<p>Closes this window by activating the old window.</p>
-<dl class="section note"><dt>Note</dt><dd>The window is not deleted with this method. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga33ea72f0548b5dc6af9a46183c02871f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void doModal </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Display this window until <a class="el" href="a00320.html#ga5ae591df94fc66ccb85cbb6565368bca" title="Closes this window. ">close()</a> is called. </p>
-
-</div>
-</div>
-<a class="anchor" id="gac2048daa10ef60ec1d647d10d8a99af8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Control* getControl </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iControlId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the control from this window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iControlId</td><td><a class="el" href="a00102.html">Control</a> id to get </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">Exception</td><td>If <a class="el" href="a00102.html">Control</a> doesn't exist</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section remark"><dt>Remarks</dt><dd>controlId doesn't have to be a python control, it can be a control id from a Kodi window too (you can find id's in the xml files.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Not python controls are not completely usable yet You can only use the <a class="el" href="a00102.html">Control</a> functions </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga17eda8ea38cdf7782095736355f63e4b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Control* getFocus </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the control which is focused.</p>
-<dl class="section return"><dt>Returns</dt><dd>Focused control class </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">SystemError</td><td>On Internal error </td></tr>
-    <tr><td class="paramname">RuntimeError</td><td>If no control has focus </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga3b69a4a08f9dd5d2c5ff767afa6b57c8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">long getFocusId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the id of the control which is focused. </p>
-<dl class="section return"><dt>Returns</dt><dd>Focused control id </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">SystemError</td><td>On Internal error </td></tr>
-    <tr><td class="paramname">RuntimeError</td><td>If no control has focus </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga18ec4174d22d39a27efae91f0757018f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">long getHeight </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the height of this screen. </p>
-<dl class="section return"><dt>Returns</dt><dd>Screen height </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga6ea42956dc2a3770054d6e0693a70cf3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getProperty </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a window property as a string, similar to an infolabel. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive.<br />
- You can use the above as keywords for arguments and skip certain optional arguments. Once you use a keyword, all following arguments require the keyword.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;win = xbmcgui.Window(xbmcgui.getCurrentWindowId())</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;category = win.getProperty(<span class="stringliteral">&#39;Category&#39;</span>)</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga9d5731a47bc44a9b02aa81db39aaa8c1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">long getResolution </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The resolution of the screen</p>
-<dl class="section return"><dt>Returns</dt><dd>Used Resolution The returned value is one of the following: <table class="doxtable">
-<tr>
-<th align="center">value </th><th align="left">Resolution  </th></tr>
-<tr>
-<td align="center">0 </td><td align="left">1080i (1920x1080) </td></tr>
-<tr>
-<td align="center">1 </td><td align="left">720p (1280x720) </td></tr>
-<tr>
-<td align="center">2 </td><td align="left">480p 4:3 (720x480) </td></tr>
-<tr>
-<td align="center">3 </td><td align="left">480p 16:9 (720x480) </td></tr>
-<tr>
-<td align="center">4 </td><td align="left">NTSC 4:3 (720x480) </td></tr>
-<tr>
-<td align="center">5 </td><td align="left">NTSC 16:9 (720x480) </td></tr>
-<tr>
-<td align="center">6 </td><td align="left">PAL 4:3 (720x576) </td></tr>
-<tr>
-<td align="center">7 </td><td align="left">PAL 16:9 (720x576) </td></tr>
-<tr>
-<td align="center">8 </td><td align="left">PAL60 4:3 (720x480) </td></tr>
-<tr>
-<td align="center">9 </td><td align="left">PAL60 16:9 (720x480) </td></tr>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
 </table>
-</dd></dl>
+</div><div class="memdoc">
 
+<p>Request Kodi to update it's list of channels. </p>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00208.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line">...</div>
+<div class="line">CPVRLib_Trigger::ChannelUpdate();</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="gad7e62f808c88a823d9a2dcc37b2a633c"></a>
+<a class="anchor" id="ga49372b48b0c3d939e69dfb83bcda3ed5"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long getWidth </td>
+          <td class="memname">static void EpgUpdate </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>iChannelUid</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Returns the width of this screen. </p>
-<dl class="section return"><dt>Returns</dt><dd>Screen width </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gad5d1ecd49c09d01f35ebb43435de8b36"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void removeControl </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00102.html">Control</a> *&#160;</td>
-          <td class="paramname"><em>pControl</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes the control from this window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pControl</td><td><a class="el" href="a00102.html">Control</a> class to remove </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">TypeError</td><td>If supplied argument is not a <a class="el" href="a00102.html">Control</a> type </td></tr>
-    <tr><td class="paramname">RuntimeError</td><td>If control is not added to this window</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>This will not delete the control. It is only removed from the window. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga5e103916a66adce745c37d0daf88d55c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void removeControls </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="a00102.html">Control</a> * &gt;&#160;</td>
-          <td class="paramname"><em>pControls</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes a list of controls from this window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pControls</td><td>List with controls to remove </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">TypeError</td><td>If supplied argument is not a <a class="el" href="a00102.html">Control</a> type </td></tr>
-    <tr><td class="paramname">RuntimeError</td><td>If control is not added to this window</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>This will not delete the controls. They are only removed from the window. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga59626db6d7f43bc114fa60aeca7ab34b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setCoordinateResolution </td>
-          <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>res</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the resolution. </p>
-<p>That the coordinates of all controls are defined in. Allows Kodi to scale control positions and width/heights to whatever resolution Kodi is currently using.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Coordinate resolution to set Resolution is one of the following: <table class="doxtable">
-<tr>
-<th align="center">value </th><th align="left">Resolution  </th></tr>
-<tr>
-<td align="center">0 </td><td align="left">1080i (1920x1080) </td></tr>
-<tr>
-<td align="center">1 </td><td align="left">720p (1280x720) </td></tr>
-<tr>
-<td align="center">2 </td><td align="left">480p 4:3 (720x480) </td></tr>
-<tr>
-<td align="center">3 </td><td align="left">480p 16:9 (720x480) </td></tr>
-<tr>
-<td align="center">4 </td><td align="left">NTSC 4:3 (720x480) </td></tr>
-<tr>
-<td align="center">5 </td><td align="left">NTSC 16:9 (720x480) </td></tr>
-<tr>
-<td align="center">6 </td><td align="left">PAL 4:3 (720x576) </td></tr>
-<tr>
-<td align="center">7 </td><td align="left">PAL 16:9 (720x576) </td></tr>
-<tr>
-<td align="center">8 </td><td align="left">PAL60 4:3 (720x480) </td></tr>
-<tr>
-<td align="center">9 </td><td align="left">PAL60 16:9 (720x480) </td></tr>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
 </table>
-</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;win = xbmcgui.Window(xbmcgui.getCurrentWindowId())</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;win.setCoordinateResolution(0)</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga1785f2b46b58870a2ad665c94cc44c4c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setFocus </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00102.html">Control</a> *&#160;</td>
-          <td class="paramname"><em>pControl</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
-<p>Give the supplied control focus. </p>
+<p>Schedule an EPG update for the given channel channel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pControl</td><td><a class="el" href="a00102.html">Control</a> class to focus </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">TypeError</td><td>If supplied argument is not a <a class="el" href="a00102.html">Control</a> type </td></tr>
-    <tr><td class="paramname">SystemError</td><td>On Internal error </td></tr>
-    <tr><td class="paramname">RuntimeError</td><td>If control is not added to a window </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iChannelUid</td><td>The unique id of the channel for this add-on </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga260fd8f75779d2bd709309b54c4eeb84"></a>
+<a class="anchor" id="ga64219c32345c79a130702741451c9a8e"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void setFocusId </td>
+          <td class="memname">static void RecordingUpdate </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iControlId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Gives the control with the supplied focus.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iControlId</td><td>On skin defined id of control </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">SystemError</td><td>On Internal error </td></tr>
-    <tr><td class="paramname">RuntimeError</td><td>If control is not added to a window </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga117dae419f8322cc06721a8537717f78"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setProperty </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets a window property, similar to an infolabel. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>string or unicode - value of property.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive. Setting value to an empty string is equivalent to clearProperty(key).<br />
- You can use the above as keywords for arguments and skip certain optional arguments.<br />
- Once you use a keyword, all following arguments require the keyword.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;win = xbmcgui.Window(xbmcgui.getCurrentWindowId())</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;win.setProperty(<span class="stringliteral">&#39;Category&#39;</span>, <span class="stringliteral">&#39;Newest&#39;</span>)</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga4b148f40a95444d5669406b918ad2f52"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void show </td>
-          <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Show this window. </p>
-<p>Shows this window by activating it, calling <a class="el" href="a00320.html#ga5ae591df94fc66ccb85cbb6565368bca" title="Closes this window. ">close()</a> after it wil activate the current window again.</p>
-<dl class="section note"><dt>Note</dt><dd>If your script ends this window will be closed to. To show it forever, make a loop at the end of your script or use <a class="el" href="a00320.html#ga33ea72f0548b5dc6af9a46183c02871f" title="Display this window until close() is called. ">doModal()</a> instead. </dd></dl>
+<p>Request Kodi to update it's list of recordings. </p>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00208.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line">...</div>
+<div class="line">CPVRLib_Trigger::RecordingUpdate();</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga92c110f8654585fdc3f8a126d1ce54bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TimerUpdate </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
+<p>Request Kodi to update it's list of timers. </p>
+<hr/>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00208.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line">...</div>
+<div class="line">CPVRLib_Trigger::TimerUpdate();</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

@@ -1,16 +1,11 @@
 var a00123 =
 [
-    [ "WindowXMLDialog", "a00123.html#a8b8fa85bda49679d837f979611e5f8b1", null ],
-    [ "~WindowXMLDialog", "a00123.html#a310432dff16af9483d895540ff76be15", null ],
-    [ "close", "a00123.html#a41f0a9216ff8fd7cfe809259fc6668cc", null ],
-    [ "IsDialog", "a00123.html#a1e8473757c23d67eeaa2ad2eaa0d868b", null ],
-    [ "IsDialogRunning", "a00123.html#af5ade9aaec42bf60e7a6c1b1ae74dd2d", null ],
-    [ "IsMediaWindow", "a00123.html#aef19fec003e392f5b0abdb6155393615", null ],
-    [ "IsModalDialog", "a00123.html#adda02b50c11c92eadfa64088e2b56094", null ],
-    [ "LoadXML", "a00123.html#a4a88d9f86eedb30367ebce61fb060bbb", null ],
-    [ "OnAction", "a00123.html#a5a929bb12b2e74b5d65471b0a4242741", null ],
-    [ "OnDeinitWindow", "a00123.html#a9abe87b5ae8d7072807ea356566bed21", null ],
-    [ "OnMessage", "a00123.html#a705aa30fc54fcb4cb255efa7992f3e9e", null ],
-    [ "show", "a00123.html#a9ceb2fdb6907af08ad835270ff1697bc", null ],
-    [ "DialogJumper", "a00123.html#a08482f1b5aa6411d68254066f6028095", null ]
+    [ "ControlSlider", "a00123.html#ac45505fb23d3fd20687337c35f347f7e", null ],
+    [ "ControlSlider", "a00123.html#a37a27a85a4dd0d13f7233061e749f865", null ],
+    [ "Create", "a00123.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "getPercent", "a00362.html#gad3e5815badb78551841c44d9b5ae3742", null ],
+    [ "setPercent", "a00362.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ],
+    [ "strTexture", "a00123.html#aca02fb07ae30257c0fa2adfa82de925c", null ],
+    [ "strTextureBack", "a00123.html#a5dae9258f23ccac9d94586346b015fc3", null ],
+    [ "strTextureFoc", "a00123.html#a5403da28109017430519960b7e555354", null ]
 ];

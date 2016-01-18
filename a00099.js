@@ -1,12 +1,7 @@
 var a00099 =
 [
-    [ "RenderCapture", "a00099.html#a2f1abd0c5a0590bee396ab3163464e91", null ],
-    [ "~RenderCapture", "a00099.html#adcd111542d35b7dc5fa70d6a8ef054a8", null ],
-    [ "capture", "a00331.html#gad84ac4cd6e43fc4aefe0eeaa0916e187", null ],
-    [ "getAspectRatio", "a00331.html#ga2c8f0f904856b52b41dd852c57bd970b", null ],
-    [ "getHeight", "a00331.html#ga07efb2a4e9a982688c8bb3c3f21d1092", null ],
-    [ "getImage", "a00331.html#gaff2e6e3a8d1c65f17c1709dc727ae69c", null ],
-    [ "getImageFormat", "a00331.html#gaa512bbf517e279b0a5ca7d2ecf07f5b1", null ],
-    [ "GetPixels", "a00099.html#a1ea12b9900fb2903c60aacad0d1ee835", null ],
-    [ "getWidth", "a00331.html#ga67a0997183f24da19b776d96c1052998", null ]
+    [ "flags", "a00099.html#a97d3809c31ac6e9631f24fc0ceeb666b", null ],
+    [ "label", "a00099.html#a512bd2c8e2a962b00a6a6926befc170c", null ],
+    [ "old", "a00099.html#a39a20e2eaa419a18d9491b8ba296ecc8", null ],
+    [ "sort", "a00099.html#a1a07c60b17fda1993e8b57d097acfd51", null ]
 ];

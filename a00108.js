@@ -1,11 +1,15 @@
 var a00108 =
 [
-    [ "ControlImage", "a00108.html#a9be115122b3309a7a738fb31643d81d1", null ],
-    [ "ControlImage", "a00108.html#ae6699f77d4ffa346eed9e00b7cadc7ef", null ],
-    [ "Create", "a00108.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "setColorDiffuse", "a00339.html#ga3b0c15e0d82d8605f4b3ad82aaa42c16", null ],
-    [ "setImage", "a00339.html#ga7ba591029ef61ca17851a9f02a1fe5dc", null ],
-    [ "aspectRatio", "a00108.html#a62de7670850188b84202355774caa6a8", null ],
-    [ "colorDiffuse", "a00108.html#aeb3be9119c45fbe967380716174f877f", null ],
-    [ "strFileName", "a00108.html#a0faec04d22e256f2777cddfaeab1d673", null ]
+    [ "PlayList", "a00108.html#a5a2b1d9cebb8cfa88add301b5143a559", null ],
+    [ "~PlayList", "a00108.html#a32fcb11cefa02bee25ef859190f927ac", null ],
+    [ "add", "a00345.html#ga979e740949519ca0e88da2ff9934a4d5", null ],
+    [ "clear", "a00345.html#gac8bb3912a3ce86b15842e79d0b421204", null ],
+    [ "getPlayListId", "a00345.html#ga4d665409e02daa8ea13ce462ca44c914", null ],
+    [ "getposition", "a00345.html#ga265b7f39dcd400e1f4edaf4060af9977", null ],
+    [ "load", "a00345.html#ga2eea1635b7df085d42c973352ef10355", null ],
+    [ "operator[]", "a00345.html#gaba5d6f37d582f0512f61f32109a92d92", null ],
+    [ "remove", "a00345.html#gae363baca6026e43cc1264c5914ff69b9", null ],
+    [ "shuffle", "a00345.html#ga1905fe84eb39f020b32c58baf7a76758", null ],
+    [ "size", "a00345.html#gaf4b57d21919c42d55af03391f91a1c08", null ],
+    [ "unshuffle", "a00345.html#ga2401476232ac1b00321c9bfe8158f9c4", null ]
 ];

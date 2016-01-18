@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Subclass - ControlSlider</title>
+<title>Kodi Development: PlayList</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,40 +92,90 @@ $(document).ready(function(){initNavTree('a00345.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Subclass - ControlSlider<div class="ingroups"><a class="el" href="a00351.html">Python Development</a> &raquo; <a class="el" href="a00313.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00332.html">Control</a></div></div>  </div>
+<div class="title">PlayList<div class="ingroups"><a class="el" href="a00371.html">Python Development</a> &raquo; <a class="el" href="a00329.html">Library - xbmc</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Used for a volume slider.</b> </p>
-<p><b><code>ControlSlider(x, y, width, height[, textureback, texture, texturefocus])</code></b></p>
-<p>The slider control is used for things where a sliding bar best represents the operation at hand (such as a volume control or seek control). You can choose the position, size, and look of the slider control.</p>
-<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00332.html">Control</a></dd></dl>
+<p><b>Kodi's Play List class.</b> </p>
+<p><b><code>xbmc.PlayList(playList)</code></b></p>
+<p>To create and edit a playlist which can be handled by the player.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">textureback</td><td>[opt] string - image filename </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">texture</td><td>[opt] string - image filename </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">texturefocus</td><td>[opt] string - image filename</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">playList</td><td>[integer] To define the stream type <table class="doxtable">
+<tr>
+<th align="center">Value </th><th align="left">Integer String </th><th align="left">Description  </th></tr>
+<tr>
+<td align="center">0 </td><td align="left">xbmc.PLAYLIST_MUSIC </td><td align="left">Playlist for music files or streams </td></tr>
+<tr>
+<td align="center">1 </td><td align="left">xbmc.PLAYLIST_VIDEO </td><td align="left">Playlist for video files or streams </td></tr>
+</table>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
- Once you use a keyword, all following arguments require the keyword.<br />
- After you create the control, you need to add it to the window with addControl().</dd></dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.slider = xbmcgui.ControlSlider(100, 250, 350, 40)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;play=xbmc.PlayList(xbmc.PLAYLIST_VIDEO)</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
 </div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gad3e5815badb78551841c44d9b5ae3742"></a>
+<a class="anchor" id="ga979e740949519ca0e88da2ff9934a4d5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float getPercent </td>
+          <td class="memname">void add </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListItem *&#160;</td>
+          <td class="paramname"><em>listitem</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new file to the playlist. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>string or unicode - filename or url to add. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">listitem</td><td>[opt] listitem - used with setInfo() to set different infolabels. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>[opt] integer - position to add playlist item. (default=end)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;playlist = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;video = <span class="stringliteral">&#39;F:\\movies\\Ironman.mov&#39;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;listitem = xbmcgui.ListItem(<span class="stringliteral">&#39;Ironman&#39;</span>, thumbnailImage=<span class="stringliteral">&#39;F:\\movies\\Ironman.tbn&#39;</span>)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;listitem.setInfo(<span class="stringliteral">&#39;video&#39;</span>, {<span class="stringliteral">&#39;Title&#39;</span>: <span class="stringliteral">&#39;Ironman&#39;</span>, <span class="stringliteral">&#39;Genre&#39;</span>: <span class="stringliteral">&#39;Science Fiction&#39;</span>})</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;playlist.add(url=video, listitem=listitem, index=7)n</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gac8bb3912a3ce86b15842e79d0b421204"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -133,41 +183,179 @@ $(document).ready(function(){initNavTree('a00345.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Returns a float of the percent of the slider. </p>
-<dl class="section return"><dt>Returns</dt><dd>float - Percent of slider</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordflow">print</span> self.slider.getPercent()</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
-</div><!-- fragment --> 
+<p>Clear all items in the playlist. </p>
+
 </div>
 </div>
-<a class="anchor" id="gaebdebaa245f9f39c8c27bbbe92ad9294"></a>
+<a class="anchor" id="ga4d665409e02daa8ea13ce462ca44c914"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getPlayListId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the <a class="el" href="a00108.html">PlayList</a> Identifier. </p>
+<dl class="section return"><dt>Returns</dt><dd>Id as an integer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga265b7f39dcd400e1f4edaf4060af9977"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void setPercent </td>
+          <td class="memname">int getposition </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>pct</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the percent of the slider. </p>
+<p>Returns the position of the current song in this playlist. </p>
+<dl class="section return"><dt>Returns</dt><dd>Position of the current song </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2eea1635b7df085d42c973352ef10355"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool load </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load a playlist. </p>
+<p>Clear current playlist and copy items from the file to this Playlist filename can be like .pls or .m3u ...</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pct</td><td>float - Percent value of slider</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>File with list to play inside </td></tr>
   </table>
   </dd>
 </dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.slider.setPercent(50)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
-</div><!-- fragment --> 
+<dl class="section return"><dt>Returns</dt><dd>False if unable to load playlist </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaba5d6f37d582f0512f61f32109a92d92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListItem* operator[] </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the item at the given position. A negative index means from the ending rather than from the start. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Pointer in list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The selected item on list </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae363baca6026e43cc1264c5914ff69b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove an item with this filename from the playlist. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The file to remove from list. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1905fe84eb39f020b32c58baf7a76758"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shuffle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shuffle the playlist. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf4b57d21919c42d55af03391f91a1c08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the total number of PlayListItems in this playlist. </p>
+<dl class="section return"><dt>Returns</dt><dd>Amount of playlist entries. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2401476232ac1b00321c9bfe8158f9c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unshuffle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unshuffle the playlist. </p>
+
 </div>
 </div>
 </div><!-- contents -->

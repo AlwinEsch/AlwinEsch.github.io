@@ -1,8 +1,7 @@
 var a00352 =
 [
-    [ "getAddonInfo", "a00352.html#gaedb0b112c76349f81e261335a6b240b9", null ],
-    [ "getLocalizedString", "a00352.html#ga79ffd96305af02e364d99c2c9d8b69de", null ],
-    [ "getSetting", "a00352.html#ga6eebe8728b7d19104a482a29abdafce2", null ],
-    [ "openSettings", "a00352.html#ga73eb9124fb7a7a5f5a89c92e0bc1fb2a", null ],
-    [ "setSetting", "a00352.html#gafd6c759c5b268d0ec1467e340323783d", null ]
+    [ "getLabel", "a00352.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
+    [ "getText", "a00352.html#gafab766445043570e6a82c14851366933", null ],
+    [ "setLabel", "a00352.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
+    [ "setText", "a00352.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Examples</title>
+<title>Kodi Development: Git usage</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,10 +92,88 @@ $(document).ready(function(){initNavTree('a00006.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Examples </div>  </div>
+<div class="title">Git usage </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#Git_usage_sect1">Git windows guide</a></li>
+<li class="level1"><a href="#Git_usage_sect2">Clone the Kodi main repository</a></li>
+<li class="level1"><a href="#Git_usage_sect3">Fetch old branches and extra history</a></li>
+<li class="level1"><a href="#Git_usage_sect4">Platform Settings</a><ul><li class="level2"><a href="#Git_usage_sect4_1">Case Insensitive File Systems</a></li>
+<li class="level2"><a href="#Git_usage_sect4_2">Line Endings</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#Git_usage_sect5">Updating</a></li>
+<li class="level1"><a href="#Git_usage_sect6">Pushing</a></li>
+<li class="level1"><a href="#Git_usage_sect7">Merging</a></li>
+<li class="level1"><a href="#Git_usage_sect8">Advanced</a><ul><li class="level2"><a href="#Git_usage_sect8_1">Maintaining a rebased version of a merge branch</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="Git_usage_sect1"></a>
+Git windows guide</h1>
+<p>The guide for Windows users is located here: Git Usage Windows</p>
+<h1><a class="anchor" id="Git_usage_sect2"></a>
+Clone the Kodi main repository</h1>
+<p>Kodi now uses git as its Software Configuration Management (SCM) framework. The main repository is located at github.</p>
+<p>For read only access </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git clone git://github.com/xbmc/xbmc.git</div>
+</div><!-- fragment --><p>If you are a developer, clone the repository. </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git clone git@github.com:xbmc/xbmc.git</div>
+</div><!-- fragment --> <hr/>
+ <h1><a class="anchor" id="Git_usage_sect3"></a>
+Fetch old branches and extra history</h1>
+<p>The following is ONLY useful for developers who wish to see extended Kodi history. Everyone else should stop here. Run this command from your tree. It requires git 1.6.5 or higher:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git fetch origin refs/old/heads/*:refs/remotes/svn-migration/* refs/replace/*:refs/replace/*</div>
+</div><!-- fragment --> <hr/>
+ <h1><a class="anchor" id="Git_usage_sect4"></a>
+Platform Settings</h1>
+<h2><a class="anchor" id="Git_usage_sect4_1"></a>
+Case Insensitive File Systems</h2>
+<p>Git wants to run under a case sensitive file system but under OSX and Windows, the file system might be case insensitive. Make sure that core.ignorecase is properly set. Check with:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git config --list</div>
+</div><!-- fragment --><p>if not set: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git config --global core.ignorecase true</div>
+</div><!-- fragment --><h2><a class="anchor" id="Git_usage_sect4_2"></a>
+Line Endings</h2>
+<p>Windows users MUST use the git autocrlf feature. This is set by default by tortoise. If it's not set, you can do so manually:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git config --system core.autocrlf true</div>
+</div><!-- fragment --><p>Linux and OSX users should set autocrlf to 'input' </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git config --global core.autocrlf input</div>
+</div><!-- fragment --> <hr/>
+ <h1><a class="anchor" id="Git_usage_sect5"></a>
+Updating</h1>
+<p>When updating from the main git repository (by default git will call this 'origin'), you should always rebase on top of your history, unless you know what you're doing.</p>
+<p>Always use </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git pull --rebase</div>
+</div><!-- fragment --><p>A safe bet is to set this to be done automatically.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git config branch.master.rebase true</div>
+</div><!-- fragment --><h1><a class="anchor" id="Git_usage_sect6"></a>
+Pushing</h1>
+<p>Please use </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git log</div>
+</div><!-- fragment --><p>to look at the log before pushing. If there are merge commits that you don't understand, please ask for help before pushing. Never EVER force a push (non-fast-forward commit) to mainline. Ever. Doing so will result in your push privileges being revoked. </p><hr/>
+ <h1><a class="anchor" id="Git_usage_sect7"></a>
+Merging</h1>
+<p>Always use the &ndash;log option to add a description of what commits are being merged. You can (and should) set this as a default:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git config merge.log true</div>
+</div><!-- fragment --> <hr/>
+ <h1><a class="anchor" id="Git_usage_sect8"></a>
+Advanced</h1>
+<h2><a class="anchor" id="Git_usage_sect8_1"></a>
+Maintaining a rebased version of a merge branch</h2>
+<p>A long-lived feature branch involving a bunch of developers at some point needs merging to mainline. During the review stage, this typically involves someone taking the time to rebase the feature branch on mainline so that the changes are easier to review for others, with a pull request being made. Review will inevitably result in fix commits being required, and where many developers are involved this can be messy if constantly rebased (as devs are working against a moving target). An alternative is to have 2 branches: The first rebased branch changes to the development branch with fixup commits being applied. A second branch is then created which is identical to the first, just rebased down. In order to maintain this arrangement, you need to be able to apply the top N commits from the development branch onto the rebased branch to ensure it's kept up to date. This can be done as follows:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ git checkout feature_branch</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;$ git checkout -b feature_rebase</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;$ # ... do rebase ...</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;$ git diff feature_branch                                     # ensure your rebase hasn&#39;t dropped something.</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;$ git checkout feature_branch</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;$ git tag -f feature_last_rebase                              # so you know when you last rebased.</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;$ # ... more commits on top of feature_branch ...</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;$ git checkout feature_rebase</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;$ git checkout -b tmp                                         # create a temporary branch</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;$ git branch -f feature_rebase feature_branch                 # move feature_rebase to the HEAD of feature_branch</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;$ git rebase --onto tmp feature_last_rebase feature_rebase    # rebase changes from the last rebase on top of feature_branch</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;$ git diff feature_branch                                     # ensure your rebased branch contains all the commits you want</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;$ git branch -d tmp</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;$ # ... do rebase ...</div>
+</div><!-- fragment --><p>You then just rinse/repeat until all issues are ironed out. feature_rebase is then what is pulled into master nice and cleanly. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

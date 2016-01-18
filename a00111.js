@@ -1,15 +1,17 @@
 var a00111 =
 [
-    [ "ControlProgress", "a00111.html#a8f64177aa9c9fdecd0b8ede01cb25b92", null ],
-    [ "ControlProgress", "a00111.html#abef3214d1c9bccc3777c244126d76e4d", null ],
-    [ "Create", "a00111.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "getPercent", "a00340.html#gad3e5815badb78551841c44d9b5ae3742", null ],
-    [ "setPercent", "a00340.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ],
-    [ "aspectRatio", "a00111.html#a62de7670850188b84202355774caa6a8", null ],
-    [ "colorDiffuse", "a00111.html#aeb3be9119c45fbe967380716174f877f", null ],
-    [ "strTextureBg", "a00111.html#a2e7730cc4604a2ce37a5af98556a878f", null ],
-    [ "strTextureLeft", "a00111.html#a5355840cd96b1dc3dd54bffbb317b93b", null ],
-    [ "strTextureMid", "a00111.html#a03fbb21bc4a963512d54452bbb6ee6fb", null ],
-    [ "strTextureOverlay", "a00111.html#a2c1fea102a7cf036617c3c534292aa20", null ],
-    [ "strTextureRight", "a00111.html#ac1685244f6b420ce72a08ccb2beb849a", null ]
+    [ "Action", "a00111.html#a9e72d404d52a0c6d6edefac30f76e02d", null ],
+    [ "Action", "a00111.html#a1e397d04f00323e53e1757ffd48425c5", null ],
+    [ "getAmount1", "a00336.html#ga3ee04d80d5e7af5563ecc098623a90ad", null ],
+    [ "getAmount2", "a00336.html#ga0f5620d911d309e2dadadc44359bce45", null ],
+    [ "getButtonCode", "a00336.html#gab60f32db21659ba5c3f4d145b9e5947b", null ],
+    [ "getId", "a00336.html#gac7a54ea5a10c5c4683f16e3f83f77104", null ],
+    [ "setFromCAction", "a00111.html#a982c0131d2301210e0bbaa23f1fe7017", null ],
+    [ "buttonCode", "a00111.html#a2876b184c855d9cb7113c2b470c25941", null ],
+    [ "control", "a00111.html#a230a9fedb2da04dce96baad3482327cc", null ],
+    [ "fAmount1", "a00111.html#a6e3775826a44f0f4128401b63968de9c", null ],
+    [ "fAmount2", "a00111.html#a04a35e3da4c8c037ea8decd65b04e1dd", null ],
+    [ "fRepeat", "a00111.html#af2e026b2f9b496d6434bf6a78d7758a1", null ],
+    [ "id", "a00111.html#a7350fbd6ad10618f3b750b1f99ca5c3c", null ],
+    [ "strAction", "a00111.html#a5326dc8fd26effd0de499a98d0e5a032", null ]
 ];

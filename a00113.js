@@ -1,11 +1,24 @@
 var a00113 =
 [
-    [ "ControlSlider", "a00113.html#ac45505fb23d3fd20687337c35f347f7e", null ],
-    [ "ControlSlider", "a00113.html#a37a27a85a4dd0d13f7233061e749f865", null ],
+    [ "ControlButton", "a00113.html#a26c714b1818096f280348d55544a495c", null ],
+    [ "ControlButton", "a00113.html#a12c52718a5084babae4c585f57793187", null ],
+    [ "canAcceptMessages", "a00113.html#a61158df74e0e53d710d19a7b4da37dc3", null ],
     [ "Create", "a00113.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "getPercent", "a00345.html#gad3e5815badb78551841c44d9b5ae3742", null ],
-    [ "setPercent", "a00345.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ],
-    [ "strTexture", "a00113.html#aca02fb07ae30257c0fa2adfa82de925c", null ],
-    [ "strTextureBack", "a00113.html#a5dae9258f23ccac9d94586346b015fc3", null ],
-    [ "strTextureFoc", "a00113.html#a5403da28109017430519960b7e555354", null ]
+    [ "getLabel", "a00358.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
+    [ "getLabel2", "a00358.html#ga670b0dee884d131339bbf88d07bbbfc7", null ],
+    [ "setDisabledColor", "a00358.html#gabb99461e652ba261d6322894a64affbe", null ],
+    [ "setLabel", "a00358.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
+    [ "align", "a00113.html#a7b37d18a03128a571c49db21941cba85", null ],
+    [ "disabledColor", "a00113.html#a9b7ae35a0c2326e198dab3c2ec50e94c", null ],
+    [ "focusedColor", "a00113.html#a447eb9cec3c74fa5083038b6af984dbc", null ],
+    [ "iAngle", "a00113.html#a52ffec3a2b42dce2829c4a46b9b7815e", null ],
+    [ "shadowColor", "a00113.html#ac7ab28073339816751c5e1b163602bf2", null ],
+    [ "strFont", "a00113.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "strText", "a00113.html#ab456897f658d865f7c66da9ba85f6cb9", null ],
+    [ "strText2", "a00113.html#afab9d235f56724083180610c327b56a4", null ],
+    [ "strTextureFocus", "a00113.html#a2c94f7603cfb9d13594e648f67b55e22", null ],
+    [ "strTextureNoFocus", "a00113.html#a51d63e84bd9b53dbdc23a476df4440a9", null ],
+    [ "textColor", "a00113.html#ad24d108d90ba89e693640b8aa2ff1d71", null ],
+    [ "textOffsetX", "a00113.html#a4a9afa650b3d5e5812be29f028cd1c09", null ],
+    [ "textOffsetY", "a00113.html#a9d455b25b2d237ca15dc20e869c0ca8a", null ]
 ];

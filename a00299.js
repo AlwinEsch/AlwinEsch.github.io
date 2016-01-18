@@ -1,15 +1,16 @@
 var a00299 =
 [
-    [ "AddItem", "a00299.html#gaaa7aba33ed28df8d2adfa6af9b097575", null ],
-    [ "AddItem", "a00299.html#gac4aeeb4b7e884b74644e14bceb759c5b", null ],
-    [ "ClearList", "a00299.html#ga2b85ec494201046fd7686395c996c272", null ],
-    [ "CPlayerLib_PlayList", "a00299.html#ga9ed3d2e6831632a37dfd0ea6699ef58f", null ],
-    [ "GetListPosition", "a00299.html#ga3b6ca85032d49dfd758dcaad70db8275", null ],
-    [ "GetListSize", "a00299.html#ga1f4581c0d5dec157ae050648b9980dda", null ],
-    [ "GetPlayListType", "a00299.html#ga1c1d6bcc394fe5e4b75634dca0147427", null ],
-    [ "LoadPlaylist", "a00299.html#ga7de3982ed8b225f5fd1580c75847d9db", null ],
-    [ "operator[]", "a00299.html#ga0fe30656a739ee76ffac247d6c602008", null ],
-    [ "RemoveItem", "a00299.html#ga7834e166deca3a366bd4d25b061606fd", null ],
-    [ "Shuffle", "a00299.html#ga9d1841bc5f559c6981b78b895d446033", null ],
-    [ "~CPlayerLib_PlayList", "a00299.html#gab5aa5368f1de872e97298ab744281ee8", null ]
+    [ "Abort", "a00299.html#ga71e9d732335846eb579f0dd00918b3e7", null ],
+    [ "CAddonGUIDialogProgress", "a00299.html#gac076fba6e17d71b4ce5b330855fb8902", null ],
+    [ "GetPercentage", "a00299.html#gae20eeb097c9ebe3506bd1d2bb3d92fda", null ],
+    [ "IsCanceled", "a00299.html#gaf76bcf12aaec9ab845ea61853a37a33c", null ],
+    [ "Open", "a00299.html#ga5e53001785ff30ae485a113b9b8a0ddc", null ],
+    [ "SetCanCancel", "a00299.html#ga13580b7f84c1c13f90c1d030ef61faf8", null ],
+    [ "SetHeading", "a00299.html#gaf6377691fa79c14e16aebaeb9d340b33", null ],
+    [ "SetLine", "a00299.html#ga845054cd7ff1978a112126086a8ec5ba", null ],
+    [ "SetPercentage", "a00299.html#gadf0353f59469e4b0cab327ea7df9cae8", null ],
+    [ "SetProgressAdvance", "a00299.html#gafe4b80962f0d7bdd3b0a73b83ef06323", null ],
+    [ "SetProgressMax", "a00299.html#gad397a19fe15c25e5077d34fd43da6e5a", null ],
+    [ "ShowProgressBar", "a00299.html#ga4ef9882ff90cb3878eb846335e2b3c07", null ],
+    [ "~CAddonGUIDialogProgress", "a00299.html#ga120fc408bff359c7c29a02551c00e9a0", null ]
 ];

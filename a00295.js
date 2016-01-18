@@ -1,20 +1,10 @@
 var a00295 =
 [
-    [ "CPlayerLib_InfoTagMusic", "a00295.html#gabd1d2ec7c0d0160ae11c80d47cfc6369", null ],
-    [ "GetAlbum", "a00295.html#gaed21becc174c1a9eabb35c10c8fb1dec", null ],
-    [ "GetAlbumArtist", "a00295.html#ga8543d954eab8c5c952c8e87fd7dd2561", null ],
-    [ "GetArtist", "a00295.html#gad63aca83a431ce2f31c86d0fdc7ed4bc", null ],
-    [ "GetComment", "a00295.html#gaab329b82f3bf29e2e56aeca7db59369c", null ],
-    [ "GetDisc", "a00295.html#gabee2b25a6f37093ff91a5caaff417704", null ],
-    [ "GetDuration", "a00295.html#ga7a0124a69d21b8af01baaf6e35b9c476", null ],
-    [ "GetGenre", "a00295.html#ga57435c1b02f97861847fffd5fd740123", null ],
-    [ "GetLastPlayed", "a00295.html#ga833b68f759c1e3ce0c068fd06e9b0f4a", null ],
-    [ "GetListeners", "a00295.html#gaf92ee71c21a267247e7d06d034143c40", null ],
-    [ "GetLyrics", "a00295.html#gad31236e89eaf77e5e65f34aa1fd90426", null ],
-    [ "GetPlayCount", "a00295.html#ga057dc61a69e40c80675a082b6251fc8a", null ],
-    [ "GetReleaseDate", "a00295.html#ga6690df3048b871ac2cacb430d5606afe", null ],
-    [ "GetTitle", "a00295.html#ga9272205cb3a71f70bb4c9437da3c9bda", null ],
-    [ "GetTrack", "a00295.html#gad4fce5cb572b03a144c22e81ae70ed88", null ],
-    [ "GetURL", "a00295.html#ga0d1d697cb13f61773101e7ad6645f1e6", null ],
-    [ "~CPlayerLib_InfoTagMusic", "a00295.html#ga0c345f0e0e254a42b005d75d93905b68", null ]
+    [ "ShowAndGetDirectory", "a00295.html#gab1c3767a978a71751a8ea550d449eed6", null ],
+    [ "ShowAndGetFile", "a00295.html#ga5924085e93999a96dc9fc5a6c5f9362b", null ],
+    [ "ShowAndGetFileFromDir", "a00295.html#ga5ef242152a302da9ab13f61ca77b7ac3", null ],
+    [ "ShowAndGetFileList", "a00295.html#ga11dac37e6c6fd7dcaa18997d54e90b1a", null ],
+    [ "ShowAndGetImage", "a00295.html#ga10785676725a192799092e82ae4a68ba", null ],
+    [ "ShowAndGetImageList", "a00295.html#gad8c149a33ac60207e2953244f72f7a1d", null ],
+    [ "ShowAndGetSource", "a00295.html#gab582e8181c1569b7ff713e8924c4aa73", null ]
 ];

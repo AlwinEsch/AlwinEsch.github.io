@@ -1,7 +1,5 @@
 var a00229 =
 [
-    [ "xbmc", "a00230.html", "a00230" ],
-    [ "xbmcaddon", "a00231.html", "a00231" ],
-    [ "xbmcgui", "a00232.html", "a00232" ],
-    [ "xbmcvfs", "a00233.html", "a00233" ]
+    [ "CONTROL_TEXT_OFFSET_X", "a00229.html#aa6d4de8d94fd25d7738153dece416e93", null ],
+    [ "CONTROL_TEXT_OFFSET_Y", "a00229.html#afb3bc10df24bc07657621c3e1bb13ddd", null ]
 ];

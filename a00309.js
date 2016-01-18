@@ -1,14 +1,10 @@
 var a00309 =
 [
-    [ "browse", "a00309.html#ga329bf9f86212595d36708f6ad8977499", null ],
-    [ "browseMultiple", "a00309.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
-    [ "browseSingle", "a00309.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
-    [ "input", "a00309.html#ga2a25e833c92e98a294964d0d285ee1f9", null ],
-    [ "multiselect", "a00309.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
-    [ "notification", "a00309.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
-    [ "numeric", "a00309.html#gad44dd72bef6ada382a1b9704580410db", null ],
-    [ "ok", "a00309.html#ga623449b051874059111f9831a7b91673", null ],
-    [ "select", "a00309.html#ga31bcf740cf64230b40af61377ad701b1", null ],
-    [ "textviewer", "a00309.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
-    [ "yesno", "a00309.html#gaa64342a4b05f1ed49803ea44a25b73db", null ]
+    [ "Addon action Id's", "a00367.html", "a00367" ],
+    [ "OnAction", "a00309.html#gad3fc2a106ba0143fa5d11d3df32d9c72", null ],
+    [ "OnClick", "a00309.html#gad741fef5d9a1d2bf07449694e9a9e602", null ],
+    [ "OnFocus", "a00309.html#ga7f69d7353e186b8fe4a1560767721501", null ],
+    [ "OnInit", "a00309.html#ga7d98c001ac8d31e48df88346e28bae16", null ],
+    [ "SetIndependentCallbacks", "a00309.html#ga5daaf4cdd5942017aa0be44ec98a7f95", null ],
+    [ "IMPLEMENT_ADDON_GUI_WINDOW", "a00309.html#ga9c9c299166319c2248b2c62548a69fbb", null ]
 ];

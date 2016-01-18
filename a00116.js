@@ -1,16 +1,13 @@
 var a00116 =
 [
-    [ "Dialog", "a00116.html#a893649c76b6e54d6a392d5e6c260a016", null ],
-    [ "~Dialog", "a00116.html#a656bf5bf83d73b108733b72a3282c958", null ],
-    [ "browse", "a00309.html#ga329bf9f86212595d36708f6ad8977499", null ],
-    [ "browseMultiple", "a00309.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
-    [ "browseSingle", "a00309.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
-    [ "input", "a00309.html#ga2a25e833c92e98a294964d0d285ee1f9", null ],
-    [ "multiselect", "a00309.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
-    [ "notification", "a00309.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
-    [ "numeric", "a00309.html#gad44dd72bef6ada382a1b9704580410db", null ],
-    [ "ok", "a00309.html#ga623449b051874059111f9831a7b91673", null ],
-    [ "select", "a00309.html#ga31bcf740cf64230b40af61377ad701b1", null ],
-    [ "textviewer", "a00309.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
-    [ "yesno", "a00309.html#gaa64342a4b05f1ed49803ea44a25b73db", null ]
+    [ "ControlFadeLabel", "a00116.html#a75091c3fbf9fafdabb9b98ee28f0a64a", null ],
+    [ "ControlFadeLabel", "a00116.html#a099013f6dfa4b09620df7bed9090abc5", null ],
+    [ "addLabel", "a00354.html#ga5c23c1e6768621ef5114c5b56a66c7c9", null ],
+    [ "Create", "a00116.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "reset", "a00351.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
+    [ "setScrolling", "a00354.html#ga37b258d64c9891a330036b19195913e1", null ],
+    [ "align", "a00116.html#a4864c3686205158c9cab83fa95c2a15a", null ],
+    [ "strFont", "a00116.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "textColor", "a00116.html#ad24d108d90ba89e693640b8aa2ff1d71", null ],
+    [ "vecLabels", "a00116.html#ab73823089fdceaaa9798d5d0bb79d458", null ]
 ];

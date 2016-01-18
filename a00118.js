@@ -1,10 +1,11 @@
 var a00118 =
 [
-    [ "DialogProgressBG", "a00118.html#a31b7ec67973b011c9efb42dcd96a0342", null ],
-    [ "~DialogProgressBG", "a00118.html#a1ea61272a3fe716659a11170cfb143a5", null ],
-    [ "close", "a00311.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
-    [ "create", "a00311.html#gaafb8a184f497bc815d38be07731df561", null ],
-    [ "deallocating", "a00118.html#a8b6dbb40347674d0ffc08d6ec7e9a877", null ],
-    [ "isFinished", "a00311.html#ga06926ca87a7be7d8af8ee84670fffa87", null ],
-    [ "update", "a00311.html#ga90d83a72e4151aba7c05422cf34f6684", null ]
+    [ "ControlImage", "a00118.html#a9be115122b3309a7a738fb31643d81d1", null ],
+    [ "ControlImage", "a00118.html#ae6699f77d4ffa346eed9e00b7cadc7ef", null ],
+    [ "Create", "a00118.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "setColorDiffuse", "a00356.html#ga3b0c15e0d82d8605f4b3ad82aaa42c16", null ],
+    [ "setImage", "a00356.html#ga7ba591029ef61ca17851a9f02a1fe5dc", null ],
+    [ "aspectRatio", "a00118.html#a62de7670850188b84202355774caa6a8", null ],
+    [ "colorDiffuse", "a00118.html#aeb3be9119c45fbe967380716174f877f", null ],
+    [ "strFileName", "a00118.html#a0faec04d22e256f2777cddfaeab1d673", null ]
 ];

@@ -1,11 +1,15 @@
 var a00276 =
 [
-    [ "CAddonGUIControlTextBox", "a00276.html#ga06117cea192b1c038b7b9b8d9c2c8dec", null ],
-    [ "GetText", "a00276.html#ga1af3f7fd8b95cc66e7599caca454f8ef", null ],
-    [ "Reset", "a00276.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
-    [ "Scroll", "a00276.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d", null ],
-    [ "SetAutoScrolling", "a00276.html#gad3e4bbb4388da7a56e8252018e4fbb00", null ],
-    [ "SetText", "a00276.html#ga8008c108280948ebd79830f222068455", null ],
-    [ "SetVisible", "a00276.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlTextBox", "a00276.html#ga671686d3890667392291118ca36b3e41", null ]
+    [ "CAddonLib_VFSDirEntry", "a00276.html#gac81f1dd62d59a58a0d6f5ef72cfde20b", null ],
+    [ "CAddonLib_VFSDirEntry", "a00276.html#ga3d6451c27a24180971c1dd12e8b665ae", null ],
+    [ "IsFolder", "a00276.html#gabfbbb37d69862b45d0f1079ab976fa37", null ],
+    [ "Label", "a00276.html#gaacd1b40e1b2e44d82303388beb475e84", null ],
+    [ "Path", "a00276.html#ga666f6d222d6e40f592d7ec4c8c670263", null ],
+    [ "Properties", "a00276.html#gaea9c66f89bd36c6b01a234d0e2ad123a", null ],
+    [ "Properties", "a00276.html#ga682a050b373b13ec1e816d7a9cc47302", null ],
+    [ "SetFolder", "a00276.html#gadc0bf158b1dc28eea1bc2e3a2c016982", null ],
+    [ "SetLabel", "a00276.html#gab825756e641ba839bfae908492165481", null ],
+    [ "SetPath", "a00276.html#ga4a03d7c94fa02df112558bc30818e413", null ],
+    [ "SetSize", "a00276.html#gaf2fb6ea3061355a5ed4b53ca45e712ac", null ],
+    [ "Size", "a00276.html#gac0ba4f4c78dcb35605e645ee75198b5a", null ]
 ];

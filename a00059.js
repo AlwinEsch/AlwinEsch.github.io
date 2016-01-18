@@ -1,9 +1,8 @@
 var a00059 =
 [
-    [ "CAddonGUIControlImage", "a00268.html#gaaab82074962caa8db7b1fa15b9e14a5c", null ],
-    [ "~CAddonGUIControlImage", "a00268.html#gaf4b7097d3f8155be34401f9daab51eb3", null ],
-    [ "SetColorDiffuse", "a00268.html#ga5f4b9c8309a04af748764bc6dd4ef31c", null ],
-    [ "SetFileName", "a00268.html#ga71ca22e2515e018fdfa6db78fbee75dd", null ],
-    [ "SetVisible", "a00268.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "IMPL_GUI_IMAGE_CONTROL", "a00059.html#a03edd7287e10b477fa1ec8f21d965d42", null ]
+    [ "CMouseEvent", "a00059.html#ac26acaa3931609c7fcadfd5c1b9c09c3", null ],
+    [ "m_id", "a00059.html#aad966617e7e050bedbead762727808a5", null ],
+    [ "m_offsetX", "a00059.html#a632d0c237986191da17de968fb392f58", null ],
+    [ "m_offsetY", "a00059.html#aed170d76d1e06cf6d2f48a0644005dfd", null ],
+    [ "m_state", "a00059.html#acc4f94200981f2eb41a7df212afc1093", null ]
 ];

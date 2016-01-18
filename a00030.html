@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Ways to access Kodi</title>
+<title>Kodi Development: Python - Audio AddOn</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,10 +92,157 @@ $(document).ready(function(){initNavTree('a00030.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Ways to access Kodi </div>  </div>
+<div class="title">Python - Audio AddOn </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#Python_Audio_addon_section1">Introduction</a></li>
+<li class="level1"><a href="#Python_Audio_addon_section2">Tools</a></li>
+<li class="level1"><a href="#Python_Audio_addon_section3">Installing</a></li>
+<li class="level1"><a href="#Python_Audio_addon_section4">Testing</a></li>
+<li class="level1"><a href="#Python_Audio_addon_section5">Explanation</a></li>
+<li class="level1"><a href="#Python_Audio_addon_section6">Structure</a></li>
+<li class="level1"><a href="#Python_Audio_addon_section7">The Code</a></li>
+<li class="level1"><a href="#Python_Audio_addon_section8">Final Thoughts</a></li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="Python_Audio_addon_section1"></a>
+Introduction</h1>
+<p>This tutorial will explain how to write your first Kodi/XBMC audio plugin Add-on</p>
+<hr/>
+<h1><a class="anchor" id="Python_Audio_addon_section2"></a>
+Tools</h1>
+<p>Assuming you have already followed the Hello World Add-on you will have a text editor already setup. Since we are dealing with audio this time its probably a good idea to have a music player setup. We recommend another great open source project for this:</p>
+<ul>
+<li>VLC <a href="http://www.videolan.org/vlc/">http://www.videolan.org/vlc/</a></li>
+</ul>
+<hr/>
+<h1><a class="anchor" id="Python_Audio_addon_section3"></a>
+Installing</h1>
+<p>For this example we will use a nice basic video Add-on tutorials You can find the source-code here:</p>
+<ul>
+<li><a href="https://github.com/zag2me/plugin.audio.example">https://github.com/zag2me/plugin.audio.example</a></li>
+</ul>
+<p>You can either download as a zip and install both of these inside the kodi GUI from the install from zip feature. Or extract the zip into your userdata/add-ons folder (If you do it this way, you will have to download the beautiful soup module manually as well).</p>
+<hr/>
+<h1><a class="anchor" id="Python_Audio_addon_section4"></a>
+Testing</h1>
+<p>You can first give the add-on a test run by going to: <code>System &gt;&gt; Add-Ons &gt;&gt; Enabled Add-Ons &gt;&gt; Audio Add-Ons &gt;&gt; Example</code> Kodi audio Plugin. You should now be able to listen to some test tracks hosted from an internet web server.</p>
+<table class="doxtable">
+<tr>
+<th></th></tr>
+<tr>
+<td><div class="image">
+<img src="Audio_Addon_tutorial_1.jpg" alt="Audio_Addon_tutorial_1.jpg"/>
+</div>
+ </td></tr>
+</table>
+<hr/>
+<h1><a class="anchor" id="Python_Audio_addon_section5"></a>
+Explanation</h1>
+<p>So whats happening in this add-on?</p>
+<p>Basically the Add-on is checking a website for the hosted audio files and artwork. In this example we are directly linking to the mp3 files, but there are possibilities for dynamic content and scraping of just about any online source</p>
+<p>Once the audio link is sent to Kodi, our music player takes over and buffers, then plays the track just like any other media.</p>
+<hr/>
+<h1><a class="anchor" id="Python_Audio_addon_section6"></a>
+Structure</h1>
+<table class="doxtable">
+<tr>
+<th>File </th><th>Description  </th></tr>
+<tr>
+<td>default.py </td><td>This is the actual python code for your Add-On </td></tr>
+<tr>
+<td>addon.xml </td><td>This is the Add-Ons metadata </td></tr>
+<tr>
+<td>icon.png </td><td>A PNG icon for the add-on. It can be 256x256 or 512x512 pixels big. Try to make it look nice! </td></tr>
+<tr>
+<td>Readme.md </td><td>The readme text file with a description of the Add-on and install instructions. This shows on the front of the GitHub page and helps users to understand your Add-on before downloading. </td></tr>
+</table>
+<hr/>
+<h1><a class="anchor" id="Python_Audio_addon_section7"></a>
+The Code</h1>
+<p>So now we come to the actual Add-On code, this is where most of your Add-on is written and is a simple text file containing python code.</p>
+<p>First we initialize the Add-on and import and bits we need. Notice we are using a special web page parsing module called Beautiful Soup.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> os</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> sys</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> urllib</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> urlparse</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> xbmcaddon</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> xbmcgui</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> xbmcplugin</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> requests</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</div>
+</div><!-- fragment --><p>Now we do check the base URL...</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>build_url(query):</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      base_url = sys.argv[0]</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      <span class="keywordflow">return</span> base_url + <span class="stringliteral">&#39;?&#39;</span> + urllib.urlencode(query)</div>
+</div><!-- fragment --><p>Here we set the download source page using the Beautiful soup module</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>get_page(url):</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;     <span class="comment"># download the source HTML for the page using requests</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;     <span class="comment"># and parse the page using BeautifulSoup</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;     <span class="keywordflow">return</span> BeautifulSoup(requests.get(url).text, <span class="stringliteral">&#39;html.parser&#39;</span>)</div>
+</div><!-- fragment --><p>The sample below is specific for the page we are scraping you will need to view the source of the page(s) you are planning to scrape to find the content you want to display this will return all the <code>&lt;a&gt; elements on the page: &lt;a href="some_url"&gt;some_text&lt;/a&gt;</code></p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>parse_page(page):</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    songs = {}</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    index = 1</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">for</span> item <span class="keywordflow">in</span> page.find_all(<span class="stringliteral">&#39;a&#39;</span>):</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        <span class="comment"># the item contains a link to an album cover</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keywordflow">if</span> item[<span class="stringliteral">&#39;href&#39;</span>].find(<span class="stringliteral">&#39;.jpg&#39;</span>) &gt; 1:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;            <span class="comment"># format the url for the album cover to include the site url and url encode any spaces</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            album_cover = <span class="stringliteral">&#39;{0}{1}&#39;</span>.format(sample_page, item[<span class="stringliteral">&#39;href&#39;</span>].replace(<span class="stringliteral">&#39; &#39;</span>, <span class="stringliteral">&#39;%20&#39;</span>))</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="comment"># the item contains a link to a song containing &#39;.mp3&#39;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordflow">if</span> item[<span class="stringliteral">&#39;href&#39;</span>].find(<span class="stringliteral">&#39;.mp3&#39;</span>) &gt; 1:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="comment"># update dictionary with the album cover url, song filename, and song url</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            songs.update({index: {<span class="stringliteral">&#39;album_cover&#39;</span>: album_cover, <span class="stringliteral">&#39;title&#39;</span>: item[<span class="stringliteral">&#39;href&#39;</span>], <span class="stringliteral">&#39;url&#39;</span>: <span class="stringliteral">&#39;{0}{1}&#39;</span>.format(sample_page, item[<span class="stringliteral">&#39;href&#39;</span>])}})</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            index += 1</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> songs</div>
+</div><!-- fragment --><p>And now iterate over the contents of the dictionary songs to build the list</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>build_song_list(songs):</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    song_list = []</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keywordflow">for</span> song <span class="keywordflow">in</span> songs:</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;        <span class="comment"># create a list item using the song filename for the label</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        li = xbmcgui.ListItem(label=songs[song][<span class="stringliteral">&#39;title&#39;</span>], thumbnailImage=songs[song][<span class="stringliteral">&#39;album_cover&#39;</span>])</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        <span class="comment"># set the fanart to the albumc cover</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        li.setProperty(<span class="stringliteral">&#39;fanart_image&#39;</span>, songs[song][<span class="stringliteral">&#39;album_cover&#39;</span>])</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="comment"># set the list item to playable</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        li.setProperty(<span class="stringliteral">&#39;IsPlayable&#39;</span>, <span class="stringliteral">&#39;true&#39;</span>)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="comment"># build the plugin url for Kodi</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="comment"># Example: plugin://plugin.audio.example/?url=http%3A%2F%2Fwww.theaudiodb.com%2Ftestfiles%2F01-pablo_perez-your_ad_here.mp3&amp;mode=stream&amp;title=01-pablo_perez-your_ad_here.mp3</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        url = build_url({<span class="stringliteral">&#39;mode&#39;</span>: <span class="stringliteral">&#39;stream&#39;</span>, <span class="stringliteral">&#39;url&#39;</span>: songs[song][<span class="stringliteral">&#39;url&#39;</span>], <span class="stringliteral">&#39;title&#39;</span>: songs[song][<span class="stringliteral">&#39;title&#39;</span>]})</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="comment"># add the current list item to a list</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        song_list.append((url, li, <span class="keyword">False</span>))</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment"># add list to Kodi per Martijn</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment"># http://forum.kodi.tv/showthread.php?tid=209948&amp;pid=2094170#pid2094170</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    xbmcplugin.addDirectoryItems(addon_handle, song_list, len(song_list))</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment"># set the content of the directory</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    xbmcplugin.setContent(addon_handle, <span class="stringliteral">&#39;songs&#39;</span>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    xbmcplugin.endOfDirectory(addon_handle)</div>
+</div><!-- fragment --><p>And now we set the path of the song to a list item</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>play_song(url):</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    play_item = xbmcgui.ListItem(path=url)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    xbmcplugin.setResolvedUrl(addon_handle, <span class="keyword">True</span>, listitem=play_item)</div>
+</div><!-- fragment --><p>And here we grab the HTML page and launch the Add-on and display the list of songs</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">def </span>main():</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    args = urlparse.parse_qs(sys.argv[2][1:])</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    mode = args.get(<span class="stringliteral">&#39;mode&#39;</span>, <span class="keywordtype">None</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keywordflow">if</span> mode <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        page = get_page(sample_page)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        content = parse_page(page)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        build_song_list(content)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">elif</span> mode[0] == <span class="stringliteral">&#39;stream&#39;</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        play_song(args[<span class="stringliteral">&#39;url&#39;</span>][0])</div>
+</div><!-- fragment --><p>Now we tell Kodi what page to parse and launch the Add-on</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keywordflow">if</span> __name__ == <span class="stringliteral">&#39;__main__&#39;</span>:</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    sample_page = <span class="stringliteral">&#39;http://www.theaudiodb.com/testfiles/&#39;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    addon_handle = int(sys.argv[1])</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    main()</div>
+</div><!-- fragment --> <hr/>
+<h1><a class="anchor" id="Python_Audio_addon_section8"></a>
+Final Thoughts</h1>
+<p>Writing a Audio Add-on is actually pretty simple once you get the basic structure correct. You can scrape most online sources with Regex, or host your own music on the web.</p>
+<p>If you have any questions about this tutorial, feel free to discuss it on our forums here <a href="http://forum.kodi.tv/showthread.php?tid=256329">http://forum.kodi.tv/showthread.php?tid=256329</a> . </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

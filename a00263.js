@@ -1,10 +1,11 @@
 var a00263 =
 [
-    [ "AddDSPMenuHook", "a00263.html#gad4e7c34b466c7523b48eb38f453c6f8b", null ],
-    [ "GetCurrentSinkFormat", "a00263.html#gaeb11fdb26f8a00296e10ff296c602bb5", null ],
-    [ "RegisterDSPMode", "a00263.html#gae95d0da238b6ffa997911dbf9eedb2d4", null ],
-    [ "RegisterMe", "a00263.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
-    [ "RemoveDSPMenuHook", "a00263.html#ga59fa2e75dbd7ede8adb9488258b55bdd", null ],
-    [ "UnregisterDSPMode", "a00263.html#gae222050a6298ea8a4b7f2085ae5e85b1", null ],
-    [ "UnRegisterMe", "a00263.html#ga5940787dcdcdb8aa995a07106917489f", null ]
+    [ "InfoTagMusic", "a00102.html", "a00102" ],
+    [ "InfoTagRadioRDS", "a00103.html", "a00103" ],
+    [ "InfoTagVideo", "a00104.html", "a00104" ],
+    [ "Keyboard", "a00105.html", "a00105" ],
+    [ "Monitor", "a00106.html", "a00106" ],
+    [ "Player", "a00107.html", "a00107" ],
+    [ "PlayList", "a00108.html", "a00108" ],
+    [ "RenderCapture", "a00109.html", "a00109" ]
 ];

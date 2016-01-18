@@ -1,16 +1,10 @@
 var a00095 =
 [
-    [ "Keyboard", "a00095.html#a290b85ded95367e3801ecb1cd5d2d8f1", null ],
-    [ "~Keyboard", "a00095.html#acec86b051eb2fd163d5f5b2e19679f9e", null ],
-    [ "doModal", "a00306.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
-    [ "getText", "a00306.html#gafab766445043570e6a82c14851366933", null ],
-    [ "isConfirmed", "a00306.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
-    [ "setDefault", "a00306.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
-    [ "setHeading", "a00306.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
-    [ "setHiddenInput", "a00306.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ],
-    [ "bConfirmed", "a00095.html#ae6546e334fe9729c6afe0eee76554a60", null ],
-    [ "bHidden", "a00095.html#af66f90748653d4c3377dff5859b83d26", null ],
-    [ "strDefault", "a00095.html#ab4d87e31c184cdc814b32f4dfa7d18b6", null ],
-    [ "strHeading", "a00095.html#a513232d32fcff9f86df46035911255ad", null ],
-    [ "strText", "a00095.html#a8975bd293643341b62e4e5a7810d2efc", null ]
+    [ "CPVRStream", "a00318.html#gaf419611a13a1bca6fe60cd58cb8a952f", null ],
+    [ "CPVRStream", "a00318.html#gad8caf56bf234506f41c1fcc64a0d1ad7", null ],
+    [ "Clear", "a00318.html#gaa71d36872f416feaa853788a7a7a7ef8", null ],
+    [ "IsCleared", "a00318.html#ga324d4448e5c2dde1488e1a9b4d26c7ad", null ],
+    [ "operator<", "a00318.html#ga8c39a1e5e76bc953c53019e4ef318216", null ],
+    [ "operator=", "a00318.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6", null ],
+    [ "operator==", "a00318.html#ga2e56127d518a6487ba46cfe720bb4904", null ]
 ];

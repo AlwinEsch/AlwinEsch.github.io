@@ -1,16 +1,19 @@
 var a00054 =
 [
-    [ "CScrollInfo", "a00054.html#a1155d01fb5d7e3bb3ea3ed0b925a5de1", null ],
-    [ "GetPixelsPerFrame", "a00054.html#a72d8f551c98130d0942e37c7c7400a91", null ],
-    [ "Reset", "a00054.html#a372de693ad40b3f42839c8ec6ac845f4", null ],
-    [ "SetSpeed", "a00054.html#a64be5578c1c726e0d16e64c2554688b5", null ],
-    [ "initialPos", "a00054.html#a4fa0f8cf55d2664548ffe6ffe87815b5", null ],
-    [ "initialWait", "a00054.html#a5434e54a256e16c48f868cfb33696a89", null ],
-    [ "m_textWidth", "a00054.html#ac5c07b3de3d7b54a3c1f7fd7ff299dc0", null ],
-    [ "m_totalWidth", "a00054.html#a120b18c698618870c64c077be6622a2d", null ],
-    [ "m_widthValid", "a00054.html#ad2407675b2b26b51c47eba10f619d443", null ],
-    [ "pixelPos", "a00054.html#ac39f2f9544959e6347ab0c97cdbe8ee3", null ],
-    [ "pixelSpeed", "a00054.html#adcd3672aa6367fe29a611c49e0ffbed2", null ],
-    [ "suffix", "a00054.html#ab211ce571d513824da669aeb6c3af673", null ],
-    [ "waitTime", "a00054.html#a3dd2bf8b269e3fa033cdf888d425c0a1", null ]
+    [ "CAction", "a00054.html#ac1218988dbb4d8b60c2b90c4d1ac2ee1", null ],
+    [ "CAction", "a00054.html#a68a32927c4449caec8f3bc033a282b1e", null ],
+    [ "CAction", "a00054.html#ac65361059abdede2b6737df0c797c548", null ],
+    [ "CAction", "a00054.html#ade0a31b38add5ab560578bff5919e0bf", null ],
+    [ "CAction", "a00054.html#ac12bcc0c31fa6095b246dd8cdf26a4ea", null ],
+    [ "GetAmount", "a00054.html#a66ccf2326af5e02727679d058caf8f90", null ],
+    [ "GetButtonCode", "a00054.html#ac4a8105d590287c80e61d2684def3274", null ],
+    [ "GetHoldTime", "a00054.html#ad81aa176a736250d37cc4a043396c414", null ],
+    [ "GetID", "a00054.html#a66b85eda9d21e72ed1561bd85c64566a", null ],
+    [ "GetName", "a00054.html#a8b9389d7613c0942dded4c6af39d7ab1", null ],
+    [ "GetRepeat", "a00054.html#abe1f5801436a278c993ae412c5db9eb7", null ],
+    [ "GetText", "a00054.html#a868015000b325012e2e3194bbdfca8b2", null ],
+    [ "GetUnicode", "a00054.html#ae3f3455d2a31ce0ee26912a51842779b", null ],
+    [ "IsGesture", "a00054.html#ab162ac8ceda1b1a031be2e9aacc902cd", null ],
+    [ "IsMouse", "a00054.html#a43969fb0716f0d3595065e361b4debc6", null ],
+    [ "SetText", "a00054.html#a8008c108280948ebd79830f222068455", null ]
 ];

@@ -1,15 +1,13 @@
 var a00098 =
 [
-    [ "PlayList", "a00098.html#a5a2b1d9cebb8cfa88add301b5143a559", null ],
-    [ "~PlayList", "a00098.html#a32fcb11cefa02bee25ef859190f927ac", null ],
-    [ "add", "a00328.html#ga979e740949519ca0e88da2ff9934a4d5", null ],
-    [ "clear", "a00328.html#gac8bb3912a3ce86b15842e79d0b421204", null ],
-    [ "getPlayListId", "a00328.html#ga4d665409e02daa8ea13ce462ca44c914", null ],
-    [ "getposition", "a00328.html#ga265b7f39dcd400e1f4edaf4060af9977", null ],
-    [ "load", "a00328.html#ga2eea1635b7df085d42c973352ef10355", null ],
-    [ "operator[]", "a00328.html#gaba5d6f37d582f0512f61f32109a92d92", null ],
-    [ "remove", "a00328.html#gae363baca6026e43cc1264c5914ff69b9", null ],
-    [ "shuffle", "a00328.html#ga1905fe84eb39f020b32c58baf7a76758", null ],
-    [ "size", "a00328.html#gaf4b57d21919c42d55af03391f91a1c08", null ],
-    [ "unshuffle", "a00328.html#ga2401476232ac1b00321c9bfe8158f9c4", null ]
+    [ "stream_vector", "a00322.html#ga1ebf7c021d47165548ca6320162935bb", null ],
+    [ "CStreamProperties", "a00322.html#gadb5884513f2557e07249fab9f1cc447c", null ],
+    [ "~CStreamProperties", "a00322.html#ga6f0282c6d4010650f5ed1075bd19da84", null ],
+    [ "Clear", "a00322.html#ga666736fbd0ebb8dc7e6ff3392423d6c0", null ],
+    [ "GetProperties", "a00322.html#ga4bb870e45a3ef7c81e92563b7a872618", null ],
+    [ "GetStreamById", "a00322.html#ga2e18a0bd69b52870b817c6c8bf0e0db6", null ],
+    [ "GetStreamData", "a00322.html#ga3687926c69b0a5d8a32a73b85ce892b4", null ],
+    [ "GetStreamId", "a00322.html#ga80239fdfa9f1d2dfea3abb949bb84b94", null ],
+    [ "UpdateStreams", "a00322.html#ga8d64e3bab115fb9201d6f688ab350ce5", null ],
+    [ "IMPL_STREAM_PROPS", "a00098.html#a5fa0e464ca4f78c4cd32d2fc4796d700", null ]
 ];

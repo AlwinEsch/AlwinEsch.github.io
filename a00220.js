@@ -1,5 +1,5 @@
 var a00220 =
 [
-    [ "getCurrentWindowDialogId", "a00313.html#ga8379c35c147def9f607d18571e24678e", null ],
-    [ "getCurrentWindowId", "a00313.html#gab1660e44ef103bd39fff61229809f567", null ]
+    [ "CONTROL_TEXT_OFFSET_X", "a00220.html#aa6d4de8d94fd25d7738153dece416e93", null ],
+    [ "CONTROL_TEXT_OFFSET_Y", "a00220.html#afb3bc10df24bc07657621c3e1bb13ddd", null ]
 ];

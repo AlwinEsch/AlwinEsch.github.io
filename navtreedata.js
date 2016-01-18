@@ -1,12 +1,11 @@
 var NAVTREE =
 [
   [ "Kodi Development", "index.html", [
-    [ "Getting Started", "a00002.html", null ],
-    [ "Add-On Types", "a00004.html", null ],
-    [ "Tutorials", "a00008.html", "a00008" ],
-    [ "Examples", "a00006.html", null ],
-    [ "Advanced", "a00032.html", "a00032" ],
-    [ "Ways to access Kodi", "a00030.html", null ],
+    [ "Getting Started", "a00010.html", "a00010" ],
+    [ "Add-On Types", "a00012.html", null ],
+    [ "Tutorials", "a00016.html", "a00016" ],
+    [ "Examples", "a00014.html", null ],
+    [ "Advanced", "a00038.html", "a00038" ],
     [ "Modules", "modules.html", "modules" ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", null ],
@@ -47,18 +46,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00002.html",
-"a00054.html#adcd3672aa6367fe29a611c49e0ffbed2",
-"a00190_source.html",
-"a00256.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a1907c53416638e264364401deab8bbfa",
-"a00264.html#gga42753b64a4c9b01785035a18e768a43da4c799cea45e81510afbad6cd1dbf873c",
-"a00264.html#gga42753b64a4c9b01785035a18e768a43dadf52af86b417054039755c146edf8742",
-"a00284.html#ga140c2c236d639885881d514bffbf5dad",
-"a00308.html#ga53172a43145522837b888b7d7f7117ea",
-"a00322.html#ga0454ccaf571354b889193e9cb3d59d49",
-"a00322.html#ga6a75fe4c38d45e682e66e939222cd1a9",
-"a00322.html#gad09f6d18594f332a460d13a3febd1dee",
-"a00327.html#ga9a7a9ad27402f5a931bcbff38e4e03d3",
-"functions_func_v.html"
+"a00058.html#ab3dbcc1ef47d49ffc499c255aa2b81d0",
+"a00183_source.html",
+"a00248.html#a760034eda2672fc57ba38adaf07baf5b",
+"a00279.html#gae854bb4797b77954d9df92aa41bc158d",
+"a00308.html#ga2b85ec494201046fd7686395c996c272",
+"a00329.html#ga30c84926c8fcac04a99d4cf18fc8fae6",
+"a00339.html#ga1e1bc2913c2ec686276b97004ad04140",
+"a00339.html#ga83e867cf869ef5fe539c1167e9733340",
+"a00339.html#gae668cd5f6000b5ca53c4fd0e46413993",
+"a00347.html#gab375f26bb820f640d74700cda4ee6646",
+"a00367.html#ga42753b64a4c9b01785035a18e768a43d",
+"a00367.html#gga42753b64a4c9b01785035a18e768a43da613a7fe3633c1cf9135c40b578f14031",
+"a00367.html#gga42753b64a4c9b01785035a18e768a43dac9450adda08eb42d14d84dee6d4bc79a",
+"functions_y.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

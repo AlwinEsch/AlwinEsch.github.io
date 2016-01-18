@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Callback functions from Kodi to add-on</title>
+<title>Kodi Development: CAddonGUIDialogExtendedProgress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,296 +92,150 @@ $(document).ready(function(){initNavTree('a00294.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Callback functions from Kodi to add-on<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a> &raquo; <a class="el" href="a00297.html">Library - PlayerLIB</a> &raquo; <a class="el" href="a00293.html">CPlayerLib_Player</a></div></div>  </div>
+<div class="title">CAddonGUIDialogExtendedProgress<div class="ingroups"><a class="el" href="a00370.html">C++ Development</a> &raquo; <a class="el" href="a00303.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Functions to handle control callbacks from Kodi. </p>
-<p><a class="el" href="a00293.html">Go back to normal functions from CPlayerLib_Player</a> </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga9b673b89fb0c2d810637d97a6144743d"></a>
+<p><b>Progress dialog shown for background work</b> </p>
+<p>The with <a class="el" href="a00187.html">#include &lt;kodi/addon.api2/GUIDialogExtendedProgress.h&gt;</a> given class are basically used to create Kodi's extended progress</p>
+<div class="image">
+<img src="help.GUIDialogExtendedProgress.png" alt="help.GUIDialogExtendedProgress.png"/>
+</div>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon.api2/GUIDialogExtendedProgress.h&gt;</span></div>
+<div class="line"></div>
+<div class="line">CAddonGUIDialogExtendedProgress *ext_progress = <span class="keyword">new</span> CAddonGUIDialogExtendedProgress(<span class="stringliteral">&quot;Test Extended progress&quot;</span>);</div>
+<div class="line">ext_progress-&gt;SetText(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 50; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  ext_progress-&gt;SetProgress(i, 100);</div>
+<div class="line">  <a class="code" href="a00329.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line">ext_progress-&gt;SetTitle(<span class="stringliteral">&quot;Test Extended progress - Second round&quot;</span>);</div>
+<div class="line">ext_progress-&gt;SetText(<span class="stringliteral">&quot;Test progress - Step 2&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 50; i &lt; 100; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  ext_progress-&gt;SetProgress(i, 100);</div>
+<div class="line">  <a class="code" href="a00329.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">delete</span> ext_progress;</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga2f267cd452ee9736993693fa501ac85e"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void OnPlayBackEnded </td>
+          <td class="memname">CAddonGUIDialogExtendedProgress </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a new dialog</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Title string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaabe45b4d47077b54df0bb809eb41b8d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsFinished </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To ask dialog is finished. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if on end </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga40af1bcedea1f61fde8cd5e70e416473"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MarkFinished </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Mark progress finished. </p>
 
 </div>
 </div>
-<a class="anchor" id="ga535ea86e9170c85e4dfc8b2292466041"></a>
+<a class="anchor" id="ga3bf91c353218dceaa271b65321b2f5cf"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void OnPlayBackPaused </td>
+          <td class="memname">float Percentage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current progress position as percent. </p>
+<dl class="section return"><dt>Returns</dt><dd>Position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga74a9a823ab1cd34d62a219a842de5946"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPercentage </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fPercentage</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>To set the current progress position as percent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="ga78de3c74ca811508e2c83bad612af8a0"></a>
+<a class="anchor" id="gac64c8e121cf5e368cd335c28a0521922"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void OnPlayBackResumed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga1aa2520cecdb44e5f37dd2905146efa6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void OnPlayBackSeek </td>
+          <td class="memname">void SetProgress </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iTime</em>, </td>
+          <td class="paramname"><em>currentItem</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>seekOffset</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga36be56af6bfdd7fc943f8d3f1abacfbf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void OnPlayBackSeekChapter </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iChapter</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga14e0279d2fb9cd6b4a68f9467e07081a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void OnPlayBackSpeedChanged </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iSpeed</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga670b9e7947764d4d474b7f8cd21c1611"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void OnPlayBackStarted </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga5df8f6dd6cf9fb162d1d4d77da58eb2d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void OnPlayBackStopped </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ga817b2d696d11b166143be2c391a972f9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void OnQueueNextItem </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="gaa8d87ba3157eed260e7334c1b3d96657"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetIndependentCallbacks </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00149.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a>&#160;</td>
-          <td class="paramname"><em>cbhdl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="a00149.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
-          <td class="paramname"><em>CBOnPlayBackStarted</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="a00149.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
-          <td class="paramname"><em>CBOnPlayBackEnded</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="a00149.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
-          <td class="paramname"><em>CBOnPlayBackStopped</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="a00149.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
-          <td class="paramname"><em>CBOnPlayBackPaused</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="a00149.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
-          <td class="paramname"><em>CBOnPlayBackResumed</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="a00149.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
-          <td class="paramname"><em>CBOnQueueNextItem</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="a00149.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl, int iSpeed)&#160;</td>
-          <td class="paramname"><em>CBOnPlayBackSpeedChanged</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="a00149.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl, int iTime, int seekOffset)&#160;</td>
-          <td class="paramname"><em>CBOnPlayBackSeek</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="a00149.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl, int iChapter)&#160;</td>
-          <td class="paramname"><em>CBOnPlayBackSeekChapter</em>&#160;</td>
+          <td class="paramname"><em>itemCount</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -391,7 +245,114 @@ $(document).ready(function(){initNavTree('a00294.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>If the class is used independent (with "new CPlayerLib_Player") and not as parent (with "cCLASS_own : CPlayerLib_Player") from own must be the callback from Kodi to add-on overdriven with own functions! </p>
+<p>To set progress position with predefined places. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentItem</td><td>Place position to use </td></tr>
+    <tr><td class="paramname">itemCount</td><td>Amount of used places </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaec55d8bf3ca3e04261b66bee36f84368"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetText </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strText</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the used text information string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strText</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gad8698c0477204fb8b81feb9d81cbe4fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTitle </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strTitle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the title of dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strTitle</td><td>Title string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gafdfa72709ffc1738c3c198f7ad8b61ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Text </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the used text information string. </p>
+<dl class="section return"><dt>Returns</dt><dd>Text string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3cb91fb7750df7982baea48c4a3de616"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Title </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the used title. </p>
+<dl class="section return"><dt>Returns</dt><dd>Title string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga86033f373ed6159d52feb585bab2dfda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~CAddonGUIDialogExtendedProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destructor </p>
 
 </div>
 </div>

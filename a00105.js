@@ -1,18 +1,16 @@
 var a00105 =
 [
-    [ "ControlEdit", "a00105.html#a49f0c2eb13ed03073366e69266befd0e", null ],
-    [ "ControlEdit", "a00105.html#af2dfe2807aa51f11a84830fac1c85ac8", null ],
-    [ "Create", "a00105.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "getLabel", "a00335.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
-    [ "getText", "a00335.html#gafab766445043570e6a82c14851366933", null ],
-    [ "setLabel", "a00335.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
-    [ "setText", "a00335.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ],
-    [ "align", "a00105.html#a4864c3686205158c9cab83fa95c2a15a", null ],
-    [ "bIsPassword", "a00105.html#affcbdac561c866d4f010a48e7889020b", null ],
-    [ "disabledColor", "a00105.html#a9b7ae35a0c2326e198dab3c2ec50e94c", null ],
-    [ "strFont", "a00105.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
-    [ "strText", "a00105.html#ab456897f658d865f7c66da9ba85f6cb9", null ],
-    [ "strTextureFocus", "a00105.html#a2c94f7603cfb9d13594e648f67b55e22", null ],
-    [ "strTextureNoFocus", "a00105.html#a51d63e84bd9b53dbdc23a476df4440a9", null ],
-    [ "textColor", "a00105.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
+    [ "Keyboard", "a00105.html#a290b85ded95367e3801ecb1cd5d2d8f1", null ],
+    [ "~Keyboard", "a00105.html#acec86b051eb2fd163d5f5b2e19679f9e", null ],
+    [ "doModal", "a00323.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
+    [ "getText", "a00323.html#gafab766445043570e6a82c14851366933", null ],
+    [ "isConfirmed", "a00323.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
+    [ "setDefault", "a00323.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
+    [ "setHeading", "a00323.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
+    [ "setHiddenInput", "a00323.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ],
+    [ "bConfirmed", "a00105.html#ae6546e334fe9729c6afe0eee76554a60", null ],
+    [ "bHidden", "a00105.html#af66f90748653d4c3377dff5859b83d26", null ],
+    [ "strDefault", "a00105.html#ab4d87e31c184cdc814b32f4dfa7d18b6", null ],
+    [ "strHeading", "a00105.html#a513232d32fcff9f86df46035911255ad", null ],
+    [ "strText", "a00105.html#a8975bd293643341b62e4e5a7810d2efc", null ]
 ];

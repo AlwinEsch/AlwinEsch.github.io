@@ -1,10 +1,9 @@
 var a00289 =
 [
-    [ "GetCurrentWindowDialogId", "a00289.html#ga4afd43d20b97e20532eeb1fac9ae6c1f", null ],
-    [ "GetCurrentWindowId", "a00289.html#ga452c9c6299140854739860045f060d28", null ],
-    [ "GetScreenHeight", "a00289.html#ga7b736bc18cc4c9b1e6229e1af312b6e3", null ],
-    [ "GetScreenWidth", "a00289.html#ga0f0cc52a3413a502953495f26270f559", null ],
-    [ "GetVideoResolution", "a00289.html#ga9e8e637bdd545cf2cd0b922d3496a64b", null ],
-    [ "Lock", "a00289.html#gace70db8e92290399a2a070eb0a60df63", null ],
-    [ "Unlock", "a00289.html#ga50f1fb5a8527c6f1beb7c59393c934a9", null ]
+    [ "CAddonGUIControlRendering", "a00289.html#ga391a8355fbbce5c4a05a01e15188a41b", null ],
+    [ "Create", "a00289.html#ga12847d560dd43205d13b0963d9e395e1", null ],
+    [ "Dirty", "a00289.html#ga7cea65505e98c9989ab92a87b2f2e99b", null ],
+    [ "Render", "a00289.html#ga0bc3f3606d9cf5304dac90cd7a619194", null ],
+    [ "Stop", "a00289.html#gaf6f113a64b92a63894b285b4f2a2c3a5", null ],
+    [ "~CAddonGUIControlRendering", "a00289.html#ga8111f29e2c5fe998d541b21d76f0d353", null ]
 ];

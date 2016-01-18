@@ -1,5 +1,5 @@
 var a00199 =
 [
-    [ "CONTROL_TEXT_OFFSET_X", "a00199.html#aa6d4de8d94fd25d7738153dece416e93", null ],
-    [ "CONTROL_TEXT_OFFSET_Y", "a00199.html#afb3bc10df24bc07657621c3e1bb13ddd", null ]
+    [ "DVD_NOPTS_VALUE", "a00199.html#aa8f3bf7de853346d6bcf7de68b1132da", null ],
+    [ "DVD_TIME_BASE", "a00199.html#a2ab735c1c1995b95aa927d15465e4c37", null ]
 ];

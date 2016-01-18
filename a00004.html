@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Add-On Types</title>
+<title>Kodi Development: Add on Rules</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,10 +92,135 @@ $(document).ready(function(){initNavTree('a00004.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Add-On Types </div>  </div>
+<div class="title">Add on Rules </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#Add_on_Rules_sect1">Repository Submission Guidelines - Please Read Before Submitting Your Addon</a></li>
+<li class="level1"><a href="#Add_on_Rules_sect2">Updates</a></li>
+<li class="level1"><a href="#Add_on_Rules_sect3">General requirements</a><ul><li class="level2"><a href="#Add_on_Rules_sect3_1">Requirements for skins</a></li>
+<li class="level2"><a href="#Add_on_Rules_sect3_2">Optional support</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#Add_on_Rules_sect4">Requirements for scripts and plugins</a></li>
+<li class="level1"><a href="#Add_on_Rules_sect5">Requirements for scrapers</a></li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="Add_on_Rules_sect1"></a>
+Repository Submission Guidelines - Please Read Before Submitting Your Addon</h1>
+<p>Because maintaining such a large repository is a large task, we have set some guidelines for inclusion. Please ensure that these guidelines are met before submitting request to be added. In order to be considered for the official repository, the following guidelines must be met:</p>
+<ul>
+<li>All add-ons must be developed as described on the <a href="http://kodi.wiki/view/Add-on_development">Add-on development</a> page.</li>
+<li>You must include a license file (named LICENSE.txt). We recommend the <a href="http://creativecommons.org/choose/non-web-popup?license_code=by-sa&amp;jurisdiction=&amp;version=3.0&amp;lang=en">CC-BY-SA 3.0</a> for skins and the <a href="http://www.gnu.org/licenses/gpl-howto.html">GPL v2+</a> for others, but most copy left licenses will suffice. Please investigate which license suits your needs and you fully understand the contents.</li>
+<li>All files must be free and legal to distribute.</li>
+<li>The add-on must not violate any known copyright laws - if in doubt, let us know and we'll look into it for you.</li>
+<li>All source files must be included. No pre-compiled files will be allowed.</li>
+<li>You acknowledge that you are the maintainer of your add-on.</li>
+<li>Team-Kodi reserves the right to update or remove it at any time as we deem necessary.</li>
+<li>If a new stable Kodi is going to be released no new submissions are accepted to the repository for the previous version. This will start from when the first <a href="http://en.wikipedia.org/wiki/Release_candidate#Release_candidate">release candidate (RC)</a> of the new version is released. Only fixes and updates will be accepted and processed for the previous version (e.g. if the current stable is 13.x, no updates are allowed for 11.x any more). <a href="http://kodi.wiki/view/Submitting_Add-ons#Allowed_submissions">Allowed submissions</a></li>
+<li>Monetization of add-ons (for instance advertising or paid subscriptions) will not be allowed. We can make an exception in case you own the copyright for the content the addon provides. Please contact us on the add-on mailing list if you believe such an exception may apply to your addon.</li>
+<li>All xbmc.python.module addons must be used by at least one other add-on in official repository.</li>
+</ul>
+<hr/>
+ <h1><a class="anchor" id="Add_on_Rules_sect2"></a>
+Updates</h1>
+<p>Keep in mind that add-ons in the official repository should be considered stable. This means that they should be well-tested before you submit them for inclusion. Because they are for stable users, they should avoid being updated too often. Too often is of course subjective. If your add-on is in rapid development, and features are constantly being added, hold off until you have hit a good stopping point and tested the current version.</p>
+<p>This means that you should not submit a request every time you change your code. If you are submitting updates more than once per week something is wrong. Once or twice per month is probably a better goal, barring unforeseen conditions (like a content source changing its paths). With good reasons provided we will of course make exceptions as we strive to prove the best user experience.</p>
+<hr/>
+ <h1><a class="anchor" id="Add_on_Rules_sect3"></a>
+General requirements</h1>
+<p>Here's a list of what basic sanity checks are done by repository maintainer on each submission.</p>
+<p><b>Basic file checks:</b></p><ul>
+<li>all strings used by add-ons must be localized, no hard-coded language strings should ever be used</li>
+<li>all paths should be treated as case-sensitive, so that they work on all OSs and file systems.</li>
+<li>all paths and files should be lower-case due to the previous point<ul>
+<li>exceptions are README, COPYING, LICENSE.txt that should be upper-case and the "Default" directory in <code>resources/skins</code>, for add-ons that need it.</li>
+</ul>
+</li>
+<li>exception are the translation Language folders with should be first letter capitalised.</li>
+<li>the following file-types are not allowed: <code>.so .dll .pyo .exe .xbt .xpr Thumbs.db</code> and so on&lt;any binary files&gt;</li>
+<li>all text files should use UNIX end-of-line</li>
+<li>all <code>.xml</code> files must pass xml validation</li>
+<li>all <code>.xml</code> files must have xml declaration as header</li>
+<li>all <code>.xml/.txt</code> must have unix style EOL's</li>
+<li>don't use a BOM at the start of your files</li>
+<li>file permissions: files should not be marked as executable</li>
+<li>filenames must have correct encoding (for skins: check your studio logos for corrupt filenames)</li>
+</ul>
+<p><b>Things that must be included:</b></p><ul>
+<li><a href="http://kodi.wiki/view/Add-on_structure#addon.xml"><code>addon.xml</code></a> must contain correct and valid info / version</li>
+<li><a href="http://kodi.wiki/view/Add-on_structure#icon.png"><code>icon.png</code></a> must be present (256x256)</li>
+<li><a href="http://kodi.wiki/view/Add-on_structure#fanart.jpg"><code>fanart.jpg</code></a> must be present (1280x720 or 1920x1080)</li>
+<li><a href="http://kodi.wiki/view/Add-on_structure#LICENSE.txt"><code>LICENCE.txt</code></a> must be present</li>
+<li><a href="http://kodi.wiki/view/Add-on_structure#changelog.txt"><code>changelog.txt</code></a> must be present</li>
+<li>start with last changes at top of the file See also: <a href="http://kodi.wiki/view/Add-on_structure">Add-on_structure</a></li>
+</ul>
+<p><b>Things that can't be included:</b></p><ul>
+<li>no .xbt files (these will be generated by our repository)</li>
+<li>no other add-ons included (skinners: if you need a script, submit it separately and depend on it)</li>
+<li>don't include unneeded files (.pdf, .doc, thumbs.db, etc...)</li>
+<li>no licensed fonts / background images / anything</li>
+</ul>
+<h2><a class="anchor" id="Add_on_Rules_sect3_1"></a>
+Requirements for skins</h2>
+<p><b>Basic checks:</b></p><ul>
+<li>The file size must be sane. There is no hard limit, but a 100mb skin is pushing it.</li>
+<li>No mods. Mods are great, and pop up frequently in the forums. But they are only confusing to non-forum-goers. This can be vague, each is evaluated on its own merit. By naming your "mod" different and make it substantial different enough, we will of course take it in consideration.</li>
+<li>Due to a bug in TexturePacker, all graphics files should have a resolution of at least 4x4.</li>
+<li>Themes must be in a subfolder of the themes/ folder in the skin root (e.g. <code>skin.foo/themes/blue/&lt;files&gt;</code>). The <code>.xbt</code> file will be created by our repo backend.</li>
+<li>If you want to have some images outside of Textures.xbt, then make sure you place those images outside of the media/ folder and reference them using <code>special://skin/backdrops/*</code> or similar. This is most useful for backgrounds - it keeps the size of the packed textures down. Any images you have in the media/ folder will be placed in Textures.xbt in the official repository.</li>
+<li>Please be careful with addon dependencies. Only add dependencies that are needed for the skin to function properly.</li>
+</ul>
+<p><b>Things that must be included:</b></p><ul>
+<li>_screenshots folder must be present, containing max. 10 .jpg screenshots (1280x720) with a reasonable file size.</li>
+</ul>
+<p><b>Code checks:</b></p><ul>
+<li>all labels must be localized</li>
+<li>code should be case-sensitive</li>
+<li>skins should not create warning/errors in the logfile, this can be a lot of things:<ul>
+<li>invalid includes</li>
+<li>undefined actions</li>
+<li>unable to evaluate condition</li>
+<li>undefined vars</li>
+<li>can't focus 'id'</li>
+</ul>
+</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>This of course also applies to script add-ons that use skin files</dd></dl>
+<h2><a class="anchor" id="Add_on_Rules_sect3_2"></a>
+Optional support</h2>
+<p>This is optional and should not block inclusion in official repo.</p>
+<ul>
+<li>mouse support</li>
+<li>touchscreen support</li>
+<li>peripheral dialogs</li>
+<li>PVR support</li>
+<li>ADSP support</li>
+<li>RDS support</li>
+</ul>
+<hr/>
+ <h1><a class="anchor" id="Add_on_Rules_sect4"></a>
+Requirements for scripts and plugins</h1>
+<ul>
+<li>all <code>special://</code> paths should be translated using <code>xbmc.translatePath("special://foo/bar")</code></li>
+<li><code>xbmc.translatePath(xbmcaddon.Addon().getAddonInfo('path')).decode('utf-8')</code> should be used for files included with the add-on</li>
+<li><code>xbmc.translatePath(xbmcaddon.Addon().getAddonInfo('profile')).decode('utf-8')</code> should be used for storing add-on related files</li>
+<li>direct access to the Kodi database is not allowed. You must use <a href="http://kodi.wiki/view/JSON_RPC">JSON RPC</a> for this.</li>
+<li>directly using analytics (Google Analytics for example) from within add-ons is not allowed. This should be handled server side by using user-agent.</li>
+<li>add-ons should store all their data in their own subfolder inside the addon_data directory. Access (read/write/delete) to any other files in settings folders is not allowed. Access (read/write/delete) to other all other files/directories must be opt-in by the user, and be clear for the user to understand what is being accessed. <em>Exceptions to this rule may be granted in specific cases only. Please contact Team XBMC's add-on repository maintainers via the add-on mailing list if your add-on needs access to such files.</em></li>
+</ul>
+<p><b>Things that shouldn't be included:</b></p><ul>
+<li>_screenshots folder (only in remote cases it could have some added value)</li>
+</ul>
+<hr/>
+ <h1><a class="anchor" id="Add_on_Rules_sect5"></a>
+Requirements for scrapers</h1>
+<ul>
+<li>scraper must return the following minimum information: movie title, year, plot, cast, poster, fanart</li>
+<li>use 'chain function' for calling functions in common scrapers</li>
+<li>remove the deprecated XML tags from the scraper header in case you use a scraper editor made for pre-Dharma versions of XBMC </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

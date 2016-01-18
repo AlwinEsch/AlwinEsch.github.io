@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['keyboard',['Keyboard',['../a00306.html',1,'']]]
+  ['infotagmusic',['InfoTagMusic',['../a00324.html',1,'']]],
+  ['infotagradiords',['InfoTagRadioRDS',['../a00335.html',1,'']]],
+  ['infotagvideo',['InfoTagVideo',['../a00325.html',1,'']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['window',['Window',['../a00120.html',1,'XBMCAddon::xbmcgui']]],
-  ['windowdialog',['WindowDialog',['../a00121.html',1,'XBMCAddon::xbmcgui']]],
-  ['windowxml',['WindowXML',['../a00122.html',1,'XBMCAddon::xbmcgui']]],
-  ['windowxmldialog',['WindowXMLDialog',['../a00123.html',1,'XBMCAddon::xbmcgui']]]
+  ['sort_5fmap',['sort_map',['../a00099.html',1,'']]],
+  ['sortdescription',['SortDescription',['../a00100.html',1,'']]],
+  ['sortutils',['SortUtils',['../a00101.html',1,'']]],
+  ['stat',['Stat',['../a00135.html',1,'XBMCAddon::xbmcvfs']]]
 ];

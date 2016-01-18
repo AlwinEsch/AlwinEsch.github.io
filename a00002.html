@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Getting Started</title>
+<title>Kodi Development: Built-in scripting</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,10 +92,60 @@ $(document).ready(function(){initNavTree('a00002.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Getting Started </div>  </div>
+<div class="title">Built-in scripting </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#page_built_in_scripting_sect1">General form of built-in Functions</a></li>
+<li class="level1"><a href="#page_built_in_scripting_sect2">Using Built-in Functions from the skin</a></li>
+<li class="level1"><a href="#page_built_in_scripting_sect3">Using Built-in Functions from python</a></li>
+<li class="level1"><a href="#page_built_in_scripting_sect4">Using Built-in Functions from keymap.xml</a></li>
+<li class="level1"><a href="#page_built_in_scripting_sect5">List of built-in functions</a></li>
+</ul>
+</div>
+<div class="textblock"><p>Kodi contains several built-in functions that can be accessed from the skin (via a button), from within a python script, or <a href="http://kodi.wiki/view/Keymap">keymap</a>.</p>
+<h1><a class="anchor" id="page_built_in_scripting_sect1"></a>
+General form of built-in Functions</h1>
+<p>Built-in functions take the form</p>
+<div class="fragment"><div class="line">[XBMC.]Function(param1,param2,...)</div>
+</div><!-- fragment --><p>The <code>XBMC.</code> prefix is optional. Some parameters are required, depending on the function. In parsing built-in functions, Kodi first treats quoted (using double quotes ") character strings as literal, and drops the quotes. Thus, when inside a quote, any otherwise special characters will be ignored until the quote is complete. Parameters are separated by commas and, given that functions may be parameters to other functions (such as with the AlarmClock function), anything within brackets () are treated as a single block as well. Finally, prior to passing parameters into the function, any initial and trailing spaces are removed. This system allows you to pass in functions as parameters (the commas used for the passed function are ignored as they're within a () block), as well as allowing you to ignore whitespace around parameter separators. If you wish to pass commas in directly as part of a parameter, simply put quotes around the parameter string - Kodi will strip off the quotes prior to passing it in. Lastly, to pass in an actual quote character, make sure it's escaped (using the <code>\</code> character), as in "\".</p>
+<p><b>Some examples:</b></p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;ActivateWindow(VideoFiles, path_to_some_files )</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;ActivateWindow(VideoFiles,path_to_some_files)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;ActivateWindow(VideoFiles,&quot;path_to_some_files&quot;)</div>
+</div><!-- fragment --><p> will all produce the exact same functionality, under the assumption that <code>path_to_some_files</code> contains no initial or trailing spaces (unlikely) and no unmatched brackets and commas. The "ActivateWindow" function will be called with two parameters: "VideoFiles" (the window to open) and "path_to_some_files" (a starting path for the browsing). If path_to_some_files contains initial or trailing spaces, or contains commas or brackets, then only the last form will function correctly.</p>
+<h1><a class="anchor" id="page_built_in_scripting_sect2"></a>
+Using Built-in Functions from the skin</h1>
+<p>To have a button (or toggle button) on the skin run a particular function, you just have to add an &lt;onclick&gt; tag (or &lt;onfocus&gt; tag) containing the function you wish to run. For example, adding the following to a button control will create a stop button.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;onclick&gt;PlayerControl(Stop)&lt;/onclick&gt;</div>
+</div><!-- fragment --><p>If you want a button in your skin taking you directly to the movie listing, add a parameter to the Window ID as follows:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;onclick&gt;ActivateWindow(myvideolibrary,movietitles)&lt;/onclick&gt;</div>
+</div><!-- fragment --><p>A list of parameters can be found here:</p>
+<ul>
+<li><a href="http://kodi.wiki/view/Opening_Windows_and_Dialogs">Opening Windows and Dialogs</a></li>
+</ul>
+<h1><a class="anchor" id="page_built_in_scripting_sect3"></a>
+Using Built-in Functions from python</h1>
+<p>To run a built-in Kodi function from within a python script or compiled C++ add-on, you just need to call <a class="el" href="a00329.html#ga3437cf59c9fc815524d7aaf98077e210">executebuiltin()</a> with the function name. For example,</p>
+<p>for Python: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;xbmc.executebuiltin(<span class="stringliteral">&#39;XBMC.RunScript(Q:\Scripts\myscript.py)&#39;</span>)</div>
+</div><!-- fragment --><p> or for C++: </p><div class="fragment"><div class="line">CAddonLib_General::ExecuteBuiltin(<span class="stringliteral">&quot;XBMC.RunScript(Q:\Scripts\myscript.py)&quot;</span>);</div>
+</div><!-- fragment --><p>will run the script myscript.py located in the Scripts directory. On 28.11.2011 a optional parameter was added. Normal call will be non-blocking - so it returns before the extraction has been finished. Now it's possible to call built-in functions blocking by doing,</p>
+<p>for Python: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;xbmc.executebuiltin(<span class="stringliteral">&#39;XBMC.RunScript(Q:\Scripts\myscript.py)&#39;</span>, <span class="keyword">True</span>)</div>
+</div><!-- fragment --><p> or for C++: </p><div class="fragment"><div class="line">CAddonLib_General::ExecuteBuiltin(<span class="stringliteral">&quot;XBMC.RunScript(Q:\Scripts\myscript.py)&quot;</span>, <span class="keyword">true</span>);</div>
+</div><!-- fragment --><h1><a class="anchor" id="page_built_in_scripting_sect4"></a>
+Using Built-in Functions from keymap.xml</h1>
+<p>To bind a built-in function to a particular key, you just add the built-in command to the appropriate section and button in keymap.xml</p>
+<p>For example, to map the running of an executeable to the BLACK button, we'd add:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;gamepad&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  ...</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  &lt;black&gt;XBMC.RunXBE(E:\Apps\AVALaunch.xbe)&lt;/black&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  ...</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;&lt;/gamepad&gt;</div>
+</div><!-- fragment --><p>to whatever window section of keymap.xml is appropriate. For more information on changing the keymapping with keymap.xml see: Changing the keymapping</p>
+<h1><a class="anchor" id="page_built_in_scripting_sect5"></a>
+List of built-in functions</h1>
+<p>See: <a class="el" href="a00040.html">List of built-in functions</a> </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

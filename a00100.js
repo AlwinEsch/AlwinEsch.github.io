@@ -1,10 +1,9 @@
 var a00100 =
 [
-    [ "Addon", "a00100.html#a0913381b26757108cd17239bcbf731e4", null ],
-    [ "~Addon", "a00100.html#a31665350e5cb1a6cdacd73dc192a13f6", null ],
-    [ "getAddonInfo", "a00352.html#gaedb0b112c76349f81e261335a6b240b9", null ],
-    [ "getLocalizedString", "a00352.html#ga79ffd96305af02e364d99c2c9d8b69de", null ],
-    [ "getSetting", "a00352.html#ga6eebe8728b7d19104a482a29abdafce2", null ],
-    [ "openSettings", "a00352.html#ga73eb9124fb7a7a5f5a89c92e0bc1fb2a", null ],
-    [ "setSetting", "a00352.html#gafd6c759c5b268d0ec1467e340323783d", null ]
+    [ "SortDescription", "a00100.html#a32bbc533471a8174ea3a6b5273c1b952", null ],
+    [ "limitEnd", "a00100.html#aefc1c84750c4db4e4ce3e308b809aa9d", null ],
+    [ "limitStart", "a00100.html#af25ddf2853ecc418cdc47439d6356719", null ],
+    [ "sortAttributes", "a00100.html#ad9c484340abdf09b561234f35d0a7730", null ],
+    [ "sortBy", "a00100.html#a11437dd4c5c5de1f8513e175d84c5918", null ],
+    [ "sortOrder", "a00100.html#a89cc0bdfe8580c2c4609bf66285c44c7", null ]
 ];

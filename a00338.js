@@ -1,8 +1,10 @@
 var a00338 =
 [
-    [ "autoScroll", "a00338.html#gad492befcc0c8ee0e1fecb0d6a6bd7d1c", null ],
-    [ "getText", "a00338.html#gafab766445043570e6a82c14851366933", null ],
-    [ "reset", "a00338.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
-    [ "scroll", "a00338.html#gaa4f5d32e79ca1250eaba1a74fdf7f1ec", null ],
-    [ "setText", "a00338.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ]
+    [ "Action Id's", "a00339.html", "a00339" ],
+    [ "onAction", "a00338.html#ga46acbc2206f67d5f8e1d44d3ebe4fa68", null ],
+    [ "onClick", "a00338.html#gad031aa7d2b1fcedaac6ad481e2e85757", null ],
+    [ "onControl", "a00338.html#ga3d8a5f47cd756f21b4744eed7ede8634", null ],
+    [ "onDoubleClick", "a00338.html#ga25347e21254d60dc94028d2ed6a0c5ed", null ],
+    [ "onFocus", "a00338.html#ga32655043662a872fb86801fe5e8e1e41", null ],
+    [ "onInit", "a00338.html#ga5a0ef4163216ec8833eb3a524f7fd80e", null ]
 ];

@@ -1,14 +1,13 @@
 var a00125 =
 [
-    [ "Stat", "a00125.html#a60ce51a2aeed51fe6b3fb97341418ad1", null ],
-    [ "atime", "a00327.html#ga65d49375e5251d4e616a45e3c898d6cc", null ],
-    [ "ctime", "a00327.html#gab24c57af16ac6f88edb819c18e2e438b", null ],
-    [ "mtime", "a00327.html#ga57da69d0b20141a95c0c44a6bb5f3b35", null ],
-    [ "st_dev", "a00327.html#gab17084ec246f2b497d2f13618c5bd220", null ],
-    [ "st_gid", "a00327.html#ga9a7a9ad27402f5a931bcbff38e4e03d3", null ],
-    [ "st_ino", "a00327.html#ga77e336d6274f6fb0e2a3c3546e61e360", null ],
-    [ "st_mode", "a00327.html#ga00b3e20028eaee69c44cdc47a922fe31", null ],
-    [ "st_nlink", "a00327.html#ga34f57426567df63ef5ad1b4679778d18", null ],
-    [ "st_size", "a00327.html#gaeec21543efab31f62a21e533b0d3a537", null ],
-    [ "st_uid", "a00327.html#gaa29c53999dffe4acc12aed2eb60a6c81", null ]
+    [ "ControlTextBox", "a00125.html#afd93b8cb98a0ef81f5f44ff700b42922", null ],
+    [ "ControlTextBox", "a00125.html#a7a8982a6c21b048766712f24e8efbd31", null ],
+    [ "autoScroll", "a00355.html#gad492befcc0c8ee0e1fecb0d6a6bd7d1c", null ],
+    [ "Create", "a00125.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "getText", "a00355.html#gafab766445043570e6a82c14851366933", null ],
+    [ "reset", "a00355.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
+    [ "scroll", "a00355.html#gaa4f5d32e79ca1250eaba1a74fdf7f1ec", null ],
+    [ "setText", "a00355.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ],
+    [ "strFont", "a00125.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "textColor", "a00125.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
 ];

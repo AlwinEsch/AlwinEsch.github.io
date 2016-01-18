@@ -1,13 +1,15 @@
 var a00316 =
 [
-    [ "File", "a00314.html", "a00314" ],
-    [ "Stat", "a00327.html", "a00327" ],
-    [ "copy", "a00316.html#ga9188bb84632ebdbc54faca1de9be95c3", null ],
-    [ "deleteFile", "a00316.html#gabf13e7bae1c97bc1c4188f3e4e459f95", null ],
-    [ "exists", "a00316.html#ga12691f7bf1c5e55da57b18f63f6fbdca", null ],
-    [ "listdir", "a00316.html#ga6bb30280e2eb7d5b94cfb0eb6e65b0cb", null ],
-    [ "mkdir", "a00316.html#gaf69897d9a5235e87828a9e75c1cae4ca", null ],
-    [ "mkdirs", "a00316.html#ga229e97a6a47bdff0122f1004c4feda5c", null ],
-    [ "rename", "a00316.html#gaefc98ff66890f353b4ea7fd620b63808", null ],
-    [ "rmdir", "a00316.html#gac83ea5fb566ee294cdd87c74c6697025", null ]
+    [ "AddItem", "a00316.html#gaaa7aba33ed28df8d2adfa6af9b097575", null ],
+    [ "AddItem", "a00316.html#gac4aeeb4b7e884b74644e14bceb759c5b", null ],
+    [ "ClearList", "a00316.html#ga2b85ec494201046fd7686395c996c272", null ],
+    [ "CPlayerLib_PlayList", "a00316.html#ga9ed3d2e6831632a37dfd0ea6699ef58f", null ],
+    [ "GetListPosition", "a00316.html#ga3b6ca85032d49dfd758dcaad70db8275", null ],
+    [ "GetListSize", "a00316.html#ga1f4581c0d5dec157ae050648b9980dda", null ],
+    [ "GetPlayListType", "a00316.html#ga1c1d6bcc394fe5e4b75634dca0147427", null ],
+    [ "LoadPlaylist", "a00316.html#ga7de3982ed8b225f5fd1580c75847d9db", null ],
+    [ "operator[]", "a00316.html#ga0fe30656a739ee76ffac247d6c602008", null ],
+    [ "RemoveItem", "a00316.html#ga7834e166deca3a366bd4d25b061606fd", null ],
+    [ "Shuffle", "a00316.html#ga9d1841bc5f559c6981b78b895d446033", null ],
+    [ "~CPlayerLib_PlayList", "a00316.html#gab5aa5368f1de872e97298ab744281ee8", null ]
 ];

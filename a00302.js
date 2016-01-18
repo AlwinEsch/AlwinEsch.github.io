@@ -1,9 +1,6 @@
 var a00302 =
 [
-    [ "ChannelEntry", "a00302.html#gafdbc7a9a4d1336f159150988868b1465", null ],
-    [ "ChannelGroup", "a00302.html#gabb331d2d9b3ef522da48c0b951ddbe21", null ],
-    [ "ChannelGroupMember", "a00302.html#ga2d24f5c60e0d4b6d3a416641b489f15e", null ],
-    [ "EpgEntry", "a00302.html#gab55ab3d9f7fa5f1304edf70e39ac6a55", null ],
-    [ "RecordingEntry", "a00302.html#gad676cb5682d7c7c959d91822342cc753", null ],
-    [ "TimerEntry", "a00302.html#gae6c3ce0a07ecc854c615f2d65e550147", null ]
+    [ "ShowAndGetInput", "a00302.html#gabd70a1306a25efc68e99f5852aeffe9f", null ],
+    [ "ShowAndGetInput", "a00302.html#gab23d9c3e25b9f866b1581d5ff1821d02", null ],
+    [ "ShowAndGetInput", "a00302.html#gacdb0bcb4ff915c595e075af871d629ea", null ]
 ];

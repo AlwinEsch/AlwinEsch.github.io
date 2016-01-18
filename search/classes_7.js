@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['listitem',['ListItem',['../a00119.html',1,'XBMCAddon::xbmcgui']]]
+  ['keyboard',['Keyboard',['../a00105.html',1,'XBMCAddon::xbmc']]],
+  ['kodi_5fcodec',['kodi_codec',['../a00087.html',1,'']]],
+  ['kodi_5fversion',['kodi_version',['../a00088.html',1,'']]]
 ];

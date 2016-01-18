@@ -1,9 +1,16 @@
 var a00060 =
 [
-    [ "CAddonGUIControlLabel", "a00269.html#ga3feee4332d158ac43b8d5d5cc20e2d0b", null ],
-    [ "~CAddonGUIControlLabel", "a00269.html#gae46262d2f574f9375e18fd28b3b0244b", null ],
-    [ "GetLabel", "a00269.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "SetLabel", "a00269.html#ga0468217482f9a171183b1cda613417e6", null ],
-    [ "SetVisible", "a00269.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "IMPL_GUI_LABEL_CONTROL", "a00060.html#a98677d76131bb756d160614fdda04f6e", null ]
+    [ "CScrollInfo", "a00060.html#a1155d01fb5d7e3bb3ea3ed0b925a5de1", null ],
+    [ "GetPixelsPerFrame", "a00060.html#a72d8f551c98130d0942e37c7c7400a91", null ],
+    [ "Reset", "a00060.html#a372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "SetSpeed", "a00060.html#a64be5578c1c726e0d16e64c2554688b5", null ],
+    [ "initialPos", "a00060.html#a4fa0f8cf55d2664548ffe6ffe87815b5", null ],
+    [ "initialWait", "a00060.html#a5434e54a256e16c48f868cfb33696a89", null ],
+    [ "m_textWidth", "a00060.html#ac5c07b3de3d7b54a3c1f7fd7ff299dc0", null ],
+    [ "m_totalWidth", "a00060.html#a120b18c698618870c64c077be6622a2d", null ],
+    [ "m_widthValid", "a00060.html#ad2407675b2b26b51c47eba10f619d443", null ],
+    [ "pixelPos", "a00060.html#ac39f2f9544959e6347ab0c97cdbe8ee3", null ],
+    [ "pixelSpeed", "a00060.html#adcd3672aa6367fe29a611c49e0ffbed2", null ],
+    [ "suffix", "a00060.html#ab211ce571d513824da669aeb6c3af673", null ],
+    [ "waitTime", "a00060.html#a3dd2bf8b269e3fa033cdf888d425c0a1", null ]
 ];

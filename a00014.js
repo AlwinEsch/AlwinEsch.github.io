@@ -1,4 +1,6 @@
 var a00014 =
 [
-    [ "Doxygen on Kodi's Add-On headers", "a00028.html", null ]
+    [ "Binary C++ Tutorials", "a00016.html", null ],
+    [ "Python Tutorials", "a00018.html", "a00018" ],
+    [ "Various Tutorials", "a00020.html", "a00020" ]
 ];

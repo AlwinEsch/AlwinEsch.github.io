@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Help functions</title>
+<title>Kodi Development: CAddonGUIControlRendering</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,13 +92,42 @@ $(document).ready(function(){initNavTree('a00289.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Help functions<div class="ingroups"><a class="el" href="a00350.html">C++ Development</a> &raquo; <a class="el" href="a00286.html">Library - GUILIB</a> &raquo; <a class="el" href="a00287.html">CGUILib</a></div></div>  </div>
+<div class="title">CAddonGUIControlRendering<div class="ingroups"><a class="el" href="a00370.html">C++ Development</a> &raquo; <a class="el" href="a00303.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Functions for GUI</b> </p>
+<p><b>Window control for rendering own parts</b> </p>
+<p>This rendering control is used when own parts are needed. You have the control over them to render direct OpenGL or DirectX content to the screen set by the size of them.</p>
+<p>It has the header <a class="el" href="a00182.html">#include &lt;kodi/gui.api2/GUIControlRendering.h&gt;</a> be included to enjoy it.</p>
+<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga4afd43d20b97e20532eeb1fac9ae6c1f"></a>
+<a class="anchor" id="ga391a8355fbbce5c4a05a01e15188a41b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CAddonGUIControlRendering </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00084.html">CAddonGUIWindow</a> *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ga12847d560dd43205d13b0963d9e395e1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -106,22 +135,51 @@ $(document).ready(function(){initNavTree('a00289.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int GetCurrentWindowDialogId </td>
+          <td class="memname">virtual bool Create </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ga452c9c6299140854739860045f060d28"></a>
+<a class="anchor" id="ga7cea65505e98c9989ab92a87b2f2e99b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -129,7 +187,7 @@ $(document).ready(function(){initNavTree('a00289.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int GetCurrentWindowId </td>
+          <td class="memname">virtual bool Dirty </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -137,14 +195,14 @@ $(document).ready(function(){initNavTree('a00289.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="ga7b736bc18cc4c9b1e6229e1af312b6e3"></a>
+<a class="anchor" id="ga0bc3f3606d9cf5304dac90cd7a619194"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -152,7 +210,7 @@ $(document).ready(function(){initNavTree('a00289.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int GetScreenHeight </td>
+          <td class="memname">virtual void Render </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -160,16 +218,14 @@ $(document).ready(function(){initNavTree('a00289.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the the current screen height with pixel. </p>
-
 </div>
 </div>
-<a class="anchor" id="ga0f0cc52a3413a502953495f26270f559"></a>
+<a class="anchor" id="gaf6f113a64b92a63894b285b4f2a2c3a5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -177,7 +233,7 @@ $(document).ready(function(){initNavTree('a00289.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int GetScreenWidth </td>
+          <td class="memname">virtual void Stop </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -185,16 +241,14 @@ $(document).ready(function(){initNavTree('a00289.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the the current screen width with pixel. </p>
-
 </div>
 </div>
-<a class="anchor" id="ga9e8e637bdd545cf2cd0b922d3496a64b"></a>
+<a class="anchor" id="ga8111f29e2c5fe998d541b21d76f0d353"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -202,7 +256,7 @@ $(document).ready(function(){initNavTree('a00289.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int GetVideoResolution </td>
+          <td class="memname">virtual ~CAddonGUIControlRendering </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -210,62 +264,10 @@ $(document).ready(function(){initNavTree('a00289.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Return the the current screen rendering resolution. </p>
-
-</div>
-</div>
-<a class="anchor" id="gace70db8e92290399a2a070eb0a60df63"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Lock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Performs a graphical lock of rendering engine. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga50f1fb5a8527c6f1beb7c59393c934a9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Unlock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Performs a graphical unlock of previous locked rendering engine. </p>
 
 </div>
 </div>

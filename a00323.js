@@ -1,8 +1,9 @@
 var a00323 =
 [
-    [ "autoScroll", "a00323.html#gad492befcc0c8ee0e1fecb0d6a6bd7d1c", null ],
+    [ "doModal", "a00323.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
     [ "getText", "a00323.html#gafab766445043570e6a82c14851366933", null ],
-    [ "reset", "a00323.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
-    [ "scroll", "a00323.html#gaa4f5d32e79ca1250eaba1a74fdf7f1ec", null ],
-    [ "setText", "a00323.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ]
+    [ "isConfirmed", "a00323.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
+    [ "setDefault", "a00323.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
+    [ "setHeading", "a00323.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
+    [ "setHiddenInput", "a00323.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ]
 ];

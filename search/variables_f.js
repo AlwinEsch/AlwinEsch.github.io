@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['waittime',['waitTime',['../a00040.html#a3dd2bf8b269e3fa033cdf888d425c0a1',1,'CScrollInfo']]],
-  ['window',['window',['../a00106.html#a1fcb47d022df798835e7bf573d0eb291',1,'XBMCAddon::xbmcgui::Window']]]
+  ['veccontrols',['vecControls',['../a00130.html#a80c3b2441fe5343dafe2efa509391ef5',1,'XBMCAddon::xbmcgui::Window']]],
+  ['vecitems',['vecItems',['../a00120.html#a7328bad814e15ada5da2f4bbc018c7e4',1,'XBMCAddon::xbmcgui::ControlList']]],
+  ['veclabels',['vecLabels',['../a00116.html#ab73823089fdceaaa9798d5d0bb79d458',1,'XBMCAddon::xbmcgui::ControlFadeLabel']]]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Python - 3rd Party Tutorials</title>
+<title>Kodi Development: Python - General AddOn</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,42 +92,183 @@ $(document).ready(function(){initNavTree('a00026.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Python - 3rd Party Tutorials </div>  </div>
+<div class="title">Python - General AddOn </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Python_3rd_party_section1">3rd Party Add-on Tutorial Links</a></li>
-<li class="level1"><a href="#Python_3rd_party_section2">Magazine Add-on Developer Guides</a></li>
-</ul>
-</div>
-<div class="textblock"><p>Below you will find some 3rd party links to Kodi Add-on tutorials </p><hr/>
-<h1><a class="anchor" id="Python_3rd_party_section1"></a>
-3rd Party Add-on Tutorial Links</h1>
-<ul>
-<li><a href="http://xbmc-plugin-dev.blogspot.co.uk/2013/06/our-first-plugin.html">http://xbmc-plugin-dev.blogspot.co.uk/2013/06/our-first-plugin.html</a></li>
-<li><a href="http://www.element14.com/community/community/raspberry-pi/blog/2013/06/26/creating-an-xmbc-plugin-hello-world">http://www.element14.com/community/community/raspberry-pi/blog/2013/06/26/creating-an-xmbc-plugin-hello-world</a></li>
-<li><a href="http://t0mm0.github.io/xbmc-urlresolver/tutorials/resolverplugin/index.html">http://t0mm0.github.io/xbmc-urlresolver/tutorials/resolverplugin/index.html</a></li>
-<li><a href="https://github.com/romanvm/plugin.video.example">https://github.com/romanvm/plugin.video.example</a></li>
-</ul>
-<hr/>
-<h1><a class="anchor" id="Python_3rd_party_section2"></a>
-Magazine Add-on Developer Guides</h1>
-<ul>
-<li>Linux User &amp; Developer - Issue 131, 2013<ul>
-<li><a href="http://www.greatdigitalmags.com/view/linuxuser&developer/2589/linux-user-and-developer-issue-131">http://www.greatdigitalmags.com/view/linuxuser&amp;developer/2589/linux-user-and-developer-issue-131</a></li>
+<ul><li class="level1"><a href="#Python_General_addon_section1">Before we get started</a></li>
+<li class="level1"><a href="#Python_General_addon_section2">Hello, World!</a></li>
+<li class="level1"><a href="#Python_General_addon_section3">Navigating between pages</a><ul><li class="level2"><a href="#Python_General_addon_section3_sub1">Retrieving arguments</a><ul><li class="level3"><a href="#Python_General_addon_section3_sub1_sub1">Multiple content types</a></li>
 </ul>
 </li>
+<li class="level2"><a href="#Python_General_addon_section3_sub2">Passing arguments</a></li>
 </ul>
+</li>
+<li class="level1"><a href="#Python_General_addon_section4">Working with user settings</a></li>
+<li class="level1"><a href="#Python_General_addon_section5">Showing additional metadata</a><ul><li class="level2"><a href="#Python_General_addon_section5_sub1">Icons, thumbnails and artwork</a></li>
+<li class="level2"><a href="#Python_General_addon_section5_sub2">Info labels</a></li>
+<li class="level2"><a href="#Python_General_addon_section5_sub3">Stream info</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#Python_General_addon_section6">Adding context menus</a></li>
+</ul>
+</div>
+<div class="textblock"><p>This page will outline the basics of creating your first Python add-on for Kodi. It assumes you're at least familiar with the basics of Python (or at least, programming in general). If not, we recommend visiting the <a href="http://docs.python.org/2/tutorial/">Python tutorial</a> first, and then returning here.</p>
+<hr/>
+<h1><a class="anchor" id="Python_General_addon_section1"></a>
+Before we get started</h1>
+<ul>
+<li>See also: <a href="http://kodi.wiki/view/Add-on_structure">Add-on structure</a></li>
+</ul>
+<p>The first step to making an add-on is to put the basic structure in place. Make sure your directory is properly named, e.g. <code>plugin.video.my-addon</code>, and that you have a properly-constructed <a href="http://kodi.wiki/view/Addon.xml">addon.xml</a> file. Once these are done, you can get started writing the actual code for your add-on!</p>
+<hr/>
+<h1><a class="anchor" id="Python_General_addon_section2"></a>
+Hello, World!</h1>
+<p>The simplest form of Python add-on is one that gets run, adds some list items, and exits to let Kodi take over the navigation; people who have written server-side code for the web should be familiar with how this works. (More complex add-ons can process user input in real-time, but we'll discuss those later.) Let's start by looking at an extremely basic example script:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> sys</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> xbmcgui</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> xbmcplugin</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;addon_handle = int(sys.argv[1])</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;xbmcplugin.setContent(addon_handle, <span class="stringliteral">&#39;movies&#39;</span>)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;url = <span class="stringliteral">&#39;http://localhost/some_video.mkv&#39;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;li = xbmcgui.ListItem(<span class="stringliteral">&#39;My First Video!&#39;</span>, iconImage=<span class="stringliteral">&#39;DefaultVideo.png&#39;</span>)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;xbmcplugin.addDirectoryItem(handle=addon_handle, url=url, listitem=li)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;xbmcplugin.endOfDirectory(addon_handle)</div>
+</div><!-- fragment --><p>While not particularly exciting, this shows the minimal amount of code you need to get an Kodi add-on up and running in Python. First, we get the add-on's process handle from <code>sys.argv[1]</code>. We need this to tell Kodi who we are. Next, we tell Kodi that we're going to show a list of <code>'movies'</code>. There are other options, like <code>'audio'</code> or <code>'episodes'</code>; these just change some details of how Kodi presents your add-on.</p>
+<p>The most important part is that we create an <code>xbmcgui.ListItem</code> with the name and icon we want (<code>'DefaultVideo.png'</code> comes from the Kodi skin), set it to be a video item, and then add it to the directory. Once we're done adding items, we need to be sure to call <code>xbmcplugin.endOfDirectory</code> to let Kodi know we're done!</p>
+<hr/>
+<h1><a class="anchor" id="Python_General_addon_section3"></a>
+Navigating between pages</h1>
+<p>While the first example might be enough for extremely simple add-ons, most add-ons will want to have the ability to navigate between different pages. Most add-ons are designed to imitate a folder hierarchy where opening folder items shows a different list of items, and going "up" returns you to the parent folder.</p>
+<h2><a class="anchor" id="Python_General_addon_section3_sub1"></a>
+Retrieving arguments</h2>
+<p>As we saw in the first example, Kodi passes some arguments to us via sys.argv. This is important, since it's what will let us tailor the output on the add-on based on user input. Remember, much like a web site, each folder (or page) in an Kodi add-on is the result of a separate invocation of our script. The arguments available to us are:</p>
 <table class="doxtable">
 <tr>
-<th></th></tr>
+<th align="center">Index </th><th align="left">Description  </th></tr>
 <tr>
-<td><div class="image">
-<img src="LinuxMag.jpg" alt="LinuxMag.jpg"/>
-</div>
- </td></tr>
+<td align="center">0 </td><td align="left">The base URL of your add-on, e.g. 'plugin://plugin.video.myaddon/' </td></tr>
+<tr>
+<td align="center">1 </td><td align="left">The process handle for this add-on, as a numeric string </td></tr>
+<tr>
+<td align="center">2 </td><td align="left">The query string passed to your add-on, e.g. '?foo=bar&amp;baz=quux' </td></tr>
 </table>
-</div></div><!-- contents -->
+<p>Of particular interest is <code>sys.argv[2]</code>, which is what we'll generally use to show different things in the add-on.</p>
+<h3><a class="anchor" id="Python_General_addon_section3_sub1_sub1"></a>
+Multiple content types</h3>
+<ul>
+<li>See also: <a href="http://kodi.wiki/view/Addon.xml#.3Cprovides.3E_element">Addon.xml# element</a></li>
+</ul>
+<p>If your add-on provides multiple content types, e.g. <code>audio</code> and <code>video</code>, when the user invokes your add-on from the add-on list, Kodi will add a <code>content_type</code> parameter to your add-on's query string. For example: <code>'?content_type=audio'</code>. This will allow you to modify the output depending on what context your add-on was invoked in.</p>
+<h2><a class="anchor" id="Python_General_addon_section3_sub2"></a>
+Passing arguments</h2>
+<p>Now that we know how to retrieve the arguments passed to our add-on, we'll have to actually pass some along to it. Generally speaking, this involves creating a folder <code>ListItem</code> with a URL back to your add-on; then the next invocation of the add-on will parse those arguments and do something with them. Let's look at another brief example that adds some folders to let the user navigate between different pages of the add-on:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> sys</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> urllib</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> urlparse</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> xbmcgui</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> xbmcplugin</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;base_url = sys.argv[0]</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;addon_handle = int(sys.argv[1])</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;args = urlparse.parse_qs(sys.argv[2][1:])</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;xbmcplugin.setContent(addon_handle, <span class="stringliteral">&#39;movies&#39;</span>)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">def </span>build_url(query):</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> base_url + <span class="stringliteral">&#39;?&#39;</span> + urllib.urlencode(query)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;mode = args.get(<span class="stringliteral">&#39;mode&#39;</span>, <span class="keywordtype">None</span>)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordflow">if</span> mode <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    url = build_url({<span class="stringliteral">&#39;mode&#39;</span>: <span class="stringliteral">&#39;folder&#39;</span>, <span class="stringliteral">&#39;foldername&#39;</span>: <span class="stringliteral">&#39;Folder One&#39;</span>})</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    li = xbmcgui.ListItem(<span class="stringliteral">&#39;Folder One&#39;</span>, iconImage=<span class="stringliteral">&#39;DefaultFolder.png&#39;</span>)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    xbmcplugin.addDirectoryItem(handle=addon_handle, url=url,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                                listitem=li, isFolder=<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    url = build_url({<span class="stringliteral">&#39;mode&#39;</span>: <span class="stringliteral">&#39;folder&#39;</span>, <span class="stringliteral">&#39;foldername&#39;</span>: <span class="stringliteral">&#39;Folder Two&#39;</span>})</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    li = xbmcgui.ListItem(<span class="stringliteral">&#39;Folder Two&#39;</span>, iconImage=<span class="stringliteral">&#39;DefaultFolder.png&#39;</span>)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    xbmcplugin.addDirectoryItem(handle=addon_handle, url=url,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                                listitem=li, isFolder=<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    xbmcplugin.endOfDirectory(addon_handle)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordflow">elif</span> mode[0] == <span class="stringliteral">&#39;folder&#39;</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    foldername = args[<span class="stringliteral">&#39;foldername&#39;</span>][0]</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    url = <span class="stringliteral">&#39;http://localhost/some_video.mkv&#39;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    li = xbmcgui.ListItem(foldername + <span class="stringliteral">&#39; Video&#39;</span>, iconImage=<span class="stringliteral">&#39;DefaultVideo.png&#39;</span>)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    xbmcplugin.addDirectoryItem(handle=addon_handle, url=url, listitem=li)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    xbmcplugin.endOfDirectory(addon_handle)</div>
+</div><!-- fragment --><p>As you can see, many parts of our code are very similar to the first example. There are a few important additions, however. First, we want to respond to the arguments supplied to our script, so we parse the query string with:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;urlparse.parse_qs(sys.argv[2][1:])</div>
+</div><!-- fragment --><p>We skip the first character, since it's always <code>'?'</code>. This will give us a dict of lists; for example, <code>'?foo=bar&amp;foo=baz&amp;quux=spam'</code> would be converted to <code>{'foo': ['bar', 'baz'], 'quux': ['spam']}</code>. With this information, we can tailor the output of our add-on to the supplied arguments.</p>
+<p>We also need to be able to create links back to our add-on in order to display related pages (e.g. subfolders). We can do this by creating an <code>xbmc.ListItem</code>, passing <code>isFolder=True</code>, and setting the URL of the item to point back to our add-on. We create the URL in the helper function <code>build_url()</code>, which gives us a URL that looks something like:</p>
+<div class="fragment"><div class="line">plugin:<span class="comment">//plugin.video.myaddon/?mode=folder&amp;foldername=Folder+One</span></div>
+</div><!-- fragment --> <hr/>
+<h1><a class="anchor" id="Python_General_addon_section4"></a>
+Working with user settings</h1>
+<ul>
+<li>See also: <a href="http://kodi.wiki/view/Add-on_settings">Add-on settings</a></li>
+</ul>
+<p>Your add-on may require some configurable options for the user (e.g. login credentials for a service). These can be stored as settings. To use settings with your add-on, you'll need to make a file defining the settings in <code>resources/settings.xml</code>. For example:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;settings&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    &lt;setting id=&quot;my_setting&quot; type=&quot;bool&quot; default=&quot;true&quot; label=&quot;My Setting&quot;/&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;&lt;/settings&gt;</div>
+</div><!-- fragment --><p>This will allow the user to open the settings for your add-on and modify this setting as needed. Then, in your add-on, you can retrieve or set this setting with the following code:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;my_addon = xbmcaddon.Addon()</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;my_setting = my_addon.getSetting(<span class="stringliteral">&#39;my_setting&#39;</span>) <span class="comment"># returns the string &#39;true&#39; or &#39;false&#39;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;my_addon.setSetting(<span class="stringliteral">&#39;my_setting&#39;</span>, <span class="stringliteral">&#39;false&#39;</span>)</div>
+</div><!-- fragment --><hr/>
+<h1><a class="anchor" id="Python_General_addon_section5"></a>
+Showing additional metadata</h1>
+<p>We've already seen how to show some basic metadata, like the icon image and the type of the item (<code>'video'</code> in our case). However, there are many more pieces of metadata that Kodi understands, and adding them can make life easier on your users. We'll take a look at some of the more important ones. You can also find a full list in the <a class="el" href="a00371.html">Python documentation</a> for <a class="el" href="a00364.html">xbmcgui.ListItem</a>.</p>
+<h2><a class="anchor" id="Python_General_addon_section5_sub1"></a>
+Icons, thumbnails and artwork</h2>
+<p>Our previous examples already showed how to set an icon, but you can also set a thumbnail, fanart (full-screen background images) and other artwork. They can be set with the <code>ListItem.setArt</code> method:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;li = xbmcgui.ListItem(label=<span class="stringliteral">&#39;My video&#39;</span>)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;li.setIconImage(<span class="stringliteral">&#39;icon.png&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;li.setArt({<span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;thumbnail.jpg&#39;</span>, <span class="stringliteral">&#39;poster&#39;</span>: <span class="stringliteral">&#39;poster.jpg&#39;</span> <span class="stringliteral">&#39;fanart&#39;</span>: <span class="stringliteral">&#39;fanart.jpg&#39;</span>})</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>In Kodi Isengard and earlier the <code>'icon'</code> type is not available for setArt. You must use <code>ListItem.setIconImage(...)</code></dd></dl>
+<p>If you'd prefer to show the default fanart from your add-on, you can get the path to that image from the <a class="el" href="a00372.html">xbmcaddon.Addon</a> object:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;my_addon = xbmcaddon.Addon(<span class="stringliteral">&#39;plugin.video.myaddon&#39;</span>)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># ...</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;li.setArt({<span class="stringliteral">&#39;fanart&#39;</span>: my_addon.getAddonInfo(<span class="stringliteral">&#39;fanart&#39;</span>)})</div>
+</div><!-- fragment --><h2><a class="anchor" id="Python_General_addon_section5_sub2"></a>
+Info labels</h2>
+<p>Kodi also lets you add useful information about each list item, like the cast, episode number, play count, and duration. The specific fields available depend on whether your list item is video, audio, or a picture. In all cases though, the format is roughly the same. For example, to add info labels to a movie, you might do the following:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;info = {</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;genre&#39;</span>: <span class="stringliteral">&#39;Horror&#39;</span>,</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="stringliteral">&#39;year&#39;</span>: 1979,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;title&#39;</span>: <span class="stringliteral">&#39;Alien&#39;</span>,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;}</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;li.setInfo(<span class="stringliteral">&#39;video&#39;</span>, info)</div>
+</div><!-- fragment --><p>For a full list of the available info labels, consult the documentation for <a class="el" href="a00364.html#gae8ac78b510d6419d3518f1d0c5671550">ListItem.setInfo</a>.</p>
+<h2><a class="anchor" id="Python_General_addon_section5_sub3"></a>
+Stream info</h2>
+<p>In addition to metadata about the file's contents, you can add information about the audio/video streams themselves. For a video, you might do the following:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;video_info = {</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&#39;codec&#39;</span>: <span class="stringliteral">&#39;h264&#39;</span>,</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="stringliteral">&#39;aspect&#39;</span>: 1.78,</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;width&#39;</span>: 1280,</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="stringliteral">&#39;height&#39;</span>: 720,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;li.addStreamInfo(<span class="stringliteral">&#39;video&#39;</span>, video_info)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;li.addStreamInfo(<span class="stringliteral">&#39;audio&#39;</span>, {<span class="stringliteral">&#39;codec&#39;</span>: <span class="stringliteral">&#39;dts&#39;</span>, <span class="stringliteral">&#39;language&#39;</span>: <span class="stringliteral">&#39;en&#39;</span>, <span class="stringliteral">&#39;channels&#39;</span>: 2})</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;li.addStreamInfo(<span class="stringliteral">&#39;subtitle&#39;</span>, {<span class="stringliteral">&#39;language&#39;</span>: <span class="stringliteral">&#39;en&#39;</span>})</div>
+</div><!-- fragment --><p>For complete documentation about this function, see <a class="el" href="a00364.html#ga4ac21e7b69df2ac986952a0a5f0767d0">ListItem.addStreamInfo</a>.</p>
+<hr/>
+<h1><a class="anchor" id="Python_General_addon_section6"></a>
+Adding context menus</h1>
+<p>In addition to the default action for a list item (e.g. playing the video), your add-on can provide additional actions for an item in the context menu. Note that this only applies to list items in your add-on. Currently, you're not able to modify the context menu for movies in the user's library. To add a context menu item, you need to give it a label and a built-in function as a string:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;li.addContextMenuItems([ (<span class="stringliteral">&#39;Refresh&#39;</span>, <span class="stringliteral">&#39;Container.Refresh&#39;</span>),</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;                         (<span class="stringliteral">&#39;Go up&#39;</span>, <span class="stringliteral">&#39;Action(ParentDir)&#39;</span>) ])</div>
+</div><!-- fragment --><p>You can also elect to show <em>only</em> your context menu items: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;li.addContextMenuItems([ (<span class="stringliteral">&#39;Refresh&#39;</span>, <span class="stringliteral">&#39;Container.Refresh&#39;</span>) ], replaceItems=<span class="keyword">True</span>)</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
