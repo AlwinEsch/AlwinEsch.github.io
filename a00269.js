@@ -1,6 +1,14 @@
 var a00269 =
 [
-    [ "AllocateDemuxPacket", "a00269.html#ga4bfc35621cb03e2ef220caa723ad5e2b", null ],
-    [ "FreeDemuxPacket", "a00269.html#ga5a59f0d8812f3f3c2ecceb2d9287a186", null ],
-    [ "GetCodecByName", "a00269.html#gabe059bd032457069e06fd2d3c0747f37", null ]
+    [ "CAddonLib", "a00270.html", "a00270" ],
+    [ "CAddonLib_Codec", "a00271.html", "a00271" ],
+    [ "CAddonLib_General", "a00274.html", "a00274" ],
+    [ "CAddonLib_Network", "a00275.html", "a00275" ],
+    [ "CAddonLib_SoundPlay", "a00276.html", "a00276" ],
+    [ "CAddonLib_VFSDirEntry", "a00278.html", "a00278" ],
+    [ "CAddonLib_VFSFile", "a00279.html", "a00279" ],
+    [ "CAddonLib_VFSProperty", "a00277.html", "a00277" ],
+    [ "CAddonLib_VFSUtils", "a00280.html", "a00280" ],
+    [ "CodecDescriptor", "a00272.html", "a00272" ],
+    [ "settings.xml", "a00273.html", null ]
 ];

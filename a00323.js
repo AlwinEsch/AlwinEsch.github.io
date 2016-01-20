@@ -1,9 +1,11 @@
 var a00323 =
 [
-    [ "doModal", "a00323.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
-    [ "getText", "a00323.html#gafab766445043570e6a82c14851366933", null ],
-    [ "isConfirmed", "a00323.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
-    [ "setDefault", "a00323.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
-    [ "setHeading", "a00323.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
-    [ "setHiddenInput", "a00323.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ]
+    [ "CAddonGUIControlTextBox", "a00323.html#ga06117cea192b1c038b7b9b8d9c2c8dec", null ],
+    [ "GetText", "a00323.html#ga1af3f7fd8b95cc66e7599caca454f8ef", null ],
+    [ "Reset", "a00323.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "Scroll", "a00323.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d", null ],
+    [ "SetAutoScrolling", "a00323.html#gad3e4bbb4388da7a56e8252018e4fbb00", null ],
+    [ "SetText", "a00323.html#ga8008c108280948ebd79830f222068455", null ],
+    [ "SetVisible", "a00323.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "~CAddonGUIControlTextBox", "a00323.html#ga671686d3890667392291118ca36b3e41", null ]
 ];

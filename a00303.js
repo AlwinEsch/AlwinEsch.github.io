@@ -1,27 +1,7 @@
 var a00303 =
 [
-    [ "CAddonGUIControlButton", "a00282.html", "a00282" ],
-    [ "CAddonGUIControlEdit", "a00283.html", "a00283" ],
-    [ "CAddonGUIControlFadeLabel", "a00284.html", "a00284" ],
-    [ "CAddonGUIControlImage", "a00285.html", "a00285" ],
-    [ "CAddonGUIControlLabel", "a00286.html", "a00286" ],
-    [ "CAddonGUIControlProgress", "a00287.html", "a00287" ],
-    [ "CAddonGUIControlRadioButton", "a00288.html", "a00288" ],
-    [ "CAddonGUIControlRendering", "a00289.html", "a00289" ],
-    [ "CAddonGUIControlSettingsSlider", "a00290.html", "a00290" ],
-    [ "CAddonGUIControlSlider", "a00291.html", "a00291" ],
-    [ "CAddonGUIControlSpin", "a00292.html", "a00292" ],
-    [ "CAddonGUIControlTextBox", "a00293.html", "a00293" ],
-    [ "CAddonGUIDialogExtendedProgress", "a00294.html", "a00294" ],
-    [ "CAddonGUIDialogFileBrowser", "a00295.html", "a00295" ],
-    [ "CAddonGUIDialogKeyboard", "a00296.html", "a00296" ],
-    [ "CAddonGUIDialogNumeric", "a00297.html", "a00297" ],
-    [ "CAddonGUIDialogOK", "a00298.html", "a00298" ],
-    [ "CAddonGUIDialogProgress", "a00299.html", "a00299" ],
-    [ "CAddonGUIDialogSelect", "a00300.html", "a00300" ],
-    [ "CAddonGUIDialogTextViewer", "a00301.html", "a00301" ],
-    [ "CAddonGUIDialogYesNo", "a00302.html", "a00302" ],
-    [ "CAddonGUIListItem", "a00307.html", "a00307" ],
-    [ "CAddonGUIWindow", "a00308.html", "a00308" ],
-    [ "CGUILib", "a00304.html", "a00304" ]
+    [ "DNSLookup", "a00303.html#ga39943b1fdb3a928f0c08e54484602a7e", null ],
+    [ "GetIPAddress", "a00303.html#gad56ffaa14c080ecaff1f5e7534551eff", null ],
+    [ "URLEncode", "a00303.html#gab4932f2cf0d39ceca1649ec8dd782acc", null ],
+    [ "WakeOnLan", "a00303.html#ga55c0502c3db4416ce1971a85f869775b", null ]
 ];

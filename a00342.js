@@ -1,13 +1,10 @@
 var a00342 =
 [
-    [ "add", "a00342.html#ga979e740949519ca0e88da2ff9934a4d5", null ],
-    [ "clear", "a00342.html#gac8bb3912a3ce86b15842e79d0b421204", null ],
-    [ "getPlayListId", "a00342.html#ga4d665409e02daa8ea13ce462ca44c914", null ],
-    [ "getposition", "a00342.html#ga265b7f39dcd400e1f4edaf4060af9977", null ],
-    [ "load", "a00342.html#ga2eea1635b7df085d42c973352ef10355", null ],
-    [ "operator[]", "a00342.html#gaba5d6f37d582f0512f61f32109a92d92", null ],
-    [ "remove", "a00342.html#gae363baca6026e43cc1264c5914ff69b9", null ],
-    [ "shuffle", "a00342.html#ga1905fe84eb39f020b32c58baf7a76758", null ],
-    [ "size", "a00342.html#gaf4b57d21919c42d55af03391f91a1c08", null ],
-    [ "unshuffle", "a00342.html#ga2401476232ac1b00321c9bfe8158f9c4", null ]
+    [ "Addon action Id's", "a00400.html", "a00400" ],
+    [ "OnAction", "a00342.html#gad3fc2a106ba0143fa5d11d3df32d9c72", null ],
+    [ "OnClick", "a00342.html#gad741fef5d9a1d2bf07449694e9a9e602", null ],
+    [ "OnFocus", "a00342.html#ga7f69d7353e186b8fe4a1560767721501", null ],
+    [ "OnInit", "a00342.html#ga7d98c001ac8d31e48df88346e28bae16", null ],
+    [ "SetIndependentCallbacks", "a00342.html#ga5daaf4cdd5942017aa0be44ec98a7f95", null ],
+    [ "IMPLEMENT_ADDON_GUI_WINDOW", "a00342.html#ga9c9c299166319c2248b2c62548a69fbb", null ]
 ];

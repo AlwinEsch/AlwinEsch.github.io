@@ -1,4 +1,6 @@
 var a00300 =
 [
-    [ "Show", "a00300.html#ga607e3ded9a30e6246ee21200b0978fd5", null ]
+    [ "Codec", "a00300.html#ga62b7b43b626a9b8beb0f16a8795b9d91", null ],
+    [ "GetCodecByName", "a00300.html#ga542cf7ce73c4f9e04f16bac4583fbb19", null ],
+    [ "Name", "a00300.html#gab29906ba5407bb58b86428cb4b4a1e26", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIDialogOK</title>
+<title>Kodi Development: CAddonLib</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,19 +92,16 @@ $(document).ready(function(){initNavTree('a00298.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIDialogOK<div class="ingroups"><a class="el" href="a00370.html">C++ Development</a> &raquo; <a class="el" href="a00303.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAddonLib<div class="ingroups"><a class="el" href="a00403.html">C++ Development</a> &raquo; <a class="el" href="a00297.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>OK dialog</b> </p>
-<p>The functions listed below permit the call of a dialogue of information, a confirmation of the user by press from OK required.</p>
+<p><b>Addon basic library functions</b> </p>
+<p>Permits the use of the required functions of the add-on to Kodi.</p>
 <p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00191.html">#include &lt;kodi/gui.api2/GUIDialogOK.h&gt;</a> be included to enjoy it.</p>
-<div class="image">
-<img src="help.GUIDialogOK.png" alt="help.GUIDialogOK.png"/>
-</div>
- <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gac63575f1ab0693f4900a6f427db53129"></a>
+<p>It has the header <a class="el" href="a00190.html">#include &lt;kodi/addon.api2/AddonLib.h&gt;</a> be included to enjoy it. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaa0bf67ad4ff0b67b500e4070f873c337"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -112,21 +109,11 @@ $(document).ready(function(){initNavTree('a00298.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void ShowAndGetInput </td>
+          <td class="memname">static bool RegisterMe </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -136,21 +123,34 @@ $(document).ready(function(){initNavTree('a00298.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Use dialog to inform user with text and confirmation with OK with continued string. </p>
+<p>Resolve all callback methods. </p>
+<p>This function link the all functions from library to kodi and without this call are them note usable.</p>
+<dl class="section note"><dt>Note</dt><dd>The required handle becomes only be send from ADDON_Create call.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">heading</td><td>Dialog heading. </td></tr>
-    <tr><td class="paramname">text</td><td>Multi-line text.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Pointer to the add-on </td></tr>
   </table>
   </dd>
 </dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00191.html">kodi/gui.api2/GUIDialogOK.h</a>&gt;</span></div>
+<dl class="section return"><dt>Returns</dt><dd>True when all methods were resolved, false otherwise.</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00190.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
 <div class="line">...</div>
-<div class="line">CAddonGUIDialogOK::ShowAndGetInput(<span class="stringliteral">&quot;Test dialog&quot;</span>, <span class="stringliteral">&quot;Hello World!\nI&#39;m a call from add-on\n :) :D&quot;</span>);</div>
-</div><!-- fragment --> 
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00298.html#gaa0bf67ad4ff0b67b500e4070f873c337">CAddonLib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use the library must be one time the macro IMPLEMENT_KODI_ADDON_LIBRARY somewhere included. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="ga65c79d1d3fcbdf7d9b1304a9abbae042"></a>
+<a class="anchor" id="ga5940787dcdcdb8aa995a07106917489f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -158,33 +158,10 @@ $(document).ready(function(){initNavTree('a00298.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void ShowAndGetInput </td>
+          <td class="memname">static void UnRegisterMe </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -194,19 +171,15 @@ $(document).ready(function(){initNavTree('a00298.html','');});
 </table>
 </div><div class="memdoc">
 
-<p>Use dialog to inform user with text and confirmation with OK with strings separated to the lines. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">heading</td><td>Dialog heading. </td></tr>
-    <tr><td class="paramname">line0</td><td>Line #1 text. </td></tr>
-    <tr><td class="paramname">line1</td><td>Line #2 text. </td></tr>
-    <tr><td class="paramname">line2</td><td>Line #3 text.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00191.html">kodi/gui.api2/GUIDialogOK.h</a>&gt;</span></div>
+<p>Release all callback methods and close handling with them. </p>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00190.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
 <div class="line">...</div>
-<div class="line">CAddonGUIDialogOK::ShowAndGetInput(<span class="stringliteral">&quot;Test dialog&quot;</span>, <span class="stringliteral">&quot;Hello World!&quot;</span>, <span class="stringliteral">&quot;I&#39;m a call from add-on&quot;</span>, <span class="stringliteral">&quot; :) :D&quot;</span>);</div>
+<div class="line">void ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="a00298.html#ga5940787dcdcdb8aa995a07106917489f">CAddonLib::UnRegisterMe</a>();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
 </div><!-- fragment --> 
 </div>
 </div>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['register_20functions',['Register functions',['../a00305.html',1,'']]],
-  ['rendercapture',['RenderCapture',['../a00348.html',1,'']]]
+  ['overlay_20icon_20types',['Overlay icon types',['../a00398.html',1,'']]]
 ];

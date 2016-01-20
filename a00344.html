@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Stat</title>
+<title>Kodi Development: Callback functions from Kodi to add-on</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,26 +92,14 @@ $(document).ready(function(){initNavTree('a00344.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Stat<div class="ingroups"><a class="el" href="a00371.html">Python Development</a> &raquo; <a class="el" href="a00333.html">Library - xbmcvfs</a></div></div>  </div>
+<div class="title">Callback functions from Kodi to add-on<div class="ingroups"><a class="el" href="a00403.html">C++ Development</a> &raquo; <a class="el" href="a00347.html">Library - PlayerLIB</a> &raquo; <a class="el" href="a00343.html">CPlayerLib_Player</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Get file or file system status. </p>
-<p><b><code>xbmcvfs.Stat(path)</code></b></p>
-<p>These class return information about a file. Execute (search) permission is required on all of the directories in path that lead to the file.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>[string] file or folder</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  st = xbmcvfs.Stat(path)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  modified = st.st_mtime()</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga65d49375e5251d4e616a45e3c898d6cc"></a>
+<p>Functions to handle control callbacks from Kodi. </p>
+<p><a class="el" href="a00343.html">Go back to normal functions from CPlayerLib_Player</a> </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga9b673b89fb0c2d810637d97a6144743d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -119,7 +107,7 @@ $(document).ready(function(){initNavTree('a00344.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long atime </td>
+          <td class="memname">virtual void OnPlayBackEnded </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -127,17 +115,14 @@ $(document).ready(function(){initNavTree('a00344.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get time of last access. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_atime </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="gab24c57af16ac6f88edb819c18e2e438b"></a>
+<a class="anchor" id="ga535ea86e9170c85e4dfc8b2292466041"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -145,7 +130,7 @@ $(document).ready(function(){initNavTree('a00344.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long ctime </td>
+          <td class="memname">virtual void OnPlayBackPaused </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -153,17 +138,14 @@ $(document).ready(function(){initNavTree('a00344.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get time of last status change. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_ctime </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga57da69d0b20141a95c0c44a6bb5f3b35"></a>
+<a class="anchor" id="ga78de3c74ca811508e2c83bad612af8a0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -171,7 +153,7 @@ $(document).ready(function(){initNavTree('a00344.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long mtime </td>
+          <td class="memname">virtual void OnPlayBackResumed </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -179,17 +161,14 @@ $(document).ready(function(){initNavTree('a00344.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get time of last modification. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_mtime </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="gab17084ec246f2b497d2f13618c5bd220"></a>
+<a class="anchor" id="ga1aa2520cecdb44e5f37dd2905146efa6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -197,26 +176,33 @@ $(document).ready(function(){initNavTree('a00344.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_dev </td>
+          <td class="memname">virtual void OnPlayBackSeek </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seekOffset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get ID of device containing file. </p>
-<p>The st_dev field describes the device on which this file resides.</p>
-<dl class="section return"><dt>Returns</dt><dd>st_dev </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga9a7a9ad27402f5a931bcbff38e4e03d3"></a>
+<a class="anchor" id="ga36be56af6bfdd7fc943f8d3f1abacfbf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -224,25 +210,23 @@ $(document).ready(function(){initNavTree('a00344.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_gid </td>
+          <td class="memname">virtual void OnPlayBackSeekChapter </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iChapter</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get group ID of owner. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_gid </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga77e336d6274f6fb0e2a3c3546e61e360"></a>
+<a class="anchor" id="ga14e0279d2fb9cd6b4a68f9467e07081a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -250,25 +234,23 @@ $(document).ready(function(){initNavTree('a00344.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_ino </td>
+          <td class="memname">virtual void OnPlayBackSpeedChanged </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iSpeed</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get inode number. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_ino </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga00b3e20028eaee69c44cdc47a922fe31"></a>
+<a class="anchor" id="ga670b9e7947764d4d474b7f8cd21c1611"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -276,7 +258,7 @@ $(document).ready(function(){initNavTree('a00344.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_mode </td>
+          <td class="memname">virtual void OnPlayBackStarted </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -284,17 +266,14 @@ $(document).ready(function(){initNavTree('a00344.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get file protection. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_mode </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="ga34f57426567df63ef5ad1b4679778d18"></a>
+<a class="anchor" id="ga5df8f6dd6cf9fb162d1d4d77da58eb2d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -302,7 +281,7 @@ $(document).ready(function(){initNavTree('a00344.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_nlink </td>
+          <td class="memname">virtual void OnPlayBackStopped </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -310,17 +289,14 @@ $(document).ready(function(){initNavTree('a00344.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get number of hard links. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_nlink </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="gaeec21543efab31f62a21e533b0d3a537"></a>
+<a class="anchor" id="ga817b2d696d11b166143be2c391a972f9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -328,7 +304,7 @@ $(document).ready(function(){initNavTree('a00344.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_size </td>
+          <td class="memname">virtual void OnQueueNextItem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -336,40 +312,86 @@ $(document).ready(function(){initNavTree('a00344.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get total size, in bytes. </p>
-<p>The st_size field gives the size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link (only on Linux and Mac OS X) is the length of the pathname it contains, without a terminating null byte.</p>
-<dl class="section return"><dt>Returns</dt><dd>st_size </dd></dl>
-
 </div>
 </div>
-<a class="anchor" id="gaa29c53999dffe4acc12aed2eb60a6c81"></a>
+<a class="anchor" id="gaa8d87ba3157eed260e7334c1b3d96657"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_uid </td>
+          <td class="memname">void SetIndependentCallbacks </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="a00203.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a>&#160;</td>
+          <td class="paramname"><em>cbhdl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00203.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackStarted</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00203.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackEnded</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00203.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackStopped</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00203.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackPaused</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00203.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackResumed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00203.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBOnQueueNextItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00203.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl, int iSpeed)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackSpeedChanged</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00203.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl, int iTime, int seekOffset)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackSeek</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00203.html#a9648d7b5459c7be333fa695dd4608b5d">PLAYERHANDLE</a> cbhdl, int iChapter)&#160;</td>
+          <td class="paramname"><em>CBOnPlayBackSeekChapter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>To get user ID of owner. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_uid </dd></dl>
+<p>If the class is used independent (with "new CPlayerLib_Player") and not as parent (with "cCLASS_own : CPlayerLib_Player") from own must be the callback from Kodi to add-on overdriven with own functions! </p>
 
 </div>
 </div>

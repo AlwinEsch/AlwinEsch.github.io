@@ -1,8 +1,10 @@
 var a00371 =
 [
-    [ "Library - xbmc", "a00329.html", "a00329" ],
-    [ "Library - xbmcaddon", "a00372.html", "a00372" ],
-    [ "Library - xbmcgui", "a00330.html", "a00330" ],
-    [ "Library - xbmcplugin", "a00334.html", "a00334" ],
-    [ "Library - xbmcvfs", "a00333.html", "a00333" ]
+    [ "Action Id's", "a00372.html", "a00372" ],
+    [ "onAction", "a00371.html#ga46acbc2206f67d5f8e1d44d3ebe4fa68", null ],
+    [ "onClick", "a00371.html#gad031aa7d2b1fcedaac6ad481e2e85757", null ],
+    [ "onControl", "a00371.html#ga3d8a5f47cd756f21b4744eed7ede8634", null ],
+    [ "onDoubleClick", "a00371.html#ga25347e21254d60dc94028d2ed6a0c5ed", null ],
+    [ "onFocus", "a00371.html#ga32655043662a872fb86801fe5e8e1e41", null ],
+    [ "onInit", "a00371.html#ga5a0ef4163216ec8833eb3a524f7fd80e", null ]
 ];

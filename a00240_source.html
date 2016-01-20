@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/Player.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/guilib/GUIFont.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,269 +92,218 @@ $(document).ready(function(){initNavTree('a00240_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Player.h</div>  </div>
+<div class="title">GUIFont.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00240.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<a href="a00240.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef CGUILIB_GUIFONT_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define CGUILIB_GUIFONT_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *      Copyright (C) 2003-2013 Team XBMC</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  any later version.</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00234.html">ListItem.h</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00207.html">PlayList.h</a>&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00204.html">InfoTagVideo.h</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;Exception.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00202.html">InfoTagMusic.h</a>&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00232.html">InfoTagRadioRDS.h</a>&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;AddonCallback.h&quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;Alternative.h&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;swighelper.h&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;cores/IPlayerCallback.h&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00262.html">XBMCAddon</a></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="a00263.html#af3c0375d913f3a660121fd1153f93059">XBMCCOMMONS_STANDARD_EXCEPTION</a>(PlayerException);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="a00240.html#a8474b4a97988b997d2dce6faa81e9dfd">   36</a></span>&#160;<span class="keyword">typedef</span> uint32_t <a class="code" href="a00240.html#a8474b4a97988b997d2dce6faa81e9dfd">character_t</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="a00240.html#a8795f711ef385216d09794142679adf1">   37</a></span>&#160;<span class="keyword">typedef</span> uint32_t <a class="code" href="a00240.html#a8795f711ef385216d09794142679adf1">color_t</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="a00240.html#a08930b7e4fc405d6ff4fc5de977059f9">   38</a></span>&#160;<span class="keyword">typedef</span> std::vector&lt;character_t&gt; <a class="code" href="a00240.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="a00240.html#af951888aa2fcd4ec769b1e4cb73644df">   39</a></span>&#160;<span class="keyword">typedef</span> std::vector&lt;color_t&gt; <a class="code" href="a00240.html#af951888aa2fcd4ec769b1e4cb73644df">vecColors</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span>CGUIFontTTFBase;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="a00263.html#a2d10c982e027434a4ad36b054f84623f">   43</a></span>&#160;    <span class="keyword">typedef</span> Alternative&lt;String, const PlayList* &gt; <a class="code" href="a00263.html#a2d10c982e027434a4ad36b054f84623f">PlayParameter</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// This class is a merge of what was previously in xbmcmodule/player.h</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//  and xbmcmodule/PythonPlayer.h without the python references. The</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//  queuing and handling of asynchronous callbacks is done internal to</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//  this class.</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="a00107.html">   71</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00107.html">Player</a> : <span class="keyword">public</span> AddonCallback, <span class="keyword">public</span> IPlayerCallback</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordtype">int</span> iPlayList;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordtype">void</span> playStream(<span class="keyword">const</span> String&amp; item = emptyString, <span class="keyword">const</span> <a class="code" href="a00129.html">XBMCAddon::xbmcgui::ListItem</a>* listitem = NULL, <span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordtype">void</span> playPlaylist(<span class="keyword">const</span> <a class="code" href="a00108.html">PlayList</a>* playlist = NULL,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                        <span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>, <span class="keywordtype">int</span> startpos=-1);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordtype">void</span> playCurrent(<span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#if !defined SWIG &amp;&amp; !defined DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keyword">static</span> PlayParameter defaultPlayParameter;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="comment">// Construct a Player proxying the given generated binding. The </span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="comment">//  construction of a Player needs to identify whether or not any </span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="comment">//  callbacks will be executed asynchronously or not.</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <a class="code" href="a00107.html">Player</a>(<span class="keywordtype">int</span> playerCore = 0);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00107.html">Player</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#gaaee24c75f696af5fedbc354b5b48e20d">play</a>(<span class="keyword">const</span> PlayParameter&amp; item = Player::defaultPlayParameter,</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;#ifndef DOXYGEN_SHOULD_SKIP_THIS</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <span class="keyword">const</span> <a class="code" href="a00265.html">XBMCAddon::xbmcgui</a>::</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;#endif <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                ListItem* listitem = NULL,</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keywordtype">int</span> startpos = -1);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#ga8c528baf37154d347366083f0f816846">stop</a>();</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#ga7167f5c196fc5e167bfabde1a730e81d">pause</a>();</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#ga1387dec220717864f672de1df7a71faf">playnext</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="a00396.html#gad5207c71b383451e25d9d7a85134ebe0">   51</a></span>&#160;<span class="preprocessor">#define XBFONT_LEFT       0x00000000 </span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="a00396.html#ga1867c471415f6499f7cd56e162d469a4">   52</a></span>&#160;<span class="preprocessor">#define XBFONT_RIGHT      0x00000001 </span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="a00396.html#ga687578b0a798bdeda43f70753d14ab0e">   53</a></span>&#160;<span class="preprocessor">#define XBFONT_CENTER_X   0x00000002 </span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="a00396.html#gab31f42c7e7b24529472d72bce221dadd">   54</a></span>&#160;<span class="preprocessor">#define XBFONT_CENTER_Y   0x00000004 </span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="a00396.html#gaa533383607587f0c0704213463e8747d">   55</a></span>&#160;<span class="preprocessor">#define XBFONT_TRUNCATED  0x00000008 </span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="a00396.html#gaadd26dee845564d68f1a100d62742f98">   56</a></span>&#160;<span class="preprocessor">#define XBFONT_JUSTIFIED  0x00000010 </span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// flags for font style. lower 16 bits are the unicode code</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// points, 16-24 are color bits and 24-32 are style bits</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="a00240.html#afa65b731c8ff872b58fa2bfa19f40d19">   61</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_NORMAL       0</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="a00240.html#a8425d980c6a71d021becb713bb2ca3f4">   62</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_BOLD         1</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="a00240.html#a964b2511a3395b4ed6148086509729e5">   63</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_ITALICS      2</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="a00240.html#a24211745bd783907a2941c06b097694d">   64</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_LIGHT        4</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="a00240.html#aa051f6a35f12ee780736f1fa9ba0cad5">   65</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_UPPERCASE    8</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="a00240.html#a738ac9d4a4b628cc3542e7cb2877accc">   66</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_LOWERCASE    16</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="a00240.html#acb7e051dc06448f74e0e680c3a9ed520">   67</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_CAPITALIZE   32</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="a00240.html#ae36cda5a827a0beb292b811a0005161c">   68</a></span>&#160;<span class="preprocessor">#define FONT_STYLE_MASK         0xFF</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="a00062.html">   70</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00062.html">CScrollInfo</a></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="a00062.html#a1155d01fb5d7e3bb3ea3ed0b925a5de1">CScrollInfo</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> wait = 50, <span class="keywordtype">float</span> pos = 0, <span class="keywordtype">int</span> speed = <a class="code" href="a00062.html#a14d2a4782b3fe7f624094bf6c624c50b">defaultSpeed</a>, <span class="keyword">const</span> std::string &amp;scrollSuffix = <span class="stringliteral">&quot; | &quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="a00062.html#a64be5578c1c726e0d16e64c2554688b5">   75</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00062.html#a64be5578c1c726e0d16e64c2554688b5">SetSpeed</a>(<span class="keywordtype">int</span> speed)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="a00062.html#adcd3672aa6367fe29a611c49e0ffbed2">pixelSpeed</a> = speed * 0.001f;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="a00062.html#a372de693ad40b3f42839c8ec6ac845f4">   79</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00062.html#a372de693ad40b3f42839c8ec6ac845f4">Reset</a>()</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="a00062.html#a3dd2bf8b269e3fa033cdf888d425c0a1">waitTime</a> = <a class="code" href="a00062.html#a5434e54a256e16c48f868cfb33696a89">initialWait</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// pixelPos is where we start the current letter, so is measured</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// to the left of the text rendering&#39;s left edge.  Thus, a negative</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// value will mean the text starts to the right</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="a00062.html#ac39f2f9544959e6347ab0c97cdbe8ee3">pixelPos</a> = -<a class="code" href="a00062.html#a4fa0f8cf55d2664548ffe6ffe87815b5">initialPos</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// privates:</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    m_averageFrameTime = 1000.f / fabs((<span class="keywordtype">float</span>)<a class="code" href="a00062.html#a14d2a4782b3fe7f624094bf6c624c50b">defaultSpeed</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    m_lastFrameTime = 0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="a00062.html#ac5c07b3de3d7b54a3c1f7fd7ff299dc0">m_textWidth</a> = 0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="a00062.html#a120b18c698618870c64c077be6622a2d">m_totalWidth</a> = 0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="a00062.html#ad2407675b2b26b51c47eba10f619d443">m_widthValid</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00062.html#a72d8f551c98130d0942e37c7c7400a91">GetPixelsPerFrame</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="a00062.html#ac39f2f9544959e6347ab0c97cdbe8ee3">   95</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00062.html#ac39f2f9544959e6347ab0c97cdbe8ee3">pixelPos</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="a00062.html#adcd3672aa6367fe29a611c49e0ffbed2">   96</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00062.html#adcd3672aa6367fe29a611c49e0ffbed2">pixelSpeed</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="a00062.html#a3dd2bf8b269e3fa033cdf888d425c0a1">   97</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00062.html#a3dd2bf8b269e3fa033cdf888d425c0a1">waitTime</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="a00062.html#a5434e54a256e16c48f868cfb33696a89">   98</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00062.html#a5434e54a256e16c48f868cfb33696a89">initialWait</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="a00062.html#a4fa0f8cf55d2664548ffe6ffe87815b5">   99</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00062.html#a4fa0f8cf55d2664548ffe6ffe87815b5">initialPos</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="a00062.html#ab211ce571d513824da669aeb6c3af673">  100</a></span>&#160;  <a class="code" href="a00240.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> <a class="code" href="a00062.html#ab211ce571d513824da669aeb6c3af673">suffix</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="a00062.html#ac5c07b3de3d7b54a3c1f7fd7ff299dc0">  101</a></span>&#160;  <span class="keyword">mutable</span> <span class="keywordtype">float</span> <a class="code" href="a00062.html#ac5c07b3de3d7b54a3c1f7fd7ff299dc0">m_textWidth</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="a00062.html#a120b18c698618870c64c077be6622a2d">  102</a></span>&#160;  <span class="keyword">mutable</span> <span class="keywordtype">float</span> <a class="code" href="a00062.html#a120b18c698618870c64c077be6622a2d">m_totalWidth</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="a00062.html#ad2407675b2b26b51c47eba10f619d443">  103</a></span>&#160;  <span class="keyword">mutable</span> <span class="keywordtype">bool</span> <a class="code" href="a00062.html#ad2407675b2b26b51c47eba10f619d443">m_widthValid</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="a00062.html#a14d2a4782b3fe7f624094bf6c624c50b">  105</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="a00062.html#a14d2a4782b3fe7f624094bf6c624c50b">defaultSpeed</a> = 60;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">float</span> m_averageFrameTime;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  uint32_t m_lastFrameTime;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="a00057.html">  115</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00057.html">CGUIFont</a></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="a00057.html#a88f7110e613989f54998ab285da25fcd">CGUIFont</a>(<span class="keyword">const</span> std::string&amp; strFontName, uint32_t style, <a class="code" href="a00240.html#a8795f711ef385216d09794142679adf1">color_t</a> textColor,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;       <a class="code" href="a00240.html#a8795f711ef385216d09794142679adf1">color_t</a> shadowColor, <span class="keywordtype">float</span> lineSpacing, <span class="keywordtype">float</span> origHeight, CGUIFontTTFBase *font);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="a00057.html#aeaa51aa5e4c14312d2a703c6a96698f2">~CGUIFont</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  std::string&amp; <a class="code" href="a00057.html#adb32cf7cb38e0fed26b56c602e06492f">GetFontName</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="a00057.html#a316c7247b879e05d74e1291bdab37cf2">  124</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00057.html#a316c7247b879e05d74e1291bdab37cf2">DrawText</a>( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <a class="code" href="a00240.html#a8795f711ef385216d09794142679adf1">color_t</a> color, <a class="code" href="a00240.html#a8795f711ef385216d09794142679adf1">color_t</a> shadowColor,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                 <span class="keyword">const</span> <a class="code" href="a00240.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> &amp;text, uint32_t alignment, <span class="keywordtype">float</span> maxPixelWidth)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="a00240.html#af951888aa2fcd4ec769b1e4cb73644df">vecColors</a> colors;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    colors.push_back(color);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="a00057.html#a316c7247b879e05d74e1291bdab37cf2">DrawText</a>(x, y, colors, shadowColor, text, alignment, maxPixelWidth);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  };</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00057.html#a316c7247b879e05d74e1291bdab37cf2">DrawText</a>( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keyword">const</span> <a class="code" href="a00240.html#af951888aa2fcd4ec769b1e4cb73644df">vecColors</a> &amp;colors, <a class="code" href="a00240.html#a8795f711ef385216d09794142679adf1">color_t</a> shadowColor,</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                 <span class="keyword">const</span> <a class="code" href="a00240.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> &amp;text, uint32_t alignment, <span class="keywordtype">float</span> maxPixelWidth);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00057.html#a7014647d74c84ee01495690088193d81">DrawScrollingText</a>( <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keyword">const</span> <a class="code" href="a00240.html#af951888aa2fcd4ec769b1e4cb73644df">vecColors</a> &amp;colors, <a class="code" href="a00240.html#a8795f711ef385216d09794142679adf1">color_t</a> shadowColor,</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                 <span class="keyword">const</span> <a class="code" href="a00240.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> &amp;text, uint32_t alignment, <span class="keywordtype">float</span> maxPixelWidth, <span class="keyword">const</span> <a class="code" href="a00062.html">CScrollInfo</a> &amp;scrollInfo);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="a00057.html#ab8e740d040a9b1ff3d84a3ab60aa0e16">UpdateScrollInfo</a>(<span class="keyword">const</span> <a class="code" href="a00240.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> &amp;text, <a class="code" href="a00062.html">CScrollInfo</a> &amp;scrollInfo);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00057.html#aa3b7ca6c67dd055e399255013bf3ec0f">GetTextWidth</a>( <span class="keyword">const</span> <a class="code" href="a00240.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a> &amp;text );</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00057.html#ab53e86f875ad47c509e5a660cc72bcb7">GetCharWidth</a>( <a class="code" href="a00240.html#a8474b4a97988b997d2dce6faa81e9dfd">character_t</a> ch );</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00057.html#abbf1d95451eee706e790eb03e9d6e01e">GetTextHeight</a>(<span class="keywordtype">int</span> numLines) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00057.html#a4d6849b6644d20937f317be0f2d8483b">GetTextBaseLine</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00057.html#a6b53885a61f58e1ad5e90b9e208fa1d0">GetLineHeight</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00057.html#a8118b8523ffc7d10ea3208e6f23b1944">GetScaleFactor</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00057.html#a1149e1e7da0129dfcc98c047dcdf9c79">Begin</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00057.html#afc12d18e19e10b35d361fbb09c7c1d54">End</a>();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="a00057.html#a3919c5244543a5db893675cdae362402">  152</a></span>&#160;  uint32_t <a class="code" href="a00057.html#a3919c5244543a5db893675cdae362402">GetStyle</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="a00057.html#a2563c5297855f5d78d25b72a3e54a5d1">m_style</a>; };</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#gaa5b43aa5da42a2efacddf87ad45daea4">playprevious</a>();</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#ga8cbc3620e75e5a03e2beaba8bde78231">playselected</a>(<span class="keywordtype">int</span> selected);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="comment">//</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment"></span>      <span class="comment">//</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga2d8b5fa98b21f02ce06f7bd7de836d9d">onPlayBackStarted</a>();</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga2d8b5fa98b21f02ce06f7bd7de836d9d">onPlayBackStarted</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00347.html#gab375f26bb820f640d74700cda4ee6646">onPlayBackEnded</a>();</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00347.html#gab375f26bb820f640d74700cda4ee6646">onPlayBackEnded</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga04dbd49c7486f00911995a56a19536d0">onPlayBackStopped</a>();</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga04dbd49c7486f00911995a56a19536d0">onPlayBackStopped</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga7226102b037bfbca79e0c940f5e912e2">onPlayBackPaused</a>();</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga7226102b037bfbca79e0c940f5e912e2">onPlayBackPaused</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga075576edcd1809ff57e3897aa165e529">onPlayBackResumed</a>();</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga075576edcd1809ff57e3897aa165e529">onPlayBackResumed</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga8890f6898fc712522c2d29f57455275d">onQueueNextItem</a>();</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga8890f6898fc712522c2d29f57455275d">onQueueNextItem</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga852e3252c43deaa541e8cae610b9e0ef">onPlayBackSpeedChanged</a>(<span class="keywordtype">int</span> speed);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga852e3252c43deaa541e8cae610b9e0ef">onPlayBackSpeedChanged</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>, <span class="keywordtype">int</span> speed); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00347.html#gaeda52fbaaf9860f7a96e93ba33709fc9">onPlayBackSeek</a>(<span class="keywordtype">int</span> time, <span class="keywordtype">int</span> seekOffset);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00347.html#gaeda52fbaaf9860f7a96e93ba33709fc9">onPlayBackSeek</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>, <span class="keywordtype">int</span> time, <span class="keywordtype">int</span> seekOffset); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga75a62da626870983e308a62e8c359218">onPlayBackSeekChapter</a>(<span class="keywordtype">int</span> chapter);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00347.html#ga75a62da626870983e308a62e8c359218">onPlayBackSeekChapter</a>(<span class="keywordtype">void</span>* <span class="keyword">self</span>, <span class="keywordtype">int</span> chapter); <span class="comment">// Python function style as doxygen part (not used to build!)</span></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00346.html#ga8438e3403946accc1986a05b89ee7b03">isPlaying</a>();</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00346.html#ga480d8fce2c836db07fd00754481295a5">isPlayingAudio</a>();</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00346.html#ga8f1c0037ad362eaadde1ec827db6f70c">isPlayingVideo</a>();</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00346.html#ga4adfa5f4e52074c9c1e2bdfb139a857b">isPlayingRDS</a>();</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      String <a class="code" href="a00346.html#gae6a8ac0668d2ae6fcbde97b61de5b4ee">getPlayingFile</a>();</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      <span class="keywordtype">double</span> <a class="code" href="a00346.html#ga4437edd7fd2832790c13ba3179bcc64d">getTime</a>();</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#ga88dd78acfd022c25ea0bbb95b88207ca">seekTime</a>(<span class="keywordtype">double</span> <a class="code" href="a00346.html#ga88dd78acfd022c25ea0bbb95b88207ca">seekTime</a>);</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#ga7181caa6357d359e1fa528585af327c4">setSubtitles</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* subtitleFile);</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#gadcaef0ad224ff20f4dc01028a5995157">showSubtitles</a>(<span class="keywordtype">bool</span> bVisible);</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;      String <a class="code" href="a00346.html#ga81495e1edeffea020f9f5b01c521ad24">getSubtitles</a>();</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#ga7b199d0d15f55de2ab6c9a205dff01f1">disableSubtitles</a>();</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00346.html#ga7327895e6b06bc5be33fbbd66c1da98f">getAvailableSubtitleStreams</a>();</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#ga1ee8a463c7974e8bd88a0906b84909da">setSubtitleStream</a>(<span class="keywordtype">int</span> iStream);</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;      <a class="code" href="a00104.html">InfoTagVideo</a>* <a class="code" href="a00346.html#ga7287b2615a3d76947a1dcd085bfaa337">getVideoInfoTag</a>();</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;      <a class="code" href="a00102.html">InfoTagMusic</a>* <a class="code" href="a00346.html#gae11388c95e616274e5ee0f10b61bf1d8">getMusicInfoTag</a>();</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;      <a class="code" href="a00103.html">InfoTagRadioRDS</a>* <a class="code" href="a00346.html#gabaefcfb5922aabc776d850b1f0869bf0">getRadioRDSInfoTag</a>() <span class="keywordflow">throw</span> (PlayerException);</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;      <span class="keywordtype">double</span> <a class="code" href="a00346.html#ga101be6ee4c35b85828fc45c67cfaded5">getTotalTime</a>();</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00346.html#ga8e79a9287b85f65d632441eda0aa00cd">getAvailableAudioStreams</a>();</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00346.html#ga1d0ef4583b20c163169af1e089e034dc">setAudioStream</a>(<span class="keywordtype">int</span> iStream);</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;<span class="preprocessor">#if !defined SWIG &amp;&amp; !defined DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackStarted();</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackEnded();</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackStopped();</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackPaused();</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackResumed();</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnQueueNextItem();</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackSpeedChanged(<span class="keywordtype">int</span> iSpeed);</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackSeek(<span class="keywordtype">int</span> iTime, <span class="keywordtype">int</span> seekOffset);</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackSeekChapter(<span class="keywordtype">int</span> iChapter);</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    };</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;  }</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;}</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
-<div class="ttc" id="a00347_html_ga075576edcd1809ff57e3897aa165e529"><div class="ttname"><a href="a00347.html#ga075576edcd1809ff57e3897aa165e529">XBMCAddon::xbmc::Player::onPlayBackResumed</a></div><div class="ttdeci">void onPlayBackResumed(void *self)</div><div class="ttdoc">onPlayBackResumed method. </div></div>
-<div class="ttc" id="a00346_html_ga7181caa6357d359e1fa528585af327c4"><div class="ttname"><a href="a00346.html#ga7181caa6357d359e1fa528585af327c4">XBMCAddon::xbmc::Player::setSubtitles</a></div><div class="ttdeci">void setSubtitles(const char *subtitleFile)</div><div class="ttdoc">Set subtitle file and enable subtitles. </div></div>
-<div class="ttc" id="a00347_html_ga7226102b037bfbca79e0c940f5e912e2"><div class="ttname"><a href="a00347.html#ga7226102b037bfbca79e0c940f5e912e2">XBMCAddon::xbmc::Player::onPlayBackPaused</a></div><div class="ttdeci">void onPlayBackPaused(void *self)</div><div class="ttdoc">onPlayBackPaused method. </div></div>
-<div class="ttc" id="a00346_html_gabaefcfb5922aabc776d850b1f0869bf0"><div class="ttname"><a href="a00346.html#gabaefcfb5922aabc776d850b1f0869bf0">XBMCAddon::xbmc::Player::getRadioRDSInfoTag</a></div><div class="ttdeci">InfoTagRadioRDS * getRadioRDSInfoTag()</div><div class="ttdoc">To get Radio RDS info tag. </div></div>
-<div class="ttc" id="a00346_html_ga7b199d0d15f55de2ab6c9a205dff01f1"><div class="ttname"><a href="a00346.html#ga7b199d0d15f55de2ab6c9a205dff01f1">XBMCAddon::xbmc::Player::disableSubtitles</a></div><div class="ttdeci">void disableSubtitles()</div><div class="ttdoc">Disable subtitles. </div></div>
-<div class="ttc" id="a00346_html_ga88dd78acfd022c25ea0bbb95b88207ca"><div class="ttname"><a href="a00346.html#ga88dd78acfd022c25ea0bbb95b88207ca">XBMCAddon::xbmc::Player::seekTime</a></div><div class="ttdeci">void seekTime(double seekTime)</div><div class="ttdoc">Seek time. </div></div>
-<div class="ttc" id="a00346_html_ga8438e3403946accc1986a05b89ee7b03"><div class="ttname"><a href="a00346.html#ga8438e3403946accc1986a05b89ee7b03">XBMCAddon::xbmc::Player::isPlaying</a></div><div class="ttdeci">bool isPlaying()</div><div class="ttdoc">Check Kodi is playing something. </div></div>
-<div class="ttc" id="a00103_html"><div class="ttname"><a href="a00103.html">XBMCAddon::xbmc::InfoTagRadioRDS</a></div><div class="ttdef"><b>Definition:</b> InfoTagRadioRDS.h:55</div></div>
-<div class="ttc" id="a00346_html_ga7327895e6b06bc5be33fbbd66c1da98f"><div class="ttname"><a href="a00346.html#ga7327895e6b06bc5be33fbbd66c1da98f">XBMCAddon::xbmc::Player::getAvailableSubtitleStreams</a></div><div class="ttdeci">std::vector&lt; String &gt; getAvailableSubtitleStreams()</div><div class="ttdoc">Get Subtitle stream names. </div></div>
-<div class="ttc" id="a00346_html_ga4adfa5f4e52074c9c1e2bdfb139a857b"><div class="ttname"><a href="a00346.html#ga4adfa5f4e52074c9c1e2bdfb139a857b">XBMCAddon::xbmc::Player::isPlayingRDS</a></div><div class="ttdeci">bool isPlayingRDS()</div><div class="ttdoc">Check for playing radio data system (RDS). </div></div>
-<div class="ttc" id="a00262_html"><div class="ttname"><a href="a00262.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00347_html_gab375f26bb820f640d74700cda4ee6646"><div class="ttname"><a href="a00347.html#gab375f26bb820f640d74700cda4ee6646">XBMCAddon::xbmc::Player::onPlayBackEnded</a></div><div class="ttdeci">void onPlayBackEnded(void *self)</div><div class="ttdoc">onPlayBackEnded method. </div></div>
-<div class="ttc" id="a00347_html_ga852e3252c43deaa541e8cae610b9e0ef"><div class="ttname"><a href="a00347.html#ga852e3252c43deaa541e8cae610b9e0ef">XBMCAddon::xbmc::Player::onPlayBackSpeedChanged</a></div><div class="ttdeci">void onPlayBackSpeedChanged(void *self, int speed)</div><div class="ttdoc">onPlayBackSpeedChanged method. </div></div>
-<div class="ttc" id="a00346_html_gae11388c95e616274e5ee0f10b61bf1d8"><div class="ttname"><a href="a00346.html#gae11388c95e616274e5ee0f10b61bf1d8">XBMCAddon::xbmc::Player::getMusicInfoTag</a></div><div class="ttdeci">InfoTagMusic * getMusicInfoTag()</div><div class="ttdoc">To get music info tag. </div></div>
-<div class="ttc" id="a00346_html_gaa5b43aa5da42a2efacddf87ad45daea4"><div class="ttname"><a href="a00346.html#gaa5b43aa5da42a2efacddf87ad45daea4">XBMCAddon::xbmc::Player::playprevious</a></div><div class="ttdeci">void playprevious()</div><div class="ttdoc">Play previous item in playlist. </div></div>
-<div class="ttc" id="a00347_html_ga75a62da626870983e308a62e8c359218"><div class="ttname"><a href="a00347.html#ga75a62da626870983e308a62e8c359218">XBMCAddon::xbmc::Player::onPlayBackSeekChapter</a></div><div class="ttdeci">void onPlayBackSeekChapter(void *self, int chapter)</div><div class="ttdoc">onPlayBackSeekChapter method. </div></div>
-<div class="ttc" id="a00347_html_gaeda52fbaaf9860f7a96e93ba33709fc9"><div class="ttname"><a href="a00347.html#gaeda52fbaaf9860f7a96e93ba33709fc9">XBMCAddon::xbmc::Player::onPlayBackSeek</a></div><div class="ttdeci">void onPlayBackSeek(void *self, int time, int seekOffset)</div><div class="ttdoc">onPlayBackSeek method. </div></div>
-<div class="ttc" id="a00346_html_ga1387dec220717864f672de1df7a71faf"><div class="ttname"><a href="a00346.html#ga1387dec220717864f672de1df7a71faf">XBMCAddon::xbmc::Player::playnext</a></div><div class="ttdeci">void playnext()</div><div class="ttdoc">Play next item in playlist. </div></div>
-<div class="ttc" id="a00346_html_ga4437edd7fd2832790c13ba3179bcc64d"><div class="ttname"><a href="a00346.html#ga4437edd7fd2832790c13ba3179bcc64d">XBMCAddon::xbmc::Player::getTime</a></div><div class="ttdeci">double getTime()</div><div class="ttdoc">Get playing time. </div></div>
-<div class="ttc" id="a00346_html_ga1ee8a463c7974e8bd88a0906b84909da"><div class="ttname"><a href="a00346.html#ga1ee8a463c7974e8bd88a0906b84909da">XBMCAddon::xbmc::Player::setSubtitleStream</a></div><div class="ttdeci">void setSubtitleStream(int iStream)</div><div class="ttdoc">Set Subtitle Stream. </div></div>
-<div class="ttc" id="a00346_html_ga8e79a9287b85f65d632441eda0aa00cd"><div class="ttname"><a href="a00346.html#ga8e79a9287b85f65d632441eda0aa00cd">XBMCAddon::xbmc::Player::getAvailableAudioStreams</a></div><div class="ttdeci">std::vector&lt; String &gt; getAvailableAudioStreams()</div><div class="ttdoc">Get Audio stream names. </div></div>
-<div class="ttc" id="a00346_html_gae6a8ac0668d2ae6fcbde97b61de5b4ee"><div class="ttname"><a href="a00346.html#gae6a8ac0668d2ae6fcbde97b61de5b4ee">XBMCAddon::xbmc::Player::getPlayingFile</a></div><div class="ttdeci">String getPlayingFile()</div><div class="ttdoc">Returns the current playing file as a string. </div></div>
-<div class="ttc" id="a00346_html_ga1d0ef4583b20c163169af1e089e034dc"><div class="ttname"><a href="a00346.html#ga1d0ef4583b20c163169af1e089e034dc">XBMCAddon::xbmc::Player::setAudioStream</a></div><div class="ttdeci">void setAudioStream(int iStream)</div><div class="ttdoc">Set Audio Stream. </div></div>
-<div class="ttc" id="a00346_html_ga7287b2615a3d76947a1dcd085bfaa337"><div class="ttname"><a href="a00346.html#ga7287b2615a3d76947a1dcd085bfaa337">XBMCAddon::xbmc::Player::getVideoInfoTag</a></div><div class="ttdeci">InfoTagVideo * getVideoInfoTag()</div><div class="ttdoc">To get video info tag. </div></div>
-<div class="ttc" id="a00346_html_ga8cbc3620e75e5a03e2beaba8bde78231"><div class="ttname"><a href="a00346.html#ga8cbc3620e75e5a03e2beaba8bde78231">XBMCAddon::xbmc::Player::playselected</a></div><div class="ttdeci">void playselected(int selected)</div><div class="ttdoc">Play a certain item from the current playlist. </div></div>
-<div class="ttc" id="a00129_html"><div class="ttname"><a href="a00129.html">XBMCAddon::xbmcgui::ListItem</a></div><div class="ttdef"><b>Definition:</b> ListItem.h:71</div></div>
-<div class="ttc" id="a00234_html"><div class="ttname"><a href="a00234.html">ListItem.h</a></div></div>
-<div class="ttc" id="a00232_html"><div class="ttname"><a href="a00232.html">InfoTagRadioRDS.h</a></div></div>
-<div class="ttc" id="a00346_html_ga8f1c0037ad362eaadde1ec827db6f70c"><div class="ttname"><a href="a00346.html#ga8f1c0037ad362eaadde1ec827db6f70c">XBMCAddon::xbmc::Player::isPlayingVideo</a></div><div class="ttdeci">bool isPlayingVideo()</div><div class="ttdoc">Check for playing video. </div></div>
-<div class="ttc" id="a00346_html_gaaee24c75f696af5fedbc354b5b48e20d"><div class="ttname"><a href="a00346.html#gaaee24c75f696af5fedbc354b5b48e20d">XBMCAddon::xbmc::Player::play</a></div><div class="ttdeci">void play(const PlayParameter &amp;item=Player::defaultPlayParameter, ListItem *listitem=NULL, bool windowed=false, int startpos=-1)</div><div class="ttdoc">Play a item. </div></div>
-<div class="ttc" id="a00346_html_ga101be6ee4c35b85828fc45c67cfaded5"><div class="ttname"><a href="a00346.html#ga101be6ee4c35b85828fc45c67cfaded5">XBMCAddon::xbmc::Player::getTotalTime</a></div><div class="ttdeci">double getTotalTime()</div><div class="ttdoc">To get total playing time. </div></div>
-<div class="ttc" id="a00263_html_a2d10c982e027434a4ad36b054f84623f"><div class="ttname"><a href="a00263.html#a2d10c982e027434a4ad36b054f84623f">XBMCAddon::xbmc::PlayParameter</a></div><div class="ttdeci">Alternative&lt; String, const PlayList * &gt; PlayParameter</div><div class="ttdef"><b>Definition:</b> Player.h:43</div></div>
-<div class="ttc" id="a00347_html_ga04dbd49c7486f00911995a56a19536d0"><div class="ttname"><a href="a00347.html#ga04dbd49c7486f00911995a56a19536d0">XBMCAddon::xbmc::Player::onPlayBackStopped</a></div><div class="ttdeci">void onPlayBackStopped(void *self)</div><div class="ttdoc">onPlayBackStopped method. </div></div>
-<div class="ttc" id="a00347_html_ga8890f6898fc712522c2d29f57455275d"><div class="ttname"><a href="a00347.html#ga8890f6898fc712522c2d29f57455275d">XBMCAddon::xbmc::Player::onQueueNextItem</a></div><div class="ttdeci">void onQueueNextItem(void *self)</div><div class="ttdoc">onQueueNextItem method. </div></div>
-<div class="ttc" id="a00108_html"><div class="ttname"><a href="a00108.html">XBMCAddon::xbmc::PlayList</a></div><div class="ttdef"><b>Definition:</b> PlayList.h:62</div></div>
-<div class="ttc" id="a00346_html_ga7167f5c196fc5e167bfabde1a730e81d"><div class="ttname"><a href="a00346.html#ga7167f5c196fc5e167bfabde1a730e81d">XBMCAddon::xbmc::Player::pause</a></div><div class="ttdeci">void pause()</div><div class="ttdoc">Pause or resume playing if already paused. </div></div>
-<div class="ttc" id="a00346_html_ga480d8fce2c836db07fd00754481295a5"><div class="ttname"><a href="a00346.html#ga480d8fce2c836db07fd00754481295a5">XBMCAddon::xbmc::Player::isPlayingAudio</a></div><div class="ttdeci">bool isPlayingAudio()</div><div class="ttdoc">Check for playing audio. </div></div>
-<div class="ttc" id="a00263_html_af3c0375d913f3a660121fd1153f93059"><div class="ttname"><a href="a00263.html#af3c0375d913f3a660121fd1153f93059">XBMCAddon::xbmc::XBMCCOMMONS_STANDARD_EXCEPTION</a></div><div class="ttdeci">XBMCCOMMONS_STANDARD_EXCEPTION(KeyboardException)</div></div>
-<div class="ttc" id="a00265_html"><div class="ttname"><a href="a00265.html">XBMCAddon::xbmcgui</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:43</div></div>
-<div class="ttc" id="a00346_html_gadcaef0ad224ff20f4dc01028a5995157"><div class="ttname"><a href="a00346.html#gadcaef0ad224ff20f4dc01028a5995157">XBMCAddon::xbmc::Player::showSubtitles</a></div><div class="ttdeci">void showSubtitles(bool bVisible)</div><div class="ttdoc">Enable / disable subtitles. </div></div>
-<div class="ttc" id="a00347_html_ga2d8b5fa98b21f02ce06f7bd7de836d9d"><div class="ttname"><a href="a00347.html#ga2d8b5fa98b21f02ce06f7bd7de836d9d">XBMCAddon::xbmc::Player::onPlayBackStarted</a></div><div class="ttdeci">void onPlayBackStarted(void *self)</div><div class="ttdoc">onPlayBackStarted method. </div></div>
-<div class="ttc" id="a00346_html_ga81495e1edeffea020f9f5b01c521ad24"><div class="ttname"><a href="a00346.html#ga81495e1edeffea020f9f5b01c521ad24">XBMCAddon::xbmc::Player::getSubtitles</a></div><div class="ttdeci">String getSubtitles()</div><div class="ttdoc">Get subtitle stream name. </div></div>
-<div class="ttc" id="a00204_html"><div class="ttname"><a href="a00204.html">InfoTagVideo.h</a></div></div>
-<div class="ttc" id="a00104_html"><div class="ttname"><a href="a00104.html">XBMCAddon::xbmc::InfoTagVideo</a></div><div class="ttdef"><b>Definition:</b> InfoTagVideo.h:54</div></div>
-<div class="ttc" id="a00202_html"><div class="ttname"><a href="a00202.html">InfoTagMusic.h</a></div></div>
-<div class="ttc" id="a00102_html"><div class="ttname"><a href="a00102.html">XBMCAddon::xbmc::InfoTagMusic</a></div><div class="ttdef"><b>Definition:</b> InfoTagMusic.h:53</div></div>
-<div class="ttc" id="a00346_html_ga8c528baf37154d347366083f0f816846"><div class="ttname"><a href="a00346.html#ga8c528baf37154d347366083f0f816846">XBMCAddon::xbmc::Player::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stop playing. </div></div>
-<div class="ttc" id="a00207_html"><div class="ttname"><a href="a00207.html">PlayList.h</a></div></div>
-<div class="ttc" id="a00107_html"><div class="ttname"><a href="a00107.html">XBMCAddon::xbmc::Player</a></div><div class="ttdef"><b>Definition:</b> Player.h:71</div></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">wchar_t</span> <a class="code" href="a00057.html#a04f14781ea14541fa06e63ad9913daa3">RemapGlyph</a>(<span class="keywordtype">wchar_t</span> letter);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="a00057.html#ae0eb03a422fa71fcfd01a58fac04e7f3">  156</a></span>&#160;  CGUIFontTTFBase* <a class="code" href="a00057.html#ae0eb03a422fa71fcfd01a58fac04e7f3">GetFont</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="a00057.html#acfc487861132ce3652a1cee9a4e38bb3">m_font</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00057.html#a089e4ad0190a4be414dc50698aa31bd4">SetFont</a>(CGUIFontTTFBase* font);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="a00057.html#a102cdc9634a84c692b2c92549feced99">  164</a></span>&#160;  std::string <a class="code" href="a00057.html#a102cdc9634a84c692b2c92549feced99">m_strFontName</a>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="a00057.html#a2563c5297855f5d78d25b72a3e54a5d1">  165</a></span>&#160;  uint32_t <a class="code" href="a00057.html#a2563c5297855f5d78d25b72a3e54a5d1">m_style</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="a00057.html#a2036a47825cfd560167de29fea7e5c5e">  166</a></span>&#160;  <a class="code" href="a00240.html#a8795f711ef385216d09794142679adf1">color_t</a> <a class="code" href="a00057.html#a2036a47825cfd560167de29fea7e5c5e">m_shadowColor</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="a00057.html#a88423fecb7ec0fb50b7357a9331c0889">  167</a></span>&#160;  <a class="code" href="a00240.html#a8795f711ef385216d09794142679adf1">color_t</a> <a class="code" href="a00057.html#a88423fecb7ec0fb50b7357a9331c0889">m_textColor</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="a00057.html#ad47bc51dc17824af0b87bc6dc923ff77">  168</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00057.html#ad47bc51dc17824af0b87bc6dc923ff77">m_lineSpacing</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="a00057.html#a39f32255414465c481b2c759ab6c698a">  169</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="a00057.html#a39f32255414465c481b2c759ab6c698a">m_origHeight</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="a00057.html#acfc487861132ce3652a1cee9a4e38bb3">  170</a></span>&#160;  CGUIFontTTFBase *<a class="code" href="a00057.html#acfc487861132ce3652a1cee9a4e38bb3">m_font</a>; <span class="comment">// the font object has the size information</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordtype">bool</span> ClippedRegionIsEmpty(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> width, uint32_t alignment) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;};</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a00240_html_a8795f711ef385216d09794142679adf1"><div class="ttname"><a href="a00240.html#a8795f711ef385216d09794142679adf1">color_t</a></div><div class="ttdeci">uint32_t color_t</div><div class="ttdef"><b>Definition:</b> GUIFont.h:37</div></div>
+<div class="ttc" id="a00057_html_a3919c5244543a5db893675cdae362402"><div class="ttname"><a href="a00057.html#a3919c5244543a5db893675cdae362402">CGUIFont::GetStyle</a></div><div class="ttdeci">uint32_t GetStyle() const </div><div class="ttdef"><b>Definition:</b> GUIFont.h:152</div></div>
+<div class="ttc" id="a00057_html_a089e4ad0190a4be414dc50698aa31bd4"><div class="ttname"><a href="a00057.html#a089e4ad0190a4be414dc50698aa31bd4">CGUIFont::SetFont</a></div><div class="ttdeci">void SetFont(CGUIFontTTFBase *font)</div></div>
+<div class="ttc" id="a00057_html_ab53e86f875ad47c509e5a660cc72bcb7"><div class="ttname"><a href="a00057.html#ab53e86f875ad47c509e5a660cc72bcb7">CGUIFont::GetCharWidth</a></div><div class="ttdeci">float GetCharWidth(character_t ch)</div></div>
+<div class="ttc" id="a00057_html_a102cdc9634a84c692b2c92549feced99"><div class="ttname"><a href="a00057.html#a102cdc9634a84c692b2c92549feced99">CGUIFont::m_strFontName</a></div><div class="ttdeci">std::string m_strFontName</div><div class="ttdef"><b>Definition:</b> GUIFont.h:164</div></div>
+<div class="ttc" id="a00057_html_a6b53885a61f58e1ad5e90b9e208fa1d0"><div class="ttname"><a href="a00057.html#a6b53885a61f58e1ad5e90b9e208fa1d0">CGUIFont::GetLineHeight</a></div><div class="ttdeci">float GetLineHeight() const </div></div>
+<div class="ttc" id="a00057_html_a8118b8523ffc7d10ea3208e6f23b1944"><div class="ttname"><a href="a00057.html#a8118b8523ffc7d10ea3208e6f23b1944">CGUIFont::GetScaleFactor</a></div><div class="ttdeci">float GetScaleFactor() const </div><div class="ttdoc">get font scale factor (rendered height / original height) </div></div>
+<div class="ttc" id="a00062_html"><div class="ttname"><a href="a00062.html">CScrollInfo</a></div><div class="ttdef"><b>Definition:</b> GUIFont.h:70</div></div>
+<div class="ttc" id="a00062_html_a64be5578c1c726e0d16e64c2554688b5"><div class="ttname"><a href="a00062.html#a64be5578c1c726e0d16e64c2554688b5">CScrollInfo::SetSpeed</a></div><div class="ttdeci">void SetSpeed(int speed)</div><div class="ttdef"><b>Definition:</b> GUIFont.h:75</div></div>
+<div class="ttc" id="a00057_html_a88f7110e613989f54998ab285da25fcd"><div class="ttname"><a href="a00057.html#a88f7110e613989f54998ab285da25fcd">CGUIFont::CGUIFont</a></div><div class="ttdeci">CGUIFont(const std::string &amp;strFontName, uint32_t style, color_t textColor, color_t shadowColor, float lineSpacing, float origHeight, CGUIFontTTFBase *font)</div></div>
+<div class="ttc" id="a00057_html_ad47bc51dc17824af0b87bc6dc923ff77"><div class="ttname"><a href="a00057.html#ad47bc51dc17824af0b87bc6dc923ff77">CGUIFont::m_lineSpacing</a></div><div class="ttdeci">float m_lineSpacing</div><div class="ttdef"><b>Definition:</b> GUIFont.h:168</div></div>
+<div class="ttc" id="a00057_html_a316c7247b879e05d74e1291bdab37cf2"><div class="ttname"><a href="a00057.html#a316c7247b879e05d74e1291bdab37cf2">CGUIFont::DrawText</a></div><div class="ttdeci">void DrawText(float x, float y, color_t color, color_t shadowColor, const vecText &amp;text, uint32_t alignment, float maxPixelWidth)</div><div class="ttdef"><b>Definition:</b> GUIFont.h:124</div></div>
+<div class="ttc" id="a00240_html_af951888aa2fcd4ec769b1e4cb73644df"><div class="ttname"><a href="a00240.html#af951888aa2fcd4ec769b1e4cb73644df">vecColors</a></div><div class="ttdeci">std::vector&lt; color_t &gt; vecColors</div><div class="ttdef"><b>Definition:</b> GUIFont.h:39</div></div>
+<div class="ttc" id="a00057_html_acfc487861132ce3652a1cee9a4e38bb3"><div class="ttname"><a href="a00057.html#acfc487861132ce3652a1cee9a4e38bb3">CGUIFont::m_font</a></div><div class="ttdeci">CGUIFontTTFBase * m_font</div><div class="ttdef"><b>Definition:</b> GUIFont.h:170</div></div>
+<div class="ttc" id="a00240_html_a8474b4a97988b997d2dce6faa81e9dfd"><div class="ttname"><a href="a00240.html#a8474b4a97988b997d2dce6faa81e9dfd">character_t</a></div><div class="ttdeci">uint32_t character_t</div><div class="ttdef"><b>Definition:</b> GUIFont.h:36</div></div>
+<div class="ttc" id="a00240_html_a08930b7e4fc405d6ff4fc5de977059f9"><div class="ttname"><a href="a00240.html#a08930b7e4fc405d6ff4fc5de977059f9">vecText</a></div><div class="ttdeci">std::vector&lt; character_t &gt; vecText</div><div class="ttdef"><b>Definition:</b> GUIFont.h:38</div></div>
+<div class="ttc" id="a00062_html_a120b18c698618870c64c077be6622a2d"><div class="ttname"><a href="a00062.html#a120b18c698618870c64c077be6622a2d">CScrollInfo::m_totalWidth</a></div><div class="ttdeci">float m_totalWidth</div><div class="ttdef"><b>Definition:</b> GUIFont.h:102</div></div>
+<div class="ttc" id="a00057_html_a2036a47825cfd560167de29fea7e5c5e"><div class="ttname"><a href="a00057.html#a2036a47825cfd560167de29fea7e5c5e">CGUIFont::m_shadowColor</a></div><div class="ttdeci">color_t m_shadowColor</div><div class="ttdef"><b>Definition:</b> GUIFont.h:166</div></div>
+<div class="ttc" id="a00062_html_a72d8f551c98130d0942e37c7c7400a91"><div class="ttname"><a href="a00062.html#a72d8f551c98130d0942e37c7c7400a91">CScrollInfo::GetPixelsPerFrame</a></div><div class="ttdeci">float GetPixelsPerFrame()</div></div>
+<div class="ttc" id="a00062_html_a5434e54a256e16c48f868cfb33696a89"><div class="ttname"><a href="a00062.html#a5434e54a256e16c48f868cfb33696a89">CScrollInfo::initialWait</a></div><div class="ttdeci">unsigned int initialWait</div><div class="ttdef"><b>Definition:</b> GUIFont.h:98</div></div>
+<div class="ttc" id="a00062_html_ad2407675b2b26b51c47eba10f619d443"><div class="ttname"><a href="a00062.html#ad2407675b2b26b51c47eba10f619d443">CScrollInfo::m_widthValid</a></div><div class="ttdeci">bool m_widthValid</div><div class="ttdef"><b>Definition:</b> GUIFont.h:103</div></div>
+<div class="ttc" id="a00057_html_a88423fecb7ec0fb50b7357a9331c0889"><div class="ttname"><a href="a00057.html#a88423fecb7ec0fb50b7357a9331c0889">CGUIFont::m_textColor</a></div><div class="ttdeci">color_t m_textColor</div><div class="ttdef"><b>Definition:</b> GUIFont.h:167</div></div>
+<div class="ttc" id="a00057_html_a04f14781ea14541fa06e63ad9913daa3"><div class="ttname"><a href="a00057.html#a04f14781ea14541fa06e63ad9913daa3">CGUIFont::RemapGlyph</a></div><div class="ttdeci">static wchar_t RemapGlyph(wchar_t letter)</div></div>
+<div class="ttc" id="a00062_html_a14d2a4782b3fe7f624094bf6c624c50b"><div class="ttname"><a href="a00062.html#a14d2a4782b3fe7f624094bf6c624c50b">CScrollInfo::defaultSpeed</a></div><div class="ttdeci">static const int defaultSpeed</div><div class="ttdef"><b>Definition:</b> GUIFont.h:105</div></div>
+<div class="ttc" id="a00062_html_a3dd2bf8b269e3fa033cdf888d425c0a1"><div class="ttname"><a href="a00062.html#a3dd2bf8b269e3fa033cdf888d425c0a1">CScrollInfo::waitTime</a></div><div class="ttdeci">unsigned int waitTime</div><div class="ttdef"><b>Definition:</b> GUIFont.h:97</div></div>
+<div class="ttc" id="a00062_html_a4fa0f8cf55d2664548ffe6ffe87815b5"><div class="ttname"><a href="a00062.html#a4fa0f8cf55d2664548ffe6ffe87815b5">CScrollInfo::initialPos</a></div><div class="ttdeci">float initialPos</div><div class="ttdef"><b>Definition:</b> GUIFont.h:99</div></div>
+<div class="ttc" id="a00057_html_a39f32255414465c481b2c759ab6c698a"><div class="ttname"><a href="a00057.html#a39f32255414465c481b2c759ab6c698a">CGUIFont::m_origHeight</a></div><div class="ttdeci">float m_origHeight</div><div class="ttdef"><b>Definition:</b> GUIFont.h:169</div></div>
+<div class="ttc" id="a00062_html_adcd3672aa6367fe29a611c49e0ffbed2"><div class="ttname"><a href="a00062.html#adcd3672aa6367fe29a611c49e0ffbed2">CScrollInfo::pixelSpeed</a></div><div class="ttdeci">float pixelSpeed</div><div class="ttdef"><b>Definition:</b> GUIFont.h:96</div></div>
+<div class="ttc" id="a00062_html_ac39f2f9544959e6347ab0c97cdbe8ee3"><div class="ttname"><a href="a00062.html#ac39f2f9544959e6347ab0c97cdbe8ee3">CScrollInfo::pixelPos</a></div><div class="ttdeci">float pixelPos</div><div class="ttdef"><b>Definition:</b> GUIFont.h:95</div></div>
+<div class="ttc" id="a00057_html_a1149e1e7da0129dfcc98c047dcdf9c79"><div class="ttname"><a href="a00057.html#a1149e1e7da0129dfcc98c047dcdf9c79">CGUIFont::Begin</a></div><div class="ttdeci">void Begin()</div></div>
+<div class="ttc" id="a00057_html_aa3b7ca6c67dd055e399255013bf3ec0f"><div class="ttname"><a href="a00057.html#aa3b7ca6c67dd055e399255013bf3ec0f">CGUIFont::GetTextWidth</a></div><div class="ttdeci">float GetTextWidth(const vecText &amp;text)</div></div>
+<div class="ttc" id="a00057_html_ab8e740d040a9b1ff3d84a3ab60aa0e16"><div class="ttname"><a href="a00057.html#ab8e740d040a9b1ff3d84a3ab60aa0e16">CGUIFont::UpdateScrollInfo</a></div><div class="ttdeci">bool UpdateScrollInfo(const vecText &amp;text, CScrollInfo &amp;scrollInfo)</div></div>
+<div class="ttc" id="a00057_html_ae0eb03a422fa71fcfd01a58fac04e7f3"><div class="ttname"><a href="a00057.html#ae0eb03a422fa71fcfd01a58fac04e7f3">CGUIFont::GetFont</a></div><div class="ttdeci">CGUIFontTTFBase * GetFont() const </div><div class="ttdef"><b>Definition:</b> GUIFont.h:156</div></div>
+<div class="ttc" id="a00057_html_adb32cf7cb38e0fed26b56c602e06492f"><div class="ttname"><a href="a00057.html#adb32cf7cb38e0fed26b56c602e06492f">CGUIFont::GetFontName</a></div><div class="ttdeci">std::string &amp; GetFontName()</div></div>
+<div class="ttc" id="a00057_html"><div class="ttname"><a href="a00057.html">CGUIFont</a></div><div class="ttdef"><b>Definition:</b> GUIFont.h:115</div></div>
+<div class="ttc" id="a00057_html_abbf1d95451eee706e790eb03e9d6e01e"><div class="ttname"><a href="a00057.html#abbf1d95451eee706e790eb03e9d6e01e">CGUIFont::GetTextHeight</a></div><div class="ttdeci">float GetTextHeight(int numLines) const </div></div>
+<div class="ttc" id="a00057_html_a7014647d74c84ee01495690088193d81"><div class="ttname"><a href="a00057.html#a7014647d74c84ee01495690088193d81">CGUIFont::DrawScrollingText</a></div><div class="ttdeci">void DrawScrollingText(float x, float y, const vecColors &amp;colors, color_t shadowColor, const vecText &amp;text, uint32_t alignment, float maxPixelWidth, const CScrollInfo &amp;scrollInfo)</div></div>
+<div class="ttc" id="a00062_html_ab211ce571d513824da669aeb6c3af673"><div class="ttname"><a href="a00062.html#ab211ce571d513824da669aeb6c3af673">CScrollInfo::suffix</a></div><div class="ttdeci">vecText suffix</div><div class="ttdef"><b>Definition:</b> GUIFont.h:100</div></div>
+<div class="ttc" id="a00057_html_a4d6849b6644d20937f317be0f2d8483b"><div class="ttname"><a href="a00057.html#a4d6849b6644d20937f317be0f2d8483b">CGUIFont::GetTextBaseLine</a></div><div class="ttdeci">float GetTextBaseLine() const </div></div>
+<div class="ttc" id="a00062_html_a1155d01fb5d7e3bb3ea3ed0b925a5de1"><div class="ttname"><a href="a00062.html#a1155d01fb5d7e3bb3ea3ed0b925a5de1">CScrollInfo::CScrollInfo</a></div><div class="ttdeci">CScrollInfo(unsigned int wait=50, float pos=0, int speed=defaultSpeed, const std::string &amp;scrollSuffix=&quot; | &quot;)</div></div>
+<div class="ttc" id="a00057_html_afc12d18e19e10b35d361fbb09c7c1d54"><div class="ttname"><a href="a00057.html#afc12d18e19e10b35d361fbb09c7c1d54">CGUIFont::End</a></div><div class="ttdeci">void End()</div></div>
+<div class="ttc" id="a00057_html_a2563c5297855f5d78d25b72a3e54a5d1"><div class="ttname"><a href="a00057.html#a2563c5297855f5d78d25b72a3e54a5d1">CGUIFont::m_style</a></div><div class="ttdeci">uint32_t m_style</div><div class="ttdef"><b>Definition:</b> GUIFont.h:165</div></div>
+<div class="ttc" id="a00057_html_aeaa51aa5e4c14312d2a703c6a96698f2"><div class="ttname"><a href="a00057.html#aeaa51aa5e4c14312d2a703c6a96698f2">CGUIFont::~CGUIFont</a></div><div class="ttdeci">virtual ~CGUIFont()</div></div>
+<div class="ttc" id="a00062_html_a372de693ad40b3f42839c8ec6ac845f4"><div class="ttname"><a href="a00062.html#a372de693ad40b3f42839c8ec6ac845f4">CScrollInfo::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdef"><b>Definition:</b> GUIFont.h:79</div></div>
+<div class="ttc" id="a00062_html_ac5c07b3de3d7b54a3c1f7fd7ff299dc0"><div class="ttname"><a href="a00062.html#ac5c07b3de3d7b54a3c1f7fd7ff299dc0">CScrollInfo::m_textWidth</a></div><div class="ttdeci">float m_textWidth</div><div class="ttdef"><b>Definition:</b> GUIFont.h:101</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00240.html">Player.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f2016486728b9ee4b575939ac5eeb448.html">guilib</a></li><li class="navelem"><a class="el" href="a00240.html">GUIFont.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

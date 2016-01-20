@@ -1,5 +1,10 @@
 var a00354 =
 [
-    [ "addLabel", "a00354.html#ga5c23c1e6768621ef5114c5b56a66c7c9", null ],
-    [ "setScrolling", "a00354.html#ga37b258d64c9891a330036b19195913e1", null ]
+    [ "Clear", "a00354.html#gaa71d36872f416feaa853788a7a7a7ef8", null ],
+    [ "CPVRStream", "a00354.html#gaf419611a13a1bca6fe60cd58cb8a952f", null ],
+    [ "CPVRStream", "a00354.html#gad8caf56bf234506f41c1fcc64a0d1ad7", null ],
+    [ "IsCleared", "a00354.html#ga324d4448e5c2dde1488e1a9b4d26c7ad", null ],
+    [ "operator<", "a00354.html#ga8c39a1e5e76bc953c53019e4ef318216", null ],
+    [ "operator=", "a00354.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6", null ],
+    [ "operator==", "a00354.html#ga2e56127d518a6487ba46cfe720bb4904", null ]
 ];

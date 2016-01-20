@@ -1,9 +1,13 @@
 var a00177 =
 [
-    [ "AddonGUISpinControlType", "a00177.html#gaa4d6f1679508cd43d05a49afbb340856", [
-      [ "ADDON_SPIN_CONTROL_TYPE_INT", "a00177.html#ggaa4d6f1679508cd43d05a49afbb340856acfcb3ed0153f23488da1d6eeaff42600", null ],
-      [ "ADDON_SPIN_CONTROL_TYPE_FLOAT", "a00177.html#ggaa4d6f1679508cd43d05a49afbb340856ae233f8620001f7fafe35e57e367d1fcb", null ],
-      [ "ADDON_SPIN_CONTROL_TYPE_TEXT", "a00177.html#ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a", null ],
-      [ "ADDON_SPIN_CONTROL_TYPE_PAGE", "a00177.html#ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109", null ]
+    [ "ATTRIBUTE_PACKED", "a00177.html#ad93e9ac33d1a9153bbea517a98260041", null ],
+    [ "DVD_NOPTS_VALUE", "a00177.html#aa8f3bf7de853346d6bcf7de68b1132da", null ],
+    [ "DVD_TIME_BASE", "a00177.html#a2ab735c1c1995b95aa927d15465e4c37", null ],
+    [ "PRAGMA_PACK", "a00177.html#a256ebdc0994be33e06dc1ad3f6f188f4", null ],
+    [ "PLAYERHANDLE", "a00177.html#a9648d7b5459c7be333fa695dd4608b5d", null ],
+    [ "AddonPlayListType", "a00177.html#ab07b512029688f85c2c460a1d0a8efc1", [
+      [ "PlayList_Music", "a00177.html#ab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143", null ],
+      [ "PlayList_Video", "a00177.html#ab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b", null ],
+      [ "PlayList_Picture", "a00177.html#ab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab", null ]
     ] ]
 ];

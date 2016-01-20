@@ -1,9 +1,6 @@
 var a00088 =
 [
-    [ "compile_name", "a00088.html#afe9672e29db448c9cc47fbb6cbb5a8f4", null ],
-    [ "major", "a00088.html#ac8947941479c38403a09c14a60b03f01", null ],
-    [ "minor", "a00088.html#aec7b96885baf2e6f10efbdef9d935a0b", null ],
-    [ "revision", "a00088.html#a5061ba1a268eb999ed21e0c4d7bf609e", null ],
-    [ "tag", "a00088.html#ae120f732e7e1c5e4a16fa31d89f655df", null ],
-    [ "tag_revision", "a00088.html#a14e85f5a1bb888b4325a87984bccfe81", null ]
+    [ "m_buttonLabel", "a00088.html#ace90f17331a1e7e6366faa5919f4ff44", null ],
+    [ "m_labelMasks", "a00088.html#a5d2431fa7741beb38684ab0acc8ff395", null ],
+    [ "m_sortDescription", "a00088.html#aa6f23e99235adfdfc0b54565aac9d888", null ]
 ];

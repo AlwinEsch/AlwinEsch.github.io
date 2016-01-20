@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIDialogSelect</title>
+<title>Kodi Development: CodecDescriptor</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,19 +92,17 @@ $(document).ready(function(){initNavTree('a00300.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIDialogSelect<div class="ingroups"><a class="el" href="a00370.html">C++ Development</a> &raquo; <a class="el" href="a00303.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CodecDescriptor<div class="ingroups"><a class="el" href="a00403.html">C++ Development</a> &raquo; <a class="el" href="a00297.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Selection dialog</b> </p>
-<p>The function listed below permits the call of a dialogue to select of an entry as a key</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00193.html">#include &lt;kodi/gui.api2/GUIDialogSelect.h&gt;</a> be included to enjoy it.</p>
-<div class="image">
-<img src="help.GUIDialogSelect.png" alt="help.GUIDialogSelect.png"/>
-</div>
- <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga607e3ded9a30e6246ee21200b0978fd5"></a>
+<p><b>Codec type name converter</b> </p>
+<p>Some of the backends codec names don't match ffmpeg's, so translate them to something ffmpeg understands.</p>
+<p>Adapter which converts codec names used by several backends into their FFmpeg equivalents.</p>
+<p>This class is optional and is available here for two reasons. One is the some PVR add-ons need this and the other to provide an example if the own add-on also names are used not to ffmpeg are compatible. Then it might be a copy of this class to its own needs.</p>
+<p>It has the header <a class="el" href="a00191.html">#include &lt;kodi/addon.api2/Codec.h&gt;</a> be included to enjoy it. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga62b7b43b626a9b8beb0f16a8795b9d91"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -112,63 +110,83 @@ $(document).ready(function(){initNavTree('a00300.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static int Show </td>
+          <td class="memname"><a class="el" href="a00089.html">kodi_codec</a> Codec </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>entries</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>selected</em> = <code>-1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Show a selection dialog about given parts. </p>
+<p>Function to retrieve used Kodi codec identification id. </p>
+<dl class="section return"><dt>Returns</dt><dd>identification of codec </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga542cf7ce73c4f9e04f16bac4583fbb19"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static CodecDescriptor GetCodecByName </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>strCodecName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Static function to translate codec names who are different to them on Kodi (ffmpeg). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">heading</td><td>Dialog heading name </td></tr>
-    <tr><td class="paramname">entries</td><td>String list about entries </td></tr>
-    <tr><td class="paramname">selected</td><td>[opt] Predefined selection (default is <code>-1</code> for the first) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strCodecName</td><td>The own used codec name, currently this are <b><em>MPEG2AUDIO</em></b>, <b><em>MPEGTS</em></b> and <b><em>TEXTSUB</em></b> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The selected entry, if return <code>-1</code> was nothing selected or canceled</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00193.html">kodi/gui.api2/GUIDialogSelect.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keyword">const</span> std::vector&lt;std::string&gt; entries</div>
-<div class="line">{</div>
-<div class="line">  <span class="stringliteral">&quot;Test 1&quot;</span>,</div>
-<div class="line">  <span class="stringliteral">&quot;Test 2&quot;</span>,</div>
-<div class="line">  <span class="stringliteral">&quot;Test 3&quot;</span>,</div>
-<div class="line">  <span class="stringliteral">&quot;Test 4&quot;</span>,</div>
-<div class="line">  <span class="stringliteral">&quot;Test 5&quot;</span></div>
-<div class="line">};</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> selected = <a class="code" href="a00300.html#ga607e3ded9a30e6246ee21200b0978fd5">CAddonGUIDialogSelect::Show</a>(<span class="stringliteral">&quot;Test selection&quot;</span>, entries, -1);</div>
-<div class="line"><span class="keywordflow">if</span> (selected &lt; 0)</div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Item selection canceled\n&quot;</span>);</div>
-<div class="line"><span class="keywordflow">else</span></div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Selected item is: %i\n&quot;</span>, selected);</div>
-</div><!-- fragment --> 
+<dl class="section return"><dt>Returns</dt><dd>This class generated with defined Name and Codec identifier </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab29906ba5407bb58b86428cb4b4a1e26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; Name </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to retrieve used Kodi codec name. </p>
+<dl class="section return"><dt>Returns</dt><dd>The string for codec based upon ffmpeg </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->

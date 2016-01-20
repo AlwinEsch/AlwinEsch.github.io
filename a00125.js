@@ -1,13 +1,11 @@
 var a00125 =
 [
-    [ "ControlTextBox", "a00125.html#afd93b8cb98a0ef81f5f44ff700b42922", null ],
-    [ "ControlTextBox", "a00125.html#a7a8982a6c21b048766712f24e8efbd31", null ],
-    [ "autoScroll", "a00355.html#gad492befcc0c8ee0e1fecb0d6a6bd7d1c", null ],
+    [ "ControlSlider", "a00125.html#ac45505fb23d3fd20687337c35f347f7e", null ],
+    [ "ControlSlider", "a00125.html#a37a27a85a4dd0d13f7233061e749f865", null ],
     [ "Create", "a00125.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "getText", "a00355.html#gafab766445043570e6a82c14851366933", null ],
-    [ "reset", "a00355.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
-    [ "scroll", "a00355.html#gaa4f5d32e79ca1250eaba1a74fdf7f1ec", null ],
-    [ "setText", "a00355.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ],
-    [ "strFont", "a00125.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
-    [ "textColor", "a00125.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
+    [ "getPercent", "a00395.html#gad3e5815badb78551841c44d9b5ae3742", null ],
+    [ "setPercent", "a00395.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ],
+    [ "strTexture", "a00125.html#aca02fb07ae30257c0fa2adfa82de925c", null ],
+    [ "strTextureBack", "a00125.html#a5dae9258f23ccac9d94586346b015fc3", null ],
+    [ "strTextureFoc", "a00125.html#a5403da28109017430519960b7e555354", null ]
 ];

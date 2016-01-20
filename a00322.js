@@ -1,12 +1,27 @@
 var a00322 =
 [
-    [ "stream_vector", "a00322.html#ga1ebf7c021d47165548ca6320162935bb", null ],
-    [ "Clear", "a00322.html#ga666736fbd0ebb8dc7e6ff3392423d6c0", null ],
-    [ "CStreamProperties", "a00322.html#gadb5884513f2557e07249fab9f1cc447c", null ],
-    [ "GetProperties", "a00322.html#ga4bb870e45a3ef7c81e92563b7a872618", null ],
-    [ "GetStreamById", "a00322.html#ga2e18a0bd69b52870b817c6c8bf0e0db6", null ],
-    [ "GetStreamData", "a00322.html#ga3687926c69b0a5d8a32a73b85ce892b4", null ],
-    [ "GetStreamId", "a00322.html#ga80239fdfa9f1d2dfea3abb949bb84b94", null ],
-    [ "UpdateStreams", "a00322.html#ga8d64e3bab115fb9201d6f688ab350ce5", null ],
-    [ "~CStreamProperties", "a00322.html#ga6f0282c6d4010650f5ed1075bd19da84", null ]
+    [ "AddonGUISpinControlType", "a00322.html#gaa4d6f1679508cd43d05a49afbb340856", [
+      [ "ADDON_SPIN_CONTROL_TYPE_INT", "a00322.html#ggaa4d6f1679508cd43d05a49afbb340856acfcb3ed0153f23488da1d6eeaff42600", null ],
+      [ "ADDON_SPIN_CONTROL_TYPE_FLOAT", "a00322.html#ggaa4d6f1679508cd43d05a49afbb340856ae233f8620001f7fafe35e57e367d1fcb", null ],
+      [ "ADDON_SPIN_CONTROL_TYPE_TEXT", "a00322.html#ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a", null ],
+      [ "ADDON_SPIN_CONTROL_TYPE_PAGE", "a00322.html#ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109", null ]
+    ] ],
+    [ "AddLabel", "a00322.html#ga9c5e370148322bad6dbbacdbe88ba5f6", null ],
+    [ "AddLabel", "a00322.html#gaeb7d340f29d5051d948b3305dccadd51", null ],
+    [ "CAddonGUIControlSpin", "a00322.html#ga48d23da73e07469740ff2c51131ec89f", null ],
+    [ "GetFloatValue", "a00322.html#gadd5b557122d90f9a891d6b981e3ac305", null ],
+    [ "GetIntValue", "a00322.html#ga026ef91588c09c091efb7c40bb73d4dc", null ],
+    [ "GetStringValue", "a00322.html#ga3995da0370e2ada1bf62a38fa44f8239", null ],
+    [ "Reset", "a00322.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "SetEnabled", "a00322.html#gaac893222adeffdefc04d749648cce354", null ],
+    [ "SetFloatInterval", "a00322.html#ga1642356ec708ec660d47175a676d2b59", null ],
+    [ "SetFloatRange", "a00322.html#gaf4c5b4468e16c51b0d9a163baa082acf", null ],
+    [ "SetFloatValue", "a00322.html#gab050b4b446dc107963b04486dcfbe03d", null ],
+    [ "SetIntRange", "a00322.html#ga16ad72259d068519b0797117275651f1", null ],
+    [ "SetIntValue", "a00322.html#ga1bc4fce2dc8738a08b6a9458d66351a1", null ],
+    [ "SetStringValue", "a00322.html#ga2ad97febb5d38307c915784990bf40de", null ],
+    [ "SetText", "a00322.html#ga8008c108280948ebd79830f222068455", null ],
+    [ "SetType", "a00322.html#ga1cf61cf89e00da77c51f2b948c21b8ce", null ],
+    [ "SetVisible", "a00322.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "~CAddonGUIControlSpin", "a00322.html#ga9a88528e79119f52c1f7808f78ded9be", null ]
 ];

@@ -1,6 +1,7 @@
 var a00351 =
 [
-    [ "getLabel", "a00351.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
-    [ "reset", "a00351.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
-    [ "setLabel", "a00351.html#gaa1d736865ab85f96ecbe8c66769b068b", null ]
+    [ "AddMenuHook", "a00351.html#gadfd504966cbc097f85cf6f510a1751cd", null ],
+    [ "Recording", "a00351.html#ga25527d9a7fb4d25460bab2f036def672", null ],
+    [ "RegisterMe", "a00351.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
+    [ "UnRegisterMe", "a00351.html#ga5940787dcdcdb8aa995a07106917489f", null ]
 ];

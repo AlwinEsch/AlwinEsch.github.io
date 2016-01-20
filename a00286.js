@@ -1,8 +1,27 @@
 var a00286 =
 [
-    [ "CAddonGUIControlLabel", "a00286.html#ga3feee4332d158ac43b8d5d5cc20e2d0b", null ],
-    [ "GetLabel", "a00286.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "SetLabel", "a00286.html#ga0468217482f9a171183b1cda613417e6", null ],
-    [ "SetVisible", "a00286.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlLabel", "a00286.html#gae46262d2f574f9375e18fd28b3b0244b", null ]
+    [ "CAddonGUIControlButton", "a00064.html", "a00064" ],
+    [ "CAddonGUIControlEdit", "a00065.html", "a00065" ],
+    [ "CAddonGUIControlFadeLabel", "a00066.html", "a00066" ],
+    [ "CAddonGUIControlImage", "a00067.html", "a00067" ],
+    [ "CAddonGUIControlLabel", "a00068.html", "a00068" ],
+    [ "CAddonGUIControlProgress", "a00069.html", "a00069" ],
+    [ "CAddonGUIControlRadioButton", "a00070.html", "a00070" ],
+    [ "CAddonGUIControlRendering", "a00071.html", "a00071" ],
+    [ "CAddonGUIControlSettingsSlider", "a00072.html", "a00072" ],
+    [ "CAddonGUIControlSlider", "a00073.html", "a00073" ],
+    [ "CAddonGUIControlSpin", "a00074.html", "a00074" ],
+    [ "CAddonGUIControlTextBox", "a00075.html", "a00075" ],
+    [ "CAddonGUIDialogExtendedProgress", "a00076.html", "a00076" ],
+    [ "CAddonGUIDialogFileBrowser", "a00077.html", null ],
+    [ "CAddonGUIDialogKeyboard", "a00078.html", null ],
+    [ "CAddonGUIDialogNumeric", "a00079.html", null ],
+    [ "CAddonGUIDialogOK", "a00080.html", null ],
+    [ "CAddonGUIDialogProgress", "a00081.html", "a00081" ],
+    [ "CAddonGUIDialogSelect", "a00082.html", null ],
+    [ "CAddonGUIDialogTextViewer", "a00083.html", null ],
+    [ "CAddonGUIDialogYesNo", "a00084.html", null ],
+    [ "CAddonGUIListItem", "a00085.html", "a00085" ],
+    [ "CAddonGUIWindow", "a00086.html", "a00086" ],
+    [ "CGUILib", "a00087.html", "a00087" ]
 ];

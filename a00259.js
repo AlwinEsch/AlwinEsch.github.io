@@ -1,8 +1,5 @@
 var a00259 =
 [
-    [ "CPlayerLib", "a00089.html", "a00089" ],
-    [ "CPlayerLib_InfoTagMusic", "a00090.html", "a00090" ],
-    [ "CPlayerLib_InfoTagVideo", "a00091.html", "a00091" ],
-    [ "CPlayerLib_Player", "a00092.html", "a00092" ],
-    [ "CPlayerLib_PlayList", "a00093.html", "a00093" ]
+    [ "CONTROL_TEXT_OFFSET_X", "a00259.html#aa6d4de8d94fd25d7738153dece416e93", null ],
+    [ "CONTROL_TEXT_OFFSET_Y", "a00259.html#afb3bc10df24bc07657621c3e1bb13ddd", null ]
 ];

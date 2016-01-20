@@ -1,10 +1,15 @@
 var a00306 =
 [
-    [ "GetCurrentWindowDialogId", "a00306.html#ga4afd43d20b97e20532eeb1fac9ae6c1f", null ],
-    [ "GetCurrentWindowId", "a00306.html#ga452c9c6299140854739860045f060d28", null ],
-    [ "GetScreenHeight", "a00306.html#ga7b736bc18cc4c9b1e6229e1af312b6e3", null ],
-    [ "GetScreenWidth", "a00306.html#ga0f0cc52a3413a502953495f26270f559", null ],
-    [ "GetVideoResolution", "a00306.html#ga9e8e637bdd545cf2cd0b922d3496a64b", null ],
-    [ "Lock", "a00306.html#gace70db8e92290399a2a070eb0a60df63", null ],
-    [ "Unlock", "a00306.html#ga50f1fb5a8527c6f1beb7c59393c934a9", null ]
+    [ "CAddonLib_VFSDirEntry", "a00306.html#gac81f1dd62d59a58a0d6f5ef72cfde20b", null ],
+    [ "CAddonLib_VFSDirEntry", "a00306.html#ga3d6451c27a24180971c1dd12e8b665ae", null ],
+    [ "IsFolder", "a00306.html#gabfbbb37d69862b45d0f1079ab976fa37", null ],
+    [ "Label", "a00306.html#gaacd1b40e1b2e44d82303388beb475e84", null ],
+    [ "Path", "a00306.html#ga666f6d222d6e40f592d7ec4c8c670263", null ],
+    [ "Properties", "a00306.html#gaea9c66f89bd36c6b01a234d0e2ad123a", null ],
+    [ "Properties", "a00306.html#ga682a050b373b13ec1e816d7a9cc47302", null ],
+    [ "SetFolder", "a00306.html#gadc0bf158b1dc28eea1bc2e3a2c016982", null ],
+    [ "SetLabel", "a00306.html#gab825756e641ba839bfae908492165481", null ],
+    [ "SetPath", "a00306.html#ga4a03d7c94fa02df112558bc30818e413", null ],
+    [ "SetSize", "a00306.html#gaf2fb6ea3061355a5ed4b53ca45e712ac", null ],
+    [ "Size", "a00306.html#gac0ba4f4c78dcb35605e645ee75198b5a", null ]
 ];

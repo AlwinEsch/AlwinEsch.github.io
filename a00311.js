@@ -1,13 +1,10 @@
 var a00311 =
 [
-    [ "OnPlayBackEnded", "a00311.html#ga9b673b89fb0c2d810637d97a6144743d", null ],
-    [ "OnPlayBackPaused", "a00311.html#ga535ea86e9170c85e4dfc8b2292466041", null ],
-    [ "OnPlayBackResumed", "a00311.html#ga78de3c74ca811508e2c83bad612af8a0", null ],
-    [ "OnPlayBackSeek", "a00311.html#ga1aa2520cecdb44e5f37dd2905146efa6", null ],
-    [ "OnPlayBackSeekChapter", "a00311.html#ga36be56af6bfdd7fc943f8d3f1abacfbf", null ],
-    [ "OnPlayBackSpeedChanged", "a00311.html#ga14e0279d2fb9cd6b4a68f9467e07081a", null ],
-    [ "OnPlayBackStarted", "a00311.html#ga670b9e7947764d4d474b7f8cd21c1611", null ],
-    [ "OnPlayBackStopped", "a00311.html#ga5df8f6dd6cf9fb162d1d4d77da58eb2d", null ],
-    [ "OnQueueNextItem", "a00311.html#ga817b2d696d11b166143be2c391a972f9", null ],
-    [ "SetIndependentCallbacks", "a00311.html#gaa8d87ba3157eed260e7334c1b3d96657", null ]
+    [ "AddDSPMenuHook", "a00311.html#gad4e7c34b466c7523b48eb38f453c6f8b", null ],
+    [ "GetCurrentSinkFormat", "a00311.html#gaeb11fdb26f8a00296e10ff296c602bb5", null ],
+    [ "RegisterDSPMode", "a00311.html#gae95d0da238b6ffa997911dbf9eedb2d4", null ],
+    [ "RegisterMe", "a00311.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
+    [ "RemoveDSPMenuHook", "a00311.html#ga59fa2e75dbd7ede8adb9488258b55bdd", null ],
+    [ "UnregisterDSPMode", "a00311.html#gae222050a6298ea8a4b7f2085ae5e85b1", null ],
+    [ "UnRegisterMe", "a00311.html#ga5940787dcdcdb8aa995a07106917489f", null ]
 ];

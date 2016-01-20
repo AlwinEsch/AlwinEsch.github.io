@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: InfoTagVideo</title>
+<title>Kodi Development: CAddonGUIDialogFileBrowser</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,399 +92,475 @@ $(document).ready(function(){initNavTree('a00325.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">InfoTagVideo<div class="ingroups"><a class="el" href="a00371.html">Python Development</a> &raquo; <a class="el" href="a00329.html">Library - xbmc</a></div></div>  </div>
+<div class="title">CAddonGUIDialogFileBrowser<div class="ingroups"><a class="el" href="a00403.html">C++ Development</a> &raquo; <a class="el" href="a00333.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's video info tag class.</b> </p>
-<p>To get video info tag data of currently played source.</p>
-<dl class="section note"><dt>Note</dt><dd>Info tag load is only be possible from present player class.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;tag = xbmc.Player().getVideoInfoTag()</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;title = tag.getTitle()</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;file  = tag.getFile()</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;...</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga014e2737672aac5e1fca6c67268ef7ca"></a>
+<p><b>File browser dialog</b> </p>
+<p>The functions listed below of the class "CAddonGUIDialogFileBrowser" offer the possibility to select to a file by the user of the add-on.</p>
+<p>It allows all the options that are possible in Kodi itself and offers all support file types.</p>
+<p>These are pure static functions them no other initialization need.</p>
+<p>It has the header <a class="el" href="a00218.html">#include &lt;kodi/gui.api2/GUIDialogFileBrowser.h&gt;</a> be included to enjoy it.</p>
+<div class="image">
+<img src="help.GUIDialogFileBrowser.png" alt="help.GUIDialogFileBrowser.png"/>
+</div>
+ <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gab1c3767a978a71751a8ea550d449eed6"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String getCast </td>
+          <td class="memname">static bool ShowAndGetDirectory </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shares</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bWriteOnly</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>To get the cast of the video when available. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Video casts</dd></dl>
-<hr/>
- 
+<p>Directory selection dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected directory </td></tr>
+    <tr><td class="paramname">bWriteOnly</td><td>If set only writeable folders are shown. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled.</dd></dl>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00218.html">kodi/gui.api2/GUIDialogFileBrowser.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Example show directory selection dialog with on &#39;share&#39; (first value)</span></div>
+<div class="line"><span class="comment"> * defined directory types.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * If this becomes leaved empty and &#39;directory&#39; is empty goes it to the</span></div>
+<div class="line"><span class="comment"> * base path of the hard disk.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Also can be with path written to &#39;directory&#39; before the dialog forced</span></div>
+<div class="line"><span class="comment"> * to a start place.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line">std::string directory;</div>
+<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00325.html#gab1c3767a978a71751a8ea550d449eed6">CAddonGUIDialogFileBrowser::ShowAndGetDirectory</a>(<span class="stringliteral">&quot;local|network|removable&quot;</span>,</div>
+<div class="line">                                                   <span class="stringliteral">&quot;Test directory selection&quot;</span>,</div>
+<div class="line">                                                   directory,</div>
+<div class="line">                                                   <span class="keyword">false</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Selected directory is : %s and was %s\n&quot;</span>, directory.c_str(), ret ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="gaf9d61e5189c09ef08febcd52087001cd"></a>
+<a class="anchor" id="ga5924085e93999a96dc9fc5a6c5f9362b"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String getDirector </td>
+          <td class="memname">static bool ShowAndGetFile </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shares</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Get <a href="https://en.wikipedia.org/wiki/Film_director">film director</a> who has made the film (if present). </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Film director name.</dd></dl>
-<hr/>
- 
+<p>File selection dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected file </td></tr>
+    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
+    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="ga723e190c9b450ce6558126ef95b03ec9"></a>
+<a class="anchor" id="ga5ef242152a302da9ab13f61ca77b7ac3"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String getFile </td>
+          <td class="memname">static bool ShowAndGetFileFromDir </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>directory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>singleList</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>To get the video file name. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] File name</dd></dl>
-<hr/>
- 
+<p>File selection from a directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">directory</td><td>The directory name where the dialog start, possible are normal names and kodi's special names. </td></tr>
+    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected file </td></tr>
+    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
+    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="ga9bf8326fd3213f31cf6c83cd70b7b521"></a>
+<a class="anchor" id="ga11dac37e6c6fd7dcaa18997d54e90b1a"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String getFirstAired </td>
+          <td class="memname">static bool ShowAndGetFileList </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shares</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useThumbs</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useFileDirectories</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Returns first aired date as string from info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] First aired date</dd></dl>
-<hr/>
- 
+<p>File selection dialog to get several in to a list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected files </td></tr>
+    <tr><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
+    <tr><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="ga724866edc25325e096d7d8a76b4a3234"></a>
+<a class="anchor" id="ga10785676725a192799092e82ae4a68ba"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String getGenre </td>
+          <td class="memname">static bool ShowAndGetImage </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shares</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>To get the <a href="https://en.wikipedia.org/wiki/Film_genre">Video Genre</a> if available. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Genre name</dd></dl>
-<hr/>
- 
+<p>Image selection dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected image </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="ga3a5155fe7fa0cdfa1970a6f569f9b666"></a>
+<a class="anchor" id="gad8c149a33ac60207e2953244f72f7a1d"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String getIMDBNumber </td>
+          <td class="memname">static bool ShowAndGetImageList </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>shares</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>To get the <a href="https://en.wikipedia.org/wiki/Internet_Movie_Database">IMDb</a> number of the video (if present). </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] IMDb number</dd></dl>
-<hr/>
- 
+<p>Image selection dialog to get several in to a list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">heading</td><td>Dialog header name </td></tr>
+    <tr><td class="paramname">path</td><td>Return value about selected images </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="ga64953074270dc9bc74370b8251c1cd43"></a>
+<a class="anchor" id="gab582e8181c1569b7ff713e8924c4aa73"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String getLastPlayed </td>
+          <td class="memname">static bool ShowAndGetSource </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the last played date / time as string. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Last played date / time</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga4f96c0aaaf77bdf9d8eef09bb8ac8ecc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">String getOriginalTitle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allowNetworkShares</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get the original title of the video. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Original title</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga6779d0f135fcec6c7f8a8ee49d7af165"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">String getPath </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>additionalShare</em> = <code>&quot;&quot;</code>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get the path where the video is stored. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Path</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gad3ff2085e537bfbfa2f14d0c9a1dfcaa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">String getPictureURL </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>type</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get a picture URL of the video to show as screenshot. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Picture URL</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gac644258d08f747039e9d0e76bcd49513"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">int getPlayCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>To get the number of plays of the video. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Play Count</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga7b4144bd89a83e0066a43d674c935453"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getPlot </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Source selection dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Return</td><td>value about selected source </td></tr>
+    <tr><td class="paramname">Allow</td><td>also access to network </td></tr>
+    <tr><td class="paramname">With</td><td>additionalShare becomes the available start folders be set. </td></tr>
+    <tr><td class="paramname">type</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
 
-<p>Get the plot of the video if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Plot</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga9d64a845dd0f805ecfc9dede2fcb683c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getPlotOutline </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the outline plot of the video if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Outline plot</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga6344c3ab0ba02f7381c09bfc384b0f58"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getPremiered </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get <a href="https://en.wikipedia.org/wiki/Premiere">premiered</a> date of the video, if available. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string]</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga235125a9aed4cc8c630d4e681e14d196"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double getRating </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the video rating if present as float (double where supported). </p>
-<dl class="section return"><dt>Returns</dt><dd>[float] The rating of the video</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga5de7f223574b5b39917a1e2d284ca2db"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getTagLine </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get video tag line if available. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Video tag line</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga888f94790c968e3f0b5de17e509098aa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getTitle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the video title. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Video title</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga43531ed78e2ffc99da87d0b93293ebf9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getVotes </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the video votes if available from video info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Votes</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga85b8f5a942a429ec2e66cad259fe1fd2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getWritingCredits </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the writing credits if present from video info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Writing credits</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga53172a43145522837b888b7d7f7117ea"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getYear </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get production year of video if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Production Year</dd></dl>
-<hr/>
- 
 </div>
 </div>
 </div><!-- contents -->

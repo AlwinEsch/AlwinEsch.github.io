@@ -1,13 +1,9 @@
 var a00051 =
 [
-    [ "AudioEngineFormat", "a00051.html#a485299b0bb8f0c1cf765321c704bcc40", null ],
-    [ "compareFormat", "a00051.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64", null ],
-    [ "m_channelCount", "a00051.html#a98e4ea22d72d3c5dce2821ae10a802f8", null ],
-    [ "m_channels", "a00051.html#a4a53bc9bcf5fe0c7d808858463f370f7", null ],
-    [ "m_dataFormat", "a00051.html#a8f4e236f291657200f64cd2f069a8ff7", null ],
-    [ "m_encodedRate", "a00051.html#a60bb897389267a5034ef730c956b661a", null ],
-    [ "m_frames", "a00051.html#a3fa03b15b439d70dd92e726e1aac9eb5", null ],
-    [ "m_frameSamples", "a00051.html#a3b6b1929e0fbe39e252645260f4d97d8", null ],
-    [ "m_frameSize", "a00051.html#a7c6321b7fd7f09478ca0bf9931009ee1", null ],
-    [ "m_sampleRate", "a00051.html#a046d570c56fd2ae9b813340816ebfdec", null ]
+    [ "CAddonLib_VFSProperty", "a00278.html#ga965d127e0d0de44d06a0e6da2ca8f829", null ],
+    [ "Name", "a00278.html#gab29906ba5407bb58b86428cb4b4a1e26", null ],
+    [ "SetName", "a00278.html#ga940d484bb6523277e1d2c742f4f534a4", null ],
+    [ "SetValue", "a00278.html#ga69925f195530e698e569191bd4c3470c", null ],
+    [ "Value", "a00278.html#ga7533eecbdf0c0c538dd01e03fdf8f2ad", null ],
+    [ "IMPL_VFS_PROPERTY", "a00051.html#a6f6cad3c4a0e6b003c8617cd277d0b38", null ]
 ];

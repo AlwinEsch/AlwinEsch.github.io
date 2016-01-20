@@ -1,18 +1,14 @@
 var a00324 =
 [
-    [ "getAlbum", "a00324.html#ga11ac7b770ff2135e877c241ddb5db662", null ],
-    [ "getAlbumArtist", "a00324.html#ga257503de86d218b382fcbbe9f1f68c2d", null ],
-    [ "getArtist", "a00324.html#ga1b9f565753d008491c59887680bd570e", null ],
-    [ "getComment", "a00324.html#ga50a7366cba8ce27bc48a00e746324f7b", null ],
-    [ "getDisc", "a00324.html#gaa2759f95638fb39b74363457af9e7777", null ],
-    [ "getDuration", "a00324.html#ga08c13081c0665a4336a0f022c955fb69", null ],
-    [ "getGenre", "a00324.html#ga724866edc25325e096d7d8a76b4a3234", null ],
-    [ "getLastPlayed", "a00324.html#ga64953074270dc9bc74370b8251c1cd43", null ],
-    [ "getListeners", "a00324.html#gafdcd386f038151367af97803c1c13e41", null ],
-    [ "getLyrics", "a00324.html#gaefe9573a6a972ef63b082d2264baa857", null ],
-    [ "getPlayCount", "a00324.html#gac644258d08f747039e9d0e76bcd49513", null ],
-    [ "getReleaseDate", "a00324.html#gad099adc410738271ffc55e6fb68f77ae", null ],
-    [ "getTitle", "a00324.html#ga888f94790c968e3f0b5de17e509098aa", null ],
-    [ "getTrack", "a00324.html#ga797e19587556ad59c5e3a7b55e8ccae9", null ],
-    [ "getURL", "a00324.html#gafa85bb6aea7b660960562826dcb20cf7", null ]
+    [ "CAddonGUIDialogExtendedProgress", "a00324.html#ga2f267cd452ee9736993693fa501ac85e", null ],
+    [ "IsFinished", "a00324.html#gaabe45b4d47077b54df0bb809eb41b8d5", null ],
+    [ "MarkFinished", "a00324.html#ga40af1bcedea1f61fde8cd5e70e416473", null ],
+    [ "Percentage", "a00324.html#ga3bf91c353218dceaa271b65321b2f5cf", null ],
+    [ "SetPercentage", "a00324.html#ga74a9a823ab1cd34d62a219a842de5946", null ],
+    [ "SetProgress", "a00324.html#gac64c8e121cf5e368cd335c28a0521922", null ],
+    [ "SetText", "a00324.html#gaec55d8bf3ca3e04261b66bee36f84368", null ],
+    [ "SetTitle", "a00324.html#gad8698c0477204fb8b81feb9d81cbe4fd", null ],
+    [ "Text", "a00324.html#gafdfa72709ffc1738c3c198f7ad8b61ec", null ],
+    [ "Title", "a00324.html#ga3cb91fb7750df7982baea48c4a3de616", null ],
+    [ "~CAddonGUIDialogExtendedProgress", "a00324.html#ga86033f373ed6159d52feb585bab2dfda", null ]
 ];

@@ -1,13 +1,18 @@
 var a00049 =
 [
-    [ "AudioEngineFormat", "a00049.html#a485299b0bb8f0c1cf765321c704bcc40", null ],
-    [ "compareFormat", "a00049.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64", null ],
-    [ "m_channelCount", "a00049.html#a98e4ea22d72d3c5dce2821ae10a802f8", null ],
-    [ "m_channels", "a00049.html#a4a53bc9bcf5fe0c7d808858463f370f7", null ],
-    [ "m_dataFormat", "a00049.html#a8f4e236f291657200f64cd2f069a8ff7", null ],
-    [ "m_encodedRate", "a00049.html#a60bb897389267a5034ef730c956b661a", null ],
-    [ "m_frames", "a00049.html#a3fa03b15b439d70dd92e726e1aac9eb5", null ],
-    [ "m_frameSamples", "a00049.html#a3b6b1929e0fbe39e252645260f4d97d8", null ],
-    [ "m_frameSize", "a00049.html#a7c6321b7fd7f09478ca0bf9931009ee1", null ],
-    [ "m_sampleRate", "a00049.html#a046d570c56fd2ae9b813340816ebfdec", null ]
+    [ "CAddonLib_VFSFile", "a00307.html#gaa4aa9190a8c2c66f86f4ece11645ca19", null ],
+    [ "~CAddonLib_VFSFile", "a00307.html#gaff9977af1409edaace50b30024b00306", null ],
+    [ "Close", "a00307.html#ga7f7a3199c392465d0767c6506c1af5b4", null ],
+    [ "Flush", "a00307.html#ga0e2644b2df3c228e8d71a55b60723f31", null ],
+    [ "GetChunkSize", "a00307.html#gacc37d885ea67ed49de5644a572d904ee", null ],
+    [ "GetLength", "a00307.html#gaf2332ee14e6eb66707939c8d9625194d", null ],
+    [ "GetPosition", "a00307.html#gaab98661a2483587df5d85e6ec8699bce", null ],
+    [ "OpenFile", "a00307.html#ga7964d4fc5936b7e41fd1c01320882d46", null ],
+    [ "OpenFileForWrite", "a00307.html#gab906912503a475cdb8f0a67c5d81266c", null ],
+    [ "Read", "a00307.html#gae8f00c5eb703624dd35f9d5205d56343", null ],
+    [ "ReadLine", "a00307.html#gae3d52fbedd9b4480dc45023814cb78f7", null ],
+    [ "Seek", "a00307.html#ga48d08591724952c3d51d0823caf17720", null ],
+    [ "Truncate", "a00307.html#ga97dbc6093302f0ced52952a2737407ec", null ],
+    [ "Write", "a00307.html#gac7025ec7df110a7a9691adb3f949f24f", null ],
+    [ "IMPL_FILE", "a00049.html#a77ceccaa94b91afd262ae116e288b528", null ]
 ];

@@ -1,9 +1,9 @@
 var a00319 =
 [
-    [ "ChannelEntry", "a00319.html#gafdbc7a9a4d1336f159150988868b1465", null ],
-    [ "ChannelGroup", "a00319.html#gabb331d2d9b3ef522da48c0b951ddbe21", null ],
-    [ "ChannelGroupMember", "a00319.html#ga2d24f5c60e0d4b6d3a416641b489f15e", null ],
-    [ "EpgEntry", "a00319.html#gab55ab3d9f7fa5f1304edf70e39ac6a55", null ],
-    [ "RecordingEntry", "a00319.html#gad676cb5682d7c7c959d91822342cc753", null ],
-    [ "TimerEntry", "a00319.html#gae6c3ce0a07ecc854c615f2d65e550147", null ]
+    [ "CAddonGUIControlRendering", "a00319.html#ga391a8355fbbce5c4a05a01e15188a41b", null ],
+    [ "Create", "a00319.html#ga12847d560dd43205d13b0963d9e395e1", null ],
+    [ "Dirty", "a00319.html#ga7cea65505e98c9989ab92a87b2f2e99b", null ],
+    [ "Render", "a00319.html#ga0bc3f3606d9cf5304dac90cd7a619194", null ],
+    [ "Stop", "a00319.html#gaf6f113a64b92a63894b285b4f2a2c3a5", null ],
+    [ "~CAddonGUIControlRendering", "a00319.html#ga8111f29e2c5fe998d541b21d76f0d353", null ]
 ];

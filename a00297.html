@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIDialogNumeric</title>
+<title>Kodi Development: Library - AddOnLIB</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,468 +91,84 @@ $(document).ready(function(){initNavTree('a00297.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">CAddonGUIDialogNumeric<div class="ingroups"><a class="el" href="a00370.html">C++ Development</a> &raquo; <a class="el" href="a00303.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">Library - AddOnLIB<div class="ingroups"><a class="el" href="a00403.html">C++ Development</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Numeric dialogs</b> </p>
-<p>The functions listed below have to be permitted by the user for the representation of a numeric keyboard around an input.</p>
-<p>The class supports several kinds, from an easy number choice up to the passport Word production and their confirmation for add-on.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00190.html">#include &lt;kodi/gui.api2/GUIDialogNumeric.h&gt;</a> be included to enjoy it.</p>
-<div class="image">
-<img src="help.GUIDialogNumeric.png" alt="help.GUIDialogNumeric.png"/>
-</div>
- <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga37d6caf6f507938f599915d93eddd596"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetDate </td>
-          <td>(</td>
-          <td class="paramtype">tm &amp;&#160;</td>
-          <td class="paramname"><em>date</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to get date value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">date</td><td>Overwritten with user input if return=true and date inserted. </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* printf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;time.h&gt;</span>       <span class="comment">/* time_t, struct tm, time, localtime, strftime */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00190.html">kodi/gui.api2/GUIDialogNumeric.h</a>&gt;</span></div>
+<p><b><em>Primary add-on helper library with general functions</em></b> </p>
+<hr/>
+<p><b>Code example:</b></p>
+<p>Below is a code example do show what must be done on add-on base function to become support for library:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00190.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00195.html">kodi/addon.api2/General.h</a>&gt;</span>  <span class="comment">// Needed for CAddOnLib_General::Log</span></div>
 <div class="line"></div>
-<div class="line">time_t rawtime;</div>
-<div class="line"><span class="keyword">struct </span>tm * timeinfo;</div>
-<div class="line"><span class="keywordtype">char</span> buffer [20];</div>
+<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
+<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
+<div class="line">...</div>
 <div class="line"></div>
-<div class="line">time (&amp;rawtime);</div>
-<div class="line">timeinfo = localtime(&amp;rawtime);</div>
-<div class="line"><span class="keywordtype">bool</span> bRet = <a class="code" href="a00297.html#ga37d6caf6f507938f599915d93eddd596">CAddonGUIDialogNumeric::ShowAndGetDate</a>(*timeinfo, <span class="stringliteral">&quot;Selected date test call&quot;</span>);</div>
-<div class="line">strftime(buffer, <span class="keyword">sizeof</span>(buffer), <span class="stringliteral">&quot;%Y-%m-%d&quot;</span>, timeinfo);</div>
-<div class="line">printf(<span class="stringliteral">&quot;Selected date it&#39;s %s and was on Dialog %s\n&quot;</span>, buffer, bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga1fd8ee824dbbbc1d222fd67583f28614"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetIPAddress </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strIPAddress</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to get a IP. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strIPAddress</td><td>Overwritten with user input if return=true and IP address inserted. </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gab73e260650434df59844c3a2c8b1ba2d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetNumber </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strInput</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iAutoCloseTimeoutMs</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to get normal number. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strInput</td><td>Overwritten with user input if return=true and time in seconds inserted </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-    <tr><td class="paramname">iAutoCloseTimeoutMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* printf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;stdlib.h&gt;</span>     <span class="comment">/* strtoull (C++11) */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00190.html">kodi/gui.api2/GUIDialogNumeric.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">std::string number;</div>
-<div class="line"><span class="keywordtype">bool</span> bRet = <a class="code" href="a00297.html#gab73e260650434df59844c3a2c8b1ba2d">CAddonGUIDialogNumeric::ShowAndGetNumber</a>(number, <span class="stringliteral">&quot;Number test call&quot;</span>);</div>
-<div class="line">printf(<span class="stringliteral">&quot;Written number input is : %llu and was %s\n&quot;</span>,</div>
-<div class="line">               strtoull(number.c_str(), <span class="keyword">nullptr</span>, 0), bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga664586418f4cb12a25a15dcd5effff02"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetSeconds </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strTime</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Show numeric keypad to get seconds. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strTime</td><td>Overwritten with user input if return=true and time in seconds inserted. </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga08a9c6abb71eb5a380213e9528b6aecf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndGetTime </td>
-          <td>(</td>
-          <td class="paramtype">tm &amp;&#160;</td>
-          <td class="paramname"><em>time</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to get time value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">time</td><td>Overwritten with user input if return=true and time inserted. </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* printf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;time.h&gt;</span>       <span class="comment">/* time_t, struct tm, time, localtime, strftime */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00190.html">kodi/gui.api2/GUIDialogNumeric.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line">time_t rawtime;</div>
-<div class="line"><span class="keyword">struct </span>tm * timeinfo;</div>
-<div class="line"><span class="keywordtype">char</span> buffer [10];</div>
-<div class="line"></div>
-<div class="line">time (&amp;rawtime);</div>
-<div class="line">timeinfo = localtime(&amp;rawtime);</div>
-<div class="line"><span class="keywordtype">bool</span> bRet = <a class="code" href="a00297.html#ga08a9c6abb71eb5a380213e9528b6aecf">CAddonGUIDialogNumeric::ShowAndGetTime</a>(*timeinfo, <span class="stringliteral">&quot;Selected time test call&quot;</span>);</div>
-<div class="line">strftime(buffer, <span class="keyword">sizeof</span>(buffer), <span class="stringliteral">&quot;%H:%M.&quot;</span>, timeinfo);</div>
-<div class="line">printf(<span class="stringliteral">&quot;Selected time it&#39;s %s and was on Dialog %s\n&quot;</span>, buffer, bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga3028013da19a00279961a45d26dcf832"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndVerifyInput </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strToVerify</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bVerifyInput</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to verify numeric password. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strToVerify</td><td>Value to compare against user input. </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-    <tr><td class="paramname">bVerifyInput</td><td>If set as true we verify the users input versus strToVerify. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga85ca517533d779b26944d6fb74fe0abe"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool ShowAndVerifyNewPassword </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strNewPassword</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to get numeric new password. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strNewPassword</td><td>String to preload into the keyboard accumulator. Overwritten with user input if return=true. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input entry/re-entry. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga28ed908212d6a38156014d5ccc5a7dc7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int ShowAndVerifyPassword </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPassword</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iRetries</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Use dialog to verify numeric password. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strPassword</td><td>Overwritten with user input if return=tru </td></tr>
-    <tr><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-    <tr><td class="paramname">iRetries</td><td>If greater than 0, shows "Incorrect password, %d retries left" on dialog line 2, else line 2 is blank. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if successful display and user input. 1 if unsuccessful input. -1 if no user input or canceled editing.</dd></dl>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* fprintf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00169.html">kodi/addon.api2/General.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00190.html">kodi/gui.api2/GUIDialogNumeric.h</a>&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * The example below shows the complete use of keyboard dialog for password</span></div>
-<div class="line"><span class="comment"> * check. If only one check from add-on needed can be function with retries</span></div>
-<div class="line"><span class="comment"> * set to &#39;0&#39; called alone.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * The use of MD5 translated password is always required for the check on Kodi!</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"></div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Get from Kodi&#39;s global settings the maximum allowed retries for passwords.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keywordtype">int</span> maxretries = 0;</div>
-<div class="line"><span class="keywordflow">if</span> (CAddonLib_General::GetSettingInt(<span class="stringliteral">&quot;masterlock.maxretries&quot;</span>, maxretries, <span class="keyword">true</span>))</div>
+<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
 <div class="line">{</div>
-<div class="line">  <span class="comment">/*</span></div>
-<div class="line"><span class="comment">   * Password names need to be send as md5 sum to kodi.</span></div>
-<div class="line"><span class="comment">   */</span></div>
-<div class="line">  std::string password;</div>
-<div class="line">  CAddonLib_General::GetMD5(<span class="stringliteral">&quot;1234&quot;</span>, password);</div>
+<div class="line">  <span class="keywordflow">if</span> (!hdl || !props)</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div>
 <div class="line"></div>
-<div class="line">  <span class="comment">/*</span></div>
-<div class="line"><span class="comment">   * To the loop about password checks.</span></div>
-<div class="line"><span class="comment">   */</span></div>
-<div class="line">  <span class="keywordtype">int</span> ret;</div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; maxretries; i++)</div>
-<div class="line">  {</div>
-<div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Ask the user about the password.</span></div>
-<div class="line"><span class="comment">     */</span></div>
-<div class="line">    ret = <a class="code" href="a00297.html#ga28ed908212d6a38156014d5ccc5a7dc7">CAddonGUIDialogNumeric::ShowAndVerifyPassword</a>(password, <span class="stringliteral">&quot;Demo numeric password call for PW &#39;1234&#39;&quot;</span>, i);</div>
-<div class="line">    <span class="keywordflow">if</span> (ret == 0)</div>
-<div class="line">    {</div>
-<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Numeric password successfull confirmed after &#39;%i&#39; tries\n&quot;</span>, i+1);</div>
-<div class="line">      <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ret &lt; 0)</div>
-<div class="line">    {</div>
-<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Canceled editing on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
-<div class="line">      <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">else</span> <span class="comment">/* if (ret &gt; 0) */</span></div>
-<div class="line">    {</div>
-<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Wrong numeric password entered on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
-<div class="line">     }</div>
-<div class="line">  }</div>
+<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
+<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00298.html#gaa0bf67ad4ff0b67b500e4070f873c337">CAddonLib::RegisterMe</a>(hdl))</div>
+<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
+<div class="line">  ...</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">// Example lib call</span></div>
+<div class="line">  CAddOnLib_General::Log(<a class="code" href="a00192.html#af8526ffb1ee2a785489ac05b6e49d357a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, <span class="stringliteral">&quot;My add-on creation done&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div>
 <div class="line">}</div>
-<div class="line"><span class="keywordflow">else</span></div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Requested global setting value &#39;masterlock.maxretries&#39; not present!&quot;</span>);</div>
-</div><!-- fragment --> 
-</div>
-</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> ADDON_Destroy()</div>
+<div class="line">{</div>
+<div class="line">  ...</div>
+<div class="line">  <a class="code" href="a00298.html#ga5940787dcdcdb8aa995a07106917489f">CAddonLib::UnRegisterMe</a>();</div>
+<div class="line">  ...</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>To use the add-on on Windows must be the <a class="el" href="a00193.html">dlfcn-win32.cpp</a> inserted on them. Is required to have translation functions from Windows to dlfcn, requested for access to Kodi! </dd></dl>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00298"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00298.html">CAddonLib</a></td></tr>
+<tr class="memdesc:a00298"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Addon basic library functions</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00299"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00299.html">CAddonLib_Codec</a></td></tr>
+<tr class="memdesc:a00299"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Demux packet handle and codec identification class</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00302"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00302.html">CAddonLib_General</a></td></tr>
+<tr class="memdesc:a00302"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>General functions</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00303"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00303.html">CAddonLib_Network</a></td></tr>
+<tr class="memdesc:a00303"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Network functions</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00304"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00304.html">CAddonLib_SoundPlay</a></td></tr>
+<tr class="memdesc:a00304"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Background sound playback</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00306"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00306.html">CAddonLib_VFSDirEntry</a></td></tr>
+<tr class="memdesc:a00306"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system directory entry</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00307"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00307.html">CAddonLib_VFSFile</a></td></tr>
+<tr class="memdesc:a00307"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system control</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00305"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html">CAddonLib_VFSProperty</a></td></tr>
+<tr class="memdesc:a00305"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system entry property</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00308"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00308.html">CAddonLib_VFSUtils</a></td></tr>
+<tr class="memdesc:a00308"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system utilities</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00300"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00300.html">CodecDescriptor</a></td></tr>
+<tr class="memdesc:a00300"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Codec type name converter</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00301"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00301.html">settings.xml</a></td></tr>
+<tr class="memdesc:a00301"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Add-on settings.xml description</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

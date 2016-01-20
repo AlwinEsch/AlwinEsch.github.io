@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keyboard',['Keyboard',['../a00323.html',1,'']]]
+  ['help_20functions',['Help functions',['../a00336.html',1,'']]]
 ];

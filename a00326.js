@@ -1,14 +1,13 @@
 var a00326 =
 [
-    [ "browse", "a00326.html#ga329bf9f86212595d36708f6ad8977499", null ],
-    [ "browseMultiple", "a00326.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
-    [ "browseSingle", "a00326.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
-    [ "input", "a00326.html#ga2a25e833c92e98a294964d0d285ee1f9", null ],
-    [ "multiselect", "a00326.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
-    [ "notification", "a00326.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
-    [ "numeric", "a00326.html#gad44dd72bef6ada382a1b9704580410db", null ],
-    [ "ok", "a00326.html#ga623449b051874059111f9831a7b91673", null ],
-    [ "select", "a00326.html#ga31bcf740cf64230b40af61377ad701b1", null ],
-    [ "textviewer", "a00326.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
-    [ "yesno", "a00326.html#gaa64342a4b05f1ed49803ea44a25b73db", null ]
+    [ "IsKeyboardActivated", "a00326.html#ga1ec4a068299863443fe39fcf4969e0df", null ],
+    [ "SendTextToActiveKeyboard", "a00326.html#ga3d85e8d21bc1fbdf8f946d3c7755005c", null ],
+    [ "ShowAndGetFilter", "a00326.html#gaa57c673c6a2d27bc9114ca557e9c5852", null ],
+    [ "ShowAndGetInput", "a00326.html#ga83b1e91927a105607762c38ea9e1dcb7", null ],
+    [ "ShowAndGetInput", "a00326.html#gac455ca6ff288c07edf7de7d5a0f28d80", null ],
+    [ "ShowAndGetNewPassword", "a00326.html#ga1b75480e0428c2eb657e9e3df1c5f6b3", null ],
+    [ "ShowAndGetNewPassword", "a00326.html#ga74b411283e562425ab3f6d2c01d1f229", null ],
+    [ "ShowAndVerifyNewPassword", "a00326.html#gaf03bd1a86951ae9a1b5f91a901957e11", null ],
+    [ "ShowAndVerifyNewPassword", "a00326.html#gab0b3eb13c8faa5d58e8e7eb59b7c50a9", null ],
+    [ "ShowAndVerifyPassword", "a00326.html#ga48bdcccb89234aad454a6be1cf219928", null ]
 ];

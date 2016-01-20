@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Register functions</title>
+<title>Kodi Development: CAddonLib_VFSProperty</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,68 +92,133 @@ $(document).ready(function(){initNavTree('a00305.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Register functions<div class="ingroups"><a class="el" href="a00370.html">C++ Development</a> &raquo; <a class="el" href="a00303.html">Library - GUILIB</a> &raquo; <a class="el" href="a00304.html">CGUILib</a></div></div>  </div>
+<div class="title">CAddonLib_VFSProperty<div class="ingroups"><a class="el" href="a00403.html">C++ Development</a> &raquo; <a class="el" href="a00297.html">Library - AddOnLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Functions to handle library registration to Kodi</b> </p>
-<p><a class="el" href="a00308.html">Go back to normal functions from CAddonGUIWindow</a> </p>
+<p><b>Virtual file system entry property</b> </p>
+<p>The <a class="el" href="a00050.html">CAddonLib_VFSProperty</a> is used to manage additional file information, if present it will be used in <a class="el" href="a00048.html">CAddonLib_VFSDirEntry</a> as a list.</p>
+<p>The additional information will be provided with text, either for the name as well as for the value.</p>
+<p>It has the header <a class="el" href="a00198.html">#include &lt;kodi/addon.api2/VFSUtils.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gaa0bf67ad4ff0b67b500e4070f873c337"></a>
+<a class="anchor" id="ga965d127e0d0de44d06a0e6da2ca8f829"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool RegisterMe </td>
+          <td class="memname">CAddonLib_VFSProperty </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Resolve all callback methods. </p>
+<p>Constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">handle</td><td>Pointer to the add-on </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Property name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Defined value to use </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True when all methods were resolved, false otherwise. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga5940787dcdcdb8aa995a07106917489f"></a>
+<a class="anchor" id="gab29906ba5407bb58b86428cb4b4a1e26"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void UnRegisterMe </td>
+          <td class="memname">const std::string&amp; Name </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used Name. </p>
+<dl class="section return"><dt>Returns</dt><dd>Defined name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga940d484bb6523277e1d2c742f4f534a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Release all callback methods and close handling with them. </p>
+<p>Set name to use. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Property name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga69925f195530e698e569191bd4c3470c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetValue </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set defined value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Defined value to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7533eecbdf0c0c538dd01e03fdf8f2ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; Value </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get defined value. </p>
+<dl class="section return"><dt>Returns</dt><dd>Defined value </dd></dl>
 
 </div>
 </div>

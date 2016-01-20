@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Python Development</title>
+<title>Kodi Development: Callback functions from Kodi to add-on</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,73 +94,280 @@ $(document).ready(function(){initNavTree('a00371.html','');});
   <div class="summary">
 <a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Python Development</div>  </div>
+<div class="title">Callback functions from Kodi to add-on<div class="ingroups"><a class="el" href="a00404.html">Python Development</a> &raquo; <a class="el" href="a00363.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00370.html">Window</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p> 
-      <h3><span  style="text-decoration: underline;"><span  style="font-style: italic;"><span
-               style="color: rgb(102, 102, 102);">Python Script Add-On Development</span></span></span></h3>
-        </p>
-<div class="image">
-<img src="logo-python.png" alt="logo-python.png"/>
-</div>
-<p> Kodi includes a built-in <a href="http://en.wikipedia.org/wiki/Python_%28programming_language%29">Python interpreter</a> that allows users to develop add-ons (scripts and plugins) that interface easily and cleanly with the Kodi dashboard. These add-ons can extend the functionality of Kodi without requiring extensive programming experience or ability. While you may not feel comfortable browsing the Kodi source code and submitting patches (or even bug reports), you can learn how to write a script or plugin with just a few hours' practice, using the information available in these pages.</p>
-<p>This page is intended as an introduction to Kodi Python for new developers, and a quick reference for more experienced programmers. If you're not interested in programming, you might want to visit <a href="http://kodi.wiki/view/Add-ons">this page</a> for information about installing and using Python add-ons as an end user. If you're already familiar with Kodi Python, you can probably skip on down to the <a href="http://kodi.wiki/view/Python_Development#Environment_details">environment details</a> or the <a href="http://kodi.wiki/view/Python_Development#Resource_links">resource links</a> below for quick reference material.</p>
-<hr/>
-<h2>Built-in modules </h2>
-<p>In addition to the standard libraries, Kodi <a href="https://www.python.org/">Python</a> uses a handful of custom modules to expose Kodi functionality to Python.</p>
-<table class="doxtable">
-<tr>
-<th align="right">Module </th><th align="left">Description  </th></tr>
-<tr>
-<td align="right"><a class="el" href="a00329.html">xbmc</a> </td><td align="left">Offers classes and functions that provide information about the media currently playing and that allow manipulation of the media player (such as starting a new song). You can also find system information using the functions available in this library. </td></tr>
-<tr>
-<td align="right"><a class="el" href="a00330.html">xbmcgui</a> </td><td align="left">Offers classes and functions that manipulate the Graphical User Interface through windows, dialogs, and various control widgets. </td></tr>
-<tr>
-<td align="right"><a class="el" href="a00334.html">xbmcplugin</a> </td><td align="left">Offers classes and functions that allow a developer to present information through Kodi's standard menu structure. While plugins don't have the same flexibility as scripts, they boast significantly quicker development time and a more consistent user experience. </td></tr>
-<tr>
-<td align="right"><a class="el" href="a00372.html">xbmcaddon</a> </td><td align="left">Offers classes and functions that manipulate the add-on settings, information and localization. </td></tr>
-<tr>
-<td align="right"><a class="el" href="a00333.html">xbmcvfs</a> </td><td align="left">Offers classes and functions offers access to the Virtual File Server (VFS) which you can use to manipulate files and folders. </td></tr>
-</table>
-<hr/>
-<h2>Installing additional modules </h2>
-<p>Additional modules may be installed by simply adding the module to the root folder of your add-on.</p>
-<p>A common way to organized third-party modules that are not part of add-on source code itself, is to add a lib directory and place an <b>init</b>.py file and other third-party modules inside it. These modules may then normally be imported using from lib import some module.</p>
-<hr/>
-<h2>Python plugins versus scripts </h2>
-<p>Please do not confuse "Plugins" with "Scripts". Unlike the Scripts, Plugins are not meant to be directly invoked by the user. Instead, Plugins are automatically invoked when the user enters such a virtual folder. Do not try to run Plugins files from the scripts window as that will only give you a weird error message. Plugins, unlike Scripts, do not really provide new functionality to Kodi, instead what they do do is provide an easy way to present content listings in Kodi through the native GUI interface.</p>
-<hr/>
-<h2>Script development </h2>
-<p>If you're new to Python programming (or just new to Kodi Python), the easiest way to get started is with a script. The traditional Hello World program, written as an Kodi Python script, would look like this: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;print(<span class="stringliteral">&quot;Hello World!&quot;</span>)</div>
-</div><!-- fragment --><p> That's the same code you would enter at the Python command line, because Kodi runs a full-featured, standard Python interpreter (for more information concerning the current version number and included modules see the environment details below). If you're already familiar with Python programming, the only new challenge is learning the custom modules that allow you to gather information from Kodi and manipulate the Graphical User Interface (GUI).</p>
-<p>There are some excellent tutorials available to introduce you to Kodi scripting (and Python in general). See the <a href="http://kodi.wiki/view/HOW-TO_write_Python_Scripts">HOW-TO</a> included in the Kodi Online Manual, or visit Alexpoet's Kodi Scripting site for a popular beginner's tutorial (PDF).</p>
-<hr/>
- <h2>Plugin development </h2>
-<p>While scripts offer you flexibility and full control over the Kodi GUI, plugins allow you to quickly and consistently present information to the user through the standard Kodi menu structure.</p>
-<p>When a user launches a plugin, the plugin generates a list of menu items and hands them to Kodi to draw on the screen (regardless of screen resolution, skin, or any other user setting). While plugin developers lose some amount of control over the presentation, they no longer have to make up their own UIs, or worry about creating a usable look and feel across multiple displays.</p>
-<p>Plugins are most commonly used to scrape websites for links to streaming videos, displaying the video list in Kodi just like it would movie files on the local hard drive, but a plugin can be used anywhere a script could, as long as the menu structure is a sufficient GUI for the add-on's needs.</p>
-<p>Also, note that a script can launch a plugin, and a plugin can launch a script (and, for that matter, it can call all the same functions available to a script) so the distinction is more theoretical than practical. </p>
+<p><b>GUI window callback functions.</b> </p>
+<p>Functions to handle control callbacks from Kodi.</p>
+<p>Likewise, all functions from here as well in the all window classes (<a class="el" href="a00370.html">Window</a>, <a class="el" href="a00373.html">WindowDialog</a>, <a class="el" href="a00374.html">WindowXML</a> and <a class="el" href="a00375.html">WindowXMLDialog</a>) with inserted and available. </p><hr/>
+<p><a class="el" href="a00370.html">Go back to normal functions from window</a> </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
-<tr class="memitem:a00329"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00329.html">Library - xbmc</a></td></tr>
-<tr class="memdesc:a00329"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>General functions on Kodi.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00372"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html">Library - xbmcaddon</a></td></tr>
-<tr class="memdesc:a00372"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Kodi's addon class.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00330"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00330.html">Library - xbmcgui</a></td></tr>
-<tr class="memdesc:a00330"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>GUI functions on Kodi.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00334"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00334.html">Library - xbmcplugin</a></td></tr>
-<tr class="memdesc:a00334"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Plugin functions on Kodi.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00333"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00333.html">Library - xbmcvfs</a></td></tr>
-<tr class="memdesc:a00333"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Virtual file system functions on Kodi.</b> <br /></td></tr>
+<tr class="memitem:a00372"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00372.html">Action Id's</a></td></tr>
+<tr class="memdesc:a00372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actions that we have defined. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga46acbc2206f67d5f8e1d44d3ebe4fa68"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onAction </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00113.html">Action</a> *&#160;</td>
+          <td class="paramname"><em>action</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>onAction method.</b> </p>
+<p>This method will receive all actions that the main program will send to this window.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">action</td><td>The action id to perform, see <a class="el" href="a00369.html">Action</a> to get use of them</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>By default, only the <code>PREVIOUS_MENU</code> and <code>NAV_BACK actions</code> are handled.</li>
+<li>Overwrite this method to let your script handle all actions.</li>
+<li>Don't forget to capture <code>ACTION_PREVIOUS_MENU</code> or <code>ACTION_NAV_BACK</code>, else the user can't close this window.</li>
+</ul>
+</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own function where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onAction(self, action):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_PREVIOUS_MENU:</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    print(<span class="stringliteral">&#39;action recieved: previous&#39;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    self.close()</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_SHOW_INFO:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    print(<span class="stringliteral">&#39;action recieved: show info&#39;</span>)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_STOP:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    print(<span class="stringliteral">&#39;action recieved: stop&#39;</span>)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_PAUSE:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    print(<span class="stringliteral">&#39;action recieved: pause&#39;</span>)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gad031aa7d2b1fcedaac6ad481e2e85757"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onClick </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>onClick method.</b> </p>
+<p>This method will receive all click events that the main program will send to this window.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>The one time clicked GUI control identifier</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; <span class="keyword">def </span>onClick(self,controlId):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;   <span class="keywordflow">if</span> controlId == 10:</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;     print(<span class="stringliteral">&quot;The control with Id 10 is clicked&quot;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga3d8a5f47cd756f21b4744eed7ede8634"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onControl </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00114.html">Control</a> *&#160;</td>
+          <td class="paramname"><em>control</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>onControl method.</b> </p>
+<p>This method will receive all click events on owned and selected controls when the control itself doesn't handle the message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">control</td><td>The <a class="el" href="a00114.html">Control</a> class</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onControl(self, control):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  print(<span class="stringliteral">&quot;Window.onControl(control=[%s])&quot;</span>%control)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga25347e21254d60dc94028d2ed6a0c5ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onDoubleClick </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>onDoubleClick method.</b> </p>
+<p>This method will receive all double click events that the main program will send to this window.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>The double clicked GUI control identifier</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onDoubleClick(self,controlId):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordflow">if</span> controlId == 10:</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    print(<span class="stringliteral">&quot;The control with Id 10 is double clicked&quot;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga32655043662a872fb86801fe5e8e1e41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onFocus </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>onFocus method.</b> </p>
+<p>This method will receive all focus events that the main program will send to this window.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>The focused GUI control identifier</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; <span class="keyword">def </span>onDoubleClick(self,controlId):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;   <span class="keywordflow">if</span> controlId == 10:</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;     print(<span class="stringliteral">&quot;The control with Id 10 is focused&quot;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga5a0ef4163216ec8833eb3a524f7fd80e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onInit </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><b>onInit method.</b> </p>
+<p>This method will be called to initialize the window</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onInit(self):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  print(<span class="stringliteral">&quot;Window.onInit method called from Kodi&quot;</span>)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

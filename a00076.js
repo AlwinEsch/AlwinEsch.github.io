@@ -1,17 +1,15 @@
 var a00076 =
 [
-    [ "CAddonGUIDialogProgress", "a00293.html#gac076fba6e17d71b4ce5b330855fb8902", null ],
-    [ "~CAddonGUIDialogProgress", "a00293.html#ga120fc408bff359c7c29a02551c00e9a0", null ],
-    [ "Abort", "a00293.html#ga71e9d732335846eb579f0dd00918b3e7", null ],
-    [ "GetPercentage", "a00293.html#gae20eeb097c9ebe3506bd1d2bb3d92fda", null ],
-    [ "IsCanceled", "a00293.html#gaf76bcf12aaec9ab845ea61853a37a33c", null ],
-    [ "Open", "a00293.html#ga5e53001785ff30ae485a113b9b8a0ddc", null ],
-    [ "SetCanCancel", "a00293.html#ga13580b7f84c1c13f90c1d030ef61faf8", null ],
-    [ "SetHeading", "a00293.html#gaf6377691fa79c14e16aebaeb9d340b33", null ],
-    [ "SetLine", "a00293.html#ga845054cd7ff1978a112126086a8ec5ba", null ],
-    [ "SetPercentage", "a00293.html#gadf0353f59469e4b0cab327ea7df9cae8", null ],
-    [ "SetProgressAdvance", "a00293.html#gafe4b80962f0d7bdd3b0a73b83ef06323", null ],
-    [ "SetProgressMax", "a00293.html#gad397a19fe15c25e5077d34fd43da6e5a", null ],
-    [ "ShowProgressBar", "a00293.html#ga4ef9882ff90cb3878eb846335e2b3c07", null ],
-    [ "IMPL_GUI_PROGRESS_DIALOG", "a00076.html#a27285bd51e7308caf726c3597624dfc8", null ]
+    [ "CAddonGUIDialogExtendedProgress", "a00324.html#ga2f267cd452ee9736993693fa501ac85e", null ],
+    [ "~CAddonGUIDialogExtendedProgress", "a00324.html#ga86033f373ed6159d52feb585bab2dfda", null ],
+    [ "IsFinished", "a00324.html#gaabe45b4d47077b54df0bb809eb41b8d5", null ],
+    [ "MarkFinished", "a00324.html#ga40af1bcedea1f61fde8cd5e70e416473", null ],
+    [ "Percentage", "a00324.html#ga3bf91c353218dceaa271b65321b2f5cf", null ],
+    [ "SetPercentage", "a00324.html#ga74a9a823ab1cd34d62a219a842de5946", null ],
+    [ "SetProgress", "a00324.html#gac64c8e121cf5e368cd335c28a0521922", null ],
+    [ "SetText", "a00324.html#gaec55d8bf3ca3e04261b66bee36f84368", null ],
+    [ "SetTitle", "a00324.html#gad8698c0477204fb8b81feb9d81cbe4fd", null ],
+    [ "Text", "a00324.html#gafdfa72709ffc1738c3c198f7ad8b61ec", null ],
+    [ "Title", "a00324.html#ga3cb91fb7750df7982baea48c4a3de616", null ],
+    [ "IMPL_GUI_EXTENDED_PROGRESS_DIALOG", "a00076.html#a346bd1e3888bec90756af8184fec1a69", null ]
 ];

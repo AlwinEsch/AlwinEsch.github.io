@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIControlProgress</title>
+<title>Kodi Development: CAddonGUIControlImage</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,23 +92,24 @@ $(document).ready(function(){initNavTree('a00287.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIControlProgress<div class="ingroups"><a class="el" href="a00370.html">C++ Development</a> &raquo; <a class="el" href="a00303.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAddonGUIControlImage<div class="ingroups"><a class="el" href="a00375.html">C++ Development</a> &raquo; <a class="el" href="a00305.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Window control to show the progress of a particular operation</b> </p>
-<p>The progress control is used to show the progress of an item that may take a long time, or to show how far through a movie you are. You can choose the position, size, and look of the progress control.</p>
-<p>It has the header <a class="el" href="a00180.html">#include &lt;kodi/gui.api2/GUIControlProgress.h&gt;</a> be included to enjoy it.</p>
+<p><b>Window control used to show an image.</b> </p>
+<p>The image control is used for displaying images in Kodi. You can choose the position, size, transparency and contents of the image to be displayed.</p>
+<p>It has the header <a class="el" href="a00180.html">#include &lt;kodi/gui.api2/GUIControlImage.h&gt;</a> be included to enjoy it.</p>
+<p>Here you find the needed skin part for a <a href="http://kodi.wiki/view/Image_Control">image control</a></p>
 <dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga29f6071fa5e9cb46c7775d82b0b518bc"></a>
+<a class="anchor" id="gaaab82074962caa8db7b1fa15b9e14a5c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CAddonGUIControlProgress </td>
+          <td class="memname">CAddonGUIControlImage </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00084.html">CAddonGUIWindow</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="a00086.html">CAddonGUIWindow</a> *&#160;</td>
           <td class="paramname"><em>window</em>, </td>
         </tr>
         <tr>
@@ -125,36 +126,73 @@ $(document).ready(function(){initNavTree('a00287.html','');});
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="gadbcb3c03a1a87a252f94e0274e1e75f8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float GetPercentage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Construct a new control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>related window control class </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>Used skin xml control id </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="ga123bcc2a09c1b721c04b4bc0dd32953d"></a>
+<a class="anchor" id="ga5f4b9c8309a04af748764bc6dd4ef31c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetPercentage </td>
+          <td class="memname">void SetColorDiffuse </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>percent</em></td><td>)</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>colorDiffuse</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>To set set the diffuse color on image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">colorDiffuse</td><td>Color to use for diffuse </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga71ca22e2515e018fdfa6db78fbee75dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetFileName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>useCache</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the filename used on image control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>Image file to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useCache</td><td>To define storage of image, default is in cache, if false becomes it loaded always on changes again </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -172,9 +210,17 @@ $(document).ready(function(){initNavTree('a00287.html','');});
       </table>
 </div><div class="memdoc">
 
+<p>Set the control on window to visible. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">visible</td><td>If true visible, otherwise hidden </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="gaa8bf8f60a1fb563174ce41f46acb9558"></a>
+<a class="anchor" id="gaf4b7097d3f8155be34401f9daab51eb3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -182,7 +228,7 @@ $(document).ready(function(){initNavTree('a00287.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~CAddonGUIControlProgress </td>
+          <td class="memname">virtual ~CAddonGUIControlImage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -194,6 +240,8 @@ $(document).ready(function(){initNavTree('a00287.html','');});
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destructor. </p>
 
 </div>
 </div>

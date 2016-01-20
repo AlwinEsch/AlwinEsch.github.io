@@ -1,8 +1,7 @@
 var a00275 =
 [
-    [ "CAddonLib_VFSProperty", "a00275.html#ga965d127e0d0de44d06a0e6da2ca8f829", null ],
-    [ "Name", "a00275.html#gab29906ba5407bb58b86428cb4b4a1e26", null ],
-    [ "SetName", "a00275.html#ga940d484bb6523277e1d2c742f4f534a4", null ],
-    [ "SetValue", "a00275.html#ga69925f195530e698e569191bd4c3470c", null ],
-    [ "Value", "a00275.html#ga7533eecbdf0c0c538dd01e03fdf8f2ad", null ]
+    [ "DNSLookup", "a00275.html#ga39943b1fdb3a928f0c08e54484602a7e", null ],
+    [ "GetIPAddress", "a00275.html#gad56ffaa14c080ecaff1f5e7534551eff", null ],
+    [ "URLEncode", "a00275.html#gab4932f2cf0d39ceca1649ec8dd782acc", null ],
+    [ "WakeOnLan", "a00275.html#ga55c0502c3db4416ce1971a85f869775b", null ]
 ];

@@ -1,4 +1,8 @@
 var a00052 =
 [
-    [ "KODI_AUDIOENGINE_LIBRARY", "a00052.html#a3d5db3884cc2c788a91a6724e97557f3", null ]
+    [ "CodecDescriptor", "a00052.html#a0ce9286b79ecef72bdf531ffb02e73d3", null ],
+    [ "CodecDescriptor", "a00052.html#a01b78d89cc9425c3b3cce1192f0fa6c4", null ],
+    [ "~CodecDescriptor", "a00052.html#a8a61d5619aaa653c3e35d65807bf725b", null ],
+    [ "Codec", "a00300.html#ga62b7b43b626a9b8beb0f16a8795b9d91", null ],
+    [ "Name", "a00300.html#gab29906ba5407bb58b86428cb4b4a1e26", null ]
 ];

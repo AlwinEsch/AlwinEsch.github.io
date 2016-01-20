@@ -1,11 +1,11 @@
 var a00293 =
 [
-    [ "CAddonGUIControlTextBox", "a00293.html#ga06117cea192b1c038b7b9b8d9c2c8dec", null ],
-    [ "GetText", "a00293.html#ga1af3f7fd8b95cc66e7599caca454f8ef", null ],
-    [ "Reset", "a00293.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
-    [ "Scroll", "a00293.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d", null ],
-    [ "SetAutoScrolling", "a00293.html#gad3e4bbb4388da7a56e8252018e4fbb00", null ],
-    [ "SetText", "a00293.html#ga8008c108280948ebd79830f222068455", null ],
-    [ "SetVisible", "a00293.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlTextBox", "a00293.html#ga671686d3890667392291118ca36b3e41", null ]
+    [ "InfoTagMusic", "a00104.html", "a00104" ],
+    [ "InfoTagRadioRDS", "a00105.html", "a00105" ],
+    [ "InfoTagVideo", "a00106.html", "a00106" ],
+    [ "Keyboard", "a00107.html", "a00107" ],
+    [ "Monitor", "a00108.html", "a00108" ],
+    [ "Player", "a00109.html", "a00109" ],
+    [ "PlayList", "a00110.html", "a00110" ],
+    [ "RenderCapture", "a00111.html", "a00111" ]
 ];

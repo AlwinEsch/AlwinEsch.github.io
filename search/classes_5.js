@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['guiviewsortdetails',['GUIViewSortDetails',['../a00086.html',1,'']]]
+  ['guiviewsortdetails',['GUIViewSortDetails',['../a00088.html',1,'']]]
 ];

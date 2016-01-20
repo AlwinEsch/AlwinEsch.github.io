@@ -1,13 +1,8 @@
 var a00165 =
 [
-    [ "ATTRIBUTE_PACKED", "a00165.html#ad93e9ac33d1a9153bbea517a98260041", null ],
-    [ "DVD_NOPTS_VALUE", "a00165.html#aa8f3bf7de853346d6bcf7de68b1132da", null ],
-    [ "DVD_TIME_BASE", "a00165.html#a2ab735c1c1995b95aa927d15465e4c37", null ],
-    [ "PRAGMA_PACK", "a00165.html#a256ebdc0994be33e06dc1ad3f6f188f4", null ],
-    [ "PLAYERHANDLE", "a00165.html#a9648d7b5459c7be333fa695dd4608b5d", null ],
-    [ "AddonPlayListType", "a00165.html#ab07b512029688f85c2c460a1d0a8efc1", [
-      [ "PlayList_Music", "a00165.html#ab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143", null ],
-      [ "PlayList_Video", "a00165.html#ab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b", null ],
-      [ "PlayList_Picture", "a00165.html#ab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab", null ]
-    ] ]
+    [ "MAX_OBJECTS", "a00165.html#acdc7844fbd4d45737d4aa56834d37829", null ],
+    [ "dlclose", "a00165.html#af483b6c4400965aa885f9f1a144138a5", null ],
+    [ "dlerror", "a00165.html#a541c343ae5cdf90926014c65972c86cc", null ],
+    [ "dlopen", "a00165.html#a8668245fcfc33ca414d3d27ca038891a", null ],
+    [ "dlsym", "a00165.html#af130d2e6324246be4262ecaaed674aa4", null ]
 ];

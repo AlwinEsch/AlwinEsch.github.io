@@ -1,9 +1,7 @@
 var a00360 =
 [
-    [ "XBFONT_CENTER_X", "a00360.html#ga687578b0a798bdeda43f70753d14ab0e", null ],
-    [ "XBFONT_CENTER_Y", "a00360.html#gab31f42c7e7b24529472d72bce221dadd", null ],
-    [ "XBFONT_JUSTIFIED", "a00360.html#gaadd26dee845564d68f1a100d62742f98", null ],
-    [ "XBFONT_LEFT", "a00360.html#gad5207c71b383451e25d9d7a85134ebe0", null ],
-    [ "XBFONT_RIGHT", "a00360.html#ga1867c471415f6499f7cd56e162d469a4", null ],
-    [ "XBFONT_TRUNCATED", "a00360.html#gaa533383607587f0c0704213463e8747d", null ]
+    [ "close", "a00360.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
+    [ "create", "a00360.html#gad71569b69244d11fe949d0bbd5b75905", null ],
+    [ "iscanceled", "a00360.html#ga2a944a55da1c28885d3f00d101618ac6", null ],
+    [ "update", "a00360.html#gabf439774a2aca33663c3bb785e6e7465", null ]
 ];

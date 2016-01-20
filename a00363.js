@@ -1,9 +1,12 @@
 var a00363 =
 [
-    [ "XBFONT_CENTER_X", "a00363.html#ga687578b0a798bdeda43f70753d14ab0e", null ],
-    [ "XBFONT_CENTER_Y", "a00363.html#gab31f42c7e7b24529472d72bce221dadd", null ],
-    [ "XBFONT_JUSTIFIED", "a00363.html#gaadd26dee845564d68f1a100d62742f98", null ],
-    [ "XBFONT_LEFT", "a00363.html#gad5207c71b383451e25d9d7a85134ebe0", null ],
-    [ "XBFONT_RIGHT", "a00363.html#ga1867c471415f6499f7cd56e162d469a4", null ],
-    [ "XBFONT_TRUNCATED", "a00363.html#gaa533383607587f0c0704213463e8747d", null ]
+    [ "Action", "a00369.html", "a00369" ],
+    [ "Control", "a00382.html", "a00382" ],
+    [ "Dialog", "a00359.html", "a00359" ],
+    [ "DialogProgress", "a00360.html", "a00360" ],
+    [ "DialogProgressBG", "a00361.html", "a00361" ],
+    [ "ListItem", "a00397.html", "a00397" ],
+    [ "Window", "a00370.html", "a00370" ],
+    [ "getCurrentWindowDialogId", "a00363.html#ga8379c35c147def9f607d18571e24678e", null ],
+    [ "getCurrentWindowId", "a00363.html#gab1660e44ef103bd39fff61229809f567", null ]
 ];

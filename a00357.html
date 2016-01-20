@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Subclass - ControlProgress</title>
+<title>Kodi Development: InfoTagMusic</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,44 +92,27 @@ $(document).ready(function(){initNavTree('a00357.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Subclass - ControlProgress<div class="ingroups"><a class="el" href="a00371.html">Python Development</a> &raquo; <a class="el" href="a00330.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00349.html">Control</a></div></div>  </div>
+<div class="title">InfoTagMusic<div class="ingroups"><a class="el" href="a00404.html">Python Development</a> &raquo; <a class="el" href="a00362.html">Library - xbmc</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Used to show the progress of a particular operation.</b> </p>
-<p><b><code>ControlProgress(x, y, width, height, filename[, texturebg, textureleft, texturemid, textureright, textureoverlay])</code></b></p>
-<p>The progress control is used to show the progress of an item that may take a long time, or to show how far through a movie you are. You can choose the position, size, and look of the progress control.</p>
-<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00349.html">Control</a></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>string - image filename. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">texturebg</td><td>[opt] string - specifies the image file whichshould be displayed in the background of the progress control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">textureleft</td><td>[opt] string - specifies the image file whichshould be displayed for the left side of the progress bar. This is rendered on the left side of the bar. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">texturemid</td><td>[opt] string - specifies the image file which should be displayed for the middl portion of the progress bar. This is the <code>fill</code> texture used to fill up the bar. It's positioned on the right of the <code>&lt;lefttexture&gt;</code> texture, and fills the gap between the <code>&lt;lefttexture&gt;</code> and <code>&lt;righttexture&gt;</code> textures, depending on how far progressed the item is. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">textureright</td><td>[opt] string - specifies the image file which should be displayed for the right side of the progress bar. This is rendered on the right side of the bar. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">textureoverlay</td><td>[opt] string - specifies the image file which should be displayed over the top of all other images in the progress bar. It is centered vertically and horizontally within the space taken up by the background image.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
- Once you use a keyword, all following arguments require the keyword.<br />
- After you create the control, you need to add it to the window with addControl().</dd></dl>
+<p><b>Kodi's music info tag class.</b> </p>
+<p>To get music info tag data of currently played source.</p>
+<dl class="section note"><dt>Note</dt><dd>Info tag load is only be possible from present player class.</dd></dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># ControlProgress(x, y, width, height, filename[, texturebg, textureleft, texturemid, textureright, textureoverlay])</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.image = xbmcgui.ControlProgress(100, 250, 250, 30, <span class="stringliteral">&#39;special://home/scripts/test.png&#39;</span>)</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;tag = xbmc.Player().getMusicInfoTag()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;title = tag.getTitle()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;url   = tag.getURL()</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;...</div>
 </div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gad3e5815badb78551841c44d9b5ae3742"></a>
+<a class="anchor" id="ga11ac7b770ff2135e877c241ddb5db662"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float getPercent </td>
+          <td class="memname">String getAlbum </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -137,44 +120,276 @@ $(document).ready(function(){initNavTree('a00357.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Returns a float of the percent of the progress. </p>
-<dl class="section return"><dt>Returns</dt><dd>Percent position</dd></dl>
+<p>Returns the album from music tag as string if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music album name</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># getPercent()</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordflow">print</span> self.progress.getPercent()</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
-</div><!-- fragment --> 
+ 
 </div>
 </div>
-<a class="anchor" id="gaebdebaa245f9f39c8c27bbbe92ad9294"></a>
+<a class="anchor" id="ga257503de86d218b382fcbbe9f1f68c2d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void setPercent </td>
+          <td class="memname">String getAlbumArtist </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>pct</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the percentage of the progressbar to show. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>float - percentage of the bar to show.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>valid range for percent is 0-100</dd></dl>
+<p>Returns the album artist from music tag as string if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music album artist name</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setPercent(percent)</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.progress.setPercent(60)</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
-</div><!-- fragment --> 
+ 
+</div>
+</div>
+<a class="anchor" id="ga1b9f565753d008491c59887680bd570e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getArtist </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the artist from music as string if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music artist</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga50a7366cba8ce27bc48a00e746324f7b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getComment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns comment as string from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Comment on tag</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gaa2759f95638fb39b74363457af9e7777"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getDisc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the disk number (if present) from music info tag as integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Disc number</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga08c13081c0665a4336a0f022c955fb69"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getDuration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the duration of music as integer from info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Duration</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga724866edc25325e096d7d8a76b4a3234"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getGenre </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the genre name from music tag as string if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Genre name</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga64953074270dc9bc74370b8251c1cd43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getLastPlayed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns last played time as string from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Last played date / time on tag</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gafdcd386f038151367af97803c1c13e41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getListeners </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the listeners as integer from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Listeners</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gaefe9573a6a972ef63b082d2264baa857"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getLyrics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string from lyrics. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Lyrics on tag</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gac644258d08f747039e9d0e76bcd49513"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getPlayCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of carried out playbacks. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Playback count</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gad099adc410738271ffc55e6fb68f77ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getReleaseDate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the release date as string from music info tag (if present). </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Release date</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga888f94790c968e3f0b5de17e509098aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the title from music as string on info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music title</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga797e19587556ad59c5e3a7b55e8ccae9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getTrack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the track number (if present) from music info tag as integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Track number</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gafa85bb6aea7b660960562826dcb20cf7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getURL </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns url of source as string from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Url of source</dd></dl>
+<hr/>
+ 
 </div>
 </div>
 </div><!-- contents -->

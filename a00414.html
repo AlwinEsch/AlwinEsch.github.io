@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Member List</title>
+<title>Kodi Development: Group Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('a00074.html','');});
+$(document).ready(function(){initNavTree('a00414.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -92,25 +92,75 @@ $(document).ready(function(){initNavTree('a00074.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIDialogExtendedProgress Member List</div>  </div>
+<div class="title">Group Control<div class="ingroups"><a class="el" href="a00406.html">Skin Development</a> &raquo; <a class="el" href="a00407.html">Controls</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00294.html#ga2f267cd452ee9736993693fa501ac85e">CAddonGUIDialogExtendedProgress</a>(const std::string &amp;title=&quot;&quot;)</td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00074.html#a346bd1e3888bec90756af8184fec1a69">IMPL_GUI_EXTENDED_PROGRESS_DIALOG</a></td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00294.html#gaabe45b4d47077b54df0bb809eb41b8d5">IsFinished</a>() const </td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00294.html#ga40af1bcedea1f61fde8cd5e70e416473">MarkFinished</a>()</td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00294.html#ga3bf91c353218dceaa271b65321b2f5cf">Percentage</a>() const </td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00294.html#ga74a9a823ab1cd34d62a219a842de5946">SetPercentage</a>(float fPercentage)</td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00294.html#gac64c8e121cf5e368cd335c28a0521922">SetProgress</a>(int currentItem, int itemCount)</td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00294.html#gaec55d8bf3ca3e04261b66bee36f84368">SetText</a>(const std::string &amp;strText)</td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00294.html#gad8698c0477204fb8b81feb9d81cbe4fd">SetTitle</a>(const std::string &amp;strTitle)</td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00294.html#gafdfa72709ffc1738c3c198f7ad8b61ec">Text</a>() const </td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00294.html#ga3cb91fb7750df7982baea48c4a3de616">Title</a>() const </td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00294.html#ga86033f373ed6159d52feb585bab2dfda">~CAddonGUIDialogExtendedProgress</a>()</td><td class="entry"><a class="el" href="a00074.html">CAddonGUIDialogExtendedProgress</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p><b>Used to group controls together.</b> </p>
+<p>The group control is one of the most important controls. It allows you to group controls together, applying attributes to all of them at once. It also remembers the last navigated button in the group, so you can set the <b><code>&lt;onup&gt;</code></b> of a control to a group of controls to have it always go back to the one you were at before. It also allows you to position controls more accurately relative to each other, as any controls within a group take their coordinates from the group's top left corner (or from elsewhere if you use the "r" attribute). You can have as many groups as you like within the skin, and groups within groups are handled with no issues.</p>
+<hr/>
+ <h1><a class="anchor" id="Group_Control_sect1"></a>
+Example</h1>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;group&quot; id=&quot;17&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first group control&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;30&lt;/height&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;defaultcontrol&gt;2&lt;/defaultcontrol&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;onup&gt;2&lt;/onup&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      &lt;ondown&gt;3&lt;/ondown&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      &lt;onleft&gt;1&lt;/onleft&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      &lt;onright&gt;1&lt;/onright&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      ... more controls go here ...</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --><hr/>
+ <h1><a class="anchor" id="Group_Control_sect2"></a>
+Available tags</h1>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
+<table class="doxtable">
+<tr>
+<th align="right">Tag </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">defaultcontrol </td><td align="left">Specifies the default control that will be focused within the group when the group receives focus. Note that the group remembers it's previously focused item and will return to it. </td></tr>
+</table>
+<hr/>
+ <h1><a class="anchor" id="Group_Control_sect3"></a>
+Notes on positioning of controls within groups</h1>
+<p>All controls within a group take their positions relative to the group's placement. Thus, the group always requires its <b><code>&lt;posx&gt;</code></b>, <b><code>&lt;posy&gt;</code></b>, <b><code>&lt;width&gt;</code></b>, and <b><code>&lt;height&gt;</code></b> attributes to be defined. As this can be a pain to remember, anything that you don't specify will be inherited from it's parent group (or the main window).</p>
+<p>By way of example, consider the first group within a PAL full screen window (720x576), and suppose we have</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;group&quot; id=&quot;15&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;posx&gt;30&lt;/posx&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  &lt;posy&gt;70&lt;/posy&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  &lt;width&gt;400&lt;/width&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  ... more controls go here ...</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --><p>so that the <b><code>&lt;height&gt;</code></b> hasn't been defined. Then Kodi will automatically set the <b><code>&lt;height&gt;</code></b> equal to 506 by inheriting this from the window's height of 576, less the <b><code>&lt;posy&gt;</code></b> amount.</p>
+<p>You can align controls within a group to the right edge of the group, by using the <b>"r"</b> modifier to the <b><code>&lt;posx&gt;</code></b> and <b><code>&lt;posy&gt;</code></b> fields</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;group&quot; id=&quot;20&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;control type=&quot;button&quot; id=2&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    &lt;posx&gt;180r&lt;/posx&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    &lt;width&gt;180&lt;/width&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  &lt;/control&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  &lt;control type=&quot;button&quot; id=3&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    &lt;posx&gt;180r&lt;/posx&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    &lt;width&gt;180&lt;/width&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  &lt;/control&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  &lt;control type=&quot;button&quot; id=4&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    &lt;posx&gt;180r&lt;/posx&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    &lt;width&gt;180&lt;/width&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  &lt;/control&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --><p>All the buttons have width 180, and are aligned 180 pixels from the right edge of the group they're within.</p>
+<hr/>
+ <h1><a class="anchor" id="Group_Control_sect4"></a>
+See also</h1>
+<h4>Development:</h4>
+<ul>
+<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
+<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

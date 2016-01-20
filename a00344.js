@@ -1,13 +1,13 @@
 var a00344 =
 [
-    [ "atime", "a00344.html#ga65d49375e5251d4e616a45e3c898d6cc", null ],
-    [ "ctime", "a00344.html#gab24c57af16ac6f88edb819c18e2e438b", null ],
-    [ "mtime", "a00344.html#ga57da69d0b20141a95c0c44a6bb5f3b35", null ],
-    [ "st_dev", "a00344.html#gab17084ec246f2b497d2f13618c5bd220", null ],
-    [ "st_gid", "a00344.html#ga9a7a9ad27402f5a931bcbff38e4e03d3", null ],
-    [ "st_ino", "a00344.html#ga77e336d6274f6fb0e2a3c3546e61e360", null ],
-    [ "st_mode", "a00344.html#ga00b3e20028eaee69c44cdc47a922fe31", null ],
-    [ "st_nlink", "a00344.html#ga34f57426567df63ef5ad1b4679778d18", null ],
-    [ "st_size", "a00344.html#gaeec21543efab31f62a21e533b0d3a537", null ],
-    [ "st_uid", "a00344.html#gaa29c53999dffe4acc12aed2eb60a6c81", null ]
+    [ "OnPlayBackEnded", "a00344.html#ga9b673b89fb0c2d810637d97a6144743d", null ],
+    [ "OnPlayBackPaused", "a00344.html#ga535ea86e9170c85e4dfc8b2292466041", null ],
+    [ "OnPlayBackResumed", "a00344.html#ga78de3c74ca811508e2c83bad612af8a0", null ],
+    [ "OnPlayBackSeek", "a00344.html#ga1aa2520cecdb44e5f37dd2905146efa6", null ],
+    [ "OnPlayBackSeekChapter", "a00344.html#ga36be56af6bfdd7fc943f8d3f1abacfbf", null ],
+    [ "OnPlayBackSpeedChanged", "a00344.html#ga14e0279d2fb9cd6b4a68f9467e07081a", null ],
+    [ "OnPlayBackStarted", "a00344.html#ga670b9e7947764d4d474b7f8cd21c1611", null ],
+    [ "OnPlayBackStopped", "a00344.html#ga5df8f6dd6cf9fb162d1d4d77da58eb2d", null ],
+    [ "OnQueueNextItem", "a00344.html#ga817b2d696d11b166143be2c391a972f9", null ],
+    [ "SetIndependentCallbacks", "a00344.html#gaa8d87ba3157eed260e7334c1b3d96657", null ]
 ];
