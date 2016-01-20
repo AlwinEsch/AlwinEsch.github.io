@@ -1,17 +1,10 @@
 var a00308 =
 [
-    [ "CreateDirectory", "a00308.html#gacbb82bf91432edf4a203b4f144c7d3c4", null ],
-    [ "DeleteFile", "a00308.html#ga83ff1a280df8f4bc766ef3398b976116", null ],
-    [ "DirectoryExists", "a00308.html#ga5e2010e4942df75e2929c5b13a082c1e", null ],
-    [ "FileExists", "a00308.html#gac73807ace2f8e3033e9f44e32e0bffeb", null ],
-    [ "GetCacheThumbName", "a00308.html#ga036d35d1c5c500c6def14e0622951346", null ],
-    [ "GetChunkSize", "a00308.html#gaf6e6b8b85c14bf77587175c446b04cc9", null ],
-    [ "GetDirectory", "a00308.html#gaf2bd94f3fa601828737bd8179e2a92e1", null ],
-    [ "GetDirectoryName", "a00308.html#ga2165e4707f3f910e36f4e98ff0f5aa7c", null ],
-    [ "GetFileMD5", "a00308.html#ga6cd9a2d2fa708d4cfe01e99b229ecaad", null ],
-    [ "GetFileName", "a00308.html#ga99209a445575f8ec40310427bc8ece4a", null ],
-    [ "MakeLegalFileName", "a00308.html#ga4847e33b9790cdee016790ad68709986", null ],
-    [ "MakeLegalPath", "a00308.html#ga9d0b0595cd9356c38329d3d8d32ae1e2", null ],
-    [ "RemoveDirectory", "a00308.html#ga96e34c477aa80c8b9adf682f8450af5c", null ],
-    [ "StatFile", "a00308.html#ga779d626c053ee2e3f9329d7f05e3d7d2", null ]
+    [ "AddDSPMenuHook", "a00308.html#gad4e7c34b466c7523b48eb38f453c6f8b", null ],
+    [ "GetCurrentSinkFormat", "a00308.html#gaeb11fdb26f8a00296e10ff296c602bb5", null ],
+    [ "RegisterDSPMode", "a00308.html#gae95d0da238b6ffa997911dbf9eedb2d4", null ],
+    [ "RegisterMe", "a00308.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
+    [ "RemoveDSPMenuHook", "a00308.html#ga59fa2e75dbd7ede8adb9488258b55bdd", null ],
+    [ "UnregisterDSPMode", "a00308.html#gae222050a6298ea8a4b7f2085ae5e85b1", null ],
+    [ "UnRegisterMe", "a00308.html#ga5940787dcdcdb8aa995a07106917489f", null ]
 ];

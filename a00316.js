@@ -1,8 +1,9 @@
 var a00316 =
 [
-    [ "CAddonGUIControlLabel", "a00316.html#ga3feee4332d158ac43b8d5d5cc20e2d0b", null ],
-    [ "GetLabel", "a00316.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "SetLabel", "a00316.html#ga0468217482f9a171183b1cda613417e6", null ],
-    [ "SetVisible", "a00316.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlLabel", "a00316.html#gae46262d2f574f9375e18fd28b3b0244b", null ]
+    [ "CAddonGUIControlRendering", "a00316.html#ga391a8355fbbce5c4a05a01e15188a41b", null ],
+    [ "Create", "a00316.html#ga12847d560dd43205d13b0963d9e395e1", null ],
+    [ "Dirty", "a00316.html#ga7cea65505e98c9989ab92a87b2f2e99b", null ],
+    [ "Render", "a00316.html#ga0bc3f3606d9cf5304dac90cd7a619194", null ],
+    [ "Stop", "a00316.html#gaf6f113a64b92a63894b285b4f2a2c3a5", null ],
+    [ "~CAddonGUIControlRendering", "a00316.html#ga8111f29e2c5fe998d541b21d76f0d353", null ]
 ];

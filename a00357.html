@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: InfoTagMusic</title>
+<title>Kodi Development: DialogProgress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,304 +92,162 @@ $(document).ready(function(){initNavTree('a00357.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">InfoTagMusic<div class="ingroups"><a class="el" href="a00404.html">Python Development</a> &raquo; <a class="el" href="a00362.html">Library - xbmc</a></div></div>  </div>
+<div class="title">DialogProgress<div class="ingroups"><a class="el" href="a00401.html">Python Development</a> &raquo; <a class="el" href="a00360.html">Library - xbmcgui</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's music info tag class.</b> </p>
-<p>To get music info tag data of currently played source.</p>
-<dl class="section note"><dt>Note</dt><dd>Info tag load is only be possible from present player class.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;tag = xbmc.Player().getMusicInfoTag()</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;title = tag.getTitle()</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;url   = tag.getURL()</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;...</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga11ac7b770ff2135e877c241ddb5db662"></a>
+<p><b>Kodi's progress dialog class (Duh!)</b> </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga5ae591df94fc66ccb85cbb6565368bca"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getAlbum </td>
+          <td class="memname">void close </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Returns the album from music tag as string if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Music album name</dd></dl>
+<p>Close the progress dialog.</p>
 <hr/>
- 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pDialog.close()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga257503de86d218b382fcbbe9f1f68c2d"></a>
+<a class="anchor" id="gad71569b69244d11fe949d0bbd5b75905"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getAlbumArtist </td>
+          <td class="memname">void create </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>line1</em> = <code>emptyString</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>line2</em> = <code>emptyString</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>line3</em> = <code>emptyString</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>create(heading[, line1, line2, line3]) &ndash; Create and show a progress dialog.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heading</td><td>: string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">line1</td><td>: [opt] string or unicode - line #1 multi-line text. </td></tr>
+    <tr><td class="paramname">line2</td><td>: [opt] string or unicode - line #2 text. </td></tr>
+    <tr><td class="paramname">line3</td><td>: [opt] string or unicode - line #3 text.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>It is preferred to only use line1 as it is actually a multi-line text. In this case line2 and line3 must be omitted. </dd>
+<dd>
+Use <a class="el" href="a00357.html#gabf439774a2aca33663c3bb785e6e7465">update()</a> to update lines and progressbar.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pDialog = xbmcgui.DialogProgress()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;pDialog.create(<span class="stringliteral">&#39;XBMC&#39;</span>, <span class="stringliteral">&#39;Initializing script...&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga2a944a55da1c28885d3f00d101618ac6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool iscanceled </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Returns the album artist from music tag as string if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Music album artist name</dd></dl>
+<p>Checks progress is canceled.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the user pressed cancel.</dd></dl>
 <hr/>
- 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordflow">if</span> (pDialog.iscanceled()): <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga1b9f565753d008491c59887680bd570e"></a>
+<a class="anchor" id="gabf439774a2aca33663c3bb785e6e7465"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getArtist </td>
+          <td class="memname">void update </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>percent</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the artist from music as string if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Music artist</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga50a7366cba8ce27bc48a00e746324f7b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">String getComment </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>line1</em> = <code>emptyString</code>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns comment as string from music info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Comment on tag</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gaa2759f95638fb39b74363457af9e7777"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">int getDisc </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>line2</em> = <code>emptyString</code>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the disk number (if present) from music info tag as integer. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Disc number</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga08c13081c0665a4336a0f022c955fb69"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">int getDuration </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>line3</em> = <code>emptyString</code>&#160;</td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the duration of music as integer from info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Duration</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga724866edc25325e096d7d8a76b4a3234"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">String getGenre </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Returns the genre name from music tag as string if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Genre name</dd></dl>
+<p>Updates the progress dialog.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">percent</td><td>: integer - percent complete. (0:100) </td></tr>
+    <tr><td class="paramname">line1</td><td>: [opt] string or unicode - line #1 multi-line text. </td></tr>
+    <tr><td class="paramname">line2</td><td>: [opt] string or unicode - line #2 text. </td></tr>
+    <tr><td class="paramname">line3</td><td>: [opt] string or unicode - line #3 text.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>It is preferred to only use line1 as it is actually a multi-line text. In this case line2 and line3 must be omitted. </dd>
+<dd>
+If percent == 0, the progressbar will be hidden.</dd></dl>
 <hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga64953074270dc9bc74370b8251c1cd43"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getLastPlayed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns last played time as string from music info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Last played date / time on tag</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gafdcd386f038151367af97803c1c13e41"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getListeners </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the listeners as integer from music info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Listeners</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gaefe9573a6a972ef63b082d2264baa857"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getLyrics </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a string from lyrics. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Lyrics on tag</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gac644258d08f747039e9d0e76bcd49513"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getPlayCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the number of carried out playbacks. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Playback count</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gad099adc410738271ffc55e6fb68f77ae"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getReleaseDate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the release date as string from music info tag (if present). </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Release date</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga888f94790c968e3f0b5de17e509098aa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getTitle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the title from music as string on info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Music title</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga797e19587556ad59c5e3a7b55e8ccae9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getTrack </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the track number (if present) from music info tag as integer. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Track number</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gafa85bb6aea7b660960562826dcb20cf7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getURL </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns url of source as string from music info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Url of source</dd></dl>
-<hr/>
- 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pDialog.update(25, <span class="stringliteral">&#39;Importing modules...&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

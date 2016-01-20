@@ -1,10 +1,10 @@
 var a00311 =
 [
-    [ "AddDSPMenuHook", "a00311.html#gad4e7c34b466c7523b48eb38f453c6f8b", null ],
-    [ "GetCurrentSinkFormat", "a00311.html#gaeb11fdb26f8a00296e10ff296c602bb5", null ],
-    [ "RegisterDSPMode", "a00311.html#gae95d0da238b6ffa997911dbf9eedb2d4", null ],
-    [ "RegisterMe", "a00311.html#gaa0bf67ad4ff0b67b500e4070f873c337", null ],
-    [ "RemoveDSPMenuHook", "a00311.html#ga59fa2e75dbd7ede8adb9488258b55bdd", null ],
-    [ "UnregisterDSPMode", "a00311.html#gae222050a6298ea8a4b7f2085ae5e85b1", null ],
-    [ "UnRegisterMe", "a00311.html#ga5940787dcdcdb8aa995a07106917489f", null ]
+    [ "AddLabel", "a00311.html#ga47cfd2f63ce533672996085727a5fdd4", null ],
+    [ "CAddonGUIControlFadeLabel", "a00311.html#gad0307142b3766119a0f4062a68f45ce0", null ],
+    [ "GetLabel", "a00311.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
+    [ "Reset", "a00311.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "SetScrolling", "a00311.html#ga02685eb001d24047fce8ed6d4899e9af", null ],
+    [ "SetVisible", "a00311.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "~CAddonGUIControlFadeLabel", "a00311.html#gac737d5d712a254b8d555891a953ba685", null ]
 ];

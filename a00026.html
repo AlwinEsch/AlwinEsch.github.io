@@ -226,7 +226,7 @@ Working with user settings</h1>
 </div><!-- fragment --><hr/>
 <h1><a class="anchor" id="Python_General_addon_section5"></a>
 Showing additional metadata</h1>
-<p>We've already seen how to show some basic metadata, like the icon image and the type of the item (<code>'video'</code> in our case). However, there are many more pieces of metadata that Kodi understands, and adding them can make life easier on your users. We'll take a look at some of the more important ones. You can also find a full list in the <a class="el" href="a00404.html">Python documentation</a> for <a class="el" href="a00397.html">xbmcgui.ListItem</a>.</p>
+<p>We've already seen how to show some basic metadata, like the icon image and the type of the item (<code>'video'</code> in our case). However, there are many more pieces of metadata that Kodi understands, and adding them can make life easier on your users. We'll take a look at some of the more important ones. You can also find a full list in the <a class="el" href="a00401.html">Python documentation</a> for <a class="el" href="a00394.html">xbmcgui.ListItem</a>.</p>
 <h2><a class="anchor" id="Python_General_addon_section5_sub1"></a>
 Icons, thumbnails and artwork</h2>
 <p>Our previous examples already showed how to set an icon, but you can also set a thumbnail, fanart (full-screen background images) and other artwork. They can be set with the <code>ListItem.setArt</code> method:</p>
@@ -234,7 +234,7 @@ Icons, thumbnails and artwork</h2>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;li.setIconImage(<span class="stringliteral">&#39;icon.png&#39;</span>)</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;li.setArt({<span class="stringliteral">&#39;thumb&#39;</span>: <span class="stringliteral">&#39;thumbnail.jpg&#39;</span>, <span class="stringliteral">&#39;poster&#39;</span>: <span class="stringliteral">&#39;poster.jpg&#39;</span> <span class="stringliteral">&#39;fanart&#39;</span>: <span class="stringliteral">&#39;fanart.jpg&#39;</span>})</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>In Kodi Isengard and earlier the <code>'icon'</code> type is not available for setArt. You must use <code>ListItem.setIconImage(...)</code></dd></dl>
-<p>If you'd prefer to show the default fanart from your add-on, you can get the path to that image from the <a class="el" href="a00405.html">xbmcaddon.Addon</a> object:</p>
+<p>If you'd prefer to show the default fanart from your add-on, you can get the path to that image from the <a class="el" href="a00402.html">xbmcaddon.Addon</a> object:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;my_addon = xbmcaddon.Addon(<span class="stringliteral">&#39;plugin.video.myaddon&#39;</span>)</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># ...</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;li.setArt({<span class="stringliteral">&#39;fanart&#39;</span>: my_addon.getAddonInfo(<span class="stringliteral">&#39;fanart&#39;</span>)})</div>
@@ -247,7 +247,7 @@ Info labels</h2>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="stringliteral">&#39;title&#39;</span>: <span class="stringliteral">&#39;Alien&#39;</span>,</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;}</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;li.setInfo(<span class="stringliteral">&#39;video&#39;</span>, info)</div>
-</div><!-- fragment --><p>For a full list of the available info labels, consult the documentation for <a class="el" href="a00397.html#gae8ac78b510d6419d3518f1d0c5671550">ListItem.setInfo</a>.</p>
+</div><!-- fragment --><p>For a full list of the available info labels, consult the documentation for <a class="el" href="a00394.html#gae8ac78b510d6419d3518f1d0c5671550">ListItem.setInfo</a>.</p>
 <h2><a class="anchor" id="Python_General_addon_section5_sub3"></a>
 Stream info</h2>
 <p>In addition to metadata about the file's contents, you can add information about the audio/video streams themselves. For a video, you might do the following:</p>
@@ -260,7 +260,7 @@ Stream info</h2>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;li.addStreamInfo(<span class="stringliteral">&#39;video&#39;</span>, video_info)</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;li.addStreamInfo(<span class="stringliteral">&#39;audio&#39;</span>, {<span class="stringliteral">&#39;codec&#39;</span>: <span class="stringliteral">&#39;dts&#39;</span>, <span class="stringliteral">&#39;language&#39;</span>: <span class="stringliteral">&#39;en&#39;</span>, <span class="stringliteral">&#39;channels&#39;</span>: 2})</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;li.addStreamInfo(<span class="stringliteral">&#39;subtitle&#39;</span>, {<span class="stringliteral">&#39;language&#39;</span>: <span class="stringliteral">&#39;en&#39;</span>})</div>
-</div><!-- fragment --><p>For complete documentation about this function, see <a class="el" href="a00397.html#ga4ac21e7b69df2ac986952a0a5f0767d0">ListItem.addStreamInfo</a>.</p>
+</div><!-- fragment --><p>For complete documentation about this function, see <a class="el" href="a00394.html#ga4ac21e7b69df2ac986952a0a5f0767d0">ListItem.addStreamInfo</a>.</p>
 <hr/>
 <h1><a class="anchor" id="Python_General_addon_section6"></a>
 Adding context menus</h1>

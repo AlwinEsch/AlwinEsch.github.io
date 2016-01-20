@@ -1,7 +1,7 @@
 var modules =
 [
-    [ "C++ Development", "a00403.html", "a00403" ],
-    [ "General Development parts", "a00402.html", "a00402" ],
-    [ "Python Development", "a00404.html", "a00404" ],
-    [ "Skin Development", "a00406.html", "a00406" ]
+    [ "C++ Development", "a00400.html", "a00400" ],
+    [ "General Development parts", "a00399.html", "a00399" ],
+    [ "Python Development", "a00401.html", "a00401" ],
+    [ "Skin Development", "a00403.html", "a00403" ]
 ];

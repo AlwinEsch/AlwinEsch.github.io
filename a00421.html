@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Panel Container</title>
+<title>Kodi Development: Resize control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,119 +92,38 @@ $(document).ready(function(){initNavTree('a00421.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Panel Container<div class="ingroups"><a class="el" href="a00406.html">Skin Development</a> &raquo; <a class="el" href="a00407.html">Controls</a></div></div>  </div>
+<div class="title">Resize control<div class="ingroups"><a class="el" href="a00403.html">Skin Development</a> &raquo; <a class="el" href="a00404.html">Controls</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<p><b>Used for a scrolling panel of items. Replaces the thumbnail panel.</b> </p>
-<p>The panel container is one of several containers used to display items from file lists in various ways. The panel container is very flexible - it's essentially a multi-column list. The layout of the items is very flexible and is up to the skinner.</p>
+<p><b>Used to set the pixel ratio in Video Calibration.</b> </p>
+<p>The resize control is used to specify an area of changeable ratio for use in the screen calibration portion of Kodi. You can choose the size, and look of the resizer.</p>
 <hr/>
- <h1><a class="anchor" id="Panel_Container_sect1"></a>
+ <h1><a class="anchor" id="Resize_Control_sect1"></a>
 Example</h1>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;panel&quot; id=&quot;52&quot;&gt;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;        &lt;posx&gt;190&lt;/posx&gt;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        &lt;posy&gt;100&lt;/posy&gt;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;        &lt;width&gt;485&lt;/width&gt;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        &lt;height&gt;425&lt;/height&gt;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        &lt;onleft&gt;9000&lt;/onleft&gt;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        &lt;onright&gt;60&lt;/onright&gt;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        &lt;onup&gt;52&lt;/onup&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        &lt;ondown&gt;52&lt;/ondown&gt;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        &lt;scrolltime tween=&quot;sine&quot; easing=&quot;out&quot;&gt;200&lt;/scrolltime&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        &lt;autoscroll&gt;true&lt;/autoscroll&gt;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        &lt;viewtype label=&quot;536&quot;&gt;icon&lt;/viewtype&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        &lt;pagecontrol&gt;60&lt;/pagecontrol&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        &lt;include&gt;contentpanelslide&lt;/include&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        &lt;itemlayout height=&quot;141&quot; width=&quot;120&quot;&gt;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                &lt;control type=&quot;image&quot;&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                        &lt;posx&gt;10&lt;/posx&gt;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                        &lt;posy&gt;10&lt;/posy&gt;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                        &lt;width&gt;100&lt;/width&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                        &lt;height&gt;100&lt;/height&gt;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                &lt;/control&gt;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                &lt;control type=&quot;image&quot;&gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                        &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                        &lt;posy&gt;75&lt;/posy&gt;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                        &lt;width&gt;32&lt;/width&gt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                        &lt;height&gt;32&lt;/height&gt;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                        &lt;info&gt;ListItem.Overlay&lt;/info&gt;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                &lt;/control&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                &lt;control type=&quot;label&quot;&gt;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                        &lt;posx&gt;60&lt;/posx&gt;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                        &lt;posy&gt;115&lt;/posy&gt;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                        &lt;width&gt;110&lt;/width&gt;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                        &lt;height&gt;22&lt;/height&gt;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        &lt;font&gt;font13&lt;/font&gt;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                        &lt;align&gt;center&lt;/align&gt;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                &lt;/control&gt;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        &lt;/itemlayout&gt;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        &lt;focusedlayout height=&quot;141&quot; width=&quot;120&quot;&gt;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                &lt;control type=&quot;image&quot;&gt;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                        &lt;width&gt;110&lt;/width&gt;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        &lt;height&gt;110&lt;/height&gt;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                        &lt;posx&gt;5&lt;/posx&gt;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                        &lt;posy&gt;5&lt;/posy&gt;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                        &lt;texture&gt;folder-focus.png&lt;/texture&gt;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                        &lt;animation effect=&quot;zoom&quot; end=&quot;0,0,120,120&quot; time=&quot;100&quot;&gt;focus&lt;/animation&gt;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                &lt;/control&gt;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                &lt;control type=&quot;image&quot;&gt;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                        &lt;posx&gt;10&lt;/posx&gt;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        &lt;posy&gt;10&lt;/posy&gt;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                        &lt;width&gt;100&lt;/width&gt;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        &lt;height&gt;100&lt;/height&gt;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        &lt;animation effect=&quot;zoom&quot; end=&quot;5,5,110,110&quot; time=&quot;100&quot;&gt;focus&lt;/animation&gt;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                &lt;/control&gt;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                &lt;control type=&quot;image&quot;&gt;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        &lt;posy&gt;75&lt;/posy&gt;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        &lt;width&gt;32&lt;/width&gt;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        &lt;height&gt;32&lt;/height&gt;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                        &lt;info&gt;ListItem.Overlay&lt;/info&gt;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        &lt;animation effect=&quot;slide&quot; end=&quot;5,5&quot; time=&quot;100&quot;&gt;focus&lt;/animation&gt;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                &lt;/control&gt;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                &lt;control type=&quot;label&quot;&gt;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        &lt;posx&gt;60&lt;/posx&gt;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        &lt;posy&gt;120&lt;/posy&gt;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                        &lt;width&gt;110&lt;/width&gt;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                        &lt;height&gt;22&lt;/height&gt;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        &lt;font&gt;font13&lt;/font&gt;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        &lt;align&gt;center&lt;/align&gt;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                &lt;/control&gt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        &lt;/focusedlayout&gt;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;&lt;/control&gt;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;resize&quot; id=&quot;3&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first resize control&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;texturefocus&gt;mytexture.png&lt;/texturefocus&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;texturenofocus&gt;mytexture.png&lt;/texturenofocus&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;pulseonselect&gt;true&lt;/pulseonselect&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;&lt;/control&gt;</div>
 </div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Panel_Container_sect2"></a>
+ <h1><a class="anchor" id="Resize_Control_sect2"></a>
 Available tags</h1>
 <p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">viewtype </td><td align="left">The type of view. Choices are list, icon, wide, wrap, biglist, bigicon, bigwide, bigwrap, info and biginfo. The label attribute indicates the label that will be used in the "View As" control within the GUI. It is localizable via strings.xml. viewtype has no effect on the view itself. It is used by kodi when switching skin to automatically select a view with a similar layout. Skinners should try to set viewtype to describe the layout as best as possible. </td></tr>
+<td align="right">texturefocus </td><td align="left">Specifies the image file which should be displayed when the resizer has focus. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
 <tr>
-<td align="right">orientation </td><td align="left">The orientation of the panel. Defaults to vertical. </td></tr>
-<tr>
-<td align="right">pagecontrol </td><td align="left">Used to set the <b><code>&lt;id&gt;</code></b> of the page control used to control this panel. </td></tr>
-<tr>
-<td align="right">scrolltime </td><td align="left">The time (in ms) to scroll from one item to another. By default, this is 200ms. The panel will scroll smoothly from one item to another as needed. Set it to zero to disable the smooth scrolling. The scroll movement can be further adjusted by selecting one of the available <a href="http://kodi.wiki/view/Tweeners">tween</a> methods. </td></tr>
-<tr>
-<td align="right">itemlayout </td><td align="left">Specifies the layout of items in the list. Requires both width and height attributes set. The <b><code>&lt;itemlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
-<tr>
-<td align="right">focusedlayout </td><td align="left">Specifies the layout of items in the list that have focus. Requires both width and height attributes set. The <b><code>&lt;focusedlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
-<tr>
-<td align="right">content </td><td align="left">Used to set the item content that this panel will contain. Allows the skinner to setup a panel anywhere they want with a static set of content, as a useful alternative to the grouplist control. <a href="http://kodi.wiki/view/Static_List_Content">See here for more information</a> </td></tr>
-<tr>
-<td align="right">preloaditems </td><td align="left">Used in association with the background image loader. <a href="http://kodi.wiki/view/Background_Image_Loader">See here for more information</a> </td></tr>
-<tr>
-<td align="right">autoscroll </td><td align="left">Used to make the container scroll automatically </td></tr>
+<td align="right">texturenofocus </td><td align="left">Specifies the image file which should be displayed when the resizer does not have focus. </td></tr>
 </table>
 <hr/>
- <h1><a class="anchor" id="Panel_Container_sect3"></a>
+ <h1><a class="anchor" id="Resize_Control_sect3"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>

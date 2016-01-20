@@ -1,16 +1,12 @@
 var a00135 =
 [
-    [ "WindowXMLDialog", "a00135.html#a8b8fa85bda49679d837f979611e5f8b1", null ],
-    [ "~WindowXMLDialog", "a00135.html#a310432dff16af9483d895540ff76be15", null ],
-    [ "close", "a00135.html#a41f0a9216ff8fd7cfe809259fc6668cc", null ],
-    [ "IsDialog", "a00135.html#a1e8473757c23d67eeaa2ad2eaa0d868b", null ],
-    [ "IsDialogRunning", "a00135.html#af5ade9aaec42bf60e7a6c1b1ae74dd2d", null ],
-    [ "IsMediaWindow", "a00135.html#aef19fec003e392f5b0abdb6155393615", null ],
-    [ "IsModalDialog", "a00135.html#adda02b50c11c92eadfa64088e2b56094", null ],
-    [ "LoadXML", "a00135.html#a4a88d9f86eedb30367ebce61fb060bbb", null ],
-    [ "OnAction", "a00135.html#a5a929bb12b2e74b5d65471b0a4242741", null ],
-    [ "OnDeinitWindow", "a00135.html#a9abe87b5ae8d7072807ea356566bed21", null ],
-    [ "OnMessage", "a00135.html#a705aa30fc54fcb4cb255efa7992f3e9e", null ],
-    [ "show", "a00135.html#a9ceb2fdb6907af08ad835270ff1697bc", null ],
-    [ "DialogJumper", "a00135.html#a08482f1b5aa6411d68254066f6028095", null ]
+    [ "File", "a00135.html#ad6c06a9065bb77311663bd2a98ef2eb5", null ],
+    [ "~File", "a00135.html#a241d694b0e799c0579a023e76cd97f18", null ],
+    [ "close", "a00361.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
+    [ "getFile", "a00135.html#ae54cc0c6b80386955f27208cbae8f3af", null ],
+    [ "read", "a00361.html#ga691e636b0dffa3c448c648f42d94437a", null ],
+    [ "readBytes", "a00361.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8", null ],
+    [ "seek", "a00361.html#ga8140115d0b4e6cb1ffa9f4298153d009", null ],
+    [ "size", "a00361.html#ga6fdf8e4501d305514d8e7b5d6cde34a6", null ],
+    [ "write", "a00361.html#ga1a6eddca986ff7164d57b9fad625e597", null ]
 ];

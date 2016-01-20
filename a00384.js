@@ -1,6 +1,5 @@
 var a00384 =
 [
-    [ "getLabel", "a00384.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
-    [ "reset", "a00384.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
-    [ "setLabel", "a00384.html#gaa1d736865ab85f96ecbe8c66769b068b", null ]
+    [ "addLabel", "a00384.html#ga5c23c1e6768621ef5114c5b56a66c7c9", null ],
+    [ "setScrolling", "a00384.html#ga37b258d64c9891a330036b19195913e1", null ]
 ];

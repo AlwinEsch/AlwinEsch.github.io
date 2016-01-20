@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CAddonGUIControlRadioButton</title>
+<title>Kodi Development: CAddonGUIControlSlider</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,24 +92,24 @@ $(document).ready(function(){initNavTree('a00318.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CAddonGUIControlRadioButton<div class="ingroups"><a class="el" href="a00403.html">C++ Development</a> &raquo; <a class="el" href="a00333.html">Library - GUILIB</a></div></div>  </div>
+<div class="title">CAddonGUIControlSlider<div class="ingroups"><a class="el" href="a00400.html">C++ Development</a> &raquo; <a class="el" href="a00330.html">Library - GUILIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Window control for a radio button (as used for on/off settings)</b> </p>
-<p>The radio button control is used for creating push button on/off settings in Kodi. You can choose the position, size, and look of the button. When the user clicks on the radio button, the state will change, toggling the extra textures (textureradioon and textureradiooff). Used for settings controls.</p>
-<p>It has the header <a class="el" href="a00211.html">#include &lt;kodi/gui.api2/GUIControlRadioButton.h&gt;</a> be included to enjoy it.</p>
-<p>Here you find the needed skin part for a <a href="http://kodi.wiki/view/Radio_button_control">radio button control</a></p>
+<p><b>Window control for moveable slider</b> </p>
+<p>The slider control is used for things where a sliding bar best represents the operation at hand (such as a volume control or seek control). You can choose the position, size, and look of the slider control.</p>
+<p>It has the header <a class="el" href="a00213.html">#include &lt;kodi/gui.api2/GUIControlSlider.h&gt;</a> be included to enjoy it.</p>
+<p>Here you find the needed skin part for a <a class="el" href="a00426.html">slider control</a></p>
 <dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gaa0b9881d273c8dde39999cdcb8d90257"></a>
+<a class="anchor" id="ga07c12260df16cfa4458529725427caa0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CAddonGUIControlRadioButton </td>
+          <td class="memname">CAddonGUIControlSlider </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00086.html">CAddonGUIWindow</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="a00085.html">CAddonGUIWindow</a> *&#160;</td>
           <td class="paramname"><em>window</em>, </td>
         </tr>
         <tr>
@@ -137,12 +137,12 @@ $(document).ready(function(){initNavTree('a00318.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ga6c80f17140ee95a258ff6c13439a2623"></a>
+<a class="anchor" id="ga3d3e509d1084585df516d4da97dd0be3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string GetLabel </td>
+          <td class="memname">std::string GetDescription </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -150,17 +150,27 @@ $(document).ready(function(){initNavTree('a00318.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Get the used text from control. </p>
-<dl class="section return"><dt>Returns</dt><dd>Text shown </dd></dl>
+<p>With GetDescription becomes a string value of position returned. </p>
+<dl class="section return"><dt>Returns</dt><dd>Text string about current slider position</dd></dl>
+<p>The following are the text defination returned from this: </p><table class="doxtable">
+<tr>
+<th align="center">Value </th><th align="left">Without range selection </th><th align="left">With range selection  </th></tr>
+<tr>
+<td align="center">float </td><td align="left"><code>%2.2f</code> </td><td align="left"><code>[%2.2f, %2.2f]</code> </td></tr>
+<tr>
+<td align="center">integer </td><td align="left"><code>i</code> </td><td align="left"><code>[i, i]</code> </td></tr>
+<tr>
+<td align="center">percent </td><td align="left"><code>i%%</code> </td><td align="left"><code>[i%%, i%%]</code> </td></tr>
+</table>
 
 </div>
 </div>
-<a class="anchor" id="gad29f489ee580d3d6d01b334aa186c323"></a>
+<a class="anchor" id="gadd5b557122d90f9a891d6b981e3ac305"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsSelected </td>
+          <td class="memname">float GetFloatValue </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -168,8 +178,63 @@ $(document).ready(function(){initNavTree('a00318.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Get the current selected condition of radio button. </p>
-<dl class="section return"><dt>Returns</dt><dd>Selected condition </dd></dl>
+<p>To get the current position as float value. </p>
+<dl class="section return"><dt>Returns</dt><dd>The position as float </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga026ef91588c09c091efb7c40bb73d4dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetIntValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get the current position as integer value. </p>
+<dl class="section return"><dt>Returns</dt><dd>The position as integer</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gadbcb3c03a1a87a252f94e0274e1e75f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GetPercentage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a float of the percent of the slider. </p>
+<dl class="section return"><dt>Returns</dt><dd>float - Percent of slider</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga372de693ad40b3f42839c8ec6ac845f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To reset slider on defaults. </p>
 
 </div>
 </div>
@@ -197,51 +262,204 @@ $(document).ready(function(){initNavTree('a00318.html','');});
 
 </div>
 </div>
-<a class="anchor" id="gab825756e641ba839bfae908492165481"></a>
+<a class="anchor" id="ga1642356ec708ec660d47175a676d2b59"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetLabel </td>
+          <td class="memname">void SetFloatInterval </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>interval</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To set the text string on radio button. </p>
+<p>To set the interval steps of slider, as default is it 0.1 If it becomes changed with this function will a step of the user with the value fixed here be executed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>Text to show </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">interval</td><td>Intervall step to set.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gada1dfadeefe2948819776785fcdbf547"></a>
+<a class="anchor" id="gaf4c5b4468e16c51b0d9a163baa082acf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetSelected </td>
+          <td class="memname">void SetFloatRange </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>selected</em></td><td>)</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the the range as float of slider, e.g. -25.0 is the slider start and e.g. +25.0 is the from here defined position where it reach the end. </p>
+<p>As default is the range 0.0 to 1.0.</p>
+<p>The float interval is as default 0.1 and can be changed with <a class="el" href="a00318.html#ga1642356ec708ec660d47175a676d2b59">SetFloatInterval</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>Integer start value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>Integer end value</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab050b4b446dc107963b04486dcfbe03d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetFloatValue </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To set radio button condition to on or off. </p>
+<p>Set the slider position with the given float value. The Range can be defined with a call from <a class="el" href="a00318.html#ga16ad72259d068519b0797117275651f1">SetIntRange</a> before, as default it is 0.0 to 1.0. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">selected</td><td>true set radio button to selection on, otherwise off </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Position in range to set with float</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0efbfb870446e5cc7409f0550bf67196"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetIntInterval </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>interval</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the interval steps of slider, as default is it 1. If it becomes changed with this function will a step of the user with the value fixed here be executed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">interval</td><td>Intervall step to set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga16ad72259d068519b0797117275651f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetIntRange </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the the range as integer of slider, e.g. -10 is the slider start and e.g. +10 is the from here defined position where it reach the end. </p>
+<p>Ad default is the range from 0 to 100.</p>
+<p>The integer interval is as default 1 and can be changed with <a class="el" href="a00318.html#ga0efbfb870446e5cc7409f0550bf67196">SetIntInterval</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>Integer start value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>Integer end value</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1bc4fce2dc8738a08b6a9458d66351a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetIntValue </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the slider position with the given integer value. The Range must be defined with a call from <a class="el" href="a00318.html#ga16ad72259d068519b0797117275651f1">SetIntRange</a> before. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Position in range to set with integer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga123bcc2a09c1b721c04b4bc0dd32953d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPercentage </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>percent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the percent of the slider. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>float - Percent value of slide</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
 
 </div>
 </div>
@@ -269,7 +487,7 @@ $(document).ready(function(){initNavTree('a00318.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ga4412919fbcab408f12771d6664a3cd16"></a>
+<a class="anchor" id="ga29c8ebb717db0bcba0a1e7227720366b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -277,7 +495,7 @@ $(document).ready(function(){initNavTree('a00318.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~CAddonGUIControlRadioButton </td>
+          <td class="memname">virtual ~CAddonGUIControlSlider </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

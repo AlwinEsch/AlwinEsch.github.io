@@ -1,22 +1,12 @@
 var a00074 =
 [
-    [ "CAddonGUIControlSpin", "a00322.html#ga48d23da73e07469740ff2c51131ec89f", null ],
-    [ "~CAddonGUIControlSpin", "a00322.html#ga9a88528e79119f52c1f7808f78ded9be", null ],
-    [ "AddLabel", "a00322.html#ga9c5e370148322bad6dbbacdbe88ba5f6", null ],
-    [ "AddLabel", "a00322.html#gaeb7d340f29d5051d948b3305dccadd51", null ],
-    [ "GetFloatValue", "a00322.html#gadd5b557122d90f9a891d6b981e3ac305", null ],
-    [ "GetIntValue", "a00322.html#ga026ef91588c09c091efb7c40bb73d4dc", null ],
-    [ "GetStringValue", "a00322.html#ga3995da0370e2ada1bf62a38fa44f8239", null ],
-    [ "Reset", "a00322.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
-    [ "SetEnabled", "a00322.html#gaac893222adeffdefc04d749648cce354", null ],
-    [ "SetFloatInterval", "a00322.html#ga1642356ec708ec660d47175a676d2b59", null ],
-    [ "SetFloatRange", "a00322.html#gaf4c5b4468e16c51b0d9a163baa082acf", null ],
-    [ "SetFloatValue", "a00322.html#gab050b4b446dc107963b04486dcfbe03d", null ],
-    [ "SetIntRange", "a00322.html#ga16ad72259d068519b0797117275651f1", null ],
-    [ "SetIntValue", "a00322.html#ga1bc4fce2dc8738a08b6a9458d66351a1", null ],
-    [ "SetStringValue", "a00322.html#ga2ad97febb5d38307c915784990bf40de", null ],
-    [ "SetText", "a00322.html#ga8008c108280948ebd79830f222068455", null ],
-    [ "SetType", "a00322.html#ga1cf61cf89e00da77c51f2b948c21b8ce", null ],
-    [ "SetVisible", "a00322.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "IMPL_GUI_SPIN_CONTROL", "a00074.html#ab0097b58f1628f61ff037504599240a2", null ]
+    [ "CAddonGUIControlTextBox", "a00320.html#ga06117cea192b1c038b7b9b8d9c2c8dec", null ],
+    [ "~CAddonGUIControlTextBox", "a00320.html#ga671686d3890667392291118ca36b3e41", null ],
+    [ "GetText", "a00320.html#ga1af3f7fd8b95cc66e7599caca454f8ef", null ],
+    [ "Reset", "a00320.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "Scroll", "a00320.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d", null ],
+    [ "SetAutoScrolling", "a00320.html#gad3e4bbb4388da7a56e8252018e4fbb00", null ],
+    [ "SetText", "a00320.html#ga8008c108280948ebd79830f222068455", null ],
+    [ "SetVisible", "a00320.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_TEXTBOX_CONTROL", "a00074.html#a62ade28dbd83a582f36b79d05192686d", null ]
 ];

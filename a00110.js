@@ -1,15 +1,12 @@
 var a00110 =
 [
-    [ "PlayList", "a00110.html#a5a2b1d9cebb8cfa88add301b5143a559", null ],
-    [ "~PlayList", "a00110.html#a32fcb11cefa02bee25ef859190f927ac", null ],
-    [ "add", "a00378.html#ga979e740949519ca0e88da2ff9934a4d5", null ],
-    [ "clear", "a00378.html#gac8bb3912a3ce86b15842e79d0b421204", null ],
-    [ "getPlayListId", "a00378.html#ga4d665409e02daa8ea13ce462ca44c914", null ],
-    [ "getposition", "a00378.html#ga265b7f39dcd400e1f4edaf4060af9977", null ],
-    [ "load", "a00378.html#ga2eea1635b7df085d42c973352ef10355", null ],
-    [ "operator[]", "a00378.html#gaba5d6f37d582f0512f61f32109a92d92", null ],
-    [ "remove", "a00378.html#gae363baca6026e43cc1264c5914ff69b9", null ],
-    [ "shuffle", "a00378.html#ga1905fe84eb39f020b32c58baf7a76758", null ],
-    [ "size", "a00378.html#gaf4b57d21919c42d55af03391f91a1c08", null ],
-    [ "unshuffle", "a00378.html#ga2401476232ac1b00321c9bfe8158f9c4", null ]
+    [ "RenderCapture", "a00110.html#a2f1abd0c5a0590bee396ab3163464e91", null ],
+    [ "~RenderCapture", "a00110.html#adcd111542d35b7dc5fa70d6a8ef054a8", null ],
+    [ "capture", "a00378.html#gad84ac4cd6e43fc4aefe0eeaa0916e187", null ],
+    [ "getAspectRatio", "a00378.html#ga2c8f0f904856b52b41dd852c57bd970b", null ],
+    [ "getHeight", "a00378.html#ga07efb2a4e9a982688c8bb3c3f21d1092", null ],
+    [ "getImage", "a00378.html#gaff2e6e3a8d1c65f17c1709dc727ae69c", null ],
+    [ "getImageFormat", "a00378.html#gaa512bbf517e279b0a5ca7d2ecf07f5b1", null ],
+    [ "GetPixels", "a00110.html#a1ea12b9900fb2903c60aacad0d1ee835", null ],
+    [ "getWidth", "a00378.html#ga67a0997183f24da19b776d96c1052998", null ]
 ];

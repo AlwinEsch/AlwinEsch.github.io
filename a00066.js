@@ -1,11 +1,9 @@
 var a00066 =
 [
-    [ "CAddonGUIControlFadeLabel", "a00314.html#gad0307142b3766119a0f4062a68f45ce0", null ],
-    [ "~CAddonGUIControlFadeLabel", "a00314.html#gac737d5d712a254b8d555891a953ba685", null ],
-    [ "AddLabel", "a00314.html#ga47cfd2f63ce533672996085727a5fdd4", null ],
-    [ "GetLabel", "a00314.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "Reset", "a00314.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
-    [ "SetScrolling", "a00314.html#ga02685eb001d24047fce8ed6d4899e9af", null ],
-    [ "SetVisible", "a00314.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "IMPL_GUI_FADELABEL_CONTROL", "a00066.html#a35b213437b6113bd52fd6ad4a512b043", null ]
+    [ "CAddonGUIControlImage", "a00312.html#gaaab82074962caa8db7b1fa15b9e14a5c", null ],
+    [ "~CAddonGUIControlImage", "a00312.html#gaf4b7097d3f8155be34401f9daab51eb3", null ],
+    [ "SetColorDiffuse", "a00312.html#ga5f4b9c8309a04af748764bc6dd4ef31c", null ],
+    [ "SetFileName", "a00312.html#ga71ca22e2515e018fdfa6db78fbee75dd", null ],
+    [ "SetVisible", "a00312.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_IMAGE_CONTROL", "a00066.html#a03edd7287e10b477fa1ec8f21d965d42", null ]
 ];

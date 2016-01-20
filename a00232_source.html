@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/interfaces/legacy/InfoTagMusic.h Source File</title>
+<title>Kodi Development: /home/alwin/Mupel/build/kodi-AlwinEsch/kodi-linux-x86_64/xbmc/addons/kodi-addon-dev-kit/kodi/player.api2/InfoTagVideo.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,109 +92,137 @@ $(document).ready(function(){initNavTree('a00232_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">InfoTagMusic.h</div>  </div>
+<div class="title">InfoTagVideo.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00232.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;music/tags/MusicInfoTag.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="a00232.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015 Team KODI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00191.html">definitions.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_player_InfoTagVideoHead.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_player_Internal.h&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00292.html">XBMCAddon</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00287.html">PlayerLIB</a></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="a00104.html">   53</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00104.html">InfoTagMusic</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      MUSIC_INFO::CMusicInfoTag* infoTag;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <a class="code" href="a00104.html#a62b565326391b112f7897681265fde34">InfoTagMusic</a>(<span class="keyword">const</span> MUSIC_INFO::CMusicInfoTag&amp; tag);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <a class="code" href="a00104.html#a62b565326391b112f7897681265fde34">InfoTagMusic</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="a00104.html#a541c6e4089511366c31fef3ed5ca0b69">~InfoTagMusic</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      String <a class="code" href="a00357.html#gafa85bb6aea7b660960562826dcb20cf7">getURL</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>V2</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="a00092.html">   43</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00092.html">CPlayerLib_InfoTagVideo</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="a00343.html#ga0c59a9a278244a6f43256556b29cbeb7">CPlayerLib_InfoTagVideo</a>(<a class="code" href="a00093.html">CPlayerLib_Player</a>* player);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="a00343.html#ga7e035ba2734dd8456cbc5cd607df46d0">~CPlayerLib_InfoTagVideo</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#gad6809482e123a8011fff62470ea115eb">GetDirector</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#gaba0a9bd1392dd9d3aeca8f79bcc6c48c">GetWritingCredits</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      String <a class="code" href="a00357.html#ga888f94790c968e3f0b5de17e509098aa">getTitle</a>();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      String <a class="code" href="a00357.html#ga1b9f565753d008491c59887680bd570e">getArtist</a>();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      String <a class="code" href="a00357.html#ga11ac7b770ff2135e877c241ddb5db662">getAlbum</a>();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      String <a class="code" href="a00357.html#ga257503de86d218b382fcbbe9f1f68c2d">getAlbumArtist</a>();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      String <a class="code" href="a00357.html#ga724866edc25325e096d7d8a76b4a3234">getGenre</a>();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00357.html#ga08c13081c0665a4336a0f022c955fb69">getDuration</a>();</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00357.html#ga797e19587556ad59c5e3a7b55e8ccae9">getTrack</a>();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00357.html#gaa2759f95638fb39b74363457af9e7777">getDisc</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga57435c1b02f97861847fffd5fd740123">GetGenre</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga971b8bd6b97a337cab9b96d8f9070749">GetCountry</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga58fabc0438d8a2d9a6e8c956897869f5">GetTagLine</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga64e0da943d733a7a84a9053e2f25ea3b">GetPlotOutline</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga35d97a12503c64202fef6c10dc687011">GetPlot</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga9a782bb09314f8c944ffbac211fbc1a2">GetTrailer</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga433fa04ffdb92cc4a868e5ba0dfbb4c2">GetPictureURL</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga9272205cb3a71f70bb4c9437da3c9bda">GetTitle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga0dc6d3dd2385ac3606324f004e11346f">GetVotes</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga887ee39961b10a4afb9a21c1b4470ad6">GetCast</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#gaa05bee5cb34224a431c82d42d5bca039">GetFile</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga823adc81f55ead9f5978de4b64b279c3">GetPath</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      String <a class="code" href="a00357.html#gad099adc410738271ffc55e6fb68f77ae">getReleaseDate</a>();</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00357.html#gafdcd386f038151367af97803c1c13e41">getListeners</a>();</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00357.html#gac644258d08f747039e9d0e76bcd49513">getPlayCount</a>();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      String <a class="code" href="a00357.html#ga64953074270dc9bc74370b8251c1cd43">getLastPlayed</a>();</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      String <a class="code" href="a00357.html#ga50a7366cba8ce27bc48a00e746324f7b">getComment</a>();</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      String <a class="code" href="a00357.html#gaefe9573a6a972ef63b082d2264baa857">getLyrics</a>();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    };</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
-<div class="ttc" id="a00357_html_ga257503de86d218b382fcbbe9f1f68c2d"><div class="ttname"><a href="a00357.html#ga257503de86d218b382fcbbe9f1f68c2d">XBMCAddon::xbmc::InfoTagMusic::getAlbumArtist</a></div><div class="ttdeci">String getAlbumArtist()</div><div class="ttdoc">Returns the album artist from music tag as string if present. </div></div>
-<div class="ttc" id="a00104_html_a62b565326391b112f7897681265fde34"><div class="ttname"><a href="a00104.html#a62b565326391b112f7897681265fde34">XBMCAddon::xbmc::InfoTagMusic::InfoTagMusic</a></div><div class="ttdeci">InfoTagMusic()</div></div>
-<div class="ttc" id="a00357_html_gad099adc410738271ffc55e6fb68f77ae"><div class="ttname"><a href="a00357.html#gad099adc410738271ffc55e6fb68f77ae">XBMCAddon::xbmc::InfoTagMusic::getReleaseDate</a></div><div class="ttdeci">String getReleaseDate()</div><div class="ttdoc">Returns the release date as string from music info tag (if present). </div></div>
-<div class="ttc" id="a00104_html_a541c6e4089511366c31fef3ed5ca0b69"><div class="ttname"><a href="a00104.html#a541c6e4089511366c31fef3ed5ca0b69">XBMCAddon::xbmc::InfoTagMusic::~InfoTagMusic</a></div><div class="ttdeci">virtual ~InfoTagMusic()</div></div>
-<div class="ttc" id="a00357_html_gac644258d08f747039e9d0e76bcd49513"><div class="ttname"><a href="a00357.html#gac644258d08f747039e9d0e76bcd49513">XBMCAddon::xbmc::InfoTagMusic::getPlayCount</a></div><div class="ttdeci">int getPlayCount()</div><div class="ttdoc">Returns the number of carried out playbacks. </div></div>
-<div class="ttc" id="a00357_html_ga888f94790c968e3f0b5de17e509098aa"><div class="ttname"><a href="a00357.html#ga888f94790c968e3f0b5de17e509098aa">XBMCAddon::xbmc::InfoTagMusic::getTitle</a></div><div class="ttdeci">String getTitle()</div><div class="ttdoc">Returns the title from music as string on info tag. </div></div>
-<div class="ttc" id="a00357_html_ga11ac7b770ff2135e877c241ddb5db662"><div class="ttname"><a href="a00357.html#ga11ac7b770ff2135e877c241ddb5db662">XBMCAddon::xbmc::InfoTagMusic::getAlbum</a></div><div class="ttdeci">String getAlbum()</div><div class="ttdoc">Returns the album from music tag as string if present. </div></div>
-<div class="ttc" id="a00357_html_ga724866edc25325e096d7d8a76b4a3234"><div class="ttname"><a href="a00357.html#ga724866edc25325e096d7d8a76b4a3234">XBMCAddon::xbmc::InfoTagMusic::getGenre</a></div><div class="ttdeci">String getGenre()</div><div class="ttdoc">Returns the genre name from music tag as string if present. </div></div>
-<div class="ttc" id="a00357_html_ga797e19587556ad59c5e3a7b55e8ccae9"><div class="ttname"><a href="a00357.html#ga797e19587556ad59c5e3a7b55e8ccae9">XBMCAddon::xbmc::InfoTagMusic::getTrack</a></div><div class="ttdeci">int getTrack()</div><div class="ttdoc">Returns the track number (if present) from music info tag as integer. </div></div>
-<div class="ttc" id="a00357_html_ga1b9f565753d008491c59887680bd570e"><div class="ttname"><a href="a00357.html#ga1b9f565753d008491c59887680bd570e">XBMCAddon::xbmc::InfoTagMusic::getArtist</a></div><div class="ttdeci">String getArtist()</div><div class="ttdoc">Returns the artist from music as string if present. </div></div>
-<div class="ttc" id="a00357_html_gafdcd386f038151367af97803c1c13e41"><div class="ttname"><a href="a00357.html#gafdcd386f038151367af97803c1c13e41">XBMCAddon::xbmc::InfoTagMusic::getListeners</a></div><div class="ttdeci">int getListeners()</div><div class="ttdoc">Returns the listeners as integer from music info tag. </div></div>
-<div class="ttc" id="a00357_html_ga08c13081c0665a4336a0f022c955fb69"><div class="ttname"><a href="a00357.html#ga08c13081c0665a4336a0f022c955fb69">XBMCAddon::xbmc::InfoTagMusic::getDuration</a></div><div class="ttdeci">int getDuration()</div><div class="ttdoc">Returns the duration of music as integer from info tag. </div></div>
-<div class="ttc" id="a00357_html_gaa2759f95638fb39b74363457af9e7777"><div class="ttname"><a href="a00357.html#gaa2759f95638fb39b74363457af9e7777">XBMCAddon::xbmc::InfoTagMusic::getDisc</a></div><div class="ttdeci">int getDisc()</div><div class="ttdoc">Returns the disk number (if present) from music info tag as integer. </div></div>
-<div class="ttc" id="a00357_html_gafa85bb6aea7b660960562826dcb20cf7"><div class="ttname"><a href="a00357.html#gafa85bb6aea7b660960562826dcb20cf7">XBMCAddon::xbmc::InfoTagMusic::getURL</a></div><div class="ttdeci">String getURL()</div><div class="ttdoc">Returns url of source as string from music info tag. </div></div>
-<div class="ttc" id="a00292_html"><div class="ttname"><a href="a00292.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00357_html_ga50a7366cba8ce27bc48a00e746324f7b"><div class="ttname"><a href="a00357.html#ga50a7366cba8ce27bc48a00e746324f7b">XBMCAddon::xbmc::InfoTagMusic::getComment</a></div><div class="ttdeci">String getComment()</div><div class="ttdoc">Returns comment as string from music info tag. </div></div>
-<div class="ttc" id="a00357_html_gaefe9573a6a972ef63b082d2264baa857"><div class="ttname"><a href="a00357.html#gaefe9573a6a972ef63b082d2264baa857">XBMCAddon::xbmc::InfoTagMusic::getLyrics</a></div><div class="ttdeci">String getLyrics()</div><div class="ttdoc">Returns a string from lyrics. </div></div>
-<div class="ttc" id="a00104_html"><div class="ttname"><a href="a00104.html">XBMCAddon::xbmc::InfoTagMusic</a></div><div class="ttdef"><b>Definition:</b> InfoTagMusic.h:53</div></div>
-<div class="ttc" id="a00357_html_ga64953074270dc9bc74370b8251c1cd43"><div class="ttname"><a href="a00357.html#ga64953074270dc9bc74370b8251c1cd43">XBMCAddon::xbmc::InfoTagMusic::getLastPlayed</a></div><div class="ttdeci">String getLastPlayed()</div><div class="ttdoc">Returns last played time as string from music info tag. </div></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga1e5232474372f5364c1d66bcfb01dce1">GetIMDBNumber</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga4546f09c240060376fef6e7be55795bc">GetMPAARating</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="a00343.html#ga434e5e24f6205c0685cddb01c68f433a">GetYear</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="a00343.html#ga60bd9aab01c1e0890199f2b5b68fbf1b">GetRating</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="a00343.html#ga057dc61a69e40c80675a082b6251fc8a">GetPlayCount</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga833b68f759c1e3ce0c068fd06e9b0f4a">GetLastPlayed</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#gabb8b8f9930f07eab44a3341f8ad966e5">GetOriginalTitle</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga51f81b31f3f918368528aaf7b217439a">GetPremiered</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keyword">const</span> std::string&amp; <a class="code" href="a00343.html#ga9094522bd49574a67d4c8402ff240cb1">GetFirstAired</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00343.html#gabf8649f509198c0605a0f93c5d29a87c">GetDuration</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="a00092.html#adb8b316a5f606da7d0eebd3dc0dfad00">  257</a></span>&#160;    <a class="code" href="a00092.html#adb8b316a5f606da7d0eebd3dc0dfad00">IMPL_ADDON_INFO_TAG_VIDEO</a>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  };</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}; <span class="comment">/* namespace V2 */</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}; <span class="comment">/* namespace PlayerLIB */</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">#include &quot;internal/libKODI_player_InfoTagVideoTail.h&quot;</span></div>
+<div class="ttc" id="a00343_html_ga057dc61a69e40c80675a082b6251fc8a"><div class="ttname"><a href="a00343.html#ga057dc61a69e40c80675a082b6251fc8a">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetPlayCount</a></div><div class="ttdeci">int GetPlayCount() const </div><div class="ttdoc">To get the number of plays of the video. </div></div>
+<div class="ttc" id="a00343_html_ga823adc81f55ead9f5978de4b64b279c3"><div class="ttname"><a href="a00343.html#ga823adc81f55ead9f5978de4b64b279c3">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetPath</a></div><div class="ttdeci">const std::string &amp; GetPath() const </div><div class="ttdoc">To get the path where the video is stored. </div></div>
+<div class="ttc" id="a00092_html_adb8b316a5f606da7d0eebd3dc0dfad00"><div class="ttname"><a href="a00092.html#adb8b316a5f606da7d0eebd3dc0dfad00">PlayerLIB::V2::CPlayerLib_InfoTagVideo::IMPL_ADDON_INFO_TAG_VIDEO</a></div><div class="ttdeci">IMPL_ADDON_INFO_TAG_VIDEO</div><div class="ttdef"><b>Definition:</b> InfoTagVideo.h:257</div></div>
+<div class="ttc" id="a00093_html"><div class="ttname"><a href="a00093.html">PlayerLIB::V2::CPlayerLib_Player</a></div><div class="ttdef"><b>Definition:</b> AddonPlayer.h:53</div></div>
+<div class="ttc" id="a00343_html_ga57435c1b02f97861847fffd5fd740123"><div class="ttname"><a href="a00343.html#ga57435c1b02f97861847fffd5fd740123">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetGenre</a></div><div class="ttdeci">const std::string &amp; GetGenre() const </div><div class="ttdoc">To get the Video Genre if available. </div></div>
+<div class="ttc" id="a00191_html"><div class="ttname"><a href="a00191.html">definitions.h</a></div></div>
+<div class="ttc" id="a00343_html_ga35d97a12503c64202fef6c10dc687011"><div class="ttname"><a href="a00343.html#ga35d97a12503c64202fef6c10dc687011">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetPlot</a></div><div class="ttdeci">const std::string &amp; GetPlot() const </div><div class="ttdoc">Get the plot of the video if present. </div></div>
+<div class="ttc" id="a00343_html_ga1e5232474372f5364c1d66bcfb01dce1"><div class="ttname"><a href="a00343.html#ga1e5232474372f5364c1d66bcfb01dce1">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetIMDBNumber</a></div><div class="ttdeci">const std::string &amp; GetIMDBNumber() const </div><div class="ttdoc">To get the IMDb number of the video (if present). </div></div>
+<div class="ttc" id="a00343_html_ga887ee39961b10a4afb9a21c1b4470ad6"><div class="ttname"><a href="a00343.html#ga887ee39961b10a4afb9a21c1b4470ad6">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetCast</a></div><div class="ttdeci">const std::string &amp; GetCast() const </div><div class="ttdoc">To get the cast of the video when available. </div></div>
+<div class="ttc" id="a00343_html_ga58fabc0438d8a2d9a6e8c956897869f5"><div class="ttname"><a href="a00343.html#ga58fabc0438d8a2d9a6e8c956897869f5">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetTagLine</a></div><div class="ttdeci">const std::string &amp; GetTagLine() const </div><div class="ttdoc">Get video tag line if available. </div></div>
+<div class="ttc" id="a00343_html_ga0dc6d3dd2385ac3606324f004e11346f"><div class="ttname"><a href="a00343.html#ga0dc6d3dd2385ac3606324f004e11346f">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetVotes</a></div><div class="ttdeci">const std::string &amp; GetVotes() const </div><div class="ttdoc">Get the video votes if available from video info tag. </div></div>
+<div class="ttc" id="a00343_html_ga971b8bd6b97a337cab9b96d8f9070749"><div class="ttname"><a href="a00343.html#ga971b8bd6b97a337cab9b96d8f9070749">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetCountry</a></div><div class="ttdeci">const std::string &amp; GetCountry() const </div><div class="ttdoc">Get country from where the video is (if rpresent) </div></div>
+<div class="ttc" id="a00287_html"><div class="ttname"><a href="a00287.html">PlayerLIB</a></div><div class="ttdef"><b>Definition:</b> AddonPlayer.h:29</div></div>
+<div class="ttc" id="a00343_html_ga51f81b31f3f918368528aaf7b217439a"><div class="ttname"><a href="a00343.html#ga51f81b31f3f918368528aaf7b217439a">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetPremiered</a></div><div class="ttdeci">const std::string &amp; GetPremiered() const </div><div class="ttdoc">To get premiered date of the video, if available. </div></div>
+<div class="ttc" id="a00343_html_gaba0a9bd1392dd9d3aeca8f79bcc6c48c"><div class="ttname"><a href="a00343.html#gaba0a9bd1392dd9d3aeca8f79bcc6c48c">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetWritingCredits</a></div><div class="ttdeci">const std::string &amp; GetWritingCredits() const </div><div class="ttdoc">Get the writing credits if present from video info tag. </div></div>
+<div class="ttc" id="a00343_html_gabf8649f509198c0605a0f93c5d29a87c"><div class="ttname"><a href="a00343.html#gabf8649f509198c0605a0f93c5d29a87c">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetDuration</a></div><div class="ttdeci">unsigned int GetDuration() const </div><div class="ttdoc">Returns the duration of video. </div></div>
+<div class="ttc" id="a00343_html_ga9272205cb3a71f70bb4c9437da3c9bda"><div class="ttname"><a href="a00343.html#ga9272205cb3a71f70bb4c9437da3c9bda">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetTitle</a></div><div class="ttdeci">const std::string &amp; GetTitle() const </div><div class="ttdoc">Get the video title. </div></div>
+<div class="ttc" id="a00343_html_gad6809482e123a8011fff62470ea115eb"><div class="ttname"><a href="a00343.html#gad6809482e123a8011fff62470ea115eb">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetDirector</a></div><div class="ttdeci">const std::string &amp; GetDirector() const </div><div class="ttdoc">Get film director who has made the film (if present). </div></div>
+<div class="ttc" id="a00343_html_ga4546f09c240060376fef6e7be55795bc"><div class="ttname"><a href="a00343.html#ga4546f09c240060376fef6e7be55795bc">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetMPAARating</a></div><div class="ttdeci">const std::string &amp; GetMPAARating() const </div></div>
+<div class="ttc" id="a00343_html_ga833b68f759c1e3ce0c068fd06e9b0f4a"><div class="ttname"><a href="a00343.html#ga833b68f759c1e3ce0c068fd06e9b0f4a">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetLastPlayed</a></div><div class="ttdeci">const std::string &amp; GetLastPlayed() const </div><div class="ttdoc">Get the last played date / time as string. </div></div>
+<div class="ttc" id="a00343_html_ga64e0da943d733a7a84a9053e2f25ea3b"><div class="ttname"><a href="a00343.html#ga64e0da943d733a7a84a9053e2f25ea3b">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetPlotOutline</a></div><div class="ttdeci">const std::string &amp; GetPlotOutline() const </div><div class="ttdoc">Get the outline plot of the video if present. </div></div>
+<div class="ttc" id="a00343_html_ga9a782bb09314f8c944ffbac211fbc1a2"><div class="ttname"><a href="a00343.html#ga9a782bb09314f8c944ffbac211fbc1a2">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetTrailer</a></div><div class="ttdeci">const std::string &amp; GetTrailer() const </div><div class="ttdoc">Get the URL of the trailer from Video. </div></div>
+<div class="ttc" id="a00343_html_ga0c59a9a278244a6f43256556b29cbeb7"><div class="ttname"><a href="a00343.html#ga0c59a9a278244a6f43256556b29cbeb7">PlayerLIB::V2::CPlayerLib_InfoTagVideo::CPlayerLib_InfoTagVideo</a></div><div class="ttdeci">CPlayerLib_InfoTagVideo(CPlayerLib_Player *player)</div><div class="ttdoc">Class constructer with play as source. </div></div>
+<div class="ttc" id="a00343_html_ga434e5e24f6205c0685cddb01c68f433a"><div class="ttname"><a href="a00343.html#ga434e5e24f6205c0685cddb01c68f433a">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetYear</a></div><div class="ttdeci">int GetYear() const </div><div class="ttdoc">Get production year of video if present. </div></div>
+<div class="ttc" id="a00343_html_gabb8b8f9930f07eab44a3341f8ad966e5"><div class="ttname"><a href="a00343.html#gabb8b8f9930f07eab44a3341f8ad966e5">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetOriginalTitle</a></div><div class="ttdeci">const std::string &amp; GetOriginalTitle() const </div><div class="ttdoc">To get the original title of the video. </div></div>
+<div class="ttc" id="a00343_html_ga9094522bd49574a67d4c8402ff240cb1"><div class="ttname"><a href="a00343.html#ga9094522bd49574a67d4c8402ff240cb1">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetFirstAired</a></div><div class="ttdeci">const std::string &amp; GetFirstAired() const </div><div class="ttdoc">Returns first aired date as string from info tag. </div></div>
+<div class="ttc" id="a00092_html"><div class="ttname"><a href="a00092.html">PlayerLIB::V2::CPlayerLib_InfoTagVideo</a></div><div class="ttdef"><b>Definition:</b> InfoTagVideo.h:43</div></div>
+<div class="ttc" id="a00343_html_gaa05bee5cb34224a431c82d42d5bca039"><div class="ttname"><a href="a00343.html#gaa05bee5cb34224a431c82d42d5bca039">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetFile</a></div><div class="ttdeci">const std::string &amp; GetFile() const </div><div class="ttdoc">To get the video file name. </div></div>
+<div class="ttc" id="a00343_html_ga60bd9aab01c1e0890199f2b5b68fbf1b"><div class="ttname"><a href="a00343.html#ga60bd9aab01c1e0890199f2b5b68fbf1b">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetRating</a></div><div class="ttdeci">double GetRating() const </div><div class="ttdoc">Get the video rating if present as float (double where supported). </div></div>
+<div class="ttc" id="a00343_html_ga7e035ba2734dd8456cbc5cd607df46d0"><div class="ttname"><a href="a00343.html#ga7e035ba2734dd8456cbc5cd607df46d0">PlayerLIB::V2::CPlayerLib_InfoTagVideo::~CPlayerLib_InfoTagVideo</a></div><div class="ttdeci">virtual ~CPlayerLib_InfoTagVideo()</div><div class="ttdoc">Class destructor. </div></div>
+<div class="ttc" id="a00343_html_ga433fa04ffdb92cc4a868e5ba0dfbb4c2"><div class="ttname"><a href="a00343.html#ga433fa04ffdb92cc4a868e5ba0dfbb4c2">PlayerLIB::V2::CPlayerLib_InfoTagVideo::GetPictureURL</a></div><div class="ttdeci">const std::string &amp; GetPictureURL() const </div><div class="ttdoc">Get a picture URL of the video to show as screenshot. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_7daf64531a6734398f47fbf4d118ea93.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_804116d6b172e647b1a8fb71e6abb849.html">legacy</a></li><li class="navelem"><a class="el" href="a00232.html">InfoTagMusic.h</a></li>
+    <li class="navelem"><a class="el" href="dir_3b29b88e633d0e7decc99dfac3f67a6c.html">kodi</a></li><li class="navelem"><a class="el" href="dir_190ef0275021a9d8497f84fadf8f87de.html">player.api2</a></li><li class="navelem"><a class="el" href="a00232.html">InfoTagVideo.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

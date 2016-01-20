@@ -1,11 +1,20 @@
 var a00071 =
 [
-    [ "CAddonGUIControlRendering", "a00319.html#ga391a8355fbbce5c4a05a01e15188a41b", null ],
-    [ "~CAddonGUIControlRendering", "a00319.html#ga8111f29e2c5fe998d541b21d76f0d353", null ],
-    [ "Create", "a00319.html#ga12847d560dd43205d13b0963d9e395e1", null ],
-    [ "Dirty", "a00319.html#ga7cea65505e98c9989ab92a87b2f2e99b", null ],
-    [ "Render", "a00319.html#ga0bc3f3606d9cf5304dac90cd7a619194", null ],
-    [ "SetIndependentCallbacks", "a00071.html#a10abcb122b56e3f8a6069b888486d5db", null ],
-    [ "Stop", "a00319.html#gaf6f113a64b92a63894b285b4f2a2c3a5", null ],
-    [ "IMPL_GUI_RENDERING_CONTROL", "a00071.html#a446e0068f82fb1cab645123c21f62fd5", null ]
+    [ "CAddonGUIControlSettingsSlider", "a00317.html#gaccf8cc6a6a808d822712bc1456839f1f", null ],
+    [ "~CAddonGUIControlSettingsSlider", "a00317.html#gaea1533f267360e38309e3c0483c27f97", null ],
+    [ "GetFloatValue", "a00317.html#gadd5b557122d90f9a891d6b981e3ac305", null ],
+    [ "GetIntValue", "a00317.html#ga026ef91588c09c091efb7c40bb73d4dc", null ],
+    [ "GetPercentage", "a00317.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ],
+    [ "Reset", "a00317.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "SetEnabled", "a00317.html#gaac893222adeffdefc04d749648cce354", null ],
+    [ "SetFloatInterval", "a00317.html#ga1642356ec708ec660d47175a676d2b59", null ],
+    [ "SetFloatRange", "a00317.html#gaf4c5b4468e16c51b0d9a163baa082acf", null ],
+    [ "SetFloatValue", "a00317.html#gab050b4b446dc107963b04486dcfbe03d", null ],
+    [ "SetIntInterval", "a00317.html#ga0efbfb870446e5cc7409f0550bf67196", null ],
+    [ "SetIntRange", "a00317.html#ga16ad72259d068519b0797117275651f1", null ],
+    [ "SetIntValue", "a00317.html#ga1bc4fce2dc8738a08b6a9458d66351a1", null ],
+    [ "SetPercentage", "a00317.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
+    [ "SetText", "a00317.html#ga8008c108280948ebd79830f222068455", null ],
+    [ "SetVisible", "a00317.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_SETTINGS_SLIDER_CONTROL", "a00071.html#a7d1192314b81749b731c98a3e98130b9", null ]
 ];

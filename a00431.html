@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Text Box</title>
+<title>Kodi Development: Wrap List Container</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,57 +92,135 @@ $(document).ready(function(){initNavTree('a00431.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Text Box<div class="ingroups"><a class="el" href="a00406.html">Skin Development</a> &raquo; <a class="el" href="a00407.html">Controls</a></div></div>  </div>
+<div class="title">Wrap List Container<div class="ingroups"><a class="el" href="a00403.html">Skin Development</a> &raquo; <a class="el" href="a00404.html">Controls</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<p><b>Used to show a multi-page piece of text.</b> </p>
-<p>The text box is used for showing a large multipage piece of text in Kodi. You can choose the position, size, and look of the text.</p>
-<hr/>
- <h1><a class="anchor" id="Text_Box_sect1"></a>
+<p><b>Used for a wrapping list of items with fixed focus.</b> </p>
+<p>The wrap list container is one of several containers used to display items fromfile lists in various ways. The wrap list container is the same as the <a class="el" href="a00415.html">List Container</a>, with two exceptions:</p><ol type="1">
+<li>The focused item is fixed.</li>
+<li>The items "wrap" around once they reach the end.</li>
+</ol>
+<p>As with all container controls, the layout of the items within the control is very flexible. </p><hr/>
+ <h1><a class="anchor" id="Wrap_List_Container_sect1"></a>
 Example</h1>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;textbox&quot; id=&quot;2&quot;&gt;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;   &lt;description&gt;My first text box control&lt;/description&gt;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;   &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;   &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;   &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;   &lt;height&gt;200&lt;/height&gt;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;   &lt;visible&gt;true&lt;/visible&gt;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;   &lt;colordiffuse&gt;FFFFFFFF&lt;/colordiffuse&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;   &lt;font&gt;font13&lt;/font&gt;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;   &lt;textcolor&gt;FFFFFFFF&lt;/textcolor&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;   &lt;pulseonselect&gt;&lt;/pulseonselect&gt;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   &lt;pagecontrol&gt;13&lt;/pagecontrol&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;   &lt;scrolltime&gt;200&lt;/scrolltime&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   &lt;autoscroll delay=&quot;3000&quot; time=&quot;1000&quot; repeat=&quot;10000&quot;&gt;!Control.HasFocus(13)&lt;/autoscroll&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;   &lt;label&gt;Text to display goes here [CR] next line...&lt;/label&gt;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;   &lt;align&gt;center&lt;/align&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;&lt;/control&gt;</div>
-</div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Text_Box_sect2"></a>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;wraplist&quot; id=&quot;50&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first wraplist container&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;onup&gt;2&lt;/onup&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;ondown&gt;3&lt;/ondown&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      &lt;onleft&gt;1&lt;/onleft&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      &lt;onright&gt;1&lt;/onright&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      &lt;viewtype label=&quot;3D list&quot;&gt;list&lt;/viewtype&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      &lt;orientation&gt;vertical&lt;/orientation&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      &lt;pagecontrol&gt;25&lt;/pagecontrol&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      &lt;focusposition&gt;3&lt;/focusposition&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      &lt;scrolltime tween=&quot;sine&quot; easing=&quot;out&quot;&gt;200&lt;/scrolltime&gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      &lt;autoscroll&gt;true&lt;/autoscroll&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      &lt;itemlayout width=&quot;250&quot; height=&quot;29&quot;&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                &lt;control type=&quot;image&quot;&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                        &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                        &lt;width&gt;22&lt;/width&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                &lt;/control&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                &lt;control type=&quot;label&quot;&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                        &lt;posx&gt;30&lt;/posx&gt;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                        &lt;width&gt;430&lt;/width&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                        &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                &lt;/control&gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                &lt;control type=&quot;label&quot;&gt;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                        &lt;posx&gt;475&lt;/posx&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        &lt;width&gt;300&lt;/width&gt;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                        &lt;textcolor&gt;grey&lt;/textcolor&gt;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                        &lt;align&gt;right&lt;/align&gt;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                        &lt;info&gt;ListItem.Label2&lt;/info&gt;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                &lt;/control&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      &lt;/itemlayout&gt;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      &lt;focusedlayout height=&quot;29&quot; width=&quot;250&quot;&gt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                &lt;control type=&quot;image&quot;&gt;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        &lt;width&gt;485&lt;/width&gt;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                        &lt;height&gt;29&lt;/height&gt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        &lt;posx&gt;0&lt;/posx&gt;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        &lt;visible&gt;Control.HasFocus(50)&lt;/visible&gt;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        &lt;texture&gt;list-focus.png&lt;/texture&gt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                &lt;/control&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                &lt;control type=&quot;image&quot;&gt;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        &lt;width&gt;22&lt;/width&gt;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                &lt;/control&gt;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                &lt;control type=&quot;label&quot;&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        &lt;posx&gt;30&lt;/posx&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                        &lt;width&gt;430&lt;/width&gt;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                &lt;/control&gt;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                &lt;control type=&quot;label&quot;&gt;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                        &lt;posx&gt;475&lt;/posx&gt;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        &lt;width&gt;300&lt;/width&gt;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                        &lt;textcolor&gt;grey&lt;/textcolor&gt;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        &lt;align&gt;right&lt;/align&gt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                        &lt;info&gt;ListItem.Label2&lt;/info&gt;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                &lt;/control&gt;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      &lt;/focusedlayout&gt;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --> <hr/>
+ <h1><a class="anchor" id="Wrap_List_Container_sect2"></a>
 Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is lower case only. This is important, as xml tags are case-sensitive.</p>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">height </td><td align="left"><code><b>&lt;height&gt;auto&lt;/height&gt;</b></code> is supported in textbox controls </td></tr>
+<td align="right">viewtype </td><td align="left">The type of view. Choices are list, icon, wide, wrap, biglist, bigicon, bigwide, bigwrap, info and biginfo. The label attribute indicates the label that will be used in the <em>"View As"</em> control within the GUI. It is localizable via strings.xml. viewtype has no effect on the view itself. It is used by kodi when switching skin to automatically select a view with a similar layout. Skinners should try to set <em>viewtype</em> to describe the layout as best as possible. </td></tr>
 <tr>
-<td align="right">font </td><td align="left">Font used for the items first label. From <code>fonts.xml</code>. </td></tr>
+<td align="right">orientation </td><td align="left">The orientation of the list. Defaults to vertical. </td></tr>
 <tr>
-<td align="right">textcolor </td><td align="left">Color used for displaying the text. In <b>AARRGGBB</b> hex format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<td align="right">pagecontrol </td><td align="left">Used to set the <b><code>&lt;id&gt;</code></b> of the page control used to control this list. </td></tr>
 <tr>
-<td align="right">shadowcolor </td><td align="left">Specifies the color of the drop shadow on the text. In <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<td align="right">scrolltime </td><td align="left">The time (in ms) to scroll from one item to another. By default, this is 200ms. The list will scroll smoothly from one item to another as needed. Set it to zero to disable the smooth scrolling. The scroll movement can be further adjusted by selecting one of the available <a href="http://kodi.wiki/view/Tweeners">tween</a> methods. </td></tr>
 <tr>
-<td align="right">pagecontrol </td><td align="left">Specifies the <code><b>&lt;id&gt;</b></code> of the page control used to control this textbox. The page control can either be a <a class="el" href="a00430.html">Spin Control</a> or a <a class="el" href="a00426.html">Scroll Bar Control</a>. </td></tr>
+<td align="right">focusposition </td><td align="left">Specifies the index (from 0 -&gt; number items displayable - 1) of the focused item. The focused item doesn't move - as the user moves up and down (or left and right) the items scroll instead. </td></tr>
 <tr>
-<td align="right">scrolltime </td><td align="left">The time (in ms) to scroll from one item to another. By default, this is <em>200ms</em>. The list will scroll smoothly from one item to another as needed. Set it to zero to disable the smooth scrolling. </td></tr>
+<td align="right">itemlayout </td><td align="left">Specifies the layout of items in the list. Requires the height attribute set in a vertical list, and the width attribute set for a horizontal list. The <b><code>&lt;itemlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
 <tr>
-<td align="right">align possible</td><td align="left">values for text alignment: left, right, center, justify </td></tr>
+<td align="right">focusedlayout </td><td align="left">Specifies the layout of items in the list that have focus. Requires the height attribute set in a vertical list, and the width attribute set for a horizontal list. The <b><code>&lt;focusedlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
 <tr>
-<td align="right">autoscroll </td><td align="left">Specifies the timing and conditions of any autoscrolling this textbox should have. Times are in milliseconds. The content is delayed for the given delay, then scrolls at a rate of one line per time interval until the end. If the repeat tag is present, it then delays for the repeat time, fades out over 1 second, and repeats. It does not wrap or reset to the top at the end of the scroll. You can use any <a href="http://kodi.wiki/view/List_of_Boolean_Conditions">bool condition</a> to specify when autoscrolling should be allowed. </td></tr>
+<td align="right">content </td><td align="left">Used to set the item content that this list will contain. Allows the skinner to setup a list anywhere they want with a static set of content, as a useful alternative to the grouplist control. <a href="http://kodi.wiki/view/Static_List_Content">See here for more information</a> </td></tr>
+<tr>
+<td align="right">autoscroll </td><td align="left">Used to make the container scroll automatically </td></tr>
 </table>
 <hr/>
- <h1><a class="anchor" id="Text_Box_sect3"></a>
+ <h1><a class="anchor" id="Wrap_List_Container_sect3"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>

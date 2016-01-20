@@ -1,18 +1,13 @@
 var a00117 =
 [
-    [ "ControlEdit", "a00117.html#a49f0c2eb13ed03073366e69266befd0e", null ],
-    [ "ControlEdit", "a00117.html#af2dfe2807aa51f11a84830fac1c85ac8", null ],
+    [ "ControlFadeLabel", "a00117.html#a75091c3fbf9fafdabb9b98ee28f0a64a", null ],
+    [ "ControlFadeLabel", "a00117.html#a099013f6dfa4b09620df7bed9090abc5", null ],
+    [ "addLabel", "a00384.html#ga5c23c1e6768621ef5114c5b56a66c7c9", null ],
     [ "Create", "a00117.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "getLabel", "a00385.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
-    [ "getText", "a00385.html#gafab766445043570e6a82c14851366933", null ],
-    [ "setLabel", "a00385.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
-    [ "setText", "a00385.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ],
+    [ "reset", "a00381.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
+    [ "setScrolling", "a00384.html#ga37b258d64c9891a330036b19195913e1", null ],
     [ "align", "a00117.html#a4864c3686205158c9cab83fa95c2a15a", null ],
-    [ "bIsPassword", "a00117.html#affcbdac561c866d4f010a48e7889020b", null ],
-    [ "disabledColor", "a00117.html#a9b7ae35a0c2326e198dab3c2ec50e94c", null ],
     [ "strFont", "a00117.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
-    [ "strText", "a00117.html#ab456897f658d865f7c66da9ba85f6cb9", null ],
-    [ "strTextureFocus", "a00117.html#a2c94f7603cfb9d13594e648f67b55e22", null ],
-    [ "strTextureNoFocus", "a00117.html#a51d63e84bd9b53dbdc23a476df4440a9", null ],
-    [ "textColor", "a00117.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
+    [ "textColor", "a00117.html#ad24d108d90ba89e693640b8aa2ff1d71", null ],
+    [ "vecLabels", "a00117.html#ab73823089fdceaaa9798d5d0bb79d458", null ]
 ];

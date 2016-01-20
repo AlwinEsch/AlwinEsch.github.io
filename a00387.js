@@ -1,5 +1,5 @@
 var a00387 =
 [
-    [ "addLabel", "a00387.html#ga5c23c1e6768621ef5114c5b56a66c7c9", null ],
-    [ "setScrolling", "a00387.html#ga37b258d64c9891a330036b19195913e1", null ]
+    [ "getPercent", "a00387.html#gad3e5815badb78551841c44d9b5ae3742", null ],
+    [ "setPercent", "a00387.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ]
 ];

@@ -1,10 +1,10 @@
 var a00129 =
 [
-    [ "DialogProgress", "a00129.html#ad6806218faf95b933b67927d5ad46a39", null ],
-    [ "~DialogProgress", "a00129.html#a94b81fdffc22f6260839893fdbf757b7", null ],
-    [ "close", "a00360.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
-    [ "create", "a00360.html#gad71569b69244d11fe949d0bbd5b75905", null ],
+    [ "DialogProgressBG", "a00129.html#a31b7ec67973b011c9efb42dcd96a0342", null ],
+    [ "~DialogProgressBG", "a00129.html#a1ea61272a3fe716659a11170cfb143a5", null ],
+    [ "close", "a00358.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
+    [ "create", "a00358.html#gaafb8a184f497bc815d38be07731df561", null ],
     [ "deallocating", "a00129.html#a8b6dbb40347674d0ffc08d6ec7e9a877", null ],
-    [ "iscanceled", "a00360.html#ga2a944a55da1c28885d3f00d101618ac6", null ],
-    [ "update", "a00360.html#gabf439774a2aca33663c3bb785e6e7465", null ]
+    [ "isFinished", "a00358.html#ga06926ca87a7be7d8af8ee84670fffa87", null ],
+    [ "update", "a00358.html#ga90d83a72e4151aba7c05422cf34f6684", null ]
 ];

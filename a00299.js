@@ -1,6 +1,6 @@
 var a00299 =
 [
-    [ "AllocateDemuxPacket", "a00299.html#ga4bfc35621cb03e2ef220caa723ad5e2b", null ],
-    [ "FreeDemuxPacket", "a00299.html#ga5a59f0d8812f3f3c2ecceb2d9287a186", null ],
-    [ "GetCodecByName", "a00299.html#gabe059bd032457069e06fd2d3c0747f37", null ]
+    [ "Codec", "a00299.html#ga62b7b43b626a9b8beb0f16a8795b9d91", null ],
+    [ "GetCodecByName", "a00299.html#ga542cf7ce73c4f9e04f16bac4583fbb19", null ],
+    [ "Name", "a00299.html#gab29906ba5407bb58b86428cb4b4a1e26", null ]
 ];

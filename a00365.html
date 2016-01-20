@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Monitor</title>
+<title>Kodi Development: InfoTagRadioRDS</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,19 +92,28 @@ $(document).ready(function(){initNavTree('a00365.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Monitor<div class="ingroups"><a class="el" href="a00404.html">Python Development</a> &raquo; <a class="el" href="a00362.html">Library - xbmc</a></div></div>  </div>
+<div class="title">InfoTagRadioRDS<div class="ingroups"><a class="el" href="a00401.html">Python Development</a> &raquo; <a class="el" href="a00359.html">Library - xbmc</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's monitor class.</b> </p>
-<p>Creates a new monitor to notify addon about changes. </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga5b1ac2490aae34c81dd3ab6ecc58d8a5"></a>
+<p><b>Kodi's radio RDS info tag class.</b> </p>
+<p>To get radio RDS info tag data of currently played PVR radio channel source.</p>
+<dl class="section note"><dt>Note</dt><dd>Info tag load is only be possible from present player class.<br />
+ Also is all the data variable from radio channels and not known on begining of radio receiving.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;tag = xbmc.Player().getRadioRDSInfoTag()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;title  = tag.getTitle()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;artist = tag.getArtist()</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;...</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga11ac7b770ff2135e877c241ddb5db662"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool abortRequested </td>
+          <td class="memname">String getAlbum </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -112,420 +121,512 @@ $(document).ready(function(){initNavTree('a00365.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Returns True if abort has been requested. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if requested </dd></dl>
+<p>Album of item on air. </p>
+<dl class="section return"><dt>Returns</dt><dd>Album name </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gace3ed8fa26883bff89728e0446fc8b81"></a>
+<a class="anchor" id="gac83fd84b63b264bc8ec91b298fcd8264"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void onAbortRequested </td>
+          <td class="memname">int getAlbumTrackNumber </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section warning"><dt>Warning</dt><dd>Deprecated, use <a class="el" href="a00365.html#gaef2a905f59250fe9ffbc34edfbdbbb54" title="Wait for Abort. ">waitForAbort()</a> to be notified about this event. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga5e89c9b7e06b744f88063e5237977247"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onCleanFinished </td>
-          <td>(</td>
-          <td class="paramtype">const String&#160;</td>
-          <td class="paramname"><em>library</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>onCleanFinished method. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">library</td><td>Video / music as string</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Will be called when library clean has ended and return video or music to indicate which library has been finished </dd></dl>
+<p>Get the album track number of currently sended music. </p>
+<dl class="section return"><dt>Returns</dt><dd>Track Number </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga5d8eb24ae2e1b1a360a9bf3b4b51d56d"></a>
+<a class="anchor" id="ga1b9f565753d008491c59887680bd570e"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void onCleanStarted </td>
-          <td>(</td>
-          <td class="paramtype">const String&#160;</td>
-          <td class="paramname"><em>library</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>onCleanStarted method. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">library</td><td>Video / music as string</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Will be called when library clean has ended and return video or music to indicate which library has been cleaned </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga74db05abe95497de5e90206cb39ef7d4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onDatabaseScanStarted </td>
-          <td>(</td>
-          <td class="paramtype">const String&#160;</td>
-          <td class="paramname"><em>database</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section warning"><dt>Warning</dt><dd>Deprecated, use <a class="el" href="a00365.html#ga6d6000ab39593068d3eb3955bed886c4" title="onScanStarted method. ">onScanStarted()</a>. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga18d6bc330604bbe55e63ae6dae11efde"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onDatabaseUpdated </td>
-          <td>(</td>
-          <td class="paramtype">const String&#160;</td>
-          <td class="paramname"><em>database</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section warning"><dt>Warning</dt><dd>Deprecated, use <a class="el" href="a00365.html#gaf8242fca7ffb83cd719b43e16ca7a439">onScanFinished()</a>. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga86cc4d6bc72abe7b74c1c50dde951412"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onDPMSActivated </td>
+          <td class="memname">String getArtist </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>onDPMSActivated method. </p>
-<p>Will be called when energysaving/DPMS gets active </p>
+<p>Artist of the item on air. </p>
+<dl class="section return"><dt>Returns</dt><dd>Artist </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga3afef1ceaec0fd233dada0f1c415980c"></a>
+<a class="anchor" id="ga569d6df96917effa696e29bbf29faeda"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void onDPMSDeactivated </td>
+          <td class="memname">String getBand </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>onDPMSDeactivated method. </p>
-<p>Will be called when energysaving/DPMS is turned off </p>
+<p>Band of the item on air. </p>
+<dl class="section return"><dt>Returns</dt><dd>Band </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga68122e7f3ea25f8848f99024690f1419"></a>
+<a class="anchor" id="ga50a7366cba8ce27bc48a00e746324f7b"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void onNotification </td>
-          <td>(</td>
-          <td class="paramtype">const String&#160;</td>
-          <td class="paramname"><em>sender</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const String&#160;</td>
-          <td class="paramname"><em>method</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const String&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>onNotification method. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sender</td><td>Sender of the notification </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td>Name of the notification </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>JSON-encoded data of the notification</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Will be called when Kodi receives or sends a notification </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaf8242fca7ffb83cd719b43e16ca7a439"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onScanFinished </td>
-          <td>(</td>
-          <td class="paramtype">const String&#160;</td>
-          <td class="paramname"><em>library</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>onScanFinished method.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">library</td><td>Video / music as string</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Will be called when library clean has ended and return video or music to indicate which library has been scanned </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga6d6000ab39593068d3eb3955bed886c4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onScanStarted </td>
-          <td>(</td>
-          <td class="paramtype">const String&#160;</td>
-          <td class="paramname"><em>library</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>onScanStarted method. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">library</td><td>Video / music as string</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Will be called when library clean has ended and return video or music to indicate which library is being scanned </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaec7c0588db39e824757e840bba4c3d0b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void onScreensaverActivated </td>
+          <td class="memname">String getComment </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>onScreensaverActivated method. </p>
-<p>Will be called when screensaver kicks in </p>
+<p>Get Comment text from channel. </p>
+<dl class="section return"><dt>Returns</dt><dd>Comment </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga72fdab6e25d1882e64768c3b4fc02ada"></a>
+<a class="anchor" id="ga061292e6e28d5d3048d2e55afc615152"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void onScreensaverDeactivated </td>
+          <td class="memname">String getComposer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>onScreensaverDeactivated method. </p>
-<p>Will be called when screensaver goes off </p>
+<p>Get the Composer of the music. </p>
+<dl class="section return"><dt>Returns</dt><dd>Composer </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga0b2faaa5bdb64710395d7b36330324a5"></a>
+<a class="anchor" id="ga93368a520bde70f6d9820377046de0dd"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void onSettingsChanged </td>
+          <td class="memname">String getConductor </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>onSettingsChanged method. </p>
-<p>Will be called when addon settings are changed </p>
+<p>Get the Conductor of the Band. </p>
+<dl class="section return"><dt>Returns</dt><dd>Conductor </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gaef2a905f59250fe9ffbc34edfbdbbb54"></a>
+<a class="anchor" id="gafb4a54820ae04a333e44c7218ecd80c0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool waitForAbort </td>
+          <td class="memname">String getEditorialStaff </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>-1</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Wait for Abort. </p>
-<p>Block until abort is requested, or until timeout occurs. If an abort requested have already been made, return immediately.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>[opt] float - timeout in seconds. Default: no timeout. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True when abort have been requested, False if a timeout is given and the operation times out. </dd></dl>
+<p>Get Editorial Staff names. </p>
+<dl class="section return"><dt>Returns</dt><dd>Editorial Staff </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga13200f81a279b08595a9fdcbf715d106"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getEMailHotline </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Email address of the radio station's studio. </p>
+<dl class="section return"><dt>Returns</dt><dd>EMail Hotline </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0f68d5e807e222f3f29ace5ed026804d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getEMailStudio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Email address of radio station studio. </p>
+<dl class="section return"><dt>Returns</dt><dd>EMail Studio </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gadbe5a226d385f5c727fa4bc4e013cace"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getInfoCinema </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Cinema informations. </p>
+<dl class="section return"><dt>Returns</dt><dd>Cinema Information </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga819f2b5d4da1d9644dc2c4822cdb41df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getInfoHoroscope </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Horoscope informations. </p>
+<dl class="section return"><dt>Returns</dt><dd>Horoscope Information </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga978969eafd267e9ce21108fc77cd17d9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getInfoLottery </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Lottery informations. </p>
+<dl class="section return"><dt>Returns</dt><dd>Lottery Information </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaedfa9e9ea918f55d9cd0946d5c4a319f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getInfoNews </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get News informations. </p>
+<dl class="section return"><dt>Returns</dt><dd>News Information </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2b0046ed8dcd87899605fa06d88de47c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getInfoNewsLocal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Local news informations. </p>
+<dl class="section return"><dt>Returns</dt><dd>Local News Information </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf45dfe55fe0320e865c9f5867c80390e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getInfoOther </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get other informations. </p>
+<dl class="section return"><dt>Returns</dt><dd>Other Information </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga9992182c39e21846ae942bb286f8c2b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getInfoSport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Sport informations. </p>
+<dl class="section return"><dt>Returns</dt><dd>Sport Information </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga810467b321b3e8b1aa3b2ff819600400"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getInfoStock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Stock informations. </p>
+<dl class="section return"><dt>Returns</dt><dd>Stock Information </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gacde4012f2a219aa80f288a18410425b1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getInfoWeather </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Weather informations. </p>
+<dl class="section return"><dt>Returns</dt><dd>Weather Information </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga636cf89ccbe8aec5726bbcc1ff5e2baa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getPhoneHotline </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Telephone number of the radio station's hotline. </p>
+<dl class="section return"><dt>Returns</dt><dd>Phone Hotline </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga26f27df2a5669d59bda3175b8c621fdb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getPhoneStudio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Telephone number of the radio station's studio. </p>
+<dl class="section return"><dt>Returns</dt><dd>Phone Studio </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4864cf4499a1647e6571a2c325c03927"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getProgHost </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Host of current radio show. </p>
+<dl class="section return"><dt>Returns</dt><dd>Program Host </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad05fbadd46d56ee35bfd0e8d4f3a605d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getProgNext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Next program show. </p>
+<dl class="section return"><dt>Returns</dt><dd>Program Next </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad0e2d31a6bb1008b47147912e2f76dd7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getProgNow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Current radio program show. </p>
+<dl class="section return"><dt>Returns</dt><dd>Program Now </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0486fd80088c0a6a6acd1de2b97c5569"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getProgStation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Name describing station. </p>
+<dl class="section return"><dt>Returns</dt><dd>Program Station </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8670642bc1ee0087d342e7548dfa6ba5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getProgStyle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The the radio channel style currently used. </p>
+<dl class="section return"><dt>Returns</dt><dd>Program Style </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaddedbc487cefb0c7014bad5f76dfa030"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getProgWebsite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Link to URL (web page) for radio station homepage. </p>
+<dl class="section return"><dt>Returns</dt><dd>Program Website </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga623db082b6ab68cd69fb5e72b8772ca6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getSMSStudio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SMS (Text Messaging) number for studio. </p>
+<dl class="section return"><dt>Returns</dt><dd>SMS Studio </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga888f94790c968e3f0b5de17e509098aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Title of the item on the air; i.e. song title. </p>
+<dl class="section return"><dt>Returns</dt><dd>Title </dd></dl>
 
 </div>
 </div>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Subclass - ControlFadeLabel</title>
+<title>Kodi Development: Subclass - ControlProgress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,42 +92,26 @@ $(document).ready(function(){initNavTree('a00387.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Subclass - ControlFadeLabel<div class="ingroups"><a class="el" href="a00404.html">Python Development</a> &raquo; <a class="el" href="a00363.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00382.html">Control</a></div></div>  </div>
+<div class="title">Subclass - ControlProgress<div class="ingroups"><a class="el" href="a00401.html">Python Development</a> &raquo; <a class="el" href="a00360.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00379.html">Control</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Used to show multiple pieces of text in the same position, by fading from one to the other.</b> </p>
-<p><b><code>ControlFadeLabel(x, y, width, height[, font, textColor, alignment])</code></b></p>
-<p>The fade label control is used for displaying multiple pieces of text in the same space in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed. The first piece of information to display fades in over 50 frames, then scrolls off to the left. Once it is finished scrolling off screen, the second piece of information fades in and the process repeats. A fade label control is not supported in a list container.</p>
-<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00382.html">Control</a></dd></dl>
+<p><b>Used to show the progress of a particular operation.</b> </p>
+<p><b><code>ControlProgress(x, y, width, height, filename[, texturebg, textureleft, texturemid, textureright, textureoverlay])</code></b></p>
+<p>The progress control is used to show the progress of an item that may take a long time, or to show how far through a movie you are. You can choose the position, size, and look of the progress control.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00379.html">Control</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>[opt] string - font used for label text. (e.g. 'font13') </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">textColor</td><td>[opt] hexstring - color of fadelabel's labels. (e.g. '0xFFFFFFFF') </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">alignment</td><td>[opt] integer - alignment of label<ul>
-<li><a class="el" href="a00396.html">Flags for alignment</a> used as bits to have several together: <table class="doxtable">
-<tr>
-<th>Defination name </th><th align="center">Bitflag </th><th align="left">Description  </th></tr>
-<tr>
-<td>XBFONT_LEFT </td><td align="center">0x00000000 </td><td align="left">Align X left </td></tr>
-<tr>
-<td>XBFONT_RIGHT </td><td align="center">0x00000001 </td><td align="left">Align X right </td></tr>
-<tr>
-<td>XBFONT_CENTER_X </td><td align="center">0x00000002 </td><td align="left">Align X center </td></tr>
-<tr>
-<td>XBFONT_CENTER_Y </td><td align="center">0x00000004 </td><td align="left">Align Y center </td></tr>
-<tr>
-<td>XBFONT_TRUNCATED </td><td align="center">0x00000008 </td><td align="left">Truncated text </td></tr>
-<tr>
-<td>XBFONT_JUSTIFIED </td><td align="center">0x00000010 </td><td align="left">Justify text </td></tr>
-</table>
-</li>
-</ul>
-</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>string - image filename. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texturebg</td><td>[opt] string - specifies the image file whichshould be displayed in the background of the progress control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureleft</td><td>[opt] string - specifies the image file whichshould be displayed for the left side of the progress bar. This is rendered on the left side of the bar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texturemid</td><td>[opt] string - specifies the image file which should be displayed for the middl portion of the progress bar. This is the <code>fill</code> texture used to fill up the bar. It's positioned on the right of the <code>&lt;lefttexture&gt;</code> texture, and fills the gap between the <code>&lt;lefttexture&gt;</code> and <code>&lt;righttexture&gt;</code> textures, depending on how far progressed the item is. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureright</td><td>[opt] string - specifies the image file which should be displayed for the right side of the progress bar. This is rendered on the right side of the bar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureoverlay</td><td>[opt] string - specifies the image file which should be displayed over the top of all other images in the progress bar. It is centered vertically and horizontally within the space taken up by the background image.</td></tr>
   </table>
   </dd>
 </dl>
@@ -136,63 +120,60 @@ $(document).ready(function(){initNavTree('a00387.html','');});
  After you create the control, you need to add it to the window with addControl().</dd></dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.fadelabel = xbmcgui.ControlFadeLabel(100, 250, 200, 50, textColor=<span class="stringliteral">&#39;0xFFFFFFFF&#39;</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># ControlProgress(x, y, width, height, filename[, texturebg, textureleft, texturemid, textureright, textureoverlay])</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.image = xbmcgui.ControlProgress(100, 250, 250, 30, <span class="stringliteral">&#39;special://home/scripts/test.png&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
 </div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga5c23c1e6768621ef5114c5b56a66c7c9"></a>
+<a class="anchor" id="gad3e5815badb78551841c44d9b5ae3742"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void addLabel </td>
+          <td class="memname">float getPercent </td>
           <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Add a label to this control for scrolling. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>string or unicode - text string to add.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>To remove added text use <code><a class="el" href="a00384.html#gad20897c5c8bd47f5d4005989bead0e55" title="Clear this fade label. ">reset()</a></code> for them.</dd></dl>
+<p>Returns a float of the percent of the progress. </p>
+<dl class="section return"><dt>Returns</dt><dd>Percent position</dd></dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.fadelabel.addLabel(<span class="stringliteral">&#39;This is a line of text that can scroll.&#39;</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># getPercent()</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordflow">print</span> self.progress.getPercent()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga37b258d64c9891a330036b19195913e1"></a>
+<a class="anchor" id="gaebdebaa245f9f39c8c27bbbe92ad9294"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void setScrolling </td>
+          <td class="memname">void setPercent </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>scroll</em></td><td>)</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pct</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set scrolling. If set to false, the labels won't scroll. Defaults to true. </p>
+<p>Sets the percentage of the progressbar to show. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">scroll</td><td>boolean - True = enabled / False = disabled</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>float - percentage of the bar to show.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>valid range for percent is 0-100</dd></dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.fadelabel.setScrolling(<span class="keyword">False</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setPercent(percent)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.progress.setPercent(60)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
 </div><!-- fragment --> 
 </div>
 </div>

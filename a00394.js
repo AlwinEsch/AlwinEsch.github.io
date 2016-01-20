@@ -1,8 +1,28 @@
 var a00394 =
 [
-    [ "Font alignment flags", "a00396.html", "a00396" ],
+    [ "Overlay icon types", "a00395.html", "a00395" ],
+    [ "Picture info labels", "a00398.html", null ],
+    [ "addContextMenuItems", "a00394.html#ga1365419ee51c2c9017a762d103ff15f0", null ],
+    [ "addStreamInfo", "a00394.html#ga4ac21e7b69df2ac986952a0a5f0767d0", null ],
+    [ "getdescription", "a00394.html#gace6910b8e357d8088be50d2e87029c39", null ],
+    [ "getduration", "a00394.html#gab3b51633b1cd49658697ba8cbe639bdc", null ],
+    [ "getfilename", "a00394.html#gab31ccf90a0734f9cb29b3c563b4b9a02", null ],
+    [ "getLabel", "a00394.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
+    [ "getLabel2", "a00394.html#ga670b0dee884d131339bbf88d07bbbfc7", null ],
+    [ "getMusicInfoTag", "a00394.html#gae11388c95e616274e5ee0f10b61bf1d8", null ],
+    [ "getProperty", "a00394.html#ga6ea42956dc2a3770054d6e0693a70cf3", null ],
+    [ "getVideoInfoTag", "a00394.html#ga7287b2615a3d76947a1dcd085bfaa337", null ],
     [ "isSelected", "a00394.html#ga5dae9e59f17e10bd3838a6fae36d477d", null ],
-    [ "setLabel", "a00394.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
-    [ "setRadioDimension", "a00394.html#ga474a447b56d8295c322cd3023e276b9f", null ],
-    [ "setSelected", "a00394.html#gad42accd39af295a957386c68dac3dcae", null ]
+    [ "select", "a00394.html#ga1369a01f7175de5180faa3aaac3faec3", null ],
+    [ "setArt", "a00394.html#gae4e9bad5ab0b4bd55bb659ec0decf2c1", null ],
+    [ "setContentLookup", "a00394.html#gaf67a4c759dfe7bfe4ca4252e631838c0", null ],
+    [ "setIconImage", "a00394.html#ga0896887d4ffd52dfcc6827fc2e2d9afa", null ],
+    [ "setInfo", "a00394.html#gae8ac78b510d6419d3518f1d0c5671550", null ],
+    [ "setLabel", "a00394.html#ga2026eb8716d1b717960eb10db4384d67", null ],
+    [ "setLabel2", "a00394.html#gaffdc6c1389342833a812729b3f0e311c", null ],
+    [ "setMimeType", "a00394.html#gac2a03039cc5e9f4a72e1f7e6dd97b566", null ],
+    [ "setPath", "a00394.html#gaed681fa935325532eecbc21f6c349a58", null ],
+    [ "setProperty", "a00394.html#ga117dae419f8322cc06721a8537717f78", null ],
+    [ "setSubtitles", "a00394.html#gab5fea75d64330f67eb5f36e52bf10c53", null ],
+    [ "setThumbnailImage", "a00394.html#ga1f2634119efdde8e432c4a9ec364501d", null ]
 ];

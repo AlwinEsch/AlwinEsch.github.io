@@ -1,12 +1,14 @@
 var a00136 =
 [
-    [ "File", "a00136.html#ad6c06a9065bb77311663bd2a98ef2eb5", null ],
-    [ "~File", "a00136.html#a241d694b0e799c0579a023e76cd97f18", null ],
-    [ "close", "a00364.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
-    [ "getFile", "a00136.html#ae54cc0c6b80386955f27208cbae8f3af", null ],
-    [ "read", "a00364.html#ga691e636b0dffa3c448c648f42d94437a", null ],
-    [ "readBytes", "a00364.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8", null ],
-    [ "seek", "a00364.html#ga8140115d0b4e6cb1ffa9f4298153d009", null ],
-    [ "size", "a00364.html#ga6fdf8e4501d305514d8e7b5d6cde34a6", null ],
-    [ "write", "a00364.html#ga1a6eddca986ff7164d57b9fad625e597", null ]
+    [ "Stat", "a00136.html#a60ce51a2aeed51fe6b3fb97341418ad1", null ],
+    [ "atime", "a00374.html#ga65d49375e5251d4e616a45e3c898d6cc", null ],
+    [ "ctime", "a00374.html#gab24c57af16ac6f88edb819c18e2e438b", null ],
+    [ "mtime", "a00374.html#ga57da69d0b20141a95c0c44a6bb5f3b35", null ],
+    [ "st_dev", "a00374.html#gab17084ec246f2b497d2f13618c5bd220", null ],
+    [ "st_gid", "a00374.html#ga9a7a9ad27402f5a931bcbff38e4e03d3", null ],
+    [ "st_ino", "a00374.html#ga77e336d6274f6fb0e2a3c3546e61e360", null ],
+    [ "st_mode", "a00374.html#ga00b3e20028eaee69c44cdc47a922fe31", null ],
+    [ "st_nlink", "a00374.html#ga34f57426567df63ef5ad1b4679778d18", null ],
+    [ "st_size", "a00374.html#gaeec21543efab31f62a21e533b0d3a537", null ],
+    [ "st_uid", "a00374.html#gaa29c53999dffe4acc12aed2eb60a6c81", null ]
 ];

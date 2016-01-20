@@ -1,8 +1,13 @@
 var a00052 =
 [
-    [ "CodecDescriptor", "a00052.html#a0ce9286b79ecef72bdf531ffb02e73d3", null ],
-    [ "CodecDescriptor", "a00052.html#a01b78d89cc9425c3b3cce1192f0fa6c4", null ],
-    [ "~CodecDescriptor", "a00052.html#a8a61d5619aaa653c3e35d65807bf725b", null ],
-    [ "Codec", "a00300.html#ga62b7b43b626a9b8beb0f16a8795b9d91", null ],
-    [ "Name", "a00300.html#gab29906ba5407bb58b86428cb4b4a1e26", null ]
+    [ "AudioEngineFormat", "a00052.html#a485299b0bb8f0c1cf765321c704bcc40", null ],
+    [ "compareFormat", "a00052.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64", null ],
+    [ "m_channelCount", "a00052.html#a98e4ea22d72d3c5dce2821ae10a802f8", null ],
+    [ "m_channels", "a00052.html#a4a53bc9bcf5fe0c7d808858463f370f7", null ],
+    [ "m_dataFormat", "a00052.html#a8f4e236f291657200f64cd2f069a8ff7", null ],
+    [ "m_encodedRate", "a00052.html#a60bb897389267a5034ef730c956b661a", null ],
+    [ "m_frames", "a00052.html#a3fa03b15b439d70dd92e726e1aac9eb5", null ],
+    [ "m_frameSamples", "a00052.html#a3b6b1929e0fbe39e252645260f4d97d8", null ],
+    [ "m_frameSize", "a00052.html#a7c6321b7fd7f09478ca0bf9931009ee1", null ],
+    [ "m_sampleRate", "a00052.html#a046d570c56fd2ae9b813340816ebfdec", null ]
 ];

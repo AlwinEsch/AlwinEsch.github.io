@@ -1,11 +1,16 @@
 var a00120 =
 [
-    [ "ControlImage", "a00120.html#a9be115122b3309a7a738fb31643d81d1", null ],
-    [ "ControlImage", "a00120.html#ae6699f77d4ffa346eed9e00b7cadc7ef", null ],
+    [ "ControlLabel", "a00120.html#a14eddb7045362abca91fb06f7df6e481", null ],
+    [ "~ControlLabel", "a00120.html#aed2a5cf3dd6f2825242e1c9cd83b79f4", null ],
+    [ "ControlLabel", "a00120.html#a4f6dacd3944c4362f2770a621b8c774a", null ],
     [ "Create", "a00120.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "setColorDiffuse", "a00389.html#ga3b0c15e0d82d8605f4b3ad82aaa42c16", null ],
-    [ "setImage", "a00389.html#ga7ba591029ef61ca17851a9f02a1fe5dc", null ],
-    [ "aspectRatio", "a00120.html#a62de7670850188b84202355774caa6a8", null ],
-    [ "colorDiffuse", "a00120.html#aeb3be9119c45fbe967380716174f877f", null ],
-    [ "strFileName", "a00120.html#a0faec04d22e256f2777cddfaeab1d673", null ]
+    [ "getLabel", "a00381.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
+    [ "setLabel", "a00381.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
+    [ "align", "a00120.html#a4864c3686205158c9cab83fa95c2a15a", null ],
+    [ "bHasPath", "a00120.html#ae83b678a24bce6873c0af1024149043a", null ],
+    [ "disabledColor", "a00120.html#a9b7ae35a0c2326e198dab3c2ec50e94c", null ],
+    [ "iAngle", "a00120.html#a52ffec3a2b42dce2829c4a46b9b7815e", null ],
+    [ "strFont", "a00120.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
+    [ "strText", "a00120.html#ab456897f658d865f7c66da9ba85f6cb9", null ],
+    [ "textColor", "a00120.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
 ];

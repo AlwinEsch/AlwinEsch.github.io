@@ -1,19 +1,14 @@
 var a00321 =
 [
-    [ "CAddonGUIControlSlider", "a00321.html#ga07c12260df16cfa4458529725427caa0", null ],
-    [ "GetDescription", "a00321.html#ga3d3e509d1084585df516d4da97dd0be3", null ],
-    [ "GetFloatValue", "a00321.html#gadd5b557122d90f9a891d6b981e3ac305", null ],
-    [ "GetIntValue", "a00321.html#ga026ef91588c09c091efb7c40bb73d4dc", null ],
-    [ "GetPercentage", "a00321.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ],
-    [ "Reset", "a00321.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
-    [ "SetEnabled", "a00321.html#gaac893222adeffdefc04d749648cce354", null ],
-    [ "SetFloatInterval", "a00321.html#ga1642356ec708ec660d47175a676d2b59", null ],
-    [ "SetFloatRange", "a00321.html#gaf4c5b4468e16c51b0d9a163baa082acf", null ],
-    [ "SetFloatValue", "a00321.html#gab050b4b446dc107963b04486dcfbe03d", null ],
-    [ "SetIntInterval", "a00321.html#ga0efbfb870446e5cc7409f0550bf67196", null ],
-    [ "SetIntRange", "a00321.html#ga16ad72259d068519b0797117275651f1", null ],
-    [ "SetIntValue", "a00321.html#ga1bc4fce2dc8738a08b6a9458d66351a1", null ],
-    [ "SetPercentage", "a00321.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
-    [ "SetVisible", "a00321.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "~CAddonGUIControlSlider", "a00321.html#ga29c8ebb717db0bcba0a1e7227720366b", null ]
+    [ "CAddonGUIDialogExtendedProgress", "a00321.html#ga2f267cd452ee9736993693fa501ac85e", null ],
+    [ "IsFinished", "a00321.html#gaabe45b4d47077b54df0bb809eb41b8d5", null ],
+    [ "MarkFinished", "a00321.html#ga40af1bcedea1f61fde8cd5e70e416473", null ],
+    [ "Percentage", "a00321.html#ga3bf91c353218dceaa271b65321b2f5cf", null ],
+    [ "SetPercentage", "a00321.html#ga74a9a823ab1cd34d62a219a842de5946", null ],
+    [ "SetProgress", "a00321.html#gac64c8e121cf5e368cd335c28a0521922", null ],
+    [ "SetText", "a00321.html#gaec55d8bf3ca3e04261b66bee36f84368", null ],
+    [ "SetTitle", "a00321.html#gad8698c0477204fb8b81feb9d81cbe4fd", null ],
+    [ "Text", "a00321.html#gafdfa72709ffc1738c3c198f7ad8b61ec", null ],
+    [ "Title", "a00321.html#ga3cb91fb7750df7982baea48c4a3de616", null ],
+    [ "~CAddonGUIDialogExtendedProgress", "a00321.html#ga86033f373ed6159d52feb585bab2dfda", null ]
 ];

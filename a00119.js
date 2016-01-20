@@ -1,6 +1,11 @@
 var a00119 =
 [
-    [ "ControlGroup", "a00119.html#aa0a015c298b791093340160416226ab1", null ],
-    [ "ControlGroup", "a00119.html#aed9666d5eebb2c412f06b2ecab47ff1c", null ],
-    [ "Create", "a00119.html#afd5ac413860cba595a2a494ba33e1b42", null ]
+    [ "ControlImage", "a00119.html#a9be115122b3309a7a738fb31643d81d1", null ],
+    [ "ControlImage", "a00119.html#ae6699f77d4ffa346eed9e00b7cadc7ef", null ],
+    [ "Create", "a00119.html#afd5ac413860cba595a2a494ba33e1b42", null ],
+    [ "setColorDiffuse", "a00386.html#ga3b0c15e0d82d8605f4b3ad82aaa42c16", null ],
+    [ "setImage", "a00386.html#ga7ba591029ef61ca17851a9f02a1fe5dc", null ],
+    [ "aspectRatio", "a00119.html#a62de7670850188b84202355774caa6a8", null ],
+    [ "colorDiffuse", "a00119.html#aeb3be9119c45fbe967380716174f877f", null ],
+    [ "strFileName", "a00119.html#a0faec04d22e256f2777cddfaeab1d673", null ]
 ];

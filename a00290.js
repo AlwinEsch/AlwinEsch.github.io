@@ -1,4 +1,8 @@
 var a00290 =
 [
-    [ "V2", "a00291.html", "a00291" ]
+    [ "CPVRLib", "a00095.html", "a00095" ],
+    [ "CPVRLib_Transfer", "a00096.html", null ],
+    [ "CPVRLib_Trigger", "a00097.html", null ],
+    [ "CPVRStream", "a00098.html", "a00098" ],
+    [ "CStreamProperties", "a00099.html", "a00099" ]
 ];

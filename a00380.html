@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Callback functions from Kodi to Add-On</title>
+<title>Kodi Development: Subclass - ControlSpin</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,110 +92,55 @@ $(document).ready(function(){initNavTree('a00380.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Callback functions from Kodi to Add-On<div class="ingroups"><a class="el" href="a00404.html">Python Development</a> &raquo; <a class="el" href="a00362.html">Library - xbmc</a> &raquo; <a class="el" href="a00379.html">Player</a></div></div>  </div>
+<div class="title">Subclass - ControlSpin<div class="ingroups"><a class="el" href="a00401.html">Python Development</a> &raquo; <a class="el" href="a00360.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00379.html">Control</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Callback functions.</b> </p>
-<p>Functions to handle control callbacks from Kodi to Add-On. </p><hr/>
-<p><a class="el" href="a00379.html">Go back to normal functions from player</a> </p>
+<p><b>Used for cycling up/down controls.</b> </p>
+<p>The spin control is used for when a list of options can be chosen (such as a page up/down control). You can choose the position, size, and look of the spin control.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00379.html">Control</a></dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd><b>Not working yet</b>. You can't create this object, it is returned by objects like <a class="el" href="a00126.html">ControlTextBox</a> and <a class="el" href="a00121.html">ControlList</a>.</dd></dl>
+<hr/>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gab375f26bb820f640d74700cda4ee6646"></a>
+<a class="anchor" id="ga746d4f8a847155ef12f04370bd2417b4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void onPlayBackEnded </td>
+          <td class="memname">void setTextures </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>onPlayBackEnded method. </p>
-<p>Will be called when Kodi stops playing a file.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga7226102b037bfbca79e0c940f5e912e2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onPlayBackPaused </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>onPlayBackPaused method. </p>
-<p>Will be called when user pauses a playing file.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga075576edcd1809ff57e3897aa165e529"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onPlayBackResumed </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>onPlayBackResumed method. </p>
-<p>Will be called when user resumes a paused file.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gaeda52fbaaf9860f7a96e93ba33709fc9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onPlayBackSeek </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>up</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>time</em>, </td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>down</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>seekOffset</em>&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>upFocus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>downFocus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>upDisabled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>downDisabled</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -205,165 +150,26 @@ $(document).ready(function(){initNavTree('a00380.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>onPlayBackSeek method. </p>
-<p>Will be called when user seeks to a time.</p>
+<p>Set's textures for this control. </p>
+<p>Texture are image files that are used for example in the skin</p>
+<dl class="section warning"><dt>Warning</dt><dd><b>Not working yet</b>.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>[integer] Time to seek to </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">seekOffset</td><td>[integer] ? </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">up</td><td>label - for the up arrow when it doesn't have focus. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">down</td><td>label - for the down button when it is not focused. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">upFocus</td><td>label - for the up button when it has focus. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">downFocus</td><td>label - for the down button when it has focus. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">upDisabled</td><td>label - for the up arrow when the button is disabled. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">downDisabled</td><td>label - for the up arrow when the button is disabled.</td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="ga75a62da626870983e308a62e8c359218"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onPlayBackSeekChapter </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>chapter</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>onPlayBackSeekChapter method. </p>
-<p>Will be called when user performs a chapter seek.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">chapter</td><td>[integer] Chapter to seek to </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga852e3252c43deaa541e8cae610b9e0ef"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onPlayBackSpeedChanged </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>speed</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>onPlayBackSpeedChanged method. </p>
-<p>Will be called when players speed changes (eg. user FF/RW).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">speed</td><td>[integer] Current speed of player</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Negative speed means player is rewinding, 1 is normal playback speed. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga2d8b5fa98b21f02ce06f7bd7de836d9d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onPlayBackStarted </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>onPlayBackStarted method. </p>
-<p>Will be called when Kodi starts playing a file.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga04dbd49c7486f00911995a56a19536d0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onPlayBackStopped </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>onPlayBackStopped method. </p>
-<p>Will be called when user stops Kodi playing a file.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga8890f6898fc712522c2d29f57455275d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void onQueueNextItem </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>onQueueNextItem method. </p>
-<p>Will be called when user queues the next item.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
-  </table>
-  </dd>
-</dl>
-
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setTextures(up, down, upFocus, downFocus, upDisabled, downDisabled)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

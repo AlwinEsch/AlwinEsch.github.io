@@ -1,13 +1,16 @@
 var a00127 =
 [
-    [ "ControlTextBox", "a00127.html#afd93b8cb98a0ef81f5f44ff700b42922", null ],
-    [ "ControlTextBox", "a00127.html#a7a8982a6c21b048766712f24e8efbd31", null ],
-    [ "autoScroll", "a00388.html#gad492befcc0c8ee0e1fecb0d6a6bd7d1c", null ],
-    [ "Create", "a00127.html#afd5ac413860cba595a2a494ba33e1b42", null ],
-    [ "getText", "a00388.html#gafab766445043570e6a82c14851366933", null ],
-    [ "reset", "a00388.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
-    [ "scroll", "a00388.html#gaa4f5d32e79ca1250eaba1a74fdf7f1ec", null ],
-    [ "setText", "a00388.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ],
-    [ "strFont", "a00127.html#a5f25f8c85a80a1d7809faf9b9b28e2c6", null ],
-    [ "textColor", "a00127.html#ad24d108d90ba89e693640b8aa2ff1d71", null ]
+    [ "Dialog", "a00127.html#a893649c76b6e54d6a392d5e6c260a016", null ],
+    [ "~Dialog", "a00127.html#a656bf5bf83d73b108733b72a3282c958", null ],
+    [ "browse", "a00356.html#ga329bf9f86212595d36708f6ad8977499", null ],
+    [ "browseMultiple", "a00356.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
+    [ "browseSingle", "a00356.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
+    [ "input", "a00356.html#ga2a25e833c92e98a294964d0d285ee1f9", null ],
+    [ "multiselect", "a00356.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
+    [ "notification", "a00356.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
+    [ "numeric", "a00356.html#gad44dd72bef6ada382a1b9704580410db", null ],
+    [ "ok", "a00356.html#ga623449b051874059111f9831a7b91673", null ],
+    [ "select", "a00356.html#ga31bcf740cf64230b40af61377ad701b1", null ],
+    [ "textviewer", "a00356.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
+    [ "yesno", "a00356.html#gaa64342a4b05f1ed49803ea44a25b73db", null ]
 ];

@@ -1,16 +1,13 @@
 var a00046 =
 [
-    [ "CAddonLib_VFSDirEntry", "a00276.html#gac81f1dd62d59a58a0d6f5ef72cfde20b", null ],
-    [ "CAddonLib_VFSDirEntry", "a00276.html#ga3d6451c27a24180971c1dd12e8b665ae", null ],
-    [ "IsFolder", "a00276.html#gabfbbb37d69862b45d0f1079ab976fa37", null ],
-    [ "Label", "a00276.html#gaacd1b40e1b2e44d82303388beb475e84", null ],
-    [ "Path", "a00276.html#ga666f6d222d6e40f592d7ec4c8c670263", null ],
-    [ "Properties", "a00276.html#gaea9c66f89bd36c6b01a234d0e2ad123a", null ],
-    [ "Properties", "a00276.html#ga682a050b373b13ec1e816d7a9cc47302", null ],
-    [ "SetFolder", "a00276.html#gadc0bf158b1dc28eea1bc2e3a2c016982", null ],
-    [ "SetLabel", "a00276.html#gab825756e641ba839bfae908492165481", null ],
-    [ "SetPath", "a00276.html#ga4a03d7c94fa02df112558bc30818e413", null ],
-    [ "SetSize", "a00276.html#gaf2fb6ea3061355a5ed4b53ca45e712ac", null ],
-    [ "Size", "a00276.html#gac0ba4f4c78dcb35605e645ee75198b5a", null ],
-    [ "IMPL_VFS_DIR_ENTRY", "a00046.html#abbcd7b09679a798a8283ea489ff4d577", null ]
+    [ "CAddonLib_SoundPlay", "a00301.html#gafb64b7a34ceffbf07ce84e4d25f36d83", null ],
+    [ "~CAddonLib_SoundPlay", "a00301.html#ga21c5c23ed3b5c5f06cc66331f8bec712", null ],
+    [ "GetChannel", "a00301.html#ga9656546b61377811a68a1cf39dbc1bfc", null ],
+    [ "GetVolume", "a00301.html#ga7f136ab9899c4abfeeb61d47383f1dd5", null ],
+    [ "IsPlaying", "a00301.html#ga755f326e8b06e5f2807d64baf8bf582c", null ],
+    [ "Play", "a00301.html#ga1cb8088c7f7b1e30a0b7b1a1993326c2", null ],
+    [ "SetChannel", "a00301.html#ga18c0452db8c88c696ba2f958396ba83d", null ],
+    [ "SetVolume", "a00301.html#ga6496c97b1bcd7301acfce8671cf90984", null ],
+    [ "Stop", "a00301.html#ga17a237457e57625296e6b24feb19c60a", null ],
+    [ "IMPL_ADDONSOUNDPLAY", "a00046.html#a4a057561facdbb22e35424d8e59a59c1", null ]
 ];

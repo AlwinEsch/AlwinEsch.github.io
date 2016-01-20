@@ -1,10 +1,17 @@
 var a00112 =
 [
-    [ "Addon", "a00112.html#a0913381b26757108cd17239bcbf731e4", null ],
-    [ "~Addon", "a00112.html#a31665350e5cb1a6cdacd73dc192a13f6", null ],
-    [ "getAddonInfo", "a00405.html#gaedb0b112c76349f81e261335a6b240b9", null ],
-    [ "getLocalizedString", "a00405.html#ga79ffd96305af02e364d99c2c9d8b69de", null ],
-    [ "getSetting", "a00405.html#ga6eebe8728b7d19104a482a29abdafce2", null ],
-    [ "openSettings", "a00405.html#ga73eb9124fb7a7a5f5a89c92e0bc1fb2a", null ],
-    [ "setSetting", "a00405.html#gafd6c759c5b268d0ec1467e340323783d", null ]
+    [ "Action", "a00112.html#a9e72d404d52a0c6d6edefac30f76e02d", null ],
+    [ "Action", "a00112.html#a1e397d04f00323e53e1757ffd48425c5", null ],
+    [ "getAmount1", "a00366.html#ga3ee04d80d5e7af5563ecc098623a90ad", null ],
+    [ "getAmount2", "a00366.html#ga0f5620d911d309e2dadadc44359bce45", null ],
+    [ "getButtonCode", "a00366.html#gab60f32db21659ba5c3f4d145b9e5947b", null ],
+    [ "getId", "a00366.html#gac7a54ea5a10c5c4683f16e3f83f77104", null ],
+    [ "setFromCAction", "a00112.html#a982c0131d2301210e0bbaa23f1fe7017", null ],
+    [ "buttonCode", "a00112.html#a2876b184c855d9cb7113c2b470c25941", null ],
+    [ "control", "a00112.html#a230a9fedb2da04dce96baad3482327cc", null ],
+    [ "fAmount1", "a00112.html#a6e3775826a44f0f4128401b63968de9c", null ],
+    [ "fAmount2", "a00112.html#a04a35e3da4c8c037ea8decd65b04e1dd", null ],
+    [ "fRepeat", "a00112.html#af2e026b2f9b496d6434bf6a78d7758a1", null ],
+    [ "id", "a00112.html#a7350fbd6ad10618f3b750b1f99ca5c3c", null ],
+    [ "strAction", "a00112.html#a5326dc8fd26effd0de499a98d0e5a032", null ]
 ];

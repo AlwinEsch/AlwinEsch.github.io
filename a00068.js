@@ -1,9 +1,9 @@
 var a00068 =
 [
-    [ "CAddonGUIControlLabel", "a00316.html#ga3feee4332d158ac43b8d5d5cc20e2d0b", null ],
-    [ "~CAddonGUIControlLabel", "a00316.html#gae46262d2f574f9375e18fd28b3b0244b", null ],
-    [ "GetLabel", "a00316.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "SetLabel", "a00316.html#ga0468217482f9a171183b1cda613417e6", null ],
-    [ "SetVisible", "a00316.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "IMPL_GUI_LABEL_CONTROL", "a00068.html#a98677d76131bb756d160614fdda04f6e", null ]
+    [ "CAddonGUIControlProgress", "a00314.html#ga29f6071fa5e9cb46c7775d82b0b518bc", null ],
+    [ "~CAddonGUIControlProgress", "a00314.html#gaa8bf8f60a1fb563174ce41f46acb9558", null ],
+    [ "GetPercentage", "a00314.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ],
+    [ "SetPercentage", "a00314.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
+    [ "SetVisible", "a00314.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "IMPL_GUI_PROGRESS_CONTROL", "a00068.html#aa59488fb9ff0e229bfcef736b8a3dda4", null ]
 ];

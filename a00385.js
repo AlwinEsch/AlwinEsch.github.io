@@ -1,7 +1,8 @@
 var a00385 =
 [
-    [ "getLabel", "a00385.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
+    [ "autoScroll", "a00385.html#gad492befcc0c8ee0e1fecb0d6a6bd7d1c", null ],
     [ "getText", "a00385.html#gafab766445043570e6a82c14851366933", null ],
-    [ "setLabel", "a00385.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
+    [ "reset", "a00385.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
+    [ "scroll", "a00385.html#gaa4f5d32e79ca1250eaba1a74fdf7f1ec", null ],
     [ "setText", "a00385.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ]
 ];

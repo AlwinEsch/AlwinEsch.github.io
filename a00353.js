@@ -1,8 +1,9 @@
 var a00353 =
 [
-    [ "ChannelGroupsUpdate", "a00353.html#ga5d29f9d2a7bb423e21cb5dd5a2f5ab4a", null ],
-    [ "ChannelUpdate", "a00353.html#ga046bd435f53dedfbc125a70b6fcd09bb", null ],
-    [ "EpgUpdate", "a00353.html#ga49372b48b0c3d939e69dfb83bcda3ed5", null ],
-    [ "RecordingUpdate", "a00353.html#ga64219c32345c79a130702741451c9a8e", null ],
-    [ "TimerUpdate", "a00353.html#ga92c110f8654585fdc3f8a126d1ce54bb", null ]
+    [ "doModal", "a00353.html#gacc43c0ec49f492cdd85ac0e53a456be3", null ],
+    [ "getText", "a00353.html#gafab766445043570e6a82c14851366933", null ],
+    [ "isConfirmed", "a00353.html#gadfdd82b36e1da59f1e1aa139755e49eb", null ],
+    [ "setDefault", "a00353.html#ga68992de7211a3a009bba135cd4cfec9a", null ],
+    [ "setHeading", "a00353.html#ga242a05d9df9e6d69b1a3645db14833fe", null ],
+    [ "setHiddenInput", "a00353.html#gaf88ac60d6cb1ba83c26e612582a36c24", null ]
 ];

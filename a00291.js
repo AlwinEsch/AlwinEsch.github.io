@@ -1,8 +1,7 @@
 var a00291 =
 [
-    [ "CPVRLib", "a00096.html", "a00096" ],
-    [ "CPVRLib_Transfer", "a00097.html", null ],
-    [ "CPVRLib_Trigger", "a00098.html", null ],
-    [ "CPVRStream", "a00099.html", "a00099" ],
-    [ "CStreamProperties", "a00100.html", "a00100" ]
+    [ "xbmc", "a00292.html", "a00292" ],
+    [ "xbmcaddon", "a00293.html", "a00293" ],
+    [ "xbmcgui", "a00294.html", "a00294" ],
+    [ "xbmcvfs", "a00295.html", "a00295" ]
 ];

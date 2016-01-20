@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: CPVRLib</title>
+<title>Kodi Development: CPVRStream</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,228 +92,232 @@ $(document).ready(function(){initNavTree('a00351.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">CPVRLib<div class="ingroups"><a class="el" href="a00403.html">C++ Development</a> &raquo; <a class="el" href="a00350.html">Library - PVRLIB</a></div></div>  </div>
+<div class="title">CPVRStream<div class="ingroups"><a class="el" href="a00400.html">C++ Development</a> &raquo; <a class="el" href="a00347.html">Library - PVRLIB</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Allow use of binary classes and function to use on add-on's</b> </p>
-<p>Permits the use of the required functions of the add-on to Kodi. This class also contains some functions to the control.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00238.html">#include &lt;kodi/pvr.api2/PVRLib.h&gt;</a> be included to enjoy it </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gadfd504966cbc097f85cf6f510a1751cd"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void AddMenuHook </td>
-          <td>(</td>
-          <td class="paramtype">PVR_MENUHOOK *&#160;</td>
-          <td class="paramname"><em>hook</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Add or replace a menu hook for the context menu for this add-on. </p>
-<p>Inserted hooks becomes called from Kodi on PVR system with <b><code>PVR_ERROR CallMenuHook(const PVR_MENUHOOK&amp; menuhook, const PVR_MENUHOOK_DATA &amp;item);</code></b></p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">hook</td><td>The hook to add</td></tr>
-  </table>
-  </dd>
-</dl>
+<p><b>PVR stream properties data class</b> </p>
+<p>Represents a single stream. It extends the PODS to provide some operators overloads.</p>
+<p>All for one PVR stream needed data can be becomes stored inside this class to have it available on requests.</p>
 <hr/>
-<p>Here structure shows the necessary values the Kodi must be handed over around a menu by the PVR system to add. </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Menu hooks that are available in the context menus while playing a</span></div>
-<div class="line"><span class="comment"> * stream via this add-on and in the Live TV settings dialog</span></div>
+<p><b>PVR stream properties:</b></p>
+<p>Structure here shows the construction that is used on the PVR system and in this class (<a class="el" href="a00098.html">CPVRStream</a>) can be edited. </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * PVR stream properties</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
 <div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_MENUHOOK</div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_STREAM_PROPERTIES</div>
 <div class="line">{</div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>     iHookId;              <span class="comment">/* This hook&#39;s identifier */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>     iLocalizedStringId;   <span class="comment">/* The id of the label for this hook in g_localizeStrings */</span></div>
-<div class="line">  PVR_MENUHOOK_CAT category;             <span class="comment">/* Category of menu hook */</span></div>
-<div class="line">} <a class="code" href="a00203.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_MENUHOOK;</div>
-</div><!-- fragment --> <hr/>
-<p><b>Hook category Id's (PVR_MENUHOOK_CAT):</b></p>
-<p><b></p><table class="doxtable">
-<tr>
-<th align="right">enum code: </th><th align="center">Id </th><th align="left">Description:  </th></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_ALL </td><td align="center">0 </td><td align="left">All categories </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_CHANNEL </td><td align="center">1 </td><td align="left">For channels </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_TIMER </td><td align="center">2 </td><td align="left">For timers </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_EPG </td><td align="center">3 </td><td align="left">For EPG </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_RECORDING </td><td align="center">4 </td><td align="left">For recordings </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_DELETED_RECORDING </td><td align="center">5 </td><td align="left">For deleted recordings </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_SETTING </td><td align="center">6 </td><td align="left">For settings </td></tr>
-</table>
+<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iStreamCount;</div>
+<div class="line">  <span class="keyword">struct </span>PVR_STREAM</div>
+<div class="line">  {</div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      iPhysicalId;        <span class="comment">/* physical index */</span></div>
+<div class="line">    <a class="code" href="a00191.html#adb311b9a66ccf6cbc77137e0af86be2a">kodi_codec_type</a>   iCodecType;         <span class="comment">/* codec type this stream */</span></div>
+<div class="line">    <a class="code" href="a00191.html#a5f36d5652cd9f943a40f0a2c4495a74a">kodi_codec_id</a>     iCodecId;           <span class="comment">/* codec id of this stream */</span></div>
+<div class="line">    <span class="keywordtype">char</span>              strLanguage[4];     <span class="comment">/* language id */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iIdentifier;        <span class="comment">/* stream id */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iFPSScale;          <span class="comment">/* scale of 1000 and a rate of 29970 will result in 29.97 fps */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iFPSRate;           <span class="comment">/* FPS rate */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iHeight;            <span class="comment">/* height of the stream reported by the demuxer */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iWidth;             <span class="comment">/* width of the stream reported by the demuxer */</span></div>
+<div class="line">    <span class="keywordtype">float</span>             fAspect;            <span class="comment">/* display aspect ratio of the stream */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iChannels;          <span class="comment">/* amount of channels */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iSampleRate;        <span class="comment">/* sample rate */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iBlockAlign;        <span class="comment">/* block alignment */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iBitRate;           <span class="comment">/* bit rate */</span></div>
+<div class="line">    <span class="keywordtype">int</span>               iBitsPerSample;     <span class="comment">/* bits per sample */</span></div>
+<div class="line">   } stream[PVR_STREAM_MAX_STREAMS];      <span class="comment">/* the streams */</span></div>
+<div class="line">} <a class="code" href="a00202.html#ad93e9ac33d1a9153bbea517a98260041">ATTRIBUTE_PACKED</a> PVR_STREAM_PROPERTIES;</div>
+</div><!-- fragment --><p>It has the header <a class="el" href="a00238.html">#include &lt;kodi/pvr.api2/StreamUtils.h&gt;</a> be included to enjoy it.</p>
 <hr/>
-<p></b></p>
-<p><b><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00238.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">PVR_MENUHOOK hook;</div>
-<div class="line">hook.iHookId = 1;</div>
-<div class="line">hook.category = PVR_MENUHOOK_SETTING;</div>
-<div class="line">hook.iLocalizedStringId = 30107;</div>
-<div class="line"><a class="code" href="a00351.html#gadfd504966cbc097f85cf6f510a1751cd">CPVRLib::AddMenuHook</a>(&amp;hook);</div>
-<div class="line">...</div>
-</div><!-- fragment --><p> </b></p>
-
-</div>
-</div>
-<a class="anchor" id="ga25527d9a7fb4d25460bab2f036def672"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Recording </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strRecordingName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bOn</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Display a notification in Kodi that a recording started or stopped on the server. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strRecordingName</td><td>The name of the recording to display </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename of the recording </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bOn</td><td>True when recording started, false when it stopped </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gaa0bf67ad4ff0b67b500e4070f873c337"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool RegisterMe </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>handle</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Resolve all callback methods. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Pointer to the add-on </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True when all methods were resolved, false otherwise.</dd></dl>
-<hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00190.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00238.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Note: This is only a example to show the easiest use of them, for</span></div>
+<div class="line"><span class="comment"> * them is always only one and the same stream type present.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * The class CStreamProperties is designed to store several streams</span></div>
+<div class="line"><span class="comment"> * and to alow updates of codec Id&#39;s during usage of them.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00238.html">kodi/pvr.api2/StreamUtils.h</a>&gt;</span></div>
 <div class="line"></div>
-<div class="line"><span class="comment">// Insert one macro on your add-on for it</span></div>
-<div class="line">IMPLEMENT_KODI_ADDON_LIBRARY;</div>
-<div class="line">IMPLEMENT_KODI_PVR_LIBRARY;</div>
+<div class="line">CStreamProperties activeChannelStreams;</div>
 <div class="line">...</div>
-<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
+<div class="line">void UpdateStreams()</div>
 <div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
-<div class="line">  <span class="keywordflow">if</span> (!CAddonLib::RegisterMe(hdl))</div>
-<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
-<div class="line">  <span class="keywordflow">if</span> (!<a class="code" href="a00351.html#gaa0bf67ad4ff0b67b500e4070f873c337">CPVRLib::RegisterMe</a>(hdl))</div>
-<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
-<div class="line">  ...</div>
+<div class="line">  CodecDescriptor codecId = CodecDescriptor::GetCodecByName(<span class="stringliteral">&quot;pcm_f32le&quot;</span>);</div>
+<div class="line">  <span class="keywordflow">if</span> (codecId.Codec().codec_type == XBMC_CODEC_TYPE_AUDIO)</div>
+<div class="line">  {</div>
+<div class="line">    CPVRStream newStream;</div>
+<div class="line">    <span class="comment">/* Get the stream data if already present and do only update */</span></div>
+<div class="line">    activeChannelStreams.GetStreamData(1, &amp;newStream);</div>
+<div class="line"></div>
+<div class="line">    newStream.iCodecType      = codecId.Codec().codec_type;</div>
+<div class="line">    newStream.iCodecId        = codecId.Codec().codec_id;</div>
+<div class="line">    newStream.iChannels       = 2;</div>
+<div class="line">    newStream.iSampleRate     = 48000;</div>
+<div class="line">    newStream.iBitsPerSample  = 32;</div>
+<div class="line">    newStream.iBitRate        = newStream.iSampleRate * newStream.iChannels * newStream.iBitsPerSample;</div>
+<div class="line">    newStream.strLanguage[0]  = 0;</div>
+<div class="line">    newStream.strLanguage[1]  = 0;</div>
+<div class="line">    newStream.strLanguage[2]  = 0;</div>
+<div class="line">    newStream.strLanguage[3]  = 0;</div>
+<div class="line">    newStream.iIdentifier     = -1;</div>
+<div class="line"></div>
+<div class="line">    newStreams.push_back(newStream);</div>
+<div class="line">    activeChannelStreams.UpdateStreams(newStreams);</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span></div>
+<div class="line">  {</div>
+<div class="line">    activeChannelStreams.Clear();</div>
+<div class="line">  }</div>
 <div class="line">}</div>
-</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>To use the library must be one time the macro IMPLEMENT_KODI_PVR_LIBRARY and IMPLEMENT_KODI_ADDON_LIBRARY somewhere one time included. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga5940787dcdcdb8aa995a07106917489f"></a>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaa71d36872f416feaa853788a7a7a7ef8"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void UnRegisterMe </td>
+          <td class="memname">void Clear </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
+</div><div class="memdoc">
+<p>Clears the present stream data on class. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf419611a13a1bca6fe60cd58cb8a952f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPVRStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
-<p>Release all callback methods and close handling with them. </p>
-<hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00190.html">kodi/addon.api2/AddonLib.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="a00238.html">kodi/pvr.api2/PVRLib.h</a>&gt;</span></div>
-<div class="line">...</div>
-<div class="line">void ADDON_Destroy()</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <a class="code" href="a00351.html#ga5940787dcdcdb8aa995a07106917489f">CPVRLib::UnRegisterMe</a>();</div>
-<div class="line">  CAddonLib::UnRegisterMe();</div>
-<div class="line">  ...</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<p>Class constructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="gad8caf56bf234506f41c1fcc64a0d1ad7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPVRStream </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00098.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class constructor to create copy of them. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>The other stream class to copy from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga324d4448e5c2dde1488e1a9b4d26c7ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsCleared </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks whether the stream has been cleared or not.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if cleared </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8c39a1e5e76bc953c53019e4ef318216"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00098.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare about Id is above. </p>
+<p>Compares this stream with another one so that video streams are sorted before any other streams and the others are sorted by the physical ID</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Other stream to compare from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the other have a higher Id </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7b1eb5fcb43d86807d0df66f0b9c74e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CPVRStream&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00098.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy stream class. </p>
+<p>Overwrite stream class with data from other stream</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>The other stream class to copy from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2e56127d518a6487ba46cfe720bb4904"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00098.html">CPVRStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Compares this stream based on another stream</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>Other stream to compare from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if equal, otherwise false </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->

@@ -1,7 +1,12 @@
 var a00360 =
 [
-    [ "close", "a00360.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
-    [ "create", "a00360.html#gad71569b69244d11fe949d0bbd5b75905", null ],
-    [ "iscanceled", "a00360.html#ga2a944a55da1c28885d3f00d101618ac6", null ],
-    [ "update", "a00360.html#gabf439774a2aca33663c3bb785e6e7465", null ]
+    [ "Action", "a00366.html", "a00366" ],
+    [ "Control", "a00379.html", "a00379" ],
+    [ "Dialog", "a00356.html", "a00356" ],
+    [ "DialogProgress", "a00357.html", "a00357" ],
+    [ "DialogProgressBG", "a00358.html", "a00358" ],
+    [ "ListItem", "a00394.html", "a00394" ],
+    [ "Window", "a00367.html", "a00367" ],
+    [ "getCurrentWindowDialogId", "a00360.html#ga8379c35c147def9f607d18571e24678e", null ],
+    [ "getCurrentWindowId", "a00360.html#gab1660e44ef103bd39fff61229809f567", null ]
 ];

@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['text',['Text',['../a00324.html#gafdfa72709ffc1738c3c198f7ad8b61ec',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
-  ['textviewer',['textviewer',['../a00359.html#gad212e84e36d2fc96b8f2e24b9dd67b47',1,'XBMCAddon::xbmcgui::Dialog']]],
-  ['timerentry',['TimerEntry',['../a00352.html#gae6c3ce0a07ecc854c615f2d65e550147',1,'PVRLIB::V2::CPVRLib_Transfer']]],
-  ['timerupdate',['TimerUpdate',['../a00353.html#ga92c110f8654585fdc3f8a126d1ce54bb',1,'PVRLIB::V2::CPVRLib_Trigger']]],
-  ['title',['Title',['../a00324.html#ga3cb91fb7750df7982baea48c4a3de616',1,'GUILIB::V2::CAddonGUIDialogExtendedProgress']]],
-  ['togglemute',['ToggleMute',['../a00302.html#gaa959a7781167f016c271bf1a8c37a681',1,'AddOnLIB::V2::CAddonLib_General']]],
-  ['translateaddonstatus',['TranslateAddonStatus',['../a00302.html#gaecf9afb07475f94d782c6cf6f4057317',1,'AddOnLIB::V2::CAddonLib_General']]],
-  ['translateoldsortmethod',['TranslateOldSortMethod',['../a00103.html#af8ca8ca20171af34ee7a01083049f0b3',1,'SortUtils::TranslateOldSortMethod(SortBy sortBy, bool ignoreArticle)'],['../a00103.html#a42b705b8e8907ea8a7872f311066ceef',1,'SortUtils::TranslateOldSortMethod(SORT_METHOD sortBy)']]],
-  ['translatepath',['TranslatePath',['../a00302.html#ga242aca0b394c978780dfbc44b112519d',1,'AddOnLIB::V2::CAddonLib_General::TranslatePath()'],['../a00362.html#ga77f8d61db7757aa22df826a904cc3a8d',1,'translatePath():&#160;ModuleXbmc.h']]],
-  ['truncate',['Truncate',['../a00307.html#ga97dbc6093302f0ced52952a2737407ec',1,'AddOnLIB::V2::CAddonLib_VFSFile']]],
-  ['typefromstring',['TypeFromString',['../a00278.html#a3de838a029a5436f3cd587e441166c13',1,'SortUtils.cpp']]],
-  ['typetostring',['TypeToString',['../a00278.html#a1193e99ac4c9a397652f37f895295903',1,'SortUtils.cpp']]]
+  ['unlock',['Unlock',['../a00333.html#ga50f1fb5a8527c6f1beb7c59393c934a9',1,'GUILIB::V2::CGUILib']]],
+  ['unregisterdspmode',['UnregisterDSPMode',['../a00308.html#gae222050a6298ea8a4b7f2085ae5e85b1',1,'AudioEngineLIB::V2::CAELib']]],
+  ['unregisterme',['UnRegisterMe',['../a00297.html#ga5940787dcdcdb8aa995a07106917489f',1,'AddOnLIB::V2::CAddonLib::UnRegisterMe()'],['../a00308.html#ga5940787dcdcdb8aa995a07106917489f',1,'AudioEngineLIB::V2::CAELib::UnRegisterMe()'],['../a00332.html#ga5940787dcdcdb8aa995a07106917489f',1,'GUILIB::V2::CGUILib::UnRegisterMe()'],['../a00345.html#ga5940787dcdcdb8aa995a07106917489f',1,'PlayerLIB::V2::CPlayerLib::UnRegisterMe()'],['../a00348.html#ga5940787dcdcdb8aa995a07106917489f',1,'PVRLIB::V2::CPVRLib::UnRegisterMe()']]],
+  ['unshuffle',['unshuffle',['../a00375.html#ga2401476232ac1b00321c9bfe8158f9c4',1,'XBMCAddon::xbmc::PlayList']]],
+  ['update',['Update',['../a00133.html#a8b44e36a9f2c7ee7cf8cc107e851094a',1,'XBMCAddon::xbmcgui::WindowXML::Update()'],['../a00357.html#gabf439774a2aca33663c3bb785e6e7465',1,'XBMCAddon::xbmcgui::DialogProgress::update()'],['../a00358.html#ga90d83a72e4151aba7c05422cf34f6684',1,'XBMCAddon::xbmcgui::DialogProgressBG::update()']]],
+  ['updatescrollinfo',['UpdateScrollInfo',['../a00056.html#ab8e740d040a9b1ff3d84a3ab60aa0e16',1,'CGUIFont']]],
+  ['updatestreams',['UpdateStreams',['../a00352.html#ga8d64e3bab115fb9201d6f688ab350ce5',1,'PVRLIB::V2::CStreamProperties']]],
+  ['urlencode',['URLEncode',['../a00300.html#gab4932f2cf0d39ceca1649ec8dd782acc',1,'AddOnLIB::V2::CAddonLib_Network']]]
 ];

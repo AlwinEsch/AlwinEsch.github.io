@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Slider Control</title>
+<title>Kodi Development: Video Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,63 +92,33 @@ $(document).ready(function(){initNavTree('a00429.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Slider Control<div class="ingroups"><a class="el" href="a00406.html">Skin Development</a> &raquo; <a class="el" href="a00407.html">Controls</a></div></div>  </div>
+<div class="title">Video Control<div class="ingroups"><a class="el" href="a00403.html">Skin Development</a> &raquo; <a class="el" href="a00404.html">Controls</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<p><b>Used for a volume slider.</b> </p>
-<p>The slider control is used for things where a sliding bar best represents the operation at hand (such as a volume control or seek control). You can choose the position, size, and look of the slider control.</p>
+<p><b>Used to display the currently playing video whilst in the GUI.</b> </p>
+<p>The videowindow control is used for displaying the currently playing video elsewhere in the Kodi GUI. You can choose the position, and size of the video displayed. Note that the control is only rendered if video is being played.</p>
 <hr/>
- <h1><a class="anchor" id="Slider_Control_sect1"></a>
+ <h1><a class="anchor" id="Video_Control_sect1"></a>
 Example</h1>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;slider&quot; id=&quot;17&quot;&gt;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first slider control&lt;/description&gt;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;videowindow&quot; id=&quot;2&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first video control&lt;/description&gt;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;30&lt;/height&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;200&lt;/height&gt;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;texturesliderbar&gt;mybackgroundtexture.png&lt;/texturesliderbar&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;textureslidernib&gt;mydowntexture.png&lt;/textureslidernib&gt;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      &lt;textureslidernibfocus&gt;mydownfocustexture.png&lt;/textureslidernibfocus&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      &lt;info&gt;&lt;/info&gt;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      &lt;action&gt;&lt;/action&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      &lt;controloffsetx&gt;&lt;/controloffsetx&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      &lt;controloffsety&gt;&lt;/controloffsety&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      &lt;pulseonselect&gt;&lt;/pulseonselect&gt;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      &lt;onup&gt;2&lt;/onup&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      &lt;ondown&gt;3&lt;/ondown&gt;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      &lt;onleft&gt;1&lt;/onleft&gt;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      &lt;onright&gt;1&lt;/onright&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;&lt;/control&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;&lt;/control&gt;</div>
 </div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Slider_Control_sect2"></a>
+ <h1><a class="anchor" id="Video_Control_sect2"></a>
 Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is lower case only. This is important, as xml tags are case-sensitive.</p>
-<table class="doxtable">
-<tr>
-<th align="right">Tag </th><th align="left">Description  </th></tr>
-<tr>
-<td align="right">texturesliderbar </td><td align="left">Specifies the image file which should be displayed in the background of the slider control. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
-<tr>
-<td align="right">textureslidernib </td><td align="left">Specifies the image file which should be displayed for the slider nib. </td></tr>
-<tr>
-<td align="right">textureslidernibfocus </td><td align="left">Specifies the image file which should be displayed for the slider nib when it has focus. </td></tr>
-<tr>
-<td align="right">controloffsetx </td><td align="left">Amount to offset the slider background texture from the left edge of the control. Only useful if a value is being rendered as well (ie in int or float mode). </td></tr>
-<tr>
-<td align="right">controloffsety </td><td align="left">Amount to offset the slider background texture from the top edge of the control. </td></tr>
-<tr>
-<td align="right">info </td><td align="left">Specifies the information that the slider controls. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
-<tr>
-<td align="right">action </td><td align="left">Can be <b>'volume'</b> to adjust the volume or 'seek' to change the seek position. </td></tr>
-</table>
+<p>Only the <a href="http://kodi.wiki/view/Default_Control_Tags">default control</a> tags are applicable to this control.</p>
 <hr/>
- <h1><a class="anchor" id="Slider_Control_sect3"></a>
+ <h1><a class="anchor" id="Video_Control_sect3"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>
 <li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
-<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
+<li><a href="http://kodi.wiki/view/Skinning">Skinning</a>' </li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

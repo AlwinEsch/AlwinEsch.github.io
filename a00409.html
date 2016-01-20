@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Button control</title>
+<title>Kodi Development: Fade label control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,91 +92,68 @@ $(document).ready(function(){initNavTree('a00409.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Button control<div class="ingroups"><a class="el" href="a00406.html">Skin Development</a> &raquo; <a class="el" href="a00407.html">Controls</a></div></div>  </div>
+<div class="title">Fade label control<div class="ingroups"><a class="el" href="a00403.html">Skin Development</a> &raquo; <a class="el" href="a00404.html">Controls</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<p><b>A standard push button control.</b> </p>
-<p>The button control is used for creating push buttons in Kodi. You can choose the position, size, and look of the button, as well as choosing what action(s) should be performed when pushed. </p><hr/>
- <h1><a class="anchor" id="skin_Button_control_sect1"></a>
+<p><b>Used to show multiple pieces of text in the same position, by fading from one to the other.</b> </p>
+<p>The fade label control is used for displaying multiple pieces of text in the same space in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed. The first piece of information to display fades in over 50 frames, then scrolls off to the left. Once it is finished scrolling off screen, the second piece of information fades in and the process repeats. A fade label control is not supported in a list container. </p><hr/>
+ <h1><a class="anchor" id="Fade_Label_Control_sect1"></a>
 Example</h1>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;button&quot; id=&quot;1&quot;&gt;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first button control&lt;/description&gt;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;fadelabel&quot; id=&quot;1&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My First fadelabel&lt;/description&gt;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;200&lt;/height&gt;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;colordiffuse&gt;FFFFFFFF&lt;/colordiffuse&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;texturefocus colordiffuse=&quot;FFFFAAFF&quot;&gt;myfocustexture.png&lt;/texturefocus&gt;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      &lt;texturenofocus colordiffuse=&quot;FFFFAAFF&quot;&gt;mynormaltexture.png&lt;/texturenofocus&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      &lt;label&gt;29&lt;/label&gt;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      &lt;wrapmultiline&gt;true&lt;/wrapmultiline&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      &lt;font&gt;font12&lt;/font&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      &lt;textcolor&gt;FFFFFFFF&lt;/textcolor&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      &lt;focusedcolor&gt;FFFFFFFF&lt;/focusedcolor&gt;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      &lt;disabledcolor&gt;80FFFFFF&lt;/disabledcolor&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      &lt;invalidcolor&gt;FFFFFFFF&lt;/invalidcolor&gt;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      &lt;align&gt;&lt;/align&gt;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      &lt;aligny&gt;&lt;/aligny&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      &lt;textoffsetx&gt;&lt;/textoffsetx&gt;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      &lt;textoffsety&gt;&lt;/textoffsety&gt;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      &lt;pulseonselect&gt;&lt;/pulseonselect&gt;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      &lt;onclick&gt;XBMC.ActivateWindow(MyVideos)&lt;/onclick&gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      &lt;onfocus&gt;-&lt;/onfocus&gt;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      &lt;onunfocus&gt;-&lt;/onunfocus&gt;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      &lt;onup&gt;2&lt;/onup&gt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      &lt;ondown&gt;3&lt;/ondown&gt;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      &lt;onleft&gt;1&lt;/onleft&gt;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      &lt;onright&gt;1&lt;/onright&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;&lt;/control&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;scrollout&gt;true&lt;/scrollout&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;pauseatend&gt;200&lt;/pauseatend&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;label&gt;6&lt;/label&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      &lt;info&gt;MusicPlayer.Genre&lt;/info&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      &lt;info&gt;MusicPlayer.Artist&lt;/info&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      &lt;info&gt;MusicPlayer.Album&lt;/info&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      &lt;info&gt;MusicPlayer.Year&lt;/info&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      &lt;font&gt;font14&lt;/font&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      &lt;textcolor&gt;FFB2D4F5&lt;/textcolor&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      &lt;textoffsetx&gt;20&lt;/textoffsetx&gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      &lt;scroll&gt;true&lt;/scroll&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      &lt;randomize&gt;true&lt;/randomize&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;&lt;/control&gt;</div>
 </div><!-- fragment --> <hr/>
- <h1><a class="anchor" id="skin_Button_control_sect2"></a>
-Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is lower case only. This is important, as xml tags are case-sensitive.</p>
+ <h1><a class="anchor" id="Fade_Label_Control_sect2"></a>
+Tag descriptions</h1>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">texturefocus </td><td align="left">Specifies the image file which should be displayed when the button has focus. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
+<td align="right">label </td><td align="left">Specifies the text which should be drawn. You should specify an entry from the strings.xml here, however you may also specify a piece of text yourself if you wish, though ofcourse it will not be localisable. <a href="http://kodi.wiki/view/Label_Parsing">You may also specify more than one piece of information here by using the $INFO and $LOCALIZE formats</a>. </td></tr>
 <tr>
-<td align="right">texturenofocus</td><td align="left">Specifies the image file which should be displayed when the button does not have focus. </td></tr>
+<td align="right">info </td><td align="left">Specifies the information that should be presented. Kodi will auto-fill in this info in place of the <b><code>&lt;label&gt;</code></b>. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
 <tr>
-<td align="right">label </td><td align="left">The label used on the button. It can be a link into <b><code>strings.xml</code></b>, or an actual text label. </td></tr>
+<td align="right">font </td><td align="left">Specifies the font to use from the font.xml file. </td></tr>
 <tr>
-<td align="right">font </td><td align="left">Font used for the button label. From fonts.xml. </td></tr>
+<td align="right">textcolor </td><td align="left">Specified the color the text should be, in hex <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
 <tr>
-<td align="right">textcolor </td><td align="left">Color used for displaying the button label. In <b>AARRGGBB</b> hex format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
-<tr>
-<td align="right">focusedcolor </td><td align="left">Color used for the button label when the button has in focus. In <b>AARRGGBB</b> hex format or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
-<tr>
-<td align="right">disabledcolor </td><td align="left">Color used for the button label if the button is disabled. In <b>AARRGGBB</b> hex format or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
-<tr>
-<td align="right">invalidcolor </td><td align="left">Color used for the button if the user entered some invalid value. In <b>AARRGGBB</b> hex format or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<td align="right">textoffsetx </td><td align="left">Specify the offset from the left edge that the text should be rendered at when static (not scrolling). The scrolling text will still scroll using the full <b><code>&lt;width&gt;</code></b> of the control. </td></tr>
 <tr>
 <td align="right">shadowcolor </td><td align="left">Specifies the color of the drop shadow on the text, in <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
 <tr>
-<td align="right">angle </td><td align="left">The angle the text should be rendered at, in degrees. A value of 0 is horizontal. </td></tr>
+<td align="right">angle </td><td align="left">Specifies the angle at which the text should be drawn, measured counter clockwise from the horizontal. </td></tr>
 <tr>
-<td align="right">align </td><td align="left">Label horizontal alignment on the button. Defaults to left, can also be center or right. </td></tr>
+<td align="right">scrollout </td><td align="left">If set to False the fadelabel will only scroll until the last char is to the right side of the width of the fadelabel instead of all the way out to the left. </td></tr>
 <tr>
-<td align="right">aligny </td><td align="left">Label vertical alignment on the button. Defaults to top, can also be center. </td></tr>
+<td align="right">pauseatend </td><td align="left">Specifies the time that the text will wait until it fades away before it scrolls again or moves to the next item. </td></tr>
 <tr>
-<td align="right">textoffsetx </td><td align="left">Amount to offset the label from the left (or right) edge of the button when using left or right alignment. </td></tr>
+<td align="right">resetonlabelchange </td><td align="left">If set to false the fadelabel will not reset the scrolling offset when the label's content changes. Useful if you have things such as the play time (in seconds) inside a fadelabel. Defaults to true. </td></tr>
 <tr>
-<td align="right">textoffsety </td><td align="left">Amount to offset the label from the top edge of the button when using top alignment. </td></tr>
+<td align="right">scrollspeed </td><td align="left">Scroll speed of text in pixels per second. Defaults to 60. </td></tr>
 <tr>
-<td align="right">textwidth </td><td align="left">Will truncate any text that's too long. </td></tr>
+<td align="right">scroll </td><td align="left">If set to false, the labels won't scroll. Defaults to true. </td></tr>
 <tr>
-<td align="right">onclick </td><td align="left">Specifies the action to perform when the button is pressed. Should be a built in function. <a href="http://kodi.wiki/view/Built-in_functions_available_to_FTP,_Webserver,_skins,_keymap_and_to_python">See here for more information</a>. You may have more than one <b><code>&lt;onclick&gt;</code></b> tag, and they'll be executed in sequence. </td></tr>
-<tr>
-<td align="right">onfocus </td><td align="left">Specifies the action to perform when the button is focused. Should be a built in function. The action is performed after any focus animations have completed. <a href="http://kodi.wiki/view/Built-in_functions_available_to_FTP,_Webserver,_skins,_keymap_and_to_python">See here for more information</a>. </td></tr>
-<tr>
-<td align="right">onunfocus </td><td align="left">Specifies the action to perform when the button loses focus. Should be a built in function. </td></tr>
-<tr>
-<td align="right">wrapmultiline </td><td align="left">Will wrap the label across multiple lines if the label exceeds the control width. </td></tr>
+<td align="right">randomize </td><td align="left">If set to true, the labels will be displayed in a random order. Defaults to false. </td></tr>
 </table>
 <hr/>
- <h1><a class="anchor" id="skin_Button_control_sect3"></a>
+ <h1><a class="anchor" id="Fade_Label_Control_sect3"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>

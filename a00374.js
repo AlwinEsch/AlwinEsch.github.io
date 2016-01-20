@@ -1,12 +1,13 @@
 var a00374 =
 [
-    [ "Subclass - WindowDialogXML", "a00375.html", null ],
-    [ "addItem", "a00374.html#ga87ffff74f065758ae9884ecc87102af1", null ],
-    [ "clearList", "a00374.html#ga612285c5b9d603a0abb0feab44b8412f", null ],
-    [ "getCurrentListPosition", "a00374.html#ga860b30302751103052456bb1f1079980", null ],
-    [ "getListItem", "a00374.html#ga37ec44d83350b3e4c5b4f7a2648bfc01", null ],
-    [ "getListSize", "a00374.html#ga7b00dc949b12149360563a1941956fc7", null ],
-    [ "removeItem", "a00374.html#ga214d46ad5cb6e318163ba98e0dd780ac", null ],
-    [ "setCurrentListPosition", "a00374.html#gabaeb49593088c3be9c7a232d50152e34", null ],
-    [ "setProperty", "a00374.html#ga3171b661458f56e0f0af6e264ac09bf3", null ]
+    [ "atime", "a00374.html#ga65d49375e5251d4e616a45e3c898d6cc", null ],
+    [ "ctime", "a00374.html#gab24c57af16ac6f88edb819c18e2e438b", null ],
+    [ "mtime", "a00374.html#ga57da69d0b20141a95c0c44a6bb5f3b35", null ],
+    [ "st_dev", "a00374.html#gab17084ec246f2b497d2f13618c5bd220", null ],
+    [ "st_gid", "a00374.html#ga9a7a9ad27402f5a931bcbff38e4e03d3", null ],
+    [ "st_ino", "a00374.html#ga77e336d6274f6fb0e2a3c3546e61e360", null ],
+    [ "st_mode", "a00374.html#ga00b3e20028eaee69c44cdc47a922fe31", null ],
+    [ "st_nlink", "a00374.html#ga34f57426567df63ef5ad1b4679778d18", null ],
+    [ "st_size", "a00374.html#gaeec21543efab31f62a21e533b0d3a537", null ],
+    [ "st_uid", "a00374.html#gaa29c53999dffe4acc12aed2eb60a6c81", null ]
 ];
