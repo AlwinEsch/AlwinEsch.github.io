@@ -1,6 +1,6 @@
 var a00016 =
 [
-    [ "Binary C++ Tutorials", "a00018.html", null ],
-    [ "Python Tutorials", "a00020.html", "a00020" ],
-    [ "Various Tutorials", "a00022.html", "a00022" ]
+    [ "Addon action Id's", "a00013.html", null ],
+    [ "List of boolean conditions", "a00015.html", null ],
+    [ "Picture info labels", "a00014.html", null ]
 ];

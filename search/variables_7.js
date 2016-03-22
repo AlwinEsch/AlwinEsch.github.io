@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['kodi_5faddon_5flibrary',['KODI_ADDON_LIBRARY',['../a00043.html#a0c8b9ce175d01a9b10ce484f86056fed',1,'AddOnLIB::V2::CAddonLib']]],
-  ['kodi_5faudioengine_5flibrary',['KODI_AUDIOENGINE_LIBRARY',['../a00053.html#a3d5db3884cc2c788a91a6724e97557f3',1,'AudioEngineLIB::V2::CAELib']]],
-  ['kodi_5fgui_5flibrary',['KODI_GUI_LIBRARY',['../a00086.html#a267bf58919cb103740f8b7cffc23ef66',1,'GUILIB::V2::CGUILib']]],
-  ['kodi_5fplayer_5flibrary',['KODI_PLAYER_LIBRARY',['../a00090.html#a4bce1dde3673c4b78c782a9f5b3a015b',1,'PlayerLIB::V2::CPlayerLib']]],
-  ['kodi_5fpvr_5flibrary',['KODI_PVR_LIBRARY',['../a00095.html#a189371e5d5b4f2016890b37d497b1674',1,'PVRLIB::V2::CPVRLib']]]
+  ['picture_5fslide_5fmap',['picture_slide_map',['../a00006.html#a35ab68e16e7457b8dcbb2cbad563aff0',1,'GUIInfoManager.cpp']]],
+  ['player_5flabels',['player_labels',['../a00006.html#a81e5cc2f77d32a58e9b6d74fd988163b',1,'GUIInfoManager.cpp']]],
+  ['player_5fparam',['player_param',['../a00006.html#a9e2072756f1c90cabc8511503affa792',1,'GUIInfoManager.cpp']]],
+  ['player_5ftimes',['player_times',['../a00006.html#abfead6754210637f40faf1d60340b302',1,'GUIInfoManager.cpp']]],
+  ['playlist',['playlist',['../a00006.html#a5061adc2d0c4bbe0536bb92cd941a2f3',1,'GUIInfoManager.cpp']]],
+  ['pvr',['pvr',['../a00006.html#a59fe29cd9055981409819110c7b88cb5',1,'GUIInfoManager.cpp']]]
 ];

@@ -1,4 +1,4 @@
 var a00015 =
 [
-    [ "KODI_ADDON_LIBRARY", "a00015.html#a0c8b9ce175d01a9b10ce484f86056fed", null ]
+    [ "skin_labels", "a00015.html#ga3a9b85da19f08588cc024da7c7b50372", null ]
 ];

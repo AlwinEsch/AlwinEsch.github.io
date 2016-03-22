@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['epggrid_20control',['EPGGrid control',['../a00408.html',1,'']]],
-  ['edit_20control',['Edit control',['../a00407.html',1,'']]]
+  ['window_20ids',['Window IDs',['../a00016.html',1,'']]]
 ];

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['dialog',['Dialog',['../a00356.html',1,'']]],
-  ['dialogprogress',['DialogProgress',['../a00357.html',1,'']]],
-  ['dialogprogressbg',['DialogProgressBG',['../a00358.html',1,'']]]
+  ['picture_20info_20labels',['Picture info labels',['../a00014.html',1,'']]]
 ];

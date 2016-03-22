@@ -1,25 +1,6 @@
 var annotated =
 [
-    [ "AddOnLIB", "a00280.html", "a00280" ],
-    [ "AudioEngineLIB", "a00282.html", "a00282" ],
-    [ "GUILIB", "a00284.html", "a00284" ],
-    [ "PlayerLIB", "a00287.html", "a00287" ],
-    [ "PVRLIB", "a00289.html", "a00289" ],
-    [ "XBMCAddon", "a00291.html", "a00291" ],
-    [ "ADDON_VideoInfoTag_Cast", "a00041.html", "a00041" ],
-    [ "ADDON_VideoInfoTag_Resume", "a00042.html", "a00042" ],
-    [ "AudioEngineFormat", "a00052.html", "a00052" ],
-    [ "CAction", "a00055.html", "a00055" ],
-    [ "CGUIFont", "a00056.html", "a00056" ],
-    [ "CGUIListItem", "a00057.html", "a00057" ],
-    [ "CKey", "a00059.html", "a00059" ],
-    [ "CMouseEvent", "a00060.html", "a00060" ],
-    [ "CScrollInfo", "a00061.html", "a00061" ],
-    [ "EPG_TAG", "a00062.html", "a00062" ],
-    [ "GUIViewSortDetails", "a00087.html", "a00087" ],
-    [ "kodi_codec", "a00088.html", "a00088" ],
-    [ "kodi_version", "a00089.html", "a00089" ],
-    [ "sort_map", "a00100.html", "a00100" ],
-    [ "SortDescription", "a00101.html", "a00101" ],
-    [ "SortUtils", "a00102.html", "a00102" ]
+    [ "CSetCurrentItemJob", "a00001.html", "a00001" ],
+    [ "InfoBoolFinder", "a00002.html", "a00002" ],
+    [ "infomap", "a00003.html", "a00003" ]
 ];
