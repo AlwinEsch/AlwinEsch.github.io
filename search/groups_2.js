@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['list_20of_20gui_20access_20messages',['List of GUI access messages',['../a00015.html',1,'']]]
+  ['picture_20info_20labels',['Picture info labels',['../a00016.html',1,'']]]
 ];

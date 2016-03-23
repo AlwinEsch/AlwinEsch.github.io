@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['picture_20info_20labels',['Picture info labels',['../a00014.html',1,'']]]
+  ['window_20ids',['Window IDs',['../a00017.html',1,'']]]
 ];

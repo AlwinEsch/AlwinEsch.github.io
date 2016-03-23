@@ -1,5 +1,6 @@
 var a00003 =
 [
-    [ "str", "a00003.html#af25d6dc49269fa2003ac7c7fa6f13915", null ],
-    [ "val", "a00003.html#aa0ccb5ee6d882ee3605ff47745c6467b", null ]
+    [ "CSetCurrentItemJob", "a00003.html#a5aa254b62467d87bf6439cc6f147f2e9", null ],
+    [ "~CSetCurrentItemJob", "a00003.html#ae688555b110b9646fd48ab88f99bbc7e", null ],
+    [ "DoWork", "a00003.html#a530e1b1920f7f2b5399d81c10e922d84", null ]
 ];

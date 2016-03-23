@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['infoboolfinder',['InfoBoolFinder',['../a00002.html',1,'']]],
-  ['infomap',['infomap',['../a00003.html',1,'']]]
+  ['infoboolfinder',['InfoBoolFinder',['../a00006.html',1,'']]],
+  ['infomap',['infomap',['../a00007.html',1,'']]]
 ];
