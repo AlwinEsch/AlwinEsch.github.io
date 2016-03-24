@@ -20,7 +20,7 @@ var a00004 =
       [ "Pvr", "a00002.html#modules__General__List_of_gui_access_Pvr", null ],
       [ "ADSP", "a00002.html#modules__General__List_of_gui_access_ADSP", null ],
       [ "Radio RDS", "a00002.html#modules__General__List_of_gui_access_RDS", null ],
-      [ "Slide show", "a00002.html#modules__General__List_of_gui_access_slideshow", null ]
+      [ "Slideshow", "a00002.html#modules__General__List_of_gui_access_slideshow", null ]
     ] ],
     [ "List of build in functions", "a00006.html", [
       [ "Add-on built-in's", "a00006.html#built_in_functions_1", null ],
