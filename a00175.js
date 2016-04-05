@@ -1,5 +1,8 @@
 var a00175 =
 [
-    [ "AddMenuHook", "a00175.html#ga19b004e52c9ec0a8d6e7b8dddae1e413", null ],
-    [ "Recording", "a00175.html#gabd6ff60172946b2f767523ee0b3bba27", null ]
+    [ "AddonPlayListType", "a00175.html#gab07b512029688f85c2c460a1d0a8efc1", [
+      [ "PlayList_Music", "a00175.html#ggab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143", null ],
+      [ "PlayList_Video", "a00175.html#ggab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b", null ],
+      [ "PlayList_Picture", "a00175.html#ggab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab", null ]
+    ] ]
 ];

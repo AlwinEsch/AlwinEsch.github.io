@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi4/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/audioengine/definitions_audioengine.hpp Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi4/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/addon/SoundPlay.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,12 +92,12 @@ $(document).ready(function(){initNavTree('a00050_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">definitions_audioengine.hpp</div>  </div>
+<div class="title">SoundPlay.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2016 Team KODI</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015 Team KODI</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
@@ -116,116 +116,83 @@ $(document).ready(function(){initNavTree('a00050_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;../definitions-all.hpp&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifdef BUILD_KODI_ADDON</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;kodi/AEChannelData.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;cores/AudioEngine/Utils/AEChannelData.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;NAMESPACE(<a class="code" href="a00138.html">V2</a>)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;../definitions.hpp&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;../.internal/AddonLib_internal.hpp&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;NAMESPACE(<a class="code" href="a00141.html">V2</a>)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;namespace <a class="code" href="a00116.html">KodiAPI</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>AddOn</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;namespace <a class="code" href="a00113.html">KodiAPI</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="a00008.html#ga09549ee338c637b62a65826fd6a4b38c">   49</a></span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="a00008.html#ga09549ee338c637b62a65826fd6a4b38c">AEStreamHandle</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="a00008.html">   60</a></span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="a00008.html#a00181">AudioEngineFormat</a></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  {</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="a00008.html#a8f4e236f291657200f64cd2f069a8ff7">   63</a></span>&#160;    <span class="keyword">enum</span> AEDataFormat <a class="code" href="a00008.html#a8f4e236f291657200f64cd2f069a8ff7">m_dataFormat</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="a00008.html#a046d570c56fd2ae9b813340816ebfdec">   66</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00008.html#a046d570c56fd2ae9b813340816ebfdec">m_sampleRate</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="a00008.html#a60bb897389267a5034ef730c956b661a">   69</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00008.html#a60bb897389267a5034ef730c956b661a">m_encodedRate</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="a00008.html#a98e4ea22d72d3c5dce2821ae10a802f8">   72</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00008.html#a98e4ea22d72d3c5dce2821ae10a802f8">m_channelCount</a>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="a00008.html#a4a53bc9bcf5fe0c7d808858463f370f7">   75</a></span>&#160;    <span class="keyword">enum</span> AEChannel <a class="code" href="a00008.html#a4a53bc9bcf5fe0c7d808858463f370f7">m_channels</a>[AE_CH_MAX];</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="a00008.html#a3fa03b15b439d70dd92e726e1aac9eb5">   78</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00008.html#a3fa03b15b439d70dd92e726e1aac9eb5">m_frames</a>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="a00008.html#a3b6b1929e0fbe39e252645260f4d97d8">   81</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00008.html#a3b6b1929e0fbe39e252645260f4d97d8">m_frameSamples</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="a00008.html#a7c6321b7fd7f09478ca0bf9931009ee1">   84</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00008.html#a7c6321b7fd7f09478ca0bf9931009ee1">m_frameSize</a>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="a00008.html#a485299b0bb8f0c1cf765321c704bcc40">   87</a></span>&#160;    <a class="code" href="a00008.html#a485299b0bb8f0c1cf765321c704bcc40">AudioEngineFormat</a>()</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      m_dataFormat = AE_FMT_INVALID;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      m_sampleRate = 0;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      m_encodedRate = 0;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      m_frames = 0;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      m_frameSamples = 0;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      m_frameSize = 0;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      m_channelCount = 0;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ch = 0; ch &lt; AE_CH_MAX; ch++)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        m_channels[ch] = AE_CH_NULL;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="a00008.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64">  107</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00008.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64">compareFormat</a>(<span class="keyword">const</span> <a class="code" href="a00008.html#a00181">AudioEngineFormat</a> *fmt)</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="keywordflow">if</span> (!fmt)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="a00012.html">   89</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00012.html#a00206">CSoundPlay</a></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span>    <a class="code" href="a00012.html#a00206">CSoundPlay</a>(<span class="keyword">const</span> std::string&amp; filename);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> ~<a class="code" href="a00012.html#a00206">CSoundPlay</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keywordflow">if</span> (m_dataFormat    != fmt-&gt;<a class="code" href="a00008.html#a8f4e236f291657200f64cd2f069a8ff7">m_dataFormat</a>    ||</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          m_sampleRate    != fmt-&gt;<a class="code" href="a00008.html#a046d570c56fd2ae9b813340816ebfdec">m_sampleRate</a>    ||</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;          m_encodedRate   != fmt-&gt;<a class="code" href="a00008.html#a60bb897389267a5034ef730c956b661a">m_encodedRate</a>   ||</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;          m_frames        != fmt-&gt;<a class="code" href="a00008.html#a3fa03b15b439d70dd92e726e1aac9eb5">m_frames</a>        ||</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;          m_frameSamples  != fmt-&gt;<a class="code" href="a00008.html#a3b6b1929e0fbe39e252645260f4d97d8">m_frameSamples</a>  ||</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;          m_frameSize     != fmt-&gt;<a class="code" href="a00008.html#a7c6321b7fd7f09478ca0bf9931009ee1">m_frameSize</a>     ||</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;          m_channelCount  != fmt-&gt;<a class="code" href="a00008.html#a98e4ea22d72d3c5dce2821ae10a802f8">m_channelCount</a>)</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ch = 0; ch &lt; AE_CH_MAX; ch++)</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">if</span> (fmt-&gt;<a class="code" href="a00008.html#a4a53bc9bcf5fe0c7d808858463f370f7">m_channels</a>[ch] != m_channels[ch])</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  } <a class="code" href="a00008.html#a00181">AudioEngineFormat</a>;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> Play();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> Stop();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}; <span class="comment">/* extern &quot;C&quot; */</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}; <span class="comment">/* namespace KodiAPI */</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;END_NAMESPACE()</div>
-<div class="ttc" id="a00008_html_a8f4e236f291657200f64cd2f069a8ff7"><div class="ttname"><a href="a00008.html#a8f4e236f291657200f64cd2f069a8ff7">AudioEngineFormat::m_dataFormat</a></div><div class="ttdeci">enum AEDataFormat m_dataFormat</div><div class="ttdoc">The stream&#39;s data format (eg, AE_FMT_S16LE) </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:63</div></div>
-<div class="ttc" id="a00008_html_a4a53bc9bcf5fe0c7d808858463f370f7"><div class="ttname"><a href="a00008.html#a4a53bc9bcf5fe0c7d808858463f370f7">AudioEngineFormat::m_channels</a></div><div class="ttdeci">enum AEChannel m_channels[AE_CH_MAX]</div><div class="ttdoc">The stream&#39;s channel layout. </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:75</div></div>
-<div class="ttc" id="a00008_html_a3b6b1929e0fbe39e252645260f4d97d8"><div class="ttname"><a href="a00008.html#a3b6b1929e0fbe39e252645260f4d97d8">AudioEngineFormat::m_frameSamples</a></div><div class="ttdeci">unsigned int m_frameSamples</div><div class="ttdoc">The number of samples in one frame. </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:81</div></div>
-<div class="ttc" id="a00008_html_a485299b0bb8f0c1cf765321c704bcc40"><div class="ttname"><a href="a00008.html#a485299b0bb8f0c1cf765321c704bcc40">AudioEngineFormat::AudioEngineFormat</a></div><div class="ttdeci">AudioEngineFormat()</div><div class="ttdoc">Structure constructor to set with null values. </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:87</div></div>
-<div class="ttc" id="a00138_html"><div class="ttname"><a href="a00138.html">V2</a></div><div class="ttdef"><b>Definition:</b> modules_cpp.dox:1</div></div>
-<div class="ttc" id="a00008_html_a3fa03b15b439d70dd92e726e1aac9eb5"><div class="ttname"><a href="a00008.html#a3fa03b15b439d70dd92e726e1aac9eb5">AudioEngineFormat::m_frames</a></div><div class="ttdeci">unsigned int m_frames</div><div class="ttdoc">The number of frames per period. </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:78</div></div>
-<div class="ttc" id="a00008_html_a046d570c56fd2ae9b813340816ebfdec"><div class="ttname"><a href="a00008.html#a046d570c56fd2ae9b813340816ebfdec">AudioEngineFormat::m_sampleRate</a></div><div class="ttdeci">unsigned int m_sampleRate</div><div class="ttdoc">The stream&#39;s sample rate (eg, 48000) </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:66</div></div>
-<div class="ttc" id="a00008_html_ga09549ee338c637b62a65826fd6a4b38c"><div class="ttname"><a href="a00008.html#ga09549ee338c637b62a65826fd6a4b38c">KodiAPI::AEStreamHandle</a></div><div class="ttdeci">void AEStreamHandle</div><div class="ttdoc">A stream handle pointer, which is only used internally by the addon stream handle. </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:49</div></div>
-<div class="ttc" id="a00008_html_ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64"><div class="ttname"><a href="a00008.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64">AudioEngineFormat::compareFormat</a></div><div class="ttdeci">bool compareFormat(const AudioEngineFormat *fmt)</div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:107</div></div>
-<div class="ttc" id="a00008_html_a7c6321b7fd7f09478ca0bf9931009ee1"><div class="ttname"><a href="a00008.html#a7c6321b7fd7f09478ca0bf9931009ee1">AudioEngineFormat::m_frameSize</a></div><div class="ttdeci">unsigned int m_frameSize</div><div class="ttdoc">The size of one frame in bytes. </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:84</div></div>
-<div class="ttc" id="a00113_html"><div class="ttname"><a href="a00113.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
-<div class="ttc" id="a00008_html_a00181"><div class="ttname"><a href="a00008.html#a00181">AudioEngineFormat</a></div><div class="ttdoc">The audio format structure that fully defines a stream&#39;s audio information. </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:60</div></div>
-<div class="ttc" id="a00008_html_a98e4ea22d72d3c5dce2821ae10a802f8"><div class="ttname"><a href="a00008.html#a98e4ea22d72d3c5dce2821ae10a802f8">AudioEngineFormat::m_channelCount</a></div><div class="ttdeci">unsigned int m_channelCount</div><div class="ttdoc">The amount of used speaker channels. </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:72</div></div>
-<div class="ttc" id="a00008_html_a60bb897389267a5034ef730c956b661a"><div class="ttname"><a href="a00008.html#a60bb897389267a5034ef730c956b661a">AudioEngineFormat::m_encodedRate</a></div><div class="ttdeci">unsigned int m_encodedRate</div><div class="ttdoc">The encoded streams sample rate if a bitstream, otherwise undefined. </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:69</div></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetChannel(<a class="code" href="a00149.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">audio_channel</a> channel);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment"></span>    <a class="code" href="a00149.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">audio_channel</a> GetChannel();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00148.html#ga6de6bdfb14ffe82f692c3e48cf095acb">SetVolume</a>(<span class="keywordtype">float</span> volume);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment"></span>    <span class="keywordtype">float</span> <a class="code" href="a00148.html#ga09668fd35caa78fb8ea23254defa7bac">GetVolume</a>();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">  #ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    IMPL_ADDONSOUNDPLAY;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">  #endif</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  };</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;} <span class="comment">/* namespace AddOn */</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;END_NAMESPACE()</div>
+<div class="ttc" id="a00149_html_ga2b5a19d3dea9946ab7cbad0c770a9ad4"><div class="ttname"><a href="a00149.html#ga2b5a19d3dea9946ab7cbad0c770a9ad4">KodiAPI::audio_channel</a></div><div class="ttdeci">audio_channel</div><div class="ttdoc">For class CAddonLib_SoundPlay used values. </div><div class="ttdef"><b>Definition:</b> definitions_addon.hpp:155</div></div>
+<div class="ttc" id="a00141_html"><div class="ttname"><a href="a00141.html">V2</a></div><div class="ttdef"><b>Definition:</b> modules_cpp.dox:1</div></div>
+<div class="ttc" id="a00148_html_ga6de6bdfb14ffe82f692c3e48cf095acb"><div class="ttname"><a href="a00148.html#ga6de6bdfb14ffe82f692c3e48cf095acb">KodiAPI::AddOn::General::SetVolume</a></div><div class="ttdeci">void SetVolume(float value, bool isPercentage=true)</div><div class="ttdoc">Set the current global Kodi audio volume. </div></div>
+<div class="ttc" id="a00148_html_ga09668fd35caa78fb8ea23254defa7bac"><div class="ttname"><a href="a00148.html#ga09668fd35caa78fb8ea23254defa7bac">KodiAPI::AddOn::General::GetVolume</a></div><div class="ttdeci">float GetVolume(bool percentage=true)</div><div class="ttdoc">Get the current global Kodi audio volume. </div></div>
+<div class="ttc" id="a00012_html_a00206"><div class="ttname"><a href="a00012.html#a00206">KodiAPI::AddOn::CSoundPlay</a></div><div class="ttdef"><b>Definition:</b> SoundPlay.hpp:89</div></div>
+<div class="ttc" id="a00116_html"><div class="ttname"><a href="a00116.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_fe48a8c06df720d1e409742da0bfab86.html">include</a></li><li class="navelem"><a class="el" href="dir_6fd4991246d3e16307e2cb5486d3a91b.html">kodi</a></li><li class="navelem"><a class="el" href="dir_dc10c354b824ab05712115248c317746.html">api2</a></li><li class="navelem"><a class="el" href="dir_4bae55acecdcf2187f12067100a2796d.html">audioengine</a></li><li class="navelem"><b>definitions_audioengine.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_fe48a8c06df720d1e409742da0bfab86.html">include</a></li><li class="navelem"><a class="el" href="dir_6fd4991246d3e16307e2cb5486d3a91b.html">kodi</a></li><li class="navelem"><a class="el" href="dir_dc10c354b824ab05712115248c317746.html">api2</a></li><li class="navelem"><a class="el" href="dir_299e5af9df84dd7aadd74f3e93fac57b.html">addon</a></li><li class="navelem"><b>SoundPlay.hpp</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

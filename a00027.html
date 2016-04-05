@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Dialog Progress</title>
+<title>Kodi Development: Control Text Box</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,177 +92,71 @@ $(document).ready(function(){initNavTree('a00027.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Dialog Progress<div class="ingroups"><a class="el" href="a00140.html">C++</a> &raquo; <a class="el" href="a00152.html">4. GUI</a></div></div>  </div>
+<div class="title">Control Text Box<div class="ingroups"><a class="el" href="a00199.html">C++</a> &raquo; <a class="el" href="a00211.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Progress dialog shown in center</b> </p>
-<p>The with <a class="el" href="a00072_source.html">#include &lt;kodi/api2/gui/DialogProgress.hpp&gt;</a> given class are basically used to create Kodi's progress dialog with named text fields.</p>
-<div class="image">
-<img src="help.GUIDialogProgress.png" alt="help.GUIDialogProgress.png"/>
-</div>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/DialogProgress.h&gt;</span></div>
-<div class="line"></div>
-<div class="line"><a class="code" href="a00027.html#a00195">KodiAPI::GUI::CDialogProgress</a> *progress = <span class="keyword">new</span> <a class="code" href="a00027.html#a00195">KodiAPI::GUI::CDialogProgress</a>;</div>
-<div class="line">progress-&gt;<a class="code" href="a00027.html#gaf6377691fa79c14e16aebaeb9d340b33">SetHeading</a>(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00027.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(1, <span class="stringliteral">&quot;line 1&quot;</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00027.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(2, <span class="stringliteral">&quot;line 2&quot;</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00027.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(3, <span class="stringliteral">&quot;line 3&quot;</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00027.html#ga13580b7f84c1c13f90c1d030ef61faf8">SetCanCancel</a>(<span class="keyword">true</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00027.html#ga4ef9882ff90cb3878eb846335e2b3c07">ShowProgressBar</a>(<span class="keyword">true</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00027.html#ga5e53001785ff30ae485a113b9b8a0ddc">Open</a>();</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 100; i += 10)</div>
-<div class="line">{</div>
-<div class="line">  progress-&gt;<a class="code" href="a00027.html#gadf0353f59469e4b0cab327ea7df9cae8">SetPercentage</a>(i);</div>
-<div class="line">  sleep(1);</div>
-<div class="line">}</div>
-<div class="line"><span class="keyword">delete</span> progress;</div>
-</div><!-- fragment --> <hr/><h2 class="groupheader">Class Documentation</h2>
-<a name="a00195" id="a00195"></a>
+<p><b>Used to show a multi-page piece of text</b> </p>
+<p>The text box control can be used to display descriptions, help texts or other larger texts. It corresponds to the representation which is also to be seen on the CDialogTextViewer.</p>
+<p>It has the header <a class="el" href="a00096_source.html">#include &lt;kodi/api2/gui/ControlTextBox.hpp&gt;</a> be included to enjoy it.</p>
+<p>Here you find the needed skin part for a <a class="el" href="a00195.html">textbox control</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
+<hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="a00252" id="a00252"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">class KodiAPI::GUI::CDialogProgress</td>
+          <td class="memname">class KodiAPI::GUI::CControlTextBox</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="textblock"></div><table class="memberdecls">
 <tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
-<tr class="memitem:ga71e9d732335846eb579f0dd00918b3e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga71e9d732335846eb579f0dd00918b3e7">Abort</a> ()</td></tr>
-<tr class="memdesc:ga71e9d732335846eb579f0dd00918b3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">To check progress was canceled on work.  <a href="a00027.html#ga71e9d732335846eb579f0dd00918b3e7">More...</a><br /></td></tr>
-<tr class="separator:ga71e9d732335846eb579f0dd00918b3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga78b8dcedb682c8b3ee857485b2c4c2b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga78b8dcedb682c8b3ee857485b2c4c2b8">CDialogProgress</a> ()</td></tr>
-<tr class="memdesc:ga78b8dcedb682c8b3ee857485b2c4c2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new dialog.  <a href="a00027.html#ga78b8dcedb682c8b3ee857485b2c4c2b8">More...</a><br /></td></tr>
-<tr class="separator:ga78b8dcedb682c8b3ee857485b2c4c2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae20eeb097c9ebe3506bd1d2bb3d92fda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#gae20eeb097c9ebe3506bd1d2bb3d92fda">GetPercentage</a> () const </td></tr>
-<tr class="memdesc:gae20eeb097c9ebe3506bd1d2bb3d92fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the current progress position as percent.  <a href="a00027.html#gae20eeb097c9ebe3506bd1d2bb3d92fda">More...</a><br /></td></tr>
-<tr class="separator:gae20eeb097c9ebe3506bd1d2bb3d92fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf76bcf12aaec9ab845ea61853a37a33c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#gaf76bcf12aaec9ab845ea61853a37a33c">IsCanceled</a> () const </td></tr>
-<tr class="memdesc:gaf76bcf12aaec9ab845ea61853a37a33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">To check dialog for clicked cancel button.  <a href="a00027.html#gaf76bcf12aaec9ab845ea61853a37a33c">More...</a><br /></td></tr>
-<tr class="separator:gaf76bcf12aaec9ab845ea61853a37a33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5e53001785ff30ae485a113b9b8a0ddc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga5e53001785ff30ae485a113b9b8a0ddc">Open</a> ()</td></tr>
-<tr class="memdesc:ga5e53001785ff30ae485a113b9b8a0ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">To open the dialog.  <a href="a00027.html#ga5e53001785ff30ae485a113b9b8a0ddc">More...</a><br /></td></tr>
-<tr class="separator:ga5e53001785ff30ae485a113b9b8a0ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga13580b7f84c1c13f90c1d030ef61faf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga13580b7f84c1c13f90c1d030ef61faf8">SetCanCancel</a> (bool bCanCancel)</td></tr>
-<tr class="memdesc:ga13580b7f84c1c13f90c1d030ef61faf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">To enable and show cancel button on dialog.  <a href="a00027.html#ga13580b7f84c1c13f90c1d030ef61faf8">More...</a><br /></td></tr>
-<tr class="separator:ga13580b7f84c1c13f90c1d030ef61faf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf6377691fa79c14e16aebaeb9d340b33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#gaf6377691fa79c14e16aebaeb9d340b33">SetHeading</a> (const std::string &amp;heading)</td></tr>
-<tr class="memdesc:gaf6377691fa79c14e16aebaeb9d340b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the heading title of dialog.  <a href="a00027.html#gaf6377691fa79c14e16aebaeb9d340b33">More...</a><br /></td></tr>
-<tr class="separator:gaf6377691fa79c14e16aebaeb9d340b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga845054cd7ff1978a112126086a8ec5ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a> (unsigned int iLine, const std::string &amp;line)</td></tr>
-<tr class="memdesc:ga845054cd7ff1978a112126086a8ec5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the line text field on dialog from 0 - 2.  <a href="a00027.html#ga845054cd7ff1978a112126086a8ec5ba">More...</a><br /></td></tr>
-<tr class="separator:ga845054cd7ff1978a112126086a8ec5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadf0353f59469e4b0cab327ea7df9cae8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#gadf0353f59469e4b0cab327ea7df9cae8">SetPercentage</a> (int iPercentage)</td></tr>
-<tr class="memdesc:gadf0353f59469e4b0cab327ea7df9cae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current progress position as percent.  <a href="a00027.html#gadf0353f59469e4b0cab327ea7df9cae8">More...</a><br /></td></tr>
-<tr class="separator:gadf0353f59469e4b0cab327ea7df9cae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafe4b80962f0d7bdd3b0a73b83ef06323"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#gafe4b80962f0d7bdd3b0a73b83ef06323">SetProgressAdvance</a> (int nSteps=1)</td></tr>
-<tr class="memdesc:gafe4b80962f0d7bdd3b0a73b83ef06323"><td class="mdescLeft">&#160;</td><td class="mdescRight">To increase progress bar by defined step size until reach of maximum position.  <a href="a00027.html#gafe4b80962f0d7bdd3b0a73b83ef06323">More...</a><br /></td></tr>
-<tr class="separator:gafe4b80962f0d7bdd3b0a73b83ef06323"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad397a19fe15c25e5077d34fd43da6e5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#gad397a19fe15c25e5077d34fd43da6e5a">SetProgressMax</a> (int iMax)</td></tr>
-<tr class="memdesc:gad397a19fe15c25e5077d34fd43da6e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum position of progress, needed if <code>SetProgressAdvance(...)</code> is used.  <a href="a00027.html#gad397a19fe15c25e5077d34fd43da6e5a">More...</a><br /></td></tr>
-<tr class="separator:gad397a19fe15c25e5077d34fd43da6e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4ef9882ff90cb3878eb846335e2b3c07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga4ef9882ff90cb3878eb846335e2b3c07">ShowProgressBar</a> (bool bOnOff)</td></tr>
-<tr class="memdesc:ga4ef9882ff90cb3878eb846335e2b3c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">To show or hide progress bar dialog.  <a href="a00027.html#ga4ef9882ff90cb3878eb846335e2b3c07">More...</a><br /></td></tr>
-<tr class="separator:ga4ef9882ff90cb3878eb846335e2b3c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf4ebae45c5583fbefea366318f13714e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#gaf4ebae45c5583fbefea366318f13714e">~CDialogProgress</a> ()</td></tr>
-<tr class="memdesc:gaf4ebae45c5583fbefea366318f13714e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="a00027.html#gaf4ebae45c5583fbefea366318f13714e">More...</a><br /></td></tr>
-<tr class="separator:gaf4ebae45c5583fbefea366318f13714e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbd8d4b43619362ed5e9c4f4bd84b118"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#gadbd8d4b43619362ed5e9c4f4bd84b118">CControlTextBox</a> (<a class="el" href="a00031.html#a00267">CWindow</a> *window, int controlId)</td></tr>
+<tr class="memdesc:gadbd8d4b43619362ed5e9c4f4bd84b118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new control.  <a href="a00027.html#gadbd8d4b43619362ed5e9c4f4bd84b118">More...</a><br /></td></tr>
+<tr class="separator:gadbd8d4b43619362ed5e9c4f4bd84b118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1af3f7fd8b95cc66e7599caca454f8ef"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga1af3f7fd8b95cc66e7599caca454f8ef">GetText</a> () const </td></tr>
+<tr class="memdesc:ga1af3f7fd8b95cc66e7599caca454f8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the used text from control.  <a href="a00027.html#ga1af3f7fd8b95cc66e7599caca454f8ef">More...</a><br /></td></tr>
+<tr class="separator:ga1af3f7fd8b95cc66e7599caca454f8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga372de693ad40b3f42839c8ec6ac845f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga372de693ad40b3f42839c8ec6ac845f4">Reset</a> ()</td></tr>
+<tr class="memdesc:ga372de693ad40b3f42839c8ec6ac845f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">To reset box an remove all the text.  <a href="a00027.html#ga372de693ad40b3f42839c8ec6ac845f4">More...</a><br /></td></tr>
+<tr class="separator:ga372de693ad40b3f42839c8ec6ac845f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b8c674da6e7eb58fcf75d2f812cfd5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d">Scroll</a> (unsigned int position)</td></tr>
+<tr class="memdesc:ga2b8c674da6e7eb58fcf75d2f812cfd5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">To scroll text on other position.  <a href="a00027.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d">More...</a><br /></td></tr>
+<tr class="separator:ga2b8c674da6e7eb58fcf75d2f812cfd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3e4bbb4388da7a56e8252018e4fbb00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#gad3e4bbb4388da7a56e8252018e4fbb00">SetAutoScrolling</a> (int delay, int time, int repeat)</td></tr>
+<tr class="memdesc:gad3e4bbb4388da7a56e8252018e4fbb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set automatic scrolling of textbox.  <a href="a00027.html#gad3e4bbb4388da7a56e8252018e4fbb00">More...</a><br /></td></tr>
+<tr class="separator:gad3e4bbb4388da7a56e8252018e4fbb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8008c108280948ebd79830f222068455"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga8008c108280948ebd79830f222068455">SetText</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:ga8008c108280948ebd79830f222068455"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the text on box.  <a href="a00027.html#ga8008c108280948ebd79830f222068455">More...</a><br /></td></tr>
+<tr class="separator:ga8008c108280948ebd79830f222068455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga71a209185b7a98adf0a310d2c44cdbe6">SetVisible</a> (bool visible)</td></tr>
+<tr class="memdesc:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control on window to visible.  <a href="a00027.html#ga71a209185b7a98adf0a310d2c44cdbe6">More...</a><br /></td></tr>
+<tr class="separator:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63bb701dbad283f26754ca62085dec77"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ga63bb701dbad283f26754ca62085dec77">~CControlTextBox</a> ()</td></tr>
+<tr class="memdesc:ga63bb701dbad283f26754ca62085dec77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="a00027.html#ga63bb701dbad283f26754ca62085dec77">More...</a><br /></td></tr>
+<tr class="separator:ga63bb701dbad283f26754ca62085dec77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga78b8dcedb682c8b3ee857485b2c4c2b8"></a>
+<a class="anchor" id="gadbd8d4b43619362ed5e9c4f4bd84b118"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CDialogProgress </td>
+          <td class="memname">CControlTextBox </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new dialog. </p>
-
-</div>
-</div>
-<a class="anchor" id="gaf4ebae45c5583fbefea366318f13714e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">~CDialogProgress </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga5e53001785ff30ae485a113b9b8a0ddc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Open </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To open the dialog. </p>
-
-</div>
-</div>
-<a class="anchor" id="gaf6377691fa79c14e16aebaeb9d340b33"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetHeading </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the heading title of dialog. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Title string to use </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga845054cd7ff1978a112126086a8ec5ba"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetLine </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iLine</em>, </td>
+          <td class="paramtype"><a class="el" href="a00031.html#a00267">CWindow</a> *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -272,47 +166,113 @@ $(document).ready(function(){initNavTree('a00027.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>To set the line text field on dialog from 0 - 2. </p>
+<p>Construct a new control. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iLine</td><td>Line number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>Text string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>related window control class </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>Used skin xml control id </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga13580b7f84c1c13f90c1d030ef61faf8"></a>
+<a class="anchor" id="ga63bb701dbad283f26754ca62085dec77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~CControlTextBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga71a209185b7a98adf0a310d2c44cdbe6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetCanCancel </td>
+          <td class="memname">void SetVisible </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bCanCancel</em></td><td>)</td>
+          <td class="paramname"><em>visible</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To enable and show cancel button on dialog. </p>
+<p>Set the control on window to visible. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bCanCancel</td><td>if true becomes it shown </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">visible</td><td>If true visible, otherwise hidden </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="gaf76bcf12aaec9ab845ea61853a37a33c"></a>
+<a class="anchor" id="ga372de693ad40b3f42839c8ec6ac845f4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsCanceled </td>
+          <td class="memname">void Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To reset box an remove all the text. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga8008c108280948ebd79830f222068455"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetText </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the text on box. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>Text to show </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1af3f7fd8b95cc66e7599caca454f8ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetText </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -320,140 +280,75 @@ $(document).ready(function(){initNavTree('a00027.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>To check dialog for clicked cancel button. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if canceled </dd></dl>
+<p>Get the used text from control. </p>
+<dl class="section return"><dt>Returns</dt><dd>Text shown </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gadf0353f59469e4b0cab327ea7df9cae8"></a>
+<a class="anchor" id="ga2b8c674da6e7eb58fcf75d2f812cfd5d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetPercentage </td>
+          <td class="memname">void Scroll </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To scroll text on other position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The line position to scroll to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gad3e4bbb4388da7a56e8252018e4fbb00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetAutoScrolling </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iPercentage</em></td><td>)</td>
+          <td class="paramname"><em>delay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the current progress position as percent. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gae20eeb097c9ebe3506bd1d2bb3d92fda"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GetPercentage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the current progress position as percent. </p>
-<dl class="section return"><dt>Returns</dt><dd>Current Position used from 0.0 to 100.0 </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga4ef9882ff90cb3878eb846335e2b3c07"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShowProgressBar </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bOnOff</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To show or hide progress bar dialog. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bOnOff</td><td>If true becomes it shown </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gad397a19fe15c25e5077d34fd43da6e5a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetProgressMax </td>
-          <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iMax</em></td><td>)</td>
-          <td></td>
+          <td class="paramname"><em>time</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the maximum position of progress, needed if <code>SetProgressAdvance(...)</code> is used. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iMax</td><td>Biggest usable position to use </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gafe4b80962f0d7bdd3b0a73b83ef06323"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void SetProgressAdvance </td>
-          <td>(</td>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nSteps</em> = <code>1</code></td><td>)</td>
+          <td class="paramname"><em>repeat</em>&#160;</td>
+        </tr>
+        <tr>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To increase progress bar by defined step size until reach of maximum position. </p>
+<p>To set automatic scrolling of textbox. </p>
+<p>Specifies the timing and conditions of any autoscrolling this textbox should have. Times are in milliseconds. The content is delayed for the given delay, then scrolls at a rate of one line per time interval until the end. If the repeat tag is present, it then delays for the repeat time, fades out over 1 second, and repeats. It does not wrap or reset to the top at the end of the scroll.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nSteps</td><td>Step size to increase, default is 1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delay</td><td>Content delay </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>One line per time interval </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">repeat</td><td>Delays with given time, fades out over 1 second, and repeats </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="ga71e9d732335846eb579f0dd00918b3e7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Abort </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To check progress was canceled on work. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if aborted </dd></dl>
 
 </div>
 </div>

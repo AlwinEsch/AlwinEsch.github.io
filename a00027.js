@@ -1,16 +1,11 @@
 var a00027 =
 [
-    [ "CDialogProgress", "a00027.html#ga78b8dcedb682c8b3ee857485b2c4c2b8", null ],
-    [ "~CDialogProgress", "a00027.html#gaf4ebae45c5583fbefea366318f13714e", null ],
-    [ "Open", "a00027.html#ga5e53001785ff30ae485a113b9b8a0ddc", null ],
-    [ "SetHeading", "a00027.html#gaf6377691fa79c14e16aebaeb9d340b33", null ],
-    [ "SetLine", "a00027.html#ga845054cd7ff1978a112126086a8ec5ba", null ],
-    [ "SetCanCancel", "a00027.html#ga13580b7f84c1c13f90c1d030ef61faf8", null ],
-    [ "IsCanceled", "a00027.html#gaf76bcf12aaec9ab845ea61853a37a33c", null ],
-    [ "SetPercentage", "a00027.html#gadf0353f59469e4b0cab327ea7df9cae8", null ],
-    [ "GetPercentage", "a00027.html#gae20eeb097c9ebe3506bd1d2bb3d92fda", null ],
-    [ "ShowProgressBar", "a00027.html#ga4ef9882ff90cb3878eb846335e2b3c07", null ],
-    [ "SetProgressMax", "a00027.html#gad397a19fe15c25e5077d34fd43da6e5a", null ],
-    [ "SetProgressAdvance", "a00027.html#gafe4b80962f0d7bdd3b0a73b83ef06323", null ],
-    [ "Abort", "a00027.html#ga71e9d732335846eb579f0dd00918b3e7", null ]
+    [ "CControlTextBox", "a00027.html#gadbd8d4b43619362ed5e9c4f4bd84b118", null ],
+    [ "~CControlTextBox", "a00027.html#ga63bb701dbad283f26754ca62085dec77", null ],
+    [ "SetVisible", "a00027.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "Reset", "a00027.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "SetText", "a00027.html#ga8008c108280948ebd79830f222068455", null ],
+    [ "GetText", "a00027.html#ga1af3f7fd8b95cc66e7599caca454f8ef", null ],
+    [ "Scroll", "a00027.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d", null ],
+    [ "SetAutoScrolling", "a00027.html#gad3e4bbb4388da7a56e8252018e4fbb00", null ]
 ];

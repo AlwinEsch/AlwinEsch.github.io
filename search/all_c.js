@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['functions_20_2d_20music_20info_20tag',['Functions - Music info tag',['../a00156.html',1,'']]],
-  ['functions_20_2d_20picture_20info_20tag',['Functions - Picture info tag',['../a00157.html',1,'']]],
-  ['functions_20_2d_20video_20info_20tag',['Functions - Video info tag',['../a00007.html',1,'']]],
-  ['fileexists',['FileExists',['../a00149.html#ga193799dbfa89ce36276634d283411ec8',1,'KodiAPI::AddOn::VFSUtils']]],
-  ['finalize',['Finalize',['../a00141.html#ga25c17863c83dcc5fedf5d3fdfaface0e',1,'KodiAPI']]],
-  ['flush',['Flush',['../a00012.html#ga0e2644b2df3c228e8d71a55b60723f31',1,'KodiAPI::AddOn::CVFSFile::Flush()'],['../a00013.html#ga0e2644b2df3c228e8d71a55b60723f31',1,'KodiAPI::AudioEngine::CStream::Flush()']]],
-  ['freedemuxpacket',['FreeDemuxPacket',['../a00168.html#gab5b9e9262b558cfa9f18acf307eec959',1,'KodiAPI::InputStream']]]
+  ['ejectopticaldrive',['EjectOpticalDrive',['../a00235.html#ga7943b94890712d9015c58be9e3873178',1,'KodiAPI::AddOn::General']]],
+  ['epgentry',['EpgEntry',['../a00267.html#ga345cfbc626ff5c3dc2df7686d7fa4cd3',1,'KodiAPI::PVR::Transfer']]],
+  ['epgeventstatechange',['EpgEventStateChange',['../a00265.html#ga59b3af92b56dc3316659f2f470f5f730',1,'KodiAPI::PVR::General']]],
+  ['epggrid_20control',['EPGGrid control',['../a00016.html',1,'skin_controls']]],
+  ['epgupdate',['EpgUpdate',['../a00268.html#gae14a095cd9a780ae9096340d9c78223f',1,'KodiAPI::PVR::Trigger']]],
+  ['eservers',['eservers',['../a00069.html#ga6f7280d04d3078fadcfa05418716bb4c',1,'KodiAPI']]],
+  ['executebuiltin',['ExecuteBuiltin',['../a00235.html#ga20c47eb79933d7b87596a57f310119e0',1,'KodiAPI::AddOn::General']]],
+  ['executejsonrpc',['ExecuteJSONRPC',['../a00235.html#ga6f6bc8b14378fd6998c0631cdcfbec89',1,'KodiAPI::AddOn::General']]],
+  ['executescript',['ExecuteScript',['../a00235.html#gaaf55394139d5735f7f88b27ac8f7b9d3',1,'KodiAPI::AddOn::General']]],
+  ['edit_20control',['Edit control',['../a00014.html',1,'skin_controls']]]
 ];

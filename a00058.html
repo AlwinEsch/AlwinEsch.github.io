@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Definations, structures and enumerators</title>
+<title>Kodi Development: Toggle button control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,285 +91,105 @@ $(document).ready(function(){initNavTree('a00058.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">Definations, structures and enumerators<div class="ingroups"><a class="el" href="a00056.html">C++</a> &raquo; <a class="el" href="a00057.html">1. Basic functions</a></div></div>  </div>
+<div class="title">Toggle button control </div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Library definition values</b> </p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ga0620a7faa979946d07a90c9d4637942a"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="a00058.html#gaf8526ffb1ee2a785489ac05b6e49d357">KodiAPI::addon_log</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga0620a7faa979946d07a90c9d4637942a">addon_log</a></td></tr>
-<tr class="memdesc:ga0620a7faa979946d07a90c9d4637942a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log file.  <a href="#ga0620a7faa979946d07a90c9d4637942a">More...</a><br /></td></tr>
-<tr class="separator:ga0620a7faa979946d07a90c9d4637942a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:gac08f738b25174ea7fe5441965c57773a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#gac08f738b25174ea7fe5441965c57773a">KODI_API_lasterror</a></td></tr>
-<tr class="memdesc:gac08f738b25174ea7fe5441965c57773a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last error code generated from lib.  <a href="#gac08f738b25174ea7fe5441965c57773a">More...</a><br /></td></tr>
-<tr class="separator:gac08f738b25174ea7fe5441965c57773a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<div class="textblock"><p><b>A toggle on/off button that can take 2 different states.</b></p>
+<p>The toggle button control is used for creating buttons that have 2 states. You can choose the position, size, and look of the button. When the user clicks on the toggle button, the state will change, toggling the extra textures (alttexturefocus and alttexturenofocus). Used for controls where two states are needed (pushed in and pushed out for instance). </p><hr/>
+ <h1><a class="anchor" id="skin_Toogle_button_control_sect1"></a>
+Example</h1>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;togglebutton&quot; id=&quot;25&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first togglebutton control&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;colordiffuse&gt;FFFFFFFF&lt;/colordiffuse&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;texturefocus&gt;myfocustexture.png&lt;/texturefocus&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      &lt;texturenofocus&gt;mynormaltexture.png&lt;/texturenofocus&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      &lt;alttexturefocus&gt;myselectedTexture.png&lt;/alttexturefocus&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      &lt;alttexturenofocus&gt;myselectedTexture_nf.png&lt;/alttexturenofocus&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      &lt;usealttexture&gt;!Player.IsPaused&lt;/usealttexture&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      &lt;label&gt;29&lt;/label&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      &lt;altlabel&gt;29&lt;/altlabel&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      &lt;font&gt;font12&lt;/font&gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      &lt;textcolor&gt;FFFFFFFF&lt;/textcolor&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      &lt;disabledcolor&gt;80FFFFFF&lt;/disabledcolor&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      &lt;textoffsetx&gt;4&lt;/textoffsetx&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      &lt;textoffsety&gt;5&lt;/textoffsety&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      &lt;pulseonselect&gt;false&lt;/pulseonselect&gt;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      &lt;onclick&gt;Player.Pause&lt;/onclick&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      &lt;onfocus&gt;-&lt;/onfocus&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      &lt;onunfocus&gt;-&lt;/onunfocus&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      &lt;onup&gt;2&lt;/onup&gt;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      &lt;ondown&gt;3&lt;/ondown&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      &lt;onleft&gt;1&lt;/onleft&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      &lt;onright&gt;1&lt;/onright&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      &lt;wrapmultiline&gt;false&lt;/wrapmultiline&gt;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --><hr/>
+ <h1><a class="anchor" id="skin_Toogle_button_control_sect2"></a>
+Available tags</h1>
+<p>In addition to the Default Control Tags the following tags are available. Note that each tag is lower case only. This is important, as xml tags are case-sensitive.</p>
+<table class="doxtable">
+<tr>
+<th align="right">Tag </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">texturefocus </td><td align="left">Specifies the image file which should be displayed when the button has focus. See here for additional information about texture tags. </td></tr>
+<tr>
+<td align="right">texturenofocus </td><td align="left">Specifies the image file which should be displayed when the button does not have focus. </td></tr>
+<tr>
+<td align="right">alttexturefocus </td><td align="left">Specifies the image file which should be displayed when the toggle button is in it's selected state. This texture replaces the <b><code>&lt;texturefocus&gt;</code></b> texture when the toggle button is selected. </td></tr>
+<tr>
+<td align="right">alttexturenofocus </td><td align="left">Specifies the image file which should be displayed when the button is in it's selected state but unfocused. </td></tr>
+<tr>
+<td align="right">usealttexture </td><td align="left">Specifies the conditions under which the Alternative Textures should be shown. Some toggle button controls are handled by Kodi internally, but any extra ones that the skinner has can be controlled using this tag. See here for more information. </td></tr>
+<tr>
+<td align="right">label </td><td align="left">The label used on the button. It can be a link into strings.xml, or an actual text label. </td></tr>
+<tr>
+<td align="right">altlabel </td><td align="left">The alternate label used on the button. It can be a link into strings.xml, or an actual text label. </td></tr>
+<tr>
+<td align="right">altclick </td><td align="left">The alternate action to perform when the button is pressed. Should be a built in function. See here for more information. You may have more than one <b><code>&lt;altclick&gt;</code></b> tag, and they'll be executed in sequence. </td></tr>
+<tr>
+<td align="right">font </td><td align="left">Font used for the button label. From fonts.xml. </td></tr>
+<tr>
+<td align="right">textcolor </td><td align="left">Color used for displaying the button label. In AARRGGBB hex format, or a name from the colour theme. </td></tr>
+<tr>
+<td align="right">disabledcolor </td><td align="left">Color used for the button label if the button is disabled. In AARRGGBB hex format, or a name from the colour theme. </td></tr>
+<tr>
+<td align="right">shadowcolor </td><td align="left">Specifies the color of the drop shadow on the text. In AARRGGBB hex format, or a name from the colour theme. </td></tr>
+<tr>
+<td align="right">align </td><td align="left">Label horizontal alignment on the button. Defaults to left, can also be center or right. </td></tr>
+<tr>
+<td align="right">aligny </td><td align="left">Label vertical alignment on the button. Defaults to top, can also be center. </td></tr>
+<tr>
+<td align="right">textoffsetx </td><td align="left">Amount to offset the label from the left (or right) edge of the button when using left or right alignment. </td></tr>
+<tr>
+<td align="right">textoffsety </td><td align="left">Amount to offset the label from the top edge of the button when using top alignment. </td></tr>
+<tr>
+<td align="right">textwidth </td><td align="left">Will truncate any text that's too long. </td></tr>
+<tr>
+<td align="right">onclick </td><td align="left">Specifies the action to perform when the button is pressed. Should be a built in function. See here for more information. You may have more than one <b><code>&lt;onclick&gt;</code></b> tag, and they'll be executed in sequence. </td></tr>
+<tr>
+<td align="right">onfocus </td><td align="left">Specifies the action to perform when the button is focused. Should be a built in function. The action is performed after any focus animations have completed. See here for more information. </td></tr>
+<tr>
+<td align="right">onunfocus </td><td align="left">Specifies the action to perform when the button loses focus. Should be a built in function. </td></tr>
+<tr>
+<td align="right">wrapmultiline </td><td align="left">Allows wrapping on the label across multiple lines. Defaults to false. </td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="gae59135f9780938a6a6fcae763f92a66e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void* <a class="el" href="a00058.html#gae59135f9780938a6a6fcae763f92a66e">KODI_HANDLE</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Handle identifier pointer. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga080345dbca513991cd5c902cee3d124b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef enum <a class="el" href="a00058.html#ga3666c3045cdf054de90faaf6cc7d14e1">KODI_API_Errortype</a>  <a class="el" href="a00058.html#ga3666c3045cdf054de90faaf6cc7d14e1">KODI_API_Errortype</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>KODI API Error Classes. </p>
-<p>The error codes are to describe the caused errors on interface. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga0620a7faa979946d07a90c9d4637942a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef enum <a class="el" href="a00058.html#gaf8526ffb1ee2a785489ac05b6e49d357">KodiAPI::addon_log</a>  addon_log</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Log file. </p>
-<p>At some point during your foray into Kodi, you will likely come up against a problem that isn't made 100% clear from errors in the GUI. This is where the log file comes into play. Kodi writes all sorts of useful stuff to its log, which is why it should be included with every bug/problem report. Don't be afraid of its contents! Often a quick glance through the log will turn up a simple typo or missing file which you can easily fix on your own.</p>
-<p>Each event is logged to one line of the Kodi log file which is formatted as follows...</p>
-<div class="fragment"><div class="line">[TIMESTAMP] T:[THREADID] M:[FREEMEM] [LEVEL]: [MESSAGE]</div>
-</div><!-- fragment --><table class="doxtable">
-<tr>
-<th>Identification name </th><th>Description  </th></tr>
-<tr>
-<td>TIMESTAMP </td><td>The wall time at which the event occurred. </td></tr>
-<tr>
-<td>THREADID </td><td>The thread identification number of the thread in which the event occurred. </td></tr>
-<tr>
-<td>FREEMEM </td><td>The amount of memory (in bytes) free at the time of the event. </td></tr>
-<tr>
-<td>LEVEL </td><td>The severity of the event. </td></tr>
-<tr>
-<td>MESSAGE </td><td>A brief description and/or important information about the event. </td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ga3666c3045cdf054de90faaf6cc7d14e1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="a00058.html#ga3666c3045cdf054de90faaf6cc7d14e1">KODI_API_Errortype</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>KODI API Error Classes. </p>
-<p>The error codes are to describe the caused errors on interface. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1ac4c2fbac1710ca3685a51f08475062e4"></a>API_SUCCESS&#160;</td><td class="fielddoc">
-<p>Successful return code. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a7120db19aa2c7d110351d7dc727263c0"></a>API_ERR_BUFFER&#160;</td><td class="fielddoc">
-<p>Invalid buffer pointer. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1ae0ac023466c84cc3f0fb36a24560ad39"></a>API_ERR_COUNT&#160;</td><td class="fielddoc">
-<p>Invalid count argument. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a0ecb7b94da0bd7ed039aa2b86b3f690d"></a>API_ERR_TYPE&#160;</td><td class="fielddoc">
-<p>Invalid datatype argument. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1afb135b1039ca828d39b5f1f395f40b3e"></a>API_ERR_TAG&#160;</td><td class="fielddoc">
-<p>Invalid tag argument. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a8b403c2c6b106247525efeafdc0d5a25"></a>API_ERR_COMM&#160;</td><td class="fielddoc">
-<p>Invalid communicator. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a747b63f8ef14166c01566e008dc99b3e"></a>API_ERR_RANK&#160;</td><td class="fielddoc">
-<p>Invalid rank. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a264b22c9bf174ff0e4aca339312592c2"></a>API_ERR_ROOT&#160;</td><td class="fielddoc">
-<p>Invalid root. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a8d36a4a16b6f1a9f84f0548c166970af"></a>API_ERR_GROUP&#160;</td><td class="fielddoc">
-<p>Null group passed to function. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1abdd2f06a3b3d399bf78a46d2288c16a2"></a>API_ERR_OP&#160;</td><td class="fielddoc">
-<p>Invalid operation. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a5a24c29ff375fbed404ea5bb0f44351a"></a>API_ERR_TOPOLOGY&#160;</td><td class="fielddoc">
-<p>Invalid topology. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1aa6e79dca78c127c9ad21d4f758a51f71"></a>API_ERR_DIMS&#160;</td><td class="fielddoc">
-<p>Illegal dimension argument. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a2a5191d9b1c2134a612a9209ddde99a3"></a>API_ERR_ARG&#160;</td><td class="fielddoc">
-<p>Invalid argument. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a265814fcc02e922e9d8a46732ba9592e"></a>API_ERR_UNKNOWN&#160;</td><td class="fielddoc">
-<p>Unknown error. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a258c952367fb18c48a8d150300e42d88"></a>API_ERR_TRUNCATE&#160;</td><td class="fielddoc">
-<p>message truncated on receive </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a6f54380ea0d3646f8202a8b694abd353"></a>API_ERR_OTHER&#160;</td><td class="fielddoc">
-<p>Other error; use Error_string. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a23034a566d89770362c2e4f1737bfea9"></a>API_ERR_INTERN&#160;</td><td class="fielddoc">
-<p>internal error code </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1ae9c349cc5f286a344b9448b42adc5784"></a>API_ERR_IN_STATUS&#160;</td><td class="fielddoc">
-<p>Look in status for error value. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a257457904b4cd34a1a5abb7e2257e085"></a>API_ERR_PENDING&#160;</td><td class="fielddoc">
-<p>Pending request. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1ad5b3e3906608e89961cdf06463eb2f68"></a>API_ERR_REQUEST&#160;</td><td class="fielddoc">
-<p>illegal API_request handle </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a6307456cad16f16000a4559c6abf523e"></a>API_ERR_CONNECTION&#160;</td><td class="fielddoc">
-<p>failed to connect </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1adf96cd7eabda35d0d1bf8ba32092df63"></a>API_ERR_VALUE_NOT_AVAILABLE&#160;</td><td class="fielddoc">
-<p>failed to connect </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1af4d0e3a55ce407301667cc9464102dfe"></a>API_ERR_LASTCODE&#160;</td><td class="fielddoc">
-<p>Last error code &ndash; always at end. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a class="anchor" id="gaf8526ffb1ee2a785489ac05b6e49d357"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum addon_log</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Log file. </p>
-<p>At some point during your foray into Kodi, you will likely come up against a problem that isn't made 100% clear from errors in the GUI. This is where the log file comes into play. Kodi writes all sorts of useful stuff to its log, which is why it should be included with every bug/problem report. Don't be afraid of its contents! Often a quick glance through the log will turn up a simple typo or missing file which you can easily fix on your own.</p>
-<p>Each event is logged to one line of the Kodi log file which is formatted as follows...</p>
-<div class="fragment"><div class="line">[TIMESTAMP] T:[THREADID] M:[FREEMEM] [LEVEL]: [MESSAGE]</div>
-</div><!-- fragment --><table class="doxtable">
-<tr>
-<th>Identification name </th><th>Description  </th></tr>
-<tr>
-<td>TIMESTAMP </td><td>The wall time at which the event occurred. </td></tr>
-<tr>
-<td>THREADID </td><td>The thread identification number of the thread in which the event occurred. </td></tr>
-<tr>
-<td>FREEMEM </td><td>The amount of memory (in bytes) free at the time of the event. </td></tr>
-<tr>
-<td>LEVEL </td><td>The severity of the event. </td></tr>
-<tr>
-<td>MESSAGE </td><td>A brief description and/or important information about the event. </td></tr>
-</table>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a905fcd03184094c9a4d74a72e6d10227"></a>ADDON_LOG_DEBUG&#160;</td><td class="fielddoc">
-<p>Log level "Debug". </p>
-<p>In depth informatio n about the status of Kodi. This information can pretty much only be deciphered by a developer or long time Kodi power user. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a63f8ea3699765964c764b141bf41e9cc"></a>ADDON_LOG_INFO&#160;</td><td class="fielddoc">
-<p>Log level "Info". </p>
-<p>Something has happened. It's not a problem, we just thought you might want to know. Fairly excessive output that most people won't care about. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a87d5d6aa6d65fe268a32a6140e4959c5"></a>ADDON_LOG_NOTICE&#160;</td><td class="fielddoc">
-<p>Log level "Notice". </p>
-<p>Similar to INFO but the average Joe might want to know about these events. This level and above are logged by default. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a60613d2dc32f26209fca36b954b1e86e"></a>ADDON_LOG_WARNING&#160;</td><td class="fielddoc">
-<p>Log level "Warning". </p>
-<p>Something potentially bad has happened. If Kodi did something you didn't expect, this is probably why. Watch for errors to follow. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357aca7f81a0bb28ea4deb9a9a61cead5768"></a>ADDON_LOG_ERROR&#160;</td><td class="fielddoc">
-<p>Log level "Error". </p>
-<p>This event is bad. Something has failed. You likely noticed problems with the application be it skin artifacts, failure of playback a crash, etc. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a9345562906d58e0dea87e99c6b101b32"></a>ADDON_LOG_SEVERE&#160;</td><td class="fielddoc">
-<p>Log level "Severe". </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a1a33911413fbeacfa24b2cdfb31f6a95"></a>ADDON_LOG_FATAL&#160;</td><td class="fielddoc">
-<p>Log level "Fatal". </p>
-<p>We're screwed. Kodi's add-on is about to crash. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="gac08f738b25174ea7fe5441965c57773a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t KODI_API_lasterror</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Last error code generated from lib. </p>
-<p>Becomes only be set if on function on error the return of them is not possible, e.g. <code>KodiAPI::Init</code>.</p>
-<p>Human readable string can be retrived with <code>KodiAPI_ErrorCodeToString</code>. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga7d342cb80361753ac42881792cd215b2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int KODI_API_Level</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>API level and Add-On to Kodi interface Version. </p>
-<p>Here the values define for the Add-On and also for Kodi the version of the interface between the both.</p>
-<p>The current add-on interface API levelAPI level version </p>
-
-</div>
-</div>
-<a class="anchor" id="ga8801d2d949b4fb40c65cb6b35a4191b6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* KODI_API_Version</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The complete Version of this interface architecture. </p>
-<p>Code version of add-on interface system </p>
-
-</div>
-</div>
-</div><!-- contents -->
+<hr/>
+ <h1><a class="anchor" id="skin_Toogle_button_control_sect3"></a>
+See also</h1>
+<h4>Development:</h4>
+<ul>
+<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
+<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

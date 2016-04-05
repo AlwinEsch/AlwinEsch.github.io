@@ -1,18 +1,16 @@
 var searchData=
 [
-  ['music_20info_20tag_20_28class_20cinfotagmusic_29',['Music Info Tag (class CInfoTagMusic)',['../a00032.html',1,'']]],
-  ['m_5fchannelcount',['m_channelCount',['../a00008.html#a98e4ea22d72d3c5dce2821ae10a802f8',1,'AudioEngineFormat']]],
-  ['m_5fchannels',['m_channels',['../a00008.html#a4a53bc9bcf5fe0c7d808858463f370f7',1,'AudioEngineFormat']]],
-  ['m_5fdataformat',['m_dataFormat',['../a00008.html#a8f4e236f291657200f64cd2f069a8ff7',1,'AudioEngineFormat']]],
-  ['m_5fencodedrate',['m_encodedRate',['../a00008.html#a60bb897389267a5034ef730c956b661a',1,'AudioEngineFormat']]],
-  ['m_5fframes',['m_frames',['../a00008.html#a3fa03b15b439d70dd92e726e1aac9eb5',1,'AudioEngineFormat']]],
-  ['m_5fframesamples',['m_frameSamples',['../a00008.html#a3b6b1929e0fbe39e252645260f4d97d8',1,'AudioEngineFormat']]],
-  ['m_5fframesize',['m_frameSize',['../a00008.html#a7c6321b7fd7f09478ca0bf9931009ee1',1,'AudioEngineFormat']]],
-  ['m_5fsamplerate',['m_sampleRate',['../a00008.html#a046d570c56fd2ae9b813340816ebfdec',1,'AudioEngineFormat']]],
-  ['major',['major',['../a00009.html#ac8947941479c38403a09c14a60b03f01',1,'kodi_version']]],
-  ['makelegalfilename',['MakeLegalFileName',['../a00149.html#ga565c557d331a3e0ff5102987806b49e6',1,'KodiAPI::AddOn::VFSUtils']]],
-  ['makelegalpath',['MakeLegalPath',['../a00149.html#ga7b18f6d43522e0b39caa8a21672c2184',1,'KodiAPI::AddOn::VFSUtils']]],
-  ['markdirtyregion',['MarkDirtyRegion',['../a00029.html#ga60ef98c2dd24a36ab0748d21888f10b6',1,'KodiAPI::GUI::CWindow']]],
-  ['markfinished',['MarkFinished',['../a00026.html#ga40af1bcedea1f61fde8cd5e70e416473',1,'KodiAPI::GUI::CDialogExtendedProgress']]],
-  ['minor',['minor',['../a00009.html#aec7b96885baf2e6f10efbdef9d935a0b',1,'kodi_version']]]
+  ['list_20item',['List Item',['../a00088.html',1,'']]],
+  ['label',['Label',['../a00071.html#gaacd1b40e1b2e44d82303388beb475e84',1,'KodiAPI::AddOn::CVFSDirEntry']]],
+  ['label_20control',['Label Control',['../a00028.html',1,'skin_controls']]],
+  ['lang_5ffmt_5fenglish_5fname',['LANG_FMT_ENGLISH_NAME',['../a00069.html#ggad481b851c163786e65d41b9ab47ed14ea8e9dbb43889202ef570c318560f52635',1,'KodiAPI']]],
+  ['lang_5ffmt_5fiso_5f639_5f1',['LANG_FMT_ISO_639_1',['../a00069.html#ggad481b851c163786e65d41b9ab47ed14ea282b7d25014247cf5f26f5ee0fe6ea51',1,'KodiAPI']]],
+  ['lang_5ffmt_5fiso_5f639_5f2',['LANG_FMT_ISO_639_2',['../a00069.html#ggad481b851c163786e65d41b9ab47ed14ea93ccac5fa6affc3908cbd62584c2e92b',1,'KodiAPI']]],
+  ['lang_5fformats',['lang_formats',['../a00069.html#gad481b851c163786e65d41b9ab47ed14e',1,'KodiAPI']]],
+  ['list_20container',['List Container',['../a00030.html',1,'skin_controls']]],
+  ['loadplaylist',['LoadPlaylist',['../a00095.html#ga7de3982ed8b225f5fd1580c75847d9db',1,'KodiAPI::Player::CPlayList']]],
+  ['lock',['Lock',['../a00243.html#ga1e6c297870325cead8b7869c56dde3a9',1,'KodiAPI::GUI::General']]],
+  ['log',['Log',['../a00231.html#ga1b35d2c11c262cd3436768f6ed4c1f58',1,'KodiAPI']]],
+  ['list_20of_20gui_20access_20messages',['List of GUI access messages',['../a00002.html',1,'general_parts']]],
+  ['list_20of_20build_20in_20functions',['List of build in functions',['../a00066.html',1,'general_parts']]]
 ];

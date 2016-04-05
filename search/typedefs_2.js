@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['kodi_5fhandle',['KODI_HANDLE',['../a00142.html#gae59135f9780938a6a6fcae763f92a66e',1,'definitions-all.hpp']]]
+  ['kodi_5fcodec_5fid',['kodi_codec_id',['../a00091.html#ga5f36d5652cd9f943a40f0a2c4495a74a',1,'KodiAPI']]],
+  ['kodi_5fhandle',['KODI_HANDLE',['../a00232.html#gae59135f9780938a6a6fcae763f92a66e',1,'definitions-all.hpp']]]
 ];

@@ -1,14 +1,22 @@
 var searchData=
 [
-  ['list_20item',['List Item',['../a00028.html',1,'']]],
-  ['label',['Label',['../a00011.html#gaacd1b40e1b2e44d82303388beb475e84',1,'KodiAPI::AddOn::CVFSDirEntry']]],
-  ['lang_5ffmt_5fenglish_5fname',['LANG_FMT_ENGLISH_NAME',['../a00009.html#ggad481b851c163786e65d41b9ab47ed14ea8e9dbb43889202ef570c318560f52635',1,'KodiAPI']]],
-  ['lang_5ffmt_5fiso_5f639_5f1',['LANG_FMT_ISO_639_1',['../a00009.html#ggad481b851c163786e65d41b9ab47ed14ea282b7d25014247cf5f26f5ee0fe6ea51',1,'KodiAPI']]],
-  ['lang_5ffmt_5fiso_5f639_5f2',['LANG_FMT_ISO_639_2',['../a00009.html#ggad481b851c163786e65d41b9ab47ed14ea93ccac5fa6affc3908cbd62584c2e92b',1,'KodiAPI']]],
-  ['lang_5fformats',['lang_formats',['../a00009.html#gad481b851c163786e65d41b9ab47ed14e',1,'KodiAPI']]],
-  ['loadplaylist',['LoadPlaylist',['../a00035.html#ga7de3982ed8b225f5fd1580c75847d9db',1,'KodiAPI::Player::CPlayList']]],
-  ['lock',['Lock',['../a00153.html#ga1e6c297870325cead8b7869c56dde3a9',1,'KodiAPI::GUI::General']]],
-  ['log',['Log',['../a00141.html#ga1b35d2c11c262cd3436768f6ed4c1f58',1,'KodiAPI']]],
-  ['list_20of_20gui_20access_20messages',['List of GUI access messages',['../a00002.html',1,'general_parts']]],
-  ['list_20of_20build_20in_20functions',['List of build in functions',['../a00006.html',1,'general_parts']]]
+  ['kodi_5fapi_5ferrortype',['KODI_API_Errortype',['../a00232.html#ga3666c3045cdf054de90faaf6cc7d14e1',1,'definitions-all.hpp']]],
+  ['kodi_5fapi_5flasterror',['KODI_API_lasterror',['../a00232.html#gac08f738b25174ea7fe5441965c57773a',1,'KodiAPI']]],
+  ['kodi_5fapi_5flevel',['KODI_API_Level',['../a00232.html#ga7d342cb80361753ac42881792cd215b2',1,'definitions-all.hpp']]],
+  ['kodi_5fapi_5fversion',['KODI_API_Version',['../a00232.html#ga8801d2d949b4fb40c65cb6b35a4191b6',1,'definitions-all.hpp']]],
+  ['kodi_5fcodec',['kodi_codec',['../a00091.html#a00299',1,'KodiAPI']]],
+  ['kodi_5fcodec_5fid',['kodi_codec_id',['../a00091.html#ga5f36d5652cd9f943a40f0a2c4495a74a',1,'KodiAPI']]],
+  ['kodi_5fcodec_5ftype',['kodi_codec_type',['../a00091.html#gadb311b9a66ccf6cbc77137e0af86be2a',1,'KodiAPI']]],
+  ['kodi_5fcodec_5ftype_5faudio',['KODI_CODEC_TYPE_AUDIO',['../a00091.html#ggadb311b9a66ccf6cbc77137e0af86be2aa1fdc2cbc56014c4fff81f4e7baae441b',1,'KodiAPI']]],
+  ['kodi_5fcodec_5ftype_5fdata',['KODI_CODEC_TYPE_DATA',['../a00091.html#ggadb311b9a66ccf6cbc77137e0af86be2aa283925b3bd6f6ed60e5cebfa6c84001f',1,'KodiAPI']]],
+  ['kodi_5fcodec_5ftype_5fnb',['KODI_CODEC_TYPE_NB',['../a00091.html#ggadb311b9a66ccf6cbc77137e0af86be2aa5db7fcefc33d4838c039fbb9d1e2eadc',1,'KodiAPI']]],
+  ['kodi_5fcodec_5ftype_5frds',['KODI_CODEC_TYPE_RDS',['../a00091.html#ggadb311b9a66ccf6cbc77137e0af86be2aad30c732aede56b620aefac72e4029d8e',1,'KodiAPI']]],
+  ['kodi_5fcodec_5ftype_5fsubtitle',['KODI_CODEC_TYPE_SUBTITLE',['../a00091.html#ggadb311b9a66ccf6cbc77137e0af86be2aa12047086ed4fc5c499f9584a45140cbd',1,'KodiAPI']]],
+  ['kodi_5fcodec_5ftype_5funknown',['KODI_CODEC_TYPE_UNKNOWN',['../a00091.html#ggadb311b9a66ccf6cbc77137e0af86be2aa8f817a79e13ea554b21f9a4ab39825e3',1,'KodiAPI']]],
+  ['kodi_5fcodec_5ftype_5fvideo',['KODI_CODEC_TYPE_VIDEO',['../a00091.html#ggadb311b9a66ccf6cbc77137e0af86be2aad2291cde40a901541cb7a15001bc06b3',1,'KodiAPI']]],
+  ['kodi_5fhandle',['KODI_HANDLE',['../a00232.html#gae59135f9780938a6a6fcae763f92a66e',1,'definitions-all.hpp']]],
+  ['kodi_5fversion',['kodi_version',['../a00069.html#a00300',1,'']]],
+  ['kodiapi_5ferrorcodetostring',['KodiAPI_ErrorCodeToString',['../a00231.html#gaa3c8a9b6597526ba1ad04e1aa3998237',1,'KodiAPI']]],
+  ['kodiquit',['KodiQuit',['../a00235.html#gab47f37449d3128970255a3379f4ce4f1',1,'KodiAPI::AddOn::General']]],
+  ['kodiversion',['KodiVersion',['../a00235.html#ga13b7ee51e76fa5851131220d2affada4',1,'KodiAPI::AddOn::General']]]
 ];

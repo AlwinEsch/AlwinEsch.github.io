@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Window</title>
+<title>Kodi Development: Dialog Progress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,312 +91,360 @@ $(document).ready(function(){initNavTree('a00029.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Window<div class="ingroups"><a class="el" href="a00140.html">C++</a> &raquo; <a class="el" href="a00152.html">4. GUI</a></div></div>  </div>
+<div class="title">Dialog Progress<div class="ingroups"><a class="el" href="a00199.html">C++</a> &raquo; <a class="el" href="a00211.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Main window control class</b> </p>
-<p>The with <a class="el" href="a00077_source.html">#include &lt;kodi/api2/gui/Window.hpp&gt;</a> included file brings support to create a window or dialog on Kodi. </p><hr/>
-<p>On functions defined input variable <b><code>controlId</code> (GUI control identifier)</b> is the on window.xml defined value behind type added with <code><b>id="..."</b></code> and used to identify for changes there and on callbacks.</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;label&quot; id=&quot;31&quot;&gt;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;description&gt;Title Label&lt;/description&gt;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  ...</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;&lt;/control&gt;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;&lt;control type=&quot;progress&quot; id=&quot;32&quot;&gt;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  &lt;description&gt;progress control&lt;/description&gt;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  ...</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;&lt;/control&gt;</div>
-</div><!-- fragment --> <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00154"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00154.html">Definitions, structures and enumerators</a></td></tr>
-<tr class="memdesc:a00154"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Library definition values</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00155"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html">Callback functions from Kodi to add-on</a></td></tr>
-<tr class="memdesc:a00155"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>GUI window callback functions.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<hr/><h2 class="groupheader">Class Documentation</h2>
-<a name="a00208" id="a00208"></a>
+<p><b>Progress dialog shown in center</b> </p>
+<p>The with <a class="el" href="a00103_source.html">#include &lt;kodi/api2/gui/DialogProgress.hpp&gt;</a> given class are basically used to create Kodi's progress dialog with named text fields.</p>
+<div class="image">
+<img src="help.GUIDialogProgress.png" alt="help.GUIDialogProgress.png"/>
+</div>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/DialogProgress.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="a00029.html#a00254">KodiAPI::GUI::CDialogProgress</a> *progress = <span class="keyword">new</span> <a class="code" href="a00029.html#a00254">KodiAPI::GUI::CDialogProgress</a>;</div>
+<div class="line">progress-&gt;<a class="code" href="a00029.html#gaf6377691fa79c14e16aebaeb9d340b33">SetHeading</a>(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00029.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(1, <span class="stringliteral">&quot;line 1&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00029.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(2, <span class="stringliteral">&quot;line 2&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00029.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(3, <span class="stringliteral">&quot;line 3&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00029.html#ga13580b7f84c1c13f90c1d030ef61faf8">SetCanCancel</a>(<span class="keyword">true</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00029.html#ga4ef9882ff90cb3878eb846335e2b3c07">ShowProgressBar</a>(<span class="keyword">true</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00029.html#ga5e53001785ff30ae485a113b9b8a0ddc">Open</a>();</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 100; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  progress-&gt;<a class="code" href="a00029.html#gadf0353f59469e4b0cab327ea7df9cae8">SetPercentage</a>(i);</div>
+<div class="line">  sleep(1);</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">delete</span> progress;</div>
+</div><!-- fragment --> <hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="a00254" id="a00254"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">class KodiAPI::GUI::CWindow</td>
+          <td class="memname">class KodiAPI::GUI::CDialogProgress</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="textblock"></div><table class="memberdecls">
 <tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
-<tr class="memitem:ga5ee402b42dd18e0f49f54ac6de83bd89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga5ee402b42dd18e0f49f54ac6de83bd89">AddItem</a> (<a class="el" href="a00028.html#a00198">CListItem</a> *item, int itemPosition=-1)</td></tr>
-<tr class="memdesc:ga5ee402b42dd18e0f49f54ac6de83bd89"><td class="mdescLeft">&#160;</td><td class="mdescRight">To add a list item in the on window integrated list.  <a href="a00029.html#ga5ee402b42dd18e0f49f54ac6de83bd89">More...</a><br /></td></tr>
-<tr class="separator:ga5ee402b42dd18e0f49f54ac6de83bd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga22199a49598ff7b9a2bd8eb0bc605aed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00028.html#a00198">CListItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga22199a49598ff7b9a2bd8eb0bc605aed">AddStringItem</a> (const std::string &amp;name, int itemPosition=-1)</td></tr>
-<tr class="memdesc:ga22199a49598ff7b9a2bd8eb0bc605aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a string named item to the integrated list.  <a href="a00029.html#ga22199a49598ff7b9a2bd8eb0bc605aed">More...</a><br /></td></tr>
-<tr class="separator:ga22199a49598ff7b9a2bd8eb0bc605aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2b85ec494201046fd7686395c996c272"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga2b85ec494201046fd7686395c996c272">ClearList</a> ()</td></tr>
-<tr class="memdesc:ga2b85ec494201046fd7686395c996c272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function delete all entries in integrated list.  <a href="a00029.html#ga2b85ec494201046fd7686395c996c272">More...</a><br /></td></tr>
-<tr class="separator:ga2b85ec494201046fd7686395c996c272"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac08a48ef4dc5afe79c14ffbefdd96f5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gac08a48ef4dc5afe79c14ffbefdd96f5d">ClearProperties</a> ()</td></tr>
-<tr class="memdesc:gac08a48ef4dc5afe79c14ffbefdd96f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all present properties from window.  <a href="a00029.html#gac08a48ef4dc5afe79c14ffbefdd96f5d">More...</a><br /></td></tr>
-<tr class="separator:gac08a48ef4dc5afe79c14ffbefdd96f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga881f45cb47b4f775418e65dfc6c8b832"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga881f45cb47b4f775418e65dfc6c8b832">ClearProperty</a> (const std::string &amp;key)</td></tr>
-<tr class="memdesc:ga881f45cb47b4f775418e65dfc6c8b832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the specific window property.  <a href="a00029.html#ga881f45cb47b4f775418e65dfc6c8b832">More...</a><br /></td></tr>
-<tr class="separator:ga881f45cb47b4f775418e65dfc6c8b832"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7f7a3199c392465d0767c6506c1af5b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga7f7a3199c392465d0767c6506c1af5b4">Close</a> ()</td></tr>
-<tr class="memdesc:ga7f7a3199c392465d0767c6506c1af5b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes this window.  <a href="a00029.html#ga7f7a3199c392465d0767c6506c1af5b4">More...</a><br /></td></tr>
-<tr class="separator:ga7f7a3199c392465d0767c6506c1af5b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf5a0daa07131817e4e805710aac04842"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gaf5a0daa07131817e4e805710aac04842">CWindow</a> (const std::string &amp;xmlFilename, const std::string &amp;defaultSkin, bool forceFallback, bool asDialog)</td></tr>
-<tr class="memdesc:gaf5a0daa07131817e4e805710aac04842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class constructor with needed values for window / dialog.  <a href="a00029.html#gaf5a0daa07131817e4e805710aac04842">More...</a><br /></td></tr>
-<tr class="separator:gaf5a0daa07131817e4e805710aac04842"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga856163c733aa826e2ff77a067e09b896"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga856163c733aa826e2ff77a067e09b896">DoModal</a> ()</td></tr>
-<tr class="memdesc:ga856163c733aa826e2ff77a067e09b896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display this window until close() is called.  <a href="a00029.html#ga856163c733aa826e2ff77a067e09b896">More...</a><br /></td></tr>
-<tr class="separator:ga856163c733aa826e2ff77a067e09b896"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga84fd2786c494be3dd0f428acb43cfbed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga84fd2786c494be3dd0f428acb43cfbed">GetCurrentListPosition</a> ()</td></tr>
-<tr class="memdesc:ga84fd2786c494be3dd0f428acb43cfbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get current selected position in list.  <a href="a00029.html#ga84fd2786c494be3dd0f428acb43cfbed">More...</a><br /></td></tr>
-<tr class="separator:ga84fd2786c494be3dd0f428acb43cfbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf38c4d162d02658d52f49cf4ffa38a45"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gaf38c4d162d02658d52f49cf4ffa38a45">GetFocusId</a> ()</td></tr>
-<tr class="memdesc:gaf38c4d162d02658d52f49cf4ffa38a45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the id of the control which is focused.  <a href="a00029.html#gaf38c4d162d02658d52f49cf4ffa38a45">More...</a><br /></td></tr>
-<tr class="separator:gaf38c4d162d02658d52f49cf4ffa38a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga557b0657ffc5f6f6ab991a242a42a833"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00028.html#a00198">CListItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga557b0657ffc5f6f6ab991a242a42a833">GetListItem</a> (int listPos)</td></tr>
-<tr class="memdesc:ga557b0657ffc5f6f6ab991a242a42a833"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get list item control class on wanted position.  <a href="a00029.html#ga557b0657ffc5f6f6ab991a242a42a833">More...</a><br /></td></tr>
-<tr class="separator:ga557b0657ffc5f6f6ab991a242a42a833"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1f4581c0d5dec157ae050648b9980dda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga1f4581c0d5dec157ae050648b9980dda">GetListSize</a> ()</td></tr>
-<tr class="memdesc:ga1f4581c0d5dec157ae050648b9980dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the amount of entries in the list.  <a href="a00029.html#ga1f4581c0d5dec157ae050648b9980dda">More...</a><br /></td></tr>
-<tr class="separator:ga1f4581c0d5dec157ae050648b9980dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf45b0883a209eba6ac9248d107d91c63"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gaf45b0883a209eba6ac9248d107d91c63">GetProperty</a> (const std::string &amp;key) const </td></tr>
-<tr class="memdesc:gaf45b0883a209eba6ac9248d107d91c63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a window property as a string, similar to an infolabel.  <a href="a00029.html#gaf45b0883a209eba6ac9248d107d91c63">More...</a><br /></td></tr>
-<tr class="separator:gaf45b0883a209eba6ac9248d107d91c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga82ce76ad7f15260f9c7a8ef3e1cb36d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga82ce76ad7f15260f9c7a8ef3e1cb36d8">GetPropertyBool</a> (const std::string &amp;key) const </td></tr>
-<tr class="memdesc:ga82ce76ad7f15260f9c7a8ef3e1cb36d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a window property with boolean value.  <a href="a00029.html#ga82ce76ad7f15260f9c7a8ef3e1cb36d8">More...</a><br /></td></tr>
-<tr class="separator:ga82ce76ad7f15260f9c7a8ef3e1cb36d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5d5abed6f74c071fe20cb32c78ef2962"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga5d5abed6f74c071fe20cb32c78ef2962">GetPropertyDouble</a> (const std::string &amp;key) const </td></tr>
-<tr class="memdesc:ga5d5abed6f74c071fe20cb32c78ef2962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a window property with double value.  <a href="a00029.html#ga5d5abed6f74c071fe20cb32c78ef2962">More...</a><br /></td></tr>
-<tr class="separator:ga5d5abed6f74c071fe20cb32c78ef2962"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad1ef604201c128051b6f953686e2e29d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gad1ef604201c128051b6f953686e2e29d">GetPropertyInt</a> (const std::string &amp;key) const </td></tr>
-<tr class="memdesc:gad1ef604201c128051b6f953686e2e29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a window property with integer value.  <a href="a00029.html#gad1ef604201c128051b6f953686e2e29d">More...</a><br /></td></tr>
-<tr class="separator:gad1ef604201c128051b6f953686e2e29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga60ef98c2dd24a36ab0748d21888f10b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga60ef98c2dd24a36ab0748d21888f10b6">MarkDirtyRegion</a> ()</td></tr>
-<tr class="memdesc:ga60ef98c2dd24a36ab0748d21888f10b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">To inform Kodi that it need to render region new.  <a href="a00029.html#ga60ef98c2dd24a36ab0748d21888f10b6">More...</a><br /></td></tr>
-<tr class="separator:ga60ef98c2dd24a36ab0748d21888f10b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad3fc2a106ba0143fa5d11d3df32d9c72"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#gad3fc2a106ba0143fa5d11d3df32d9c72">OnAction</a> (int actionId)</td></tr>
-<tr class="memdesc:gad3fc2a106ba0143fa5d11d3df32d9c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">OnAction method.  <a href="a00155.html#gad3fc2a106ba0143fa5d11d3df32d9c72">More...</a><br /></td></tr>
-<tr class="separator:gad3fc2a106ba0143fa5d11d3df32d9c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad741fef5d9a1d2bf07449694e9a9e602"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#gad741fef5d9a1d2bf07449694e9a9e602">OnClick</a> (int controlId)</td></tr>
-<tr class="memdesc:gad741fef5d9a1d2bf07449694e9a9e602"><td class="mdescLeft">&#160;</td><td class="mdescRight">OnClick method.  <a href="a00155.html#gad741fef5d9a1d2bf07449694e9a9e602">More...</a><br /></td></tr>
-<tr class="separator:gad741fef5d9a1d2bf07449694e9a9e602"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7f69d7353e186b8fe4a1560767721501"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#ga7f69d7353e186b8fe4a1560767721501">OnFocus</a> (int controlId)</td></tr>
-<tr class="memdesc:ga7f69d7353e186b8fe4a1560767721501"><td class="mdescLeft">&#160;</td><td class="mdescRight">OnFocus method.  <a href="a00155.html#ga7f69d7353e186b8fe4a1560767721501">More...</a><br /></td></tr>
-<tr class="separator:ga7f69d7353e186b8fe4a1560767721501"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7d98c001ac8d31e48df88346e28bae16"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#ga7d98c001ac8d31e48df88346e28bae16">OnInit</a> ()</td></tr>
-<tr class="memdesc:ga7d98c001ac8d31e48df88346e28bae16"><td class="mdescLeft">&#160;</td><td class="mdescRight">OnInit method.  <a href="a00155.html#ga7d98c001ac8d31e48df88346e28bae16">More...</a><br /></td></tr>
-<tr class="separator:ga7d98c001ac8d31e48df88346e28bae16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac45d2066c403cf222cccc265371680b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gac45d2066c403cf222cccc265371680b3">RemoveItem</a> (int itemPosition)</td></tr>
-<tr class="memdesc:gac45d2066c403cf222cccc265371680b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove list item on position.  <a href="a00029.html#gac45d2066c403cf222cccc265371680b3">More...</a><br /></td></tr>
-<tr class="separator:gac45d2066c403cf222cccc265371680b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabee41b97eff7bd51a19e32f996b2a04a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gabee41b97eff7bd51a19e32f996b2a04a">RemoveItem</a> (<a class="el" href="a00028.html#a00198">CListItem</a> *item)</td></tr>
-<tr class="memdesc:gabee41b97eff7bd51a19e32f996b2a04a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove item with given control class from list.  <a href="a00029.html#gabee41b97eff7bd51a19e32f996b2a04a">More...</a><br /></td></tr>
-<tr class="separator:gabee41b97eff7bd51a19e32f996b2a04a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga609a14f7e58e2182470595d9a6dcfca6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga609a14f7e58e2182470595d9a6dcfca6">SetControlLabel</a> (int controlId, const std::string &amp;label)</td></tr>
-<tr class="memdesc:ga609a14f7e58e2182470595d9a6dcfca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the used label on given control id.  <a href="a00029.html#ga609a14f7e58e2182470595d9a6dcfca6">More...</a><br /></td></tr>
-<tr class="separator:ga609a14f7e58e2182470595d9a6dcfca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabd56fda84238160597c9d9aa1ad09e29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gabd56fda84238160597c9d9aa1ad09e29">SetCurrentListPosition</a> (int listPos)</td></tr>
-<tr class="memdesc:gabd56fda84238160597c9d9aa1ad09e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set position of selected part in list.  <a href="a00029.html#gabd56fda84238160597c9d9aa1ad09e29">More...</a><br /></td></tr>
-<tr class="separator:gabd56fda84238160597c9d9aa1ad09e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae4612cf096752b43db2312280b7cf6dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gae4612cf096752b43db2312280b7cf6dc">SetFocusId</a> (int iControlId)</td></tr>
-<tr class="memdesc:gae4612cf096752b43db2312280b7cf6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the control with the supplied focus.  <a href="a00029.html#gae4612cf096752b43db2312280b7cf6dc">More...</a><br /></td></tr>
-<tr class="separator:gae4612cf096752b43db2312280b7cf6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5daaf4cdd5942017aa0be44ec98a7f95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00155.html#ga5daaf4cdd5942017aa0be44ec98a7f95">SetIndependentCallbacks</a> (<a class="el" href="a00154.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, bool(*CBOnInit)(<a class="el" href="a00154.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl), bool(*CBOnFocus)(<a class="el" href="a00154.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, int controlId), bool(*CBOnClick)(<a class="el" href="a00154.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, int controlId), bool(*CBOnAction)(<a class="el" href="a00154.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, int actionId))</td></tr>
-<tr class="memdesc:ga5daaf4cdd5942017aa0be44ec98a7f95"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Set independent callbacks</b>  <a href="a00155.html#ga5daaf4cdd5942017aa0be44ec98a7f95">More...</a><br /></td></tr>
-<tr class="separator:ga5daaf4cdd5942017aa0be44ec98a7f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7d553225fe861e34410148ca3bbd70fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga7d553225fe861e34410148ca3bbd70fc">SetProperty</a> (const std::string &amp;key, const std::string &amp;value)</td></tr>
-<tr class="memdesc:ga7d553225fe861e34410148ca3bbd70fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a window property, similar to an infolabel.  <a href="a00029.html#ga7d553225fe861e34410148ca3bbd70fc">More...</a><br /></td></tr>
-<tr class="separator:ga7d553225fe861e34410148ca3bbd70fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f37733246a712df31946c12b40d7553"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga8f37733246a712df31946c12b40d7553">SetPropertyBool</a> (const std::string &amp;key, bool value)</td></tr>
-<tr class="memdesc:ga8f37733246a712df31946c12b40d7553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a window property with boolean value.  <a href="a00029.html#ga8f37733246a712df31946c12b40d7553">More...</a><br /></td></tr>
-<tr class="separator:ga8f37733246a712df31946c12b40d7553"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga363ee3e1bf219c8f824241f58aebe294"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga363ee3e1bf219c8f824241f58aebe294">SetPropertyDouble</a> (const std::string &amp;key, double value)</td></tr>
-<tr class="memdesc:ga363ee3e1bf219c8f824241f58aebe294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a window property with double value.  <a href="a00029.html#ga363ee3e1bf219c8f824241f58aebe294">More...</a><br /></td></tr>
-<tr class="separator:ga363ee3e1bf219c8f824241f58aebe294"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3d68ad750393fd5293be9d0650cd30a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga3d68ad750393fd5293be9d0650cd30a9">SetPropertyInt</a> (const std::string &amp;key, int value)</td></tr>
-<tr class="memdesc:ga3d68ad750393fd5293be9d0650cd30a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a window property with integer value.  <a href="a00029.html#ga3d68ad750393fd5293be9d0650cd30a9">More...</a><br /></td></tr>
-<tr class="separator:ga3d68ad750393fd5293be9d0650cd30a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa262f72ef31f1d6ca005f2668e326c41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gaa262f72ef31f1d6ca005f2668e326c41">Show</a> ()</td></tr>
-<tr class="memdesc:gaa262f72ef31f1d6ca005f2668e326c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show this window.  <a href="a00029.html#gaa262f72ef31f1d6ca005f2668e326c41">More...</a><br /></td></tr>
-<tr class="separator:gaa262f72ef31f1d6ca005f2668e326c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c7a4d340096bba4de74ef7ca5324457"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#a1c7a4d340096bba4de74ef7ca5324457">~CWindow</a> ()</td></tr>
-<tr class="memdesc:a1c7a4d340096bba4de74ef7ca5324457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor.  <a href="#a1c7a4d340096bba4de74ef7ca5324457">More...</a><br /></td></tr>
-<tr class="separator:a1c7a4d340096bba4de74ef7ca5324457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71e9d732335846eb579f0dd00918b3e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga71e9d732335846eb579f0dd00918b3e7">Abort</a> ()</td></tr>
+<tr class="memdesc:ga71e9d732335846eb579f0dd00918b3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">To check progress was canceled on work.  <a href="a00029.html#ga71e9d732335846eb579f0dd00918b3e7">More...</a><br /></td></tr>
+<tr class="separator:ga71e9d732335846eb579f0dd00918b3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78b8dcedb682c8b3ee857485b2c4c2b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga78b8dcedb682c8b3ee857485b2c4c2b8">CDialogProgress</a> ()</td></tr>
+<tr class="memdesc:ga78b8dcedb682c8b3ee857485b2c4c2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new dialog.  <a href="a00029.html#ga78b8dcedb682c8b3ee857485b2c4c2b8">More...</a><br /></td></tr>
+<tr class="separator:ga78b8dcedb682c8b3ee857485b2c4c2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae20eeb097c9ebe3506bd1d2bb3d92fda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gae20eeb097c9ebe3506bd1d2bb3d92fda">GetPercentage</a> () const </td></tr>
+<tr class="memdesc:gae20eeb097c9ebe3506bd1d2bb3d92fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the current progress position as percent.  <a href="a00029.html#gae20eeb097c9ebe3506bd1d2bb3d92fda">More...</a><br /></td></tr>
+<tr class="separator:gae20eeb097c9ebe3506bd1d2bb3d92fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf76bcf12aaec9ab845ea61853a37a33c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gaf76bcf12aaec9ab845ea61853a37a33c">IsCanceled</a> () const </td></tr>
+<tr class="memdesc:gaf76bcf12aaec9ab845ea61853a37a33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">To check dialog for clicked cancel button.  <a href="a00029.html#gaf76bcf12aaec9ab845ea61853a37a33c">More...</a><br /></td></tr>
+<tr class="separator:gaf76bcf12aaec9ab845ea61853a37a33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e53001785ff30ae485a113b9b8a0ddc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga5e53001785ff30ae485a113b9b8a0ddc">Open</a> ()</td></tr>
+<tr class="memdesc:ga5e53001785ff30ae485a113b9b8a0ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">To open the dialog.  <a href="a00029.html#ga5e53001785ff30ae485a113b9b8a0ddc">More...</a><br /></td></tr>
+<tr class="separator:ga5e53001785ff30ae485a113b9b8a0ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13580b7f84c1c13f90c1d030ef61faf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga13580b7f84c1c13f90c1d030ef61faf8">SetCanCancel</a> (bool bCanCancel)</td></tr>
+<tr class="memdesc:ga13580b7f84c1c13f90c1d030ef61faf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">To enable and show cancel button on dialog.  <a href="a00029.html#ga13580b7f84c1c13f90c1d030ef61faf8">More...</a><br /></td></tr>
+<tr class="separator:ga13580b7f84c1c13f90c1d030ef61faf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6377691fa79c14e16aebaeb9d340b33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gaf6377691fa79c14e16aebaeb9d340b33">SetHeading</a> (const std::string &amp;heading)</td></tr>
+<tr class="memdesc:gaf6377691fa79c14e16aebaeb9d340b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the heading title of dialog.  <a href="a00029.html#gaf6377691fa79c14e16aebaeb9d340b33">More...</a><br /></td></tr>
+<tr class="separator:gaf6377691fa79c14e16aebaeb9d340b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga845054cd7ff1978a112126086a8ec5ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a> (unsigned int iLine, const std::string &amp;line)</td></tr>
+<tr class="memdesc:ga845054cd7ff1978a112126086a8ec5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the line text field on dialog from 0 - 2.  <a href="a00029.html#ga845054cd7ff1978a112126086a8ec5ba">More...</a><br /></td></tr>
+<tr class="separator:ga845054cd7ff1978a112126086a8ec5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf0353f59469e4b0cab327ea7df9cae8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gadf0353f59469e4b0cab327ea7df9cae8">SetPercentage</a> (int iPercentage)</td></tr>
+<tr class="memdesc:gadf0353f59469e4b0cab327ea7df9cae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current progress position as percent.  <a href="a00029.html#gadf0353f59469e4b0cab327ea7df9cae8">More...</a><br /></td></tr>
+<tr class="separator:gadf0353f59469e4b0cab327ea7df9cae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe4b80962f0d7bdd3b0a73b83ef06323"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gafe4b80962f0d7bdd3b0a73b83ef06323">SetProgressAdvance</a> (int nSteps=1)</td></tr>
+<tr class="memdesc:gafe4b80962f0d7bdd3b0a73b83ef06323"><td class="mdescLeft">&#160;</td><td class="mdescRight">To increase progress bar by defined step size until reach of maximum position.  <a href="a00029.html#gafe4b80962f0d7bdd3b0a73b83ef06323">More...</a><br /></td></tr>
+<tr class="separator:gafe4b80962f0d7bdd3b0a73b83ef06323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad397a19fe15c25e5077d34fd43da6e5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gad397a19fe15c25e5077d34fd43da6e5a">SetProgressMax</a> (int iMax)</td></tr>
+<tr class="memdesc:gad397a19fe15c25e5077d34fd43da6e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum position of progress, needed if <code>SetProgressAdvance(...)</code> is used.  <a href="a00029.html#gad397a19fe15c25e5077d34fd43da6e5a">More...</a><br /></td></tr>
+<tr class="separator:gad397a19fe15c25e5077d34fd43da6e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ef9882ff90cb3878eb846335e2b3c07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ga4ef9882ff90cb3878eb846335e2b3c07">ShowProgressBar</a> (bool bOnOff)</td></tr>
+<tr class="memdesc:ga4ef9882ff90cb3878eb846335e2b3c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">To show or hide progress bar dialog.  <a href="a00029.html#ga4ef9882ff90cb3878eb846335e2b3c07">More...</a><br /></td></tr>
+<tr class="separator:ga4ef9882ff90cb3878eb846335e2b3c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4ebae45c5583fbefea366318f13714e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#gaf4ebae45c5583fbefea366318f13714e">~CDialogProgress</a> ()</td></tr>
+<tr class="memdesc:gaf4ebae45c5583fbefea366318f13714e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="a00029.html#gaf4ebae45c5583fbefea366318f13714e">More...</a><br /></td></tr>
+<tr class="separator:gaf4ebae45c5583fbefea366318f13714e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h4 class="groupheader">Constructor &amp; Destructor Documentation</h4>
-<a class="anchor" id="a1c7a4d340096bba4de74ef7ca5324457"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~<a class="el" href="a00029.html#a00208">CWindow</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Class destructor. </p>
-
-</div>
-</div>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gaf5a0daa07131817e4e805710aac04842"></a>
+<a class="anchor" id="ga78b8dcedb682c8b3ee857485b2c4c2b8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CWindow </td>
+          <td class="memname">CDialogProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new dialog. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf4ebae45c5583fbefea366318f13714e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~CDialogProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga5e53001785ff30ae485a113b9b8a0ddc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To open the dialog. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf6377691fa79c14e16aebaeb9d340b33"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetHeading </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>xmlFilename</em>, </td>
+          <td class="paramname"><em>heading</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the heading title of dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Title string to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga845054cd7ff1978a112126086a8ec5ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetLine </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>iLine</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>defaultSkin</em>, </td>
+          <td class="paramname"><em>line</em>&#160;</td>
         </tr>
         <tr>
-          <td class="paramkey"></td>
           <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the line text field on dialog from 0 - 2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iLine</td><td>Line number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>Text string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga13580b7f84c1c13f90c1d030ef61faf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetCanCancel </td>
+          <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>forceFallback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>bCanCancel</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To enable and show cancel button on dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bCanCancel</td><td>if true becomes it shown </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf76bcf12aaec9ab845ea61853a37a33c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsCanceled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To check dialog for clicked cancel button. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if canceled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gadf0353f59469e4b0cab327ea7df9cae8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPercentage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iPercentage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current progress position as percent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gae20eeb097c9ebe3506bd1d2bb3d92fda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetPercentage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the current progress position as percent. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current Position used from 0.0 to 100.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4ef9882ff90cb3878eb846335e2b3c07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowProgressBar </td>
+          <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>asDialog</em>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>bOnOff</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Class constructor with needed values for window / dialog. </p>
-<p>Creates a new Window class.</p>
+<p>To show or hide progress bar dialog. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">xmlFilename</td><td>XML file for the skin </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">defaultSkin</td><td>default skin to use if needed not available </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">forceFallback</td><td>If set becomes always default skin used (todo: check correct descr.) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">asDialog</td><td>Use window as dialog if set </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bOnOff</td><td>If true becomes it shown </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="gaa262f72ef31f1d6ca005f2668e326c41"></a>
+<a class="anchor" id="gad397a19fe15c25e5077d34fd43da6e5a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Show </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Show this window. </p>
-<p>Shows this window by activating it, calling close() after it wil activate the current window again.</p>
-<dl class="section note"><dt>Note</dt><dd>If your Add-On ends this window will be closed to. To show it forever, make a loop at the end of your Add-On or use doModal() instead.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if call and show is successed, if false was something failed to get needed skin parts. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga7f7a3199c392465d0767c6506c1af5b4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Close </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Closes this window. </p>
-<p>Closes this window by activating the old window. </p><dl class="section note"><dt>Note</dt><dd>The window is not deleted with this method. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga856163c733aa826e2ff77a067e09b896"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DoModal </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Display this window until close() is called. </p>
-
-</div>
-</div>
-<a class="anchor" id="gae4612cf096752b43db2312280b7cf6dc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SetFocusId </td>
+          <td class="memname">void SetProgressMax </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iControlId</em></td><td>)</td>
+          <td class="paramname"><em>iMax</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gives the control with the supplied focus. </p>
+<p>Set the maximum position of progress, needed if <code>SetProgressAdvance(...)</code> is used. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iControlId</td><td>On skin defined id of control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iMax</td><td>Biggest usable position to use </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if call and focus is successed, if false was something failed to get needed skin parts. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gaf38c4d162d02658d52f49cf4ffa38a45"></a>
+<a class="anchor" id="gafe4b80962f0d7bdd3b0a73b83ef06323"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int GetFocusId </td>
+          <td class="memname">void SetProgressAdvance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSteps</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To increase progress bar by defined step size until reach of maximum position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nSteps</td><td>Step size to increase, default is 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga71e9d732335846eb579f0dd00918b3e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Abort </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -404,577 +452,8 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the id of the control which is focused. </p>
-<dl class="section return"><dt>Returns</dt><dd>Focused control id </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga609a14f7e58e2182470595d9a6dcfca6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetControlLabel </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the used label on given control id. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>Control id where label need to set </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>Label to use </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga7d553225fe861e34410148ca3bbd70fc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetProperty </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets a window property, similar to an infolabel. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>string or unicode - value of property.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive. Setting value to an empty string is equivalent to clearProperty(key).<br />
- You can use the above as keywords for arguments and skip certain optional arguments.<br />
- Once you use a keyword, all following arguments require the keyword. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaf45b0883a209eba6ac9248d107d91c63"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GetProperty </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a window property as a string, similar to an infolabel. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The property as strin (if present)</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive. Setting value to an empty string is equivalent to clearProperty(key).<br />
- You can use the above as keywords for arguments and skip certain optional arguments.<br />
- Once you use a keyword, all following arguments require the keyword. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga3d68ad750393fd5293be9d0650cd30a9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetPropertyInt </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets a window property with integer value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>integer value to set </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gad1ef604201c128051b6f953686e2e29d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GetPropertyInt </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a window property with integer value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>integer value of property </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga8f37733246a712df31946c12b40d7553"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetPropertyBool </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets a window property with boolean value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>boolean value to set </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga82ce76ad7f15260f9c7a8ef3e1cb36d8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool GetPropertyBool </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a window property with boolean value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>boolean value of property </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga363ee3e1bf219c8f824241f58aebe294"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetPropertyDouble </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets a window property with double value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>double value to set </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga5d5abed6f74c071fe20cb32c78ef2962"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double GetPropertyDouble </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a window property with double value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>double value of property </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gac08a48ef4dc5afe79c14ffbefdd96f5d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ClearProperties </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Remove all present properties from window. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga881f45cb47b4f775418e65dfc6c8b832"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ClearProperty </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>key</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Clears the specific window property. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive. Equivalent to SetProperty(key, "") You can use the above as keywords for arguments and skip certain optional arguments. Once you use a keyword, all following arguments require the keyword.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
-<div class="line"><a class="code" href="a00029.html#ga881f45cb47b4f775418e65dfc6c8b832">ClearProperty</a>(<span class="stringliteral">&#39;Category&#39;</span>)</div>
-<div class="line">..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga22199a49598ff7b9a2bd8eb0bc605aed"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CListItem* AddStringItem </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>itemPosition</em> = <code>-1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add a string named item to the integrated list. </p>
-<dl class="section note"><dt>Note</dt><dd>On delete of "CListItem" is item not removed from list on window.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Class need to be deleted after it is not used anymore</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name of the item to add </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">itemPosition</td><td>[opt] The position for item, default is on end </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga5ee402b42dd18e0f49f54ac6de83bd89"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AddItem </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00028.html#a00198">CListItem</a> *&#160;</td>
-          <td class="paramname"><em>item</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>itemPosition</em> = <code>-1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To add a list item in the on window integrated list. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">item</td><td>List item to add </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">itemPosition</td><td>[opt] The position for item, default is on end </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gac45d2066c403cf222cccc265371680b3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RemoveItem </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>itemPosition</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Remove list item on position. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">itemPosition</td><td>List position to remove </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gabee41b97eff7bd51a19e32f996b2a04a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RemoveItem </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00028.html#a00198">CListItem</a> *&#160;</td>
-          <td class="paramname"><em>item</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Remove item with given control class from list. </p>
-<dl class="section note"><dt>Note</dt><dd>Related control class is not deleted.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">item</td><td>List item control class to remove </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga557b0657ffc5f6f6ab991a242a42a833"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CListItem* GetListItem </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>listPos</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get list item control class on wanted position. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">listPos</td><td>Position from where control is needed </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The list item control class or null if not found</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Function returns a new generated <b><a class="el" href="a00028.html#a00198">CListItem</a></b> class, which to delete. Every call of this generare a new class! </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gabd56fda84238160597c9d9aa1ad09e29"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetCurrentListPosition </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>listPos</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set position of selected part in list. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">listPos</td><td>Position to use </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga84fd2786c494be3dd0f428acb43cfbed"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GetCurrentListPosition </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get current selected position in list. </p>
-<dl class="section return"><dt>Returns</dt><dd>Current list position </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga1f4581c0d5dec157ae050648b9980dda"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GetListSize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get the amount of entries in the list. </p>
-<dl class="section return"><dt>Returns</dt><dd>Size of in window integrated control class </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga2b85ec494201046fd7686395c996c272"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ClearList </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Function delete all entries in integrated list. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga60ef98c2dd24a36ab0748d21888f10b6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MarkDirtyRegion </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To inform Kodi that it need to render region new. </p>
+<p>To check progress was canceled on work. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if aborted </dd></dl>
 
 </div>
 </div>

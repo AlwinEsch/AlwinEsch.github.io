@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Dialog Extended Progress</title>
+<title>Kodi Development: Image Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,319 +92,79 @@ $(document).ready(function(){initNavTree('a00026.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Dialog Extended Progress<div class="ingroups"><a class="el" href="a00140.html">C++</a> &raquo; <a class="el" href="a00152.html">4. GUI</a></div></div>  </div>
+<div class="title">Image Control </div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Progress dialog shown for background work</b> </p>
-<p>The with <a class="el" href="a00067_source.html">#include &lt;kodi/api2/addon/DialogExtendedProgress.hpp&gt;</a> given class are basically used to create Kodi's extended progress.</p>
-<div class="image">
-<img src="help.GUIDialogExtendedProgress.png" alt="help.GUIDialogExtendedProgress.png"/>
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#Image_Control_sect1">Example</a></li>
+<li class="level1"><a href="#Image_Control_sect2">Image Size and Type Restrictions</a><ul><li class="level2"><a href="#Image_Control_sect2_1">Size</a></li>
+<li class="level2"><a href="#Image_Control_sect2_2">Formats</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#Image_Control_sect3">Available tags and attributes</a></li>
+<li class="level1"><a href="#Image_Control_sect4">See also</a></li>
+</ul>
 </div>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/DialogExtendedProgress.h&gt;</span></div>
-<div class="line"></div>
-<div class="line"><a class="code" href="a00026.html#a00194">KodiAPI::GUI::CDialogExtendedProgress</a> *ext_progress = <span class="keyword">new</span> <a class="code" href="a00026.html#a00194">KodiAPI::GUI::CDialogExtendedProgress</a>(<span class="stringliteral">&quot;Test Extended progress&quot;</span>);</div>
-<div class="line">ext_progress-&gt;<a class="code" href="a00026.html#gaec55d8bf3ca3e04261b66bee36f84368">SetText</a>(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 50; i += 10)</div>
-<div class="line">{</div>
-<div class="line">  ext_progress-&gt;<a class="code" href="a00026.html#gac64c8e121cf5e368cd335c28a0521922">SetProgress</a>(i, 100);</div>
-<div class="line">  sleep(1);</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line">ext_progress-&gt;<a class="code" href="a00026.html#gad8698c0477204fb8b81feb9d81cbe4fd">SetTitle</a>(<span class="stringliteral">&quot;Test Extended progress - Second round&quot;</span>);</div>
-<div class="line">ext_progress-&gt;<a class="code" href="a00026.html#gaec55d8bf3ca3e04261b66bee36f84368">SetText</a>(<span class="stringliteral">&quot;Test progress - Step 2&quot;</span>);</div>
-<div class="line"></div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 50; i &lt; 100; i += 10)</div>
-<div class="line">{</div>
-<div class="line">  ext_progress-&gt;<a class="code" href="a00026.html#gac64c8e121cf5e368cd335c28a0521922">SetProgress</a>(i, 100);</div>
-<div class="line">  sleep(1);</div>
-<div class="line">}</div>
-<div class="line"><span class="keyword">delete</span> ext_progress;</div>
-</div><!-- fragment --> <hr/><h2 class="groupheader">Class Documentation</h2>
-<a name="a00194" id="a00194"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">class KodiAPI::GUI::CDialogExtendedProgress</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
-<tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
-<tr class="memitem:ga598592cd22cbc89797f504ffd53f7a70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga598592cd22cbc89797f504ffd53f7a70">CDialogExtendedProgress</a> (const std::string &amp;title=&quot;&quot;)</td></tr>
-<tr class="separator:ga598592cd22cbc89797f504ffd53f7a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaabe45b4d47077b54df0bb809eb41b8d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#gaabe45b4d47077b54df0bb809eb41b8d5">IsFinished</a> () const </td></tr>
-<tr class="memdesc:gaabe45b4d47077b54df0bb809eb41b8d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">To ask dialog is finished.  <a href="a00026.html#gaabe45b4d47077b54df0bb809eb41b8d5">More...</a><br /></td></tr>
-<tr class="separator:gaabe45b4d47077b54df0bb809eb41b8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga40af1bcedea1f61fde8cd5e70e416473"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga40af1bcedea1f61fde8cd5e70e416473">MarkFinished</a> ()</td></tr>
-<tr class="memdesc:ga40af1bcedea1f61fde8cd5e70e416473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark progress finished.  <a href="a00026.html#ga40af1bcedea1f61fde8cd5e70e416473">More...</a><br /></td></tr>
-<tr class="separator:ga40af1bcedea1f61fde8cd5e70e416473"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3bf91c353218dceaa271b65321b2f5cf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga3bf91c353218dceaa271b65321b2f5cf">Percentage</a> () const </td></tr>
-<tr class="memdesc:ga3bf91c353218dceaa271b65321b2f5cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current progress position as percent.  <a href="a00026.html#ga3bf91c353218dceaa271b65321b2f5cf">More...</a><br /></td></tr>
-<tr class="separator:ga3bf91c353218dceaa271b65321b2f5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga74a9a823ab1cd34d62a219a842de5946"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga74a9a823ab1cd34d62a219a842de5946">SetPercentage</a> (float fPercentage)</td></tr>
-<tr class="memdesc:ga74a9a823ab1cd34d62a219a842de5946"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the current progress position as percent.  <a href="a00026.html#ga74a9a823ab1cd34d62a219a842de5946">More...</a><br /></td></tr>
-<tr class="separator:ga74a9a823ab1cd34d62a219a842de5946"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac64c8e121cf5e368cd335c28a0521922"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#gac64c8e121cf5e368cd335c28a0521922">SetProgress</a> (int currentItem, int itemCount)</td></tr>
-<tr class="memdesc:gac64c8e121cf5e368cd335c28a0521922"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set progress position with predefined places.  <a href="a00026.html#gac64c8e121cf5e368cd335c28a0521922">More...</a><br /></td></tr>
-<tr class="separator:gac64c8e121cf5e368cd335c28a0521922"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaec55d8bf3ca3e04261b66bee36f84368"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#gaec55d8bf3ca3e04261b66bee36f84368">SetText</a> (const std::string &amp;strText)</td></tr>
-<tr class="memdesc:gaec55d8bf3ca3e04261b66bee36f84368"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the used text information string.  <a href="a00026.html#gaec55d8bf3ca3e04261b66bee36f84368">More...</a><br /></td></tr>
-<tr class="separator:gaec55d8bf3ca3e04261b66bee36f84368"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad8698c0477204fb8b81feb9d81cbe4fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#gad8698c0477204fb8b81feb9d81cbe4fd">SetTitle</a> (const std::string &amp;strTitle)</td></tr>
-<tr class="memdesc:gad8698c0477204fb8b81feb9d81cbe4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the title of dialog.  <a href="a00026.html#gad8698c0477204fb8b81feb9d81cbe4fd">More...</a><br /></td></tr>
-<tr class="separator:gad8698c0477204fb8b81feb9d81cbe4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafdfa72709ffc1738c3c198f7ad8b61ec"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#gafdfa72709ffc1738c3c198f7ad8b61ec">Text</a> () const </td></tr>
-<tr class="memdesc:gafdfa72709ffc1738c3c198f7ad8b61ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the used text information string.  <a href="a00026.html#gafdfa72709ffc1738c3c198f7ad8b61ec">More...</a><br /></td></tr>
-<tr class="separator:gafdfa72709ffc1738c3c198f7ad8b61ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3cb91fb7750df7982baea48c4a3de616"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga3cb91fb7750df7982baea48c4a3de616">Title</a> () const </td></tr>
-<tr class="memdesc:ga3cb91fb7750df7982baea48c4a3de616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the used title.  <a href="a00026.html#ga3cb91fb7750df7982baea48c4a3de616">More...</a><br /></td></tr>
-<tr class="separator:ga3cb91fb7750df7982baea48c4a3de616"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga60f91cfdfb63c58d75ab7bb1d8076857"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga60f91cfdfb63c58d75ab7bb1d8076857">~CDialogExtendedProgress</a> ()</td></tr>
-<tr class="separator:ga60f91cfdfb63c58d75ab7bb1d8076857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<div class="textblock"><p><b>Used to show an image.</b></p>
+<p>The image control is used for displaying images in Kodi. You can choose the position, size, transparency and contents of the image to be displayed. </p><hr/>
+ <h1><a class="anchor" id="Image_Control_sect1"></a>
+Example</h1>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;image&quot; id=&quot;1&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first image control&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;colordiffuse&gt;FFFFFFFF&lt;/colordiffuse&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;fadetime&gt;200&lt;/fadetime&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      &lt;texture border=&quot;5&quot; flipy=&quot;true&quot; flipx=&quot;false&quot;&gt;mytexture.png&lt;/texture&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      &lt;bordertexture border=&quot;5&quot;&gt;mybordertexture.png&lt;/bordertexture&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      &lt;bordersize&gt;5&lt;/bordersize&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      &lt;texture&gt;$INFO[MusicPlayer.Cover]&lt;/texture&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      &lt;aspectratio&gt;keep&lt;/aspectratio&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --><hr/>
+ <h1><a class="anchor" id="Image_Control_sect2"></a>
+Image Size and Type Restrictions</h1>
+<p>For the <b><code>&lt;texture&gt;</code></b> tags, and for all <b><code>&lt;texture&gt;</code></b> tags in other controls, there is a small set of rules that you should follow if at all possible:</p>
+<h2><a class="anchor" id="Image_Control_sect2_1"></a>
+Size</h2>
+<p>Images can be any size, though some graphics cards allow only power of 2 textures, so this may be a consideration. For the most case, it doesn't really matter what size things are - Kodi will quite happily load most files.</p>
+<h2><a class="anchor" id="Image_Control_sect2_2"></a>
+Formats</h2>
+<p>If you wish to use transparency, then use PNG. It is suggested that you use PNG and JPG as much as possible. Note that once the images are injected into Textures.xbt, they are not stored as JPG or PNG – rather they are stored in a native format used for GPUs for faster loading, such as ARGB or DXTc textures. The size of the images (in kb) is therefore not as important as the size of the images in pixels – so feel free to store them in a lossless (eg PNG) manner if you wish.</p>
+<p>The only exception to this is if you require an animated texture. In this case, we support only animated GIF. There are also some animated gifs that may not work. Use ImageReady CS and make sure you set the gif-anim to “restore to background” and they should work fine. </p><hr/>
+ <h1><a class="anchor" id="Image_Control_sect3"></a>
+Available tags and attributes</h1>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
+<table class="doxtable">
+<tr>
+<th align="right">Tag </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">aspectratio </td><td align="left">This specifies how the image will be drawn inside the box defined by <b><code>&lt;width&gt;</code></b> and <b><code>&lt;height&gt;</code></b>. <a href="http://kodi.wiki/view/Aspect_Ratio">See here for more information</a>. </td></tr>
+<tr>
+<td align="right">texture </td><td align="left">Specifies the image file which should be displayed. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
+<tr>
+<td align="right">bordertexture </td><td align="left">Specifies the image file which should be displayed as a border around the image. Use the <b><code>&lt;bordersize&gt;</code></b> to specify the size of the border. The <b><code>&lt;width&gt;</code></b>, <b><code>&lt;height&gt;</code></b> box specifies the size of the image plus border. </td></tr>
+<tr>
+<td align="right">bordersize </td><td align="left">Specifies the size of the border. A single number specifies the border should be the same size all the way around the image, whereas a comma separated list of 4 values indicates left,top,right,bottom values. </td></tr>
+<tr>
+<td align="right">info </td><td align="left">Specifies the information that this image control is presenting. Kodi will select the texture to use based on this tag. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
+<tr>
+<td align="right">fadetime </td><td align="left">This specifies a crossfade time that will be used whenever the underlying <b><code>&lt;texture&gt;</code></b> filename changes. The previous image will be held until the new image is ready, and then they will be crossfaded. This is particularly useful for a large thumbnail image showing the focused item in a list, or for fanart or other large backdrops. </td></tr>
+<tr>
+<td align="right">background </td><td align="left">For images inside a container, you can specify background="true" to load the textures in a background worker thread. <a href="http://kodi.wiki/view/Background_Image_Loader">See here for additional information about background loading</a>. </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga598592cd22cbc89797f504ffd53f7a70"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CDialogExtendedProgress </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em> = <code>&quot;&quot;</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Construct a new dialog</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>Title string </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga60f91cfdfb63c58d75ab7bb1d8076857"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">~CDialogExtendedProgress </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Destructor </p>
-
-</div>
-</div>
-<a class="anchor" id="ga3cb91fb7750df7982baea48c4a3de616"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Title </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the used title. </p>
-<dl class="section return"><dt>Returns</dt><dd>Title string </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gad8698c0477204fb8b81feb9d81cbe4fd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetTitle </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strTitle</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the title of dialog. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strTitle</td><td>Title string </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gafdfa72709ffc1738c3c198f7ad8b61ec"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Text </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the used text information string. </p>
-<dl class="section return"><dt>Returns</dt><dd>Text string </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaec55d8bf3ca3e04261b66bee36f84368"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetText </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strText</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the used text information string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strText</td><td>information text to set </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gaabe45b4d47077b54df0bb809eb41b8d5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IsFinished </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To ask dialog is finished. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if on end </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga40af1bcedea1f61fde8cd5e70e416473"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MarkFinished </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Mark progress finished. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga3bf91c353218dceaa271b65321b2f5cf"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Percentage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the current progress position as percent. </p>
-<dl class="section return"><dt>Returns</dt><dd>Position </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga74a9a823ab1cd34d62a219a842de5946"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetPercentage </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>fPercentage</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the current progress position as percent. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">fPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gac64c8e121cf5e368cd335c28a0521922"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetProgress </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>currentItem</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>itemCount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set progress position with predefined places. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">currentItem</td><td>Place position to use </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">itemCount</td><td>Amount of used places </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-</div><!-- contents -->
+<hr/>
+ <h1><a class="anchor" id="Image_Control_sect4"></a>
+See also</h1>
+<h4>Development:</h4>
+<ul>
+<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
+<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -1,12 +1,8 @@
 var a00158 =
 [
-    [ "AddonGUIIconOverlay", "a00158.html#ga84c995b3a9c675a155ac04175b6f036e", [
-      [ "ADDON_ICON_OVERLAY_NONE", "a00158.html#gga84c995b3a9c675a155ac04175b6f036ea5aff12248265d41c7a3b844b3a266d89", null ],
-      [ "ADDON_ICON_OVERLAY_RAR", "a00158.html#gga84c995b3a9c675a155ac04175b6f036ea95fe6bd6d78702037977092efd6a3bae", null ],
-      [ "ADDON_ICON_OVERLAY_ZIP", "a00158.html#gga84c995b3a9c675a155ac04175b6f036ea985180b75a396e849147c4e152d95ab4", null ],
-      [ "ADDON_ICON_OVERLAY_LOCKED", "a00158.html#gga84c995b3a9c675a155ac04175b6f036eaaa8c59bf1846c970826022a96a1be181", null ],
-      [ "ADDON_ICON_OVERLAY_UNWATCHED", "a00158.html#gga84c995b3a9c675a155ac04175b6f036eaf533441634ed4ef43e368c7be8ba3982", null ],
-      [ "ADDON_ICON_OVERLAY_WATCHED", "a00158.html#gga84c995b3a9c675a155ac04175b6f036ea14f4cfc8a3f1f5f55f4d1bb8d81e33f2", null ],
-      [ "ADDON_ICON_OVERLAY_HD", "a00158.html#gga84c995b3a9c675a155ac04175b6f036eaaca8506291936db6653c9d0810a26828", null ]
-    ] ]
+    [ "OnInit", "a00158.html#ga7d98c001ac8d31e48df88346e28bae16", null ],
+    [ "OnFocus", "a00158.html#ga7f69d7353e186b8fe4a1560767721501", null ],
+    [ "OnClick", "a00158.html#gad741fef5d9a1d2bf07449694e9a9e602", null ],
+    [ "OnAction", "a00158.html#gad3fc2a106ba0143fa5d11d3df32d9c72", null ],
+    [ "SetIndependentCallbacks", "a00158.html#ga5daaf4cdd5942017aa0be44ec98a7f95", null ]
 ];

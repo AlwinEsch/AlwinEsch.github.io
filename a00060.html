@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: C++</title>
+<title>Kodi Development: Video Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,60 +91,42 @@ $(document).ready(function(){initNavTree('a00060.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">C++</div>  </div>
+<div class="title">Video Control </div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p> 
-      <h3><span  style="text-decoration: underline;"><span  style="font-style: italic;"><span
-               style="color: rgb(102, 102, 102);">C++ Binary Add-On Development</span></span></span></h3>
-        </p>
-<p><b><em>Primary add-on helper library with general functions</em></b></p>
-<div class="image">
-<img src="logo-cpp.png" alt="logo-cpp.png"/>
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#Video_Control_sect1">Example</a></li>
+<li class="level1"><a href="#Video_Control_sect2">Available tags</a></li>
+<li class="level1"><a href="#Video_Control_sect3">See also</a></li>
+</ul>
 </div>
+<div class="textblock"><p><b>Used to display the currently playing video whilst in the GUI.</b></p>
+<p>The videowindow control is used for displaying the currently playing video elsewhere in the Kodi GUI. You can choose the position, and size of the video displayed. Note that the control is only rendered if video is being played.</p>
 <hr/>
-<p><b>Code example:</b></p>
-<p>Below is a code example do show what must be done on add-on base function to become support for library:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/AddonLib.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line">ADDON_STATUS ADDON_Create(<span class="keywordtype">void</span>* hdl, <span class="keywordtype">void</span>* props)</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordflow">if</span> (!hdl || !props)</div>
-<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div>
-<div class="line"></div>
-<div class="line">  <span class="comment">// Enable access to all add-on to Kodi functions</span></div>
-<div class="line">  <span class="keywordflow">if</span> (<a class="code" href="a00061.html#ga54c2c0dd7a940c723a67a51ffe97025f">KodiAPI::InitLibAddon</a>(hdl) != <a class="code" href="a00062.html#gga3666c3045cdf054de90faaf6cc7d14e1ac4c2fbac1710ca3685a51f08475062e4">API_SUCCESS</a>)</div>
-<div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_PERMANENT_FAILURE;</div>
-<div class="line">  ...</div>
-<div class="line"></div>
-<div class="line">  <span class="comment">// Example lib call</span></div>
-<div class="line">  <a class="code" href="a00061.html#ga1b35d2c11c262cd3436768f6ed4c1f58">KodiAPI::Log</a>(LOG_INFO, <span class="stringliteral">&quot;My add-on creation done&quot;</span>);</div>
-<div class="line"></div>
-<div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">void</span> ADDON_Destroy()</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <a class="code" href="a00061.html#ga25c17863c83dcc5fedf5d3fdfaface0e">KodiAPI::Finalize</a>();</div>
-<div class="line">  ...</div>
-<div class="line">}</div>
-</div><!-- fragment --> <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00061"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00061.html">1. Basic functions</a></td></tr>
-<tr class="memdesc:a00061"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Addon basic library functions</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00063"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00063.html">2. AddOn</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00070"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00070.html">3. Audio Engine</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-</div><!-- contents -->
+ <h1><a class="anchor" id="Video_Control_sect1"></a>
+Example</h1>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;videowindow&quot; id=&quot;2&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first video control&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --><hr/>
+ <h1><a class="anchor" id="Video_Control_sect2"></a>
+Available tags</h1>
+<p>Only the <a href="http://kodi.wiki/view/Default_Control_Tags">default control</a> tags are applicable to this control.</p>
+<hr/>
+ <h1><a class="anchor" id="Video_Control_sect3"></a>
+See also</h1>
+<h4>Development:</h4>
+<ul>
+<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
+<li><a href="http://kodi.wiki/view/Skinning">Skinning</a>' </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

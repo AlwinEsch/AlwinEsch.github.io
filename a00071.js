@@ -1,8 +1,13 @@
 var a00071 =
 [
-    [ "AddDSPMenuHook", "a00071.html#gac50957717cca9c40e9bdd97a718ba0d7", null ],
-    [ "RemoveDSPMenuHook", "a00071.html#gafef53bc62464ad25d97faa2d19ce912e", null ],
-    [ "RegisterDSPMode", "a00071.html#gab56e9bd387990e317c034578a41e05ec", null ],
-    [ "UnregisterDSPMode", "a00071.html#ga53717f88a6a1ba1711e464c9f85f01a1", null ],
-    [ "GetCurrentSinkFormat", "a00071.html#ga7f796a096b74b433541c8bcc8a698fe3", null ]
+    [ "CVFSDirEntry", "a00071.html#ga52a9625fed293dafda5d51e531caa8f5", null ],
+    [ "CVFSDirEntry", "a00071.html#ga0d75ba3099e37c9a2b2b9b8b4e4fae6d", null ],
+    [ "Label", "a00071.html#gaacd1b40e1b2e44d82303388beb475e84", null ],
+    [ "Path", "a00071.html#ga666f6d222d6e40f592d7ec4c8c670263", null ],
+    [ "IsFolder", "a00071.html#gabfbbb37d69862b45d0f1079ab976fa37", null ],
+    [ "Size", "a00071.html#gac0ba4f4c78dcb35605e645ee75198b5a", null ],
+    [ "SetLabel", "a00071.html#gab825756e641ba839bfae908492165481", null ],
+    [ "SetPath", "a00071.html#ga4a03d7c94fa02df112558bc30818e413", null ],
+    [ "SetFolder", "a00071.html#gadc0bf158b1dc28eea1bc2e3a2c016982", null ],
+    [ "SetSize", "a00071.html#gaf2fb6ea3061355a5ed4b53ca45e712ac", null ]
 ];

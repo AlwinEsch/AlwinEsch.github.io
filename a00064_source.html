@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi4/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/gui/ControlSpin.hpp Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi4/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/gui/ControlRendering.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('a00064_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">ControlSpin.hpp</div>  </div>
+<div class="title">ControlRendering.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
@@ -116,143 +116,89 @@ $(document).ready(function(){initNavTree('a00064_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;NAMESPACE(<a class="code" href="a00138.html">V2</a>)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;NAMESPACE(<a class="code" href="a00141.html">V2</a>)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;namespace <a class="code" href="a00113.html">KodiAPI</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;namespace <a class="code" href="a00116.html">KodiAPI</a></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>GUI</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">class </span>CWindow;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="a00024.html#gaa4d6f1679508cd43d05a49afbb340856">   59</a></span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="a00024.html#gaa4d6f1679508cd43d05a49afbb340856">AddonGUISpinControlType</a></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  {</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856acfcb3ed0153f23488da1d6eeaff42600">   62</a></span>&#160;    <a class="code" href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856acfcb3ed0153f23488da1d6eeaff42600">ADDON_SPIN_CONTROL_TYPE_INT</a>    = 1,</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856ae233f8620001f7fafe35e57e367d1fcb">   64</a></span>&#160;    <a class="code" href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856ae233f8620001f7fafe35e57e367d1fcb">ADDON_SPIN_CONTROL_TYPE_FLOAT</a>  = 2,</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a">   66</a></span>&#160;    <a class="code" href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a">ADDON_SPIN_CONTROL_TYPE_TEXT</a>   = 3,</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109">   68</a></span>&#160;    <a class="code" href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109">ADDON_SPIN_CONTROL_TYPE_PAGE</a>   = 4</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  } <a class="code" href="a00024.html#gaa4d6f1679508cd43d05a49afbb340856">AddonGUISpinControlType</a>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="a00024.html">   72</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00024.html#a00192">CControlSpin</a></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span>    <a class="code" href="a00024.html#a00192">CControlSpin</a>(<a class="code" href="a00029.html#a00208">CWindow</a>* window, <span class="keywordtype">int</span> controlId);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> ~<a class="code" href="a00024.html#a00192">CControlSpin</a>();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetVisible(<span class="keywordtype">bool</span> visible);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetEnabled(<span class="keywordtype">bool</span> enabled);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetText(<span class="keyword">const</span> std::string&amp; text);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> Reset();</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetType(<a class="code" href="a00024.html#gaa4d6f1679508cd43d05a49afbb340856">AddonGUISpinControlType</a> type);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> AddLabel(<span class="keyword">const</span> std::string&amp; label, <span class="keyword">const</span> std::string&amp; value);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> AddLabel(<span class="keyword">const</span> std::string&amp; label, <span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetStringValue(<span class="keyword">const</span> std::string&amp; value);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment"></span>    std::string GetStringValue() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetIntRange(<span class="keywordtype">int</span> start, <span class="keywordtype">int</span> end);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetIntValue(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment"></span>    <span class="keywordtype">int</span> GetIntValue() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetFloatRange(<span class="keywordtype">float</span> start, <span class="keywordtype">float</span> end);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetFloatValue(<span class="keywordtype">float</span> value);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment"></span>    <span class="keywordtype">float</span> GetFloatValue() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetFloatInterval(<span class="keywordtype">float</span> interval);</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor">  #ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    IMPL_GUI_SPIN_CONTROL;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="preprocessor">  #endif</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  };</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;} <span class="comment">/* namespace GUI */</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;END_NAMESPACE()</div>
-<div class="ttc" id="a00024_html_ggaa4d6f1679508cd43d05a49afbb340856ae233f8620001f7fafe35e57e367d1fcb"><div class="ttname"><a href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856ae233f8620001f7fafe35e57e367d1fcb">KodiAPI::GUI::ADDON_SPIN_CONTROL_TYPE_FLOAT</a></div><div class="ttdoc">One spin step interpreted as floating point value. </div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:64</div></div>
-<div class="ttc" id="a00138_html"><div class="ttname"><a href="a00138.html">V2</a></div><div class="ttdef"><b>Definition:</b> modules_cpp.dox:1</div></div>
-<div class="ttc" id="a00029_html_a00208"><div class="ttname"><a href="a00029.html#a00208">KodiAPI::GUI::CWindow</a></div><div class="ttdef"><b>Definition:</b> Window.hpp:69</div></div>
-<div class="ttc" id="a00024_html_ggaa4d6f1679508cd43d05a49afbb340856acfcb3ed0153f23488da1d6eeaff42600"><div class="ttname"><a href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856acfcb3ed0153f23488da1d6eeaff42600">KodiAPI::GUI::ADDON_SPIN_CONTROL_TYPE_INT</a></div><div class="ttdoc">One spin step interpreted as integer. </div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:62</div></div>
-<div class="ttc" id="a00024_html_ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a"><div class="ttname"><a href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a">KodiAPI::GUI::ADDON_SPIN_CONTROL_TYPE_TEXT</a></div><div class="ttdoc">One spin step interpreted as text string. </div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:66</div></div>
-<div class="ttc" id="a00113_html"><div class="ttname"><a href="a00113.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
-<div class="ttc" id="a00024_html_a00192"><div class="ttname"><a href="a00024.html#a00192">KodiAPI::GUI::CControlSpin</a></div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:72</div></div>
-<div class="ttc" id="a00024_html_gaa4d6f1679508cd43d05a49afbb340856"><div class="ttname"><a href="a00024.html#gaa4d6f1679508cd43d05a49afbb340856">KodiAPI::GUI::AddonGUISpinControlType</a></div><div class="ttdeci">AddonGUISpinControlType</div><div class="ttdoc">The values here defines the used value format for steps on spin control. </div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:59</div></div>
-<div class="ttc" id="a00024_html_ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109"><div class="ttname"><a href="a00024.html#ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109">KodiAPI::GUI::ADDON_SPIN_CONTROL_TYPE_PAGE</a></div><div class="ttdoc">One spin step interpreted as a page change value. </div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:68</div></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="a00023.html">   61</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00023.html#a00192">CControlRendering</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span>    <a class="code" href="a00023.html#a00192">CControlRendering</a>(<a class="code" href="a00031.html#a00211">CWindow</a>* window, <span class="keywordtype">int</span> controlId);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> ~<a class="code" href="a00023.html#a00192">CControlRendering</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="a00023.html#ga12847d560dd43205d13b0963d9e395e1">  105</a></span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="a00023.html#ga12847d560dd43205d13b0963d9e395e1">Create</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, <span class="keywordtype">void</span>* device) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="a00023.html#ga0bc3f3606d9cf5304dac90cd7a619194">  117</a></span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00023.html#ga0bc3f3606d9cf5304dac90cd7a619194">Render</a>() { }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="a00023.html#gaf6f113a64b92a63894b285b4f2a2c3a5">  129</a></span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00023.html#gaf6f113a64b92a63894b285b4f2a2c3a5">Stop</a>() { }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="a00023.html#ga7cea65505e98c9989ab92a87b2f2e99b">  142</a></span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="a00023.html#ga7cea65505e98c9989ab92a87b2f2e99b">Dirty</a>() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> SetIndependentCallbacks(</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <a class="code" href="a00157.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a>             cbhdl,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordtype">bool</span>      (*CBCreate)(<a class="code" href="a00157.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                              <span class="keywordtype">int</span>       x,</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                              <span class="keywordtype">int</span>       y,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                              <span class="keywordtype">int</span>       w,</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                              <span class="keywordtype">int</span>       h,</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                              <span class="keywordtype">void</span>*     device),</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">void</span>      (*CBRender)(<a class="code" href="a00157.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl),</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">void</span>      (*CBStop)  (<a class="code" href="a00157.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl),</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">bool</span>      (*CBDirty) (<a class="code" href="a00157.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl));</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">  #ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    IMPL_GUI_RENDERING_CONTROL;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">  #endif</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  };</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;} <span class="comment">/* namespace GUI */</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;END_NAMESPACE()</div>
+<div class="ttc" id="a00023_html_gaf6f113a64b92a63894b285b4f2a2c3a5"><div class="ttname"><a href="a00023.html#gaf6f113a64b92a63894b285b4f2a2c3a5">KodiAPI::GUI::CControlRendering::Stop</a></div><div class="ttdeci">virtual void Stop()</div><div class="ttdoc">Call from Kodi to stop rendering process. </div><div class="ttdef"><b>Definition:</b> ControlRendering.hpp:129</div></div>
+<div class="ttc" id="a00031_html_a00211"><div class="ttname"><a href="a00031.html#a00211">KodiAPI::GUI::CWindow</a></div><div class="ttdef"><b>Definition:</b> Window.hpp:69</div></div>
+<div class="ttc" id="a00141_html"><div class="ttname"><a href="a00141.html">V2</a></div><div class="ttdef"><b>Definition:</b> modules_cpp.dox:1</div></div>
+<div class="ttc" id="a00023_html_ga12847d560dd43205d13b0963d9e395e1"><div class="ttname"><a href="a00023.html#ga12847d560dd43205d13b0963d9e395e1">KodiAPI::GUI::CControlRendering::Create</a></div><div class="ttdeci">virtual bool Create(int x, int y, int w, int h, void *device)</div><div class="ttdoc">To create rendering control on Add-on. </div><div class="ttdef"><b>Definition:</b> ControlRendering.hpp:105</div></div>
+<div class="ttc" id="a00023_html_a00192"><div class="ttname"><a href="a00023.html#a00192">KodiAPI::GUI::CControlRendering</a></div><div class="ttdef"><b>Definition:</b> ControlRendering.hpp:61</div></div>
+<div class="ttc" id="a00023_html_ga0bc3f3606d9cf5304dac90cd7a619194"><div class="ttname"><a href="a00023.html#ga0bc3f3606d9cf5304dac90cd7a619194">KodiAPI::GUI::CControlRendering::Render</a></div><div class="ttdeci">virtual void Render()</div><div class="ttdoc">Render process call from Kodi. </div><div class="ttdef"><b>Definition:</b> ControlRendering.hpp:117</div></div>
+<div class="ttc" id="a00157_html_ga3e3a75682bddc7d2ee995d4e7a37daec"><div class="ttname"><a href="a00157.html#ga3e3a75682bddc7d2ee995d4e7a37daec">KodiAPI::GUIHANDLE</a></div><div class="ttdeci">void * GUIHANDLE</div><div class="ttdoc">Handle to use as independent pointer for GUI. </div><div class="ttdef"><b>Definition:</b> definitions_gui.hpp:48</div></div>
+<div class="ttc" id="a00023_html_ga7cea65505e98c9989ab92a87b2f2e99b"><div class="ttname"><a href="a00023.html#ga7cea65505e98c9989ab92a87b2f2e99b">KodiAPI::GUI::CControlRendering::Dirty</a></div><div class="ttdeci">virtual bool Dirty()</div><div class="ttdoc">Call from Kodi where add-on becomes asked about dirty rendering region. </div><div class="ttdef"><b>Definition:</b> ControlRendering.hpp:142</div></div>
+<div class="ttc" id="a00116_html"><div class="ttname"><a href="a00116.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_fe48a8c06df720d1e409742da0bfab86.html">include</a></li><li class="navelem"><a class="el" href="dir_6fd4991246d3e16307e2cb5486d3a91b.html">kodi</a></li><li class="navelem"><a class="el" href="dir_dc10c354b824ab05712115248c317746.html">api2</a></li><li class="navelem"><a class="el" href="dir_e18eb4ca03d0ba1d1c483d5247c59660.html">gui</a></li><li class="navelem"><b>ControlSpin.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_fe48a8c06df720d1e409742da0bfab86.html">include</a></li><li class="navelem"><a class="el" href="dir_6fd4991246d3e16307e2cb5486d3a91b.html">kodi</a></li><li class="navelem"><a class="el" href="dir_dc10c354b824ab05712115248c317746.html">api2</a></li><li class="navelem"><a class="el" href="dir_e18eb4ca03d0ba1d1c483d5247c59660.html">gui</a></li><li class="navelem"><b>ControlRendering.hpp</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['window',['Window',['../a00029.html',1,'']]],
-  ['wakeonlan',['WakeOnLan',['../a00147.html#ga6cffcf06e3428295facca7094936f93d',1,'KodiAPI::AddOn::Network']]],
-  ['write',['Write',['../a00012.html#gac7025ec7df110a7a9691adb3f949f24f',1,'KodiAPI::AddOn::CVFSFile']]]
+  ['virtual_20file_20system',['Virtual file system',['../a00238.html',1,'']]],
+  ['video_20info_20tag_20_28class_20cinfotagvideo_29',['Video Info Tag (class CInfoTagVideo)',['../a00093.html',1,'']]],
+  ['video_20control',['Video Control',['../a00060.html',1,'skin_controls']]],
+  ['visualisation_20control',['Visualisation Control',['../a00062.html',1,'skin_controls']]]
 ];

@@ -1,12 +1,10 @@
 var a00038 =
 [
-    [ "stream_vector", "a00038.html#ga1ebf7c021d47165548ca6320162935bb", null ],
-    [ "CStreamProperties", "a00038.html#gadb5884513f2557e07249fab9f1cc447c", null ],
-    [ "~CStreamProperties", "a00038.html#ga6f0282c6d4010650f5ed1075bd19da84", null ],
-    [ "Clear", "a00038.html#ga666736fbd0ebb8dc7e6ff3392423d6c0", null ],
-    [ "GetStreamId", "a00038.html#ga80239fdfa9f1d2dfea3abb949bb84b94", null ],
-    [ "GetStreamById", "a00038.html#ga2e18a0bd69b52870b817c6c8bf0e0db6", null ],
-    [ "GetStreamData", "a00038.html#ga3687926c69b0a5d8a32a73b85ce892b4", null ],
-    [ "GetProperties", "a00038.html#ga4bb870e45a3ef7c81e92563b7a872618", null ],
-    [ "UpdateStreams", "a00038.html#ga8d64e3bab115fb9201d6f688ab350ce5", null ]
+    [ "CPVRStream", "a00038.html#gaf419611a13a1bca6fe60cd58cb8a952f", null ],
+    [ "CPVRStream", "a00038.html#gad8caf56bf234506f41c1fcc64a0d1ad7", null ],
+    [ "operator=", "a00038.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6", null ],
+    [ "operator==", "a00038.html#ga2e56127d518a6487ba46cfe720bb4904", null ],
+    [ "operator<", "a00038.html#ga8c39a1e5e76bc953c53019e4ef318216", null ],
+    [ "Clear", "a00038.html#gaa71d36872f416feaa853788a7a7a7ef8", null ],
+    [ "IsCleared", "a00038.html#ga324d4448e5c2dde1488e1a9b4d26c7ad", null ]
 ];

@@ -1,8 +1,8 @@
 var a00019 =
 [
-    [ "CControlProgress", "a00019.html#ga33e0980459ea8e489f13a882c73a7dde", null ],
-    [ "~CControlProgress", "a00019.html#gaa981b5bb0357bd7838daa15e7eeec0b1", null ],
+    [ "CControlImage", "a00019.html#gab915c5cf48004bbfcc702b3e449c5a0e", null ],
+    [ "~CControlImage", "a00019.html#gaa93f71361d6d2ce42f04a353b3ece66c", null ],
     [ "SetVisible", "a00019.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "SetPercentage", "a00019.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
-    [ "GetPercentage", "a00019.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ]
+    [ "SetFileName", "a00019.html#ga71ca22e2515e018fdfa6db78fbee75dd", null ],
+    [ "SetColorDiffuse", "a00019.html#ga5f4b9c8309a04af748764bc6dd4ef31c", null ]
 ];

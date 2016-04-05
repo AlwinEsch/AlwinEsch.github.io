@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Control Slider</title>
+<title>Kodi Development: Control Rendering</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,115 +91,72 @@ $(document).ready(function(){initNavTree('a00023.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Control Slider<div class="ingroups"><a class="el" href="a00140.html">C++</a> &raquo; <a class="el" href="a00152.html">4. GUI</a></div></div>  </div>
+<div class="title">Control Rendering<div class="ingroups"><a class="el" href="a00199.html">C++</a> &raquo; <a class="el" href="a00211.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Window control for moveable slider</b> </p>
-<p>The slider control is used for things where a sliding bar best represents the operation at hand (such as a volume control or seek control). You can choose the position, size, and look of the slider control.</p>
-<p>It has the header <a class="el" href="a00063_source.html">#include &lt;kodi/api2/gui/ControlSlider.hpp&gt;</a> be included to enjoy it.</p>
-<p>Here you find the needed skin part for a slider control</p>
+<p><b>Window control for rendering own parts</b> </p>
+<p>This rendering control is used when own parts are needed. You have the control over them to render direct OpenGL or DirectX content to the screen set by the size of them.</p>
+<p>Alternative can be the virtual functions from t his been ignored if the callbacks are defined by the <a class="el" href="a00023.html#CControlRendering_SetIndependentCallbacks">CControlRendering_SetIndependentCallbacks</a> function and class is used as single and not as a parent class.</p>
+<p>It has the header <a class="el" href="a00092_source.html">#include &lt;kodi/api2/gui/ControlRendering.hpp&gt;</a> be included to enjoy it.</p>
+<p>Here you find the needed skin part for a <a class="el" href="a00171.html">rendering control</a></p>
 <dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00226"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00226.html">Definitions, structures and enumerators</a></td></tr>
+<tr class="memdesc:a00226"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Library definition values</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <hr/><h2 class="groupheader">Class Documentation</h2>
-<a name="a00191" id="a00191"></a>
+<a name="a00248" id="a00248"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">class KodiAPI::GUI::CControlSlider</td>
+          <td class="memname">class KodiAPI::GUI::CControlRendering</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="textblock"></div><table class="memberdecls">
 <tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
-<tr class="memitem:ga7a6140b2be7d0db0080142d2e2b45258"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga7a6140b2be7d0db0080142d2e2b45258">CControlSlider</a> (<a class="el" href="a00029.html#a00208">CWindow</a> *window, int controlId)</td></tr>
-<tr class="memdesc:ga7a6140b2be7d0db0080142d2e2b45258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new control.  <a href="a00023.html#ga7a6140b2be7d0db0080142d2e2b45258">More...</a><br /></td></tr>
-<tr class="separator:ga7a6140b2be7d0db0080142d2e2b45258"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3d3e509d1084585df516d4da97dd0be3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga3d3e509d1084585df516d4da97dd0be3">GetDescription</a> () const </td></tr>
-<tr class="memdesc:ga3d3e509d1084585df516d4da97dd0be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">With GetDescription becomes a string value of position returned.  <a href="a00023.html#ga3d3e509d1084585df516d4da97dd0be3">More...</a><br /></td></tr>
-<tr class="separator:ga3d3e509d1084585df516d4da97dd0be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadd5b557122d90f9a891d6b981e3ac305"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#gadd5b557122d90f9a891d6b981e3ac305">GetFloatValue</a> () const </td></tr>
-<tr class="memdesc:gadd5b557122d90f9a891d6b981e3ac305"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the current position as float value.  <a href="a00023.html#gadd5b557122d90f9a891d6b981e3ac305">More...</a><br /></td></tr>
-<tr class="separator:gadd5b557122d90f9a891d6b981e3ac305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga026ef91588c09c091efb7c40bb73d4dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga026ef91588c09c091efb7c40bb73d4dc">GetIntValue</a> () const </td></tr>
-<tr class="memdesc:ga026ef91588c09c091efb7c40bb73d4dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get the current position as integer value.  <a href="a00023.html#ga026ef91588c09c091efb7c40bb73d4dc">More...</a><br /></td></tr>
-<tr class="separator:ga026ef91588c09c091efb7c40bb73d4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadbcb3c03a1a87a252f94e0274e1e75f8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#gadbcb3c03a1a87a252f94e0274e1e75f8">GetPercentage</a> () const </td></tr>
-<tr class="memdesc:gadbcb3c03a1a87a252f94e0274e1e75f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a float of the percent of the slider.  <a href="a00023.html#gadbcb3c03a1a87a252f94e0274e1e75f8">More...</a><br /></td></tr>
-<tr class="separator:gadbcb3c03a1a87a252f94e0274e1e75f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga372de693ad40b3f42839c8ec6ac845f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga372de693ad40b3f42839c8ec6ac845f4">Reset</a> ()</td></tr>
-<tr class="memdesc:ga372de693ad40b3f42839c8ec6ac845f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">To reset slider on defaults.  <a href="a00023.html#ga372de693ad40b3f42839c8ec6ac845f4">More...</a><br /></td></tr>
-<tr class="separator:ga372de693ad40b3f42839c8ec6ac845f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaac893222adeffdefc04d749648cce354"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#gaac893222adeffdefc04d749648cce354">SetEnabled</a> (bool enabled)</td></tr>
-<tr class="memdesc:gaac893222adeffdefc04d749648cce354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the control's enabled/disabled state.  <a href="a00023.html#gaac893222adeffdefc04d749648cce354">More...</a><br /></td></tr>
-<tr class="separator:gaac893222adeffdefc04d749648cce354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1642356ec708ec660d47175a676d2b59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga1642356ec708ec660d47175a676d2b59">SetFloatInterval</a> (float interval)</td></tr>
-<tr class="memdesc:ga1642356ec708ec660d47175a676d2b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the interval steps of slider, as default is it 0.1 If it becomes changed with this function will a step of the user with the value fixed here be executed.  <a href="a00023.html#ga1642356ec708ec660d47175a676d2b59">More...</a><br /></td></tr>
-<tr class="separator:ga1642356ec708ec660d47175a676d2b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf4c5b4468e16c51b0d9a163baa082acf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#gaf4c5b4468e16c51b0d9a163baa082acf">SetFloatRange</a> (float start, float end)</td></tr>
-<tr class="memdesc:gaf4c5b4468e16c51b0d9a163baa082acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the the range as float of slider, e.g. -25.0 is the slider start and e.g. +25.0 is the from here defined position where it reach the end.  <a href="a00023.html#gaf4c5b4468e16c51b0d9a163baa082acf">More...</a><br /></td></tr>
-<tr class="separator:gaf4c5b4468e16c51b0d9a163baa082acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab050b4b446dc107963b04486dcfbe03d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#gab050b4b446dc107963b04486dcfbe03d">SetFloatValue</a> (float value)</td></tr>
-<tr class="memdesc:gab050b4b446dc107963b04486dcfbe03d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the slider position with the given float value. The Range can be defined with a call from <a class="el" href="a00023.html#ga16ad72259d068519b0797117275651f1">SetIntRange</a> before, as default it is 0.0 to 1.0.  <a href="a00023.html#gab050b4b446dc107963b04486dcfbe03d">More...</a><br /></td></tr>
-<tr class="separator:gab050b4b446dc107963b04486dcfbe03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0efbfb870446e5cc7409f0550bf67196"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga0efbfb870446e5cc7409f0550bf67196">SetIntInterval</a> (int interval)</td></tr>
-<tr class="memdesc:ga0efbfb870446e5cc7409f0550bf67196"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the interval steps of slider, as default is it 1. If it becomes changed with this function will a step of the user with the value fixed here be executed.  <a href="a00023.html#ga0efbfb870446e5cc7409f0550bf67196">More...</a><br /></td></tr>
-<tr class="separator:ga0efbfb870446e5cc7409f0550bf67196"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga16ad72259d068519b0797117275651f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga16ad72259d068519b0797117275651f1">SetIntRange</a> (int start, int end)</td></tr>
-<tr class="memdesc:ga16ad72259d068519b0797117275651f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the the range as integer of slider, e.g. -10 is the slider start and e.g. +10 is the from here defined position where it reach the end.  <a href="a00023.html#ga16ad72259d068519b0797117275651f1">More...</a><br /></td></tr>
-<tr class="separator:ga16ad72259d068519b0797117275651f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bc4fce2dc8738a08b6a9458d66351a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#a1bc4fce2dc8738a08b6a9458d66351a1">SetIntValue</a> (int value)</td></tr>
-<tr class="memdesc:a1bc4fce2dc8738a08b6a9458d66351a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the slider position with the given integer value. The Range must be defined with a call from <a class="el" href="a00023.html#ga16ad72259d068519b0797117275651f1">SetIntRange</a> before.  <a href="#a1bc4fce2dc8738a08b6a9458d66351a1">More...</a><br /></td></tr>
-<tr class="separator:a1bc4fce2dc8738a08b6a9458d66351a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga123bcc2a09c1b721c04b4bc0dd32953d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga123bcc2a09c1b721c04b4bc0dd32953d">SetPercentage</a> (float percent)</td></tr>
-<tr class="memdesc:ga123bcc2a09c1b721c04b4bc0dd32953d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the percent of the slider.  <a href="a00023.html#ga123bcc2a09c1b721c04b4bc0dd32953d">More...</a><br /></td></tr>
-<tr class="separator:ga123bcc2a09c1b721c04b4bc0dd32953d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga71a209185b7a98adf0a310d2c44cdbe6">SetVisible</a> (bool visible)</td></tr>
-<tr class="memdesc:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control on window to visible.  <a href="a00023.html#ga71a209185b7a98adf0a310d2c44cdbe6">More...</a><br /></td></tr>
-<tr class="separator:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga40e1eb5993a4fb44d3a025a072073841"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga40e1eb5993a4fb44d3a025a072073841">~CControlSlider</a> ()</td></tr>
-<tr class="memdesc:ga40e1eb5993a4fb44d3a025a072073841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="a00023.html#ga40e1eb5993a4fb44d3a025a072073841">More...</a><br /></td></tr>
-<tr class="separator:ga40e1eb5993a4fb44d3a025a072073841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e729c9d7a09727b98b31269d21a022a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga6e729c9d7a09727b98b31269d21a022a">CControlRendering</a> (<a class="el" href="a00031.html#a00267">CWindow</a> *window, int controlId)</td></tr>
+<tr class="memdesc:ga6e729c9d7a09727b98b31269d21a022a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new control.  <a href="a00023.html#ga6e729c9d7a09727b98b31269d21a022a">More...</a><br /></td></tr>
+<tr class="separator:ga6e729c9d7a09727b98b31269d21a022a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12847d560dd43205d13b0963d9e395e1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga12847d560dd43205d13b0963d9e395e1">Create</a> (int x, int y, int w, int h, void *device)</td></tr>
+<tr class="memdesc:ga12847d560dd43205d13b0963d9e395e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To create rendering control on Add-on.  <a href="a00023.html#ga12847d560dd43205d13b0963d9e395e1">More...</a><br /></td></tr>
+<tr class="separator:ga12847d560dd43205d13b0963d9e395e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7cea65505e98c9989ab92a87b2f2e99b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga7cea65505e98c9989ab92a87b2f2e99b">Dirty</a> ()</td></tr>
+<tr class="memdesc:ga7cea65505e98c9989ab92a87b2f2e99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call from Kodi where add-on becomes asked about dirty rendering region.  <a href="a00023.html#ga7cea65505e98c9989ab92a87b2f2e99b">More...</a><br /></td></tr>
+<tr class="separator:ga7cea65505e98c9989ab92a87b2f2e99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0bc3f3606d9cf5304dac90cd7a619194"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga0bc3f3606d9cf5304dac90cd7a619194">Render</a> ()</td></tr>
+<tr class="memdesc:ga0bc3f3606d9cf5304dac90cd7a619194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render process call from Kodi.  <a href="a00023.html#ga0bc3f3606d9cf5304dac90cd7a619194">More...</a><br /></td></tr>
+<tr class="separator:ga0bc3f3606d9cf5304dac90cd7a619194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10abcb122b56e3f8a6069b888486d5db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga10abcb122b56e3f8a6069b888486d5db">SetIndependentCallbacks</a> (<a class="el" href="a00213.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, bool(*CBCreate)(<a class="el" href="a00213.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, intx, inty, intw, inth, void *device), void(*CBRender)(<a class="el" href="a00213.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl), void(*CBStop)(<a class="el" href="a00213.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl), bool(*CBDirty)(<a class="el" href="a00213.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl))</td></tr>
+<tr class="memdesc:ga10abcb122b56e3f8a6069b888486d5db"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the class is used independent (with "new CControlRendering") and not as parent (with "cCLASS_own : CControlRendering") from own must be the callback from Kodi to add-on overdriven with own functions!  <a href="a00023.html#ga10abcb122b56e3f8a6069b888486d5db">More...</a><br /></td></tr>
+<tr class="separator:ga10abcb122b56e3f8a6069b888486d5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6f113a64b92a63894b285b4f2a2c3a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#gaf6f113a64b92a63894b285b4f2a2c3a5">Stop</a> ()</td></tr>
+<tr class="memdesc:gaf6f113a64b92a63894b285b4f2a2c3a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call from Kodi to stop rendering process.  <a href="a00023.html#gaf6f113a64b92a63894b285b4f2a2c3a5">More...</a><br /></td></tr>
+<tr class="separator:gaf6f113a64b92a63894b285b4f2a2c3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga812abb51ba5159602f5b1a1833a642eb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00023.html#ga812abb51ba5159602f5b1a1833a642eb">~CControlRendering</a> ()</td></tr>
+<tr class="memdesc:ga812abb51ba5159602f5b1a1833a642eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="a00023.html#ga812abb51ba5159602f5b1a1833a642eb">More...</a><br /></td></tr>
+<tr class="separator:ga812abb51ba5159602f5b1a1833a642eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h4 class="groupheader">Member Function Documentation</h4>
-<a class="anchor" id="a1bc4fce2dc8738a08b6a9458d66351a1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetIntValue </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the slider position with the given integer value. The Range must be defined with a call from <a class="el" href="a00023.html#ga16ad72259d068519b0797117275651f1">SetIntRange</a> before. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Position in range to set with integer</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
-
-</div>
-</div>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga7a6140b2be7d0db0080142d2e2b45258"></a>
+<a class="anchor" id="ga6e729c9d7a09727b98b31269d21a022a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CControlSlider </td>
+          <td class="memname">CControlRendering </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00029.html#a00208">CWindow</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="a00031.html#a00267">CWindow</a> *&#160;</td>
           <td class="paramname"><em>window</em>, </td>
         </tr>
         <tr>
@@ -227,7 +184,7 @@ $(document).ready(function(){initNavTree('a00023.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ga40e1eb5993a4fb44d3a025a072073841"></a>
+<a class="anchor" id="ga812abb51ba5159602f5b1a1833a642eb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -235,7 +192,7 @@ $(document).ready(function(){initNavTree('a00023.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~CControlSlider </td>
+          <td class="memname">virtual ~CControlRendering </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -252,114 +209,184 @@ $(document).ready(function(){initNavTree('a00023.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ga71a209185b7a98adf0a310d2c44cdbe6"></a>
+<a class="anchor" id="ga12847d560dd43205d13b0963d9e395e1"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SetVisible </td>
+          <td class="memname">virtual bool Create </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>visible</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the control on window to visible. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">visible</td><td>If true visible, otherwise hidden </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gaac893222adeffdefc04d749648cce354"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void SetEnabled </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set's the control's enabled/disabled state. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">enabled</td><td>If true enabled, otherwise disabled </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga372de693ad40b3f42839c8ec6ac845f4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void Reset </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To reset slider on defaults. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga3d3e509d1084585df516d4da97dd0be3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">std::string GetDescription </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>With GetDescription becomes a string value of position returned. </p>
-<dl class="section return"><dt>Returns</dt><dd>Text string about current slider position</dd></dl>
-<p>The following are the text definition returned from this: </p><table class="doxtable">
-<tr>
-<th align="center">Value </th><th align="left">Without range selection </th><th align="left">With range selection  </th></tr>
-<tr>
-<td align="center">float </td><td align="left"><code>%2.2f</code> </td><td align="left"><code>[%2.2f, %2.2f]</code> </td></tr>
-<tr>
-<td align="center">integer </td><td align="left"><code>i</code> </td><td align="left"><code>[i, i]</code> </td></tr>
-<tr>
-<td align="center">percent </td><td align="left"><code>i%%</code> </td><td align="left"><code>[i%%, i%%]</code> </td></tr>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
 </table>
+</div><div class="memdoc">
+
+<p>To create rendering control on Add-on. </p>
+<p>Function creates the needed rendering control for Kodi which becomes handled and processed from Add-on</p>
+<dl class="section note"><dt>Note</dt><dd>This is callback function from Kodi to Add-on and not to use for calls from add-on to this function.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Horizontal position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Vertical position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>Width of control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Height of control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">device</td><td>The device to use. For OpenGL is empty on Direct X is the needed device send. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Add-on needs to return true if successed, otherwise false. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga16ad72259d068519b0797117275651f1"></a>
+<a class="anchor" id="ga0bc3f3606d9cf5304dac90cd7a619194"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Render process call from Kodi. </p>
+<dl class="section note"><dt>Note</dt><dd>This is callback function from Kodi to Add-on and not to use for calls from add-on to this function. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf6f113a64b92a63894b285b4f2a2c3a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Call from Kodi to stop rendering process. </p>
+<dl class="section note"><dt>Note</dt><dd>This is callback function from Kodi to Add-on and not to use for calls from add-on to this function. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7cea65505e98c9989ab92a87b2f2e99b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Dirty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Call from Kodi where add-on becomes asked about dirty rendering region. </p>
+<dl class="section note"><dt>Note</dt><dd>This is callback function from Kodi to Add-on and not to use for calls from add-on to this function. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga10abcb122b56e3f8a6069b888486d5db"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetIntRange </td>
+          <td class="memname">void SetIndependentCallbacks </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>start</em>, </td>
+          <td class="paramtype"><a class="el" href="a00213.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a>&#160;</td>
+          <td class="paramname"><em>cbhdl</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>end</em>&#160;</td>
+          <td class="paramtype">bool(*)(<a class="el" href="a00213.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, intx, inty, intw, inth, void *device)&#160;</td>
+          <td class="paramname"><em>CBCreate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00213.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBRender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(<a class="el" href="a00213.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBStop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(*)(<a class="el" href="a00213.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)&#160;</td>
+          <td class="paramname"><em>CBDirty</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -369,211 +396,8 @@ $(document).ready(function(){initNavTree('a00023.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>To set the the range as integer of slider, e.g. -10 is the slider start and e.g. +10 is the from here defined position where it reach the end. </p>
-<p>Ad default is the range from 0 to 100.</p>
-<p>The integer interval is as default 1 and can be changed with <a class="el" href="a00023.html#ga0efbfb870446e5cc7409f0550bf67196">SetIntInterval</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>Integer start value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>Integer end value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga026ef91588c09c091efb7c40bb73d4dc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int GetIntValue </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get the current position as integer value. </p>
-<dl class="section return"><dt>Returns</dt><dd>The position as integer</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga0efbfb870446e5cc7409f0550bf67196"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetIntInterval </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>interval</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the interval steps of slider, as default is it 1. If it becomes changed with this function will a step of the user with the value fixed here be executed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">interval</td><td>Intervall step to set.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga123bcc2a09c1b721c04b4bc0dd32953d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetPercentage </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>percent</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the percent of the slider. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>float - Percent value of slide</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gadbcb3c03a1a87a252f94e0274e1e75f8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float GetPercentage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a float of the percent of the slider. </p>
-<dl class="section return"><dt>Returns</dt><dd>float - Percent of slider</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaf4c5b4468e16c51b0d9a163baa082acf"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetFloatRange </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>start</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>end</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the the range as float of slider, e.g. -25.0 is the slider start and e.g. +25.0 is the from here defined position where it reach the end. </p>
-<p>As default is the range 0.0 to 1.0.</p>
-<p>The float interval is as default 0.1 and can be changed with <a class="el" href="a00023.html#ga1642356ec708ec660d47175a676d2b59">SetFloatInterval</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>Integer start value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>Integer end value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gab050b4b446dc107963b04486dcfbe03d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetFloatValue </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the slider position with the given float value. The Range can be defined with a call from <a class="el" href="a00023.html#ga16ad72259d068519b0797117275651f1">SetIntRange</a> before, as default it is 0.0 to 1.0. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Position in range to set with float</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gadd5b557122d90f9a891d6b981e3ac305"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float GetFloatValue </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get the current position as float value. </p>
-<dl class="section return"><dt>Returns</dt><dd>The position as float </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga1642356ec708ec660d47175a676d2b59"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetFloatInterval </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>interval</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the interval steps of slider, as default is it 0.1 If it becomes changed with this function will a step of the user with the value fixed here be executed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">interval</td><td>Intervall step to set.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Percent, floating point or integer are alone possible. Combining these different values can be not together and can, therefore, only one each can be used. </dd></dl>
+<p>If the class is used independent (with "new CControlRendering") and not as parent (with "cCLASS_own : CControlRendering") from own must be the callback from Kodi to add-on overdriven with own functions! </p>
+<p><a class="anchor" id="CControlRendering_SetIndependentCallbacks"></a></p>
 
 </div>
 </div>

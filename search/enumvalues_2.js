@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['playlist_5fmusic',['PlayList_Music',['../a00172.html#ggab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143',1,'KodiAPI']]],
-  ['playlist_5fpicture',['PlayList_Picture',['../a00172.html#ggab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab',1,'KodiAPI']]],
-  ['playlist_5fvideo',['PlayList_Video',['../a00172.html#ggab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b',1,'KodiAPI']]]
+  ['lang_5ffmt_5fenglish_5fname',['LANG_FMT_ENGLISH_NAME',['../a00069.html#ggad481b851c163786e65d41b9ab47ed14ea8e9dbb43889202ef570c318560f52635',1,'KodiAPI']]],
+  ['lang_5ffmt_5fiso_5f639_5f1',['LANG_FMT_ISO_639_1',['../a00069.html#ggad481b851c163786e65d41b9ab47ed14ea282b7d25014247cf5f26f5ee0fe6ea51',1,'KodiAPI']]],
+  ['lang_5ffmt_5fiso_5f639_5f2',['LANG_FMT_ISO_639_2',['../a00069.html#ggad481b851c163786e65d41b9ab47ed14ea93ccac5fa6affc3908cbd62584c2e92b',1,'KodiAPI']]]
 ];

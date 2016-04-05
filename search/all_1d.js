@@ -1,27 +1,7 @@
 var searchData=
 [
-  ['_7eccontrolbutton',['~CControlButton',['../a00014.html#ga47e8648c29559d376e795a784e1e1c06',1,'KodiAPI::GUI::CControlButton']]],
-  ['_7eccontroledit',['~CControlEdit',['../a00015.html#ga59af6e8d8815fa4fc493c6c7263ac869',1,'KodiAPI::GUI::CControlEdit']]],
-  ['_7eccontrolfadelabel',['~CControlFadeLabel',['../a00016.html#gadcc150f725189d7e4f903b153c6d7ca1',1,'KodiAPI::GUI::CControlFadeLabel']]],
-  ['_7eccontrolimage',['~CControlImage',['../a00017.html#gaa93f71361d6d2ce42f04a353b3ece66c',1,'KodiAPI::GUI::CControlImage']]],
-  ['_7eccontrollabel',['~CControlLabel',['../a00018.html#gae90723d21627aadd9c39acd2e0f0080b',1,'KodiAPI::GUI::CControlLabel']]],
-  ['_7eccontrolprogress',['~CControlProgress',['../a00019.html#gaa981b5bb0357bd7838daa15e7eeec0b1',1,'KodiAPI::GUI::CControlProgress']]],
-  ['_7eccontrolradiobutton',['~CControlRadioButton',['../a00020.html#adbc40c8965bd4c255719a7ff9e00ddaa',1,'KodiAPI::GUI::CControlRadioButton']]],
-  ['_7eccontrolrendering',['~CControlRendering',['../a00021.html#ga812abb51ba5159602f5b1a1833a642eb',1,'KodiAPI::GUI::CControlRendering']]],
-  ['_7eccontrolsettingsslider',['~CControlSettingsSlider',['../a00022.html#gad875821a386b63b80b7e98dd0a7b79f6',1,'KodiAPI::GUI::CControlSettingsSlider']]],
-  ['_7eccontrolslider',['~CControlSlider',['../a00023.html#ga40e1eb5993a4fb44d3a025a072073841',1,'KodiAPI::GUI::CControlSlider']]],
-  ['_7eccontrolspin',['~CControlSpin',['../a00024.html#ga713dd979c48e23ce766fd6a1f9c555b7',1,'KodiAPI::GUI::CControlSpin']]],
-  ['_7eccontroltextbox',['~CControlTextBox',['../a00025.html#ga63bb701dbad283f26754ca62085dec77',1,'KodiAPI::GUI::CControlTextBox']]],
-  ['_7ecdialogextendedprogress',['~CDialogExtendedProgress',['../a00026.html#ga60f91cfdfb63c58d75ab7bb1d8076857',1,'KodiAPI::GUI::CDialogExtendedProgress']]],
-  ['_7ecdialogprogress',['~CDialogProgress',['../a00027.html#gaf4ebae45c5583fbefea366318f13714e',1,'KodiAPI::GUI::CDialogProgress']]],
-  ['_7ecinfotagmusic',['~CInfoTagMusic',['../a00032.html#gad180a993dc6a48bceff78f6fb44a3489',1,'KodiAPI::Player::CInfoTagMusic']]],
-  ['_7ecinfotagvideo',['~CInfoTagVideo',['../a00033.html#ga6c66b02b0688fee2c4239eb52d10fafa',1,'KodiAPI::Player::CInfoTagVideo']]],
-  ['_7eclistitem',['~CListItem',['../a00028.html#ga44df492b0358d7f7d6d19bbd2d7f5864',1,'KodiAPI::GUI::CListItem']]],
-  ['_7ecplayer',['~CPlayer',['../a00034.html#gafb82a7ac17e591e601d649c199ec7f2f',1,'KodiAPI::Player::CPlayer']]],
-  ['_7ecplaylist',['~CPlayList',['../a00035.html#ga5c082b03678535fcbbd29c350faadbc7',1,'KodiAPI::Player::CPlayList']]],
-  ['_7ecsoundplay',['~CSoundPlay',['../a00010.html#ga55031a30fa0d46695ed16a869fff7dc4',1,'KodiAPI::AddOn::CSoundPlay']]],
-  ['_7ecstream',['~CStream',['../a00013.html#ga5ee123148c70a20a16976f4663f172c1',1,'KodiAPI::AudioEngine::CStream']]],
-  ['_7ecstreamproperties',['~CStreamProperties',['../a00037.html#ga6f0282c6d4010650f5ed1075bd19da84',1,'KodiAPI::PVR::CStreamProperties']]],
-  ['_7ecvfsfile',['~CVFSFile',['../a00012.html#ga22b091981da61c00e0e53ceb638cbf2e',1,'KodiAPI::AddOn::CVFSFile']]],
-  ['_7ecwindow',['~CWindow',['../a00029.html#a1c7a4d340096bba4de74ef7ca5324457',1,'KodiAPI::GUI::CWindow']]]
+  ['window',['Window',['../a00089.html',1,'']]],
+  ['wakeonlan',['WakeOnLan',['../a00237.html#ga6cffcf06e3428295facca7094936f93d',1,'KodiAPI::AddOn::Network']]],
+  ['wrap_20list_20container',['Wrap List Container',['../a00064.html',1,'skin_controls']]],
+  ['write',['Write',['../a00072.html#gac7025ec7df110a7a9691adb3f949f24f',1,'KodiAPI::AddOn::CVFSFile']]]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Member List</title>
+<title>Kodi Development: settings.xml</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('a00031.html','');});
+$(document).ready(function(){initNavTree('a00203.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -92,15 +92,120 @@ $(document).ready(function(){initNavTree('a00031.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">kodi_codec Member List</div>  </div>
+<div class="title">settings.xml<div class="ingroups"><a class="el" href="a00199.html">C++</a> &raquo; <a class="el" href="a00202.html">2. AddOn</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="a00031.html">kodi_codec</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00031.html#abb16fc135f202805c438614ff10cf11c">codec_id</a></td><td class="entry"><a class="el" href="a00031.html">kodi_codec</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="a00031.html#a74ecd8a982f71c56801ba227f4cd8d94">codec_type</a></td><td class="entry"><a class="el" href="a00031.html">kodi_codec</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p><b>Add-on settings.xml description</b> </p>
+<p><code>settings.xml</code> is a XML file that contains the current configuration for the addon and should be placed in the resources direcory. If your addon has configurable items that are set by the user, put them here. This file defines what the user sees when they click on Addon settings for your addon. You don't need to do any coding to utilise this functionality. The format for the settings file is relatively straightforward as can be seen in the following.</p><ul>
+<li><b>Example:</b></li>
+</ul>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;settings&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  &lt;category label=&quot;32100&quot;&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    &lt;setting id=&quot;scrolldelay&quot; type=&quot;slider&quot; label=&quot;32101&quot; option=&quot;int&quot; default=&quot;1&quot; range=&quot;0,10&quot; /&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    &lt;setting id=&quot;scrollmode&quot; type=&quot;enum&quot; label=&quot;32102&quot; lvalues=&quot;32401|32402&quot; default=&quot;0&quot; /&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    &lt;setting id=&quot;navtimeout&quot; type=&quot;slider&quot; label=&quot;32103&quot; option=&quot;int&quot; default=&quot;2&quot; range=&quot;1,10&quot; /&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    &lt;setting id=&quot;refreshrate&quot; type=&quot;slider&quot; label=&quot;32104&quot; option=&quot;int&quot; default=&quot;1&quot; range=&quot;1,20&quot; /&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    &lt;setting id=&quot;sep1&quot; type=&quot;sep&quot; /&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    &lt;setting id=&quot;usealternatecharset&quot; type=&quot;bool&quot; label=&quot;32105&quot; default=&quot;false&quot; /&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    &lt;setting id=&quot;charset&quot; enable=&quot;eq(-1,true)&quot; type=&quot;enum&quot; label=&quot;32106&quot; lvalues=&quot;32411|32412|32413|32414|32415|32416|32417&quot; default=&quot;0&quot; subsetting=&quot;true&quot;/&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    &lt;setting id=&quot;sep2&quot; type=&quot;sep&quot; /&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    &lt;setting id=&quot;useextraelements&quot; type=&quot;bool&quot; label=&quot;32107&quot; default=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  &lt;/category&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  &lt;category label=&quot;32200&quot;&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    &lt;setting label=&quot;32206&quot; type=&quot;lsep&quot; /&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    &lt;setting id=&quot;dimonvideoplayback&quot; type=&quot;bool&quot; label=&quot;32203&quot; default=&quot;false&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    &lt;setting id=&quot;dimonmusicplayback&quot; type=&quot;bool&quot; label=&quot;32204&quot; default=&quot;false&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    &lt;setting id=&quot;dimonscreensaver&quot; type=&quot;bool&quot; label=&quot;32201&quot; default=&quot;false&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    &lt;setting id=&quot;dimdelay&quot; type=&quot;slider&quot; label=&quot;32205&quot; default=&quot;0&quot; range=&quot;0,30&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    &lt;setting id=&quot;sep3&quot; type=&quot;sep&quot; /&gt;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    &lt;setting id=&quot;dimonshutdown&quot; type=&quot;bool&quot; label=&quot;32202&quot; default=&quot;false&quot; /&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  &lt;/category&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  &lt;category label=&quot;32300&quot;&gt;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    &lt;setting id=&quot;remotelcdproc&quot; type=&quot;bool&quot; label=&quot;32301&quot; default=&quot;false&quot; /&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    &lt;setting id=&quot;hostip&quot; enable=&quot;eq(-1,true)&quot; type=&quot;ipaddress&quot; label=&quot;32302&quot; default=&quot;127.0.0.1&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    &lt;setting id=&quot;hostport&quot; enable=&quot;eq(-2,true)&quot; type=&quot;number&quot; label=&quot;32303&quot; default=&quot;13666&quot; subsetting=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    &lt;setting id=&quot;sep4&quot; type=&quot;sep&quot; /&gt;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    &lt;setting id=&quot;heartbeat&quot; type=&quot;bool&quot; label=&quot;32304&quot; default=&quot;false&quot; /&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    &lt;setting id=&quot;sep5&quot; type=&quot;sep&quot; /&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    &lt;setting id=&quot;hideconnpopups&quot; type=&quot;bool&quot; label=&quot;32305&quot; default=&quot;true&quot; /&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  &lt;/category&gt;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;&lt;/settings&gt;</div>
+</div><!-- fragment --><p>Settings can have additional attributes:</p>
+<p> 
+<table border="1">
+  <tr>
+    <th>Type</th>                         <th>Description</th>
+  </tr>
+  <tr>
+    <td><b>source=""</b></td>             <td>
+<b>video</b>, <b>music</b>, <b>pictures</b>, <b>programs</b>, <b>files</b>, <b>local</b> or <b>blank</b>.<br>
+If source is blank it will use the type for shares if it is a valid share if not a valid<br>
+share it will use, both local and network drives.<br></td>
+  </tr>
+  <tr>
+    <td><b>visible=""</b></td>            <td><b>true</b>, <b>false</b> or <b>conditional</b>.<br>
+Determines if the setting is displayed in the settings dialog (default = 'true')"<br>
+<br>
+You can also use a conditional statement:<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>visible="System.HasAddon(plugin.video.youtube)"</tt></em></b><br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>visible="eq(-2,true)"</tt></em></b> ( same syntax like for enable="" )<br>
+<br>
+</td>
+  </tr>
+  <tr>
+    <td><b>enable=""</b></td>             <td>
+Allows you to determine whether this setting should be shown based on the value of<br>
+another setting.<br>
+3 comparators are available:<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>eq()</tt></em></b> Equal to<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>gt()</tt></em></b> Greater than<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>lt()</tt></em></b> Less than<br>
+<br>
+You can AND the comparators using the + symbol and negate it using the ! symbol<br>
+ (e.g. !eq()). Each comparator takes 2 operands:<br>
+Relative position of setting to compare<br>
+Value to compare against<br>
+Thus if we place settings in our file in this order:<br>
+&nbsp; &nbsp; &nbsp;- myFirst setting<br>
+&nbsp; &nbsp; &nbsp;- mySecondSetting<br>
+&nbsp; &nbsp; &nbsp;- myThirdSetting<br>
+<br>
+for the third setting we might add the option:<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>enable="gt(-2,3) + lt(-2,10)"</tt></em></b><br>
+<br>
+You can also use a conditional statement:<br>
+&nbsp; &nbsp; &nbsp;- <b><em><tt>enable="System.HasAddon(plugin.video.youtube)"</tt></em></b><br>
+<br>
+</td>
+  </tr>
+  <tr>
+    <td><b>subsetting="true"</b></td>     <td>Add dash in front of option<br><br></td>
+  </tr>
+</table>
+<br>
+</p>
+<p><b><em>Void type examples for add-on</em></b> <code>./resources/settings.xml</code></p><ul>
+<li>Line separators add a horizontal separating line between other element. They are purely user-interface elements that do not allow user input and therefore have no meaningful value as a setting.</li>
+<li><code>lsep</code><ul>
+<li>Shows a horizontal line with a text. <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting label=&quot;32024&quot; type=&quot;lsep&quot;/&gt;</div>
+</div><!-- fragment --></li>
+<li><b><em>label="id"</em></b> (required) - an id from the language file that indicates which text to display.</li>
+</ul>
+</li>
+<li><code>sep</code><ul>
+<li>Shows a horizontal line. <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting type=&quot;sep&quot;/&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;setting id=&quot;sep1&quot; type=&quot;sep&quot; /&gt;</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+<li><code>action</code><ul>
+<li>Adds line to configuration windows which allow to execute action <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;setting label=&quot;32002&quot; type=&quot;action&quot; id=&quot;backend&quot; action=&quot;XBMC.NotifyAll(service.xbmc.tts,SETTINGS.BACKEND_DIALOG)&quot;/&gt;</div>
+</div><!-- fragment --> </li>
+</ul>
+</li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

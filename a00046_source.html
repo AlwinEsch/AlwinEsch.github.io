@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi4/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/addon/Network.hpp Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi4/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/audioengine/General.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,12 +92,12 @@ $(document).ready(function(){initNavTree('a00046_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Network.hpp</div>  </div>
+<div class="title">General.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015 Team KODI</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2005-2014 Team KODI</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
@@ -116,57 +116,63 @@ $(document).ready(function(){initNavTree('a00046_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;../definitions.hpp&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;../.internal/AddonLib_internal.hpp&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;../definitions.hpp&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;../.internal/AddonLib_internal.hpp&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;NAMESPACE(<a class="code" href="a00141.html">V2</a>)</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;NAMESPACE(<a class="code" href="a00138.html">V2</a>)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;namespace <a class="code" href="a00113.html">KodiAPI</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;namespace <a class="code" href="a00116.html">KodiAPI</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>AudioEngine</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>AddOn</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>  <span class="keyword">namespace </span>Network</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">namespace </span>General</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="a00147.html#ga6cffcf06e3428295facca7094936f93d">WakeOnLan</a>(<span class="keyword">const</span> std::string&amp; mac);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span>    std::string <a class="code" href="a00147.html#ga25c4bfd2da6ba218027f096807a09fe7">GetIPAddress</a>();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"></span>    std::string <a class="code" href="a00147.html#gaab8bb8bdf47d013523678277ac3642d0">URLEncode</a>(<span class="keyword">const</span> std::string&amp; url);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="a00147.html#gab932829498dcaab549489ac50af368eb">DNSLookup</a>(<span class="keyword">const</span> std::string&amp; strHostName, std::string&amp; strIpAddress);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  }; <span class="comment">/* namespace Network */</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;} <span class="comment">/* namespace AddOn */</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;END_NAMESPACE()</div>
-<div class="ttc" id="a00147_html_gab932829498dcaab549489ac50af368eb"><div class="ttname"><a href="a00147.html#gab932829498dcaab549489ac50af368eb">KodiAPI::AddOn::Network::DNSLookup</a></div><div class="ttdeci">bool DNSLookup(const std::string &amp;strHostName, std::string &amp;strIpAddress)</div><div class="ttdoc">Lookup URL in DNS cache. </div></div>
-<div class="ttc" id="a00138_html"><div class="ttname"><a href="a00138.html">V2</a></div><div class="ttdef"><b>Definition:</b> modules_cpp.dox:1</div></div>
-<div class="ttc" id="a00147_html_gaab8bb8bdf47d013523678277ac3642d0"><div class="ttname"><a href="a00147.html#gaab8bb8bdf47d013523678277ac3642d0">KodiAPI::AddOn::Network::URLEncode</a></div><div class="ttdeci">std::string URLEncode(const std::string &amp;url)</div><div class="ttdoc">URL encodes the given string. </div></div>
-<div class="ttc" id="a00147_html_ga25c4bfd2da6ba218027f096807a09fe7"><div class="ttname"><a href="a00147.html#ga25c4bfd2da6ba218027f096807a09fe7">KodiAPI::AddOn::Network::GetIPAddress</a></div><div class="ttdeci">std::string GetIPAddress()</div><div class="ttdoc">To the current own ip address as a string. </div></div>
-<div class="ttc" id="a00113_html"><div class="ttname"><a href="a00113.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
-<div class="ttc" id="a00147_html_ga6cffcf06e3428295facca7094936f93d"><div class="ttname"><a href="a00147.html#ga6cffcf06e3428295facca7094936f93d">KodiAPI::AddOn::Network::WakeOnLan</a></div><div class="ttdeci">bool WakeOnLan(const std::string &amp;mac)</div><div class="ttdoc">Send WakeOnLan magic packet. </div></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00154.html#gac50957717cca9c40e9bdd97a718ba0d7">AddDSPMenuHook</a>(AE_DSP_MENUHOOK* hook);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00154.html#gafef53bc62464ad25d97faa2d19ce912e">RemoveDSPMenuHook</a>(AE_DSP_MENUHOOK* hook);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00154.html#gab56e9bd387990e317c034578a41e05ec">RegisterDSPMode</a>(AE_DSP_MODES::AE_DSP_MODE* mode);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00154.html#ga53717f88a6a1ba1711e464c9f85f01a1">UnregisterDSPMode</a>(AE_DSP_MODES::AE_DSP_MODE* mode);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="a00154.html#ga7f796a096b74b433541c8bcc8a698fe3">GetCurrentSinkFormat</a>(<a class="code" href="a00010.html#a00184">AudioEngineFormat</a> &amp;sinkFormat);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  };</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}; <span class="comment">/* namespace AudioEngine */</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}; <span class="comment">/* namespace KodiAPI */</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;END_NAMESPACE()</div>
+<div class="ttc" id="a00154_html_gafef53bc62464ad25d97faa2d19ce912e"><div class="ttname"><a href="a00154.html#gafef53bc62464ad25d97faa2d19ce912e">KodiAPI::AudioEngine::General::RemoveDSPMenuHook</a></div><div class="ttdeci">void RemoveDSPMenuHook(AE_DSP_MENUHOOK *hook)</div><div class="ttdoc">Remove a menu hook for the context menu for this add-on. </div></div>
+<div class="ttc" id="a00154_html_ga53717f88a6a1ba1711e464c9f85f01a1"><div class="ttname"><a href="a00154.html#ga53717f88a6a1ba1711e464c9f85f01a1">KodiAPI::AudioEngine::General::UnregisterDSPMode</a></div><div class="ttdeci">void UnregisterDSPMode(AE_DSP_MODES::AE_DSP_MODE *mode)</div><div class="ttdoc">Remove a mode from audio dsp database. </div></div>
+<div class="ttc" id="a00141_html"><div class="ttname"><a href="a00141.html">V2</a></div><div class="ttdef"><b>Definition:</b> modules_cpp.dox:1</div></div>
+<div class="ttc" id="a00154_html_ga7f796a096b74b433541c8bcc8a698fe3"><div class="ttname"><a href="a00154.html#ga7f796a096b74b433541c8bcc8a698fe3">KodiAPI::AudioEngine::General::GetCurrentSinkFormat</a></div><div class="ttdeci">bool GetCurrentSinkFormat(AudioEngineFormat &amp;sinkFormat)</div><div class="ttdoc">Get the current sink data format. </div></div>
+<div class="ttc" id="a00010_html_a00184"><div class="ttname"><a href="a00010.html#a00184">AudioEngineFormat</a></div><div class="ttdoc">The audio format structure that fully defines a stream&#39;s audio information. </div><div class="ttdef"><b>Definition:</b> definitions_audioengine.hpp:60</div></div>
+<div class="ttc" id="a00154_html_gac50957717cca9c40e9bdd97a718ba0d7"><div class="ttname"><a href="a00154.html#gac50957717cca9c40e9bdd97a718ba0d7">KodiAPI::AudioEngine::General::AddDSPMenuHook</a></div><div class="ttdeci">void AddDSPMenuHook(AE_DSP_MENUHOOK *hook)</div><div class="ttdoc">Add or replace a menu hook for the context menu for this add-on. </div></div>
+<div class="ttc" id="a00116_html"><div class="ttname"><a href="a00116.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
+<div class="ttc" id="a00154_html_gab56e9bd387990e317c034578a41e05ec"><div class="ttname"><a href="a00154.html#gab56e9bd387990e317c034578a41e05ec">KodiAPI::AudioEngine::General::RegisterDSPMode</a></div><div class="ttdeci">void RegisterDSPMode(AE_DSP_MODES::AE_DSP_MODE *mode)</div><div class="ttdoc">Add or replace mode information inside audio dsp database. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_fe48a8c06df720d1e409742da0bfab86.html">include</a></li><li class="navelem"><a class="el" href="dir_6fd4991246d3e16307e2cb5486d3a91b.html">kodi</a></li><li class="navelem"><a class="el" href="dir_dc10c354b824ab05712115248c317746.html">api2</a></li><li class="navelem"><a class="el" href="dir_299e5af9df84dd7aadd74f3e93fac57b.html">addon</a></li><li class="navelem"><b>Network.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_fe48a8c06df720d1e409742da0bfab86.html">include</a></li><li class="navelem"><a class="el" href="dir_6fd4991246d3e16307e2cb5486d3a91b.html">kodi</a></li><li class="navelem"><a class="el" href="dir_dc10c354b824ab05712115248c317746.html">api2</a></li><li class="navelem"><a class="el" href="dir_4bae55acecdcf2187f12067100a2796d.html">audioengine</a></li><li class="navelem"><b>General.hpp</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

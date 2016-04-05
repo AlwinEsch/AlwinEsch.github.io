@@ -1,13 +1,7 @@
 var a00171 =
 [
-    [ "OnPlayBackStarted", "a00171.html#ga670b9e7947764d4d474b7f8cd21c1611", null ],
-    [ "OnPlayBackEnded", "a00171.html#ga9b673b89fb0c2d810637d97a6144743d", null ],
-    [ "OnPlayBackStopped", "a00171.html#ga5df8f6dd6cf9fb162d1d4d77da58eb2d", null ],
-    [ "OnPlayBackPaused", "a00171.html#ga535ea86e9170c85e4dfc8b2292466041", null ],
-    [ "OnPlayBackResumed", "a00171.html#ga78de3c74ca811508e2c83bad612af8a0", null ],
-    [ "OnQueueNextItem", "a00171.html#ga817b2d696d11b166143be2c391a972f9", null ],
-    [ "OnPlayBackSpeedChanged", "a00171.html#ga50564fc4dcbcefda185943d3b14e0882", null ],
-    [ "OnPlayBackSeek", "a00171.html#ga4eb5b9aa6732c7712848b7f372d50232", null ],
-    [ "OnPlayBackSeekChapter", "a00171.html#ga5d83d8af0f34044f1613abfb02bbe624", null ],
-    [ "SetIndependentCallbacks", "a00171.html#gaa8d87ba3157eed260e7334c1b3d96657", null ]
+    [ "Codec Descriptor (class CodecDescriptor)", "a00032.html", "a00032" ],
+    [ "GetCodecByName", "a00171.html#gab8d4d7010febbe7e81fc55d2fc7b8614", null ],
+    [ "AllocateDemuxPacket", "a00171.html#gaa73596c7986592032d59da8ad3cfca28", null ],
+    [ "FreeDemuxPacket", "a00171.html#gab5b9e9262b558cfa9f18acf307eec959", null ]
 ];

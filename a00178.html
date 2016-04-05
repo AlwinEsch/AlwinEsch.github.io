@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Trigger</title>
+<title>Kodi Development: Group Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,131 +92,74 @@ $(document).ready(function(){initNavTree('a00178.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Trigger<div class="ingroups"><a class="el" href="a00140.html">C++</a> &raquo; <a class="el" href="a00174.html">8. PVR</a></div></div>  </div>
+<div class="title">Group Control<div class="ingroups"><a class="el" href="a00173.html">Controls</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Funtions to trigger PVR related updates on Kodi</b> </p>
-<p>Call of function in this class informs Kodi to do a update of related parts.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00090_source.html">#include &lt;kodi/api2/pvr/Trigger.hpp&gt;</a> be included to enjoy it </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga4586d22121490cf3bcc088ab51b244a1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void KodiAPI::PVR::Trigger::TimerUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Request Kodi to update it's list of timers. </p>
+<p><b>Used to group controls together.</b> </p>
+<p>The group control is one of the most important controls. It allows you to group controls together, applying attributes to all of them at once. It also remembers the last navigated button in the group, so you can set the <b><code>&lt;onup&gt;</code></b> of a control to a group of controls to have it always go back to the one you were at before. It also allows you to position controls more accurately relative to each other, as any controls within a group take their coordinates from the group's top left corner (or from elsewhere if you use the "r" attribute). You can have as many groups as you like within the skin, and groups within groups are handled with no issues.</p>
 <hr/>
-<p><b>Code Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/pvr/Trigger.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">KodiAPI::PVR::Trigger::TimerUpdate();</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga0d9cd5c5f01b0106862f48a21b0c42d6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void KodiAPI::PVR::Trigger::RecordingUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Request Kodi to update it's list of recordings. </p>
+ <h1><a class="anchor" id="Group_Control_sect1"></a>
+Example</h1>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;group&quot; id=&quot;17&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first group control&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;30&lt;/height&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;defaultcontrol&gt;2&lt;/defaultcontrol&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;onup&gt;2&lt;/onup&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      &lt;ondown&gt;3&lt;/ondown&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      &lt;onleft&gt;1&lt;/onleft&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      &lt;onright&gt;1&lt;/onright&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      ... more controls go here ...</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --><hr/>
+ <h1><a class="anchor" id="Group_Control_sect2"></a>
+Available tags</h1>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
+<table class="doxtable">
+<tr>
+<th align="right">Tag </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">defaultcontrol </td><td align="left">Specifies the default control that will be focused within the group when the group receives focus. Note that the group remembers it's previously focused item and will return to it. </td></tr>
+</table>
 <hr/>
-<p><b>Code Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/pvr/Trigger.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">KodiAPI::PVR::Trigger::RecordingUpdate();</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga482cfad54b46dd910487cbaf9bd49836"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void KodiAPI::PVR::Trigger::ChannelUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Request Kodi to update it's list of channels. </p>
+ <h1><a class="anchor" id="Group_Control_sect3"></a>
+Notes on positioning of controls within groups</h1>
+<p>All controls within a group take their positions relative to the group's placement. Thus, the group always requires its <b><code>&lt;posx&gt;</code></b>, <b><code>&lt;posy&gt;</code></b>, <b><code>&lt;width&gt;</code></b>, and <b><code>&lt;height&gt;</code></b> attributes to be defined. As this can be a pain to remember, anything that you don't specify will be inherited from it's parent group (or the main window).</p>
+<p>By way of example, consider the first group within a PAL full screen window (720x576), and suppose we have</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;group&quot; id=&quot;15&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;posx&gt;30&lt;/posx&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  &lt;posy&gt;70&lt;/posy&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  &lt;width&gt;400&lt;/width&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  ... more controls go here ...</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --><p>so that the <b><code>&lt;height&gt;</code></b> hasn't been defined. Then Kodi will automatically set the <b><code>&lt;height&gt;</code></b> equal to 506 by inheriting this from the window's height of 576, less the <b><code>&lt;posy&gt;</code></b> amount.</p>
+<p>You can align controls within a group to the right edge of the group, by using the <b>"r"</b> modifier to the <b><code>&lt;posx&gt;</code></b> and <b><code>&lt;posy&gt;</code></b> fields</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;group&quot; id=&quot;20&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;control type=&quot;button&quot; id=2&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    &lt;posx&gt;180r&lt;/posx&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    &lt;width&gt;180&lt;/width&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  &lt;/control&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  &lt;control type=&quot;button&quot; id=3&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    &lt;posx&gt;180r&lt;/posx&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    &lt;width&gt;180&lt;/width&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  &lt;/control&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  &lt;control type=&quot;button&quot; id=4&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    &lt;posx&gt;180r&lt;/posx&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    &lt;width&gt;180&lt;/width&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  &lt;/control&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --><p>All the buttons have width 180, and are aligned 180 pixels from the right edge of the group they're within.</p>
 <hr/>
-<p><b>Code Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/pvr/Trigger.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">KodiAPI::PVR::Trigger::ChannelUpdate();</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga857ef60425bf31af3cf7b8b27252f6ce"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void KodiAPI::PVR::Trigger::ChannelGroupsUpdate </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Request Kodi to update it's list of channel groups. </p>
-<hr/>
-<p><b>Code Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/pvr/Trigger.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line">KodiAPI::PVR::Trigger::ChannelGroupsUpdate();</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gae14a095cd9a780ae9096340d9c78223f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void KodiAPI::PVR::Trigger::EpgUpdate </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iChannelUid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Schedule an EPG update for the given channel channel. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iChannelUid</td><td>The unique id of the channel for this add-on </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
+ <h1><a class="anchor" id="Group_Control_sect4"></a>
+See also</h1>
+<h4>Development:</h4>
+<ul>
+<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
+<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

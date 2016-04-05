@@ -1,10 +1,11 @@
 var a00016 =
 [
-    [ "CControlFadeLabel", "a00016.html#ga90b3c88c8f974d59928e67fa9751b69b", null ],
-    [ "~CControlFadeLabel", "a00016.html#gadcc150f725189d7e4f903b153c6d7ca1", null ],
+    [ "CControlButton", "a00016.html#gab03f705293188d855c45952d42e2ac9c", null ],
+    [ "~CControlButton", "a00016.html#ga47e8648c29559d376e795a784e1e1c06", null ],
     [ "SetVisible", "a00016.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "AddLabel", "a00016.html#ga47cfd2f63ce533672996085727a5fdd4", null ],
+    [ "SetEnabled", "a00016.html#gaac893222adeffdefc04d749648cce354", null ],
+    [ "SetLabel", "a00016.html#ga0468217482f9a171183b1cda613417e6", null ],
     [ "GetLabel", "a00016.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "SetScrolling", "a00016.html#ga02685eb001d24047fce8ed6d4899e9af", null ],
-    [ "Reset", "a00016.html#ga372de693ad40b3f42839c8ec6ac845f4", null ]
+    [ "SetLabel2", "a00016.html#ga4f36ea518d9c722f2cdc03cac01aabf3", null ],
+    [ "GetLabel2", "a00016.html#ga94e3a8c89b6a8d0fb69cb8f44c3d5b1b", null ]
 ];

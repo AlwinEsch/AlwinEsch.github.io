@@ -1,17 +1,17 @@
 var a00072 =
 [
-    [ "CreateDirectory", "a00072.html#ga8c553db3e064720e8385b9e0236e2419", null ],
-    [ "DirectoryExists", "a00072.html#ga5af80cc932ddb30e5f030e0bcc06ff49", null ],
-    [ "RemoveDirectory", "a00072.html#ga64e75270c4a456efab73a9b05fe39bf5", null ],
-    [ "GetDirectory", "a00072.html#ga6c7010942a646dcef1841a8e4ac25704", null ],
-    [ "FileExists", "a00072.html#ga193799dbfa89ce36276634d283411ec8", null ],
-    [ "StatFile", "a00072.html#ga9f0866dc1ede1d335cf1d2034e01adda", null ],
-    [ "DeleteFile", "a00072.html#ga14e17cccb7ad7e718c67fb52b081cc14", null ],
-    [ "GetFileMD5", "a00072.html#ga5b01c6d1fd6a724a780253f576017f8c", null ],
-    [ "GetCacheThumbName", "a00072.html#ga217bda21b9d638cd6729a8226b8e6e23", null ],
-    [ "MakeLegalFileName", "a00072.html#ga565c557d331a3e0ff5102987806b49e6", null ],
-    [ "MakeLegalPath", "a00072.html#ga7b18f6d43522e0b39caa8a21672c2184", null ],
-    [ "GetChunkSize", "a00072.html#ga2aa7eed375895403ca62af6fa5eb0aa2", null ],
-    [ "GetFileName", "a00072.html#ga5eeb3593de10ce1d9f2d3e6dc2864f88", null ],
-    [ "GetDirectoryName", "a00072.html#ga1e2f6ccce535992f98de0cfa7675d1ec", null ]
+    [ "CVFSFile", "a00072.html#gacdfefddfde4a4d68ae29a6339dd6e11c", null ],
+    [ "~CVFSFile", "a00072.html#ga22b091981da61c00e0e53ceb638cbf2e", null ],
+    [ "OpenFile", "a00072.html#ga7964d4fc5936b7e41fd1c01320882d46", null ],
+    [ "OpenFileForWrite", "a00072.html#gab906912503a475cdb8f0a67c5d81266c", null ],
+    [ "Read", "a00072.html#gae8f00c5eb703624dd35f9d5205d56343", null ],
+    [ "ReadLine", "a00072.html#gae3d52fbedd9b4480dc45023814cb78f7", null ],
+    [ "Write", "a00072.html#gac7025ec7df110a7a9691adb3f949f24f", null ],
+    [ "Flush", "a00072.html#ga0e2644b2df3c228e8d71a55b60723f31", null ],
+    [ "Seek", "a00072.html#ga48d08591724952c3d51d0823caf17720", null ],
+    [ "Truncate", "a00072.html#ga97dbc6093302f0ced52952a2737407ec", null ],
+    [ "GetPosition", "a00072.html#gaab98661a2483587df5d85e6ec8699bce", null ],
+    [ "GetLength", "a00072.html#gaf2332ee14e6eb66707939c8d9625194d", null ],
+    [ "Close", "a00072.html#ga7f7a3199c392465d0767c6506c1af5b4", null ],
+    [ "GetChunkSize", "a00072.html#gacc37d885ea67ed49de5644a572d904ee", null ]
 ];

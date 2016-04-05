@@ -1,6 +1,4 @@
 var a00068 =
 [
-    [ "General VFS Utilities", "a00069.html", "a00069" ],
-    [ "class CVFSDirEntry", "a00010.html", "a00010" ],
-    [ "class CVFSFile", "a00011.html", "a00011" ]
+    [ "AEStreamHandle", "a00068.html#ga09549ee338c637b62a65826fd6a4b38c", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Definitions, structures and enumerators</title>
+<title>Kodi Development: Button control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,37 +92,97 @@ $(document).ready(function(){initNavTree('a00172.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Definitions, structures and enumerators<div class="ingroups"><a class="el" href="a00140.html">C++</a> &raquo; <a class="el" href="a00173.html">7. Player</a> &raquo; <a class="el" href="a00035.html">Play List (class CPlayList)</a></div></div>  </div>
+<div class="title">Button control<div class="ingroups"><a class="el" href="a00173.html">Controls</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Library definition values</b> </p>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="gab07b512029688f85c2c460a1d0a8efc1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum AddonPlayListType</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Playlist types are defined here to identify the lists. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143"></a>PlayList_Music&#160;</td><td class="fielddoc">
-<p>To define playlist is for music. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b"></a>PlayList_Video&#160;</td><td class="fielddoc">
-<p>To define playlist is for video. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab"></a>PlayList_Picture&#160;</td><td class="fielddoc">
-<p>To define playlist is for pictures. </p>
-</td></tr>
+<p><b>A standard push button control.</b> </p>
+<p>The button control is used for creating push buttons in Kodi. You can choose the position, size, and look of the button, as well as choosing what action(s) should be performed when pushed. </p><hr/>
+ <h1><a class="anchor" id="skin_Button_control_sect1"></a>
+Example</h1>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;button&quot; id=&quot;1&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first button control&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;colordiffuse&gt;FFFFFFFF&lt;/colordiffuse&gt;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;texturefocus colordiffuse=&quot;FFFFAAFF&quot;&gt;myfocustexture.png&lt;/texturefocus&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      &lt;texturenofocus colordiffuse=&quot;FFFFAAFF&quot;&gt;mynormaltexture.png&lt;/texturenofocus&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      &lt;label&gt;29&lt;/label&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      &lt;wrapmultiline&gt;true&lt;/wrapmultiline&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      &lt;font&gt;font12&lt;/font&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      &lt;textcolor&gt;FFFFFFFF&lt;/textcolor&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      &lt;focusedcolor&gt;FFFFFFFF&lt;/focusedcolor&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      &lt;disabledcolor&gt;80FFFFFF&lt;/disabledcolor&gt;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      &lt;invalidcolor&gt;FFFFFFFF&lt;/invalidcolor&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      &lt;align&gt;&lt;/align&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      &lt;aligny&gt;&lt;/aligny&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      &lt;textoffsetx&gt;&lt;/textoffsetx&gt;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      &lt;textoffsety&gt;&lt;/textoffsety&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      &lt;pulseonselect&gt;&lt;/pulseonselect&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      &lt;onclick&gt;XBMC.ActivateWindow(MyVideos)&lt;/onclick&gt;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      &lt;onfocus&gt;-&lt;/onfocus&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      &lt;onunfocus&gt;-&lt;/onunfocus&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      &lt;onup&gt;2&lt;/onup&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      &lt;ondown&gt;3&lt;/ondown&gt;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      &lt;onleft&gt;1&lt;/onleft&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      &lt;onright&gt;1&lt;/onright&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --> <hr/>
+ <h1><a class="anchor" id="skin_Button_control_sect2"></a>
+Available tags</h1>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is lower case only. This is important, as xml tags are case-sensitive.</p>
+<table class="doxtable">
+<tr>
+<th align="right">Tag </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">texturefocus </td><td align="left">Specifies the image file which should be displayed when the button has focus. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
+<tr>
+<td align="right">texturenofocus</td><td align="left">Specifies the image file which should be displayed when the button does not have focus. </td></tr>
+<tr>
+<td align="right">label </td><td align="left">The label used on the button. It can be a link into <b><code>strings.xml</code></b>, or an actual text label. </td></tr>
+<tr>
+<td align="right">font </td><td align="left">Font used for the button label. From fonts.xml. </td></tr>
+<tr>
+<td align="right">textcolor </td><td align="left">Color used for displaying the button label. In <b>AARRGGBB</b> hex format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">focusedcolor </td><td align="left">Color used for the button label when the button has in focus. In <b>AARRGGBB</b> hex format or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">disabledcolor </td><td align="left">Color used for the button label if the button is disabled. In <b>AARRGGBB</b> hex format or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">invalidcolor </td><td align="left">Color used for the button if the user entered some invalid value. In <b>AARRGGBB</b> hex format or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">shadowcolor </td><td align="left">Specifies the color of the drop shadow on the text, in <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">angle </td><td align="left">The angle the text should be rendered at, in degrees. A value of 0 is horizontal. </td></tr>
+<tr>
+<td align="right">align </td><td align="left">Label horizontal alignment on the button. Defaults to left, can also be center or right. </td></tr>
+<tr>
+<td align="right">aligny </td><td align="left">Label vertical alignment on the button. Defaults to top, can also be center. </td></tr>
+<tr>
+<td align="right">textoffsetx </td><td align="left">Amount to offset the label from the left (or right) edge of the button when using left or right alignment. </td></tr>
+<tr>
+<td align="right">textoffsety </td><td align="left">Amount to offset the label from the top edge of the button when using top alignment. </td></tr>
+<tr>
+<td align="right">textwidth </td><td align="left">Will truncate any text that's too long. </td></tr>
+<tr>
+<td align="right">onclick </td><td align="left">Specifies the action to perform when the button is pressed. Should be a built in function. <a href="http://kodi.wiki/view/Built-in_functions_available_to_FTP,_Webserver,_skins,_keymap_and_to_python">See here for more information</a>. You may have more than one <b><code>&lt;onclick&gt;</code></b> tag, and they'll be executed in sequence. </td></tr>
+<tr>
+<td align="right">onfocus </td><td align="left">Specifies the action to perform when the button is focused. Should be a built in function. The action is performed after any focus animations have completed. <a href="http://kodi.wiki/view/Built-in_functions_available_to_FTP,_Webserver,_skins,_keymap_and_to_python">See here for more information</a>. </td></tr>
+<tr>
+<td align="right">onunfocus </td><td align="left">Specifies the action to perform when the button loses focus. Should be a built in function. </td></tr>
+<tr>
+<td align="right">wrapmultiline </td><td align="left">Will wrap the label across multiple lines if the label exceeds the control width. </td></tr>
 </table>
-
-</div>
-</div>
+<hr/>
+ <h1><a class="anchor" id="skin_Button_control_sect3"></a>
+See also</h1>
+<h4>Development:</h4>
+<ul>
+<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
+<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
