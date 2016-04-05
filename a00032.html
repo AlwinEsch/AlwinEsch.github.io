@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Mover Control</title>
+<title>Kodi Development: Group MultiImage Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,44 +92,70 @@ $(document).ready(function(){initNavTree('a00032.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Mover Control </div>  </div>
+<div class="title">Group MultiImage Control </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Mover_Control_sect1">Example</a></li>
-<li class="level1"><a href="#Mover_Control_sect2">Available tags</a></li>
-<li class="level1"><a href="#Mover_Control_sect3">See also</a></li>
+<ul><li class="level1"><a href="#MultiImage_Control_sect1">Example</a></li>
+<li class="level1"><a href="#MultiImage_Control_sect2">Image Size and Type Restrictions</a><ul><li class="level2"><a href="#MultiImage_Control_sect2_1">Formats</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#MultiImage_Control_sect3">Available tags and attributes</a></li>
+<li class="level1"><a href="#MultiImage_Control_sect4">See also</a></li>
 </ul>
 </div>
-<div class="textblock"><p><b>Used in the calibration screens.</b></p>
-<p>The mover control is used for the screen calibration portions of Kodi. You can choose the size and look of the mover control.</p>
+<div class="textblock"><p><b>Used to show a slideshow of images.</b></p>
+<p>The MultiImage control is used for displaying a slideshow of images from a folder in Kodi. You can choose the position and size of the slideshow, as well as timing information.</p>
 <hr/>
- <h1><a class="anchor" id="Mover_Control_sect1"></a>
+ <h1><a class="anchor" id="MultiImage_Control_sect1"></a>
 Example</h1>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;mover&quot; id=&quot;3&quot;&gt;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first mover control&lt;/description&gt;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;200&lt;/height&gt;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;texturefocus&gt;mytexture.png&lt;/texturefocus&gt;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;texturenofocus&gt;mytexture.png&lt;/texturenofocus&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;pulseonselect&gt;true&lt;/pulseonselect&gt;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;&lt;/control&gt;</div>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;multiimage&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line">      &lt;description&gt;My first slideshow control&lt;/description&gt;</div>
+<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line">      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
+<div class="line">      &lt;imagepath&gt;myimagepath&lt;/imagepath&gt;</div>
+<div class="line">      &lt;info&gt;&lt;/info&gt;</div>
+<div class="line">      &lt;timeperimage&gt;5000&lt;/timeperimage&gt;</div>
+<div class="line">      &lt;fadetime&gt;2000&lt;/fadetime&gt;</div>
+<div class="line">      &lt;pauseatend&gt;10000&lt;/pauseatend&gt;</div>
+<div class="line">      &lt;randomize&gt;<span class="keyword">true</span>&lt;/randomize&gt;</div>
+<div class="line">      &lt;loop&gt;no&lt;/loop&gt;</div>
+<div class="line">      &lt;aspectratio&gt;stretch&lt;/aspectratio&gt;</div>
+<div class="line">&lt;/control&gt;</div>
 </div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Mover_Control_sect2"></a>
-Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is lower case only. This is important, as xml tags are case-sensitive.</p>
+ <h1><a class="anchor" id="MultiImage_Control_sect2"></a>
+Image Size and Type Restrictions</h1>
+<p>For the <b><code>&lt;texture&gt;</code></b> tags, and for all <b><code>&lt;texture&gt;</code></b> tags in other controls, there is a small set of rules that you should follow if at all possible:</p>
+<h2><a class="anchor" id="MultiImage_Control_sect2_1"></a>
+Formats</h2>
+<p>If you wish to use full 8 bit transparency, then use PNG. If you only need a single transparent colour, then you can specify this in the <b><code>&lt;colorkey&gt;</code></b> tag, so any image will be fine. It is suggested that you use PNG and JPG as much as possible. The size of the images (in kb) is therefore not as important as the size of the images in pixels – so feel free to store them in a lossless (eg PNG) manner if you wish.</p>
+<p>The only exception to this is if you require an animated texture. In this case, we only support animated GIF. There are also SOME animated gifs that may not work. Use ImageReady CS and make sure you set the gif-anim to “restore to background” and they should work fine.</p>
+<h1><a class="anchor" id="MultiImage_Control_sect3"></a>
+Available tags and attributes</h1>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">texturefocus </td><td align="left">Specifies the image file which should be displayed when the mover has focus. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
+<td align="right">imagepath </td><td align="left">Specifies the path containing the images to use for the slideshow. Kodi will first look inside the compressed Textures.xbt file for images, and then will look in the actual folder. The path is relative to the media/ folder if it is not specified completely. </td></tr>
 <tr>
-<td align="right">texturenofocus </td><td align="left">Specifies the image file which should be displayed when the mover does not have focus. </td></tr>
+<td align="right">info </td><td align="left">Specifies the information that this image control is presenting. Kodi will select the texture to use based on this tag. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
+<tr>
+<td align="right">timeperimage </td><td align="left">Time in milliseconds that an image is shown for. </td></tr>
+<tr>
+<td align="right">fadetime </td><td align="left">Time in milliseconds to fade between images. </td></tr>
+<tr>
+<td align="right">pauseatend </td><td align="left">Time in milliseconds to pause (in addition to <b><code>&lt;timeperimage&gt;</code></b>) on the last image at the end of a complete cycle through the images. Only useful if <b><code>&lt;loop&gt;</code></b> is set to yes. </td></tr>
+<tr>
+<td align="right">loop </td><td align="left">If set to no, the last image will display indefinitely. Setting it to yes will loop around once they reach the last image. Defaults to yes. </td></tr>
+<tr>
+<td align="right">aspectratio </td><td align="left">This specifies how the image will be drawn inside the box defined by <b><code>&lt;width&gt;</code></b> and <b><code>&lt;height&gt;</code></b>. <a href="http://kodi.wiki/view/Aspect_Ratio">See here for more info</a>. </td></tr>
 </table>
 <hr/>
- <h1><a class="anchor" id="Mover_Control_sect3"></a>
+ <h1><a class="anchor" id="MultiImage_Control_sect4"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>

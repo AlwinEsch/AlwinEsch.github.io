@@ -1,4 +1,4 @@
 var a00006 =
 [
-    [ "Controls", "a00012.html", "a00012" ]
+    [ "Controls", "a00064.html", "a00064" ]
 ];

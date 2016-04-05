@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['2_2e_20addon',['2. AddOn',['../a00233.html',1,'']]]
+  ['button_20control',['Button control',['../a00010.html',1,'skin_controls']]]
 ];

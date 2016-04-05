@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['6_2e_20peripheral',['6. Peripheral',['../a00259.html',1,'']]]
+  ['general_20development_20parts',['General Development parts',['../a00004.html',1,'index']]],
+  ['group_20control',['Group Control',['../a00020.html',1,'skin_controls']]],
+  ['group_20list_20control',['Group List Control',['../a00022.html',1,'skin_controls']]],
+  ['group_20multiimage_20control',['Group MultiImage Control',['../a00032.html',1,'skin_controls']]]
 ];

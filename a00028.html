@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Label Control</title>
+<title>Kodi Development: List Container</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,95 +92,136 @@ $(document).ready(function(){initNavTree('a00028.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Label Control </div>  </div>
+<div class="title">List Container </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Label_Control_sect1">Example</a></li>
-<li class="level1"><a href="#Label_Control_sect2">Auto size labels</a></li>
-<li class="level1"><a href="#Label_Control_sect3">Multi-line labels</a></li>
-<li class="level1"><a href="#Label_Control_sect4">Available tags</a></li>
-<li class="level1"><a href="#Label_Control_sect5">See also</a></li>
+<ul><li class="level1"><a href="#List_Container_sect1">Example</a></li>
+<li class="level1"><a href="#List_Container_sect2">Available tags</a></li>
+<li class="level1"><a href="#List_Container_sect3">See also</a></li>
 </ul>
 </div>
-<div class="textblock"><p><b>Used to show some lines of text.</b></p>
-<p>The label control is used for displaying text in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed.</p>
-<hr/>
- <h1><a class="anchor" id="Label_Control_sect1"></a>
+<div class="textblock"><p><b>Used for a scrolling lists of items. Replaces the list control.</b></p>
+<p>The list container is one of several containers used to display items from file lists in various ways. The list container is very flexible - it's only restriction is that it is a list - i.e. a single column or row of items. The layout of the items is very flexible and is up to the skinner. </p><hr/>
+ <h1><a class="anchor" id="List_Container_sect1"></a>
 Example</h1>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;label&quot; id=&quot;1&quot;&gt;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My First label&lt;/description&gt;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;align&gt;center&lt;/align&gt;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;aligny&gt;center&lt;/aligny&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;scroll&gt;false&lt;/scroll&gt;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      &lt;label&gt;6&lt;/label&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      &lt;info&gt;MusicPlayer.Artist&lt;/info&gt;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      &lt;number&gt;&lt;/number&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      &lt;angle&gt;30&lt;/angle&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      &lt;haspath&gt;false&lt;/haspath&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      &lt;font&gt;font14&lt;/font&gt;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      &lt;textcolor&gt;FFB2D4F5&lt;/textcolor&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      &lt;shadowcolor&gt;ff000000&lt;/shadowcolor&gt;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      &lt;wrapmultiline&gt;false&lt;/wrapmultiline&gt;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      &lt;scrollspeed&gt;50&lt;/scrollspeed&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      &lt;scrollsuffix&gt; - &lt;/scrollsuffix&gt;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;&lt;/control&gt;</div>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;list&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;50&quot;</span>&gt;</div>
+<div class="line">      &lt;description&gt;My first list container&lt;/description&gt;</div>
+<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line">      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
+<div class="line">      &lt;onup&gt;2&lt;/onup&gt;</div>
+<div class="line">      &lt;ondown&gt;3&lt;/ondown&gt;</div>
+<div class="line">      &lt;onleft&gt;1&lt;/onleft&gt;</div>
+<div class="line">      &lt;onright&gt;1&lt;/onright&gt;</div>
+<div class="line">      &lt;viewtype label=<span class="stringliteral">&quot;3D list&quot;</span>&gt;list&lt;/viewtype&gt;</div>
+<div class="line">      &lt;orientation&gt;vertical&lt;/orientation&gt;</div>
+<div class="line">      &lt;pagecontrol&gt;25&lt;/pagecontrol&gt;</div>
+<div class="line">      &lt;autoscroll&gt;<span class="keyword">true</span>&lt;/autoscroll&gt;</div>
+<div class="line">      &lt;scrolltime tween=<span class="stringliteral">&quot;sine&quot;</span> easing=<span class="stringliteral">&quot;out&quot;</span>&gt;200&lt;/scrolltime&gt;</div>
+<div class="line">      &lt;itemlayout width=<span class="stringliteral">&quot;250&quot;</span> height=<span class="stringliteral">&quot;29&quot;</span>&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;22&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;30&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;430&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line">                        &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;475&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;300&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line">                        &lt;textcolor&gt;grey&lt;/textcolor&gt;</div>
+<div class="line">                        &lt;align&gt;right&lt;/align&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Label2&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">      &lt;/itemlayout&gt;</div>
+<div class="line">      &lt;focusedlayout height=<span class="stringliteral">&quot;29&quot;</span> width=<span class="stringliteral">&quot;250&quot;</span>&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">                        &lt;width&gt;485&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;29&lt;/height&gt;</div>
+<div class="line">                        &lt;posx&gt;0&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line">                        &lt;visible&gt;Control.HasFocus(50)&lt;/visible&gt;</div>
+<div class="line">                        &lt;texture&gt;list-focus.png&lt;/texture&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;22&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;30&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;430&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line">                        &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;475&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;300&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line">                        &lt;textcolor&gt;grey&lt;/textcolor&gt;</div>
+<div class="line">                        &lt;align&gt;right&lt;/align&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Label2&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">      &lt;/focusedlayout&gt;</div>
+<div class="line">&lt;/control&gt;</div>
 </div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Label_Control_sect2"></a>
-Auto size labels</h1>
-<p>Wrapping your label in a grouplist with the auto width and appropriate minium and maximum values. Allows the labels width to dynamically change relevalant to how long the label text is. This allows a image or other control to be alligned to the right of the actual label text no matter how wide the label is.</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;width min=&quot;29&quot; max=&quot;200&quot;&gt;auto&lt;/width&gt;</div>
-</div><!-- fragment --><p>As of XBMC Gotham, simply specifying <b><code>&lt;width&gt;auto&lt;/width&gt;</code></b> is also supported.</p>
-<hr/>
- <h1><a class="anchor" id="Label_Control_sect3"></a>
-Multi-line labels</h1>
-<p>If you want your label control to span multiple lines, you can insert a new line character in your label. For example:</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;label&gt;This will be on the first line[CR]And this will be on the second line&lt;/label&gt;</div>
-</div><!-- fragment --><p>Also, if you want your label control to conform to the <b><code>&lt;width&gt;</code></b> parameter, but still want to be able to give it more content than will fit on one line, then setting:</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;wrapmultiline&gt;true&lt;/wrapmultiline&gt;</div>
-</div><!-- fragment --><p>will cause the text to be cut up (at the spaces in the text) onto multiple lines. Note that if a single word is larger than <b><code>&lt;width&gt;</code></b> then it will not be cut, and will still overflow.</p>
-<hr/>
- <h1><a class="anchor" id="Label_Control_sect4"></a>
+ <h1><a class="anchor" id="List_Container_sect2"></a>
 Available tags</h1>
 <p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">align </td><td align="left">Can be left, right, or center. Aligns the text within the given label <b><code>&lt;width&gt;</code></b>. Defaults to left </td></tr>
+<td align="right">viewtype </td><td align="left">The type of view. Choices are list, icon, wide, wrap, biglist, bigicon, bigwide, bigwrap, info and biginfo. The label attribute indicates the label that will be used in the "View As" control within the GUI. It is localizable via strings.xml. viewtype has no effect on the view itself. It is used by kodi when switching skin to automatically select a view with a similar layout. Skinners should try to set viewtype to describe the layout as best as possible. </td></tr>
 <tr>
-<td align="right">aligny </td><td align="left">Can be top or center. Aligns the text within its given label <b><code>&lt;height&gt;</code></b>. Defaults to top </td></tr>
+<td align="right">orientation </td><td align="left">The orientation of the list. Defaults to vertical. </td></tr>
 <tr>
-<td align="right">scroll </td><td align="left">When true, the text will scroll if longer than the label's <b><code>&lt;width&gt;</code></b>. If false, the text will be truncated. Defaults to false. </td></tr>
+<td align="right">pagecontrol </td><td align="left">Used to set the <b><code>&lt;id&gt;</code></b> of the page control used to control this list. </td></tr>
 <tr>
-<td align="right">label </td><td align="left">Specifies the text which should be drawn. You should specify an entry from the strings.xml here (either the Kodi strings.xml or your skin's strings.xml file), however you may also hardcode a piece of text also if you wish, though of course it will not be localisable. You can use the full <a href="http://kodi.wiki/view/Label_Formatting">label formatting syntax</a> and <a href="http://kodi.wiki/view/Label_Parsing">you may also specify more than one piece of information here by using the $INFO and $LOCALIZE formats</a>. </td></tr>
+<td align="right">scrolltime </td><td align="left">The time (in ms) to scroll from one item to another. By default, this is 200ms. The list will scroll smoothly from one item to another as needed. Set it to zero to disable the smooth scrolling. The scroll movement can be further adjusted by selecting one of the available <a href="http://kodi.wiki/view/Tweeners">tween</a> methods. </td></tr>
 <tr>
-<td align="right">info </td><td align="left">Specifies the information that should be presented. Kodi will auto-fill in this info in place of the <b><code>&lt;label&gt;</code></b>. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
+<td align="right">itemlayout </td><td align="left">Specifies the layout of items in the list. Requires the height attribute set in a vertical list, and the width attribute set for a horizontal list. The <b><code>&lt;itemlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
 <tr>
-<td align="right">number </td><td align="left">Specifies a number that should be presented. This is just here to allow a skinner to use a number rather than a text label (as any number given to <b><code>&lt;label&gt;</code></b> will be used to lookup in strings.xml) </td></tr>
+<td align="right">focusedlayout </td><td align="left">Specifies the layout of items in the list that have focus. Requires the height attribute set in a vertical list, and the width attribute set for a horizontal list. The <b><code>&lt;focusedlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
 <tr>
-<td align="right">angle </td><td align="left">The angle the text should be rendered at, in degrees. A value of 0 is horizontal. </td></tr>
+<td align="right">content </td><td align="left">Used to set the item content that this list will contain. Allows the skinner to setup a list anywhere they want with a static set of content, as a useful alternative to the grouplist control. <a href="http://kodi.wiki/view/Static_List_Content">See here for more information</a>. </td></tr>
 <tr>
-<td align="right">haspath </td><td align="left">Specifies whether or not this label is filled with a path. Long paths are shortened by compressing the file path while keeping the actual filename full length. </td></tr>
+<td align="right">preloaditems </td><td align="left">Used in association with the background image loader. <a href="http://kodi.wiki/view/Background_Image_Loader">See here for more information</a>. </td></tr>
 <tr>
-<td align="right">font </td><td align="left">Specifies the font to use from the font.xml file. </td></tr>
-<tr>
-<td align="right">textcolor </td><td align="left">Specifies the color the text should be, in hex <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
-<tr>
-<td align="right">shadowcolor </td><td align="left">Specifies the color of the drop shadow on the text, in <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
-<tr>
-<td align="right">wrapmultiline </td><td align="left">If true, any text that doesn't fit on one line will be wrapped onto multiple lines. </td></tr>
-<tr>
-<td align="right">scrollspeed </td><td align="left">Scroll speed of text in pixels per second. Defaults to 60. </td></tr>
-<tr>
-<td align="right">scrollsuffix </td><td align="left">Specifies the suffix used in scrolling labels. Defaults to <b><code>"¦"</code></b>. </td></tr>
+<td align="right">autoscroll </td><td align="left">Used to make the container scroll automatically </td></tr>
 </table>
 <hr/>
- <h1><a class="anchor" id="Label_Control_sect5"></a>
+ <h1><a class="anchor" id="List_Container_sect3"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>

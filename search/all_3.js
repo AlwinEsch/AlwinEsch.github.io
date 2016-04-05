@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['4_2e_20gui',['4. GUI',['../a00242.html',1,'']]]
+  ['epggrid_20control',['EPGGrid control',['../a00014.html',1,'skin_controls']]],
+  ['edit_20control',['Edit control',['../a00012.html',1,'skin_controls']]]
 ];

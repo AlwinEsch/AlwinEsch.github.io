@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Group MultiImage Control</title>
+<title>Kodi Development: Panel Container</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,70 +92,125 @@ $(document).ready(function(){initNavTree('a00034.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Group MultiImage Control </div>  </div>
+<div class="title">Panel Container </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#MultiImage_Control_sect1">Example</a></li>
-<li class="level1"><a href="#MultiImage_Control_sect2">Image Size and Type Restrictions</a><ul><li class="level2"><a href="#MultiImage_Control_sect2_1">Formats</a></li>
-</ul>
-</li>
-<li class="level1"><a href="#MultiImage_Control_sect3">Available tags and attributes</a></li>
-<li class="level1"><a href="#MultiImage_Control_sect4">See also</a></li>
+<ul><li class="level1"><a href="#Panel_Container_sect1">Example</a></li>
+<li class="level1"><a href="#Panel_Container_sect2">Available tags</a></li>
+<li class="level1"><a href="#Panel_Container_sect3">See also</a></li>
 </ul>
 </div>
-<div class="textblock"><p><b>Used to show a slideshow of images.</b></p>
-<p>The MultiImage control is used for displaying a slideshow of images from a folder in Kodi. You can choose the position and size of the slideshow, as well as timing information.</p>
+<div class="textblock"><p><b>Used for a scrolling panel of items. Replaces the thumbnail panel.</b></p>
+<p>The panel container is one of several containers used to display items from file lists in various ways. The panel container is very flexible - it's essentially a multi-column list. The layout of the items is very flexible and is up to the skinner.</p>
 <hr/>
- <h1><a class="anchor" id="MultiImage_Control_sect1"></a>
+ <h1><a class="anchor" id="Panel_Container_sect1"></a>
 Example</h1>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;multiimage&quot; id=&quot;1&quot;&gt;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;      &lt;description&gt;My first slideshow control&lt;/description&gt;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;      &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;      &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;      &lt;height&gt;200&lt;/height&gt;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;      &lt;visible&gt;true&lt;/visible&gt;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      &lt;imagepath&gt;myimagepath&lt;/imagepath&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      &lt;info&gt;&lt;/info&gt;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      &lt;timeperimage&gt;5000&lt;/timeperimage&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      &lt;fadetime&gt;2000&lt;/fadetime&gt;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      &lt;pauseatend&gt;10000&lt;/pauseatend&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      &lt;randomize&gt;true&lt;/randomize&gt;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      &lt;loop&gt;no&lt;/loop&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      &lt;aspectratio&gt;stretch&lt;/aspectratio&gt;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;&lt;/control&gt;</div>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;panel&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;52&quot;</span>&gt;</div>
+<div class="line">        &lt;posx&gt;190&lt;/posx&gt;</div>
+<div class="line">        &lt;posy&gt;100&lt;/posy&gt;</div>
+<div class="line">        &lt;width&gt;485&lt;/width&gt;</div>
+<div class="line">        &lt;height&gt;425&lt;/height&gt;</div>
+<div class="line">        &lt;onleft&gt;9000&lt;/onleft&gt;</div>
+<div class="line">        &lt;onright&gt;60&lt;/onright&gt;</div>
+<div class="line">        &lt;onup&gt;52&lt;/onup&gt;</div>
+<div class="line">        &lt;ondown&gt;52&lt;/ondown&gt;</div>
+<div class="line">        &lt;scrolltime tween=<span class="stringliteral">&quot;sine&quot;</span> easing=<span class="stringliteral">&quot;out&quot;</span>&gt;200&lt;/scrolltime&gt;</div>
+<div class="line">        &lt;autoscroll&gt;<span class="keyword">true</span>&lt;/autoscroll&gt;</div>
+<div class="line">        &lt;viewtype label=<span class="stringliteral">&quot;536&quot;</span>&gt;icon&lt;/viewtype&gt;</div>
+<div class="line">        &lt;pagecontrol&gt;60&lt;/pagecontrol&gt;</div>
+<div class="line">        &lt;include&gt;contentpanelslide&lt;/include&gt;</div>
+<div class="line">        &lt;itemlayout height=<span class="stringliteral">&quot;141&quot;</span> width=<span class="stringliteral">&quot;120&quot;</span>&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;10&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;10&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;100&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;100&lt;/height&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;75&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;32&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;32&lt;/height&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Overlay&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;60&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;115&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;110&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line">                        &lt;align&gt;center&lt;/align&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">        &lt;/itemlayout&gt;</div>
+<div class="line">        &lt;focusedlayout height=<span class="stringliteral">&quot;141&quot;</span> width=<span class="stringliteral">&quot;120&quot;</span>&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">                        &lt;width&gt;110&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;110&lt;/height&gt;</div>
+<div class="line">                        &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;5&lt;/posy&gt;</div>
+<div class="line">                        &lt;texture&gt;folder-focus.png&lt;/texture&gt;</div>
+<div class="line">                        &lt;animation effect=<span class="stringliteral">&quot;zoom&quot;</span> end=<span class="stringliteral">&quot;0,0,120,120&quot;</span> time=<span class="stringliteral">&quot;100&quot;</span>&gt;focus&lt;/animation&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;10&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;10&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;100&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;100&lt;/height&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
+<div class="line">                        &lt;animation effect=<span class="stringliteral">&quot;zoom&quot;</span> end=<span class="stringliteral">&quot;5,5,110,110&quot;</span> time=<span class="stringliteral">&quot;100&quot;</span>&gt;focus&lt;/animation&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;75&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;32&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;32&lt;/height&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Overlay&lt;/info&gt;</div>
+<div class="line">                        &lt;animation effect=<span class="stringliteral">&quot;slide&quot;</span> end=<span class="stringliteral">&quot;5,5&quot;</span> time=<span class="stringliteral">&quot;100&quot;</span>&gt;focus&lt;/animation&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;60&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;120&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;110&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line">                        &lt;align&gt;center&lt;/align&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">        &lt;/focusedlayout&gt;</div>
+<div class="line">&lt;/control&gt;</div>
 </div><!-- fragment --><hr/>
- <h1><a class="anchor" id="MultiImage_Control_sect2"></a>
-Image Size and Type Restrictions</h1>
-<p>For the <b><code>&lt;texture&gt;</code></b> tags, and for all <b><code>&lt;texture&gt;</code></b> tags in other controls, there is a small set of rules that you should follow if at all possible:</p>
-<h2><a class="anchor" id="MultiImage_Control_sect2_1"></a>
-Formats</h2>
-<p>If you wish to use full 8 bit transparency, then use PNG. If you only need a single transparent colour, then you can specify this in the <b><code>&lt;colorkey&gt;</code></b> tag, so any image will be fine. It is suggested that you use PNG and JPG as much as possible. The size of the images (in kb) is therefore not as important as the size of the images in pixels – so feel free to store them in a lossless (eg PNG) manner if you wish.</p>
-<p>The only exception to this is if you require an animated texture. In this case, we only support animated GIF. There are also SOME animated gifs that may not work. Use ImageReady CS and make sure you set the gif-anim to “restore to background” and they should work fine.</p>
-<h1><a class="anchor" id="MultiImage_Control_sect3"></a>
-Available tags and attributes</h1>
+ <h1><a class="anchor" id="Panel_Container_sect2"></a>
+Available tags</h1>
 <p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">imagepath </td><td align="left">Specifies the path containing the images to use for the slideshow. Kodi will first look inside the compressed Textures.xbt file for images, and then will look in the actual folder. The path is relative to the media/ folder if it is not specified completely. </td></tr>
+<td align="right">viewtype </td><td align="left">The type of view. Choices are list, icon, wide, wrap, biglist, bigicon, bigwide, bigwrap, info and biginfo. The label attribute indicates the label that will be used in the "View As" control within the GUI. It is localizable via strings.xml. viewtype has no effect on the view itself. It is used by kodi when switching skin to automatically select a view with a similar layout. Skinners should try to set viewtype to describe the layout as best as possible. </td></tr>
 <tr>
-<td align="right">info </td><td align="left">Specifies the information that this image control is presenting. Kodi will select the texture to use based on this tag. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
+<td align="right">orientation </td><td align="left">The orientation of the panel. Defaults to vertical. </td></tr>
 <tr>
-<td align="right">timeperimage </td><td align="left">Time in milliseconds that an image is shown for. </td></tr>
+<td align="right">pagecontrol </td><td align="left">Used to set the <b><code>&lt;id&gt;</code></b> of the page control used to control this panel. </td></tr>
 <tr>
-<td align="right">fadetime </td><td align="left">Time in milliseconds to fade between images. </td></tr>
+<td align="right">scrolltime </td><td align="left">The time (in ms) to scroll from one item to another. By default, this is 200ms. The panel will scroll smoothly from one item to another as needed. Set it to zero to disable the smooth scrolling. The scroll movement can be further adjusted by selecting one of the available <a href="http://kodi.wiki/view/Tweeners">tween</a> methods. </td></tr>
 <tr>
-<td align="right">pauseatend </td><td align="left">Time in milliseconds to pause (in addition to <b><code>&lt;timeperimage&gt;</code></b>) on the last image at the end of a complete cycle through the images. Only useful if <b><code>&lt;loop&gt;</code></b> is set to yes. </td></tr>
+<td align="right">itemlayout </td><td align="left">Specifies the layout of items in the list. Requires both width and height attributes set. The <b><code>&lt;itemlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
 <tr>
-<td align="right">loop </td><td align="left">If set to no, the last image will display indefinitely. Setting it to yes will loop around once they reach the last image. Defaults to yes. </td></tr>
+<td align="right">focusedlayout </td><td align="left">Specifies the layout of items in the list that have focus. Requires both width and height attributes set. The <b><code>&lt;focusedlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
 <tr>
-<td align="right">aspectratio </td><td align="left">This specifies how the image will be drawn inside the box defined by <b><code>&lt;width&gt;</code></b> and <b><code>&lt;height&gt;</code></b>. <a href="http://kodi.wiki/view/Aspect_Ratio">See here for more info</a>. </td></tr>
+<td align="right">content </td><td align="left">Used to set the item content that this panel will contain. Allows the skinner to setup a panel anywhere they want with a static set of content, as a useful alternative to the grouplist control. <a href="http://kodi.wiki/view/Static_List_Content">See here for more information</a> </td></tr>
+<tr>
+<td align="right">preloaditems </td><td align="left">Used in association with the background image loader. <a href="http://kodi.wiki/view/Background_Image_Loader">See here for more information</a> </td></tr>
+<tr>
+<td align="right">autoscroll </td><td align="left">Used to make the container scroll automatically </td></tr>
 </table>
 <hr/>
- <h1><a class="anchor" id="MultiImage_Control_sect4"></a>
+ <h1><a class="anchor" id="Panel_Container_sect3"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>

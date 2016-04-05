@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['7_2e_20player',['7. Player',['../a00263.html',1,'']]]
+  ['image_20control',['Image Control',['../a00024.html',1,'skin_controls']]]
 ];

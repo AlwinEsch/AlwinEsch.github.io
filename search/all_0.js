@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['1_2e_20basic_20functions',['1. Basic functions',['../a00231.html',1,'']]]
+  ['add_2don_20rendering_20control',['Add-on Rendering control',['../a00008.html',1,'skin_controls']]]
 ];
