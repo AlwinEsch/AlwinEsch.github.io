@@ -1,8 +1,11 @@
 var a00290 =
 [
-    [ "Library - xbmc", "a00291.html", "a00291" ],
-    [ "Library - xbmcgui", "a00292.html", "a00292" ],
-    [ "Library - xbmcplugin", "a00293.html", "a00293" ],
-    [ "Library - xbmcaddon", "a00106.html", "a00106" ],
-    [ "Library - xbmcvfs", "a00294.html", "a00294" ]
+    [ "1. Basic functions", "a00331.html", "a00331" ],
+    [ "2. AddOn", "a00333.html", "a00333" ],
+    [ "3. Audio Engine", "a00344.html", "a00344" ],
+    [ "4. GUI", "a00348.html", "a00348" ],
+    [ "5. Input Stream", "a00381.html", "a00381" ],
+    [ "6. Peripheral", "a00384.html", "a00384" ],
+    [ "7. Player", "a00390.html", "a00390" ],
+    [ "8. PVR", "a00393.html", "a00393" ]
 ];

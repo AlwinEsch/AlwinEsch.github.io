@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Dialog Yes/No</title>
+<title>Kodi Development: Callback functions from Kodi to Add-On</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,52 +92,179 @@ $(document).ready(function(){initNavTree('a00315.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Dialog Yes/No<div class="ingroups"><a class="el" href="a00289.html">C++</a> &raquo; <a class="el" href="a00308.html">4. GUI</a></div></div>  </div>
+<div class="title">Callback functions from Kodi to Add-On<div class="ingroups"><a class="el" href="a00291.html">Python</a> &raquo; <a class="el" href="a00292.html">Library - xbmc</a> &raquo; <a class="el" href="a00314.html">Player</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Yes / No dialog</b> </p>
-<p>The Yes / No dialog can be used to inform the user about questions and get the answer.</p>
-<p>In order to achieve a line break is a <b>\n</b> directly in the text or in the "./resources/language/resource.language.??_??/strings.po" to call with <b>std::string KodiAPI::AddOn::General::GetLocalizedString(...);</b>.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00199_source.html">#include &lt;kodi/api2/gui/DialogYesNo.hpp&gt;</a> be included to enjoy it.</p>
-<div class="image">
-<img src="help.GUIDialogYesNo.png" alt="help.GUIDialogYesNo.png"/>
-</div>
- <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga89f6071edbb80badea144ee1988d3fd1"></a>
+<p><b>Callback functions.</b> </p>
+<p>Functions to handle control callbacks from Kodi to Add-On. </p><hr/>
+<p><a class="el" href="a00314.html">Go back to normal functions from player</a> </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga2d8b5fa98b21f02ce06f7bd7de836d9d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogYesNo::ShowAndGetInput </td>
+          <td class="memname">void onPlayBackStarted </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>onPlayBackStarted method. </p>
+<p>Will be called when Kodi starts playing a file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gab375f26bb820f640d74700cda4ee6646"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onPlayBackEnded </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>onPlayBackEnded method. </p>
+<p>Will be called when Kodi stops playing a file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga04dbd49c7486f00911995a56a19536d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onPlayBackStopped </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>onPlayBackStopped method. </p>
+<p>Will be called when user stops Kodi playing a file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7226102b037bfbca79e0c940f5e912e2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onPlayBackPaused </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>onPlayBackPaused method. </p>
+<p>Will be called when user pauses a playing file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga075576edcd1809ff57e3897aa165e529"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onPlayBackResumed </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>onPlayBackResumed method. </p>
+<p>Will be called when user resumes a paused file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8890f6898fc712522c2d29f57455275d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onQueueNextItem </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>onQueueNextItem method. </p>
+<p>Will be called when user queues the next item.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga852e3252c43deaa541e8cae610b9e0ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onPlayBackSpeedChanged </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;&#160;</td>
-          <td class="paramname"><em>bCanceled</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>noLabel</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>yesLabel</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -147,74 +274,40 @@ $(document).ready(function(){initNavTree('a00315.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Use dialog to get numeric new password with one text string shown everywhere and cancel return field. </p>
+<p>onPlayBackSpeedChanged method. </p>
+<p>Will be called when players speed changes (eg. user FF/RW).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog heading </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>Multi-line text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bCanceled</td><td>Return value about cancel button </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">noLabel</td><td>[opt] label to put on the no button </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">yesLabel</td><td>[opt] label to put on the yes button </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">speed</td><td>[integer] Current speed of player</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns True if 'Yes' was pressed, else False</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is preferred to only use this as it is actually a multi-line text.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogYesNo.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">bool</span> canceled;</div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00315.html#ga89f6071edbb80badea144ee1988d3fd1">KodiAPI::GUI::DialogYesNo::ShowAndGetInput</a>(</div>
-<div class="line">   <span class="stringliteral">&quot;Yes / No test call&quot;</span>,   <span class="comment">/* The Header */</span></div>
-<div class="line">   <span class="stringliteral">&quot;You has opened Yes / No dialog for test\n\nIs this OK for you?&quot;</span>,</div>
-<div class="line">   canceled,               <span class="comment">/* return value about cancel button */</span></div>
-<div class="line">   <span class="stringliteral">&quot;Not really&quot;</span>,           <span class="comment">/* No label, is optional and if empty &quot;No&quot; */</span></div>
-<div class="line">   <span class="stringliteral">&quot;Ohhh yes&quot;</span>);            <span class="comment">/* Yes label, also optional and if empty &quot;Yes&quot; */</span></div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;You has called Yes/No, returned &#39;%s&#39; and was %s\n&quot;</span>,</div>
-<div class="line">         ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>,</div>
-<div class="line">         canceled ? <span class="stringliteral">&quot;canceled&quot;</span> : <span class="stringliteral">&quot;not canceled&quot;</span>);</div>
-</div><!-- fragment --> 
+<dl class="section note"><dt>Note</dt><dd>Negative speed means player is rewinding, 1 is normal playback speed. </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="ga3c58c94f72888a60d56d24f5af509658"></a>
+<a class="anchor" id="gaeda52fbaaf9860f7a96e93ba33709fc9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogYesNo::ShowAndGetInput </td>
+          <td class="memname">void onPlayBackSeek </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line0</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>noLabel</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>yesLabel</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seekOffset</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -224,79 +317,34 @@ $(document).ready(function(){initNavTree('a00315.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Use dialog to get numeric new password with separated line strings. </p>
+<p>onPlayBackSeek method. </p>
+<p>Will be called when user seeks to a time.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog heading </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line0</td><td>Line #0 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line1</td><td>Line #1 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line2</td><td>Line #2 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">noLabel</td><td>[opt] label to put on the no button. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">yesLabel</td><td>[opt] label to put on the yes button. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>[integer] Time to seek to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">seekOffset</td><td>[integer] ? </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns True if 'Yes' was pressed, else False.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogYesNo.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00315.html#ga89f6071edbb80badea144ee1988d3fd1">KodiAPI::GUI::DialogYesNo::ShowAndGetInput</a>(</div>
-<div class="line">   <span class="stringliteral">&quot;Yes / No test call&quot;</span>,   <span class="comment">// The Header</span></div>
-<div class="line">   <span class="stringliteral">&quot;You has opened Yes / No dialog for test&quot;</span>,</div>
-<div class="line">   <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line">   <span class="stringliteral">&quot;Is this OK for you?&quot;</span>,</div>
-<div class="line">   <span class="stringliteral">&quot;Not really&quot;</span>,           <span class="comment">// No label, is optional and if empty &quot;No&quot;</span></div>
-<div class="line">   <span class="stringliteral">&quot;Ohhh yes&quot;</span>);            <span class="comment">// Yes label, also optional and if empty &quot;Yes&quot;</span></div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;You has called Yes/No, returned &#39;%s&#39;\n&quot;</span>,</div>
-<div class="line">         ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
-</div><!-- fragment --> 
+
 </div>
 </div>
-<a class="anchor" id="ga066996e8332302afd1ae3dcd69382a2d"></a>
+<a class="anchor" id="ga75a62da626870983e308a62e8c359218"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogYesNo::ShowAndGetInput </td>
+          <td class="memname">void onPlayBackSeekChapter </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;&#160;</td>
-          <td class="paramname"><em>bCanceled</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>noLabel</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>yesLabel</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chapter</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -306,36 +354,16 @@ $(document).ready(function(){initNavTree('a00315.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Use dialog to get numeric new password with separated line strings and cancel return field. </p>
+<p>onPlayBackSeekChapter method. </p>
+<p>Will be called when user performs a chapter seek.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog heading </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line0</td><td>Line #0 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line1</td><td>Line #1 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line2</td><td>Line #2 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bCanceled</td><td>Return value about cancel button </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">noLabel</td><td>[opt] label to put on the no button </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">yesLabel</td><td>[opt] label to put on the yes button </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chapter</td><td>[integer] Chapter to seek to </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns True if 'Yes' was pressed, else False</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogYesNo.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">bool</span> canceled;</div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00315.html#ga89f6071edbb80badea144ee1988d3fd1">KodiAPI::GUI::DialogYesNo::ShowAndGetInput</a>(</div>
-<div class="line">   <span class="stringliteral">&quot;Yes / No test call&quot;</span>,   <span class="comment">// The Header</span></div>
-<div class="line">   <span class="stringliteral">&quot;You has opened Yes / No dialog for test&quot;</span>,</div>
-<div class="line">   <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line">   <span class="stringliteral">&quot;Is this OK for you?&quot;</span>,</div>
-<div class="line">   canceled,               <span class="comment">// return value about cancel button</span></div>
-<div class="line">   <span class="stringliteral">&quot;Not really&quot;</span>,           <span class="comment">// No label, is optional and if empty &quot;No&quot;</span></div>
-<div class="line">   <span class="stringliteral">&quot;Ohhh yes&quot;</span>);            <span class="comment">// Yes label, also optional and if empty &quot;Yes&quot;</span></div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;You has called Yes/No, returned &#39;%s&#39; and was %s\n&quot;</span>,</div>
-<div class="line">         ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>,</div>
-<div class="line">         canceled ? <span class="stringliteral">&quot;canceled&quot;</span> : <span class="stringliteral">&quot;not canceled&quot;</span>);</div>
-</div><!-- fragment --> 
+
 </div>
 </div>
 </div><!-- contents -->

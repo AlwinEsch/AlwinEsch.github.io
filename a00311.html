@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Callback functions from Kodi to add-on</title>
+<title>Kodi Development: Subclass - WindowDialogXML</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,263 +92,46 @@ $(document).ready(function(){initNavTree('a00311.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Callback functions from Kodi to add-on<div class="ingroups"><a class="el" href="a00289.html">C++</a> &raquo; <a class="el" href="a00308.html">4. GUI</a> &raquo; <a class="el" href="a00090.html">Window</a></div></div>  </div>
+<div class="title">Subclass - WindowDialogXML<div class="ingroups"><a class="el" href="a00291.html">Python</a> &raquo; <a class="el" href="a00293.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00307.html">Window</a> &raquo; <a class="el" href="a00310.html">Subclass - WindowXML</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>GUI window callback functions.</b> </p>
-<p>Functions to handle control callbacks from Kodi </p><hr/>
-<p><a class="el" href="a00090.html">Go back to normal functions from CWindow</a> </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga7d98c001ac8d31e48df88346e28bae16"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool OnInit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>OnInit method. </p>
-<dl class="section return"><dt>Returns</dt><dd>Return true if initialize was done successful </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga7f69d7353e186b8fe4a1560767721501"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool OnFocus </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>OnFocus method. </p>
+<p><b>GUI xml window dialog class.</b> </p>
+<p><b><code>xbmcgui.WindowXMLDialog(xmlFilename, scriptPath[, defaultSkin, defaultRes])</code></b></p>
+<p>Creates a new xml file based window dialog class.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>GUI control identifier </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xmlFilename</td><td>string - the name of the xml file to look for. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scriptPath</td><td>string - path to script. used to fallback to if the xml doesn't exist in the current skin. (eg xbmcaddon.Addon().getAddonInfo('path').decode('utf-8')) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultSkin</td><td>[opt] string - name of the folder in the skins path to look in for the xml. (default='Default') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultRes</td><td>[opt] string - default skins resolution. (default='720p') </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if focus condition was handled there or false to handle them by Kodi itself </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gad741fef5d9a1d2bf07449694e9a9e602"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool OnClick </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>OnClick method. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>GUI control identifier </td></tr>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if more then 200 windows are created.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if click was handled there or false to handle them by Kodi itself </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gad3fc2a106ba0143fa5d11d3df32d9c72"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool OnAction </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>actionId</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>OnAction method. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">actionId</td><td>The action id to perform, see kodi_key_action_ids to get list of them </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if action was handled there or false to handle them by Kodi itself</dd></dl>
-<p>This method will receive all actions that the main program will send to this window.</p>
-<dl class="section note"><dt>Note</dt><dd><ul>
-<li>By default, only the <code>PREVIOUS_MENU</code> and <code>NAV_BACK</code> actions are handled.</li>
-<li>Overwrite this method to let your code handle all actions.</li>
-<li>Don't forget to capture <code>ADDON_ACTION_PREVIOUS_MENU</code> or <code>ADDON_ACTION_NAV_BACK</code>, else the user can't close this window.</li>
-</ul>
-</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Skin folder structure is e.g. <b>resources/skins/Default/720p</b></dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
-<div class="line"><span class="comment">/* Window used with parent / child way */</span></div>
-<div class="line"><span class="keywordtype">bool</span> cYOUR_CLASS::OnAction(<span class="keywordtype">int</span> actionId)</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordflow">switch</span> (action)</div>
-<div class="line">  {</div>
-<div class="line">    <span class="keywordflow">case</span> <a class="code" href="a00310.html#gga42753b64a4c9b01785035a18e768a43da532e6c2f4d77d6eca13b8478e7a05c6a">ADDON_ACTION_PREVIOUS_MENU</a>:</div>
-<div class="line">    <span class="keywordflow">case</span> <a class="code" href="a00310.html#gga42753b64a4c9b01785035a18e768a43da916248ef06523f8131316b6fabef634a">ADDON_ACTION_NAV_BACK</a>:</div>
-<div class="line">      printf(<span class="stringliteral">&quot;action recieved: previous&quot;</span>);</div>
-<div class="line">      <a class="code" href="a00090.html#ga7f7a3199c392465d0767c6506c1af5b4">Close</a>();</div>
-<div class="line">      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line">    <span class="keywordflow">case</span> <a class="code" href="a00310.html#gga42753b64a4c9b01785035a18e768a43daa5061b9dfbda0f33a9c8ef8e7a2d8916">ADDON_ACTION_SHOW_INFO</a>:</div>
-<div class="line">      printf(<span class="stringliteral">&quot;action recieved: show info&quot;</span>);</div>
-<div class="line">      <span class="keywordflow">break</span>;</div>
-<div class="line">    <span class="keywordflow">case</span> <a class="code" href="a00310.html#gga42753b64a4c9b01785035a18e768a43daae103c89c5ddc6e5e78727eeaea0597f">ADDON_ACTION_STOP</a>:</div>
-<div class="line">      printf(<span class="stringliteral">&quot;action recieved: stop&quot;</span>);</div>
-<div class="line">      <span class="keywordflow">break</span>;</div>
-<div class="line">    <span class="keywordflow">case</span> <a class="code" href="a00310.html#gga42753b64a4c9b01785035a18e768a43dadc8bd2ae7cc584ad2f2dab3f8021a006">ADDON_ACTION_PAUSE</a>:</div>
-<div class="line">      printf(<span class="stringliteral">&quot;action recieved: pause&quot;</span>);</div>
-<div class="line">      <span class="keywordflow">break</span>;</div>
-<div class="line">    <span class="keywordflow">default</span>:</div>
-<div class="line">      <span class="keywordflow">break</span>;</div>
-<div class="line">  }</div>
-<div class="line">  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line">}</div>
-<div class="line">..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga5daaf4cdd5942017aa0be44ec98a7f95"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetIndependentCallbacks </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a>&#160;</td>
-          <td class="paramname"><em>cbhdl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool(*)(<a class="el" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)&#160;</td>
-          <td class="paramname"><em>CBOnInit</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool(*)(<a class="el" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, int controlId)&#160;</td>
-          <td class="paramname"><em>CBOnFocus</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool(*)(<a class="el" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, int controlId)&#160;</td>
-          <td class="paramname"><em>CBOnClick</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool(*)(<a class="el" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, int actionId)&#160;</td>
-          <td class="paramname"><em>CBOnAction</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><b>Set independent callbacks</b> </p>
-<p>If the class is used independent (with "new CWindow") and not as parent (with "cCLASS_own : CWindow") from own must be the callback from Kodi to add-on overdriven with own functions!</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">cbhdl</td><td>The pointer to own handle data structure / class </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">CBOnInit</td><td>Own defined window init function </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">CBOnFocus</td><td>Own defined focus function </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">CBOnClick</td><td>Own defined click function </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">CBOnAction</td><td>Own defined action function</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">...</div>
-<div class="line"></div>
-<div class="line">bool <a class="code" href="a00311.html#ga7d98c001ac8d31e48df88346e28bae16">OnInit</a>(<a class="code" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">bool</span> <a class="code" href="a00311.html#ga7f69d7353e186b8fe4a1560767721501">OnFocus</a>(<a class="code" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">bool</span> <a class="code" href="a00311.html#gad741fef5d9a1d2bf07449694e9a9e602">OnClick</a>(<a class="code" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">bool</span> <a class="code" href="a00311.html#gad3fc2a106ba0143fa5d11d3df32d9c72">OnAction</a>(<a class="code" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)</div>
-<div class="line">{</div>
-<div class="line">  ...</div>
-<div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line">...</div>
-<div class="line"><span class="comment">/* Somewhere where you create the window */</span></div>
-<div class="line">CWindow myWindow = <span class="keyword">new</span> <a class="code" href="a00090.html#gaf5a0daa07131817e4e805710aac04842">CWindow</a>;</div>
-<div class="line">myWindow-&gt;SetIndependentCallbacks(myWindow, <a class="code" href="a00311.html#ga7d98c001ac8d31e48df88346e28bae16">OnInit</a>, <a class="code" href="a00311.html#ga7f69d7353e186b8fe4a1560767721501">OnFocus</a>, <a class="code" href="a00311.html#gad741fef5d9a1d2bf07449694e9a9e602">OnClick</a>, <a class="code" href="a00311.html#gad3fc2a106ba0143fa5d11d3df32d9c72">OnAction</a>);</div>
-<div class="line">...</div>
-</div><!-- fragment --> 
-</div>
-</div>
-</div><!-- contents -->
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.WindowXMLDialog(<span class="stringliteral">&#39;script-Lyrics-main.xml&#39;</span>, xbmcaddon.Addon().getAddonInfo(<span class="stringliteral">&#39;path&#39;</span>).decode(<span class="stringliteral">&#39;utf-8&#39;</span>), <span class="stringliteral">&#39;default&#39;</span>, <span class="stringliteral">&#39;1080p&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;dialog.doModal()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;del dialog</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --><hr/>
+<p>On functions defined input variable <b><code>controlId</code> (GUI control identifier)</b> is the on window.xml defined value behind type added with <code><b>id="..."</b></code> and used to identify for changes there and on callbacks.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;label&quot; id=&quot;31&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;description&gt;Title Label&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  ...</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;&lt;/control&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;&lt;control type=&quot;progress&quot; id=&quot;32&quot;&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  &lt;description&gt;progress control&lt;/description&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  ...</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

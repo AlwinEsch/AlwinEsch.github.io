@@ -1,5 +1,5 @@
 var a00325 =
 [
-    [ "TriggerScan", "a00325.html#ga71e2010f9a35616f7a4024517f052d1b", null ],
-    [ "RefreshButtonMaps", "a00325.html#ga04b34df13a671ee8bd096203642cf06c", null ]
+    [ "setPercent", "a00325.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ],
+    [ "getPercent", "a00325.html#gad3e5815badb78551841c44d9b5ae3742", null ]
 ];

@@ -1,13 +1,14 @@
 var a00294 =
 [
-    [ "File", "a00129.html", "a00129" ],
-    [ "Stat", "a00130.html", "a00130" ],
-    [ "copy", "a00294.html#ga9188bb84632ebdbc54faca1de9be95c3", null ],
-    [ "deleteFile", "a00294.html#gabf13e7bae1c97bc1c4188f3e4e459f95", null ],
-    [ "rename", "a00294.html#gaefc98ff66890f353b4ea7fd620b63808", null ],
-    [ "exists", "a00294.html#ga12691f7bf1c5e55da57b18f63f6fbdca", null ],
-    [ "mkdir", "a00294.html#gaf69897d9a5235e87828a9e75c1cae4ca", null ],
-    [ "mkdirs", "a00294.html#ga229e97a6a47bdff0122f1004c4feda5c", null ],
-    [ "rmdir", "a00294.html#gac83ea5fb566ee294cdd87c74c6697025", null ],
-    [ "listdir", "a00294.html#ga6bb30280e2eb7d5b94cfb0eb6e65b0cb", null ]
+    [ "addDirectoryItem", "a00294.html#ga0b7759ec71ba6098cd71289f7ffc103d", null ],
+    [ "addDirectoryItems", "a00294.html#gae65e249416de893f077e2c0010b7f697", null ],
+    [ "endOfDirectory", "a00294.html#ga4efbfacead99ce6a469bbf37f63e05eb", null ],
+    [ "setResolvedUrl", "a00294.html#ga269ab5fd6b88eb1f56e3bc4f5b81701a", null ],
+    [ "addSortMethod", "a00294.html#gabc68ce9f13d4d68df93d19a61f53ff8e", null ],
+    [ "getSetting", "a00294.html#gac254decc5a7b5cdf14893fe7136aa9dc", null ],
+    [ "setSetting", "a00294.html#ga397670857a9ff2861a9fe55a4c8cf206", null ],
+    [ "setContent", "a00294.html#ga0ee818babc80aab1ead30465b1be416f", null ],
+    [ "setPluginCategory", "a00294.html#ga2303d9cc58dfd405758375a94b29f14f", null ],
+    [ "setPluginFanart", "a00294.html#ga2678f7c15eb38fdab9dec474ba7c1ed6", null ],
+    [ "setProperty", "a00294.html#gad34e6025edb46d622a8ae9f7195d033c", null ]
 ];

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: General</title>
+<title>Kodi Development: Subclass - WindowDialog</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,145 +92,33 @@ $(document).ready(function(){initNavTree('a00309.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">General<div class="ingroups"><a class="el" href="a00289.html">C++</a> &raquo; <a class="el" href="a00308.html">4. GUI</a></div></div>  </div>
+<div class="title">Subclass - WindowDialog<div class="ingroups"><a class="el" href="a00291.html">Python</a> &raquo; <a class="el" href="a00293.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00307.html">Window</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Allow use of binary classes and function to use on add-on's</b> </p>
-<p>Permits the use of the required functions of the add-on to Kodi. This class also contains some functions to the control.</p>
-<p>These are pure functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00168_source.html">#include &lt;kodi/api2/gui/General.hpp&gt;</a> be included to enjoy it. </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga1e6c297870325cead8b7869c56dde3a9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void KodiAPI::GUI::General::Lock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Performs a graphical lock of rendering engine. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga562187d336aad67565a1f90521b8c12b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void KodiAPI::GUI::General::Unlock </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Performs a graphical unlock of previous locked rendering engine. </p>
-
-</div>
-</div>
-<a class="anchor" id="gad287a915b2c19dea690a43f4df7d5553"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int KodiAPI::GUI::General::GetScreenHeight </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return the the current screen height with pixel. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga45844d515e52c611383bf9724c91312b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int KodiAPI::GUI::General::GetScreenWidth </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return the the current screen width with pixel. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga52089728c14d6f72a86939377b496e9b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int KodiAPI::GUI::General::GetVideoResolution </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return the the current screen rendering resolution. </p>
-
-</div>
-</div>
-<a class="anchor" id="gadb22389c1d52ed050c28515c8175d357"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int KodiAPI::GUI::General::GetCurrentWindowDialogId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the id for the current 'active' dialog as an integer. </p>
-<dl class="section return"><dt>Returns</dt><dd>The currently active dialog Id</dd></dl>
+<p><b>GUI window dialog class for Add-Ons.</b> </p>
+<p><b><code>xbmcgui.WindowDialog(int windowId):</code></b></p>
+<p>Creates a new window from Add-On usable dialog class. This is to create window for related controls by system calls.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">windowId</td><td>[opt] Specify an id to use an existing window. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ValueError</td><td>if supplied window Id does not exist. </td></tr>
+    <tr><td class="paramname">Exception</td><td>if more then 200 windows are created.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Deleting this window will activate the old window that was active and resets (not delete) all controls that are associated with this window.</p>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
-<div class="line"><span class="keywordtype">int</span> wid = <a class="code" href="a00309.html#gadb22389c1d52ed050c28515c8175d357">KodiAPI::GUI::General::GetCurrentWindowDialogId</a>()</div>
-<div class="line">..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gacc2226a2237c681f2a4b930b87f63d0d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int KodiAPI::GUI::General::GetCurrentWindowId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the id for the current 'active' window as an integer. </p>
-<dl class="section return"><dt>Returns</dt><dd>The currently active window Id</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
-<div class="line"><span class="keywordtype">int</span> wid = <a class="code" href="a00309.html#gacc2226a2237c681f2a4b930b87f63d0d">KodiAPI::GUI::General::GetCurrentWindowId</a>()</div>
-<div class="line">..</div>
-</div><!-- fragment --> 
-</div>
-</div>
-</div><!-- contents -->
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.WindowDialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;width = dialog.getWidth()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

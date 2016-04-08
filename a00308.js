@@ -1,27 +1,9 @@
 var a00308 =
 [
-    [ "General", "a00309.html", "a00309" ],
-    [ "Window", "a00090.html", "a00090" ],
-    [ "List Item", "a00089.html", "a00089" ],
-    [ "Dialog Yes/No", "a00315.html", "a00315" ],
-    [ "Dialog Extended Progress", "a00087.html", "a00087" ],
-    [ "Dialog File Browser", "a00316.html", "a00316" ],
-    [ "Dialog Keyboard", "a00317.html", "a00317" ],
-    [ "Dialog Numeric", "a00318.html", "a00318" ],
-    [ "Dialog OK", "a00319.html", "a00319" ],
-    [ "Dialog Progress", "a00088.html", "a00088" ],
-    [ "Dialog Select", "a00320.html", "a00320" ],
-    [ "Dialog Text Viewer", "a00321.html", "a00321" ],
-    [ "Control Button", "a00075.html", "a00075" ],
-    [ "Control Edit", "a00076.html", "a00076" ],
-    [ "Control Fade Label", "a00077.html", "a00077" ],
-    [ "Control Image", "a00078.html", "a00078" ],
-    [ "Control Label", "a00079.html", "a00079" ],
-    [ "Control Progress", "a00080.html", "a00080" ],
-    [ "Control Radio Button", "a00081.html", "a00081" ],
-    [ "Control Rendering", "a00082.html", "a00082" ],
-    [ "Control Settings Slider", "a00083.html", "a00083" ],
-    [ "Control Slider", "a00084.html", "a00084" ],
-    [ "Control Spin", "a00085.html", "a00085" ],
-    [ "Control Text Box", "a00086.html", "a00086" ]
+    [ "onAction", "a00308.html#ga46acbc2206f67d5f8e1d44d3ebe4fa68", null ],
+    [ "onControl", "a00308.html#ga3d8a5f47cd756f21b4744eed7ede8634", null ],
+    [ "onClick", "a00308.html#gad031aa7d2b1fcedaac6ad481e2e85757", null ],
+    [ "onDoubleClick", "a00308.html#ga25347e21254d60dc94028d2ed6a0c5ed", null ],
+    [ "onFocus", "a00308.html#ga32655043662a872fb86801fe5e8e1e41", null ],
+    [ "onInit", "a00308.html#ga5a0ef4163216ec8833eb3a524f7fd80e", null ]
 ];

@@ -1,8 +1,26 @@
 var a00307 =
 [
-    [ "AddDSPMenuHook", "a00307.html#gac50957717cca9c40e9bdd97a718ba0d7", null ],
-    [ "RemoveDSPMenuHook", "a00307.html#gafef53bc62464ad25d97faa2d19ce912e", null ],
-    [ "RegisterDSPMode", "a00307.html#gab56e9bd387990e317c034578a41e05ec", null ],
-    [ "UnregisterDSPMode", "a00307.html#ga53717f88a6a1ba1711e464c9f85f01a1", null ],
-    [ "GetCurrentSinkFormat", "a00307.html#ga7f796a096b74b433541c8bcc8a698fe3", null ]
+    [ "Callback functions from Kodi to add-on", "a00308.html", "a00308" ],
+    [ "Subclass - WindowDialog", "a00309.html", null ],
+    [ "Subclass - WindowXML", "a00310.html", "a00310" ],
+    [ "show", "a00307.html#ga4b148f40a95444d5669406b918ad2f52", null ],
+    [ "setFocus", "a00307.html#ga1785f2b46b58870a2ad665c94cc44c4c", null ],
+    [ "setFocusId", "a00307.html#ga260fd8f75779d2bd709309b54c4eeb84", null ],
+    [ "getFocus", "a00307.html#ga17eda8ea38cdf7782095736355f63e4b", null ],
+    [ "getFocusId", "a00307.html#ga3b69a4a08f9dd5d2c5ff767afa6b57c8", null ],
+    [ "removeControl", "a00307.html#gad5d1ecd49c09d01f35ebb43435de8b36", null ],
+    [ "removeControls", "a00307.html#ga5e103916a66adce745c37d0daf88d55c", null ],
+    [ "getHeight", "a00307.html#ga18ec4174d22d39a27efae91f0757018f", null ],
+    [ "getWidth", "a00307.html#gad7e62f808c88a823d9a2dcc37b2a633c", null ],
+    [ "getResolution", "a00307.html#ga9d5731a47bc44a9b02aa81db39aaa8c1", null ],
+    [ "setCoordinateResolution", "a00307.html#ga59626db6d7f43bc114fa60aeca7ab34b", null ],
+    [ "setProperty", "a00307.html#ga117dae419f8322cc06721a8537717f78", null ],
+    [ "getProperty", "a00307.html#ga6ea42956dc2a3770054d6e0693a70cf3", null ],
+    [ "clearProperty", "a00307.html#ga99d0d60007e7b2cefdf8b695383c9347", null ],
+    [ "clearProperties", "a00307.html#ga08051d9d0c9864b7aa7444239938dd9b", null ],
+    [ "close", "a00307.html#ga5ae591df94fc66ccb85cbb6565368bca", null ],
+    [ "doModal", "a00307.html#ga33ea72f0548b5dc6af9a46183c02871f", null ],
+    [ "addControl", "a00307.html#gac37d32aa4a0f2292f1812c1f1af9f3ca", null ],
+    [ "addControls", "a00307.html#gacfd7c99ea69252b8c195f9863af5e012", null ],
+    [ "getControl", "a00307.html#gac2048daa10ef60ec1d647d10d8a99af8", null ]
 ];

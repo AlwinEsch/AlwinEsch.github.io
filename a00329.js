@@ -1,7 +1,7 @@
 var a00329 =
 [
-    [ "Player (class CPlayer)", "a00094.html", "a00094" ],
-    [ "Play List (class CPlayList)", "a00095.html", "a00095" ],
-    [ "Music Info Tag (class CInfoTagMusic)", "a00092.html", "a00092" ],
-    [ "Video Info Tag (class CInfoTagVideo)", "a00093.html", "a00093" ]
+    [ "setSelected", "a00329.html#gad42accd39af295a957386c68dac3dcae", null ],
+    [ "isSelected", "a00329.html#ga5dae9e59f17e10bd3838a6fae36d477d", null ],
+    [ "setLabel", "a00329.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
+    [ "setRadioDimension", "a00329.html#ga474a447b56d8295c322cd3023e276b9f", null ]
 ];

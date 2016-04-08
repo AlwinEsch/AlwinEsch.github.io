@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Network</title>
+<title>Kodi Development: File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,112 +92,181 @@ $(document).ready(function(){initNavTree('a00303.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Network<div class="ingroups"><a class="el" href="a00289.html">C++</a> &raquo; <a class="el" href="a00299.html">2. AddOn</a></div></div>  </div>
+<div class="title">File<div class="ingroups"><a class="el" href="a00291.html">Python</a> &raquo; <a class="el" href="a00296.html">Library - xbmcvfs</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Network functions</b> </p>
-<p>The network module offers functions that allow you to control it.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00170_source.html">#include &lt;kodi/api2/addon/Network.hpp&gt;</a> be included to enjoy it. </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga6cffcf06e3428295facca7094936f93d"></a>
+<p><b>Kodi's file class.</b> </p>
+<p><b><code>xbmcvfs.File(filepath, [mode])</code></b></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filepath</td><td>string Selected file path </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>[opt] string Additional mode options <table class="doxtable">
+<tr>
+<th align="center">Mode </th><th align="left">Description  </th></tr>
+<tr>
+<td align="center">w </td><td align="left">Open for write </td></tr>
+</table>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file, [<span class="stringliteral">&#39;w&#39;</span>])</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga691e636b0dffa3c448c648f42d94437a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String read </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>numBytes</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read file parts as string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bytes</td><td>[opt] How many bytes to read - if not set it will read the whole file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;b = f.read()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;f.close()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gafb6cfe2d85d46667aaa8ff4e9ae194e8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool KodiAPI::AddOn::Network::WakeOnLan </td>
+          <td class="memname">XbmcCommons::Buffer readBytes </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>mac</em></td><td>)</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>numBytes</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Send WakeOnLan magic packet. </p>
+<p>Read bytes from file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mac</td><td>Network address of the host to wake. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numbytes</td><td>How many bytes to read [opt]- if not set it will read the whole file </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the magic packet was successfully sent, false otherwise. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>bytearray</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;b = f.read()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;f.close()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga25c4bfd2da6ba218027f096807a09fe7"></a>
+<a class="anchor" id="ga1a6eddca986ff7164d57b9fad625e597"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string KodiAPI::AddOn::Network::GetIPAddress </td>
+          <td class="memname">bool write </td>
+          <td>(</td>
+          <td class="paramtype">XbmcCommons::Buffer &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To write given data in file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>Buffer to write to file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file, <span class="stringliteral">&#39;w&#39;</span>, <span class="keyword">True</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;result = f.write(buffer)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;f.close()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga6fdf8e4501d305514d8e7b5d6cde34a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>To the current own ip address as a string. </p>
-<dl class="section return"><dt>Returns</dt><dd>Own system ip.</dd></dl>
+<p>Get the file size. </p>
+<dl class="section return"><dt>Returns</dt><dd>The file size</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/Network.hpp&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string strIpAddress = <a class="code" href="a00303.html#ga25c4bfd2da6ba218027f096807a09fe7">CPP_KodiAPI_AddOn_Network::GetIPAddress</a>();</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;My IP is &#39;%s&#39;\n&quot;</span>, strIpAddress.c_str());</div>
-<div class="line">...</div>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;s = f.size()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;f.close()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="gaab8bb8bdf47d013523678277ac3642d0"></a>
+<a class="anchor" id="ga8140115d0b4e6cb1ffa9f4298153d009"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string KodiAPI::AddOn::Network::URLEncode </td>
+          <td class="memname">long long seek </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>url</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>URL encodes the given string. </p>
-<p>This function converts the given input string to a URL encoded string and returns that as a new allocated string. All input characters that are not a-z, A-Z, 0-9, '-', '.', '_' or '~' are converted to their "URL escaped" version (NN where NN is a two-digit hexadecimal number).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The code of the message to get. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Encoded URL string</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/Network.hpp&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string encodedUrl = <a class="code" href="a00303.html#gaab8bb8bdf47d013523678277ac3642d0">KodiAPI::AddOn::Network::URLEncode</a>(<span class="stringliteral">&quot;François&quot;</span>);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Encoded URL is &#39;%s&#39;\n&quot;</span>, encodedUrl.c_str());</div>
-<div class="line">...</div>
-</div><!-- fragment --><p> For example, the string: François ,would be encoded as: FranC3A7ois </p>
-
-</div>
-</div>
-<a class="anchor" id="gab932829498dcaab549489ac50af368eb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool KodiAPI::AddOn::Network::DNSLookup </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHostName</em>, </td>
+          <td class="paramtype">long long&#160;</td>
+          <td class="paramname"><em>seekBytes</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strIpAddress</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iWhence</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -205,25 +274,57 @@ $(document).ready(function(){initNavTree('a00303.html','');});
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Lookup URL in DNS cache. </p>
-<p>This test will get DNS record for a domain. The DNS lookup is done directly against the domain's authoritative name server, so changes to DNS Records should show up instantly. By default, the DNS lookup tool will return an IP address if you give it a name (e.g. www.example.com)</p>
+<p>Seek to position in file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strHostName</td><td>The code of the message to get. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strIpAddress</td><td>Returned address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">seekBytes</td><td>position in the file </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iWhence</td><td>where in a file to seek from[0 begining, 1 current , 2 end possition]</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successfull</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/Network.hpp&gt;</span></div>
-<div class="line">...</div>
-<div class="line">std::string strIpAddress;</div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00303.html#gab932829498dcaab549489ac50af368eb">KodiAPI::AddOn::Network::DNSLookup</a>(<span class="stringliteral">&quot;www.google.com&quot;</span>, strIpAddress);</div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;DNSLookup returned for www.google.com the IP &#39;%s&#39;, call was %s\n&quot;</span>, strIpAddress.c_str(), ret ? <span class="stringliteral">&quot;ok&quot;</span> : <span class="stringliteral">&quot;failed&quot;</span>);</div>
-<div class="line">...</div>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;result = f.seek(8129, 0)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;f.close()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga5ae591df94fc66ccb85cbb6565368bca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Close opened file. </p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;f.close()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
 </div><!-- fragment --> 
 </div>
 </div>

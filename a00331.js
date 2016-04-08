@@ -1,7 +1,8 @@
 var a00331 =
 [
-    [ "AddMenuHook", "a00331.html#ga19b004e52c9ec0a8d6e7b8dddae1e413", null ],
-    [ "Recording", "a00331.html#gabd6ff60172946b2f767523ee0b3bba27", null ],
-    [ "ConnectionStateChange", "a00331.html#ga855ee1e1bd6ca101050fdd680a2a780b", null ],
-    [ "EpgEventStateChange", "a00331.html#ga59b3af92b56dc3316659f2f470f5f730", null ]
+    [ "Definitions, structures and enumerators", "a00332.html", "a00332" ],
+    [ "KodiAPI_ErrorCodeToString", "a00331.html#gaa3c8a9b6597526ba1ad04e1aa3998237", null ],
+    [ "InitLibAddon", "a00331.html#ga54c2c0dd7a940c723a67a51ffe97025f", null ],
+    [ "Finalize", "a00331.html#ga25c17863c83dcc5fedf5d3fdfaface0e", null ],
+    [ "Log", "a00331.html#ga1b35d2c11c262cd3436768f6ed4c1f58", null ]
 ];

@@ -1,7 +1,5 @@
 var a00330 =
 [
-    [ "General", "a00331.html", "a00331" ],
-    [ "Stream Utils", "a00332.html", "a00332" ],
-    [ "Transfer", "a00333.html", "a00333" ],
-    [ "Trigger", "a00334.html", "a00334" ]
+    [ "getPercent", "a00330.html#gad3e5815badb78551841c44d9b5ae3742", null ],
+    [ "setPercent", "a00330.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ]
 ];

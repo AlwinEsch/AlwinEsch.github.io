@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Definitions, structures and enumerators</title>
+<title>Kodi Development: Subclass - ControlFadeLabel</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,60 +92,108 @@ $(document).ready(function(){initNavTree('a00322.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Definitions, structures and enumerators<div class="ingroups"><a class="el" href="a00289.html">C++</a> &raquo; <a class="el" href="a00308.html">4. GUI</a> &raquo; <a class="el" href="a00076.html">Control Edit</a></div></div>  </div>
+<div class="title">Subclass - ControlFadeLabel<div class="ingroups"><a class="el" href="a00291.html">Python</a> &raquo; <a class="el" href="a00293.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00317.html">Control</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Library definition values</b> </p>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ga65e94c0b771b91d3c1f0948113ee838a"></a>
+<p><b>Used to show multiple pieces of text in the same position, by fading from one to the other.</b> </p>
+<p><b><code>ControlFadeLabel(x, y, width, height[, font, textColor, alignment])</code></b></p>
+<p>The fade label control is used for displaying multiple pieces of text in the same space in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed. The first piece of information to display fades in over 50 frames, then scrolls off to the left. Once it is finished scrolling off screen, the second piece of information fades in and the process repeats. A fade label control is not supported in a list container.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00317.html">Control</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>[opt] string - font used for label text. (e.g. 'font13') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textColor</td><td>[opt] hexstring - color of fadelabel's labels. (e.g. '0xFFFFFFFF') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alignment</td><td>[opt] integer - alignment of label<ul>
+<li>Flags for alignment used as bits to have several together: <table class="doxtable">
+<tr>
+<th>Defination name </th><th align="center">Bitflag </th><th align="left">Description  </th></tr>
+<tr>
+<td>XBFONT_LEFT </td><td align="center">0x00000000 </td><td align="left">Align X left </td></tr>
+<tr>
+<td>XBFONT_RIGHT </td><td align="center">0x00000001 </td><td align="left">Align X right </td></tr>
+<tr>
+<td>XBFONT_CENTER_X </td><td align="center">0x00000002 </td><td align="left">Align X center </td></tr>
+<tr>
+<td>XBFONT_CENTER_Y </td><td align="center">0x00000004 </td><td align="left">Align Y center </td></tr>
+<tr>
+<td>XBFONT_TRUNCATED </td><td align="center">0x00000008 </td><td align="left">Truncated text </td></tr>
+<tr>
+<td>XBFONT_JUSTIFIED </td><td align="center">0x00000010 </td><td align="left">Justify text </td></tr>
+</table>
+</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.<br />
+ After you create the control, you need to add it to the window with addControl().</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.fadelabel = xbmcgui.ControlFadeLabel(100, 250, 200, 50, textColor=<span class="stringliteral">&#39;0xFFFFFFFF&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga5c23c1e6768621ef5114c5b56a66c7c9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum AddonGUIInputType</td>
+          <td class="memname">void addLabel </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Text input types used on CControlEdit. </p>
-<p><a class="anchor" id="AddonGUIInputType"></a></p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga65e94c0b771b91d3c1f0948113ee838aaa63d88b1372dab2ea053511a3d96002e"></a>ADDON_INPUT_TYPE_READONLY&#160;</td><td class="fielddoc">
-<p>Text inside edit control only readable. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga65e94c0b771b91d3c1f0948113ee838aaa73aafdd310b4551e007aed37e571c04"></a>ADDON_INPUT_TYPE_TEXT&#160;</td><td class="fielddoc">
-<p>Normal text entries. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga65e94c0b771b91d3c1f0948113ee838aaa2d1bb2e9d33bbfaff112b3412b6b863"></a>ADDON_INPUT_TYPE_NUMBER&#160;</td><td class="fielddoc">
-<p>To use on edit control only numeric numbers. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga65e94c0b771b91d3c1f0948113ee838aa0e96b1b3233e6ec2bea2eba2fba18a06"></a>ADDON_INPUT_TYPE_SECONDS&#160;</td><td class="fielddoc">
-<p>To insert seconds. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga65e94c0b771b91d3c1f0948113ee838aa084a056148212fbecfb4eaece6b153a7"></a>ADDON_INPUT_TYPE_TIME&#160;</td><td class="fielddoc">
-<p>To insert time. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga65e94c0b771b91d3c1f0948113ee838aa9c1afcab52623fdfc0d10fe837920136"></a>ADDON_INPUT_TYPE_DATE&#160;</td><td class="fielddoc">
-<p>To insert a date. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga65e94c0b771b91d3c1f0948113ee838aaf81ea3216e8493d8172c09ab14574c9b"></a>ADDON_INPUT_TYPE_IPADDRESS&#160;</td><td class="fielddoc">
-<p>Used for write in IP addresses. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga65e94c0b771b91d3c1f0948113ee838aaf3c00814c8eb77412d95d7bf9a48c07b"></a>ADDON_INPUT_TYPE_PASSWORD&#160;</td><td class="fielddoc">
-<p>Text field used as password entry field with not visible text. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga65e94c0b771b91d3c1f0948113ee838aa4b20fcc4a3e0394e6d0a04ed88abbbde"></a>ADDON_INPUT_TYPE_PASSWORD_MD5&#160;</td><td class="fielddoc">
-<p>Text field used as password entry field with not visible text but returned as MD5 value </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga65e94c0b771b91d3c1f0948113ee838aa5351675bba33a01770a28ef7a58c7083"></a>ADDON_INPUT_TYPE_SEARCH&#160;</td><td class="fielddoc">
-<p>Use text field for search purpose. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga65e94c0b771b91d3c1f0948113ee838aa43201c04ae524da52393a26205f903a6"></a>ADDON_INPUT_TYPE_FILTER&#160;</td><td class="fielddoc">
-<p>Text field as filter. </p>
-</td></tr>
-</table>
+<p>Add a label to this control for scrolling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>string or unicode - text string to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>To remove added text use <code><a class="el" href="a00319.html#gad20897c5c8bd47f5d4005989bead0e55" title="Clear this fade label. ">reset()</a></code> for them.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.fadelabel.addLabel(<span class="stringliteral">&#39;This is a line of text that can scroll.&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga37b258d64c9891a330036b19195913e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setScrolling </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>scroll</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
+<p>Set scrolling. If set to false, the labels won't scroll. Defaults to true. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scroll</td><td>boolean - True = enabled / False = disabled</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.fadelabel.setScrolling(<span class="keyword">False</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

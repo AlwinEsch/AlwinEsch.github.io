@@ -1,5 +1,6 @@
 var a00319 =
 [
-    [ "ShowAndGetInput", "a00319.html#ga66900f5924746739d7daa409f8cc7a8c", null ],
-    [ "ShowAndGetInput", "a00319.html#ga4c6c7f4e7e62c51ec324a7187cf6252f", null ]
+    [ "getLabel", "a00319.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
+    [ "setLabel", "a00319.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
+    [ "reset", "a00319.html#gad20897c5c8bd47f5d4005989bead0e55", null ]
 ];

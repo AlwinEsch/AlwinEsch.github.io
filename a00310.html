@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Definitions, structures and enumerators</title>
+<title>Kodi Development: Subclass - WindowXML</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,843 +91,254 @@ $(document).ready(function(){initNavTree('a00310.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Definitions, structures and enumerators<div class="ingroups"><a class="el" href="a00289.html">C++</a> &raquo; <a class="el" href="a00308.html">4. GUI</a> &raquo; <a class="el" href="a00090.html">Window</a></div></div>  </div>
+<div class="title">Subclass - WindowXML<div class="ingroups"><a class="el" href="a00291.html">Python</a> &raquo; <a class="el" href="a00293.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00307.html">Window</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Library definition values</b> </p>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="ga3e3a75682bddc7d2ee995d4e7a37daec"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void* GUIHANDLE</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Handle to use as independent pointer for GUI. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ga5e872358567b0569550d7a712e9ec577"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum AddonGUIFontAlignment</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>flags for text font alignment </p>
-<p>Flags are used as bits to have several together, e.g. <code>ADDON_FONT_LEFT | ADDON_FONT_CENTER_Y</code> </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga5e872358567b0569550d7a712e9ec577aaf7c4b142a17f064c815040ac7ac0617"></a>ADDON_FONT_LEFT&#160;</td><td class="fielddoc">
-<p>Align X left. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga5e872358567b0569550d7a712e9ec577a2156065be572a142389d62626ac11117"></a>ADDON_FONT_RIGHT&#160;</td><td class="fielddoc">
-<p>Align X right. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga5e872358567b0569550d7a712e9ec577a8e867ea8765fb7f21ece98c4c8184309"></a>ADDON_FONT_CENTER_X&#160;</td><td class="fielddoc">
-<p>Align X center. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga5e872358567b0569550d7a712e9ec577a7532ed9597c2a2721f7ff9a9251bd7be"></a>ADDON_FONT_CENTER_Y&#160;</td><td class="fielddoc">
-<p>Align Y center. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga5e872358567b0569550d7a712e9ec577a5b58d0b8dc88823457540650f0412706"></a>ADDON_FONT_TRUNCATED&#160;</td><td class="fielddoc">
-<p>Truncated text. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga5e872358567b0569550d7a712e9ec577a996cc02975a9a444455539738d06cf68"></a>ADDON_FONT_JUSTIFIED&#160;</td><td class="fielddoc">
-<p>Justify text. </p>
-</td></tr>
+<p><b>GUI xml window class.</b> </p>
+<p><b><code>xbmcgui.WindowXML(xmlFilename, scriptPath[, defaultSkin, defaultRes])</code></b></p>
+<p>Creates a new xml file based window class.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <b><code><a class="el" href="a00307.html">Window</a></code></b>.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">xmlFilename</td><td>string - the name of the xml file to look for. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scriptPath</td><td>string - path to script. used to fallback to if the xml doesn't exist in the current skin. (eg xbmcaddon.Addon().getAddonInfo('path').decode('utf-8')) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultSkin</td><td>[opt] string - name of the folder in the skins path to look in for the xml. (default='Default') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultRes</td><td>[opt] string - default skins resolution. (default='720p') </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if more then 200 windows are created.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Skin folder structure is e.g. <b>resources/skins/Default/720p</b></dd></dl>
+<p>Deleting this window will activate the old window that was active and resets (not delete) all controls that are associated with this window. </p><hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;win = xbmcgui.WindowXML(<span class="stringliteral">&#39;script-Lyrics-main.xml&#39;</span>, xbmcaddon.Addon().getAddonInfo(<span class="stringliteral">&#39;path&#39;</span>).decode(<span class="stringliteral">&#39;utf-8&#39;</span>), <span class="stringliteral">&#39;default&#39;</span>, <span class="stringliteral">&#39;1080p&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;win.doModal()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;del win</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --><hr/>
+<p>On functions defined input variable <b><code>controlId</code> (GUI control identifier)</b> is the on window.xml defined value behind type added with <code><b>id="..."</b></code> and used to identify for changes there and on callbacks.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;label&quot; id=&quot;31&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;description&gt;Title Label&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  ...</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;&lt;/control&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;&lt;control type=&quot;progress&quot; id=&quot;32&quot;&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  &lt;description&gt;progress control&lt;/description&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  ...</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --> <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00311"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00311.html">Subclass - WindowDialogXML</a></td></tr>
+<tr class="memdesc:a00311"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>GUI xml window dialog class.</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-
-</div>
-</div>
-<a class="anchor" id="ga42753b64a4c9b01785035a18e768a43d"></a>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga87ffff74f065758ae9884ecc87102af1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum AddonGUIActionType</td>
+          <td class="memname">void addItem </td>
+          <td>(</td>
+          <td class="paramtype">const Alternative&lt; String, const ListItem * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em> = <code>INT_MAX</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Actions that we have defined. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da5569bfa887cb66b777e347ee73a4c9dc"></a>ADDON_ACTION_MOVE_LEFT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Left</code></b> </p>
-<p>Move left off a control. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da0af0f5495868a9de732889dc766174e5"></a>ADDON_ACTION_MOVE_RIGHT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Right</code></b> </p>
-<p>Move right off a control. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da0a16a95d51de976850e2e07a85e28005"></a>ADDON_ACTION_MOVE_UP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Up</code></b> </p>
-<p>Move up off a control. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dae5378359c3dfef0d90502a2834e3ec7a"></a>ADDON_ACTION_MOVE_DOWN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Down</code></b> </p>
-<p>Move down off a control. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da8e88149ab5114a4b7fe6aa645cf3fee1"></a>ADDON_ACTION_PAGE_UP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PageUp</code></b> </p>
-<p>Scroll up on page in a list, thumb, or text view. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daaf8687a69428e6b7653e93fdba15b8c6"></a>ADDON_ACTION_PAGE_DOWN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PageDown</code></b> </p>
-<p>Scroll down on page in a list, thumb, or text view. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da4c14b7aa778db9301925c978a3d83187"></a>ADDON_ACTION_SELECT_ITEM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Select</code></b> </p>
-<p>Select a button, or an item from a list of thumb view. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daca1545c4d5ac6043c33740aedf94d651"></a>ADDON_ACTION_HIGHLIGHT_ITEM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Highlight</code></b> </p>
-<p>Highlight an item in a list or thumb view. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daf8b3210dbb8137c4bda76ef53b73b3e4"></a>ADDON_ACTION_PARENT_DIR&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ParentDir</code></b> </p>
-<p>Go up a folder to the parent folder. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da532e6c2f4d77d6eca13b8478e7a05c6a"></a>ADDON_ACTION_PREVIOUS_MENU&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PreviousMenu</code></b> </p>
-<p>Go back to the previous menu screen. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daa5061b9dfbda0f33a9c8ef8e7a2d8916"></a>ADDON_ACTION_SHOW_INFO&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Info</code></b> </p>
-<p>Show the information about the currently highlighted item, or currently playing item. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dadc8bd2ae7cc584ad2f2dab3f8021a006"></a>ADDON_ACTION_PAUSE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Pause</code></b> </p>
-<p>Pause the currently playing item. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daae103c89c5ddc6e5e78727eeaea0597f"></a>ADDON_ACTION_STOP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Stop</code></b> </p>
-<p>Stop the currently playing item. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da06d407cad7f882f419162ab9b628fb31"></a>ADDON_ACTION_NEXT_ITEM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SkipNext</code></b> </p>
-<p>Skip to next video in playlist. If no playlist, then skip to next chapter in video. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daa2421b05119c316740e3798845002129"></a>ADDON_ACTION_PREV_ITEM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SkipPrevious</code></b> </p>
-<p>Skip to previous video in playlist. If no playlist, then skip to previous chapter in video. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da10a10b45ec4f1ed34ead5eb05c7f6b5f"></a>ADDON_ACTION_FORWARD&#160;</td><td class="fielddoc">
-<p>Can be used to specify specific action in a window, Playback control is handled in ACTION_PLAYER_* </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da910b804bb430009f3cc69f0bba3bf481"></a>ADDON_ACTION_REWIND&#160;</td><td class="fielddoc">
-<p>Can be used to specify specific action in a window, Playback control is handled in ACTION_PLAYER_* </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da81d7b1c7c5358d98dcb3d6619f262350"></a>ADDON_ACTION_SHOW_GUI&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Fullscreen</code></b> </p>
-<p>toggle between GUI and movie or GUI and visualisation. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daf79cbb28943fd7ac565e8d62bbccaab8"></a>ADDON_ACTION_ASPECT_RATIO&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AspectRatio</code></b> </p>
-<p>toggle quick-access zoom modes. Can b used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dac9450adda08eb42d14d84dee6d4bc79a"></a>ADDON_ACTION_STEP_FORWARD&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>StepForward</code></b> </p>
-<p>seek +1% in the movie. Can b used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daebc875ff63b95541f5bcc25f72a00e3a"></a>ADDON_ACTION_STEP_BACK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>StepBack</code></b> </p>
-<p>seek -1% in the movie. Can b used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da4afe5a7ca16a43b091115655e08ca6d0"></a>ADDON_ACTION_BIG_STEP_FORWARD&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>BigStepForward</code></b> </p>
-<p>seek +10% in the movie. Can b used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dac36c73719895d47291f1cc5d7768f499"></a>ADDON_ACTION_BIG_STEP_BACK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>BigStepBack</code></b> </p>
-<p>seek -10% in the movie. Can b used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da4e7403fbb727edb72ee8e718f5d3c8d0"></a>ADDON_ACTION_SHOW_OSD&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>OSD</code></b> </p>
-<p>show/hide OSD. Can b used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da8d0272e5769b48e83ca7dcfae33e7868"></a>ADDON_ACTION_SHOW_SUBTITLES&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ShowSubtitles</code></b> </p>
-<p>turn subtitles on/off. Can be used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dae0744197847b4aae9a061a70c6761a89"></a>ADDON_ACTION_NEXT_SUBTITLE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>NextSubtitle</code></b> </p>
-<p>switch to next subtitle of movie. Can be used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dae44d0021144dd7f495b52098c4001c23"></a>ADDON_ACTION_SHOW_CODEC&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>CodecInfo</code></b> </p>
-<p>show information about file. Can be used in videoFullScreen.xml window id=2005 and in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da0f2f0c72804384e7607c430aeb3aafab"></a>ADDON_ACTION_NEXT_PICTURE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>NextPicture</code></b> </p>
-<p>show next picture of slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dafd8fe3e2700061979c9e04d35fef103a"></a>ADDON_ACTION_PREV_PICTURE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PreviousPicture</code></b> </p>
-<p>show previous picture of slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dabe48c98484bac665183b1b3bf4db340a"></a>ADDON_ACTION_ZOOM_OUT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomOut</code></b> </p>
-<p>zoom in picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da680d0a5261fc6286decb65ec584040f5"></a>ADDON_ACTION_ZOOM_IN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomIn</code></b> </p>
-<p>zoom out picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da45bb123f4fbf71169fe9c11053f66b49"></a>ADDON_ACTION_TOGGLE_SOURCE_DEST&#160;</td><td class="fielddoc">
-<p>used to toggle between source view and destination view. Can be used in myfiles.xml window id=3 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daa99ce2ac71c848a6698d1071c615dbf9"></a>ADDON_ACTION_SHOW_PLAYLIST&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Playlist</code></b> </p>
-<p>used to toggle between current view and playlist view. Can b used in all mymusic xml files </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da3d3d1eb0c89763f93e51f8dda8d955a3"></a>ADDON_ACTION_QUEUE_ITEM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Queue</code></b> </p>
-<p>used to queue a item to the playlist. Can b used in all mymusic xml files </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da74e938b7ef8eddeb2dbfe71e64bc46b8"></a>ADDON_ACTION_REMOVE_ITEM&#160;</td><td class="fielddoc">
-<p>not used anymore </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da40d11613b826979273ecedb64be1eda4"></a>ADDON_ACTION_SHOW_FULLSCREEN&#160;</td><td class="fielddoc">
-<p>not used anymore </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dadfcbdc8e028b2ee85a5a6a5bc46b433a"></a>ADDON_ACTION_ZOOM_LEVEL_NORMAL&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomNormal</code></b> </p>
-<p>Zoom 1x picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da791fc36bc9eecc6ac7d5cde2491e6f45"></a>ADDON_ACTION_ZOOM_LEVEL_1&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomLevel1</code></b> </p>
-<p>Zoom 2x picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da0fa5676ab67b1039b1f5af5fbb93866f"></a>ADDON_ACTION_ZOOM_LEVEL_2&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomLevel2</code></b> </p>
-<p>Zoom 3x picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da6b5e646d969c836fcd5314c13495b836"></a>ADDON_ACTION_ZOOM_LEVEL_3&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomLevel3</code></b> </p>
-<p>Zoom 4x picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da309de85a008282be66cdb04758c83a86"></a>ADDON_ACTION_ZOOM_LEVEL_4&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomLevel4</code></b> </p>
-<p>Zoom 5x picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daf513b027a001986cc4aa44630bcacc31"></a>ADDON_ACTION_ZOOM_LEVEL_5&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomLevel5</code></b> </p>
-<p>Zoom 6x picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da202ccd953d54adf3114d0f8568e7dfe9"></a>ADDON_ACTION_ZOOM_LEVEL_6&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomLevel6</code></b> </p>
-<p>Zoom 7x picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dac5e7b2b06b58bbd3f656195c05d8756f"></a>ADDON_ACTION_ZOOM_LEVEL_7&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomLevel7</code></b> </p>
-<p>Zoom 8x picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da95caf197e4028b0ce2600f2e03ed40ab"></a>ADDON_ACTION_ZOOM_LEVEL_8&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomLevel8</code></b> </p>
-<p>Zoom 9x picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da345e87c41a0299ec867e950662385d29"></a>ADDON_ACTION_ZOOM_LEVEL_9&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomLevel9</code></b> </p>
-<p>Zoom 10x picture during slideshow. Can b used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da5f06d3ec10b5debf7ed2d65707e86f64"></a>ADDON_ACTION_CALIBRATE_SWAP_ARROWS&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>NextCalibration</code></b> </p>
-<p>select next arrow. Can b used in: settingsScreenCalibration.xml windowid=11 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da02130f15a5a83ba425ec61669e48c567"></a>ADDON_ACTION_CALIBRATE_RESET&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ResetCalibration</code></b> </p>
-<p>reset calibration to defaults. Can be used in: settingsScreenCalibration.xml windowid=11/settingsUICalibration.xml windowid=10 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da9a196a81ce0cfac12f384b4ad60df7c9"></a>ADDON_ACTION_ANALOG_MOVE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AnalogMove</code></b> </p>
-<p>analog thumbstick move. Can be used in: slideshow.xml window id=2007/settingsScreenCalibration.xml windowid=11/settingsUICalibration.xml windowid=10, see also ACTION_ANALOG_MOVE_X, ACTION_ANALOG_MOVE_Y </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dad8a9f5b7a92cf0b51cf6c148bd10627c"></a>ADDON_ACTION_ROTATE_PICTURE_CW&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Rotate</code></b> </p>
-<p>rotate current picture clockwise during slideshow. Can be used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dae74f560a671be80a364c58e661629da3"></a>ADDON_ACTION_ROTATE_PICTURE_CCW&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>RotateCCW</code></b> </p>
-<p>rotate current picture counterclockwise during slideshow. Can be used in slideshow.xml window id=2007 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da6addeffe666df7bbcf6808e5fd5ffcab"></a>ADDON_ACTION_SUBTITLE_DELAY_MIN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SubtitleDelayMin</code></b> </p>
-<p>Decrease subtitle/movie Delay. Can b used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da0509ee91776666626484c85eed35d495"></a>ADDON_ACTION_SUBTITLE_DELAY_PLUS&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SubtitleDelayPlus</code></b> </p>
-<p>Increase subtitle/movie Delay. Can be used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daf1043becab8212ab620915e1f2eacaf3"></a>ADDON_ACTION_AUDIO_DELAY_MIN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AudioDelayMinus</code></b> </p>
-<p>Increase avsync delay. Can be used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da0c9b71fd04aa601eb5ebe207287ceebf"></a>ADDON_ACTION_AUDIO_DELAY_PLUS&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AudioDelayPlus</code></b> </p>
-<p>Decrease avsync delay. Can be used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da1f33ca37c130a545f406bd9a1247e928"></a>ADDON_ACTION_AUDIO_NEXT_LANGUAGE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AudioNextLanguage</code></b> </p>
-<p>Select next language in movie. Can be used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da64f699f918a9c8b9cc16507e521bd406"></a>ADDON_ACTION_CHANGE_RESOLUTION&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>NextResolution</code></b> </p>
-<p>switch 2 next resolution. Can b used during screen calibration settingsScreenCalibration.xml windowid=11 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da653e9b0a6c2f5671570d4ca24f448d38"></a>ADDON_REMOTE_0&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Number0</code></b> </p>
-<p>remote keys 0-9. are used by multiple windows </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da0f4b2868ae44dbc0894f3c22cfe6056e"></a>ADDON_REMOTE_1&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Number1</code></b> </p>
-<p>for example in videoFullScreen.xml window id=2005 you can </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daed346f907f8a6d76805cd494e3466802"></a>ADDON_REMOTE_2&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Number2</code></b> </p>
-<p>enter time (mmss) to jump to particular point in the movie </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da60d9815e7932c4e05f12ed57914be05e"></a>ADDON_REMOTE_3&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Number3</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da6cf89807739456592607d9a5cab28d41"></a>ADDON_REMOTE_4&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Number4</code></b> </p>
-<p>with spincontrols you can enter 3digit number to quickly set </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da625e41b828ec040f4ca1633f5dfd8b5d"></a>ADDON_REMOTE_5&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Number5</code></b> </p>
-<p>spincontrol to desired value </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da95f3ad0799d6a489d0150dbeb30152a8"></a>ADDON_REMOTE_6&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Number6</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dab4c6980c1f6fe620ef2af0fb7f27cef5"></a>ADDON_REMOTE_7&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Number7</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da210e29a3794c42713e217ea692dc4b7e"></a>ADDON_REMOTE_8&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Number8</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da2763e8fc8190d41684a7b25a8ab9d7d9"></a>ADDON_REMOTE_9&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Number9</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da0177f83c8fe4b1e2c9915234d87f40d9"></a>ADDON_ACTION_PLAY&#160;</td><td class="fielddoc">
-<p>Unused at the moment. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daa55d8c9817c49a902f75ed219f2b74a1"></a>ADDON_ACTION_SMALL_STEP_BACK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SmallStepBack</code></b> </p>
-<p>jumps a few seconds back during playback of movie. Can be used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da6bd02344963ccd78305961bccb949894"></a>ADDON_ACTION_PLAYER_FORWARD&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>FastForward</code></b> </p>
-<p>FF in current file played. global action, can be used anywhere </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da22f5cd0d765775003ee290bbcfd839c5"></a>ADDON_ACTION_PLAYER_REWIND&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Rewind</code></b> </p>
-<p>RW in current file played. global action, can be used anywhere </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dab838dae5f52bd62ac27595ad03e95d62"></a>ADDON_ACTION_PLAYER_PLAY&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Play</code></b> </p>
-<p>Play current song. Unpauses song and sets playspeed to 1x. global action, can be used anywhere </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da9cdee5177f35925741c882cb9e41c812"></a>ADDON_ACTION_DELETE_ITEM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Delete</code></b> </p>
-<p>delete current selected item. Can be used in myfiles.xml window id=3 and in myvideoTitle.xml window id=25 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da2ab6bcc4e5c2f6a3fc6bd10b43c9ff55"></a>ADDON_ACTION_COPY_ITEM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Copy</code></b> </p>
-<p>copy current selected item. Can be used in myfiles.xml window id=3 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dab8567c5cb6d1eede1c32b1deecc4a673"></a>ADDON_ACTION_MOVE_ITEM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Move</code></b> </p>
-<p>move current selected item. Can be used in myfiles.xml window id=3 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da8b5af381ead8c8bdd2ce6a7ddc3d37c7"></a>ADDON_ACTION_TAKE_SCREENSHOT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Sreenshot</code></b> </p>
-<p>take a screenshot </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dacbf4e2889665c47fb5e5c5b7a1bf4d09"></a>ADDON_ACTION_RENAME_ITEM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Rename</code></b> </p>
-<p>rename item </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da5e4a1833ea563dd1b8754f16d5cb8f33"></a>ADDON_ACTION_VOLUME_UP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>VolumeUp</code></b> </p>
-<p>Increase the volume of playback. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dab7d7d724e467326fa92087f19c75e823"></a>ADDON_ACTION_VOLUME_DOWN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>VolumeDown</code></b> </p>
-<p>Decrease the volume of playback. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dab677faee79a725a7cc524efa3610a09b"></a>ADDON_ACTION_VOLAMP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>VolumeAmplification</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da5caa2545b20fa0a1a468e4e3c71d5eb8"></a>ADDON_ACTION_MUTE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Mute</code></b> </p>
-<p>Mute the volume. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da916248ef06523f8131316b6fabef634a"></a>ADDON_ACTION_NAV_BACK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ParentDir</code></b> </p>
-<p>Go back in navigation. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dadf52af86b417054039755c146edf8742"></a>ADDON_ACTION_VOLAMP_UP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>VolAmpUp</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da81ca76e5ab056365b689a9cccb802aaf"></a>ADDON_ACTION_VOLAMP_DOWN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>VolAmpDown</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da9607ec81fef368ea55c6f761b9748b5b"></a>ADDON_ACTION_CREATE_EPISODE_BOOKMARK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>CreateEpisodeBookmark</code></b> </p>
-<p>Creates an episode bookmark on the currently playing video file containing more than one episode </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da6a16b393bee5dc74b5fac261fae8a336"></a>ADDON_ACTION_CREATE_BOOKMARK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>CreateBookmark</code></b> </p>
-<p>Creates a bookmark of the currently playing video file </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da1c15fd387e0f7268f18577ff779b844d"></a>ADDON_ACTION_CHAPTER_OR_BIG_STEP_FORWARD&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ChapterOrBigStepForward</code></b> </p>
-<p>Goto the next chapter, if not available perform a big step forward </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da613a7fe3633c1cf9135c40b578f14031"></a>ADDON_ACTION_CHAPTER_OR_BIG_STEP_BACK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code></code>ChapterOrBigStepBack</b> </p>
-<p>Goto the previous chapter, if not available perform a big step back </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da7d9f283e1fb4829c7f34c0b804364f70"></a>ADDON_ACTION_CYCLE_SUBTITLE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>CycleSubtitle</code></b> </p>
-<p>switch to next subtitle of movie, but will not enable/disable the subtitles. Can be used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da4c04a4e9553b01106c5fbf0b8cc2a72a"></a>ADDON_ACTION_MOUSE_LEFT_CLICK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>LeftClick</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daacf8ea7a88239e7d4be30d49476bc116"></a>ADDON_ACTION_MOUSE_RIGHT_CLICK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>RightClick</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da379afe025ecbfae8e3e9d3c461bc8284"></a>ADDON_ACTION_MOUSE_MIDDLE_CLICK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>MiddleClick</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da4012d195e7b6912749b6901402fb7305"></a>ADDON_ACTION_MOUSE_DOUBLE_CLICK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>DoubleClick</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dacd6233c8bbd4b876d0cf1c6c34535ed4"></a>ADDON_ACTION_MOUSE_WHEEL_UP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>WheelUp</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dad2caefcc3d4dbe56558f8264a8d31c18"></a>ADDON_ACTION_MOUSE_WHEEL_DOWN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>WheelDown</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dac87887a1ae0530b8bb05f8f1b76958b9"></a>ADDON_ACTION_MOUSE_DRAG&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>MouseDrag</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daaabaf69b283ba1c83612e651105433a7"></a>ADDON_ACTION_MOUSE_MOVE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>MouseMove</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dad50e84311ad79d3c8b13439db5280d76"></a>ADDON_ACTION_MOUSE_LONG_CLICK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>LongClick</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dabe008d5a24b7ccd36e87fbb13f10e530"></a>ADDON_ACTION_BACKSPACE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Backspace</code></b> </p>
-<p>Used in the virtual keyboards to delete one letter. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da135344e0e2a6ded4cb9b416162e3bc30"></a>ADDON_ACTION_SCROLL_UP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ScrollUp</code></b> </p>
-<p>Variable speed scroll up for analog keys (stick or triggers) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da1453f257bfa357c26eeabd7d64ab2efa"></a>ADDON_ACTION_SCROLL_DOWN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ScrollDown</code></b> </p>
-<p>Variable speed scroll down for analog keys (stick or triggers) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dacf7fdcdeaee2ce43272608ad71eed87a"></a>ADDON_ACTION_ANALOG_FORWARD&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AnalogFastForward</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dad97d2970b1103a7374992f6b8089b645"></a>ADDON_ACTION_ANALOG_REWIND&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AnalogRewind</code></b> </p>
-<p>Variable speed rewind for analog keys (stick or triggers) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da2485485fd2c51cff8f623b9e37a87dac"></a>ADDON_ACTION_MOVE_ITEM_UP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>MoveItemUp</code></b> </p>
-<p>move item up in playlist </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da922d52df4b1c085a7eff5a9d4c526321"></a>ADDON_ACTION_MOVE_ITEM_DOWN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>MoveItemDown</code></b> </p>
-<p>move item down in playlist </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dab444ca31d6c0b657163becd6cc00f508"></a>ADDON_ACTION_CONTEXT_MENU&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ContextMenu</code></b> </p>
-<p>pops up the context menu </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da86f2c1551874dc95abf6289040649cc0"></a>ADDON_ACTION_SHIFT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Shift</code></b> </p>
-<p>Used in Virtual Keyboard to switch to upper or lower case letters </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da87e59c5eb367d3eeedfd99d780df6126"></a>ADDON_ACTION_SYMBOLS&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Symbols</code></b> </p>
-<p>Used in Virtual Keyboard to switch to or from symbols mode </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da86dabf5bb2cf0fc64894a2d183e88fbc"></a>ADDON_ACTION_CURSOR_LEFT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>CursorLeft</code></b> </p>
-<p>Used in Virtual Keyboard to move the current cursor point to the left </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dafe19dd714b62174f65e7f6a9224e2ee9"></a>ADDON_ACTION_CURSOR_RIGHT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>CursorRight</code></b> </p>
-<p>Used in Virtual Keyboard to move the current cursor point to the right </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da929a536b79b149e8ebec637c1b643147"></a>ADDON_ACTION_SHOW_OSD_TIME&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ShowTime</code></b> </p>
-<p>displays current time, can be used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da73b6f3e0988fc02d476b8d185245bf0e"></a>ADDON_ACTION_ANALOG_SEEK_FORWARD&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AnalogSeekForward</code></b> </p>
-<p>seeks forward, and displays the seek bar. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dae8b8a9b7ac0413f0845dc61e110b0a7a"></a>ADDON_ACTION_ANALOG_SEEK_BACK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AnalogSeekBack</code></b> </p>
-<p>seeks backward, and displays the seek bar. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da1a720c40a8b735a64cff735737b21374"></a>ADDON_ACTION_VIS_PRESET_SHOW&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ShowPreset</code></b> </p>
-<p>Shows the current visualisation preset (milkdrop/spectrum) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da717e21a887f7fc98fcc5b89245670a16"></a>ADDON_ACTION_VIS_PRESET_NEXT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>NextPresent</code></b> </p>
-<p>Next visualisation preset </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dafd11561ddf76a95245ce7007cf918497"></a>ADDON_ACTION_VIS_PRESET_PREV&#160;</td><td class="fielddoc">
-<p>Action string: <b><code></code>PreviousPreset</b> </p>
-<p>Previous visualisation preset </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daf7874e0211c3700a880ba4cf232959a0"></a>ADDON_ACTION_VIS_PRESET_LOCK&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>LockPreset</code></b> </p>
-<p>Lock the current visualisation preset </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dab07a4c75d693a46bf19f766d72858d2b"></a>ADDON_ACTION_VIS_PRESET_RANDOM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>RandomPreset</code></b> </p>
-<p>Switch to a new random preset </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da75cc36c9b86f40d7db9a90e73ba8d4b0"></a>ADDON_ACTION_VIS_RATE_PRESET_PLUS&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>IncreaseVisRating</code></b> </p>
-<p>Used to increase track rating in full screen playback (press info on track and use pageplus on keyboard/remote </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da368a392318aca6f73dde885b526f0dec"></a>ADDON_ACTION_VIS_RATE_PRESET_MINUS&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>DecreaseVisRating</code></b> </p>
-<p>Used to decrease track rating in full screen playback (press info on track and use pageminus on keyboard/remote </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da54adea0ef3f85c268fceefc02f1f2e69"></a>ADDON_ACTION_SHOW_VIDEOMENU&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ShowVideoMenu</code></b> </p>
-<p>Go to the DVD Video menu when playing a DVD. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dadb0c09cb7cfe2392260e00b0eb38c0f2"></a>ADDON_ACTION_ENTER&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Enter</code></b> </p>
-<p>? (ACTION_ENTER) Not sure about all areas, but on some windows this will be the same as the "done" on screen button. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daecb1defb73d0751ede7066fccc7e42a0"></a>ADDON_ACTION_INCREASE_RATING&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>IncreaseRating</code></b> </p>
-<p>Used to increase track rating in full screen playback (press info on track and use pageplus on keyboard/remote </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da50a36e52496b8aecd5ea88a6efa7b9cd"></a>ADDON_ACTION_DECREASE_RATING&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>DecreaseRating</code></b> </p>
-<p>Used to decrease track rating in full screen playback (press info on track and use pageminus on keyboard/remote </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da4cb84101da264fccd77fa2f153cea4b2"></a>ADDON_ACTION_NEXT_SCENE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>NextScene</code></b> </p>
-<p>switch to next scene/cutpoint in movie </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da43e3e884480dc684820e036145551535"></a>ADDON_ACTION_PREV_SCENE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PreviousScene</code></b> </p>
-<p>switch to previous scene/cutpoint in movie </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da9ec9d4d1c23b6853ddb8380042d9f285"></a>ADDON_ACTION_NEXT_LETTER&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>NextLetter</code></b> </p>
-<p>jump through a list or container by letter </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da5693652c39a9514d3d14b59248f3367d"></a>ADDON_ACTION_PREV_LETTER&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PrevLetter</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daf78012f76c9f6c24715c70e0c8dd60fc"></a>ADDON_ACTION_JUMP_SMS2&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>JumpSMS2</code></b> </p>
-<p>Jump through a list using SMS-style input 2 (eg press 2 twice to jump to the B's.) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da8dbf731d67b2bc8cbde5639ce29a78ec"></a>ADDON_ACTION_JUMP_SMS3&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>JumpSMS3</code></b> </p>
-<p>Jump through a list using SMS-style input 3 (eg press 2 twice to jump to the B's.) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da651bf200a64418a6450d42f23769193c"></a>ADDON_ACTION_JUMP_SMS4&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>JumpSMS4</code></b> </p>
-<p>Jump through a list using SMS-style input 4 (eg press 2 twice to jump to the B's.) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da3271f4fcf1c278dd182e82463dc814d4"></a>ADDON_ACTION_JUMP_SMS5&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>JumpSMS5</code></b> </p>
-<p>Jump through a list using SMS-style input 5 (eg press 2 twice to jump to the B's.) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dae379393073735d29a8ecbce57a725f54"></a>ADDON_ACTION_JUMP_SMS6&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>JumpSMS6</code></b> </p>
-<p>Jump through a list using SMS-style input 6 (eg press 2 twice to jump to the B's.) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da25ff8b40174845658db344bc351caacf"></a>ADDON_ACTION_JUMP_SMS7&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>JumpSMS7</code></b> </p>
-<p>Jump through a list using SMS-style input 7 (eg press 2 twice to jump to the B's.) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daa891a1d9538f432d601215c1e95a1b15"></a>ADDON_ACTION_JUMP_SMS8&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>JumpSMS8</code></b> </p>
-<p>Jump through a list using SMS-style input 8 (eg press 2 twice to jump to the B's.) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da8070467d6d01b427cebad5f15196a4ad"></a>ADDON_ACTION_JUMP_SMS9&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>JumpSMS9</code></b> </p>
-<p>Jump through a list using SMS-style input 9 (eg press 2 twice to jump to the B's.) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dad51f07ffb53ac61a8fc610f30314a619"></a>ADDON_ACTION_FILTER_CLEAR&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>FilterClear</code></b> </p>
-<p>Filter a list in music or videos using SMS-style input. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da3d401c5cf139df8919a38d048cba1531"></a>ADDON_ACTION_FILTER_SMS2&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>FilterSMS2</code></b> </p>
-<p>Filter a list in music or videos using SMS-style input. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da4c799cea45e81510afbad6cd1dbf873c"></a>ADDON_ACTION_FILTER_SMS3&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>FilterSMS3</code></b> </p>
-<p>Filter a list in music or videos using SMS-style input. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dacbf1f8634dfabd071f0becf69150f37e"></a>ADDON_ACTION_FILTER_SMS4&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>FilterSMS4</code></b> </p>
-<p>Filter a list in music or videos using SMS-style input. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da1a5e56888e9ce5ab3cb16826a6aae59d"></a>ADDON_ACTION_FILTER_SMS5&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>FilterSMS5</code></b> </p>
-<p>Filter a list in music or videos using SMS-style input. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da3dba61b619fb2e9f5e1b7043feb19497"></a>ADDON_ACTION_FILTER_SMS6&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>FilterSMS6</code></b> </p>
-<p>Filter a list in music or videos using SMS-style input. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da5b44d12163404003b088d58eef28de46"></a>ADDON_ACTION_FILTER_SMS7&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>FilterSMS7</code></b> </p>
-<p>Filter a list in music or videos using SMS-style input. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daec7877a36f85b9c4e9a0b26524b52f86"></a>ADDON_ACTION_FILTER_SMS8&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>FilterSMS8</code></b> </p>
-<p>Filter a list in music or videos using SMS-style input. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daaa9f87af477a566baaa7a2747c33414a"></a>ADDON_ACTION_FILTER_SMS9&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>FilterSMS9</code></b> </p>
-<p>Filter a list in music or videos using SMS-style input. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da17d1a4d267a1cb7cefc551940044ee6d"></a>ADDON_ACTION_FIRST_PAGE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>FirstPage</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da0647578804546bb8edf2b644ed4e6aef"></a>ADDON_ACTION_LAST_PAGE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>LastPage</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da724f4f32e01775d1a055aa9e6803412e"></a>ADDON_ACTION_AUDIO_DELAY&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AudioDelay</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da2822749eccd67cca8bf0013a4d67e9c3"></a>ADDON_ACTION_SUBTITLE_DELAY&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SubtitleDelay</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da02feae3bf448e8b0dd8ab702ccf49e60"></a>ADDON_ACTION_MENU&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Menu</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da67e36efbf08b6bd30bb9d80fe0162f26"></a>ADDON_ACTION_RECORD&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Record</code></b> </p>
-<p>PVR record current playing channel or selected item in windows like EPG </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da19c89c474217ded859a70bf57c8bdd1d"></a>ADDON_ACTION_CHANNEL_SWITCH&#160;</td><td class="fielddoc">
-<p>PVR Used to switch channel. Works only if you playback TV or radio. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da82c616a840248cb1e97d80f492842b3d"></a>ADDON_ACTION_CHANNEL_UP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ChannelUp</code></b> </p>
-<p>PVR Used to switch up to the next channel. Works only if you playback TV or radio </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da6f8843f0bfdf2f4effa3187641e99dff"></a>ADDON_ACTION_CHANNEL_DOWN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ChannelDown</code></b> </p>
-<p>PVR Used to switch down to the previous channel. Works only if you playback TV or radio </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da4806759cee3c35a983602d16720aa77b"></a>ADDON_ACTION_NEXT_CHANNELGROUP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>NextChannelGroup</code></b> </p>
-<p>PVR Goes to the next channel group when using live TV. Works only within PVR windows + channel osd. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da0deb5d602e2cf0b1499e0345dea9116c"></a>ADDON_ACTION_PREVIOUS_CHANNELGROUP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PreviousChannelGroup</code></b> </p>
-<p>PVR Goes to the previous channel group when using live TV. Works only within PVR windows + channel osd. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da3bcdbb65a7bcc1382339384882a1016b"></a>ADDON_ACTION_PVR_PLAY&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PlayPVR</code></b> </p>
-<p>PVR Starts playback a TV or radio channel depends on the last played channel. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dab9c41f88a696a4a0287a1662c828b41a"></a>ADDON_ACTION_PVR_PLAY_TV&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PlayPVRTV</code></b> </p>
-<p>PVR Starts playback a TV channel. Will playback the last played channel if available. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dac9dcc42d8e3fd09b3d2b658ae302d338"></a>ADDON_ACTION_PVR_PLAY_RADIO&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PlayPVRRadio</code></b> </p>
-<p>PVR Starts playback a radio channel. Will playback the last played channel if available. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da6ab65c68e892cb81e18fabc5e63db401"></a>ADDON_ACTION_TOGGLE_FULLSCREEN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ToggleFullsreen</code></b> </p>
-<p>switch 2 desktop resolution </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da21b111a5965fd4f824191d7890affef5"></a>ADDON_ACTION_TOGGLE_WATCHED&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ToggleWatched</code></b> </p>
-<p>Toggle watched status (videos) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da16504aa731b63542782f3d345126783f"></a>ADDON_ACTION_SCAN_ITEM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ScanItem</code></b> </p>
-<p>scan item </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da9f1d76c62ad378d7a2990373ca7ccbb1"></a>ADDON_ACTION_TOGGLE_DIGITAL_ANALOG&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AudioToggleDigital</code></b> </p>
-<p>switch digital &lt;-&gt; analog </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da926261b44c8211962ea28358ec152034"></a>ADDON_ACTION_RELOAD_KEYMAPS&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ReloadKeymaps</code></b> </p>
-<p>reloads CButtonTranslator's keymaps </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da54323544c9c7a57cd906ca61d50eade4"></a>ADDON_ACTION_GUIPROFILE_BEGIN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>GUIProfile</code></b> </p>
-<p>start the GUIControlProfiler running </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dafb62f445546869cb1a2a706ee564878d"></a>ADDON_ACTION_TELETEXT_RED&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Red</code></b> </p>
-<p>Teletext Color buttons to control TopText </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daf399788ea055d818b57b01992786db73"></a>ADDON_ACTION_TELETEXT_GREEN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Green</code></b> </p>
-<p>Teletext Color buttons to control TopText </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daae7b469b1b69c63aedcda279af62777b"></a>ADDON_ACTION_TELETEXT_YELLOW&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Yellow</code></b> </p>
-<p>Teletext Color buttons to control TopText </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daed9ea17cad27f45408fb2d1f020e1db0"></a>ADDON_ACTION_TELETEXT_BLUE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Blue</code></b> </p>
-<p>Teletext Color buttons to control TopText </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da2ec83a9354a22453171bd3631f8bec7d"></a>ADDON_ACTION_INCREASE_PAR&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>IncreasePar</code></b> </p>
-<p>Used in video fullscreen to increase the pixel aspect ratio (stretch). </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da8d65490b837845f3305f4e5562c022a5"></a>ADDON_ACTION_DECREASE_PAR&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>DecreasePar</code></b> </p>
-<p>Used in video fullscreen to decrease the pixel aspect ratio (stretch). </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dacd02f9b72924fef3a10b652c9dc5a0d3"></a>ADDON_ACTION_VSHIFT_UP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>VerticalShiftUp</code></b> </p>
-<p>shift up video image in VideoPlayer </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dac776c47cf36a10a480739d422bc97b49"></a>ADDON_ACTION_VSHIFT_DOWN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>VerticalShiftDown</code></b> </p>
-<p>shift down video image in VideoPlayer </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dadf0fd1064805a4941b0c13497b54e7dd"></a>ADDON_ACTION_PLAYER_PLAYPAUSE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PlayPause</code></b> </p>
-<p>Play/pause. If playing it pauses, if paused it plays. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da5b99a6c59c1631101da88072691cde6a"></a>ADDON_ACTION_SUBTITLE_VSHIFT_UP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SubtitleShiftUp</code></b> </p>
-<p>shift up subtitles in VideoPlayer </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da61297206b69557ae75dd52936e998194"></a>ADDON_ACTION_SUBTITLE_VSHIFT_DOWN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SubtitleShiftDown</code></b> </p>
-<p>shift down subtitles in VideoPlayer </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da7aebcdeff383b51900f022259503abdf"></a>ADDON_ACTION_SUBTITLE_ALIGN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SubtitleAlign</code></b> </p>
-<p>toggle vertical alignment of subtitles </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da1e8092ed82c92220d9a653ff43777e21"></a>ADDON_ACTION_FILTER&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Filter</code></b> </p>
-<p>Opens the mediafilter dialog in the video and musiclibrary. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daaf13f08aa8a8513df197169b0698fec4"></a>ADDON_ACTION_SWITCH_PLAYER&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SwitchPlayer</code></b> </p>
-<p>Select player to use, such as internal (DVDPlayer/PAPlayer), UPnP "play using" targets, external players (defined in playercorefactory.xml). </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daf5c80832cc3d743a17cee591c075d365"></a>ADDON_ACTION_STEREOMODE_NEXT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code></code>NextStereoMode</b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dab17da7a41e78619f1bd961f4522bcf53"></a>ADDON_ACTION_STEREOMODE_PREVIOUS&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PreviousStereoMode</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dada5a34f1be10d85c9bc06cd1aaa0c360"></a>ADDON_ACTION_STEREOMODE_TOGGLE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ToggleStereoMode</code></b> </p>
-<p>Toggle 3D/Stereoscopic mode </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da17fbe557e9aca8bac91060f3d79a3784"></a>ADDON_ACTION_STEREOMODE_SELECT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>StereoMode</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da0296b26bd83f2e279d8dafb9f6a25bb7"></a>ADDON_ACTION_STEREOMODE_TOMONO&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>StereoModeToMono</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da74f43359739ec16676ccd8976b7fa9bd"></a>ADDON_ACTION_SETTINGS_RESET&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SettingsReset</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da60e89b9312148f9d4c46c55c85de09f3"></a>ADDON_ACTION_SETTINGS_LEVEL_CHANGE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SettingsLevelChange</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43daeb86e22256d1eb3791c7bdf5cbfff9a9"></a>ADDON_ACTION_TRIGGER_OSD&#160;</td><td class="fielddoc">
-<p>show autoclosing OSD. Can b used in videoFullScreen.xml window id=2005 </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da4cfcfd24a139f6e57bf1b911dbefb05b"></a>ADDON_ACTION_TOUCH_TAP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Tap</code></b> </p>
-<p>touch actions </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da583748503b9698730992661939779b38"></a>ADDON_ACTION_TOUCH_TAP_TEN&#160;</td><td class="fielddoc">
-<p>To define the highest value possible for ADDON_ACTION_TOUCH_TAP. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da3397e98619afa0386d8a4b62bf6d5075"></a>ADDON_ACTION_TOUCH_LONGPRESS&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>LongPress</code></b> </p>
-<p>touch action </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da9596443a4db6fa7c82aaf3a3c11465c4"></a>ADDON_ACTION_TOUCH_LONGPRESS_TEN&#160;</td><td class="fielddoc">
-<p>To define the highest value possible for ADDON_ACTION_TOUCH_LONGPRESS. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da09aff7c1d28a6a70dfe1b81650f0bb58"></a>ADDON_ACTION_GESTURE_ZOOM&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>ZoomGesture</code></b> </p>
-<p>sendaction with point and currentPinchScale (fingers together &lt; 1.0 -&gt; fingers apart &gt; 1.0) </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dacdcfcd6b277e60fe4e1ad0a8faf50658"></a>ADDON_ACTION_GESTURE_ROTATE&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>RotateGesture</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da582020831289e2733f1fe9e29ff4d665"></a>ADDON_ACTION_GESTURE_PAN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>PanGesture</code></b> </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dae4081c0abb99bef39aaa3d813467cfd1"></a>ADDON_ACTION_GESTURE_SWIPE_LEFT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SwipeLeft</code></b> </p>
-<p>To define the highest value possible for ADDON_ACTION_GESTURE_SWIPE_LEFT </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da75fe2098c9022ed265a9571ced1c9a0b"></a>ADDON_ACTION_GESTURE_SWIPE_RIGHT&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SwipeRight</code></b> </p>
-<p>To define the highest value possible for ADDON_ACTION_GESTURE_SWIPE_RIGHT </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da3968a821bdc3d98474281097fd945fff"></a>ADDON_ACTION_GESTURE_SWIPE_UP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SwipeUp</code></b> </p>
-<p>To define the highest value possible for ADDON_ACTION_GESTURE_SWIPE_UP </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da997208c1c7cc4554f8b4f8e7f6ec758d"></a>ADDON_ACTION_GESTURE_SWIPE_DOWN&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>SwipeDown</code></b> </p>
-<p>To define the highest value possible for ADDON_ACTION_GESTURE_SWIPE_DOWN </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da7fc7ab7b1b68a2b60b1ae1e68cafc8a8"></a>ADDON_ACTION_ANALOG_MOVE_X&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AnalogMoveX</code></b> </p>
-<p>analog thumbstick move, horizontal axis; see ACTION_ANALOG_MOVE </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43dace7055a1eee38153b88333f1ee176886"></a>ADDON_ACTION_ANALOG_MOVE_Y&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>AnalogMoveY</code></b> </p>
-<p>analog thumbstick move, vertical axis; see ACTION_ANALOG_MOVE </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da04e9a2b03c426f50da7b259d4877c5f7"></a>ADDON_ACTION_ERROR&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Error</code></b> </p>
-<p>ERROR action is used to play an error sound </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga42753b64a4c9b01785035a18e768a43da190c936e901c14ee148f3cadee757ce8"></a>ADDON_ACTION_NOOP&#160;</td><td class="fielddoc">
-<p>Action string: <b><code>Noop</code></b> </p>
-<p>The NOOP action can be specified to disable an input event. This is useful in user keyboard.xml etc to disable actions specified in the system mappings. </p>
-</td></tr>
-</table>
-
+<p>addItem(item[, position]) &ndash; Add a new item to this <a class="el" href="a00126.html">Window</a> List.</p>
+<ul>
+<li>item : string, unicode or ListItem - item to add.</li>
+<li>position : [opt] integer - position of item to add. (NO Int = Adds to bottom,0 adds to top, 1 adds to one below from top,-1 adds to one above from bottom etc etc )<ul>
+<li>If integer positions are greater than list size, negative positions will add to top of list, positive positions will add to bottom of list</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.addItem(<span class="stringliteral">&#39;Reboot Kodi&#39;</span>, 0)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga214d46ad5cb6e318163ba98e0dd780ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>removeItem(position) &ndash; Removes a specified item based on position, from the <a class="el" href="a00126.html">Window</a> List.</p>
+<p>position : integer - position of item to remove.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.removeItem(5)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga860b30302751103052456bb1f1079980"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getCurrentListPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="a00310.html#ga860b30302751103052456bb1f1079980">getCurrentListPosition()</a> &ndash; Gets the current position in the <a class="el" href="a00126.html">Window</a> List.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pos = self.getCurrentListPosition()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gabaeb49593088c3be9c7a232d50152e34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setCurrentListPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>setCurrentListPosition(position) &ndash; Set the current position in the <a class="el" href="a00126.html">Window</a> List.</p>
+<p>position : integer - position of item to set.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.setCurrentListPosition(5)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga37ec44d83350b3e4c5b4f7a2648bfc01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ListItem* getListItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>getListItem(position) &ndash; Returns a given ListItem in this <a class="el" href="a00126.html">Window</a> List.</p>
+<p>position : integer - position of item to return.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;listitem = self.getListItem(6)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga7b00dc949b12149360563a1941956fc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getListSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="a00310.html#ga7b00dc949b12149360563a1941956fc7">getListSize()</a> &ndash; Returns the number of items in this <a class="el" href="a00126.html">Window</a> List.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;listSize = self.getListSize()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga612285c5b9d603a0abb0feab44b8412f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clearList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="a00310.html#ga612285c5b9d603a0abb0feab44b8412f">clearList()</a> &ndash; Clear the <a class="el" href="a00126.html">Window</a> List.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.clearList()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaf48b268d0ce5767fd8702e649e2aad39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setContainerProperty </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>strProperty</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>strValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>setContainerProperty(key, value) &ndash; Sets a container property, similar to an infolabel.</p>
+<p>key : string - property name. value : string or unicode - value of property.</p>
+<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive.<br />
+You can use the above as keywords for arguments and skip certain optional arguments.<br />
+Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.setContainerProperty(<span class="stringliteral">&#39;Category&#39;</span>, <span class="stringliteral">&#39;Newest&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

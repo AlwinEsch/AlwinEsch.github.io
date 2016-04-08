@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: 5. Input Stream</title>
+<title>Kodi Development: Subclass - ControlImage</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,112 +91,104 @@ $(document).ready(function(){initNavTree('a00324.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">5. Input Stream<div class="ingroups"><a class="el" href="a00289.html">C++</a></div></div>  </div>
+<div class="title">Subclass - ControlImage<div class="ingroups"><a class="el" href="a00291.html">Python</a> &raquo; <a class="el" href="a00293.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00317.html">Control</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Demux packet handle and codec identification class</b> </p>
-<p>This class brings the support for obtaining required codec identifications and packages for handling stream demuxer.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00203_source.html">#include &lt;kodi/api2/inputstream/InputStream.hpp&gt;</a> to enjoy it. </p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00091"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00091.html">Codec Descriptor (class CodecDescriptor)</a></td></tr>
-<tr class="memdesc:a00091"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Codec type name converter</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gab8d4d7010febbe7e81fc55d2fc7b8614"></a>
+<p><b>Used to show an image.</b> </p>
+<p><b><code>ControlImage(x, y, width, height, filename[, aspectRatio, colorDiffuse])</code></b></p>
+<p>The image control is used for displaying images in Kodi. You can choose the position, size, transparency and contents of the image to be displayed.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00317.html">Control</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>string - image filename. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aspectRatio</td><td>[opt] integer - (values 0 = stretch (default), 1 = scale up (crops), 2 = scale down (black bar) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colorDiffuse</td><td>hexString - (example, '0xC0FF0000' (red tint))</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.<br />
+ After you create the control, you need to add it to the window with addControl().</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># ControlImage(x, y, width, height, filename[, aspectRatio, colorDiffuse])</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.image = xbmcgui.ControlImage(100, 250, 125, 75, aspectRatio=2)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga7ba591029ef61ca17851a9f02a1fe5dc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00069.html#a00389">kodi_codec</a> KodiAPI::InputStream::GetCodecByName </td>
+          <td class="memname">void setImage </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strCodecName</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>imageFilename</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the codec id used by Kodi. </p>
-<p>This function is required on registration of streams to Kodi, what is currently needed on the PVR add-on system where the demuxing becomes handled from them.</p>
-<p>About available codec/demuxer names see <a href="https://www.ffmpeg.org/doxygen/2.8/allformats_8c_source.html"><b>see ffmpeg allformats.c</b></a> in function <b><code>void av_register_all(void)</code></b> with on macro <b><code>REGISTER_DEMUXER</code></b> defined values. Further are inside Kodi the two names <b><em>TELETEXT</em></b> and <b><em>RDS</em></b> used to get <a class="el" href="a00069.html#a00389" title="Codec identification structure. ">kodi_codec</a> value.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strCodecName</td><td>The name of the codec </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The codec_id, or a codec_id with 0 values when not supported </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaa73596c7986592032d59da8ad3cfca28"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">DemuxPacket* KodiAPI::InputStream::AllocateDemuxPacket </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iDataSize</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>useCache</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allocate a demux packet. Free with FreeDemuxPacket. </p>
-<p>Create a free demux packet with requested size</p>
+<p>Changes the image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iDataSize</td><td>The size of the data that will go into the packet </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>string - image filename. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useCache</td><td>[opt] bool - True=use cache (default) / False=don't use cache.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The allocated packet</dd></dl>
-<p>Here is a view of packet data structure: </p><div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>DemuxPacket</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* pData;   <span class="comment">// data</span></div>
-<div class="line">  <span class="keywordtype">int</span> iSize;              <span class="comment">// data size</span></div>
-<div class="line">  <span class="keywordtype">int</span> iStreamId;          <span class="comment">// integer representing the stream index</span></div>
-<div class="line">  <span class="keywordtype">int</span> iGroupId;           <span class="comment">// the group this data belongs to, used to</span></div>
-<div class="line">                          <span class="comment">// group data from different streams together</span></div>
-<div class="line"></div>
-<div class="line">  <span class="keywordtype">double</span> pts;             <span class="comment">// pts in DVD_TIME_BASE</span></div>
-<div class="line">  <span class="keywordtype">double</span> dts;             <span class="comment">// dts in DVD_TIME_BASE</span></div>
-<div class="line">  <span class="keywordtype">double</span> duration;        <span class="comment">// duration in DVD_TIME_BASE if available</span></div>
-<div class="line">} DemuxPacket;</div>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setImage(filename[, useCache])</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.image.setImage(<span class="stringliteral">&#39;special://home/scripts/test.png&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;self.image.setImage(<span class="stringliteral">&#39;special://home/scripts/test.png&#39;</span>, <span class="keyword">False</span>)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;...</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="gab5b9e9262b558cfa9f18acf307eec959"></a>
+<a class="anchor" id="ga3b0c15e0d82d8605f4b3ad82aaa42c16"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void KodiAPI::InputStream::FreeDemuxPacket </td>
+          <td class="memname">void setColorDiffuse </td>
           <td>(</td>
-          <td class="paramtype">DemuxPacket *&#160;</td>
-          <td class="paramname"><em>pPacket</em></td><td>)</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>hexString</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Free a packet that was allocated with AllocateDemuxPacket. </p>
+<p>Changes the images color. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pPacket</td><td>The packet to free </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colorDiffuse</td><td>hexString - (example, '0xC0FF0000' (red tint))</td></tr>
   </table>
   </dd>
 </dl>
-
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setColorDiffuse(colorDiffuse)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.image.setColorDiffuse(<span class="stringliteral">&#39;0xC0FF0000&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

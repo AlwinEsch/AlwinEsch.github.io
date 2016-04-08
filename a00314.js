@@ -1,12 +1,31 @@
 var a00314 =
 [
-    [ "AddonGUIIconOverlay", "a00314.html#ga84c995b3a9c675a155ac04175b6f036e", [
-      [ "ADDON_ICON_OVERLAY_NONE", "a00314.html#gga84c995b3a9c675a155ac04175b6f036ea5aff12248265d41c7a3b844b3a266d89", null ],
-      [ "ADDON_ICON_OVERLAY_RAR", "a00314.html#gga84c995b3a9c675a155ac04175b6f036ea95fe6bd6d78702037977092efd6a3bae", null ],
-      [ "ADDON_ICON_OVERLAY_ZIP", "a00314.html#gga84c995b3a9c675a155ac04175b6f036ea985180b75a396e849147c4e152d95ab4", null ],
-      [ "ADDON_ICON_OVERLAY_LOCKED", "a00314.html#gga84c995b3a9c675a155ac04175b6f036eaaa8c59bf1846c970826022a96a1be181", null ],
-      [ "ADDON_ICON_OVERLAY_UNWATCHED", "a00314.html#gga84c995b3a9c675a155ac04175b6f036eaf533441634ed4ef43e368c7be8ba3982", null ],
-      [ "ADDON_ICON_OVERLAY_WATCHED", "a00314.html#gga84c995b3a9c675a155ac04175b6f036ea14f4cfc8a3f1f5f55f4d1bb8d81e33f2", null ],
-      [ "ADDON_ICON_OVERLAY_HD", "a00314.html#gga84c995b3a9c675a155ac04175b6f036eaaca8506291936db6653c9d0810a26828", null ]
-    ] ]
+    [ "Callback functions from Kodi to Add-On", "a00315.html", "a00315" ],
+    [ "play", "a00314.html#gaaee24c75f696af5fedbc354b5b48e20d", null ],
+    [ "stop", "a00314.html#ga8c528baf37154d347366083f0f816846", null ],
+    [ "pause", "a00314.html#ga7167f5c196fc5e167bfabde1a730e81d", null ],
+    [ "playnext", "a00314.html#ga1387dec220717864f672de1df7a71faf", null ],
+    [ "playprevious", "a00314.html#gaa5b43aa5da42a2efacddf87ad45daea4", null ],
+    [ "playselected", "a00314.html#ga8cbc3620e75e5a03e2beaba8bde78231", null ],
+    [ "isPlaying", "a00314.html#ga8438e3403946accc1986a05b89ee7b03", null ],
+    [ "isPlayingAudio", "a00314.html#ga480d8fce2c836db07fd00754481295a5", null ],
+    [ "isPlayingVideo", "a00314.html#ga8f1c0037ad362eaadde1ec827db6f70c", null ],
+    [ "isPlayingRDS", "a00314.html#ga4adfa5f4e52074c9c1e2bdfb139a857b", null ],
+    [ "getPlayingFile", "a00314.html#gae6a8ac0668d2ae6fcbde97b61de5b4ee", null ],
+    [ "getTime", "a00314.html#ga4437edd7fd2832790c13ba3179bcc64d", null ],
+    [ "seekTime", "a00314.html#ga88dd78acfd022c25ea0bbb95b88207ca", null ],
+    [ "setSubtitles", "a00314.html#ga7181caa6357d359e1fa528585af327c4", null ],
+    [ "showSubtitles", "a00314.html#gadcaef0ad224ff20f4dc01028a5995157", null ],
+    [ "getSubtitles", "a00314.html#ga81495e1edeffea020f9f5b01c521ad24", null ],
+    [ "disableSubtitles", "a00314.html#ga7b199d0d15f55de2ab6c9a205dff01f1", null ],
+    [ "getAvailableSubtitleStreams", "a00314.html#ga7327895e6b06bc5be33fbbd66c1da98f", null ],
+    [ "setSubtitleStream", "a00314.html#ga1ee8a463c7974e8bd88a0906b84909da", null ],
+    [ "getVideoInfoTag", "a00314.html#ga7287b2615a3d76947a1dcd085bfaa337", null ],
+    [ "getMusicInfoTag", "a00314.html#gae11388c95e616274e5ee0f10b61bf1d8", null ],
+    [ "getRadioRDSInfoTag", "a00314.html#gabaefcfb5922aabc776d850b1f0869bf0", null ],
+    [ "getTotalTime", "a00314.html#ga101be6ee4c35b85828fc45c67cfaded5", null ],
+    [ "getAvailableAudioStreams", "a00314.html#ga8e79a9287b85f65d632441eda0aa00cd", null ],
+    [ "setAudioStream", "a00314.html#ga1d0ef4583b20c163169af1e089e034dc", null ],
+    [ "getAvailableVideoStreams", "a00314.html#ga90d87cdb88979d2713b05412f4e79f4d", null ],
+    [ "setVideoStream", "a00314.html#ga66ee0bb7628463cdf42c01c774134646", null ]
 ];

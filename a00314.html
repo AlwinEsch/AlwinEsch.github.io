@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Definitions, structures and enumerators</title>
+<title>Kodi Development: Player</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,49 +91,656 @@ $(document).ready(function(){initNavTree('a00314.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Definitions, structures and enumerators<div class="ingroups"><a class="el" href="a00289.html">C++</a> &raquo; <a class="el" href="a00308.html">4. GUI</a> &raquo; <a class="el" href="a00089.html">List Item</a></div></div>  </div>
+<div class="title">Player<div class="ingroups"><a class="el" href="a00291.html">Python</a> &raquo; <a class="el" href="a00292.html">Library - xbmc</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Library definition values</b> </p>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ga84c995b3a9c675a155ac04175b6f036e"></a>
+<p><b>Kodi's player class.</b> </p>
+<p><b><code>xbmc.Player()</code></b></p>
+<p>To become and create the class to play something.</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmc.Player().play(url, listitem, windowed)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00315"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00315.html">Callback functions from Kodi to Add-On</a></td></tr>
+<tr class="memdesc:a00315"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Callback functions.</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gaaee24c75f696af5fedbc354b5b48e20d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum AddonGUIIconOverlay</td>
+          <td class="memname">void play </td>
+          <td>(</td>
+          <td class="paramtype">const PlayParameter &amp;&#160;</td>
+          <td class="paramname"><em>item</em> = <code>Player::defaultPlayParameter</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ListItem *&#160;</td>
+          <td class="paramname"><em>listitem</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>windowed</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startpos</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Overlay icons used on a list item. </p>
-<p><a class="anchor" id="kodi_gui_listitem_iconoverlay"></a></p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga84c995b3a9c675a155ac04175b6f036ea5aff12248265d41c7a3b844b3a266d89"></a>ADDON_ICON_OVERLAY_NONE&#160;</td><td class="fielddoc">
-<p>Value <b>0</b> - No overlay icon. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga84c995b3a9c675a155ac04175b6f036ea95fe6bd6d78702037977092efd6a3bae"></a>ADDON_ICON_OVERLAY_RAR&#160;</td><td class="fielddoc">
-<p>Value <b>1</b> - Compressed *.rar files. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga84c995b3a9c675a155ac04175b6f036ea985180b75a396e849147c4e152d95ab4"></a>ADDON_ICON_OVERLAY_ZIP&#160;</td><td class="fielddoc">
-<p>Value <b>2</b> - Compressed *.zip files. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga84c995b3a9c675a155ac04175b6f036eaaa8c59bf1846c970826022a96a1be181"></a>ADDON_ICON_OVERLAY_LOCKED&#160;</td><td class="fielddoc">
-<p>Value <b>3</b> - Locked files. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga84c995b3a9c675a155ac04175b6f036eaf533441634ed4ef43e368c7be8ba3982"></a>ADDON_ICON_OVERLAY_UNWATCHED&#160;</td><td class="fielddoc">
-<p>Value <b>4</b> - For not watched files. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga84c995b3a9c675a155ac04175b6f036ea14f4cfc8a3f1f5f55f4d1bb8d81e33f2"></a>ADDON_ICON_OVERLAY_WATCHED&#160;</td><td class="fielddoc">
-<p>Value <b>5</b> - For seen files. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga84c995b3a9c675a155ac04175b6f036eaaca8506291936db6653c9d0810a26828"></a>ADDON_ICON_OVERLAY_HD&#160;</td><td class="fielddoc">
-<p>Value <b>6</b> - Is on hard disk stored. </p>
-</td></tr>
-</table>
+<p>Play a item. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">item</td><td>[opt] string - filename, url or playlist. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">listitem</td><td>[opt] listitem - used with setInfo() to set different infolabels. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">windowed</td><td>[opt] bool - true=play video windowed, false=play users preference.(default) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">startpos</td><td>[opt] int - starting position when playing a playlist. Default = -1</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If item is not given then the <a class="el" href="a00104.html">Player</a> will try to play the current item in the current playlist.<br />
+ <br />
+ You can use the above as keywords for arguments and skip certain. optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;listitem = xbmcgui.ListItem(<span class="stringliteral">&#39;Ironman&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;listitem.setInfo(<span class="stringliteral">&#39;video&#39;</span>, {<span class="stringliteral">&#39;Title&#39;</span>: <span class="stringliteral">&#39;Ironman&#39;</span>, <span class="stringliteral">&#39;Genre&#39;</span>: <span class="stringliteral">&#39;Science Fiction&#39;</span>})</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;xbmc.Player().play(url, listitem, windowed)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;xbmc.Player().play(playlist, listitem, windowed, startpos)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga8c528baf37154d347366083f0f816846"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
+<p>Stop playing. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga7167f5c196fc5e167bfabde1a730e81d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pause or resume playing if already paused. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga1387dec220717864f672de1df7a71faf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void playnext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Play next item in playlist. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaa5b43aa5da42a2efacddf87ad45daea4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void playprevious </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Play previous item in playlist. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga8cbc3620e75e5a03e2beaba8bde78231"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void playselected </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>selected</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Play a certain item from the current playlist. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga8438e3403946accc1986a05b89ee7b03"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPlaying </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check Kodi is playing something. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if Kodi is playing a file. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga480d8fce2c836db07fd00754481295a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPlayingAudio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check for playing audio. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if Kodi is playing an audio file. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8f1c0037ad362eaadde1ec827db6f70c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPlayingVideo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check for playing video. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if Kodi is playing a video. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4adfa5f4e52074c9c1e2bdfb139a857b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPlayingRDS </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check for playing radio data system (RDS). </p>
+<dl class="section return"><dt>Returns</dt><dd>True if kodi is playing a radio data system (RDS). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae6a8ac0668d2ae6fcbde97b61de5b4ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getPlayingFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the current playing file as a string. </p>
+<dl class="section note"><dt>Note</dt><dd>For LiveTV, returns a <b>pvr://</b> url which is not translatable to an OS specific file or external url.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Playing filename </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception,if</td><td>player is not playing a file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4437edd7fd2832790c13ba3179bcc64d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double getTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get playing time. </p>
+<p>Returns the current time of the current playing media as fractional seconds.</p>
+<dl class="section return"><dt>Returns</dt><dd>Current time as fractional seconds </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>If player is not playing a file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga88dd78acfd022c25ea0bbb95b88207ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void seekTime </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>seekTime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Seek time. </p>
+<p>Seeks the specified amount of time as fractional seconds. The time specified is relative to the beginning of the currently. playing media file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">seekTime</td><td>Time to seek as fractional seconds </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>If player is not playing a file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7181caa6357d359e1fa528585af327c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSubtitles </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>subtitleFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set subtitle file and enable subtitles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">subtitleFile</td><td>File to use as source ofsubtitles </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gadcaef0ad224ff20f4dc01028a5995157"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void showSubtitles </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bVisible</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable / disable subtitles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">visible</td><td>[boolean] True for visible subtitles.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmc.Player().showSubtitles(<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga81495e1edeffea020f9f5b01c521ad24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getSubtitles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get subtitle stream name. </p>
+<dl class="section return"><dt>Returns</dt><dd>Stream name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7b199d0d15f55de2ab6c9a205dff01f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void disableSubtitles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable subtitles. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga7327895e6b06bc5be33fbbd66c1da98f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;String&gt; getAvailableSubtitleStreams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Subtitle stream names. </p>
+<dl class="section return"><dt>Returns</dt><dd>List of subtitle streams as name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1ee8a463c7974e8bd88a0906b84909da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setSubtitleStream </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iStream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set Subtitle Stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iStream</td><td>[int] Subtitle stream to select for play</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmc.Player().setSubtitleStream(1)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga7287b2615a3d76947a1dcd085bfaa337"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InfoTagVideo* getVideoInfoTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get video info tag. </p>
+<p>Returns the VideoInfoTag of the current playing Movie.</p>
+<dl class="section return"><dt>Returns</dt><dd>Video info tag </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>If player is not playing a file or current file is not a movie file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gae11388c95e616274e5ee0f10b61bf1d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InfoTagMusic* getMusicInfoTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get music info tag. </p>
+<p>Returns the MusicInfoTag of the current playing 'Song'.</p>
+<dl class="section return"><dt>Returns</dt><dd>Music info tag </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>If player is not playing a file or current file is not a music file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gabaefcfb5922aabc776d850b1f0869bf0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">InfoTagRadioRDS* getRadioRDSInfoTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2">PlayerException</td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get Radio RDS info tag. </p>
+<p>Returns the RadioRDSInfoTag of the current playing 'Radio Song if. present'.</p>
+<dl class="section return"><dt>Returns</dt><dd>Radio RDS info tag </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>If player is not playing a file or current file is not a rds file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga101be6ee4c35b85828fc45c67cfaded5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double getTotalTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get total playing time. </p>
+<p>Returns the total time of the current playing media in seconds. This is only accurate to the full second.</p>
+<dl class="section return"><dt>Returns</dt><dd>Total time of the current playing media </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>If player is not playing a file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8e79a9287b85f65d632441eda0aa00cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;String&gt; getAvailableAudioStreams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Audio stream names. </p>
+<dl class="section return"><dt>Returns</dt><dd>List of audio streams as name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1d0ef4583b20c163169af1e089e034dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAudioStream </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iStream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set Audio Stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iStream</td><td>[int] Audio stream to select for play</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmc.Player().setAudioStream(1)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga90d87cdb88979d2713b05412f4e79f4d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;String&gt; getAvailableVideoStreams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Video stream names. </p>
+<dl class="section return"><dt>Returns</dt><dd>List of video streams as name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga66ee0bb7628463cdf42c01c774134646"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setVideoStream </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iStream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set Video Stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iStream</td><td>[int] Video stream to select for play</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmc.Player().setVideoStream(1)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

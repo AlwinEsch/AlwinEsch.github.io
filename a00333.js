@@ -1,9 +1,8 @@
 var a00333 =
 [
-    [ "EpgEntry", "a00333.html#ga345cfbc626ff5c3dc2df7686d7fa4cd3", null ],
-    [ "ChannelEntry", "a00333.html#ga358c2ca5fb5b38bbe06cd50a9dbc47a7", null ],
-    [ "TimerEntry", "a00333.html#gaf965d62fda6f7cb9840e7c580ea0cdb4", null ],
-    [ "RecordingEntry", "a00333.html#ga9b2c71ebb33fc47467d268d1f83578e2", null ],
-    [ "ChannelGroup", "a00333.html#ga7d06f75358ad661f5dc42a2c0f05bec9", null ],
-    [ "ChannelGroupMember", "a00333.html#ga7ad64fe7b3cd334deb32b3193c0e6856", null ]
+    [ "settings.xml", "a00334.html", null ],
+    [ "General", "a00335.html", "a00335" ],
+    [ "Sound Playback (class CSoundPlay)", "a00337.html", "a00337" ],
+    [ "Network", "a00339.html", "a00339" ],
+    [ "Virtual file system", "a00340.html", "a00340" ]
 ];

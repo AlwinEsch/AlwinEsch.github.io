@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Functions - Music info tag</title>
+<title>Kodi Development: Stat</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,373 +92,284 @@ $(document).ready(function(){initNavTree('a00312.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Functions - Music info tag<div class="ingroups"><a class="el" href="a00289.html">C++</a> &raquo; <a class="el" href="a00308.html">4. GUI</a> &raquo; <a class="el" href="a00089.html">List Item</a></div></div>  </div>
+<div class="title">Stat<div class="ingroups"><a class="el" href="a00291.html">Python</a> &raquo; <a class="el" href="a00296.html">Library - xbmcvfs</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ga15e9d1572e077825edbaa17d36a35d4b"></a>
+<p>Get file or file system status. </p>
+<p><b><code>xbmcvfs.Stat(path)</code></b></p>
+<p>These class return information about a file. Execute (search) permission is required on all of the directories in path that lead to the file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>[string] file or folder</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  st = xbmcvfs.Stat(path)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  modified = st.st_mtime()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga00b3e20028eaee69c44cdc47a922fe31"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum ADDON_MusicInfoTag</td>
+          <td class="memname">long long st_mode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-<p>Music info tag data transfer flags. </p>
-<p><a class="anchor" id="ADDON_MusicInfoTag"></a> Flags are used to identify data send from Add-on to Kodi and is used by the following functions:</p><ul>
-<li><a class="el" href="a00312.html#ga21b04708daf767915e62979acd47b6aa">CListItem::SetMusicInfo_BOOL(...);</a></li>
-<li><a class="el" href="a00312.html#gab97b3b7b94b59c5ef326982feda630a7">CListItem::SetMusicInfo_INT(...);</a></li>
-<li><a class="el" href="a00312.html#ga03cc9e6f99b5527feaf63c6e1ac897b0">CListItem::SetMusicInfo_UINT(...);</a></li>
-<li><a class="el" href="a00312.html#ga7b0dd8566cc13729d8469b569bcf7fa9">CListItem::SetMusicInfo_FLOAT(...);</a></li>
-<li><a class="el" href="a00312.html#ga8a915dea0ebfde069cfd3decae9eeebe">CListItem::SetMusicInfo_STRING(...);</a></li>
-<li><a class="el" href="a00312.html#gad37cb7a265cdfbe71a9c630ba1a88926">CListItem::SetMusicInfo_STRING_LIST(...);</a></li>
-</ul>
-<dl class="section note"><dt>Note</dt><dd>The end string of value shows the type of function to use.</dd></dl>
-<p><b>Music example Values</b>: </p><table class="doxtable">
-<tr>
-<th align="right">Info label </th><th align="left">Description  </th></tr>
-<tr>
-<td align="right">tracknumber </td><td align="left">integer (8) </td></tr>
-<tr>
-<td align="right">discnumber </td><td align="left">integer (2) </td></tr>
-<tr>
-<td align="right">duration </td><td align="left">integer (245) - duration in seconds </td></tr>
-<tr>
-<td align="right">year </td><td align="left">integer (1998) </td></tr>
-<tr>
-<td align="right">genre </td><td align="left">string (Rock) </td></tr>
-<tr>
-<td align="right">album </td><td align="left">string (Pulse) </td></tr>
-<tr>
-<td align="right">artist </td><td align="left">string (Muse) </td></tr>
-<tr>
-<td align="right">title </td><td align="left">string (American Pie) </td></tr>
-<tr>
-<td align="right">rating </td><td align="left">float - range is between 0 and 10 </td></tr>
-<tr>
-<td align="right">userrating </td><td align="left">integer - range is 1..10 </td></tr>
-<tr>
-<td align="right">lyrics </td><td align="left">string (On a dark desert highway...) </td></tr>
-<tr>
-<td align="right">playcount </td><td align="left">integer (2) - number of times this item has been played </td></tr>
-<tr>
-<td align="right">lastplayed </td><td align="left">string (Y-m-d h:m:s = 2009-04-05 23:16:04) </td></tr>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
 </table>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba960a82adcf21911abb6168f72971b6d4"></a>ADDON_MusicInfoTag____url_______________________STRING&#160;</td><td class="fielddoc">
-<p>URL of the music song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba6cea37ffbbfb5560ac66b08328b4a66a"></a>ADDON_MusicInfoTag____title_____________________STRING&#160;</td><td class="fielddoc">
-<p>Title of the currently selected song or movie in a container. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bab422f497aff2a1652904be41c50b12d7"></a>ADDON_MusicInfoTag____artist____________________STRING_LIST&#160;</td><td class="fielddoc">
-<p>Artist of the currently selected song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba3c8de4c32c54a1b5e73d5da568e16078"></a>ADDON_MusicInfoTag____displayartist_____________STRING&#160;</td><td class="fielddoc">
-<p>Artist of the currently selected song to show on skin. </p>
-<dl class="section note"><dt>Note</dt><dd>Only used for the way from Kodi to Add-on, not to use with CListItem::SetMusicInfo_STRING(...) to send from Add-on to Kodi. </dd></dl>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba17f9ed1a07fc4cfcd4f134a81ed3d430"></a>ADDON_MusicInfoTag____displayalbumartist________STRING&#160;</td><td class="fielddoc">
-<p>Album artist name to show on skin. </p>
-<dl class="section note"><dt>Note</dt><dd>Only used for the way from Kodi to Add-on, not to use with CListItem::SetMusicInfo_STRING(...) to send from Add-on to Kodi. </dd></dl>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bad464ee6f23edb4cddd0aeb77be51ebfc"></a>ADDON_MusicInfoTag____album_____________________STRING&#160;</td><td class="fielddoc">
-<p>The album of the currently selected song in a container. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4baed00303dedd608abed2a92c31c6829ca"></a>ADDON_MusicInfoTag____albumartist_______________STRING_LIST&#160;</td><td class="fielddoc">
-<p>The artist of the currently selected album in a list. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4baa40a3f2e90d02cf1c4aede3a51411abd"></a>ADDON_MusicInfoTag____genre_____________________STRING_LIST&#160;</td><td class="fielddoc">
-<p>Genre(s) of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bad7a1efe64ef925ededc317818dc5845f"></a>ADDON_MusicInfoTag____duration__________________INT&#160;</td><td class="fielddoc">
-<p>Duration of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba02f1037ee4888a83aec07ee71ae12aa7"></a>ADDON_MusicInfoTag____track_number______________INT&#160;</td><td class="fielddoc">
-<p>Track number of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bac356779be9ae66b85dd2251e234ecd74"></a>ADDON_MusicInfoTag____disc_number_______________INT&#160;</td><td class="fielddoc">
-<p>Disc Number of current song stored in ID tag info. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba47585e253cd941198f04be26a6f85210"></a>ADDON_MusicInfoTag____loaded____________________BOOL&#160;</td><td class="fielddoc">
-<p>Disc number of use. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bada6a44efcb22077ca21c9c99216a8dd8"></a>ADDON_MusicInfoTag____year______________________UINT&#160;</td><td class="fielddoc">
-<p>Year of release of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba0fbd1e3407adae735c569543ff81f597"></a>ADDON_MusicInfoTag____musicbrainztrackid________STRING&#160;</td><td class="fielddoc">
-<p>MusicBrainz metadata track ID. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba4858cad68465ba79c9515f4cdb539b07"></a>ADDON_MusicInfoTag____musicbrainzartistid_______STRING_LIST&#160;</td><td class="fielddoc">
-<p>MusicBrainz metadata artist ID. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba26f968b7b51cf148d97897c03c6ee681"></a>ADDON_MusicInfoTag____musicbrainzalbumid________STRING&#160;</td><td class="fielddoc">
-<p>MusicBrainz metadata album ID. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bad97ae2c439dc18aba602403b35ca75f3"></a>ADDON_MusicInfoTag____musicbrainzalbumartistid__STRING_LIST&#160;</td><td class="fielddoc">
-<p>MusicBrainz metadata Album &amp; Artist ID. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bad7798dc1c798865e54bb5eef317c2ef2"></a>ADDON_MusicInfoTag____mediatype_________________STRING&#160;</td><td class="fielddoc">
-<p>Media type to use for music on list item Used strings: </p>
-<ul>
-<li>"music"</li>
-<li>"song"</li>
-<li>"album"</li>
-<li>"artist" </li>
-</ul>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4babb6315ae2713a66da5d56e1481a7b972"></a>ADDON_MusicInfoTag____comment___________________STRING&#160;</td><td class="fielddoc">
-<p>Comment of current song stored in ID tag info. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba6e5fcd450f74d91539ab80401bf10b80"></a>ADDON_MusicInfoTag____mood______________________STRING&#160;</td><td class="fielddoc">
-<p>Shows the moods of the currently playing artist. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4badae4ad037400aa041190df08c9fcf81f"></a>ADDON_MusicInfoTag____rating____________________FLOAT&#160;</td><td class="fielddoc">
-<p>Numeric Rating of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba7bd19ce1a5c6db834295ee3cf2ca7bc9"></a>ADDON_MusicInfoTag____userrating________________INT&#160;</td><td class="fielddoc">
-<p>The user rating of the currently playing item. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba4c4768dc7535db9d96d80fd0986a099d"></a>ADDON_MusicInfoTag____votes_____________________INT&#160;</td><td class="fielddoc">
-<p>Votes of the current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba98bbdaa55c7ea859f0a31290267fa398"></a>ADDON_MusicInfoTag____playcount_________________INT&#160;</td><td class="fielddoc">
-<p>Playcount of current playing song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba1d2a1b366fd27d9861b7f93be4f92837"></a>ADDON_MusicInfoTag____lastplayed________________STRING_DATE_TIME&#160;</td><td class="fielddoc">
-<p>Last play date of current playing song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4baa21a7f90b4acd2b20e6c1bbe7e186a9b"></a>ADDON_MusicInfoTag____dateadded_________________STRING_DATE_TIME&#160;</td><td class="fielddoc">
-<p>The date the currently playing song was added to the library. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba1d946633be6876480cc08c43fe278387"></a>ADDON_MusicInfoTag____releasedate_______________STRING_DATE_TIME&#160;</td><td class="fielddoc">
-<p>Shows the release/aired date of the currently playing song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bacf6743b4f908b34f95650832f6537b31"></a>ADDON_MusicInfoTag____lyrics____________________STRING&#160;</td><td class="fielddoc">
-<p>Lyrics of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba265dff087bd576af073de36e39a41b8f"></a>ADDON_MusicInfoTag____albumid___________________INT&#160;</td><td class="fielddoc">
-<p>Album id of currently playing song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba16d6ad0031d20f905592a80d777b3c2f"></a>ADDON_MusicInfoTag____compilation_______________BOOL&#160;</td><td class="fielddoc">
-<pre class="fragment"></pre> </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bafdee5675faf6a71d0b9ac1276c287a8c"></a>ADDON_MusicInfoTag____albumreleasetype__________UINT&#160;</td><td class="fielddoc">
-<pre class="fragment"></pre> </td></tr>
+</div><div class="memdoc">
+
+<p>To get file protection. </p>
+<dl class="section return"><dt>Returns</dt><dd>st_mode </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga77e336d6274f6fb0e2a3c3546e61e360"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long st_ino </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga21b04708daf767915e62979acd47b6aa"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetMusicInfo_BOOL </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00312.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels of type bool. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00312.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>boolean value to set </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>To get inode number. </p>
+<dl class="section return"><dt>Returns</dt><dd>st_ino </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gab97b3b7b94b59c5ef326982feda630a7"></a>
+<a class="anchor" id="gab17084ec246f2b497d2f13618c5bd220"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusicInfo_INT </td>
+          <td class="memname">long long st_dev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00312.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels of type integer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00312.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>integer value to set </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>To get ID of device containing file. </p>
+<p>The st_dev field describes the device on which this file resides.</p>
+<dl class="section return"><dt>Returns</dt><dd>st_dev </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga03cc9e6f99b5527feaf63c6e1ac897b0"></a>
+<a class="anchor" id="ga34f57426567df63ef5ad1b4679778d18"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusicInfo_UINT </td>
+          <td class="memname">long long st_nlink </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00312.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels of type unsigned integer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00312.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>unsigned integer value to set </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>To get number of hard links. </p>
+<dl class="section return"><dt>Returns</dt><dd>st_nlink </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga7b0dd8566cc13729d8469b569bcf7fa9"></a>
+<a class="anchor" id="gaa29c53999dffe4acc12aed2eb60a6c81"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusicInfo_FLOAT </td>
+          <td class="memname">long long st_uid </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00312.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels of type float. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00312.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>float value to set </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>To get user ID of owner. </p>
+<dl class="section return"><dt>Returns</dt><dd>st_uid </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga8a915dea0ebfde069cfd3decae9eeebe"></a>
+<a class="anchor" id="ga9a7a9ad27402f5a931bcbff38e4e03d3"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusicInfo_STRING </td>
+          <td class="memname">long long st_gid </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00312.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels with a string. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00312.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>string value to set </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>To get group ID of owner. </p>
+<dl class="section return"><dt>Returns</dt><dd>st_gid </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gad37cb7a265cdfbe71a9c630ba1a88926"></a>
+<a class="anchor" id="gaeec21543efab31f62a21e533b0d3a537"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusicInfo_STRING_LIST </td>
+          <td class="memname">long long st_size </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00312.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels with string table. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00312.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>string table to set </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>To get total size, in bytes. </p>
+<p>The st_size field gives the size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link (only on Linux and Mac OS X) is the length of the pathname it contains, without a terminating null byte.</p>
+<dl class="section return"><dt>Returns</dt><dd>st_size </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga65d49375e5251d4e616a45e3c898d6cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long atime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To get time of last access. </p>
+<dl class="section return"><dt>Returns</dt><dd>st_atime </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga57da69d0b20141a95c0c44a6bb5f3b35"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long mtime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To get time of last modification. </p>
+<dl class="section return"><dt>Returns</dt><dd>st_mtime </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab24c57af16ac6f88edb819c18e2e438b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long ctime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To get time of last status change. </p>
+<dl class="section return"><dt>Returns</dt><dd>st_ctime </dd></dl>
 
 </div>
 </div>
