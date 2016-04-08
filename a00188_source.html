@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/interfaces/legacy/InfoTagVideo.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/gui/ControlSpin.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,136 +92,183 @@ $(document).ready(function(){initNavTree('a00188_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">InfoTagVideo.h</div>  </div>
+<div class="title">ControlSpin.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;video/VideoInfoTag.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015-2016 Team KODI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;API_NAMESPACE</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00233.html">XBMCAddon</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00257.html">KodiAPI</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>GUI</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="a00050.html">   54</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00050.html#a00337">InfoTagVideo</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      CVideoInfoTag* infoTag;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <a class="code" href="a00050.html#a00337">InfoTagVideo</a>(<span class="keyword">const</span> CVideoInfoTag&amp; tag);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <a class="code" href="a00050.html#a00337">InfoTagVideo</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00050.html#a00337">InfoTagVideo</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00050.html#gae8578bc4b45dee7d9ef7d5053936b932">getDbId</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      String <a class="code" href="a00050.html#gaf9d61e5189c09ef08febcd52087001cd">getDirector</a>();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      String <a class="code" href="a00050.html#ga85b8f5a942a429ec2e66cad259fe1fd2">getWritingCredits</a>();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      String <a class="code" href="a00050.html#ga724866edc25325e096d7d8a76b4a3234">getGenre</a>();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      String <a class="code" href="a00050.html#ga5de7f223574b5b39917a1e2d284ca2db">getTagLine</a>();</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      String <a class="code" href="a00050.html#ga9d64a845dd0f805ecfc9dede2fcb683c">getPlotOutline</a>();</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      String <a class="code" href="a00050.html#ga7b4144bd89a83e0066a43d674c935453">getPlot</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">class </span>CWindow;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="a00085.html#gaa4d6f1679508cd43d05a49afbb340856">   60</a></span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="a00085.html#gaa4d6f1679508cd43d05a49afbb340856">AddonGUISpinControlType</a></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856acfcb3ed0153f23488da1d6eeaff42600">   63</a></span>&#160;    <a class="code" href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856acfcb3ed0153f23488da1d6eeaff42600">ADDON_SPIN_CONTROL_TYPE_INT</a>    = 1,</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856ae233f8620001f7fafe35e57e367d1fcb">   65</a></span>&#160;    <a class="code" href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856ae233f8620001f7fafe35e57e367d1fcb">ADDON_SPIN_CONTROL_TYPE_FLOAT</a>  = 2,</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a">   67</a></span>&#160;    <a class="code" href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a">ADDON_SPIN_CONTROL_TYPE_TEXT</a>   = 3,</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109">   69</a></span>&#160;    <a class="code" href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109">ADDON_SPIN_CONTROL_TYPE_PAGE</a>   = 4</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  } <a class="code" href="a00085.html#gaa4d6f1679508cd43d05a49afbb340856">AddonGUISpinControlType</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="a00085.html">   73</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00085.html#a00350">CControlSpin</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span>    <a class="code" href="a00085.html#gadebb6c7fd95b9e696a17b18026015715">CControlSpin</a>(<a class="code" href="a00090.html#a00380">CWindow</a>* window, <span class="keywordtype">int</span> controlId);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <a class="code" href="a00085.html#ga713dd979c48e23ce766fd6a1f9c555b7">~CControlSpin</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#ga71a209185b7a98adf0a310d2c44cdbe6">SetVisible</a>(<span class="keywordtype">bool</span> visible);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#gaac893222adeffdefc04d749648cce354">SetEnabled</a>(<span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#ga8008c108280948ebd79830f222068455">SetText</a>(<span class="keyword">const</span> std::string&amp; text);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#ga372de693ad40b3f42839c8ec6ac845f4">Reset</a>();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#ga1cf61cf89e00da77c51f2b948c21b8ce">SetType</a>(<a class="code" href="a00085.html#gaa4d6f1679508cd43d05a49afbb340856">AddonGUISpinControlType</a> type);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      String <a class="code" href="a00050.html#gad3ff2085e537bfbfa2f14d0c9a1dfcaa">getPictureURL</a>();</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      String <a class="code" href="a00050.html#ga888f94790c968e3f0b5de17e509098aa">getTitle</a>();</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      String <a class="code" href="a00050.html#gadbd0cd8415816d569d02770046c879a6">getTVShowTitle</a>();</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      String <a class="code" href="a00050.html#ga1651536f0e21049e0d3785a121cb326c">getMediaType</a>();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      String <a class="code" href="a00050.html#ga43531ed78e2ffc99da87d0b93293ebf9">getVotes</a>();</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      String <a class="code" href="a00050.html#ga014e2737672aac5e1fca6c67268ef7ca">getCast</a>();</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      String <a class="code" href="a00050.html#ga723e190c9b450ce6558126ef95b03ec9">getFile</a>();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      String <a class="code" href="a00050.html#ga6779d0f135fcec6c7f8a8ee49d7af165">getPath</a>();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#ga9c5e370148322bad6dbbacdbe88ba5f6">AddLabel</a>(<span class="keyword">const</span> std::string&amp; label, <span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#ga9c5e370148322bad6dbbacdbe88ba5f6">AddLabel</a>(<span class="keyword">const</span> std::string&amp; label, <span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#ga2ad97febb5d38307c915784990bf40de">SetStringValue</a>(<span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment"></span>    std::string <a class="code" href="a00085.html#ga3995da0370e2ada1bf62a38fa44f8239">GetStringValue</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#ga16ad72259d068519b0797117275651f1">SetIntRange</a>(<span class="keywordtype">int</span> start, <span class="keywordtype">int</span> end);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#ga1bc4fce2dc8738a08b6a9458d66351a1">SetIntValue</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="comment"></span>    <span class="keywordtype">int</span> <a class="code" href="a00085.html#ga026ef91588c09c091efb7c40bb73d4dc">GetIntValue</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      String <a class="code" href="a00050.html#ga3a5155fe7fa0cdfa1970a6f569f9b666">getIMDBNumber</a>();</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00050.html#ga2bfd0d5f89dde6da47559c3cf05dbbca">getSeason</a>();</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00050.html#gaedfd83ab6f63a2f5a689ff2f85eb7d2f">getEpisode</a>();</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00050.html#ga53172a43145522837b888b7d7f7117ea">getYear</a>();</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      <span class="keywordtype">double</span> <a class="code" href="a00050.html#ga235125a9aed4cc8c630d4e681e14d196">getRating</a>();</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00050.html#gac644258d08f747039e9d0e76bcd49513">getPlayCount</a>();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#gaf4c5b4468e16c51b0d9a163baa082acf">SetFloatRange</a>(<span class="keywordtype">float</span> start, <span class="keywordtype">float</span> end);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#gab050b4b446dc107963b04486dcfbe03d">SetFloatValue</a>(<span class="keywordtype">float</span> value);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="comment"></span>    <span class="keywordtype">float</span> <a class="code" href="a00085.html#gadd5b557122d90f9a891d6b981e3ac305">GetFloatValue</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00085.html#ga1642356ec708ec660d47175a676d2b59">SetFloatInterval</a>(<span class="keywordtype">float</span> interval);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="preprocessor">  #ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    IMPL_GUI_SPIN_CONTROL;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="preprocessor">  #endif</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  };</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      String <a class="code" href="a00050.html#ga64953074270dc9bc74370b8251c1cd43">getLastPlayed</a>();</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      String <a class="code" href="a00050.html#ga4f96c0aaaf77bdf9d8eef09bb8ac8ecc">getOriginalTitle</a>();</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      String <a class="code" href="a00050.html#ga6344c3ab0ba02f7381c09bfc384b0f58">getPremiered</a>();</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      String <a class="code" href="a00050.html#ga9bf8326fd3213f31cf6c83cd70b7b521">getFirstAired</a>();</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    };</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  }</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
-<div class="ttc" id="a00050_html_ga723e190c9b450ce6558126ef95b03ec9"><div class="ttname"><a href="a00050.html#ga723e190c9b450ce6558126ef95b03ec9">XBMCAddon::xbmc::InfoTagVideo::getFile</a></div><div class="ttdeci">String getFile()</div><div class="ttdoc">To get the video file name. </div></div>
-<div class="ttc" id="a00050_html_gaedfd83ab6f63a2f5a689ff2f85eb7d2f"><div class="ttname"><a href="a00050.html#gaedfd83ab6f63a2f5a689ff2f85eb7d2f">XBMCAddon::xbmc::InfoTagVideo::getEpisode</a></div><div class="ttdeci">int getEpisode()</div><div class="ttdoc">To get episode number of a series. </div></div>
-<div class="ttc" id="a00050_html_gaf9d61e5189c09ef08febcd52087001cd"><div class="ttname"><a href="a00050.html#gaf9d61e5189c09ef08febcd52087001cd">XBMCAddon::xbmc::InfoTagVideo::getDirector</a></div><div class="ttdeci">String getDirector()</div><div class="ttdoc">Get film director who has made the film (if present). </div></div>
-<div class="ttc" id="a00050_html_ga4f96c0aaaf77bdf9d8eef09bb8ac8ecc"><div class="ttname"><a href="a00050.html#ga4f96c0aaaf77bdf9d8eef09bb8ac8ecc">XBMCAddon::xbmc::InfoTagVideo::getOriginalTitle</a></div><div class="ttdeci">String getOriginalTitle()</div><div class="ttdoc">To get the original title of the video. </div></div>
-<div class="ttc" id="a00050_html_ga888f94790c968e3f0b5de17e509098aa"><div class="ttname"><a href="a00050.html#ga888f94790c968e3f0b5de17e509098aa">XBMCAddon::xbmc::InfoTagVideo::getTitle</a></div><div class="ttdeci">String getTitle()</div><div class="ttdoc">Get the video title. </div></div>
-<div class="ttc" id="a00050_html_ga014e2737672aac5e1fca6c67268ef7ca"><div class="ttname"><a href="a00050.html#ga014e2737672aac5e1fca6c67268ef7ca">XBMCAddon::xbmc::InfoTagVideo::getCast</a></div><div class="ttdeci">String getCast()</div><div class="ttdoc">To get the cast of the video when available. </div></div>
-<div class="ttc" id="a00050_html_gadbd0cd8415816d569d02770046c879a6"><div class="ttname"><a href="a00050.html#gadbd0cd8415816d569d02770046c879a6">XBMCAddon::xbmc::InfoTagVideo::getTVShowTitle</a></div><div class="ttdeci">String getTVShowTitle()</div><div class="ttdoc">Get the video TV show title. </div></div>
-<div class="ttc" id="a00050_html_ga1651536f0e21049e0d3785a121cb326c"><div class="ttname"><a href="a00050.html#ga1651536f0e21049e0d3785a121cb326c">XBMCAddon::xbmc::InfoTagVideo::getMediaType</a></div><div class="ttdeci">String getMediaType()</div><div class="ttdoc">Get the media type of the video. </div></div>
-<div class="ttc" id="a00050_html_ga2bfd0d5f89dde6da47559c3cf05dbbca"><div class="ttname"><a href="a00050.html#ga2bfd0d5f89dde6da47559c3cf05dbbca">XBMCAddon::xbmc::InfoTagVideo::getSeason</a></div><div class="ttdeci">int getSeason()</div><div class="ttdoc">To get season number of a series. </div></div>
-<div class="ttc" id="a00050_html_ga6344c3ab0ba02f7381c09bfc384b0f58"><div class="ttname"><a href="a00050.html#ga6344c3ab0ba02f7381c09bfc384b0f58">XBMCAddon::xbmc::InfoTagVideo::getPremiered</a></div><div class="ttdeci">String getPremiered()</div><div class="ttdoc">To get premiered date of the video, if available. </div></div>
-<div class="ttc" id="a00050_html_a00337"><div class="ttname"><a href="a00050.html#a00337">XBMCAddon::xbmc::InfoTagVideo</a></div><div class="ttdef"><b>Definition:</b> InfoTagVideo.h:54</div></div>
-<div class="ttc" id="a00050_html_ga6779d0f135fcec6c7f8a8ee49d7af165"><div class="ttname"><a href="a00050.html#ga6779d0f135fcec6c7f8a8ee49d7af165">XBMCAddon::xbmc::InfoTagVideo::getPath</a></div><div class="ttdeci">String getPath()</div><div class="ttdoc">To get the path where the video is stored. </div></div>
-<div class="ttc" id="a00050_html_ga9d64a845dd0f805ecfc9dede2fcb683c"><div class="ttname"><a href="a00050.html#ga9d64a845dd0f805ecfc9dede2fcb683c">XBMCAddon::xbmc::InfoTagVideo::getPlotOutline</a></div><div class="ttdeci">String getPlotOutline()</div><div class="ttdoc">Get the outline plot of the video if present. </div></div>
-<div class="ttc" id="a00050_html_ga724866edc25325e096d7d8a76b4a3234"><div class="ttname"><a href="a00050.html#ga724866edc25325e096d7d8a76b4a3234">XBMCAddon::xbmc::InfoTagVideo::getGenre</a></div><div class="ttdeci">String getGenre()</div><div class="ttdoc">To get the Video Genre if available. </div></div>
-<div class="ttc" id="a00050_html_ga235125a9aed4cc8c630d4e681e14d196"><div class="ttname"><a href="a00050.html#ga235125a9aed4cc8c630d4e681e14d196">XBMCAddon::xbmc::InfoTagVideo::getRating</a></div><div class="ttdeci">double getRating()</div><div class="ttdoc">Get the video rating if present as float (double where supported). </div></div>
-<div class="ttc" id="a00050_html_ga85b8f5a942a429ec2e66cad259fe1fd2"><div class="ttname"><a href="a00050.html#ga85b8f5a942a429ec2e66cad259fe1fd2">XBMCAddon::xbmc::InfoTagVideo::getWritingCredits</a></div><div class="ttdeci">String getWritingCredits()</div><div class="ttdoc">Get the writing credits if present from video info tag. </div></div>
-<div class="ttc" id="a00050_html_ga9bf8326fd3213f31cf6c83cd70b7b521"><div class="ttname"><a href="a00050.html#ga9bf8326fd3213f31cf6c83cd70b7b521">XBMCAddon::xbmc::InfoTagVideo::getFirstAired</a></div><div class="ttdeci">String getFirstAired()</div><div class="ttdoc">Returns first aired date as string from info tag. </div></div>
-<div class="ttc" id="a00050_html_ga43531ed78e2ffc99da87d0b93293ebf9"><div class="ttname"><a href="a00050.html#ga43531ed78e2ffc99da87d0b93293ebf9">XBMCAddon::xbmc::InfoTagVideo::getVotes</a></div><div class="ttdeci">String getVotes()</div><div class="ttdoc">Get the video votes if available from video info tag. </div></div>
-<div class="ttc" id="a00233_html"><div class="ttname"><a href="a00233.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00050_html_gac644258d08f747039e9d0e76bcd49513"><div class="ttname"><a href="a00050.html#gac644258d08f747039e9d0e76bcd49513">XBMCAddon::xbmc::InfoTagVideo::getPlayCount</a></div><div class="ttdeci">int getPlayCount()</div><div class="ttdoc">To get the number of plays of the video. </div></div>
-<div class="ttc" id="a00050_html_ga53172a43145522837b888b7d7f7117ea"><div class="ttname"><a href="a00050.html#ga53172a43145522837b888b7d7f7117ea">XBMCAddon::xbmc::InfoTagVideo::getYear</a></div><div class="ttdeci">int getYear()</div><div class="ttdoc">Get production year of video if present. </div></div>
-<div class="ttc" id="a00050_html_ga3a5155fe7fa0cdfa1970a6f569f9b666"><div class="ttname"><a href="a00050.html#ga3a5155fe7fa0cdfa1970a6f569f9b666">XBMCAddon::xbmc::InfoTagVideo::getIMDBNumber</a></div><div class="ttdeci">String getIMDBNumber()</div><div class="ttdoc">To get the IMDb number of the video (if present). </div></div>
-<div class="ttc" id="a00050_html_ga64953074270dc9bc74370b8251c1cd43"><div class="ttname"><a href="a00050.html#ga64953074270dc9bc74370b8251c1cd43">XBMCAddon::xbmc::InfoTagVideo::getLastPlayed</a></div><div class="ttdeci">String getLastPlayed()</div><div class="ttdoc">Get the last played date / time as string. </div></div>
-<div class="ttc" id="a00050_html_gad3ff2085e537bfbfa2f14d0c9a1dfcaa"><div class="ttname"><a href="a00050.html#gad3ff2085e537bfbfa2f14d0c9a1dfcaa">XBMCAddon::xbmc::InfoTagVideo::getPictureURL</a></div><div class="ttdeci">String getPictureURL()</div><div class="ttdoc">Get a picture URL of the video to show as screenshot. </div></div>
-<div class="ttc" id="a00050_html_ga5de7f223574b5b39917a1e2d284ca2db"><div class="ttname"><a href="a00050.html#ga5de7f223574b5b39917a1e2d284ca2db">XBMCAddon::xbmc::InfoTagVideo::getTagLine</a></div><div class="ttdeci">String getTagLine()</div><div class="ttdoc">Get video tag line if available. </div></div>
-<div class="ttc" id="a00050_html_ga7b4144bd89a83e0066a43d674c935453"><div class="ttname"><a href="a00050.html#ga7b4144bd89a83e0066a43d674c935453">XBMCAddon::xbmc::InfoTagVideo::getPlot</a></div><div class="ttdeci">String getPlot()</div><div class="ttdoc">Get the plot of the video if present. </div></div>
-<div class="ttc" id="a00050_html_gae8578bc4b45dee7d9ef7d5053936b932"><div class="ttname"><a href="a00050.html#gae8578bc4b45dee7d9ef7d5053936b932">XBMCAddon::xbmc::InfoTagVideo::getDbId</a></div><div class="ttdeci">int getDbId()</div><div class="ttdoc">Get identification number of tag in database. </div></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;} <span class="comment">/* namespace GUI */</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;END_NAMESPACE()</div>
+<div class="ttc" id="a00085_html_gadebb6c7fd95b9e696a17b18026015715"><div class="ttname"><a href="a00085.html#gadebb6c7fd95b9e696a17b18026015715">KodiAPI::GUI::CControlSpin::CControlSpin</a></div><div class="ttdeci">CControlSpin(CWindow *window, int controlId)</div><div class="ttdoc">Construct a new control. </div></div>
+<div class="ttc" id="a00085_html_ga71a209185b7a98adf0a310d2c44cdbe6"><div class="ttname"><a href="a00085.html#ga71a209185b7a98adf0a310d2c44cdbe6">KodiAPI::GUI::CControlSpin::SetVisible</a></div><div class="ttdeci">void SetVisible(bool visible)</div><div class="ttdoc">Set the control on window to visible. </div></div>
+<div class="ttc" id="a00085_html_ga026ef91588c09c091efb7c40bb73d4dc"><div class="ttname"><a href="a00085.html#ga026ef91588c09c091efb7c40bb73d4dc">KodiAPI::GUI::CControlSpin::GetIntValue</a></div><div class="ttdeci">int GetIntValue() const </div><div class="ttdoc">To get the current position as integer value. </div></div>
+<div class="ttc" id="a00085_html_ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109"><div class="ttname"><a href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109">KodiAPI::GUI::ADDON_SPIN_CONTROL_TYPE_PAGE</a></div><div class="ttdoc">One spin step interpreted as a page change value. </div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:69</div></div>
+<div class="ttc" id="a00085_html_ga1642356ec708ec660d47175a676d2b59"><div class="ttname"><a href="a00085.html#ga1642356ec708ec660d47175a676d2b59">KodiAPI::GUI::CControlSpin::SetFloatInterval</a></div><div class="ttdeci">void SetFloatInterval(float interval)</div><div class="ttdoc">To set the interval steps of spin, as default is it 0.1 If it becomes changed with this function will...</div></div>
+<div class="ttc" id="a00085_html_ggaa4d6f1679508cd43d05a49afbb340856acfcb3ed0153f23488da1d6eeaff42600"><div class="ttname"><a href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856acfcb3ed0153f23488da1d6eeaff42600">KodiAPI::GUI::ADDON_SPIN_CONTROL_TYPE_INT</a></div><div class="ttdoc">One spin step interpreted as integer. </div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:63</div></div>
+<div class="ttc" id="a00085_html_ga1bc4fce2dc8738a08b6a9458d66351a1"><div class="ttname"><a href="a00085.html#ga1bc4fce2dc8738a08b6a9458d66351a1">KodiAPI::GUI::CControlSpin::SetIntValue</a></div><div class="ttdeci">void SetIntValue(int value)</div><div class="ttdoc">Set the slider position with the given integer value. The Range must be defined with a call from SetI...</div></div>
+<div class="ttc" id="a00085_html_a00350"><div class="ttname"><a href="a00085.html#a00350">KodiAPI::GUI::CControlSpin</a></div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:73</div></div>
+<div class="ttc" id="a00085_html_ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a"><div class="ttname"><a href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a">KodiAPI::GUI::ADDON_SPIN_CONTROL_TYPE_TEXT</a></div><div class="ttdoc">One spin step interpreted as text string. </div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:67</div></div>
+<div class="ttc" id="a00085_html_gaac893222adeffdefc04d749648cce354"><div class="ttname"><a href="a00085.html#gaac893222adeffdefc04d749648cce354">KodiAPI::GUI::CControlSpin::SetEnabled</a></div><div class="ttdeci">void SetEnabled(bool enabled)</div><div class="ttdoc">Set&#39;s the control&#39;s enabled/disabled state. </div></div>
+<div class="ttc" id="a00085_html_ga1cf61cf89e00da77c51f2b948c21b8ce"><div class="ttname"><a href="a00085.html#ga1cf61cf89e00da77c51f2b948c21b8ce">KodiAPI::GUI::CControlSpin::SetType</a></div><div class="ttdeci">void SetType(AddonGUISpinControlType type)</div><div class="ttdoc">To set the with SpinControlType defined types of spin. </div></div>
+<div class="ttc" id="a00085_html_ggaa4d6f1679508cd43d05a49afbb340856ae233f8620001f7fafe35e57e367d1fcb"><div class="ttname"><a href="a00085.html#ggaa4d6f1679508cd43d05a49afbb340856ae233f8620001f7fafe35e57e367d1fcb">KodiAPI::GUI::ADDON_SPIN_CONTROL_TYPE_FLOAT</a></div><div class="ttdoc">One spin step interpreted as floating point value. </div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:65</div></div>
+<div class="ttc" id="a00090_html_a00380"><div class="ttname"><a href="a00090.html#a00380">KodiAPI::GUI::CWindow</a></div><div class="ttdef"><b>Definition:</b> Window.hpp:69</div></div>
+<div class="ttc" id="a00085_html_ga16ad72259d068519b0797117275651f1"><div class="ttname"><a href="a00085.html#ga16ad72259d068519b0797117275651f1">KodiAPI::GUI::CControlSpin::SetIntRange</a></div><div class="ttdeci">void SetIntRange(int start, int end)</div><div class="ttdoc">To set the the range as integer of slider, e.g. -10 is the slider start and e.g. +10 is the from here...</div></div>
+<div class="ttc" id="a00085_html_ga3995da0370e2ada1bf62a38fa44f8239"><div class="ttname"><a href="a00085.html#ga3995da0370e2ada1bf62a38fa44f8239">KodiAPI::GUI::CControlSpin::GetStringValue</a></div><div class="ttdeci">std::string GetStringValue() const </div><div class="ttdoc">To get the current spin control position with text string value. </div></div>
+<div class="ttc" id="a00085_html_ga2ad97febb5d38307c915784990bf40de"><div class="ttname"><a href="a00085.html#ga2ad97febb5d38307c915784990bf40de">KodiAPI::GUI::CControlSpin::SetStringValue</a></div><div class="ttdeci">void SetStringValue(const std::string &amp;value)</div><div class="ttdoc">To change the spin to position with them string as value. </div></div>
+<div class="ttc" id="a00085_html_ga9c5e370148322bad6dbbacdbe88ba5f6"><div class="ttname"><a href="a00085.html#ga9c5e370148322bad6dbbacdbe88ba5f6">KodiAPI::GUI::CControlSpin::AddLabel</a></div><div class="ttdeci">void AddLabel(const std::string &amp;label, const std::string &amp;value)</div><div class="ttdoc">To add a label entry in spin defined with a value as string. </div></div>
+<div class="ttc" id="a00085_html_gaf4c5b4468e16c51b0d9a163baa082acf"><div class="ttname"><a href="a00085.html#gaf4c5b4468e16c51b0d9a163baa082acf">KodiAPI::GUI::CControlSpin::SetFloatRange</a></div><div class="ttdeci">void SetFloatRange(float start, float end)</div><div class="ttdoc">To set the the range as float of spin, e.g. -25.0 is the spin start and e.g. +25.0 is the from here d...</div></div>
+<div class="ttc" id="a00257_html"><div class="ttname"><a href="a00257.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
+<div class="ttc" id="a00085_html_gab050b4b446dc107963b04486dcfbe03d"><div class="ttname"><a href="a00085.html#gab050b4b446dc107963b04486dcfbe03d">KodiAPI::GUI::CControlSpin::SetFloatValue</a></div><div class="ttdeci">void SetFloatValue(float value)</div><div class="ttdoc">Set the spin position with the given float value. The Range can be defined with a call from SetIntRan...</div></div>
+<div class="ttc" id="a00085_html_gadd5b557122d90f9a891d6b981e3ac305"><div class="ttname"><a href="a00085.html#gadd5b557122d90f9a891d6b981e3ac305">KodiAPI::GUI::CControlSpin::GetFloatValue</a></div><div class="ttdeci">float GetFloatValue() const </div><div class="ttdoc">To get the current position as float value. </div></div>
+<div class="ttc" id="a00085_html_ga372de693ad40b3f42839c8ec6ac845f4"><div class="ttname"><a href="a00085.html#ga372de693ad40b3f42839c8ec6ac845f4">KodiAPI::GUI::CControlSpin::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">To reset spin control to defaults. </div></div>
+<div class="ttc" id="a00085_html_ga713dd979c48e23ce766fd6a1f9c555b7"><div class="ttname"><a href="a00085.html#ga713dd979c48e23ce766fd6a1f9c555b7">KodiAPI::GUI::CControlSpin::~CControlSpin</a></div><div class="ttdeci">virtual ~CControlSpin()</div><div class="ttdoc">Destructor. </div></div>
+<div class="ttc" id="a00085_html_gaa4d6f1679508cd43d05a49afbb340856"><div class="ttname"><a href="a00085.html#gaa4d6f1679508cd43d05a49afbb340856">KodiAPI::GUI::AddonGUISpinControlType</a></div><div class="ttdeci">AddonGUISpinControlType</div><div class="ttdoc">The values here defines the used value format for steps on spin control. </div><div class="ttdef"><b>Definition:</b> ControlSpin.hpp:60</div></div>
+<div class="ttc" id="a00085_html_ga8008c108280948ebd79830f222068455"><div class="ttname"><a href="a00085.html#ga8008c108280948ebd79830f222068455">KodiAPI::GUI::CControlSpin::SetText</a></div><div class="ttdeci">void SetText(const std::string &amp;text)</div><div class="ttdoc">To set the text string on spin control. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c72e4a3b15aa6b185e7458e4a6d6ab4f.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_81c1a29a69722fee590df545771fd524.html">legacy</a></li><li class="navelem"><b>InfoTagVideo.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e2f41087cf08f19ef9254dabbd5edda3.html">include</a></li><li class="navelem"><a class="el" href="dir_684c90c798bf40b829fca8909140a321.html">kodi</a></li><li class="navelem"><a class="el" href="dir_fe15ccb97bc6dd916b539c35a997f873.html">api2</a></li><li class="navelem"><a class="el" href="dir_c2c64a33e9f782c7e9591d9d282ea392.html">gui</a></li><li class="navelem"><b>ControlSpin.hpp</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

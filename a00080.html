@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Stat</title>
+<title>Kodi Development: Control Progress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,77 +92,83 @@ $(document).ready(function(){initNavTree('a00080.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Stat<div class="ingroups"><a class="el" href="a00240.html">Python</a> &raquo; <a class="el" href="a00244.html">Library - xbmcvfs</a></div></div>  </div>
+<div class="title">Control Progress<div class="ingroups"><a class="el" href="a00289.html">C++</a> &raquo; <a class="el" href="a00308.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Get file or file system status. </p>
-<p><b><code>xbmcvfs.Stat(path)</code></b></p>
-<p>These class return information about a file. Execute (search) permission is required on all of the directories in path that lead to the file.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>[string] file or folder</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  st = xbmcvfs.Stat(path)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  modified = st.st_mtime()</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
-</div><!-- fragment --> <hr/><h2 class="groupheader">Class Documentation</h2>
+<p><b>Window control to show the progress of a particular operation</b> </p>
+<p>The progress control is used to show the progress of an item that may take a long time, or to show how far through a movie you are. You can choose the position, size, and look of the progress control.</p>
+<p>It has the header <a class="el" href="a00183_source.html">#include &lt;kodi/api2/gui/ControlProgress.hpp&gt;</a> be included to enjoy it.</p>
+<p>Here you find the needed skin part for a <a class="el" href="a00036.html">progress control</a></p>
+<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
+<hr/><h2 class="groupheader">Class Documentation</h2>
 <a name="a00345" id="a00345"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">class XBMCAddon::xbmcvfs::Stat</td>
+          <td class="memname">class KodiAPI::GUI::CControlProgress</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div>
-<p>Inherits AddonClass.</p>
-<table class="memberdecls">
+<div class="textblock"></div><table class="memberdecls">
 <tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
-<tr class="memitem:ga65d49375e5251d4e616a45e3c898d6cc"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#ga65d49375e5251d4e616a45e3c898d6cc">atime</a> ()</td></tr>
-<tr class="memdesc:ga65d49375e5251d4e616a45e3c898d6cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get time of last access.  <a href="a00080.html#ga65d49375e5251d4e616a45e3c898d6cc">More...</a><br /></td></tr>
-<tr class="separator:ga65d49375e5251d4e616a45e3c898d6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab24c57af16ac6f88edb819c18e2e438b"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#gab24c57af16ac6f88edb819c18e2e438b">ctime</a> ()</td></tr>
-<tr class="memdesc:gab24c57af16ac6f88edb819c18e2e438b"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get time of last status change.  <a href="a00080.html#gab24c57af16ac6f88edb819c18e2e438b">More...</a><br /></td></tr>
-<tr class="separator:gab24c57af16ac6f88edb819c18e2e438b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga57da69d0b20141a95c0c44a6bb5f3b35"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#ga57da69d0b20141a95c0c44a6bb5f3b35">mtime</a> ()</td></tr>
-<tr class="memdesc:ga57da69d0b20141a95c0c44a6bb5f3b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get time of last modification.  <a href="a00080.html#ga57da69d0b20141a95c0c44a6bb5f3b35">More...</a><br /></td></tr>
-<tr class="separator:ga57da69d0b20141a95c0c44a6bb5f3b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab17084ec246f2b497d2f13618c5bd220"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#gab17084ec246f2b497d2f13618c5bd220">st_dev</a> ()</td></tr>
-<tr class="memdesc:gab17084ec246f2b497d2f13618c5bd220"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get ID of device containing file.  <a href="a00080.html#gab17084ec246f2b497d2f13618c5bd220">More...</a><br /></td></tr>
-<tr class="separator:gab17084ec246f2b497d2f13618c5bd220"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9a7a9ad27402f5a931bcbff38e4e03d3"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#ga9a7a9ad27402f5a931bcbff38e4e03d3">st_gid</a> ()</td></tr>
-<tr class="memdesc:ga9a7a9ad27402f5a931bcbff38e4e03d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get group ID of owner.  <a href="a00080.html#ga9a7a9ad27402f5a931bcbff38e4e03d3">More...</a><br /></td></tr>
-<tr class="separator:ga9a7a9ad27402f5a931bcbff38e4e03d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga77e336d6274f6fb0e2a3c3546e61e360"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#ga77e336d6274f6fb0e2a3c3546e61e360">st_ino</a> ()</td></tr>
-<tr class="memdesc:ga77e336d6274f6fb0e2a3c3546e61e360"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get inode number.  <a href="a00080.html#ga77e336d6274f6fb0e2a3c3546e61e360">More...</a><br /></td></tr>
-<tr class="separator:ga77e336d6274f6fb0e2a3c3546e61e360"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga00b3e20028eaee69c44cdc47a922fe31"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#ga00b3e20028eaee69c44cdc47a922fe31">st_mode</a> ()</td></tr>
-<tr class="memdesc:ga00b3e20028eaee69c44cdc47a922fe31"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get file protection.  <a href="a00080.html#ga00b3e20028eaee69c44cdc47a922fe31">More...</a><br /></td></tr>
-<tr class="separator:ga00b3e20028eaee69c44cdc47a922fe31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga34f57426567df63ef5ad1b4679778d18"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#ga34f57426567df63ef5ad1b4679778d18">st_nlink</a> ()</td></tr>
-<tr class="memdesc:ga34f57426567df63ef5ad1b4679778d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get number of hard links.  <a href="a00080.html#ga34f57426567df63ef5ad1b4679778d18">More...</a><br /></td></tr>
-<tr class="separator:ga34f57426567df63ef5ad1b4679778d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeec21543efab31f62a21e533b0d3a537"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#gaeec21543efab31f62a21e533b0d3a537">st_size</a> ()</td></tr>
-<tr class="memdesc:gaeec21543efab31f62a21e533b0d3a537"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get total size, in bytes.  <a href="a00080.html#gaeec21543efab31f62a21e533b0d3a537">More...</a><br /></td></tr>
-<tr class="separator:gaeec21543efab31f62a21e533b0d3a537"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa29c53999dffe4acc12aed2eb60a6c81"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#gaa29c53999dffe4acc12aed2eb60a6c81">st_uid</a> ()</td></tr>
-<tr class="memdesc:gaa29c53999dffe4acc12aed2eb60a6c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get user ID of owner.  <a href="a00080.html#gaa29c53999dffe4acc12aed2eb60a6c81">More...</a><br /></td></tr>
-<tr class="separator:gaa29c53999dffe4acc12aed2eb60a6c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60ce51a2aeed51fe6b3fb97341418ad1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60ce51a2aeed51fe6b3fb97341418ad1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Stat</b> (const String &amp;path)</td></tr>
-<tr class="separator:a60ce51a2aeed51fe6b3fb97341418ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33e0980459ea8e489f13a882c73a7dde"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#ga33e0980459ea8e489f13a882c73a7dde">CControlProgress</a> (<a class="el" href="a00090.html#a00380">CWindow</a> *window, int controlId)</td></tr>
+<tr class="memdesc:ga33e0980459ea8e489f13a882c73a7dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new control.  <a href="a00080.html#ga33e0980459ea8e489f13a882c73a7dde">More...</a><br /></td></tr>
+<tr class="separator:ga33e0980459ea8e489f13a882c73a7dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbcb3c03a1a87a252f94e0274e1e75f8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#gadbcb3c03a1a87a252f94e0274e1e75f8">GetPercentage</a> () const </td></tr>
+<tr class="memdesc:gadbcb3c03a1a87a252f94e0274e1e75f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the active percent position of progress bar.  <a href="a00080.html#gadbcb3c03a1a87a252f94e0274e1e75f8">More...</a><br /></td></tr>
+<tr class="separator:gadbcb3c03a1a87a252f94e0274e1e75f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga123bcc2a09c1b721c04b4bc0dd32953d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#ga123bcc2a09c1b721c04b4bc0dd32953d">SetPercentage</a> (float percent)</td></tr>
+<tr class="memdesc:ga123bcc2a09c1b721c04b4bc0dd32953d"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set Percent position of control.  <a href="a00080.html#ga123bcc2a09c1b721c04b4bc0dd32953d">More...</a><br /></td></tr>
+<tr class="separator:ga123bcc2a09c1b721c04b4bc0dd32953d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#ga71a209185b7a98adf0a310d2c44cdbe6">SetVisible</a> (bool visible)</td></tr>
+<tr class="memdesc:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control on window to visible.  <a href="a00080.html#ga71a209185b7a98adf0a310d2c44cdbe6">More...</a><br /></td></tr>
+<tr class="separator:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa981b5bb0357bd7838daa15e7eeec0b1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00080.html#gaa981b5bb0357bd7838daa15e7eeec0b1">~CControlProgress</a> ()</td></tr>
+<tr class="memdesc:gaa981b5bb0357bd7838daa15e7eeec0b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="a00080.html#gaa981b5bb0357bd7838daa15e7eeec0b1">More...</a><br /></td></tr>
+<tr class="separator:gaa981b5bb0357bd7838daa15e7eeec0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga00b3e20028eaee69c44cdc47a922fe31"></a>
+<a class="anchor" id="ga33e0980459ea8e489f13a882c73a7dde"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CControlProgress </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00090.html#a00380">CWindow</a> *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>related window control class </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>Used skin xml control id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa981b5bb0357bd7838daa15e7eeec0b1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -170,7 +176,7 @@ $(document).ready(function(){initNavTree('a00080.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_mode </td>
+          <td class="memname">virtual ~CControlProgress </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -178,249 +184,78 @@ $(document).ready(function(){initNavTree('a00080.html','');});
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get file protection. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_mode </dd></dl>
+<p>Destructor. </p>
 
 </div>
 </div>
-<a class="anchor" id="ga77e336d6274f6fb0e2a3c3546e61e360"></a>
+<a class="anchor" id="ga71a209185b7a98adf0a310d2c44cdbe6"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_ino </td>
+          <td class="memname">void SetVisible </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>visible</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>To get inode number. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_ino </dd></dl>
+<p>Set the control on window to visible. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">visible</td><td>If true visible, otherwise hidden </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="gab17084ec246f2b497d2f13618c5bd220"></a>
+<a class="anchor" id="ga123bcc2a09c1b721c04b4bc0dd32953d"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_dev </td>
+          <td class="memname">void SetPercentage </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>percent</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>To get ID of device containing file. </p>
-<p>The st_dev field describes the device on which this file resides.</p>
-<dl class="section return"><dt>Returns</dt><dd>st_dev </dd></dl>
+<p>To set Percent position of control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>The percent position to use </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="ga34f57426567df63ef5ad1b4679778d18"></a>
+<a class="anchor" id="gadbcb3c03a1a87a252f94e0274e1e75f8"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long long st_nlink </td>
+          <td class="memname">float GetPercentage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>To get number of hard links. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_nlink </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaa29c53999dffe4acc12aed2eb60a6c81"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_uid </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get user ID of owner. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_uid </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga9a7a9ad27402f5a931bcbff38e4e03d3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_gid </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get group ID of owner. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_gid </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaeec21543efab31f62a21e533b0d3a537"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long st_size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get total size, in bytes. </p>
-<p>The st_size field gives the size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link (only on Linux and Mac OS X) is the length of the pathname it contains, without a terminating null byte.</p>
-<dl class="section return"><dt>Returns</dt><dd>st_size </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga65d49375e5251d4e616a45e3c898d6cc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long atime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get time of last access. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_atime </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga57da69d0b20141a95c0c44a6bb5f3b35"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long mtime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get time of last modification. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_mtime </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gab24c57af16ac6f88edb819c18e2e438b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">long long ctime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To get time of last status change. </p>
-<dl class="section return"><dt>Returns</dt><dd>st_ctime </dd></dl>
+<p>Get the active percent position of progress bar. </p>
+<dl class="section return"><dt>Returns</dt><dd>Progress position as percent </dd></dl>
 
 </div>
 </div>

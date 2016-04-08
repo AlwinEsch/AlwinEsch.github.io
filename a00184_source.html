@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/interfaces/legacy/Dialog.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/gui/ControlRadioButton.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,187 +92,107 @@ $(document).ready(function(){initNavTree('a00184_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Dialog.h</div>  </div>
+<div class="title">ControlRadioButton.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; <span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;dialogs/GUIDialogProgress.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;dialogs/GUIDialogExtendedProgressBar.h&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;Alternative.h&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define INPUT_ALPHANUM        0</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define INPUT_NUMERIC         1</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define INPUT_DATE            2</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define INPUT_TIME            3</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define INPUT_IPADDRESS       4</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define INPUT_PASSWORD        5</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define PASSWORD_VERIFY       1</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define ALPHANUM_HIDE_INPUT   2</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00233.html">XBMCAddon</a></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">namespace </span>xbmcgui</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  {</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="a00072.html">   52</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00072.html#a00331">Dialog</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">inline</span> <a class="code" href="a00072.html#a00331">Dialog</a>() {}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00072.html#a00331">Dialog</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00072.html#gaa64342a4b05f1ed49803ea44a25b73db">yesno</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1, </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                 <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                 <span class="keyword">const</span> String&amp; line3 = emptyString,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                 <span class="keyword">const</span> String&amp; nolabel = emptyString,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                 <span class="keyword">const</span> String&amp; yeslabel = emptyString,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                 <span class="keywordtype">int</span> autoclose = 0);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00072.html#ga31bcf740cf64230b40af61377ad701b1">select</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> std::vector&lt;String&gt;&amp; list, <span class="keywordtype">int</span> autoclose=0);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      std::unique_ptr&lt;std::vector&lt;int&gt; &gt; <a class="code" href="a00072.html#gaf6cee72babc023f15a8ed28cbb2cc7f6">multiselect</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> std::vector&lt;String&gt;&amp; options, <span class="keywordtype">int</span> autoclose=0);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00072.html#ga623449b051874059111f9831a7b91673">ok</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1, </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;              <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;              <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00072.html#gad212e84e36d2fc96b8f2e24b9dd67b47">textviewer</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; text);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      Alternative&lt;String, std::vector&lt;String&gt; &gt; <a class="code" href="a00072.html#ga329bf9f86212595d36708f6ad8977499">browse</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                          <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                          <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, <span class="keyword">const</span> String&amp; sDefault = emptyString,</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                          <span class="keywordtype">bool</span> enableMultiple = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      String <a class="code" href="a00072.html#ga8a8334ae223a82e7df728e032e167bbf">browseSingle</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                          <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>, </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                          <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                          <span class="keyword">const</span> String&amp; defaultt = emptyString );</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00072.html#ga804e86cf03fe10961d7a7ca1d00fffa3">browseMultiple</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                                         <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>, </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                                         <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                                         <span class="keyword">const</span> String&amp; defaultt = emptyString );</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      String <a class="code" href="a00072.html#gad44dd72bef6ada382a1b9704580410db">numeric</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; defaultt = emptyString);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00072.html#ga0a385fe365c4fba6583fdd25e8ad072b">notification</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; message, <span class="keyword">const</span> String&amp; icon = emptyString, <span class="keywordtype">int</span> time = 0, <span class="keywordtype">bool</span> sound = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      String <a class="code" href="a00072.html#ga2a25e833c92e98a294964d0d285ee1f9">input</a>(<span class="keyword">const</span> String&amp; heading,</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                   <span class="keyword">const</span> String&amp; defaultt = emptyString,</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                   <span class="keywordtype">int</span> type = INPUT_ALPHANUM,</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                   <span class="keywordtype">int</span> option = 0,</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                   <span class="keywordtype">int</span> autoclose = 0);</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    };</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
-<div class="line"><a name="l00407"></a><span class="lineno"><a class="line" href="a00073.html">  407</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00073.html#a00332">DialogProgress</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    {</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;      CGUIDialogProgress* dlg;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      <span class="keywordtype">bool</span>                open;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> deallocating();</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;      <a class="code" href="a00073.html#a00332">DialogProgress</a>() : dlg(NULL), open(<span class="keyword">false</span>) {}</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00073.html#a00332">DialogProgress</a>();</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00073.html#gad71569b69244d11fe949d0bbd5b75905">create</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1 = emptyString, </div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                  <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                  <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00073.html#gabf439774a2aca33663c3bb785e6e7465">update</a>(<span class="keywordtype">int</span> percent, <span class="keyword">const</span> String&amp; line1 = emptyString, </div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                  <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                  <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00073.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00073.html#ga2a944a55da1c28885d3f00d101618ac6">iscanceled</a>();</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    };</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;</div>
-<div class="line"><a name="l00517"></a><span class="lineno"><a class="line" href="a00074.html">  517</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00074.html#a00333">DialogProgressBG</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    {</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;      CGUIDialogExtendedProgressBar* dlg;</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;      CGUIDialogProgressBarHandle* handle;</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;      <span class="keywordtype">bool</span> open;</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> deallocating();</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;      <a class="code" href="a00074.html#a00333">DialogProgressBG</a>() : dlg(NULL), handle(NULL), open(<span class="keyword">false</span>) {}</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00074.html#a00333">DialogProgressBG</a>();</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00074.html#gaafb8a184f497bc815d38be07731df561">create</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; message = emptyString);</div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00074.html#ga90d83a72e4151aba7c05422cf34f6684">update</a>(<span class="keywordtype">int</span> percent = 0, <span class="keyword">const</span> String&amp; heading = emptyString, <span class="keyword">const</span> String&amp; message = emptyString);</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00074.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00074.html#ga06926ca87a7be7d8af8ee84670fffa87">isFinished</a>();</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    };</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;  }</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;}</div>
-<div class="ttc" id="a00074_html_ga90d83a72e4151aba7c05422cf34f6684"><div class="ttname"><a href="a00074.html#ga90d83a72e4151aba7c05422cf34f6684">XBMCAddon::xbmcgui::DialogProgressBG::update</a></div><div class="ttdeci">void update(int percent=0, const String &amp;heading=emptyString, const String &amp;message=emptyString)</div></div>
-<div class="ttc" id="a00073_html_gabf439774a2aca33663c3bb785e6e7465"><div class="ttname"><a href="a00073.html#gabf439774a2aca33663c3bb785e6e7465">XBMCAddon::xbmcgui::DialogProgress::update</a></div><div class="ttdeci">void update(int percent, const String &amp;line1=emptyString, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
-<div class="ttc" id="a00074_html_gaafb8a184f497bc815d38be07731df561"><div class="ttname"><a href="a00074.html#gaafb8a184f497bc815d38be07731df561">XBMCAddon::xbmcgui::DialogProgressBG::create</a></div><div class="ttdeci">void create(const String &amp;heading, const String &amp;message=emptyString)</div></div>
-<div class="ttc" id="a00072_html_ga623449b051874059111f9831a7b91673"><div class="ttname"><a href="a00072.html#ga623449b051874059111f9831a7b91673">XBMCAddon::xbmcgui::Dialog::ok</a></div><div class="ttdeci">bool ok(const String &amp;heading, const String &amp;line1, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
-<div class="ttc" id="a00074_html_ga5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="a00074.html#ga5ae591df94fc66ccb85cbb6565368bca">XBMCAddon::xbmcgui::DialogProgressBG::close</a></div><div class="ttdeci">void close()</div></div>
-<div class="ttc" id="a00072_html_gaf6cee72babc023f15a8ed28cbb2cc7f6"><div class="ttname"><a href="a00072.html#gaf6cee72babc023f15a8ed28cbb2cc7f6">XBMCAddon::xbmcgui::Dialog::multiselect</a></div><div class="ttdeci">std::unique_ptr&lt; std::vector&lt; int &gt; &gt; multiselect(const String &amp;heading, const std::vector&lt; String &gt; &amp;options, int autoclose=0)</div></div>
-<div class="ttc" id="a00072_html_gaa64342a4b05f1ed49803ea44a25b73db"><div class="ttname"><a href="a00072.html#gaa64342a4b05f1ed49803ea44a25b73db">XBMCAddon::xbmcgui::Dialog::yesno</a></div><div class="ttdeci">bool yesno(const String &amp;heading, const String &amp;line1, const String &amp;line2=emptyString, const String &amp;line3=emptyString, const String &amp;nolabel=emptyString, const String &amp;yeslabel=emptyString, int autoclose=0)</div></div>
-<div class="ttc" id="a00073_html_a00332"><div class="ttname"><a href="a00073.html#a00332">XBMCAddon::xbmcgui::DialogProgress</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:407</div></div>
-<div class="ttc" id="a00074_html_ga06926ca87a7be7d8af8ee84670fffa87"><div class="ttname"><a href="a00074.html#ga06926ca87a7be7d8af8ee84670fffa87">XBMCAddon::xbmcgui::DialogProgressBG::isFinished</a></div><div class="ttdeci">bool isFinished()</div></div>
-<div class="ttc" id="a00073_html_ga2a944a55da1c28885d3f00d101618ac6"><div class="ttname"><a href="a00073.html#ga2a944a55da1c28885d3f00d101618ac6">XBMCAddon::xbmcgui::DialogProgress::iscanceled</a></div><div class="ttdeci">bool iscanceled()</div></div>
-<div class="ttc" id="a00072_html_ga8a8334ae223a82e7df728e032e167bbf"><div class="ttname"><a href="a00072.html#ga8a8334ae223a82e7df728e032e167bbf">XBMCAddon::xbmcgui::Dialog::browseSingle</a></div><div class="ttdeci">String browseSingle(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;defaultt=emptyString)</div></div>
-<div class="ttc" id="a00072_html_ga0a385fe365c4fba6583fdd25e8ad072b"><div class="ttname"><a href="a00072.html#ga0a385fe365c4fba6583fdd25e8ad072b">XBMCAddon::xbmcgui::Dialog::notification</a></div><div class="ttdeci">void notification(const String &amp;heading, const String &amp;message, const String &amp;icon=emptyString, int time=0, bool sound=true)</div></div>
-<div class="ttc" id="a00072_html_ga329bf9f86212595d36708f6ad8977499"><div class="ttname"><a href="a00072.html#ga329bf9f86212595d36708f6ad8977499">XBMCAddon::xbmcgui::Dialog::browse</a></div><div class="ttdeci">Alternative&lt; String, std::vector&lt; String &gt; &gt; browse(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;sDefault=emptyString, bool enableMultiple=false)</div></div>
-<div class="ttc" id="a00233_html"><div class="ttname"><a href="a00233.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00074_html_a00333"><div class="ttname"><a href="a00074.html#a00333">XBMCAddon::xbmcgui::DialogProgressBG</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:517</div></div>
-<div class="ttc" id="a00073_html_ga5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="a00073.html#ga5ae591df94fc66ccb85cbb6565368bca">XBMCAddon::xbmcgui::DialogProgress::close</a></div><div class="ttdeci">void close()</div></div>
-<div class="ttc" id="a00072_html_gad44dd72bef6ada382a1b9704580410db"><div class="ttname"><a href="a00072.html#gad44dd72bef6ada382a1b9704580410db">XBMCAddon::xbmcgui::Dialog::numeric</a></div><div class="ttdeci">String numeric(int type, const String &amp;heading, const String &amp;defaultt=emptyString)</div></div>
-<div class="ttc" id="a00072_html_gad212e84e36d2fc96b8f2e24b9dd67b47"><div class="ttname"><a href="a00072.html#gad212e84e36d2fc96b8f2e24b9dd67b47">XBMCAddon::xbmcgui::Dialog::textviewer</a></div><div class="ttdeci">void textviewer(const String &amp;heading, const String &amp;text)</div></div>
-<div class="ttc" id="a00072_html_ga2a25e833c92e98a294964d0d285ee1f9"><div class="ttname"><a href="a00072.html#ga2a25e833c92e98a294964d0d285ee1f9">XBMCAddon::xbmcgui::Dialog::input</a></div><div class="ttdeci">String input(const String &amp;heading, const String &amp;defaultt=emptyString, int type=INPUT_ALPHANUM, int option=0, int autoclose=0)</div></div>
-<div class="ttc" id="a00072_html_a00331"><div class="ttname"><a href="a00072.html#a00331">XBMCAddon::xbmcgui::Dialog</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:52</div></div>
-<div class="ttc" id="a00072_html_ga804e86cf03fe10961d7a7ca1d00fffa3"><div class="ttname"><a href="a00072.html#ga804e86cf03fe10961d7a7ca1d00fffa3">XBMCAddon::xbmcgui::Dialog::browseMultiple</a></div><div class="ttdeci">std::vector&lt; String &gt; browseMultiple(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;defaultt=emptyString)</div></div>
-<div class="ttc" id="a00072_html_ga31bcf740cf64230b40af61377ad701b1"><div class="ttname"><a href="a00072.html#ga31bcf740cf64230b40af61377ad701b1">XBMCAddon::xbmcgui::Dialog::select</a></div><div class="ttdeci">int select(const String &amp;heading, const std::vector&lt; String &gt; &amp;list, int autoclose=0)</div></div>
-<div class="ttc" id="a00073_html_gad71569b69244d11fe949d0bbd5b75905"><div class="ttname"><a href="a00073.html#gad71569b69244d11fe949d0bbd5b75905">XBMCAddon::xbmcgui::DialogProgress::create</a></div><div class="ttdeci">void create(const String &amp;heading, const String &amp;line1=emptyString, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015-2016 Team KODI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;API_NAMESPACE</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00257.html">KodiAPI</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>GUI</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">class </span>CWindow;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="a00081.html">   51</a></span>&#160;<span class="comment"></span>  <span class="keyword">class </span><a class="code" href="a00081.html#a00346">CControlRadioButton</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span>    <a class="code" href="a00081.html#ga8d84caae6f6484bebdbcb0b45befdf11">CControlRadioButton</a>(<a class="code" href="a00090.html#a00380">CWindow</a>* window, <span class="keywordtype">int</span> controlId);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <a class="code" href="a00081.html#adbc40c8965bd4c255719a7ff9e00ddaa">~CControlRadioButton</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00081.html#ga71a209185b7a98adf0a310d2c44cdbe6">SetVisible</a>(<span class="keywordtype">bool</span> visible);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00081.html#gaac893222adeffdefc04d749648cce354">SetEnabled</a>(<span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00081.html#gab825756e641ba839bfae908492165481">SetLabel</a>(<span class="keyword">const</span> std::string&amp; label);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"></span>    std::string <a class="code" href="a00081.html#ga6c80f17140ee95a258ff6c13439a2623">GetLabel</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00081.html#gada1dfadeefe2948819776785fcdbf547">SetSelected</a>(<span class="keywordtype">bool</span> selected);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="a00081.html#gad29f489ee580d3d6d01b334aa186c323">IsSelected</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">  #ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    IMPL_GUI_RADIO_BUTTON_CONTROL;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="preprocessor">  #endif</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  };</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;} <span class="comment">/* namespace GUI */</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;END_NAMESPACE()</div>
+<div class="ttc" id="a00081_html_gada1dfadeefe2948819776785fcdbf547"><div class="ttname"><a href="a00081.html#gada1dfadeefe2948819776785fcdbf547">KodiAPI::GUI::CControlRadioButton::SetSelected</a></div><div class="ttdeci">void SetSelected(bool selected)</div><div class="ttdoc">To set radio button condition to on or off. </div></div>
+<div class="ttc" id="a00081_html_gab825756e641ba839bfae908492165481"><div class="ttname"><a href="a00081.html#gab825756e641ba839bfae908492165481">KodiAPI::GUI::CControlRadioButton::SetLabel</a></div><div class="ttdeci">void SetLabel(const std::string &amp;label)</div><div class="ttdoc">To set the text string on radio button. </div></div>
+<div class="ttc" id="a00081_html_a00346"><div class="ttname"><a href="a00081.html#a00346">KodiAPI::GUI::CControlRadioButton</a></div><div class="ttdef"><b>Definition:</b> ControlRadioButton.hpp:51</div></div>
+<div class="ttc" id="a00081_html_ga71a209185b7a98adf0a310d2c44cdbe6"><div class="ttname"><a href="a00081.html#ga71a209185b7a98adf0a310d2c44cdbe6">KodiAPI::GUI::CControlRadioButton::SetVisible</a></div><div class="ttdeci">void SetVisible(bool visible)</div><div class="ttdoc">Set the control on window to visible. </div></div>
+<div class="ttc" id="a00081_html_ga6c80f17140ee95a258ff6c13439a2623"><div class="ttname"><a href="a00081.html#ga6c80f17140ee95a258ff6c13439a2623">KodiAPI::GUI::CControlRadioButton::GetLabel</a></div><div class="ttdeci">std::string GetLabel() const </div><div class="ttdoc">Get the used text from control. </div></div>
+<div class="ttc" id="a00090_html_a00380"><div class="ttname"><a href="a00090.html#a00380">KodiAPI::GUI::CWindow</a></div><div class="ttdef"><b>Definition:</b> Window.hpp:69</div></div>
+<div class="ttc" id="a00081_html_ga8d84caae6f6484bebdbcb0b45befdf11"><div class="ttname"><a href="a00081.html#ga8d84caae6f6484bebdbcb0b45befdf11">KodiAPI::GUI::CControlRadioButton::CControlRadioButton</a></div><div class="ttdeci">CControlRadioButton(CWindow *window, int controlId)</div><div class="ttdoc">Construct a new control. </div></div>
+<div class="ttc" id="a00257_html"><div class="ttname"><a href="a00257.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
+<div class="ttc" id="a00081_html_gad29f489ee580d3d6d01b334aa186c323"><div class="ttname"><a href="a00081.html#gad29f489ee580d3d6d01b334aa186c323">KodiAPI::GUI::CControlRadioButton::IsSelected</a></div><div class="ttdeci">bool IsSelected() const </div><div class="ttdoc">Get the current selected condition of radio button. </div></div>
+<div class="ttc" id="a00081_html_adbc40c8965bd4c255719a7ff9e00ddaa"><div class="ttname"><a href="a00081.html#adbc40c8965bd4c255719a7ff9e00ddaa">KodiAPI::GUI::CControlRadioButton::~CControlRadioButton</a></div><div class="ttdeci">virtual ~CControlRadioButton()</div><div class="ttdoc">Destructor. </div></div>
+<div class="ttc" id="a00081_html_gaac893222adeffdefc04d749648cce354"><div class="ttname"><a href="a00081.html#gaac893222adeffdefc04d749648cce354">KodiAPI::GUI::CControlRadioButton::SetEnabled</a></div><div class="ttdeci">void SetEnabled(bool enabled)</div><div class="ttdoc">Set&#39;s the control&#39;s enabled/disabled state. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c72e4a3b15aa6b185e7458e4a6d6ab4f.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_81c1a29a69722fee590df545771fd524.html">legacy</a></li><li class="navelem"><b>Dialog.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e2f41087cf08f19ef9254dabbd5edda3.html">include</a></li><li class="navelem"><a class="el" href="dir_684c90c798bf40b829fca8909140a321.html">kodi</a></li><li class="navelem"><a class="el" href="dir_fe15ccb97bc6dd916b539c35a997f873.html">api2</a></li><li class="navelem"><a class="el" href="dir_c2c64a33e9f782c7e9591d9d282ea392.html">gui</a></li><li class="navelem"><b>ControlRadioButton.hpp</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

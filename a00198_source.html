@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/interfaces/legacy/Stat.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/gui/DialogTextViewer.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,93 +92,59 @@ $(document).ready(function(){initNavTree('a00198_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Stat.h</div>  </div>
+<div class="title">DialogTextViewer.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;filesystem/File.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;LanguageHook.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00233.html">XBMCAddon</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">namespace </span>xbmcvfs</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="a00080.html">   55</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00080.html#a00345">Stat</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">struct </span>__stat64 st;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <a class="code" href="a00080.html#a00345">Stat</a>(<span class="keyword">const</span> String&amp; path)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        DelayedCallGuard dg;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        XFILE::CFile::Stat(path, &amp;st);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="a00080.html#ga00b3e20028eaee69c44cdc47a922fe31">   72</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00080.html#ga00b3e20028eaee69c44cdc47a922fe31">st_mode</a>() { <span class="keywordflow">return</span> st.st_mode; };</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="a00080.html#ga77e336d6274f6fb0e2a3c3546e61e360">   80</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00080.html#ga77e336d6274f6fb0e2a3c3546e61e360">st_ino</a>() { <span class="keywordflow">return</span> st.st_ino; };</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="a00080.html#gab17084ec246f2b497d2f13618c5bd220">   90</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00080.html#gab17084ec246f2b497d2f13618c5bd220">st_dev</a>() { <span class="keywordflow">return</span> st.st_dev; };</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="a00080.html#ga34f57426567df63ef5ad1b4679778d18">   98</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00080.html#ga34f57426567df63ef5ad1b4679778d18">st_nlink</a>() { <span class="keywordflow">return</span> st.st_nlink; };</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="a00080.html#gaa29c53999dffe4acc12aed2eb60a6c81">  106</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00080.html#gaa29c53999dffe4acc12aed2eb60a6c81">st_uid</a>() { <span class="keywordflow">return</span> st.st_uid; };</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="a00080.html#ga9a7a9ad27402f5a931bcbff38e4e03d3">  114</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00080.html#ga9a7a9ad27402f5a931bcbff38e4e03d3">st_gid</a>() { <span class="keywordflow">return</span> st.st_gid; };</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="a00080.html#gaeec21543efab31f62a21e533b0d3a537">  127</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00080.html#gaeec21543efab31f62a21e533b0d3a537">st_size</a>() { <span class="keywordflow">return</span> st.st_size; };</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="a00080.html#ga65d49375e5251d4e616a45e3c898d6cc">  135</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00080.html#ga65d49375e5251d4e616a45e3c898d6cc">atime</a>() { <span class="keywordflow">return</span> st.st_atime; }; <span class="comment">//names st_atime/st_mtime/st_ctime are used by sys/stat.h</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="a00080.html#ga57da69d0b20141a95c0c44a6bb5f3b35">  143</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00080.html#ga57da69d0b20141a95c0c44a6bb5f3b35">mtime</a>() { <span class="keywordflow">return</span> st.st_mtime; };</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="a00080.html#gab24c57af16ac6f88edb819c18e2e438b">  151</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00080.html#gab24c57af16ac6f88edb819c18e2e438b">ctime</a>() { <span class="keywordflow">return</span> st.st_ctime; };</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    };</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="ttc" id="a00080_html_ga00b3e20028eaee69c44cdc47a922fe31"><div class="ttname"><a href="a00080.html#ga00b3e20028eaee69c44cdc47a922fe31">XBMCAddon::xbmcvfs::Stat::st_mode</a></div><div class="ttdeci">long long st_mode()</div><div class="ttdoc">To get file protection. </div><div class="ttdef"><b>Definition:</b> Stat.h:72</div></div>
-<div class="ttc" id="a00080_html_ga9a7a9ad27402f5a931bcbff38e4e03d3"><div class="ttname"><a href="a00080.html#ga9a7a9ad27402f5a931bcbff38e4e03d3">XBMCAddon::xbmcvfs::Stat::st_gid</a></div><div class="ttdeci">long long st_gid()</div><div class="ttdoc">To get group ID of owner. </div><div class="ttdef"><b>Definition:</b> Stat.h:114</div></div>
-<div class="ttc" id="a00080_html_gab24c57af16ac6f88edb819c18e2e438b"><div class="ttname"><a href="a00080.html#gab24c57af16ac6f88edb819c18e2e438b">XBMCAddon::xbmcvfs::Stat::ctime</a></div><div class="ttdeci">long long ctime()</div><div class="ttdoc">To get time of last status change. </div><div class="ttdef"><b>Definition:</b> Stat.h:151</div></div>
-<div class="ttc" id="a00080_html_gaa29c53999dffe4acc12aed2eb60a6c81"><div class="ttname"><a href="a00080.html#gaa29c53999dffe4acc12aed2eb60a6c81">XBMCAddon::xbmcvfs::Stat::st_uid</a></div><div class="ttdeci">long long st_uid()</div><div class="ttdoc">To get user ID of owner. </div><div class="ttdef"><b>Definition:</b> Stat.h:106</div></div>
-<div class="ttc" id="a00080_html_a00345"><div class="ttname"><a href="a00080.html#a00345">XBMCAddon::xbmcvfs::Stat</a></div><div class="ttdef"><b>Definition:</b> Stat.h:55</div></div>
-<div class="ttc" id="a00080_html_ga57da69d0b20141a95c0c44a6bb5f3b35"><div class="ttname"><a href="a00080.html#ga57da69d0b20141a95c0c44a6bb5f3b35">XBMCAddon::xbmcvfs::Stat::mtime</a></div><div class="ttdeci">long long mtime()</div><div class="ttdoc">To get time of last modification. </div><div class="ttdef"><b>Definition:</b> Stat.h:143</div></div>
-<div class="ttc" id="a00080_html_ga77e336d6274f6fb0e2a3c3546e61e360"><div class="ttname"><a href="a00080.html#ga77e336d6274f6fb0e2a3c3546e61e360">XBMCAddon::xbmcvfs::Stat::st_ino</a></div><div class="ttdeci">long long st_ino()</div><div class="ttdoc">To get inode number. </div><div class="ttdef"><b>Definition:</b> Stat.h:80</div></div>
-<div class="ttc" id="a00080_html_ga34f57426567df63ef5ad1b4679778d18"><div class="ttname"><a href="a00080.html#ga34f57426567df63ef5ad1b4679778d18">XBMCAddon::xbmcvfs::Stat::st_nlink</a></div><div class="ttdeci">long long st_nlink()</div><div class="ttdoc">To get number of hard links. </div><div class="ttdef"><b>Definition:</b> Stat.h:98</div></div>
-<div class="ttc" id="a00233_html"><div class="ttname"><a href="a00233.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00080_html_gab17084ec246f2b497d2f13618c5bd220"><div class="ttname"><a href="a00080.html#gab17084ec246f2b497d2f13618c5bd220">XBMCAddon::xbmcvfs::Stat::st_dev</a></div><div class="ttdeci">long long st_dev()</div><div class="ttdoc">To get ID of device containing file. </div><div class="ttdef"><b>Definition:</b> Stat.h:90</div></div>
-<div class="ttc" id="a00080_html_gaeec21543efab31f62a21e533b0d3a537"><div class="ttname"><a href="a00080.html#gaeec21543efab31f62a21e533b0d3a537">XBMCAddon::xbmcvfs::Stat::st_size</a></div><div class="ttdeci">long long st_size()</div><div class="ttdoc">To get total size, in bytes. </div><div class="ttdef"><b>Definition:</b> Stat.h:127</div></div>
-<div class="ttc" id="a00080_html_ga65d49375e5251d4e616a45e3c898d6cc"><div class="ttname"><a href="a00080.html#ga65d49375e5251d4e616a45e3c898d6cc">XBMCAddon::xbmcvfs::Stat::atime</a></div><div class="ttdeci">long long atime()</div><div class="ttdoc">To get time of last access. </div><div class="ttdef"><b>Definition:</b> Stat.h:135</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015-2016 Team KODI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;API_NAMESPACE</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00257.html">KodiAPI</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>GUI</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span>  <span class="keyword">namespace </span>DialogTextViewer</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00321.html#ga205945a8afdd80f1d2f145a40439141b">Show</a>(</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="keyword">const</span> std::string&amp; heading,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="keyword">const</span> std::string&amp; text);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  };</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;} <span class="comment">/* namespace GUI */</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;END_NAMESPACE()</div>
+<div class="ttc" id="a00321_html_ga205945a8afdd80f1d2f145a40439141b"><div class="ttname"><a href="a00321.html#ga205945a8afdd80f1d2f145a40439141b">KodiAPI::GUI::DialogTextViewer::Show</a></div><div class="ttdeci">void Show(const std::string &amp;heading, const std::string &amp;text)</div><div class="ttdoc">Show info text dialog. </div></div>
+<div class="ttc" id="a00257_html"><div class="ttname"><a href="a00257.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c72e4a3b15aa6b185e7458e4a6d6ab4f.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_81c1a29a69722fee590df545771fd524.html">legacy</a></li><li class="navelem"><b>Stat.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e2f41087cf08f19ef9254dabbd5edda3.html">include</a></li><li class="navelem"><a class="el" href="dir_684c90c798bf40b829fca8909140a321.html">kodi</a></li><li class="navelem"><a class="el" href="dir_fe15ccb97bc6dd916b539c35a997f873.html">api2</a></li><li class="navelem"><a class="el" href="dir_c2c64a33e9f782c7e9591d9d282ea392.html">gui</a></li><li class="navelem"><b>DialogTextViewer.hpp</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

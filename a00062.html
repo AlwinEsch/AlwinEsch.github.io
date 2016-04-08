@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Subclass - ControlFadeLabel</title>
+<title>Kodi Development: Wrap List Container</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,261 +92,148 @@ $(document).ready(function(){initNavTree('a00062.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Subclass - ControlFadeLabel<div class="ingroups"><a class="el" href="a00240.html">Python</a> &raquo; <a class="el" href="a00242.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00058.html">Control</a></div></div>  </div>
+<div class="title">Wrap List Container </div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Used to show multiple pieces of text in the same position, by fading from one to the other.</b> </p>
-<p><b><code>ControlFadeLabel(x, y, width, height[, font, textColor, alignment])</code></b></p>
-<p>The fade label control is used for displaying multiple pieces of text in the same space in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed. The first piece of information to display fades in over 50 frames, then scrolls off to the left. Once it is finished scrolling off screen, the second piece of information fades in and the process repeats. A fade label control is not supported in a list container.</p>
-<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00058.html">Control</a></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>[opt] string - font used for label text. (e.g. 'font13') </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">textColor</td><td>[opt] hexstring - color of fadelabel's labels. (e.g. '0xFFFFFFFF') </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">alignment</td><td>[opt] integer - alignment of label<ul>
-<li>Flags for alignment used as bits to have several together: <table class="doxtable">
-<tr>
-<th>Defination name </th><th align="center">Bitflag </th><th align="left">Description  </th></tr>
-<tr>
-<td>XBFONT_LEFT </td><td align="center">0x00000000 </td><td align="left">Align X left </td></tr>
-<tr>
-<td>XBFONT_RIGHT </td><td align="center">0x00000001 </td><td align="left">Align X right </td></tr>
-<tr>
-<td>XBFONT_CENTER_X </td><td align="center">0x00000002 </td><td align="left">Align X center </td></tr>
-<tr>
-<td>XBFONT_CENTER_Y </td><td align="center">0x00000004 </td><td align="left">Align Y center </td></tr>
-<tr>
-<td>XBFONT_TRUNCATED </td><td align="center">0x00000008 </td><td align="left">Truncated text </td></tr>
-<tr>
-<td>XBFONT_JUSTIFIED </td><td align="center">0x00000010 </td><td align="left">Justify text </td></tr>
-</table>
-</li>
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#Wrap_List_Container_sect1">Example</a></li>
+<li class="level1"><a href="#Wrap_List_Container_sect2">Available tags</a></li>
+<li class="level1"><a href="#Wrap_List_Container_sect3">See also</a></li>
 </ul>
-</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
- Once you use a keyword, all following arguments require the keyword.<br />
- After you create the control, you need to add it to the window with addControl().</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.fadelabel = xbmcgui.ControlFadeLabel(100, 250, 200, 50, textColor=<span class="stringliteral">&#39;0xFFFFFFFF&#39;</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
-</div><!-- fragment --> <hr/><h2 class="groupheader">Class Documentation</h2>
-<a name="a00312" id="a00312"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">class XBMCAddon::xbmcgui::ControlFadeLabel</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"></div>
-<p>Inherits <a class="el" href="a00058.html#a00308">Control</a>.</p>
-<table class="memberdecls">
-<tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
-<tr class="memitem:ga5c23c1e6768621ef5114c5b56a66c7c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00062.html#ga5c23c1e6768621ef5114c5b56a66c7c9">addLabel</a> (const String &amp;label)</td></tr>
-<tr class="memdesc:ga5c23c1e6768621ef5114c5b56a66c7c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a label to this control for scrolling.  <a href="a00062.html#ga5c23c1e6768621ef5114c5b56a66c7c9">More...</a><br /></td></tr>
-<tr class="separator:ga5c23c1e6768621ef5114c5b56a66c7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75091c3fbf9fafdabb9b98ee28f0a64a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75091c3fbf9fafdabb9b98ee28f0a64a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ControlFadeLabel</b> (long x, long y, long width, long height, const char *font=NULL, const char *textColor=NULL, long _alignment=XBFONT_LEFT)</td></tr>
-<tr class="separator:a75091c3fbf9fafdabb9b98ee28f0a64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd5ac413860cba595a2a494ba33e1b42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd5ac413860cba595a2a494ba33e1b42"></a>
-SWIGHIDDENVIRTUAL CGUIControl *&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> ()</td></tr>
-<tr class="separator:afd5ac413860cba595a2a494ba33e1b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad20897c5c8bd47f5d4005989bead0e55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00065.html#gad20897c5c8bd47f5d4005989bead0e55">reset</a> ()</td></tr>
-<tr class="memdesc:gad20897c5c8bd47f5d4005989bead0e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear this fade label.  <a href="a00065.html#gad20897c5c8bd47f5d4005989bead0e55">More...</a><br /></td></tr>
-<tr class="separator:gad20897c5c8bd47f5d4005989bead0e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga37b258d64c9891a330036b19195913e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00062.html#ga37b258d64c9891a330036b19195913e1">setScrolling</a> (bool scroll)</td></tr>
-<tr class="memdesc:ga37b258d64c9891a330036b19195913e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scrolling. If set to false, the labels won't scroll. Defaults to true.  <a href="a00062.html#ga37b258d64c9891a330036b19195913e1">More...</a><br /></td></tr>
-<tr class="separator:ga37b258d64c9891a330036b19195913e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_a00058"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_a00058')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00058.html#a00308">Control</a></td></tr>
-<tr class="memitem:ae51dcbcf9694731af5c1737ed206c60e inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae51dcbcf9694731af5c1737ed206c60e"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>canAcceptMessages</b> (int actionId)</td></tr>
-<tr class="separator:ae51dcbcf9694731af5c1737ed206c60e inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaec4ebc8f3555c1e6382eeb59354d6a12 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#gaec4ebc8f3555c1e6382eeb59354d6a12">controlDown</a> (const <a class="el" href="a00058.html#a00308">Control</a> *control)</td></tr>
-<tr class="memdesc:gaec4ebc8f3555c1e6382eeb59354d6a12 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the controls down navigation.  <a href="a00058.html#gaec4ebc8f3555c1e6382eeb59354d6a12">More...</a><br /></td></tr>
-<tr class="separator:gaec4ebc8f3555c1e6382eeb59354d6a12 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad9ab4542e5acb12c46393a26a007ef66 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#gad9ab4542e5acb12c46393a26a007ef66">controlLeft</a> (const <a class="el" href="a00058.html#a00308">Control</a> *control)</td></tr>
-<tr class="memdesc:gad9ab4542e5acb12c46393a26a007ef66 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the controls left navigation.  <a href="a00058.html#gad9ab4542e5acb12c46393a26a007ef66">More...</a><br /></td></tr>
-<tr class="separator:gad9ab4542e5acb12c46393a26a007ef66 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7cb92e50d4913b0c9de289e22c558e99 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga7cb92e50d4913b0c9de289e22c558e99">controlRight</a> (const <a class="el" href="a00058.html#a00308">Control</a> *control)</td></tr>
-<tr class="memdesc:ga7cb92e50d4913b0c9de289e22c558e99 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the controls right navigation.  <a href="a00058.html#ga7cb92e50d4913b0c9de289e22c558e99">More...</a><br /></td></tr>
-<tr class="separator:ga7cb92e50d4913b0c9de289e22c558e99 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac601d65962991f21dd651ed607c6a63b inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#gac601d65962991f21dd651ed607c6a63b">controlUp</a> (const <a class="el" href="a00058.html#a00308">Control</a> *up)</td></tr>
-<tr class="memdesc:gac601d65962991f21dd651ed607c6a63b inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the controls up navigation.  <a href="a00058.html#gac601d65962991f21dd651ed607c6a63b">More...</a><br /></td></tr>
-<tr class="separator:gac601d65962991f21dd651ed607c6a63b inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga07efb2a4e9a982688c8bb3c3f21d1092 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga07efb2a4e9a982688c8bb3c3f21d1092">getHeight</a> ()</td></tr>
-<tr class="memdesc:ga07efb2a4e9a982688c8bb3c3f21d1092 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the control's current height as an integer.  <a href="a00058.html#ga07efb2a4e9a982688c8bb3c3f21d1092">More...</a><br /></td></tr>
-<tr class="separator:ga07efb2a4e9a982688c8bb3c3f21d1092 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga67283be3f45257d1e0c474c563ebb6b6 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga67283be3f45257d1e0c474c563ebb6b6">getId</a> ()</td></tr>
-<tr class="memdesc:ga67283be3f45257d1e0c474c563ebb6b6 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the control's current id as an integer.  <a href="a00058.html#ga67283be3f45257d1e0c474c563ebb6b6">More...</a><br /></td></tr>
-<tr class="separator:ga67283be3f45257d1e0c474c563ebb6b6 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga07266de29777b8f36f4ad6cbed4b8020 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga07266de29777b8f36f4ad6cbed4b8020">getPosition</a> ()</td></tr>
-<tr class="memdesc:ga07266de29777b8f36f4ad6cbed4b8020 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the control's current position as a x,y integer tuple.  <a href="a00058.html#ga07266de29777b8f36f4ad6cbed4b8020">More...</a><br /></td></tr>
-<tr class="separator:ga07266de29777b8f36f4ad6cbed4b8020 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga67a0997183f24da19b776d96c1052998 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga67a0997183f24da19b776d96c1052998">getWidth</a> ()</td></tr>
-<tr class="memdesc:ga67a0997183f24da19b776d96c1052998 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the control's current width as an integer.  <a href="a00058.html#ga67a0997183f24da19b776d96c1052998">More...</a><br /></td></tr>
-<tr class="separator:ga67a0997183f24da19b776d96c1052998 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae13f88e922e1339355456062ad9fa359 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#gae13f88e922e1339355456062ad9fa359">getX</a> ()</td></tr>
-<tr class="memdesc:gae13f88e922e1339355456062ad9fa359 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the control's current X position.  <a href="a00058.html#gae13f88e922e1339355456062ad9fa359">More...</a><br /></td></tr>
-<tr class="separator:gae13f88e922e1339355456062ad9fa359 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaab81944f0a14bba932c0931899951937 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#gaab81944f0a14bba932c0931899951937">getY</a> ()</td></tr>
-<tr class="memdesc:gaab81944f0a14bba932c0931899951937 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the control's current Y position.  <a href="a00058.html#gaab81944f0a14bba932c0931899951937">More...</a><br /></td></tr>
-<tr class="separator:gaab81944f0a14bba932c0931899951937 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe5b3359ed3816cfe518b3936bbe18d7 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe5b3359ed3816cfe518b3936bbe18d7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="a00058.html#a00308">Control</a> &amp;other) const </td></tr>
-<tr class="separator:abe5b3359ed3816cfe518b3936bbe18d7 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3afa902404bb37b7198235543d9175b inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3afa902404bb37b7198235543d9175b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="a00058.html#a00308">Control</a> &amp;other) const </td></tr>
-<tr class="separator:ac3afa902404bb37b7198235543d9175b inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a748ad45a8ff567d618b63a9640a9bb05 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a748ad45a8ff567d618b63a9640a9bb05"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (const <a class="el" href="a00058.html#a00308">Control</a> &amp;other) const </td></tr>
-<tr class="separator:a748ad45a8ff567d618b63a9640a9bb05 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga22700732d77c4d7603e8551ae8367dcb inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga22700732d77c4d7603e8551ae8367dcb">setAnimations</a> (const std::vector&lt; Tuple&lt; String, String &gt; &gt; &amp;eventAttr)</td></tr>
-<tr class="memdesc:ga22700732d77c4d7603e8551ae8367dcb inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the control's animations.  <a href="a00058.html#ga22700732d77c4d7603e8551ae8367dcb">More...</a><br /></td></tr>
-<tr class="separator:ga22700732d77c4d7603e8551ae8367dcb inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafad573737fe328c444f990096a3a90bf inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#gafad573737fe328c444f990096a3a90bf">setEnableCondition</a> (const char *enable)</td></tr>
-<tr class="memdesc:gafad573737fe328c444f990096a3a90bf inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the control's enabled condition.  <a href="a00058.html#gafad573737fe328c444f990096a3a90bf">More...</a><br /></td></tr>
-<tr class="separator:gafad573737fe328c444f990096a3a90bf inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga32b9dc15995ce2538f774b7237d96908 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga32b9dc15995ce2538f774b7237d96908">setEnabled</a> (bool enabled)</td></tr>
-<tr class="memdesc:ga32b9dc15995ce2538f774b7237d96908 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the control's enabled/disabled state.  <a href="a00058.html#ga32b9dc15995ce2538f774b7237d96908">More...</a><br /></td></tr>
-<tr class="separator:ga32b9dc15995ce2538f774b7237d96908 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf5c2dbdb58f9c0d627a3fc45e576546a inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#gaf5c2dbdb58f9c0d627a3fc45e576546a">setHeight</a> (long height)</td></tr>
-<tr class="memdesc:gaf5c2dbdb58f9c0d627a3fc45e576546a inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the controls height.  <a href="a00058.html#gaf5c2dbdb58f9c0d627a3fc45e576546a">More...</a><br /></td></tr>
-<tr class="separator:gaf5c2dbdb58f9c0d627a3fc45e576546a inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga952a8f722abe01bcdea42f5687d0dd2b inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga952a8f722abe01bcdea42f5687d0dd2b">setNavigation</a> (const <a class="el" href="a00058.html#a00308">Control</a> *up, const <a class="el" href="a00058.html#a00308">Control</a> *down, const <a class="el" href="a00058.html#a00308">Control</a> *left, const <a class="el" href="a00058.html#a00308">Control</a> *right)</td></tr>
-<tr class="memdesc:ga952a8f722abe01bcdea42f5687d0dd2b inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the controls navigation.  <a href="a00058.html#ga952a8f722abe01bcdea42f5687d0dd2b">More...</a><br /></td></tr>
-<tr class="separator:ga952a8f722abe01bcdea42f5687d0dd2b inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga638e0167b31fc8c2582c52a9bc68408a inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga638e0167b31fc8c2582c52a9bc68408a">setPosition</a> (long x, long y)</td></tr>
-<tr class="memdesc:ga638e0167b31fc8c2582c52a9bc68408a inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the controls position.  <a href="a00058.html#ga638e0167b31fc8c2582c52a9bc68408a">More...</a><br /></td></tr>
-<tr class="separator:ga638e0167b31fc8c2582c52a9bc68408a inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga18e44e30b31525a243960ca3928125aa inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga18e44e30b31525a243960ca3928125aa">setVisible</a> (bool visible)</td></tr>
-<tr class="memdesc:ga18e44e30b31525a243960ca3928125aa inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the control's visible/hidden state.  <a href="a00058.html#ga18e44e30b31525a243960ca3928125aa">More...</a><br /></td></tr>
-<tr class="separator:ga18e44e30b31525a243960ca3928125aa inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2f6b35ece172527a592cefc3fce5e553 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga2f6b35ece172527a592cefc3fce5e553">setVisibleCondition</a> (const char *visible, bool allowHiddenFocus=false)</td></tr>
-<tr class="memdesc:ga2f6b35ece172527a592cefc3fce5e553 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the control's visible condition.  <a href="a00058.html#ga2f6b35ece172527a592cefc3fce5e553">More...</a><br /></td></tr>
-<tr class="separator:ga2f6b35ece172527a592cefc3fce5e553 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2d8a32e1a10ddea462cb6e88cce099d7 inherit pub_methods_a00058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00058.html#ga2d8a32e1a10ddea462cb6e88cce099d7">setWidth</a> (long width)</td></tr>
-<tr class="memdesc:ga2d8a32e1a10ddea462cb6e88cce099d7 inherit pub_methods_a00058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the controls width.  <a href="a00058.html#ga2d8a32e1a10ddea462cb6e88cce099d7">More...</a><br /></td></tr>
-<tr class="separator:ga2d8a32e1a10ddea462cb6e88cce099d7 inherit pub_methods_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><h3>Public Attributes</h3></td></tr>
-<tr class="memitem:a4864c3686205158c9cab83fa95c2a15a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4864c3686205158c9cab83fa95c2a15a"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>align</b></td></tr>
-<tr class="separator:a4864c3686205158c9cab83fa95c2a15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f25f8c85a80a1d7809faf9b9b28e2c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f25f8c85a80a1d7809faf9b9b28e2c6"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>strFont</b></td></tr>
-<tr class="separator:a5f25f8c85a80a1d7809faf9b9b28e2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad24d108d90ba89e693640b8aa2ff1d71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad24d108d90ba89e693640b8aa2ff1d71"></a>
-color_t&#160;</td><td class="memItemRight" valign="bottom"><b>textColor</b></td></tr>
-<tr class="separator:ad24d108d90ba89e693640b8aa2ff1d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab73823089fdceaaa9798d5d0bb79d458"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab73823089fdceaaa9798d5d0bb79d458"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>vecLabels</b></td></tr>
-<tr class="separator:ab73823089fdceaaa9798d5d0bb79d458"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_a00058"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_a00058')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="a00058.html#a00308">Control</a></td></tr>
-<tr class="memitem:a8506bcd836aa13d6faf58a1845904ac9 inherit pub_attribs_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8506bcd836aa13d6faf58a1845904ac9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>dwHeight</b></td></tr>
-<tr class="separator:a8506bcd836aa13d6faf58a1845904ac9 inherit pub_attribs_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31508c9d39034568e35f97ea21751fc9 inherit pub_attribs_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31508c9d39034568e35f97ea21751fc9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>dwPosX</b></td></tr>
-<tr class="separator:a31508c9d39034568e35f97ea21751fc9 inherit pub_attribs_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9b1b9c267586f6aaaa5c674f0edeec3 inherit pub_attribs_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9b1b9c267586f6aaaa5c674f0edeec3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>dwPosY</b></td></tr>
-<tr class="separator:af9b1b9c267586f6aaaa5c674f0edeec3 inherit pub_attribs_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03265ff22f8493f403adc9ec5bb5b597 inherit pub_attribs_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03265ff22f8493f403adc9ec5bb5b597"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>dwWidth</b></td></tr>
-<tr class="separator:a03265ff22f8493f403adc9ec5bb5b597 inherit pub_attribs_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeee139c77e6937413ca2154f1c896bba inherit pub_attribs_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeee139c77e6937413ca2154f1c896bba"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>iControlDown</b></td></tr>
-<tr class="separator:aeee139c77e6937413ca2154f1c896bba inherit pub_attribs_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0618498d86db22d66e6eb76a18a01842 inherit pub_attribs_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0618498d86db22d66e6eb76a18a01842"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>iControlId</b></td></tr>
-<tr class="separator:a0618498d86db22d66e6eb76a18a01842 inherit pub_attribs_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff29a93df987ecd9ded0f331dd9f1f2c inherit pub_attribs_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff29a93df987ecd9ded0f331dd9f1f2c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>iControlLeft</b></td></tr>
-<tr class="separator:aff29a93df987ecd9ded0f331dd9f1f2c inherit pub_attribs_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4418e2b45bca02ee8d5cc3c1ef31c5dc inherit pub_attribs_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4418e2b45bca02ee8d5cc3c1ef31c5dc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>iControlRight</b></td></tr>
-<tr class="separator:a4418e2b45bca02ee8d5cc3c1ef31c5dc inherit pub_attribs_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade2699152714846f2ec9889c199125b4 inherit pub_attribs_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade2699152714846f2ec9889c199125b4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>iControlUp</b></td></tr>
-<tr class="separator:ade2699152714846f2ec9889c199125b4 inherit pub_attribs_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fbad531e502848903d2b327a9014c60 inherit pub_attribs_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fbad531e502848903d2b327a9014c60"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>iParentId</b></td></tr>
-<tr class="separator:a6fbad531e502848903d2b327a9014c60 inherit pub_attribs_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47b72ebe2f3bedcdb538271dd3836245 inherit pub_attribs_a00058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47b72ebe2f3bedcdb538271dd3836245"></a>
-CGUIControl *&#160;</td><td class="memItemRight" valign="bottom"><b>pGUIControl</b></td></tr>
-<tr class="separator:a47b72ebe2f3bedcdb538271dd3836245 inherit pub_attribs_a00058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div>
+<div class="textblock"><p><b>Used for a wrapping list of items with fixed focus.</b></p>
+<p>The wrap list container is one of several containers used to display items fromfile lists in various ways. The wrap list container is the same as the <a class="el" href="a00028.html">List Container</a>, with two exceptions:</p><ol type="1">
+<li>The focused item is fixed.</li>
+<li>The items "wrap" around once they reach the end.</li>
+</ol>
+<p>As with all container controls, the layout of the items within the control is very flexible. </p><hr/>
+ <h1><a class="anchor" id="Wrap_List_Container_sect1"></a>
+Example</h1>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;wraplist&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;50&quot;</span>&gt;</div>
+<div class="line">      &lt;description&gt;My first wraplist container&lt;/description&gt;</div>
+<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line">      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
+<div class="line">      &lt;onup&gt;2&lt;/onup&gt;</div>
+<div class="line">      &lt;ondown&gt;3&lt;/ondown&gt;</div>
+<div class="line">      &lt;onleft&gt;1&lt;/onleft&gt;</div>
+<div class="line">      &lt;onright&gt;1&lt;/onright&gt;</div>
+<div class="line">      &lt;viewtype label=<span class="stringliteral">&quot;3D list&quot;</span>&gt;list&lt;/viewtype&gt;</div>
+<div class="line">      &lt;orientation&gt;vertical&lt;/orientation&gt;</div>
+<div class="line">      &lt;pagecontrol&gt;25&lt;/pagecontrol&gt;</div>
+<div class="line">      &lt;focusposition&gt;3&lt;/focusposition&gt;</div>
+<div class="line">      &lt;scrolltime tween=<span class="stringliteral">&quot;sine&quot;</span> easing=<span class="stringliteral">&quot;out&quot;</span>&gt;200&lt;/scrolltime&gt;</div>
+<div class="line">      &lt;autoscroll&gt;<span class="keyword">true</span>&lt;/autoscroll&gt;</div>
+<div class="line">      &lt;itemlayout width=<span class="stringliteral">&quot;250&quot;</span> height=<span class="stringliteral">&quot;29&quot;</span>&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;22&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;30&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;430&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line">                        &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;475&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;300&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line">                        &lt;textcolor&gt;grey&lt;/textcolor&gt;</div>
+<div class="line">                        &lt;align&gt;right&lt;/align&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Label2&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">      &lt;/itemlayout&gt;</div>
+<div class="line">      &lt;focusedlayout height=<span class="stringliteral">&quot;29&quot;</span> width=<span class="stringliteral">&quot;250&quot;</span>&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">                        &lt;width&gt;485&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;29&lt;/height&gt;</div>
+<div class="line">                        &lt;posx&gt;0&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line">                        &lt;visible&gt;Control.HasFocus(50)&lt;/visible&gt;</div>
+<div class="line">                        &lt;texture&gt;list-focus.png&lt;/texture&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;22&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;30&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;430&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line">                        &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">                        &lt;posx&gt;475&lt;/posx&gt;</div>
+<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">                        &lt;width&gt;300&lt;/width&gt;</div>
+<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
+<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
+<div class="line">                        &lt;textcolor&gt;grey&lt;/textcolor&gt;</div>
+<div class="line">                        &lt;align&gt;right&lt;/align&gt;</div>
+<div class="line">                        &lt;info&gt;ListItem.Label2&lt;/info&gt;</div>
+<div class="line">                &lt;/control&gt;</div>
+<div class="line">      &lt;/focusedlayout&gt;</div>
+<div class="line">&lt;/control&gt;</div>
+</div><!-- fragment --> <hr/>
+ <h1><a class="anchor" id="Wrap_List_Container_sect2"></a>
+Available tags</h1>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
+<table class="doxtable">
+<tr>
+<th align="right">Tag </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">viewtype </td><td align="left">The type of view. Choices are list, icon, wide, wrap, biglist, bigicon, bigwide, bigwrap, info and biginfo. The label attribute indicates the label that will be used in the <em>"View As"</em> control within the GUI. It is localizable via strings.xml. viewtype has no effect on the view itself. It is used by kodi when switching skin to automatically select a view with a similar layout. Skinners should try to set <em>viewtype</em> to describe the layout as best as possible. </td></tr>
+<tr>
+<td align="right">orientation </td><td align="left">The orientation of the list. Defaults to vertical. </td></tr>
+<tr>
+<td align="right">pagecontrol </td><td align="left">Used to set the <b><code>&lt;id&gt;</code></b> of the page control used to control this list. </td></tr>
+<tr>
+<td align="right">scrolltime </td><td align="left">The time (in ms) to scroll from one item to another. By default, this is 200ms. The list will scroll smoothly from one item to another as needed. Set it to zero to disable the smooth scrolling. The scroll movement can be further adjusted by selecting one of the available <a href="http://kodi.wiki/view/Tweeners">tween</a> methods. </td></tr>
+<tr>
+<td align="right">focusposition </td><td align="left">Specifies the index (from 0 -&gt; number items displayable - 1) of the focused item. The focused item doesn't move - as the user moves up and down (or left and right) the items scroll instead. </td></tr>
+<tr>
+<td align="right">itemlayout </td><td align="left">Specifies the layout of items in the list. Requires the height attribute set in a vertical list, and the width attribute set for a horizontal list. The <b><code>&lt;itemlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
+<tr>
+<td align="right">focusedlayout </td><td align="left">Specifies the layout of items in the list that have focus. Requires the height attribute set in a vertical list, and the width attribute set for a horizontal list. The <b><code>&lt;focusedlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
+<tr>
+<td align="right">content </td><td align="left">Used to set the item content that this list will contain. Allows the skinner to setup a list anywhere they want with a static set of content, as a useful alternative to the grouplist control. <a href="http://kodi.wiki/view/Static_List_Content">See here for more information</a> </td></tr>
+<tr>
+<td align="right">autoscroll </td><td align="left">Used to make the container scroll automatically </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga5c23c1e6768621ef5114c5b56a66c7c9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void addLabel </td>
-          <td>(</td>
-          <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add a label to this control for scrolling. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>string or unicode - text string to add.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>To remove added text use <code><a class="el" href="a00065.html#gad20897c5c8bd47f5d4005989bead0e55" title="Clear this fade label. ">reset()</a></code> for them.</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.fadelabel.addLabel(<span class="stringliteral">&#39;This is a line of text that can scroll.&#39;</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga37b258d64c9891a330036b19195913e1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setScrolling </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>scroll</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set scrolling. If set to false, the labels won't scroll. Defaults to true. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">scroll</td><td>boolean - True = enabled / False = disabled</td></tr>
-  </table>
-  </dd>
-</dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.fadelabel.setScrolling(<span class="keyword">False</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
-</div><!-- fragment --> 
-</div>
-</div>
-</div><!-- contents -->
+ <h1><a class="anchor" id="Wrap_List_Container_sect3"></a>
+See also</h1>
+<h4>Development:</h4>
+<ul>
+<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
+<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

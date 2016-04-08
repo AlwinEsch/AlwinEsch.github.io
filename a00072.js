@@ -1,14 +1,13 @@
 var a00072 =
 [
-    [ "yesno", "a00072.html#gaa64342a4b05f1ed49803ea44a25b73db", null ],
-    [ "select", "a00072.html#ga31bcf740cf64230b40af61377ad701b1", null ],
-    [ "multiselect", "a00072.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
-    [ "ok", "a00072.html#ga623449b051874059111f9831a7b91673", null ],
-    [ "textviewer", "a00072.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
-    [ "browse", "a00072.html#ga329bf9f86212595d36708f6ad8977499", null ],
-    [ "browseSingle", "a00072.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
-    [ "browseMultiple", "a00072.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
-    [ "numeric", "a00072.html#gad44dd72bef6ada382a1b9704580410db", null ],
-    [ "notification", "a00072.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
-    [ "input", "a00072.html#ga2a25e833c92e98a294964d0d285ee1f9", null ]
+    [ "CVFSDirEntry", "a00072.html#ga52a9625fed293dafda5d51e531caa8f5", null ],
+    [ "CVFSDirEntry", "a00072.html#ga0d75ba3099e37c9a2b2b9b8b4e4fae6d", null ],
+    [ "Label", "a00072.html#gaacd1b40e1b2e44d82303388beb475e84", null ],
+    [ "Path", "a00072.html#ga666f6d222d6e40f592d7ec4c8c670263", null ],
+    [ "IsFolder", "a00072.html#gabfbbb37d69862b45d0f1079ab976fa37", null ],
+    [ "Size", "a00072.html#gac0ba4f4c78dcb35605e645ee75198b5a", null ],
+    [ "SetLabel", "a00072.html#gab825756e641ba839bfae908492165481", null ],
+    [ "SetPath", "a00072.html#ga4a03d7c94fa02df112558bc30818e413", null ],
+    [ "SetFolder", "a00072.html#gadc0bf158b1dc28eea1bc2e3a2c016982", null ],
+    [ "SetSize", "a00072.html#gaf2fb6ea3061355a5ed4b53ca45e712ac", null ]
 ];

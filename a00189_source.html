@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/interfaces/legacy/Keyboard.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/gui/ControlTextBox.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,89 +92,109 @@ $(document).ready(function(){initNavTree('a00189_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Keyboard.h</div>  </div>
+<div class="title">ControlTextBox.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;Exception.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span>CGUIDialogKeyboardGeneric;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00233.html">XBMCAddon</a></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    XBMCCOMMONS_STANDARD_EXCEPTION(KeyboardException);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="a00051.html">   66</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00051.html#a00338">Keyboard</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      String strDefault;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      String strHeading;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordtype">bool</span> bHidden;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      String strText;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordtype">bool</span> bConfirmed;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <a class="code" href="a00051.html#a00338">Keyboard</a>(<span class="keyword">const</span> String&amp; line = emptyString, <span class="keyword">const</span> String&amp; heading = emptyString, <span class="keywordtype">bool</span> hidden = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00051.html#a00338">Keyboard</a>();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00051.html#gacc43c0ec49f492cdd85ac0e53a456be3">doModal</a>(<span class="keywordtype">int</span> autoclose = 0);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="comment">// setDefault() Method</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"></span>      <span class="keywordtype">void</span> <a class="code" href="a00051.html#ga68992de7211a3a009bba135cd4cfec9a">setDefault</a>(<span class="keyword">const</span> String&amp; line = emptyString);</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015-2016 Team KODI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;../.internal/AddonLib_internal.hpp&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;API_NAMESPACE</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00257.html">KodiAPI</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>GUI</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">class </span>CWindow;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="a00086.html">   51</a></span>&#160;<span class="comment"></span>  <span class="keyword">class </span><a class="code" href="a00086.html#a00351">CControlTextBox</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span>    <a class="code" href="a00086.html#gadbd8d4b43619362ed5e9c4f4bd84b118">CControlTextBox</a>(<a class="code" href="a00090.html#a00380">CWindow</a>* window, <span class="keywordtype">int</span> controlId);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <a class="code" href="a00086.html#ga63bb701dbad283f26754ca62085dec77">~CControlTextBox</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00086.html#ga71a209185b7a98adf0a310d2c44cdbe6">SetVisible</a>(<span class="keywordtype">bool</span> visible);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00086.html#ga372de693ad40b3f42839c8ec6ac845f4">Reset</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00086.html#ga8008c108280948ebd79830f222068455">SetText</a>(<span class="keyword">const</span> std::string&amp; text);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment"></span>    std::string <a class="code" href="a00086.html#ga1af3f7fd8b95cc66e7599caca454f8ef">GetText</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00051.html#gaf88ac60d6cb1ba83c26e612582a36c24">setHiddenInput</a>(<span class="keywordtype">bool</span> hidden = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="comment">// setHeading() Method</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"></span>      <span class="keywordtype">void</span> <a class="code" href="a00051.html#ga242a05d9df9e6d69b1a3645db14833fe">setHeading</a>(<span class="keyword">const</span> String&amp; heading);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00086.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d">Scroll</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00086.html#gad3e4bbb4388da7a56e8252018e4fbb00">SetAutoScrolling</a>(<span class="keywordtype">int</span> delay, <span class="keywordtype">int</span> time, <span class="keywordtype">int</span> repeat);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">  #ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    IMPL_GUI_TEXTBOX_CONTROL;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">  #endif</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  };</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      <span class="comment">// getText() Method</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment"></span>      String <a class="code" href="a00051.html#gafab766445043570e6a82c14851366933">getText</a>();</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="comment">// isConfirmed() Method</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment"></span>      <span class="keywordtype">bool</span> <a class="code" href="a00051.html#gadfdd82b36e1da59f1e1aa139755e49eb">isConfirmed</a>();</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    };</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
-<div class="ttc" id="a00051_html_gadfdd82b36e1da59f1e1aa139755e49eb"><div class="ttname"><a href="a00051.html#gadfdd82b36e1da59f1e1aa139755e49eb">XBMCAddon::xbmc::Keyboard::isConfirmed</a></div><div class="ttdeci">bool isConfirmed()</div></div>
-<div class="ttc" id="a00051_html_gafab766445043570e6a82c14851366933"><div class="ttname"><a href="a00051.html#gafab766445043570e6a82c14851366933">XBMCAddon::xbmc::Keyboard::getText</a></div><div class="ttdeci">String getText()</div></div>
-<div class="ttc" id="a00051_html_a00338"><div class="ttname"><a href="a00051.html#a00338">XBMCAddon::xbmc::Keyboard</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:66</div></div>
-<div class="ttc" id="a00051_html_ga68992de7211a3a009bba135cd4cfec9a"><div class="ttname"><a href="a00051.html#ga68992de7211a3a009bba135cd4cfec9a">XBMCAddon::xbmc::Keyboard::setDefault</a></div><div class="ttdeci">void setDefault(const String &amp;line=emptyString)</div></div>
-<div class="ttc" id="a00051_html_gacc43c0ec49f492cdd85ac0e53a456be3"><div class="ttname"><a href="a00051.html#gacc43c0ec49f492cdd85ac0e53a456be3">XBMCAddon::xbmc::Keyboard::doModal</a></div><div class="ttdeci">void doModal(int autoclose=0)</div></div>
-<div class="ttc" id="a00051_html_ga242a05d9df9e6d69b1a3645db14833fe"><div class="ttname"><a href="a00051.html#ga242a05d9df9e6d69b1a3645db14833fe">XBMCAddon::xbmc::Keyboard::setHeading</a></div><div class="ttdeci">void setHeading(const String &amp;heading)</div></div>
-<div class="ttc" id="a00233_html"><div class="ttname"><a href="a00233.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00051_html_gaf88ac60d6cb1ba83c26e612582a36c24"><div class="ttname"><a href="a00051.html#gaf88ac60d6cb1ba83c26e612582a36c24">XBMCAddon::xbmc::Keyboard::setHiddenInput</a></div><div class="ttdeci">void setHiddenInput(bool hidden=false)</div></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;} <span class="comment">/* namespace GUI */</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;END_NAMESPACE()</div>
+<div class="ttc" id="a00086_html_a00351"><div class="ttname"><a href="a00086.html#a00351">KodiAPI::GUI::CControlTextBox</a></div><div class="ttdef"><b>Definition:</b> ControlTextBox.hpp:51</div></div>
+<div class="ttc" id="a00086_html_ga372de693ad40b3f42839c8ec6ac845f4"><div class="ttname"><a href="a00086.html#ga372de693ad40b3f42839c8ec6ac845f4">KodiAPI::GUI::CControlTextBox::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">To reset box an remove all the text. </div></div>
+<div class="ttc" id="a00086_html_ga8008c108280948ebd79830f222068455"><div class="ttname"><a href="a00086.html#ga8008c108280948ebd79830f222068455">KodiAPI::GUI::CControlTextBox::SetText</a></div><div class="ttdeci">void SetText(const std::string &amp;text)</div><div class="ttdoc">To set the text on box. </div></div>
+<div class="ttc" id="a00086_html_ga2b8c674da6e7eb58fcf75d2f812cfd5d"><div class="ttname"><a href="a00086.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d">KodiAPI::GUI::CControlTextBox::Scroll</a></div><div class="ttdeci">void Scroll(unsigned int position)</div><div class="ttdoc">To scroll text on other position. </div></div>
+<div class="ttc" id="a00090_html_a00380"><div class="ttname"><a href="a00090.html#a00380">KodiAPI::GUI::CWindow</a></div><div class="ttdef"><b>Definition:</b> Window.hpp:69</div></div>
+<div class="ttc" id="a00086_html_ga71a209185b7a98adf0a310d2c44cdbe6"><div class="ttname"><a href="a00086.html#ga71a209185b7a98adf0a310d2c44cdbe6">KodiAPI::GUI::CControlTextBox::SetVisible</a></div><div class="ttdeci">void SetVisible(bool visible)</div><div class="ttdoc">Set the control on window to visible. </div></div>
+<div class="ttc" id="a00086_html_gadbd8d4b43619362ed5e9c4f4bd84b118"><div class="ttname"><a href="a00086.html#gadbd8d4b43619362ed5e9c4f4bd84b118">KodiAPI::GUI::CControlTextBox::CControlTextBox</a></div><div class="ttdeci">CControlTextBox(CWindow *window, int controlId)</div><div class="ttdoc">Construct a new control. </div></div>
+<div class="ttc" id="a00257_html"><div class="ttname"><a href="a00257.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
+<div class="ttc" id="a00086_html_ga1af3f7fd8b95cc66e7599caca454f8ef"><div class="ttname"><a href="a00086.html#ga1af3f7fd8b95cc66e7599caca454f8ef">KodiAPI::GUI::CControlTextBox::GetText</a></div><div class="ttdeci">std::string GetText() const </div><div class="ttdoc">Get the used text from control. </div></div>
+<div class="ttc" id="a00086_html_ga63bb701dbad283f26754ca62085dec77"><div class="ttname"><a href="a00086.html#ga63bb701dbad283f26754ca62085dec77">KodiAPI::GUI::CControlTextBox::~CControlTextBox</a></div><div class="ttdeci">virtual ~CControlTextBox()</div><div class="ttdoc">Destructor. </div></div>
+<div class="ttc" id="a00086_html_gad3e4bbb4388da7a56e8252018e4fbb00"><div class="ttname"><a href="a00086.html#gad3e4bbb4388da7a56e8252018e4fbb00">KodiAPI::GUI::CControlTextBox::SetAutoScrolling</a></div><div class="ttdeci">void SetAutoScrolling(int delay, int time, int repeat)</div><div class="ttdoc">To set automatic scrolling of textbox. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c72e4a3b15aa6b185e7458e4a6d6ab4f.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_81c1a29a69722fee590df545771fd524.html">legacy</a></li><li class="navelem"><b>Keyboard.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e2f41087cf08f19ef9254dabbd5edda3.html">include</a></li><li class="navelem"><a class="el" href="dir_684c90c798bf40b829fca8909140a321.html">kodi</a></li><li class="navelem"><a class="el" href="dir_fe15ccb97bc6dd916b539c35a997f873.html">api2</a></li><li class="navelem"><a class="el" href="dir_c2c64a33e9f782c7e9591d9d282ea392.html">gui</a></li><li class="navelem"><b>ControlTextBox.hpp</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

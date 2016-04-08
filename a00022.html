@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: class CVFSDirEntry</title>
+<title>Kodi Development: Group List Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,321 +92,67 @@ $(document).ready(function(){initNavTree('a00022.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">class CVFSDirEntry<div class="ingroups"><a class="el" href="a00239.html">C++</a> &raquo; <a class="el" href="a00249.html">2. AddOn</a> &raquo; <a class="el" href="a00254.html">Virtual file system</a></div></div>  </div>
+<div class="title">Group List Control </div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Virtual file system directory entry</b> </p>
-<p>This class is used as an entry for files and folders in KodiAPI::AddOn::CVFSUtils::GetDirectory(...).</p>
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#Group_List_Control_sect1">Example</a></li>
+<li class="level1"><a href="#Group_List_Control_sect2">Available tags</a></li>
+<li class="level1"><a href="#Group_List_Control_sect3">See also</a></li>
+</ul>
+</div>
+<div class="textblock"><p><b>Special case of the group control that forms a scrolling list of controls.</b></p>
+<p>The group list control is a special case of the group control. It is used for placing a set of controls into a list (either horizontally or vertically) and handles all the navigation within the list and placement within the list for you. It will be scrollable if the number of items exceeds the size of the list, and you can assign a scrollbar to it just like you can to any of the containers (list, panel, etc.).</p>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/VFSUtils.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line">std::vector&lt;KodiAPI::AddOn::CVFSDirEntry&gt; items;</div>
-<div class="line"><a class="code" href="a00255.html#ga6c7010942a646dcef1841a8e4ac25704">KodiAPI::AddOn::CVFSUtils::GetDirectory</a>(<span class="stringliteral">&quot;special://temp&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, items);</div>
-<div class="line"></div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory have %lu entries\n&quot;</span>, items.size());</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; items.size(); i++)</div>
-<div class="line">{</div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot; - %04lu -- Folder: %s -- Name: %s -- Path: %s\n&quot;</span>,</div>
-<div class="line">            i+1,</div>
-<div class="line">            items[i].IsFolder() ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no &quot;</span>,</div>
-<div class="line">            items[i].Label().c_str(),</div>
-<div class="line">            items[i].Path().c_str());</div>
-<div class="line">}</div>
-</div><!-- fragment --><p>It has the header <a class="el" href="a00122_source.html">#include &lt;kodi/api2/addon/VFSUtils.hpp&gt;</a> be included to enjoy it. </p>
-<hr/><h2 class="groupheader">Class Documentation</h2>
-<a name="a00328" id="a00328"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">class KodiAPI::AddOn::CVFSDirEntry</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
-<tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
-<tr class="memitem:ga52a9625fed293dafda5d51e531caa8f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#ga52a9625fed293dafda5d51e531caa8f5">CVFSDirEntry</a> (const std::string &amp;label=&quot;&quot;, const std::string &amp;path=&quot;&quot;, bool bFolder=false, int64_t size=-1)</td></tr>
-<tr class="memdesc:ga52a9625fed293dafda5d51e531caa8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for VFS directory entry.  <a href="a00022.html#ga52a9625fed293dafda5d51e531caa8f5">More...</a><br /></td></tr>
-<tr class="separator:ga52a9625fed293dafda5d51e531caa8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0d75ba3099e37c9a2b2b9b8b4e4fae6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#ga0d75ba3099e37c9a2b2b9b8b4e4fae6d">CVFSDirEntry</a> (const VFSDirEntry &amp;dirEntry)</td></tr>
-<tr class="memdesc:ga0d75ba3099e37c9a2b2b9b8b4e4fae6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to create own copy.  <a href="a00022.html#ga0d75ba3099e37c9a2b2b9b8b4e4fae6d">More...</a><br /></td></tr>
-<tr class="separator:ga0d75ba3099e37c9a2b2b9b8b4e4fae6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabfbbb37d69862b45d0f1079ab976fa37"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#gabfbbb37d69862b45d0f1079ab976fa37">IsFolder</a> (void) const </td></tr>
-<tr class="memdesc:gabfbbb37d69862b45d0f1079ab976fa37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to check entry is folder.  <a href="a00022.html#gabfbbb37d69862b45d0f1079ab976fa37">More...</a><br /></td></tr>
-<tr class="separator:gabfbbb37d69862b45d0f1079ab976fa37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaacd1b40e1b2e44d82303388beb475e84"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#gaacd1b40e1b2e44d82303388beb475e84">Label</a> (void) const </td></tr>
-<tr class="memdesc:gaacd1b40e1b2e44d82303388beb475e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the directory entry name.  <a href="a00022.html#gaacd1b40e1b2e44d82303388beb475e84">More...</a><br /></td></tr>
-<tr class="separator:gaacd1b40e1b2e44d82303388beb475e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga666f6d222d6e40f592d7ec4c8c670263"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#ga666f6d222d6e40f592d7ec4c8c670263">Path</a> (void) const </td></tr>
-<tr class="memdesc:ga666f6d222d6e40f592d7ec4c8c670263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path of the entry.  <a href="a00022.html#ga666f6d222d6e40f592d7ec4c8c670263">More...</a><br /></td></tr>
-<tr class="separator:ga666f6d222d6e40f592d7ec4c8c670263"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadc0bf158b1dc28eea1bc2e3a2c016982"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#gadc0bf158b1dc28eea1bc2e3a2c016982">SetFolder</a> (bool bFolder)</td></tr>
-<tr class="memdesc:gadc0bf158b1dc28eea1bc2e3a2c016982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the entry defined as folder.  <a href="a00022.html#gadc0bf158b1dc28eea1bc2e3a2c016982">More...</a><br /></td></tr>
-<tr class="separator:gadc0bf158b1dc28eea1bc2e3a2c016982"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab825756e641ba839bfae908492165481"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#gab825756e641ba839bfae908492165481">SetLabel</a> (const std::string &amp;label)</td></tr>
-<tr class="memdesc:gab825756e641ba839bfae908492165481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the label name.  <a href="a00022.html#gab825756e641ba839bfae908492165481">More...</a><br /></td></tr>
-<tr class="separator:gab825756e641ba839bfae908492165481"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4a03d7c94fa02df112558bc30818e413"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#ga4a03d7c94fa02df112558bc30818e413">SetPath</a> (const std::string &amp;path)</td></tr>
-<tr class="memdesc:ga4a03d7c94fa02df112558bc30818e413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the path of the entry.  <a href="a00022.html#ga4a03d7c94fa02df112558bc30818e413">More...</a><br /></td></tr>
-<tr class="separator:ga4a03d7c94fa02df112558bc30818e413"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf2fb6ea3061355a5ed4b53ca45e712ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#gaf2fb6ea3061355a5ed4b53ca45e712ac">SetSize</a> (int64_t size)</td></tr>
-<tr class="memdesc:gaf2fb6ea3061355a5ed4b53ca45e712ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a file size for a new entry.  <a href="a00022.html#gaf2fb6ea3061355a5ed4b53ca45e712ac">More...</a><br /></td></tr>
-<tr class="separator:gaf2fb6ea3061355a5ed4b53ca45e712ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac0ba4f4c78dcb35605e645ee75198b5a"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00022.html#gac0ba4f4c78dcb35605e645ee75198b5a">Size</a> (void) const </td></tr>
-<tr class="memdesc:gac0ba4f4c78dcb35605e645ee75198b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If file, the size of the file.  <a href="a00022.html#gac0ba4f4c78dcb35605e645ee75198b5a">More...</a><br /></td></tr>
-<tr class="separator:gac0ba4f4c78dcb35605e645ee75198b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ <h1><a class="anchor" id="Group_List_Control_sect1"></a>
+Example</h1>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;grouplist&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;17&quot;</span>&gt;</div>
+<div class="line">      &lt;description&gt;My first group list control&lt;/description&gt;</div>
+<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line">      &lt;height&gt;300&lt;/height&gt;</div>
+<div class="line">      &lt;itemgap&gt;10&lt;/itemgap&gt;</div>
+<div class="line">      &lt;pagecontrol&gt;25&lt;/pagecontrol&gt;</div>
+<div class="line">      &lt;scrolltime tween=<span class="stringliteral">&quot;sine&quot;</span> easing=<span class="stringliteral">&quot;out&quot;</span>&gt;200&lt;/scrolltime&gt;</div>
+<div class="line">      &lt;orientation&gt;vertical&lt;/orientation&gt;</div>
+<div class="line">      &lt;usecontrolcoords&gt;<span class="keyword">false</span>&lt;/usecontrolcoords&gt;</div>
+<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
+<div class="line">      &lt;onup&gt;2&lt;/onup&gt;</div>
+<div class="line">      &lt;ondown&gt;3&lt;/ondown&gt;</div>
+<div class="line">      &lt;onleft&gt;1&lt;/onleft&gt;</div>
+<div class="line">      &lt;onright&gt;1&lt;/onright&gt;</div>
+<div class="line">      &lt;align&gt;right&lt;/align&gt;</div>
+<div class="line">&lt;/control&gt;</div>
+</div><!-- fragment --><hr/>
+ <h1><a class="anchor" id="Group_List_Control_sect2"></a>
+Available tags</h1>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
+<table class="doxtable">
+<tr>
+<th align="right">Tag </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">itemgap </td><td align="left">Specifies the gap (in pixels) between controls in the list. Defaults to 5px. </td></tr>
+<tr>
+<td align="right">orientation </td><td align="left">Specifies whether the list is horizontal or vertical. Defaults to vertical. </td></tr>
+<tr>
+<td align="right">pagecontrol </td><td align="left">Specifies the page control used to scroll up and down the list. Set the page control's id here. </td></tr>
+<tr>
+<td align="right">scrolltime </td><td align="left">The time (in ms) to scroll from one item to another. By default, this is 200ms. The list will scroll smoothly from one item to another as needed. Set it to zero to disable the smooth scrolling. The scroll movement can be further adjusted by selecting one of the available <a href="http://kodi.wiki/view/Tweeners">tween</a> methods. </td></tr>
+<tr>
+<td align="right">usecontrolcoords </td><td align="left">Specifies whether the list should use the control's coordinates as an offset location from the coordinates it would normally use to draw the control. Defaults to false. Useful for staggering a control in from the edge of the grouplist, or for having more space around a control than <code><code>&lt;itemgap&gt;</code></code> gives. </td></tr>
+<tr>
+<td align="right">align </td><td align="left">Specifies how to align the grouplist. possible values: left, right, center, justify. defaults to left. </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga52a9625fed293dafda5d51e531caa8f5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CVFSDirEntry </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bFolder</em> = <code>false</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>size</em> = <code>-1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructor for VFS directory entry. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>[opt] Name to use for entry </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>[opt] Used path of the entry </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bFolder</td><td>[opt] If set entry used as folder </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>[opt] If used as file, his size defined there </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga0d75ba3099e37c9a2b2b9b8b4e4fae6d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CVFSDirEntry </td>
-          <td>(</td>
-          <td class="paramtype">const VFSDirEntry &amp;&#160;</td>
-          <td class="paramname"><em>dirEntry</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructor to create own copy. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">dirEntry</td><td>pointer to own class type </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gaacd1b40e1b2e44d82303388beb475e84"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; Label </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the directory entry name. </p>
-<dl class="section return"><dt>Returns</dt><dd>Name of the entry </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga666f6d222d6e40f592d7ec4c8c670263"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; Path </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the path of the entry. </p>
-<dl class="section return"><dt>Returns</dt><dd>File system path of the entry </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gabfbbb37d69862b45d0f1079ab976fa37"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IsFolder </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Used to check entry is folder. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if entry is a folder </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gac0ba4f4c78dcb35605e645ee75198b5a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t Size </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>If file, the size of the file. </p>
-<dl class="section return"><dt>Returns</dt><dd>Defined file size </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gab825756e641ba839bfae908492165481"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetLabel </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the label name. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>name of entry </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga4a03d7c94fa02df112558bc30818e413"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetPath </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the path of the entry. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path of entry </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gadc0bf158b1dc28eea1bc2e3a2c016982"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetFolder </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bFolder</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the entry defined as folder. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bFolder</td><td>If true becomes entry defined as folder </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gaf2fb6ea3061355a5ed4b53ca45e712ac"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetSize </td>
-          <td>(</td>
-          <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set a file size for a new entry. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size to set for dir entry </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-</div><!-- contents -->
+<hr/>
+ <h1><a class="anchor" id="Group_List_Control_sect3"></a>
+See also</h1>
+<h4>Development:</h4>
+<ul>
+<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
+<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

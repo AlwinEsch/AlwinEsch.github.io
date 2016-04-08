@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/interfaces/legacy/InfoTagMusic.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/gui/ControlSettingsSlider.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,107 +92,155 @@ $(document).ready(function(){initNavTree('a00186_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">InfoTagMusic.h</div>  </div>
+<div class="title">ControlSettingsSlider.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;music/tags/MusicInfoTag.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015-2016 Team KODI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;API_NAMESPACE</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00233.html">XBMCAddon</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00257.html">KodiAPI</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>GUI</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="a00048.html">   53</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00048.html#a00335">InfoTagMusic</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      MUSIC_INFO::CMusicInfoTag* infoTag;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <a class="code" href="a00048.html#a00335">InfoTagMusic</a>(<span class="keyword">const</span> MUSIC_INFO::CMusicInfoTag&amp; tag);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <a class="code" href="a00048.html#a00335">InfoTagMusic</a>();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00048.html#a00335">InfoTagMusic</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">class </span>CWindow;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="a00083.html">   51</a></span>&#160;<span class="comment"></span>  <span class="keyword">class </span><a class="code" href="a00083.html#a00348">CControlSettingsSlider</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span>    <a class="code" href="a00083.html#ga1ad521cb67636d687ab20c3dddf97771">CControlSettingsSlider</a>(<a class="code" href="a00090.html#a00380">CWindow</a>* window, <span class="keywordtype">int</span> controlId);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      String <a class="code" href="a00048.html#gafa85bb6aea7b660960562826dcb20cf7">getURL</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      String <a class="code" href="a00048.html#ga888f94790c968e3f0b5de17e509098aa">getTitle</a>();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      String <a class="code" href="a00048.html#ga1b9f565753d008491c59887680bd570e">getArtist</a>();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      String <a class="code" href="a00048.html#ga11ac7b770ff2135e877c241ddb5db662">getAlbum</a>();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      String <a class="code" href="a00048.html#ga257503de86d218b382fcbbe9f1f68c2d">getAlbumArtist</a>();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      String <a class="code" href="a00048.html#ga724866edc25325e096d7d8a76b4a3234">getGenre</a>();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00048.html#ga08c13081c0665a4336a0f022c955fb69">getDuration</a>();</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00048.html#ga797e19587556ad59c5e3a7b55e8ccae9">getTrack</a>();</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00048.html#gaa2759f95638fb39b74363457af9e7777">getDisc</a>();</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      String <a class="code" href="a00048.html#gad099adc410738271ffc55e6fb68f77ae">getReleaseDate</a>();</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00048.html#gafdcd386f038151367af97803c1c13e41">getListeners</a>();</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00048.html#gac644258d08f747039e9d0e76bcd49513">getPlayCount</a>();</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      String <a class="code" href="a00048.html#ga64953074270dc9bc74370b8251c1cd43">getLastPlayed</a>();</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      String <a class="code" href="a00048.html#ga50a7366cba8ce27bc48a00e746324f7b">getComment</a>();</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      String <a class="code" href="a00048.html#gaefe9573a6a972ef63b082d2264baa857">getLyrics</a>();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    };</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
-<div class="ttc" id="a00048_html_ga11ac7b770ff2135e877c241ddb5db662"><div class="ttname"><a href="a00048.html#ga11ac7b770ff2135e877c241ddb5db662">XBMCAddon::xbmc::InfoTagMusic::getAlbum</a></div><div class="ttdeci">String getAlbum()</div><div class="ttdoc">Returns the album from music tag as string if present. </div></div>
-<div class="ttc" id="a00048_html_ga08c13081c0665a4336a0f022c955fb69"><div class="ttname"><a href="a00048.html#ga08c13081c0665a4336a0f022c955fb69">XBMCAddon::xbmc::InfoTagMusic::getDuration</a></div><div class="ttdeci">int getDuration()</div><div class="ttdoc">Returns the duration of music as integer from info tag. </div></div>
-<div class="ttc" id="a00048_html_ga797e19587556ad59c5e3a7b55e8ccae9"><div class="ttname"><a href="a00048.html#ga797e19587556ad59c5e3a7b55e8ccae9">XBMCAddon::xbmc::InfoTagMusic::getTrack</a></div><div class="ttdeci">int getTrack()</div><div class="ttdoc">Returns the track number (if present) from music info tag as integer. </div></div>
-<div class="ttc" id="a00048_html_ga64953074270dc9bc74370b8251c1cd43"><div class="ttname"><a href="a00048.html#ga64953074270dc9bc74370b8251c1cd43">XBMCAddon::xbmc::InfoTagMusic::getLastPlayed</a></div><div class="ttdeci">String getLastPlayed()</div><div class="ttdoc">Returns last played time as string from music info tag. </div></div>
-<div class="ttc" id="a00048_html_ga724866edc25325e096d7d8a76b4a3234"><div class="ttname"><a href="a00048.html#ga724866edc25325e096d7d8a76b4a3234">XBMCAddon::xbmc::InfoTagMusic::getGenre</a></div><div class="ttdeci">String getGenre()</div><div class="ttdoc">Returns the genre name from music tag as string if present. </div></div>
-<div class="ttc" id="a00048_html_ga888f94790c968e3f0b5de17e509098aa"><div class="ttname"><a href="a00048.html#ga888f94790c968e3f0b5de17e509098aa">XBMCAddon::xbmc::InfoTagMusic::getTitle</a></div><div class="ttdeci">String getTitle()</div><div class="ttdoc">Returns the title from music as string on info tag. </div></div>
-<div class="ttc" id="a00048_html_ga50a7366cba8ce27bc48a00e746324f7b"><div class="ttname"><a href="a00048.html#ga50a7366cba8ce27bc48a00e746324f7b">XBMCAddon::xbmc::InfoTagMusic::getComment</a></div><div class="ttdeci">String getComment()</div><div class="ttdoc">Returns comment as string from music info tag. </div></div>
-<div class="ttc" id="a00048_html_gac644258d08f747039e9d0e76bcd49513"><div class="ttname"><a href="a00048.html#gac644258d08f747039e9d0e76bcd49513">XBMCAddon::xbmc::InfoTagMusic::getPlayCount</a></div><div class="ttdeci">int getPlayCount()</div><div class="ttdoc">Returns the number of carried out playbacks. </div></div>
-<div class="ttc" id="a00048_html_gaa2759f95638fb39b74363457af9e7777"><div class="ttname"><a href="a00048.html#gaa2759f95638fb39b74363457af9e7777">XBMCAddon::xbmc::InfoTagMusic::getDisc</a></div><div class="ttdeci">int getDisc()</div><div class="ttdoc">Returns the disk number (if present) from music info tag as integer. </div></div>
-<div class="ttc" id="a00233_html"><div class="ttname"><a href="a00233.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00048_html_ga257503de86d218b382fcbbe9f1f68c2d"><div class="ttname"><a href="a00048.html#ga257503de86d218b382fcbbe9f1f68c2d">XBMCAddon::xbmc::InfoTagMusic::getAlbumArtist</a></div><div class="ttdeci">String getAlbumArtist()</div><div class="ttdoc">Returns the album artist from music tag as string if present. </div></div>
-<div class="ttc" id="a00048_html_gafdcd386f038151367af97803c1c13e41"><div class="ttname"><a href="a00048.html#gafdcd386f038151367af97803c1c13e41">XBMCAddon::xbmc::InfoTagMusic::getListeners</a></div><div class="ttdeci">int getListeners()</div><div class="ttdoc">Returns the listeners as integer from music info tag. </div></div>
-<div class="ttc" id="a00048_html_gaefe9573a6a972ef63b082d2264baa857"><div class="ttname"><a href="a00048.html#gaefe9573a6a972ef63b082d2264baa857">XBMCAddon::xbmc::InfoTagMusic::getLyrics</a></div><div class="ttdeci">String getLyrics()</div><div class="ttdoc">Returns a string from lyrics. </div></div>
-<div class="ttc" id="a00048_html_gafa85bb6aea7b660960562826dcb20cf7"><div class="ttname"><a href="a00048.html#gafa85bb6aea7b660960562826dcb20cf7">XBMCAddon::xbmc::InfoTagMusic::getURL</a></div><div class="ttdeci">String getURL()</div><div class="ttdoc">Returns url of source as string from music info tag. </div></div>
-<div class="ttc" id="a00048_html_ga1b9f565753d008491c59887680bd570e"><div class="ttname"><a href="a00048.html#ga1b9f565753d008491c59887680bd570e">XBMCAddon::xbmc::InfoTagMusic::getArtist</a></div><div class="ttdeci">String getArtist()</div><div class="ttdoc">Returns the artist from music as string if present. </div></div>
-<div class="ttc" id="a00048_html_a00335"><div class="ttname"><a href="a00048.html#a00335">XBMCAddon::xbmc::InfoTagMusic</a></div><div class="ttdef"><b>Definition:</b> InfoTagMusic.h:53</div></div>
-<div class="ttc" id="a00048_html_gad099adc410738271ffc55e6fb68f77ae"><div class="ttname"><a href="a00048.html#gad099adc410738271ffc55e6fb68f77ae">XBMCAddon::xbmc::InfoTagMusic::getReleaseDate</a></div><div class="ttdeci">String getReleaseDate()</div><div class="ttdoc">Returns the release date as string from music info tag (if present). </div></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <a class="code" href="a00083.html#gad875821a386b63b80b7e98dd0a7b79f6">~CControlSettingsSlider</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00083.html#ga71a209185b7a98adf0a310d2c44cdbe6">SetVisible</a>(<span class="keywordtype">bool</span> visible);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00083.html#gaac893222adeffdefc04d749648cce354">SetEnabled</a>(<span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00083.html#ga8008c108280948ebd79830f222068455">SetText</a>(<span class="keyword">const</span> std::string&amp; text);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00083.html#ga372de693ad40b3f42839c8ec6ac845f4">Reset</a>();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00083.html#ga16ad72259d068519b0797117275651f1">SetIntRange</a>(<span class="keywordtype">int</span> start, <span class="keywordtype">int</span> end);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00083.html#ga1bc4fce2dc8738a08b6a9458d66351a1">SetIntValue</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment"></span>    <span class="keywordtype">int</span> <a class="code" href="a00083.html#ga026ef91588c09c091efb7c40bb73d4dc">GetIntValue</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00083.html#ga0efbfb870446e5cc7409f0550bf67196">SetIntInterval</a>(<span class="keywordtype">int</span> interval);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00083.html#ga123bcc2a09c1b721c04b4bc0dd32953d">SetPercentage</a>(<span class="keywordtype">float</span> percent);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment"></span>    <span class="keywordtype">float</span> <a class="code" href="a00083.html#gadbcb3c03a1a87a252f94e0274e1e75f8">GetPercentage</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00083.html#gaf4c5b4468e16c51b0d9a163baa082acf">SetFloatRange</a>(<span class="keywordtype">float</span> start, <span class="keywordtype">float</span> end);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00083.html#gab050b4b446dc107963b04486dcfbe03d">SetFloatValue</a>(<span class="keywordtype">float</span> value);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="comment"></span>    <span class="keywordtype">float</span> <a class="code" href="a00083.html#gadd5b557122d90f9a891d6b981e3ac305">GetFloatValue</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00083.html#ga1642356ec708ec660d47175a676d2b59">SetFloatInterval</a>(<span class="keywordtype">float</span> interval);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">  #ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    IMPL_GUI_SETTINGS_SLIDER_CONTROL;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">  #endif</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  };</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;} <span class="comment">/* namespace GUI */</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;END_NAMESPACE()</div>
+<div class="ttc" id="a00083_html_ga1642356ec708ec660d47175a676d2b59"><div class="ttname"><a href="a00083.html#ga1642356ec708ec660d47175a676d2b59">KodiAPI::GUI::CControlSettingsSlider::SetFloatInterval</a></div><div class="ttdeci">void SetFloatInterval(float interval)</div><div class="ttdoc">To set the interval steps of slider, as default is it 0.1 If it becomes changed with this function wi...</div></div>
+<div class="ttc" id="a00083_html_ga0efbfb870446e5cc7409f0550bf67196"><div class="ttname"><a href="a00083.html#ga0efbfb870446e5cc7409f0550bf67196">KodiAPI::GUI::CControlSettingsSlider::SetIntInterval</a></div><div class="ttdeci">void SetIntInterval(int interval)</div><div class="ttdoc">To set the interval steps of slider, as default is it 1. If it becomes changed with this function wil...</div></div>
+<div class="ttc" id="a00083_html_ga71a209185b7a98adf0a310d2c44cdbe6"><div class="ttname"><a href="a00083.html#ga71a209185b7a98adf0a310d2c44cdbe6">KodiAPI::GUI::CControlSettingsSlider::SetVisible</a></div><div class="ttdeci">void SetVisible(bool visible)</div><div class="ttdoc">Set the control on window to visible. </div></div>
+<div class="ttc" id="a00083_html_ga1bc4fce2dc8738a08b6a9458d66351a1"><div class="ttname"><a href="a00083.html#ga1bc4fce2dc8738a08b6a9458d66351a1">KodiAPI::GUI::CControlSettingsSlider::SetIntValue</a></div><div class="ttdeci">void SetIntValue(int value)</div><div class="ttdoc">Set the slider position with the given integer value. The Range must be defined with a call from SetI...</div></div>
+<div class="ttc" id="a00083_html_ga1ad521cb67636d687ab20c3dddf97771"><div class="ttname"><a href="a00083.html#ga1ad521cb67636d687ab20c3dddf97771">KodiAPI::GUI::CControlSettingsSlider::CControlSettingsSlider</a></div><div class="ttdeci">CControlSettingsSlider(CWindow *window, int controlId)</div><div class="ttdoc">Construct a new control. </div></div>
+<div class="ttc" id="a00083_html_ga16ad72259d068519b0797117275651f1"><div class="ttname"><a href="a00083.html#ga16ad72259d068519b0797117275651f1">KodiAPI::GUI::CControlSettingsSlider::SetIntRange</a></div><div class="ttdeci">void SetIntRange(int start, int end)</div><div class="ttdoc">To set the the range as integer of slider, e.g. -10 is the slider start and e.g. +10 is the from here...</div></div>
+<div class="ttc" id="a00083_html_a00348"><div class="ttname"><a href="a00083.html#a00348">KodiAPI::GUI::CControlSettingsSlider</a></div><div class="ttdef"><b>Definition:</b> ControlSettingsSlider.hpp:51</div></div>
+<div class="ttc" id="a00083_html_gadbcb3c03a1a87a252f94e0274e1e75f8"><div class="ttname"><a href="a00083.html#gadbcb3c03a1a87a252f94e0274e1e75f8">KodiAPI::GUI::CControlSettingsSlider::GetPercentage</a></div><div class="ttdeci">float GetPercentage() const </div><div class="ttdoc">Returns a float of the percent of the slider. </div></div>
+<div class="ttc" id="a00090_html_a00380"><div class="ttname"><a href="a00090.html#a00380">KodiAPI::GUI::CWindow</a></div><div class="ttdef"><b>Definition:</b> Window.hpp:69</div></div>
+<div class="ttc" id="a00083_html_gaac893222adeffdefc04d749648cce354"><div class="ttname"><a href="a00083.html#gaac893222adeffdefc04d749648cce354">KodiAPI::GUI::CControlSettingsSlider::SetEnabled</a></div><div class="ttdeci">void SetEnabled(bool enabled)</div><div class="ttdoc">Set&#39;s the control&#39;s enabled/disabled state. </div></div>
+<div class="ttc" id="a00083_html_gadd5b557122d90f9a891d6b981e3ac305"><div class="ttname"><a href="a00083.html#gadd5b557122d90f9a891d6b981e3ac305">KodiAPI::GUI::CControlSettingsSlider::GetFloatValue</a></div><div class="ttdeci">float GetFloatValue() const </div><div class="ttdoc">To get the current position as float value. </div></div>
+<div class="ttc" id="a00083_html_ga372de693ad40b3f42839c8ec6ac845f4"><div class="ttname"><a href="a00083.html#ga372de693ad40b3f42839c8ec6ac845f4">KodiAPI::GUI::CControlSettingsSlider::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">To reset slider on defaults. </div></div>
+<div class="ttc" id="a00257_html"><div class="ttname"><a href="a00257.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
+<div class="ttc" id="a00083_html_ga123bcc2a09c1b721c04b4bc0dd32953d"><div class="ttname"><a href="a00083.html#ga123bcc2a09c1b721c04b4bc0dd32953d">KodiAPI::GUI::CControlSettingsSlider::SetPercentage</a></div><div class="ttdeci">void SetPercentage(float percent)</div><div class="ttdoc">Sets the percent of the slider. </div></div>
+<div class="ttc" id="a00083_html_gad875821a386b63b80b7e98dd0a7b79f6"><div class="ttname"><a href="a00083.html#gad875821a386b63b80b7e98dd0a7b79f6">KodiAPI::GUI::CControlSettingsSlider::~CControlSettingsSlider</a></div><div class="ttdeci">virtual ~CControlSettingsSlider()</div><div class="ttdoc">Destructor. </div></div>
+<div class="ttc" id="a00083_html_ga8008c108280948ebd79830f222068455"><div class="ttname"><a href="a00083.html#ga8008c108280948ebd79830f222068455">KodiAPI::GUI::CControlSettingsSlider::SetText</a></div><div class="ttdeci">void SetText(const std::string &amp;text)</div><div class="ttdoc">To set the text string on settings slider. </div></div>
+<div class="ttc" id="a00083_html_gaf4c5b4468e16c51b0d9a163baa082acf"><div class="ttname"><a href="a00083.html#gaf4c5b4468e16c51b0d9a163baa082acf">KodiAPI::GUI::CControlSettingsSlider::SetFloatRange</a></div><div class="ttdeci">void SetFloatRange(float start, float end)</div><div class="ttdoc">To set the the range as float of slider, e.g. -25.0 is the slider start and e.g. +25.0 is the from here defined position where it reach the end. </div></div>
+<div class="ttc" id="a00083_html_gab050b4b446dc107963b04486dcfbe03d"><div class="ttname"><a href="a00083.html#gab050b4b446dc107963b04486dcfbe03d">KodiAPI::GUI::CControlSettingsSlider::SetFloatValue</a></div><div class="ttdeci">void SetFloatValue(float value)</div><div class="ttdoc">Set the slider position with the given float value. The Range can be defined with a call from SetIntR...</div></div>
+<div class="ttc" id="a00083_html_ga026ef91588c09c091efb7c40bb73d4dc"><div class="ttname"><a href="a00083.html#ga026ef91588c09c091efb7c40bb73d4dc">KodiAPI::GUI::CControlSettingsSlider::GetIntValue</a></div><div class="ttdeci">int GetIntValue() const </div><div class="ttdoc">To get the current position as integer value. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c72e4a3b15aa6b185e7458e4a6d6ab4f.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_81c1a29a69722fee590df545771fd524.html">legacy</a></li><li class="navelem"><b>InfoTagMusic.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e2f41087cf08f19ef9254dabbd5edda3.html">include</a></li><li class="navelem"><a class="el" href="dir_684c90c798bf40b829fca8909140a321.html">kodi</a></li><li class="navelem"><a class="el" href="dir_fe15ccb97bc6dd916b539c35a997f873.html">api2</a></li><li class="navelem"><a class="el" href="dir_c2c64a33e9f782c7e9591d9d282ea392.html">gui</a></li><li class="navelem"><b>ControlSettingsSlider.hpp</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

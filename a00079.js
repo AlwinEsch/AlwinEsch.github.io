@@ -1,9 +1,8 @@
 var a00079 =
 [
-    [ "read", "a00079.html#ga691e636b0dffa3c448c648f42d94437a", null ],
-    [ "readBytes", "a00079.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8", null ],
-    [ "write", "a00079.html#ga1a6eddca986ff7164d57b9fad625e597", null ],
-    [ "size", "a00079.html#ga6fdf8e4501d305514d8e7b5d6cde34a6", null ],
-    [ "seek", "a00079.html#ga8140115d0b4e6cb1ffa9f4298153d009", null ],
-    [ "close", "a00079.html#ga5ae591df94fc66ccb85cbb6565368bca", null ]
+    [ "CControlLabel", "a00079.html#gabd4da1ab602a52093c0a1ce14896b858", null ],
+    [ "~CControlLabel", "a00079.html#gae90723d21627aadd9c39acd2e0f0080b", null ],
+    [ "SetVisible", "a00079.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "SetLabel", "a00079.html#ga0468217482f9a171183b1cda613417e6", null ],
+    [ "GetLabel", "a00079.html#ga6c80f17140ee95a258ff6c13439a2623", null ]
 ];

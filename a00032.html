@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Control Rendering</title>
+<title>Kodi Development: Group MultiImage Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,317 +91,78 @@ $(document).ready(function(){initNavTree('a00032.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Control Rendering<div class="ingroups"><a class="el" href="a00239.html">C++</a> &raquo; <a class="el" href="a00258.html">4. GUI</a></div></div>  </div>
+<div class="title">Group MultiImage Control </div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Window control for rendering own parts</b> </p>
-<p>This rendering control is used when own parts are needed. You have the control over them to render direct OpenGL or DirectX content to the screen set by the size of them.</p>
-<p>Alternative can be the virtual functions from t his been ignored if the callbacks are defined by the <a class="el" href="a00032.html#CControlRendering_SetIndependentCallbacks">CControlRendering_SetIndependentCallbacks</a> function and class is used as single and not as a parent class.</p>
-<p>It has the header <a class="el" href="a00135_source.html">#include &lt;kodi/api2/gui/ControlRendering.hpp&gt;</a> be included to enjoy it.</p>
-<p>Here you find the needed skin part for a rendering control</p>
-<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00273"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00273.html">Definitions, structures and enumerators</a></td></tr>
-<tr class="memdesc:a00273"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Library definition values</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#MultiImage_Control_sect1">Example</a></li>
+<li class="level1"><a href="#MultiImage_Control_sect2">Image Size and Type Restrictions</a><ul><li class="level2"><a href="#MultiImage_Control_sect2_1">Formats</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#MultiImage_Control_sect3">Available tags and attributes</a></li>
+<li class="level1"><a href="#MultiImage_Control_sect4">See also</a></li>
+</ul>
+</div>
+<div class="textblock"><p><b>Used to show a slideshow of images.</b></p>
+<p>The MultiImage control is used for displaying a slideshow of images from a folder in Kodi. You can choose the position and size of the slideshow, as well as timing information.</p>
+<hr/>
+ <h1><a class="anchor" id="MultiImage_Control_sect1"></a>
+Example</h1>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;multiimage&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line">      &lt;description&gt;My first slideshow control&lt;/description&gt;</div>
+<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line">      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
+<div class="line">      &lt;imagepath&gt;myimagepath&lt;/imagepath&gt;</div>
+<div class="line">      &lt;info&gt;&lt;/info&gt;</div>
+<div class="line">      &lt;timeperimage&gt;5000&lt;/timeperimage&gt;</div>
+<div class="line">      &lt;fadetime&gt;2000&lt;/fadetime&gt;</div>
+<div class="line">      &lt;pauseatend&gt;10000&lt;/pauseatend&gt;</div>
+<div class="line">      &lt;randomize&gt;<span class="keyword">true</span>&lt;/randomize&gt;</div>
+<div class="line">      &lt;loop&gt;no&lt;/loop&gt;</div>
+<div class="line">      &lt;aspectratio&gt;stretch&lt;/aspectratio&gt;</div>
+<div class="line">&lt;/control&gt;</div>
+</div><!-- fragment --><hr/>
+ <h1><a class="anchor" id="MultiImage_Control_sect2"></a>
+Image Size and Type Restrictions</h1>
+<p>For the <b><code>&lt;texture&gt;</code></b> tags, and for all <b><code>&lt;texture&gt;</code></b> tags in other controls, there is a small set of rules that you should follow if at all possible:</p>
+<h2><a class="anchor" id="MultiImage_Control_sect2_1"></a>
+Formats</h2>
+<p>If you wish to use full 8 bit transparency, then use PNG. If you only need a single transparent colour, then you can specify this in the <b><code>&lt;colorkey&gt;</code></b> tag, so any image will be fine. It is suggested that you use PNG and JPG as much as possible. The size of the images (in kb) is therefore not as important as the size of the images in pixels – so feel free to store them in a lossless (eg PNG) manner if you wish.</p>
+<p>The only exception to this is if you require an animated texture. In this case, we only support animated GIF. There are also SOME animated gifs that may not work. Use ImageReady CS and make sure you set the gif-anim to “restore to background” and they should work fine.</p>
+<h1><a class="anchor" id="MultiImage_Control_sect3"></a>
+Available tags and attributes</h1>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
+<table class="doxtable">
+<tr>
+<th align="right">Tag </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">imagepath </td><td align="left">Specifies the path containing the images to use for the slideshow. Kodi will first look inside the compressed Textures.xbt file for images, and then will look in the actual folder. The path is relative to the media/ folder if it is not specified completely. </td></tr>
+<tr>
+<td align="right">info </td><td align="left">Specifies the information that this image control is presenting. Kodi will select the texture to use based on this tag. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
+<tr>
+<td align="right">timeperimage </td><td align="left">Time in milliseconds that an image is shown for. </td></tr>
+<tr>
+<td align="right">fadetime </td><td align="left">Time in milliseconds to fade between images. </td></tr>
+<tr>
+<td align="right">pauseatend </td><td align="left">Time in milliseconds to pause (in addition to <b><code>&lt;timeperimage&gt;</code></b>) on the last image at the end of a complete cycle through the images. Only useful if <b><code>&lt;loop&gt;</code></b> is set to yes. </td></tr>
+<tr>
+<td align="right">loop </td><td align="left">If set to no, the last image will display indefinitely. Setting it to yes will loop around once they reach the last image. Defaults to yes. </td></tr>
+<tr>
+<td align="right">aspectratio </td><td align="left">This specifies how the image will be drawn inside the box defined by <b><code>&lt;width&gt;</code></b> and <b><code>&lt;height&gt;</code></b>. <a href="http://kodi.wiki/view/Aspect_Ratio">See here for more info</a>. </td></tr>
 </table>
-<hr/><h2 class="groupheader">Class Documentation</h2>
-<a name="a00297" id="a00297"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">class KodiAPI::GUI::CControlRendering</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
-<tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
-<tr class="memitem:ga6e729c9d7a09727b98b31269d21a022a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.html#ga6e729c9d7a09727b98b31269d21a022a">CControlRendering</a> (<a class="el" href="a00040.html#a00330">CWindow</a> *window, int controlId)</td></tr>
-<tr class="memdesc:ga6e729c9d7a09727b98b31269d21a022a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new control.  <a href="a00032.html#ga6e729c9d7a09727b98b31269d21a022a">More...</a><br /></td></tr>
-<tr class="separator:ga6e729c9d7a09727b98b31269d21a022a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga12847d560dd43205d13b0963d9e395e1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.html#ga12847d560dd43205d13b0963d9e395e1">Create</a> (int x, int y, int w, int h, void *device)</td></tr>
-<tr class="memdesc:ga12847d560dd43205d13b0963d9e395e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">To create rendering control on Add-on.  <a href="a00032.html#ga12847d560dd43205d13b0963d9e395e1">More...</a><br /></td></tr>
-<tr class="separator:ga12847d560dd43205d13b0963d9e395e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7cea65505e98c9989ab92a87b2f2e99b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.html#ga7cea65505e98c9989ab92a87b2f2e99b">Dirty</a> ()</td></tr>
-<tr class="memdesc:ga7cea65505e98c9989ab92a87b2f2e99b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call from Kodi where add-on becomes asked about dirty rendering region.  <a href="a00032.html#ga7cea65505e98c9989ab92a87b2f2e99b">More...</a><br /></td></tr>
-<tr class="separator:ga7cea65505e98c9989ab92a87b2f2e99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0bc3f3606d9cf5304dac90cd7a619194"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.html#ga0bc3f3606d9cf5304dac90cd7a619194">Render</a> ()</td></tr>
-<tr class="memdesc:ga0bc3f3606d9cf5304dac90cd7a619194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render process call from Kodi.  <a href="a00032.html#ga0bc3f3606d9cf5304dac90cd7a619194">More...</a><br /></td></tr>
-<tr class="separator:ga0bc3f3606d9cf5304dac90cd7a619194"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga10abcb122b56e3f8a6069b888486d5db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.html#ga10abcb122b56e3f8a6069b888486d5db">SetIndependentCallbacks</a> (<a class="el" href="a00260.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, bool(*CBCreate)(<a class="el" href="a00260.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, intx, inty, intw, inth, void *device), void(*CBRender)(<a class="el" href="a00260.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl), void(*CBStop)(<a class="el" href="a00260.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl), bool(*CBDirty)(<a class="el" href="a00260.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl))</td></tr>
-<tr class="memdesc:ga10abcb122b56e3f8a6069b888486d5db"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the class is used independent (with "new CControlRendering") and not as parent (with "cCLASS_own : CControlRendering") from own must be the callback from Kodi to add-on overdriven with own functions!  <a href="a00032.html#ga10abcb122b56e3f8a6069b888486d5db">More...</a><br /></td></tr>
-<tr class="separator:ga10abcb122b56e3f8a6069b888486d5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf6f113a64b92a63894b285b4f2a2c3a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.html#gaf6f113a64b92a63894b285b4f2a2c3a5">Stop</a> ()</td></tr>
-<tr class="memdesc:gaf6f113a64b92a63894b285b4f2a2c3a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call from Kodi to stop rendering process.  <a href="a00032.html#gaf6f113a64b92a63894b285b4f2a2c3a5">More...</a><br /></td></tr>
-<tr class="separator:gaf6f113a64b92a63894b285b4f2a2c3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga812abb51ba5159602f5b1a1833a642eb"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00032.html#ga812abb51ba5159602f5b1a1833a642eb">~CControlRendering</a> ()</td></tr>
-<tr class="memdesc:ga812abb51ba5159602f5b1a1833a642eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="a00032.html#ga812abb51ba5159602f5b1a1833a642eb">More...</a><br /></td></tr>
-<tr class="separator:ga812abb51ba5159602f5b1a1833a642eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga6e729c9d7a09727b98b31269d21a022a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CControlRendering </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00040.html#a00330">CWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new control. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>related window control class </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>Used skin xml control id </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga812abb51ba5159602f5b1a1833a642eb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~CControlRendering </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga12847d560dd43205d13b0963d9e395e1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool Create </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>device</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>To create rendering control on Add-on. </p>
-<p>Function creates the needed rendering control for Kodi which becomes handled and processed from Add-on</p>
-<dl class="section note"><dt>Note</dt><dd>This is callback function from Kodi to Add-on and not to use for calls from add-on to this function.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Horizontal position </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Vertical position </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>Width of control </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Height of control </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">device</td><td>The device to use. For OpenGL is empty on Direct X is the needed device send. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Add-on needs to return true if successed, otherwise false. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga0bc3f3606d9cf5304dac90cd7a619194"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Render </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Render process call from Kodi. </p>
-<dl class="section note"><dt>Note</dt><dd>This is callback function from Kodi to Add-on and not to use for calls from add-on to this function. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaf6f113a64b92a63894b285b4f2a2c3a5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Stop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Call from Kodi to stop rendering process. </p>
-<dl class="section note"><dt>Note</dt><dd>This is callback function from Kodi to Add-on and not to use for calls from add-on to this function. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga7cea65505e98c9989ab92a87b2f2e99b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool Dirty </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Call from Kodi where add-on becomes asked about dirty rendering region. </p>
-<dl class="section note"><dt>Note</dt><dd>This is callback function from Kodi to Add-on and not to use for calls from add-on to this function. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga10abcb122b56e3f8a6069b888486d5db"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetIndependentCallbacks </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00260.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a>&#160;</td>
-          <td class="paramname"><em>cbhdl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool(*)(<a class="el" href="a00260.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl, intx, inty, intw, inth, void *device)&#160;</td>
-          <td class="paramname"><em>CBCreate</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="a00260.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)&#160;</td>
-          <td class="paramname"><em>CBRender</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="a00260.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)&#160;</td>
-          <td class="paramname"><em>CBStop</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool(*)(<a class="el" href="a00260.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl)&#160;</td>
-          <td class="paramname"><em>CBDirty</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>If the class is used independent (with "new CControlRendering") and not as parent (with "cCLASS_own : CControlRendering") from own must be the callback from Kodi to add-on overdriven with own functions! </p>
-<p><a class="anchor" id="CControlRendering_SetIndependentCallbacks"></a></p>
-
-</div>
-</div>
-</div><!-- contents -->
+<hr/>
+ <h1><a class="anchor" id="MultiImage_Control_sect4"></a>
+See also</h1>
+<h4>Development:</h4>
+<ul>
+<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
+<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

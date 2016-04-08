@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Control Edit</title>
+<title>Kodi Development: Label Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,345 +91,103 @@ $(document).ready(function(){initNavTree('a00026.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Control Edit<div class="ingroups"><a class="el" href="a00239.html">C++</a> &raquo; <a class="el" href="a00258.html">4. GUI</a></div></div>  </div>
+<div class="title">Label Control </div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Editable window text control used as an input control for the osd keyboard and other input fields</b> </p>
-<p>The edit control allows a user to input text in Kodi. You can choose the font, size, colour, location and header of the text to be displayed.</p>
-<p>It has the header <a class="el" href="a00129_source.html">#include &lt;kodi/api2/gui/ControlEdit.hpp&gt;</a> be included to enjoy it.</p>
-<p>Here you find the needed skin part for a edit control.</p>
-<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00272"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00272.html">Definitions, structures and enumerators</a></td></tr>
-<tr class="memdesc:a00272"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Library definition values</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#Label_Control_sect1">Example</a></li>
+<li class="level1"><a href="#Label_Control_sect2">Auto size labels</a></li>
+<li class="level1"><a href="#Label_Control_sect3">Multi-line labels</a></li>
+<li class="level1"><a href="#Label_Control_sect4">Available tags</a></li>
+<li class="level1"><a href="#Label_Control_sect5">See also</a></li>
+</ul>
+</div>
+<div class="textblock"><p><b>Used to show some lines of text.</b></p>
+<p>The label control is used for displaying text in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed.</p>
+<hr/>
+ <h1><a class="anchor" id="Label_Control_sect1"></a>
+Example</h1>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;label&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line">      &lt;description&gt;My First label&lt;/description&gt;</div>
+<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
+<div class="line">      &lt;align&gt;center&lt;/align&gt;</div>
+<div class="line">      &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">      &lt;scroll&gt;<span class="keyword">false</span>&lt;/scroll&gt;</div>
+<div class="line">      &lt;label&gt;6&lt;/label&gt;</div>
+<div class="line">      &lt;info&gt;MusicPlayer.Artist&lt;/info&gt;</div>
+<div class="line">      &lt;number&gt;&lt;/number&gt;</div>
+<div class="line">      &lt;angle&gt;30&lt;/angle&gt;</div>
+<div class="line">      &lt;haspath&gt;<span class="keyword">false</span>&lt;/haspath&gt;</div>
+<div class="line">      &lt;font&gt;font14&lt;/font&gt;</div>
+<div class="line">      &lt;textcolor&gt;FFB2D4F5&lt;/textcolor&gt;</div>
+<div class="line">      &lt;shadowcolor&gt;ff000000&lt;/shadowcolor&gt;</div>
+<div class="line">      &lt;wrapmultiline&gt;<span class="keyword">false</span>&lt;/wrapmultiline&gt;</div>
+<div class="line">      &lt;scrollspeed&gt;50&lt;/scrollspeed&gt;</div>
+<div class="line">      &lt;scrollsuffix&gt; - &lt;/scrollsuffix&gt;</div>
+<div class="line">&lt;/control&gt;</div>
+</div><!-- fragment --><hr/>
+ <h1><a class="anchor" id="Label_Control_sect2"></a>
+Auto size labels</h1>
+<p>Wrapping your label in a grouplist with the auto width and appropriate minium and maximum values. Allows the labels width to dynamically change relevalant to how long the label text is. This allows a image or other control to be alligned to the right of the actual label text no matter how wide the label is.</p>
+<div class="fragment"><div class="line">&lt;width min=<span class="stringliteral">&quot;29&quot;</span> max=<span class="stringliteral">&quot;200&quot;</span>&gt;<span class="keyword">auto</span>&lt;/width&gt;</div>
+</div><!-- fragment --><p>As of XBMC Gotham, simply specifying <b><code>&lt;width&gt;auto&lt;/width&gt;</code></b> is also supported.</p>
+<hr/>
+ <h1><a class="anchor" id="Label_Control_sect3"></a>
+Multi-line labels</h1>
+<p>If you want your label control to span multiple lines, you can insert a new line character in your label. For example:</p>
+<div class="fragment"><div class="line">&lt;label&gt;This will be on the first line[CR]And <span class="keyword">this</span> will be on the second line&lt;/label&gt;</div>
+</div><!-- fragment --><p>Also, if you want your label control to conform to the <b><code>&lt;width&gt;</code></b> parameter, but still want to be able to give it more content than will fit on one line, then setting:</p>
+<div class="fragment"><div class="line">&lt;wrapmultiline&gt;<span class="keyword">true</span>&lt;/wrapmultiline&gt;</div>
+</div><!-- fragment --><p>will cause the text to be cut up (at the spaces in the text) onto multiple lines. Note that if a single word is larger than <b><code>&lt;width&gt;</code></b> then it will not be cut, and will still overflow.</p>
+<hr/>
+ <h1><a class="anchor" id="Label_Control_sect4"></a>
+Available tags</h1>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
+<table class="doxtable">
+<tr>
+<th align="right">Tag </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">align </td><td align="left">Can be left, right, or center. Aligns the text within the given label <b><code>&lt;width&gt;</code></b>. Defaults to left </td></tr>
+<tr>
+<td align="right">aligny </td><td align="left">Can be top or center. Aligns the text within its given label <b><code>&lt;height&gt;</code></b>. Defaults to top </td></tr>
+<tr>
+<td align="right">scroll </td><td align="left">When true, the text will scroll if longer than the label's <b><code>&lt;width&gt;</code></b>. If false, the text will be truncated. Defaults to false. </td></tr>
+<tr>
+<td align="right">label </td><td align="left">Specifies the text which should be drawn. You should specify an entry from the strings.xml here (either the Kodi strings.xml or your skin's strings.xml file), however you may also hardcode a piece of text also if you wish, though of course it will not be localisable. You can use the full <a href="http://kodi.wiki/view/Label_Formatting">label formatting syntax</a> and <a href="http://kodi.wiki/view/Label_Parsing">you may also specify more than one piece of information here by using the $INFO and $LOCALIZE formats</a>. </td></tr>
+<tr>
+<td align="right">info </td><td align="left">Specifies the information that should be presented. Kodi will auto-fill in this info in place of the <b><code>&lt;label&gt;</code></b>. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
+<tr>
+<td align="right">number </td><td align="left">Specifies a number that should be presented. This is just here to allow a skinner to use a number rather than a text label (as any number given to <b><code>&lt;label&gt;</code></b> will be used to lookup in strings.xml) </td></tr>
+<tr>
+<td align="right">angle </td><td align="left">The angle the text should be rendered at, in degrees. A value of 0 is horizontal. </td></tr>
+<tr>
+<td align="right">haspath </td><td align="left">Specifies whether or not this label is filled with a path. Long paths are shortened by compressing the file path while keeping the actual filename full length. </td></tr>
+<tr>
+<td align="right">font </td><td align="left">Specifies the font to use from the font.xml file. </td></tr>
+<tr>
+<td align="right">textcolor </td><td align="left">Specifies the color the text should be, in hex <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">shadowcolor </td><td align="left">Specifies the color of the drop shadow on the text, in <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">wrapmultiline </td><td align="left">If true, any text that doesn't fit on one line will be wrapped onto multiple lines. </td></tr>
+<tr>
+<td align="right">scrollspeed </td><td align="left">Scroll speed of text in pixels per second. Defaults to 60. </td></tr>
+<tr>
+<td align="right">scrollsuffix </td><td align="left">Specifies the suffix used in scrolling labels. Defaults to <b><code>"¦"</code></b>. </td></tr>
 </table>
-<hr/><h2 class="groupheader">Class Documentation</h2>
-<a name="a00291" id="a00291"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">class KodiAPI::GUI::CControlEdit</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
-<tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
-<tr class="memitem:ga8e9a4e4d5ac9f74f17a46bd0499f31fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga8e9a4e4d5ac9f74f17a46bd0499f31fb">CControlEdit</a> (<a class="el" href="a00040.html#a00330">CWindow</a> *window, int controlId)</td></tr>
-<tr class="memdesc:ga8e9a4e4d5ac9f74f17a46bd0499f31fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new control.  <a href="a00026.html#ga8e9a4e4d5ac9f74f17a46bd0499f31fb">More...</a><br /></td></tr>
-<tr class="separator:ga8e9a4e4d5ac9f74f17a46bd0499f31fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f49c265d97c7c025da04eb79d86602c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga8f49c265d97c7c025da04eb79d86602c">GetCursorPosition</a> ()</td></tr>
-<tr class="memdesc:ga8f49c265d97c7c025da04eb79d86602c"><td class="mdescLeft">&#160;</td><td class="mdescRight">To get current cursor position on text field.  <a href="a00026.html#ga8f49c265d97c7c025da04eb79d86602c">More...</a><br /></td></tr>
-<tr class="separator:ga8f49c265d97c7c025da04eb79d86602c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6c80f17140ee95a258ff6c13439a2623"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga6c80f17140ee95a258ff6c13439a2623">GetLabel</a> () const </td></tr>
-<tr class="memdesc:ga6c80f17140ee95a258ff6c13439a2623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the text heading for this edit control.  <a href="a00026.html#ga6c80f17140ee95a258ff6c13439a2623">More...</a><br /></td></tr>
-<tr class="separator:ga6c80f17140ee95a258ff6c13439a2623"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1af3f7fd8b95cc66e7599caca454f8ef"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga1af3f7fd8b95cc66e7599caca454f8ef">GetText</a> () const </td></tr>
-<tr class="memdesc:ga1af3f7fd8b95cc66e7599caca454f8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the text value for this edit control.  <a href="a00026.html#ga1af3f7fd8b95cc66e7599caca454f8ef">More...</a><br /></td></tr>
-<tr class="separator:ga1af3f7fd8b95cc66e7599caca454f8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac0bffd1ac815193d85aa396fcfaf2397"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#gac0bffd1ac815193d85aa396fcfaf2397">SetCursorPosition</a> (unsigned int iPosition)</td></tr>
-<tr class="memdesc:gac0bffd1ac815193d85aa396fcfaf2397"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the cursor position on text.  <a href="a00026.html#gac0bffd1ac815193d85aa396fcfaf2397">More...</a><br /></td></tr>
-<tr class="separator:gac0bffd1ac815193d85aa396fcfaf2397"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaac893222adeffdefc04d749648cce354"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#gaac893222adeffdefc04d749648cce354">SetEnabled</a> (bool enabled)</td></tr>
-<tr class="memdesc:gaac893222adeffdefc04d749648cce354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's the control's enabled/disabled state.  <a href="a00026.html#gaac893222adeffdefc04d749648cce354">More...</a><br /></td></tr>
-<tr class="separator:gaac893222adeffdefc04d749648cce354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf25d6c30fea27feaa77adc955bb842de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#gaf25d6c30fea27feaa77adc955bb842de">SetInputType</a> (<a class="el" href="a00272.html#ga65e94c0b771b91d3c1f0948113ee838a">AddonGUIInputType</a> type, const std::string &amp;heading)</td></tr>
-<tr class="memdesc:gaf25d6c30fea27feaa77adc955bb842de"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set field input type which are defined on <a class="el" href="a00272.html#AddonGUIInputType">AddonGUIInputType</a>.  <a href="a00026.html#gaf25d6c30fea27feaa77adc955bb842de">More...</a><br /></td></tr>
-<tr class="separator:gaf25d6c30fea27feaa77adc955bb842de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab825756e641ba839bfae908492165481"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#gab825756e641ba839bfae908492165481">SetLabel</a> (const std::string &amp;label)</td></tr>
-<tr class="memdesc:gab825756e641ba839bfae908492165481"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the text string on edit control.  <a href="a00026.html#gab825756e641ba839bfae908492165481">More...</a><br /></td></tr>
-<tr class="separator:gab825756e641ba839bfae908492165481"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8008c108280948ebd79830f222068455"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga8008c108280948ebd79830f222068455">SetText</a> (const std::string &amp;text)</td></tr>
-<tr class="memdesc:ga8008c108280948ebd79830f222068455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set's text heading for this edit control.  <a href="a00026.html#ga8008c108280948ebd79830f222068455">More...</a><br /></td></tr>
-<tr class="separator:ga8008c108280948ebd79830f222068455"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga71a209185b7a98adf0a310d2c44cdbe6">SetVisible</a> (bool visible)</td></tr>
-<tr class="memdesc:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control on window to visible.  <a href="a00026.html#ga71a209185b7a98adf0a310d2c44cdbe6">More...</a><br /></td></tr>
-<tr class="separator:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga59af6e8d8815fa4fc493c6c7263ac869"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00026.html#ga59af6e8d8815fa4fc493c6c7263ac869">~CControlEdit</a> ()</td></tr>
-<tr class="memdesc:ga59af6e8d8815fa4fc493c6c7263ac869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="a00026.html#ga59af6e8d8815fa4fc493c6c7263ac869">More...</a><br /></td></tr>
-<tr class="separator:ga59af6e8d8815fa4fc493c6c7263ac869"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga8e9a4e4d5ac9f74f17a46bd0499f31fb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CControlEdit </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00040.html#a00330">CWindow</a> *&#160;</td>
-          <td class="paramname"><em>window</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>controlId</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new control. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>related window control class </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>Used skin xml control id </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga59af6e8d8815fa4fc493c6c7263ac869"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual ~CControlEdit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga71a209185b7a98adf0a310d2c44cdbe6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetVisible </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>visible</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the control on window to visible. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">visible</td><td>If true visible, otherwise hidden </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gaac893222adeffdefc04d749648cce354"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetEnabled </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enabled</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set's the control's enabled/disabled state. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">enabled</td><td>If true enabled, otherwise disabled </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gab825756e641ba839bfae908492165481"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetLabel </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the text string on edit control. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>Text to show </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga6c80f17140ee95a258ff6c13439a2623"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GetLabel </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the text heading for this edit control. </p>
-<dl class="section return"><dt>Returns</dt><dd>Heading text </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga8008c108280948ebd79830f222068455"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetText </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set's text heading for this edit control. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>string or unicode - text string. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga1af3f7fd8b95cc66e7599caca454f8ef"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string GetText </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the text value for this edit control. </p>
-<dl class="section return"><dt>Returns</dt><dd>Text value of control </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gac0bffd1ac815193d85aa396fcfaf2397"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetCursorPosition </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iPosition</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the cursor position on text. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iPosition</td><td>The position to set </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga8f49c265d97c7c025da04eb79d86602c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int GetCursorPosition </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To get current cursor position on text field. </p>
-<dl class="section return"><dt>Returns</dt><dd>The current cursor position </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaf25d6c30fea27feaa77adc955bb842de"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetInputType </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00272.html#ga65e94c0b771b91d3c1f0948113ee838a">AddonGUIInputType</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set field input type which are defined on <a class="el" href="a00272.html#AddonGUIInputType">AddonGUIInputType</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>The <a class="el" href="a00272.html#AddonGUIInputType">Add-on input type</a> to use </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>The heading text for related keyboard dialog </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-</div><!-- contents -->
+<hr/>
+ <h1><a class="anchor" id="Label_Control_sect5"></a>
+See also</h1>
+<h4>Development:</h4>
+<ul>
+<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
+<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

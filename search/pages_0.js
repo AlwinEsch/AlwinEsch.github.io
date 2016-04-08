@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['controls',['Controls',['../a00014.html',1,'skin_parts']]]
+  ['add_2don_20rendering_20control',['Add-on Rendering control',['../a00008.html',1,'skin_controls']]]
 ];

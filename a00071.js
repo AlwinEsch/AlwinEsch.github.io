@@ -1,8 +1,12 @@
 var a00071 =
 [
-    [ "setText", "a00071.html#ga90b92b647abb3c9f7cc25f07f5fa0982", null ],
-    [ "getText", "a00071.html#gafab766445043570e6a82c14851366933", null ],
-    [ "reset", "a00071.html#gad20897c5c8bd47f5d4005989bead0e55", null ],
-    [ "scroll", "a00071.html#gaa4f5d32e79ca1250eaba1a74fdf7f1ec", null ],
-    [ "autoScroll", "a00071.html#gad492befcc0c8ee0e1fecb0d6a6bd7d1c", null ]
+    [ "Definitions, structures and enumerators", "a00302.html", "a00302" ],
+    [ "CSoundPlay", "a00071.html#ga3e3801bb530c9a788c0b3920fc3b4d91", null ],
+    [ "~CSoundPlay", "a00071.html#ga55031a30fa0d46695ed16a869fff7dc4", null ],
+    [ "Play", "a00071.html#ga12574569144fb9d22d996965ee42b627", null ],
+    [ "Stop", "a00071.html#ga17a237457e57625296e6b24feb19c60a", null ],
+    [ "SetChannel", "a00071.html#ga18c0452db8c88c696ba2f958396ba83d", null ],
+    [ "GetChannel", "a00071.html#ga9656546b61377811a68a1cf39dbc1bfc", null ],
+    [ "SetVolume", "a00071.html#ga6496c97b1bcd7301acfce8671cf90984", null ],
+    [ "GetVolume", "a00071.html#ga7f136ab9899c4abfeeb61d47383f1dd5", null ]
 ];

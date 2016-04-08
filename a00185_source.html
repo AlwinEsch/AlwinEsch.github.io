@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/interfaces/legacy/File.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/gui/ControlRendering.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,99 +92,115 @@ $(document).ready(function(){initNavTree('a00185_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">File.h</div>  </div>
+<div class="title">ControlRendering.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  any later version.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  along with XBMC; see the file COPYING.  If not, see</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;filesystem/File.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;LanguageHook.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;commons/Buffer.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00233.html">XBMCAddon</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">namespace </span>xbmcvfs</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="a00079.html">   62</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00079.html#a00334">File</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      XFILE::CFile* file;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keyword">inline</span> <a class="code" href="a00079.html#a00334">File</a>(<span class="keyword">const</span> String&amp; filepath, <span class="keyword">const</span> <span class="keywordtype">char</span>* mode = NULL) : file(<span class="keyword">new</span> XFILE::CFile())</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        DelayedCallGuard dg(languageHook);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (mode &amp;&amp; strncmp(mode, <span class="stringliteral">&quot;w&quot;</span>, 1) == 0)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;          file-&gt;OpenForWrite(filepath,<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;          file-&gt;Open(filepath, XFILE::READ_NO_CACHE);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      }</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      Copyright (C) 2015-2016 Team KODI</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *      http://kodi.tv</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  This Program is free software; you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  the Free Software Foundation; either version 2, or (at your option)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  This Program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  along with KODI; see the file COPYING.  If not, see</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;API_NAMESPACE</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00257.html">KodiAPI</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>GUI</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">class </span>CWindow;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="a00082.html">   61</a></span>&#160;  <span class="keyword">class </span><a class="code" href="a00082.html#a00347">CControlRendering</a></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span>    <a class="code" href="a00082.html#ga6e729c9d7a09727b98b31269d21a022a">CControlRendering</a>(<a class="code" href="a00090.html#a00380">CWindow</a>* window, <span class="keywordtype">int</span> controlId);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keyword">inline</span> ~<a class="code" href="a00079.html#a00334">File</a>() { <span class="keyword">delete</span> file; }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="a00079.html#ga691e636b0dffa3c448c648f42d94437a">   97</a></span>&#160;      <span class="keyword">inline</span> String <a class="code" href="a00079.html#ga691e636b0dffa3c448c648f42d94437a">read</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> numBytes = 0)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        XbmcCommons::Buffer b = <a class="code" href="a00079.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8">readBytes</a>(numBytes);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> b.getString(numBytes == 0 ? b.remaining() : std::min((<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)b.remaining(),numBytes));</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      XbmcCommons::Buffer <a class="code" href="a00079.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8">readBytes</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> numBytes = 0);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00079.html#ga1a6eddca986ff7164d57b9fad625e597">write</a>(XbmcCommons::Buffer&amp; buffer);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <a class="code" href="a00082.html#ga812abb51ba5159602f5b1a1833a642eb">~CControlRendering</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="a00082.html#ga12847d560dd43205d13b0963d9e395e1">  105</a></span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="a00082.html#ga12847d560dd43205d13b0963d9e395e1">Create</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, <span class="keywordtype">void</span>* device) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="a00082.html#ga0bc3f3606d9cf5304dac90cd7a619194">  117</a></span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00082.html#ga0bc3f3606d9cf5304dac90cd7a619194">Render</a>() { }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="a00082.html#gaf6f113a64b92a63894b285b4f2a2c3a5">  129</a></span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00082.html#gaf6f113a64b92a63894b285b4f2a2c3a5">Stop</a>() { }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="a00082.html#ga7cea65505e98c9989ab92a87b2f2e99b">  142</a></span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="a00082.html#ga7cea65505e98c9989ab92a87b2f2e99b">Dirty</a>() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="a00079.html#ga6fdf8e4501d305514d8e7b5d6cde34a6">  164</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00079.html#ga6fdf8e4501d305514d8e7b5d6cde34a6">size</a>() { DelayedCallGuard dg(languageHook); <span class="keywordflow">return</span> file-&gt;GetLength(); }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="a00079.html#ga8140115d0b4e6cb1ffa9f4298153d009">  186</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00079.html#ga8140115d0b4e6cb1ffa9f4298153d009">seek</a>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> seekBytes, <span class="keywordtype">int</span> iWhence) { DelayedCallGuard dg(languageHook); <span class="keywordflow">return</span> file-&gt;Seek(seekBytes,iWhence); }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="a00079.html#ga5ae591df94fc66ccb85cbb6565368bca">  203</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="a00079.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>() { DelayedCallGuard dg(languageHook); file-&gt;Close(); }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <span class="keyword">inline</span> <span class="keyword">const</span> XFILE::CFile* getFile()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> file; }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    };</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  }</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
-<div class="ttc" id="a00079_html_gafb6cfe2d85d46667aaa8ff4e9ae194e8"><div class="ttname"><a href="a00079.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8">XBMCAddon::xbmcvfs::File::readBytes</a></div><div class="ttdeci">XbmcCommons::Buffer readBytes(unsigned long numBytes=0)</div><div class="ttdoc">Read bytes from file. </div></div>
-<div class="ttc" id="a00079_html_ga691e636b0dffa3c448c648f42d94437a"><div class="ttname"><a href="a00079.html#ga691e636b0dffa3c448c648f42d94437a">XBMCAddon::xbmcvfs::File::read</a></div><div class="ttdeci">String read(unsigned long numBytes=0)</div><div class="ttdoc">Read file parts as string. </div><div class="ttdef"><b>Definition:</b> File.h:97</div></div>
-<div class="ttc" id="a00079_html_ga6fdf8e4501d305514d8e7b5d6cde34a6"><div class="ttname"><a href="a00079.html#ga6fdf8e4501d305514d8e7b5d6cde34a6">XBMCAddon::xbmcvfs::File::size</a></div><div class="ttdeci">long long size()</div><div class="ttdoc">Get the file size. </div><div class="ttdef"><b>Definition:</b> File.h:164</div></div>
-<div class="ttc" id="a00079_html_a00334"><div class="ttname"><a href="a00079.html#a00334">XBMCAddon::xbmcvfs::File</a></div><div class="ttdef"><b>Definition:</b> File.h:62</div></div>
-<div class="ttc" id="a00079_html_ga5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="a00079.html#ga5ae591df94fc66ccb85cbb6565368bca">XBMCAddon::xbmcvfs::File::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Close opened file. </div><div class="ttdef"><b>Definition:</b> File.h:203</div></div>
-<div class="ttc" id="a00233_html"><div class="ttname"><a href="a00233.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00079_html_ga8140115d0b4e6cb1ffa9f4298153d009"><div class="ttname"><a href="a00079.html#ga8140115d0b4e6cb1ffa9f4298153d009">XBMCAddon::xbmcvfs::File::seek</a></div><div class="ttdeci">long long seek(long long seekBytes, int iWhence)</div><div class="ttdoc">Seek to position in file. </div><div class="ttdef"><b>Definition:</b> File.h:186</div></div>
-<div class="ttc" id="a00079_html_ga1a6eddca986ff7164d57b9fad625e597"><div class="ttname"><a href="a00079.html#ga1a6eddca986ff7164d57b9fad625e597">XBMCAddon::xbmcvfs::File::write</a></div><div class="ttdeci">bool write(XbmcCommons::Buffer &amp;buffer)</div><div class="ttdoc">To write given data in file. </div></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00082.html#ga10abcb122b56e3f8a6069b888486d5db">SetIndependentCallbacks</a>(</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <a class="code" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a>             cbhdl,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordtype">bool</span>      (*CBCreate)(<a class="code" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                              <span class="keywordtype">int</span>       x,</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                              <span class="keywordtype">int</span>       y,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                              <span class="keywordtype">int</span>       w,</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                              <span class="keywordtype">int</span>       h,</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                              <span class="keywordtype">void</span>*     device),</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">void</span>      (*CBRender)(<a class="code" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl),</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">void</span>      (*CBStop)  (<a class="code" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl),</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">bool</span>      (*CBDirty) (<a class="code" href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">GUIHANDLE</a> cbhdl));</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">  #ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    IMPL_GUI_RENDERING_CONTROL;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">  #endif</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  };</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;} <span class="comment">/* namespace GUI */</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;END_NAMESPACE()</div>
+<div class="ttc" id="a00082_html_gaf6f113a64b92a63894b285b4f2a2c3a5"><div class="ttname"><a href="a00082.html#gaf6f113a64b92a63894b285b4f2a2c3a5">KodiAPI::GUI::CControlRendering::Stop</a></div><div class="ttdeci">virtual void Stop()</div><div class="ttdoc">Call from Kodi to stop rendering process. </div><div class="ttdef"><b>Definition:</b> ControlRendering.hpp:129</div></div>
+<div class="ttc" id="a00082_html_ga12847d560dd43205d13b0963d9e395e1"><div class="ttname"><a href="a00082.html#ga12847d560dd43205d13b0963d9e395e1">KodiAPI::GUI::CControlRendering::Create</a></div><div class="ttdeci">virtual bool Create(int x, int y, int w, int h, void *device)</div><div class="ttdoc">To create rendering control on Add-on. </div><div class="ttdef"><b>Definition:</b> ControlRendering.hpp:105</div></div>
+<div class="ttc" id="a00082_html_ga10abcb122b56e3f8a6069b888486d5db"><div class="ttname"><a href="a00082.html#ga10abcb122b56e3f8a6069b888486d5db">KodiAPI::GUI::CControlRendering::SetIndependentCallbacks</a></div><div class="ttdeci">void SetIndependentCallbacks(GUIHANDLE cbhdl, bool(*CBCreate)(GUIHANDLE cbhdl, intx, inty, intw, inth, void *device), void(*CBRender)(GUIHANDLE cbhdl), void(*CBStop)(GUIHANDLE cbhdl), bool(*CBDirty)(GUIHANDLE cbhdl))</div><div class="ttdoc">If the class is used independent (with "new CControlRendering") and not as parent (with "cCLASS_own :...</div></div>
+<div class="ttc" id="a00082_html_ga7cea65505e98c9989ab92a87b2f2e99b"><div class="ttname"><a href="a00082.html#ga7cea65505e98c9989ab92a87b2f2e99b">KodiAPI::GUI::CControlRendering::Dirty</a></div><div class="ttdeci">virtual bool Dirty()</div><div class="ttdoc">Call from Kodi where add-on becomes asked about dirty rendering region. </div><div class="ttdef"><b>Definition:</b> ControlRendering.hpp:142</div></div>
+<div class="ttc" id="a00082_html_ga812abb51ba5159602f5b1a1833a642eb"><div class="ttname"><a href="a00082.html#ga812abb51ba5159602f5b1a1833a642eb">KodiAPI::GUI::CControlRendering::~CControlRendering</a></div><div class="ttdeci">virtual ~CControlRendering()</div><div class="ttdoc">Destructor. </div></div>
+<div class="ttc" id="a00082_html_ga0bc3f3606d9cf5304dac90cd7a619194"><div class="ttname"><a href="a00082.html#ga0bc3f3606d9cf5304dac90cd7a619194">KodiAPI::GUI::CControlRendering::Render</a></div><div class="ttdeci">virtual void Render()</div><div class="ttdoc">Render process call from Kodi. </div><div class="ttdef"><b>Definition:</b> ControlRendering.hpp:117</div></div>
+<div class="ttc" id="a00090_html_a00380"><div class="ttname"><a href="a00090.html#a00380">KodiAPI::GUI::CWindow</a></div><div class="ttdef"><b>Definition:</b> Window.hpp:69</div></div>
+<div class="ttc" id="a00310_html_ga3e3a75682bddc7d2ee995d4e7a37daec"><div class="ttname"><a href="a00310.html#ga3e3a75682bddc7d2ee995d4e7a37daec">KodiAPI::GUIHANDLE</a></div><div class="ttdeci">void * GUIHANDLE</div><div class="ttdoc">Handle to use as independent pointer for GUI. </div><div class="ttdef"><b>Definition:</b> definitions_gui.hpp:48</div></div>
+<div class="ttc" id="a00082_html_ga6e729c9d7a09727b98b31269d21a022a"><div class="ttname"><a href="a00082.html#ga6e729c9d7a09727b98b31269d21a022a">KodiAPI::GUI::CControlRendering::CControlRendering</a></div><div class="ttdeci">CControlRendering(CWindow *window, int controlId)</div><div class="ttdoc">Construct a new control. </div></div>
+<div class="ttc" id="a00257_html"><div class="ttname"><a href="a00257.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
+<div class="ttc" id="a00082_html_a00347"><div class="ttname"><a href="a00082.html#a00347">KodiAPI::GUI::CControlRendering</a></div><div class="ttdef"><b>Definition:</b> ControlRendering.hpp:61</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c72e4a3b15aa6b185e7458e4a6d6ab4f.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_81c1a29a69722fee590df545771fd524.html">legacy</a></li><li class="navelem"><b>File.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e2f41087cf08f19ef9254dabbd5edda3.html">include</a></li><li class="navelem"><a class="el" href="dir_684c90c798bf40b829fca8909140a321.html">kodi</a></li><li class="navelem"><a class="el" href="dir_fe15ccb97bc6dd916b539c35a997f873.html">api2</a></li><li class="navelem"><a class="el" href="dir_c2c64a33e9f782c7e9591d9d282ea392.html">gui</a></li><li class="navelem"><b>ControlRendering.hpp</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

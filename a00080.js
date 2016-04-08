@@ -1,13 +1,8 @@
 var a00080 =
 [
-    [ "st_mode", "a00080.html#ga00b3e20028eaee69c44cdc47a922fe31", null ],
-    [ "st_ino", "a00080.html#ga77e336d6274f6fb0e2a3c3546e61e360", null ],
-    [ "st_dev", "a00080.html#gab17084ec246f2b497d2f13618c5bd220", null ],
-    [ "st_nlink", "a00080.html#ga34f57426567df63ef5ad1b4679778d18", null ],
-    [ "st_uid", "a00080.html#gaa29c53999dffe4acc12aed2eb60a6c81", null ],
-    [ "st_gid", "a00080.html#ga9a7a9ad27402f5a931bcbff38e4e03d3", null ],
-    [ "st_size", "a00080.html#gaeec21543efab31f62a21e533b0d3a537", null ],
-    [ "atime", "a00080.html#ga65d49375e5251d4e616a45e3c898d6cc", null ],
-    [ "mtime", "a00080.html#ga57da69d0b20141a95c0c44a6bb5f3b35", null ],
-    [ "ctime", "a00080.html#gab24c57af16ac6f88edb819c18e2e438b", null ]
+    [ "CControlProgress", "a00080.html#ga33e0980459ea8e489f13a882c73a7dde", null ],
+    [ "~CControlProgress", "a00080.html#gaa981b5bb0357bd7838daa15e7eeec0b1", null ],
+    [ "SetVisible", "a00080.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "SetPercentage", "a00080.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
+    [ "GetPercentage", "a00080.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ]
 ];

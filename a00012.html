@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Scroll Bar Control</title>
+<title>Kodi Development: Edit control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,78 +92,59 @@ $(document).ready(function(){initNavTree('a00012.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Scroll Bar Control </div>  </div>
+<div class="title">Edit control </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Scroll_Bar_Control_sect">Example</a></li>
-<li class="level1"><a href="#Scroll_Bar_Control_sect2">Available tags</a></li>
-<li class="level1"><a href="#Scroll_Bar_Control_sect3">Adding Up and Down buttons above and below a scrollbar</a></li>
-<li class="level1"><a href="#Scroll_Bar_Control_sect4">See also</a></li>
+<ul><li class="level1"><a href="#skin_Edit_control_sect1">Example</a></li>
+<li class="level1"><a href="#skin_Edit_control_sect2">Available tags</a></li>
+<li class="level1"><a href="#skin_Edit_control_sect3">See also</a></li>
 </ul>
 </div>
-<div class="textblock"><p><b>Used for a implementing a scroll bar.</b></p>
-<p>The scroll bar control is used as a page control for lists, panels, wraplists, fixedlists, textboxes, and grouplists. You can choose the position, size, and look of the scroll bar.</p>
-<hr/>
- <h1><a class="anchor" id="Scroll_Bar_Control_sect"></a>
+<div class="textblock"><p><b>Used as an input control for the osd keyboard and other input fields.</b></p>
+<p>The edit control allows a user to input text in Kodi. You can choose the font, size, colour, location and header of the text to be displayed. </p><hr/>
+ <h1><a class="anchor" id="skin_Edit_control_sect1"></a>
 Example</h1>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD </p><div class="fragment"><div class="line">=======</div>
-<div class="line">~~~~~~~~~~~~~{.xml}</div>
-<div class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; 3a0b919... [addon] binary add-on library rework <span class="keywordflow">for</span> API level system</div>
-<div class="line">&lt;control type=<span class="stringliteral">&quot;scrollbar&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;17&quot;</span>&gt;</div>
-<div class="line">      &lt;description&gt;My first scroll bar control&lt;/description&gt;</div>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;edit&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line">      &lt;description&gt;My First edit control&lt;/description&gt;</div>
 <div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
 <div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
 <div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line">      &lt;height&gt;30&lt;/height&gt;</div>
 <div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
-<div class="line">      &lt;texturesliderbackground&gt;scroll-background.png&lt;/texturesliderbackground&gt;</div>
-<div class="line">      &lt;texturesliderbar&gt;bar.png&lt;/texturesliderbar&gt;</div>
-<div class="line">      &lt;texturesliderbarfocus&gt;bar-focus.png&lt;/texturesliderbarfocus&gt;</div>
-<div class="line">      &lt;textureslidernib&gt;nib.png&lt;/textureslidernib&gt;</div>
-<div class="line">      &lt;textureslidernibfocus&gt;nib-focus.png&lt;/textureslidernibfocus&gt;</div>
-<div class="line">      &lt;pulseonselect&gt;&lt;/pulseonselect&gt;</div>
-<div class="line">      &lt;orientation&gt;vertical&lt;/orientation&gt;</div>
-<div class="line">      &lt;showonepage&gt;<span class="keyword">false</span>&lt;/showonepage&gt;</div>
-<div class="line">      &lt;onup&gt;2&lt;/onup&gt;</div>
-<div class="line">      &lt;ondown&gt;3&lt;/ondown&gt;</div>
-<div class="line">      &lt;onleft&gt;1&lt;/onleft&gt;</div>
-<div class="line">      &lt;onright&gt;1&lt;/onright&gt;</div>
+<div class="line">      &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">      &lt;label&gt;Search&lt;/label&gt;</div>
+<div class="line">      &lt;hinttext&gt;Enter search <span class="keywordtype">string</span>&lt;/hinttext&gt;</div>
+<div class="line">      &lt;font&gt;font14&lt;/font&gt;</div>
+<div class="line">      &lt;textoffsetx&gt;10&lt;/textoffsetx&gt;</div>
+<div class="line">      &lt;textcolor&gt;FFB2D4F5&lt;/textcolor&gt;</div>
+<div class="line">      &lt;disabledcolor&gt;FF000000&lt;/disabledcolor&gt;</div>
+<div class="line">      &lt;invalidcolor&gt;FFFFFFFF&lt;/invalidcolor&gt;</div>
+<div class="line">      &lt;texturefocus&gt;button-focus.png&lt;/texturefocus&gt;</div>
+<div class="line">      &lt;texturenofocus&gt;button-nofocus.png&lt;/texturenofocus&gt;</div>
+<div class="line">      &lt;pulseonselect&gt;no&lt;/pulseonselect&gt;</div>
 <div class="line">&lt;/control&gt;</div>
-</div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Scroll_Bar_Control_sect2"></a>
+</div><!-- fragment --> <hr/>
+ <h1><a class="anchor" id="skin_Edit_control_sect2"></a>
 Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is lower case only. This is important, as xml tags are case-sensitive.</p>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">texturesliderbackground </td><td align="left">Specifies the image file which should be displayed in the background of the scroll bar control. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
+<td align="right">aligny </td><td align="left">Can be top or center. Aligns the text within its given control <b><code>&lt;height&gt;</code></b>. Defaults to top </td></tr>
 <tr>
-<td align="right">texturesliderbar </td><td align="left">Specifies the image file which should be displayed for the scroll bar. As the size of the scroll bar is dynamic, it is often useful to <a href="http://kodi.wiki/view/Texture_Attributes">use the border attribute of this texture</a>. </td></tr>
+<td align="right">label </td><td align="left">Specifies the header text which should be shown. You should specify an entry from the <b>strings.xml</b> here (either the Kodi strings.xml or your skin's strings.xml file), however you may also hardcode a piece of text also if you wish, though of course it will not be localized. You can use the full <a href="http://kodi.wiki/view/Label_Formatting">label formatting syntax</a> and <a href="http://kodi.wiki/view/Label_Parsing">you may also specify more than one piece of information here by using the $INFO and $LOCALIZE formats.strings.xml</a>) </td></tr>
 <tr>
-<td align="right">texturesliderbarfocus </td><td align="left">Specifies the image file which should be displayed for the scroll bar when it has focus. </td></tr>
+<td align="right">hinttext </td><td align="left">Specifies the text which should be displayed in the edit label control, until the user enters some text. It can be used to provide a clue as to what a user should enter in this control. </td></tr>
 <tr>
-<td align="right">textureslidernib </td><td align="left">Specifies the image file which should be displayed for the scroll bar nib. The nib is always centered within the scroll bar. </td></tr>
+<td align="right">font </td><td align="left">Specifies the font to use from the <b>font.xml</b> file. </td></tr>
 <tr>
-<td align="right">textureslidernibfocus </td><td align="left">Specifies the image file which should be displayed for the scroll bar nib when it has focus. The nib is always centered within the scroll bar. </td></tr>
+<td align="right">textcolor </td><td align="left">Specifies the color the text should be, in hex <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
 <tr>
-<td align="right">orientation </td><td align="left">Specifies whether this scrollbar is horizontal or vertical. Defaults to vertical. </td></tr>
-<tr>
-<td align="right">showonepage </td><td align="left">Specifies whether the scrollbar will show if the container it's controlling has just one page. Defaults to true. </td></tr>
+<td align="right">textwidth </td><td align="left">Will truncate any text that's too long. </td></tr>
 </table>
-<h1><a class="anchor" id="Scroll_Bar_Control_sect3"></a>
-Adding Up and Down buttons above and below a scrollbar</h1>
-<p>To add arrow buttons above and below the scrollbar, you need to add 2 additional button controls to the window, and set their <b><code>&lt;onclick&gt;</code></b> tag to</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD </p><div class="fragment"><div class="line">&lt;onclick&gt;pageup(<span class="keywordtype">id</span>)&lt;/onclick&gt;</div>
-</div><!-- fragment --><p> or </p><div class="fragment"><div class="line">=======</div>
-<div class="line">~~~~~~~~~~~~~{.xml}</div>
-<div class="line">&lt;onclick&gt;pageup(<span class="keywordtype">id</span>)&lt;/onclick&gt;</div>
-</div><!-- fragment --><p> or </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 3a0b919... [addon] binary add-on library rework for API level system</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;onclick&gt;pagedown(id)&lt;/onclick&gt;</div>
-</div><!-- fragment --><p>where id is the id of this scroll bar.</p>
 <hr/>
- <h1><a class="anchor" id="Scroll_Bar_Control_sect4"></a>
+ <h1><a class="anchor" id="skin_Edit_control_sect3"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>

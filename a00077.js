@@ -1,12 +1,10 @@
 var a00077 =
 [
-    [ "Subclass - WindowDialogXML", "a00078.html", null ],
-    [ "addItem", "a00077.html#ga87ffff74f065758ae9884ecc87102af1", null ],
-    [ "removeItem", "a00077.html#ga214d46ad5cb6e318163ba98e0dd780ac", null ],
-    [ "getCurrentListPosition", "a00077.html#ga860b30302751103052456bb1f1079980", null ],
-    [ "setCurrentListPosition", "a00077.html#gabaeb49593088c3be9c7a232d50152e34", null ],
-    [ "getListItem", "a00077.html#ga37ec44d83350b3e4c5b4f7a2648bfc01", null ],
-    [ "getListSize", "a00077.html#ga7b00dc949b12149360563a1941956fc7", null ],
-    [ "clearList", "a00077.html#ga612285c5b9d603a0abb0feab44b8412f", null ],
-    [ "setContainerProperty", "a00077.html#gaf48b268d0ce5767fd8702e649e2aad39", null ]
+    [ "CControlFadeLabel", "a00077.html#ga90b3c88c8f974d59928e67fa9751b69b", null ],
+    [ "~CControlFadeLabel", "a00077.html#gadcc150f725189d7e4f903b153c6d7ca1", null ],
+    [ "SetVisible", "a00077.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "AddLabel", "a00077.html#ga47cfd2f63ce533672996085727a5fdd4", null ],
+    [ "GetLabel", "a00077.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
+    [ "SetScrolling", "a00077.html#ga02685eb001d24047fce8ed6d4899e9af", null ],
+    [ "Reset", "a00077.html#ga372de693ad40b3f42839c8ec6ac845f4", null ]
 ];
