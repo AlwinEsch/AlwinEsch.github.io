@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Group Control</title>
+<title>Kodi Development: Definitions, structures and enumerators</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
    <div id="projectname">Kodi Development
    &#160;<span id="projectnumber">17.0</span>
    </div>
-   <div id="projectbrief">for Binary (API Level 2) and Script based Add-Ons</div>
+   <div id="projectbrief">for Binary (API Level 3) and Script based Add-Ons</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -92,82 +92,261 @@ $(document).ready(function(){initNavTree('a00020.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Group Control </div>  </div>
+<div class="title">Definitions, structures and enumerators<div class="ingroups"><a class="el" href="a00239.html">C++</a> &raquo; <a class="el" href="a00249.html">2. AddOn</a> &raquo; <a class="el" href="a00251.html">General</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Group_Control_sect1">Example</a></li>
-<li class="level1"><a href="#Group_Control_sect2">Available tags</a></li>
-<li class="level1"><a href="#Group_Control_sect3">Notes on positioning of controls within groups</a></li>
-<li class="level1"><a href="#Group_Control_sect4">See also</a></li>
-</ul>
-</div>
-<div class="textblock"><p><b>Used to group controls together.</b></p>
-<p>The group control is one of the most important controls. It allows you to group controls together, applying attributes to all of them at once. It also remembers the last navigated button in the group, so you can set the <b><code>&lt;onup&gt;</code></b> of a control to a group of controls to have it always go back to the one you were at before. It also allows you to position controls more accurately relative to each other, as any controls within a group take their coordinates from the group's top left corner (or from elsewhere if you use the "r" attribute). You can have as many groups as you like within the skin, and groups within groups are handled with no issues.</p>
-<hr/>
- <h1><a class="anchor" id="Group_Control_sect1"></a>
-Example</h1>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;group&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;17&quot;</span>&gt;</div>
-<div class="line">      &lt;description&gt;My first group control&lt;/description&gt;</div>
-<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line">      &lt;height&gt;30&lt;/height&gt;</div>
-<div class="line">      &lt;defaultcontrol&gt;2&lt;/defaultcontrol&gt;</div>
-<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
-<div class="line">      &lt;onup&gt;2&lt;/onup&gt;</div>
-<div class="line">      &lt;ondown&gt;3&lt;/ondown&gt;</div>
-<div class="line">      &lt;onleft&gt;1&lt;/onleft&gt;</div>
-<div class="line">      &lt;onright&gt;1&lt;/onright&gt;</div>
-<div class="line">      ... more controls go here ...</div>
-<div class="line">&lt;/control&gt;</div>
-</div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Group_Control_sect2"></a>
-Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
-<table class="doxtable">
-<tr>
-<th align="right">Tag </th><th align="left">Description  </th></tr>
-<tr>
-<td align="right">defaultcontrol </td><td align="left">Specifies the default control that will be focused within the group when the group receives focus. Note that the group remembers it's previously focused item and will return to it. </td></tr>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p><b>Library definition values</b> </p>
+<hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="a00340" id="a00340"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct kodi_version</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>For CAddonLib_General::KodiVersion used structure. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public Attributes</h3></td></tr>
+<tr class="memitem:afe9672e29db448c9cc47fbb6cbb5a8f4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#afe9672e29db448c9cc47fbb6cbb5a8f4">compile_name</a></td></tr>
+<tr class="memdesc:afe9672e29db448c9cc47fbb6cbb5a8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application name, normally 'Kodi'.  <a href="#afe9672e29db448c9cc47fbb6cbb5a8f4">More...</a><br /></td></tr>
+<tr class="separator:afe9672e29db448c9cc47fbb6cbb5a8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8947941479c38403a09c14a60b03f01"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#ac8947941479c38403a09c14a60b03f01">major</a></td></tr>
+<tr class="memdesc:ac8947941479c38403a09c14a60b03f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Major code version of Kodi.  <a href="#ac8947941479c38403a09c14a60b03f01">More...</a><br /></td></tr>
+<tr class="separator:ac8947941479c38403a09c14a60b03f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7b96885baf2e6f10efbdef9d935a0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#aec7b96885baf2e6f10efbdef9d935a0b">minor</a></td></tr>
+<tr class="memdesc:aec7b96885baf2e6f10efbdef9d935a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minor code version of Kodi.  <a href="#aec7b96885baf2e6f10efbdef9d935a0b">More...</a><br /></td></tr>
+<tr class="separator:aec7b96885baf2e6f10efbdef9d935a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5061ba1a268eb999ed21e0c4d7bf609e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a5061ba1a268eb999ed21e0c4d7bf609e">revision</a></td></tr>
+<tr class="memdesc:a5061ba1a268eb999ed21e0c4d7bf609e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Revision contains a id and the build date, e.g. 2015-11-30-74edffb-dirty.  <a href="#a5061ba1a268eb999ed21e0c4d7bf609e">More...</a><br /></td></tr>
+<tr class="separator:a5061ba1a268eb999ed21e0c4d7bf609e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae120f732e7e1c5e4a16fa31d89f655df"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#ae120f732e7e1c5e4a16fa31d89f655df">tag</a></td></tr>
+<tr class="memdesc:ae120f732e7e1c5e4a16fa31d89f655df"><td class="mdescLeft">&#160;</td><td class="mdescRight">The version canditate e.g. alpha, beta or release.  <a href="#ae120f732e7e1c5e4a16fa31d89f655df">More...</a><br /></td></tr>
+<tr class="separator:ae120f732e7e1c5e4a16fa31d89f655df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e85f5a1bb888b4325a87984bccfe81"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00020.html#a14e85f5a1bb888b4325a87984bccfe81">tag_revision</a></td></tr>
+<tr class="memdesc:a14e85f5a1bb888b4325a87984bccfe81"><td class="mdescLeft">&#160;</td><td class="mdescRight">The revision of tag before.  <a href="#a14e85f5a1bb888b4325a87984bccfe81">More...</a><br /></td></tr>
+<tr class="separator:a14e85f5a1bb888b4325a87984bccfe81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>
- <h1><a class="anchor" id="Group_Control_sect3"></a>
-Notes on positioning of controls within groups</h1>
-<p>All controls within a group take their positions relative to the group's placement. Thus, the group always requires its <b><code>&lt;posx&gt;</code></b>, <b><code>&lt;posy&gt;</code></b>, <b><code>&lt;width&gt;</code></b>, and <b><code>&lt;height&gt;</code></b> attributes to be defined. As this can be a pain to remember, anything that you don't specify will be inherited from it's parent group (or the main window).</p>
-<p>By way of example, consider the first group within a PAL full screen window (720x576), and suppose we have</p>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;group&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;15&quot;</span>&gt;</div>
-<div class="line">  &lt;posx&gt;30&lt;/posx&gt;</div>
-<div class="line">  &lt;posy&gt;70&lt;/posy&gt;</div>
-<div class="line">  &lt;width&gt;400&lt;/width&gt;</div>
-<div class="line">  ... more controls go here ...</div>
-<div class="line">&lt;/control&gt;</div>
-</div><!-- fragment --><p>so that the <b><code>&lt;height&gt;</code></b> hasn't been defined. Then Kodi will automatically set the <b><code>&lt;height&gt;</code></b> equal to 506 by inheriting this from the window's height of 576, less the <b><code>&lt;posy&gt;</code></b> amount.</p>
-<p>You can align controls within a group to the right edge of the group, by using the <b>"r"</b> modifier to the <b><code>&lt;posx&gt;</code></b> and <b><code>&lt;posy&gt;</code></b> fields</p>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;group&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;20&quot;</span>&gt;</div>
-<div class="line">  &lt;control type=<span class="stringliteral">&quot;button&quot;</span> <span class="keywordtype">id</span>=2&gt;</div>
-<div class="line">    &lt;posx&gt;180r&lt;/posx&gt;</div>
-<div class="line">    &lt;width&gt;180&lt;/width&gt;</div>
-<div class="line">  &lt;/control&gt;</div>
-<div class="line">  &lt;control type=<span class="stringliteral">&quot;button&quot;</span> <span class="keywordtype">id</span>=3&gt;</div>
-<div class="line">    &lt;posx&gt;180r&lt;/posx&gt;</div>
-<div class="line">    &lt;width&gt;180&lt;/width&gt;</div>
-<div class="line">  &lt;/control&gt;</div>
-<div class="line">  &lt;control type=<span class="stringliteral">&quot;button&quot;</span> <span class="keywordtype">id</span>=4&gt;</div>
-<div class="line">    &lt;posx&gt;180r&lt;/posx&gt;</div>
-<div class="line">    &lt;width&gt;180&lt;/width&gt;</div>
-<div class="line">  &lt;/control&gt;</div>
-<div class="line">&lt;/control&gt;</div>
-</div><!-- fragment --><p>All the buttons have width 180, and are aligned 180 pixels from the right edge of the group they're within.</p>
-<hr/>
- <h1><a class="anchor" id="Group_Control_sect4"></a>
-See also</h1>
-<h4>Development:</h4>
-<ul>
-<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
-<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
-</ul>
-</div></div><!-- contents -->
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="afe9672e29db448c9cc47fbb6cbb5a8f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string compile_name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Application name, normally 'Kodi'. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac8947941479c38403a09c14a60b03f01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int major</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Major code version of Kodi. </p>
+
+</div>
+</div>
+<a class="anchor" id="aec7b96885baf2e6f10efbdef9d935a0b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int minor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minor code version of Kodi. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5061ba1a268eb999ed21e0c4d7bf609e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string revision</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Revision contains a id and the build date, e.g. 2015-11-30-74edffb-dirty. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae120f732e7e1c5e4a16fa31d89f655df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string tag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The version canditate e.g. alpha, beta or release. </p>
+
+</div>
+</div>
+<a class="anchor" id="a14e85f5a1bb888b4325a87984bccfe81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string tag_revision</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The revision of tag before. </p>
+
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ga3a3ad4636a6590c7a30713da82d0cf8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum queue_msg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For CAddonLib_General::QueueNotification used message types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga3a3ad4636a6590c7a30713da82d0cf8ba337175e2eb3336df26c7e387e56cfb6b"></a>QUEUE_INFO&#160;</td><td class="fielddoc">
+<p>Show info notification message. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga3a3ad4636a6590c7a30713da82d0cf8ba2ffaf3e648ad752d53c2739eeea1f712"></a>QUEUE_WARNING&#160;</td><td class="fielddoc">
+<p>Show warning notification message. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga3a3ad4636a6590c7a30713da82d0cf8bad2f91e8feff864772fb0a394bb60cdc5"></a>QUEUE_ERROR&#160;</td><td class="fielddoc">
+<p>Show error notification message. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="gad481b851c163786e65d41b9ab47ed14e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum lang_formats</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Format codes to get string from them. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggad481b851c163786e65d41b9ab47ed14ea282b7d25014247cf5f26f5ee0fe6ea51"></a>LANG_FMT_ISO_639_1&#160;</td><td class="fielddoc">
+<p>two letter code as defined in ISO 639-1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggad481b851c163786e65d41b9ab47ed14ea93ccac5fa6affc3908cbd62584c2e92b"></a>LANG_FMT_ISO_639_2&#160;</td><td class="fielddoc">
+<p>three letter code as defined in ISO 639-2/T or ISO 639-2/B </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggad481b851c163786e65d41b9ab47ed14ea8e9dbb43889202ef570c318560f52635"></a>LANG_FMT_ENGLISH_NAME&#160;</td><td class="fielddoc">
+<p>full language name in English </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga6f7280d04d3078fadcfa05418716bb4c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum eservers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Kodi server identificators. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga6f7280d04d3078fadcfa05418716bb4cad977f9d16cbfe302e8194178248b506f"></a>ADDON_ES_WEBSERVER&#160;</td><td class="fielddoc">
+<p><a href="http://kodi.wiki/view/Webserver">To control Kodi's builtin webserver</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga6f7280d04d3078fadcfa05418716bb4ca3bdff893a2bcd91c10c360c5f479ce78"></a>ADDON_ES_AIRPLAYSERVER&#160;</td><td class="fielddoc">
+<p><a href="http://kodi.wiki/view/AirPlay">AirPlay is a proprietary protocol stack/suite developed by Apple Inc.</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga6f7280d04d3078fadcfa05418716bb4cade509f8f38e2af85457a57e8ff9e81aa"></a>ADDON_ES_JSONRPCSERVER&#160;</td><td class="fielddoc">
+<p><a href="http://kodi.wiki/view/JSON-RPC_API">Control JSON-RPC HTTP/TCP socket-based interface</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga6f7280d04d3078fadcfa05418716bb4cadda2cc5bf8c7bb2ca59b33509e4d2645"></a>ADDON_ES_UPNPRENDERER&#160;</td><td class="fielddoc">
+<p><a href="http://kodi.wiki/view/UPnP/Client">UPnP client (aka UPnP renderer)</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga6f7280d04d3078fadcfa05418716bb4cae4ffdb7a6ecf388128f4a66f82005dd0"></a>ADDON_ES_UPNPSERVER&#160;</td><td class="fielddoc">
+<p><a href="http://kodi.wiki/view/UPnP/Server">Control built-in UPnP A/V media server (UPnP-server)</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga6f7280d04d3078fadcfa05418716bb4ca0f05af6f103b15d29591d1f1b70bd467"></a>ADDON_ES_EVENTSERVER&#160;</td><td class="fielddoc">
+<p><a href="http://kodi.wiki/view/EventServer">Set eventServer part that accepts remote device input on all platforms</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga6f7280d04d3078fadcfa05418716bb4ca46f07c7c7c3d6db1a95474651f68a26a"></a>ADDON_ES_ZEROCONF&#160;</td><td class="fielddoc">
+<p><a href="http://kodi.wiki/view/Zeroconf">Control Kodi's Avahi Zeroconf</a> </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga62dee07eaadf713901c47b64c48754c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum ADDON_CURLOPTIONTYPE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used CURL message types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga62dee07eaadf713901c47b64c48754c1a97988273eb8b1940e630d2af6bd85244"></a>ADDON_CURL_OPTION_OPTION&#160;</td><td class="fielddoc">
+<p>Set a general option. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga62dee07eaadf713901c47b64c48754c1a34c8dcfdf540f7c1c6da9f4121e53ea4"></a>ADDON_CURL_OPTION_PROTOCOL&#160;</td><td class="fielddoc">
+<p>Set a protocol option. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga62dee07eaadf713901c47b64c48754c1add256095bd64635e30866a85d14a8b34"></a>ADDON_CURL_OPTION_CREDENTIALS&#160;</td><td class="fielddoc">
+<p>Set User and password. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga62dee07eaadf713901c47b64c48754c1a9f87e76324084670e3eaa129b772a812"></a>ADDON_CURL_OPTION_HEADER&#160;</td><td class="fielddoc">
+<p>Add a Header. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga6854c40ee0b4222220398351339f0aa5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum dvd_state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>State values about optical drive </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

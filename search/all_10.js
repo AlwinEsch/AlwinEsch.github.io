@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['infotagmusic',['InfoTagMusic',['../a00048.html#a00335',1,'XBMCAddon::xbmc']]],
+  ['infotagradiords',['InfoTagRadioRDS',['../a00049.html#a00336',1,'XBMCAddon::xbmc']]],
+  ['infotagvideo',['InfoTagVideo',['../a00050.html#a00337',1,'XBMCAddon::xbmc']]],
+  ['initlibaddon',['InitLibAddon',['../a00247.html#ga54c2c0dd7a940c723a67a51ffe97025f',1,'KodiAPI']]],
+  ['input',['input',['../a00072.html#ga2a25e833c92e98a294964d0d285ee1f9',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['interceptorclear',['interceptorClear',['../a00075.html#a93c985f5f8fed6487de34c88dcb40b5a',1,'XBMCAddon::xbmcgui::Window']]],
+  ['isbuffering',['IsBuffering',['../a00024.html#ga0a04f8b3e045b68d509dab0b67d077a8',1,'KodiAPI::AudioEngine::CStream']]],
+  ['iscanceled',['IsCanceled',['../a00038.html#gaf76bcf12aaec9ab845ea61853a37a33c',1,'KodiAPI::GUI::CDialogProgress::IsCanceled()'],['../a00073.html#ga2a944a55da1c28885d3f00d101618ac6',1,'XBMCAddon::xbmcgui::DialogProgress::iscanceled()']]],
+  ['iscleared',['IsCleared',['../a00046.html#ga324d4448e5c2dde1488e1a9b4d26c7ad',1,'KodiAPI::PVR::CPVRStream']]],
+  ['isconfirmed',['isConfirmed',['../a00051.html#gadfdd82b36e1da59f1e1aa139755e49eb',1,'XBMCAddon::xbmc::Keyboard']]],
+  ['isdrained',['IsDrained',['../a00024.html#gad2f3302fdee3ed4ab1558bc373498057',1,'KodiAPI::AudioEngine::CStream']]],
+  ['isdraining',['IsDraining',['../a00024.html#ga3659870694bbf153c0faf470cb4984cc',1,'KodiAPI::AudioEngine::CStream']]],
+  ['isfileitem',['IsFileItem',['../a00039.html#gafcb84c749b00051b94bc1353b16da631',1,'KodiAPI::GUI::CListItem']]],
+  ['isfinished',['IsFinished',['../a00037.html#gaabe45b4d47077b54df0bb809eb41b8d5',1,'KodiAPI::GUI::CDialogExtendedProgress::IsFinished()'],['../a00074.html#ga06926ca87a7be7d8af8ee84670fffa87',1,'XBMCAddon::xbmcgui::DialogProgressBG::isFinished()']]],
+  ['isfolder',['IsFolder',['../a00022.html#gabfbbb37d69862b45d0f1079ab976fa37',1,'KodiAPI::AddOn::CVFSDirEntry::IsFolder()'],['../a00039.html#ga83746525efaa62e4a49358f908e014db',1,'KodiAPI::GUI::CListItem::IsFolder()']]],
+  ['iskeyboardactivated',['IsKeyboardActivated',['../a00267.html#ga84a15873fc602d5f3cee645db60d56f3',1,'KodiAPI::GUI::DialogKeyboard']]],
+  ['ismuted',['IsMuted',['../a00251.html#ga8f9e6bb9b9d17d4efc88d88c73915c16',1,'KodiAPI::AddOn::General']]],
+  ['isplaying',['isPlaying',['../a00053.html#ga8438e3403946accc1986a05b89ee7b03',1,'XBMCAddon::xbmc::Player::isPlaying()'],['../a00044.html#ga755f326e8b06e5f2807d64baf8bf582c',1,'KodiAPI::Player::CPlayer::IsPlaying()']]],
+  ['isplayingaudio',['IsPlayingAudio',['../a00044.html#ga64d2795d7a491c9b86cf31e7907cae1b',1,'KodiAPI::Player::CPlayer::IsPlayingAudio()'],['../a00053.html#ga480d8fce2c836db07fd00754481295a5',1,'XBMCAddon::xbmc::Player::isPlayingAudio()']]],
+  ['isplayingrds',['isPlayingRDS',['../a00053.html#ga4adfa5f4e52074c9c1e2bdfb139a857b',1,'XBMCAddon::xbmc::Player::isPlayingRDS()'],['../a00044.html#gaae4a0dff198fb9394cfcb70a173509fe',1,'KodiAPI::Player::CPlayer::IsPlayingRDS()']]],
+  ['isplayingvideo',['IsPlayingVideo',['../a00044.html#ga0bb55e1048a2c76fb6685f772292cbde',1,'KodiAPI::Player::CPlayer::IsPlayingVideo()'],['../a00053.html#ga8f1c0037ad362eaadde1ec827db6f70c',1,'XBMCAddon::xbmc::Player::isPlayingVideo()']]],
+  ['isselected',['IsSelected',['../a00039.html#ga8bd3773d1e4bc4a38c419fd6c92bdee2',1,'KodiAPI::GUI::CListItem::IsSelected()'],['../a00031.html#gad29f489ee580d3d6d01b334aa186c323',1,'KodiAPI::GUI::CControlRadioButton::IsSelected()'],['../a00068.html#ga5dae9e59f17e10bd3838a6fae36d477d',1,'XBMCAddon::xbmcgui::ControlRadioButton::isSelected()']]],
+  ['infotagmusic',['InfoTagMusic',['../a00048.html',1,'']]],
+  ['infotagradiords',['InfoTagRadioRDS',['../a00049.html',1,'']]],
+  ['infotagvideo',['InfoTagVideo',['../a00050.html',1,'']]]
+];

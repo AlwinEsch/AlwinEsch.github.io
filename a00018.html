@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Fixed List Container</title>
+<title>Kodi Development: Definitions, structures and enumerators</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
    <div id="projectname">Kodi Development
    &#160;<span id="projectnumber">17.0</span>
    </div>
-   <div id="projectbrief">for Binary (API Level 2) and Script based Add-Ons</div>
+   <div id="projectbrief">for Binary (API Level 3) and Script based Add-Ons</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -92,146 +92,246 @@ $(document).ready(function(){initNavTree('a00018.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Fixed List Container </div>  </div>
+<div class="title">Definitions, structures and enumerators<div class="ingroups"><a class="el" href="a00239.html">C++</a> &raquo; <a class="el" href="a00256.html">3. Audio Engine</a> &raquo; <a class="el" href="a00024.html">Test stream (class CStream)</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Fixed_List_Container_sect2">Available tags</a></li>
-<li class="level1"><a href="#Fixed_List_Container_sect3">See also</a></li>
-</ul>
-</div>
-<div class="textblock"><p><b>Used for a list of items with a fixed focus. Same as the <a class="el" href="a00062.html">Wrap List Container</a> except it doesn't wrap.</b></p>
-<p>The fixed list container is one of several containers used to display items from file lists in various ways. The fixed list container is the same as the <a href="http://kodi.wiki/view/List_Container">List Container</a>, with one exception: the focused item is fixed. Thus, moving up or down scrolls the items, not the focused position. As with all container controls, the layout of the items within the control is very flexible.</p>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;fixedlist&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;50&quot;</span>&gt;</div>
-<div class="line">      &lt;description&gt;My first fixed list container&lt;/description&gt;</div>
-<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line">      &lt;height&gt;200&lt;/height&gt;</div>
-<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
-<div class="line">      &lt;onup&gt;2&lt;/onup&gt;</div>
-<div class="line">      &lt;ondown&gt;3&lt;/ondown&gt;</div>
-<div class="line">      &lt;onleft&gt;1&lt;/onleft&gt;</div>
-<div class="line">      &lt;onright&gt;1&lt;/onright&gt;</div>
-<div class="line">      &lt;viewtype label=<span class="stringliteral">&quot;3D list&quot;</span>&gt;list&lt;/viewtype&gt;</div>
-<div class="line">      &lt;orientation&gt;vertical&lt;/orientation&gt;</div>
-<div class="line">      &lt;pagecontrol&gt;25&lt;/pagecontrol&gt;</div>
-<div class="line">      &lt;scrolltime tween=<span class="stringliteral">&quot;sine&quot;</span> easing=<span class="stringliteral">&quot;out&quot;</span>&gt;200&lt;/scrolltime&gt;</div>
-<div class="line">      &lt;autoscroll&gt;<span class="keyword">true</span>&lt;/autoscroll&gt;</div>
-<div class="line">      &lt;focusposition&gt;4&lt;/focusposition&gt;</div>
-<div class="line">      &lt;movement&gt;6&lt;/movement&gt;</div>
-<div class="line">      &lt;itemlayout width=<span class="stringliteral">&quot;250&quot;</span> height=<span class="stringliteral">&quot;29&quot;</span>&gt;</div>
-<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
-<div class="line">                        &lt;posx&gt;5&lt;/posx&gt;</div>
-<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
-<div class="line">                        &lt;width&gt;22&lt;/width&gt;</div>
-<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
-<div class="line">                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
-<div class="line">                &lt;/control&gt;</div>
-<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
-<div class="line">                        &lt;posx&gt;30&lt;/posx&gt;</div>
-<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
-<div class="line">                        &lt;width&gt;430&lt;/width&gt;</div>
-<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
-<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
-<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
-<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
-<div class="line">                        &lt;align&gt;left&lt;/align&gt;</div>
-<div class="line">                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
-<div class="line">                &lt;/control&gt;</div>
-<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
-<div class="line">                        &lt;posx&gt;475&lt;/posx&gt;</div>
-<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
-<div class="line">                        &lt;width&gt;300&lt;/width&gt;</div>
-<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
-<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
-<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
-<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
-<div class="line">                        &lt;textcolor&gt;grey&lt;/textcolor&gt;</div>
-<div class="line">                        &lt;align&gt;right&lt;/align&gt;</div>
-<div class="line">                        &lt;info&gt;ListItem.Label2&lt;/info&gt;</div>
-<div class="line">                &lt;/control&gt;</div>
-<div class="line">      &lt;/itemlayout&gt;</div>
-<div class="line">      &lt;focusedlayout height=<span class="stringliteral">&quot;29&quot;</span> width=<span class="stringliteral">&quot;250&quot;</span>&gt;</div>
-<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
-<div class="line">                        &lt;width&gt;485&lt;/width&gt;</div>
-<div class="line">                        &lt;height&gt;29&lt;/height&gt;</div>
-<div class="line">                        &lt;posx&gt;0&lt;/posx&gt;</div>
-<div class="line">                        &lt;posy&gt;0&lt;/posy&gt;</div>
-<div class="line">                        &lt;visible&gt;Control.HasFocus(50)&lt;/visible&gt;</div>
-<div class="line">                        &lt;texture&gt;list-focus.png&lt;/texture&gt;</div>
-<div class="line">                &lt;/control&gt;</div>
-<div class="line">                &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
-<div class="line">                        &lt;posx&gt;5&lt;/posx&gt;</div>
-<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
-<div class="line">                        &lt;width&gt;22&lt;/width&gt;</div>
-<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
-<div class="line">                        &lt;info&gt;ListItem.Icon&lt;/info&gt;</div>
-<div class="line">                &lt;/control&gt;</div>
-<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
-<div class="line">                        &lt;posx&gt;30&lt;/posx&gt;</div>
-<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
-<div class="line">                        &lt;width&gt;430&lt;/width&gt;</div>
-<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
-<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
-<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
-<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
-<div class="line">                        &lt;align&gt;left&lt;/align&gt;</div>
-<div class="line">                        &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
-<div class="line">                &lt;/control&gt;</div>
-<div class="line">                &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
-<div class="line">                        &lt;posx&gt;475&lt;/posx&gt;</div>
-<div class="line">                        &lt;posy&gt;3&lt;/posy&gt;</div>
-<div class="line">                        &lt;width&gt;300&lt;/width&gt;</div>
-<div class="line">                        &lt;height&gt;22&lt;/height&gt;</div>
-<div class="line">                        &lt;font&gt;font13&lt;/font&gt;</div>
-<div class="line">                        &lt;aligny&gt;center&lt;/aligny&gt;</div>
-<div class="line">                        &lt;selectedcolor&gt;green&lt;/selectedcolor&gt;</div>
-<div class="line">                        &lt;textcolor&gt;grey&lt;/textcolor&gt;</div>
-<div class="line">                        &lt;align&gt;right&lt;/align&gt;</div>
-<div class="line">                        &lt;info&gt;ListItem.Label2&lt;/info&gt;</div>
-<div class="line">                &lt;/control&gt;</div>
-<div class="line">      &lt;/focusedlayout&gt;</div>
-<div class="line">&lt;/control&gt;</div>
-</div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Fixed_List_Container_sect2"></a>
-Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is lower case only. This is important, as xml tags are case-sensitive.</p>
-<table class="doxtable">
-<tr>
-<th align="right">Tag </th><th align="left">Description  </th></tr>
-<tr>
-<td align="right">viewtype </td><td align="left">The type of view. Choices are list, icon, wide, wrap, biglist, bigicon, bigwide, bigwrap, info and biginfo. The label attribute indicates the label that will be used in the "View As" control within the GUI. It is localizable via <b>strings.xml</b>. <em>viewtype</em> has no effect on the view itself. It is used by kodi when switching skin to automatically select a view with a similar layout. Skinners should try to set viewtype to describe the layout as best as possible. </td></tr>
-<tr>
-<td align="right">orientation </td><td align="left">The orientation of the list. Defaults to vertical. </td></tr>
-<tr>
-<td align="right">pagecontrol </td><td align="left">Used to set the <b><code>&lt;id&gt;</code></b> of the page control used to control this list. </td></tr>
-<tr>
-<td align="right">scrolltime </td><td align="left">The time (in ms) to scroll from one item to another. By default, this is 200ms. The list will scroll smoothly from one item to another as needed. Set it to zero to disable the smooth scrolling. The scroll movement can be further adjusted by selecting one of the available <a href="http://kodi.wiki/view/Tweeners">tween</a> methods. </td></tr>
-<tr>
-<td align="right">focusposition </td><td align="left">Specifies the focus position (from 0 -&gt; number of displayable items - 1). The focused position doesn't change - instead, the items move up or down (or left and right) as focus changes. </td></tr>
-<tr>
-<td align="right">movement </td><td align="left">This will make the focused position scroll again at the end of the list. (ie. <b><code>&lt;movement&gt;6&lt;/movement&gt;</code></b> if there are only 6 items below the focus, the focus moves down to the bottom) </td></tr>
-<tr>
-<td align="right">itemlayout </td><td align="left">Specifies the layout of items in the list. Requires the height attribute set in a vertical list, and the width attribute set for a horizontal list. The <b><code>&lt;itemlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
-<tr>
-<td align="right">focusedlayout </td><td align="left">Specifies the layout of items in the list that have focus. Requires the height attribute set in a vertical list, and the width attribute set for a horizontal list. The <b><code>&lt;focusedlayout&gt;</code></b> then contains as many label and image controls as required. <a href="http://kodi.wiki/view/Container_Item_Layout">See here for more information</a>. </td></tr>
-<tr>
-<td align="right">content </td><td align="left">Used to set the item content that this list will contain. Allows the skinner to setup a list anywhere they want with a static set of content, as a useful alternative to the grouplist control. <a href="http://kodi.wiki/view/Static_List_Content">See here for more information</a>. </td></tr>
-<tr>
-<td align="right">preloaditems </td><td align="left">Used in association with the background image loader. <a href="http://kodi.wiki/view/Background_Image_Loader">See here for more information</a>. </td></tr>
-<tr>
-<td align="right">autoscroll </td><td align="left">Used to make the container scroll automatically </td></tr>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p><b>Library definition values</b> </p>
+<hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="a00289" id="a00289"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct AudioEngineFormat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>The audio format structure that fully defines a stream's audio information. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
+<tr class="memitem:a485299b0bb8f0c1cf765321c704bcc40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a485299b0bb8f0c1cf765321c704bcc40">AudioEngineFormat</a> ()</td></tr>
+<tr class="memdesc:a485299b0bb8f0c1cf765321c704bcc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure constructor to set with null values.  <a href="#a485299b0bb8f0c1cf765321c704bcc40">More...</a><br /></td></tr>
+<tr class="separator:a485299b0bb8f0c1cf765321c704bcc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64">compareFormat</a> (const <a class="el" href="a00018.html#a00289">AudioEngineFormat</a> *fmt)</td></tr>
+<tr class="separator:ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Public Attributes</h3></td></tr>
+<tr class="memitem:a98e4ea22d72d3c5dce2821ae10a802f8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a98e4ea22d72d3c5dce2821ae10a802f8">m_channelCount</a></td></tr>
+<tr class="memdesc:a98e4ea22d72d3c5dce2821ae10a802f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of used speaker channels.  <a href="#a98e4ea22d72d3c5dce2821ae10a802f8">More...</a><br /></td></tr>
+<tr class="separator:a98e4ea22d72d3c5dce2821ae10a802f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a53bc9bcf5fe0c7d808858463f370f7"><td class="memItemLeft" align="right" valign="top">enum AEChannel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a4a53bc9bcf5fe0c7d808858463f370f7">m_channels</a> [AE_CH_MAX]</td></tr>
+<tr class="memdesc:a4a53bc9bcf5fe0c7d808858463f370f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stream's channel layout.  <a href="#a4a53bc9bcf5fe0c7d808858463f370f7">More...</a><br /></td></tr>
+<tr class="separator:a4a53bc9bcf5fe0c7d808858463f370f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f4e236f291657200f64cd2f069a8ff7"><td class="memItemLeft" align="right" valign="top">enum AEDataFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a8f4e236f291657200f64cd2f069a8ff7">m_dataFormat</a></td></tr>
+<tr class="memdesc:a8f4e236f291657200f64cd2f069a8ff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stream's data format (eg, AE_FMT_S16LE)  <a href="#a8f4e236f291657200f64cd2f069a8ff7">More...</a><br /></td></tr>
+<tr class="separator:a8f4e236f291657200f64cd2f069a8ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60bb897389267a5034ef730c956b661a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a60bb897389267a5034ef730c956b661a">m_encodedRate</a></td></tr>
+<tr class="memdesc:a60bb897389267a5034ef730c956b661a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The encoded streams sample rate if a bitstream, otherwise undefined.  <a href="#a60bb897389267a5034ef730c956b661a">More...</a><br /></td></tr>
+<tr class="separator:a60bb897389267a5034ef730c956b661a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa03b15b439d70dd92e726e1aac9eb5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a3fa03b15b439d70dd92e726e1aac9eb5">m_frames</a></td></tr>
+<tr class="memdesc:a3fa03b15b439d70dd92e726e1aac9eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of frames per period.  <a href="#a3fa03b15b439d70dd92e726e1aac9eb5">More...</a><br /></td></tr>
+<tr class="separator:a3fa03b15b439d70dd92e726e1aac9eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6b1929e0fbe39e252645260f4d97d8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a3b6b1929e0fbe39e252645260f4d97d8">m_frameSamples</a></td></tr>
+<tr class="memdesc:a3b6b1929e0fbe39e252645260f4d97d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of samples in one frame.  <a href="#a3b6b1929e0fbe39e252645260f4d97d8">More...</a><br /></td></tr>
+<tr class="separator:a3b6b1929e0fbe39e252645260f4d97d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c6321b7fd7f09478ca0bf9931009ee1"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a7c6321b7fd7f09478ca0bf9931009ee1">m_frameSize</a></td></tr>
+<tr class="memdesc:a7c6321b7fd7f09478ca0bf9931009ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of one frame in bytes.  <a href="#a7c6321b7fd7f09478ca0bf9931009ee1">More...</a><br /></td></tr>
+<tr class="separator:a7c6321b7fd7f09478ca0bf9931009ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a046d570c56fd2ae9b813340816ebfdec"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00018.html#a046d570c56fd2ae9b813340816ebfdec">m_sampleRate</a></td></tr>
+<tr class="memdesc:a046d570c56fd2ae9b813340816ebfdec"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stream's sample rate (eg, 48000)  <a href="#a046d570c56fd2ae9b813340816ebfdec">More...</a><br /></td></tr>
+<tr class="separator:a046d570c56fd2ae9b813340816ebfdec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>
- <h1><a class="anchor" id="Fixed_List_Container_sect3"></a>
-See also</h1>
-<h4>Development:</h4>
-<ul>
-<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
-<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
-</ul>
-</div></div><!-- contents -->
+<h4 class="groupheader">Constructor &amp; Destructor Documentation</h4>
+<a class="anchor" id="a485299b0bb8f0c1cf765321c704bcc40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00018.html#a00289">AudioEngineFormat</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Structure constructor to set with null values. </p>
+
+</div>
+</div>
+<h4 class="groupheader">Member Function Documentation</h4>
+<a class="anchor" id="ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool compareFormat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00018.html#a00289">AudioEngineFormat</a> *&#160;</td>
+          <td class="paramname"><em>fmt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Compare this audio engine format with another</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fmt</td><td>The other format to compare with </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if format is equal with the other </dd></dl>
+
+</div>
+</div>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a8f4e236f291657200f64cd2f069a8ff7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum AEDataFormat m_dataFormat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The stream's data format (eg, AE_FMT_S16LE) </p>
+
+</div>
+</div>
+<a class="anchor" id="a046d570c56fd2ae9b813340816ebfdec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int m_sampleRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The stream's sample rate (eg, 48000) </p>
+
+</div>
+</div>
+<a class="anchor" id="a60bb897389267a5034ef730c956b661a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int m_encodedRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The encoded streams sample rate if a bitstream, otherwise undefined. </p>
+
+</div>
+</div>
+<a class="anchor" id="a98e4ea22d72d3c5dce2821ae10a802f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int m_channelCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The amount of used speaker channels. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4a53bc9bcf5fe0c7d808858463f370f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum AEChannel m_channels[AE_CH_MAX]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The stream's channel layout. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3fa03b15b439d70dd92e726e1aac9eb5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int m_frames</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of frames per period. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3b6b1929e0fbe39e252645260f4d97d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int m_frameSamples</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of samples in one frame. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7c6321b7fd7f09478ca0bf9931009ee1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int m_frameSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The size of one frame in bytes. </p>
+
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="ga09549ee338c637b62a65826fd6a4b38c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void AEStreamHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A stream handle pointer, which is only used internally by the addon stream handle. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

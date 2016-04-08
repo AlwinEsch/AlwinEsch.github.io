@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Radio button control</title>
+<title>Kodi Development: Dialog Progress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
    <div id="projectname">Kodi Development
    &#160;<span id="projectnumber">17.0</span>
    </div>
-   <div id="projectbrief">for Binary (API Level 2) and Script based Add-Ons</div>
+   <div id="projectbrief">for Binary (API Level 3) and Script based Add-Ons</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -92,128 +92,372 @@ $(document).ready(function(){initNavTree('a00038.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Radio button control </div>  </div>
+<div class="title">Dialog Progress<div class="ingroups"><a class="el" href="a00239.html">C++</a> &raquo; <a class="el" href="a00258.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Radio_button_control_sect1">Example</a></li>
-<li class="level1"><a href="#Radio_button_control_sect2">Available tags</a></li>
-<li class="level1"><a href="#Radio_button_control_sect3">See also</a></li>
-</ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p><b>Progress dialog shown in center</b> </p>
+<p>The with <a class="el" href="a00146_source.html">#include &lt;kodi/api2/gui/DialogProgress.hpp&gt;</a> given class are basically used to create Kodi's progress dialog with named text fields.</p>
+<div class="image">
+<img src="help.GUIDialogProgress.png" alt="help.GUIDialogProgress.png"/>
 </div>
-<div class="textblock"><p><b>A radio button control (as used for on/off settings).</b></p>
-<p>The radio button control is used for creating push button on/off settings in Kodi. You can choose the position, size, and look of the button. When the user clicks on the radio button, the state will change, toggling the extra textures (<code>textureradioon</code> and <code>textureradiooff</code>). Used for settings controls. </p><hr/>
- <h1><a class="anchor" id="Radio_button_control_sect1"></a>
-Example</h1>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;radiobutton&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;2&quot;</span>&gt;</div>
-<div class="line">      &lt;description&gt;My first radiobutton control&lt;/description&gt;</div>
-<div class="line">      &lt;type&gt;radiobutton&lt;/type&gt;</div>
-<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line">      &lt;height&gt;200&lt;/height&gt;</div>
-<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
-<div class="line">      &lt;colordiffuse&gt;FFFFFFFF&lt;/colordiffuse&gt;</div>
-<div class="line">      &lt;texturefocus&gt;myfocustexture.png&lt;/texturefocus&gt;</div>
-<div class="line">      &lt;texturenofocus&gt;mynormaltexture.png&lt;/texturenofocus&gt;</div>
-<div class="line">      &lt;textureradioonfocus colordiffuse=<span class="stringliteral">&quot;FFFFAAFF&quot;</span>&gt;myradiobutton.png&lt;/textureradioonfocus&gt;</div>
-<div class="line">      &lt;textureradioonnofocus colordiffuse=<span class="stringliteral">&quot;FFFFAAFF&quot;</span>&gt;myradiobutton.png&lt;/textureradioonnofocus&gt;</div>
-<div class="line">      &lt;textureradioofffocus colordiffuse=<span class="stringliteral">&quot;FFFFAAFF&quot;</span>&gt;myradiobutton_nf.png&lt;/textureradioofffocus&gt;</div>
-<div class="line">      &lt;textureradiooffnofocus colordiffuse=<span class="stringliteral">&quot;FFFFAAFF&quot;</span>&gt;myradiobutton_nf.png&lt;/textureradiooffnofocus&gt;</div>
-<div class="line">      &lt;selected&gt;Player.Paused&lt;/selected&gt;</div>
-<div class="line">      &lt;onclick&gt;PlayerControls(Pause)&lt;/onclick&gt;</div>
-<div class="line">      &lt;label&gt;29&lt;/label&gt;</div>
-<div class="line">      &lt;font&gt;font12&lt;/font&gt;</div>
-<div class="line">      &lt;textcolor&gt;FFFFFFFF&lt;/textcolor&gt;</div>
-<div class="line">      &lt;focusedcolor&gt;FFFFFFFF&lt;/focusedcolor&gt;</div>
-<div class="line">      &lt;disabledcolor&gt;80FFFFFF&lt;/disabledcolor&gt;</div>
-<div class="line">      &lt;align&gt;left&lt;/align&gt;</div>
-<div class="line">      &lt;aligny&gt;center&lt;/aligny&gt;</div>
-<div class="line">      &lt;textoffsetx&gt;4&lt;/textoffsetx&gt;</div>
-<div class="line">      &lt;textoffsety&gt;5&lt;/textoffsety&gt;</div>
-<div class="line">      &lt;pulseonselect&gt;<span class="keyword">false</span>&lt;/pulseonselect&gt;</div>
-<div class="line">      &lt;onfocus&gt;-&lt;/onfocus&gt;</div>
-<div class="line">      &lt;onunfocus&gt;-&lt;/onunfocus&gt;</div>
-<div class="line">      &lt;onup&gt;2&lt;/onup&gt;</div>
-<div class="line">      &lt;ondown&gt;3&lt;/ondown&gt;</div>
-<div class="line">      &lt;onleft&gt;1&lt;/onleft&gt;</div>
-<div class="line">      &lt;onright&gt;1&lt;/onright&gt;</div>
-<div class="line">&lt;/control&gt;</div>
-</div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Radio_button_control_sect2"></a>
-Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
-<table class="doxtable">
-<tr>
-<th align="right">Tag </th><th align="left">Description  </th></tr>
-<tr>
-<td align="right">texturefocus </td><td align="left">Specifies the image file which should be displayed when the button has focus. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
-<tr>
-<td align="right">texturenofocus </td><td align="left">Specifies the image file which should be displayed when the button does not have focus. </td></tr>
-<tr>
-<td align="right">textureradioonfocus </td><td align="left">Specifies the image file which should be displayed for the radio button portion when it's the button is on and focused. This texture is positioned on the right of the button – it's positioned 24 pixels from the right edge of the button, and 8 pixels above the center vertically. </td></tr>
-<tr>
-<td align="right">textureradioonnofocus </td><td align="left">Specifies the image file which should be displayed for the radio button portion when it's the button is on and unfocused. This texture is positioned on the right of the button – it's positioned 24 pixels from the right edge of the button, and 8 pixels above the center vertically. </td></tr>
-<tr>
-<td align="right">textureradioon </td><td align="left">A shortcut to set both of the above textures to the same image file. </td></tr>
-<tr>
-<td align="right">textureradioondisabled </td><td align="left">Specifies the image file which should be displayed for the radio button portion when the button is on and disabled. </td></tr>
-<tr>
-<td align="right">textureradioofffocus </td><td align="left">Specifies the image file which should be displayed for the radio button portion when the button is off and focused. </td></tr>
-<tr>
-<td align="right">textureradiooffnofocus </td><td align="left">Specifies the image file which should be displayed for the radio button portion when the button is off and unfocused. </td></tr>
-<tr>
-<td align="right">textureradiooff </td><td align="left">A shortcut to set both of the above textures to the same image file. </td></tr>
-<tr>
-<td align="right">textureradioondisabled </td><td align="left">Specifies the image file which should be displayed for the radio button portion when the button is off and disabled. </td></tr>
-<tr>
-<td align="right">label </td><td align="left">The label used on the button. It can be a link into strings.xml, or an actual text label. </td></tr>
-<tr>
-<td align="right">label2 </td><td align="left">Optional. Will display an 'on' or 'off' label. Only available if you specify an empty radiowidth and radioheight. </td></tr>
-<tr>
-<td align="right">font </td><td align="left">Font used for the button label. From fonts.xml. </td></tr>
-<tr>
-<td align="right">textcolor </td><td align="left">Color used for displaying the button label. In <b>AARRGGBB</b> hex format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
-<tr>
-<td align="right">focusedcolor </td><td align="left">Color used for the button label when the button has in focus. In <b>AARRGGBB</b> hex format or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
-<tr>
-<td align="right">disabledcolor </td><td align="left">Color used for the button label if the button is disabled. In <b>AARRGGBB</b> hex format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
-<tr>
-<td align="right">shadowcolor </td><td align="left">Specifies the color of the drop shadow on the text, in <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
-<tr>
-<td align="right">align </td><td align="left">Label horizontal alignment on the button. Defaults to left, can also be center or right. </td></tr>
-<tr>
-<td align="right">aligny </td><td align="left">Label vertical alignment on the button. Defaults to top, can also be center. </td></tr>
-<tr>
-<td align="right">textoffsetx </td><td align="left">Amount to offset the label from the left (or right) edge of the button when using left or right alignment. </td></tr>
-<tr>
-<td align="right">textoffsety </td><td align="left">Amount to offset the label from the top edge of the button when using top alignment. </td></tr>
-<tr>
-<td align="right">selected </td><td align="left">The boolean condition that when met will cause the control to become selected. <a href="http://kodi.wiki/view/Conditional_Visibility">see here for more information</a>. </td></tr>
-<tr>
-<td align="right">onclick </td><td align="left">The function to perform when the radio button is clicked. Should be a <a href="http://kodi.wiki/view/Built-in_functions_available_to_FTP,_Webserver,_skins,_keymap_and_to_python">built in function</a>. </td></tr>
-<tr>
-<td align="right">radioposx </td><td align="left">X offset of the dot or radio button itself </td></tr>
-<tr>
-<td align="right">radioposy </td><td align="left">Y offset of the dot or radio button itself </td></tr>
-<tr>
-<td align="right">radiowidth </td><td align="left">Width in Pixels of the dot or radio button itself </td></tr>
-<tr>
-<td align="right">radioheight </td><td align="left">Height in Pixels of the dot or radio button itself </td></tr>
-<tr>
-<td align="right">onfocus </td><td align="left">Specifies the action to perform when the button is focused. Should be a built in function. The action is performed after any focus animations have completed. See here for more information. </td></tr>
-<tr>
-<td align="right">onunfocus </td><td align="left">Specifies the action to perform when the button loses focus. Should be a built in function. </td></tr>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/DialogProgress.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="a00038.html#a00303">KodiAPI::GUI::CDialogProgress</a> *progress = <span class="keyword">new</span> <a class="code" href="a00038.html#a00303">KodiAPI::GUI::CDialogProgress</a>;</div>
+<div class="line">progress-&gt;<a class="code" href="a00038.html#gaf6377691fa79c14e16aebaeb9d340b33">SetHeading</a>(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00038.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(1, <span class="stringliteral">&quot;line 1&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00038.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(2, <span class="stringliteral">&quot;line 2&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00038.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(3, <span class="stringliteral">&quot;line 3&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00038.html#ga13580b7f84c1c13f90c1d030ef61faf8">SetCanCancel</a>(<span class="keyword">true</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00038.html#ga4ef9882ff90cb3878eb846335e2b3c07">ShowProgressBar</a>(<span class="keyword">true</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00038.html#ga5e53001785ff30ae485a113b9b8a0ddc">Open</a>();</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 100; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  progress-&gt;<a class="code" href="a00038.html#gadf0353f59469e4b0cab327ea7df9cae8">SetPercentage</a>(i);</div>
+<div class="line">  <a class="code" href="a00241.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">delete</span> progress;</div>
+</div><!-- fragment --> <hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="a00303" id="a00303"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class KodiAPI::GUI::CDialogProgress</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
+<tr class="memitem:ga71e9d732335846eb579f0dd00918b3e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#ga71e9d732335846eb579f0dd00918b3e7">Abort</a> ()</td></tr>
+<tr class="memdesc:ga71e9d732335846eb579f0dd00918b3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">To check progress was canceled on work.  <a href="a00038.html#ga71e9d732335846eb579f0dd00918b3e7">More...</a><br /></td></tr>
+<tr class="separator:ga71e9d732335846eb579f0dd00918b3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78b8dcedb682c8b3ee857485b2c4c2b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#ga78b8dcedb682c8b3ee857485b2c4c2b8">CDialogProgress</a> ()</td></tr>
+<tr class="memdesc:ga78b8dcedb682c8b3ee857485b2c4c2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new dialog.  <a href="a00038.html#ga78b8dcedb682c8b3ee857485b2c4c2b8">More...</a><br /></td></tr>
+<tr class="separator:ga78b8dcedb682c8b3ee857485b2c4c2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae20eeb097c9ebe3506bd1d2bb3d92fda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#gae20eeb097c9ebe3506bd1d2bb3d92fda">GetPercentage</a> () const </td></tr>
+<tr class="memdesc:gae20eeb097c9ebe3506bd1d2bb3d92fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the current progress position as percent.  <a href="a00038.html#gae20eeb097c9ebe3506bd1d2bb3d92fda">More...</a><br /></td></tr>
+<tr class="separator:gae20eeb097c9ebe3506bd1d2bb3d92fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf76bcf12aaec9ab845ea61853a37a33c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#gaf76bcf12aaec9ab845ea61853a37a33c">IsCanceled</a> () const </td></tr>
+<tr class="memdesc:gaf76bcf12aaec9ab845ea61853a37a33c"><td class="mdescLeft">&#160;</td><td class="mdescRight">To check dialog for clicked cancel button.  <a href="a00038.html#gaf76bcf12aaec9ab845ea61853a37a33c">More...</a><br /></td></tr>
+<tr class="separator:gaf76bcf12aaec9ab845ea61853a37a33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e53001785ff30ae485a113b9b8a0ddc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#ga5e53001785ff30ae485a113b9b8a0ddc">Open</a> ()</td></tr>
+<tr class="memdesc:ga5e53001785ff30ae485a113b9b8a0ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">To open the dialog.  <a href="a00038.html#ga5e53001785ff30ae485a113b9b8a0ddc">More...</a><br /></td></tr>
+<tr class="separator:ga5e53001785ff30ae485a113b9b8a0ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13580b7f84c1c13f90c1d030ef61faf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#ga13580b7f84c1c13f90c1d030ef61faf8">SetCanCancel</a> (bool bCanCancel)</td></tr>
+<tr class="memdesc:ga13580b7f84c1c13f90c1d030ef61faf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">To enable and show cancel button on dialog.  <a href="a00038.html#ga13580b7f84c1c13f90c1d030ef61faf8">More...</a><br /></td></tr>
+<tr class="separator:ga13580b7f84c1c13f90c1d030ef61faf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6377691fa79c14e16aebaeb9d340b33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#gaf6377691fa79c14e16aebaeb9d340b33">SetHeading</a> (const std::string &amp;heading)</td></tr>
+<tr class="memdesc:gaf6377691fa79c14e16aebaeb9d340b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the heading title of dialog.  <a href="a00038.html#gaf6377691fa79c14e16aebaeb9d340b33">More...</a><br /></td></tr>
+<tr class="separator:gaf6377691fa79c14e16aebaeb9d340b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga845054cd7ff1978a112126086a8ec5ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a> (unsigned int iLine, const std::string &amp;line)</td></tr>
+<tr class="memdesc:ga845054cd7ff1978a112126086a8ec5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the line text field on dialog from 0 - 2.  <a href="a00038.html#ga845054cd7ff1978a112126086a8ec5ba">More...</a><br /></td></tr>
+<tr class="separator:ga845054cd7ff1978a112126086a8ec5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf0353f59469e4b0cab327ea7df9cae8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#gadf0353f59469e4b0cab327ea7df9cae8">SetPercentage</a> (int iPercentage)</td></tr>
+<tr class="memdesc:gadf0353f59469e4b0cab327ea7df9cae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current progress position as percent.  <a href="a00038.html#gadf0353f59469e4b0cab327ea7df9cae8">More...</a><br /></td></tr>
+<tr class="separator:gadf0353f59469e4b0cab327ea7df9cae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe4b80962f0d7bdd3b0a73b83ef06323"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#gafe4b80962f0d7bdd3b0a73b83ef06323">SetProgressAdvance</a> (int nSteps=1)</td></tr>
+<tr class="memdesc:gafe4b80962f0d7bdd3b0a73b83ef06323"><td class="mdescLeft">&#160;</td><td class="mdescRight">To increase progress bar by defined step size until reach of maximum position.  <a href="a00038.html#gafe4b80962f0d7bdd3b0a73b83ef06323">More...</a><br /></td></tr>
+<tr class="separator:gafe4b80962f0d7bdd3b0a73b83ef06323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad397a19fe15c25e5077d34fd43da6e5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#gad397a19fe15c25e5077d34fd43da6e5a">SetProgressMax</a> (int iMax)</td></tr>
+<tr class="memdesc:gad397a19fe15c25e5077d34fd43da6e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum position of progress, needed if <code>SetProgressAdvance(...)</code> is used.  <a href="a00038.html#gad397a19fe15c25e5077d34fd43da6e5a">More...</a><br /></td></tr>
+<tr class="separator:gad397a19fe15c25e5077d34fd43da6e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ef9882ff90cb3878eb846335e2b3c07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#ga4ef9882ff90cb3878eb846335e2b3c07">ShowProgressBar</a> (bool bOnOff)</td></tr>
+<tr class="memdesc:ga4ef9882ff90cb3878eb846335e2b3c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">To show or hide progress bar dialog.  <a href="a00038.html#ga4ef9882ff90cb3878eb846335e2b3c07">More...</a><br /></td></tr>
+<tr class="separator:ga4ef9882ff90cb3878eb846335e2b3c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4ebae45c5583fbefea366318f13714e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00038.html#gaf4ebae45c5583fbefea366318f13714e">~CDialogProgress</a> ()</td></tr>
+<tr class="memdesc:gaf4ebae45c5583fbefea366318f13714e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="a00038.html#gaf4ebae45c5583fbefea366318f13714e">More...</a><br /></td></tr>
+<tr class="separator:gaf4ebae45c5583fbefea366318f13714e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>
- <h1><a class="anchor" id="Radio_button_control_sect3"></a>
-See also</h1>
-<h4>Development:</h4>
-<ul>
-<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
-<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
-</ul>
-</div></div><!-- contents -->
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga78b8dcedb682c8b3ee857485b2c4c2b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDialogProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new dialog. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf4ebae45c5583fbefea366318f13714e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~CDialogProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga5e53001785ff30ae485a113b9b8a0ddc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To open the dialog. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf6377691fa79c14e16aebaeb9d340b33"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetHeading </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the heading title of dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Title string to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga845054cd7ff1978a112126086a8ec5ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetLine </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>iLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the line text field on dialog from 0 - 2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iLine</td><td>Line number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>Text string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga13580b7f84c1c13f90c1d030ef61faf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetCanCancel </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bCanCancel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To enable and show cancel button on dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bCanCancel</td><td>if true becomes it shown </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf76bcf12aaec9ab845ea61853a37a33c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsCanceled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To check dialog for clicked cancel button. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if canceled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gadf0353f59469e4b0cab327ea7df9cae8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPercentage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iPercentage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current progress position as percent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gae20eeb097c9ebe3506bd1d2bb3d92fda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetPercentage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the current progress position as percent. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current Position used from 0.0 to 100.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4ef9882ff90cb3878eb846335e2b3c07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowProgressBar </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bOnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To show or hide progress bar dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bOnOff</td><td>If true becomes it shown </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gad397a19fe15c25e5077d34fd43da6e5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProgressMax </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iMax</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the maximum position of progress, needed if <code>SetProgressAdvance(...)</code> is used. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iMax</td><td>Biggest usable position to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gafe4b80962f0d7bdd3b0a73b83ef06323"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProgressAdvance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSteps</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To increase progress bar by defined step size until reach of maximum position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nSteps</td><td>Step size to increase, default is 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga71e9d732335846eb579f0dd00918b3e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Abort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To check progress was canceled on work. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if aborted </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

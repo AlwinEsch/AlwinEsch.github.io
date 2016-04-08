@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['abort',['Abort',['../a00038.html#ga71e9d732335846eb579f0dd00918b3e7',1,'KodiAPI::GUI::CDialogProgress']]],
+  ['abortrequested',['abortRequested',['../a00052.html#ga5b1ac2490aae34c81dd3ab6ecc58d8a5',1,'XBMCAddon::xbmc::Monitor']]],
+  ['add',['add',['../a00054.html#ga979e740949519ca0e88da2ff9934a4d5',1,'XBMCAddon::xbmc::PlayList']]],
+  ['addcontextmenuitems',['AddContextMenuItems',['../a00039.html#ga90dd27f19f3b3537714f6ab19849b1cb',1,'KodiAPI::GUI::CListItem']]],
+  ['addcontrol',['addControl',['../a00075.html#gac37d32aa4a0f2292f1812c1f1af9f3ca',1,'XBMCAddon::xbmcgui::Window']]],
+  ['addcontrols',['addControls',['../a00075.html#gacfd7c99ea69252b8c195f9863af5e012',1,'XBMCAddon::xbmcgui::Window']]],
+  ['adddata',['AddData',['../a00024.html#gaa2503d36e6847a31997d4e9bf60c50b4',1,'KodiAPI::AudioEngine::CStream']]],
+  ['adddirectoryitem',['addDirectoryItem',['../a00243.html#ga0b7759ec71ba6098cd71289f7ffc103d',1,'ModuleXbmcplugin.h']]],
+  ['adddirectoryitems',['addDirectoryItems',['../a00243.html#gae65e249416de893f077e2c0010b7f697',1,'ModuleXbmcplugin.h']]],
+  ['adddspmenuhook',['AddDSPMenuHook',['../a00257.html#gac50957717cca9c40e9bdd97a718ba0d7',1,'KodiAPI::AudioEngine::General']]],
+  ['additem',['AddItem',['../a00040.html#ga5ee402b42dd18e0f49f54ac6de83bd89',1,'KodiAPI::GUI::CWindow::AddItem()'],['../a00045.html#gaaa7aba33ed28df8d2adfa6af9b097575',1,'KodiAPI::Player::CPlayList::AddItem(const std::string &amp;url, int index=-1)'],['../a00045.html#gacfa6f7082b33d605cbcd5e03cee64431',1,'KodiAPI::Player::CPlayList::AddItem(const API_NAMESPACE_NAME::KodiAPI::GUI::CListItem *listitem, int index=-1)'],['../a00077.html#ga87ffff74f065758ae9884ecc87102af1',1,'XBMCAddon::xbmcgui::WindowXML::addItem()'],['../a00066.html#gad0ffe4debd8af86effc82b80d3a2dd11',1,'XBMCAddon::xbmcgui::ControlList::addItem()']]],
+  ['additems',['addItems',['../a00066.html#ga6d9c948e88aa291c485ce2435c5e6665',1,'XBMCAddon::xbmcgui::ControlList']]],
+  ['addlabel',['AddLabel',['../a00027.html#ga47cfd2f63ce533672996085727a5fdd4',1,'KodiAPI::GUI::CControlFadeLabel::AddLabel()'],['../a00035.html#ga9c5e370148322bad6dbbacdbe88ba5f6',1,'KodiAPI::GUI::CControlSpin::AddLabel(const std::string &amp;label, const std::string &amp;value)'],['../a00035.html#gaeb7d340f29d5051d948b3305dccadd51',1,'KodiAPI::GUI::CControlSpin::AddLabel(const std::string &amp;label, int value)'],['../a00062.html#ga5c23c1e6768621ef5114c5b56a66c7c9',1,'XBMCAddon::xbmcgui::ControlFadeLabel::addLabel()']]],
+  ['addmenuhook',['AddMenuHook',['../a00281.html#ga19b004e52c9ec0a8d6e7b8dddae1e413',1,'KodiAPI::PVR::General']]],
+  ['addsortmethod',['addSortMethod',['../a00243.html#gabc68ce9f13d4d68df93d19a61f53ff8e',1,'ModuleXbmcplugin.h']]],
+  ['addstreaminfo',['AddStreamInfo',['../a00039.html#ga80655c971ff25be8ae0d1f7fc28a55a3',1,'KodiAPI::GUI::CListItem']]],
+  ['addstringitem',['AddStringItem',['../a00040.html#ga22199a49598ff7b9a2bd8eb0bc605aed',1,'KodiAPI::GUI::CWindow']]],
+  ['addsubtitle',['AddSubtitle',['../a00044.html#gae448ea91b6bd9a470c3ee935dbf50b54',1,'KodiAPI::Player::CPlayer']]],
+  ['allocatedemuxpacket',['AllocateDemuxPacket',['../a00274.html#gaa73596c7986592032d59da8ad3cfca28',1,'KodiAPI::InputStream']]],
+  ['atime',['atime',['../a00080.html#ga65d49375e5251d4e616a45e3c898d6cc',1,'XBMCAddon::xbmcvfs::Stat']]],
+  ['audioengineformat',['AudioEngineFormat',['../a00018.html#a485299b0bb8f0c1cf765321c704bcc40',1,'AudioEngineFormat']]],
+  ['audioresume',['audioResume',['../a00241.html#gaee0301aad7c7ba0deac7b51d046c59b6',1,'audioResume():&#160;ModuleXbmc.h'],['../a00251.html#ga8e1971714227df741234de8a7ae21cb9',1,'KodiAPI::AddOn::General::AudioResume()']]],
+  ['audiosuspend',['AudioSuspend',['../a00251.html#ga8e6b0e117f01672e7b14035916be6043',1,'KodiAPI::AddOn::General::AudioSuspend()'],['../a00241.html#ga2babadc0bebb8422edc6d40b11d0d2f7',1,'audioSuspend():&#160;ModuleXbmc.h']]],
+  ['autoscroll',['autoScroll',['../a00071.html#gad492befcc0c8ee0e1fecb0d6a6bd7d1c',1,'XBMCAddon::xbmcgui::ControlTextBox']]]
+];

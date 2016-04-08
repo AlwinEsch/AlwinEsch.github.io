@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Progress Control</title>
+<title>Kodi Development: Control Text Box</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,7 +35,7 @@
    <div id="projectname">Kodi Development
    &#160;<span id="projectnumber">17.0</span>
    </div>
-   <div id="projectbrief">for Binary (API Level 2) and Script based Add-Ons</div>
+   <div id="projectbrief">for Binary (API Level 3) and Script based Add-Ons</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -92,66 +92,267 @@ $(document).ready(function(){initNavTree('a00036.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Progress Control </div>  </div>
+<div class="title">Control Text Box<div class="ingroups"><a class="el" href="a00239.html">C++</a> &raquo; <a class="el" href="a00258.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Progress_Control_sect1">Example</a></li>
-<li class="level1"><a href="#Progress_Control_sect2">Available tags</a></li>
-<li class="level1"><a href="#Progress_Control_sect3">See also</a></li>
-</ul>
-</div>
-<div class="textblock"><p><b>Used to show the progress of a particular operation.</b></p>
-<p>The progress control is used to show the progress of an item that may take a long time, or to show how far through a movie you are. You can choose the position, size, and look of the progress control.</p>
-<hr/>
- <h1><a class="anchor" id="Progress_Control_sect1"></a>
-Example</h1>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;progress&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;12&quot;</span>&gt;</div>
-<div class="line">      &lt;description&gt;My first progress control&lt;/description&gt;</div>
-<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line">      &lt;height&gt;30&lt;/height&gt;</div>
-<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
-<div class="line">      &lt;reveal&gt;<span class="keyword">false</span>&lt;/reveal&gt;</div>
-<div class="line">      &lt;texturebg&gt;mybackgroundtexture.png&lt;/texturebg&gt;</div>
-<div class="line">      &lt;lefttexture&gt;mydowntexture.png&lt;/lefttexture&gt;</div>
-<div class="line">      &lt;midtexture&gt;mymidtexture.png&lt;/midtexture&gt;</div>
-<div class="line">      &lt;righttexture&gt;myrighttexture.png&lt;/righttexture&gt;</div>
-<div class="line">      &lt;overlaytexture&gt;myoverlaytexture.png&lt;/overlaytexture&gt;</div>
-<div class="line">      &lt;info&gt;&lt;/info&gt;</div>
-<div class="line">&lt;/control&gt;</div>
-</div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Progress_Control_sect2"></a>
-Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
-<table class="doxtable">
-<tr>
-<th align="right">Tag </th><th align="left">Description  </th></tr>
-<tr>
-<td align="right">reveal </td><td align="left">If set to true the midtexture will reveal itself instead of stretching to fill the gap (works best when its the same size as <b>texturebg</b>) </td></tr>
-<tr>
-<td align="right">texturebg </td><td align="left">Specifies the image file which should be displayed in the background of the progress control. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
-<tr>
-<td align="right">lefttexture </td><td align="left">Specifies the image file which should be displayed for the left side of the progress bar. This is rendered on the left side of the bar. </td></tr>
-<tr>
-<td align="right">midtexture </td><td align="left">Specifies the image file which should be displayed for the middle portion of the progress bar. This is the <code>fill</code> texture used to fill up the bar. It's positioned on the right of the <b><code>&lt;lefttexture&gt;</code></b> texture, and fills the gap between the <b><code>&lt;lefttexture&gt;</code></b> and <b><code>&lt;righttexture&gt;</code></b> textures, depending on how far progressed the item is. </td></tr>
-<tr>
-<td align="right">righttexture </td><td align="left">Specifies the image file which should be displayed for the right side of the progress bar. This is rendered on the right side of the bar. </td></tr>
-<tr>
-<td align="right">overlaytexture </td><td align="left">Specifies the image file which should be displayed over the top of all other images in the progress bar. It is centered vertically and horizontally within the space taken up by the background image. </td></tr>
-<tr>
-<td align="right">info </td><td align="left">Specifies the information that the progress bar is reporting on. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p><b>Used to show a multi-page piece of text</b> </p>
+<p>The text box control can be used to display descriptions, help texts or other larger texts. It corresponds to the representation which is also to be seen on the CDialogTextViewer.</p>
+<p>It has the header <a class="el" href="a00139_source.html">#include &lt;kodi/api2/gui/ControlTextBox.hpp&gt;</a> be included to enjoy it.</p>
+<p>Here you find the needed skin part for a textbox control.</p>
+<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
+<hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="a00301" id="a00301"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class KodiAPI::GUI::CControlTextBox</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public Member Functions</h3></td></tr>
+<tr class="memitem:gadbd8d4b43619362ed5e9c4f4bd84b118"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00036.html#gadbd8d4b43619362ed5e9c4f4bd84b118">CControlTextBox</a> (<a class="el" href="a00040.html#a00330">CWindow</a> *window, int controlId)</td></tr>
+<tr class="memdesc:gadbd8d4b43619362ed5e9c4f4bd84b118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new control.  <a href="a00036.html#gadbd8d4b43619362ed5e9c4f4bd84b118">More...</a><br /></td></tr>
+<tr class="separator:gadbd8d4b43619362ed5e9c4f4bd84b118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1af3f7fd8b95cc66e7599caca454f8ef"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00036.html#ga1af3f7fd8b95cc66e7599caca454f8ef">GetText</a> () const </td></tr>
+<tr class="memdesc:ga1af3f7fd8b95cc66e7599caca454f8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the used text from control.  <a href="a00036.html#ga1af3f7fd8b95cc66e7599caca454f8ef">More...</a><br /></td></tr>
+<tr class="separator:ga1af3f7fd8b95cc66e7599caca454f8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga372de693ad40b3f42839c8ec6ac845f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00036.html#ga372de693ad40b3f42839c8ec6ac845f4">Reset</a> ()</td></tr>
+<tr class="memdesc:ga372de693ad40b3f42839c8ec6ac845f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">To reset box an remove all the text.  <a href="a00036.html#ga372de693ad40b3f42839c8ec6ac845f4">More...</a><br /></td></tr>
+<tr class="separator:ga372de693ad40b3f42839c8ec6ac845f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b8c674da6e7eb58fcf75d2f812cfd5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00036.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d">Scroll</a> (unsigned int position)</td></tr>
+<tr class="memdesc:ga2b8c674da6e7eb58fcf75d2f812cfd5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">To scroll text on other position.  <a href="a00036.html#ga2b8c674da6e7eb58fcf75d2f812cfd5d">More...</a><br /></td></tr>
+<tr class="separator:ga2b8c674da6e7eb58fcf75d2f812cfd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3e4bbb4388da7a56e8252018e4fbb00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00036.html#gad3e4bbb4388da7a56e8252018e4fbb00">SetAutoScrolling</a> (int delay, int time, int repeat)</td></tr>
+<tr class="memdesc:gad3e4bbb4388da7a56e8252018e4fbb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set automatic scrolling of textbox.  <a href="a00036.html#gad3e4bbb4388da7a56e8252018e4fbb00">More...</a><br /></td></tr>
+<tr class="separator:gad3e4bbb4388da7a56e8252018e4fbb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8008c108280948ebd79830f222068455"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00036.html#ga8008c108280948ebd79830f222068455">SetText</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:ga8008c108280948ebd79830f222068455"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set the text on box.  <a href="a00036.html#ga8008c108280948ebd79830f222068455">More...</a><br /></td></tr>
+<tr class="separator:ga8008c108280948ebd79830f222068455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00036.html#ga71a209185b7a98adf0a310d2c44cdbe6">SetVisible</a> (bool visible)</td></tr>
+<tr class="memdesc:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control on window to visible.  <a href="a00036.html#ga71a209185b7a98adf0a310d2c44cdbe6">More...</a><br /></td></tr>
+<tr class="separator:ga71a209185b7a98adf0a310d2c44cdbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63bb701dbad283f26754ca62085dec77"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00036.html#ga63bb701dbad283f26754ca62085dec77">~CControlTextBox</a> ()</td></tr>
+<tr class="memdesc:ga63bb701dbad283f26754ca62085dec77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="a00036.html#ga63bb701dbad283f26754ca62085dec77">More...</a><br /></td></tr>
+<tr class="separator:ga63bb701dbad283f26754ca62085dec77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>
- <h1><a class="anchor" id="Progress_Control_sect3"></a>
-See also</h1>
-<h4>Development:</h4>
-<ul>
-<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
-<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
-</ul>
-</div></div><!-- contents -->
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gadbd8d4b43619362ed5e9c4f4bd84b118"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CControlTextBox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00040.html#a00330">CWindow</a> *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>related window control class </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>Used skin xml control id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga63bb701dbad283f26754ca62085dec77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~CControlTextBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga71a209185b7a98adf0a310d2c44cdbe6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetVisible </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>visible</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the control on window to visible. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">visible</td><td>If true visible, otherwise hidden </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga372de693ad40b3f42839c8ec6ac845f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To reset box an remove all the text. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga8008c108280948ebd79830f222068455"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetText </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the text on box. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>Text to show </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1af3f7fd8b95cc66e7599caca454f8ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetText </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the used text from control. </p>
+<dl class="section return"><dt>Returns</dt><dd>Text shown </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2b8c674da6e7eb58fcf75d2f812cfd5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scroll </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To scroll text on other position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The line position to scroll to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gad3e4bbb4388da7a56e8252018e4fbb00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetAutoScrolling </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>delay</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>repeat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set automatic scrolling of textbox. </p>
+<p>Specifies the timing and conditions of any autoscrolling this textbox should have. Times are in milliseconds. The content is delayed for the given delay, then scrolls at a rate of one line per time interval until the end. If the repeat tag is present, it then delays for the repeat time, fades out over 1 second, and repeats. It does not wrap or reset to the top at the end of the scroll.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">delay</td><td>Content delay </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>One line per time interval </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">repeat</td><td>Delays with given time, fades out over 1 second, and repeats </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
