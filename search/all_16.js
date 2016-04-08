@@ -18,7 +18,7 @@ var searchData=
   ['playsfx',['playSFX',['../a00241.html#ga30c84926c8fcac04a99d4cf18fc8fae6',1,'ModuleXbmc.h']]],
   ['popactivewindowid',['popActiveWindowId',['../a00075.html#a09309d4a53608ecb531fcc9bb4ae97b2',1,'XBMCAddon::xbmcgui::Window']]],
   ['position',['position',['../a00017.html#a76777b356ab2a080225682528119c4fe',1,'ADDON_VideoInfoTag_Resume']]],
-  ['python_20development',['Python Development',['../a00240.html',1,'']]],
+  ['python',['Python',['../a00240.html',1,'']]],
   ['player',['Player',['../a00053.html',1,'']]],
   ['playlist',['PlayList',['../a00054.html',1,'']]]
 ];
