@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Subclass - WindowDialog</title>
+<title>Kodi Development: Action</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,33 +92,124 @@ $(document).ready(function(){initNavTree('a00309.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Subclass - WindowDialog<div class="ingroups"><a class="el" href="a00291.html">Python</a> &raquo; <a class="el" href="a00293.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00307.html">Window</a></div></div>  </div>
+<div class="title">Action<div class="ingroups"><a class="el" href="a00293.html">Python</a> &raquo; <a class="el" href="a00295.html">Library - xbmcgui</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>GUI window dialog class for Add-Ons.</b> </p>
-<p><b><code>xbmcgui.WindowDialog(int windowId):</code></b></p>
-<p>Creates a new window from Add-On usable dialog class. This is to create window for related controls by system calls.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">windowId</td><td>[opt] Specify an id to use an existing window. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">ValueError</td><td>if supplied window Id does not exist. </td></tr>
-    <tr><td class="paramname">Exception</td><td>if more then 200 windows are created.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Deleting this window will activate the old window that was active and resets (not delete) all controls that are associated with this window.</p>
+<p><b><a class="el" href="a00108.html">Action</a> class.</b> </p>
+<p><b><code>xbmcgui.Action():</code></b></p>
+<p>This class serves in addition to identify carried out kodi_key_action_ids of Kodi and to be able to carry out thereby own necessary steps.</p>
+<p>The data of this class are always transmitted by callback <a class="el" href="a00311.html#ga46acbc2206f67d5f8e1d44d3ebe4fa68" title="onAction method. ">Window::onAction</a> at a window. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gac7a54ea5a10c5c4683f16e3f83f77104"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To get kodi_key_action_ids. </p>
+<p>This function returns the identification code used by the explained order, it is necessary to determine the type of command from kodi_key_action_ids.</p>
+<dl class="section return"><dt>Returns</dt><dd>The action's current id as a long or 0 if no action is mapped in the xml's.</dd></dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.WindowDialog()</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;width = dialog.getWidth()</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
-</div><!-- fragment --> </div><!-- contents -->
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">def </span>onAction(self, action):</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_PREVIOUS_MENU:</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    print(<span class="stringliteral">&#39;action recieved: previous&#39;</span>)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gab60f32db21659ba5c3f4d145b9e5947b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long getButtonCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the button code for this action. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga3ee04d80d5e7af5563ecc098623a90ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getAmount1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the first amount of force applied to the thumbstick. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga0f5620d911d309e2dadadc44359bce45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getAmount2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the second amount of force applied to the thumbstick. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Functions - Music info tag</title>
+<title>Kodi Development: Window</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,181 +91,232 @@ $(document).ready(function(){initNavTree('a00353.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Functions - Music info tag<div class="ingroups"><a class="el" href="a00290.html">C++</a> &raquo; <a class="el" href="a00348.html">4. GUI</a> &raquo; <a class="el" href="a00356.html">List Item</a></div></div>  </div>
+<div class="title">Window<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00351.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ga15e9d1572e077825edbaa17d36a35d4b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum ADDON_MusicInfoTag</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Music info tag data transfer flags. </p>
-<p><a class="anchor" id="ADDON_MusicInfoTag"></a> Flags are used to identify data send from Add-on to Kodi and is used by the following functions:</p><ul>
-<li><a class="el" href="a00353.html#ga21b04708daf767915e62979acd47b6aa">CListItem::SetMusicInfo_BOOL(...);</a></li>
-<li><a class="el" href="a00353.html#gab97b3b7b94b59c5ef326982feda630a7">CListItem::SetMusicInfo_INT(...);</a></li>
-<li><a class="el" href="a00353.html#ga03cc9e6f99b5527feaf63c6e1ac897b0">CListItem::SetMusicInfo_UINT(...);</a></li>
-<li><a class="el" href="a00353.html#ga7b0dd8566cc13729d8469b569bcf7fa9">CListItem::SetMusicInfo_FLOAT(...);</a></li>
-<li><a class="el" href="a00353.html#ga8a915dea0ebfde069cfd3decae9eeebe">CListItem::SetMusicInfo_STRING(...);</a></li>
-<li><a class="el" href="a00353.html#gad37cb7a265cdfbe71a9c630ba1a88926">CListItem::SetMusicInfo_STRING_LIST(...);</a></li>
-</ul>
-<dl class="section note"><dt>Note</dt><dd>The end string of value shows the type of function to use.</dd></dl>
-<p><b>Music example Values</b>: </p><table class="doxtable">
-<tr>
-<th align="right">Info label </th><th align="left">Description  </th></tr>
-<tr>
-<td align="right">tracknumber </td><td align="left">integer (8) </td></tr>
-<tr>
-<td align="right">discnumber </td><td align="left">integer (2) </td></tr>
-<tr>
-<td align="right">duration </td><td align="left">integer (245) - duration in seconds </td></tr>
-<tr>
-<td align="right">year </td><td align="left">integer (1998) </td></tr>
-<tr>
-<td align="right">genre </td><td align="left">string (Rock) </td></tr>
-<tr>
-<td align="right">album </td><td align="left">string (Pulse) </td></tr>
-<tr>
-<td align="right">artist </td><td align="left">string (Muse) </td></tr>
-<tr>
-<td align="right">title </td><td align="left">string (American Pie) </td></tr>
-<tr>
-<td align="right">rating </td><td align="left">float - range is between 0 and 10 </td></tr>
-<tr>
-<td align="right">userrating </td><td align="left">integer - range is 1..10 </td></tr>
-<tr>
-<td align="right">lyrics </td><td align="left">string (On a dark desert highway...) </td></tr>
-<tr>
-<td align="right">playcount </td><td align="left">integer (2) - number of times this item has been played </td></tr>
-<tr>
-<td align="right">lastplayed </td><td align="left">string (Y-m-d h:m:s = 2009-04-05 23:16:04) </td></tr>
+<p><b>Main window control class</b> </p>
+<p>The with <a class="el" href="a00203_source.html">#include &lt;kodi/api2/gui/Window.hpp&gt;</a> included file brings support to create a window or dialog on Kodi. </p><hr/>
+<p>On functions defined input variable <b><code>controlId</code> (GUI control identifier)</b> is the on window.xml defined value behind type added with <code><b>id="..."</b></code> and used to identify for changes there and on callbacks.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;label&quot; id=&quot;31&quot;&gt;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;description&gt;Title Label&lt;/description&gt;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  ...</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;&lt;/control&gt;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;&lt;control type=&quot;progress&quot; id=&quot;32&quot;&gt;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  &lt;description&gt;progress control&lt;/description&gt;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  ...</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;&lt;/control&gt;</div>
+</div><!-- fragment --> <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00354"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00354.html">Definitions, structures and enumerators</a></td></tr>
+<tr class="memdesc:a00354"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Library definition values</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00355"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00355.html">Callback functions from Kodi to add-on</a></td></tr>
+<tr class="memdesc:a00355"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>GUI window callback functions.</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba960a82adcf21911abb6168f72971b6d4"></a>ADDON_MusicInfoTag____url_______________________STRING&#160;</td><td class="fielddoc">
-<p>URL of the music song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba6cea37ffbbfb5560ac66b08328b4a66a"></a>ADDON_MusicInfoTag____title_____________________STRING&#160;</td><td class="fielddoc">
-<p>Title of the currently selected song or movie in a container. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bab422f497aff2a1652904be41c50b12d7"></a>ADDON_MusicInfoTag____artist____________________STRING_LIST&#160;</td><td class="fielddoc">
-<p>Artist of the currently selected song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba3c8de4c32c54a1b5e73d5da568e16078"></a>ADDON_MusicInfoTag____displayartist_____________STRING&#160;</td><td class="fielddoc">
-<p>Artist of the currently selected song to show on skin. </p>
-<dl class="section note"><dt>Note</dt><dd>Only used for the way from Kodi to Add-on, not to use with CListItem::SetMusicInfo_STRING(...) to send from Add-on to Kodi. </dd></dl>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba17f9ed1a07fc4cfcd4f134a81ed3d430"></a>ADDON_MusicInfoTag____displayalbumartist________STRING&#160;</td><td class="fielddoc">
-<p>Album artist name to show on skin. </p>
-<dl class="section note"><dt>Note</dt><dd>Only used for the way from Kodi to Add-on, not to use with CListItem::SetMusicInfo_STRING(...) to send from Add-on to Kodi. </dd></dl>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bad464ee6f23edb4cddd0aeb77be51ebfc"></a>ADDON_MusicInfoTag____album_____________________STRING&#160;</td><td class="fielddoc">
-<p>The album of the currently selected song in a container. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4baed00303dedd608abed2a92c31c6829ca"></a>ADDON_MusicInfoTag____albumartist_______________STRING_LIST&#160;</td><td class="fielddoc">
-<p>The artist of the currently selected album in a list. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4baa40a3f2e90d02cf1c4aede3a51411abd"></a>ADDON_MusicInfoTag____genre_____________________STRING_LIST&#160;</td><td class="fielddoc">
-<p>Genre(s) of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bad7a1efe64ef925ededc317818dc5845f"></a>ADDON_MusicInfoTag____duration__________________INT&#160;</td><td class="fielddoc">
-<p>Duration of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba02f1037ee4888a83aec07ee71ae12aa7"></a>ADDON_MusicInfoTag____track_number______________INT&#160;</td><td class="fielddoc">
-<p>Track number of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bac356779be9ae66b85dd2251e234ecd74"></a>ADDON_MusicInfoTag____disc_number_______________INT&#160;</td><td class="fielddoc">
-<p>Disc Number of current song stored in ID tag info. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba47585e253cd941198f04be26a6f85210"></a>ADDON_MusicInfoTag____loaded____________________BOOL&#160;</td><td class="fielddoc">
-<p>Disc number of use. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bada6a44efcb22077ca21c9c99216a8dd8"></a>ADDON_MusicInfoTag____year______________________UINT&#160;</td><td class="fielddoc">
-<p>Year of release of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba0fbd1e3407adae735c569543ff81f597"></a>ADDON_MusicInfoTag____musicbrainztrackid________STRING&#160;</td><td class="fielddoc">
-<p>MusicBrainz metadata track ID. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba4858cad68465ba79c9515f4cdb539b07"></a>ADDON_MusicInfoTag____musicbrainzartistid_______STRING_LIST&#160;</td><td class="fielddoc">
-<p>MusicBrainz metadata artist ID. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba26f968b7b51cf148d97897c03c6ee681"></a>ADDON_MusicInfoTag____musicbrainzalbumid________STRING&#160;</td><td class="fielddoc">
-<p>MusicBrainz metadata album ID. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bad97ae2c439dc18aba602403b35ca75f3"></a>ADDON_MusicInfoTag____musicbrainzalbumartistid__STRING_LIST&#160;</td><td class="fielddoc">
-<p>MusicBrainz metadata Album &amp; Artist ID. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bad7798dc1c798865e54bb5eef317c2ef2"></a>ADDON_MusicInfoTag____mediatype_________________STRING&#160;</td><td class="fielddoc">
-<p>Media type to use for music on list item Used strings: </p>
-<ul>
-<li>"music"</li>
-<li>"song"</li>
-<li>"album"</li>
-<li>"artist" </li>
-</ul>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4babb6315ae2713a66da5d56e1481a7b972"></a>ADDON_MusicInfoTag____comment___________________STRING&#160;</td><td class="fielddoc">
-<p>Comment of current song stored in ID tag info. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba6e5fcd450f74d91539ab80401bf10b80"></a>ADDON_MusicInfoTag____mood______________________STRING&#160;</td><td class="fielddoc">
-<p>Shows the moods of the currently playing artist. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4badae4ad037400aa041190df08c9fcf81f"></a>ADDON_MusicInfoTag____rating____________________FLOAT&#160;</td><td class="fielddoc">
-<p>Numeric Rating of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba7bd19ce1a5c6db834295ee3cf2ca7bc9"></a>ADDON_MusicInfoTag____userrating________________INT&#160;</td><td class="fielddoc">
-<p>The user rating of the currently playing item. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba4c4768dc7535db9d96d80fd0986a099d"></a>ADDON_MusicInfoTag____votes_____________________INT&#160;</td><td class="fielddoc">
-<p>Votes of the current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba98bbdaa55c7ea859f0a31290267fa398"></a>ADDON_MusicInfoTag____playcount_________________INT&#160;</td><td class="fielddoc">
-<p>Playcount of current playing song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba1d2a1b366fd27d9861b7f93be4f92837"></a>ADDON_MusicInfoTag____lastplayed________________STRING_DATE_TIME&#160;</td><td class="fielddoc">
-<p>Last play date of current playing song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4baa21a7f90b4acd2b20e6c1bbe7e186a9b"></a>ADDON_MusicInfoTag____dateadded_________________STRING_DATE_TIME&#160;</td><td class="fielddoc">
-<p>The date the currently playing song was added to the library. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba1d946633be6876480cc08c43fe278387"></a>ADDON_MusicInfoTag____releasedate_______________STRING_DATE_TIME&#160;</td><td class="fielddoc">
-<p>Shows the release/aired date of the currently playing song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bacf6743b4f908b34f95650832f6537b31"></a>ADDON_MusicInfoTag____lyrics____________________STRING&#160;</td><td class="fielddoc">
-<p>Lyrics of current song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba265dff087bd576af073de36e39a41b8f"></a>ADDON_MusicInfoTag____albumid___________________INT&#160;</td><td class="fielddoc">
-<p>Album id of currently playing song. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4ba16d6ad0031d20f905592a80d777b3c2f"></a>ADDON_MusicInfoTag____compilation_______________BOOL&#160;</td><td class="fielddoc">
-<pre class="fragment"></pre> </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga15e9d1572e077825edbaa17d36a35d4bafdee5675faf6a71d0b9ac1276c287a8c"></a>ADDON_MusicInfoTag____albumreleasetype__________UINT&#160;</td><td class="fielddoc">
-<pre class="fragment"></pre> </td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga21b04708daf767915e62979acd47b6aa"></a>
+<a class="anchor" id="gaf5a0daa07131817e4e805710aac04842"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusicInfo_BOOL </td>
+          <td class="memname">CWindow </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00353.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>xmlFilename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>defaultSkin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>forceFallback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>asDialog</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class constructor with needed values for window / dialog. </p>
+<p>Creates a new Window class.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">xmlFilename</td><td>XML file for the skin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultSkin</td><td>default skin to use if needed not available </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">forceFallback</td><td>If set becomes always default skin used (todo: check correct descr.) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">asDialog</td><td>Use window as dialog if set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa262f72ef31f1d6ca005f2668e326c41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Show </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show this window. </p>
+<p>Shows this window by activating it, calling close() after it wil activate the current window again.</p>
+<dl class="section note"><dt>Note</dt><dd>If your Add-On ends this window will be closed to. To show it forever, make a loop at the end of your Add-On or use doModal() instead.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if call and show is successed, if false was something failed to get needed skin parts. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7f7a3199c392465d0767c6506c1af5b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Closes this window. </p>
+<p>Closes this window by activating the old window. </p><dl class="section note"><dt>Note</dt><dd>The window is not deleted with this method. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga856163c733aa826e2ff77a067e09b896"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoModal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Display this window until close() is called. </p>
+
+</div>
+</div>
+<a class="anchor" id="gae4612cf096752b43db2312280b7cf6dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SetFocusId </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iControlId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gives the control with the supplied focus. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iControlId</td><td>On skin defined id of control </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if call and focus is successed, if false was something failed to get needed skin parts. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf38c4d162d02658d52f49cf4ffa38a45"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetFocusId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the id of the control which is focused. </p>
+<dl class="section return"><dt>Returns</dt><dd>Focused control id </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga609a14f7e58e2182470595d9a6dcfca6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetControlLabel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the used label on given control id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>Control id where label need to set </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>Label to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7d553225fe861e34410148ca3bbd70fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProperty </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
@@ -276,26 +327,57 @@ $(document).ready(function(){initNavTree('a00353.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels of type bool. </p>
+<p>Sets a window property, similar to an infolabel. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00353.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>boolean value to set </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>string or unicode - value of property.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive. Setting value to an empty string is equivalent to clearProperty(key).<br />
+ You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gab97b3b7b94b59c5ef326982feda630a7"></a>
+<a class="anchor" id="gaf45b0883a209eba6ac9248d107d91c63"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusicInfo_INT </td>
+          <td class="memname">std::string GetProperty </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00353.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a window property as a string, similar to an infolabel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The property as strin (if present)</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive. Setting value to an empty string is equivalent to clearProperty(key).<br />
+ You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3d68ad750393fd5293be9d0650cd30a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPropertyInt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -311,10 +393,10 @@ $(document).ready(function(){initNavTree('a00353.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels of type integer. </p>
+<p>Sets a window property with integer value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00353.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>integer value to set </td></tr>
   </table>
   </dd>
@@ -322,20 +404,45 @@ $(document).ready(function(){initNavTree('a00353.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ga03cc9e6f99b5527feaf63c6e1ac897b0"></a>
+<a class="anchor" id="gad1ef604201c128051b6f953686e2e29d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusicInfo_UINT </td>
+          <td class="memname">int GetPropertyInt </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00353.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a window property with integer value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>integer value of property </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8f37733246a712df31946c12b40d7553"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPropertyBool </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
@@ -346,31 +453,56 @@ $(document).ready(function(){initNavTree('a00353.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels of type unsigned integer. </p>
+<p>Sets a window property with boolean value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00353.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>unsigned integer value to set </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>boolean value to set </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga7b0dd8566cc13729d8469b569bcf7fa9"></a>
+<a class="anchor" id="ga82ce76ad7f15260f9c7a8ef3e1cb36d8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusicInfo_FLOAT </td>
+          <td class="memname">bool GetPropertyBool </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00353.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a window property with boolean value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean value of property </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga363ee3e1bf219c8f824241f58aebe294"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPropertyDouble </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
@@ -381,32 +513,103 @@ $(document).ready(function(){initNavTree('a00353.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels of type float. </p>
+<p>Sets a window property with double value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00353.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>float value to set </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>double value to set </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga8a915dea0ebfde069cfd3decae9eeebe"></a>
+<a class="anchor" id="ga5d5abed6f74c071fe20cb32c78ef2962"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusicInfo_STRING </td>
+          <td class="memname">double GetPropertyDouble </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00353.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a window property with double value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double value of property </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac08a48ef4dc5afe79c14ffbefdd96f5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearProperties </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove all present properties from window. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga881f45cb47b4f775418e65dfc6c8b832"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearProperty </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the specific window property. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>string - property name.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive. Equivalent to SetProperty(key, "") You can use the above as keywords for arguments and skip certain optional arguments. Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line"><a class="code" href="a00353.html#ga881f45cb47b4f775418e65dfc6c8b832">ClearProperty</a>(<span class="stringliteral">&#39;Category&#39;</span>)</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga22199a49598ff7b9a2bd8eb0bc605aed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CListItem* AddStringItem </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>itemPosition</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -416,32 +619,35 @@ $(document).ready(function(){initNavTree('a00353.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels with a string. </p>
+<p>Add a string named item to the integrated list. </p>
+<dl class="section note"><dt>Note</dt><dd>On delete of "CListItem" is item not removed from list on window.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Class need to be deleted after it is not used anymore</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00353.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>string value to set </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name of the item to add </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">itemPosition</td><td>[opt] The position for item, default is on end </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gad37cb7a265cdfbe71a9c630ba1a88926"></a>
+<a class="anchor" id="ga5ee402b42dd18e0f49f54ac6de83bd89"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusicInfo_STRING_LIST </td>
+          <td class="memname">void AddItem </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00353.html#ga15e9d1572e077825edbaa17d36a35d4b">ADDON_MusicInfoTag</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramtype"><a class="el" href="a00090.html">CListItem</a> *&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>itemPosition</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -451,14 +657,183 @@ $(document).ready(function(){initNavTree('a00353.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Sets the music listitem's infoLabels with string table. </p>
+<p>To add a list item in the on window integrated list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00353.html#ADDON_MusicInfoTag">Music Info Tag</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>string table to set </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">item</td><td>List item to add </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">itemPosition</td><td>[opt] The position for item, default is on end </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="gac45d2066c403cf222cccc265371680b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>itemPosition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove list item on position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">itemPosition</td><td>List position to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gabee41b97eff7bd51a19e32f996b2a04a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RemoveItem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00090.html">CListItem</a> *&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove item with given control class from list. </p>
+<dl class="section note"><dt>Note</dt><dd>Related control class is not deleted.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">item</td><td>List item control class to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga557b0657ffc5f6f6ab991a242a42a833"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CListItem* GetListItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>listPos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get list item control class on wanted position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">listPos</td><td>Position from where control is needed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The list item control class or null if not found</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Function returns a new generated <b><a class="el" href="a00090.html">CListItem</a></b> class, which to delete. Every call of this generare a new class! </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gabd56fda84238160597c9d9aa1ad09e29"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetCurrentListPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>listPos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set position of selected part in list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">listPos</td><td>Position to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga84fd2786c494be3dd0f428acb43cfbed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetCurrentListPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get current selected position in list. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current list position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1f4581c0d5dec157ae050648b9980dda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetListSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To get the amount of entries in the list. </p>
+<dl class="section return"><dt>Returns</dt><dd>Size of in window integrated control class </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2b85ec494201046fd7686395c996c272"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function delete all entries in integrated list. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga60ef98c2dd24a36ab0748d21888f10b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MarkDirtyRegion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To inform Kodi that it need to render region new. </p>
 
 </div>
 </div>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Control Fade Label</title>
+<title>Kodi Development: Control Button</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,22 +92,22 @@ $(document).ready(function(){initNavTree('a00370.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Control Fade Label<div class="ingroups"><a class="el" href="a00290.html">C++</a> &raquo; <a class="el" href="a00348.html">4. GUI</a></div></div>  </div>
+<div class="title">Control Button<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00351.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Window control used to show multiple pieces of text in the same position, by fading from one to the other</b> </p>
-<p>The fade label control is used for displaying multiple pieces of text in the same space in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed. The first piece of information to display fades in over 50 frames, then scrolls off to the left. Once it is finished scrolling off screen, the second piece of information fades in and the process repeats. A fade label control is not supported in a list container.</p>
-<p>It has the header <a class="el" href="a00181_source.html">#include &lt;kodi/api2/gui/ControlFadeLabel.hpp&gt;</a> be included to enjoy it.</p>
-<p>Here you find the needed skin part for a <a class="el" href="a00016.html">fade label control</a></p>
+<p><b>Standard push button control for window</b> </p>
+<p>The button control is used for creating push buttons in Kodi. You can choose the position, size, and look of the button, as well as choosing what action(s) should be performed when pushed.</p>
+<p>It has the header <a class="el" href="a00180_source.html">#include &lt;kodi/api2/gui/ControlButton.hpp&gt;</a> be included to enjoy it.</p>
+<p>Here you find the needed skin part for a <a class="el" href="a00010.html">button control</a></p>
 <dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga90b3c88c8f974d59928e67fa9751b69b"></a>
+<a class="anchor" id="gab03f705293188d855c45952d42e2ac9c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CControlFadeLabel </td>
+          <td class="memname">CControlButton </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="a00091.html">CWindow</a> *&#160;</td>
           <td class="paramname"><em>window</em>, </td>
@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('a00370.html','');});
 
 </div>
 </div>
-<a class="anchor" id="gadcc150f725189d7e4f903b153c6d7ca1"></a>
+<a class="anchor" id="ga47e8648c29559d376e795a784e1e1c06"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('a00370.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~CControlFadeLabel </td>
+          <td class="memname">virtual ~CControlButton </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -186,24 +186,48 @@ $(document).ready(function(){initNavTree('a00370.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ga47cfd2f63ce533672996085727a5fdd4"></a>
+<a class="anchor" id="gaac893222adeffdefc04d749648cce354"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddLabel </td>
+          <td class="memname">void SetEnabled </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To add additional text string on fade label. </p>
+<p>Set's the control's enabled/disabled state. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>Text to show </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enabled</td><td>If true enabled, otherwise disabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0468217482f9a171183b1cda613417e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetLabel </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the text string on button. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>Text to show </td></tr>
   </table>
   </dd>
 </dl>
@@ -228,44 +252,45 @@ $(document).ready(function(){initNavTree('a00370.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ga02685eb001d24047fce8ed6d4899e9af"></a>
+<a class="anchor" id="ga4f36ea518d9c722f2cdc03cac01aabf3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetScrolling </td>
+          <td class="memname">void SetLabel2 </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>scroll</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To enable or disable scrolling on fade label. </p>
+<p>If two labels are used for button becomes it set with them. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">scroll</td><td>To enable scrolling set to true, otherwise is disabled </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>Text for second label </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ga372de693ad40b3f42839c8ec6ac845f4"></a>
+<a class="anchor" id="ga94e3a8c89b6a8d0fb69cb8f44c3d5b1b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Reset </td>
+          <td class="memname">std::string GetLabel2 </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To reset al inserted labels. </p>
+<p>Get the second label if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>Second label </dd></dl>
 
 </div>
 </div>

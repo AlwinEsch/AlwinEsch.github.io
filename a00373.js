@@ -1,8 +1,10 @@
 var a00373 =
 [
-    [ "CControlProgress", "a00373.html#ga33e0980459ea8e489f13a882c73a7dde", null ],
-    [ "~CControlProgress", "a00373.html#gaa981b5bb0357bd7838daa15e7eeec0b1", null ],
+    [ "CControlFadeLabel", "a00373.html#ga90b3c88c8f974d59928e67fa9751b69b", null ],
+    [ "~CControlFadeLabel", "a00373.html#gadcc150f725189d7e4f903b153c6d7ca1", null ],
     [ "SetVisible", "a00373.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "SetPercentage", "a00373.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
-    [ "GetPercentage", "a00373.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ]
+    [ "AddLabel", "a00373.html#ga47cfd2f63ce533672996085727a5fdd4", null ],
+    [ "GetLabel", "a00373.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
+    [ "SetScrolling", "a00373.html#ga02685eb001d24047fce8ed6d4899e9af", null ],
+    [ "Reset", "a00373.html#ga372de693ad40b3f42839c8ec6ac845f4", null ]
 ];

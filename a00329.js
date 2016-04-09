@@ -1,7 +1,7 @@
 var a00329 =
 [
-    [ "setSelected", "a00329.html#gad42accd39af295a957386c68dac3dcae", null ],
-    [ "isSelected", "a00329.html#ga5dae9e59f17e10bd3838a6fae36d477d", null ],
     [ "setLabel", "a00329.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
-    [ "setRadioDimension", "a00329.html#ga474a447b56d8295c322cd3023e276b9f", null ]
+    [ "setDisabledColor", "a00329.html#gabb99461e652ba261d6322894a64affbe", null ],
+    [ "getLabel", "a00329.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
+    [ "getLabel2", "a00329.html#ga670b0dee884d131339bbf88d07bbbfc7", null ]
 ];

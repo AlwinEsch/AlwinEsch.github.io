@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Definitions, structures and enumerators</title>
+<title>Kodi Development: Subclass - ControlRadioButton</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,229 +91,247 @@ $(document).ready(function(){initNavTree('a00332.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">Definitions, structures and enumerators<div class="ingroups"><a class="el" href="a00290.html">C++</a> &raquo; <a class="el" href="a00331.html">1. Basic functions</a></div></div>  </div>
+<div class="title">Subclass - ControlRadioButton<div class="ingroups"><a class="el" href="a00293.html">Python</a> &raquo; <a class="el" href="a00295.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00320.html">Control</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Library definition values</b> </p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:gac08f738b25174ea7fe5441965c57773a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00332.html#gac08f738b25174ea7fe5441965c57773a">KODI_API_lasterror</a></td></tr>
-<tr class="memdesc:gac08f738b25174ea7fe5441965c57773a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last error code generated from lib.  <a href="#gac08f738b25174ea7fe5441965c57773a">More...</a><br /></td></tr>
-<tr class="separator:gac08f738b25174ea7fe5441965c57773a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<p><b>For control a radio button (as used for on/off settings).</b> </p>
+<p><b><code><a class="el" href="a00119.html">ControlRadioButton</a>(x, y, width, height, label[, focusOnTexture, noFocusOnTexture,<br />
+ focusOffTexture, noFocusOffTexture, focusTexture, noFocusTexture,<br />
+ textOffsetX, textOffsetY, alignment, font, textColor, disabledColor])</code></b></p>
+<p>The radio button control is used for creating push button on/off settings in Kodi. You can choose the position, size, and look of the button. When the user clicks on the radio button, the state will change, toggling the extra textures (textureradioon and textureradiooff). Used for settings controls.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00320.html">Control</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>string or unicode - text string. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">focusOnTexture</td><td>[opt] string - filename for radio ON focused texture. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">noFocusOnTexture</td><td>[opt] string - filename for radio ON not focused texture. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">focusOfTexture</td><td>[opt] string - filename for radio OFF focused texture. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">noFocusOffTexture</td><td>[opt] string - filename for radio OFF not focused texture. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">focusTexture</td><td>[opt] string - filename for radio ON texture (deprecated, use focusOnTexture and noFocusOnTexture). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">noFocusTexture</td><td>[opt] string - filename for radio OFF texture (deprecated, use focusOffTexture and noFocusOffTexture). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textOffsetX</td><td>[opt] integer - horizontal text offset </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textOffsetY</td><td>[opt] integer - vertical text offset </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alignment</td><td>[opt] integer - alignment of label<ul>
+<li>Flags for alignment used as bits to have several together: <table class="doxtable">
+<tr>
+<th>Defination name </th><th align="center">Bitflag </th><th align="left">Description  </th></tr>
+<tr>
+<td>XBFONT_LEFT </td><td align="center">0x00000000 </td><td align="left">Align X left </td></tr>
+<tr>
+<td>XBFONT_RIGHT </td><td align="center">0x00000001 </td><td align="left">Align X right </td></tr>
+<tr>
+<td>XBFONT_CENTER_X </td><td align="center">0x00000002 </td><td align="left">Align X center </td></tr>
+<tr>
+<td>XBFONT_CENTER_Y </td><td align="center">0x00000004 </td><td align="left">Align Y center </td></tr>
+<tr>
+<td>XBFONT_TRUNCATED </td><td align="center">0x00000008 </td><td align="left">Truncated text </td></tr>
+<tr>
+<td>XBFONT_JUSTIFIED </td><td align="center">0x00000010 </td><td align="left">Justify text </td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="gae59135f9780938a6a6fcae763f92a66e"></a>
+</li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>[opt] string - font used for label text. (e.g. 'font13') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textColor</td><td>[opt] hexstring - color of enabled checkmark's label. (e.g. '0xFFFFFFFF') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">disabledColor</td><td>[opt] hexstring - color of disabled checkmark's label. (e.g. '0xFFFF3300')</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.<br />
+ After you create the control, you need to add it to the window with addControl().</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.radiobutton = xbmcgui.ControlRadioButton(100, 250, 200, 50, <span class="stringliteral">&#39;Enable&#39;</span>, font=<span class="stringliteral">&#39;font14&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gad42accd39af295a957386c68dac3dcae"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void* <a class="el" href="a00332.html#gae59135f9780938a6a6fcae763f92a66e">KODI_HANDLE</a></td>
+          <td class="memname">void setSelected </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>selected</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Handle identifier pointer. </p>
-
+<p><b>Sets the radio buttons's selected status.</b> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">selected</td><td>bool - True=selected (on) / False=not selected (off)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.radiobutton.setSelected(<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ga3666c3045cdf054de90faaf6cc7d14e1"></a>
+<a class="anchor" id="ga5dae9e59f17e10bd3838a6fae36d477d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="a00332.html#ga3666c3045cdf054de90faaf6cc7d14e1">KODI_API_Errortype</a></td>
+          <td class="memname">bool isSelected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>KODI API Error Classes. </p>
-<p>The error codes are to describe the caused errors on interface. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1ac4c2fbac1710ca3685a51f08475062e4"></a>API_SUCCESS&#160;</td><td class="fielddoc">
-<p>Successful return code. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a7120db19aa2c7d110351d7dc727263c0"></a>API_ERR_BUFFER&#160;</td><td class="fielddoc">
-<p>Invalid buffer pointer. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1ae0ac023466c84cc3f0fb36a24560ad39"></a>API_ERR_COUNT&#160;</td><td class="fielddoc">
-<p>Invalid count argument. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a0ecb7b94da0bd7ed039aa2b86b3f690d"></a>API_ERR_TYPE&#160;</td><td class="fielddoc">
-<p>Invalid datatype argument. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1afb135b1039ca828d39b5f1f395f40b3e"></a>API_ERR_TAG&#160;</td><td class="fielddoc">
-<p>Invalid tag argument. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a8b403c2c6b106247525efeafdc0d5a25"></a>API_ERR_COMM&#160;</td><td class="fielddoc">
-<p>Invalid communicator. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a747b63f8ef14166c01566e008dc99b3e"></a>API_ERR_RANK&#160;</td><td class="fielddoc">
-<p>Invalid rank. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a264b22c9bf174ff0e4aca339312592c2"></a>API_ERR_ROOT&#160;</td><td class="fielddoc">
-<p>Invalid root. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a8d36a4a16b6f1a9f84f0548c166970af"></a>API_ERR_GROUP&#160;</td><td class="fielddoc">
-<p>Null group passed to function. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1abdd2f06a3b3d399bf78a46d2288c16a2"></a>API_ERR_OP&#160;</td><td class="fielddoc">
-<p>Invalid operation. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a5a24c29ff375fbed404ea5bb0f44351a"></a>API_ERR_TOPOLOGY&#160;</td><td class="fielddoc">
-<p>Invalid topology. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1aa6e79dca78c127c9ad21d4f758a51f71"></a>API_ERR_DIMS&#160;</td><td class="fielddoc">
-<p>Illegal dimension argument. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a2a5191d9b1c2134a612a9209ddde99a3"></a>API_ERR_ARG&#160;</td><td class="fielddoc">
-<p>Invalid argument. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a265814fcc02e922e9d8a46732ba9592e"></a>API_ERR_UNKNOWN&#160;</td><td class="fielddoc">
-<p>Unknown error. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a258c952367fb18c48a8d150300e42d88"></a>API_ERR_TRUNCATE&#160;</td><td class="fielddoc">
-<p>message truncated on receive </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a6f54380ea0d3646f8202a8b694abd353"></a>API_ERR_OTHER&#160;</td><td class="fielddoc">
-<p>Other error; use Error_string. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a23034a566d89770362c2e4f1737bfea9"></a>API_ERR_INTERN&#160;</td><td class="fielddoc">
-<p>internal error code </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1ae9c349cc5f286a344b9448b42adc5784"></a>API_ERR_IN_STATUS&#160;</td><td class="fielddoc">
-<p>Look in status for error value. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a257457904b4cd34a1a5abb7e2257e085"></a>API_ERR_PENDING&#160;</td><td class="fielddoc">
-<p>Pending request. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1ad5b3e3906608e89961cdf06463eb2f68"></a>API_ERR_REQUEST&#160;</td><td class="fielddoc">
-<p>illegal API_request handle </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1a6307456cad16f16000a4559c6abf523e"></a>API_ERR_CONNECTION&#160;</td><td class="fielddoc">
-<p>failed to connect </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1adf96cd7eabda35d0d1bf8ba32092df63"></a>API_ERR_VALUE_NOT_AVAILABLE&#160;</td><td class="fielddoc">
-<p>failed to connect </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga3666c3045cdf054de90faaf6cc7d14e1af4d0e3a55ce407301667cc9464102dfe"></a>API_ERR_LASTCODE&#160;</td><td class="fielddoc">
-<p>Last error code &ndash; always at end. </p>
-</td></tr>
-</table>
-
+<p>Returns the radio buttons's selected status. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if selected on</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordflow">is</span> = self.radiobutton.isSelected()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="gaf8526ffb1ee2a785489ac05b6e49d357"></a>
+<a class="anchor" id="gaa1d736865ab85f96ecbe8c66769b068b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum addon_log</td>
+          <td class="memname">void setLabel </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>label</em> = <code>emptyString</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>font</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>textColor</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>disabledColor</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>shadowColor</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>focusedColor</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>label2</em> = <code>emptyString</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Log file. </p>
-<p>At some point during your foray into Kodi, you will likely come up against a problem that isn't made 100% clear from errors in the GUI. This is where the log file comes into play. Kodi writes all sorts of useful stuff to its log, which is why it should be included with every bug/problem report. Don't be afraid of its contents! Often a quick glance through the log will turn up a simple typo or missing file which you can easily fix on your own.</p>
-<p>Each event is logged to one line of the Kodi log file which is formatted as follows...</p>
-<div class="fragment"><div class="line">[TIMESTAMP] T:[THREADID] M:[FREEMEM] [LEVEL]: [MESSAGE]</div>
-</div><!-- fragment --><table class="doxtable">
-<tr>
-<th>Identification name </th><th>Description  </th></tr>
-<tr>
-<td>TIMESTAMP </td><td>The wall time at which the event occurred. </td></tr>
-<tr>
-<td>THREADID </td><td>The thread identification number of the thread in which the event occurred. </td></tr>
-<tr>
-<td>FREEMEM </td><td>The amount of memory (in bytes) free at the time of the event. </td></tr>
-<tr>
-<td>LEVEL </td><td>The severity of the event. </td></tr>
-<tr>
-<td>MESSAGE </td><td>A brief description and/or important information about the event. </td></tr>
-</table>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a905fcd03184094c9a4d74a72e6d10227"></a>ADDON_LOG_DEBUG&#160;</td><td class="fielddoc">
-<p>Log level "Debug". </p>
-<p>In depth informatio n about the status of Kodi. This information can pretty much only be deciphered by a developer or long time Kodi power user. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a63f8ea3699765964c764b141bf41e9cc"></a>ADDON_LOG_INFO&#160;</td><td class="fielddoc">
-<p>Log level "Info". </p>
-<p>Something has happened. It's not a problem, we just thought you might want to know. Fairly excessive output that most people won't care about. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a87d5d6aa6d65fe268a32a6140e4959c5"></a>ADDON_LOG_NOTICE&#160;</td><td class="fielddoc">
-<p>Log level "Notice". </p>
-<p>Similar to INFO but the average Joe might want to know about these events. This level and above are logged by default. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a60613d2dc32f26209fca36b954b1e86e"></a>ADDON_LOG_WARNING&#160;</td><td class="fielddoc">
-<p>Log level "Warning". </p>
-<p>Something potentially bad has happened. If Kodi did something you didn't expect, this is probably why. Watch for errors to follow. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357aca7f81a0bb28ea4deb9a9a61cead5768"></a>ADDON_LOG_ERROR&#160;</td><td class="fielddoc">
-<p>Log level "Error". </p>
-<p>This event is bad. Something has failed. You likely noticed problems with the application be it skin artifacts, failure of playback a crash, etc. </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a9345562906d58e0dea87e99c6b101b32"></a>ADDON_LOG_SEVERE&#160;</td><td class="fielddoc">
-<p>Log level "Severe". </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ggaf8526ffb1ee2a785489ac05b6e49d357a1a33911413fbeacfa24b2cdfb31f6a95"></a>ADDON_LOG_FATAL&#160;</td><td class="fielddoc">
-<p>Log level "Fatal". </p>
-<p>We're screwed. Kodi's add-on is about to crash. </p>
-</td></tr>
-</table>
-
+<p>Set's the radio buttons text attributes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>string or unicode - text string. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>[opt] string - font used for label text. (e.g. 'font13') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textColor</td><td>[opt] hexstring - color of enabled radio button's label. (e.g. '0xFFFFFFFF') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">disabledColor</td><td>[opt] hexstring - color of disabled radio button's label. (e.g. '0xFFFF3300') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shadowColor</td><td>[opt] hexstring - color of radio button's label's shadow. (e.g. '0xFF000000') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">focusedColor</td><td>[opt] hexstring - color of focused radio button's label. (e.g. '0xFFFFFF00')</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setLabel(label[, font, textColor, disabledColor, shadowColor, focusedColor])</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.radiobutton.setLabel(<span class="stringliteral">&#39;Status&#39;</span>, <span class="stringliteral">&#39;font14&#39;</span>, <span class="stringliteral">&#39;0xFFFFFFFF&#39;</span>, <span class="stringliteral">&#39;0xFFFF3300&#39;</span>, <span class="stringliteral">&#39;0xFF000000&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="gac08f738b25174ea7fe5441965c57773a"></a>
+<a class="anchor" id="ga474a447b56d8295c322cd3023e276b9f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t KODI_API_lasterror</td>
+          <td class="memname">void setRadioDimension </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Last error code generated from lib. </p>
-<p>Becomes only be set if on function on error the return of them is not possible, e.g. <code>KodiAPI::Init</code>.</p>
-<p>Human readable string can be retrived with <code>KodiAPI_ErrorCodeToString</code>. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga7d342cb80361753ac42881792cd215b2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">int KODI_API_Level</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>API level and Add-On to Kodi interface Version. </p>
-<p>Here the values define for the Add-On and also for Kodi the version of the interface between the both.</p>
-<p>The current add-on interface API levelAPI level version </p>
-
-</div>
-</div>
-<a class="anchor" id="ga8801d2d949b4fb40c65cb6b35a4191b6"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">const char* KODI_API_Version</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The complete Version of this interface architecture. </p>
-<p>Code version of add-on interface system </p>
-
+<p>Sets the radio buttons's radio texture's position and size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of radio texture. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of radio texture. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of radio texture. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of radio texture.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.radiobutton.setRadioDimension(x=100, y=5, width=20, height=20)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

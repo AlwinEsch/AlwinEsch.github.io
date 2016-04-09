@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/interfaces/legacy/File.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi2/xbmc/interfaces/legacy/Dialog.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,10 +92,10 @@ $(document).ready(function(){initNavTree('a00236_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">File.h</div>  </div>
+<div class="title">Dialog.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; <span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
@@ -117,74 +117,289 @@ $(document).ready(function(){initNavTree('a00236_source.html','');});
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;filesystem/File.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;LanguageHook.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;commons/Buffer.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;dialogs/GUIDialogProgress.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;dialogs/GUIDialogExtendedProgressBar.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;Alternative.h&quot;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00284.html">XBMCAddon</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">namespace </span>xbmcvfs</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="a00130.html">   62</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00130.html">File</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      XFILE::CFile* file;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keyword">inline</span> <a class="code" href="a00130.html">File</a>(<span class="keyword">const</span> String&amp; filepath, <span class="keyword">const</span> <span class="keywordtype">char</span>* mode = NULL) : file(<span class="keyword">new</span> XFILE::CFile())</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        DelayedCallGuard dg(languageHook);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (mode &amp;&amp; strncmp(mode, <span class="stringliteral">&quot;w&quot;</span>, 1) == 0)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;          file-&gt;OpenForWrite(filepath,<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;          file-&gt;Open(filepath, XFILE::READ_NO_CACHE);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keyword">inline</span> ~<a class="code" href="a00130.html">File</a>() { <span class="keyword">delete</span> file; }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="a00303.html#ga691e636b0dffa3c448c648f42d94437a">   97</a></span>&#160;      <span class="keyword">inline</span> String <a class="code" href="a00303.html#ga691e636b0dffa3c448c648f42d94437a">read</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> numBytes = 0)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        XbmcCommons::Buffer b = <a class="code" href="a00303.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8">readBytes</a>(numBytes);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">return</span> b.getString(numBytes == 0 ? b.remaining() : std::min((<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)b.remaining(),numBytes));</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      XbmcCommons::Buffer <a class="code" href="a00303.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8">readBytes</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> numBytes = 0);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00303.html#ga1a6eddca986ff7164d57b9fad625e597">write</a>(XbmcCommons::Buffer&amp; buffer);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="a00303.html#ga6fdf8e4501d305514d8e7b5d6cde34a6">  164</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00303.html#ga6fdf8e4501d305514d8e7b5d6cde34a6">size</a>() { DelayedCallGuard dg(languageHook); <span class="keywordflow">return</span> file-&gt;GetLength(); }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="a00303.html#ga8140115d0b4e6cb1ffa9f4298153d009">  186</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00303.html#ga8140115d0b4e6cb1ffa9f4298153d009">seek</a>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> seekBytes, <span class="keywordtype">int</span> iWhence) { DelayedCallGuard dg(languageHook); <span class="keywordflow">return</span> file-&gt;Seek(seekBytes,iWhence); }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="a00303.html#ga5ae591df94fc66ccb85cbb6565368bca">  203</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="a00303.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>() { DelayedCallGuard dg(languageHook); file-&gt;Close(); }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <span class="keyword">inline</span> <span class="keyword">const</span> XFILE::CFile* getFile()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> file; }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    };</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  }</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
-<div class="ttc" id="a00303_html_gafb6cfe2d85d46667aaa8ff4e9ae194e8"><div class="ttname"><a href="a00303.html#gafb6cfe2d85d46667aaa8ff4e9ae194e8">XBMCAddon::xbmcvfs::File::readBytes</a></div><div class="ttdeci">XbmcCommons::Buffer readBytes(unsigned long numBytes=0)</div><div class="ttdoc">Read bytes from file. </div></div>
-<div class="ttc" id="a00130_html"><div class="ttname"><a href="a00130.html">XBMCAddon::xbmcvfs::File</a></div><div class="ttdef"><b>Definition:</b> File.h:62</div></div>
-<div class="ttc" id="a00303_html_ga6fdf8e4501d305514d8e7b5d6cde34a6"><div class="ttname"><a href="a00303.html#ga6fdf8e4501d305514d8e7b5d6cde34a6">XBMCAddon::xbmcvfs::File::size</a></div><div class="ttdeci">long long size()</div><div class="ttdoc">Get the file size. </div><div class="ttdef"><b>Definition:</b> File.h:164</div></div>
-<div class="ttc" id="a00284_html"><div class="ttname"><a href="a00284.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00303_html_ga8140115d0b4e6cb1ffa9f4298153d009"><div class="ttname"><a href="a00303.html#ga8140115d0b4e6cb1ffa9f4298153d009">XBMCAddon::xbmcvfs::File::seek</a></div><div class="ttdeci">long long seek(long long seekBytes, int iWhence)</div><div class="ttdoc">Seek to position in file. </div><div class="ttdef"><b>Definition:</b> File.h:186</div></div>
-<div class="ttc" id="a00303_html_ga1a6eddca986ff7164d57b9fad625e597"><div class="ttname"><a href="a00303.html#ga1a6eddca986ff7164d57b9fad625e597">XBMCAddon::xbmcvfs::File::write</a></div><div class="ttdeci">bool write(XbmcCommons::Buffer &amp;buffer)</div><div class="ttdoc">To write given data in file. </div></div>
-<div class="ttc" id="a00303_html_ga5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="a00303.html#ga5ae591df94fc66ccb85cbb6565368bca">XBMCAddon::xbmcvfs::File::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">Close opened file. </div><div class="ttdef"><b>Definition:</b> File.h:203</div></div>
-<div class="ttc" id="a00303_html_ga691e636b0dffa3c448c648f42d94437a"><div class="ttname"><a href="a00303.html#ga691e636b0dffa3c448c648f42d94437a">XBMCAddon::xbmcvfs::File::read</a></div><div class="ttdeci">String read(unsigned long numBytes=0)</div><div class="ttdoc">Read file parts as string. </div><div class="ttdef"><b>Definition:</b> File.h:97</div></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define INPUT_ALPHANUM        0</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define INPUT_NUMERIC         1</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define INPUT_DATE            2</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define INPUT_TIME            3</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define INPUT_IPADDRESS       4</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define INPUT_PASSWORD        5</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define PASSWORD_VERIFY       1</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define ALPHANUM_HIDE_INPUT   2</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00286.html">XBMCAddon</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">namespace </span>xbmcgui</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">class </span>Dialog : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    class Dialog : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keyword">inline</span> Dialog() {}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keyword">virtual</span> ~Dialog();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00302.html#gaa64342a4b05f1ed49803ea44a25b73db">yesno</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1, </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                 <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                 <span class="keyword">const</span> String&amp; line3 = emptyString,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                 <span class="keyword">const</span> String&amp; nolabel = emptyString,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                 <span class="keyword">const</span> String&amp; yeslabel = emptyString,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                 <span class="keywordtype">int</span> autoclose = 0);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00302.html#gaa64342a4b05f1ed49803ea44a25b73db">yesno</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                 <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                 <span class="keyword">const</span> String&amp; line3 = emptyString,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                 <span class="keyword">const</span> String&amp; nolabel = emptyString,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                 <span class="keyword">const</span> String&amp; yeslabel = emptyString,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                 <span class="keywordtype">int</span> autoclose = 0);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00302.html#ga31bcf740cf64230b40af61377ad701b1">select</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> std::vector&lt;String&gt;&amp; list, <span class="keywordtype">int</span> autoclose=0);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00302.html#ga31bcf740cf64230b40af61377ad701b1">select</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> std::vector&lt;String&gt;&amp; list, <span class="keywordtype">int</span> autoclose=0);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      std::unique_ptr&lt;std::vector&lt;int&gt; &gt; <a class="code" href="a00302.html#gaf6cee72babc023f15a8ed28cbb2cc7f6">multiselect</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> std::vector&lt;String&gt;&amp; options, <span class="keywordtype">int</span> autoclose=0);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      std::unique_ptr&lt;std::vector&lt;int&gt; &gt; <a class="code" href="a00302.html#gaf6cee72babc023f15a8ed28cbb2cc7f6">multiselect</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> std::vector&lt;String&gt;&amp; options, <span class="keywordtype">int</span> autoclose=0);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00302.html#ga623449b051874059111f9831a7b91673">ok</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1, </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;              <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;              <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00302.html#ga623449b051874059111f9831a7b91673">ok</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1, </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;              <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;              <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00302.html#gad212e84e36d2fc96b8f2e24b9dd67b47">textviewer</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; text);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00302.html#gad212e84e36d2fc96b8f2e24b9dd67b47">textviewer</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; text);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      Alternative&lt;String, std::vector&lt;String&gt; &gt; <a class="code" href="a00302.html#ga329bf9f86212595d36708f6ad8977499">browse</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                          <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                          <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, <span class="keyword">const</span> String&amp; sDefault = emptyString,</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                          <span class="keywordtype">bool</span> enableMultiple = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;      Alternative&lt;String, std::vector&lt;String&gt; &gt; <a class="code" href="a00302.html#ga329bf9f86212595d36708f6ad8977499">browse</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; s_shares,</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                          <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                          <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, <span class="keyword">const</span> String&amp; defaultt = emptyString,</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                          <span class="keywordtype">bool</span> enableMultiple = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      String <a class="code" href="a00302.html#ga8a8334ae223a82e7df728e032e167bbf">browseSingle</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                          <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                          <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                          <span class="keyword">const</span> String&amp; defaultt = emptyString );</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      String <a class="code" href="a00302.html#ga8a8334ae223a82e7df728e032e167bbf">browseSingle</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                          <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;                          <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;                          <span class="keyword">const</span> String&amp; defaultt = emptyString );</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00302.html#ga804e86cf03fe10961d7a7ca1d00fffa3">browseMultiple</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                                         <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                                         <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                                         <span class="keyword">const</span> String&amp; defaultt = emptyString );</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00302.html#ga804e86cf03fe10961d7a7ca1d00fffa3">browseMultiple</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; shares,</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;                                         <span class="keyword">const</span> String&amp; mask = emptyString, <span class="keywordtype">bool</span> useThumbs = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;                                         <span class="keywordtype">bool</span> treatAsFolder = <span class="keyword">false</span>, </div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;                                         <span class="keyword">const</span> String&amp; defaultt = emptyString );</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;      String <a class="code" href="a00302.html#gad44dd72bef6ada382a1b9704580410db">numeric</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; defaultt = emptyString);</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;      String <a class="code" href="a00302.html#gad44dd72bef6ada382a1b9704580410db">numeric</a>(<span class="keywordtype">int</span> type, <span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; defaultt = emptyString);</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00302.html#ga0a385fe365c4fba6583fdd25e8ad072b">notification</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; message, <span class="keyword">const</span> String&amp; icon = emptyString, <span class="keywordtype">int</span> time = 0, <span class="keywordtype">bool</span> sound = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00302.html#ga0a385fe365c4fba6583fdd25e8ad072b">notification</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; message, <span class="keyword">const</span> String&amp; icon = emptyString, <span class="keywordtype">int</span> time = 0, <span class="keywordtype">bool</span> sound = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;      String <a class="code" href="a00302.html#ga2a25e833c92e98a294964d0d285ee1f9">input</a>(<span class="keyword">const</span> String&amp; heading,</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                   <span class="keyword">const</span> String&amp; defaultt = emptyString,</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                   <span class="keywordtype">int</span> type = INPUT_ALPHANUM,</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                   <span class="keywordtype">int</span> option = 0,</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                   <span class="keywordtype">int</span> autoclose = 0);</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;      String <a class="code" href="a00302.html#ga2a25e833c92e98a294964d0d285ee1f9">input</a>(<span class="keyword">const</span> String&amp; heading,</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                   <span class="keyword">const</span> String&amp; defaultt = emptyString,</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                   <span class="keywordtype">int</span> type = INPUT_ALPHANUM,</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;                   <span class="keywordtype">int</span> option = 0,</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;                   <span class="keywordtype">int</span> autoclose = 0);</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    };</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    <span class="keyword">class </span>DialogProgress : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    class DialogProgress : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    {</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;      CGUIDialogProgress* dlg;</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;      <span class="keywordtype">bool</span>                open;</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> deallocating();</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;      DialogProgress() : dlg(NULL), open(false) {}</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;      <span class="keyword">virtual</span> ~DialogProgress();</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00303.html#gad71569b69244d11fe949d0bbd5b75905">create</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1 = emptyString, </div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;                  <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;                  <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00303.html#gad71569b69244d11fe949d0bbd5b75905">create</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; line1 = emptyString, </div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                  <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;                  <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00303.html#gabf439774a2aca33663c3bb785e6e7465">update</a>(<span class="keywordtype">int</span> percent, <span class="keyword">const</span> String&amp; line1 = emptyString, </div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                  <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                  <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00303.html#gabf439774a2aca33663c3bb785e6e7465">update</a>(<span class="keywordtype">int</span> percent, <span class="keyword">const</span> String&amp; line1 = emptyString, </div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                  <span class="keyword">const</span> String&amp; line2 = emptyString,</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                  <span class="keyword">const</span> String&amp; line3 = emptyString);</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00303.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00303.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00303.html#ga2a944a55da1c28885d3f00d101618ac6">iscanceled</a>();</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00303.html#ga2a944a55da1c28885d3f00d101618ac6">iscanceled</a>();</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;    };</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;    <span class="keyword">class </span>DialogProgressBG : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    class DialogProgressBG : <span class="keyword">public</span> AddonClass</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    {</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;      CGUIDialogExtendedProgressBar* dlg;</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;      CGUIDialogProgressBarHandle* handle;</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;      <span class="keywordtype">bool</span> open;</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> deallocating();</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;      DialogProgressBG() : dlg(NULL), handle(NULL), open(false) {}</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;      <span class="keyword">virtual</span> ~DialogProgressBG();</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00304.html#gaafb8a184f497bc815d38be07731df561">create</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; message = emptyString);</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00304.html#gaafb8a184f497bc815d38be07731df561">create</a>(<span class="keyword">const</span> String&amp; heading, <span class="keyword">const</span> String&amp; message = emptyString);</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00304.html#ga90d83a72e4151aba7c05422cf34f6684">update</a>(<span class="keywordtype">int</span> percent = 0, <span class="keyword">const</span> String&amp; heading = emptyString, <span class="keyword">const</span> String&amp; message = emptyString);</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00304.html#ga90d83a72e4151aba7c05422cf34f6684">update</a>(<span class="keywordtype">int</span> percent = 0, <span class="keyword">const</span> String&amp; heading = emptyString, <span class="keyword">const</span> String&amp; message = emptyString);</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00304.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;</div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00304.html#ga5ae591df94fc66ccb85cbb6565368bca">close</a>();</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00304.html#ga06926ca87a7be7d8af8ee84670fffa87">isFinished</a>();</div>
+<div class="line"><a name="l01012"></a><span class="lineno"> 1012</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;</div>
+<div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00304.html#ga06926ca87a7be7d8af8ee84670fffa87">isFinished</a>();</div>
+<div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;    };</div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;</div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;  }</div>
+<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;}</div>
+<div class="ttc" id="a00302_html_gad212e84e36d2fc96b8f2e24b9dd67b47"><div class="ttname"><a href="a00302.html#gad212e84e36d2fc96b8f2e24b9dd67b47">XBMCAddon::xbmcgui::Dialog::textviewer</a></div><div class="ttdeci">void textviewer(const String &amp;heading, const String &amp;text)</div></div>
+<div class="ttc" id="a00302_html_ga623449b051874059111f9831a7b91673"><div class="ttname"><a href="a00302.html#ga623449b051874059111f9831a7b91673">XBMCAddon::xbmcgui::Dialog::ok</a></div><div class="ttdeci">bool ok(const String &amp;heading, const String &amp;line1, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
+<div class="ttc" id="a00304_html_ga06926ca87a7be7d8af8ee84670fffa87"><div class="ttname"><a href="a00304.html#ga06926ca87a7be7d8af8ee84670fffa87">XBMCAddon::xbmcgui::DialogProgressBG::isFinished</a></div><div class="ttdeci">bool isFinished()</div></div>
+<div class="ttc" id="a00302_html_ga8a8334ae223a82e7df728e032e167bbf"><div class="ttname"><a href="a00302.html#ga8a8334ae223a82e7df728e032e167bbf">XBMCAddon::xbmcgui::Dialog::browseSingle</a></div><div class="ttdeci">String browseSingle(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;defaultt=emptyString)</div></div>
+<div class="ttc" id="a00302_html_ga329bf9f86212595d36708f6ad8977499"><div class="ttname"><a href="a00302.html#ga329bf9f86212595d36708f6ad8977499">XBMCAddon::xbmcgui::Dialog::browse</a></div><div class="ttdeci">Alternative&lt; String, std::vector&lt; String &gt; &gt; browse(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;sDefault=emptyString, bool enableMultiple=false)</div></div>
+<div class="ttc" id="a00304_html_gaafb8a184f497bc815d38be07731df561"><div class="ttname"><a href="a00304.html#gaafb8a184f497bc815d38be07731df561">XBMCAddon::xbmcgui::DialogProgressBG::create</a></div><div class="ttdeci">void create(const String &amp;heading, const String &amp;message=emptyString)</div></div>
+<div class="ttc" id="a00302_html_gaf6cee72babc023f15a8ed28cbb2cc7f6"><div class="ttname"><a href="a00302.html#gaf6cee72babc023f15a8ed28cbb2cc7f6">XBMCAddon::xbmcgui::Dialog::multiselect</a></div><div class="ttdeci">std::unique_ptr&lt; std::vector&lt; int &gt; &gt; multiselect(const String &amp;heading, const std::vector&lt; String &gt; &amp;options, int autoclose=0)</div></div>
+<div class="ttc" id="a00302_html_gaa64342a4b05f1ed49803ea44a25b73db"><div class="ttname"><a href="a00302.html#gaa64342a4b05f1ed49803ea44a25b73db">XBMCAddon::xbmcgui::Dialog::yesno</a></div><div class="ttdeci">bool yesno(const String &amp;heading, const String &amp;line1, const String &amp;line2=emptyString, const String &amp;line3=emptyString, const String &amp;nolabel=emptyString, const String &amp;yeslabel=emptyString, int autoclose=0)</div></div>
+<div class="ttc" id="a00302_html_ga0a385fe365c4fba6583fdd25e8ad072b"><div class="ttname"><a href="a00302.html#ga0a385fe365c4fba6583fdd25e8ad072b">XBMCAddon::xbmcgui::Dialog::notification</a></div><div class="ttdeci">void notification(const String &amp;heading, const String &amp;message, const String &amp;icon=emptyString, int time=0, bool sound=true)</div></div>
+<div class="ttc" id="a00304_html_ga5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="a00304.html#ga5ae591df94fc66ccb85cbb6565368bca">XBMCAddon::xbmcgui::DialogProgressBG::close</a></div><div class="ttdeci">void close()</div></div>
+<div class="ttc" id="a00303_html_ga5ae591df94fc66ccb85cbb6565368bca"><div class="ttname"><a href="a00303.html#ga5ae591df94fc66ccb85cbb6565368bca">XBMCAddon::xbmcgui::DialogProgress::close</a></div><div class="ttdeci">void close()</div></div>
+<div class="ttc" id="a00302_html_ga804e86cf03fe10961d7a7ca1d00fffa3"><div class="ttname"><a href="a00302.html#ga804e86cf03fe10961d7a7ca1d00fffa3">XBMCAddon::xbmcgui::Dialog::browseMultiple</a></div><div class="ttdeci">std::vector&lt; String &gt; browseMultiple(int type, const String &amp;heading, const String &amp;shares, const String &amp;mask=emptyString, bool useThumbs=false, bool treatAsFolder=false, const String &amp;defaultt=emptyString)</div></div>
+<div class="ttc" id="a00286_html"><div class="ttname"><a href="a00286.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
+<div class="ttc" id="a00302_html_gad44dd72bef6ada382a1b9704580410db"><div class="ttname"><a href="a00302.html#gad44dd72bef6ada382a1b9704580410db">XBMCAddon::xbmcgui::Dialog::numeric</a></div><div class="ttdeci">String numeric(int type, const String &amp;heading, const String &amp;defaultt=emptyString)</div></div>
+<div class="ttc" id="a00303_html_gabf439774a2aca33663c3bb785e6e7465"><div class="ttname"><a href="a00303.html#gabf439774a2aca33663c3bb785e6e7465">XBMCAddon::xbmcgui::DialogProgress::update</a></div><div class="ttdeci">void update(int percent, const String &amp;line1=emptyString, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
+<div class="ttc" id="a00302_html_ga31bcf740cf64230b40af61377ad701b1"><div class="ttname"><a href="a00302.html#ga31bcf740cf64230b40af61377ad701b1">XBMCAddon::xbmcgui::Dialog::select</a></div><div class="ttdeci">int select(const String &amp;heading, const std::vector&lt; String &gt; &amp;list, int autoclose=0)</div></div>
+<div class="ttc" id="a00302_html_ga2a25e833c92e98a294964d0d285ee1f9"><div class="ttname"><a href="a00302.html#ga2a25e833c92e98a294964d0d285ee1f9">XBMCAddon::xbmcgui::Dialog::input</a></div><div class="ttdeci">String input(const String &amp;heading, const String &amp;defaultt=emptyString, int type=INPUT_ALPHANUM, int option=0, int autoclose=0)</div></div>
+<div class="ttc" id="a00303_html_gad71569b69244d11fe949d0bbd5b75905"><div class="ttname"><a href="a00303.html#gad71569b69244d11fe949d0bbd5b75905">XBMCAddon::xbmcgui::DialogProgress::create</a></div><div class="ttdeci">void create(const String &amp;heading, const String &amp;line1=emptyString, const String &amp;line2=emptyString, const String &amp;line3=emptyString)</div></div>
+<div class="ttc" id="a00304_html_ga90d83a72e4151aba7c05422cf34f6684"><div class="ttname"><a href="a00304.html#ga90d83a72e4151aba7c05422cf34f6684">XBMCAddon::xbmcgui::DialogProgressBG::update</a></div><div class="ttdeci">void update(int percent=0, const String &amp;heading=emptyString, const String &amp;message=emptyString)</div></div>
+<div class="ttc" id="a00303_html_ga2a944a55da1c28885d3f00d101618ac6"><div class="ttname"><a href="a00303.html#ga2a944a55da1c28885d3f00d101618ac6">XBMCAddon::xbmcgui::DialogProgress::iscanceled</a></div><div class="ttdeci">bool iscanceled()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c72e4a3b15aa6b185e7458e4a6d6ab4f.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_81c1a29a69722fee590df545771fd524.html">legacy</a></li><li class="navelem"><b>File.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e1c33da6b8d5f7a4162daa452f8eeb21.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_a77a393e745ee1117c2ab603390e9e77.html">legacy</a></li><li class="navelem"><b>Dialog.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

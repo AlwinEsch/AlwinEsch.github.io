@@ -1,20 +1,16 @@
 var a00391 =
 [
-    [ "CInfoTagMusic", "a00391.html#ga7a6c3071739b71d28174465b9a008af5", null ],
-    [ "~CInfoTagMusic", "a00391.html#gad180a993dc6a48bceff78f6fb44a3489", null ],
-    [ "GetURL", "a00391.html#ga0d1d697cb13f61773101e7ad6645f1e6", null ],
-    [ "GetTitle", "a00391.html#ga9272205cb3a71f70bb4c9437da3c9bda", null ],
-    [ "GetArtist", "a00391.html#gad63aca83a431ce2f31c86d0fdc7ed4bc", null ],
-    [ "GetAlbum", "a00391.html#gaed21becc174c1a9eabb35c10c8fb1dec", null ],
-    [ "GetAlbumArtist", "a00391.html#ga8543d954eab8c5c952c8e87fd7dd2561", null ],
-    [ "GetGenre", "a00391.html#ga57435c1b02f97861847fffd5fd740123", null ],
-    [ "GetDuration", "a00391.html#ga7a0124a69d21b8af01baaf6e35b9c476", null ],
-    [ "GetTrack", "a00391.html#gad4fce5cb572b03a144c22e81ae70ed88", null ],
-    [ "GetDisc", "a00391.html#gabee2b25a6f37093ff91a5caaff417704", null ],
-    [ "GetReleaseDate", "a00391.html#ga6690df3048b871ac2cacb430d5606afe", null ],
-    [ "GetListeners", "a00391.html#gaf92ee71c21a267247e7d06d034143c40", null ],
-    [ "GetPlayCount", "a00391.html#ga057dc61a69e40c80675a082b6251fc8a", null ],
-    [ "GetLastPlayed", "a00391.html#ga833b68f759c1e3ce0c068fd06e9b0f4a", null ],
-    [ "GetComment", "a00391.html#gaab329b82f3bf29e2e56aeca7db59369c", null ],
-    [ "GetLyrics", "a00391.html#gad31236e89eaf77e5e65f34aa1fd90426", null ]
+    [ "Definitions, structures and enumerators", "a00392.html", "a00392" ],
+    [ "CPlayList", "a00391.html#gad644099112fa1474fbbba84c5b48574e", null ],
+    [ "~CPlayList", "a00391.html#ga5c082b03678535fcbbd29c350faadbc7", null ],
+    [ "GetPlayListType", "a00391.html#ga1c1d6bcc394fe5e4b75634dca0147427", null ],
+    [ "LoadPlaylist", "a00391.html#ga7de3982ed8b225f5fd1580c75847d9db", null ],
+    [ "AddItem", "a00391.html#gaaa7aba33ed28df8d2adfa6af9b097575", null ],
+    [ "AddItem", "a00391.html#gacfa6f7082b33d605cbcd5e03cee64431", null ],
+    [ "RemoveItem", "a00391.html#ga7834e166deca3a366bd4d25b061606fd", null ],
+    [ "ClearList", "a00391.html#ga2b85ec494201046fd7686395c996c272", null ],
+    [ "GetListSize", "a00391.html#ga1f4581c0d5dec157ae050648b9980dda", null ],
+    [ "GetListPosition", "a00391.html#ga3b6ca85032d49dfd758dcaad70db8275", null ],
+    [ "Shuffle", "a00391.html#ga9d1841bc5f559c6981b78b895d446033", null ],
+    [ "operator[]", "a00391.html#ga4aeae9803c0f65314b3e749be5d78ea9", null ]
 ];

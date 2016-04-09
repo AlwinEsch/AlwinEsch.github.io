@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Control Progress</title>
+<title>Kodi Development: Control Fade Label</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,22 +92,22 @@ $(document).ready(function(){initNavTree('a00373.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Control Progress<div class="ingroups"><a class="el" href="a00290.html">C++</a> &raquo; <a class="el" href="a00348.html">4. GUI</a></div></div>  </div>
+<div class="title">Control Fade Label<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00351.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Window control to show the progress of a particular operation</b> </p>
-<p>The progress control is used to show the progress of an item that may take a long time, or to show how far through a movie you are. You can choose the position, size, and look of the progress control.</p>
-<p>It has the header <a class="el" href="a00184_source.html">#include &lt;kodi/api2/gui/ControlProgress.hpp&gt;</a> be included to enjoy it.</p>
-<p>Here you find the needed skin part for a <a class="el" href="a00036.html">progress control</a></p>
+<p><b>Window control used to show multiple pieces of text in the same position, by fading from one to the other</b> </p>
+<p>The fade label control is used for displaying multiple pieces of text in the same space in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed. The first piece of information to display fades in over 50 frames, then scrolls off to the left. Once it is finished scrolling off screen, the second piece of information fades in and the process repeats. A fade label control is not supported in a list container.</p>
+<p>It has the header <a class="el" href="a00182_source.html">#include &lt;kodi/api2/gui/ControlFadeLabel.hpp&gt;</a> be included to enjoy it.</p>
+<p>Here you find the needed skin part for a <a class="el" href="a00016.html">fade label control</a></p>
 <dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga33e0980459ea8e489f13a882c73a7dde"></a>
+<a class="anchor" id="ga90b3c88c8f974d59928e67fa9751b69b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CControlProgress </td>
+          <td class="memname">CControlFadeLabel </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="a00091.html">CWindow</a> *&#160;</td>
           <td class="paramname"><em>window</em>, </td>
@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('a00373.html','');});
 
 </div>
 </div>
-<a class="anchor" id="gaa981b5bb0357bd7838daa15e7eeec0b1"></a>
+<a class="anchor" id="gadcc150f725189d7e4f903b153c6d7ca1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('a00373.html','');});
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~CControlProgress </td>
+          <td class="memname">virtual ~CControlFadeLabel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -186,36 +186,36 @@ $(document).ready(function(){initNavTree('a00373.html','');});
 
 </div>
 </div>
-<a class="anchor" id="ga123bcc2a09c1b721c04b4bc0dd32953d"></a>
+<a class="anchor" id="ga47cfd2f63ce533672996085727a5fdd4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetPercentage </td>
+          <td class="memname">void AddLabel </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>percent</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To set Percent position of control. </p>
+<p>To add additional text string on fade label. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>The percent position to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>Text to show </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="gadbcb3c03a1a87a252f94e0274e1e75f8"></a>
+<a class="anchor" id="ga6c80f17140ee95a258ff6c13439a2623"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float GetPercentage </td>
+          <td class="memname">std::string GetLabel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -223,8 +223,49 @@ $(document).ready(function(){initNavTree('a00373.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Get the active percent position of progress bar. </p>
-<dl class="section return"><dt>Returns</dt><dd>Progress position as percent </dd></dl>
+<p>Get the used text from button. </p>
+<dl class="section return"><dt>Returns</dt><dd>Text shown </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga02685eb001d24047fce8ed6d4899e9af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetScrolling </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>scroll</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To enable or disable scrolling on fade label. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scroll</td><td>To enable scrolling set to true, otherwise is disabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga372de693ad40b3f42839c8ec6ac845f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To reset al inserted labels. </p>
 
 </div>
 </div>

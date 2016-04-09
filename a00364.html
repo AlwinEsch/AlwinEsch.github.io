@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Dialog Progress</title>
+<title>Kodi Development: Dialog Keyboard</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,122 +92,52 @@ $(document).ready(function(){initNavTree('a00364.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Dialog Progress<div class="ingroups"><a class="el" href="a00290.html">C++</a> &raquo; <a class="el" href="a00348.html">4. GUI</a></div></div>  </div>
+<div class="title">Dialog Keyboard<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00351.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Progress dialog shown in center</b> </p>
-<p>The with <a class="el" href="a00197_source.html">#include &lt;kodi/api2/gui/DialogProgress.hpp&gt;</a> given class are basically used to create Kodi's progress dialog with named text fields.</p>
+<p><b>Keyboard dialogs</b> </p>
+<p>The functions listed below have to be permitted by the user for the representation of a keyboard around an input.</p>
+<p>The class supports several kinds, from an easy text choice up to the passport Word production and their confirmation for add-on.</p>
+<p>These are pure static functions them no other initialization need.</p>
+<p>It has the header <a class="el" href="a00195_source.html">#include &lt;kodi/api2/gui/DialogKeyboard.hpp&gt;</a> be included to enjoy it.</p>
 <div class="image">
-<img src="help.GUIDialogProgress.png" alt="help.GUIDialogProgress.png"/>
+<img src="help.GUIDialogKeyboard.png" alt="help.GUIDialogKeyboard.png"/>
 </div>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/DialogProgress.h&gt;</span></div>
-<div class="line"></div>
-<div class="line"><a class="code" href="a00089.html">KodiAPI::GUI::CDialogProgress</a> *progress = <span class="keyword">new</span> <a class="code" href="a00089.html">KodiAPI::GUI::CDialogProgress</a>;</div>
-<div class="line">progress-&gt;<a class="code" href="a00364.html#gaf6377691fa79c14e16aebaeb9d340b33">SetHeading</a>(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00364.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(1, <span class="stringliteral">&quot;line 1&quot;</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00364.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(2, <span class="stringliteral">&quot;line 2&quot;</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00364.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(3, <span class="stringliteral">&quot;line 3&quot;</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00364.html#ga13580b7f84c1c13f90c1d030ef61faf8">SetCanCancel</a>(<span class="keyword">true</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00364.html#ga4ef9882ff90cb3878eb846335e2b3c07">ShowProgressBar</a>(<span class="keyword">true</span>);</div>
-<div class="line">progress-&gt;<a class="code" href="a00364.html#ga5e53001785ff30ae485a113b9b8a0ddc">Open</a>();</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 100; i += 10)</div>
-<div class="line">{</div>
-<div class="line">  progress-&gt;<a class="code" href="a00364.html#gadf0353f59469e4b0cab327ea7df9cae8">SetPercentage</a>(i);</div>
-<div class="line">  <a class="code" href="a00292.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
-<div class="line">}</div>
-<div class="line"><span class="keyword">delete</span> progress;</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga78b8dcedb682c8b3ee857485b2c4c2b8"></a>
+ <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gae3c529fd78ec590f13d4ededdca6cb58"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">CDialogProgress </td>
+          <td class="memname">bool KodiAPI::GUI::DialogKeyboard::ShowAndGetInput </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new dialog. </p>
-
-</div>
-</div>
-<a class="anchor" id="gaf4ebae45c5583fbefea366318f13714e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">~CDialogProgress </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Destructor. </p>
-
-</div>
-</div>
-<a class="anchor" id="ga5e53001785ff30ae485a113b9b8a0ddc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Open </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To open the dialog. </p>
-
-</div>
-</div>
-<a class="anchor" id="gaf6377691fa79c14e16aebaeb9d340b33"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetHeading </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the heading title of dialog. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Title string to use </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="ga845054cd7ff1978a112126086a8ec5ba"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetLine </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iLine</em>, </td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line</em>&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allowEmptyResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hiddenInput</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -217,179 +147,445 @@ $(document).ready(function(){initNavTree('a00364.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>To set the line text field on dialog from 0 - 2. </p>
+<p>Show keyboard with initial value <code>text</code> and replace with result string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iLine</td><td>Line number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>Text string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">text</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">allowEmptyResult</td><td>Whether a blank password is valid or not. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hiddenInput</td><td>The inserted input is not shown as text. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
-
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogKeyboard.hpp&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * The example shows the display of keyboard call dialog at Kodi from the add-on.</span></div>
+<div class="line"><span class="comment"> * Below all values are set, however, can last two (hidden input = false and autoCloseMs = 0)</span></div>
+<div class="line"><span class="comment"> * to be released if not needed.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line">std::string text = <span class="stringliteral">&quot;Please change me to them want you want&quot;</span>; <span class="comment">/*&lt; It can be leaved empty or a</span></div>
+<div class="line"><span class="comment">                                                                 entry text added */</span></div>
+<div class="line"><span class="keywordtype">bool</span> bRet = <a class="code" href="a00361.html#ga89f6071edbb80badea144ee1988d3fd1">KodiAPI::GUI::DialogKeyboard::ShowAndGetInput</a>(text,</div>
+<div class="line">                                                     <span class="stringliteral">&quot;Demonstration text entry&quot;</span>,</div>
+<div class="line">                                                     <span class="keyword">true</span>,</div>
+<div class="line">                                                     <span class="keyword">false</span>,</div>
+<div class="line">                                                     0);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Written keyboard input is : %s and was %s\n&quot;</span>,</div>
+<div class="line">                  text.c_str(), bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga13580b7f84c1c13f90c1d030ef61faf8"></a>
+<a class="anchor" id="gaaf143bc4f1f6d076b0fa13ec53ca0679"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetCanCancel </td>
+          <td class="memname">bool KodiAPI::GUI::DialogKeyboard::ShowAndGetInput </td>
           <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bCanCancel</em></td><td>)</td>
+          <td class="paramname"><em>allowEmptyResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To enable and show cancel button on dialog. </p>
+<p>The example shows the display of keyboard call dialog at Kodi from the add-on. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bCanCancel</td><td>if true becomes it shown </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">text</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">allowEmptyResult</td><td>If set to true keyboard can also exited without entered text. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gaf76bcf12aaec9ab845ea61853a37a33c"></a>
+<a class="anchor" id="gaf47920c4d4a290a0937da87bca49647a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsCanceled </td>
+          <td class="memname">bool KodiAPI::GUI::DialogKeyboard::ShowAndGetNewPassword </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>newPassword</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To check dialog for clicked cancel button. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if canceled </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gadf0353f59469e4b0cab327ea7df9cae8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">void SetPercentage </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iPercentage</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
         </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the current progress position as percent. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="gae20eeb097c9ebe3506bd1d2bb3d92fda"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">int GetPercentage </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>To set the current progress position as percent. </p>
-<dl class="section return"><dt>Returns</dt><dd>Current Position used from 0.0 to 100.0 </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga4ef9882ff90cb3878eb846335e2b3c07"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ShowProgressBar </td>
-          <td>(</td>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bOnOff</em></td><td>)</td>
+          <td class="paramname"><em>allowEmptyResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To show or hide progress bar dialog. </p>
+<p>Shows keyboard and prompts for a password. Differs from <code><a class="el" href="a00364.html#ga477c8805a58d52ecbf6b2030686330dc" title="Show keyboard twice to get and confirm a user-entered password string. ">ShowAndVerifyNewPassword()</a></code> in that no second verification. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bOnOff</td><td>If true becomes it shown </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">newPassword</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">allowEmptyResult</td><td>Whether a blank password is valid or not. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gad397a19fe15c25e5077d34fd43da6e5a"></a>
+<a class="anchor" id="ga90fbd6a5e07e72142cd2b84afef1d415"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetProgressMax </td>
+          <td class="memname">bool KodiAPI::GUI::DialogKeyboard::ShowAndGetNewPassword </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iMax</em></td><td>)</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>newPassword</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the maximum position of progress, needed if <code>SetProgressAdvance(...)</code> is used. </p>
+<p>Shows keyboard and prompts for a password. Differs from <code><a class="el" href="a00364.html#ga477c8805a58d52ecbf6b2030686330dc" title="Show keyboard twice to get and confirm a user-entered password string. ">ShowAndVerifyNewPassword()</a></code> in that no second verification. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">iMax</td><td>Biggest usable position to use </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">newPassword</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gafe4b80962f0d7bdd3b0a73b83ef06323"></a>
+<a class="anchor" id="ga461c967b8641507a99e4cfe0a352283a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetProgressAdvance </td>
+          <td class="memname">bool KodiAPI::GUI::DialogKeyboard::ShowAndVerifyNewPassword </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nSteps</em> = <code>1</code></td><td>)</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>newPassword</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allowEmptyResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>To increase progress bar by defined step size until reach of maximum position. </p>
+<p>Show keyboard twice to get and confirm a user-entered password string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nSteps</td><td>Step size to increase, default is 1 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">newPassword</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">allowEmptyResult</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
-
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/General.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogKeyboard.hpp&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * The example below shows the complete use of keyboard dialog for password</span></div>
+<div class="line"><span class="comment"> * check. If only one check from add-on needed can be function with retries</span></div>
+<div class="line"><span class="comment"> * set to &#39;0&#39; called alone.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * The use of MD5 translated password is always required for the check on Kodi!</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Get from Kodi&#39;s global settings the maximum allowed retries for passwords.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="keywordtype">int</span> maxretries = 0;</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="a00338.html#gaa30840affaf9670a98d6f20938383243">KodiAPI::AddOn::General::GetSettingInt</a>(<span class="stringliteral">&quot;masterlock.maxretries&quot;</span>, maxretries, <span class="keyword">true</span>))</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">   * Password names need to be send as md5 sum to kodi.</span></div>
+<div class="line"><span class="comment">   */</span></div>
+<div class="line">  std::string password;</div>
+<div class="line">  <a class="code" href="a00338.html#gaaa4e4b87e389178029953c66ff1e2252">KodiAPI::AddOn::General::GetMD5</a>(<span class="stringliteral">&quot;kodi&quot;</span>, password);</div>
+<div class="line"></div>
+<div class="line">  <span class="comment">/*</span></div>
+<div class="line"><span class="comment">   * To the loop about password checks.</span></div>
+<div class="line"><span class="comment">   */</span></div>
+<div class="line">  <span class="keywordtype">int</span> ret;</div>
+<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; maxretries; i++)</div>
+<div class="line">  {</div>
+<div class="line">    <span class="comment">/*</span></div>
+<div class="line"><span class="comment">     * Ask the user about the password.</span></div>
+<div class="line"><span class="comment">     */</span></div>
+<div class="line">    ret = <a class="code" href="a00364.html#gae355205f5c513b100dddaaf1632f7e81">KodiAPI::GUI::DialogKeyboard::ShowAndVerifyPassword</a>(password, <span class="stringliteral">&quot;Demo password call for PW &#39;kodi&#39;&quot;</span>, i, 0);</div>
+<div class="line">    <span class="keywordflow">if</span> (ret == 0)</div>
+<div class="line">    {</div>
+<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Password successfull confirmed after &#39;%i&#39; tries\n&quot;</span>, i+1);</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ret &lt; 0)</div>
+<div class="line">    {</div>
+<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Canceled editing on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span> <span class="comment">/* if (ret &gt; 0) */</span></div>
+<div class="line">    {</div>
+<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Wrong password entered on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Requested global setting value &#39;masterlock.maxretries&#39; not present!&quot;</span>);</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga71e9d732335846eb579f0dd00918b3e7"></a>
+<a class="anchor" id="ga477c8805a58d52ecbf6b2030686330dc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Abort </td>
+          <td class="memname">bool KodiAPI::GUI::DialogKeyboard::ShowAndVerifyNewPassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>newPassword</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show keyboard twice to get and confirm a user-entered password string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">newPassword</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae355205f5c513b100dddaaf1632f7e81"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int KodiAPI::GUI::DialogKeyboard::ShowAndVerifyPassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>password</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iRetries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show keyboard and verify user input against <code>password</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">password</td><td>Value to compare against user input. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iRetries</td><td>If greater than 0, shows "Incorrect
+                           password,  %d retries left" on dialog line 2, else line 2 is blank. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if successful display and user input. 1 if unsuccessful input. -1 if no user input or canceled editing. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac4494c0f2fe6a2036de2a9fe61c7685c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool KodiAPI::GUI::DialogKeyboard::ShowAndGetFilter </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>searching</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>autoCloseMs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shows a filter related keyboard. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">text</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">searching</td><td>Use dialog for search and send our search message in safe way (only the active window needs it)<ul>
+<li>header name if true is "Enter search string"</li>
+<li>header name if false is "Enter value" </li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga9fd35d71a1d9b8bd54a441eeaaba268a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool KodiAPI::GUI::DialogKeyboard::SendTextToActiveKeyboard </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>closeKeyboard</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a text to a visible keyboard. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">closeKeyboard</td><td>The open dialog is if also closed on 'true'. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful done, false if unsuccessful or keyboard not present. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga84a15873fc602d5f3cee645db60d56f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool KodiAPI::GUI::DialogKeyboard::IsKeyboardActivated </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -397,8 +593,8 @@ $(document).ready(function(){initNavTree('a00364.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>To check progress was canceled on work. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if aborted </dd></dl>
+<p>Check for visible keyboard on GUI. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if keyboard present, false if not present </dd></dl>
 
 </div>
 </div>

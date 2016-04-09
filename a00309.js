@@ -1,10 +1,7 @@
 var a00309 =
 [
-    [ "Lock", "a00309.html#ga1e6c297870325cead8b7869c56dde3a9", null ],
-    [ "Unlock", "a00309.html#ga562187d336aad67565a1f90521b8c12b", null ],
-    [ "GetScreenHeight", "a00309.html#gad287a915b2c19dea690a43f4df7d5553", null ],
-    [ "GetScreenWidth", "a00309.html#ga45844d515e52c611383bf9724c91312b", null ],
-    [ "GetVideoResolution", "a00309.html#ga52089728c14d6f72a86939377b496e9b", null ],
-    [ "GetCurrentWindowDialogId", "a00309.html#gadb22389c1d52ed050c28515c8175d357", null ],
-    [ "GetCurrentWindowId", "a00309.html#gacc2226a2237c681f2a4b930b87f63d0d", null ]
+    [ "getId", "a00309.html#gac7a54ea5a10c5c4683f16e3f83f77104", null ],
+    [ "getButtonCode", "a00309.html#gab60f32db21659ba5c3f4d145b9e5947b", null ],
+    [ "getAmount1", "a00309.html#ga3ee04d80d5e7af5563ecc098623a90ad", null ],
+    [ "getAmount2", "a00309.html#ga0f5620d911d309e2dadadc44359bce45", null ]
 ];

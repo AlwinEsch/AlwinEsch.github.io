@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: 2. AddOn</title>
+<title>Kodi Development: Subclass - ControlSlider</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,31 +91,85 @@ $(document).ready(function(){initNavTree('a00333.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">2. AddOn<div class="ingroups"><a class="el" href="a00290.html">C++</a></div></div>  </div>
+<div class="title">Subclass - ControlSlider<div class="ingroups"><a class="el" href="a00293.html">Python</a> &raquo; <a class="el" href="a00295.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00320.html">Control</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00334"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00334.html">settings.xml</a></td></tr>
-<tr class="memdesc:a00334"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Add-on settings.xml description</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00335"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00335.html">General</a></td></tr>
-<tr class="memdesc:a00335"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>General functions</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00337"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00337.html">Sound Playback (class CSoundPlay)</a></td></tr>
-<tr class="memdesc:a00337"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Background sound playback</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00339"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00339.html">Network</a></td></tr>
-<tr class="memdesc:a00339"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Network functions</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00340"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00340.html">Virtual file system</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p><b>Used for a volume slider.</b> </p>
+<p><b><code>ControlSlider(x, y, width, height[, textureback, texture, texturefocus])</code></b></p>
+<p>The slider control is used for things where a sliding bar best represents the operation at hand (such as a volume control or seek control). You can choose the position, size, and look of the slider control.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00320.html">Control</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureback</td><td>[opt] string - image filename </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texture</td><td>[opt] string - image filename </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texturefocus</td><td>[opt] string - image filename</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.<br />
+ After you create the control, you need to add it to the window with addControl().</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.slider = xbmcgui.ControlSlider(100, 250, 350, 40)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gad3e5815badb78551841c44d9b5ae3742"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getPercent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a float of the percent of the slider. </p>
+<dl class="section return"><dt>Returns</dt><dd>float - Percent of slider</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordflow">print</span> self.slider.getPercent()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaebdebaa245f9f39c8c27bbbe92ad9294"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPercent </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pct</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the percent of the slider. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pct</td><td>float - Percent value of slider</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.slider.setPercent(50)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

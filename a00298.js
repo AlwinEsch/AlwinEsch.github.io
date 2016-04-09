@@ -1,18 +1,13 @@
 var a00298 =
 [
-    [ "getURL", "a00298.html#gafa85bb6aea7b660960562826dcb20cf7", null ],
-    [ "getTitle", "a00298.html#ga888f94790c968e3f0b5de17e509098aa", null ],
-    [ "getArtist", "a00298.html#ga1b9f565753d008491c59887680bd570e", null ],
-    [ "getAlbum", "a00298.html#ga11ac7b770ff2135e877c241ddb5db662", null ],
-    [ "getAlbumArtist", "a00298.html#ga257503de86d218b382fcbbe9f1f68c2d", null ],
-    [ "getGenre", "a00298.html#ga724866edc25325e096d7d8a76b4a3234", null ],
-    [ "getDuration", "a00298.html#ga08c13081c0665a4336a0f022c955fb69", null ],
-    [ "getTrack", "a00298.html#ga797e19587556ad59c5e3a7b55e8ccae9", null ],
-    [ "getDisc", "a00298.html#gaa2759f95638fb39b74363457af9e7777", null ],
-    [ "getReleaseDate", "a00298.html#gad099adc410738271ffc55e6fb68f77ae", null ],
-    [ "getListeners", "a00298.html#gafdcd386f038151367af97803c1c13e41", null ],
-    [ "getPlayCount", "a00298.html#gac644258d08f747039e9d0e76bcd49513", null ],
-    [ "getLastPlayed", "a00298.html#ga64953074270dc9bc74370b8251c1cd43", null ],
-    [ "getComment", "a00298.html#ga50a7366cba8ce27bc48a00e746324f7b", null ],
-    [ "getLyrics", "a00298.html#gaefe9573a6a972ef63b082d2264baa857", null ]
+    [ "File", "a00305.html", "a00305" ],
+    [ "Stat", "a00315.html", "a00315" ],
+    [ "copy", "a00298.html#ga9188bb84632ebdbc54faca1de9be95c3", null ],
+    [ "deleteFile", "a00298.html#gabf13e7bae1c97bc1c4188f3e4e459f95", null ],
+    [ "rename", "a00298.html#gaefc98ff66890f353b4ea7fd620b63808", null ],
+    [ "exists", "a00298.html#ga12691f7bf1c5e55da57b18f63f6fbdca", null ],
+    [ "mkdir", "a00298.html#gaf69897d9a5235e87828a9e75c1cae4ca", null ],
+    [ "mkdirs", "a00298.html#ga229e97a6a47bdff0122f1004c4feda5c", null ],
+    [ "rmdir", "a00298.html#gac83ea5fb566ee294cdd87c74c6697025", null ],
+    [ "listdir", "a00298.html#ga6bb30280e2eb7d5b94cfb0eb6e65b0cb", null ]
 ];

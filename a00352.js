@@ -1,8 +1,10 @@
 var a00352 =
 [
-    [ "OnInit", "a00352.html#ga7d98c001ac8d31e48df88346e28bae16", null ],
-    [ "OnFocus", "a00352.html#ga7f69d7353e186b8fe4a1560767721501", null ],
-    [ "OnClick", "a00352.html#gad741fef5d9a1d2bf07449694e9a9e602", null ],
-    [ "OnAction", "a00352.html#gad3fc2a106ba0143fa5d11d3df32d9c72", null ],
-    [ "SetIndependentCallbacks", "a00352.html#ga5daaf4cdd5942017aa0be44ec98a7f95", null ]
+    [ "Lock", "a00352.html#ga1e6c297870325cead8b7869c56dde3a9", null ],
+    [ "Unlock", "a00352.html#ga562187d336aad67565a1f90521b8c12b", null ],
+    [ "GetScreenHeight", "a00352.html#gad287a915b2c19dea690a43f4df7d5553", null ],
+    [ "GetScreenWidth", "a00352.html#ga45844d515e52c611383bf9724c91312b", null ],
+    [ "GetVideoResolution", "a00352.html#ga52089728c14d6f72a86939377b496e9b", null ],
+    [ "GetCurrentWindowDialogId", "a00352.html#gadb22389c1d52ed050c28515c8175d357", null ],
+    [ "GetCurrentWindowId", "a00352.html#gacc2226a2237c681f2a4b930b87f63d0d", null ]
 ];

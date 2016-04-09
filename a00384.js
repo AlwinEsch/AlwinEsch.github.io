@@ -1,5 +1,7 @@
 var a00384 =
 [
-    [ "TriggerScan", "a00384.html#ga71e2010f9a35616f7a4024517f052d1b", null ],
-    [ "RefreshButtonMaps", "a00384.html#ga04b34df13a671ee8bd096203642cf06c", null ]
+    [ "Codec Descriptor (class CodecDescriptor)", "a00385.html", "a00385" ],
+    [ "GetCodecByName", "a00384.html#gab8d4d7010febbe7e81fc55d2fc7b8614", null ],
+    [ "AllocateDemuxPacket", "a00384.html#gaa73596c7986592032d59da8ad3cfca28", null ],
+    [ "FreeDemuxPacket", "a00384.html#gab5b9e9262b558cfa9f18acf307eec959", null ]
 ];

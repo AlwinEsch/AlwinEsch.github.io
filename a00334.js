@@ -1,8 +1,8 @@
 var a00334 =
 [
-    [ "TimerUpdate", "a00334.html#ga4586d22121490cf3bcc088ab51b244a1", null ],
-    [ "RecordingUpdate", "a00334.html#ga0d9cd5c5f01b0106862f48a21b0c42d6", null ],
-    [ "ChannelUpdate", "a00334.html#ga482cfad54b46dd910487cbaf9bd49836", null ],
-    [ "ChannelGroupsUpdate", "a00334.html#ga857ef60425bf31af3cf7b8b27252f6ce", null ],
-    [ "EpgUpdate", "a00334.html#gae14a095cd9a780ae9096340d9c78223f", null ]
+    [ "Definitions, structures and enumerators", "a00335.html", "a00335" ],
+    [ "KodiAPI_ErrorCodeToString", "a00334.html#gaa3c8a9b6597526ba1ad04e1aa3998237", null ],
+    [ "InitLibAddon", "a00334.html#ga54c2c0dd7a940c723a67a51ffe97025f", null ],
+    [ "Finalize", "a00334.html#ga25c17863c83dcc5fedf5d3fdfaface0e", null ],
+    [ "Log", "a00334.html#ga1b35d2c11c262cd3436768f6ed4c1f58", null ]
 ];

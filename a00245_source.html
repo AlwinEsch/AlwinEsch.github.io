@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/interfaces/legacy/Monitor.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi2/xbmc/interfaces/legacy/ModuleXbmcplugin.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('a00245_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Monitor.h</div>  </div>
+<div class="title">ModuleXbmcplugin.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
@@ -115,107 +115,180 @@ $(document).ready(function(){initNavTree('a00245_source.html','');});
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;AddonCallback.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;Tuple.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;ListItem.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;swighelper.h&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00284.html">XBMCAddon</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="a00103.html">   39</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00103.html">Monitor</a> : <span class="keyword">public</span> AddonCallback</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      String Id;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      CEvent abortEvent;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <a class="code" href="a00103.html">Monitor</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00286.html">XBMCAddon</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">namespace </span>xbmcplugin</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnSettingsChanged() { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#ga0b2faaa5bdb64710395d7b36330324a5">Monitor::onSettingsChanged</a>)); }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnScreensaverActivated() { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#gaec7c0588db39e824757e840bba4c3d0b">Monitor::onScreensaverActivated</a>)); }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnScreensaverDeactivated() { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#ga72fdab6e25d1882e64768c3b4fc02ada">Monitor::onScreensaverDeactivated</a>)); }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnDPMSActivated() { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#ga86cc4d6bc72abe7b74c1c50dde951412">Monitor::onDPMSActivated</a>)); }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnDPMSDeactivated() { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#ga3afef1ceaec0fd233dada0f1c415980c">Monitor::onDPMSDeactivated</a>)); }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnScanStarted(<span class="keyword">const</span> String &amp;library)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    XBMC_TRACE;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#ga6d6000ab39593068d3eb3955bed886c4">Monitor::onScanStarted</a>,library));</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#ga74db05abe95497de5e90206cb39ef7d4">Monitor::onDatabaseScanStarted</a>,library));</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnScanFinished(<span class="keyword">const</span> String &amp;library)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    XBMC_TRACE;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#gaf8242fca7ffb83cd719b43e16ca7a439">Monitor::onScanFinished</a>,library));</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#ga18d6bc330604bbe55e63ae6dae11efde">Monitor::onDatabaseUpdated</a>,library));</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnCleanStarted(<span class="keyword">const</span> String &amp;library) { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#ga5d8eb24ae2e1b1a360a9bf3b4b51d56d">Monitor::onCleanStarted</a>,library)); }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnCleanFinished(<span class="keyword">const</span> String &amp;library) { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#ga5e89c9b7e06b744f88063e5237977247">Monitor::onCleanFinished</a>,library)); }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnNotification(<span class="keyword">const</span> String &amp;sender, <span class="keyword">const</span> String &amp;method, <span class="keyword">const</span> String &amp;data) { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String,const String,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00304.html#ga68122e7f3ea25f8848f99024690f1419">Monitor::onNotification</a>,sender,method,data)); }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keyword">inline</span> <span class="keyword">const</span> String&amp; GetId() { <span class="keywordflow">return</span> Id; }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordtype">void</span> OnAbortRequested();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="a00304.html#ga0b2faaa5bdb64710395d7b36330324a5">   79</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#ga0b2faaa5bdb64710395d7b36330324a5">onSettingsChanged</a>() { XBMC_TRACE; }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="a00304.html#gaec7c0588db39e824757e840bba4c3d0b">   87</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#gaec7c0588db39e824757e840bba4c3d0b">onScreensaverActivated</a>() { XBMC_TRACE; }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="a00304.html#ga72fdab6e25d1882e64768c3b4fc02ada">   95</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#ga72fdab6e25d1882e64768c3b4fc02ada">onScreensaverDeactivated</a>() { XBMC_TRACE; }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="a00304.html#ga86cc4d6bc72abe7b74c1c50dde951412">  103</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#ga86cc4d6bc72abe7b74c1c50dde951412">onDPMSActivated</a>() { XBMC_TRACE; }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="a00304.html#ga3afef1ceaec0fd233dada0f1c415980c">  111</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#ga3afef1ceaec0fd233dada0f1c415980c">onDPMSDeactivated</a>() { XBMC_TRACE; }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="a00304.html#ga6d6000ab39593068d3eb3955bed886c4">  123</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#ga6d6000ab39593068d3eb3955bed886c4">onScanStarted</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="a00304.html#gaf8242fca7ffb83cd719b43e16ca7a439">  135</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#gaf8242fca7ffb83cd719b43e16ca7a439">onScanFinished</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="a00304.html#ga74db05abe95497de5e90206cb39ef7d4">  141</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#ga74db05abe95497de5e90206cb39ef7d4">onDatabaseScanStarted</a>(<span class="keyword">const</span> String database) { XBMC_TRACE; }</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="a00304.html#ga18d6bc330604bbe55e63ae6dae11efde">  147</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#ga18d6bc330604bbe55e63ae6dae11efde">onDatabaseUpdated</a>(<span class="keyword">const</span> String database) { XBMC_TRACE; }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="a00304.html#ga5d8eb24ae2e1b1a360a9bf3b4b51d56d">  159</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#ga5d8eb24ae2e1b1a360a9bf3b4b51d56d">onCleanStarted</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="a00304.html#ga5e89c9b7e06b744f88063e5237977247">  171</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#ga5e89c9b7e06b744f88063e5237977247">onCleanFinished</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="a00304.html#gace3ed8fa26883bff89728e0446fc8b81">  177</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#gace3ed8fa26883bff89728e0446fc8b81">onAbortRequested</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00296.html#ga0b7759ec71ba6098cd71289f7ffc103d">addDirectoryItem</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> String&amp; url, <span class="keyword">const</span> <a class="code" href="a00126.html">XBMCAddon::xbmcgui::ListItem</a>* listitem,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                          <span class="keywordtype">bool</span> isFolder = <span class="keyword">false</span>, <span class="keywordtype">int</span> totalItems = 0);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00296.html#ga0b7759ec71ba6098cd71289f7ffc103d">addDirectoryItem</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> String&amp; url, <span class="keyword">const</span> <a class="code" href="a00126.html">XBMCAddon::xbmcgui::ListItem</a>* listitem,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                          <span class="keywordtype">bool</span> isFolder = <span class="keyword">false</span>, <span class="keywordtype">int</span> totalItems = 0);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00296.html#gae65e249416de893f077e2c0010b7f697">addDirectoryItems</a>(<span class="keywordtype">int</span> handle,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                           <span class="keyword">const</span> std::vector&lt;Tuple&lt;String,const XBMCAddon::xbmcgui::ListItem*,bool&gt; &gt;&amp; items,</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                           <span class="keywordtype">int</span> totalItems = 0);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00296.html#gae65e249416de893f077e2c0010b7f697">addDirectoryItems</a>(<span class="keywordtype">int</span> handle,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                           <span class="keyword">const</span> std::vector&lt;Tuple&lt;String,const XBMCAddon::xbmcgui::ListItem*,bool&gt; &gt;&amp; items,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                           <span class="keywordtype">int</span> totalItems = 0);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga4efbfacead99ce6a469bbf37f63e05eb">endOfDirectory</a>(<span class="keywordtype">int</span> handle, <span class="keywordtype">bool</span> succeeded = <span class="keyword">true</span>, <span class="keywordtype">bool</span> updateListing = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                        <span class="keywordtype">bool</span> cacheToDisc = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="a00304.html#ga68122e7f3ea25f8848f99024690f1419">  189</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00304.html#ga68122e7f3ea25f8848f99024690f1419">onNotification</a>(<span class="keyword">const</span> String sender, <span class="keyword">const</span> String method, <span class="keyword">const</span> String data) { XBMC_TRACE; }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00304.html#gaef2a905f59250fe9ffbc34edfbdbbb54">waitForAbort</a>(<span class="keywordtype">double</span> timeout = -1);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00304.html#ga5b1ac2490aae34c81dd3ab6ecc58d8a5">abortRequested</a>();</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00103.html">Monitor</a>();</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    };</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  }</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;};</div>
-<div class="ttc" id="a00304_html_gaec7c0588db39e824757e840bba4c3d0b"><div class="ttname"><a href="a00304.html#gaec7c0588db39e824757e840bba4c3d0b">XBMCAddon::xbmc::Monitor::onScreensaverActivated</a></div><div class="ttdeci">virtual void onScreensaverActivated()</div><div class="ttdoc">onScreensaverActivated method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:87</div></div>
-<div class="ttc" id="a00304_html_ga72fdab6e25d1882e64768c3b4fc02ada"><div class="ttname"><a href="a00304.html#ga72fdab6e25d1882e64768c3b4fc02ada">XBMCAddon::xbmc::Monitor::onScreensaverDeactivated</a></div><div class="ttdeci">virtual void onScreensaverDeactivated()</div><div class="ttdoc">onScreensaverDeactivated method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:95</div></div>
-<div class="ttc" id="a00103_html"><div class="ttname"><a href="a00103.html">XBMCAddon::xbmc::Monitor</a></div><div class="ttdef"><b>Definition:</b> Monitor.h:39</div></div>
-<div class="ttc" id="a00304_html_ga5e89c9b7e06b744f88063e5237977247"><div class="ttname"><a href="a00304.html#ga5e89c9b7e06b744f88063e5237977247">XBMCAddon::xbmc::Monitor::onCleanFinished</a></div><div class="ttdeci">virtual void onCleanFinished(const String library)</div><div class="ttdoc">onCleanFinished method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:171</div></div>
-<div class="ttc" id="a00304_html_ga86cc4d6bc72abe7b74c1c50dde951412"><div class="ttname"><a href="a00304.html#ga86cc4d6bc72abe7b74c1c50dde951412">XBMCAddon::xbmc::Monitor::onDPMSActivated</a></div><div class="ttdeci">virtual void onDPMSActivated()</div><div class="ttdoc">onDPMSActivated method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:103</div></div>
-<div class="ttc" id="a00304_html_ga68122e7f3ea25f8848f99024690f1419"><div class="ttname"><a href="a00304.html#ga68122e7f3ea25f8848f99024690f1419">XBMCAddon::xbmc::Monitor::onNotification</a></div><div class="ttdeci">virtual void onNotification(const String sender, const String method, const String data)</div><div class="ttdoc">onNotification method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:189</div></div>
-<div class="ttc" id="a00304_html_ga74db05abe95497de5e90206cb39ef7d4"><div class="ttname"><a href="a00304.html#ga74db05abe95497de5e90206cb39ef7d4">XBMCAddon::xbmc::Monitor::onDatabaseScanStarted</a></div><div class="ttdeci">virtual void onDatabaseScanStarted(const String database)</div><div class="ttdef"><b>Definition:</b> Monitor.h:141</div></div>
-<div class="ttc" id="a00284_html"><div class="ttname"><a href="a00284.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00304_html_ga5d8eb24ae2e1b1a360a9bf3b4b51d56d"><div class="ttname"><a href="a00304.html#ga5d8eb24ae2e1b1a360a9bf3b4b51d56d">XBMCAddon::xbmc::Monitor::onCleanStarted</a></div><div class="ttdeci">virtual void onCleanStarted(const String library)</div><div class="ttdoc">onCleanStarted method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:159</div></div>
-<div class="ttc" id="a00304_html_ga0b2faaa5bdb64710395d7b36330324a5"><div class="ttname"><a href="a00304.html#ga0b2faaa5bdb64710395d7b36330324a5">XBMCAddon::xbmc::Monitor::onSettingsChanged</a></div><div class="ttdeci">virtual void onSettingsChanged()</div><div class="ttdoc">onSettingsChanged method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:79</div></div>
-<div class="ttc" id="a00304_html_ga18d6bc330604bbe55e63ae6dae11efde"><div class="ttname"><a href="a00304.html#ga18d6bc330604bbe55e63ae6dae11efde">XBMCAddon::xbmc::Monitor::onDatabaseUpdated</a></div><div class="ttdeci">virtual void onDatabaseUpdated(const String database)</div><div class="ttdef"><b>Definition:</b> Monitor.h:147</div></div>
-<div class="ttc" id="a00304_html_gace3ed8fa26883bff89728e0446fc8b81"><div class="ttname"><a href="a00304.html#gace3ed8fa26883bff89728e0446fc8b81">XBMCAddon::xbmc::Monitor::onAbortRequested</a></div><div class="ttdeci">virtual void onAbortRequested()</div><div class="ttdef"><b>Definition:</b> Monitor.h:177</div></div>
-<div class="ttc" id="a00304_html_gaf8242fca7ffb83cd719b43e16ca7a439"><div class="ttname"><a href="a00304.html#gaf8242fca7ffb83cd719b43e16ca7a439">XBMCAddon::xbmc::Monitor::onScanFinished</a></div><div class="ttdeci">virtual void onScanFinished(const String library)</div><div class="ttdef"><b>Definition:</b> Monitor.h:135</div></div>
-<div class="ttc" id="a00304_html_ga5b1ac2490aae34c81dd3ab6ecc58d8a5"><div class="ttname"><a href="a00304.html#ga5b1ac2490aae34c81dd3ab6ecc58d8a5">XBMCAddon::xbmc::Monitor::abortRequested</a></div><div class="ttdeci">bool abortRequested()</div><div class="ttdoc">Returns True if abort has been requested. </div></div>
-<div class="ttc" id="a00304_html_ga6d6000ab39593068d3eb3955bed886c4"><div class="ttname"><a href="a00304.html#ga6d6000ab39593068d3eb3955bed886c4">XBMCAddon::xbmc::Monitor::onScanStarted</a></div><div class="ttdeci">virtual void onScanStarted(const String library)</div><div class="ttdoc">onScanStarted method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:123</div></div>
-<div class="ttc" id="a00304_html_gaef2a905f59250fe9ffbc34edfbdbbb54"><div class="ttname"><a href="a00304.html#gaef2a905f59250fe9ffbc34edfbdbbb54">XBMCAddon::xbmc::Monitor::waitForAbort</a></div><div class="ttdeci">bool waitForAbort(double timeout=-1)</div><div class="ttdoc">Wait for Abort. </div></div>
-<div class="ttc" id="a00304_html_ga3afef1ceaec0fd233dada0f1c415980c"><div class="ttname"><a href="a00304.html#ga3afef1ceaec0fd233dada0f1c415980c">XBMCAddon::xbmc::Monitor::onDPMSDeactivated</a></div><div class="ttdeci">virtual void onDPMSDeactivated()</div><div class="ttdoc">onDPMSDeactivated method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:111</div></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga4efbfacead99ce6a469bbf37f63e05eb">endOfDirectory</a>(<span class="keywordtype">int</span> handle, <span class="keywordtype">bool</span> succeeded = <span class="keyword">true</span>, <span class="keywordtype">bool</span> updateListing = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                        <span class="keywordtype">bool</span> cacheToDisc = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga269ab5fd6b88eb1f56e3bc4f5b81701a">setResolvedUrl</a>(<span class="keywordtype">int</span> handle, <span class="keywordtype">bool</span> succeeded, <span class="keyword">const</span> <a class="code" href="a00126.html">XBMCAddon::xbmcgui::ListItem</a>* listitem);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga269ab5fd6b88eb1f56e3bc4f5b81701a">setResolvedUrl</a>(<span class="keywordtype">int</span> handle, <span class="keywordtype">bool</span> succeeded, <span class="keyword">const</span> <a class="code" href="a00126.html">XBMCAddon::xbmcgui::ListItem</a>* listitem);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#gabc68ce9f13d4d68df93d19a61f53ff8e">addSortMethod</a>(<span class="keywordtype">int</span> handle, <span class="keywordtype">int</span> sortMethod, <span class="keyword">const</span> String&amp; label2Mask = emptyString);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#gabc68ce9f13d4d68df93d19a61f53ff8e">addSortMethod</a>(<span class="keywordtype">int</span> handle, <span class="keywordtype">int</span> sortMethod, <span class="keyword">const</span> String&amp; label2Mask = emptyString);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    String <a class="code" href="a00296.html#gac254decc5a7b5cdf14893fe7136aa9dc">getSetting</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    String <a class="code" href="a00296.html#gac254decc5a7b5cdf14893fe7136aa9dc">getSetting</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga397670857a9ff2861a9fe55a4c8cf206">setSetting</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> String&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> String&amp; value);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga397670857a9ff2861a9fe55a4c8cf206">setSetting</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> String&amp; <span class="keywordtype">id</span>, <span class="keyword">const</span> String&amp; value);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga0ee818babc80aab1ead30465b1be416f">setContent</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> <span class="keywordtype">char</span>* content);</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga0ee818babc80aab1ead30465b1be416f">setContent</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> <span class="keywordtype">char</span>* content);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga2303d9cc58dfd405758375a94b29f14f">setPluginCategory</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> String&amp; category);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga2303d9cc58dfd405758375a94b29f14f">setPluginCategory</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> String&amp; category);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga2678f7c15eb38fdab9dec474ba7c1ed6">setPluginFanart</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> <span class="keywordtype">char</span>* image = NULL,</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                         <span class="keyword">const</span> <span class="keywordtype">char</span>* color1 = NULL,</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;                         <span class="keyword">const</span> <span class="keywordtype">char</span>* color2 = NULL,</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                         <span class="keyword">const</span> <span class="keywordtype">char</span>* color3 = NULL);</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#ga2678f7c15eb38fdab9dec474ba7c1ed6">setPluginFanart</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> <span class="keywordtype">char</span>* image = NULL,</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                         <span class="keyword">const</span> <span class="keywordtype">char</span>* color1 = NULL,</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                         <span class="keyword">const</span> <span class="keywordtype">char</span>* color2 = NULL,</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                         <span class="keyword">const</span> <span class="keywordtype">char</span>* color3 = NULL);</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#gad34e6025edb46d622a8ae9f7195d033c">setProperty</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keyword">const</span> String&amp; value);</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="a00296.html#gad34e6025edb46d622a8ae9f7195d033c">setProperty</a>(<span class="keywordtype">int</span> handle, <span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keyword">const</span> String&amp; value);</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_NONE);</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_LABEL);</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_LABEL_IGNORE_THE);</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_DATE);</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_SIZE);</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_FILE);</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_DRIVE_TYPE);</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_TRACKNUM);</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_DURATION);</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_TITLE);</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_TITLE_IGNORE_THE);</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_ARTIST);</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_ARTIST_IGNORE_THE);</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_ALBUM);</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_ALBUM_IGNORE_THE);</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_GENRE);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    SWIG_CONSTANT2(<span class="keywordtype">int</span>,SORT_METHOD_VIDEO_YEAR,SORT_METHOD_YEAR);</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_VIDEO_RATING);</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_PROGRAM_COUNT);</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_PLAYLIST_ORDER);</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_EPISODE);</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_VIDEO_TITLE);</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_VIDEO_SORT_TITLE);</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_VIDEO_SORT_TITLE_IGNORE_THE);</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_PRODUCTIONCODE);</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_SONG_RATING);</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_MPAA_RATING);</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_VIDEO_RUNTIME);</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_STUDIO);</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_STUDIO_IGNORE_THE);</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_UNSORTED);</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_BITRATE);</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_LISTENERS);</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_COUNTRY);</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_DATEADDED);</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_FULLPATH);</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_LABEL_IGNORE_FOLDERS);</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_LASTPLAYED);</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_PLAYCOUNT);</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_CHANNEL);</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_DATE_TAKEN);</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_VIDEO_USER_RATING);</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    SWIG_CONSTANT(<span class="keywordtype">int</span>,SORT_METHOD_SONG_USER_RATING);</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;  }</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;}</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a00296_html_gae65e249416de893f077e2c0010b7f697"><div class="ttname"><a href="a00296.html#gae65e249416de893f077e2c0010b7f697">addDirectoryItems</a></div><div class="ttdeci">bool addDirectoryItems(int handle, const std::vector&lt; Tuple&lt; String, const XBMCAddon::xbmcgui::ListItem *, bool &gt; &gt; &amp;items, int totalItems=0)</div></div>
+<div class="ttc" id="a00296_html_ga397670857a9ff2861a9fe55a4c8cf206"><div class="ttname"><a href="a00296.html#ga397670857a9ff2861a9fe55a4c8cf206">setSetting</a></div><div class="ttdeci">void setSetting(int handle, const String &amp;id, const String &amp;value)</div></div>
+<div class="ttc" id="a00296_html_gabc68ce9f13d4d68df93d19a61f53ff8e"><div class="ttname"><a href="a00296.html#gabc68ce9f13d4d68df93d19a61f53ff8e">addSortMethod</a></div><div class="ttdeci">void addSortMethod(int handle, int sortMethod, const String &amp;label2Mask=emptyString)</div></div>
+<div class="ttc" id="a00296_html_gad34e6025edb46d622a8ae9f7195d033c"><div class="ttname"><a href="a00296.html#gad34e6025edb46d622a8ae9f7195d033c">setProperty</a></div><div class="ttdeci">void setProperty(int handle, const char *key, const String &amp;value)</div></div>
+<div class="ttc" id="a00126_html"><div class="ttname"><a href="a00126.html">XBMCAddon::xbmcgui::ListItem</a></div><div class="ttdef"><b>Definition:</b> ListItem.h:72</div></div>
+<div class="ttc" id="a00296_html_ga2303d9cc58dfd405758375a94b29f14f"><div class="ttname"><a href="a00296.html#ga2303d9cc58dfd405758375a94b29f14f">setPluginCategory</a></div><div class="ttdeci">void setPluginCategory(int handle, const String &amp;category)</div></div>
+<div class="ttc" id="a00296_html_ga0ee818babc80aab1ead30465b1be416f"><div class="ttname"><a href="a00296.html#ga0ee818babc80aab1ead30465b1be416f">setContent</a></div><div class="ttdeci">void setContent(int handle, const char *content)</div></div>
+<div class="ttc" id="a00296_html_ga269ab5fd6b88eb1f56e3bc4f5b81701a"><div class="ttname"><a href="a00296.html#ga269ab5fd6b88eb1f56e3bc4f5b81701a">setResolvedUrl</a></div><div class="ttdeci">void setResolvedUrl(int handle, bool succeeded, const XBMCAddon::xbmcgui::ListItem *listitem)</div></div>
+<div class="ttc" id="a00296_html_ga4efbfacead99ce6a469bbf37f63e05eb"><div class="ttname"><a href="a00296.html#ga4efbfacead99ce6a469bbf37f63e05eb">endOfDirectory</a></div><div class="ttdeci">void endOfDirectory(int handle, bool succeeded=true, bool updateListing=false, bool cacheToDisc=true)</div></div>
+<div class="ttc" id="a00296_html_gac254decc5a7b5cdf14893fe7136aa9dc"><div class="ttname"><a href="a00296.html#gac254decc5a7b5cdf14893fe7136aa9dc">getSetting</a></div><div class="ttdeci">String getSetting(int handle, const char *id)</div></div>
+<div class="ttc" id="a00296_html_ga0b7759ec71ba6098cd71289f7ffc103d"><div class="ttname"><a href="a00296.html#ga0b7759ec71ba6098cd71289f7ffc103d">addDirectoryItem</a></div><div class="ttdeci">bool addDirectoryItem(int handle, const String &amp;url, const XBMCAddon::xbmcgui::ListItem *listitem, bool isFolder=false, int totalItems=0)</div></div>
+<div class="ttc" id="a00286_html"><div class="ttname"><a href="a00286.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
+<div class="ttc" id="a00296_html_ga2678f7c15eb38fdab9dec474ba7c1ed6"><div class="ttname"><a href="a00296.html#ga2678f7c15eb38fdab9dec474ba7c1ed6">setPluginFanart</a></div><div class="ttdeci">void setPluginFanart(int handle, const char *image=NULL, const char *color1=NULL, const char *color2=NULL, const char *color3=NULL)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c72e4a3b15aa6b185e7458e4a6d6ab4f.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_81c1a29a69722fee590df545771fd524.html">legacy</a></li><li class="navelem"><b>Monitor.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e1c33da6b8d5f7a4162daa452f8eeb21.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_a77a393e745ee1117c2ab603390e9e77.html">legacy</a></li><li class="navelem"><b>ModuleXbmcplugin.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

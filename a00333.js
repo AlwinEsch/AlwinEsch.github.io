@@ -1,8 +1,5 @@
 var a00333 =
 [
-    [ "settings.xml", "a00334.html", null ],
-    [ "General", "a00335.html", "a00335" ],
-    [ "Sound Playback (class CSoundPlay)", "a00337.html", "a00337" ],
-    [ "Network", "a00339.html", "a00339" ],
-    [ "Virtual file system", "a00340.html", "a00340" ]
+    [ "getPercent", "a00333.html#gad3e5815badb78551841c44d9b5ae3742", null ],
+    [ "setPercent", "a00333.html#gaebdebaa245f9f39c8c27bbbe92ad9294", null ]
 ];

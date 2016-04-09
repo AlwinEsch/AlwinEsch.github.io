@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Dialog Numeric</title>
+<title>Kodi Development: Dialog Extended Progress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,65 +92,251 @@ $(document).ready(function(){initNavTree('a00362.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Dialog Numeric<div class="ingroups"><a class="el" href="a00290.html">C++</a> &raquo; <a class="el" href="a00348.html">4. GUI</a></div></div>  </div>
+<div class="title">Dialog Extended Progress<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00351.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Numeric dialogs</b> </p>
-<p>The functions listed below have to be permitted by the user for the representation of a numeric keyboard around an input.</p>
-<p>The class supports several kinds, from an easy number choice up to the passport Word production and their confirmation for add-on.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00195_source.html">#include &lt;kodi/api2/gui/DialogNumeric.hpp&gt;</a> be included to enjoy it.</p>
+<p><b>Progress dialog shown for background work</b> </p>
+<p>The with <a class="el" href="a00193_source.html">#include &lt;kodi/api2/addon/DialogExtendedProgress.hpp&gt;</a> given class are basically used to create Kodi's extended progress.</p>
 <div class="image">
-<img src="help.GUIDialogNumeric.png" alt="help.GUIDialogNumeric.png"/>
+<img src="help.GUIDialogExtendedProgress.png" alt="help.GUIDialogExtendedProgress.png"/>
 </div>
- <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga425c581c506c008c30f7502f55442790"></a>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/DialogExtendedProgress.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="a00088.html">KodiAPI::GUI::CDialogExtendedProgress</a> *ext_progress = <span class="keyword">new</span> <a class="code" href="a00088.html">KodiAPI::GUI::CDialogExtendedProgress</a>(<span class="stringliteral">&quot;Test Extended progress&quot;</span>);</div>
+<div class="line">ext_progress-&gt;<a class="code" href="a00362.html#gaec55d8bf3ca3e04261b66bee36f84368">SetText</a>(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 50; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  ext_progress-&gt;<a class="code" href="a00362.html#gac64c8e121cf5e368cd335c28a0521922">SetProgress</a>(i, 100);</div>
+<div class="line">  <a class="code" href="a00294.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line">ext_progress-&gt;<a class="code" href="a00362.html#gad8698c0477204fb8b81feb9d81cbe4fd">SetTitle</a>(<span class="stringliteral">&quot;Test Extended progress - Second round&quot;</span>);</div>
+<div class="line">ext_progress-&gt;<a class="code" href="a00362.html#gaec55d8bf3ca3e04261b66bee36f84368">SetText</a>(<span class="stringliteral">&quot;Test progress - Step 2&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 50; i &lt; 100; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  ext_progress-&gt;<a class="code" href="a00362.html#gac64c8e121cf5e368cd335c28a0521922">SetProgress</a>(i, 100);</div>
+<div class="line">  <a class="code" href="a00294.html#gac0cd1ce3c7d7beb5da0b2456a8477d16">sleep</a>(1);</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">delete</span> ext_progress;</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga598592cd22cbc89797f504ffd53f7a70"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogNumeric::ShowAndVerifyNewPassword </td>
+          <td class="memname">CDialogExtendedProgress </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strNewPassword</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a new dialog</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>Title string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga60f91cfdfb63c58d75ab7bb1d8076857"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~CDialogExtendedProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destructor </p>
+
+</div>
+</div>
+<a class="anchor" id="ga3cb91fb7750df7982baea48c4a3de616"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Title </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the used title. </p>
+<dl class="section return"><dt>Returns</dt><dd>Title string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad8698c0477204fb8b81feb9d81cbe4fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTitle </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strTitle</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Use dialog to get numeric new password. </p>
+<p>To set the title of dialog. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">strNewPassword</td><td>String to preload into the keyboard accumulator. Overwritten with user input if return=true. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strTitle</td><td>Title string </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input entry/re-entry. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="gac38878bcfd30e783aed2bd2f2a8a0dc1"></a>
+<a class="anchor" id="gafdfa72709ffc1738c3c198f7ad8b61ec"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int KodiAPI::GUI::DialogNumeric::ShowAndVerifyPassword </td>
+          <td class="memname">std::string Text </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strPassword</em>, </td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the used text information string. </p>
+<dl class="section return"><dt>Returns</dt><dd>Text string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaec55d8bf3ca3e04261b66bee36f84368"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
         <tr>
-          <td class="paramkey"></td>
-          <td></td>
+          <td class="memname">void SetText </td>
+          <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>, </td>
+          <td class="paramname"><em>strText</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the used text information string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strText</td><td>information text to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaabe45b4d47077b54df0bb809eb41b8d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsFinished </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To ask dialog is finished. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if on end </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga40af1bcedea1f61fde8cd5e70e416473"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MarkFinished </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mark progress finished. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga3bf91c353218dceaa271b65321b2f5cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Percentage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current progress position as percent. </p>
+<dl class="section return"><dt>Returns</dt><dd>Position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga74a9a823ab1cd34d62a219a842de5946"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPercentage </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fPercentage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the current progress position as percent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gac64c8e121cf5e368cd335c28a0521922"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProgress </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentItem</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iRetries</em>&#160;</td>
+          <td class="paramname"><em>itemCount</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -160,336 +346,14 @@ $(document).ready(function(){initNavTree('a00362.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Use dialog to verify numeric password. </p>
+<p>To set progress position with predefined places. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">strPassword</td><td>Overwritten with user input if return=tru </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">iRetries</td><td>If greater than 0, shows "Incorrect password, %d retries left" on dialog line 2, else line 2 is blank. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">currentItem</td><td>Place position to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">itemCount</td><td>Amount of used places </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if successful display and user input. 1 if unsuccessful input. -1 if no user input or canceled editing.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* fprintf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/General.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogNumeric.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * The example below shows the complete use of keyboard dialog for password</span></div>
-<div class="line"><span class="comment"> * check. If only one check from add-on needed can be function with retries</span></div>
-<div class="line"><span class="comment"> * set to &#39;0&#39; called alone.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * The use of MD5 translated password is always required for the check on Kodi!</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"></div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Get from Kodi&#39;s global settings the maximum allowed retries for passwords.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keywordtype">int</span> maxretries = 0;</div>
-<div class="line"><span class="keywordflow">if</span> (<a class="code" href="a00335.html#gaa30840affaf9670a98d6f20938383243">KodiAPI::AddOn::General::GetSettingInt</a>(<span class="stringliteral">&quot;masterlock.maxretries&quot;</span>, maxretries, <span class="keyword">true</span>))</div>
-<div class="line">{</div>
-<div class="line">  <span class="comment">/*</span></div>
-<div class="line"><span class="comment">   * Password names need to be send as md5 sum to kodi.</span></div>
-<div class="line"><span class="comment">   */</span></div>
-<div class="line">  std::string password;</div>
-<div class="line">  <a class="code" href="a00335.html#gaaa4e4b87e389178029953c66ff1e2252">CAddonLib_General::GetMD5</a>(<span class="stringliteral">&quot;1234&quot;</span>, password);</div>
-<div class="line"></div>
-<div class="line">  <span class="comment">/*</span></div>
-<div class="line"><span class="comment">   * To the loop about password checks.</span></div>
-<div class="line"><span class="comment">   */</span></div>
-<div class="line">  <span class="keywordtype">int</span> ret;</div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; maxretries; i++)</div>
-<div class="line">  {</div>
-<div class="line">    <span class="comment">/*</span></div>
-<div class="line"><span class="comment">     * Ask the user about the password.</span></div>
-<div class="line"><span class="comment">     */</span></div>
-<div class="line">    ret = <a class="code" href="a00361.html#gae355205f5c513b100dddaaf1632f7e81">KodiAPI::GUI::DialogNumeric::ShowAndVerifyPassword</a>(password, <span class="stringliteral">&quot;Demo numeric password call for PW &#39;1234&#39;&quot;</span>, i);</div>
-<div class="line">    <span class="keywordflow">if</span> (ret == 0)</div>
-<div class="line">    {</div>
-<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Numeric password successfull confirmed after &#39;%i&#39; tries\n&quot;</span>, i+1);</div>
-<div class="line">      <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ret &lt; 0)</div>
-<div class="line">    {</div>
-<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Canceled editing on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
-<div class="line">      <span class="keywordflow">break</span>;</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">else</span> <span class="comment">/* if (ret &gt; 0) */</span></div>
-<div class="line">    {</div>
-<div class="line">      fprintf(stderr, <span class="stringliteral">&quot;Wrong numeric password entered on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
-<div class="line">     }</div>
-<div class="line">  }</div>
-<div class="line">}</div>
-<div class="line"><span class="keywordflow">else</span></div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot;Requested global setting value &#39;masterlock.maxretries&#39; not present!&quot;</span>);</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gac1e6848c0cb5734499a0ed11f43b8427"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogNumeric::ShowAndVerifyInput </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strToVerify</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bVerifyInput</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Use dialog to verify numeric password. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">strToVerify</td><td>Value to compare against user input. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bVerifyInput</td><td>If set as true we verify the users input versus strToVerify. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaabe01c994c20c760af3827e3d6505684"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogNumeric::ShowAndGetTime </td>
-          <td>(</td>
-          <td class="paramtype">tm &amp;&#160;</td>
-          <td class="paramname"><em>time</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Use dialog to get time value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">time</td><td>Overwritten with user input if return=true and time inserted. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strHeading</td><td>Heading to display. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* printf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;time.h&gt;</span>       <span class="comment">/* time_t, struct tm, time, localtime, strftime */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogNumeric.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line">time_t rawtime;</div>
-<div class="line"><span class="keyword">struct </span>tm * timeinfo;</div>
-<div class="line"><span class="keywordtype">char</span> buffer [10];</div>
-<div class="line"></div>
-<div class="line">time (&amp;rawtime);</div>
-<div class="line">timeinfo = localtime(&amp;rawtime);</div>
-<div class="line"><span class="keywordtype">bool</span> bRet = <a class="code" href="a00362.html#gaabe01c994c20c760af3827e3d6505684">KodiAPI::GUI::DialogNumeric::ShowAndGetTime</a>(*timeinfo, <span class="stringliteral">&quot;Selected time test call&quot;</span>);</div>
-<div class="line">strftime(buffer, <span class="keyword">sizeof</span>(buffer), <span class="stringliteral">&quot;%H:%M.&quot;</span>, timeinfo);</div>
-<div class="line">printf(<span class="stringliteral">&quot;Selected time it&#39;s %s and was on Dialog %s\n&quot;</span>, buffer, bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="gaa5e69e0b6597de68f49c163b87ebaf57"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogNumeric::ShowAndGetDate </td>
-          <td>(</td>
-          <td class="paramtype">tm &amp;&#160;</td>
-          <td class="paramname"><em>date</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Use dialog to get date value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">date</td><td>Overwritten with user input if return=true and date inserted. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* printf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;time.h&gt;</span>       <span class="comment">/* time_t, struct tm, time, localtime, strftime */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogNumeric.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line">time_t rawtime;</div>
-<div class="line"><span class="keyword">struct </span>tm * timeinfo;</div>
-<div class="line"><span class="keywordtype">char</span> buffer [20];</div>
-<div class="line"></div>
-<div class="line">time (&amp;rawtime);</div>
-<div class="line">timeinfo = localtime(&amp;rawtime);</div>
-<div class="line"><span class="keywordtype">bool</span> bRet = <a class="code" href="a00362.html#gaa5e69e0b6597de68f49c163b87ebaf57">KodiAPI::GUI::DialogNumeric::ShowAndGetDate</a>(*timeinfo, <span class="stringliteral">&quot;Selected date test call&quot;</span>);</div>
-<div class="line">strftime(buffer, <span class="keyword">sizeof</span>(buffer), <span class="stringliteral">&quot;%Y-%m-%d&quot;</span>, timeinfo);</div>
-<div class="line">printf(<span class="stringliteral">&quot;Selected date it&#39;s %s and was on Dialog %s\n&quot;</span>, buffer, bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga8f40109c706444bbb7484793c7a92c05"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogNumeric::ShowAndGetIPAddress </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strIPAddress</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Use dialog to get a IP. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">strIPAddress</td><td>Overwritten with user input if return=true and IP address inserted. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strHeading</td><td>Heading to display. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga39533ee1e2f8541c47f8dd1cbcf893a1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogNumeric::ShowAndGetNumber </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strInput</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iAutoCloseTimeoutMs</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Use dialog to get normal number. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">strInput</td><td>Overwritten with user input if return=true and time in seconds inserted </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">iAutoCloseTimeoutMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span>      <span class="comment">/* printf */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;stdlib.h&gt;</span>     <span class="comment">/* strtoull (C++11) */</span></div>
-<div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogNumeric.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line">std::string number;</div>
-<div class="line"><span class="keywordtype">bool</span> bRet = <a class="code" href="a00362.html#ga39533ee1e2f8541c47f8dd1cbcf893a1">KodiAPI::GUI::DialogNumeric::ShowAndGetNumber</a>(number, <span class="stringliteral">&quot;Number test call&quot;</span>);</div>
-<div class="line">printf(<span class="stringliteral">&quot;Written number input is : %llu and was %s\n&quot;</span>,</div>
-<div class="line">               strtoull(number.c_str(), <span class="keyword">nullptr</span>, 0), bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="ga5b7c4dbde91b44058a9edebef65d5354"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogNumeric::ShowAndGetSeconds </td>
-          <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>strTime</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strHeading</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Show numeric keypad to get seconds. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">strTime</td><td>Overwritten with user input if return=true and time in seconds inserted. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strHeading</td><td>Heading to display </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful display and user input. false if unsuccessful display, no user input, or canceled editing. </dd></dl>
 
 </div>
 </div>

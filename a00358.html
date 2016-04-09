@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Dialog Yes/No</title>
+<title>Kodi Development: Functions - Picture info tag</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,52 +92,253 @@ $(document).ready(function(){initNavTree('a00358.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Dialog Yes/No<div class="ingroups"><a class="el" href="a00290.html">C++</a> &raquo; <a class="el" href="a00348.html">4. GUI</a></div></div>  </div>
+<div class="title">Functions - Picture info tag<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00351.html">4. GUI</a> &raquo; <a class="el" href="a00359.html">List Item</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Yes / No dialog</b> </p>
-<p>The Yes / No dialog can be used to inform the user about questions and get the answer.</p>
-<p>In order to achieve a line break is a <b>\n</b> directly in the text or in the "./resources/language/resource.language.??_??/strings.po" to call with <b>std::string KodiAPI::AddOn::General::GetLocalizedString(...);</b>.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00200_source.html">#include &lt;kodi/api2/gui/DialogYesNo.hpp&gt;</a> be included to enjoy it.</p>
-<div class="image">
-<img src="help.GUIDialogYesNo.png" alt="help.GUIDialogYesNo.png"/>
-</div>
- <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga89f6071edbb80badea144ee1988d3fd1"></a>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ga52554fd2ecb4f8f4f1cc5b3c524ac989"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogYesNo::ShowAndGetInput </td>
+          <td class="memname">enum ADDON_PictureInfoTag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Picture info tag data transfer flags. </p>
+<p><a class="anchor" id="ADDON_PictureInfoTag"></a> Flags are used to identify data send from Add-on to Kodi and is used by the following functions:</p><ul>
+<li><a class="el" href="a00358.html#ga6d5fec639f9977efee96f85280790b96">CListItem::SetPictureInfo_BOOL(...);</a></li>
+<li><a class="el" href="a00358.html#gae0d0e7be2dbd1133b7c005f130972cb1">CListItem::SetPictureInfo_INT(...);</a></li>
+<li><a class="el" href="a00358.html#ga35f53eb53d1ae797ccfb723c1ab56bce">CListItem::SetPictureInfo_UINT(...);</a></li>
+<li><a class="el" href="a00358.html#gad519e09d54228fd193c308e3cdfa1a11">CListItem::SetPictureInfo_FLOAT(...);</a></li>
+<li><a class="el" href="a00358.html#ga6509ea12792ec0fb2e6b205486c6be6a">CListItem::SetPictureInfo_STRING(...);</a></li>
+<li><a class="el" href="a00358.html#ga42d6b908cd635edb8e9aa98953032e22">CListItem::SetPictureInfo_STRING_LIST(...);</a></li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>The end string of value shows the type of function to use.</dd></dl>
+<p><b>Picture example Values</b>: </p><table class="doxtable">
+<tr>
+<th align="right">Info label </th><th align="left">Description  </th></tr>
+<tr>
+<td align="right">title </td><td align="left">string (In the last summer-1) </td></tr>
+<tr>
+<td align="right">picturepath </td><td align="left">string (<code>/home/username/pictures/img001.jpg</code>) </td></tr>
+<tr>
+<td align="right">exif* </td><td align="left">string (See kodi_pictures_infotag for valid strings) </td></tr>
+</table>
+<dl class="section warning"><dt>Warning</dt><dd>From exif are currently only the following supported:<ul>
+<li>ADDON_PictureInfoTag__count_____________________INT</li>
+<li>ADDON_PictureInfoTag__size______________________INT</li>
+<li>ADDON_PictureInfoTag__title_____________________STRING</li>
+<li>ADDON_PictureInfoTag__picturepath_______________STRING</li>
+<li>ADDON_PictureInfoTag__date______________________STRING_DATE_TIME</li>
+<li>ADDON_PictureInfoTag__datetime__________________STRING_DATE_TIME</li>
+<li>ADDON_PictureInfoTag__resolution________________DATA All other from exif are not usable! </li>
+</ul>
+</dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a60dbd5c1adf55e83e0a276edb1e153be"></a>ADDON_PictureInfoTag__title_____________________STRING&#160;</td><td class="fielddoc">
+<p>The itle of the currently selected picture. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a059936ee9748109942614d13d9c6febb"></a>ADDON_PictureInfoTag__size______________________INT&#160;</td><td class="fielddoc">
+<p>Shows the file size of the current picture. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989abac734ec6b06fbcd58cd681e5967b659"></a>ADDON_PictureInfoTag__count_____________________INT&#160;</td><td class="fielddoc">
+<pre class="fragment"></pre> </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a51a8dede2b6aca3ffb38a1baeb044503"></a>ADDON_PictureInfoTag__picturepath_______________STRING&#160;</td><td class="fielddoc">
+<p>Shows the filename and path of the selected picture. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a50e176edd1e8965d35fc1835bb949d90"></a>ADDON_PictureInfoTag__date______________________STRING_DATE_TIME&#160;</td><td class="fielddoc">
+<p>Shows the localized date of the selected picture. The short form of the date is used. The value of the EXIF DateTimeOriginal tag (hex code 0x9003) is preferred. If the DateTimeOriginal tag is not found, the value of DateTimeDigitized (hex code 0x9004) or of DateTime (hex code 0x0132) might be used. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a7e75b744128bd56f03187d6abe4b9a06"></a>ADDON_PictureInfoTag__aperturefnumber___________FLOAT&#160;</td><td class="fielddoc">
+<p>Shows the F-stop used to take the selected picture. This is the value of the EXIF FNumber tag (hex code 0x829D). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a3171f794a50e88d6bc59ba88ee6f0c48"></a>ADDON_PictureInfoTag__cameramake________________STRING&#160;</td><td class="fielddoc">
+<p>Shows the manufacturer of the camera used to take the current picture. This is the value of the EXIF Make tag (hex code 0x010F). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ae9ac1972056f6cb9416e5e6276730022"></a>ADDON_PictureInfoTag__cameramodel_______________STRING&#160;</td><td class="fielddoc">
+<p>Shows the manufacturer's model name or number of the camera used to take the current picture. This is the value of the EXIF Model tag (hex code 0x0110). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989aa30bd46e1582821bbbc1f7cf965f54c7"></a>ADDON_PictureInfoTag__ccdwidth__________________FLOAT&#160;</td><td class="fielddoc">
+<p>Shows the width of the CCD in the camera used to take the current picture. This is calculated from three EXIF tags (0xA002 * 0xA210 / 0xA20e). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a8b57e88fb1bd8052801815e8a25c95b0"></a>ADDON_PictureInfoTag__comments__________________STRING&#160;</td><td class="fielddoc">
+<p>Shows a description of the selected picture. This is the value of the EXIF User Comment tag (hex code 0x9286). This is the same value as Slideshow.SlideComment. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a520a0fa3a9c33f41c6205685c1e20b66"></a>ADDON_PictureInfoTag__description_______________STRING&#160;</td><td class="fielddoc">
+<p>Shows a short description of the current picture. The SlideComment, EXIFComment, or Caption values might contain a longer description. This is the value of the EXIF ImageDescription tag (hex code 0x010E). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ab5142310be7193fe4e290689352b09bd"></a>ADDON_PictureInfoTag__datetime__________________STRING_DATE_TIME&#160;</td><td class="fielddoc">
+<p>Shows the date/timestamp of the selected picture. The localized short form of the date and time is used. The value of the EXIF DateTimeOriginal tag (hex code 0x9003) is preferred. If the DateTimeOriginal tag is not found, the value of DateTimeDigitized (hex code 0x9004) or of DateTime (hex code 0x0132) might be used. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a822bfde479224a080f6b374536a3903f"></a>ADDON_PictureInfoTag__datetimeoffsets_ten_items_INT_LIST&#160;</td><td class="fielddoc">
+<pre class="fragment"></pre> </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a1e077530c52a645adcd8fb19523b1273"></a>ADDON_PictureInfoTag__digitalzoomratio__________FLOAT&#160;</td><td class="fielddoc">
+<p>Shows the digital zoom ratio when the current picture was taken. This is the value of the EXIF .DigitalZoomRatio tag (hex code 0xA404). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a2b5bf61431c25cd099c3ce6931303e55"></a>ADDON_PictureInfoTag__distance__________________FLOAT&#160;</td><td class="fielddoc">
+<p>Shows the distance to the subject, in meters. This is the value of the EXIF SubjectDistance tag (hex code 0x9206). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a6f2ccd73e387f70fd0ecda6a55e06a84"></a>ADDON_PictureInfoTag__exposurebias______________FLOAT&#160;</td><td class="fielddoc">
+<p>Shows the exposure bias of the current picture. Typically this is a number between -99.99 and 99.99. This is the value of the EXIF ExposureBiasValue tag (hex code 0x9204). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ae74a9575e135f1f3cdc31ed67268ba7f"></a>ADDON_PictureInfoTag__exposuremode______________INT&#160;</td><td class="fielddoc">
+<p>Shows the exposure mode of the current picture. The possible values are "Automatic", "Manual", and "Auto bracketing". This is the value of the EXIF ExposureMode tag (hex code 0xA402). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989acaecf8ae12e54324532cdcdae1777792"></a>ADDON_PictureInfoTag__exposureprogram___________INT&#160;</td><td class="fielddoc">
+<p>Shows the exposure mode of the current picture. The possible values are "Automatic", "Manual", and "Auto bracketing". This is the value of the EXIF ExposureMode tag (hex code 0xA402). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a347985a6718fb67b49f2360b76b451d4"></a>ADDON_PictureInfoTag__exposuretime______________FLOAT&#160;</td><td class="fielddoc">
+<p>Shows the exposure time of the current picture, in seconds. This is the value of the EXIF ExposureTime tag (hex code 0x829A). If the ExposureTime tag is not found, the ShutterSpeedValue tag (hex code 0x9201) might be used. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a1e021ba5869b64d2a4c5a10ef8af1e2d"></a>ADDON_PictureInfoTag__flashused_________________INT&#160;</td><td class="fielddoc">
+<p>Shows the status of flash when the current picture was taken. The value will be either "Yes" or "No", and might include additional information. This is the value of the EXIF Flash tag (hex code 0x9209). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989aeaa106fa6ebdab3d464c47b319ea254d"></a>ADDON_PictureInfoTag__focallength_______________FLOAT&#160;</td><td class="fielddoc">
+<p>Shows the focal length of the lens, in mm. This is the value of the EXIF FocalLength tag (hex code 0x920A). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a7535c4abe1e092331e32b7f457d46c8e"></a>ADDON_PictureInfoTag__focallength35mmequiv______INT&#160;</td><td class="fielddoc">
+<pre class="fragment"></pre> </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a96de29aef5a36bade03da221a16ece72"></a>ADDON_PictureInfoTag__gpsinfopresent____________BOOL&#160;</td><td class="fielddoc">
+<pre class="fragment"></pre> </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a61d2cbc984f5b4f9ba4c7cdf1f2f9e18"></a>ADDON_PictureInfoTag__gpsinfo_alt_______________STRING&#160;</td><td class="fielddoc">
+<p>Shows the altitude in meters where the selected picture was taken. This is the value of the EXIF GPSInfo.GPSAltitude tag. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ab064ddc5862cdc01b7b6830ec6c9bbf4"></a>ADDON_PictureInfoTag__gpsinfo_lat_______________STRING&#160;</td><td class="fielddoc">
+<p>Shows the latitude where the selected picture was taken (degrees, minutes, seconds North or South). This is the value of the EXIF GPSInfo.GPSLatitude and GPSInfo.GPSLatitudeRef tags. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a12f72f915209d5016bcc9eaa4d83f5f4"></a>ADDON_PictureInfoTag__gpsinfo_long______________STRING&#160;</td><td class="fielddoc">
+<p>Shows the longitude where the selected picture was taken (degrees, minutes, seconds East or West). This is the value of the EXIF GPSInfo.GPSLongitude and GPSInfo.GPSLongitudeRef tags. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a86ccc7043d71073dd255fb2403b01efe"></a>ADDON_PictureInfoTag__resolution________________DATA&#160;</td><td class="fielddoc">
+<p>Shows the dimensions of the current picture (Width x Height) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ad45f63bcf6c1b9a7e08de96e637af171"></a>ADDON_PictureInfoTag__iscolor___________________BOOL&#160;</td><td class="fielddoc">
+<pre class="fragment"></pre> </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a61c2ad251f3742417fbed723d9a8fe31"></a>ADDON_PictureInfoTag__isoequivalent_____________BOOL&#160;</td><td class="fielddoc">
+<p>Shows the ISO speed of the camera when the current picture was taken. This is the value of the EXIF ISOSpeedRatings tag (hex code 0x8827). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989adce582919a5459a9d2bfbb64ed9fa7a0"></a>ADDON_PictureInfoTag__largestexifoffset_________UINT&#160;</td><td class="fielddoc">
+<pre class="fragment"></pre> </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a76c9e2ffec0200733897018756b85629"></a>ADDON_PictureInfoTag__lightsource_______________INT&#160;</td><td class="fielddoc">
+<p>Shows the kind of light source when the picture was taken. Possible values include "Daylight", "Fluorescent", "Incandescent", etc. This is the value of the EXIF LightSource tag (hex code 0x9208). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989afdd11244e16cf8a47f15e4a12bc33dad"></a>ADDON_PictureInfoTag__meteringmode______________INT&#160;</td><td class="fielddoc">
+<p>Shows the metering mode used when the current picture was taken. The possible values are "Center weight", "Spot", or "Matrix". This is the value of the EXIF MeteringMode tag (hex code 0x9207). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a71cbf57f7063c87c3333f4ea6be40804"></a>ADDON_PictureInfoTag__numdatetimetags___________INT&#160;</td><td class="fielddoc">
+<pre class="fragment"></pre> </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a1fab67f8023dee6e22bdc87b5b0062d7"></a>ADDON_PictureInfoTag__orientation_______________INT&#160;</td><td class="fielddoc">
+<p>Shows the orientation of the current picture. Possible values are "Top Left", "Top Right", "Left Top", "Right Bottom", etc. This is the value of the EXIF Orientation tag (hex code 0x0112). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a68666e3d314a17dc29783d0b14e68d71"></a>ADDON_PictureInfoTag__process___________________INT&#160;</td><td class="fielddoc">
+<p>Shows the process used to compress the current picture. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989adbff0a255f339b63c321bc6b0100d10d"></a>ADDON_PictureInfoTag__thumbnailatend____________BOOL&#160;</td><td class="fielddoc">
+<pre class="fragment"></pre> </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a676a62b77460129ca68c186b86892b24"></a>ADDON_PictureInfoTag__thumbnailoffset___________UINT&#160;</td><td class="fielddoc">
+<pre class="fragment"></pre> </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a5afa2381dc9e0294e72877ca4985b54e"></a>ADDON_PictureInfoTag__thumbnailsize_____________UINT&#160;</td><td class="fielddoc">
+<pre class="fragment"></pre> </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a5ec69e09c539ed540d09c84e88d60442"></a>ADDON_PictureInfoTag__thumbnailsizeoffset_______INT&#160;</td><td class="fielddoc">
+<pre class="fragment"></pre> </td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a2470c2ad87f5ce7a60e86fec4cc78a40"></a>ADDON_PictureInfoTag__whitebalance______________INT&#160;</td><td class="fielddoc">
+<p>Shows the white balance mode set when the current picture was taken. The possible values are "Manual" and "Auto". This is the value of the EXIF WhiteBalance tag (hex code 0xA403). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989acea555d58461e379414b66e7705bf9c9"></a>ADDON_PictureInfoTag__author____________________STRING&#160;</td><td class="fielddoc">
+<p>Shows the name of the person involved in writing about the current picture. This is the value of the IPTC Writer tag (hex code 0x7A). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a725a5b32bb79a8adef655193429b8f7b"></a>ADDON_PictureInfoTag__byline____________________STRING&#160;</td><td class="fielddoc">
+<p>Shows the name of the person who created the current picture. This is the value of the IPTC Byline tag (hex code 0x50). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ae52279f0cc8e22af8bdaa810091fe9a4"></a>ADDON_PictureInfoTag__bylinetitle_______________STRING&#160;</td><td class="fielddoc">
+<p>Shows the title of the person who created the current picture. This is the value of the IPTC BylineTitle tag (hex code 0x55). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ad31e0a420a208c58b028b6951d04181a"></a>ADDON_PictureInfoTag__caption___________________STRING&#160;</td><td class="fielddoc">
+<p>Shows a description of the current picture. This is the value of the IPTC Caption tag (hex code 0x78). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a9c4f52ee9dd5e346e93b1fc181e36db8"></a>ADDON_PictureInfoTag__category__________________STRING&#160;</td><td class="fielddoc">
+<p>Shows the subject of the current picture as a category code. This is the value of the IPTC Category tag (hex code 0x0F). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a14cc476f6b085b69faf99f902577110e"></a>ADDON_PictureInfoTag__city______________________STRING&#160;</td><td class="fielddoc">
+<p>Shows the city where the current picture was taken. This is the value of the IPTC City tag (hex code 0x5A). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ad1564517ba8c3fbc8b4b828d850cad52"></a>ADDON_PictureInfoTag__urgency___________________STRING&#160;</td><td class="fielddoc">
+<p>Shows the urgency of the current picture. Values are 1-9. The 1 is most urgent. Some image management programs use urgency to indicate picture rating, where urgency 1 is 5 stars and urgency 5 is 1 star. Urgencies 6-9 are not used for rating. This is the value of the IPTC Urgency tag (hex code 0x0A). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ad7cb8ac1314caff251279c3bfb59f92f"></a>ADDON_PictureInfoTag__copyrightnotice___________STRING&#160;</td><td class="fielddoc">
+<p>Shows the copyright notice of the current picture. This is the value of the IPTC Copyright tag (hex code 0x74). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a1ddf998f85345e3fa7957f36fb92e11c"></a>ADDON_PictureInfoTag__country___________________STRING&#160;</td><td class="fielddoc">
+<p>Shows the full name of the country where the current picture was taken. This is the value of the IPTC CountryName tag (hex code 0x65). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a7d53c3779d0c272ef96dbcb286fdec8b"></a>ADDON_PictureInfoTag__countrycode_______________STRING&#160;</td><td class="fielddoc">
+<p>Shows the country code of the country where the current picture was taken. This is the value of the IPTC CountryCode tag (hex code 0x64). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a58ecd07fb62a64c28fc84a439c091ad8"></a>ADDON_PictureInfoTag__credit____________________STRING&#160;</td><td class="fielddoc">
+<p>Shows who provided the current picture. This is the value of the IPTC Credit tag (hex code 0x6E). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a13cd86979b9e1e1a70c556cc69bc3c56"></a>ADDON_PictureInfoTag__date______________________STRING&#160;</td><td class="fielddoc">
+<p>Shows the localized date of the current picture. The short form of the date is used. The value of the EXIF DateTimeOriginal tag (hex code 0x9003) is preferred. If the DateTimeOriginal tag is not found, the value of DateTimeDigitized (hex code 0x9004) or of DateTime (hex code 0x0132) might be used. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a46446c07be0b6bbfe27c0db864c6bad2"></a>ADDON_PictureInfoTag__headline__________________STRING&#160;</td><td class="fielddoc">
+<p>Shows a synopsis of the contents of the current picture. This is the value of the IPTC Headline tag (hex code 0x69). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989aba40bc85d09b2e714197a46ce778896d"></a>ADDON_PictureInfoTag__keywords__________________STRING&#160;</td><td class="fielddoc">
+<p>Shows keywords assigned to the current picture. This is the value of the IPTC Keywords tag (hex code 0x19). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a914cb753475d8a1a9e44af2a9d369711"></a>ADDON_PictureInfoTag__objectname________________STRING&#160;</td><td class="fielddoc">
+<p>Shows a shorthand reference for the current picture. This is the value of the IPTC ObjectName tag (hex code 0x05). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a7376ab79d3de196eb37a7ef3e22d8a70"></a>ADDON_PictureInfoTag__referenceservice__________STRING&#160;</td><td class="fielddoc">
+<p>Shows the Service Identifier of a prior envelope to which the current picture refers. This is the value of the IPTC ReferenceService tag (hex code 0x2D). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ae57e79af62433d884af3f800d59beb82"></a>ADDON_PictureInfoTag__source____________________STRING&#160;</td><td class="fielddoc">
+<p>Shows the original owner of the current picture. This is the value of the IPTC Source tag (hex code 0x73). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a007a98c0bdc430158c1565720307c217"></a>ADDON_PictureInfoTag__specialinstructions_______STRING&#160;</td><td class="fielddoc">
+<p>Shows other editorial instructions concerning the use of the current picture. This is the value of the IPTC SpecialInstructions tag (hex code 0x28). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a32614a6e2f6b9def6ba10379690a47fb"></a>ADDON_PictureInfoTag__state_____________________STRING&#160;</td><td class="fielddoc">
+<p>Shows the State/Province where the current picture was taken. This is the value of the IPTC ProvinceState tag (hex code 0x5F). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ade1ebb2f9682bd4b840a57e426efd432"></a>ADDON_PictureInfoTag__supplementalcategories____STRING&#160;</td><td class="fielddoc">
+<p>Shows supplemental category codes to further refine the subject of the current picture. This is the value of the IPTC SuppCategory tag (hex code 0x14). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ab2d2916c01c3bca5b66a16edfdecef28"></a>ADDON_PictureInfoTag__transmissionreference_____STRING&#160;</td><td class="fielddoc">
+<p>Shows a code representing the location of original transmission of the current picture. This is the value of the IPTC TransmissionReference tag (hex code 0x67). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989a298f227b6cc5de8f2f652240d9f27c7f"></a>ADDON_PictureInfoTag__timecreated_______________STRING&#160;</td><td class="fielddoc">
+<p>Shows the time when the intellectual content of the current picture was created, rather than when the picture was created. This is the value of the IPTC TimeCreated tag (hex code 0x3C). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989aaf0b1e5634286d84c6ecbfe89e40ffeb"></a>ADDON_PictureInfoTag__sublocation_______________STRING&#160;</td><td class="fielddoc">
+<p>Shows the location within a city where the current picture was taken - might indicate the nearest landmark. This is the value of the IPTC SubLocation tag (hex code 0x5C). </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga52554fd2ecb4f8f4f1cc5b3c524ac989ad72dec08fc3acda66a7e4771052e386a"></a>ADDON_PictureInfoTag__imagetype_________________STRING&#160;</td><td class="fielddoc">
+<p>Shows the color components of the current picture. This is the value of the IPTC ImageType tag (hex code 0x82). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga6d5fec639f9977efee96f85280790b96"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPictureInfo_BOOL </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
+          <td class="paramtype"><a class="el" href="a00358.html#ga52554fd2ecb4f8f4f1cc5b3c524ac989">ADDON_PictureInfoTag</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;&#160;</td>
-          <td class="paramname"><em>bCanceled</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>noLabel</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>yesLabel</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -147,74 +348,32 @@ $(document).ready(function(){initNavTree('a00358.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Use dialog to get numeric new password with one text string shown everywhere and cancel return field. </p>
+<p>Sets the video infoLabels with picture info tag. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog heading </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>Multi-line text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bCanceled</td><td>Return value about cancel button </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">noLabel</td><td>[opt] label to put on the no button </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">yesLabel</td><td>[opt] label to put on the yes button </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00358.html#ADDON_PictureInfoTag">Picture Info Tag</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>boolean value to set </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns True if 'Yes' was pressed, else False</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>It is preferred to only use this as it is actually a multi-line text.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogYesNo.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">bool</span> canceled;</div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00358.html#ga89f6071edbb80badea144ee1988d3fd1">KodiAPI::GUI::DialogYesNo::ShowAndGetInput</a>(</div>
-<div class="line">   <span class="stringliteral">&quot;Yes / No test call&quot;</span>,   <span class="comment">/* The Header */</span></div>
-<div class="line">   <span class="stringliteral">&quot;You has opened Yes / No dialog for test\n\nIs this OK for you?&quot;</span>,</div>
-<div class="line">   canceled,               <span class="comment">/* return value about cancel button */</span></div>
-<div class="line">   <span class="stringliteral">&quot;Not really&quot;</span>,           <span class="comment">/* No label, is optional and if empty &quot;No&quot; */</span></div>
-<div class="line">   <span class="stringliteral">&quot;Ohhh yes&quot;</span>);            <span class="comment">/* Yes label, also optional and if empty &quot;Yes&quot; */</span></div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;You has called Yes/No, returned &#39;%s&#39; and was %s\n&quot;</span>,</div>
-<div class="line">         ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>,</div>
-<div class="line">         canceled ? <span class="stringliteral">&quot;canceled&quot;</span> : <span class="stringliteral">&quot;not canceled&quot;</span>);</div>
-</div><!-- fragment --> 
+
 </div>
 </div>
-<a class="anchor" id="ga3c58c94f72888a60d56d24f5af509658"></a>
+<a class="anchor" id="gae0d0e7be2dbd1133b7c005f130972cb1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogYesNo::ShowAndGetInput </td>
+          <td class="memname">void SetPictureInfo_INT </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
+          <td class="paramtype"><a class="el" href="a00358.html#ga52554fd2ecb4f8f4f1cc5b3c524ac989">ADDON_PictureInfoTag</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>noLabel</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>yesLabel</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -224,79 +383,32 @@ $(document).ready(function(){initNavTree('a00358.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Use dialog to get numeric new password with separated line strings. </p>
+<p>Sets the picture listitem's infoLabels of type integer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog heading </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line0</td><td>Line #0 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line1</td><td>Line #1 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line2</td><td>Line #2 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">noLabel</td><td>[opt] label to put on the no button. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">yesLabel</td><td>[opt] label to put on the yes button. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00358.html#ADDON_PictureInfoTag">Picture Info Tag</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>integer value to set </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns True if 'Yes' was pressed, else False.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogYesNo.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00358.html#ga89f6071edbb80badea144ee1988d3fd1">KodiAPI::GUI::DialogYesNo::ShowAndGetInput</a>(</div>
-<div class="line">   <span class="stringliteral">&quot;Yes / No test call&quot;</span>,   <span class="comment">// The Header</span></div>
-<div class="line">   <span class="stringliteral">&quot;You has opened Yes / No dialog for test&quot;</span>,</div>
-<div class="line">   <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line">   <span class="stringliteral">&quot;Is this OK for you?&quot;</span>,</div>
-<div class="line">   <span class="stringliteral">&quot;Not really&quot;</span>,           <span class="comment">// No label, is optional and if empty &quot;No&quot;</span></div>
-<div class="line">   <span class="stringliteral">&quot;Ohhh yes&quot;</span>);            <span class="comment">// Yes label, also optional and if empty &quot;Yes&quot;</span></div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;You has called Yes/No, returned &#39;%s&#39;\n&quot;</span>,</div>
-<div class="line">         ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
-</div><!-- fragment --> 
+
 </div>
 </div>
-<a class="anchor" id="ga066996e8332302afd1ae3dcd69382a2d"></a>
+<a class="anchor" id="ga35f53eb53d1ae797ccfb723c1ab56bce"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool KodiAPI::GUI::DialogYesNo::ShowAndGetInput </td>
+          <td class="memname">void SetPictureInfo_UINT </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>heading</em>, </td>
+          <td class="paramtype"><a class="el" href="a00358.html#ga52554fd2ecb4f8f4f1cc5b3c524ac989">ADDON_PictureInfoTag</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>line2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;&#160;</td>
-          <td class="paramname"><em>bCanceled</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>noLabel</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>yesLabel</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -306,36 +418,120 @@ $(document).ready(function(){initNavTree('a00358.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Use dialog to get numeric new password with separated line strings and cancel return field. </p>
+<p>Sets the picture listitem's infoLabels of type unsigned integer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog heading </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line0</td><td>Line #0 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line1</td><td>Line #1 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">line2</td><td>Line #2 text </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bCanceled</td><td>Return value about cancel button </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">noLabel</td><td>[opt] label to put on the no button </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">yesLabel</td><td>[opt] label to put on the yes button </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00358.html#ADDON_PictureInfoTag">Picture Info Tag</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>unsigned integer value to set </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns True if 'Yes' was pressed, else False</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/gui/DialogYesNo.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">bool</span> canceled;</div>
-<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="a00358.html#ga89f6071edbb80badea144ee1988d3fd1">KodiAPI::GUI::DialogYesNo::ShowAndGetInput</a>(</div>
-<div class="line">   <span class="stringliteral">&quot;Yes / No test call&quot;</span>,   <span class="comment">// The Header</span></div>
-<div class="line">   <span class="stringliteral">&quot;You has opened Yes / No dialog for test&quot;</span>,</div>
-<div class="line">   <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line">   <span class="stringliteral">&quot;Is this OK for you?&quot;</span>,</div>
-<div class="line">   canceled,               <span class="comment">// return value about cancel button</span></div>
-<div class="line">   <span class="stringliteral">&quot;Not really&quot;</span>,           <span class="comment">// No label, is optional and if empty &quot;No&quot;</span></div>
-<div class="line">   <span class="stringliteral">&quot;Ohhh yes&quot;</span>);            <span class="comment">// Yes label, also optional and if empty &quot;Yes&quot;</span></div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;You has called Yes/No, returned &#39;%s&#39; and was %s\n&quot;</span>,</div>
-<div class="line">         ret ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>,</div>
-<div class="line">         canceled ? <span class="stringliteral">&quot;canceled&quot;</span> : <span class="stringliteral">&quot;not canceled&quot;</span>);</div>
-</div><!-- fragment --> 
+
+</div>
+</div>
+<a class="anchor" id="gad519e09d54228fd193c308e3cdfa1a11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPictureInfo_FLOAT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00358.html#ga52554fd2ecb4f8f4f1cc5b3c524ac989">ADDON_PictureInfoTag</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the picture listitem's infoLabels of type float. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00358.html#ADDON_PictureInfoTag">Picture Info Tag</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>float value to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6509ea12792ec0fb2e6b205486c6be6a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPictureInfo_STRING </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00358.html#ga52554fd2ecb4f8f4f1cc5b3c524ac989">ADDON_PictureInfoTag</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the picture listitem's infoLabels with a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00358.html#ADDON_PictureInfoTag">Picture Info Tag</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>string value to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga42d6b908cd635edb8e9aa98953032e22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPictureInfo_STRING_LIST </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00358.html#ga52554fd2ecb4f8f4f1cc5b3c524ac989">ADDON_PictureInfoTag</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the picture listitem's infoLabels with string table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>type of <a class="el" href="a00358.html#ADDON_PictureInfoTag">Picture Info Tag</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>string table to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 </div><!-- contents -->

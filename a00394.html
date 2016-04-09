@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: General</title>
+<title>Kodi Development: Music Info Tag (class CInfoTagMusic)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,205 +92,330 @@ $(document).ready(function(){initNavTree('a00394.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">General<div class="ingroups"><a class="el" href="a00290.html">C++</a> &raquo; <a class="el" href="a00393.html">8. PVR</a></div></div>  </div>
+<div class="title">Music Info Tag (class CInfoTagMusic)<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00393.html">7. Player</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Allow use of binary classes and function to use on add-on's</b> </p>
-<p>Permits the use of the required functions of the add-on to Kodi. This class also contains some functions to the control.</p>
-<p>These are pure static functions them no other initialization need.</p>
-<p>It has the header <a class="el" href="a00170_source.html">#include &lt;kodi/api2/pvr/General.hpp&gt;</a> be included to enjoy it </p>
+<p><b>Used for present music information</b> </p>
+<p>Class contains after request the on Kodi present information of played music or as entry from a list item.</p>
+<p>It has the header <a class="el" href="a00209_source.html">#include &lt;kodi/api2/player/InfoTagMusic.hpp&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga19b004e52c9ec0a8d6e7b8dddae1e413"></a>
+<a class="anchor" id="ga7a6c3071739b71d28174465b9a008af5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void KodiAPI::PVR::General::AddMenuHook </td>
+          <td class="memname">CInfoTagMusic </td>
           <td>(</td>
-          <td class="paramtype">PVR_MENUHOOK *&#160;</td>
-          <td class="paramname"><em>hook</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="a00095.html">CPlayer</a> *&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Add or replace a menu hook for the context menu for this add-on. </p>
-<p>Inserted hooks becomes called from Kodi on PVR system with <b><code>PVR_ERROR CallMenuHook(const PVR_MENUHOOK&amp; menuhook, const PVR_MENUHOOK_DATA &amp;item);</code></b></p>
+<p>Class constructer with play as source. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">hook</td><td>The hook to add</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">player</td><td>Class from where the tag data becomes retrieved. </td></tr>
   </table>
   </dd>
 </dl>
-<hr/>
-<p>Here structure shows the necessary values the Kodi must be handed over around a menu by the PVR system to add. </p><div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Menu hooks that are available in the context menus while playing a</span></div>
-<div class="line"><span class="comment"> * stream via this add-on and in the Live TV settings dialog</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>PVR_MENUHOOK</div>
-<div class="line">{</div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>     iHookId;              <span class="comment">/* This hook&#39;s identifier */</span></div>
-<div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>     iLocalizedStringId;   <span class="comment">/* The id of the label for this hook in g_localizeStrings */</span></div>
-<div class="line">  PVR_MENUHOOK_CAT category;             <span class="comment">/* Category of menu hook */</span></div>
-<div class="line">} ATTRIBUTE_PACKED PVR_MENUHOOK;</div>
-</div><!-- fragment --> <hr/>
-<p><b>Hook category Id's (PVR_MENUHOOK_CAT):</b></p>
-<table class="doxtable">
-<tr>
-<th align="right">enum code: </th><th align="center">Id </th><th align="left">Description:  </th></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_ALL </td><td align="center">0 </td><td align="left">All categories </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_CHANNEL </td><td align="center">1 </td><td align="left">For channels </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_TIMER </td><td align="center">2 </td><td align="left">For timers </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_EPG </td><td align="center">3 </td><td align="left">For EPG </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_RECORDING </td><td align="center">4 </td><td align="left">For recordings </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_DELETED_RECORDING </td><td align="center">5 </td><td align="left">For deleted recordings </td></tr>
-<tr>
-<td align="right">PVR_MENUHOOK_SETTING </td><td align="center">6 </td><td align="left">For settings </td></tr>
+
+</div>
+</div>
+<a class="anchor" id="gad180a993dc6a48bceff78f6fb44a3489"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~CInfoTagMusic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
 </table>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/pvr/General.hpp&gt;</span></div>
-<div class="line">...</div>
-<div class="line">PVR_MENUHOOK hook;</div>
-<div class="line">hook.iHookId = 1;</div>
-<div class="line">hook.category = PVR_MENUHOOK_SETTING;</div>
-<div class="line">hook.iLocalizedStringId = 30107;</div>
-<div class="line"><a class="code" href="a00394.html#ga19b004e52c9ec0a8d6e7b8dddae1e413">KodiAPI::PVR::General::AddMenuHook</a>(&amp;hook);</div>
-<div class="line">...</div>
-</div><!-- fragment --> 
+</div><div class="memdoc">
+
+<p>Class destructor. </p>
+
 </div>
 </div>
-<a class="anchor" id="gabd6ff60172946b2f767523ee0b3bba27"></a>
+<a class="anchor" id="ga0d1d697cb13f61773101e7ad6645f1e6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void KodiAPI::PVR::General::Recording </td>
+          <td class="memname">const std::string&amp; GetURL </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strRecordingName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strFileName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bOn</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Display a notification in Kodi that a recording started or stopped on the server. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">strRecordingName</td><td>The name of the recording to display </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFileName</td><td>The filename of the recording </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bOn</td><td>True when recording started, false when it stopped </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Returns url of source as string from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Url of source </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga855ee1e1bd6ca101050fdd680a2a780b"></a>
+<a class="anchor" id="ga9272205cb3a71f70bb4c9437da3c9bda"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void KodiAPI::PVR::General::ConnectionStateChange </td>
+          <td class="memname">const std::string&amp; GetTitle </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strConnectionString</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">PVR_CONNECTION_STATE&#160;</td>
-          <td class="paramname"><em>newState</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>strMessage</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Notify a state change for a PVR backend connection. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">strConnectionString</td><td>The connection string reported by the backend that can be displayed in the UI. </td></tr>
-    <tr><td class="paramname">newState</td><td>The new state. </td></tr>
-    <tr><td class="paramname">strMessage</td><td>A localized addon-defined string representing the new state, that can be displayed in the UI or NULL if the Kodi-defined default string for the new state shall be displayed. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Returns the title from music as string on info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music title </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ga59b3af92b56dc3316659f2f470f5f730"></a>
+<a class="anchor" id="gad63aca83a431ce2f31c86d0fdc7ed4bc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void KodiAPI::PVR::General::EpgEventStateChange </td>
+          <td class="memname">const std::string&amp; GetArtist </td>
           <td>(</td>
-          <td class="paramtype">EPG_TAG *&#160;</td>
-          <td class="paramname"><em>tag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>iUniqueChannelId</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">EPG_EVENT_STATE&#160;</td>
-          <td class="paramname"><em>newState</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Notify a state change for an EPG event. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">tag</td><td>The EPG event. </td></tr>
-    <tr><td class="paramname">iUniqueChannelId</td><td>The unique id of the channel for the EPG event </td></tr>
-    <tr><td class="paramname">newState</td><td>The new state. For EPG_EVENT_CREATED and EPG_EVENT_UPDATED, tag must be filled with all available event data, not just a delta. For EPG_EVENT_DELETED, it is sufficient to fill EPG_TAG.iUniqueBroadcastId </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Returns the artist from music as string if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music artist </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaed21becc174c1a9eabb35c10c8fb1dec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetAlbum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the album from music tag as string if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music album name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8543d954eab8c5c952c8e87fd7dd2561"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetAlbumArtist </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the album artist from music tag as string if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music album artist name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga57435c1b02f97861847fffd5fd740123"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetGenre </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the genre name from music tag as string if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Genre name </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga7a0124a69d21b8af01baaf6e35b9c476"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetDuration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the duration of music as integer from info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Duration </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad4fce5cb572b03a144c22e81ae70ed88"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetTrack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the track number (if present) from music info tag as integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Track number </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gabee2b25a6f37093ff91a5caaff417704"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetDisc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the disk number (if present) from music info tag as integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Disc number </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga6690df3048b871ac2cacb430d5606afe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetReleaseDate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the release date as string from music info tag (if present). </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Release date </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf92ee71c21a267247e7d06d034143c40"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetListeners </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the listeners as integer from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Listeners </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga057dc61a69e40c80675a082b6251fc8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetPlayCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of carried out playbacks. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Playback count </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga833b68f759c1e3ce0c068fd06e9b0f4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetLastPlayed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns last played time as string from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Last played date / time on tag </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaab329b82f3bf29e2e56aeca7db59369c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetComment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns comment as string from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Comment on tag </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad31236e89eaf77e5e65f34aa1fd90426"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; GetLyrics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string from lyrics. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Lyrics on tag </dd></dl>
 
 </div>
 </div>

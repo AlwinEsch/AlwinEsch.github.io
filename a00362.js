@@ -1,11 +1,14 @@
 var a00362 =
 [
-    [ "ShowAndVerifyNewPassword", "a00362.html#ga425c581c506c008c30f7502f55442790", null ],
-    [ "ShowAndVerifyPassword", "a00362.html#gac38878bcfd30e783aed2bd2f2a8a0dc1", null ],
-    [ "ShowAndVerifyInput", "a00362.html#gac1e6848c0cb5734499a0ed11f43b8427", null ],
-    [ "ShowAndGetTime", "a00362.html#gaabe01c994c20c760af3827e3d6505684", null ],
-    [ "ShowAndGetDate", "a00362.html#gaa5e69e0b6597de68f49c163b87ebaf57", null ],
-    [ "ShowAndGetIPAddress", "a00362.html#ga8f40109c706444bbb7484793c7a92c05", null ],
-    [ "ShowAndGetNumber", "a00362.html#ga39533ee1e2f8541c47f8dd1cbcf893a1", null ],
-    [ "ShowAndGetSeconds", "a00362.html#ga5b7c4dbde91b44058a9edebef65d5354", null ]
+    [ "CDialogExtendedProgress", "a00362.html#ga598592cd22cbc89797f504ffd53f7a70", null ],
+    [ "~CDialogExtendedProgress", "a00362.html#ga60f91cfdfb63c58d75ab7bb1d8076857", null ],
+    [ "Title", "a00362.html#ga3cb91fb7750df7982baea48c4a3de616", null ],
+    [ "SetTitle", "a00362.html#gad8698c0477204fb8b81feb9d81cbe4fd", null ],
+    [ "Text", "a00362.html#gafdfa72709ffc1738c3c198f7ad8b61ec", null ],
+    [ "SetText", "a00362.html#gaec55d8bf3ca3e04261b66bee36f84368", null ],
+    [ "IsFinished", "a00362.html#gaabe45b4d47077b54df0bb809eb41b8d5", null ],
+    [ "MarkFinished", "a00362.html#ga40af1bcedea1f61fde8cd5e70e416473", null ],
+    [ "Percentage", "a00362.html#ga3bf91c353218dceaa271b65321b2f5cf", null ],
+    [ "SetPercentage", "a00362.html#ga74a9a823ab1cd34d62a219a842de5946", null ],
+    [ "SetProgress", "a00362.html#gac64c8e121cf5e368cd335c28a0521922", null ]
 ];

@@ -1,29 +1,8 @@
 var a00392 =
 [
-    [ "CInfoTagVideo", "a00392.html#ga7dc3911f22292d78185f027a0a0cc1ac", null ],
-    [ "~CInfoTagVideo", "a00392.html#ga6c66b02b0688fee2c4239eb52d10fafa", null ],
-    [ "GetDirector", "a00392.html#gad6809482e123a8011fff62470ea115eb", null ],
-    [ "GetWritingCredits", "a00392.html#gaba0a9bd1392dd9d3aeca8f79bcc6c48c", null ],
-    [ "GetGenre", "a00392.html#ga57435c1b02f97861847fffd5fd740123", null ],
-    [ "GetCountry", "a00392.html#ga971b8bd6b97a337cab9b96d8f9070749", null ],
-    [ "GetTagLine", "a00392.html#ga58fabc0438d8a2d9a6e8c956897869f5", null ],
-    [ "GetPlotOutline", "a00392.html#ga64e0da943d733a7a84a9053e2f25ea3b", null ],
-    [ "GetPlot", "a00392.html#ga35d97a12503c64202fef6c10dc687011", null ],
-    [ "GetTrailer", "a00392.html#ga9a782bb09314f8c944ffbac211fbc1a2", null ],
-    [ "GetPictureURL", "a00392.html#ga433fa04ffdb92cc4a868e5ba0dfbb4c2", null ],
-    [ "GetTitle", "a00392.html#ga9272205cb3a71f70bb4c9437da3c9bda", null ],
-    [ "GetVotes", "a00392.html#ga0dc6d3dd2385ac3606324f004e11346f", null ],
-    [ "GetCast", "a00392.html#ga887ee39961b10a4afb9a21c1b4470ad6", null ],
-    [ "GetFile", "a00392.html#gaa05bee5cb34224a431c82d42d5bca039", null ],
-    [ "GetPath", "a00392.html#ga823adc81f55ead9f5978de4b64b279c3", null ],
-    [ "GetIMDBNumber", "a00392.html#ga1e5232474372f5364c1d66bcfb01dce1", null ],
-    [ "GetMPAARating", "a00392.html#ga4546f09c240060376fef6e7be55795bc", null ],
-    [ "GetYear", "a00392.html#ga434e5e24f6205c0685cddb01c68f433a", null ],
-    [ "GetRating", "a00392.html#ga60bd9aab01c1e0890199f2b5b68fbf1b", null ],
-    [ "GetPlayCount", "a00392.html#ga057dc61a69e40c80675a082b6251fc8a", null ],
-    [ "GetLastPlayed", "a00392.html#ga833b68f759c1e3ce0c068fd06e9b0f4a", null ],
-    [ "GetOriginalTitle", "a00392.html#gabb8b8f9930f07eab44a3341f8ad966e5", null ],
-    [ "GetPremiered", "a00392.html#ga51f81b31f3f918368528aaf7b217439a", null ],
-    [ "GetFirstAired", "a00392.html#ga9094522bd49574a67d4c8402ff240cb1", null ],
-    [ "GetDuration", "a00392.html#gabf8649f509198c0605a0f93c5d29a87c", null ]
+    [ "AddonPlayListType", "a00392.html#gab07b512029688f85c2c460a1d0a8efc1", [
+      [ "PlayList_Music", "a00392.html#ggab07b512029688f85c2c460a1d0a8efc1a9ea8dbbd253973a8ff657a0c4d270143", null ],
+      [ "PlayList_Video", "a00392.html#ggab07b512029688f85c2c460a1d0a8efc1a2b7e7a57d9b126a3faeab1357a5c256b", null ],
+      [ "PlayList_Picture", "a00392.html#ggab07b512029688f85c2c460a1d0a8efc1a2fccdf4aaf1636d7218e94ce0534ceab", null ]
+    ] ]
 ];

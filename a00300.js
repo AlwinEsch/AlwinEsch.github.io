@@ -1,14 +1,18 @@
 var a00300 =
 [
-    [ "yesno", "a00300.html#gaa64342a4b05f1ed49803ea44a25b73db", null ],
-    [ "select", "a00300.html#ga31bcf740cf64230b40af61377ad701b1", null ],
-    [ "multiselect", "a00300.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
-    [ "ok", "a00300.html#ga623449b051874059111f9831a7b91673", null ],
-    [ "textviewer", "a00300.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
-    [ "browse", "a00300.html#ga329bf9f86212595d36708f6ad8977499", null ],
-    [ "browseSingle", "a00300.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
-    [ "browseMultiple", "a00300.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
-    [ "numeric", "a00300.html#gad44dd72bef6ada382a1b9704580410db", null ],
-    [ "notification", "a00300.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
-    [ "input", "a00300.html#ga2a25e833c92e98a294964d0d285ee1f9", null ]
+    [ "getArtist", "a00300.html#ga1b9f565753d008491c59887680bd570e", null ],
+    [ "getAlbum", "a00300.html#ga11ac7b770ff2135e877c241ddb5db662", null ],
+    [ "getAlbumArtist", "a00300.html#ga257503de86d218b382fcbbe9f1f68c2d", null ],
+    [ "getGenre", "a00300.html#ga724866edc25325e096d7d8a76b4a3234", null ],
+    [ "getDuration", "a00300.html#ga08c13081c0665a4336a0f022c955fb69", null ],
+    [ "getTrack", "a00300.html#ga797e19587556ad59c5e3a7b55e8ccae9", null ],
+    [ "getDisc", "a00300.html#gaa2759f95638fb39b74363457af9e7777", null ],
+    [ "getReleaseDate", "a00300.html#gad099adc410738271ffc55e6fb68f77ae", null ],
+    [ "getListeners", "a00300.html#gafdcd386f038151367af97803c1c13e41", null ],
+    [ "getPlayCount", "a00300.html#gac644258d08f747039e9d0e76bcd49513", null ],
+    [ "getLastPlayed", "a00300.html#ga64953074270dc9bc74370b8251c1cd43", null ],
+    [ "getComment", "a00300.html#ga50a7366cba8ce27bc48a00e746324f7b", null ],
+    [ "getLyrics", "a00300.html#gaefe9573a6a972ef63b082d2264baa857", null ],
+    [ "getURL", "a00300.html#gafa85bb6aea7b660960562826dcb20cf7", null ],
+    [ "getTitle", "a00300.html#ga888f94790c968e3f0b5de17e509098aa", null ]
 ];

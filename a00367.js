@@ -1,11 +1,16 @@
 var a00367 =
 [
-    [ "CControlButton", "a00367.html#gab03f705293188d855c45952d42e2ac9c", null ],
-    [ "~CControlButton", "a00367.html#ga47e8648c29559d376e795a784e1e1c06", null ],
-    [ "SetVisible", "a00367.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "SetEnabled", "a00367.html#gaac893222adeffdefc04d749648cce354", null ],
-    [ "SetLabel", "a00367.html#ga0468217482f9a171183b1cda613417e6", null ],
-    [ "GetLabel", "a00367.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "SetLabel2", "a00367.html#ga4f36ea518d9c722f2cdc03cac01aabf3", null ],
-    [ "GetLabel2", "a00367.html#ga94e3a8c89b6a8d0fb69cb8f44c3d5b1b", null ]
+    [ "CDialogProgress", "a00367.html#ga78b8dcedb682c8b3ee857485b2c4c2b8", null ],
+    [ "~CDialogProgress", "a00367.html#gaf4ebae45c5583fbefea366318f13714e", null ],
+    [ "Open", "a00367.html#ga5e53001785ff30ae485a113b9b8a0ddc", null ],
+    [ "SetHeading", "a00367.html#gaf6377691fa79c14e16aebaeb9d340b33", null ],
+    [ "SetLine", "a00367.html#ga845054cd7ff1978a112126086a8ec5ba", null ],
+    [ "SetCanCancel", "a00367.html#ga13580b7f84c1c13f90c1d030ef61faf8", null ],
+    [ "IsCanceled", "a00367.html#gaf76bcf12aaec9ab845ea61853a37a33c", null ],
+    [ "SetPercentage", "a00367.html#gadf0353f59469e4b0cab327ea7df9cae8", null ],
+    [ "GetPercentage", "a00367.html#gae20eeb097c9ebe3506bd1d2bb3d92fda", null ],
+    [ "ShowProgressBar", "a00367.html#ga4ef9882ff90cb3878eb846335e2b3c07", null ],
+    [ "SetProgressMax", "a00367.html#gad397a19fe15c25e5077d34fd43da6e5a", null ],
+    [ "SetProgressAdvance", "a00367.html#gafe4b80962f0d7bdd3b0a73b83ef06323", null ],
+    [ "Abort", "a00367.html#ga71e9d732335846eb579f0dd00918b3e7", null ]
 ];

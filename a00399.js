@@ -1,8 +1,10 @@
 var a00399 =
 [
-    [ "TimerUpdate", "a00399.html#ga4586d22121490cf3bcc088ab51b244a1", null ],
-    [ "RecordingUpdate", "a00399.html#ga0d9cd5c5f01b0106862f48a21b0c42d6", null ],
-    [ "ChannelUpdate", "a00399.html#ga482cfad54b46dd910487cbaf9bd49836", null ],
-    [ "ChannelGroupsUpdate", "a00399.html#ga857ef60425bf31af3cf7b8b27252f6ce", null ],
-    [ "EpgUpdate", "a00399.html#gae14a095cd9a780ae9096340d9c78223f", null ]
+    [ "CPVRStream", "a00399.html#gaf419611a13a1bca6fe60cd58cb8a952f", null ],
+    [ "CPVRStream", "a00399.html#gad8caf56bf234506f41c1fcc64a0d1ad7", null ],
+    [ "operator=", "a00399.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6", null ],
+    [ "operator==", "a00399.html#ga2e56127d518a6487ba46cfe720bb4904", null ],
+    [ "operator<", "a00399.html#ga8c39a1e5e76bc953c53019e4ef318216", null ],
+    [ "Clear", "a00399.html#gaa71d36872f416feaa853788a7a7a7ef8", null ],
+    [ "IsCleared", "a00399.html#ga324d4448e5c2dde1488e1a9b4d26c7ad", null ]
 ];

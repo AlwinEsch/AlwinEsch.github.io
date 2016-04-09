@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: InfoTagMusic</title>
+<title>Kodi Development: Library - xbmcvfs</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,305 +91,289 @@ $(document).ready(function(){initNavTree('a00298.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">InfoTagMusic<div class="ingroups"><a class="el" href="a00291.html">Python</a> &raquo; <a class="el" href="a00292.html">Library - xbmc</a></div></div>  </div>
+<div class="title">Library - xbmcvfs<div class="ingroups"><a class="el" href="a00293.html">Python</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's music info tag class.</b> </p>
-<p>To get music info tag data of currently played source.</p>
-<dl class="section note"><dt>Note</dt><dd>Info tag load is only be possible from present player class.</dd></dl>
-<hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;tag = xbmc.Player().getMusicInfoTag()</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;title = tag.getTitle()</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;url   = tag.getURL()</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;...</div>
-</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="gafa85bb6aea7b660960562826dcb20cf7"></a>
+<p><b>Virtual file system functions on Kodi.</b> </p>
+<p>Offers classes and functions offers acces to the Virtual File Server (VFS) which you can use to manipulate files and folders. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:a00305"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00305.html">File</a></td></tr>
+<tr class="memdesc:a00305"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Kodi's file class.</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00315"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00315.html">Stat</a></td></tr>
+<tr class="memdesc:a00315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get file or file system status. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga9188bb84632ebdbc54faca1de9be95c3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getURL </td>
+          <td class="memname">bool copy </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>strSource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>strDestnation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copy file to destination, returns true/false.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>file to copy. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">destination</td><td>destination file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.copy(source, destination)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gabf13e7bae1c97bc1c4188f3e4e459f95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool deleteFile </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns url of source as string from music info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Url of source</dd></dl>
+<p>Delete a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>File to delete </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
 <hr/>
- 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;xbmcvfs.delete(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga888f94790c968e3f0b5de17e509098aa"></a>
+<a class="anchor" id="gaefc98ff66890f353b4ea7fd620b63808"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getTitle </td>
+          <td class="memname">bool rename </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>newFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rename a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>File to rename </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newFileName</td><td>New filename, including the full path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Moving files between different filesystem (eg. local to nfs://) is not possible on all platforms. You may have to do it manually by using the copy and deleteFile functions.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.rename(file,newFileName)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga12691f7bf1c5e55da57b18f63f6fbdca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool exists </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the title from music as string on info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Music title</dd></dl>
+<p>Check for a file or folder existance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>File or folder (folder must end with slash or backslash) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
 <hr/>
- 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.exists(path)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga1b9f565753d008491c59887680bd570e"></a>
+<a class="anchor" id="gaf69897d9a5235e87828a9e75c1cae4ca"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getArtist </td>
+          <td class="memname">bool mkdir </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the artist from music as string if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Music artist</dd></dl>
+<p>Create a folder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folder to create </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
 <hr/>
- 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.mkdir(path)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga11ac7b770ff2135e877c241ddb5db662"></a>
+<a class="anchor" id="ga229e97a6a47bdff0122f1004c4feda5c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getAlbum </td>
+          <td class="memname">bool mkdirs </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the album from music tag as string if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Music album name</dd></dl>
+<p>Make all directories along the path. </p>
+<p>Create folder(s) - it will create all folders in the path.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folders to create </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
 <hr/>
- 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.mkdirs(path)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a class="anchor" id="ga257503de86d218b382fcbbe9f1f68c2d"></a>
+<a class="anchor" id="gac83ea5fb566ee294cdd87c74c6697025"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String getAlbumArtist </td>
+          <td class="memname">bool rmdir </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a folder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folder to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successed</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;success = xbmcvfs.rmdir(path)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga6bb30280e2eb7d5b94cfb0eb6e65b0cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tuple&lt;std::vector&lt;String&gt;, std::vector&lt;String&gt; &gt; listdir </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the album artist from music tag as string if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Music album artist name</dd></dl>
+<p>Lists content of a folder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Folder to get list from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Directory content list</dd></dl>
 <hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga724866edc25325e096d7d8a76b4a3234"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getGenre </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the genre name from music tag as string if present. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Genre name</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga08c13081c0665a4336a0f022c955fb69"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getDuration </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the duration of music as integer from info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Duration</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga797e19587556ad59c5e3a7b55e8ccae9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getTrack </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the track number (if present) from music info tag as integer. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Track number</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gaa2759f95638fb39b74363457af9e7777"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getDisc </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the disk number (if present) from music info tag as integer. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Disc number</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gad099adc410738271ffc55e6fb68f77ae"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getReleaseDate </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the release date as string from music info tag (if present). </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Release date</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gafdcd386f038151367af97803c1c13e41"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getListeners </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the listeners as integer from music info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Listeners</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gac644258d08f747039e9d0e76bcd49513"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getPlayCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the number of carried out playbacks. </p>
-<dl class="section return"><dt>Returns</dt><dd>[integer] Playback count</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga64953074270dc9bc74370b8251c1cd43"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getLastPlayed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns last played time as string from music info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Last played date / time on tag</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="ga50a7366cba8ce27bc48a00e746324f7b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getComment </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns comment as string from music info tag. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Comment on tag</dd></dl>
-<hr/>
- 
-</div>
-</div>
-<a class="anchor" id="gaefe9573a6a972ef63b082d2264baa857"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String getLyrics </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a string from lyrics. </p>
-<dl class="section return"><dt>Returns</dt><dd>[string] Lyrics on tag</dd></dl>
-<hr/>
- 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dirs, files = xbmcvfs.listdir(path)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

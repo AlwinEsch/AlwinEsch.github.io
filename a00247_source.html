@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi10/xbmc/interfaces/legacy/PlayList.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi2/xbmc/interfaces/legacy/Monitor.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('a00247_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">PlayList.h</div>  </div>
+<div class="title">Monitor.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
@@ -117,79 +117,183 @@ $(document).ready(function(){initNavTree('a00247_source.html','');});
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;playlists/PlayList.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;Exception.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;ListItem.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00284.html">XBMCAddon</a></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    XBMCCOMMONS_STANDARD_EXCEPTION(PlayListException);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="a00105.html">   62</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00105.html">PlayList</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordtype">long</span> refs;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordtype">int</span> iPlayList;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      PLAYLIST::CPlayList *pPlayList;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <a class="code" href="a00105.html">PlayList</a>(<span class="keywordtype">int</span> playList);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00105.html">PlayList</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="a00313.html#ga4d665409e02daa8ea13ce462ca44c914">   78</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="a00313.html#ga4d665409e02daa8ea13ce462ca44c914">getPlayListId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> iPlayList; }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00313.html#ga979e740949519ca0e88da2ff9934a4d5">add</a>(<span class="keyword">const</span> String&amp; url,</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;#ifndef DOXYGEN_SHOULD_SKIP_THIS</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;               <a class="code" href="a00287.html">XBMCAddon::xbmcgui</a>::</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;#endif <span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;               ListItem* listitem = NULL,</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;               <span class="keywordtype">int</span> index = -1);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00313.html#ga2eea1635b7df085d42c973352ef10355">load</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordtype">void</span> <span class="keyword">remove</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00313.html#gac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00313.html#gaf4b57d21919c42d55af03391f91a1c08">size</a>();</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00313.html#ga1905fe84eb39f020b32c58baf7a76758">shuffle</a>();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00313.html#ga2401476232ac1b00321c9bfe8158f9c4">unshuffle</a>();</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <span class="keywordtype">int</span> <a class="code" href="a00313.html#ga265b7f39dcd400e1f4edaf4060af9977">getposition</a>();</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <a class="code" href="a00287.html">XBMCAddon::xbmcgui</a>::</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      ListItem* <a class="code" href="a00313.html#gaba5d6f37d582f0512f61f32109a92d92">operator[]</a>(<span class="keywordtype">long</span> i);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    };</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="ttc" id="a00313_html_ga2401476232ac1b00321c9bfe8158f9c4"><div class="ttname"><a href="a00313.html#ga2401476232ac1b00321c9bfe8158f9c4">XBMCAddon::xbmc::PlayList::unshuffle</a></div><div class="ttdeci">void unshuffle()</div><div class="ttdoc">Unshuffle the playlist. </div></div>
-<div class="ttc" id="a00313_html_ga1905fe84eb39f020b32c58baf7a76758"><div class="ttname"><a href="a00313.html#ga1905fe84eb39f020b32c58baf7a76758">XBMCAddon::xbmc::PlayList::shuffle</a></div><div class="ttdeci">void shuffle()</div><div class="ttdoc">Shuffle the playlist. </div></div>
-<div class="ttc" id="a00313_html_ga2eea1635b7df085d42c973352ef10355"><div class="ttname"><a href="a00313.html#ga2eea1635b7df085d42c973352ef10355">XBMCAddon::xbmc::PlayList::load</a></div><div class="ttdeci">bool load(const char *filename)</div><div class="ttdoc">Load a playlist. </div></div>
-<div class="ttc" id="a00284_html"><div class="ttname"><a href="a00284.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00287_html"><div class="ttname"><a href="a00287.html">XBMCAddon::xbmcgui</a></div><div class="ttdef"><b>Definition:</b> Dialog.h:43</div></div>
-<div class="ttc" id="a00313_html_ga265b7f39dcd400e1f4edaf4060af9977"><div class="ttname"><a href="a00313.html#ga265b7f39dcd400e1f4edaf4060af9977">XBMCAddon::xbmc::PlayList::getposition</a></div><div class="ttdeci">int getposition()</div><div class="ttdoc">Returns the position of the current song in this playlist. </div></div>
-<div class="ttc" id="a00105_html"><div class="ttname"><a href="a00105.html">XBMCAddon::xbmc::PlayList</a></div><div class="ttdef"><b>Definition:</b> PlayList.h:62</div></div>
-<div class="ttc" id="a00313_html_gaba5d6f37d582f0512f61f32109a92d92"><div class="ttname"><a href="a00313.html#gaba5d6f37d582f0512f61f32109a92d92">XBMCAddon::xbmc::PlayList::operator[]</a></div><div class="ttdeci">ListItem * operator[](long i)</div><div class="ttdoc">Retrieve the item at the given position. A negative index means from the ending rather than from the ...</div></div>
-<div class="ttc" id="a00313_html_ga979e740949519ca0e88da2ff9934a4d5"><div class="ttname"><a href="a00313.html#ga979e740949519ca0e88da2ff9934a4d5">XBMCAddon::xbmc::PlayList::add</a></div><div class="ttdeci">void add(const String &amp;url, ListItem *listitem=NULL, int index=-1)</div><div class="ttdoc">Adds a new file to the playlist. </div></div>
-<div class="ttc" id="a00313_html_ga4d665409e02daa8ea13ce462ca44c914"><div class="ttname"><a href="a00313.html#ga4d665409e02daa8ea13ce462ca44c914">XBMCAddon::xbmc::PlayList::getPlayListId</a></div><div class="ttdeci">int getPlayListId() const </div><div class="ttdoc">Get the PlayList Identifier. </div><div class="ttdef"><b>Definition:</b> PlayList.h:78</div></div>
-<div class="ttc" id="a00313_html_gac8bb3912a3ce86b15842e79d0b421204"><div class="ttname"><a href="a00313.html#gac8bb3912a3ce86b15842e79d0b421204">XBMCAddon::xbmc::PlayList::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clear all items in the playlist. </div></div>
-<div class="ttc" id="a00313_html_gaf4b57d21919c42d55af03391f91a1c08"><div class="ttname"><a href="a00313.html#gaf4b57d21919c42d55af03391f91a1c08">XBMCAddon::xbmc::PlayList::size</a></div><div class="ttdeci">int size()</div><div class="ttdoc">Returns the total number of PlayListItems in this playlist. </div></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;AddonCallback.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00286.html">XBMCAddon</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">class </span>Monitor : <span class="keyword">public</span> AddonCallback</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    class Monitor : <span class="keyword">public</span> AddonCallback</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      String Id;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      CEvent abortEvent;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      Monitor();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnSettingsChanged() { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#ga0b2faaa5bdb64710395d7b36330324a5">Monitor::onSettingsChanged</a>)); }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnScreensaverActivated() { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#gaec7c0588db39e824757e840bba4c3d0b">Monitor::onScreensaverActivated</a>)); }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnScreensaverDeactivated() { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#ga72fdab6e25d1882e64768c3b4fc02ada">Monitor::onScreensaverDeactivated</a>)); }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnDPMSActivated() { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#ga86cc4d6bc72abe7b74c1c50dde951412">Monitor::onDPMSActivated</a>)); }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnDPMSDeactivated() { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#ga3afef1ceaec0fd233dada0f1c415980c">Monitor::onDPMSDeactivated</a>)); }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnScanStarted(<span class="keyword">const</span> String &amp;library)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    XBMC_TRACE;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#ga6d6000ab39593068d3eb3955bed886c4">Monitor::onScanStarted</a>,library));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#ga74db05abe95497de5e90206cb39ef7d4">Monitor::onDatabaseScanStarted</a>,library));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnScanFinished(<span class="keyword">const</span> String &amp;library)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    XBMC_TRACE;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#gaf8242fca7ffb83cd719b43e16ca7a439">Monitor::onScanFinished</a>,library));</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#ga18d6bc330604bbe55e63ae6dae11efde">Monitor::onDatabaseUpdated</a>,library));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnCleanStarted(<span class="keyword">const</span> String &amp;library) { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#ga5d8eb24ae2e1b1a360a9bf3b4b51d56d">Monitor::onCleanStarted</a>,library)); }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnCleanFinished(<span class="keyword">const</span> String &amp;library) { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#ga5e89c9b7e06b744f88063e5237977247">Monitor::onCleanFinished</a>,library)); }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span>    OnNotification(<span class="keyword">const</span> String &amp;sender, <span class="keyword">const</span> String &amp;method, <span class="keyword">const</span> String &amp;data) { XBMC_TRACE; invokeCallback(<span class="keyword">new</span> CallbackFunction&lt;Monitor,const String,const String,const String&gt;(<span class="keyword">this</span>,&amp;<a class="code" href="a00307.html#ga68122e7f3ea25f8848f99024690f1419">Monitor::onNotification</a>,sender,method,data)); }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keyword">inline</span> <span class="keyword">const</span> String&amp; GetId() { <span class="keywordflow">return</span> Id; }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordtype">void</span> OnAbortRequested();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga0b2faaa5bdb64710395d7b36330324a5">onSettingsChanged</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga0b2faaa5bdb64710395d7b36330324a5">onSettingsChanged</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#gaec7c0588db39e824757e840bba4c3d0b">onScreensaverActivated</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#gaec7c0588db39e824757e840bba4c3d0b">onScreensaverActivated</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga72fdab6e25d1882e64768c3b4fc02ada">onScreensaverDeactivated</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga72fdab6e25d1882e64768c3b4fc02ada">onScreensaverDeactivated</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga86cc4d6bc72abe7b74c1c50dde951412">onDPMSActivated</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga86cc4d6bc72abe7b74c1c50dde951412">onDPMSActivated</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga3afef1ceaec0fd233dada0f1c415980c">onDPMSDeactivated</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga3afef1ceaec0fd233dada0f1c415980c">onDPMSDeactivated</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga6d6000ab39593068d3eb3955bed886c4">onScanStarted</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga6d6000ab39593068d3eb3955bed886c4">onScanStarted</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#gaf8242fca7ffb83cd719b43e16ca7a439">onScanFinished</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#gaf8242fca7ffb83cd719b43e16ca7a439">onScanFinished</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga74db05abe95497de5e90206cb39ef7d4">onDatabaseScanStarted</a>(<span class="keyword">const</span> String database) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga74db05abe95497de5e90206cb39ef7d4">onDatabaseScanStarted</a>(<span class="keyword">const</span> String database) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga18d6bc330604bbe55e63ae6dae11efde">onDatabaseUpdated</a>(<span class="keyword">const</span> String database) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga18d6bc330604bbe55e63ae6dae11efde">onDatabaseUpdated</a>(<span class="keyword">const</span> String database) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga5d8eb24ae2e1b1a360a9bf3b4b51d56d">onCleanStarted</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga5d8eb24ae2e1b1a360a9bf3b4b51d56d">onCleanStarted</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga5e89c9b7e06b744f88063e5237977247">onCleanFinished</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga5e89c9b7e06b744f88063e5237977247">onCleanFinished</a>(<span class="keyword">const</span> String library) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#gace3ed8fa26883bff89728e0446fc8b81">onAbortRequested</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#gace3ed8fa26883bff89728e0446fc8b81">onAbortRequested</a>() { XBMC_TRACE; }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga68122e7f3ea25f8848f99024690f1419">onNotification</a>(<span class="keyword">const</span> String sender, <span class="keyword">const</span> String method, <span class="keyword">const</span> String data) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span>    <a class="code" href="a00307.html#ga68122e7f3ea25f8848f99024690f1419">onNotification</a>(<span class="keyword">const</span> String sender, <span class="keyword">const</span> String method, <span class="keyword">const</span> String data) { XBMC_TRACE; }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00307.html#gaef2a905f59250fe9ffbc34edfbdbbb54">waitForAbort</a>(<span class="keywordtype">double</span> timeout = -1);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00307.html#gaef2a905f59250fe9ffbc34edfbdbbb54">waitForAbort</a>(<span class="keywordtype">double</span> timeout = -1);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00307.html#ga5b1ac2490aae34c81dd3ab6ecc58d8a5">abortRequested</a>();</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00307.html#ga5b1ac2490aae34c81dd3ab6ecc58d8a5">abortRequested</a>();</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      <span class="keyword">virtual</span> ~Monitor();</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    };</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;};</div>
+<div class="ttc" id="a00307_html_ga3afef1ceaec0fd233dada0f1c415980c"><div class="ttname"><a href="a00307.html#ga3afef1ceaec0fd233dada0f1c415980c">XBMCAddon::xbmc::Monitor::onDPMSDeactivated</a></div><div class="ttdeci">virtual void onDPMSDeactivated()</div><div class="ttdoc">onDPMSDeactivated method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:157</div></div>
+<div class="ttc" id="a00307_html_ga5d8eb24ae2e1b1a360a9bf3b4b51d56d"><div class="ttname"><a href="a00307.html#ga5d8eb24ae2e1b1a360a9bf3b4b51d56d">XBMCAddon::xbmc::Monitor::onCleanStarted</a></div><div class="ttdeci">virtual void onCleanStarted(const String library)</div><div class="ttdoc">onCleanStarted method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:250</div></div>
+<div class="ttc" id="a00307_html_ga86cc4d6bc72abe7b74c1c50dde951412"><div class="ttname"><a href="a00307.html#ga86cc4d6bc72abe7b74c1c50dde951412">XBMCAddon::xbmc::Monitor::onDPMSActivated</a></div><div class="ttdeci">virtual void onDPMSActivated()</div><div class="ttdoc">onDPMSActivated method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:140</div></div>
+<div class="ttc" id="a00307_html_ga74db05abe95497de5e90206cb39ef7d4"><div class="ttname"><a href="a00307.html#ga74db05abe95497de5e90206cb39ef7d4">XBMCAddon::xbmc::Monitor::onDatabaseScanStarted</a></div><div class="ttdeci">virtual void onDatabaseScanStarted(const String database)</div><div class="ttdef"><b>Definition:</b> Monitor.h:218</div></div>
+<div class="ttc" id="a00307_html_gaec7c0588db39e824757e840bba4c3d0b"><div class="ttname"><a href="a00307.html#gaec7c0588db39e824757e840bba4c3d0b">XBMCAddon::xbmc::Monitor::onScreensaverActivated</a></div><div class="ttdeci">virtual void onScreensaverActivated()</div><div class="ttdoc">onScreensaverActivated method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:106</div></div>
+<div class="ttc" id="a00307_html_ga68122e7f3ea25f8848f99024690f1419"><div class="ttname"><a href="a00307.html#ga68122e7f3ea25f8848f99024690f1419">XBMCAddon::xbmc::Monitor::onNotification</a></div><div class="ttdeci">virtual void onNotification(const String sender, const String method, const String data)</div><div class="ttdoc">onNotification method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:309</div></div>
+<div class="ttc" id="a00307_html_ga72fdab6e25d1882e64768c3b4fc02ada"><div class="ttname"><a href="a00307.html#ga72fdab6e25d1882e64768c3b4fc02ada">XBMCAddon::xbmc::Monitor::onScreensaverDeactivated</a></div><div class="ttdeci">virtual void onScreensaverDeactivated()</div><div class="ttdoc">onScreensaverDeactivated method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:123</div></div>
+<div class="ttc" id="a00307_html_gace3ed8fa26883bff89728e0446fc8b81"><div class="ttname"><a href="a00307.html#gace3ed8fa26883bff89728e0446fc8b81">XBMCAddon::xbmc::Monitor::onAbortRequested</a></div><div class="ttdeci">virtual void onAbortRequested()</div><div class="ttdef"><b>Definition:</b> Monitor.h:290</div></div>
+<div class="ttc" id="a00307_html_ga5b1ac2490aae34c81dd3ab6ecc58d8a5"><div class="ttname"><a href="a00307.html#ga5b1ac2490aae34c81dd3ab6ecc58d8a5">XBMCAddon::xbmc::Monitor::abortRequested</a></div><div class="ttdeci">bool abortRequested()</div><div class="ttdoc">Returns True if abort has been requested. </div></div>
+<div class="ttc" id="a00307_html_gaf8242fca7ffb83cd719b43e16ca7a439"><div class="ttname"><a href="a00307.html#gaf8242fca7ffb83cd719b43e16ca7a439">XBMCAddon::xbmc::Monitor::onScanFinished</a></div><div class="ttdeci">virtual void onScanFinished(const String library)</div><div class="ttdef"><b>Definition:</b> Monitor.h:201</div></div>
+<div class="ttc" id="a00307_html_ga18d6bc330604bbe55e63ae6dae11efde"><div class="ttname"><a href="a00307.html#ga18d6bc330604bbe55e63ae6dae11efde">XBMCAddon::xbmc::Monitor::onDatabaseUpdated</a></div><div class="ttdeci">virtual void onDatabaseUpdated(const String database)</div><div class="ttdef"><b>Definition:</b> Monitor.h:231</div></div>
+<div class="ttc" id="a00286_html"><div class="ttname"><a href="a00286.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
+<div class="ttc" id="a00307_html_ga0b2faaa5bdb64710395d7b36330324a5"><div class="ttname"><a href="a00307.html#ga0b2faaa5bdb64710395d7b36330324a5">XBMCAddon::xbmc::Monitor::onSettingsChanged</a></div><div class="ttdeci">virtual void onSettingsChanged()</div><div class="ttdoc">onSettingsChanged method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:89</div></div>
+<div class="ttc" id="a00307_html_gaef2a905f59250fe9ffbc34edfbdbbb54"><div class="ttname"><a href="a00307.html#gaef2a905f59250fe9ffbc34edfbdbbb54">XBMCAddon::xbmc::Monitor::waitForAbort</a></div><div class="ttdeci">bool waitForAbort(double timeout=-1)</div><div class="ttdoc">Wait for Abort. </div></div>
+<div class="ttc" id="a00307_html_ga5e89c9b7e06b744f88063e5237977247"><div class="ttname"><a href="a00307.html#ga5e89c9b7e06b744f88063e5237977247">XBMCAddon::xbmc::Monitor::onCleanFinished</a></div><div class="ttdeci">virtual void onCleanFinished(const String library)</div><div class="ttdoc">onCleanFinished method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:273</div></div>
+<div class="ttc" id="a00307_html_ga6d6000ab39593068d3eb3955bed886c4"><div class="ttname"><a href="a00307.html#ga6d6000ab39593068d3eb3955bed886c4">XBMCAddon::xbmc::Monitor::onScanStarted</a></div><div class="ttdeci">virtual void onScanStarted(const String library)</div><div class="ttdoc">onScanStarted method. </div><div class="ttdef"><b>Definition:</b> Monitor.h:178</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c72e4a3b15aa6b185e7458e4a6d6ab4f.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_81c1a29a69722fee590df545771fd524.html">legacy</a></li><li class="navelem"><b>PlayList.h</b></li>
+    <li class="navelem"><a class="el" href="dir_e1c33da6b8d5f7a4162daa452f8eeb21.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_a77a393e745ee1117c2ab603390e9e77.html">legacy</a></li><li class="navelem"><b>Monitor.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

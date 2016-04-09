@@ -1,13 +1,12 @@
 var a00313 =
 [
-    [ "getPlayListId", "a00313.html#ga4d665409e02daa8ea13ce462ca44c914", null ],
-    [ "add", "a00313.html#ga979e740949519ca0e88da2ff9934a4d5", null ],
-    [ "load", "a00313.html#ga2eea1635b7df085d42c973352ef10355", null ],
-    [ "remove", "a00313.html#gae363baca6026e43cc1264c5914ff69b9", null ],
-    [ "clear", "a00313.html#gac8bb3912a3ce86b15842e79d0b421204", null ],
-    [ "size", "a00313.html#gaf4b57d21919c42d55af03391f91a1c08", null ],
-    [ "shuffle", "a00313.html#ga1905fe84eb39f020b32c58baf7a76758", null ],
-    [ "unshuffle", "a00313.html#ga2401476232ac1b00321c9bfe8158f9c4", null ],
-    [ "getposition", "a00313.html#ga265b7f39dcd400e1f4edaf4060af9977", null ],
-    [ "operator[]", "a00313.html#gaba5d6f37d582f0512f61f32109a92d92", null ]
+    [ "Subclass - WindowDialogXML", "a00314.html", null ],
+    [ "addItem", "a00313.html#ga87ffff74f065758ae9884ecc87102af1", null ],
+    [ "removeItem", "a00313.html#ga214d46ad5cb6e318163ba98e0dd780ac", null ],
+    [ "getCurrentListPosition", "a00313.html#ga860b30302751103052456bb1f1079980", null ],
+    [ "setCurrentListPosition", "a00313.html#gabaeb49593088c3be9c7a232d50152e34", null ],
+    [ "getListItem", "a00313.html#ga37ec44d83350b3e4c5b4f7a2648bfc01", null ],
+    [ "getListSize", "a00313.html#ga7b00dc949b12149360563a1941956fc7", null ],
+    [ "clearList", "a00313.html#ga612285c5b9d603a0abb0feab44b8412f", null ],
+    [ "setContainerProperty", "a00313.html#gaf48b268d0ce5767fd8702e649e2aad39", null ]
 ];
