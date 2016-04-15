@@ -7,6 +7,6 @@ var a00295 =
     [ "Action", "a00309.html", "a00309" ],
     [ "Window", "a00310.html", "a00310" ],
     [ "Control", "a00320.html", "a00320" ],
-    [ "getCurrentWindowId", "a00295.html#gab1660e44ef103bd39fff61229809f567", null ],
-    [ "getCurrentWindowDialogId", "a00295.html#ga8379c35c147def9f607d18571e24678e", null ]
+    [ "getCurrentWindowId", "a00295_gab1660e44ef103bd39fff61229809f567.html#gab1660e44ef103bd39fff61229809f567", null ],
+    [ "getCurrentWindowDialogId", "a00295_ga8379c35c147def9f607d18571e24678e.html#ga8379c35c147def9f607d18571e24678e", null ]
 ];

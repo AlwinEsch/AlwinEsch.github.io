@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['browse',['browse',['../group__python___dialog.html#ga329bf9f86212595d36708f6ad8977499',1,'XBMCAddon::xbmcgui::Dialog']]],
-  ['browsemultiple',['browseMultiple',['../group__python___dialog.html#ga804e86cf03fe10961d7a7ca1d00fffa3',1,'XBMCAddon::xbmcgui::Dialog']]],
-  ['browsesingle',['browseSingle',['../group__python___dialog.html#ga8a8334ae223a82e7df728e032e167bbf',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['browse',['browse',['../group__python___dialog.html#ga2ece1ca620087a97233713710eac1b83',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['browsemultiple',['browseMultiple',['../group__python___dialog.html#ga987efec260c6ee5a457c96a9c3fcba2f',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['browsesingle',['browseSingle',['../group__python___dialog.html#ga5ee90196e7b1d6e8d2f60cbba1f0ccef',1,'XBMCAddon::xbmcgui::Dialog']]],
   ['button_20control',['Button control',['../skin__button_control.html',1,'skin_controls']]]
 ];

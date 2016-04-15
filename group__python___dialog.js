@@ -1,15 +1,15 @@
 var group__python___dialog =
 [
-    [ "yesno", "group__python___dialog.html#gaec88ec7bfee6c979c3bbee79d8bdc0bd", null ],
-    [ "select", "group__python___dialog.html#ga56430b3194d3188cbc7f4a595bd89f2c", null ],
-    [ "contextmenu", "group__python___dialog.html#ga593ca0d5a700a594eb1655494e0d914b", null ],
-    [ "multiselect", "group__python___dialog.html#ga3ba70a5e43d787b3392bcc4b60e369cc", null ],
-    [ "ok", "group__python___dialog.html#ga2380697691387b15d53c9c156d6d9590", null ],
-    [ "textviewer", "group__python___dialog.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
-    [ "browse", "group__python___dialog.html#ga329bf9f86212595d36708f6ad8977499", null ],
-    [ "browseSingle", "group__python___dialog.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
-    [ "browseMultiple", "group__python___dialog.html#ga804e86cf03fe10961d7a7ca1d00fffa3", null ],
-    [ "numeric", "group__python___dialog.html#gad44dd72bef6ada382a1b9704580410db", null ],
-    [ "notification", "group__python___dialog.html#ga0a385fe365c4fba6583fdd25e8ad072b", null ],
-    [ "input", "group__python___dialog.html#ga2a25e833c92e98a294964d0d285ee1f9", null ]
+    [ "yesno", "group__python___dialog.html#ga28b2225b08fccc588441336c3a4b0ca3", null ],
+    [ "select", "group__python___dialog.html#ga7ba82954c5d17b1a821abdf753ed339e", null ],
+    [ "contextmenu", "group__python___dialog.html#ga4096de3747da855937f6ed7c1df3877b", null ],
+    [ "multiselect", "group__python___dialog.html#ga30fb89d8f6bfa31e2b2eace4d4bd16fa", null ],
+    [ "ok", "group__python___dialog.html#gaeba4d3278eff78b902a99e63f112a9b9", null ],
+    [ "textviewer", "group__python___dialog.html#gad24eabf4c8107d4674c017db09a193ae", null ],
+    [ "browse", "group__python___dialog.html#ga2ece1ca620087a97233713710eac1b83", null ],
+    [ "browseSingle", "group__python___dialog.html#ga5ee90196e7b1d6e8d2f60cbba1f0ccef", null ],
+    [ "browseMultiple", "group__python___dialog.html#ga987efec260c6ee5a457c96a9c3fcba2f", null ],
+    [ "numeric", "group__python___dialog.html#ga1575511e8ea0f9e4d4684c5b9342d191", null ],
+    [ "notification", "group__python___dialog.html#gaca90e2d17ad057925f1a350a08deed85", null ],
+    [ "input", "group__python___dialog.html#ga39e614212c79458d71e289d77783baeb", null ]
 ];

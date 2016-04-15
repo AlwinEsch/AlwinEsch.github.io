@@ -1,7 +1,7 @@
 var searchData=
 [
   ['text',['Text',['../group___c_p_p___kodi_a_p_i___g_u_i___c_dialog_extended_progress.html#gafdfa72709ffc1738c3c198f7ad8b61ec',1,'KodiAPI::GUI::CDialogExtendedProgress']]],
-  ['textviewer',['textviewer',['../group__python___dialog.html#gad212e84e36d2fc96b8f2e24b9dd67b47',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['textviewer',['textviewer',['../group__python___dialog.html#gad24eabf4c8107d4674c017db09a193ae',1,'XBMCAddon::xbmcgui::Dialog']]],
   ['timerentry',['TimerEntry',['../group___c_p_p___kodi_a_p_i___p_v_r___transfer.html#gaf965d62fda6f7cb9840e7c580ea0cdb4',1,'KodiAPI::PVR::Transfer']]],
   ['timerupdate',['TimerUpdate',['../group___c_p_p___kodi_a_p_i___p_v_r___trigger.html#ga4586d22121490cf3bcc088ab51b244a1',1,'KodiAPI::PVR::Trigger']]],
   ['title',['Title',['../group___c_p_p___kodi_a_p_i___g_u_i___c_dialog_extended_progress.html#ga3cb91fb7750df7982baea48c4a3de616',1,'KodiAPI::GUI::CDialogExtendedProgress']]],
