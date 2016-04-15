@@ -1,9 +1,9 @@
 var a00296 =
 [
-    [ "addDirectoryItem", "a00296.html#ga0b7759ec71ba6098cd71289f7ffc103d", null ],
-    [ "addDirectoryItems", "a00296.html#gae65e249416de893f077e2c0010b7f697", null ],
+    [ "addDirectoryItem", "a00296.html#gac48f917e45acddb66f24dd8ebcebf3cc", null ],
+    [ "addDirectoryItems", "a00296.html#ga5ac1c2eb78c96446abb53eef08300e1a", null ],
     [ "endOfDirectory", "a00296.html#ga4efbfacead99ce6a469bbf37f63e05eb", null ],
-    [ "setResolvedUrl", "a00296.html#ga269ab5fd6b88eb1f56e3bc4f5b81701a", null ],
+    [ "setResolvedUrl", "a00296.html#gae28b93021dbc01b5ea1c96dcc172f91a", null ],
     [ "addSortMethod", "a00296.html#gabc68ce9f13d4d68df93d19a61f53ff8e", null ],
     [ "getSetting", "a00296.html#gac254decc5a7b5cdf14893fe7136aa9dc", null ],
     [ "setSetting", "a00296.html#ga397670857a9ff2861a9fe55a4c8cf206", null ],

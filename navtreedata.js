@@ -1,21 +1,21 @@
 var NAVTREE =
 [
   [ "Kodi Development", "index.html", [
-    [ "General Development", "a00004.html", "a00004" ],
-    [ "Skin Development", "a00006.html", "a00006" ],
+    [ "General Development", "general_parts.html", "general_parts" ],
+    [ "Skin Development", "skin_parts.html", "skin_parts" ],
     [ "Language Development", "modules.html", "modules" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"a00002.html",
-"a00300.html#gaefe9573a6a972ef63b082d2264baa857",
-"a00320.html#ga7cb92e50d4913b0c9de289e22c558e99",
-"a00346.html#ga5eeb3593de10ce1d9f2d3e6dc2864f88",
-"a00354.html#gga42753b64a4c9b01785035a18e768a43dad51f07ffb53ac61a8fc610f30314a619",
-"a00359.html#gad0cc801f1cfa8f4e2cfc1b88fc964403",
-"a00388.html#ga3e6946a02a8cc5fe7f12302858f414a3"
+"_addon__rendering_control.html",
+"group___c_p_p___kodi_a_p_i___add_on___v_f_s_utils.html#ga6c7010942a646dcef1841a8e4ac25704",
+"group___c_p_p___kodi_a_p_i___g_u_i___c_list_item___defs.html#gga84c995b3a9c675a155ac04175b6f036ea985180b75a396e849147c4e152d95ab4",
+"group___c_p_p___kodi_a_p_i___g_u_i___c_window___defs.html#gga42753b64a4c9b01785035a18e768a43da3397e98619afa0386d8a4b62bf6d5075",
+"group___c_p_p___kodi_a_p_i___p_v_r___c_stream_properties.html#ga3687926c69b0a5d8a32a73b85ce892b4",
+"group__python___info_tag_video.html#ga1651536f0e21049e0d3785a121cb326c",
+"group__python__xbmcgui__control__textbox.html#gafab766445043570e6a82c14851366933"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

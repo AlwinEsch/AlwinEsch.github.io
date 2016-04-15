@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stat',['Stat',['../a00132.html',1,'XBMCAddon::xbmcvfs']]]
+  ['stat',['Stat',['../class_x_b_m_c_addon_1_1xbmcvfs_1_1_stat.html',1,'XBMCAddon::xbmcvfs']]]
 ];

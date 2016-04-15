@@ -1,5 +1,5 @@
 var modules =
 [
-    [ "C++", "a00292.html", "a00292" ],
-    [ "Python", "a00293.html", "a00293" ]
+    [ "C++", "group__cpp.html", "group__cpp" ],
+    [ "Python", "group__python.html", "group__python" ]
 ];

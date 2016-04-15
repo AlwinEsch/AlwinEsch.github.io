@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rendercapture',['RenderCapture',['../a00319.html',1,'']]]
+  ['rendercapture',['RenderCapture',['../group__python__xbmc___render_capture.html',1,'']]]
 ];

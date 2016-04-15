@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keyboard',['Keyboard',['../a00299.html',1,'']]]
+  ['keyboard',['Keyboard',['../group__python__keyboard.html',1,'']]]
 ];

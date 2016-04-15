@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['infotagmusic',['InfoTagMusic',['../a00099.html',1,'XBMCAddon::xbmc']]],
-  ['infotagradiords',['InfoTagRadioRDS',['../a00100.html',1,'XBMCAddon::xbmc']]],
-  ['infotagvideo',['InfoTagVideo',['../a00101.html',1,'XBMCAddon::xbmc']]]
+  ['infotagmusic',['InfoTagMusic',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music.html',1,'XBMCAddon::xbmc']]],
+  ['infotagradiords',['InfoTagRadioRDS',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_radio_r_d_s.html',1,'XBMCAddon::xbmc']]],
+  ['infotagvideo',['InfoTagVideo',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html',1,'XBMCAddon::xbmc']]]
 ];
