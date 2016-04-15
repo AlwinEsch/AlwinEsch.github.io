@@ -1,10 +1,10 @@
 var group__python___dialog =
 [
-    [ "yesno", "group__python___dialog.html#gaa64342a4b05f1ed49803ea44a25b73db", null ],
-    [ "select", "group__python___dialog.html#ga31bcf740cf64230b40af61377ad701b1", null ],
-    [ "contextmenu", "group__python___dialog.html#gac95eba828defd64864e7218de9b45855", null ],
-    [ "multiselect", "group__python___dialog.html#gaf6cee72babc023f15a8ed28cbb2cc7f6", null ],
-    [ "ok", "group__python___dialog.html#ga623449b051874059111f9831a7b91673", null ],
+    [ "yesno", "group__python___dialog.html#gaec88ec7bfee6c979c3bbee79d8bdc0bd", null ],
+    [ "select", "group__python___dialog.html#ga56430b3194d3188cbc7f4a595bd89f2c", null ],
+    [ "contextmenu", "group__python___dialog.html#ga593ca0d5a700a594eb1655494e0d914b", null ],
+    [ "multiselect", "group__python___dialog.html#ga3ba70a5e43d787b3392bcc4b60e369cc", null ],
+    [ "ok", "group__python___dialog.html#ga2380697691387b15d53c9c156d6d9590", null ],
     [ "textviewer", "group__python___dialog.html#gad212e84e36d2fc96b8f2e24b9dd67b47", null ],
     [ "browse", "group__python___dialog.html#ga329bf9f86212595d36708f6ad8977499", null ],
     [ "browseSingle", "group__python___dialog.html#ga8a8334ae223a82e7df728e032e167bbf", null ],
