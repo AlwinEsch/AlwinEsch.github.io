@@ -140,5 +140,6 @@ var NAVTREEINDEX6 =
 "skin__toggle_button_control.html#skin_Toogle_button_control_sect2":[1,0,24,1],
 "skin__toggle_button_control.html#skin_Toogle_button_control_sect3":[1,0,24,2],
 "skin_controls.html":[1,0],
-"skin_parts.html":[1]
+"skin_parts.html":[1],
+"usergroup0.html":[3]
 };
