@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Callback functions from Kodi to add-on</title>
+<title>Kodi Development: InfoTagMusic</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,14 +92,323 @@ $(document).ready(function(){initNavTree('a00311.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Callback functions from Kodi to add-on<div class="ingroups"><a class="el" href="a00293.html">Python</a> &raquo; <a class="el" href="a00295.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00310.html">Window</a></div></div>  </div>
+<div class="title">InfoTagMusic<div class="ingroups"><a class="el" href="a00303.html">Python</a> &raquo; <a class="el" href="a00304.html">Library - xbmc</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>GUI window callback functions.</b> </p>
-<p>Functions to handle control callbacks from Kodi.</p>
-<p>Likewise, all functions from here as well in the all window classes (<a class="el" href="a00310.html">Window</a>, <a class="el" href="a00312.html">WindowDialog</a>, <a class="el" href="a00313.html">WindowXML</a> and <a class="el" href="a00314.html">WindowXMLDialog</a>) with inserted and available. </p><hr/>
-<p><a class="el" href="a00310.html">Go back to normal functions from window</a> </p>
+<p><b>Kodi's music info tag class.</b> </p>
+<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> InfoTagMusic() </big></font></span></code></h4> </p>
+<p>To get music info tag data of currently played source.</p>
+<dl class="section note"><dt>Note</dt><dd>Info tag load is only be possible from present player class.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;tag = xbmc.Player().getMusicInfoTag()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;title = tag.getTitle()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;url   = tag.getURL()</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;...</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga7fab9ce25511a132269e791a5308f7b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getURL </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getURL() </big></font></span></code></h4> </p><hr/>
+<p> Returns url of source as string from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Url of source</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga95e859a4588a39a1824b717378a84c29"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getTitle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getTitle() </big></font></span></code></h4> </p><hr/>
+<p> Returns the title from music as string on info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music title</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga885a8570d62e92bb6f6c83144766e7fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getArtist </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getArtist() </big></font></span></code></h4> </p><hr/>
+<p> Returns the artist from music as string if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music artist</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gaee148d665bb21d0319499d90186605b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getAlbum </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getAlbum() </big></font></span></code></h4> </p><hr/>
+<p> Returns the album from music tag as string if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music album name</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gaf49ce9703600649cd1f8c58cb989de66"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getAlbumArtist </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getAlbumArtist() </big></font></span></code></h4> </p><hr/>
+ </p>
+<p>Returns the album artist from music tag as string if present.</p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Music album artist name</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gadc6f217756d49edbac6975e1f69485d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getGenre </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getGenre() </big></font></span></code></h4> </p><hr/>
+<p> Returns the genre name from music tag as string if present. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Genre name</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gab46fe3d2750728c84bd71ae1bfd08ee8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getDuration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getDuration() </big></font></span></code></h4> </p><hr/>
+<p> Returns the duration of music as integer from info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Duration</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga86cb4c526de526dad142d5e945e4d6f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getTrack </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getTrack() </big></font></span></code></h4> </p><hr/>
+<p> Returns the track number (if present) from music info tag as integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Track number</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga59e76fc119dff33ae92c871744cca574"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getDisc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getDisc() </big></font></span></code></h4> </p><hr/>
+<p> Returns the disk number (if present) from music info tag as integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Disc number</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga5852df07c7200dd5910756eb71bbc067"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getReleaseDate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getReleaseDate() </big></font></span></code></h4> </p><hr/>
+<p> Returns the release date as string from music info tag (if present). </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Release date</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga71aa910950be7a63261e686e3a690020"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getListeners </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getListeners() </big></font></span></code></h4> </p><hr/>
+<p> Returns the listeners as integer from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Listeners</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga6b91408706d3ba78df1cf0d9fc8d7365"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getPlayCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getPlayCount() </big></font></span></code></h4> </p><hr/>
+<p> Returns the number of carried out playbacks. </p>
+<dl class="section return"><dt>Returns</dt><dd>[integer] Playback count</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gaf16ec95dcf0cf2f08182b703de6f2074"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getLastPlayed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getLastPlayed() </big></font></span></code></h4> </p><hr/>
+<p> Returns last played time as string from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Last played date / time on tag</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="gadb57c3d1b74c19589ba1d641ea1a390e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getComment </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getComment() </big></font></span></code></h4> </p><hr/>
+<p> Returns comment as string from music info tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Comment on tag</dd></dl>
+<hr/>
+ 
+</div>
+</div>
+<a class="anchor" id="ga51f1bf160123ec89bea5b0efdfae5366"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getLyrics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getLyrics() </big></font></span></code></h4> </p><hr/>
+<p> Returns a string from lyrics. </p>
+<dl class="section return"><dt>Returns</dt><dd>[string] Lyrics on tag</dd></dl>
+<hr/>
+ 
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

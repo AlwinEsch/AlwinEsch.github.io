@@ -1,8 +1,5 @@
 var a00336 =
 [
-    [ "settings.xml", "a00337.html", null ],
-    [ "General", "a00338.html", "a00338" ],
-    [ "Sound Playback (class CSoundPlay)", "a00340.html", "a00340" ],
-    [ "Network", "a00342.html", "a00342" ],
-    [ "Virtual file system", "a00343.html", "a00343" ]
+    [ "addLabel", "a00336.html#ga1a4d8d7257c8023e99df810a56bee816", null ],
+    [ "setScrolling", "a00336.html#ga6f4ced77230e64f80f5b6fa49d179544", null ]
 ];

@@ -7,7 +7,7 @@ var searchData=
   ['title',['Title',['../group___c_p_p___kodi_a_p_i___g_u_i___c_dialog_extended_progress.html#ga3cb91fb7750df7982baea48c4a3de616',1,'KodiAPI::GUI::CDialogExtendedProgress']]],
   ['togglemute',['ToggleMute',['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga33da889fbfe7ad24feb501f694715fbc',1,'KodiAPI::AddOn::General']]],
   ['translateaddonstatus',['TranslateAddonStatus',['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga30315a5b2b42f1e1bbb41424503a870f',1,'KodiAPI::AddOn::General']]],
-  ['translatepath',['translatePath',['../group__python__xbmc.html#ga77f8d61db7757aa22df826a904cc3a8d',1,'translatePath():&#160;ModuleXbmc.h'],['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga568234911f33e049937f68cb5c20f72b',1,'KodiAPI::AddOn::General::TranslatePath()']]],
+  ['translatepath',['translatePath',['../group__python__xbmc.html#ga762f48b2097ec25d938bf8596023b221',1,'translatePath():&#160;ModuleXbmc.h'],['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga568234911f33e049937f68cb5c20f72b',1,'KodiAPI::AddOn::General::TranslatePath()']]],
   ['triggerscan',['TriggerScan',['../group___c_p_p___kodi_a_p_i___peripheral.html#ga71e2010f9a35616f7a4024517f052d1b',1,'KodiAPI::Peripheral']]],
   ['truncate',['Truncate',['../group___c_p_p___kodi_a_p_i___add_on___c_v_f_s_file.html#ga97dbc6093302f0ced52952a2737407ec',1,'KodiAPI::AddOn::CVFSFile']]]
 ];

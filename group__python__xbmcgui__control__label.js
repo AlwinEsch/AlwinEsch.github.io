@@ -1,6 +1,6 @@
 var group__python__xbmcgui__control__label =
 [
-    [ "getLabel", "group__python__xbmcgui__control__label.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
-    [ "setLabel", "group__python__xbmcgui__control__label.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
-    [ "reset", "group__python__xbmcgui__control__label.html#gad20897c5c8bd47f5d4005989bead0e55", null ]
+    [ "getLabel", "group__python__xbmcgui__control__label.html#ga14c4e7420d903d3e40342266333d2ecf", null ],
+    [ "setLabel", "group__python__xbmcgui__control__label.html#ga002b6bcb81f2510c34983101ea0c8cc7", null ],
+    [ "reset", "group__python__xbmcgui__control__label.html#ga4a20559544fdf4dcb457e258dc976cf8", null ]
 ];

@@ -1,9 +1,18 @@
 var a00311 =
 [
-    [ "onAction", "a00311_ga46acbc2206f67d5f8e1d44d3ebe4fa68.html#ga46acbc2206f67d5f8e1d44d3ebe4fa68", null ],
-    [ "onControl", "a00311_ga3d8a5f47cd756f21b4744eed7ede8634.html#ga3d8a5f47cd756f21b4744eed7ede8634", null ],
-    [ "onClick", "a00311_gad031aa7d2b1fcedaac6ad481e2e85757.html#gad031aa7d2b1fcedaac6ad481e2e85757", null ],
-    [ "onDoubleClick", "a00311_ga25347e21254d60dc94028d2ed6a0c5ed.html#ga25347e21254d60dc94028d2ed6a0c5ed", null ],
-    [ "onFocus", "a00311_ga32655043662a872fb86801fe5e8e1e41.html#ga32655043662a872fb86801fe5e8e1e41", null ],
-    [ "onInit", "a00311_ga5a0ef4163216ec8833eb3a524f7fd80e.html#ga5a0ef4163216ec8833eb3a524f7fd80e", null ]
+    [ "getURL", "a00311.html#ga7fab9ce25511a132269e791a5308f7b7", null ],
+    [ "getTitle", "a00311.html#ga95e859a4588a39a1824b717378a84c29", null ],
+    [ "getArtist", "a00311.html#ga885a8570d62e92bb6f6c83144766e7fc", null ],
+    [ "getAlbum", "a00311.html#gaee148d665bb21d0319499d90186605b2", null ],
+    [ "getAlbumArtist", "a00311.html#gaf49ce9703600649cd1f8c58cb989de66", null ],
+    [ "getGenre", "a00311.html#gadc6f217756d49edbac6975e1f69485d5", null ],
+    [ "getDuration", "a00311.html#gab46fe3d2750728c84bd71ae1bfd08ee8", null ],
+    [ "getTrack", "a00311.html#ga86cb4c526de526dad142d5e945e4d6f3", null ],
+    [ "getDisc", "a00311.html#ga59e76fc119dff33ae92c871744cca574", null ],
+    [ "getReleaseDate", "a00311.html#ga5852df07c7200dd5910756eb71bbc067", null ],
+    [ "getListeners", "a00311.html#ga71aa910950be7a63261e686e3a690020", null ],
+    [ "getPlayCount", "a00311.html#ga6b91408706d3ba78df1cf0d9fc8d7365", null ],
+    [ "getLastPlayed", "a00311.html#gaf16ec95dcf0cf2f08182b703de6f2074", null ],
+    [ "getComment", "a00311.html#gadb57c3d1b74c19589ba1d641ea1a390e", null ],
+    [ "getLyrics", "a00311.html#ga51f1bf160123ec89bea5b0efdfae5366", null ]
 ];

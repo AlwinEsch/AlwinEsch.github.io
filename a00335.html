@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Definitions, structures and enumerators</title>
+<title>Kodi Development: Subclass - ControlList</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,21 +91,504 @@ $(document).ready(function(){initNavTree('a00335.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">Definitions, structures and enumerators<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00334.html">1. Basic functions</a></div></div>  </div>
+<div class="title">Subclass - ControlList<div class="ingroups"><a class="el" href="a00303.html">Python</a> &raquo; <a class="el" href="a00305.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00331.html">Control</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Library definition values</b> </p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:gac08f738b25174ea7fe5441965c57773a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00335_gac08f738b25174ea7fe5441965c57773a.html#gac08f738b25174ea7fe5441965c57773a">KODI_API_lasterror</a></td></tr>
-<tr class="memdesc:gac08f738b25174ea7fe5441965c57773a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last error code generated from lib.  <a href="a00335_gac08f738b25174ea7fe5441965c57773a.html#gac08f738b25174ea7fe5441965c57773a">More...</a><br /></td></tr>
-<tr class="separator:gac08f738b25174ea7fe5441965c57773a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<p><b>Used for a scrolling lists of items. Replaces the list control.</b> </p>
+<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> ControlList(x, y, width, height[, font, textColor, buttonTexture, buttonFocusTexture,
+      selectedColor, imageWidth, imageHeight, itemTextXOffset, itemTextYOffset,
+      itemHeight, space, alignmentY, shadowColor]) </big></font></span></code></h4> </p>
+<p>The list container is one of several containers used to display items from file lists in various ways. The list container is very flexible - it's only restriction is that it is a list - i.e. a single column or row of items. The layout of the items is very flexible and is up to the skinner.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00331.html">Control</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>[opt] string - font used for items label. (e.g. 'font13') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textColor</td><td>[opt] hexstring - color of items label. (e.g. '0xFFFFFFFF') </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buttonTexture</td><td>[opt] string - filename for focus texture. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buttonFocusTexture</td><td>[opt] string - filename for no focus texture. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">selectedColor</td><td>[opt] integer - x offset of label. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageWidth</td><td>[opt] integer - width of items icon or thumbnail. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageHeight</td><td>[opt] integer - height of items icon or thumbnail. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">itemTextXOffset</td><td>[opt] integer - x offset of items label. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">itemTextYOffset</td><td>[opt] integer - y offset of items label. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">itemHeight</td><td>[opt] integer - height of items. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">space</td><td>[opt] integer - space between items. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alignmentY</td><td>[opt] integer - Y-axis alignment of items label<ul>
+<li>Flags for alignment used as bits to have several together: <table class="doxtable">
+<tr>
+<th>Defination name </th><th align="center">Bitflag </th><th align="left">Description  </th></tr>
+<tr>
+<td>XBFONT_LEFT </td><td align="center">0x00000000 </td><td align="left">Align X left </td></tr>
+<tr>
+<td>XBFONT_RIGHT </td><td align="center">0x00000001 </td><td align="left">Align X right </td></tr>
+<tr>
+<td>XBFONT_CENTER_X </td><td align="center">0x00000002 </td><td align="left">Align X center </td></tr>
+<tr>
+<td>XBFONT_CENTER_Y </td><td align="center">0x00000004 </td><td align="left">Align Y center </td></tr>
+<tr>
+<td>XBFONT_TRUNCATED </td><td align="center">0x00000008 </td><td align="left">Truncated text </td></tr>
+<tr>
+<td>XBFONT_JUSTIFIED </td><td align="center">0x00000010 </td><td align="left">Justify text </td></tr>
 </table>
+</li>
+</ul>
+</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shadowColor</td><td>[opt] hexstring - color of items label's shadow. (e.g. '0xFF000000')</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.<br />
+ After you create the control, you need to add it to the window with addControl().</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.cList = xbmcgui.ControlList(100, 250, 200, 250, <span class="stringliteral">&#39;font14&#39;</span>, space=5)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga3cf94a2cf4dee919f08589c667135645"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">addItem </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> addItem(item) </big></font></span></code></h4> </p><hr/>
+<p> Add a new item to this list control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">item</td><td>string, unicode or <a class="el" href="a00126.html">ListItem</a> - item to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cList.addItem(<span class="stringliteral">&#39;Reboot Kodi&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaf7ebe4e595b860cbd984df8dab1faaac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">addItems </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> addItems(items) </big></font></span></code></h4> </p><hr/>
+<p> Adds a list of listitems or strings to this list control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">items</td><td>List - list of strings, unicode objects or ListItems to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments.</dd></dl>
+<p>Large lists benefit considerably, than using the standard <a class="el" href="a00335.html#ga3cf94a2cf4dee919f08589c667135645" title=" <h4><code><span style=&quot;font-style: italic;&quot;>Function: </span><span style=&quot;font-style: bold;&quot;><font c...">addItem()</a></p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cList.addItems(items=listitems)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga1bdf74c9bba50409e4cdad1c0f3f71bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">selectItem </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> selectItem(item) </big></font></span></code></h4> </p><hr/>
+<p> Select an item by index number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">item</td><td>integer - index number of the item to select.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cList.selectItem(12)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gab2430b748eb11b54354a83acb273e8d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">removeItem </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> removeItem(index) </big></font></span></code></h4> </p><hr/>
+<p> Remove an item by index number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>integer - index number of the item to remove.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cList.removeItem(12)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga4a20559544fdf4dcb457e258dc976cf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> reset() </big></font></span></code></h4> </p><hr/>
+<p> Clear all ListItems in this control list. </p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cList.reset()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gac785d504ed59ebc7f29b41c13d5bdb1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getSpinControl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getSpinControl() </big></font></span></code></h4> </p><hr/>
+ </p>
+<p>Returns the associated <a class="el" href="a00121.html">ControlSpin</a> object.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Not working completely yet<br />
+ After adding this control list to a window it is not possible to change the settings of this spin control.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;ctl = cList.getSpinControl()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga77d936a0f9bdf1d9e681815766c57bf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getSelectedPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getSelectedPosition() </big></font></span></code></h4> </p><hr/>
+ </p>
+<p>Returns the position of the selected item as an integer.</p>
+<dl class="section note"><dt>Note</dt><dd>Returns -1 for empty lists.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pos = cList.getSelectedPosition()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga0ae78cf64a4231e23dd107dec58ed57b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getSelectedItem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getSelectedItem() </big></font></span></code></h4> </p><hr/>
+<p> Returns the selected item as a <a class="el" href="a00126.html">ListItem</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The selected item</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Same as <a class="el" href="a00335.html#ga77d936a0f9bdf1d9e681815766c57bf8" title=" <h4><code><span style=&quot;font-style: italic;&quot;>Function: </span><span style=&quot;font-style: bold;&quot;><font c...">getSelectedPosition()</a>, but instead of an integer a <a class="el" href="a00126.html">ListItem</a> object is returned. Returns None for empty lists.<br />
+ See windowexample.py on how to use this.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;item = cList.getSelectedItem()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gad599f0f53524360e47bd95c36b42c2db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setImageDimensions </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> setImageDimensions(imageWidth, imageHeight) </big></font></span></code></h4> </p><hr/>
+<p> Sets the width/height of items icon or thumbnail. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageWidth</td><td>[opt] integer - width of items icon or thumbnail. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageHeight</td><td>[opt] integer - height of items icon or thumbnail.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cList.setImageDimensions(18, 18)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga5699c23af09b2607b3c7923c548a0b21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setSpace </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> setSpace(space) </big></font></span></code></h4> </p><hr/>
+<p> Set's the space between items. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">space</td><td>[opt] integer - space between items.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cList.setSpace(5)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga6a57b2e0eea5648b2860615a419008f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setPageControlVisible </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> setPageControlVisible(visible) </big></font></span></code></h4> </p><hr/>
+<p> Sets the spin control's visible/hidden state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">visible</td><td>boolean - True=visible / False=hidden.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cList.setPageControlVisible(<span class="keyword">True</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga775bfb88c1bb7975d67f277eade2a1b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> size() </big></font></span></code></h4> </p><hr/>
+ </p>
+<p>Returns the total number of items in this list control as an integer.</p>
+<dl class="section return"><dt>Returns</dt><dd>Total number of items</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cnt = cList.size()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga3e7c5ea091a8e78e04be7799e37c882d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getItemHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getItemHeight() </big></font></span></code></h4> </p><hr/>
+<p> Returns the control's current item height as an integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current item heigh</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;item_height = self.cList.getItemHeight()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga70b4a06fba476f6a2762ee655fe6e952"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getSpace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getSpace() </big></font></span></code></h4> </p><hr/>
+<p> Returns the control's space between items as an integer. </p>
+<dl class="section return"><dt>Returns</dt><dd>Space between items</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;gap = self.cList.getSpace()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gac0ca640f178c947fd5cdcd8bdcbc269b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getListItem </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getListItem(index) </big></font></span></code></h4> </p><hr/>
+<p> Returns a given <a class="el" href="a00126.html">ListItem</a> in this List. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>integer - index number of item to return. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List item </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ValueError</td><td>if index is out of range.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;listitem = cList.getListItem(6)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga376169c95563853b2aa8ccf43a0bcfc3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setStaticContent </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> setStaticContent(items) </big></font></span></code></h4> </p><hr/>
+<p> Fills a static list with a list of listitems. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">items</td><td>List - list of listitems to add.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cList.setStaticContent(items=listitems)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

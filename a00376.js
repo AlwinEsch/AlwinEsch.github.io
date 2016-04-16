@@ -1,8 +1,11 @@
 var a00376 =
 [
-    [ "CControlProgress", "a00376_ga33e0980459ea8e489f13a882c73a7dde.html#ga33e0980459ea8e489f13a882c73a7dde", null ],
-    [ "~CControlProgress", "a00376_gaa981b5bb0357bd7838daa15e7eeec0b1.html#gaa981b5bb0357bd7838daa15e7eeec0b1", null ],
-    [ "SetVisible", "a00376_ga71a209185b7a98adf0a310d2c44cdbe6.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "SetPercentage", "a00376_ga123bcc2a09c1b721c04b4bc0dd32953d.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
-    [ "GetPercentage", "a00376_gadbcb3c03a1a87a252f94e0274e1e75f8.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ]
+    [ "ShowAndVerifyNewPassword", "a00376.html#ga425c581c506c008c30f7502f55442790", null ],
+    [ "ShowAndVerifyPassword", "a00376.html#gac38878bcfd30e783aed2bd2f2a8a0dc1", null ],
+    [ "ShowAndVerifyInput", "a00376.html#gac1e6848c0cb5734499a0ed11f43b8427", null ],
+    [ "ShowAndGetTime", "a00376.html#gaabe01c994c20c760af3827e3d6505684", null ],
+    [ "ShowAndGetDate", "a00376.html#gaa5e69e0b6597de68f49c163b87ebaf57", null ],
+    [ "ShowAndGetIPAddress", "a00376.html#ga8f40109c706444bbb7484793c7a92c05", null ],
+    [ "ShowAndGetNumber", "a00376.html#ga39533ee1e2f8541c47f8dd1cbcf893a1", null ],
+    [ "ShowAndGetSeconds", "a00376.html#ga5b7c4dbde91b44058a9edebef65d5354", null ]
 ];

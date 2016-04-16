@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Definitions, structures and enumerators</title>
+<title>Kodi Development: Subclass - ControlProgress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,11 +92,93 @@ $(document).ready(function(){initNavTree('a00339.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Definitions, structures and enumerators<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00336.html">2. AddOn</a> &raquo; <a class="el" href="a00338.html">General</a></div></div>  </div>
+<div class="title">Subclass - ControlProgress<div class="ingroups"><a class="el" href="a00303.html">Python</a> &raquo; <a class="el" href="a00305.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00331.html">Control</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Library definition values</b> </p>
+<p><b>Used to show the progress of a particular operation.</b> </p>
+<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> ControlProgress(x, y, width, height, filename[, texturebg, textureleft, texturemid, textureright, textureoverlay]) </big></font></span></code></h4> </p>
+<p>The progress control is used to show the progress of an item that may take a long time, or to show how far through a movie you are. You can choose the position, size, and look of the progress control.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00331.html">Control</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>string - image filename. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texturebg</td><td>[opt] string - specifies the image file whichshould be displayed in the background of the progress control. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureleft</td><td>[opt] string - specifies the image file whichshould be displayed for the left side of the progress bar. This is rendered on the left side of the bar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texturemid</td><td>[opt] string - specifies the image file which should be displayed for the middl portion of the progress bar. This is the <code>fill</code> texture used to fill up the bar. It's positioned on the right of the <code>&lt;lefttexture&gt;</code> texture, and fills the gap between the <code>&lt;lefttexture&gt;</code> and <code>&lt;righttexture&gt;</code> textures, depending on how far progressed the item is. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureright</td><td>[opt] string - specifies the image file which should be displayed for the right side of the progress bar. This is rendered on the right side of the bar. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureoverlay</td><td>[opt] string - specifies the image file which should be displayed over the top of all other images in the progress bar. It is centered vertically and horizontally within the space taken up by the background image.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.<br />
+ After you create the control, you need to add it to the window with addControl().</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># ControlProgress(x, y, width, height, filename[, texturebg, textureleft, texturemid, textureright, textureoverlay])</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.image = xbmcgui.ControlProgress(100, 250, 250, 30, <span class="stringliteral">&#39;special://home/scripts/test.png&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga732f7ebb9fb55911046472ed4c47f1f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setPercent </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> setPercent(percent) </big></font></span></code></h4> </p><hr/>
+<p> Sets the percentage of the progressbar to show. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">percent</td><td>float - percentage of the bar to show.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>valid range for percent is 0-100</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># setPercent(percent)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;self.progress.setPercent(60)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga4991236fc1fe1d1e569933cadfccfde9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getPercent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getPercent() </big></font></span></code></h4> </p><hr/>
+<p> Returns a float of the percent of the progress. </p>
+<dl class="section return"><dt>Returns</dt><dd>Percent position</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># getPercent()</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keywordflow">print</span> self.progress.getPercent()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

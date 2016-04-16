@@ -1,12 +1,12 @@
 var group__python__xbmcgui__window__xml =
 [
     [ "Subclass - WindowDialogXML", "group__python__xbmcgui__window__dialog__xml.html", null ],
-    [ "addItem", "group__python__xbmcgui__window__xml.html#ga87ffff74f065758ae9884ecc87102af1", null ],
-    [ "removeItem", "group__python__xbmcgui__window__xml.html#ga214d46ad5cb6e318163ba98e0dd780ac", null ],
-    [ "getCurrentListPosition", "group__python__xbmcgui__window__xml.html#ga860b30302751103052456bb1f1079980", null ],
-    [ "setCurrentListPosition", "group__python__xbmcgui__window__xml.html#gabaeb49593088c3be9c7a232d50152e34", null ],
-    [ "getListItem", "group__python__xbmcgui__window__xml.html#ga37ec44d83350b3e4c5b4f7a2648bfc01", null ],
-    [ "getListSize", "group__python__xbmcgui__window__xml.html#ga7b00dc949b12149360563a1941956fc7", null ],
-    [ "clearList", "group__python__xbmcgui__window__xml.html#ga612285c5b9d603a0abb0feab44b8412f", null ],
-    [ "setContainerProperty", "group__python__xbmcgui__window__xml.html#gaf48b268d0ce5767fd8702e649e2aad39", null ]
+    [ "addItem", "group__python__xbmcgui__window__xml.html#ga3cf94a2cf4dee919f08589c667135645", null ],
+    [ "removeItem", "group__python__xbmcgui__window__xml.html#gab2430b748eb11b54354a83acb273e8d2", null ],
+    [ "getCurrentListPosition", "group__python__xbmcgui__window__xml.html#ga99ea213424afdc6e3800c0b2899b28bc", null ],
+    [ "setCurrentListPosition", "group__python__xbmcgui__window__xml.html#gabc4a27d06fa4498693f6e8eb3ba043dd", null ],
+    [ "getListItem", "group__python__xbmcgui__window__xml.html#gac0ca640f178c947fd5cdcd8bdcbc269b", null ],
+    [ "getListSize", "group__python__xbmcgui__window__xml.html#ga49ec06e6c8ef6a59b55c2b7aeb9fbc73", null ],
+    [ "clearList", "group__python__xbmcgui__window__xml.html#ga5421bf9d57ddded1e8e16959804626ca", null ],
+    [ "setContainerProperty", "group__python__xbmcgui__window__xml.html#gad5749c0654365381de032cc3c5c10276", null ]
 ];

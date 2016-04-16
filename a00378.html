@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Control Rendering</title>
+<title>Kodi Development: Dialog Progress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,26 +91,317 @@ $(document).ready(function(){initNavTree('a00378.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Control Rendering<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00351.html">4. GUI</a></div></div>  </div>
+<div class="title">Dialog Progress<div class="ingroups"><a class="el" href="a00302.html">C++</a> &raquo; <a class="el" href="a00362.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Window control for rendering own parts</b> </p>
-<p>This rendering control is used when own parts are needed. You have the control over them to render direct OpenGL or DirectX content to the screen set by the size of them.</p>
-<p>Alternative can be the virtual functions from t his been ignored if the callbacks are defined by the <a class="el" href="a00378_ga10abcb122b56e3f8a6069b888486d5db.html#CControlRendering_SetIndependentCallbacks">CControlRendering_SetIndependentCallbacks</a> function and class is used as single and not as a parent class.</p>
-<p>It has the header <a class="el" href="a00187_source.html">#include &lt;kodi/api2/gui/ControlRendering.hpp&gt;</a> be included to enjoy it.</p>
-<p>Here you find the needed skin part for a <a class="el" href="a00008.html">rendering control</a></p>
-<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00379"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00379.html">Definitions, structures and enumerators</a></td></tr>
-<tr class="memdesc:a00379"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Library definition values</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p><b>Progress dialog shown in center</b> </p>
+<p>The with <a class="el" href="a00203_source.html">#include &lt;kodi/api2/gui/DialogProgress.hpp&gt;</a> given class are basically used to create Kodi's progress dialog with named text fields.</p>
+<div class="image">
+<img src="help.GUIDialogProgress.png" alt="help.GUIDialogProgress.png"/>
+</div>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/DialogProgress.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="a00089.html">KodiAPI::GUI::CDialogProgress</a> *progress = <span class="keyword">new</span> <a class="code" href="a00089.html">KodiAPI::GUI::CDialogProgress</a>;</div>
+<div class="line">progress-&gt;<a class="code" href="a00378.html#gaf6377691fa79c14e16aebaeb9d340b33">SetHeading</a>(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00378.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(1, <span class="stringliteral">&quot;line 1&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00378.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(2, <span class="stringliteral">&quot;line 2&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00378.html#ga845054cd7ff1978a112126086a8ec5ba">SetLine</a>(3, <span class="stringliteral">&quot;line 3&quot;</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00378.html#ga13580b7f84c1c13f90c1d030ef61faf8">SetCanCancel</a>(<span class="keyword">true</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00378.html#ga4ef9882ff90cb3878eb846335e2b3c07">ShowProgressBar</a>(<span class="keyword">true</span>);</div>
+<div class="line">progress-&gt;<a class="code" href="a00378.html#ga5e53001785ff30ae485a113b9b8a0ddc">Open</a>();</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 100; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  progress-&gt;<a class="code" href="a00378.html#gadf0353f59469e4b0cab327ea7df9cae8">SetPercentage</a>(i);</div>
+<div class="line">  <a class="code" href="a00304.html#gac81db027eab4f3b5bec4a7a5a1073e7e">sleep</a>(1);</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">delete</span> progress;</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga78b8dcedb682c8b3ee857485b2c4c2b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDialogProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new dialog. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf4ebae45c5583fbefea366318f13714e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~CDialogProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga5e53001785ff30ae485a113b9b8a0ddc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To open the dialog. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaf6377691fa79c14e16aebaeb9d340b33"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetHeading </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>heading</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the heading title of dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Title string to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga845054cd7ff1978a112126086a8ec5ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetLine </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>iLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the line text field on dialog from 0 - 2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iLine</td><td>Line number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>Text string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga13580b7f84c1c13f90c1d030ef61faf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetCanCancel </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bCanCancel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To enable and show cancel button on dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bCanCancel</td><td>if true becomes it shown </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf76bcf12aaec9ab845ea61853a37a33c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsCanceled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To check dialog for clicked cancel button. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if canceled </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gadf0353f59469e4b0cab327ea7df9cae8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPercentage </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iPercentage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current progress position as percent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gae20eeb097c9ebe3506bd1d2bb3d92fda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetPercentage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the current progress position as percent. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current Position used from 0.0 to 100.0 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4ef9882ff90cb3878eb846335e2b3c07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowProgressBar </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bOnOff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To show or hide progress bar dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bOnOff</td><td>If true becomes it shown </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gad397a19fe15c25e5077d34fd43da6e5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProgressMax </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iMax</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the maximum position of progress, needed if <code>SetProgressAdvance(...)</code> is used. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">iMax</td><td>Biggest usable position to use </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gafe4b80962f0d7bdd3b0a73b83ef06323"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProgressAdvance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nSteps</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To increase progress bar by defined step size until reach of maximum position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nSteps</td><td>Step size to increase, default is 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga71e9d732335846eb579f0dd00918b3e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Abort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To check progress was canceled on work. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if aborted </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

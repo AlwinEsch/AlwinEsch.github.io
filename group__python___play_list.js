@@ -1,13 +1,12 @@
 var group__python___play_list =
 [
-    [ "getPlayListId", "group__python___play_list.html#ga4d665409e02daa8ea13ce462ca44c914", null ],
-    [ "add", "group__python___play_list.html#ga979e740949519ca0e88da2ff9934a4d5", null ],
-    [ "load", "group__python___play_list.html#ga2eea1635b7df085d42c973352ef10355", null ],
-    [ "remove", "group__python___play_list.html#gae363baca6026e43cc1264c5914ff69b9", null ],
-    [ "clear", "group__python___play_list.html#gac8bb3912a3ce86b15842e79d0b421204", null ],
-    [ "size", "group__python___play_list.html#gaf4b57d21919c42d55af03391f91a1c08", null ],
-    [ "shuffle", "group__python___play_list.html#ga1905fe84eb39f020b32c58baf7a76758", null ],
-    [ "unshuffle", "group__python___play_list.html#ga2401476232ac1b00321c9bfe8158f9c4", null ],
-    [ "getposition", "group__python___play_list.html#ga265b7f39dcd400e1f4edaf4060af9977", null ],
-    [ "operator[]", "group__python___play_list.html#gaba5d6f37d582f0512f61f32109a92d92", null ]
+    [ "getPlayListId", "group__python___play_list.html#gaf375fd11f3e7b06d67a1d24a98480a4f", null ],
+    [ "add", "group__python___play_list.html#ga4f172777a0871dede5515fd016ae26e6", null ],
+    [ "load", "group__python___play_list.html#ga58df00a466baca2469ad8407c5534377", null ],
+    [ "remove", "group__python___play_list.html#ga2c737a7d7cded298377ca2aeda23d3ab", null ],
+    [ "clear", "group__python___play_list.html#gaa821bec12eaa7e0f649397c9675ff505", null ],
+    [ "size", "group__python___play_list.html#ga775bfb88c1bb7975d67f277eade2a1b7", null ],
+    [ "shuffle", "group__python___play_list.html#gafce59714eca34395b19320a00ca1c7da", null ],
+    [ "unshuffle", "group__python___play_list.html#ga869185334948aa5f500d718c1c071cdd", null ],
+    [ "getposition", "group__python___play_list.html#gaf043e2c7bc131891594ef9aaff03187a", null ]
 ];

@@ -1,7 +1,7 @@
 var group__python__xbmcgui__control__button =
 [
-    [ "setLabel", "group__python__xbmcgui__control__button.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
-    [ "setDisabledColor", "group__python__xbmcgui__control__button.html#gabb99461e652ba261d6322894a64affbe", null ],
-    [ "getLabel", "group__python__xbmcgui__control__button.html#ga86ad2cb533724ac728e0f96b2323cceb", null ],
-    [ "getLabel2", "group__python__xbmcgui__control__button.html#ga670b0dee884d131339bbf88d07bbbfc7", null ]
+    [ "setLabel", "group__python__xbmcgui__control__button.html#ga002b6bcb81f2510c34983101ea0c8cc7", null ],
+    [ "setDisabledColor", "group__python__xbmcgui__control__button.html#gacabda86d884db154032f559efda11fa1", null ],
+    [ "getLabel", "group__python__xbmcgui__control__button.html#ga14c4e7420d903d3e40342266333d2ecf", null ],
+    [ "getLabel2", "group__python__xbmcgui__control__button.html#ga855de4c2af40094f9f8cae4d9d35378e", null ]
 ];

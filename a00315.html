@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Stat</title>
+<title>Kodi Development: DialogProgressBG</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,25 +92,120 @@ $(document).ready(function(){initNavTree('a00315.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Stat<div class="ingroups"><a class="el" href="a00293.html">Python</a> &raquo; <a class="el" href="a00298.html">Library - xbmcvfs</a></div></div>  </div>
+<div class="title">DialogProgressBG<div class="ingroups"><a class="el" href="a00303.html">Python</a> &raquo; <a class="el" href="a00305.html">Library - xbmcgui</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>Get file or file system status. </p>
-<p><b><code>xbmcvfs.Stat(path)</code></b></p>
-<p>These class return information about a file. Execute (search) permission is required on all of the directories in path that lead to the file.</p>
+<p><b>Kodi's background progress dialog class</b> </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga51dead1cfadfb0c6438ed3a44639ea5e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">create </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.DialogProgressBG().create(heading[, message]) </big></font></span></code></h4> </p><hr/>
+<p>Create and show a background progress dialog.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>[string] file or folder</td></tr>
+    <tr><td class="paramname">heading</td><td>string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">message</td><td>[opt] string or unicode - message text.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>'heading' is used for the dialog's id. Use a unique heading. Use <a class="el" href="a00315.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476">update()</a> to update heading, message and progressbar.</dd></dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  st = xbmcvfs.Stat(path)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  modified = st.st_mtime()</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pDialog = xbmcgui.DialogProgressBG()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;pDialog.create(<span class="stringliteral">&#39;Movie Trailers&#39;</span>, <span class="stringliteral">&#39;Downloading Monsters Inc... .&#39;</span>)</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
-</div><!-- fragment --> </div><!-- contents -->
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga6bfa818f28a3ff9fbe3ea0bb71c64476"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">update </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.DialogProgressBG().update([percent, heading, message]) </big></font></span></code></h4> </p><hr/>
+<p>Updates the background progress dialog.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">percent</td><td>[opt] integer - percent complete. (0:100) </td></tr>
+    <tr><td class="paramname">heading</td><td>[opt] string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">message</td><td>[opt] string or unicode - message text.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>To clear heading or message, you must pass a blank character.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pDialog.update(25, message=<span class="stringliteral">&#39;Downloading Finding Nemo ...&#39;</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaa68d6863c83c0c1cab65be8c683053a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">close </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.DialogProgressBG().close() </big></font></span></code></h4> </p><hr/>
+<p>Close the background progress dialog</p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;pDialog.close()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gafedd49742f1edc9ceb13de3b182413dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">isFinished </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.DialogProgressBG().isFinished() </big></font></span></code></h4> </p><hr/>
+<p>Checks progress is finished</p>
+<dl class="section return"><dt>Returns</dt><dd>True if the background dialog is active.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordflow">if</span> (pDialog.isFinished()): <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

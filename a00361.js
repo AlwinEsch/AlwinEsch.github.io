@@ -1,6 +1,4 @@
 var a00361 =
 [
-    [ "ShowAndGetInput", "a00361_ga89f6071edbb80badea144ee1988d3fd1.html#ga89f6071edbb80badea144ee1988d3fd1", null ],
-    [ "ShowAndGetInput", "a00361_ga3c58c94f72888a60d56d24f5af509658.html#ga3c58c94f72888a60d56d24f5af509658", null ],
-    [ "ShowAndGetInput", "a00361_ga066996e8332302afd1ae3dcd69382a2d.html#ga066996e8332302afd1ae3dcd69382a2d", null ]
+    [ "AEStreamHandle", "a00361.html#ga09549ee338c637b62a65826fd6a4b38c", null ]
 ];

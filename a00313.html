@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Subclass - WindowXML</title>
+<title>Kodi Development: Dialog</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -91,56 +91,514 @@ $(document).ready(function(){initNavTree('a00313.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Subclass - WindowXML<div class="ingroups"><a class="el" href="a00293.html">Python</a> &raquo; <a class="el" href="a00295.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00310.html">Window</a></div></div>  </div>
+<div class="title">Dialog<div class="ingroups"><a class="el" href="a00303.html">Python</a> &raquo; <a class="el" href="a00305.html">Library - xbmcgui</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>GUI xml window class.</b> </p>
-<p><b><code>xbmcgui.WindowXML(xmlFilename, scriptPath[, defaultSkin, defaultRes])</code></b></p>
-<p>Creates a new xml file based window class.</p>
-<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <b><code><a class="el" href="a00310.html">Window</a></code></b>.</dd></dl>
+<p><b>Kodi's dialog class</b> </p>
+<p>The graphical control element dialog box (also called dialogue box or just dialog) is a small window that communicates information to the user and prompts them for a response.</p>
+<table class="doxtable">
+<tr>
+<th align="center"><div class="image">
+<img src="help.GUIDialogOK.png" alt="help.GUIDialogOK.png"/>
+</div>
+  </th></tr>
+<tr>
+<td align="center">Example of <a class="el" href="a00313.html#gaeba4d3278eff78b902a99e63f112a9b9">OK Dialog</a> </td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga28b2225b08fccc588441336c3a4b0ca3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">yesno </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().yesno(heading, line1[, line2, line3, nolabel, yeslabel, autoclose]) </big></font></span></code></h4> </p><hr/>
+<p><b>Yes / no dialog</b></p>
+<p>The Yes / No dialog can be used to inform the user about questions and get the answer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">xmlFilename</td><td>string - the name of the xml file to look for. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">scriptPath</td><td>string - path to script. used to fallback to if the xml doesn't exist in the current skin. (eg xbmcaddon.Addon().getAddonInfo('path').decode('utf-8')) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">defaultSkin</td><td>[opt] string - name of the folder in the skins path to look in for the xml. (default='Default') </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">defaultRes</td><td>[opt] string - default skins resolution. (default='720p') </td></tr>
+    <tr><td class="paramname">heading</td><td>string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">line1</td><td>string or unicode - line #1 multi-line text. </td></tr>
+    <tr><td class="paramname">line2</td><td>[opt] string or unicode - line #2 text. </td></tr>
+    <tr><td class="paramname">line3</td><td>[opt] string or unicode - line #3 text. </td></tr>
+    <tr><td class="paramname">nolabel</td><td>[opt] label to put on the no button. </td></tr>
+    <tr><td class="paramname">yeslabel</td><td>[opt] label to put on the yes button. </td></tr>
+    <tr><td class="paramname">autoclose</td><td>[opt] integer - milliseconds to autoclose dialog. (default=do not autoclose) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">Exception</td><td>if more then 200 windows are created.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section remark"><dt>Remarks</dt><dd>Skin folder structure is e.g. <b>resources/skins/Default/720p</b></dd></dl>
-<p>Deleting this window will activate the old window that was active and resets (not delete) all controls that are associated with this window. </p><hr/>
+<dl class="section return"><dt>Returns</dt><dd>Returns True if 'Yes' was pressed, else False.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is preferred to only use line1 as it is actually a multi-line text. In this case line2 and line3 must be omitted.</dd></dl>
+<hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;win = xbmcgui.WindowXML(<span class="stringliteral">&#39;script-Lyrics-main.xml&#39;</span>, xbmcaddon.Addon().getAddonInfo(<span class="stringliteral">&#39;path&#39;</span>).decode(<span class="stringliteral">&#39;utf-8&#39;</span>), <span class="stringliteral">&#39;default&#39;</span>, <span class="stringliteral">&#39;1080p&#39;</span>)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;win.doModal()</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;del win</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
-</div><!-- fragment --><hr/>
-<p>On functions defined input variable <b><code>controlId</code> (GUI control identifier)</b> is the on window.xml defined value behind type added with <code><b>id="..."</b></code> and used to identify for changes there and on callbacks.</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;control type=&quot;label&quot; id=&quot;31&quot;&gt;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;  &lt;description&gt;Title Label&lt;/description&gt;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  ...</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;&lt;/control&gt;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;&lt;control type=&quot;progress&quot; id=&quot;32&quot;&gt;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  &lt;description&gt;progress control&lt;/description&gt;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  ...</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;&lt;/control&gt;</div>
-</div><!-- fragment --> <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
-Modules</h2></td></tr>
-<tr class="memitem:a00314"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00314.html">Subclass - WindowDialogXML</a></td></tr>
-<tr class="memdesc:a00314"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>GUI xml window dialog class.</b> <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;ret = dialog.yesno(<span class="stringliteral">&#39;Kodi&#39;</span>, <span class="stringliteral">&#39;Do you want to exit this script?&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga7ba82954c5d17b1a821abdf753ed339e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">select </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().select(heading, list[, autoclose]) </big></font></span></code></h4> </p><hr/>
+<p><b>Select dialog</b></p>
+<p>Show of a dialog to select of an entry as a key</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heading</td><td>string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">list</td><td>string list - list of items. </td></tr>
+    <tr><td class="paramname">autoclose</td><td>[opt] integer - milliseconds to autoclose dialog. (default=do not autoclose) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the position of the highlighted item as an integer.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;ret = dialog.select(<span class="stringliteral">&#39;Choose a playlist&#39;</span>, [<span class="stringliteral">&#39;Playlist #1&#39;</span>, <span class="stringliteral">&#39;Playlist #2, &#39;</span>Playlist <span class="comment">#3&#39;])</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga4096de3747da855937f6ed7c1df3877b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">contextmenu </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().contextmenu(list) </big></font></span></code></h4> </p><hr/>
+<p>Show a context menu.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>string list - list of items. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the position of the highlighted item as an integer (-1 if cancelled).</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;ret = dialog.contextmenu([<span class="stringliteral">&#39;Option #1&#39;</span>, <span class="stringliteral">&#39;Option #2&#39;</span>, <span class="stringliteral">&#39;Option #3&#39;</span>])</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga30fb89d8f6bfa31e2b2eace4d4bd16fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">multiselect </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().multiselect(heading, options[, autoclose]) </big></font></span></code></h4> </p><hr/>
+<p>Show a multi-select dialog.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heading</td><td>string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">options</td><td>list of string - options to choose from. </td></tr>
+    <tr><td class="paramname">autoclose</td><td>[opt] integer - milliseconds to autoclose dialog. (default=do not autoclose) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the selected items as a list of indices, or None if cancelled.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;ret = dialog.multiselect(<span class="stringliteral">&quot;Choose something&quot;</span>, [<span class="stringliteral">&quot;Foo&quot;</span>, <span class="stringliteral">&quot;Bar&quot;</span>, <span class="stringliteral">&quot;Baz&quot;</span>])</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaeba4d3278eff78b902a99e63f112a9b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ok </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().ok(heading, line1[, line2, line3]) </big></font></span></code></h4> </p><hr/>
+<p><b>OK dialog</b></p>
+<p>The functions permit the call of a dialog of information, a confirmation of the user by press from OK required.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heading</td><td>string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">line1</td><td>string or unicode - line #1 multi-line text. </td></tr>
+    <tr><td class="paramname">line2</td><td>[opt] string or unicode - line #2 text. </td></tr>
+    <tr><td class="paramname">line3</td><td>[opt] string or unicode - line #3 text. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns True if 'Ok' was pressed, else False.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It is preferred to only use line1 as it is actually a multi-line text. In this case line2 and line3 must be omitted.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;ok = dialog.ok(<span class="stringliteral">&#39;Kodi&#39;</span>, <span class="stringliteral">&#39;There was an error.&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gad24eabf4c8107d4674c017db09a193ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">textviewer </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().textviewer(heading, text) </big></font></span></code></h4> </p><hr/>
+<p><b>TextViewe dialog</b></p>
+<p>The text viewer dialog can be used to display descriptions, help texts or other larger texts.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heading</td><td>string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">text</td><td>string or unicode - text.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;dialog.textviewer(<span class="stringliteral">&#39;Plot&#39;</span>, <span class="stringliteral">&#39;Some movie plot.&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga2ece1ca620087a97233713710eac1b83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">browse </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().browse(type, heading, shares[, mask, useThumbs, treatAsFolder, sDefault, enableMultiple]) </big></font></span></code></h4> </p><hr/>
+<p><b>Browser dialog</b></p>
+<p>The function offer the possibility to select a file by the user of the add-on.</p>
+<p>It allows all the options that are possible in Kodi itself and offers all support file types.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>integer - the type of browse dialog. <table class="doxtable">
+<tr>
+<th align="center">Param </th><th align="left">Name  </th></tr>
+<tr>
+<td align="center">0 </td><td align="left">ShowAndGetDirectory </td></tr>
+<tr>
+<td align="center">1 </td><td align="left">ShowAndGetFile </td></tr>
+<tr>
+<td align="center">2 </td><td align="left">ShowAndGetImage </td></tr>
+<tr>
+<td align="center">3 </td><td align="left">ShowAndGetWriteableDirectory </td></tr>
 </table>
+</td></tr>
+    <tr><td class="paramname">heading</td><td>string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">shares</td><td>string or unicode - from <a href="http://kodi.wiki/view/Sources.xml">sources.xml</a> . (i.e. 'myprograms') </td></tr>
+    <tr><td class="paramname">mask</td><td>[opt] string or unicode - '|' separated file mask. (i.e. '.jpg|.png') </td></tr>
+    <tr><td class="paramname">useThumbs</td><td>[opt] boolean - if True autoswitch to Thumb view if files exist. </td></tr>
+    <tr><td class="paramname">treatAsFolder</td><td>[opt] boolean - if True playlists and archives act as folders. </td></tr>
+    <tr><td class="paramname">sDefault</td><td>[opt] string - default path or file. </td></tr>
+    <tr><td class="paramname">enableMultiple</td><td>[opt] boolean - if True multiple file selection is enabled.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If enableMultiple is False (default): returns filename and/or path as a string to the location of the highlighted item, if user pressed 'Ok' or a masked item was selected. Returns the default value if dialog was canceled. If enableMultiple is True: returns tuple of marked filenames as a strin if user pressed 'Ok' or a masked item was selected. Returns empty tuple if dialog was canceled.<br />
+<br />
+ If type is 0 or 3 the enableMultiple parameter is ignore</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;fn = dialog.browse(3, <span class="stringliteral">&#39;Kodi&#39;</span>, <span class="stringliteral">&#39;files&#39;</span>, <span class="stringliteral">&#39;&#39;</span>, <span class="keyword">False</span>, <span class="keyword">False</span>, <span class="keyword">False</span>, <span class="stringliteral">&#39;special://masterprofile/script_data/Kodi Lyrics&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga5ee90196e7b1d6e8d2f60cbba1f0ccef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">browseSingle </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().browseSingle(type, heading, shares[, mask, useThumbs, treatAsFolder, default]) </big></font></span></code></h4> </p><hr/>
+<p><b>Browse single dialog</b></p>
+<p>The function offer the possibility to select a file by the user of the add-on.</p>
+<p>It allows all the options that are possible in Kodi itself and offers all support file types.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>integer - the type of browse dialog. <table class="doxtable">
+<tr>
+<th align="center">Param </th><th align="left">Name  </th></tr>
+<tr>
+<td align="center">0 </td><td align="left">ShowAndGetDirectory </td></tr>
+<tr>
+<td align="center">1 </td><td align="left">ShowAndGetFile </td></tr>
+<tr>
+<td align="center">2 </td><td align="left">ShowAndGetImage </td></tr>
+<tr>
+<td align="center">3 </td><td align="left">ShowAndGetWriteableDirectory </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramname">heading</td><td>string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">shares</td><td>string or unicode - from <a href="http://kodi.wiki/view/Sources.xml">sources.xml</a> . (i.e. 'myprograms') </td></tr>
+    <tr><td class="paramname">mask</td><td>[opt] string or unicode - '|' separated file mask. (i.e. '.jpg|.png') </td></tr>
+    <tr><td class="paramname">useThumbs</td><td>[opt] boolean - if True autoswitch to Thumb view if files exist (default=false). </td></tr>
+    <tr><td class="paramname">treatAsFolder</td><td>[opt] boolean - if True playlists and archives act as folders (default=false). </td></tr>
+    <tr><td class="paramname">default</td><td>[opt] string - default path or file.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns filename and/or path as a string to the location of the highlighted item, if user pressed 'Ok' or a masked item was selected. Returns the default value if dialog was canceled.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;fn = dialog.browseSingle(3, <span class="stringliteral">&#39;Kodi&#39;</span>, <span class="stringliteral">&#39;files&#39;</span>, <span class="stringliteral">&#39;&#39;</span>, <span class="keyword">False</span>, <span class="keyword">False</span>, <span class="stringliteral">&#39;special://masterprofile/script_data/Kodi Lyrics&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga987efec260c6ee5a457c96a9c3fcba2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">browseMultiple </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().browseMultiple(type, heading, shares[, mask, useThumbs, treatAsFolder, default]) </big></font></span></code></h4> </p><hr/>
+<p><b>Browser dialog</b></p>
+<p>The function offer the possibility to select multiple files by the user of the add-on.</p>
+<p>It allows all the options that are possible in Kodi itself and offers all support file types.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>integer - the type of browse dialog. <table class="doxtable">
+<tr>
+<th align="center">Param </th><th align="left">Name  </th></tr>
+<tr>
+<td align="center">1 </td><td align="left">ShowAndGetFile </td></tr>
+<tr>
+<td align="center">2 </td><td align="left">ShowAndGetImage </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramname">heading</td><td>string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">shares</td><td>string or unicode - from <a href="http://kodi.wiki/view/Sources.xml">sources.xml</a> . (i.e. 'myprograms') </td></tr>
+    <tr><td class="paramname">mask</td><td>[opt] string or unicode - '|' separated file mask. (i.e. '.jpg|.png') </td></tr>
+    <tr><td class="paramname">useThumbs</td><td>[opt] boolean - if True autoswitch to Thumb view if files exist (default=false). </td></tr>
+    <tr><td class="paramname">treatAsFolder</td><td>[opt] boolean - if True playlists and archives act as folders (default=false). </td></tr>
+    <tr><td class="paramname">default</td><td>[opt] string - default path or file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns tuple of marked filenames as a string," if user pressed 'Ok' or a masked item was selected. Returns empty tuple if dialog was canceled.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;fn = dialog.browseMultiple(2, <span class="stringliteral">&#39;Kodi&#39;</span>, <span class="stringliteral">&#39;files&#39;</span>, <span class="stringliteral">&#39;&#39;</span>, <span class="keyword">False</span>, <span class="keyword">False</span>, <span class="stringliteral">&#39;special://masterprofile/script_data/Kodi Lyrics&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga1575511e8ea0f9e4d4684c5b9342d191"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">numeric </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().numeric(type, heading[, default]) </big></font></span></code></h4> </p><hr/>
+<p><b>Numeric dialog</b></p>
+<p>The function have to be permitted by the user for the representation of a numeric keyboard around an input.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>integer - the type of numeric dialog. <table class="doxtable">
+<tr>
+<th align="center">Param </th><th align="left">Name </th><th align="left">Format  </th></tr>
+<tr>
+<td align="center">0 </td><td align="left">ShowAndGetNumber </td><td align="left">(default format: #) </td></tr>
+<tr>
+<td align="center">1 </td><td align="left">ShowAndGetDate </td><td align="left">(default format: DD/MM/YYYY) </td></tr>
+<tr>
+<td align="center">2 </td><td align="left">ShowAndGetTime </td><td align="left">(default format: HH:MM) </td></tr>
+<tr>
+<td align="center">3 </td><td align="left">ShowAndGetIPAddress </td><td align="left">(default format: #.#.#.#) </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramname">heading</td><td>string or unicode - dialog heading. </td></tr>
+    <tr><td class="paramname">default</td><td>[opt] string - default value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the entered data as a string. Returns the default value if dialog was canceled.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;d = dialog.numeric(1, <span class="stringliteral">&#39;Enter date of birth&#39;</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaca90e2d17ad057925f1a350a08deed85"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">notification </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().notification(heading, message[, icon, time, sound]) </big></font></span></code></h4> </p><hr/>
+<p>Show a Notification alert.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heading</td><td>string - dialog heading. </td></tr>
+    <tr><td class="paramname">message</td><td>string - dialog message. </td></tr>
+    <tr><td class="paramname">icon</td><td>[opt] string - icon to use. (default xbmcgui.NOTIFICATION_INFO) </td></tr>
+    <tr><td class="paramname">time</td><td>[opt] integer - time in milliseconds (default 5000) </td></tr>
+    <tr><td class="paramname">sound</td><td>[opt] bool - play notification sound (default True)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Builtin Icons:</p><ul>
+<li>xbmcgui.NOTIFICATION_INFO</li>
+<li>xbmcgui.NOTIFICATION_WARNING</li>
+<li>xbmcgui.NOTIFICATION_ERROR</li>
+</ul>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;dialog.notification(<span class="stringliteral">&#39;Movie Trailers&#39;</span>, <span class="stringliteral">&#39;Finding Nemo download finished.&#39;</span>, xbmcgui.NOTIFICATION_INFO, 5000)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga39e614212c79458d71e289d77783baeb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">input </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcgui.Dialog().input(heading[, default, type, option, autoclose]) </big></font></span></code></h4> </p><hr/>
+<p>Show an Input dialog.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heading</td><td>string - dialog heading. </td></tr>
+    <tr><td class="paramname">default</td><td>[opt] string - default value. (default=empty string) </td></tr>
+    <tr><td class="paramname">type</td><td>[opt] integer - the type of keyboard dialog. (default=xbmcgui.INPUT_ALPHANUM) <table class="doxtable">
+<tr>
+<th align="right">Parameter </th><th align="left">Format  </th></tr>
+<tr>
+<td align="right"><code>xbmcgui.INPUT_ALPHANUM</code> </td><td align="left">(standard keyboard) </td></tr>
+<tr>
+<td align="right"><code>xbmcgui.INPUT_NUMERIC</code> </td><td align="left">(format: #) </td></tr>
+<tr>
+<td align="right"><code>xbmcgui.INPUT_DATE</code> </td><td align="left">(format: DD/MM/YYYY) </td></tr>
+<tr>
+<td align="right"><code>xbmcgui.INPUT_TIME</code> </td><td align="left">(format: HH:MM) </td></tr>
+<tr>
+<td align="right"><code>xbmcgui.INPUT_IPADDRESS</code> </td><td align="left">(format: #.#.#.#) </td></tr>
+<tr>
+<td align="right"><code>xbmcgui.INPUT_PASSWORD</code> </td><td align="left">(return md5 hash of input, input is masked) </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramname">option</td><td>[opt] integer - option for the dialog. (see Options below)<ul>
+<li>Password dialog:<ul>
+<li><code>xbmcgui.PASSWORD_VERIFY</code> (verifies an existing (default) md5 hashed password)</li>
+</ul>
+</li>
+<li>Alphanum dialog:<ul>
+<li><code>xbmcgui.ALPHANUM_HIDE_INPUT</code> (masks input) </li>
+</ul>
+</li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">autoclose</td><td>[opt] integer - milliseconds to autoclose dialog. (default=do not autoclose)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the entered data as a string. Returns an empty string if dialog was canceled.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;dialog = xbmcgui.Dialog()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;d = dialog.input(<span class="stringliteral">&#39;Enter secret code&#39;</span>, type=xbmcgui.INPUT_ALPHANUM, option=xbmcgui.ALPHANUM_HIDE_INPUT)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

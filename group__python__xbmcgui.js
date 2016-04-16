@@ -7,6 +7,6 @@ var group__python__xbmcgui =
     [ "Action", "group__python__xbmcgui__action.html", "group__python__xbmcgui__action" ],
     [ "Window", "group__python__xbmcgui__window.html", "group__python__xbmcgui__window" ],
     [ "Control", "group__python__xbmcgui__control.html", "group__python__xbmcgui__control" ],
-    [ "getCurrentWindowId", "group__python__xbmcgui.html#gab1660e44ef103bd39fff61229809f567", null ],
-    [ "getCurrentWindowDialogId", "group__python__xbmcgui.html#ga8379c35c147def9f607d18571e24678e", null ]
+    [ "getCurrentWindowId", "group__python__xbmcgui.html#gadb269db9ee11dfa03817f1585b0b1895", null ],
+    [ "getCurrentWindowDialogId", "group__python__xbmcgui.html#gadfd0d4dbb62e60d8b37b345cec97fdf8", null ]
 ];

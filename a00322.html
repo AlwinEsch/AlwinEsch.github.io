@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Subclass - ControlLabel</title>
+<title>Kodi Development: Callback functions from Kodi to add-on</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,56 +92,230 @@ $(document).ready(function(){initNavTree('a00322.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Subclass - ControlLabel<div class="ingroups"><a class="el" href="a00293.html">Python</a> &raquo; <a class="el" href="a00295.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00320.html">Control</a></div></div>  </div>
+<div class="title">Callback functions from Kodi to add-on<div class="ingroups"><a class="el" href="a00303.html">Python</a> &raquo; <a class="el" href="a00305.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00321.html">Window</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Used to show some lines of text. </b></p>
-<p><b><code><a class="el" href="a00116.html">ControlLabel</a>(x, y, width, height, label[, font, textColor, disabledColor, alignment, hasPath, angle])</code></b></p>
-<p>The label control is used for displaying text in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed.</p>
-<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00320.html">Control</a></dd></dl>
+<p><b>GUI window callback functions.</b> </p>
+<p>Functions to handle control callbacks from Kodi.</p>
+<p>Likewise, all functions from here as well in the all window classes (<a class="el" href="a00321.html">Window</a>, <a class="el" href="a00323.html">WindowDialog</a>, <a class="el" href="a00324.html">WindowXML</a> and <a class="el" href="a00325.html">WindowXMLDialog</a>) with inserted and available. </p><hr/>
+<p><a class="el" href="a00321.html">Go back to normal functions from window</a> </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga1749b41bda7533c34282371758d50764"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">onAction </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> onAction(self, Action action) </big></font></span></code></h4> </p><hr/>
+<p> <b>onAction method.</b> </p>
+<p>This method will receive all actions that the main program will send to this window.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>string or unicode - text string. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>[opt] string - font used for label text. (e.g. 'font13') </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">textColor</td><td>[opt] hexstring - color of enabled label's label. (e.g. '0xFFFFFFFF') </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">disabledColor</td><td>[opt] hexstring - color of disabled label's label. (e.g. '0xFFFF3300') </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">alignment</td><td>[opt] integer - alignment of label<ul>
-<li>Flags for alignment used as bits to have several together: <table class="doxtable">
-<tr>
-<th>Defination name </th><th align="center">Bitflag </th><th align="left">Description  </th></tr>
-<tr>
-<td>XBFONT_LEFT </td><td align="center">0x00000000 </td><td align="left">Align X left </td></tr>
-<tr>
-<td>XBFONT_RIGHT </td><td align="center">0x00000001 </td><td align="left">Align X right </td></tr>
-<tr>
-<td>XBFONT_CENTER_X </td><td align="center">0x00000002 </td><td align="left">Align X center </td></tr>
-<tr>
-<td>XBFONT_CENTER_Y </td><td align="center">0x00000004 </td><td align="left">Align Y center </td></tr>
-<tr>
-<td>XBFONT_TRUNCATED </td><td align="center">0x00000008 </td><td align="left">Truncated text </td></tr>
-<tr>
-<td>XBFONT_JUSTIFIED </td><td align="center">0x00000010 </td><td align="left">Justify text </td></tr>
-</table>
-</li>
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">action</td><td>The action id to perform, see <a class="el" href="a00320.html">Action</a> to get use of them</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>By default, only the <code>PREVIOUS_MENU</code> and <code>NAV_BACK actions</code> are handled.</li>
+<li>Overwrite this method to let your script handle all actions.</li>
+<li>Don't forget to capture <code>ACTION_PREVIOUS_MENU</code> or <code>ACTION_NAV_BACK</code>, else the user can't close this window.</li>
 </ul>
-</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">hasPath</td><td>[opt] bool - True=stores a path / False=no path </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">angle</td><td>[opt] integer - angle of control. (<b>+</b> rotates CCW, <b>-</b> rotates C)</td></tr>
+</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own function where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onAction(self, action):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_PREVIOUS_MENU:</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    print(<span class="stringliteral">&#39;action recieved: previous&#39;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    self.close()</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_SHOW_INFO:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    print(<span class="stringliteral">&#39;action recieved: show info&#39;</span>)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_STOP:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    print(<span class="stringliteral">&#39;action recieved: stop&#39;</span>)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordflow">if</span> action.getId() == ACTION_PAUSE:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    print(<span class="stringliteral">&#39;action recieved: pause&#39;</span>)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga79d2f6b4e69d0c24eaec96a4f451a95f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onControl </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> onControl(self, Control) </big></font></span></code></h4> </p><hr/>
+<p> <b>onControl method.</b> </p>
+<p>This method will receive all click events on owned and selected controls when the control itself doesn't handle the message.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">control</td><td>The <a class="el" href="a00109.html">Control</a> class</td></tr>
   </table>
   </dd>
 </dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># ControlLabel(x, y, width, height, label[, font, textColor,</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">#              disabledColor, alignment, hasPath, angle])</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;self.label = xbmcgui.ControlLabel(100, 250, 125, 75, <span class="stringliteral">&#39;Status&#39;</span>, angle=45)</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;...</div>
-</div><!-- fragment --> </div><!-- contents -->
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onControl(self, control):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  print(<span class="stringliteral">&quot;Window.onControl(control=[%s])&quot;</span>%control)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga445a9dbf7b6f62d05a85c391717c2d38"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">onClick </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> onClick(self, int controlId) </big></font></span></code></h4> </p><hr/>
+<p> <b>onClick method.</b> </p>
+<p>This method will receive all click events that the main program will send to this window.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>The one time clicked GUI control identifier</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onClick(self,controlId):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordflow">if</span> controlId == 10:</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    print(<span class="stringliteral">&quot;The control with Id 10 is clicked&quot;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga33398da13ddb2671eda8b7916a628c99"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">onDoubleClick </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> onDoubleClick(self, int controlId) </big></font></span></code></h4> </p><hr/>
+<p> <b>onDoubleClick method.</b> </p>
+<p>This method will receive all double click events that the main program will send to this window.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>The double clicked GUI control identifier</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onDoubleClick(self,controlId):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordflow">if</span> controlId == 10:</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    print(<span class="stringliteral">&quot;The control with Id 10 is double clicked&quot;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga60bc025eeb4f04ef3b815ae308f009d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">onFocus </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> onFocus(self, int controlId) </big></font></span></code></h4> </p><hr/>
+<p> <b>onFocus method.</b> </p>
+<p>This method will receive all focus events that the main program will send to this window.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlId</td><td>The focused GUI control identifier</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; <span class="keyword">def </span>onDoubleClick(self,controlId):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;   <span class="keywordflow">if</span> controlId == 10:</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;     print(<span class="stringliteral">&quot;The control with Id 10 is focused&quot;</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga077680d40c7bc79d2b2b73c7401437b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">onInit </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> onInit(self) </big></font></span></code></h4> </p><hr/>
+<p> <b>onInit method.</b> </p>
+<p>This method will be called to initialize the window</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">self</td><td>Own base class pointer</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># Define own funtion where becomes called from Kodi</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">def </span>onInit(self):</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  print(<span class="stringliteral">&quot;Window.onInit method called from Kodi&quot;</span>)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

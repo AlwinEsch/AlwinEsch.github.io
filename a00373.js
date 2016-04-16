@@ -1,10 +1,14 @@
 var a00373 =
 [
-    [ "CControlFadeLabel", "a00373_ga90b3c88c8f974d59928e67fa9751b69b.html#ga90b3c88c8f974d59928e67fa9751b69b", null ],
-    [ "~CControlFadeLabel", "a00373_gadcc150f725189d7e4f903b153c6d7ca1.html#gadcc150f725189d7e4f903b153c6d7ca1", null ],
-    [ "SetVisible", "a00373_ga71a209185b7a98adf0a310d2c44cdbe6.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "AddLabel", "a00373_ga47cfd2f63ce533672996085727a5fdd4.html#ga47cfd2f63ce533672996085727a5fdd4", null ],
-    [ "GetLabel", "a00373_ga6c80f17140ee95a258ff6c13439a2623.html#ga6c80f17140ee95a258ff6c13439a2623", null ],
-    [ "SetScrolling", "a00373_ga02685eb001d24047fce8ed6d4899e9af.html#ga02685eb001d24047fce8ed6d4899e9af", null ],
-    [ "Reset", "a00373_ga372de693ad40b3f42839c8ec6ac845f4.html#ga372de693ad40b3f42839c8ec6ac845f4", null ]
+    [ "CDialogExtendedProgress", "a00373.html#ga598592cd22cbc89797f504ffd53f7a70", null ],
+    [ "~CDialogExtendedProgress", "a00373.html#ga60f91cfdfb63c58d75ab7bb1d8076857", null ],
+    [ "Title", "a00373.html#ga3cb91fb7750df7982baea48c4a3de616", null ],
+    [ "SetTitle", "a00373.html#gad8698c0477204fb8b81feb9d81cbe4fd", null ],
+    [ "Text", "a00373.html#gafdfa72709ffc1738c3c198f7ad8b61ec", null ],
+    [ "SetText", "a00373.html#gaec55d8bf3ca3e04261b66bee36f84368", null ],
+    [ "IsFinished", "a00373.html#gaabe45b4d47077b54df0bb809eb41b8d5", null ],
+    [ "MarkFinished", "a00373.html#ga40af1bcedea1f61fde8cd5e70e416473", null ],
+    [ "Percentage", "a00373.html#ga3bf91c353218dceaa271b65321b2f5cf", null ],
+    [ "SetPercentage", "a00373.html#ga74a9a823ab1cd34d62a219a842de5946", null ],
+    [ "SetProgress", "a00373.html#gac64c8e121cf5e368cd335c28a0521922", null ]
 ];

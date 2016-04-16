@@ -1,16 +1,19 @@
 var a00391 =
 [
-    [ "Definitions, structures and enumerators", "a00392.html", "a00392" ],
-    [ "CPlayList", "a00391_gad644099112fa1474fbbba84c5b48574e.html#gad644099112fa1474fbbba84c5b48574e", null ],
-    [ "~CPlayList", "a00391_ga5c082b03678535fcbbd29c350faadbc7.html#ga5c082b03678535fcbbd29c350faadbc7", null ],
-    [ "GetPlayListType", "a00391_ga1c1d6bcc394fe5e4b75634dca0147427.html#ga1c1d6bcc394fe5e4b75634dca0147427", null ],
-    [ "LoadPlaylist", "a00391_ga7de3982ed8b225f5fd1580c75847d9db.html#ga7de3982ed8b225f5fd1580c75847d9db", null ],
-    [ "AddItem", "a00391_gaaa7aba33ed28df8d2adfa6af9b097575.html#gaaa7aba33ed28df8d2adfa6af9b097575", null ],
-    [ "AddItem", "a00391_gacfa6f7082b33d605cbcd5e03cee64431.html#gacfa6f7082b33d605cbcd5e03cee64431", null ],
-    [ "RemoveItem", "a00391_ga7834e166deca3a366bd4d25b061606fd.html#ga7834e166deca3a366bd4d25b061606fd", null ],
-    [ "ClearList", "a00391_ga2b85ec494201046fd7686395c996c272.html#ga2b85ec494201046fd7686395c996c272", null ],
-    [ "GetListSize", "a00391_ga1f4581c0d5dec157ae050648b9980dda.html#ga1f4581c0d5dec157ae050648b9980dda", null ],
-    [ "GetListPosition", "a00391_ga3b6ca85032d49dfd758dcaad70db8275.html#ga3b6ca85032d49dfd758dcaad70db8275", null ],
-    [ "Shuffle", "a00391_ga9d1841bc5f559c6981b78b895d446033.html#ga9d1841bc5f559c6981b78b895d446033", null ],
-    [ "operator[]", "a00391_ga4aeae9803c0f65314b3e749be5d78ea9.html#ga4aeae9803c0f65314b3e749be5d78ea9", null ]
+    [ "CControlSettingsSlider", "a00391.html#ga1ad521cb67636d687ab20c3dddf97771", null ],
+    [ "~CControlSettingsSlider", "a00391.html#gad875821a386b63b80b7e98dd0a7b79f6", null ],
+    [ "SetVisible", "a00391.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "SetEnabled", "a00391.html#gaac893222adeffdefc04d749648cce354", null ],
+    [ "SetText", "a00391.html#ga8008c108280948ebd79830f222068455", null ],
+    [ "Reset", "a00391.html#ga372de693ad40b3f42839c8ec6ac845f4", null ],
+    [ "SetIntRange", "a00391.html#ga16ad72259d068519b0797117275651f1", null ],
+    [ "SetIntValue", "a00391.html#ga1bc4fce2dc8738a08b6a9458d66351a1", null ],
+    [ "GetIntValue", "a00391.html#ga026ef91588c09c091efb7c40bb73d4dc", null ],
+    [ "SetIntInterval", "a00391.html#ga0efbfb870446e5cc7409f0550bf67196", null ],
+    [ "SetPercentage", "a00391.html#ga123bcc2a09c1b721c04b4bc0dd32953d", null ],
+    [ "GetPercentage", "a00391.html#gadbcb3c03a1a87a252f94e0274e1e75f8", null ],
+    [ "SetFloatRange", "a00391.html#gaf4c5b4468e16c51b0d9a163baa082acf", null ],
+    [ "SetFloatValue", "a00391.html#gab050b4b446dc107963b04486dcfbe03d", null ],
+    [ "GetFloatValue", "a00391.html#gadd5b557122d90f9a891d6b981e3ac305", null ],
+    [ "SetFloatInterval", "a00391.html#ga1642356ec708ec660d47175a676d2b59", null ]
 ];

@@ -8,13 +8,13 @@ var searchData=
   ['lang_5ffmt_5fiso_5f639_5f2',['LANG_FMT_ISO_639_2',['../group___c_p_p___kodi_a_p_i___add_on___general___defs.html#ggad481b851c163786e65d41b9ab47ed14ea93ccac5fa6affc3908cbd62584c2e92b',1,'KodiAPI']]],
   ['lang_5fformats',['lang_formats',['../group___c_p_p___kodi_a_p_i___add_on___general___defs.html#gad481b851c163786e65d41b9ab47ed14e',1,'KodiAPI']]],
   ['list_20container',['List Container',['../_list__container.html',1,'skin_controls']]],
-  ['listdir',['listdir',['../group__python__xbmcvfs.html#ga6bb30280e2eb7d5b94cfb0eb6e65b0cb',1,'ModuleXbmcvfs.h']]],
+  ['listdir',['listdir',['../group__python__xbmcvfs.html#ga6fdd93a2195f65e549abb759bc151afc',1,'ModuleXbmcvfs.h']]],
   ['listitem',['ListItem',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_list_item.html',1,'XBMCAddon::xbmcgui']]],
-  ['load',['load',['../group__python___play_list.html#ga2eea1635b7df085d42c973352ef10355',1,'XBMCAddon::xbmc::PlayList']]],
+  ['load',['load',['../group__python___play_list.html#ga58df00a466baca2469ad8407c5534377',1,'XBMCAddon::xbmc::PlayList']]],
   ['loadplaylist',['LoadPlaylist',['../group___c_p_p___kodi_a_p_i___player___c_play_list.html#ga7de3982ed8b225f5fd1580c75847d9db',1,'KodiAPI::Player::CPlayList']]],
   ['lock',['Lock',['../group___c_p_p___kodi_a_p_i___g_u_i___general.html#ga1e6c297870325cead8b7869c56dde3a9',1,'KodiAPI::GUI::General']]],
   ['lockinggetnextavailablewindowid',['lockingGetNextAvailableWindowId',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window_x_m_l.html#a507ab35d41a0baaa7a32b16ca78aee24',1,'XBMCAddon::xbmcgui::WindowXML']]],
-  ['log',['Log',['../group___kodi_addon___c_p_p___main.html#ga1b35d2c11c262cd3436768f6ed4c1f58',1,'KodiAPI::Log()'],['../group__python__xbmc.html#gaae1f9e78fc2e0e63f68dfe93f8e65cf9',1,'log():&#160;ModuleXbmc.h']]],
+  ['log',['Log',['../group___kodi_addon___c_p_p___main.html#ga1b35d2c11c262cd3436768f6ed4c1f58',1,'KodiAPI::Log()'],['../group__python__xbmc.html#ga3cd3eff2195727144ad6fbabd4744961',1,'log():&#160;ModuleXbmc.h']]],
   ['list_20of_20gui_20access_20messages',['List of GUI access messages',['../modules___general___list_of_gui_access.html',1,'general_parts']]],
   ['list_20of_20build_20in_20functions',['List of build in functions',['../page__list_of_built_in_functions.html',1,'general_parts']]],
   ['library_20_2d_20xbmc',['Library - xbmc',['../group__python__xbmc.html',1,'']]],
@@ -22,5 +22,6 @@ var searchData=
   ['library_20_2d_20xbmcgui',['Library - xbmcgui',['../group__python__xbmcgui.html',1,'']]],
   ['listitem',['ListItem',['../group__python__xbmcgui__listitem.html',1,'']]],
   ['library_20_2d_20xbmcplugin',['Library - xbmcplugin',['../group__python__xbmcplugin.html',1,'']]],
-  ['library_20_2d_20xbmcvfs',['Library - xbmcvfs',['../group__python__xbmcvfs.html',1,'']]]
+  ['library_20_2d_20xbmcvfs',['Library - xbmcvfs',['../group__python__xbmcvfs.html',1,'']]],
+  ['library_20_2d_20xbmcwsgi',['Library - xbmcwsgi',['../group__python__xbmcwsgi.html',1,'']]]
 ];

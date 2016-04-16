@@ -1,9 +1,9 @@
 var group__python__xbmcgui__window__cb =
 [
-    [ "onAction", "group__python__xbmcgui__window__cb.html#ga46acbc2206f67d5f8e1d44d3ebe4fa68", null ],
-    [ "onControl", "group__python__xbmcgui__window__cb.html#ga3d8a5f47cd756f21b4744eed7ede8634", null ],
-    [ "onClick", "group__python__xbmcgui__window__cb.html#gad031aa7d2b1fcedaac6ad481e2e85757", null ],
-    [ "onDoubleClick", "group__python__xbmcgui__window__cb.html#ga25347e21254d60dc94028d2ed6a0c5ed", null ],
-    [ "onFocus", "group__python__xbmcgui__window__cb.html#ga32655043662a872fb86801fe5e8e1e41", null ],
-    [ "onInit", "group__python__xbmcgui__window__cb.html#ga5a0ef4163216ec8833eb3a524f7fd80e", null ]
+    [ "onAction", "group__python__xbmcgui__window__cb.html#ga1749b41bda7533c34282371758d50764", null ],
+    [ "onControl", "group__python__xbmcgui__window__cb.html#ga79d2f6b4e69d0c24eaec96a4f451a95f", null ],
+    [ "onClick", "group__python__xbmcgui__window__cb.html#ga445a9dbf7b6f62d05a85c391717c2d38", null ],
+    [ "onDoubleClick", "group__python__xbmcgui__window__cb.html#ga33398da13ddb2671eda8b7916a628c99", null ],
+    [ "onFocus", "group__python__xbmcgui__window__cb.html#ga60bc025eeb4f04ef3b815ae308f009d1", null ],
+    [ "onInit", "group__python__xbmcgui__window__cb.html#ga077680d40c7bc79d2b2b73c7401437b4", null ]
 ];

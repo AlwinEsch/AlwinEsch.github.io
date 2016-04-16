@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Control Fade Label</title>
+<title>Kodi Development: Dialog Extended Progress</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,15 +92,271 @@ $(document).ready(function(){initNavTree('a00373.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Control Fade Label<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00351.html">4. GUI</a></div></div>  </div>
+<div class="title">Dialog Extended Progress<div class="ingroups"><a class="el" href="a00302.html">C++</a> &raquo; <a class="el" href="a00362.html">4. GUI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Window control used to show multiple pieces of text in the same position, by fading from one to the other</b> </p>
-<p>The fade label control is used for displaying multiple pieces of text in the same space in Kodi. You can choose the font, size, colour, location and contents of the text to be displayed. The first piece of information to display fades in over 50 frames, then scrolls off to the left. Once it is finished scrolling off screen, the second piece of information fades in and the process repeats. A fade label control is not supported in a list container.</p>
-<p>It has the header <a class="el" href="a00182_source.html">#include &lt;kodi/api2/gui/ControlFadeLabel.hpp&gt;</a> be included to enjoy it.</p>
-<p>Here you find the needed skin part for a <a class="el" href="a00016.html">fade label control</a></p>
-<dl class="section note"><dt>Note</dt><dd>The call of the control is only possible from the corresponding window as its class and identification number is required. </dd></dl>
+<p><b>Progress dialog shown for background work</b> </p>
+<p>The with <a class="el" href="a00198_source.html">#include &lt;kodi/api2/addon/DialogExtendedProgress.hpp&gt;</a> given class are basically used to create Kodi's extended progress.</p>
+<div class="image">
+<img src="help.GUIDialogExtendedProgress.png" alt="help.GUIDialogExtendedProgress.png"/>
+</div>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/DialogExtendedProgress.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="a00088.html">KodiAPI::GUI::CDialogExtendedProgress</a> *ext_progress = <span class="keyword">new</span> <a class="code" href="a00088.html">KodiAPI::GUI::CDialogExtendedProgress</a>(<span class="stringliteral">&quot;Test Extended progress&quot;</span>);</div>
+<div class="line">ext_progress-&gt;<a class="code" href="a00373.html#gaec55d8bf3ca3e04261b66bee36f84368">SetText</a>(<span class="stringliteral">&quot;Test progress&quot;</span>);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 50; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  ext_progress-&gt;<a class="code" href="a00373.html#gac64c8e121cf5e368cd335c28a0521922">SetProgress</a>(i, 100);</div>
+<div class="line">  <a class="code" href="a00304.html#gac81db027eab4f3b5bec4a7a5a1073e7e">sleep</a>(1);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line">ext_progress-&gt;<a class="code" href="a00373.html#gad8698c0477204fb8b81feb9d81cbe4fd">SetTitle</a>(<span class="stringliteral">&quot;Test Extended progress - Second round&quot;</span>);</div>
+<div class="line">ext_progress-&gt;<a class="code" href="a00373.html#gaec55d8bf3ca3e04261b66bee36f84368">SetText</a>(<span class="stringliteral">&quot;Test progress - Step 2&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 50; i &lt; 100; i += 10)</div>
+<div class="line">{</div>
+<div class="line">  ext_progress-&gt;<a class="code" href="a00373.html#gac64c8e121cf5e368cd335c28a0521922">SetProgress</a>(i, 100);</div>
+<div class="line">  <a class="code" href="a00304.html#gac81db027eab4f3b5bec4a7a5a1073e7e">sleep</a>(1);</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">delete</span> ext_progress;</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga598592cd22cbc89797f504ffd53f7a70"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CDialogExtendedProgress </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Construct a new dialog</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>Title string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga60f91cfdfb63c58d75ab7bb1d8076857"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~CDialogExtendedProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Destructor </p>
+
+</div>
+</div>
+<a class="anchor" id="ga3cb91fb7750df7982baea48c4a3de616"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Title </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the used title. </p>
+<dl class="section return"><dt>Returns</dt><dd>Title string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad8698c0477204fb8b81feb9d81cbe4fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTitle </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strTitle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the title of dialog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strTitle</td><td>Title string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gafdfa72709ffc1738c3c198f7ad8b61ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Text </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the used text information string. </p>
+<dl class="section return"><dt>Returns</dt><dd>Text string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaec55d8bf3ca3e04261b66bee36f84368"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetText </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>strText</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the used text information string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">strText</td><td>information text to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gaabe45b4d47077b54df0bb809eb41b8d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsFinished </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To ask dialog is finished. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if on end </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga40af1bcedea1f61fde8cd5e70e416473"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MarkFinished </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mark progress finished. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga3bf91c353218dceaa271b65321b2f5cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Percentage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current progress position as percent. </p>
+<dl class="section return"><dt>Returns</dt><dd>Position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga74a9a823ab1cd34d62a219a842de5946"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPercentage </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>fPercentage</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set the current progress position as percent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fPercentage</td><td>Position to use from 0.0 to 100.0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="gac64c8e121cf5e368cd335c28a0521922"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProgress </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>itemCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>To set progress position with predefined places. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">currentItem</td><td>Place position to use </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">itemCount</td><td>Amount of used places </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

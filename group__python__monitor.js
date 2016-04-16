@@ -1,18 +1,18 @@
 var group__python__monitor =
 [
-    [ "onSettingsChanged", "group__python__monitor.html#ga0b2faaa5bdb64710395d7b36330324a5", null ],
-    [ "onScreensaverActivated", "group__python__monitor.html#gaec7c0588db39e824757e840bba4c3d0b", null ],
-    [ "onScreensaverDeactivated", "group__python__monitor.html#ga72fdab6e25d1882e64768c3b4fc02ada", null ],
-    [ "onDPMSActivated", "group__python__monitor.html#ga86cc4d6bc72abe7b74c1c50dde951412", null ],
-    [ "onDPMSDeactivated", "group__python__monitor.html#ga3afef1ceaec0fd233dada0f1c415980c", null ],
-    [ "onScanStarted", "group__python__monitor.html#ga6d6000ab39593068d3eb3955bed886c4", null ],
-    [ "onScanFinished", "group__python__monitor.html#gaf8242fca7ffb83cd719b43e16ca7a439", null ],
-    [ "onDatabaseScanStarted", "group__python__monitor.html#ga74db05abe95497de5e90206cb39ef7d4", null ],
-    [ "onDatabaseUpdated", "group__python__monitor.html#ga18d6bc330604bbe55e63ae6dae11efde", null ],
-    [ "onCleanStarted", "group__python__monitor.html#ga5d8eb24ae2e1b1a360a9bf3b4b51d56d", null ],
-    [ "onCleanFinished", "group__python__monitor.html#ga5e89c9b7e06b744f88063e5237977247", null ],
-    [ "onAbortRequested", "group__python__monitor.html#gace3ed8fa26883bff89728e0446fc8b81", null ],
-    [ "onNotification", "group__python__monitor.html#ga68122e7f3ea25f8848f99024690f1419", null ],
-    [ "waitForAbort", "group__python__monitor.html#gaef2a905f59250fe9ffbc34edfbdbbb54", null ],
-    [ "abortRequested", "group__python__monitor.html#ga5b1ac2490aae34c81dd3ab6ecc58d8a5", null ]
+    [ "onSettingsChanged", "group__python__monitor.html#gaa8675d38debd82a3aef6ba1c06aabda0", null ],
+    [ "onScreensaverActivated", "group__python__monitor.html#ga838fd6fa385f34d0497404bd7e0ec797", null ],
+    [ "onScreensaverDeactivated", "group__python__monitor.html#gadf97ef46effd3a321f9eb1db570648d0", null ],
+    [ "onDPMSActivated", "group__python__monitor.html#ga31dfaa85a323fc5cfa93ab567b105ade", null ],
+    [ "onDPMSDeactivated", "group__python__monitor.html#ga02f1138d40cf000fd6e5823c2f6383e1", null ],
+    [ "onScanStarted", "group__python__monitor.html#gaa08a1673d8347425816859666a5edd01", null ],
+    [ "onScanFinished", "group__python__monitor.html#ga05a62d4886798d1cdb2a23e979249250", null ],
+    [ "onDatabaseScanStarted", "group__python__monitor.html#ga5ee33edfc21fb06cfe99f892da9b234c", null ],
+    [ "onDatabaseUpdated", "group__python__monitor.html#ga006bbf59838d69f0e686a4c9bde2288f", null ],
+    [ "onCleanStarted", "group__python__monitor.html#gabf239f436cbd72bfff02253bd1972c7c", null ],
+    [ "onCleanFinished", "group__python__monitor.html#ga19798ab61e778754e7027112236024e7", null ],
+    [ "onAbortRequested", "group__python__monitor.html#gadfe1a1b3bd1d72a94c60590cd757247c", null ],
+    [ "onNotification", "group__python__monitor.html#ga0e49e1b7c38dd22ef51276ad4efbd7e9", null ],
+    [ "waitForAbort", "group__python__monitor.html#ga101acf761929351fb676b05e88ddeb8d", null ],
+    [ "abortRequested", "group__python__monitor.html#gab583bbcbf0b63bdc0241ba759985bc9b", null ]
 ];

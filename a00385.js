@@ -1,7 +1,8 @@
 var a00385 =
 [
-    [ "Definitions, structures and enumerators", "a00386.html", "a00386" ],
-    [ "Name", "a00385_gab29906ba5407bb58b86428cb4b4a1e26.html#gab29906ba5407bb58b86428cb4b4a1e26", null ],
-    [ "Codec", "a00385_ga62b7b43b626a9b8beb0f16a8795b9d91.html#ga62b7b43b626a9b8beb0f16a8795b9d91", null ],
-    [ "GetCodecByName", "a00385_ga542cf7ce73c4f9e04f16bac4583fbb19.html#ga542cf7ce73c4f9e04f16bac4583fbb19", null ]
+    [ "CControlImage", "a00385.html#gab915c5cf48004bbfcc702b3e449c5a0e", null ],
+    [ "~CControlImage", "a00385.html#gaa93f71361d6d2ce42f04a353b3ece66c", null ],
+    [ "SetVisible", "a00385.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
+    [ "SetFileName", "a00385.html#ga71ca22e2515e018fdfa6db78fbee75dd", null ],
+    [ "SetColorDiffuse", "a00385.html#ga5f4b9c8309a04af748764bc6dd4ef31c", null ]
 ];

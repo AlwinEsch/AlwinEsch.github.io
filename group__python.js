@@ -4,5 +4,6 @@ var group__python =
     [ "Library - xbmcgui", "group__python__xbmcgui.html", "group__python__xbmcgui" ],
     [ "Library - xbmcplugin", "group__python__xbmcplugin.html", "group__python__xbmcplugin" ],
     [ "Library - xbmcaddon", "group__python__xbmcaddon.html", "group__python__xbmcaddon" ],
-    [ "Library - xbmcvfs", "group__python__xbmcvfs.html", "group__python__xbmcvfs" ]
+    [ "Library - xbmcvfs", "group__python__xbmcvfs.html", "group__python__xbmcvfs" ],
+    [ "Library - xbmcwsgi", "group__python__xbmcwsgi.html", "group__python__xbmcwsgi" ]
 ];

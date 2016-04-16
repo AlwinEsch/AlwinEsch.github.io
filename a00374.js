@@ -1,8 +1,10 @@
 var a00374 =
 [
-    [ "CControlImage", "a00374_gab915c5cf48004bbfcc702b3e449c5a0e.html#gab915c5cf48004bbfcc702b3e449c5a0e", null ],
-    [ "~CControlImage", "a00374_gaa93f71361d6d2ce42f04a353b3ece66c.html#gaa93f71361d6d2ce42f04a353b3ece66c", null ],
-    [ "SetVisible", "a00374_ga71a209185b7a98adf0a310d2c44cdbe6.html#ga71a209185b7a98adf0a310d2c44cdbe6", null ],
-    [ "SetFileName", "a00374_ga71ca22e2515e018fdfa6db78fbee75dd.html#ga71ca22e2515e018fdfa6db78fbee75dd", null ],
-    [ "SetColorDiffuse", "a00374_ga5f4b9c8309a04af748764bc6dd4ef31c.html#ga5f4b9c8309a04af748764bc6dd4ef31c", null ]
+    [ "ShowAndGetDirectory", "a00374.html#ga91429cda74de406ee81f92786c59a691", null ],
+    [ "ShowAndGetFile", "a00374.html#ga5d6d4caafaa46492b8488770198ae48a", null ],
+    [ "ShowAndGetFileFromDir", "a00374.html#ga2e9dd4605ba71b31d6513282a003e061", null ],
+    [ "ShowAndGetFileList", "a00374.html#ga37c88eef3cc694ae25a69c54264ec1bb", null ],
+    [ "ShowAndGetSource", "a00374.html#gab76321dc0d4a1e26fd6a0a75a23ba061", null ],
+    [ "ShowAndGetImage", "a00374.html#gac859a430345aa90d0aa5dc0836ffbe5e", null ],
+    [ "ShowAndGetImageList", "a00374.html#ga200aeb7ed6dc377ee861afdb0e6eebab", null ]
 ];

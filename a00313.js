@@ -1,12 +1,15 @@
 var a00313 =
 [
-    [ "Subclass - WindowDialogXML", "a00314.html", null ],
-    [ "addItem", "a00313_ga87ffff74f065758ae9884ecc87102af1.html#ga87ffff74f065758ae9884ecc87102af1", null ],
-    [ "removeItem", "a00313_ga214d46ad5cb6e318163ba98e0dd780ac.html#ga214d46ad5cb6e318163ba98e0dd780ac", null ],
-    [ "getCurrentListPosition", "a00313_ga860b30302751103052456bb1f1079980.html#ga860b30302751103052456bb1f1079980", null ],
-    [ "setCurrentListPosition", "a00313_gabaeb49593088c3be9c7a232d50152e34.html#gabaeb49593088c3be9c7a232d50152e34", null ],
-    [ "getListItem", "a00313_ga37ec44d83350b3e4c5b4f7a2648bfc01.html#ga37ec44d83350b3e4c5b4f7a2648bfc01", null ],
-    [ "getListSize", "a00313_ga7b00dc949b12149360563a1941956fc7.html#ga7b00dc949b12149360563a1941956fc7", null ],
-    [ "clearList", "a00313_ga612285c5b9d603a0abb0feab44b8412f.html#ga612285c5b9d603a0abb0feab44b8412f", null ],
-    [ "setContainerProperty", "a00313_gaf48b268d0ce5767fd8702e649e2aad39.html#gaf48b268d0ce5767fd8702e649e2aad39", null ]
+    [ "yesno", "a00313.html#ga28b2225b08fccc588441336c3a4b0ca3", null ],
+    [ "select", "a00313.html#ga7ba82954c5d17b1a821abdf753ed339e", null ],
+    [ "contextmenu", "a00313.html#ga4096de3747da855937f6ed7c1df3877b", null ],
+    [ "multiselect", "a00313.html#ga30fb89d8f6bfa31e2b2eace4d4bd16fa", null ],
+    [ "ok", "a00313.html#gaeba4d3278eff78b902a99e63f112a9b9", null ],
+    [ "textviewer", "a00313.html#gad24eabf4c8107d4674c017db09a193ae", null ],
+    [ "browse", "a00313.html#ga2ece1ca620087a97233713710eac1b83", null ],
+    [ "browseSingle", "a00313.html#ga5ee90196e7b1d6e8d2f60cbba1f0ccef", null ],
+    [ "browseMultiple", "a00313.html#ga987efec260c6ee5a457c96a9c3fcba2f", null ],
+    [ "numeric", "a00313.html#ga1575511e8ea0f9e4d4684c5b9342d191", null ],
+    [ "notification", "a00313.html#gaca90e2d17ad057925f1a350a08deed85", null ],
+    [ "input", "a00313.html#ga39e614212c79458d71e289d77783baeb", null ]
 ];

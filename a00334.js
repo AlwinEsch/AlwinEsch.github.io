@@ -1,8 +1,7 @@
 var a00334 =
 [
-    [ "Definitions, structures and enumerators", "a00335.html", "a00335" ],
-    [ "KodiAPI_ErrorCodeToString", "a00334_gaa3c8a9b6597526ba1ad04e1aa3998237.html#gaa3c8a9b6597526ba1ad04e1aa3998237", null ],
-    [ "InitLibAddon", "a00334_ga54c2c0dd7a940c723a67a51ffe97025f.html#ga54c2c0dd7a940c723a67a51ffe97025f", null ],
-    [ "Finalize", "a00334_ga25c17863c83dcc5fedf5d3fdfaface0e.html#ga25c17863c83dcc5fedf5d3fdfaface0e", null ],
-    [ "Log", "a00334_ga1b35d2c11c262cd3436768f6ed4c1f58.html#ga1b35d2c11c262cd3436768f6ed4c1f58", null ]
+    [ "setLabel", "a00334.html#ga002b6bcb81f2510c34983101ea0c8cc7", null ],
+    [ "getLabel", "a00334.html#ga14c4e7420d903d3e40342266333d2ecf", null ],
+    [ "setText", "a00334.html#gaeeafc3d047cb758329d2d75401d5956b", null ],
+    [ "getText", "a00334.html#ga8a2999b1d846c0a7bc77187e28facd99", null ]
 ];

@@ -1,18 +1,18 @@
 var group__python___info_tag_music =
 [
-    [ "getArtist", "group__python___info_tag_music.html#ga1b9f565753d008491c59887680bd570e", null ],
-    [ "getAlbum", "group__python___info_tag_music.html#ga11ac7b770ff2135e877c241ddb5db662", null ],
-    [ "getAlbumArtist", "group__python___info_tag_music.html#ga257503de86d218b382fcbbe9f1f68c2d", null ],
-    [ "getGenre", "group__python___info_tag_music.html#ga724866edc25325e096d7d8a76b4a3234", null ],
-    [ "getDuration", "group__python___info_tag_music.html#ga08c13081c0665a4336a0f022c955fb69", null ],
-    [ "getTrack", "group__python___info_tag_music.html#ga797e19587556ad59c5e3a7b55e8ccae9", null ],
-    [ "getDisc", "group__python___info_tag_music.html#gaa2759f95638fb39b74363457af9e7777", null ],
-    [ "getReleaseDate", "group__python___info_tag_music.html#gad099adc410738271ffc55e6fb68f77ae", null ],
-    [ "getListeners", "group__python___info_tag_music.html#gafdcd386f038151367af97803c1c13e41", null ],
-    [ "getPlayCount", "group__python___info_tag_music.html#gac644258d08f747039e9d0e76bcd49513", null ],
-    [ "getLastPlayed", "group__python___info_tag_music.html#ga64953074270dc9bc74370b8251c1cd43", null ],
-    [ "getComment", "group__python___info_tag_music.html#ga50a7366cba8ce27bc48a00e746324f7b", null ],
-    [ "getLyrics", "group__python___info_tag_music.html#gaefe9573a6a972ef63b082d2264baa857", null ],
-    [ "getURL", "group__python___info_tag_music.html#gafa85bb6aea7b660960562826dcb20cf7", null ],
-    [ "getTitle", "group__python___info_tag_music.html#ga888f94790c968e3f0b5de17e509098aa", null ]
+    [ "getURL", "group__python___info_tag_music.html#ga7fab9ce25511a132269e791a5308f7b7", null ],
+    [ "getTitle", "group__python___info_tag_music.html#ga95e859a4588a39a1824b717378a84c29", null ],
+    [ "getArtist", "group__python___info_tag_music.html#ga885a8570d62e92bb6f6c83144766e7fc", null ],
+    [ "getAlbum", "group__python___info_tag_music.html#gaee148d665bb21d0319499d90186605b2", null ],
+    [ "getAlbumArtist", "group__python___info_tag_music.html#gaf49ce9703600649cd1f8c58cb989de66", null ],
+    [ "getGenre", "group__python___info_tag_music.html#gadc6f217756d49edbac6975e1f69485d5", null ],
+    [ "getDuration", "group__python___info_tag_music.html#gab46fe3d2750728c84bd71ae1bfd08ee8", null ],
+    [ "getTrack", "group__python___info_tag_music.html#ga86cb4c526de526dad142d5e945e4d6f3", null ],
+    [ "getDisc", "group__python___info_tag_music.html#ga59e76fc119dff33ae92c871744cca574", null ],
+    [ "getReleaseDate", "group__python___info_tag_music.html#ga5852df07c7200dd5910756eb71bbc067", null ],
+    [ "getListeners", "group__python___info_tag_music.html#ga71aa910950be7a63261e686e3a690020", null ],
+    [ "getPlayCount", "group__python___info_tag_music.html#ga6b91408706d3ba78df1cf0d9fc8d7365", null ],
+    [ "getLastPlayed", "group__python___info_tag_music.html#gaf16ec95dcf0cf2f08182b703de6f2074", null ],
+    [ "getComment", "group__python___info_tag_music.html#gadb57c3d1b74c19589ba1d641ea1a390e", null ],
+    [ "getLyrics", "group__python___info_tag_music.html#ga51f1bf160123ec89bea5b0efdfae5366", null ]
 ];

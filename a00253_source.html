@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi/xbmc/interfaces/legacy/WindowDialog.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi/xbmc/interfaces/legacy/Player.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,10 +92,10 @@ $(document).ready(function(){initNavTree('a00253_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">WindowDialog.h</div>  </div>
+<div class="title">Player.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; <span class="comment">/*</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *      Copyright (C) 2005-2013 Team XBMC</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *      http://xbmc.org</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
@@ -117,50 +117,346 @@ $(document).ready(function(){initNavTree('a00253_source.html','');});
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;Window.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;WindowDialogMixin.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00286.html">XBMCAddon</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">namespace </span>xbmcgui</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="a00128.html">   64</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00128.html">WindowDialog</a> : <span class="keyword">public</span> <a class="code" href="a00127.html">Window</a>, <span class="keyword">private</span> WindowDialogMixin</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    class <a class="code" href="a00128.html">WindowDialog</a> : <span class="keyword">public</span> <a class="code" href="a00127.html">Window</a>, <span class="keyword">private</span> WindowDialogMixin</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <a class="code" href="a00128.html">WindowDialog</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00128.html">WindowDialog</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;ListItem.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;PlayList.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;InfoTagVideo.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;Exception.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;InfoTagMusic.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;InfoTagRadioRDS.h&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;AddonCallback.h&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;Alternative.h&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;swighelper.h&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;cores/IPlayerCallback.h&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00295.html">XBMCAddon</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">namespace </span>xbmc</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    XBMCCOMMONS_STANDARD_EXCEPTION(PlayerException);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">typedef</span> Alternative&lt;String, const PlayList* &gt; PlayParameter;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// This class is a merge of what was previously in xbmcmodule/player.h</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//  and xbmcmodule/PythonPlayer.h without the python references. The</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//  queuing and handling of asynchronous callbacks is done internal to</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//  this class.</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="a00104.html">   71</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00104.html">Player</a> : <span class="keyword">public</span> AddonCallback, <span class="keyword">public</span> IPlayerCallback</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordtype">int</span> iPlayList;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span> OnMessage(CGUIMessage&amp; message);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span> OnAction(<span class="keyword">const</span> CAction &amp;action);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnDeinitWindow(<span class="keywordtype">int</span> nextWindowID);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordtype">void</span> playStream(<span class="keyword">const</span> String&amp; item = emptyString, <span class="keyword">const</span> <a class="code" href="a00126.html">XBMCAddon::xbmcgui::ListItem</a>* listitem = NULL, <span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordtype">void</span> playPlaylist(<span class="keyword">const</span> <a class="code" href="a00105.html">PlayList</a>* playlist = NULL,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                        <span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>, <span class="keywordtype">int</span> startpos=-1);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordtype">void</span> playCurrent(<span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span> IsDialogRunning()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> WindowDialogMixin::IsDialogRunning(); }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span> IsModalDialog()<span class="keyword"> const </span>{ XBMC_TRACE; <span class="keywordflow">return</span> <span class="keyword">true</span>; };</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">bool</span> IsDialog()<span class="keyword"> const </span>{ XBMC_TRACE; <span class="keywordflow">return</span> <span class="keyword">true</span>; };</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      SWIGHIDDENVIRTUAL <span class="keyword">inline</span> <span class="keywordtype">void</span> show() { XBMC_TRACE; WindowDialogMixin::show(); }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      SWIGHIDDENVIRTUAL <span class="keyword">inline</span> <span class="keywordtype">void</span> close() { XBMC_TRACE; WindowDialogMixin::close(); }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    };</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="ttc" id="a00127_html"><div class="ttname"><a href="a00127.html">XBMCAddon::xbmcgui::Window</a></div><div class="ttdef"><b>Definition:</b> Window.h:210</div></div>
-<div class="ttc" id="a00286_html"><div class="ttname"><a href="a00286.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00128_html"><div class="ttname"><a href="a00128.html">XBMCAddon::xbmcgui::WindowDialog</a></div><div class="ttdef"><b>Definition:</b> WindowDialog.h:64</div></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#if !defined SWIG &amp;&amp; !defined DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keyword">static</span> PlayParameter defaultPlayParameter;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="comment">// Construct a Player proxying the given generated binding. The </span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="comment">//  construction of a Player needs to identify whether or not any </span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="comment">//  callbacks will be executed asynchronously or not.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <a class="code" href="a00104.html">Player</a>(<span class="keywordtype">int</span> playerCore = 0);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="a00104.html">Player</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <a class="code" href="a00328.html#ga84f42d1160cbf72fcaec1030225e8669">play</a>(...);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#ga84f42d1160cbf72fcaec1030225e8669">play</a>(<span class="keyword">const</span> PlayParameter&amp; item = Player::defaultPlayParameter,</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keyword">const</span> <a class="code" href="a00126.html">XBMCAddon::xbmcgui::ListItem</a>* listitem = NULL, <span class="keywordtype">bool</span> windowed = <span class="keyword">false</span>, <span class="keywordtype">int</span> startpos = -1);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <a class="code" href="a00328.html#ga8b6fc76a620d7557d06e9a11a9ffb509">stop</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#ga8b6fc76a620d7557d06e9a11a9ffb509">stop</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <a class="code" href="a00328.html#gab02121d4dfeb622a4ea3db42c0cb6676">pause</a>();</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#gab02121d4dfeb622a4ea3db42c0cb6676">pause</a>();</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <a class="code" href="a00328.html#gad3fc41131784480b8d6bda2b90bbdec9">playnext</a>();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#gad3fc41131784480b8d6bda2b90bbdec9">playnext</a>();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <a class="code" href="a00328.html#gad16dd426f4c538dd6dfa830445e456a3">playprevious</a>();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#gad16dd426f4c538dd6dfa830445e456a3">playprevious</a>();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      <a class="code" href="a00328.html#ga418537b7c75355df885a94d31014855b">playselected</a>(...);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#ga418537b7c75355df885a94d31014855b">playselected</a>(<span class="keywordtype">int</span> selected);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      <span class="comment">//</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment"></span>      <span class="comment">//</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      <a class="code" href="a00329.html#gac7d191ced791c2c2b1cbc5057012fe24">onPlayBackStarted</a>();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00329.html#gac7d191ced791c2c2b1cbc5057012fe24">onPlayBackStarted</a>();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <a class="code" href="a00329.html#gae5afbf357925738748545911b81c2c93">onPlayBackEnded</a>();</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00329.html#gae5afbf357925738748545911b81c2c93">onPlayBackEnded</a>();</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      <a class="code" href="a00329.html#ga52c1f7e52f9cb6db7f3314359801ceb7">onPlayBackStopped</a>();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga52c1f7e52f9cb6db7f3314359801ceb7">onPlayBackStopped</a>();</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      <a class="code" href="a00329.html#ga36e7a7663e295f40b40b570cbbad8af1">onPlayBackPaused</a>();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga36e7a7663e295f40b40b570cbbad8af1">onPlayBackPaused</a>();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      <a class="code" href="a00329.html#ga8a170ae39ff44dabf2bacbecd65ff40c">onPlayBackResumed</a>();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga8a170ae39ff44dabf2bacbecd65ff40c">onPlayBackResumed</a>();</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      <a class="code" href="a00329.html#gaf9016012824f806b0f577082d906c89f">onQueueNextItem</a>();</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00329.html#gaf9016012824f806b0f577082d906c89f">onQueueNextItem</a>();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      <a class="code" href="a00329.html#gafe8b0752bee7ff48b5cec0bc93123677">onPlayBackSpeedChanged</a>(<span class="keywordtype">int</span> speed);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00329.html#gafe8b0752bee7ff48b5cec0bc93123677">onPlayBackSpeedChanged</a>(<span class="keywordtype">int</span> speed);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;      <a class="code" href="a00329.html#gac5b915089e7b9df47d3b8ac56c08d805">onPlayBackSeek</a>(...);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00329.html#gac5b915089e7b9df47d3b8ac56c08d805">onPlayBackSeek</a>(<span class="keywordtype">int</span> time, <span class="keywordtype">int</span> seekOffset);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;      <a class="code" href="a00329.html#ga2dfca309bbf13c023042f842eca4da9a">onPlayBackSeekChapter</a>(...);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00329.html#ga2dfca309bbf13c023042f842eca4da9a">onPlayBackSeekChapter</a>(<span class="keywordtype">int</span> chapter);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      <a class="code" href="a00328.html#ga56a1b42c304ff6e28459b18a237d57e1">isPlaying</a>();</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00328.html#ga56a1b42c304ff6e28459b18a237d57e1">isPlaying</a>();</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      <a class="code" href="a00328.html#ga5691edc135aebc26fcb83110d23b33d2">isPlayingAudio</a>();</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00328.html#ga5691edc135aebc26fcb83110d23b33d2">isPlayingAudio</a>();</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      <a class="code" href="a00328.html#ga4d8d2d0daa6149cb36fc72a7bcb6a509">isPlayingVideo</a>();</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00328.html#ga4d8d2d0daa6149cb36fc72a7bcb6a509">isPlayingVideo</a>();</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;      <a class="code" href="a00328.html#gadb60d29bad8cb1214883e6344fbe11cc">isPlayingRDS</a>();</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="a00328.html#gadb60d29bad8cb1214883e6344fbe11cc">isPlayingRDS</a>();</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;      <a class="code" href="a00328.html#gae8a50dfcb3835158f4cfc713bf730ca9">getPlayingFile</a>();</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;      String <a class="code" href="a00328.html#gae8a50dfcb3835158f4cfc713bf730ca9">getPlayingFile</a>();</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      <a class="code" href="a00328.html#ga57c78d9f0aa316ee2fdd6995e2a06ce3">getTime</a>();</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;      <span class="keywordtype">double</span> <a class="code" href="a00328.html#ga57c78d9f0aa316ee2fdd6995e2a06ce3">getTime</a>();</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;      <a class="code" href="a00328.html#gac48fa5e726cce08b644232c3c0abc868">seekTime</a>(...);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#gac48fa5e726cce08b644232c3c0abc868">seekTime</a>(<span class="keywordtype">double</span> <a class="code" href="a00328.html#gac48fa5e726cce08b644232c3c0abc868">seekTime</a>);</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;      <a class="code" href="a00328.html#ga24a6b65440083e83e67e5d0fb3379369">setSubtitles</a>(...);</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#ga24a6b65440083e83e67e5d0fb3379369">setSubtitles</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* subtitleFile);</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;      <a class="code" href="a00328.html#ga4f02c3e27797cad9ea91b0372eca4e06">showSubtitles</a>(...);</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#ga4f02c3e27797cad9ea91b0372eca4e06">showSubtitles</a>(<span class="keywordtype">bool</span> bVisible);</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;      <a class="code" href="a00328.html#gacb0f9c105b13da64eb30490ebd923c43">getSubtitles</a>();</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;      String <a class="code" href="a00328.html#gacb0f9c105b13da64eb30490ebd923c43">getSubtitles</a>();</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;      <a class="code" href="a00328.html#gaab6c8a95b275a10a6042b33ae25e8dfb">disableSubtitles</a>();</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#gaab6c8a95b275a10a6042b33ae25e8dfb">disableSubtitles</a>();</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;      <a class="code" href="a00328.html#gad5afece4209ffaa546e1007bdc162c47">getAvailableSubtitleStreams</a>();</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00328.html#gad5afece4209ffaa546e1007bdc162c47">getAvailableSubtitleStreams</a>();</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;      <a class="code" href="a00328.html#gab8d682e114808afa8a828ce4796a0e3f">setSubtitleStream</a>(...);</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#gab8d682e114808afa8a828ce4796a0e3f">setSubtitleStream</a>(<span class="keywordtype">int</span> iStream);</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;      <a class="code" href="a00328.html#ga240f1deb93fc70eeffb671445781ae1f">getVideoInfoTag</a>();</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;      <a class="code" href="a00101.html">InfoTagVideo</a>* <a class="code" href="a00328.html#ga240f1deb93fc70eeffb671445781ae1f">getVideoInfoTag</a>();</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;      <span class="comment">// Player_GetMusicInfoTag</span></div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;      <a class="code" href="a00328.html#ga35824a2f064ca06e0e75900b30aa6fa4">getMusicInfoTag</a>();</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;      <a class="code" href="a00099.html">InfoTagMusic</a>* <a class="code" href="a00328.html#ga35824a2f064ca06e0e75900b30aa6fa4">getMusicInfoTag</a>();</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;      <a class="code" href="a00328.html#ga94964468f493028dd798337722e83365">getRadioRDSInfoTag</a>();</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;      <a class="code" href="a00100.html">InfoTagRadioRDS</a>* <a class="code" href="a00328.html#ga94964468f493028dd798337722e83365">getRadioRDSInfoTag</a>() <span class="keywordflow">throw</span> (PlayerException);</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;      <a class="code" href="a00328.html#gac646186bf31a0fe91ea7c17cdcb92cf7">getTotalTime</a>();</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;      <span class="keywordtype">double</span> <a class="code" href="a00328.html#gac646186bf31a0fe91ea7c17cdcb92cf7">getTotalTime</a>();</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;      <a class="code" href="a00328.html#ga75d8565a14958fba85a9e87ba003dbc4">getAvailableAudioStreams</a>();</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00328.html#ga75d8565a14958fba85a9e87ba003dbc4">getAvailableAudioStreams</a>();</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;      <a class="code" href="a00328.html#ga65741c898c3dae2642dd94d2c93690b9">setAudioStream</a>(...);</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#ga65741c898c3dae2642dd94d2c93690b9">setAudioStream</a>(<span class="keywordtype">int</span> iStream);</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;      <a class="code" href="a00328.html#ga340cf5a8c62f5bbde6ba6cdf0ce05cba">getAvailableVideoStreams</a>();</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;      std::vector&lt;String&gt; <a class="code" href="a00328.html#ga340cf5a8c62f5bbde6ba6cdf0ce05cba">getAvailableVideoStreams</a>();</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;      <a class="code" href="a00328.html#ga5873120d3fa8ae9379ec20a4db79269f">setVideoStream</a>(...);</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="a00328.html#ga5873120d3fa8ae9379ec20a4db79269f">setVideoStream</a>(<span class="keywordtype">int</span> iStream);</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;<span class="preprocessor">#if !defined SWIG &amp;&amp; !defined DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackStarted();</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackEnded();</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackStopped();</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackPaused();</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnPlayBackResumed();</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span> OnQueueNextItem();</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span>    OnPlayBackSpeedChanged(<span class="keywordtype">int</span> iSpeed);</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span>    OnPlayBackSeek(<span class="keywordtype">int</span> iTime, <span class="keywordtype">int</span> seekOffset);</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;      SWIGHIDDENVIRTUAL <span class="keywordtype">void</span>    OnPlayBackSeekChapter(<span class="keywordtype">int</span> iChapter);</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    };</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;  }</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;}</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;</div>
+<div class="ttc" id="a00328_html_gac646186bf31a0fe91ea7c17cdcb92cf7"><div class="ttname"><a href="a00328.html#gac646186bf31a0fe91ea7c17cdcb92cf7">XBMCAddon::xbmc::Player::getTotalTime</a></div><div class="ttdeci">getTotalTime()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga5691edc135aebc26fcb83110d23b33d2"><div class="ttname"><a href="a00328.html#ga5691edc135aebc26fcb83110d23b33d2">XBMCAddon::xbmc::Player::isPlayingAudio</a></div><div class="ttdeci">isPlayingAudio()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga8b6fc76a620d7557d06e9a11a9ffb509"><div class="ttname"><a href="a00328.html#ga8b6fc76a620d7557d06e9a11a9ffb509">XBMCAddon::xbmc::Player::stop</a></div><div class="ttdeci">stop()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00329_html_ga2dfca309bbf13c023042f842eca4da9a"><div class="ttname"><a href="a00329.html#ga2dfca309bbf13c023042f842eca4da9a">XBMCAddon::xbmc::Player::onPlayBackSeekChapter</a></div><div class="ttdeci">onPlayBackSeekChapter(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00101_html"><div class="ttname"><a href="a00101.html">XBMCAddon::xbmc::InfoTagVideo</a></div><div class="ttdef"><b>Definition:</b> InfoTagVideo.h:56</div></div>
+<div class="ttc" id="a00328_html_gad3fc41131784480b8d6bda2b90bbdec9"><div class="ttname"><a href="a00328.html#gad3fc41131784480b8d6bda2b90bbdec9">XBMCAddon::xbmc::Player::playnext</a></div><div class="ttdeci">playnext()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00329_html_gafe8b0752bee7ff48b5cec0bc93123677"><div class="ttname"><a href="a00329.html#gafe8b0752bee7ff48b5cec0bc93123677">XBMCAddon::xbmc::Player::onPlayBackSpeedChanged</a></div><div class="ttdeci">onPlayBackSpeedChanged(int speed)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_gae8a50dfcb3835158f4cfc713bf730ca9"><div class="ttname"><a href="a00328.html#gae8a50dfcb3835158f4cfc713bf730ca9">XBMCAddon::xbmc::Player::getPlayingFile</a></div><div class="ttdeci">getPlayingFile()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga75d8565a14958fba85a9e87ba003dbc4"><div class="ttname"><a href="a00328.html#ga75d8565a14958fba85a9e87ba003dbc4">XBMCAddon::xbmc::Player::getAvailableAudioStreams</a></div><div class="ttdeci">getAvailableAudioStreams()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga94964468f493028dd798337722e83365"><div class="ttname"><a href="a00328.html#ga94964468f493028dd798337722e83365">XBMCAddon::xbmc::Player::getRadioRDSInfoTag</a></div><div class="ttdeci">getRadioRDSInfoTag()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_gab8d682e114808afa8a828ce4796a0e3f"><div class="ttname"><a href="a00328.html#gab8d682e114808afa8a828ce4796a0e3f">XBMCAddon::xbmc::Player::setSubtitleStream</a></div><div class="ttdeci">setSubtitleStream(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga340cf5a8c62f5bbde6ba6cdf0ce05cba"><div class="ttname"><a href="a00328.html#ga340cf5a8c62f5bbde6ba6cdf0ce05cba">XBMCAddon::xbmc::Player::getAvailableVideoStreams</a></div><div class="ttdeci">getAvailableVideoStreams()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga84f42d1160cbf72fcaec1030225e8669"><div class="ttname"><a href="a00328.html#ga84f42d1160cbf72fcaec1030225e8669">XBMCAddon::xbmc::Player::play</a></div><div class="ttdeci">play(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00329_html_gae5afbf357925738748545911b81c2c93"><div class="ttname"><a href="a00329.html#gae5afbf357925738748545911b81c2c93">XBMCAddon::xbmc::Player::onPlayBackEnded</a></div><div class="ttdeci">onPlayBackEnded()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00099_html"><div class="ttname"><a href="a00099.html">XBMCAddon::xbmc::InfoTagMusic</a></div><div class="ttdef"><b>Definition:</b> InfoTagMusic.h:55</div></div>
+<div class="ttc" id="a00328_html_ga4f02c3e27797cad9ea91b0372eca4e06"><div class="ttname"><a href="a00328.html#ga4f02c3e27797cad9ea91b0372eca4e06">XBMCAddon::xbmc::Player::showSubtitles</a></div><div class="ttdeci">showSubtitles(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_gaab6c8a95b275a10a6042b33ae25e8dfb"><div class="ttname"><a href="a00328.html#gaab6c8a95b275a10a6042b33ae25e8dfb">XBMCAddon::xbmc::Player::disableSubtitles</a></div><div class="ttdeci">disableSubtitles()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga65741c898c3dae2642dd94d2c93690b9"><div class="ttname"><a href="a00328.html#ga65741c898c3dae2642dd94d2c93690b9">XBMCAddon::xbmc::Player::setAudioStream</a></div><div class="ttdeci">setAudioStream(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00126_html"><div class="ttname"><a href="a00126.html">XBMCAddon::xbmcgui::ListItem</a></div><div class="ttdef"><b>Definition:</b> ListItem.h:71</div></div>
+<div class="ttc" id="a00328_html_ga57c78d9f0aa316ee2fdd6995e2a06ce3"><div class="ttname"><a href="a00328.html#ga57c78d9f0aa316ee2fdd6995e2a06ce3">XBMCAddon::xbmc::Player::getTime</a></div><div class="ttdeci">getTime()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga4d8d2d0daa6149cb36fc72a7bcb6a509"><div class="ttname"><a href="a00328.html#ga4d8d2d0daa6149cb36fc72a7bcb6a509">XBMCAddon::xbmc::Player::isPlayingVideo</a></div><div class="ttdeci">isPlayingVideo()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00295_html"><div class="ttname"><a href="a00295.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
+<div class="ttc" id="a00100_html"><div class="ttname"><a href="a00100.html">XBMCAddon::xbmc::InfoTagRadioRDS</a></div><div class="ttdef"><b>Definition:</b> InfoTagRadioRDS.h:57</div></div>
+<div class="ttc" id="a00328_html_ga56a1b42c304ff6e28459b18a237d57e1"><div class="ttname"><a href="a00328.html#ga56a1b42c304ff6e28459b18a237d57e1">XBMCAddon::xbmc::Player::isPlaying</a></div><div class="ttdeci">isPlaying()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00329_html_gaf9016012824f806b0f577082d906c89f"><div class="ttname"><a href="a00329.html#gaf9016012824f806b0f577082d906c89f">XBMCAddon::xbmc::Player::onQueueNextItem</a></div><div class="ttdeci">onQueueNextItem()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00329_html_ga36e7a7663e295f40b40b570cbbad8af1"><div class="ttname"><a href="a00329.html#ga36e7a7663e295f40b40b570cbbad8af1">XBMCAddon::xbmc::Player::onPlayBackPaused</a></div><div class="ttdeci">onPlayBackPaused()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00105_html"><div class="ttname"><a href="a00105.html">XBMCAddon::xbmc::PlayList</a></div><div class="ttdef"><b>Definition:</b> PlayList.h:62</div></div>
+<div class="ttc" id="a00329_html_ga8a170ae39ff44dabf2bacbecd65ff40c"><div class="ttname"><a href="a00329.html#ga8a170ae39ff44dabf2bacbecd65ff40c">XBMCAddon::xbmc::Player::onPlayBackResumed</a></div><div class="ttdeci">onPlayBackResumed()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_gacb0f9c105b13da64eb30490ebd923c43"><div class="ttname"><a href="a00328.html#gacb0f9c105b13da64eb30490ebd923c43">XBMCAddon::xbmc::Player::getSubtitles</a></div><div class="ttdeci">getSubtitles()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00329_html_gac7d191ced791c2c2b1cbc5057012fe24"><div class="ttname"><a href="a00329.html#gac7d191ced791c2c2b1cbc5057012fe24">XBMCAddon::xbmc::Player::onPlayBackStarted</a></div><div class="ttdeci">onPlayBackStarted()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga240f1deb93fc70eeffb671445781ae1f"><div class="ttname"><a href="a00328.html#ga240f1deb93fc70eeffb671445781ae1f">XBMCAddon::xbmc::Player::getVideoInfoTag</a></div><div class="ttdeci">getVideoInfoTag()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_gad16dd426f4c538dd6dfa830445e456a3"><div class="ttname"><a href="a00328.html#gad16dd426f4c538dd6dfa830445e456a3">XBMCAddon::xbmc::Player::playprevious</a></div><div class="ttdeci">playprevious()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga24a6b65440083e83e67e5d0fb3379369"><div class="ttname"><a href="a00328.html#ga24a6b65440083e83e67e5d0fb3379369">XBMCAddon::xbmc::Player::setSubtitles</a></div><div class="ttdeci">setSubtitles(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00329_html_ga52c1f7e52f9cb6db7f3314359801ceb7"><div class="ttname"><a href="a00329.html#ga52c1f7e52f9cb6db7f3314359801ceb7">XBMCAddon::xbmc::Player::onPlayBackStopped</a></div><div class="ttdeci">onPlayBackStopped()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_gab02121d4dfeb622a4ea3db42c0cb6676"><div class="ttname"><a href="a00328.html#gab02121d4dfeb622a4ea3db42c0cb6676">XBMCAddon::xbmc::Player::pause</a></div><div class="ttdeci">pause()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00329_html_gac5b915089e7b9df47d3b8ac56c08d805"><div class="ttname"><a href="a00329.html#gac5b915089e7b9df47d3b8ac56c08d805">XBMCAddon::xbmc::Player::onPlayBackSeek</a></div><div class="ttdeci">onPlayBackSeek(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_gadb60d29bad8cb1214883e6344fbe11cc"><div class="ttname"><a href="a00328.html#gadb60d29bad8cb1214883e6344fbe11cc">XBMCAddon::xbmc::Player::isPlayingRDS</a></div><div class="ttdeci">isPlayingRDS()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00104_html"><div class="ttname"><a href="a00104.html">XBMCAddon::xbmc::Player</a></div><div class="ttdef"><b>Definition:</b> Player.h:71</div></div>
+<div class="ttc" id="a00328_html_ga35824a2f064ca06e0e75900b30aa6fa4"><div class="ttname"><a href="a00328.html#ga35824a2f064ca06e0e75900b30aa6fa4">XBMCAddon::xbmc::Player::getMusicInfoTag</a></div><div class="ttdeci">getMusicInfoTag()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga418537b7c75355df885a94d31014855b"><div class="ttname"><a href="a00328.html#ga418537b7c75355df885a94d31014855b">XBMCAddon::xbmc::Player::playselected</a></div><div class="ttdeci">playselected(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_gad5afece4209ffaa546e1007bdc162c47"><div class="ttname"><a href="a00328.html#gad5afece4209ffaa546e1007bdc162c47">XBMCAddon::xbmc::Player::getAvailableSubtitleStreams</a></div><div class="ttdeci">getAvailableSubtitleStreams()</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_ga5873120d3fa8ae9379ec20a4db79269f"><div class="ttname"><a href="a00328.html#ga5873120d3fa8ae9379ec20a4db79269f">XBMCAddon::xbmc::Player::setVideoStream</a></div><div class="ttdeci">setVideoStream(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00328_html_gac48fa5e726cce08b644232c3c0abc868"><div class="ttname"><a href="a00328.html#gac48fa5e726cce08b644232c3c0abc868">XBMCAddon::xbmc::Player::seekTime</a></div><div class="ttdeci">seekTime(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_fabaa15d8b2c4cc19b06d0107c10ea23.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_39c15d74e82d3457892ee934da67de74.html">legacy</a></li><li class="navelem"><b>WindowDialog.h</b></li>
+    <li class="navelem"><a class="el" href="dir_fabaa15d8b2c4cc19b06d0107c10ea23.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_39c15d74e82d3457892ee934da67de74.html">legacy</a></li><li class="navelem"><b>Player.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

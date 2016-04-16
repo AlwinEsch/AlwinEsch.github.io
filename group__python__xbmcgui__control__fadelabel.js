@@ -1,5 +1,5 @@
 var group__python__xbmcgui__control__fadelabel =
 [
-    [ "addLabel", "group__python__xbmcgui__control__fadelabel.html#ga5c23c1e6768621ef5114c5b56a66c7c9", null ],
-    [ "setScrolling", "group__python__xbmcgui__control__fadelabel.html#ga37b258d64c9891a330036b19195913e1", null ]
+    [ "addLabel", "group__python__xbmcgui__control__fadelabel.html#ga1a4d8d7257c8023e99df810a56bee816", null ],
+    [ "setScrolling", "group__python__xbmcgui__control__fadelabel.html#ga6f4ced77230e64f80f5b6fa49d179544", null ]
 ];

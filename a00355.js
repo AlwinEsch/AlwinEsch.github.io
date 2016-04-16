@@ -1,8 +1,13 @@
 var a00355 =
 [
-    [ "OnInit", "a00355_ga7d98c001ac8d31e48df88346e28bae16.html#ga7d98c001ac8d31e48df88346e28bae16", null ],
-    [ "OnFocus", "a00355_ga7f69d7353e186b8fe4a1560767721501.html#ga7f69d7353e186b8fe4a1560767721501", null ],
-    [ "OnClick", "a00355_gad741fef5d9a1d2bf07449694e9a9e602.html#gad741fef5d9a1d2bf07449694e9a9e602", null ],
-    [ "OnAction", "a00355_gad3fc2a106ba0143fa5d11d3df32d9c72.html#gad3fc2a106ba0143fa5d11d3df32d9c72", null ],
-    [ "SetIndependentCallbacks", "a00355_ga5daaf4cdd5942017aa0be44ec98a7f95.html#ga5daaf4cdd5942017aa0be44ec98a7f95", null ]
+    [ "CVFSDirEntry", "a00355.html#ga52a9625fed293dafda5d51e531caa8f5", null ],
+    [ "CVFSDirEntry", "a00355.html#ga0d75ba3099e37c9a2b2b9b8b4e4fae6d", null ],
+    [ "Label", "a00355.html#gaacd1b40e1b2e44d82303388beb475e84", null ],
+    [ "Path", "a00355.html#ga666f6d222d6e40f592d7ec4c8c670263", null ],
+    [ "IsFolder", "a00355.html#gabfbbb37d69862b45d0f1079ab976fa37", null ],
+    [ "Size", "a00355.html#gac0ba4f4c78dcb35605e645ee75198b5a", null ],
+    [ "SetLabel", "a00355.html#gab825756e641ba839bfae908492165481", null ],
+    [ "SetPath", "a00355.html#ga4a03d7c94fa02df112558bc30818e413", null ],
+    [ "SetFolder", "a00355.html#gadc0bf158b1dc28eea1bc2e3a2c016982", null ],
+    [ "SetSize", "a00355.html#gaf2fb6ea3061355a5ed4b53ca45e712ac", null ]
 ];

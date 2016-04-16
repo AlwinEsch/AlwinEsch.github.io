@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: PlayList</title>
+<title>Kodi Development: File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,32 +92,207 @@ $(document).ready(function(){initNavTree('a00316.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">PlayList<div class="ingroups"><a class="el" href="a00293.html">Python</a> &raquo; <a class="el" href="a00294.html">Library - xbmc</a></div></div>  </div>
+<div class="title">File<div class="ingroups"><a class="el" href="a00303.html">Python</a> &raquo; <a class="el" href="a00308.html">Library - xbmcvfs</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Kodi's Play List class. </b></p>
-<p><b><code>xbmc.PlayList(playList)</code></b></p>
-<p>To create and edit a playlist which can be handled by the player.</p>
+<p><b>Kodi's file class.</b> </p>
+<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> xbmcvfs.File(filepath, [mode]) </big></font></span></code></h4> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">playList</td><td>[integer] To define the stream type <table class="doxtable">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filepath</td><td>string Selected file path </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>[opt] string Additional mode options <table class="doxtable">
 <tr>
-<th align="center">Value </th><th align="left">Integer String </th><th align="left">Description  </th></tr>
+<th align="center">Mode </th><th align="left">Description  </th></tr>
 <tr>
-<td align="center">0 </td><td align="left">xbmc.PLAYLIST_MUSIC </td><td align="left">Playlist for music files or streams </td></tr>
-<tr>
-<td align="center">1 </td><td align="left">xbmc.PLAYLIST_VIDEO </td><td align="left">Playlist for video files or streams </td></tr>
+<td align="center">w </td><td align="left">Open for write </td></tr>
 </table>
 </td></tr>
   </table>
   </dd>
 </dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;play=xbmc.PlayList(xbmc.PLAYLIST_VIDEO)</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
-</div><!-- fragment --> </div><!-- contents -->
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file, [<span class="stringliteral">&#39;w&#39;</span>])</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;..</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga09536b9e99d54e4160097d953cbd2eda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">read </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> read([bytes]) </big></font></span></code></h4> </p><hr/>
+<p> Read file parts as string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bytes</td><td>[opt] How many bytes to read - if not set it will read the whole file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;b = f.read()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;f.close()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga8ec9b4c6916b0ff50fe31a0bcd94e489"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readBytes </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> readBytes(numbytes) </big></font></span></code></h4> </p><hr/>
+<p> Read bytes from file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">numbytes</td><td>How many bytes to read [opt]- if not set it will read the whole file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bytearray</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;b = f.read()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;f.close()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga3df61f0669ef30181e65bbe5b0bb663c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">write </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> write(buffer) </big></font></span></code></h4> </p><hr/>
+<p> To write given data in file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>Buffer to write to file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file, <span class="stringliteral">&#39;w&#39;</span>, <span class="keyword">True</span>)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;result = f.write(buffer)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;f.close()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga775bfb88c1bb7975d67f277eade2a1b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> size() </big></font></span></code></h4> </p><hr/>
+<p> Get the file size. </p>
+<dl class="section return"><dt>Returns</dt><dd>The file size</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;s = f.size()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;f.close()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga699e6bdc888b7ab94d1cf47b1000147d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">seek </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> seek(seekBytes, iWhence) </big></font></span></code></h4> </p><hr/>
+<p> Seek to position in file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">seekBytes</td><td>position in the file </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">iWhence</td><td>where in a file to seek from[0 begining, 1 current , 2 end possition]</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;result = f.seek(8129, 0)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;f.close()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="gaa69c8bf1f1dcf4e72552efff1fe3e87e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> close() </big></font></span></code></h4> </p><hr/>
+<p> Close opened file. </p>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;f = xbmcvfs.File(file)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;f.close()</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;..</div>
+</div><!-- fragment --> 
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

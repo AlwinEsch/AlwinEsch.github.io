@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/inputstream/definitions_inputstream.hpp Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi/xbmc/addons/kodi-addon-dev-kit/include/kodi/api2/gui/DialogSelect.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('a00204_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">definitions_inputstream.hpp</div>  </div>
+<div class="title">DialogSelect.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
@@ -116,65 +116,39 @@ $(document).ready(function(){initNavTree('a00204_source.html','');});
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">struct </span>DemuxPacket;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;API_NAMESPACE</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00260.html">KodiAPI</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00269.html">KodiAPI</a></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="a00386_ga5f36d5652cd9f943a40f0a2c4495a74a.html#ga5f36d5652cd9f943a40f0a2c4495a74a">   47</a></span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="a00386_ga5f36d5652cd9f943a40f0a2c4495a74a.html#ga5f36d5652cd9f943a40f0a2c4495a74a">kodi_codec_id</a>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#gadb311b9a66ccf6cbc77137e0af86be2a">   55</a></span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#gadb311b9a66ccf6cbc77137e0af86be2a">kodi_codec_type</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  {</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa8f817a79e13ea554b21f9a4ab39825e3">   58</a></span>&#160;    <a class="code" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa8f817a79e13ea554b21f9a4ab39825e3">KODI_CODEC_TYPE_UNKNOWN</a> = -1,</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aad2291cde40a901541cb7a15001bc06b3">   60</a></span>&#160;    <a class="code" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aad2291cde40a901541cb7a15001bc06b3">KODI_CODEC_TYPE_VIDEO</a>,</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa1fdc2cbc56014c4fff81f4e7baae441b">   62</a></span>&#160;    <a class="code" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa1fdc2cbc56014c4fff81f4e7baae441b">KODI_CODEC_TYPE_AUDIO</a>,</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa283925b3bd6f6ed60e5cebfa6c84001f">   64</a></span>&#160;    <a class="code" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa283925b3bd6f6ed60e5cebfa6c84001f">KODI_CODEC_TYPE_DATA</a>,</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa12047086ed4fc5c499f9584a45140cbd">   66</a></span>&#160;    <a class="code" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa12047086ed4fc5c499f9584a45140cbd">KODI_CODEC_TYPE_SUBTITLE</a>,</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aad30c732aede56b620aefac72e4029d8e">   68</a></span>&#160;    <a class="code" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aad30c732aede56b620aefac72e4029d8e">KODI_CODEC_TYPE_RDS</a>,</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa5db7fcefc33d4838c039fbb9d1e2eadc">   70</a></span>&#160;    <a class="code" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa5db7fcefc33d4838c039fbb9d1e2eadc">KODI_CODEC_TYPE_NB</a></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  } <a class="code" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#gadb311b9a66ccf6cbc77137e0af86be2a">kodi_codec_type</a>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="a00070.html">   79</a></span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="a00070.html">kodi_codec</a></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="a00070_a74ecd8a982f71c56801ba227f4cd8d94.html#a74ecd8a982f71c56801ba227f4cd8d94">   82</a></span>&#160;    <a class="code" href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#gadb311b9a66ccf6cbc77137e0af86be2a">kodi_codec_type</a> <a class="code" href="a00070_a74ecd8a982f71c56801ba227f4cd8d94.html#a74ecd8a982f71c56801ba227f4cd8d94">codec_type</a>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="a00070_abb16fc135f202805c438614ff10cf11c.html#abb16fc135f202805c438614ff10cf11c">   84</a></span>&#160;    kodi_codec_id   <a class="code" href="a00070_abb16fc135f202805c438614ff10cf11c.html#abb16fc135f202805c438614ff10cf11c">codec_id</a>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  } <a class="code" href="a00070.html">kodi_codec</a>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">  #define KODI_INVALID_CODEC_ID 0</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">  #define KODI_INVALID_CODEC    { API_NAMESPACE_NAME::KodiAPI::KODI_CODEC_TYPE_UNKNOWN, KODI_INVALID_CODEC_ID }</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>GUI</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>  <span class="keyword">namespace </span>DialogSelect</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span>    <span class="keywordtype">int</span> <a class="code" href="a00379.html#ga0ff72b925259697003a78ac2bb7c8f9f">Show</a>(</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keyword">const</span> std::string&amp;              heading,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; entries,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordtype">int</span>                             selected = -1,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordtype">bool</span>                            autoclose = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  };</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;END_NAMESPACE()</div>
-<div class="ttc" id="a00386_gadb311b9a66ccf6cbc77137e0af86be2a_html_ggadb311b9a66ccf6cbc77137e0af86be2aa8f817a79e13ea554b21f9a4ab39825e3"><div class="ttname"><a href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa8f817a79e13ea554b21f9a4ab39825e3">KodiAPI::KODI_CODEC_TYPE_UNKNOWN</a></div><div class="ttdoc">Unknown identifier. </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:58</div></div>
-<div class="ttc" id="a00070_html"><div class="ttname"><a href="a00070.html">kodi_codec</a></div><div class="ttdoc">Codec identification structure. </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:79</div></div>
-<div class="ttc" id="a00386_gadb311b9a66ccf6cbc77137e0af86be2a_html_ggadb311b9a66ccf6cbc77137e0af86be2aa1fdc2cbc56014c4fff81f4e7baae441b"><div class="ttname"><a href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa1fdc2cbc56014c4fff81f4e7baae441b">KodiAPI::KODI_CODEC_TYPE_AUDIO</a></div><div class="ttdoc">Audio stream format. </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:62</div></div>
-<div class="ttc" id="a00386_ga5f36d5652cd9f943a40f0a2c4495a74a_html_ga5f36d5652cd9f943a40f0a2c4495a74a"><div class="ttname"><a href="a00386_ga5f36d5652cd9f943a40f0a2c4495a74a.html#ga5f36d5652cd9f943a40f0a2c4495a74a">KodiAPI::kodi_codec_id</a></div><div class="ttdeci">unsigned int kodi_codec_id</div><div class="ttdoc">Codec identifier. </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:47</div></div>
-<div class="ttc" id="a00386_gadb311b9a66ccf6cbc77137e0af86be2a_html_ggadb311b9a66ccf6cbc77137e0af86be2aa12047086ed4fc5c499f9584a45140cbd"><div class="ttname"><a href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa12047086ed4fc5c499f9584a45140cbd">KodiAPI::KODI_CODEC_TYPE_SUBTITLE</a></div><div class="ttdoc">Subtitle stream format. </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:66</div></div>
-<div class="ttc" id="a00386_gadb311b9a66ccf6cbc77137e0af86be2a_html_ggadb311b9a66ccf6cbc77137e0af86be2aa283925b3bd6f6ed60e5cebfa6c84001f"><div class="ttname"><a href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa283925b3bd6f6ed60e5cebfa6c84001f">KodiAPI::KODI_CODEC_TYPE_DATA</a></div><div class="ttdoc">Data stream format. </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:64</div></div>
-<div class="ttc" id="a00386_gadb311b9a66ccf6cbc77137e0af86be2a_html_gadb311b9a66ccf6cbc77137e0af86be2a"><div class="ttname"><a href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#gadb311b9a66ccf6cbc77137e0af86be2a">KodiAPI::kodi_codec_type</a></div><div class="ttdeci">kodi_codec_type</div><div class="ttdoc">Codecs stream type definitions. </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:55</div></div>
-<div class="ttc" id="a00386_gadb311b9a66ccf6cbc77137e0af86be2a_html_ggadb311b9a66ccf6cbc77137e0af86be2aad2291cde40a901541cb7a15001bc06b3"><div class="ttname"><a href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aad2291cde40a901541cb7a15001bc06b3">KodiAPI::KODI_CODEC_TYPE_VIDEO</a></div><div class="ttdoc">Video stream format. </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:60</div></div>
-<div class="ttc" id="a00260_html"><div class="ttname"><a href="a00260.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
-<div class="ttc" id="a00070_a74ecd8a982f71c56801ba227f4cd8d94_html_a74ecd8a982f71c56801ba227f4cd8d94"><div class="ttname"><a href="a00070_a74ecd8a982f71c56801ba227f4cd8d94.html#a74ecd8a982f71c56801ba227f4cd8d94">kodi_codec::codec_type</a></div><div class="ttdeci">kodi_codec_type codec_type</div><div class="ttdoc">Stream type identification. </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:82</div></div>
-<div class="ttc" id="a00386_gadb311b9a66ccf6cbc77137e0af86be2a_html_ggadb311b9a66ccf6cbc77137e0af86be2aa5db7fcefc33d4838c039fbb9d1e2eadc"><div class="ttname"><a href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aa5db7fcefc33d4838c039fbb9d1e2eadc">KodiAPI::KODI_CODEC_TYPE_NB</a></div><div class="ttdoc">Not used. </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:70</div></div>
-<div class="ttc" id="a00386_gadb311b9a66ccf6cbc77137e0af86be2a_html_ggadb311b9a66ccf6cbc77137e0af86be2aad30c732aede56b620aefac72e4029d8e"><div class="ttname"><a href="a00386_gadb311b9a66ccf6cbc77137e0af86be2a.html#ggadb311b9a66ccf6cbc77137e0af86be2aad30c732aede56b620aefac72e4029d8e">KodiAPI::KODI_CODEC_TYPE_RDS</a></div><div class="ttdoc">Radio RDS stream format. </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:68</div></div>
-<div class="ttc" id="a00070_abb16fc135f202805c438614ff10cf11c_html_abb16fc135f202805c438614ff10cf11c"><div class="ttname"><a href="a00070_abb16fc135f202805c438614ff10cf11c.html#abb16fc135f202805c438614ff10cf11c">kodi_codec::codec_id</a></div><div class="ttdeci">kodi_codec_id codec_id</div><div class="ttdoc">Needed codec identification (is code based upon ffmpeg) </div><div class="ttdef"><b>Definition:</b> definitions_inputstream.hpp:84</div></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">/* namespace GUI */</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} <span class="comment">/* namespace KodiAPI */</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;END_NAMESPACE()</div>
+<div class="ttc" id="a00379_html_ga0ff72b925259697003a78ac2bb7c8f9f"><div class="ttname"><a href="a00379.html#ga0ff72b925259697003a78ac2bb7c8f9f">KodiAPI::GUI::DialogSelect::Show</a></div><div class="ttdeci">int Show(const std::string &amp;heading, const std::vector&lt; std::string &gt; &amp;entries, int selected=-1, bool autoclose=false)</div><div class="ttdoc">Show a selection dialog about given parts. </div></div>
+<div class="ttc" id="a00269_html"><div class="ttname"><a href="a00269.html">KodiAPI</a></div><div class="ttdef"><b>Definition:</b> AddonLib.hpp:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_20dbdb7b237c70099fe6f96f9258e5fa.html">include</a></li><li class="navelem"><a class="el" href="dir_531d99529106c062bd1f7ca7a308cfde.html">kodi</a></li><li class="navelem"><a class="el" href="dir_5dd3084b620b8da80a77c27f0a2447f1.html">api2</a></li><li class="navelem"><a class="el" href="dir_4335781ebcf9a31637a6f79d6e2e887e.html">inputstream</a></li><li class="navelem"><b>definitions_inputstream.hpp</b></li>
+    <li class="navelem"><a class="el" href="dir_20dbdb7b237c70099fe6f96f9258e5fa.html">include</a></li><li class="navelem"><a class="el" href="dir_531d99529106c062bd1f7ca7a308cfde.html">kodi</a></li><li class="navelem"><a class="el" href="dir_5dd3084b620b8da80a77c27f0a2447f1.html">api2</a></li><li class="navelem"><a class="el" href="dir_bc21e54bc01f3f5f43827dec2d7c2298.html">gui</a></li><li class="navelem"><b>DialogSelect.hpp</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

@@ -1,10 +1,10 @@
 var a00363 =
 [
-    [ "ShowAndGetDirectory", "a00363_ga91429cda74de406ee81f92786c59a691.html#ga91429cda74de406ee81f92786c59a691", null ],
-    [ "ShowAndGetFile", "a00363_ga5d6d4caafaa46492b8488770198ae48a.html#ga5d6d4caafaa46492b8488770198ae48a", null ],
-    [ "ShowAndGetFileFromDir", "a00363_ga2e9dd4605ba71b31d6513282a003e061.html#ga2e9dd4605ba71b31d6513282a003e061", null ],
-    [ "ShowAndGetFileList", "a00363_ga37c88eef3cc694ae25a69c54264ec1bb.html#ga37c88eef3cc694ae25a69c54264ec1bb", null ],
-    [ "ShowAndGetSource", "a00363_gab76321dc0d4a1e26fd6a0a75a23ba061.html#gab76321dc0d4a1e26fd6a0a75a23ba061", null ],
-    [ "ShowAndGetImage", "a00363_gac859a430345aa90d0aa5dc0836ffbe5e.html#gac859a430345aa90d0aa5dc0836ffbe5e", null ],
-    [ "ShowAndGetImageList", "a00363_ga200aeb7ed6dc377ee861afdb0e6eebab.html#ga200aeb7ed6dc377ee861afdb0e6eebab", null ]
+    [ "Lock", "a00363.html#ga1e6c297870325cead8b7869c56dde3a9", null ],
+    [ "Unlock", "a00363.html#ga562187d336aad67565a1f90521b8c12b", null ],
+    [ "GetScreenHeight", "a00363.html#gad287a915b2c19dea690a43f4df7d5553", null ],
+    [ "GetScreenWidth", "a00363.html#ga45844d515e52c611383bf9724c91312b", null ],
+    [ "GetVideoResolution", "a00363.html#ga52089728c14d6f72a86939377b496e9b", null ],
+    [ "GetCurrentWindowDialogId", "a00363.html#gadb22389c1d52ed050c28515c8175d357", null ],
+    [ "GetCurrentWindowId", "a00363.html#gacc2226a2237c681f2a4b930b87f63d0d", null ]
 ];

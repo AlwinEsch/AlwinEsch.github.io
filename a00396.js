@@ -1,7 +1,7 @@
 var a00396 =
 [
-    [ "General", "a00397.html", "a00397" ],
-    [ "Stream Utils", "a00398.html", "a00398" ],
-    [ "Transfer", "a00401.html", "a00401" ],
-    [ "Trigger", "a00402.html", "a00402" ]
+    [ "Definitions, structures and enumerators", "a00397.html", "a00397" ],
+    [ "Name", "a00396.html#gab29906ba5407bb58b86428cb4b4a1e26", null ],
+    [ "Codec", "a00396.html#ga62b7b43b626a9b8beb0f16a8795b9d91", null ],
+    [ "GetCodecByName", "a00396.html#ga542cf7ce73c4f9e04f16bac4583fbb19", null ]
 ];

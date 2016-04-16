@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: /home/alwin/Development/11/kodi/xbmc/interfaces/legacy/Stat.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/11/kodi/xbmc/interfaces/legacy/ModuleXbmcvfs.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('a00251_source.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Stat.h</div>  </div>
+<div class="title">ModuleXbmcvfs.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
@@ -117,113 +117,88 @@ $(document).ready(function(){initNavTree('a00251_source.html','');});
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;filesystem/File.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;AddonClass.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;LanguageHook.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;AddonString.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;Tuple.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00286.html">XBMCAddon</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">namespace </span>xbmcvfs</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="a00132.html">   56</a></span>&#160;    <span class="keyword">class </span><a class="code" href="a00132.html">Stat</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    class <a class="code" href="a00132.html">Stat</a> : <span class="keyword">public</span> AddonClass</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keyword">struct </span>__stat64 st;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <a class="code" href="a00132.html">Stat</a>(<span class="keyword">const</span> String&amp; path)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        DelayedCallGuard dg;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        XFILE::CFile::Stat(path, &amp;st);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga00b3e20028eaee69c44cdc47a922fe31.html#ga00b3e20028eaee69c44cdc47a922fe31">st_mode</a>() { <span class="keywordflow">return</span> st.st_mode; };</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga00b3e20028eaee69c44cdc47a922fe31.html#ga00b3e20028eaee69c44cdc47a922fe31">st_mode</a>() { <span class="keywordflow">return</span> st.st_mode; };</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga77e336d6274f6fb0e2a3c3546e61e360.html#ga77e336d6274f6fb0e2a3c3546e61e360">st_ino</a>() { <span class="keywordflow">return</span> st.st_ino; };</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga77e336d6274f6fb0e2a3c3546e61e360.html#ga77e336d6274f6fb0e2a3c3546e61e360">st_ino</a>() { <span class="keywordflow">return</span> st.st_ino; };</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_gab17084ec246f2b497d2f13618c5bd220.html#gab17084ec246f2b497d2f13618c5bd220">st_dev</a>() { <span class="keywordflow">return</span> st.st_dev; };</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_gab17084ec246f2b497d2f13618c5bd220.html#gab17084ec246f2b497d2f13618c5bd220">st_dev</a>() { <span class="keywordflow">return</span> st.st_dev; };</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga34f57426567df63ef5ad1b4679778d18.html#ga34f57426567df63ef5ad1b4679778d18">st_nlink</a>() { <span class="keywordflow">return</span> st.st_nlink; };</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga34f57426567df63ef5ad1b4679778d18.html#ga34f57426567df63ef5ad1b4679778d18">st_nlink</a>() { <span class="keywordflow">return</span> st.st_nlink; };</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_gaa29c53999dffe4acc12aed2eb60a6c81.html#gaa29c53999dffe4acc12aed2eb60a6c81">st_uid</a>() { <span class="keywordflow">return</span> st.st_uid; };</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_gaa29c53999dffe4acc12aed2eb60a6c81.html#gaa29c53999dffe4acc12aed2eb60a6c81">st_uid</a>() { <span class="keywordflow">return</span> st.st_uid; };</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga9a7a9ad27402f5a931bcbff38e4e03d3.html#ga9a7a9ad27402f5a931bcbff38e4e03d3">st_gid</a>() { <span class="keywordflow">return</span> st.st_gid; };</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga9a7a9ad27402f5a931bcbff38e4e03d3.html#ga9a7a9ad27402f5a931bcbff38e4e03d3">st_gid</a>() { <span class="keywordflow">return</span> st.st_gid; };</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_gaeec21543efab31f62a21e533b0d3a537.html#gaeec21543efab31f62a21e533b0d3a537">st_size</a>() { <span class="keywordflow">return</span> st.st_size; };</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_gaeec21543efab31f62a21e533b0d3a537.html#gaeec21543efab31f62a21e533b0d3a537">st_size</a>() { <span class="keywordflow">return</span> st.st_size; };</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga65d49375e5251d4e616a45e3c898d6cc.html#ga65d49375e5251d4e616a45e3c898d6cc">atime</a>() { <span class="keywordflow">return</span> st.st_atime; }; <span class="comment">//names st_atime/st_mtime/st_ctime are used by sys/stat.h</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga65d49375e5251d4e616a45e3c898d6cc.html#ga65d49375e5251d4e616a45e3c898d6cc">atime</a>() { <span class="keywordflow">return</span> st.st_atime; };</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga57da69d0b20141a95c0c44a6bb5f3b35.html#ga57da69d0b20141a95c0c44a6bb5f3b35">mtime</a>() { <span class="keywordflow">return</span> st.st_mtime; };</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_ga57da69d0b20141a95c0c44a6bb5f3b35.html#ga57da69d0b20141a95c0c44a6bb5f3b35">mtime</a>() { <span class="keywordflow">return</span> st.st_mtime; };</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">#ifndef SWIG </span><span class="comment">/* Part below used for HTML doc and behind #else for python internal docs */</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_gab24c57af16ac6f88edb819c18e2e438b.html#gab24c57af16ac6f88edb819c18e2e438b">ctime</a>() { <span class="keywordflow">return</span> st.st_ctime; };</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="a00315_gab24c57af16ac6f88edb819c18e2e438b.html#gab24c57af16ac6f88edb819c18e2e438b">ctime</a>() { <span class="keywordflow">return</span> st.st_ctime; };</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    };</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="ttc" id="a00315_ga57da69d0b20141a95c0c44a6bb5f3b35_html_ga57da69d0b20141a95c0c44a6bb5f3b35"><div class="ttname"><a href="a00315_ga57da69d0b20141a95c0c44a6bb5f3b35.html#ga57da69d0b20141a95c0c44a6bb5f3b35">XBMCAddon::xbmcvfs::Stat::mtime</a></div><div class="ttdeci">long long mtime()</div><div class="ttdoc">To get time of last modification. </div><div class="ttdef"><b>Definition:</b> Stat.h:189</div></div>
-<div class="ttc" id="a00315_ga9a7a9ad27402f5a931bcbff38e4e03d3_html_ga9a7a9ad27402f5a931bcbff38e4e03d3"><div class="ttname"><a href="a00315_ga9a7a9ad27402f5a931bcbff38e4e03d3.html#ga9a7a9ad27402f5a931bcbff38e4e03d3">XBMCAddon::xbmcvfs::Stat::st_gid</a></div><div class="ttdeci">long long st_gid()</div><div class="ttdoc">To get group ID of owner. </div><div class="ttdef"><b>Definition:</b> Stat.h:148</div></div>
-<div class="ttc" id="a00315_ga77e336d6274f6fb0e2a3c3546e61e360_html_ga77e336d6274f6fb0e2a3c3546e61e360"><div class="ttname"><a href="a00315_ga77e336d6274f6fb0e2a3c3546e61e360.html#ga77e336d6274f6fb0e2a3c3546e61e360">XBMCAddon::xbmcvfs::Stat::st_ino</a></div><div class="ttdeci">long long st_ino()</div><div class="ttdoc">To get inode number. </div><div class="ttdef"><b>Definition:</b> Stat.h:98</div></div>
-<div class="ttc" id="a00315_gaeec21543efab31f62a21e533b0d3a537_html_gaeec21543efab31f62a21e533b0d3a537"><div class="ttname"><a href="a00315_gaeec21543efab31f62a21e533b0d3a537.html#gaeec21543efab31f62a21e533b0d3a537">XBMCAddon::xbmcvfs::Stat::st_size</a></div><div class="ttdeci">long long st_size()</div><div class="ttdoc">To get total size, in bytes. </div><div class="ttdef"><b>Definition:</b> Stat.h:165</div></div>
-<div class="ttc" id="a00315_ga00b3e20028eaee69c44cdc47a922fe31_html_ga00b3e20028eaee69c44cdc47a922fe31"><div class="ttname"><a href="a00315_ga00b3e20028eaee69c44cdc47a922fe31.html#ga00b3e20028eaee69c44cdc47a922fe31">XBMCAddon::xbmcvfs::Stat::st_mode</a></div><div class="ttdeci">long long st_mode()</div><div class="ttdoc">To get file protection. </div><div class="ttdef"><b>Definition:</b> Stat.h:86</div></div>
-<div class="ttc" id="a00315_ga34f57426567df63ef5ad1b4679778d18_html_ga34f57426567df63ef5ad1b4679778d18"><div class="ttname"><a href="a00315_ga34f57426567df63ef5ad1b4679778d18.html#ga34f57426567df63ef5ad1b4679778d18">XBMCAddon::xbmcvfs::Stat::st_nlink</a></div><div class="ttdeci">long long st_nlink()</div><div class="ttdoc">To get number of hard links. </div><div class="ttdef"><b>Definition:</b> Stat.h:124</div></div>
-<div class="ttc" id="a00132_html"><div class="ttname"><a href="a00132.html">XBMCAddon::xbmcvfs::Stat</a></div><div class="ttdef"><b>Definition:</b> Stat.h:56</div></div>
-<div class="ttc" id="a00315_gaa29c53999dffe4acc12aed2eb60a6c81_html_gaa29c53999dffe4acc12aed2eb60a6c81"><div class="ttname"><a href="a00315_gaa29c53999dffe4acc12aed2eb60a6c81.html#gaa29c53999dffe4acc12aed2eb60a6c81">XBMCAddon::xbmcvfs::Stat::st_uid</a></div><div class="ttdeci">long long st_uid()</div><div class="ttdoc">To get user ID of owner. </div><div class="ttdef"><b>Definition:</b> Stat.h:136</div></div>
-<div class="ttc" id="a00315_gab24c57af16ac6f88edb819c18e2e438b_html_gab24c57af16ac6f88edb819c18e2e438b"><div class="ttname"><a href="a00315_gab24c57af16ac6f88edb819c18e2e438b.html#gab24c57af16ac6f88edb819c18e2e438b">XBMCAddon::xbmcvfs::Stat::ctime</a></div><div class="ttdeci">long long ctime()</div><div class="ttdoc">To get time of last status change. </div><div class="ttdef"><b>Definition:</b> Stat.h:201</div></div>
-<div class="ttc" id="a00286_html"><div class="ttname"><a href="a00286.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
-<div class="ttc" id="a00315_gab17084ec246f2b497d2f13618c5bd220_html_gab17084ec246f2b497d2f13618c5bd220"><div class="ttname"><a href="a00315_gab17084ec246f2b497d2f13618c5bd220.html#gab17084ec246f2b497d2f13618c5bd220">XBMCAddon::xbmcvfs::Stat::st_dev</a></div><div class="ttdeci">long long st_dev()</div><div class="ttdoc">To get ID of device containing file. </div><div class="ttdef"><b>Definition:</b> Stat.h:112</div></div>
-<div class="ttc" id="a00315_ga65d49375e5251d4e616a45e3c898d6cc_html_ga65d49375e5251d4e616a45e3c898d6cc"><div class="ttname"><a href="a00315_ga65d49375e5251d4e616a45e3c898d6cc.html#ga65d49375e5251d4e616a45e3c898d6cc">XBMCAddon::xbmcvfs::Stat::atime</a></div><div class="ttdeci">long long atime()</div><div class="ttdoc">To get time of last access. </div><div class="ttdef"><b>Definition:</b> Stat.h:177</div></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="a00295.html">XBMCAddon</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">namespace </span>xbmcvfs</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="a00308.html#ga3fca1e9cad2d5ca0b64743a1461498e4">copy</a>(...);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00308.html#ga3fca1e9cad2d5ca0b64743a1461498e4">copy</a>(<span class="keyword">const</span> String&amp; strSource, <span class="keyword">const</span> String&amp; strDestnation);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="a00308.html#ga327aa7237e490a648b67aab6c3a3a3c0">deleteFile</a>(...);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00308.html#ga327aa7237e490a648b67aab6c3a3a3c0">deleteFile</a>(<span class="keyword">const</span> String&amp; file);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="a00308.html#ga54135fe88c417074dcc7d9d4ce3fa540">rename</a>(...);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00308.html#ga54135fe88c417074dcc7d9d4ce3fa540">rename</a>(<span class="keyword">const</span> String&amp; file, <span class="keyword">const</span> String&amp; newFile);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="a00308.html#ga34ed07fb93392411ddc215762485a3b9">exists</a>(...);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00308.html#ga34ed07fb93392411ddc215762485a3b9">exists</a>(<span class="keyword">const</span> String&amp; path);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="a00308.html#ga07a90f3afa1401bd289deb4be40c2489">mkdir</a>(...);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00308.html#ga07a90f3afa1401bd289deb4be40c2489">mkdir</a>(<span class="keyword">const</span> String&amp; path);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="a00308.html#gaf0a772cd125d92abecaf2da7482aa16d">mkdirs</a>(...);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00308.html#gaf0a772cd125d92abecaf2da7482aa16d">mkdirs</a>(<span class="keyword">const</span> String&amp; path);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="a00308.html#ga686ef8ff094072a27fb97b830fde8962">rmdir</a>(...);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="a00308.html#ga686ef8ff094072a27fb97b830fde8962">rmdir</a>(<span class="keyword">const</span> String&amp; path, <span class="keywordtype">bool</span> force = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#ifdef DOXYGEN_SHOULD_USE_THIS</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="a00308.html#ga6fdd93a2195f65e549abb759bc151afc">listdir</a>(...);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    Tuple&lt;std::vector&lt;String&gt;, std::vector&lt;String&gt; &gt; <a class="code" href="a00308.html#ga6fdd93a2195f65e549abb759bc151afc">listdir</a>(<span class="keyword">const</span> String&amp; path);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DOXYGEN_SHOULD_SKIP_THIS */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a00308_html_ga34ed07fb93392411ddc215762485a3b9"><div class="ttname"><a href="a00308.html#ga34ed07fb93392411ddc215762485a3b9">exists</a></div><div class="ttdeci">exists(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00308_html_ga327aa7237e490a648b67aab6c3a3a3c0"><div class="ttname"><a href="a00308.html#ga327aa7237e490a648b67aab6c3a3a3c0">deleteFile</a></div><div class="ttdeci">deleteFile(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00308_html_gaf0a772cd125d92abecaf2da7482aa16d"><div class="ttname"><a href="a00308.html#gaf0a772cd125d92abecaf2da7482aa16d">mkdirs</a></div><div class="ttdeci">mkdirs(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00295_html"><div class="ttname"><a href="a00295.html">XBMCAddon</a></div><div class="ttdef"><b>Definition:</b> Keyboard.h:29</div></div>
+<div class="ttc" id="a00308_html_ga6fdd93a2195f65e549abb759bc151afc"><div class="ttname"><a href="a00308.html#ga6fdd93a2195f65e549abb759bc151afc">listdir</a></div><div class="ttdeci">listdir(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00308_html_ga07a90f3afa1401bd289deb4be40c2489"><div class="ttname"><a href="a00308.html#ga07a90f3afa1401bd289deb4be40c2489">mkdir</a></div><div class="ttdeci">mkdir(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00308_html_ga3fca1e9cad2d5ca0b64743a1461498e4"><div class="ttname"><a href="a00308.html#ga3fca1e9cad2d5ca0b64743a1461498e4">copy</a></div><div class="ttdeci">copy(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00308_html_ga54135fe88c417074dcc7d9d4ce3fa540"><div class="ttname"><a href="a00308.html#ga54135fe88c417074dcc7d9d4ce3fa540">rename</a></div><div class="ttdeci">rename(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
+<div class="ttc" id="a00308_html_ga686ef8ff094072a27fb97b830fde8962"><div class="ttname"><a href="a00308.html#ga686ef8ff094072a27fb97b830fde8962">rmdir</a></div><div class="ttdeci">rmdir(...)</div><div class="ttdoc"> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font c...</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_fabaa15d8b2c4cc19b06d0107c10ea23.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_39c15d74e82d3457892ee934da67de74.html">legacy</a></li><li class="navelem"><b>Stat.h</b></li>
+    <li class="navelem"><a class="el" href="dir_fabaa15d8b2c4cc19b06d0107c10ea23.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_39c15d74e82d3457892ee934da67de74.html">legacy</a></li><li class="navelem"><b>ModuleXbmcvfs.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>

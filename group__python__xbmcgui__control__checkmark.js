@@ -1,7 +1,7 @@
 var group__python__xbmcgui__control__checkmark =
 [
-    [ "getSelected", "group__python__xbmcgui__control__checkmark.html#ga1f9a3346caf72cfe92c1c48e92b71724", null ],
-    [ "setSelected", "group__python__xbmcgui__control__checkmark.html#gad42accd39af295a957386c68dac3dcae", null ],
-    [ "setLabel", "group__python__xbmcgui__control__checkmark.html#gaa1d736865ab85f96ecbe8c66769b068b", null ],
-    [ "setDisabledColor", "group__python__xbmcgui__control__checkmark.html#gabb99461e652ba261d6322894a64affbe", null ]
+    [ "getSelected", "group__python__xbmcgui__control__checkmark.html#ga0303e9d0cc9e36fb2cbdac2bdbbe3649", null ],
+    [ "setSelected", "group__python__xbmcgui__control__checkmark.html#ga88c1395d1ae949f1d27e6d4f4a872401", null ],
+    [ "setLabel", "group__python__xbmcgui__control__checkmark.html#ga002b6bcb81f2510c34983101ea0c8cc7", null ],
+    [ "setDisabledColor", "group__python__xbmcgui__control__checkmark.html#gacabda86d884db154032f559efda11fa1", null ]
 ];

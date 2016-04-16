@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: class CVFSDirEntry</title>
+<title>Kodi Development: Subclass - ControlSlider</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,28 +92,86 @@ $(document).ready(function(){initNavTree('a00344.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">class CVFSDirEntry<div class="ingroups"><a class="el" href="a00292.html">C++</a> &raquo; <a class="el" href="a00336.html">2. AddOn</a> &raquo; <a class="el" href="a00343.html">Virtual file system</a></div></div>  </div>
+<div class="title">Subclass - ControlSlider<div class="ingroups"><a class="el" href="a00303.html">Python</a> &raquo; <a class="el" href="a00305.html">Library - xbmcgui</a> &raquo; <a class="el" href="a00331.html">Control</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Virtual file system directory entry</b> </p>
-<p>This class is used as an entry for files and folders in KodiAPI::AddOn::CVFSUtils::GetDirectory(...).</p>
+<p><b>Used for a volume slider.</b> </p>
+<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> ControlSlider(x, y, width, height[, textureback, texture, texturefocus]) </big></font></span></code></h4> </p>
+<p>The slider control is used for things where a sliding bar best represents the operation at hand (such as a volume control or seek control). You can choose the position, size, and look of the slider control.</p>
+<dl class="section note"><dt>Note</dt><dd>This class include also all calls from <a class="el" href="a00331.html">Control</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>integer - x coordinate of control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>integer - y coordinate of control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>integer - width of control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>integer - height of control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureback</td><td>[opt] string - image filename </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texture</td><td>[opt] string - image filename </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texturefocus</td><td>[opt] string - image filename</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments.<br />
+ Once you use a keyword, all following arguments require the keyword.<br />
+ After you create the control, you need to add it to the window with addControl().</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/api2/addon/VFSUtils.hpp&gt;</span></div>
-<div class="line"></div>
-<div class="line">std::vector&lt;KodiAPI::AddOn::CVFSDirEntry&gt; items;</div>
-<div class="line"><a class="code" href="a00346_ga6c7010942a646dcef1841a8e4ac25704.html#ga6c7010942a646dcef1841a8e4ac25704">KodiAPI::AddOn::CVFSUtils::GetDirectory</a>(<span class="stringliteral">&quot;special://temp&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, items);</div>
-<div class="line"></div>
-<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory have %lu entries\n&quot;</span>, items.size());</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; items.size(); i++)</div>
-<div class="line">{</div>
-<div class="line">  fprintf(stderr, <span class="stringliteral">&quot; - %04lu -- Folder: %s -- Name: %s -- Path: %s\n&quot;</span>,</div>
-<div class="line">            i+1,</div>
-<div class="line">            items[i].IsFolder() ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no &quot;</span>,</div>
-<div class="line">            items[i].Label().c_str(),</div>
-<div class="line">            items[i].Path().c_str());</div>
-<div class="line">}</div>
-</div><!-- fragment --><p>It has the header <a class="el" href="a00174_source.html">#include &lt;kodi/api2/addon/VFSUtils.hpp&gt;</a> be included to enjoy it. </p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.slider = xbmcgui.ControlSlider(100, 250, 350, 40)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga4991236fc1fe1d1e569933cadfccfde9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getPercent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getPercent() </big></font></span></code></h4> </p><hr/>
+<p> Returns a float of the percent of the slider. </p>
+<dl class="section return"><dt>Returns</dt><dd>float - Percent of slider</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keywordflow">print</span> self.slider.getPercent()</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="ga732f7ebb9fb55911046472ed4c47f1f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setPercent </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> setPercent(pct) </big></font></span></code></h4> </p><hr/>
+<p> Sets the percent of the slider. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pct</td><td>float - Percent value of slider</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;...</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.slider.setPercent(50)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;...</div>
+</div><!-- fragment --> 
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
