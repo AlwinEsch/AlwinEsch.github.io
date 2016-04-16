@@ -32,7 +32,7 @@ var searchData=
   ['open',['Open',['../group___c_p_p___kodi_a_p_i___g_u_i___c_dialog_progress.html#ga5e53001785ff30ae485a113b9b8a0ddc',1,'KodiAPI::GUI::CDialogProgress']]],
   ['openfile',['OpenFile',['../group___c_p_p___kodi_a_p_i___add_on___c_v_f_s_file.html#ga7964d4fc5936b7e41fd1c01320882d46',1,'KodiAPI::AddOn::CVFSFile']]],
   ['openfileforwrite',['OpenFileForWrite',['../group___c_p_p___kodi_a_p_i___add_on___c_v_f_s_file.html#gab906912503a475cdb8f0a67c5d81266c',1,'KodiAPI::AddOn::CVFSFile']]],
-  ['opensettings',['openSettings',['../group__python__xbmcaddon.html#ga73eb9124fb7a7a5f5a89c92e0bc1fb2a',1,'XBMCAddon::xbmcaddon::Addon::openSettings()'],['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga518b479cef7b1d3488a8a07c7a8bd3a0',1,'KodiAPI::AddOn::General::OpenSettings()']]],
+  ['opensettings',['openSettings',['../group__python__xbmcaddon.html#ga33b8229f80033148116f0cff2dca9d50',1,'XBMCAddon::xbmcaddon::Addon::openSettings()'],['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga518b479cef7b1d3488a8a07c7a8bd3a0',1,'KodiAPI::AddOn::General::OpenSettings()']]],
   ['operator_3c',['operator&lt;',['../group___c_p_p___kodi_a_p_i___p_v_r___c_p_v_r_stream.html#ga8c39a1e5e76bc953c53019e4ef318216',1,'KodiAPI::PVR::CPVRStream']]],
   ['operator_3d',['operator=',['../group___c_p_p___kodi_a_p_i___p_v_r___c_p_v_r_stream.html#ga7b1eb5fcb43d86807d0df66f0b9c74e6',1,'KodiAPI::PVR::CPVRStream']]],
   ['operator_3d_3d',['operator==',['../group___c_p_p___kodi_a_p_i___p_v_r___c_p_v_r_stream.html#ga2e56127d518a6487ba46cfe720bb4904',1,'KodiAPI::PVR::CPVRStream']]],

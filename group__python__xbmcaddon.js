@@ -1,8 +1,8 @@
 var group__python__xbmcaddon =
 [
-    [ "getLocalizedString", "group__python__xbmcaddon.html#ga79ffd96305af02e364d99c2c9d8b69de", null ],
-    [ "getSetting", "group__python__xbmcaddon.html#ga6eebe8728b7d19104a482a29abdafce2", null ],
-    [ "setSetting", "group__python__xbmcaddon.html#gafd6c759c5b268d0ec1467e340323783d", null ],
-    [ "openSettings", "group__python__xbmcaddon.html#ga73eb9124fb7a7a5f5a89c92e0bc1fb2a", null ],
-    [ "getAddonInfo", "group__python__xbmcaddon.html#gaedb0b112c76349f81e261335a6b240b9", null ]
+    [ "getLocalizedString", "group__python__xbmcaddon.html#ga82834997987f068af982d91feb40bf9f", null ],
+    [ "getSetting", "group__python__xbmcaddon.html#ga8739303a25018f275578b17e35602793", null ],
+    [ "setSetting", "group__python__xbmcaddon.html#ga81abff05565e5e9aa156439646a91758", null ],
+    [ "openSettings", "group__python__xbmcaddon.html#ga33b8229f80033148116f0cff2dca9d50", null ],
+    [ "getAddonInfo", "group__python__xbmcaddon.html#ga19050fb2822da5f0cbd8cdaad40b8b3f", null ]
 ];
