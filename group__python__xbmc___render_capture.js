@@ -1,9 +1,9 @@
 var group__python__xbmc___render_capture =
 [
-    [ "getWidth", "group__python__xbmc___render_capture.html#ga67a0997183f24da19b776d96c1052998", null ],
-    [ "getHeight", "group__python__xbmc___render_capture.html#ga07efb2a4e9a982688c8bb3c3f21d1092", null ],
-    [ "getAspectRatio", "group__python__xbmc___render_capture.html#ga2c8f0f904856b52b41dd852c57bd970b", null ],
-    [ "getImageFormat", "group__python__xbmc___render_capture.html#gaa512bbf517e279b0a5ca7d2ecf07f5b1", null ],
-    [ "getImage", "group__python__xbmc___render_capture.html#gaff2e6e3a8d1c65f17c1709dc727ae69c", null ],
-    [ "capture", "group__python__xbmc___render_capture.html#gad84ac4cd6e43fc4aefe0eeaa0916e187", null ]
+    [ "getWidth", "group__python__xbmc___render_capture.html#gae7fba4c8be1972cf80dc1a95f390df23", null ],
+    [ "getHeight", "group__python__xbmc___render_capture.html#gaa725283ffc599b3f6563cada4cbeb2c7", null ],
+    [ "getAspectRatio", "group__python__xbmc___render_capture.html#ga513d92194f1232b24edaa989e44d75d4", null ],
+    [ "getImageFormat", "group__python__xbmc___render_capture.html#gac086fcc7f9619fb51436af767561dd7e", null ],
+    [ "getImage", "group__python__xbmc___render_capture.html#ga14ed670fcc4ff3b544898bb2b46d10e7", null ],
+    [ "capture", "group__python__xbmc___render_capture.html#gadc8ab8d7cb0feab6099f9ee3b3d06e36", null ]
 ];

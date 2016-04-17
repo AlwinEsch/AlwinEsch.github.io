@@ -104,10 +104,10 @@ $(document).ready(function(){initNavTree('group__python__xbmcgui__window__xml.ht
 <dl class="section note"><dt>Note</dt><dd>This class include also all calls from <b><code><a class="el" href="group__python__xbmcgui__window.html">Window</a></code></b>.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">xmlFilename</td><td>string - the name of the xml file to look for. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">scriptPath</td><td>string - path to script. used to fallback to if the xml doesn't exist in the current skin. (eg xbmcaddon.Addon().getAddonInfo('path').decode('utf-8')) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">defaultSkin</td><td>[opt] string - name of the folder in the skins path to look in for the xml. (default='Default') </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">defaultRes</td><td>[opt] string - default skins resolution. (default='720p') </td></tr>
+    <tr><td class="paramname">xmlFilename</td><td>string - the name of the xml file to look for. </td></tr>
+    <tr><td class="paramname">scriptPath</td><td>string - path to script. used to fallback to if the xml doesn't exist in the current skin. (eg xbmcaddon.Addon().getAddonInfo('path').decode('utf-8')) </td></tr>
+    <tr><td class="paramname">defaultSkin</td><td>[opt] string - name of the folder in the skins path to look in for the xml. (default='Default') </td></tr>
+    <tr><td class="paramname">defaultRes</td><td>[opt] string - default skins resolution. (default='720p') </td></tr>
   </table>
   </dd>
 </dl>
@@ -158,13 +158,16 @@ Modules</h2></td></tr>
 
 <p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> addItem(item[, position]) </big></font></span></code></h4> </p><hr/>
 <p> Add a new item to this <a class="el" href="class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html">Window</a> List. </p>
-<ul>
-<li>item : string, unicode or <a class="el" href="class_x_b_m_c_addon_1_1xbmcgui_1_1_list_item.html">ListItem</a> - item to add.</li>
-<li>position : [opt] integer - position of item to add. (NO Int = Adds to bottom,0 adds to top, 1 adds to one below from top,-1 adds to one above from bottom etc etc )<ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>string, unicode or <a class="el" href="class_x_b_m_c_addon_1_1xbmcgui_1_1_list_item.html">ListItem</a> - item to add. </td></tr>
+    <tr><td class="paramname">position</td><td>[opt] integer - position of item to add. (NO Int = Adds to bottom,0 adds to top, 1 adds to one below from top,-1 adds to one above from bottom etc etc )<ul>
 <li>If integer positions are greater than list size, negative positions will add to top of list, positive positions will add to bottom of list</li>
 </ul>
-</li>
-</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.addItem(<span class="stringliteral">&#39;Reboot Kodi&#39;</span>, 0)</div>
@@ -188,7 +191,12 @@ Modules</h2></td></tr>
 
 <p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> removeItem(position) </big></font></span></code></h4> </p><hr/>
 <p> Removes a specified item based on position, from the <a class="el" href="class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html">Window</a> List. </p>
-<p>position : integer - position of item to remove.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>integer - position of item to remove.</td></tr>
+  </table>
+  </dd>
+</dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.removeItem(5)</div>
@@ -234,7 +242,12 @@ Modules</h2></td></tr>
 
 <p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> setCurrentListPosition(position) </big></font></span></code></h4> </p><hr/>
 <p> Set the current position in the <a class="el" href="class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html">Window</a> List. </p>
-<p>position : integer - position of item to set.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>integer - position of item to set.</td></tr>
+  </table>
+  </dd>
+</dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;self.setCurrentListPosition(5)</div>
@@ -258,7 +271,12 @@ Modules</h2></td></tr>
 
 <p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> getListItem(position) </big></font></span></code></h4> </p><hr/>
 <p> Returns a given <a class="el" href="class_x_b_m_c_addon_1_1xbmcgui_1_1_list_item.html">ListItem</a> in this <a class="el" href="class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html">Window</a> List. </p>
-<p>position : integer - position of item to return.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>integer - position of item to return.</td></tr>
+  </table>
+  </dd>
+</dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;..</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;listitem = self.getListItem(6)</div>
@@ -326,7 +344,13 @@ Modules</h2></td></tr>
 
 <p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> setContainerProperty(key, value) </big></font></span></code></h4> </p><hr/>
 <p> Sets a container property, similar to an infolabel. </p>
-<p>key : string - property name. value : string or unicode - value of property.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>string - property name. </td></tr>
+    <tr><td class="paramname">value</td><td>string or unicode - value of property.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive.<br />
  You can use the above as keywords for arguments and skip certain optional arguments.<br />
  Once you use a keyword, all following arguments require the keyword.</dd></dl>

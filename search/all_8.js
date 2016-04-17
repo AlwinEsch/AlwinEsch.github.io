@@ -454,7 +454,7 @@ var searchData=
   ['api_5ferr_5funknown',['API_ERR_UNKNOWN',['../group___kodi_addon___c_p_p___main___defs.html#gga3666c3045cdf054de90faaf6cc7d14e1a265814fcc02e922e9d8a46732ba9592e',1,'KodiAPI']]],
   ['api_5ferr_5fvalue_5fnot_5favailable',['API_ERR_VALUE_NOT_AVAILABLE',['../group___kodi_addon___c_p_p___main___defs.html#gga3666c3045cdf054de90faaf6cc7d14e1adf96cd7eabda35d0d1bf8ba32092df63',1,'KodiAPI']]],
   ['api_5fsuccess',['API_SUCCESS',['../group___kodi_addon___c_p_p___main___defs.html#gga3666c3045cdf054de90faaf6cc7d14e1ac4c2fbac1710ca3685a51f08475062e4',1,'KodiAPI']]],
-  ['atime',['atime',['../group__python__stat.html#ga65d49375e5251d4e616a45e3c898d6cc',1,'XBMCAddon::xbmcvfs::Stat']]],
+  ['atime',['atime',['../group__python__stat.html#ga168004cb787954e08154d53996c3b3a1',1,'XBMCAddon::xbmcvfs::Stat']]],
   ['audio_5fch_5fbc',['AUDIO_CH_BC',['../group___c_p_p___kodi_a_p_i___add_on___sound_play___defs.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4aa90c458a48d2ad4c195e766822ff2c33',1,'KodiAPI']]],
   ['audio_5fch_5fbl',['AUDIO_CH_BL',['../group___c_p_p___kodi_a_p_i___add_on___sound_play___defs.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4aa913e9df7d430fb038a46ffd9a6b6c0c',1,'KodiAPI']]],
   ['audio_5fch_5fbloc',['AUDIO_CH_BLOC',['../group___c_p_p___kodi_a_p_i___add_on___sound_play___defs.html#gga2b5a19d3dea9946ab7cbad0c770a9ad4a442f0143698374bd20d33700f4ee11dd',1,'KodiAPI']]],
