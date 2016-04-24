@@ -29,5 +29,7 @@ var searchData=
   ['onscreensaveractivated',['onScreensaverActivated',['../group__python__monitor.html#ga838fd6fa385f34d0497404bd7e0ec797',1,'XBMCAddon::xbmc::Monitor']]],
   ['onscreensaverdeactivated',['onScreensaverDeactivated',['../group__python__monitor.html#gadf97ef46effd3a321f9eb1db570648d0',1,'XBMCAddon::xbmc::Monitor']]],
   ['onsettingschanged',['onSettingsChanged',['../group__python__monitor.html#gaa8675d38debd82a3aef6ba1c06aabda0',1,'XBMCAddon::xbmc::Monitor']]],
-  ['opensettings',['openSettings',['../group__python__xbmcaddon.html#ga33b8229f80033148116f0cff2dca9d50',1,'XBMCAddon::xbmcaddon::Addon']]]
+  ['opensettings',['openSettings',['../group__python__xbmcaddon.html#ga33b8229f80033148116f0cff2dca9d50',1,'XBMCAddon::xbmcaddon::Addon']]],
+  ['operator',['operator',['../group__python__xbmcwsgi___wsgi_response.html#ga2d4599fb7cfd91c737dee41f02f1e4cd',1,'XBMCAddon::xbmcwsgi::WsgiResponse']]],
+  ['operator_28_29',['operator()',['../group__python__xbmcwsgi___wsgi_response_body.html#gaeb7237dc841d5477b789ffd871d15fbb',1,'XBMCAddon::xbmcwsgi::WsgiResponseBody']]]
 ];

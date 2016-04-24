@@ -2,7 +2,7 @@ var searchData=
 [
   ['rendercapture',['RenderCapture',['../group__python__xbmc___render_capture.html',1,'']]],
   ['radio_20button_20control',['Radio button control',['../_radio_button_control.html',1,'skin_controls']]],
-  ['read',['read',['../group__python__file.html#ga09536b9e99d54e4160097d953cbd2eda',1,'XBMCAddon::xbmcvfs::File']]],
+  ['read',['read',['../group__python__file.html#ga09536b9e99d54e4160097d953cbd2eda',1,'XBMCAddon::xbmcvfs::File::read()'],['../group__python__xbmcwsgi___wsgi_input_stream.html#ga09536b9e99d54e4160097d953cbd2eda',1,'XBMCAddon::xbmcwsgi::WsgiInputStreamIterator::read(...)'],['../class_x_b_m_c_addon_1_1xbmcwsgi_1_1_wsgi_input_stream_iterator.html#ga09536b9e99d54e4160097d953cbd2eda',1,'XBMCAddon::xbmcwsgi::WsgiInputStreamIterator::read(...)'],['../class_x_b_m_c_addon_1_1xbmcwsgi_1_1_wsgi_input_stream_iterator.html#ga09536b9e99d54e4160097d953cbd2eda',1,'XBMCAddon::xbmcwsgi::WsgiInputStreamIterator::read(...)']]],
   ['readbytes',['readBytes',['../group__python__file.html#ga8ec9b4c6916b0ff50fe31a0bcd94e489',1,'XBMCAddon::xbmcvfs::File']]],
   ['remove',['remove',['../group__python___play_list.html#ga2c737a7d7cded298377ca2aeda23d3ab',1,'XBMCAddon::xbmc::PlayList']]],
   ['removecontrol',['removeControl',['../group__python__xbmcgui__window.html#ga1d2ebb433f21bd658058f878a54f3da6',1,'XBMCAddon::xbmcgui::Window']]],
