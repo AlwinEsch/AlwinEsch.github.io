@@ -1,14 +1,17 @@
 var searchData=
 [
-  ['functions_20_2d_20music_20info_20tag',['Functions - Music info tag',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item___music_info_tag.html',1,'']]],
-  ['functions_20_2d_20picture_20info_20tag',['Functions - Picture info tag',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item___picture_info_tag.html',1,'']]],
-  ['functions_20_2d_20video_20info_20tag',['Functions - Video info tag',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item___video_info_tag.html',1,'']]],
-  ['fade_20label_20control',['Fade label control',['../_fade__label__control.html',1,'skin_controls']]],
-  ['file',['File',['../class_x_b_m_c_addon_1_1xbmcvfs_1_1_file.html',1,'XBMCAddon::xbmcvfs']]],
-  ['fileexists',['FileExists',['../group___c_p_p___kodi_a_p_i___add_on___v_f_s_utils.html#ga193799dbfa89ce36276634d283411ec8',1,'KodiAPI::AddOn::VFSUtils']]],
-  ['finalize',['Finalize',['../group___kodi_addon___c_p_p___main.html#ga25c17863c83dcc5fedf5d3fdfaface0e',1,'KodiAPI']]],
-  ['fixed_20list_20container',['Fixed List Container',['../_fixed__list__container.html',1,'skin_controls']]],
-  ['flush',['Flush',['../group___c_p_p___kodi_a_p_i___add_on___c_v_f_s_file.html#ga0e2644b2df3c228e8d71a55b60723f31',1,'KodiAPI::AddOn::CVFSFile::Flush()'],['../group___c_p_p___kodi_a_p_i___audio_engine___c_stream.html#ga0e2644b2df3c228e8d71a55b60723f31',1,'KodiAPI::AudioEngine::CStream::Flush()'],['../group__python__xbmcwsgi___wsgi_error_stream.html#ga7751f77b5263bcf940ece6e824a05b38',1,'XBMCAddon::xbmcwsgi::WsgiErrorStream::flush()']]],
-  ['freedemuxpacket',['FreeDemuxPacket',['../group___c_p_p___kodi_a_p_i___input_stream.html#gab5b9e9262b558cfa9f18acf307eec959',1,'KodiAPI::InputStream']]],
-  ['file',['File',['../group__python__file.html',1,'']]]
+  ['panel_20container',['Panel Container',['../_panel__container.html',1,'skin_controls']]],
+  ['pause',['pause',['../group__python___player.html#gab02121d4dfeb622a4ea3db42c0cb6676',1,'XBMCAddon::xbmc::Player']]],
+  ['play',['play',['../group__python___player.html#ga84f42d1160cbf72fcaec1030225e8669',1,'XBMCAddon::xbmc::Player']]],
+  ['player',['Player',['../class_x_b_m_c_addon_1_1xbmc_1_1_player.html',1,'XBMCAddon::xbmc']]],
+  ['playlist',['PlayList',['../class_x_b_m_c_addon_1_1xbmc_1_1_play_list.html',1,'XBMCAddon::xbmc']]],
+  ['playnext',['playnext',['../group__python___player.html#gad3fc41131784480b8d6bda2b90bbdec9',1,'XBMCAddon::xbmc::Player']]],
+  ['playprevious',['playprevious',['../group__python___player.html#gad16dd426f4c538dd6dfa830445e456a3',1,'XBMCAddon::xbmc::Player']]],
+  ['playselected',['playselected',['../group__python___player.html#ga418537b7c75355df885a94d31014855b',1,'XBMCAddon::xbmc::Player']]],
+  ['playsfx',['playSFX',['../group__python__xbmc.html#gae7630e0754ba3e3e17a380e69784e2b9',1,'ModuleXbmc.h']]],
+  ['popactivewindowid',['popActiveWindowId',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#a09309d4a53608ecb531fcc9bb4ae97b2',1,'XBMCAddon::xbmcgui::Window']]],
+  ['progress_20control',['Progress Control',['../_progress__control.html',1,'skin_controls']]],
+  ['python',['Python',['../group__python.html',1,'']]],
+  ['player',['Player',['../group__python___player.html',1,'']]],
+  ['playlist',['PlayList',['../group__python___play_list.html',1,'']]]
 ];

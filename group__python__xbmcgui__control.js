@@ -14,7 +14,6 @@ var group__python__xbmcgui__control =
     [ "Subclass - ControlRadioButton", "group__python__xbmcgui__control__radiobutton.html", "group__python__xbmcgui__control__radiobutton" ],
     [ "Subclass - ControlSlider", "group__python__xbmcgui__control__slider.html", "group__python__xbmcgui__control__slider" ],
     [ "getId", "group__python__xbmcgui__control.html#gacbf6c26e96b378a3209ce6d13eebf735", null ],
-    [ "getPosition", "group__python__xbmcgui__control.html#ga107d1509bfad2c1b7507aac4e81be889", null ],
     [ "getX", "group__python__xbmcgui__control.html#ga403d7c3dc9b308567cf859a67b1cf1e5", null ],
     [ "getY", "group__python__xbmcgui__control.html#gac878fc1b93b7d5c1bd6d3142dd197f19", null ],
     [ "getHeight", "group__python__xbmcgui__control.html#gaa725283ffc599b3f6563cada4cbeb2c7", null ],

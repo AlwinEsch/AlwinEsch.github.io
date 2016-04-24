@@ -1,6 +1,7 @@
 var searchData=
 [
   ['scroll_20bar_20control',['Scroll Bar Control',['../_scroll__bar__control.html',1,'skin_controls']]],
+  ['select_20button_20control',['Select Button Control',['../_select__button__control.html',1,'skin_controls']]],
   ['settings_20slider_20control',['Settings Slider Control',['../_settings__slider__control.html',1,'skin_controls']]],
   ['settings_20spin_20control',['Settings Spin Control',['../_settings__spin__control.html',1,'skin_controls']]],
   ['skin_20development',['Skin Development',['../skin_parts.html',1,'']]],

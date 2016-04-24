@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['2_2e_20addon',['2. AddOn',['../group___c_p_p___kodi_a_p_i___add_on.html',1,'']]]
+  ['browse',['browse',['../group__python___dialog.html#ga2ece1ca620087a97233713710eac1b83',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['browsemultiple',['browseMultiple',['../group__python___dialog.html#ga987efec260c6ee5a457c96a9c3fcba2f',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['browsesingle',['browseSingle',['../group__python___dialog.html#ga5ee90196e7b1d6e8d2f60cbba1f0ccef',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['button_20control',['Button control',['../skin__button_control.html',1,'skin_controls']]]
 ];

@@ -109,6 +109,11 @@ var skin_controls =
       [ "Adding Up and Down buttons above and below a scrollbar", "_scroll__bar__control.html#Scroll_Bar_Control_sect3", null ],
       [ "See also", "_scroll__bar__control.html#Scroll_Bar_Control_sect4", null ]
     ] ],
+    [ "Select Button Control", "_select__button__control.html", [
+      [ "Example", "_select__button__control.html#Select_Button_Control_sect1", null ],
+      [ "Available tags", "_select__button__control.html#Select_Button_Control_sect2", null ],
+      [ "See also", "_select__button__control.html#Select_Button_Control_sect3", null ]
+    ] ],
     [ "Settings Slider Control", "_settings__slider__control.html", [
       [ "Example", "_settings__slider__control.html#Settings_Slider_Control_sect1", null ],
       [ "Available tags", "_settings__slider__control.html#Settings_Slider_Control_sect2", null ],

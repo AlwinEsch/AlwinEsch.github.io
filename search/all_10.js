@@ -1,29 +1,7 @@
 var searchData=
 [
-  ['image_20control',['Image Control',['../_image__control.html',1,'skin_controls']]],
-  ['infotagmusic',['InfoTagMusic',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music.html',1,'XBMCAddon::xbmc']]],
-  ['infotagradiords',['InfoTagRadioRDS',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_radio_r_d_s.html',1,'XBMCAddon::xbmc']]],
-  ['infotagvideo',['InfoTagVideo',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html',1,'XBMCAddon::xbmc']]],
-  ['initlibaddon',['InitLibAddon',['../group___kodi_addon___c_p_p___main.html#ga54c2c0dd7a940c723a67a51ffe97025f',1,'KodiAPI']]],
-  ['input',['input',['../group__python___dialog.html#ga39e614212c79458d71e289d77783baeb',1,'XBMCAddon::xbmcgui::Dialog']]],
-  ['interceptorclear',['interceptorClear',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#a93c985f5f8fed6487de34c88dcb40b5a',1,'XBMCAddon::xbmcgui::Window']]],
-  ['isbuffering',['IsBuffering',['../group___c_p_p___kodi_a_p_i___audio_engine___c_stream.html#ga0a04f8b3e045b68d509dab0b67d077a8',1,'KodiAPI::AudioEngine::CStream']]],
-  ['iscanceled',['IsCanceled',['../group___c_p_p___kodi_a_p_i___g_u_i___c_dialog_progress.html#gaf76bcf12aaec9ab845ea61853a37a33c',1,'KodiAPI::GUI::CDialogProgress::IsCanceled()'],['../group__python___dialog_progress.html#gac07285e6206ee72c89fedc797e0ceede',1,'XBMCAddon::xbmcgui::DialogProgress::iscanceled()']]],
-  ['iscleared',['IsCleared',['../group___c_p_p___kodi_a_p_i___p_v_r___c_p_v_r_stream.html#ga324d4448e5c2dde1488e1a9b4d26c7ad',1,'KodiAPI::PVR::CPVRStream']]],
-  ['isconfirmed',['isConfirmed',['../group__python__keyboard.html#gaab2d1fb41e1fb7d56b43b5833e22a3f6',1,'XBMCAddon::xbmc::Keyboard']]],
-  ['isdrained',['IsDrained',['../group___c_p_p___kodi_a_p_i___audio_engine___c_stream.html#gad2f3302fdee3ed4ab1558bc373498057',1,'KodiAPI::AudioEngine::CStream']]],
-  ['isdraining',['IsDraining',['../group___c_p_p___kodi_a_p_i___audio_engine___c_stream.html#ga3659870694bbf153c0faf470cb4984cc',1,'KodiAPI::AudioEngine::CStream']]],
-  ['isfileitem',['IsFileItem',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item.html#gafcb84c749b00051b94bc1353b16da631',1,'KodiAPI::GUI::CListItem']]],
-  ['isfinished',['IsFinished',['../group___c_p_p___kodi_a_p_i___g_u_i___c_dialog_extended_progress.html#gaabe45b4d47077b54df0bb809eb41b8d5',1,'KodiAPI::GUI::CDialogExtendedProgress::IsFinished()'],['../group__python___dialog_progress_b_g.html#gafedd49742f1edc9ceb13de3b182413dd',1,'XBMCAddon::xbmcgui::DialogProgressBG::isFinished()']]],
-  ['isfolder',['IsFolder',['../group___c_p_p___kodi_a_p_i___add_on___c_v_f_s_dir_entry.html#gabfbbb37d69862b45d0f1079ab976fa37',1,'KodiAPI::AddOn::CVFSDirEntry::IsFolder()'],['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item.html#ga83746525efaa62e4a49358f908e014db',1,'KodiAPI::GUI::CListItem::IsFolder()']]],
-  ['iskeyboardactivated',['IsKeyboardActivated',['../group___c_p_p___kodi_a_p_i___g_u_i___dialog_keyboard.html#ga84a15873fc602d5f3cee645db60d56f3',1,'KodiAPI::GUI::DialogKeyboard']]],
-  ['ismuted',['IsMuted',['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga8f9e6bb9b9d17d4efc88d88c73915c16',1,'KodiAPI::AddOn::General']]],
-  ['isplaying',['IsPlaying',['../group___c_p_p___kodi_a_p_i___player___c_player.html#ga755f326e8b06e5f2807d64baf8bf582c',1,'KodiAPI::Player::CPlayer::IsPlaying()'],['../group__python___player.html#ga56a1b42c304ff6e28459b18a237d57e1',1,'XBMCAddon::xbmc::Player::isPlaying()']]],
-  ['isplayingaudio',['IsPlayingAudio',['../group___c_p_p___kodi_a_p_i___player___c_player.html#ga64d2795d7a491c9b86cf31e7907cae1b',1,'KodiAPI::Player::CPlayer::IsPlayingAudio()'],['../group__python___player.html#ga5691edc135aebc26fcb83110d23b33d2',1,'XBMCAddon::xbmc::Player::isPlayingAudio()']]],
-  ['isplayingrds',['IsPlayingRDS',['../group___c_p_p___kodi_a_p_i___player___c_player.html#gaae4a0dff198fb9394cfcb70a173509fe',1,'KodiAPI::Player::CPlayer::IsPlayingRDS()'],['../group__python___player.html#gadb60d29bad8cb1214883e6344fbe11cc',1,'XBMCAddon::xbmc::Player::isPlayingRDS()']]],
-  ['isplayingvideo',['isPlayingVideo',['../group__python___player.html#ga4d8d2d0daa6149cb36fc72a7bcb6a509',1,'XBMCAddon::xbmc::Player::isPlayingVideo()'],['../group___c_p_p___kodi_a_p_i___player___c_player.html#ga0bb55e1048a2c76fb6685f772292cbde',1,'KodiAPI::Player::CPlayer::IsPlayingVideo()']]],
-  ['isselected',['IsSelected',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item.html#ga8bd3773d1e4bc4a38c419fd6c92bdee2',1,'KodiAPI::GUI::CListItem::IsSelected()'],['../group___c_p_p___kodi_a_p_i___g_u_i___c_control_radio_button.html#gad29f489ee580d3d6d01b334aa186c323',1,'KodiAPI::GUI::CControlRadioButton::IsSelected()'],['../group__python__xbmcgui__listitem.html#ga2887792e8b30d1fd4e5f83d27694225d',1,'XBMCAddon::xbmcgui::ListItem::isSelected()'],['../group__python__xbmcgui__control__radiobutton.html#ga2887792e8b30d1fd4e5f83d27694225d',1,'XBMCAddon::xbmcgui::ControlRadioButton::isSelected()']]],
-  ['infotagmusic',['InfoTagMusic',['../group__python___info_tag_music.html',1,'']]],
-  ['infotagradiords',['InfoTagRadioRDS',['../group__python___info_tag_radio_r_d_s.html',1,'']]],
-  ['infotagvideo',['InfoTagVideo',['../group__python___info_tag_video.html',1,'']]]
+  ['toggle_20button_20control',['Toggle button control',['../skin__toggle_button_control.html',1,'skin_controls']]],
+  ['text_20box',['Text Box',['../_text__box.html',1,'skin_controls']]],
+  ['textviewer',['textviewer',['../group__python___dialog.html#gad24eabf4c8107d4674c017db09a193ae',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['translatepath',['translatePath',['../group__python__xbmc.html#ga762f48b2097ec25d938bf8596023b221',1,'ModuleXbmc.h']]]
 ];

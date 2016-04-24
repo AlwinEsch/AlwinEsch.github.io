@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['kodiapi_5ferrorcodetostring',['KodiAPI_ErrorCodeToString',['../group___kodi_addon___c_p_p___main.html#gaa3c8a9b6597526ba1ad04e1aa3998237',1,'KodiAPI']]],
-  ['kodiquit',['KodiQuit',['../group___c_p_p___kodi_a_p_i___add_on___general.html#gab47f37449d3128970255a3379f4ce4f1',1,'KodiAPI::AddOn::General']]],
-  ['kodiversion',['KodiVersion',['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga13b7ee51e76fa5851131220d2affada4',1,'KodiAPI::AddOn::General']]]
+  ['makelegalfilename',['makeLegalFilename',['../group__python__xbmc.html#gac40e0ecd5b1aa66a90c5c0918cd40491',1,'ModuleXbmc.h']]],
+  ['mkdir',['mkdir',['../group__python__xbmcvfs.html#ga07a90f3afa1401bd289deb4be40c2489',1,'ModuleXbmcvfs.h']]],
+  ['mkdirs',['mkdirs',['../group__python__xbmcvfs.html#gaf0a772cd125d92abecaf2da7482aa16d',1,'ModuleXbmcvfs.h']]],
+  ['mtime',['mtime',['../group__python__stat.html#ga87df9874162af616bbcd66e3f28fcd73',1,'XBMCAddon::xbmcvfs::Stat']]],
+  ['multiselect',['multiselect',['../group__python___dialog.html#ga30fb89d8f6bfa31e2b2eace4d4bd16fa',1,'XBMCAddon::xbmcgui::Dialog']]]
 ];

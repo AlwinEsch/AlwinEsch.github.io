@@ -7,6 +7,7 @@ var group__python__xbmcgui__listitem =
     [ "setIconImage", "group__python__xbmcgui__listitem.html#ga5856235a9611ec3b081d20c896d1c732", null ],
     [ "setThumbnailImage", "group__python__xbmcgui__listitem.html#gaa67ecad5a54d996f37ea94e2a67bea81", null ],
     [ "setArt", "group__python__xbmcgui__listitem.html#ga92f9aeb062ff50badcb8792d14a37394", null ],
+    [ "getArt", "group__python__xbmcgui__listitem.html#ga20bf1738625c38184321035e7c76472a", null ],
     [ "select", "group__python__xbmcgui__listitem.html#ga7ba82954c5d17b1a821abdf753ed339e", null ],
     [ "isSelected", "group__python__xbmcgui__listitem.html#ga2887792e8b30d1fd4e5f83d27694225d", null ],
     [ "setInfo", "group__python__xbmcgui__listitem.html#ga0f1e91e1d5aa61d8dd0eac90e8edbf18", null ],
