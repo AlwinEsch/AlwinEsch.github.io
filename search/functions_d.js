@@ -5,7 +5,7 @@ var searchData=
   ['onaction',['OnAction',['../group___c_p_p___kodi_a_p_i___g_u_i___c_window__callbacks.html#gad3fc2a106ba0143fa5d11d3df32d9c72',1,'KodiAPI::GUI::CWindow::OnAction()'],['../group__python__xbmcgui__window__cb.html#ga1749b41bda7533c34282371758d50764',1,'XBMCAddon::xbmcgui::Window::onAction()']]],
   ['oncleanfinished',['onCleanFinished',['../group__python__monitor.html#ga19798ab61e778754e7027112236024e7',1,'XBMCAddon::xbmc::Monitor']]],
   ['oncleanstarted',['onCleanStarted',['../group__python__monitor.html#gabf239f436cbd72bfff02253bd1972c7c',1,'XBMCAddon::xbmc::Monitor']]],
-  ['onclick',['OnClick',['../group___c_p_p___kodi_a_p_i___g_u_i___c_window__callbacks.html#gad741fef5d9a1d2bf07449694e9a9e602',1,'KodiAPI::GUI::CWindow::OnClick()'],['../group__python__xbmcgui__window__cb.html#ga445a9dbf7b6f62d05a85c391717c2d38',1,'XBMCAddon::xbmcgui::Window::onClick()']]],
+  ['onclick',['onClick',['../group__python__xbmcgui__window__cb.html#ga445a9dbf7b6f62d05a85c391717c2d38',1,'XBMCAddon::xbmcgui::Window::onClick()'],['../group___c_p_p___kodi_a_p_i___g_u_i___c_window__callbacks.html#gad741fef5d9a1d2bf07449694e9a9e602',1,'KodiAPI::GUI::CWindow::OnClick()']]],
   ['oncontrol',['onControl',['../group__python__xbmcgui__window__cb.html#ga79d2f6b4e69d0c24eaec96a4f451a95f',1,'XBMCAddon::xbmcgui::Window']]],
   ['ondatabasescanstarted',['onDatabaseScanStarted',['../group__python__monitor.html#ga5ee33edfc21fb06cfe99f892da9b234c',1,'XBMCAddon::xbmc::Monitor']]],
   ['ondatabaseupdated',['onDatabaseUpdated',['../group__python__monitor.html#ga006bbf59838d69f0e686a4c9bde2288f',1,'XBMCAddon::xbmc::Monitor']]],

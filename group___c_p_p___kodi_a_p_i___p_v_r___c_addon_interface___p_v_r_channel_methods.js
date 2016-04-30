@@ -1,5 +1,6 @@
 var group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_methods =
 [
+    [ "Definitions, structures and enumerators", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_methods___defs.html", null ],
     [ "GetChannelsAmount", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_methods.html#ga8ff7d7833bf0456ffb048eb2b9e23c48", null ],
     [ "GetChannels", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_methods.html#ga0310e0acf08e666c04ec45ae16f1f3f9", null ],
     [ "DeleteChannel", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_methods.html#gaca5b90d2b11864f8a884b2dae295183f", null ],

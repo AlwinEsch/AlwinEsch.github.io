@@ -1,5 +1,6 @@
 var group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_stream_methods =
 [
+    [ "Definitions, structures and enumerators", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_stream_methods___defs.html", null ],
     [ "OpenRecordedStream", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_stream_methods.html#ga64dec46d224b30e8f23150274f6ce162", null ],
     [ "CloseRecordedStream", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_stream_methods.html#ga44d114374d1259a65f2d33cc46f349b8", null ],
     [ "ReadRecordedStream", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_stream_methods.html#ga2d986b6d68d724bf7e25049d2e3614fc", null ],

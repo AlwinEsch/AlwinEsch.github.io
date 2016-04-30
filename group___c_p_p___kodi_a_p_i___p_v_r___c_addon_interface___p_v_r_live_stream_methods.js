@@ -1,5 +1,6 @@
 var group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods =
 [
+    [ "Definitions, structures and enumerators", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods___defs.html", null ],
     [ "OpenLiveStream", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#ga21cfc432638fbb472fdb028d4537b06b", null ],
     [ "CloseLiveStream", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#ga3c8976768808009408f4cce97bac43d1", null ],
     [ "ReadLiveStream", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#ga8e7b8d8c57f163886c10e198e04b1909", null ],

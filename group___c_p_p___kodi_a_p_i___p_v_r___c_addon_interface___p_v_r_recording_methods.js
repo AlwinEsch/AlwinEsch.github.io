@@ -1,5 +1,6 @@
 var group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods =
 [
+    [ "Definitions, structures and enumerators", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods___defs.html", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods___defs" ],
     [ "GetRecordingsAmount", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods.html#ga64185e2834b089d699104620b2358d53", null ],
     [ "GetRecordings", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods.html#ga7152a7b836c5dd30abe485b83a89caea", null ],
     [ "DeleteRecording", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods.html#ga5dca4e86e119a9189c72be0fe4b7bd7c", null ],
