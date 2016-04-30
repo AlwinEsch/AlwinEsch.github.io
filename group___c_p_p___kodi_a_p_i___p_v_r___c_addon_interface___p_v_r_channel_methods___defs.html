@@ -95,7 +95,89 @@ $(document).ready(function(){initNavTree('group___c_p_p___kodi_a_p_i___p_v_r___c
 <div class="title">Definitions, structures and enumerators<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group___c_p_p___kodi_a_p_i___p_v_r.html">8. PVR</a> &raquo; <a class="el" href="group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface.html">PVR Add-on (class KodiAPI::PVR::CAddonInterface)</a> &raquo; <a class="el" href="group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_methods.html">Channel methods</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b>Add-on definition values</b> </p>
+<hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="struct_p_v_r___c_h_a_n_n_e_l" id="struct_p_v_r___c_h_a_n_n_e_l"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct PVR_CHANNEL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Representation of a TV or radio channel. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ac0547402bbfcac9b093305b002fc52fa"></a>unsigned int</td>
+<td class="fieldname">
+iUniqueId</td>
+<td class="fielddoc">
+(required) unique identifier for this channel </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a8d3f2d7f3e790706074c60af62610987"></a>bool</td>
+<td class="fieldname">
+bIsRadio</td>
+<td class="fielddoc">
+(required) true if this is a radio channel, false if it's a TV channel </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a08bdcb8628b6bd40f38c25ad6ba319d3"></a>unsigned int</td>
+<td class="fieldname">
+iChannelNumber</td>
+<td class="fielddoc">
+(optional) channel number of this channel on the backend </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="aec5328bdc1414bd7baaa85daf4c3f574"></a>unsigned int</td>
+<td class="fieldname">
+iSubChannelNumber</td>
+<td class="fielddoc">
+(optional) sub channel number of this channel on the backend (ATSC) </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a51e1b0aba8395ce5bb035ae3ca1065f1"></a>char</td>
+<td class="fieldname">
+strChannelName[PVR_ADDON_NAME_STRING_LENGTH]</td>
+<td class="fielddoc">
+(optional) channel name given to this channel </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="add25fb92e953231b966fcb9a2b8826d9"></a>char</td>
+<td class="fieldname">
+strInputFormat[PVR_ADDON_INPUT_FORMAT_STRING_LENGTH]</td>
+<td class="fielddoc">
+<p>(optional) input format type. types can be found in ffmpeg/libavformat/allformats.c</p>
+<p>Leave empty if unknown </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a460ea988e5a8fdc57281755e6e5e8bcd"></a>char</td>
+<td class="fieldname">
+strStreamURL[PVR_ADDON_URL_STRING_LENGTH]</td>
+<td class="fielddoc">
+<p>(optional) the URL to use to access this channel.</p>
+<p>Leave empty to use this add-on to access the stream. Set to a path that's supported by Kodi otherwise. </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a5c7f4ec16b1afdef37500e34aaba911f"></a>unsigned int</td>
+<td class="fieldname">
+iEncryptionSystem</td>
+<td class="fielddoc">
+(optional) the encryption ID or CaID of this channel </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a36c179b6d0f370d4744c6d0393d1318b"></a>char</td>
+<td class="fieldname">
+strIconPath[PVR_ADDON_URL_STRING_LENGTH]</td>
+<td class="fielddoc">
+(optional) path to the channel icon (if present) </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a29794a095012cb573c1cbe24e0d63284"></a>bool</td>
+<td class="fieldname">
+bIsHidden</td>
+<td class="fielddoc">
+(optional) true if this channel is marked as hidden </td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

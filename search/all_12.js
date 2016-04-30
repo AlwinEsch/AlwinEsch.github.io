@@ -10,6 +10,7 @@ var searchData=
   ['lang_5fformats',['lang_formats',['../group___c_p_p___kodi_a_p_i___add_on___general___defs.html#gad481b851c163786e65d41b9ab47ed14e',1,'KodiAPI']]],
   ['lengthlivestream',['LengthLiveStream',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#ga40b33aa8649997d00e9c6f26af56da85',1,'KodiAPI::PVR::CAddonInterface']]],
   ['lengthrecordedstream',['LengthRecordedStream',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_stream_methods.html#ga015f4e4b07c8263f8fed28bef7b25215',1,'KodiAPI::PVR::CAddonInterface']]],
+  ['lifetimes',['lifetimes',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ab937ef36e7447eb32bdc2f2e45d81921',1,'PVR_TIMER_TYPE']]],
   ['list_20container',['List Container',['../_list__container.html',1,'skin_controls']]],
   ['listdir',['listdir',['../group__python__xbmcvfs.html#ga6fdd93a2195f65e549abb759bc151afc',1,'ModuleXbmcvfs.h']]],
   ['listitem',['ListItem',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_list_item.html',1,'XBMCAddon::xbmcgui']]],

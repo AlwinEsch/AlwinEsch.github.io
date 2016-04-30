@@ -1,5 +1,43 @@
 var group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs =
 [
+    [ "PVR_TIMER_TYPES", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ga1844a4f6a87a84f5faee1ebe3a978fde", [
+      [ "PVR_TIMER_TYPE_ATTRIBUTE_NONE", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdeae89c1c8e4f9757a36f3dd9e36bc90d7e", null ],
+      [ "PVR_TIMER_TYPE_IS_MANUAL", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdeaadc1a16a0a9b6a654b4d46580f0f9b00", null ],
+      [ "PVR_TIMER_TYPE_IS_REPEATING", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea7f58a6fb8bc3d770684b160d19661488", null ],
+      [ "PVR_TIMER_TYPE_IS_READONLY", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdeac48038d74f2c40e92c10db1457ca4110", null ],
+      [ "PVR_TIMER_TYPE_FORBIDS_NEW_INSTANCES", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea156337c8e73db1f9b9984137eaba2095", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_ENABLE_DISABLE", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea581ea23d1e85a2e7eaa60561fff95418", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_CHANNELS", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea8befbf6eccbdc8101ea126d43b17b2dd", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_START_TIME", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea491cdb59a5efc88cfab0832d6d6935ba", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_TITLE_EPG_MATCH", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea214b801bac67c18a9e4a466dc1d7e18b", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_FULLTEXT_EPG_MATCH", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea9b1c6d326b51a7c7a906f322a99b4888", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_FIRST_DAY", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdeadc025ba2738d614ad58144c8a7d109d8", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_WEEKDAYS", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea77c43580d36f09810a9447770606a50f", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_RECORD_ONLY_NEW_EPISODES", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea7f004e8bca23f648bb86b96b303709f6", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_START_END_MARGIN", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea1ecda5e8a2c41bd18ab027c0d12c68fc", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_PRIORITY", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdeaa4d1d177f63b4c2427a6dca274099a72", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_LIFETIME", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdeaa34723d5372f4ffcbe5855039e144c49", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_RECORDING_FOLDERS", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea4f8d65cb348fbb250e53923fbf2d31f8", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_RECORDING_GROUP", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea0dcfd8f2c49f0dba5466d98f366e76c5", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_END_TIME", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdeaa3b272f13a3e5e0b1a40ca54d6b0d998", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_START_ANYTIME", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdead37b6b5ac3dce0da541f448fadba6ffd", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_END_ANYTIME", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea213611560a86e4b50e66fd8af207d629", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_MAX_RECORDINGS", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea8ac6c36038b91bfe81c577bd26d40611", null ],
+      [ "PVR_TIMER_TYPE_REQUIRES_EPG_TAG_ON_CREATE", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea563240dd6893a5589b0002365e3dd728", null ],
+      [ "PVR_TIMER_TYPE_FORBIDS_EPG_TAG_ON_CREATE", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea057a307e3abc6a6f03305f2c067d3987", null ],
+      [ "PVR_TIMER_TYPE_REQUIRES_EPG_SERIES_ON_CREATE", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga1844a4f6a87a84f5faee1ebe3a978fdea74223b6ec79fe6196122c53cce984d40", null ]
+    ] ],
+    [ "PVR_WEEKDAYS", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gac402ac6124283bf269402e7b34402c73", [
+      [ "PVR_WEEKDAY_NONE", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ggac402ac6124283bf269402e7b34402c73a50446cceea2b9f53d7543ed15d3c1914", null ],
+      [ "PVR_WEEKDAY_MONDAY", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ggac402ac6124283bf269402e7b34402c73a59680eef417028455f48b1991a82401f", null ],
+      [ "PVR_WEEKDAY_TUESDAY", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ggac402ac6124283bf269402e7b34402c73a8c62e5ec16d2e640aac7dc0782daf662", null ],
+      [ "PVR_WEEKDAY_WEDNESDAY", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ggac402ac6124283bf269402e7b34402c73a4d48c9b90f28b4555073df1c5ac94ab4", null ],
+      [ "PVR_WEEKDAY_THURSDAY", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ggac402ac6124283bf269402e7b34402c73abf756d2037657fd61f98e76df7222d8b", null ],
+      [ "PVR_WEEKDAY_FRIDAY", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ggac402ac6124283bf269402e7b34402c73a2b9d817379455606bde9590510fddda7", null ],
+      [ "PVR_WEEKDAY_SATURDAY", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ggac402ac6124283bf269402e7b34402c73a233fc4d54d940c8fb5d57257b4b0f9fc", null ],
+      [ "PVR_WEEKDAY_SUNDAY", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ggac402ac6124283bf269402e7b34402c73ad9273ac4938d97f0470028b3fa18a765", null ],
+      [ "PVR_WEEKDAY_ALLDAYS", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ggac402ac6124283bf269402e7b34402c73a31b583e58a6975cc388345ff225c7096", null ]
+    ] ],
     [ "PVR_TIMER_STATE", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ga13841ca455933a42daf0ab20ea26895b", [
       [ "PVR_TIMER_STATE_NEW", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga13841ca455933a42daf0ab20ea26895ba00688c4ed4e5b30b40b98c50f5890311", null ],
       [ "PVR_TIMER_STATE_SCHEDULED", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga13841ca455933a42daf0ab20ea26895babd184ae5ba5aa8b2ef9a0e847337a76a", null ],
@@ -11,5 +49,10 @@ var group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods
       [ "PVR_TIMER_STATE_CONFLICT_NOK", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga13841ca455933a42daf0ab20ea26895ba0c0fa115ada04bf38565a432ffe02607", null ],
       [ "PVR_TIMER_STATE_ERROR", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga13841ca455933a42daf0ab20ea26895ba4e1fd5cabb8d7133f02e827827d37baa", null ],
       [ "PVR_TIMER_STATE_DISABLED", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gga13841ca455933a42daf0ab20ea26895ba27de93886160256576af2f415107c29a", null ]
-    ] ]
+    ] ],
+    [ "PVR_TIMER_TYPE_NONE", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gaca7987d78ab014b0bfecbc1185c67730", null ],
+    [ "PVR_TIMER_NO_CLIENT_INDEX", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ga967a7bb5ceddda540a00ef11cd6706aa", null ],
+    [ "PVR_TIMER_NO_PARENT", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gae3d69e183b8d6e180b38292069a62c0a", null ],
+    [ "PVR_TIMER_NO_EPG_UID", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gaa523be3d6b225b9a9f3b2586204e14ce", null ],
+    [ "PVR_TIMER_ANY_CHANNEL", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#gae5aa728f117f35d9b476557b79ebd0ed", null ]
 ];

@@ -1,10 +1,17 @@
 var searchData=
 [
+  ['bendanytime',['bEndAnyTime',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ad82db0773f70403b286bd5f2c3863c5f',1,'PVR_TIMER']]],
+  ['bfulltextepgsearch',['bFullTextEpgSearch',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#a1e57bc8473273653f3dea214bc803564',1,'PVR_TIMER']]],
   ['bhandlesdemuxing',['bHandlesDemuxing',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#aa0a130028e1cda5c3f8e9fb13fbc7ac7',1,'PVR_ADDON_CAPABILITIES']]],
   ['bhandlesinputstream',['bHandlesInputStream',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a359e8015ac7906c2088fe0ecb3ec648f',1,'PVR_ADDON_CAPABILITIES']]],
+  ['bisdeleted',['bIsDeleted',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods___defs.html#a48daaa3f4c00e4bacd799898340a2ddc',1,'PVR_RECORDING']]],
+  ['bishidden',['bIsHidden',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_methods___defs.html#a29794a095012cb573c1cbe24e0d63284',1,'PVR_CHANNEL']]],
+  ['bisradio',['bIsRadio',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_methods___defs.html#a8d3f2d7f3e790706074c60af62610987',1,'PVR_CHANNEL::bIsRadio()'],['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_group_methods___defs.html#a8d3f2d7f3e790706074c60af62610987',1,'PVR_CHANNEL_GROUP::bIsRadio()']]],
+  ['bnotify',['bNotify',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_e_p_g_methods___defs.html#ad273493d2cc94a0960638fc1360a2ec7',1,'EPG_TAG']]],
   ['browse',['browse',['../group__python___dialog.html#ga2ece1ca620087a97233713710eac1b83',1,'XBMCAddon::xbmcgui::Dialog']]],
   ['browsemultiple',['browseMultiple',['../group__python___dialog.html#ga987efec260c6ee5a457c96a9c3fcba2f',1,'XBMCAddon::xbmcgui::Dialog']]],
   ['browsesingle',['browseSingle',['../group__python___dialog.html#ga5ee90196e7b1d6e8d2f60cbba1f0ccef',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['bstartanytime',['bStartAnyTime',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#a3d040da25edfd9c7b30e47f641fa1db8',1,'PVR_TIMER']]],
   ['bsupportschannelgroups',['bSupportsChannelGroups',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a8e4d51f8fa63513d7311e835b65d584a',1,'PVR_ADDON_CAPABILITIES']]],
   ['bsupportschannelscan',['bSupportsChannelScan',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a98a9e9a76ed7fb3a7e750e20235303f3',1,'PVR_ADDON_CAPABILITIES']]],
   ['bsupportschannelsettings',['bSupportsChannelSettings',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a0435c9bf30ea1b1395b71054d3682efc',1,'PVR_ADDON_CAPABILITIES']]],

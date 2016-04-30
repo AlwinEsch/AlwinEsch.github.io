@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['order',['order',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item___video_info_tag.html#ac85d5511fdb8d162a7278bfb440ae420',1,'ADDON_VideoInfoTag_Cast']]]
+  ['lifetimes',['lifetimes',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ab937ef36e7447eb32bdc2f2e45d81921',1,'PVR_TIMER_TYPE']]]
 ];

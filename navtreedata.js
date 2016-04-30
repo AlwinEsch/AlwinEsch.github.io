@@ -22,9 +22,9 @@ var NAVTREEINDEX =
 "group___c_p_p___kodi_a_p_i___g_u_i___c_list_item.html#ga482218f1a2677c6665c9d57dfaa86c22",
 "group___c_p_p___kodi_a_p_i___g_u_i___c_window___defs.html#gga42753b64a4c9b01785035a18e768a43da06d407cad7f882f419162ab9b628fb31",
 "group___c_p_p___kodi_a_p_i___g_u_i___general.html#ga45844d515e52c611383bf9724c91312b",
-"group___c_p_p___kodi_a_p_i___player___c_play_list.html#ga3b6ca85032d49dfd758dcaad70db8275",
-"group__python__monitor.html#ga0e49e1b7c38dd22ef51276ad4efbd7e9",
-"group__python__xbmcwsgi___wsgi_input_stream.html"
+"group___c_p_p___kodi_a_p_i___p_v_r___general___defs.html#ggaa434a9da21b265c38eade0b452d8d58ba887894d183eef119c3dba5c40c3b71aa",
+"group__python___info_tag_video.html#gadf61e733be7f62a3f4bedbe7d2e02ec2",
+"group__python__xbmcgui__listitem.html#ga9d55cae30190423090e954af1166a34f"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

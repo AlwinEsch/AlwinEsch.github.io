@@ -18,7 +18,8 @@ var searchData=
   ['togglemute',['ToggleMute',['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga33da889fbfe7ad24feb501f694715fbc',1,'KodiAPI::AddOn::General']]],
   ['total',['total',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item___video_info_tag.html#a10a770f02ba0757d779ece8e2ee384f5',1,'ADDON_VideoInfoTag_Resume']]],
   ['translateaddonstatus',['TranslateAddonStatus',['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga30315a5b2b42f1e1bbb41424503a870f',1,'KodiAPI::AddOn::General']]],
-  ['translatepath',['translatePath',['../group__python__xbmc.html#ga762f48b2097ec25d938bf8596023b221',1,'translatePath():&#160;ModuleXbmc.h'],['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga568234911f33e049937f68cb5c20f72b',1,'KodiAPI::AddOn::General::TranslatePath()']]],
+  ['translatepath',['TranslatePath',['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga568234911f33e049937f68cb5c20f72b',1,'KodiAPI::AddOn::General::TranslatePath()'],['../group__python__xbmc.html#ga762f48b2097ec25d938bf8596023b221',1,'translatePath():&#160;ModuleXbmc.h']]],
   ['triggerscan',['TriggerScan',['../group___c_p_p___kodi_a_p_i___peripheral.html#ga71e2010f9a35616f7a4024517f052d1b',1,'KodiAPI::Peripheral']]],
-  ['truncate',['Truncate',['../group___c_p_p___kodi_a_p_i___add_on___c_v_f_s_file.html#ga97dbc6093302f0ced52952a2737407ec',1,'KodiAPI::AddOn::CVFSFile']]]
+  ['truncate',['Truncate',['../group___c_p_p___kodi_a_p_i___add_on___c_v_f_s_file.html#ga97dbc6093302f0ced52952a2737407ec',1,'KodiAPI::AddOn::CVFSFile']]],
+  ['type',['type',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods___defs.html#acfe0fa72ffa7e97ef64917c24032188d',1,'PVR_EDL_ENTRY']]]
 ];

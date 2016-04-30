@@ -97,6 +97,220 @@ $(document).ready(function(){initNavTree('group___c_p_p___kodi_a_p_i___p_v_r___c
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b>Add-on definition values</b> </p>
+<hr/><h2 class="groupheader">Class Documentation</h2>
+<a name="struct_p_v_r___e_d_l___e_n_t_r_y" id="struct_p_v_r___e_d_l___e_n_t_r_y"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct PVR_EDL_ENTRY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Edit definition list (EDL) entry structure. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a9b7656b922ea4ec96097d7380c0e61fe"></a>int64_t</td>
+<td class="fieldname">
+start</td>
+<td class="fielddoc">
+Entry start time as milliseconds. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ad3882b6f2abb8df63ecc34dc73c4e886"></a>int64_t</td>
+<td class="fieldname">
+end</td>
+<td class="fielddoc">
+Entry end time as milliseconds. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="acfe0fa72ffa7e97ef64917c24032188d"></a>PVR_EDL_TYPE</td>
+<td class="fieldname">
+type</td>
+<td class="fielddoc">
+With <a class="el" href="group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods___defs.html#PVR_EDL_TYPE">PVR_EDL_TYPE</a> defined type to use for. </td></tr>
+</table>
+
+</div>
+</div>
+<a name="struct_p_v_r___r_e_c_o_r_d_i_n_g" id="struct_p_v_r___r_e_c_o_r_d_i_n_g"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct PVR_RECORDING</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Representation of a recording. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Class Members</th></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="aef4e94454575c3e4cd40ad4e42bed2e5"></a>char</td>
+<td class="fieldname">
+strRecordingId[PVR_ADDON_NAME_STRING_LENGTH]</td>
+<td class="fielddoc">
+(required) unique id of the recording on the client. </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a18dde00b3f85145c5749e79f4dbbb4e4"></a>char</td>
+<td class="fieldname">
+strTitle[PVR_ADDON_NAME_STRING_LENGTH]</td>
+<td class="fielddoc">
+(required) the title of this recording </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a2c7051f0a7a51552c28712d860450e27"></a>char</td>
+<td class="fieldname">
+strEpisodeName[PVR_ADDON_NAME_STRING_LENGTH]</td>
+<td class="fielddoc">
+(optional) episode name (also known as subtitle) </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="af1be9ffbad1a1d8a8a6bae04f82bb0ea"></a>int</td>
+<td class="fieldname">
+iSeriesNumber</td>
+<td class="fielddoc">
+<p>(optional) series number (usually called season).</p>
+<p>Set to "0" for specials/pilot. For 'invalid' see iEpisodeNumber or set to -1 </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a57de17dd0f1bb774def03159a67ccf1b"></a>int</td>
+<td class="fieldname">
+iEpisodeNumber</td>
+<td class="fielddoc">
+<p>(optional) episode number within the "iSeriesNumber" season. For 'invalid' set to -1 or iSeriesNumber=iEpisodeNumber=0 to show both are invalid </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="aff44b11da9adef57c6766912ab82bf7d"></a>int</td>
+<td class="fieldname">
+iYear</td>
+<td class="fielddoc">
+<p>(optional) year of first release (use to identify a specific movie re-make) / first airing for TV shows. Set to '0' for invalid. </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a460ea988e5a8fdc57281755e6e5e8bcd"></a>char</td>
+<td class="fieldname">
+strStreamURL[PVR_ADDON_URL_STRING_LENGTH]</td>
+<td class="fielddoc">
+(required) stream URL to access this recording </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a2ab5a5811eac9c4afe1a39a2f3f0108d"></a>char</td>
+<td class="fieldname">
+strDirectory[PVR_ADDON_URL_STRING_LENGTH]</td>
+<td class="fielddoc">
+(optional) directory of this recording on the client </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="aafc6545f8486270034b5a27e84d51b9a"></a>char</td>
+<td class="fieldname">
+strPlotOutline[PVR_ADDON_DESC_STRING_LENGTH]</td>
+<td class="fielddoc">
+(optional) plot outline </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="aa2cb7049352e0f1136e1ec723e144dcf"></a>char</td>
+<td class="fieldname">
+strPlot[PVR_ADDON_DESC_STRING_LENGTH]</td>
+<td class="fielddoc">
+(optional) plot </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a51e1b0aba8395ce5bb035ae3ca1065f1"></a>char</td>
+<td class="fieldname">
+strChannelName[PVR_ADDON_NAME_STRING_LENGTH]</td>
+<td class="fielddoc">
+(optional) channel name </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a36c179b6d0f370d4744c6d0393d1318b"></a>char</td>
+<td class="fieldname">
+strIconPath[PVR_ADDON_URL_STRING_LENGTH]</td>
+<td class="fielddoc">
+(optional) icon path </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ac60767abe31db53cf4733563ee44c3a3"></a>char</td>
+<td class="fieldname">
+strThumbnailPath[PVR_ADDON_URL_STRING_LENGTH]</td>
+<td class="fielddoc">
+(optional) thumbnail path </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="adc46a9a132c8e842d92d2963e011bc5a"></a>char</td>
+<td class="fieldname">
+strFanartPath[PVR_ADDON_URL_STRING_LENGTH]</td>
+<td class="fielddoc">
+(optional) fanart path </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ad7dede26284b19819a6e4cc9313dbbc6"></a>time_t</td>
+<td class="fieldname">
+recordingTime</td>
+<td class="fielddoc">
+(optional) start time of the recording </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a773539c25eb49feefbf01daae7ed8a9f"></a>int</td>
+<td class="fieldname">
+iDuration</td>
+<td class="fielddoc">
+(optional) duration of the recording in seconds </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ad455cbeec0f2922ce65765170c7dc4dc"></a>int</td>
+<td class="fieldname">
+iPriority</td>
+<td class="fielddoc">
+(optional) priority of this recording (from 0 - 100) </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ac7ad6c1ba8e39c8e9e3dd5973e8f4c29"></a>int</td>
+<td class="fieldname">
+iLifetime</td>
+<td class="fielddoc">
+(optional) life time in days of this recording </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ae1fcfda6c86ca6afbf583117363a7bac"></a>int</td>
+<td class="fieldname">
+iGenreType</td>
+<td class="fielddoc">
+(optional) genre type </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a4a59e14dd7a234942305274b4de31ec6"></a>int</td>
+<td class="fieldname">
+iGenreSubType</td>
+<td class="fielddoc">
+(optional) genre sub type </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ad2bc04443aa68b56ab718cf44598ddb2"></a>int</td>
+<td class="fieldname">
+iPlayCount</td>
+<td class="fielddoc">
+(optional) play count of this recording on the client </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a5ced863f935e4d3df93818375015a371"></a>int</td>
+<td class="fieldname">
+iLastPlayedPosition</td>
+<td class="fielddoc">
+(optional) last played position of this recording on the client </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a48daaa3f4c00e4bacd799898340a2ddc"></a>bool</td>
+<td class="fieldname">
+bIsDeleted</td>
+<td class="fielddoc">
+(optional) shows this recording is deleted and can be undelete </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a182e984ba75ee374597e55f07b871d2c"></a>unsigned int</td>
+<td class="fieldname">
+iEpgEventId</td>
+<td class="fielddoc">
+<p>(optional) EPG event id associated with this recording. Valid ids must be greater than EPG_TAG_INVALID_UID. </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="adb28406b5d5c934fcc5ab0afa359dd96"></a>int</td>
+<td class="fieldname">
+iChannelUid</td>
+<td class="fielddoc">
+<p>(optional) unique identifier of the channel for this recording. PVR_CHANNEL_INVALID_UID denotes that channel uid is not available. </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a29ed237c011ae5563b1b4293e0a5020c"></a>PVR_RECORDING_CHANNEL_TYPE</td>
+<td class="fieldname">
+channelType</td>
+<td class="fielddoc">
+<p>(optional) channel type. Set to PVR_RECORDING_CHANNEL_TYPE_UNKNOWN if the type cannot be determined. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="ga7a6a447d2d318bc8ae3cfa098f14dc0b"></a>
 <div class="memitem">
@@ -118,6 +332,35 @@ $(document).ready(function(){initNavTree('group___c_p_p___kodi_a_p_i___p_v_r___c
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="gga7a6a447d2d318bc8ae3cfa098f14dc0ba54bac6899575b3581cdc92eebad7e544"></a>PVR_RECORDING_CHANNEL_TYPE_RADIO&#160;</td><td class="fielddoc">
 <p>radio channel </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga128ed1eef185d2db881b8c59e7ab5668"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum PVR_EDL_TYPE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Edit definition list (EDL) </p>
+<p><a class="anchor" id="PVR_EDL_TYPE"></a>Used on <a class="el" href="group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods___defs.html#struct_p_v_r___e_d_l___e_n_t_r_y" title="Edit definition list (EDL) entry structure. ">PVR_EDL_ENTRY</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga128ed1eef185d2db881b8c59e7ab5668aaa1eb6463352ee57ac8ebc1d68b68582"></a>PVR_EDL_TYPE_CUT&#160;</td><td class="fielddoc">
+<p>cut (completly remove content) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga128ed1eef185d2db881b8c59e7ab5668aced140d3e8bc82a4ea9872c18b76b149"></a>PVR_EDL_TYPE_MUTE&#160;</td><td class="fielddoc">
+<p>mute audio </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga128ed1eef185d2db881b8c59e7ab5668a53713e451de7cce565ef8a7e6fcc678c"></a>PVR_EDL_TYPE_SCENE&#160;</td><td class="fielddoc">
+<p>scene markers (chapter seeking) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga128ed1eef185d2db881b8c59e7ab5668a1857e5b0d7db4b7b3acdff088d612d5f"></a>PVR_EDL_TYPE_COMBREAK&#160;</td><td class="fielddoc">
+<p>commercial breaks </p>
 </td></tr>
 </table>
 

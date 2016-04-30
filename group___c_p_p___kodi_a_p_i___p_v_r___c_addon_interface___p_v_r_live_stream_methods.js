@@ -8,7 +8,7 @@ var group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_m
     [ "PositionLiveStream", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#ga37bcddf7aa68769dfda5018b2ac0cdc3", null ],
     [ "LengthLiveStream", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#ga40b33aa8649997d00e9c6f26af56da85", null ],
     [ "SwitchChannel", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#ga5cf10d6e1304b3350cf3a3b95e5f402a", null ],
-    [ "GetChannelSwitchDelay", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#ga53ad6d40b6e05540ed0ea9408d918004", null ],
+    [ "GetChannelSwitchDelay", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#gaca92fdd76948e4e18c77b30e57e7a64f", null ],
     [ "SignalStatus", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#ga4480787e192e8201532c6e7e26afb2aa", null ],
     [ "GetLiveStreamURL", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#gaed0dc682dce71b1622448984ab2e2d51", null ],
     [ "GetStreamProperties", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods.html#gaba60e2e6d4da2d571405580196953a49", null ],

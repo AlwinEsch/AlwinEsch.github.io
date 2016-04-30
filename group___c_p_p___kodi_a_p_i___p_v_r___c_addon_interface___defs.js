@@ -21,5 +21,6 @@ var group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs =
       [ "PVR_MENUHOOK_RECORDING", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#ggaec2fca812b6f20d491aba91dcb442b74a7fb9f5c4072e4cf5beb272e96006bcc7", null ],
       [ "PVR_MENUHOOK_DELETED_RECORDING", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#ggaec2fca812b6f20d491aba91dcb442b74a53ed72af909c5bf62cf6d770e066309f", null ],
       [ "PVR_MENUHOOK_SETTING", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#ggaec2fca812b6f20d491aba91dcb442b74a5f1926ee4e173a1956764bf775444507", null ]
-    ] ]
+    ] ],
+    [ "PVR_CHANNEL_INVALID_UID", "group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#ga91eac7f6449ae814e89f7ac8df065b95", null ]
 ];
