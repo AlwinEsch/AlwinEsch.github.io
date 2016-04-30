@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Progress Control</title>
+<title>Kodi Development: Mover Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,59 +92,44 @@ $(document).ready(function(){initNavTree('a00036.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Progress Control </div>  </div>
+<div class="title">Mover Control </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Progress_Control_sect1">Example</a></li>
-<li class="level1"><a href="#Progress_Control_sect2">Available tags</a></li>
-<li class="level1"><a href="#Progress_Control_sect3">See also</a></li>
+<ul><li class="level1"><a href="#Mover_Control_sect1">Example</a></li>
+<li class="level1"><a href="#Mover_Control_sect2">Available tags</a></li>
+<li class="level1"><a href="#Mover_Control_sect3">See also</a></li>
 </ul>
 </div>
-<div class="textblock"><p><b>Used to show the progress of a particular operation.</b></p>
-<p>The progress control is used to show the progress of an item that may take a long time, or to show how far through a movie you are. You can choose the position, size, and look of the progress control.</p>
+<div class="textblock"><p><b>Used in the calibration screens.</b></p>
+<p>The mover control is used for the screen calibration portions of Kodi. You can choose the size and look of the mover control.</p>
 <hr/>
- <h1><a class="anchor" id="Progress_Control_sect1"></a>
+ <h1><a class="anchor" id="Mover_Control_sect1"></a>
 Example</h1>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;progress&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;12&quot;</span>&gt;</div>
-<div class="line">      &lt;description&gt;My first progress control&lt;/description&gt;</div>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;mover&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;3&quot;</span>&gt;</div>
+<div class="line">      &lt;description&gt;My first mover control&lt;/description&gt;</div>
 <div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
 <div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
 <div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line">      &lt;height&gt;30&lt;/height&gt;</div>
-<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
-<div class="line">      &lt;reveal&gt;<span class="keyword">false</span>&lt;/reveal&gt;</div>
-<div class="line">      &lt;texturebg&gt;mybackgroundtexture.png&lt;/texturebg&gt;</div>
-<div class="line">      &lt;lefttexture&gt;mydowntexture.png&lt;/lefttexture&gt;</div>
-<div class="line">      &lt;midtexture&gt;mymidtexture.png&lt;/midtexture&gt;</div>
-<div class="line">      &lt;righttexture&gt;myrighttexture.png&lt;/righttexture&gt;</div>
-<div class="line">      &lt;overlaytexture&gt;myoverlaytexture.png&lt;/overlaytexture&gt;</div>
-<div class="line">      &lt;info&gt;&lt;/info&gt;</div>
+<div class="line">      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line">      &lt;texturefocus&gt;mytexture.png&lt;/texturefocus&gt;</div>
+<div class="line">      &lt;texturenofocus&gt;mytexture.png&lt;/texturenofocus&gt;</div>
+<div class="line">      &lt;pulseonselect&gt;<span class="keyword">true</span>&lt;/pulseonselect&gt;</div>
 <div class="line">&lt;/control&gt;</div>
 </div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Progress_Control_sect2"></a>
+ <h1><a class="anchor" id="Mover_Control_sect2"></a>
 Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is lower case only. This is important, as xml tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">reveal </td><td align="left">If set to true the midtexture will reveal itself instead of stretching to fill the gap (works best when its the same size as <b>texturebg</b>) </td></tr>
+<td align="right">texturefocus </td><td align="left">Specifies the image file which should be displayed when the mover has focus. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
 <tr>
-<td align="right">texturebg </td><td align="left">Specifies the image file which should be displayed in the background of the progress control. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
-<tr>
-<td align="right">lefttexture </td><td align="left">Specifies the image file which should be displayed for the left side of the progress bar. This is rendered on the left side of the bar. </td></tr>
-<tr>
-<td align="right">midtexture </td><td align="left">Specifies the image file which should be displayed for the middle portion of the progress bar. This is the <code>fill</code> texture used to fill up the bar. It's positioned on the right of the <b><code>&lt;lefttexture&gt;</code></b> texture, and fills the gap between the <b><code>&lt;lefttexture&gt;</code></b> and <b><code>&lt;righttexture&gt;</code></b> textures, depending on how far progressed the item is. </td></tr>
-<tr>
-<td align="right">righttexture </td><td align="left">Specifies the image file which should be displayed for the right side of the progress bar. This is rendered on the right side of the bar. </td></tr>
-<tr>
-<td align="right">overlaytexture </td><td align="left">Specifies the image file which should be displayed over the top of all other images in the progress bar. It is centered vertically and horizontally within the space taken up by the background image. </td></tr>
-<tr>
-<td align="right">info </td><td align="left">Specifies the information that the progress bar is reporting on. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
+<td align="right">texturenofocus </td><td align="left">Specifies the image file which should be displayed when the mover does not have focus. </td></tr>
 </table>
 <hr/>
- <h1><a class="anchor" id="Progress_Control_sect3"></a>
+ <h1><a class="anchor" id="Mover_Control_sect3"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>

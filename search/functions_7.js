@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['input',['input',['../group__python___dialog.html#ga39e614212c79458d71e289d77783baeb',1,'XBMCAddon::xbmcgui::Dialog']]],
-  ['interceptorclear',['interceptorClear',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#a93c985f5f8fed6487de34c88dcb40b5a',1,'XBMCAddon::xbmcgui::Window']]],
-  ['iscanceled',['iscanceled',['../group__python___dialog_progress.html#gac07285e6206ee72c89fedc797e0ceede',1,'XBMCAddon::xbmcgui::DialogProgress']]],
-  ['isconfirmed',['isConfirmed',['../group__python__keyboard.html#gaab2d1fb41e1fb7d56b43b5833e22a3f6',1,'XBMCAddon::xbmc::Keyboard']]],
-  ['isfinished',['isFinished',['../group__python___dialog_progress_b_g.html#gafedd49742f1edc9ceb13de3b182413dd',1,'XBMCAddon::xbmcgui::DialogProgressBG']]],
-  ['isplaying',['isPlaying',['../group__python___player.html#ga56a1b42c304ff6e28459b18a237d57e1',1,'XBMCAddon::xbmc::Player']]],
-  ['isplayingaudio',['isPlayingAudio',['../group__python___player.html#ga5691edc135aebc26fcb83110d23b33d2',1,'XBMCAddon::xbmc::Player']]],
-  ['isplayingrds',['isPlayingRDS',['../group__python___player.html#gadb60d29bad8cb1214883e6344fbe11cc',1,'XBMCAddon::xbmc::Player']]],
-  ['isplayingvideo',['isPlayingVideo',['../group__python___player.html#ga4d8d2d0daa6149cb36fc72a7bcb6a509',1,'XBMCAddon::xbmc::Player']]],
-  ['isselected',['isSelected',['../group__python__xbmcgui__listitem.html#ga2887792e8b30d1fd4e5f83d27694225d',1,'XBMCAddon::xbmcgui::ListItem::isSelected()'],['../group__python__xbmcgui__control__radiobutton.html#ga2887792e8b30d1fd4e5f83d27694225d',1,'XBMCAddon::xbmcgui::ControlRadioButton::isSelected()']]]
+  ['hasart',['HasArt',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item.html#ga0208983acdcf01ed6f92494ce693f335',1,'KodiAPI::GUI::CListItem']]],
+  ['hasicon',['HasIcon',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item.html#ga56e0cc79e6f0d67ab934a22f5db58611',1,'KodiAPI::GUI::CListItem']]],
+  ['hasoverlay',['HasOverlay',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item.html#ga320f1663a24a839ab004303f87018de7',1,'KodiAPI::GUI::CListItem']]],
+  ['hasproperties',['HasProperties',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item.html#gab226449aceca3197243a93c9302bb11d',1,'KodiAPI::GUI::CListItem']]],
+  ['hasproperty',['HasProperty',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item.html#ga0d03d0a645db0f7ba8bc4cd94a77f8d6',1,'KodiAPI::GUI::CListItem']]],
+  ['htpcrestart',['HTPCRestart',['../group___c_p_p___kodi_a_p_i___add_on___general.html#gabe81ee133e3f827c74210934ce72a037',1,'KodiAPI::AddOn::General']]],
+  ['htpcshutdown',['HTPCShutdown',['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga0b1951ecac856b66efb8c48598910fa9',1,'KodiAPI::AddOn::General']]]
 ];

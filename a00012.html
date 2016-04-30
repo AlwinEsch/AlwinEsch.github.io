@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Edit control</title>
+<title>Kodi Development: Skin Development</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,64 +92,15 @@ $(document).ready(function(){initNavTree('a00012.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Edit control </div>  </div>
+<div class="title">Skin Development </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#skin_Edit_control_sect1">Example</a></li>
-<li class="level1"><a href="#skin_Edit_control_sect2">Available tags</a></li>
-<li class="level1"><a href="#skin_Edit_control_sect3">See also</a></li>
-</ul>
-</div>
-<div class="textblock"><p><b>Used as an input control for the osd keyboard and other input fields.</b></p>
-<p>The edit control allows a user to input text in Kodi. You can choose the font, size, colour, location and header of the text to be displayed. </p><hr/>
- <h1><a class="anchor" id="skin_Edit_control_sect1"></a>
-Example</h1>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;edit&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
-<div class="line">      &lt;description&gt;My First edit control&lt;/description&gt;</div>
-<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
-<div class="line">      &lt;aligny&gt;center&lt;/aligny&gt;</div>
-<div class="line">      &lt;label&gt;Search&lt;/label&gt;</div>
-<div class="line">      &lt;hinttext&gt;Enter search <span class="keywordtype">string</span>&lt;/hinttext&gt;</div>
-<div class="line">      &lt;font&gt;font14&lt;/font&gt;</div>
-<div class="line">      &lt;textoffsetx&gt;10&lt;/textoffsetx&gt;</div>
-<div class="line">      &lt;textcolor&gt;FFB2D4F5&lt;/textcolor&gt;</div>
-<div class="line">      &lt;disabledcolor&gt;FF000000&lt;/disabledcolor&gt;</div>
-<div class="line">      &lt;invalidcolor&gt;FFFFFFFF&lt;/invalidcolor&gt;</div>
-<div class="line">      &lt;texturefocus&gt;button-focus.png&lt;/texturefocus&gt;</div>
-<div class="line">      &lt;texturenofocus&gt;button-nofocus.png&lt;/texturenofocus&gt;</div>
-<div class="line">      &lt;pulseonselect&gt;no&lt;/pulseonselect&gt;</div>
-<div class="line">&lt;/control&gt;</div>
-</div><!-- fragment --> <hr/>
- <h1><a class="anchor" id="skin_Edit_control_sect2"></a>
-Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
-<table class="doxtable">
-<tr>
-<th align="right">Tag </th><th align="left">Description  </th></tr>
-<tr>
-<td align="right">aligny </td><td align="left">Can be top or center. Aligns the text within its given control <b><code>&lt;height&gt;</code></b>. Defaults to top </td></tr>
-<tr>
-<td align="right">label </td><td align="left">Specifies the header text which should be shown. You should specify an entry from the <b>strings.xml</b> here (either the Kodi strings.xml or your skin's strings.xml file), however you may also hardcode a piece of text also if you wish, though of course it will not be localized. You can use the full <a href="http://kodi.wiki/view/Label_Formatting">label formatting syntax</a> and <a href="http://kodi.wiki/view/Label_Parsing">you may also specify more than one piece of information here by using the $INFO and $LOCALIZE formats.strings.xml</a>) </td></tr>
-<tr>
-<td align="right">hinttext </td><td align="left">Specifies the text which should be displayed in the edit label control, until the user enters some text. It can be used to provide a clue as to what a user should enter in this control. </td></tr>
-<tr>
-<td align="right">font </td><td align="left">Specifies the font to use from the <b>font.xml</b> file. </td></tr>
-<tr>
-<td align="right">textcolor </td><td align="left">Specifies the color the text should be, in hex <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
-<tr>
-<td align="right">textwidth </td><td align="left">Will truncate any text that's too long. </td></tr>
-</table>
-<hr/>
- <h1><a class="anchor" id="skin_Edit_control_sect3"></a>
-See also</h1>
-<h4>Development:</h4>
+<div class="textblock"><p> <h3><span style="text-decoration: underline;"><span  style="font-style: italic;"><span style="color: rgb(102, 102, 102);"> Skin Add-On Development </span></span></span></h3> </p>
+<p>Kodi includes a GUI library that allows you to skin/change everything you see. The images, sizes and positions of controls, colours, fonts, text, through to altering navigation and even adding new functionality.</p>
+<p>The skin system is quite complex. This portion of the manual is dedicated to providing in depth information on how it all works. It contains tips to make the experience a little more pleasant.</p>
+<p>If you are just getting started with skinning Kodi, then it is suggested that the best way to learn is by modifying one of the many existing skins that are available. The default skin, Estuary, includes almost all the various tricks and features that make the Kodi skinning engine so powerful, so is an ideal place to start. You may wish to start by having a look through the tutorial section on skinning Kodi as well as the "Skinning Kodi" article, and try modifying a window or two by adding a button, or altering the textures or layout.</p>
 <ul>
-<li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>
-<li><a href="http://kodi.wiki/view/Skinning">Skinning</a> </li>
+<li><a class="el" href="a00072.html">Controls</a> - Controls are the substance of your skin. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fade_20label_20control',['Fade label control',['../_fade__label__control.html',1,'skin_controls']]],
-  ['fixed_20list_20container',['Fixed List Container',['../_fixed__list__container.html',1,'skin_controls']]]
+  ['epggrid_20control',['EPGGrid control',['../_e_p_g_grid_control.html',1,'skin_controls']]],
+  ['edit_20control',['Edit control',['../skin__edit_control.html',1,'skin_controls']]]
 ];

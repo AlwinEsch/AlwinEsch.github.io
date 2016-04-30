@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['epggrid_20control',['EPGGrid control',['../_e_p_g_grid_control.html',1,'skin_controls']]],
-  ['edit_20control',['Edit control',['../skin__edit_control.html',1,'skin_controls']]]
+  ['doxygen_20on_20kodi_27s_20add_2don_20headers',['Doxygen on Kodi&apos;s Add-On headers',['../_doxygen__on__addon.html',1,'general']]]
 ];

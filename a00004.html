@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: General Development parts</title>
+<title>Kodi Development: Doxygen on Kodi&#39;s Add-On headers</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,14 +92,77 @@ $(document).ready(function(){initNavTree('a00004.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">General Development parts </div>  </div>
+<div class="title">Doxygen on Kodi's Add-On headers </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p> 
-      <h3><span  style="text-decoration: underline;"><span  style="font-style: italic;"><span
-               style="color: rgb(102, 102, 102);">General Add-On Development parts</span></span></span></h3>
-       </p>
-<p><a class="el" href="a00002.html">List of GUI access messages</a> <a class="el" href="a00068.html">List of build in functions</a> </p>
+<div class="textblock"><h3>This page is for notes on using Doxygen to document the Kodi's Add-On headers source code.</h3>
+<p><a href="http://www.stack.nl/~dimitri/doxygen/index.html">Doxygen</a>, is a documentation system for C++, C, Java, and some other weird languages. It can generate html docs documenting a projects source code, by either extracting special tags from the source code (put there by people wanting to make use of doxygen), or doxygen attempts to build documentation from existing source.</p>
+<p>Doxygen seems to be installed on the NMR systems, type: </p><div class="fragment"><div class="line">doxygen --version</div>
+</div><!-- fragment --><hr/>
+<p>Start doxygen documentation for add-ons always with <code>///</code> and on Kodi itself with <code>/*!</code>, this makes it more easy to see for which place the documentation is.</p>
+<p><b>Here a axample on add-on about function coding style:</b></p>
+<pre class="fragment">#ifdef DOXYGEN_SHOULD_USE_THIS
+  ///
+  /// \ingroup python_xbmcgui_window
+  /// @brief Sets the resolution
+  ///
+  /// That the coordinates of all controls are defined in.  Allows Kodi
+  /// to scale control positions and width/heights to whatever resolution
+  /// Kodi is currently using.
+  ///
+  /// @param[in] res                Coordinate resolution to set
+  ///  Resolution is one of the following:
+  ///  | value | Resolution                |
+  ///  |:-----:|:--------------------------|
+  ///  |   0   | 1080i      (1920x1080)
+  ///  |   1   | 720p       (1280x720)
+  ///  |   2   | 480p 4:3   (720x480)
+  ///  |   3   | 480p 16:9  (720x480)
+  ///  |   4   | NTSC 4:3   (720x480)
+  ///  |   5   | NTSC 16:9  (720x480)
+  ///  |   6   | PAL 4:3    (720x576)
+  ///  |   7   | PAL 16:9   (720x576)
+  ///  |   8   | PAL60 4:3  (720x480)
+  ///  |   9   | PAL60 16:9 (720x480)
+  /// @return                       Nothing only added as example here :)
+  /// @param[out] nothingExample    Example here, if on value pointer data becomes
+  ///                               returned.
+  /// @throws TypeError             If supplied argument is not of List type, or a
+  ///                               control is not of Control type
+  /// @throws ReferenceError        If control is already used in another window
+  /// @throws RuntimeError          Should not happen :-)
+  ///
+  ///
+  ///--------------------------------------------------------------------------
+  ///
+  /// **Example:**
+  /// ~~~~~~~~~~~~~{.py}
+  /// ..
+  /// win = xbmcgui.Window(xbmcgui.getCurrentWindowId())
+  /// win.setCoordinateResolution(0)
+  /// ..
+  /// ~~~~~~~~~~~~~
+  ///
+  setCoordinateResolution(...);
+#else
+  SWIGHIDDENVIRTUAL bool setCoordinateResolution(long res, int &amp;nothingExample);
+#endif
+</pre><ul>
+<li><pre class="fragment">/// \ingroup</pre> - Define the group where the documentation part comes in.</li>
+<li><pre class="fragment">/// @brief</pre> - Add a small text of part there.</li>
+<li><pre class="fragment">/// TEXT_FIELD</pre> - Add a bigger text there if needed.</li>
+<li><pre class="fragment">/// @param[in] VALUE_NAME                 VALUE_TEXT</pre> - To set input paramter defined by name and add a description. There the example also add a small table which is useful to descripe values.</li>
+<li><pre class="fragment">/// @param[out] VALUE_NAME                VALUE_TEXT</pre> - To set output paramter defined by name and add a description.</li>
+<li><pre class="fragment">/// @return                               VALUE_TEXT</pre> - To add a description of return value.</li>
+<li><pre class="fragment">/// @throws ERROR_TYPE                    ERROR_TEXT</pre> - If also exception becomes handled, can you use this for description.</li>
+<li><pre class="fragment">/// TEXT_FIELD</pre> - Add a much bigger text there if needed.</li>
+<li><pre class="fragment">/// ------------------</pre> - Use this to define a field line, e.g. if you add example add this always before, further must you make two empty lines before to prevent add of them on string before!</li>
+<li><pre class="fragment">/// ~~~~~~~~~~~~~ </pre> - Here can you define a code example which must start and end with the defination string, also can you define the code style with e.g. <b>{.py}</b> for Python or <b>{.cpp}</b> for CPP code on the first line of them.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Start all <code>VALUE_TEXT</code> at same character to hold a clean code on <code>*.cpp</code> or <code>*.h</code> files.<br />
+<br />
+ The <code>#ifdef DOXYGEN_SHOULD_USE_THIS</code> on example above can be becomes used if for Doxygen another function is needed to descripe.</dd></dl>
+<p>If you want to prevent a part from doxygen can you define <b><code>#ifndef DOXYGEN_SHOULD_SKIP_THIS</code></b> or <b><code>#ifdef DOXYGEN_SHOULD_USE_THIS</code></b> on the related code. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

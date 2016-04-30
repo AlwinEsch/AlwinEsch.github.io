@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: RSS ticker</title>
+<title>Kodi Development: Progress Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,89 +92,60 @@ $(document).ready(function(){initNavTree('a00042.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">RSS ticker </div>  </div>
+<div class="title">Progress Control </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#RSS_feed_Control_sect1">RSS ticker settings</a></li>
-<li class="level1"><a href="#RSS_feed_Control_sect2">Technical documentation for skinners</a><ul><li class="level2"><a href="#RSS_feed_Control_sect2_1">RSS control</a></li>
-<li class="level2"><a href="#RSS_feed_Control_sect2_2">Available tags and attributes</a></li>
-<li class="level2"><a href="#RSS_feed_Control_sect2_3">RssFeeds.xml</a></li>
-</ul>
-</li>
-<li class="level1"><a href="#RSS_feed_Control_sect3">See also</a></li>
+<ul><li class="level1"><a href="#Progress_Control_sect1">Example</a></li>
+<li class="level1"><a href="#Progress_Control_sect2">Available tags</a></li>
+<li class="level1"><a href="#Progress_Control_sect3">See also</a></li>
 </ul>
 </div>
-<div class="textblock"><p><b>Used to display scrolling RSS feeds.</b></p>
-<p>Kodi can display an RSS feed on the home screen of the default skin/interface (Estuary), as well as any other skin that supports RSS feeds. By default, the RSS news feed is taken from <a href="http://kodi.tv/">http://kodi.tv</a>, but the feed can be changed to almost any RSS feed.</p>
-<dl class="section note"><dt>Note</dt><dd>Don't confuse the RSS ticker with RSS media source, which allows access to video and/or audio RSS streams.</dd></dl>
+<div class="textblock"><p><b>Used to show the progress of a particular operation.</b></p>
+<p>The progress control is used to show the progress of an item that may take a long time, or to show how far through a movie you are. You can choose the position, size, and look of the progress control.</p>
 <hr/>
- <h1><a class="anchor" id="RSS_feed_Control_sect1"></a>
-RSS ticker settings</h1>
-<p>The RSS ticker can be toggled on or off by going to <b><code>Settings -&gt; Appearance -&gt; Skin -&gt; Show RSS news feed</code></b></p>
-<p>Below this setting one can also change the RSS news feed address.</p>
-<hr/>
- <h1><a class="anchor" id="RSS_feed_Control_sect2"></a>
-Technical documentation for skinners</h1>
-<p>Main page: <a href="http://kodi.wiki/view/Skin_development">Skin development</a></p>
-<h2><a class="anchor" id="RSS_feed_Control_sect2_1"></a>
-RSS control</h2>
-<p>The rss control is used for displaying scrolling RSS feeds from the internet in Kodi. You can choose the font, size, colour, location and the RSS feed to be displayed.</p>
-<p><b>Example:</b></p>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;rss&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
-<div class="line">  &lt;description&gt;My First RSS control&lt;/description&gt;</div>
-<div class="line">  &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line">  &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line">  &lt;width&gt;500&lt;/width&gt;</div>
-<div class="line">  &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
-<div class="line">  &lt;font&gt;font14&lt;/font&gt;</div>
-<div class="line">  &lt;textcolor&gt;FFB2D4F5&lt;/textcolor&gt;</div>
-<div class="line">  &lt;headlinecolor&gt;FFFFFFFF&lt;/headlinecolor&gt;</div>
-<div class="line">  &lt;titlecolor&gt;FF655656&lt;/titlecolor&gt;</div>
+ <h1><a class="anchor" id="Progress_Control_sect1"></a>
+Example</h1>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;progress&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;12&quot;</span>&gt;</div>
+<div class="line">      &lt;description&gt;My first progress control&lt;/description&gt;</div>
+<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line">      &lt;height&gt;30&lt;/height&gt;</div>
+<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
+<div class="line">      &lt;reveal&gt;<span class="keyword">false</span>&lt;/reveal&gt;</div>
+<div class="line">      &lt;texturebg&gt;mybackgroundtexture.png&lt;/texturebg&gt;</div>
+<div class="line">      &lt;lefttexture&gt;mydowntexture.png&lt;/lefttexture&gt;</div>
+<div class="line">      &lt;midtexture&gt;mymidtexture.png&lt;/midtexture&gt;</div>
+<div class="line">      &lt;righttexture&gt;myrighttexture.png&lt;/righttexture&gt;</div>
+<div class="line">      &lt;overlaytexture&gt;myoverlaytexture.png&lt;/overlaytexture&gt;</div>
+<div class="line">      &lt;info&gt;&lt;/info&gt;</div>
 <div class="line">&lt;/control&gt;</div>
-</div><!-- fragment --><h2><a class="anchor" id="RSS_feed_Control_sect2_2"></a>
-Available tags and attributes</h2>
+</div><!-- fragment --><hr/>
+ <h1><a class="anchor" id="Progress_Control_sect2"></a>
+Available tags</h1>
 <p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">id </td><td align="left">This refers to the feedset to be displayed. This is the id reference to the <b><code>&lt;set&gt;</code></b> section in <a href="http://kodi.wiki/view/RssFeeds.xml">RssFeeds.xml</a> (see below): </td></tr>
+<td align="right">reveal </td><td align="left">If set to true the midtexture will reveal itself instead of stretching to fill the gap (works best when its the same size as <b>texturebg</b>) </td></tr>
 <tr>
-<td align="right">font </td><td align="left">Specifies the font to use from the font.xml file. </td></tr>
+<td align="right">texturebg </td><td align="left">Specifies the image file which should be displayed in the background of the progress control. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
 <tr>
-<td align="right">textcolor </td><td align="left">Specified the color the text should be. In hex <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<td align="right">lefttexture </td><td align="left">Specifies the image file which should be displayed for the left side of the progress bar. This is rendered on the left side of the bar. </td></tr>
 <tr>
-<td align="right">shadowcolor </td><td align="left">Specifies the color of the drop shadow on the text. In <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<td align="right">midtexture </td><td align="left">Specifies the image file which should be displayed for the middle portion of the progress bar. This is the <code>fill</code> texture used to fill up the bar. It's positioned on the right of the <b><code>&lt;lefttexture&gt;</code></b> texture, and fills the gap between the <b><code>&lt;lefttexture&gt;</code></b> and <b><code>&lt;righttexture&gt;</code></b> textures, depending on how far progressed the item is. </td></tr>
 <tr>
-<td align="right">headlinecolor </td><td align="left">Specified the color that any highlighted text should be. In hex <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<td align="right">righttexture </td><td align="left">Specifies the image file which should be displayed for the right side of the progress bar. This is rendered on the right side of the bar. </td></tr>
 <tr>
-<td align="right">titlecolor </td><td align="left">Specified the color the titles of the feeds should be. In hex <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<td align="right">overlaytexture </td><td align="left">Specifies the image file which should be displayed over the top of all other images in the progress bar. It is centered vertically and horizontally within the space taken up by the background image. </td></tr>
 <tr>
-<td align="right">scrollspeed </td><td align="left">Scroll speed of text in pixels per second. </td></tr>
+<td align="right">info </td><td align="left">Specifies the information that the progress bar is reporting on. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
 </table>
-<h2><a class="anchor" id="RSS_feed_Control_sect2_3"></a>
-RssFeeds.xml</h2>
-<ul>
-<li><em>Main page: <a href="http://kodi.wiki/view/RssFeeds.xml">RssFeeds.xml</a></em></li>
-</ul>
-<p>The actual content of the RSS feed is defined in the <a href="http://kodi.wiki/view/RssFeeds.xml">RssFeeds.xml</a> file stored in the user's profile. Here is an example :</p>
-<div class="fragment"><div class="line">&lt;rssfeeds&gt;</div>
-<div class="line">  &lt;set <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
-<div class="line">    &lt;feed updateinterval=<span class="stringliteral">&quot;30&quot;</span>&gt;http:<span class="comment">//feeds.feedburner.com/XboxScene&lt;/feed&gt;</span></div>
-<div class="line">    &lt;feed updateinterval=<span class="stringliteral">&quot;30&quot;</span>&gt;http:<span class="comment">//feeds.wired.com/wired/topheadlines&lt;/feed&gt;</span></div>
-<div class="line">  &lt;/set&gt;</div>
-<div class="line">  &lt;set <span class="keywordtype">id</span>=<span class="stringliteral">&quot;2&quot;</span>&gt;</div>
-<div class="line">    &lt;feed updateinterval=<span class="stringliteral">&quot;30&quot;</span>&gt;http:<span class="comment">//www.cnet.co.uk/feeds/public/rss_news_10.htm&lt;/feed&gt;</span></div>
-<div class="line">  &lt;/set&gt;</div>
-<div class="line">&lt;/rssfeeds&gt;</div>
-</div><!-- fragment --><p>As can be seen, each feedset has an id attribute – this is what we are referencing in the <b><code>&lt;id&gt;</code></b> attribute of the control. There can be more than one <b><code>&lt;set&gt;</code></b> defined, and more than one <b><code>&lt;feed&gt;</code></b> per set. The <b><code>&lt;feed&gt;</code></b>'s must be escaped so that they're xml-safe (ie replace &amp; with &amp; etc.). Each feed in the set runs through in the order they are defined.</p>
 <hr/>
- <h1><a class="anchor" id="RSS_feed_Control_sect3"></a>
+ <h1><a class="anchor" id="Progress_Control_sect3"></a>
 See also</h1>
-<ul>
-<li><a href="http://kodi.wiki/view/RssFeeds.xml">RssFeeds.xml</a></li>
-</ul>
 <h4>Development:</h4>
 <ul>
 <li><a href="http://kodi.wiki/view/Add-on_development">Add-on development</a></li>

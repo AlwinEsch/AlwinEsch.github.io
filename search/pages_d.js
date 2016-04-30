@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['video_20control',['Video Control',['../_video__control.html',1,'skin_controls']]],
-  ['visualisation_20control',['Visualisation Control',['../_visualisation__control.html',1,'skin_controls']]]
+  ['toggle_20button_20control',['Toggle button control',['../skin__toggle_button_control.html',1,'skin_controls']]],
+  ['text_20box',['Text Box',['../_text__box.html',1,'skin_controls']]]
 ];

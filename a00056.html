@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Text Box</title>
+<title>Kodi Development: Settings Spin Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,63 +92,107 @@ $(document).ready(function(){initNavTree('a00056.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Text Box </div>  </div>
+<div class="title">Settings Spin Control </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Text_Box_sect1">Example</a></li>
-<li class="level1"><a href="#Text_Box_sect2">Available tags</a></li>
-<li class="level1"><a href="#Text_Box_sect3">See also</a></li>
+<ul><li class="level1"><a href="#Settings_Spin_Control_sect1">Example</a></li>
+<li class="level1"><a href="#Settings_Spin_Control_sect2">Available tags</a></li>
+<li class="level1"><a href="#Settings_Spin_Control_sect3">See also</a></li>
 </ul>
 </div>
-<div class="textblock"><p><b>Used to show a multi-page piece of text.</b></p>
-<p>The text box is used for showing a large multipage piece of text in Kodi. You can choose the position, size, and look of the text.</p>
-<hr/>
- <h1><a class="anchor" id="Text_Box_sect1"></a>
+<div class="textblock"><p><b>Used for cycling up/down controls in the settings menus.</b></p>
+<p>The settings spin control is used in the settings screens for when a list of options can be chosen from using up/down arrows. You can choose the position, size, and look of the spin control. It is basically a cross between the button control and a spin control. It has a label and focus and non focus textures, as well as a spin control on the right. </p><hr/>
+ <h1><a class="anchor" id="Settings_Spin_Control_sect1"></a>
 Example</h1>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;textbox&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;2&quot;</span>&gt;</div>
-<div class="line">   &lt;description&gt;My first text box control&lt;/description&gt;</div>
-<div class="line">   &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line">   &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line">   &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line">   &lt;height&gt;200&lt;/height&gt;</div>
-<div class="line">   &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
-<div class="line">   &lt;colordiffuse&gt;FFFFFFFF&lt;/colordiffuse&gt;</div>
-<div class="line">   &lt;font&gt;font13&lt;/font&gt;</div>
-<div class="line">   &lt;textcolor&gt;FFFFFFFF&lt;/textcolor&gt;</div>
-<div class="line">   &lt;pulseonselect&gt;&lt;/pulseonselect&gt;</div>
-<div class="line">   &lt;pagecontrol&gt;13&lt;/pagecontrol&gt;</div>
-<div class="line">   &lt;scrolltime&gt;200&lt;/scrolltime&gt;</div>
-<div class="line">   &lt;autoscroll delay=<span class="stringliteral">&quot;3000&quot;</span> time=<span class="stringliteral">&quot;1000&quot;</span> repeat=<span class="stringliteral">&quot;10000&quot;</span>&gt;!Control.HasFocus(13)&lt;/autoscroll&gt;</div>
-<div class="line">   &lt;label&gt;Text to display goes here [CR] next line...&lt;/label&gt;</div>
-<div class="line">   &lt;align&gt;center&lt;/align&gt;</div>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;spincontrolex&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;12&quot;</span>&gt;</div>
+<div class="line">      &lt;description&gt;My first settings spin control&lt;/description&gt;</div>
+<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
+<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
+<div class="line">      &lt;height&gt;200&lt;/height&gt;</div>
+<div class="line">      &lt;spinposx&gt;220&lt;/spinposx&gt;</div>
+<div class="line">      &lt;spinposy&gt;180&lt;/spinposy&gt;</div>
+<div class="line">      &lt;spinwidth&gt;16&lt;/spinwidth&gt;</div>
+<div class="line">      &lt;spinheight&gt;16&lt;/spinheight&gt;</div>
+<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
+<div class="line">      &lt;colordiffuse&gt;FFFFFFFF&lt;/colordiffuse&gt;</div>
+<div class="line">      &lt;texturefocus&gt;myfocustexture.png&lt;/texturefocus&gt;</div>
+<div class="line">      &lt;texturenofocus&gt;mynofocustexture.png&lt;/texturenofocus&gt;</div>
+<div class="line">      &lt;textureup&gt;myuptexture.png&lt;/textureup&gt;</div>
+<div class="line">      &lt;textureupfocus&gt;myupfocustexture.png&lt;/textureupfocus&gt;</div>
+<div class="line">      &lt;texturedown&gt;mydowntexture.png&lt;/texturedown&gt;</div>
+<div class="line">      &lt;texturedownfocus&gt;mydownfocustexture.png&lt;/texturedownfocus&gt;</div>
+<div class="line">      &lt;textureupdisabled colordiffuse=<span class="stringliteral">&quot;AAFFAAFF&quot;</span>&gt;mydowntexture.png&lt;/textureupdisabled&gt;</div>
+<div class="line">      &lt;texturedowndisabled colordiffuse=<span class="stringliteral">&quot;AAFFAAFF&quot;</span>&gt;mydownfocustexture.png&lt;/texturedowndisabled&gt;</div>
+<div class="line">      &lt;label&gt;46&lt;/label&gt;</div>
+<div class="line">      &lt;font&gt;font12&lt;/font&gt;</div>
+<div class="line">      &lt;textcolor&gt;FFFFFFFF&lt;/textcolor&gt;</div>
+<div class="line">      &lt;disabledcolor&gt;80FFFFFF&lt;/disabledcolor&gt;</div>
+<div class="line">      &lt;align&gt;&lt;/align&gt;</div>
+<div class="line">      &lt;aligny&gt;&lt;/aligny&gt;</div>
+<div class="line">      &lt;textoffsetx&gt;&lt;/textoffsetx&gt;</div>
+<div class="line">      &lt;textoffsety&gt;&lt;/textoffsety&gt;</div>
+<div class="line">      &lt;pulseonselect&gt;&lt;/pulseonselect&gt;</div>
+<div class="line">      &lt;onup&gt;2&lt;/onup&gt;</div>
+<div class="line">      &lt;ondown&gt;3&lt;/ondown&gt;</div>
+<div class="line">      &lt;onleft&gt;1&lt;/onleft&gt;</div>
+<div class="line">      &lt;onright&gt;1&lt;/onright&gt;</div>
 <div class="line">&lt;/control&gt;</div>
 </div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Text_Box_sect2"></a>
+ <h1><a class="anchor" id="Settings_Spin_Control_sect2"></a>
 Available tags</h1>
-<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is lower case only. This is important, as xml tags are case-sensitive.</p>
+<p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">height </td><td align="left"><b><code>&lt;height&gt;auto&lt;/height&gt;</code></b> is supported in textbox controls </td></tr>
+<td align="right">spinposx </td><td align="left">The horizontal position of the spin control for multipage lists. This is offset from the top left of the list. </td></tr>
 <tr>
-<td align="right">font </td><td align="left">Font used for the items first label. From <code>fonts.xml</code>. </td></tr>
+<td align="right">spinposy </td><td align="left">The vertical position of the spin control for multipage lists. This is offset from the top left of the list. </td></tr>
 <tr>
-<td align="right">textcolor </td><td align="left">Color used for displaying the text. In <b>AARRGGBB</b> hex format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<td align="right">spinwidth </td><td align="left">The width of one of the spin control buttons. The textures for this spin control will be scaled to fit this width. </td></tr>
 <tr>
-<td align="right">shadowcolor </td><td align="left">Specifies the color of the drop shadow on the text. In <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<td align="right">spinheight </td><td align="left">The height of one of the spin control buttons. The textures for this spin control will be scaled to fit this height. </td></tr>
 <tr>
-<td align="right">pagecontrol </td><td align="left">Specifies the <b><code>&lt;id&gt;</code></b> of the page control used to control this textbox. The page control can either be a <a class="el" href="a00054.html">Spin Control</a> or a <a class="el" href="a00044.html">Scroll Bar Control</a>. </td></tr>
+<td align="right">texturefocus </td><td align="left">Specifies the image file which should be displayed for the control when it has focus. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
 <tr>
-<td align="right">scrolltime </td><td align="left">The time (in ms) to scroll from one item to another. By default, this is <em>200ms</em>. The list will scroll smoothly from one item to another as needed. Set it to zero to disable the smooth scrolling. </td></tr>
+<td align="right">texturenofocus </td><td align="left">Specifies the image file which should be displayed for the control when it doesn't focus. </td></tr>
 <tr>
-<td align="right">align </td><td align="left">possible values for text alignment: left, right, center, justify </td></tr>
+<td align="right">textureup </td><td align="left">Specifies the image file which should be displayed for the up arrow when it doesn't have focus. It is displayed to the left of the down arrow. </td></tr>
 <tr>
-<td align="right">autoscroll </td><td align="left">Specifies the timing and conditions of any autoscrolling this textbox should have. Times are in milliseconds. The content is delayed for the given delay, then scrolls at a rate of one line per time interval until the end. If the repeat tag is present, it then delays for the repeat time, fades out over 1 second, and repeats. It does not wrap or reset to the top at the end of the scroll. You can use any <a href="http://kodi.wiki/view/List_of_Boolean_Conditions">bool condition</a> to specify when autoscrolling should be allowed. </td></tr>
+<td align="right">textureupfocus </td><td align="left">Specifies the image file which should be displayed for the up arrow when it has focus. </td></tr>
+<tr>
+<td align="right">textureupdisabled </td><td align="left">Specifies the image file which should be displayed for the up arrow when the button is disabled. </td></tr>
+<tr>
+<td align="right">texturedown </td><td align="left">Specifies the image file which should be displayed for the down arrow when it is not focused. It is displayed to the right of the up arrow so that it's right edge is <b><code>&lt;textoffsetx&gt;</code></b> pixels away from the right edge of the control. </td></tr>
+<tr>
+<td align="right">texturedownfocus </td><td align="left">Specifies the image file which should be displayed for the down arrow when it has focus. </td></tr>
+<tr>
+<td align="right">texturedowndisabled </td><td align="left">Specifies the image file which should be displayed for the up arrow when the button is disabled. </td></tr>
+<tr>
+<td align="right">label </td><td align="left">Either a numeric reference into strings.xml (for localization), or a string that will be shown on the left of the control. </td></tr>
+<tr>
+<td align="right">font </td><td align="left">Font used for the controls label. From fonts.xml. </td></tr>
+<tr>
+<td align="right">textcolor </td><td align="left">Color used for displaying the label. In <b>AARRGGBB</b> hex format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">disabledcolor </td><td align="left">Color used for the label if the control is disabled. In <b>AARRGGBB</b> hex format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">shadowcolor </td><td align="left">Specifies the color of the drop shadow on the text. In <b>AARRGGBB</b> hex format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">align </td><td align="left">Label horizontal alignment on the control. Defaults to left. </td></tr>
+<tr>
+<td align="right">aligny </td><td align="left">Label vertical alignment on the control. Defaults to top, can also be center. </td></tr>
+<tr>
+<td align="right">textoffsetx </td><td align="left">Amount to offset the label from the left (or right) edge of the button when using left or right alignment. </td></tr>
+<tr>
+<td align="right">textoffsety </td><td align="left">Amount to offset the label from the top edge of the button when using top alignment. </td></tr>
+<tr>
+<td align="right">textwidth </td><td align="left">Will truncate any text that's too long. </td></tr>
 </table>
 <hr/>
- <h1><a class="anchor" id="Text_Box_sect3"></a>
+ <h1><a class="anchor" id="Settings_Spin_Control_sect3"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['infotagmusic',['InfoTagMusic',['../group__python___info_tag_music.html',1,'']]],
-  ['infotagradiords',['InfoTagRadioRDS',['../group__python___info_tag_radio_r_d_s.html',1,'']]],
-  ['infotagvideo',['InfoTagVideo',['../group__python___info_tag_video.html',1,'']]]
+  ['5_2e_20input_20stream',['5. Input Stream',['../group___c_p_p___kodi_a_p_i___input_stream.html',1,'']]]
 ];

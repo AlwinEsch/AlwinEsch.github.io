@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Slider Control</title>
+<title>Kodi Development: Select Button Control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,64 +92,105 @@ $(document).ready(function(){initNavTree('a00052.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Slider Control </div>  </div>
+<div class="title">Select Button Control </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Slider_Control_sect1">Example</a></li>
-<li class="level1"><a href="#Slider_Control_sect2">Available tags</a></li>
-<li class="level1"><a href="#Slider_Control_sect3">See also</a></li>
+<ul><li class="level1"><a href="#Select_Button_Control_sect1">Example</a></li>
+<li class="level1"><a href="#Select_Button_Control_sect2">Available tags</a></li>
+<li class="level1"><a href="#Select_Button_Control_sect3">See also</a></li>
 </ul>
 </div>
-<div class="textblock"><p><b>Used for a volume slider.</b></p>
-<p>The slider control is used for things where a sliding bar best represents the operation at hand (such as a volume control or seek control). You can choose the position, size, and look of the slider control.</p>
+<div class="textblock"><p><b>Button with multi selection choice.</b></p>
+<p>Behaves like a normal button control, but when pressing, it can show multiple strings. The user can choose one by moving left or right.</p>
+<p>Messages the button reactes on:</p>
+<ul>
+<li>GUI_MSG_LABEL_ADD <br />
+ Add a label to the control.</li>
+<li>GUI_MSG_LABEL_RESET <br />
+ Remove all labels from the control.</li>
+<li>GUI_MSG_ITEM_SELECTED <br />
+ After sending this message Kodi contains the selected label as an integer. <dl class="section note"><dt>Note</dt><dd>The order of the items depends on the order they have been added to the control using GUI_MSG_LABEL_ADD.</dd></dl>
+</li>
+<li>GUI_MSG_ITEM_SELECT <br />
+ Send this message to set the label to be selected.</li>
+</ul>
 <hr/>
- <h1><a class="anchor" id="Slider_Control_sect1"></a>
+ <h1><a class="anchor" id="Select_Button_Control_sect1"></a>
 Example</h1>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;slider&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;17&quot;</span>&gt;</div>
-<div class="line">      &lt;description&gt;My first slider control&lt;/description&gt;</div>
-<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line">      &lt;height&gt;30&lt;/height&gt;</div>
-<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
-<div class="line">      &lt;texturesliderbar&gt;mybackgroundtexture.png&lt;/texturesliderbar&gt;</div>
-<div class="line">      &lt;textureslidernib&gt;mydowntexture.png&lt;/textureslidernib&gt;</div>
-<div class="line">      &lt;textureslidernibfocus&gt;mydownfocustexture.png&lt;/textureslidernibfocus&gt;</div>
-<div class="line">      &lt;info&gt;&lt;/info&gt;</div>
-<div class="line">      &lt;action&gt;&lt;/action&gt;</div>
-<div class="line">      &lt;controloffsetx&gt;&lt;/controloffsetx&gt;</div>
-<div class="line">      &lt;controloffsety&gt;&lt;/controloffsety&gt;</div>
-<div class="line">      &lt;pulseonselect&gt;&lt;/pulseonselect&gt;</div>
-<div class="line">      &lt;onup&gt;2&lt;/onup&gt;</div>
-<div class="line">      &lt;ondown&gt;3&lt;/ondown&gt;</div>
-<div class="line">      &lt;onleft&gt;1&lt;/onleft&gt;</div>
-<div class="line">      &lt;onright&gt;1&lt;/onright&gt;</div>
+<p>Example entry to define a select button in a window or as reference control:</p>
+<div class="fragment"><div class="line">&lt;control&gt;</div>
+<div class="line">  &lt;description&gt;<span class="keywordflow">default</span> select button&lt;/description</div>
+<div class="line">  &lt;type&gt;selectbutton&lt;/type&gt;</div>
+<div class="line">  &lt;<span class="keywordtype">id</span>&gt;6&lt;/<span class="keywordtype">id</span>&gt;</div>
+<div class="line">  &lt;posX&gt;60&lt;/posX&gt;</div>
+<div class="line">  &lt;posY&gt;192&lt;/posY&gt;</div>
+<div class="line">  &lt;width&gt;130&lt;/width&gt;</div>
+<div class="line">  &lt;height&gt;32&lt;/height&gt;</div>
+<div class="line">  &lt;label&gt;132&lt;/label&gt;</div>
+<div class="line">  &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">  &lt;textureFocus&gt;button-focus.png&lt;/textureFocus&gt;</div>
+<div class="line">  &lt;textureNoFocus&gt;button-nofocus.jpg&lt;/textureNoFocus&gt;</div>
+<div class="line">  &lt;texturebg&gt;button-focus.png&lt;/texturebg&gt;</div>
+<div class="line">  &lt;textureLeft&gt;scroll-left.png&lt;/textureLeft&gt;</div>
+<div class="line">  &lt;textureRight&gt;scroll-right.png&lt;/textureRight&gt;</div>
+<div class="line">  &lt;font&gt;font13&lt;/font&gt;</div>
+<div class="line">  &lt;textcolor&gt;ffffffff&lt;/textcolor&gt;</div>
+<div class="line">  &lt;colordiffuse&gt;ffffffff&lt;/colordiffuse&gt;</div>
+<div class="line">  &lt;disabledcolor&gt;60ffffff&lt;/disabledcolor&gt;</div>
+<div class="line">  &lt;onleft&gt;50&lt;/onleft&gt;</div>
+<div class="line">  &lt;onright&gt;50&lt;/onright&gt;</div>
+<div class="line">  &lt;onup&gt;3&lt;/onup&gt;</div>
+<div class="line">  &lt;ondown&gt;7&lt;/ondown&gt;</div>
 <div class="line">&lt;/control&gt;</div>
 </div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Slider_Control_sect2"></a>
+ <h1><a class="anchor" id="Select_Button_Control_sect2"></a>
 Available tags</h1>
 <p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is lower case only. This is important, as xml tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">texturesliderbar </td><td align="left">Specifies the image file which should be displayed in the background of the slider control. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
+<td align="right">texturefocus </td><td align="left">Specifies the image file which should be displayed when the button has focus. <a href="http://kodi.wiki/view/Texture_Attributes">See here for additional information about textures</a>. </td></tr>
 <tr>
-<td align="right">textureslidernib </td><td align="left">Specifies the image file which should be displayed for the slider nib. </td></tr>
+<td align="right">texturenofocus</td><td align="left">Specifies the image file which should be displayed when the button does not have focus. </td></tr>
 <tr>
-<td align="right">textureslidernibfocus </td><td align="left">Specifies the image file which should be displayed for the slider nib when it has focus. </td></tr>
+<td align="right">label </td><td align="left">The label used on the button. It can be a link into <b><code>strings.xml</code></b>, or an actual text label. </td></tr>
 <tr>
-<td align="right">controloffsetx </td><td align="left">Amount to offset the slider background texture from the left edge of the control. Only useful if a value is being rendered as well (ie in int or float mode). </td></tr>
+<td align="right">font </td><td align="left">Font used for the button label. From fonts.xml. </td></tr>
 <tr>
-<td align="right">controloffsety </td><td align="left">Amount to offset the slider background texture from the top edge of the control. </td></tr>
+<td align="right">textcolor </td><td align="left">Color used for displaying the button label. In <b>AARRGGBB</b> hex format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
 <tr>
-<td align="right">info </td><td align="left">Specifies the information that the slider controls. <a href="http://kodi.wiki/view/InfoLabels">See here for more information</a>. </td></tr>
+<td align="right">focusedcolor </td><td align="left">Color used for the button label when the button has in focus. In <b>AARRGGBB</b> hex format or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
 <tr>
-<td align="right">action </td><td align="left">Can be <b>'volume'</b> to adjust the volume or 'seek' to change the seek position. </td></tr>
+<td align="right">disabledcolor </td><td align="left">Color used for the button label if the button is disabled. In <b>AARRGGBB</b> hex format or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">invalidcolor </td><td align="left">Color used for the button if the user entered some invalid value. In <b>AARRGGBB</b> hex format or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">shadowcolor </td><td align="left">Specifies the color of the drop shadow on the text, in <b>AARRGGBB</b> format, or a name from the <a href="http://kodi.wiki/view/Colour_Themes">colour theme</a>. </td></tr>
+<tr>
+<td align="right">angle </td><td align="left">The angle the text should be rendered at, in degrees. A value of 0 is horizontal. </td></tr>
+<tr>
+<td align="right">align </td><td align="left">Label horizontal alignment on the button. Defaults to left, can also be center or right. </td></tr>
+<tr>
+<td align="right">aligny </td><td align="left">Label vertical alignment on the button. Defaults to top, can also be center. </td></tr>
+<tr>
+<td align="right">textoffsetx </td><td align="left">Amount to offset the label from the left (or right) edge of the button when using left or right alignment. </td></tr>
+<tr>
+<td align="right">textoffsety </td><td align="left">Amount to offset the label from the top edge of the button when using top alignment. </td></tr>
+<tr>
+<td align="right">textwidth </td><td align="left">Will truncate any text that's too long. </td></tr>
+<tr>
+<td align="right">onclick </td><td align="left">Specifies the action to perform when the button is pressed. Should be a built in function. <a href="http://kodi.wiki/view/Built-in_functions_available_to_FTP,_Webserver,_skins,_keymap_and_to_python">See here for more information</a>. You may have more than one <b><code>&lt;onclick&gt;</code></b> tag, and they'll be executed in sequence. </td></tr>
+<tr>
+<td align="right">onfocus </td><td align="left">Specifies the action to perform when the button is focused. Should be a built in function. The action is performed after any focus animations have completed. <a href="http://kodi.wiki/view/Built-in_functions_available_to_FTP,_Webserver,_skins,_keymap_and_to_python">See here for more information</a>. </td></tr>
+<tr>
+<td align="right">onunfocus </td><td align="left">Specifies the action to perform when the button loses focus. Should be a built in function. </td></tr>
+<tr>
+<td align="right">wrapmultiline </td><td align="left">Will wrap the label across multiple lines if the label exceeds the control width. </td></tr>
 </table>
 <hr/>
- <h1><a class="anchor" id="Slider_Control_sect3"></a>
+ <h1><a class="anchor" id="Select_Button_Control_sect3"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>

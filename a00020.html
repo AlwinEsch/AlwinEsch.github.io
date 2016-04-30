@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Kodi Development: Group Control</title>
+<title>Kodi Development: EPGGrid control</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,75 +92,243 @@ $(document).ready(function(){initNavTree('a00020.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Group Control </div>  </div>
+<div class="title">EPGGrid control </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#Group_Control_sect1">Example</a></li>
-<li class="level1"><a href="#Group_Control_sect2">Available tags</a></li>
-<li class="level1"><a href="#Group_Control_sect3">Notes on positioning of controls within groups</a></li>
-<li class="level1"><a href="#Group_Control_sect4">See also</a></li>
+<ul><li class="level1"><a href="#EPGGrid_control_sect1">Example</a></li>
+<li class="level1"><a href="#EPGGrid_control_sect2">Available tags</a></li>
+<li class="level1"><a href="#EPGGrid_control_sect3">See also</a></li>
 </ul>
 </div>
-<div class="textblock"><p><b>Used to group controls together.</b></p>
-<p>The group control is one of the most important controls. It allows you to group controls together, applying attributes to all of them at once. It also remembers the last navigated button in the group, so you can set the <b><code>&lt;onup&gt;</code></b> of a control to a group of controls to have it always go back to the one you were at before. It also allows you to position controls more accurately relative to each other, as any controls within a group take their coordinates from the group's top left corner (or from elsewhere if you use the "r" attribute). You can have as many groups as you like within the skin, and groups within groups are handled with no issues.</p>
+<div class="textblock"><p><b>Used to display the EPG guide in the PVR section.</b></p>
+<p>The epggrid control is used for creating an epg timeline in Kodi. You can choose the position, size, and look of the grid and it's contents.</p>
 <hr/>
- <h1><a class="anchor" id="Group_Control_sect1"></a>
+ <h1><a class="anchor" id="EPGGrid_control_sect1"></a>
 Example</h1>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;group&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;17&quot;</span>&gt;</div>
-<div class="line">      &lt;description&gt;My first group control&lt;/description&gt;</div>
-<div class="line">      &lt;posx&gt;80&lt;/posx&gt;</div>
-<div class="line">      &lt;posy&gt;60&lt;/posy&gt;</div>
-<div class="line">      &lt;width&gt;250&lt;/width&gt;</div>
-<div class="line">      &lt;height&gt;30&lt;/height&gt;</div>
-<div class="line">      &lt;defaultcontrol&gt;2&lt;/defaultcontrol&gt;</div>
-<div class="line">      &lt;visible&gt;<span class="keyword">true</span>&lt;/visible&gt;</div>
-<div class="line">      &lt;onup&gt;2&lt;/onup&gt;</div>
-<div class="line">      &lt;ondown&gt;3&lt;/ondown&gt;</div>
-<div class="line">      &lt;onleft&gt;1&lt;/onleft&gt;</div>
-<div class="line">      &lt;onright&gt;1&lt;/onright&gt;</div>
-<div class="line">      ... more controls go here ...</div>
+<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;epggrid&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;10&quot;</span>&gt;</div>
+<div class="line">    &lt;description&gt;<a class="code" href="a00130.html">EPG</a> Grid&lt;/description&gt;</div>
+<div class="line">    &lt;posx&gt;80&lt;/posx&gt;</div>
+<div class="line">    &lt;posy&gt;81&lt;/posy&gt;</div>
+<div class="line">    &lt;width&gt;1120&lt;/width&gt;</div>
+<div class="line">    &lt;height&gt;555&lt;/height&gt;</div>
+<div class="line">    &lt;pagecontrol&gt;10&lt;/pagecontrol&gt;</div>
+<div class="line">    &lt;scrolltime&gt;350&lt;/scrolltime&gt;</div>
+<div class="line">    &lt;timeblocks&gt;40&lt;/timeblocks&gt;</div>
+<div class="line">    &lt;rulerunit&gt;6&lt;/rulerunit&gt;</div>
+<div class="line">    &lt;progresstexture border=<span class="stringliteral">&quot;5&quot;</span>&gt;<a class="code" href="a00134.html">PVR</a>-EpgProgressIndicator.png&lt;/progresstexture&gt;</div>
+<div class="line">    &lt;onleft&gt;31&lt;/onleft&gt;</div>
+<div class="line">    &lt;onright&gt;31&lt;/onright&gt;</div>
+<div class="line">    &lt;onup&gt;10&lt;/onup&gt;</div>
+<div class="line">    &lt;ondown&gt;10&lt;/ondown&gt;</div>
+<div class="line">    &lt;rulerlayout height=<span class="stringliteral">&quot;35&quot;</span> width=<span class="stringliteral">&quot;40&quot;</span>&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line">            &lt;width&gt;40&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;29&lt;/height&gt;</div>
+<div class="line">            &lt;posx&gt;0&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line">            &lt;texture border=<span class="stringliteral">&quot;5&quot;</span>&gt;button-nofocus.png&lt;/texture&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;label&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;2&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;10&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;34&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;29&lt;/height&gt;</div>
+<div class="line">            &lt;font&gt;font12&lt;/font&gt;</div>
+<div class="line">            &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">            &lt;selectedcolor&gt;selected&lt;/selectedcolor&gt;</div>
+<div class="line">            &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line">            &lt;label&gt;$INFO[ListItem.Label]&lt;/label&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">    &lt;/rulerlayout&gt;</div>
+<div class="line">    &lt;channellayout height=<span class="stringliteral">&quot;52&quot;</span> width=<span class="stringliteral">&quot;280&quot;</span>&gt;</div>
+<div class="line">        &lt;animation effect=<span class="stringliteral">&quot;fade&quot;</span> start=<span class="stringliteral">&quot;110&quot;</span> time=<span class="stringliteral">&quot;200&quot;</span>&gt;UnFocus&lt;/animation&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;0&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;270&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;52&lt;/height&gt;</div>
+<div class="line">            &lt;texture border=<span class="stringliteral">&quot;5&quot;</span>&gt;button-nofocus.png&lt;/texture&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;5&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;40&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;35&lt;/height&gt;</div>
+<div class="line">            &lt;font&gt;font12&lt;/font&gt;</div>
+<div class="line">            &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line">            &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">            &lt;textcolor&gt;grey&lt;/textcolor&gt;</div>
+<div class="line">            &lt;selectedcolor&gt;grey&lt;/selectedcolor&gt;</div>
+<div class="line">            &lt;info&gt;ListItem.ChannelNumber&lt;/info&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;45&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;4&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;45&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;44&lt;/height&gt;</div>
+<div class="line">            &lt;texture&gt;$INFO[ListItem.Icon]&lt;/texture&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;label&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;94&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;160&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;52&lt;/height&gt;</div>
+<div class="line">            &lt;font&gt;special12&lt;/font&gt;</div>
+<div class="line">            &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">            &lt;selectedcolor&gt;selected&lt;/selectedcolor&gt;</div>
+<div class="line">            &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line">            &lt;label&gt;$INFO[ListItem.ChannelName]&lt;/label&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">    &lt;/channellayout&gt;</div>
+<div class="line">    &lt;focusedchannellayout height=<span class="stringliteral">&quot;52&quot;</span> width=<span class="stringliteral">&quot;280&quot;</span>&gt;</div>
+<div class="line">        &lt;animation effect=<span class="stringliteral">&quot;fade&quot;</span> start=<span class="stringliteral">&quot;110&quot;</span> time=<span class="stringliteral">&quot;200&quot;</span>&gt;OnFocus&lt;/animation&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;0&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;270&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;52&lt;/height&gt;</div>
+<div class="line">            &lt;texture border=<span class="stringliteral">&quot;5&quot;</span>&gt;button-focus.png&lt;/texture&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;label&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;5&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;40&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;35&lt;/height&gt;</div>
+<div class="line">            &lt;font&gt;font12&lt;/font&gt;</div>
+<div class="line">            &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line">            &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">            &lt;textcolor&gt;grey&lt;/textcolor&gt;</div>
+<div class="line">            &lt;selectedcolor&gt;grey&lt;/selectedcolor&gt;</div>
+<div class="line">            &lt;info&gt;ListItem.ChannelNumber&lt;/info&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;45&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;4&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;45&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;44&lt;/height&gt;</div>
+<div class="line">            &lt;texture&gt;$INFO[ListItem.Icon]&lt;/texture&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;label&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;94&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;160&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;52&lt;/height&gt;</div>
+<div class="line">            &lt;font&gt;special12&lt;/font&gt;</div>
+<div class="line">            &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">            &lt;selectedcolor&gt;selected&lt;/selectedcolor&gt;</div>
+<div class="line">            &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line">            &lt;label&gt;$INFO[ListItem.ChannelName]&lt;/label&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">    &lt;/focusedchannellayout&gt;</div>
+<div class="line">    &lt;itemlayout height=<span class="stringliteral">&quot;52&quot;</span> width=<span class="stringliteral">&quot;40&quot;</span>&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;2&quot;</span>&gt;</div>
+<div class="line">            &lt;width&gt;40&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;52&lt;/height&gt;</div>
+<div class="line">            &lt;posx&gt;0&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line">            &lt;aspectratio&gt;stretch&lt;/aspectratio&gt;</div>
+<div class="line">            &lt;texture border=<span class="stringliteral">&quot;3&quot;</span>&gt;epg-genres/$INFO[ListItem.Property(GenreType)].png&lt;/texture&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;label&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;6&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;30&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;25&lt;/height&gt;</div>
+<div class="line">            &lt;font&gt;font12&lt;/font&gt;</div>
+<div class="line">            &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">            &lt;selectedcolor&gt;selected&lt;/selectedcolor&gt;</div>
+<div class="line">            &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line">            &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;28&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;30&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;20&lt;/height&gt;</div>
+<div class="line">            &lt;texture&gt;<a class="code" href="a00134.html">PVR</a>-IsRecording.png&lt;/texture&gt;</div>
+<div class="line">            &lt;visible&gt;ListItem.IsRecording&lt;/visible&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;28&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;20&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;20&lt;/height&gt;</div>
+<div class="line">            &lt;texture&gt;<a class="code" href="a00134.html">PVR</a>-HasTimer.png&lt;/texture&gt;</div>
+<div class="line">            &lt;visible&gt;ListItem.HasTimer + !ListItem.IsRecording&lt;/visible&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">    &lt;/itemlayout&gt;</div>
+<div class="line">    &lt;focusedlayout height=<span class="stringliteral">&quot;52&quot;</span> width=<span class="stringliteral">&quot;40&quot;</span>&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;14&quot;</span>&gt;</div>
+<div class="line">            &lt;width&gt;40&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;52&lt;/height&gt;</div>
+<div class="line">            &lt;posx&gt;0&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line">            &lt;texture border=<span class="stringliteral">&quot;5&quot;</span>&gt;folder-focus.png&lt;/texture&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;2&quot;</span>&gt;</div>
+<div class="line">            &lt;width&gt;40&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;52&lt;/height&gt;</div>
+<div class="line">            &lt;posx&gt;0&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;0&lt;/posy&gt;</div>
+<div class="line">            &lt;aspectratio&gt;stretch&lt;/aspectratio&gt;</div>
+<div class="line">            &lt;texture border=<span class="stringliteral">&quot;3&quot;</span>&gt;epg-genres/$INFO[ListItem.Property(GenreType)].png&lt;/texture&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;label&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;6&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;3&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;30&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;25&lt;/height&gt;</div>
+<div class="line">            &lt;font&gt;font12&lt;/font&gt;</div>
+<div class="line">            &lt;aligny&gt;center&lt;/aligny&gt;</div>
+<div class="line">            &lt;selectedcolor&gt;selected&lt;/selectedcolor&gt;</div>
+<div class="line">            &lt;align&gt;left&lt;/align&gt;</div>
+<div class="line">            &lt;info&gt;ListItem.Label&lt;/info&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;28&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;30&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;20&lt;/height&gt;</div>
+<div class="line">            &lt;texture&gt;<a class="code" href="a00134.html">PVR</a>-IsRecording.png&lt;/texture&gt;</div>
+<div class="line">            &lt;visible&gt;ListItem.IsRecording&lt;/visible&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">        &lt;control type=<span class="stringliteral">&quot;image&quot;</span>&gt;</div>
+<div class="line">            &lt;posx&gt;5&lt;/posx&gt;</div>
+<div class="line">            &lt;posy&gt;28&lt;/posy&gt;</div>
+<div class="line">            &lt;width&gt;20&lt;/width&gt;</div>
+<div class="line">            &lt;height&gt;20&lt;/height&gt;</div>
+<div class="line">            &lt;texture&gt;<a class="code" href="a00134.html">PVR</a>-HasTimer.png&lt;/texture&gt;</div>
+<div class="line">            &lt;visible&gt;ListItem.HasTimer + !ListItem.IsRecording&lt;/visible&gt;</div>
+<div class="line">        &lt;/control&gt;</div>
+<div class="line">    &lt;/focusedlayout&gt;</div>
 <div class="line">&lt;/control&gt;</div>
 </div><!-- fragment --><hr/>
- <h1><a class="anchor" id="Group_Control_sect2"></a>
+ <h1><a class="anchor" id="EPGGrid_control_sect2"></a>
 Available tags</h1>
 <p>In addition to the <a href="http://kodi.wiki/view/Default_Control_Tags">Default Control Tags</a> the following tags are available. Note that each tag is <b>lower case</b> only. This is important, as <code>xml</code> tags are case-sensitive.</p>
 <table class="doxtable">
 <tr>
 <th align="right">Tag </th><th align="left">Description  </th></tr>
 <tr>
-<td align="right">defaultcontrol </td><td align="left">Specifies the default control that will be focused within the group when the group receives focus. Note that the group remembers it's previously focused item and will return to it. </td></tr>
+<td align="right">timeblocks </td><td align="left">The number of timeframes on the top row. </td></tr>
+<tr>
+<td align="right">rulerunit </td><td align="left">Timeframe of each unit on the top row. 1 unit equals 5 minutes. </td></tr>
+<tr>
+<td align="right">rulerlayout </td><td align="left">The layout of the top row. </td></tr>
+<tr>
+<td align="right">progresstexture </td><td align="left">A texture which indicates the current progress time </td></tr>
+<tr>
+<td align="right">channellayout </td><td align="left">The layout of the left column. </td></tr>
+<tr>
+<td align="right">focusedchannellayout </td><td align="left">The focused layout of the left column. </td></tr>
+<tr>
+<td align="right">itemlayout </td><td align="left">The layout of the grid </td></tr>
+<tr>
+<td align="right">focusedlayout </td><td align="left">The focused layout of the grid </td></tr>
 </table>
 <hr/>
- <h1><a class="anchor" id="Group_Control_sect3"></a>
-Notes on positioning of controls within groups</h1>
-<p>All controls within a group take their positions relative to the group's placement. Thus, the group always requires its <b><code>&lt;posx&gt;</code></b>, <b><code>&lt;posy&gt;</code></b>, <b><code>&lt;width&gt;</code></b>, and <b><code>&lt;height&gt;</code></b> attributes to be defined. As this can be a pain to remember, anything that you don't specify will be inherited from it's parent group (or the main window).</p>
-<p>By way of example, consider the first group within a PAL full screen window (720x576), and suppose we have</p>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;group&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;15&quot;</span>&gt;</div>
-<div class="line">  &lt;posx&gt;30&lt;/posx&gt;</div>
-<div class="line">  &lt;posy&gt;70&lt;/posy&gt;</div>
-<div class="line">  &lt;width&gt;400&lt;/width&gt;</div>
-<div class="line">  ... more controls go here ...</div>
-<div class="line">&lt;/control&gt;</div>
-</div><!-- fragment --><p>so that the <b><code>&lt;height&gt;</code></b> hasn't been defined. Then Kodi will automatically set the <b><code>&lt;height&gt;</code></b> equal to 506 by inheriting this from the window's height of 576, less the <b><code>&lt;posy&gt;</code></b> amount.</p>
-<p>You can align controls within a group to the right edge of the group, by using the <b>"r"</b> modifier to the <b><code>&lt;posx&gt;</code></b> and <b><code>&lt;posy&gt;</code></b> fields</p>
-<div class="fragment"><div class="line">&lt;control type=<span class="stringliteral">&quot;group&quot;</span> <span class="keywordtype">id</span>=<span class="stringliteral">&quot;20&quot;</span>&gt;</div>
-<div class="line">  &lt;control type=<span class="stringliteral">&quot;button&quot;</span> <span class="keywordtype">id</span>=2&gt;</div>
-<div class="line">    &lt;posx&gt;180r&lt;/posx&gt;</div>
-<div class="line">    &lt;width&gt;180&lt;/width&gt;</div>
-<div class="line">  &lt;/control&gt;</div>
-<div class="line">  &lt;control type=<span class="stringliteral">&quot;button&quot;</span> <span class="keywordtype">id</span>=3&gt;</div>
-<div class="line">    &lt;posx&gt;180r&lt;/posx&gt;</div>
-<div class="line">    &lt;width&gt;180&lt;/width&gt;</div>
-<div class="line">  &lt;/control&gt;</div>
-<div class="line">  &lt;control type=<span class="stringliteral">&quot;button&quot;</span> <span class="keywordtype">id</span>=4&gt;</div>
-<div class="line">    &lt;posx&gt;180r&lt;/posx&gt;</div>
-<div class="line">    &lt;width&gt;180&lt;/width&gt;</div>
-<div class="line">  &lt;/control&gt;</div>
-<div class="line">&lt;/control&gt;</div>
-</div><!-- fragment --><p>All the buttons have width 180, and are aligned 180 pixels from the right edge of the group they're within.</p>
-<hr/>
- <h1><a class="anchor" id="Group_Control_sect4"></a>
+ <h1><a class="anchor" id="EPGGrid_control_sect3"></a>
 See also</h1>
 <h4>Development:</h4>
 <ul>

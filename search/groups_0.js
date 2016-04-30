@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['action',['Action',['../group__python__xbmcgui__action.html',1,'']]]
+  ['1_2e_20basic_20functions',['1. Basic functions',['../group___kodi_addon___c_p_p___main.html',1,'']]]
 ];
