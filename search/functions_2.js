@@ -10,6 +10,7 @@ var searchData=
   ['clearproperty',['clearProperty',['../group__python__xbmcgui__window.html#ga20a379dd0d82ee7bab6e3caebeb956e8',1,'XBMCAddon::xbmcgui::Window']]],
   ['close',['Close',['../group__cpp__kodi__vfs___c_file.html#ga7f7a3199c392465d0767c6506c1af5b4',1,'kodi::vfs::CFile::Close()'],['../group__python___dialog_progress.html#gaa68d6863c83c0c1cab65be8c683053a5',1,'XBMCAddon::xbmcgui::DialogProgress::close()'],['../group__python___dialog_progress_b_g.html#gaa68d6863c83c0c1cab65be8c683053a5',1,'XBMCAddon::xbmcgui::DialogProgressBG::close()'],['../group__python__file.html#gaa69c8bf1f1dcf4e72552efff1fe3e87e',1,'XBMCAddon::xbmcvfs::File::close()'],['../group__python__xbmcgui__window.html#gaa69c8bf1f1dcf4e72552efff1fe3e87e',1,'XBMCAddon::xbmcgui::Window::close()']]],
   ['closefile',['CloseFile',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a0f7f167beca61df2847dbe8ecae7b6fe',1,'ADDON::CHelper_libXBMC_addon']]],
+  ['compareformat',['compareFormat',['../group__cpp__kodi__audioengine___defs.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64',1,'AudioEngineFormat']]],
   ['contextmenu',['contextmenu',['../group__python___dialog.html#ga4096de3747da855937f6ed7c1df3877b',1,'XBMCAddon::xbmcgui::Dialog']]],
   ['controldown',['controlDown',['../group__python__xbmcgui__control.html#gaf9686cc82e37a639b7d8f7cccfbf918d',1,'XBMCAddon::xbmcgui::Control']]],
   ['controlleft',['controlLeft',['../group__python__xbmcgui__control.html#ga49f482d9fdc2fe5a517de3b9e2d118aa',1,'XBMCAddon::xbmcgui::Control']]],
