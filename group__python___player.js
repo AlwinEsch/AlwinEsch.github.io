@@ -17,7 +17,6 @@ var group__python___player =
     [ "setSubtitles", "group__python___player.html#ga24a6b65440083e83e67e5d0fb3379369", null ],
     [ "showSubtitles", "group__python___player.html#ga4f02c3e27797cad9ea91b0372eca4e06", null ],
     [ "getSubtitles", "group__python___player.html#gacb0f9c105b13da64eb30490ebd923c43", null ],
-    [ "disableSubtitles", "group__python___player.html#gaab6c8a95b275a10a6042b33ae25e8dfb", null ],
     [ "getAvailableSubtitleStreams", "group__python___player.html#gad5afece4209ffaa546e1007bdc162c47", null ],
     [ "setSubtitleStream", "group__python___player.html#gab8d682e114808afa8a828ce4796a0e3f", null ],
     [ "getVideoInfoTag", "group__python___player.html#ga240f1deb93fc70eeffb671445781ae1f", null ],

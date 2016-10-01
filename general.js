@@ -33,5 +33,5 @@ var general =
         [ "for loops", "code_guidelines.html#code_guidelines_6_4", null ]
       ] ]
     ] ],
-    [ "Doxygen on Kodi's Add-On headers", "_doxygen__on__addon.html", null ]
+    [ "Doxygen on Kodi's Add-On headers", "Doxygen_On_Addon.html", null ]
 ];

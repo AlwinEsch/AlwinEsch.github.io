@@ -1,12 +1,7 @@
 var searchData=
 [
-  ['undeleterecording',['UndeleteRecording',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods.html#gad5446e0506474d8dd063ae497917d686',1,'KodiAPI::PVR::CAddonInterface']]],
-  ['unknowntoutf8',['UnknownToUTF8',['../group___c_p_p___kodi_a_p_i___add_on___general.html#ga9f66c9970f7e23ae40debce5db4a121b',1,'KodiAPI::AddOn::General']]],
-  ['unlock',['Unlock',['../group___c_p_p___kodi_a_p_i___g_u_i___general.html#ga562187d336aad67565a1f90521b8c12b',1,'KodiAPI::GUI::General']]],
-  ['unregisterdspmode',['UnregisterDSPMode',['../group___c_p_p___kodi_a_p_i___audio_engine___general.html#ga53717f88a6a1ba1711e464c9f85f01a1',1,'KodiAPI::AudioEngine::General']]],
+  ['unknowntoutf8',['UnknownToUTF8',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a072b04ab983496e37e6ab6f40abed1ee',1,'ADDON::CHelper_libXBMC_addon::UnknownToUTF8()'],['../group__cpp__kodi.html#ga275a5231deebed983e67a97f50c8195e',1,'kodi::UnknownToUTF8()']]],
   ['unshuffle',['unshuffle',['../group__python___play_list.html#ga869185334948aa5f500d718c1c071cdd',1,'XBMCAddon::xbmc::PlayList']]],
   ['update',['update',['../group__python___dialog_progress.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgress::update()'],['../group__python___dialog_progress_b_g.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgressBG::update()']]],
-  ['updatestreams',['UpdateStreams',['../group___c_p_p___kodi_a_p_i___p_v_r___c_stream_properties.html#ga8d64e3bab115fb9201d6f688ab350ce5',1,'KodiAPI::PVR::CStreamProperties']]],
-  ['updatetimer',['UpdateTimer',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods.html#ga2fb079f099725c0caeec2a8a8d9fc392',1,'KodiAPI::PVR::CAddonInterface']]],
-  ['urlencode',['URLEncode',['../group___c_p_p___kodi_a_p_i___add_on___network.html#gaab8bb8bdf47d013523678277ac3642d0',1,'KodiAPI::AddOn::Network']]]
+  ['urlencode',['URLEncode',['../group__cpp__kodi__network.html#gac4320b320b1871e24d37f6bab266f368',1,'kodi::network']]]
 ];

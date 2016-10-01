@@ -1,4 +1,9 @@
 var searchData=
 [
-  ['3_2e_20audio_20engine',['3. Audio Engine',['../group___c_p_p___kodi_a_p_i___audio_engine.html',1,'']]]
+  ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__audioengine___defs.html',1,'']]],
+  ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi___defs.html',1,'']]],
+  ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__vfs___c_file___defs.html',1,'']]],
+  ['dialog',['Dialog',['../group__python___dialog.html',1,'']]],
+  ['dialogprogress',['DialogProgress',['../group__python___dialog_progress.html',1,'']]],
+  ['dialogprogressbg',['DialogProgressBG',['../group__python___dialog_progress_b_g.html',1,'']]]
 ];

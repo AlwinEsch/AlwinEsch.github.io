@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stream_5fvector',['stream_vector',['../group___c_p_p___kodi_a_p_i___p_v_r___c_stream_properties.html#ga1ebf7c021d47165548ca6320162935bb',1,'KodiAPI::PVR::CStreamProperties']]]
+  ['langformats',['LangFormats',['../group__cpp__kodi___defs.html#gadbfc26eac03180c65119899fe7f3968f',1,'General.h']]]
 ];

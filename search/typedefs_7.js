@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stream_5fvector',['stream_vector',['../group___c_p_p___kodi_a_p_i___p_v_r___c_stream_properties.html#ga1ebf7c021d47165548ca6320162935bb',1,'KodiAPI::PVR::CStreamProperties']]]
+  ['playparameter',['PlayParameter',['../namespace_x_b_m_c_addon_1_1xbmc.html#a2d10c982e027434a4ad36b054f84623f',1,'XBMCAddon::xbmc']]]
 ];

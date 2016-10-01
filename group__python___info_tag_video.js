@@ -20,6 +20,7 @@ var group__python___info_tag_video =
     [ "getEpisode", "group__python___info_tag_video.html#ga67a90e64b454890c4cacd410f34873e6", null ],
     [ "getYear", "group__python___info_tag_video.html#gad0a298a1c3d30a5dff3278f1f5bb7d86", null ],
     [ "getRating", "group__python___info_tag_video.html#ga209cc2a79146f673389564ea1315c2a2", null ],
+    [ "getUserRating", "group__python___info_tag_video.html#gaadadcc290c6f92aa133108c12329911e", null ],
     [ "getPlayCount", "group__python___info_tag_video.html#ga6b91408706d3ba78df1cf0d9fc8d7365", null ],
     [ "getLastPlayed", "group__python___info_tag_video.html#gaf16ec95dcf0cf2f08182b703de6f2074", null ],
     [ "getOriginalTitle", "group__python___info_tag_video.html#ga40c2a978091fe91512e2aa42fd127122", null ],

@@ -1,20 +1,4 @@
 var searchData=
 [
-  ['player',['Player',['../class_x_b_m_c_addon_1_1xbmc_1_1_player.html',1,'XBMCAddon::xbmc']]],
-  ['playlist',['PlayList',['../class_x_b_m_c_addon_1_1xbmc_1_1_play_list.html',1,'XBMCAddon::xbmc']]],
-  ['pvr_5faddon_5fcapabilities',['PVR_ADDON_CAPABILITIES',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s',1,'']]],
-  ['pvr_5fchannel',['PVR_CHANNEL',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_methods___defs.html#struct_p_v_r___c_h_a_n_n_e_l',1,'']]],
-  ['pvr_5fchannel_5fgroup',['PVR_CHANNEL_GROUP',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_group_methods___defs.html#struct_p_v_r___c_h_a_n_n_e_l___g_r_o_u_p',1,'']]],
-  ['pvr_5fchannel_5fgroup_5fmember',['PVR_CHANNEL_GROUP_MEMBER',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_group_methods___defs.html#struct_p_v_r___c_h_a_n_n_e_l___g_r_o_u_p___m_e_m_b_e_r',1,'']]],
-  ['pvr_5fedl_5fentry',['PVR_EDL_ENTRY',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods___defs.html#struct_p_v_r___e_d_l___e_n_t_r_y',1,'']]],
-  ['pvr_5fmenuhook',['PVR_MENUHOOK',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#struct_p_v_r___m_e_n_u_h_o_o_k',1,'']]],
-  ['pvr_5fmenuhook_5fdata',['PVR_MENUHOOK_DATA',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#struct_p_v_r___m_e_n_u_h_o_o_k___d_a_t_a',1,'']]],
-  ['pvr_5fproperties',['PVR_PROPERTIES',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#struct_p_v_r___p_r_o_p_e_r_t_i_e_s',1,'']]],
-  ['pvr_5frecording',['PVR_RECORDING',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods___defs.html#struct_p_v_r___r_e_c_o_r_d_i_n_g',1,'']]],
-  ['pvr_5fsignal_5fstatus',['PVR_SIGNAL_STATUS',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods___defs.html#struct_p_v_r___s_i_g_n_a_l___s_t_a_t_u_s',1,'']]],
-  ['pvr_5fstream',['PVR_STREAM',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods___defs.html#struct_p_v_r___s_t_r_e_a_m',1,'']]],
-  ['pvr_5fstream_5fproperties',['PVR_STREAM_PROPERTIES',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_live_stream_methods___defs.html#struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s',1,'']]],
-  ['pvr_5ftimer',['PVR_TIMER',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#struct_p_v_r___t_i_m_e_r',1,'']]],
-  ['pvr_5ftimer_5ftype',['PVR_TIMER_TYPE',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#struct_p_v_r___t_i_m_e_r___t_y_p_e',1,'']]],
-  ['pvr_5ftimer_5ftype_5fattribute_5fint_5fvalue',['PVR_TIMER_TYPE_ATTRIBUTE_INT_VALUE',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#struct_p_v_r___t_i_m_e_r___t_y_p_e___a_t_t_r_i_b_u_t_e___i_n_t___v_a_l_u_e',1,'']]]
+  ['monitor',['Monitor',['../group__python__monitor.html#class_x_b_m_c_addon_1_1xbmc_1_1_monitor',1,'XBMCAddon::xbmc']]]
 ];

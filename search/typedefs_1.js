@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['guihandle',['GUIHANDLE',['../group___c_p_p___kodi_a_p_i___g_u_i___c_window___defs.html#ga3e3a75682bddc7d2ee995d4e7a37daec',1,'KodiAPI']]]
+  ['curloptiontype',['CURLOptiontype',['../group__cpp__kodi__vfs___c_file___defs.html#ga5a8b93b5deaed9c7191a9f69b869dcff',1,'VFS.h']]]
 ];

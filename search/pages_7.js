@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['image_20control',['Image Control',['../_image__control.html',1,'skin_controls']]]
+  ['image_20control',['Image Control',['../Image_Control.html',1,'skin_controls']]]
 ];

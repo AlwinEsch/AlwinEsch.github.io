@@ -1,24 +1,6 @@
 var searchData=
 [
-  ['bendanytime',['bEndAnyTime',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#ad82db0773f70403b286bd5f2c3863c5f',1,'PVR_TIMER']]],
-  ['bfulltextepgsearch',['bFullTextEpgSearch',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#a1e57bc8473273653f3dea214bc803564',1,'PVR_TIMER']]],
-  ['bhandlesdemuxing',['bHandlesDemuxing',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#aa0a130028e1cda5c3f8e9fb13fbc7ac7',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bhandlesinputstream',['bHandlesInputStream',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a359e8015ac7906c2088fe0ecb3ec648f',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bisdeleted',['bIsDeleted',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_recording_methods___defs.html#a48daaa3f4c00e4bacd799898340a2ddc',1,'PVR_RECORDING']]],
-  ['bishidden',['bIsHidden',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_methods___defs.html#a29794a095012cb573c1cbe24e0d63284',1,'PVR_CHANNEL']]],
-  ['bisradio',['bIsRadio',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_methods___defs.html#a8d3f2d7f3e790706074c60af62610987',1,'PVR_CHANNEL::bIsRadio()'],['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_channel_group_methods___defs.html#a8d3f2d7f3e790706074c60af62610987',1,'PVR_CHANNEL_GROUP::bIsRadio()']]],
-  ['bnotify',['bNotify',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_e_p_g_methods___defs.html#ad273493d2cc94a0960638fc1360a2ec7',1,'EPG_TAG']]],
-  ['bstartanytime',['bStartAnyTime',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___p_v_r_timer_methods___defs.html#a3d040da25edfd9c7b30e47f641fa1db8',1,'PVR_TIMER']]],
-  ['bsupportschannelgroups',['bSupportsChannelGroups',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a8e4d51f8fa63513d7311e835b65d584a',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bsupportschannelscan',['bSupportsChannelScan',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a98a9e9a76ed7fb3a7e750e20235303f3',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bsupportschannelsettings',['bSupportsChannelSettings',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a0435c9bf30ea1b1395b71054d3682efc',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bsupportsepg',['bSupportsEPG',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a9e1cc84853679832105123c3948dc4d5',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bsupportslastplayedposition',['bSupportsLastPlayedPosition',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a4b2299089b062da42352cf509b0235e8',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bsupportsradio',['bSupportsRadio',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#ac56dba1378272b8c53c10876135db0fe',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bsupportsrecordingedl',['bSupportsRecordingEdl',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a5af3fe7a6aeb16f8597e7122c3b4b749',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bsupportsrecordingplaycount',['bSupportsRecordingPlayCount',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a3951a15dbd390d9b61c37b9696a181b7',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bsupportsrecordings',['bSupportsRecordings',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a748e782ac4547cab51312991fa8c190e',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bsupportsrecordingsundelete',['bSupportsRecordingsUndelete',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a2f249ff14666a73871ea11c9cd07a8f9',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bsupportstimers',['bSupportsTimers',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a400c1c7be9832ea40324ba02b68dd973',1,'PVR_ADDON_CAPABILITIES']]],
-  ['bsupportstv',['bSupportsTV',['../group___c_p_p___kodi_a_p_i___p_v_r___c_addon_interface___defs.html#a081d8e4e19a1b04eb19569f2f807eccf',1,'PVR_ADDON_CAPABILITIES']]]
+  ['ac3_5feac3',['ac3_eac3',['../union_a_e___d_s_p___p_r_o_f_i_l_e.html#a3a152119a5b74ba5fe88783302c3f029',1,'AE_DSP_PROFILE']]],
+  ['addon_5fpath',['addon_path',['../struct_p_e_r_i_p_h_e_r_a_l___p_r_o_p_s.html#a74f7156d25d6dcf0731792974f88ebaf',1,'PERIPHERAL_PROPS']]],
+  ['axis_5fcount',['axis_count',['../struct_j_o_y_s_t_i_c_k___i_n_f_o.html#a6c9f3c39fbcd95dfbdbfd4febefafb63',1,'JOYSTICK_INFO']]]
 ];

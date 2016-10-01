@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['network',['Network',['../group___c_p_p___kodi_a_p_i___add_on___network.html',1,'']]],
-  ['name',['name',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item___video_info_tag.html#a9b45b3e13bd9167aab02e17e08916231',1,'ADDON_VideoInfoTag_Cast::name()'],['../group___c_p_p___kodi_a_p_i___input_stream___codec_descriptor.html#gab29906ba5407bb58b86428cb4b4a1e26',1,'KodiAPI::InputStream::CodecDescriptor::Name()']]],
-  ['notification',['notification',['../group__python___dialog.html#gaca90e2d17ad057925f1a350a08deed85',1,'XBMCAddon::xbmcgui::Dialog']]],
-  ['numeric',['numeric',['../group__python___dialog.html#ga1575511e8ea0f9e4d4684c5b9342d191',1,'XBMCAddon::xbmcgui::Dialog']]]
+  ['unknowntoutf8',['UnknownToUTF8',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a072b04ab983496e37e6ab6f40abed1ee',1,'ADDON::CHelper_libXBMC_addon::UnknownToUTF8()'],['../group__cpp__kodi.html#ga275a5231deebed983e67a97f50c8195e',1,'kodi::UnknownToUTF8()']]],
+  ['unshuffle',['unshuffle',['../group__python___play_list.html#ga869185334948aa5f500d718c1c071cdd',1,'XBMCAddon::xbmc::PlayList']]],
+  ['update',['update',['../group__python___dialog_progress.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgress::update()'],['../group__python___dialog_progress_b_g.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgressBG::update()']]],
+  ['urlencode',['URLEncode',['../group__cpp__kodi__network.html#gac4320b320b1871e24d37f6bab266f368',1,'kodi::network']]],
+  ['user_5fpath',['user_path',['../struct_p_e_r_i_p_h_e_r_a_l___p_r_o_p_s.html#a8f1a2234f2571276a0d84c5eec8fec67',1,'PERIPHERAL_PROPS']]]
 ];

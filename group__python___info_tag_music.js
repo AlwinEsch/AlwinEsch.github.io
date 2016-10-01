@@ -7,6 +7,8 @@ var group__python___info_tag_music =
     [ "getAlbumArtist", "group__python___info_tag_music.html#gaf49ce9703600649cd1f8c58cb989de66", null ],
     [ "getGenre", "group__python___info_tag_music.html#gadc6f217756d49edbac6975e1f69485d5", null ],
     [ "getDuration", "group__python___info_tag_music.html#gab46fe3d2750728c84bd71ae1bfd08ee8", null ],
+    [ "getRating", "group__python___info_tag_music.html#ga209cc2a79146f673389564ea1315c2a2", null ],
+    [ "getUserRating", "group__python___info_tag_music.html#gaadadcc290c6f92aa133108c12329911e", null ],
     [ "getTrack", "group__python___info_tag_music.html#ga86cb4c526de526dad142d5e945e4d6f3", null ],
     [ "getDisc", "group__python___info_tag_music.html#ga59e76fc119dff33ae92c871744cca574", null ],
     [ "getReleaseDate", "group__python___info_tag_music.html#ga5852df07c7200dd5910756eb71bbc067", null ],

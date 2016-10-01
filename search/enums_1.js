@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dvd_5fstate',['dvd_state',['../group___c_p_p___kodi_a_p_i___add_on___general___defs.html#ga6854c40ee0b4222220398351339f0aa5',1,'KodiAPI']]]
+  ['curloptiontype',['CURLOptiontype',['../group__cpp__kodi__vfs___c_file___defs.html#ga8fd8d9cf7b1dd293423b7194ff86d6a9',1,'VFS.h']]]
 ];

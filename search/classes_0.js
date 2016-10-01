@@ -1,8 +1,23 @@
 var searchData=
 [
-  ['action',['Action',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_action.html',1,'XBMCAddon::xbmcgui']]],
-  ['addon',['Addon',['../class_x_b_m_c_addon_1_1xbmcaddon_1_1_addon.html',1,'XBMCAddon::xbmcaddon']]],
-  ['addon_5fvideoinfotag_5fcast',['ADDON_VideoInfoTag_Cast',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item___video_info_tag.html#struct_a_d_d_o_n___video_info_tag___cast',1,'']]],
-  ['addon_5fvideoinfotag_5fresume',['ADDON_VideoInfoTag_Resume',['../group___c_p_p___kodi_a_p_i___g_u_i___c_list_item___video_info_tag.html#struct_a_d_d_o_n___video_info_tag___resume',1,'']]],
-  ['audioengineformat',['AudioEngineFormat',['../struct_audio_engine_format.html',1,'']]]
+  ['action',['Action',['../group__python__xbmcgui__action.html#class_x_b_m_c_addon_1_1xbmcgui_1_1_action',1,'XBMCAddon::xbmcgui']]],
+  ['addon',['Addon',['../group__python__xbmcaddon.html#class_x_b_m_c_addon_1_1xbmcaddon_1_1_addon',1,'XBMCAddon::xbmcaddon']]],
+  ['addon_5fhandle_5fstruct',['ADDON_HANDLE_STRUCT',['../struct_a_d_d_o_n___h_a_n_d_l_e___s_t_r_u_c_t.html',1,'']]],
+  ['addon_5fstructsetting',['ADDON_StructSetting',['../struct_a_d_d_o_n___struct_setting.html',1,'']]],
+  ['addoncb',['AddonCB',['../struct_addon_c_b.html',1,'']]],
+  ['ae_5fdsp_5faddon_5fcapabilities',['AE_DSP_ADDON_CAPABILITIES',['../struct_a_e___d_s_p___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html',1,'']]],
+  ['ae_5fdsp_5fmenuhook',['AE_DSP_MENUHOOK',['../struct_a_e___d_s_p___m_e_n_u_h_o_o_k.html',1,'']]],
+  ['ae_5fdsp_5fmenuhook_5fdata',['AE_DSP_MENUHOOK_DATA',['../struct_a_e___d_s_p___m_e_n_u_h_o_o_k___d_a_t_a.html',1,'']]],
+  ['ae_5fdsp_5fmode',['AE_DSP_MODE',['../struct_a_e___d_s_p___m_o_d_e_s_1_1_a_e___d_s_p___m_o_d_e.html',1,'AE_DSP_MODES']]],
+  ['ae_5fdsp_5fmodes',['AE_DSP_MODES',['../struct_a_e___d_s_p___m_o_d_e_s.html',1,'']]],
+  ['ae_5fdsp_5fprofile',['AE_DSP_PROFILE',['../union_a_e___d_s_p___p_r_o_f_i_l_e.html',1,'']]],
+  ['ae_5fdsp_5fprofile_5fac3_5feac3',['AE_DSP_PROFILE_AC3_EAC3',['../struct_a_e___d_s_p___p_r_o_f_i_l_e___a_c3___e_a_c3.html',1,'']]],
+  ['ae_5fdsp_5fprofile_5fdts_5fdtshd',['AE_DSP_PROFILE_DTS_DTSHD',['../struct_a_e___d_s_p___p_r_o_f_i_l_e___d_t_s___d_t_s_h_d.html',1,'']]],
+  ['ae_5fdsp_5fprofile_5fmlp_5ftruehd',['AE_DSP_PROFILE_MLP_TRUEHD',['../struct_a_e___d_s_p___p_r_o_f_i_l_e___m_l_p___t_r_u_e_h_d.html',1,'']]],
+  ['ae_5fdsp_5fproperties',['AE_DSP_PROPERTIES',['../struct_a_e___d_s_p___p_r_o_p_e_r_t_i_e_s.html',1,'']]],
+  ['ae_5fdsp_5fsettings',['AE_DSP_SETTINGS',['../struct_a_e___d_s_p___s_e_t_t_i_n_g_s.html',1,'']]],
+  ['ae_5fdsp_5fstream_5fproperties',['AE_DSP_STREAM_PROPERTIES',['../struct_a_e___d_s_p___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html',1,'']]],
+  ['audiodec_5fprops',['AUDIODEC_PROPS',['../struct_a_u_d_i_o_d_e_c___p_r_o_p_s.html',1,'']]],
+  ['audioenc_5fprops',['AUDIOENC_PROPS',['../struct_a_u_d_i_o_e_n_c___p_r_o_p_s.html',1,'']]],
+  ['audioengineformat',['AudioEngineFormat',['../group__cpp__kodi__audioengine___defs.html#struct_audio_engine_format',1,'']]]
 ];
