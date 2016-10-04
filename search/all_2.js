@@ -48,7 +48,7 @@ var searchData=
   ['cfile',['CFile',['../group__cpp__kodi__vfs___c_file.html#ga8b221739572abc22a176281ebd8e70c0',1,'kodi::vfs::CFile']]],
   ['cfile',['CFile',['../group__cpp__kodi__vfs___c_file.html#classkodi_1_1vfs_1_1_c_file',1,'kodi::vfs']]],
   ['channeltype',['channelType',['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#a29ed237c011ae5563b1b4293e0a5020c',1,'PVR_RECORDING']]],
-  ['cinstancescreensaver',['CInstanceScreensaver',['../group__cpp__kodi__addon__screensaver.html#gaf6ef2b25cd759cea9a1e0c653dc266ba',1,'kodi::addon::CInstanceScreensaver']]],
+  ['cinstancescreensaver',['CInstanceScreensaver',['../group__cpp__kodi__addon__screensaver.html#gad09651fc5f7621db1fe5390eb3573b44',1,'kodi::addon::CInstanceScreensaver']]],
   ['cinstancescreensaver',['CInstanceScreensaver',['../classkodi_1_1addon_1_1_c_instance_screensaver.html',1,'kodi::addon']]],
   ['clear',['clear',['../group__python___play_list.html#gaa821bec12eaa7e0f649397c9675ff505',1,'XBMCAddon::xbmc::PlayList']]],
   ['clearlist',['clearList',['../group__python__xbmcgui__window__xml.html#ga5421bf9d57ddded1e8e16959804626ca',1,'XBMCAddon::xbmcgui::WindowXML::clearList()'],['../group__cpp__kodi__gui___c_window.html#ga2b85ec494201046fd7686395c996c272',1,'kodi::gui::CWindow::ClearList()']]],

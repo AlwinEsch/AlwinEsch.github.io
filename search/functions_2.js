@@ -20,7 +20,7 @@ var searchData=
   ['cdialogextendedprogress',['CDialogExtendedProgress',['../group__cpp__kodi__gui___c_dialog_extended_progress.html#ga598592cd22cbc89797f504ffd53f7a70',1,'kodi::gui::CDialogExtendedProgress']]],
   ['cdialogprogress',['CDialogProgress',['../group__cpp__kodi__gui___c_dialog_progress.html#ga78b8dcedb682c8b3ee857485b2c4c2b8',1,'kodi::gui::CDialogProgress']]],
   ['cfile',['CFile',['../group__cpp__kodi__vfs___c_file.html#ga8b221739572abc22a176281ebd8e70c0',1,'kodi::vfs::CFile']]],
-  ['cinstancescreensaver',['CInstanceScreensaver',['../group__cpp__kodi__addon__screensaver.html#gaf6ef2b25cd759cea9a1e0c653dc266ba',1,'kodi::addon::CInstanceScreensaver']]],
+  ['cinstancescreensaver',['CInstanceScreensaver',['../group__cpp__kodi__addon__screensaver.html#gad09651fc5f7621db1fe5390eb3573b44',1,'kodi::addon::CInstanceScreensaver']]],
   ['clear',['clear',['../group__python___play_list.html#gaa821bec12eaa7e0f649397c9675ff505',1,'XBMCAddon::xbmc::PlayList']]],
   ['clearlist',['clearList',['../group__python__xbmcgui__window__xml.html#ga5421bf9d57ddded1e8e16959804626ca',1,'XBMCAddon::xbmcgui::WindowXML::clearList()'],['../group__cpp__kodi__gui___c_window.html#ga2b85ec494201046fd7686395c996c272',1,'kodi::gui::CWindow::ClearList()']]],
   ['clearproperties',['clearProperties',['../group__python__xbmcgui__window.html#ga37575f372fcefefb8281b618d9bc8487',1,'XBMCAddon::xbmcgui::Window::clearProperties()'],['../group__cpp__kodi__gui___c_list_item.html#gac08a48ef4dc5afe79c14ffbefdd96f5d',1,'kodi::gui::CListItem::ClearProperties()'],['../group__cpp__kodi__gui___c_window.html#gac08a48ef4dc5afe79c14ffbefdd96f5d',1,'kodi::gui::CWindow::ClearProperties()']]],
