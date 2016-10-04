@@ -1,11 +1,29 @@
 var searchData=
 [
   ['path',['Path',['../group__cpp__kodi__vfs___c_dir_entry.html#ga666f6d222d6e40f592d7ec4c8c670263',1,'kodi::vfs::CVFSDirEntry']]],
-  ['pause',['pause',['../group__python___player.html#gab02121d4dfeb622a4ea3db42c0cb6676',1,'XBMCAddon::xbmc::Player::pause()'],['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga70babc5227ddd16ca31dccc6cec0bb22',1,'kodi::audioengine::CAddonAEStream::Pause()'],['../class_c_addon_a_e_stream.html#a70babc5227ddd16ca31dccc6cec0bb22',1,'CAddonAEStream::Pause()']]],
+  ['pause',['Pause',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga70babc5227ddd16ca31dccc6cec0bb22',1,'kodi::audioengine::CAddonAEStream::Pause()'],['../group__python___player.html#gab02121d4dfeb622a4ea3db42c0cb6676',1,'XBMCAddon::xbmc::Player::pause()']]],
+  ['pausestream',['PauseStream',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html#a0c6c3376d5b8e5a255acc189a45119dd',1,'kodi::addon::inputstream::CAddon::PauseStream()'],['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#ac2158722d1f7f740a518e47b575fb4df',1,'kodi::addon::pvr::CAddon::PauseStream()']]],
+  ['percentage',['Percentage',['../group__cpp__kodi__gui___c_dialog_extended_progress.html#ga3bf91c353218dceaa271b65321b2f5cf',1,'kodi::gui::CDialogExtendedProgress']]],
+  ['performdevicescan',['PerformDeviceScan',['../classkodi_1_1addon_1_1peripheral_1_1_c_addon.html#a288f76e52df9844ea447887947cda068',1,'kodi::addon::peripheral::CAddon']]],
+  ['pixelratio',['PixelRatio',['../group__cpp__kodi__addon__screensaver___c_b.html#gaed543c2faa2875e81791a9a84b76ab56',1,'kodi::addon::CInstanceScreensaver']]],
   ['play',['Play',['../group__cpp__kodi___sound_play.html#ga12574569144fb9d22d996965ee42b627',1,'kodi::CSoundPlay::Play()'],['../group__python___player.html#ga84f42d1160cbf72fcaec1030225e8669',1,'XBMCAddon::xbmc::Player::play()']]],
   ['playnext',['playnext',['../group__python___player.html#gad3fc41131784480b8d6bda2b90bbdec9',1,'XBMCAddon::xbmc::Player']]],
   ['playprevious',['playprevious',['../group__python___player.html#gad16dd426f4c538dd6dfa830445e456a3',1,'XBMCAddon::xbmc::Player']]],
   ['playselected',['playselected',['../group__python___player.html#ga418537b7c75355df885a94d31014855b',1,'XBMCAddon::xbmc::Player']]],
   ['playsfx',['playSFX',['../group__python__xbmc.html#gae7630e0754ba3e3e17a380e69784e2b9',1,'ModuleXbmc.h']]],
-  ['popactivewindowid',['popActiveWindowId',['../group__python__xbmcgui__window.html#a09309d4a53608ecb531fcc9bb4ae97b2',1,'XBMCAddon::xbmcgui::Window']]]
+  ['popactivewindowid',['popActiveWindowId',['../group__python__xbmcgui__window.html#a09309d4a53608ecb531fcc9bb4ae97b2',1,'XBMCAddon::xbmcgui::Window']]],
+  ['positionlivestream',['PositionLiveStream',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a1e500b96216af2666b6169e709f2ac09',1,'kodi::addon::pvr::CAddon']]],
+  ['positionrecordedstream',['PositionRecordedStream',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#acc0cb11fe6eb9018a9f41476b53e96eb',1,'kodi::addon::pvr::CAddon']]],
+  ['positionstream',['PositionStream',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html#a692d2ac25cc800876b0b5164c7b5ca3f',1,'kodi::addon::inputstream::CAddon']]],
+  ['postime',['PosTime',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html#abc1f89040d8fea0db1a8778a9e68caf6',1,'kodi::addon::inputstream::CAddon']]],
+  ['postprocess',['PostProcess',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a64ee87e1e49303a906b993abd6f1452e',1,'kodi::addon::adsp::CAddon']]],
+  ['postprocessgetdelay',['PostProcessGetDelay',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a77811f4f47b91b59148b981a744ada86',1,'kodi::addon::adsp::CAddon']]],
+  ['postprocessneededsamplesize',['PostProcessNeededSamplesize',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#ad332f3611bd4b2508ef63c458a5ae106',1,'kodi::addon::adsp::CAddon']]],
+  ['poweroffjoystick',['PowerOffJoystick',['../classkodi_1_1addon_1_1peripheral_1_1_c_addon.html#a971f07a9b76152a5779626b5f945c6ac',1,'kodi::addon::peripheral::CAddon']]],
+  ['preprocess',['PreProcess',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a059cae320b8d473ca8c98570bb0107ce',1,'kodi::addon::adsp::CAddon']]],
+  ['preprocessgetdelay',['PreProcessGetDelay',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#afdc5bd253d6f273de079bb745bad87ee',1,'kodi::addon::adsp::CAddon']]],
+  ['preprocessneededsamplesize',['PreProcessNeededSamplesize',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a57ea76569392415fec0d59d45b1d1f6e',1,'kodi::addon::adsp::CAddon']]],
+  ['presets',['Presets',['../group__cpp__kodi__addon__screensaver___c_b.html#ga2664b8df9b7970b2482b362c12cfe1f6',1,'kodi::addon::CInstanceScreensaver']]],
+  ['profile',['Profile',['../group__cpp__kodi__addon__screensaver___c_b.html#ga85035689dc2f1796f5acd2fd25053e3d',1,'kodi::addon::CInstanceScreensaver']]],
+  ['profilefolder',['ProfileFolder',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html#a3e48146321029e3a20c4837f39693b63',1,'kodi::addon::inputstream::CAddon']]]
 ];

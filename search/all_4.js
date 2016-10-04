@@ -2,9 +2,12 @@ var searchData=
 [
   ['ejectopticaldrive',['EjectOpticalDrive',['../group__cpp__kodi.html#gaf4765d3d9a413a539f6c59a5dafa1773',1,'kodi']]],
   ['enablenavsounds',['enableNavSounds',['../group__python__xbmc.html#ga4eb71eb7730907d480191ef5c2be6ef0',1,'enableNavSounds():&#160;ModuleXbmc.h'],['../group__cpp__kodi.html#ga31300c4519bcb944c746d86571b0cb6d',1,'kodi::EnableNavSounds()']]],
+  ['enablestream',['EnableStream',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html#a1f46dd938cd4828e2b585dbf5b81ad1e',1,'kodi::addon::inputstream::CAddon']]],
+  ['encode',['Encode',['../classkodi_1_1addon_1_1audioencoder_1_1_c_addon.html#a079a50af4ad8549bbb4209a82497708a',1,'kodi::addon::audioencoder::CAddon']]],
   ['endofdirectory',['endOfDirectory',['../group__python__xbmcplugin.html#ga52a8af0460894fa918c6a20d8d77fff6',1,'ModuleXbmcplugin.h']]],
-  ['endtime',['endTime',['../struct_p_v_r___t_i_m_e_r.html#a1f1e169e482467aaf615639bb3467f09',1,'PVR_TIMER::endTime()'],['../struct_e_p_g___t_a_g.html#a1f1e169e482467aaf615639bb3467f09',1,'EPG_TAG::endTime()']]],
+  ['endtime',['endTime',['../struct_e_p_g___t_a_g.html#a1f1e169e482467aaf615639bb3467f09',1,'EPG_TAG::endTime()'],['../struct_p_v_r___t_i_m_e_r.html#a1f1e169e482467aaf615639bb3467f09',1,'PVR_TIMER::endTime()']]],
   ['epg_5ftag',['EPG_TAG',['../struct_e_p_g___t_a_g.html',1,'']]],
+  ['epgeventstatechange',['EpgEventStateChange',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a8795247dea7a40ac72ac8102c06f7cb7',1,'kodi::addon::pvr::CAddon']]],
   ['epggrid_20control',['EPGGrid control',['../EPGGrid_control.html',1,'skin_controls']]],
   ['eservers',['EServers',['../group__cpp__kodi___defs.html#gab4b49b714f90f463734cb0c7c0caca27',1,'General.h']]],
   ['executebuiltin',['executebuiltin',['../group__python__xbmc.html#ga2809d4c435f713c6cf4f95c14e926015',1,'executebuiltin():&#160;ModuleXbmc.h'],['../group__cpp__kodi.html#ga12f6fa1df6c32f9f8dac4ab367509186',1,'kodi::ExecuteBuiltin()']]],

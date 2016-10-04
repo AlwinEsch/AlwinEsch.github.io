@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['screensaver',['Screensaver',['../group__cpp__kodi__addon__screensaver.html',1,'']]],
+  ['struct_20audioengineformat',['struct AudioEngineFormat',['../group__cpp__kodi__audioengine___defs___audio_engine_format.html',1,'']]],
   ['stat',['Stat',['../group__python__stat.html',1,'']]],
   ['subclass_20_2d_20controlbutton',['Subclass - ControlButton',['../group__python__xbmcgui__control__button.html',1,'']]],
   ['subclass_20_2d_20controledit',['Subclass - ControlEdit',['../group__python__xbmcgui__control__edit.html',1,'']]],

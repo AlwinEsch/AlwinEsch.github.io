@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['iaddoninstance',['IAddonInstance',['../classkodi_1_1addon_1_1_i_addon_instance.html',1,'kodi::addon']]],
   ['infotagmusic',['InfoTagMusic',['../group__python___info_tag_music.html#class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music',1,'XBMCAddon::xbmc']]],
   ['infotagradiords',['InfoTagRadioRDS',['../group__python___info_tag_radio_r_d_s.html#class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_radio_r_d_s',1,'XBMCAddon::xbmc']]],
   ['infotagvideo',['InfoTagVideo',['../group__python___info_tag_video.html#class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video',1,'XBMCAddon::xbmc']]],

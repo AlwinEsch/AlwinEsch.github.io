@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['_7ecfile',['~CFile',['../group__cpp__kodi__vfs___c_file.html#gaaca978eab220d4564711e06f5d9e55b3',1,'kodi::vfs::CFile']]],
-  ['_7ecsoundplay',['~CSoundPlay',['../group__cpp__kodi___sound_play.html#ga55031a30fa0d46695ed16a869fff7dc4',1,'kodi::CSoundPlay']]]
+  ['y',['Y',['../group__cpp__kodi__addon__screensaver___c_b.html#gae17c4a6c158b5533f640b52d757b5519',1,'kodi::addon::CInstanceScreensaver']]],
+  ['yesno',['yesno',['../group__python___dialog.html#ga28b2225b08fccc588441336c3a4b0ca3',1,'XBMCAddon::xbmcgui::Dialog']]]
 ];

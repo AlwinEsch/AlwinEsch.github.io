@@ -1,9 +1,12 @@
 var searchData=
 [
+  ['peripheral',['Peripheral',['../classkodi_1_1addon_1_1peripheral_1_1_peripheral.html',1,'kodi::addon::peripheral']]],
   ['peripheral_5fcapabilities',['PERIPHERAL_CAPABILITIES',['../struct_p_e_r_i_p_h_e_r_a_l___c_a_p_a_b_i_l_i_t_i_e_s.html',1,'']]],
   ['peripheral_5fevent',['PERIPHERAL_EVENT',['../struct_p_e_r_i_p_h_e_r_a_l___e_v_e_n_t.html',1,'']]],
   ['peripheral_5finfo',['PERIPHERAL_INFO',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html',1,'']]],
   ['peripheral_5fprops',['PERIPHERAL_PROPS',['../struct_p_e_r_i_p_h_e_r_a_l___p_r_o_p_s.html',1,'']]],
+  ['peripheralevent',['PeripheralEvent',['../classkodi_1_1addon_1_1peripheral_1_1_peripheral_event.html',1,'kodi::addon::peripheral']]],
+  ['peripheralvector',['PeripheralVector',['../classkodi_1_1addon_1_1peripheral_1_1_peripheral_vector.html',1,'kodi::addon::peripheral']]],
   ['player',['Player',['../group__python___player.html#class_x_b_m_c_addon_1_1xbmc_1_1_player',1,'XBMCAddon::xbmc']]],
   ['playlist',['PlayList',['../group__python___play_list.html#class_x_b_m_c_addon_1_1xbmc_1_1_play_list',1,'XBMCAddon::xbmc']]],
   ['pvr_5faddon_5fcapabilities',['PVR_ADDON_CAPABILITIES',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html',1,'']]],

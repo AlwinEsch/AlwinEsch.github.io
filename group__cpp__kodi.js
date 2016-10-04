@@ -2,6 +2,7 @@ var group__cpp__kodi =
 [
     [ "Definitions, structures and enumerators", "group__cpp__kodi___defs.html", "group__cpp__kodi___defs" ],
     [ "class CSoundPlay", "group__cpp__kodi___sound_play.html", "group__cpp__kodi___sound_play" ],
+    [ "Log", "group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1", null ],
     [ "GetSettingString", "group__cpp__kodi.html#gaf92302f01384d4a3e308be9a787a9b5c", null ],
     [ "GetSettingInt", "group__cpp__kodi.html#gab2364cf7d349a6ed655768cb23eff47b", null ],
     [ "GetSettingBoolean", "group__cpp__kodi.html#gabd5ce410910dc1520547da85222e9d64", null ],

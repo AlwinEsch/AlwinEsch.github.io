@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi.html','');});
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b>General functions on Kodi</b> </p>
-<p>It has the header <a class="el" href="_general_8h_source.html">#include &lt;kodi/General.h&gt;</a> be included to enjoy it.</p>
+<p>It has the header #include &lt;kodi/General.h&gt; be included to enjoy it.</p>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"></div><!-- fragment --> <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
@@ -112,6 +112,73 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gab3a67917537eaaf1ea958b95e5a3e9d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kodi::Log </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__cpp__kodi___defs.html#ga913895aaf2ef685961947f8d6b93e038">AddonLog</a>&#160;</td>
+          <td class="paramname"><em>loglevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a message to <a href="http://kodi.wiki/view/Log_file/Advanced#Log_levels">KODI's log</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">loglevel</td><td>The log level of the message <table class="doxtable">
+<tr>
+<th align="right">enum code: </th><th>Description:  </th></tr>
+<tr>
+<td align="right">LOG_DEBUG </td><td>In depth information about the status of Kodi. This information can pretty much only be deciphered by a developer or long time Kodi power user. </td></tr>
+<tr>
+<td align="right">LOG_INFO </td><td>Something has happened. It's not a problem, we just thought you might want to know. Fairly excessive output that most people won't care about. </td></tr>
+<tr>
+<td align="right">LOG_NOTICE </td><td>Similar to INFO but the average Joe might want to know about these events. This level and above are logged by default. </td></tr>
+<tr>
+<td align="right">LOG_WARNING </td><td>Something potentially bad has happened. If Kodi did something you didn't expect, this is probably why. Watch for errors to follow. </td></tr>
+<tr>
+<td align="right">LOG_ERROR </td><td>This event is bad. Something has failed. You likely noticed problems with the application be it skin artifacts, failure of playback a crash, etc. </td></tr>
+<tr>
+<td align="right">LOG_FATAL </td><td>We're screwed. Kodi is about to crash. </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>The format of the message to pass to KODI. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>Added string values</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon/AddonBase.h&gt;</span></div><div class="line"></div><div class="line">...</div><div class="line">kodi::Log(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038ac630750884d91cb9767ef2200bbb048b">LOG_FATAL</a>, <span class="stringliteral">&quot;Oh my goddess, I&#39;m so fatal ;)&quot;</span>);</div><div class="line">...</div></div><!-- fragment --> 
+</div>
+</div>
 <a class="anchor" id="gaf92302f01384d4a3e308be9a787a9b5c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -228,7 +295,7 @@ Modules</h2></td></tr>
 </li>
 </ul>
 <hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line"></div><div class="line">std::string bitrate = <span class="stringliteral">&quot;Max&quot;</span>;</div><div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi.html#gaf92302f01384d4a3e308be9a787a9b5c">kodi::GetSettingString</a>(<span class="stringliteral">&quot;bitrate&quot;</span>, bitrate))</div><div class="line">  kodi::Log(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;bitrate&#39; setting, falling back to default&quot;</span>);</div></div><!-- fragment --> 
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line"></div><div class="line">std::string bitrate = <span class="stringliteral">&quot;Max&quot;</span>;</div><div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi.html#gaf92302f01384d4a3e308be9a787a9b5c">kodi::GetSettingString</a>(<span class="stringliteral">&quot;bitrate&quot;</span>, bitrate))</div><div class="line">  <a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;bitrate&#39; setting, falling back to default&quot;</span>);</div></div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="gab2364cf7d349a6ed655768cb23eff47b"></a>
@@ -317,7 +384,7 @@ Modules</h2></td></tr>
 </li>
 </ul>
 <hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line"></div><div class="line"><span class="keywordtype">int</span> cachesize = 5;</div><div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi.html#gab2364cf7d349a6ed655768cb23eff47b">kodi::GetSettingInt</a>(<span class="stringliteral">&quot;kodion.cache.size&quot;</span>, cachesize))</div><div class="line">  kodi::Log(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;kodion.cache.size&#39; setting, falling back to default&quot;</span>);</div></div><!-- fragment --> 
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line"></div><div class="line"><span class="keywordtype">int</span> cachesize = 5;</div><div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi.html#gab2364cf7d349a6ed655768cb23eff47b">kodi::GetSettingInt</a>(<span class="stringliteral">&quot;kodion.cache.size&quot;</span>, cachesize))</div><div class="line">  <a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;kodion.cache.size&#39; setting, falling back to default&quot;</span>);</div></div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="gabd5ce410910dc1520547da85222e9d64"></a>
@@ -380,7 +447,7 @@ Modules</h2></td></tr>
 </li>
 </ul>
 <hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> show_notifications = <span class="keyword">true</span>;</div><div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi.html#gabd5ce410910dc1520547da85222e9d64">kodi::GetSettingBoolean</a>(<span class="stringliteral">&quot;show-notifications&quot;</span>, show_notifications))</div><div class="line">  kodi::Log(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;show-notifications&#39; setting, falling back to default&quot;</span>);</div></div><!-- fragment --> 
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> show_notifications = <span class="keyword">true</span>;</div><div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi.html#gabd5ce410910dc1520547da85222e9d64">kodi::GetSettingBoolean</a>(<span class="stringliteral">&quot;show-notifications&quot;</span>, show_notifications))</div><div class="line">  <a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;show-notifications&#39; setting, falling back to default&quot;</span>);</div></div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="ga3460687b47bdfd5ff6864758ff409ebe"></a>
@@ -438,7 +505,7 @@ Modules</h2></td></tr>
 </li>
 </ul>
 <hr/>
-<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line"></div><div class="line"><span class="keywordtype">float</span> volume = 1.0;</div><div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi.html#ga3460687b47bdfd5ff6864758ff409ebe">kodi::GetSettingFloat</a>(<span class="stringliteral">&quot;kodi.amplication.volume&quot;</span>, volume))</div><div class="line">  kodi::Log(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;kodi.amplication.volume&#39; setting, falling back to default&quot;</span>);</div></div><!-- fragment --> 
+<p><b>Code example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line"></div><div class="line"><span class="keywordtype">float</span> volume = 1.0;</div><div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi.html#ga3460687b47bdfd5ff6864758ff409ebe">kodi::GetSettingFloat</a>(<span class="stringliteral">&quot;kodi.amplication.volume&quot;</span>, volume))</div><div class="line">  <a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Couldn&#39;t get &#39;kodi.amplication.volume&#39; setting, falling back to default&quot;</span>);</div></div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="ga075e5cb20648760c781452024a7e2fef"></a>
@@ -1077,7 +1144,7 @@ The length sub-specifier modifies the length of the data type. This is a chart s
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if successfull done</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line">...</div><div class="line">if (!<a class="code" href="group__cpp__kodi.html#gae549d939cd2865d1d0ea20efbbaeb7fe">kodi::StartServer</a>(<a class="code" href="group__cpp__kodi___defs.html#ggab4b49b714f90f463734cb0c7c0caca27ad977f9d16cbfe302e8194178248b506f">ADDON_ES_WEBSERVER</a>, <span class="keyword">true</span>))</div><div class="line">  kodi::Log(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Start of web server failed!&quot;</span>);</div><div class="line">...</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line">...</div><div class="line">if (!<a class="code" href="group__cpp__kodi.html#gae549d939cd2865d1d0ea20efbbaeb7fe">kodi::StartServer</a>(<a class="code" href="group__cpp__kodi___defs.html#ggab4b49b714f90f463734cb0c7c0caca27ad977f9d16cbfe302e8194178248b506f">ADDON_ES_WEBSERVER</a>, <span class="keyword">true</span>))</div><div class="line">  <a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Start of web server failed!&quot;</span>);</div><div class="line">...</div></div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="gaf29741fcae7bf99f2bb927d745fc1c41"></a>
@@ -1379,7 +1446,7 @@ The length sub-specifier modifies the length of the data type. This is a chart s
 <p>Send eject signal to optical drive. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if successfull done</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line">...</div><div class="line">if (!<a class="code" href="group__cpp__kodi.html#gaf4765d3d9a413a539f6c59a5dafa1773">kodi::EjectOpticalDrive</a>())</div><div class="line">  kodi::Log(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Eject of drive failed!&quot;</span>);</div><div class="line">...</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line">...</div><div class="line">if (!<a class="code" href="group__cpp__kodi.html#gaf4765d3d9a413a539f6c59a5dafa1773">kodi::EjectOpticalDrive</a>())</div><div class="line">  <a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, <span class="stringliteral">&quot;Eject of drive failed!&quot;</span>);</div><div class="line">...</div></div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="ga0149f4ca809ce2a62fcb09d792421802"></a>

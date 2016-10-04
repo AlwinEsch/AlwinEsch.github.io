@@ -19,9 +19,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Addon_Rendering_control.html",
-"group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038acf862042315b7b30a2b7d395dcef3198",
-"group__python___player.html#gab8d682e114808afa8a828ce4796a0e3f",
-"group__python__xbmcgui__window__dialog__xml.html"
+"group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038ac630750884d91cb9767ef2200bbb048b",
+"group__cpp__kodi__gui___c_dialog_progress.html#gaf4ebae45c5583fbefea366318f13714e",
+"group__cpp__kodi__gui___c_window___defs.html#gga42753b64a4c9b01785035a18e768a43da1e8092ed82c92220d9a653ff43777e21",
+"group__cpp__kodi__vfs.html#gab053f177a461b97666f395d51d9edd05",
+"group__python__xbmc.html#ga7d325903d7bc797f993c9df791d22c44",
+"page_List_of_built_in_functions.html#built_in_functions_5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
