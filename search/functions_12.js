@@ -4,7 +4,7 @@ var searchData=
   ['textviewer',['textviewer',['../group__python___dialog.html#gad24eabf4c8107d4674c017db09a193ae',1,'XBMCAddon::xbmcgui::Dialog']]],
   ['title',['Title',['../group__cpp__kodi__gui___c_dialog_extended_progress.html#ga3cb91fb7750df7982baea48c4a3de616',1,'kodi::gui::CDialogExtendedProgress']]],
   ['togglemute',['ToggleMute',['../group__cpp__kodi.html#ga854c00891e7568e025c4a010954a7db3',1,'kodi']]],
-  ['trackcount',['TrackCount',['../classkodi_1_1addon_1_1audiodecoder_1_1_c_addon.html#a81bd110153ec1a548b14155fa6aa3d0a',1,'kodi::addon::audiodecoder::CAddon']]],
+  ['trackcount',['TrackCount',['../group__cpp__kodi__addon__audiodecoder.html#ga81bd110153ec1a548b14155fa6aa3d0a',1,'kodi::addon::CInstanceAudioDecoder']]],
   ['translateaddonstatus',['TranslateAddonStatus',['../group__cpp__kodi.html#ga9b32dff545988b283985ca95f1daaebc',1,'kodi']]],
   ['translatepath',['translatePath',['../group__python__xbmc.html#ga762f48b2097ec25d938bf8596023b221',1,'translatePath():&#160;ModuleXbmc.h'],['../group__cpp__kodi.html#ga4c12be421dfd42575481d1147cb73f3a',1,'kodi::TranslatePath()']]],
   ['triggerchannelgroupsupdate',['TriggerChannelGroupsUpdate',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a935da613c39f91145b6f230728bb1df0',1,'kodi::addon::pvr::CAddon']]],

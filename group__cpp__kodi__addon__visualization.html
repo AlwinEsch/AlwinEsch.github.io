@@ -91,10 +91,659 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__visualization
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
 <div class="title">Visualization<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__addon.html">Interface - kodi::addon</a> &raquo; <a class="el" href="group__cpp__kodi__addon__instances.html">Addon type instances</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::addon::CInstanceVisualization </big></font></span></code></h4>  <b>Visualization add-on instance</b> </p>
+<p><a href="https://en.wikipedia.org/wiki/Music_visualization">Music visualization</a> or music visualisation, a feature in Kodi, generates animated imagery based on a piece of music. The imagery is usually generated and rendered in real time and in a way synchronized with the music as it is played.</p>
+<p>Visualization techniques range from simple ones (e.g., a simulation of an oscilloscope display) to elaborate ones, which often include a plurality of composited effects. The changes in the music's loudness and frequency spectrum are among the properties used as input to the visualization.</p>
+<p>It has the header <a class="el" href="_visualization_8h_source.html">#include &lt;kodi/visualization/Visualization.h&gt;</a> be included to enjoy it.</p>
+<p>This interface allow the creating of a visualizations for Kodi, based upon <b>DirectX</b> or/and <b>OpenGL</b> rendering with <code>C++</code> code.</p>
+<p>The interface have big possibility. By transferring the many different data, almost everything can be possible to use items of the respective title.</p>
+<p>Further are several <a class="el" href="group__cpp__kodi__addon__visualization___c_b.html">other functions</a> available where the child class can ask about used device, display and few other parts. </p><hr/>
+<p><b>Here as example what is minimum required to start on a visualization:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/visualization/Visualization.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyVisualization : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_visualization.html">::kodi::addon::CInstanceVisualization</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyVisualization(<span class="keywordtype">void</span>* instance);</div><div class="line"></div><div class="line">  <span class="keywordtype">void</span> Start(<span class="keywordtype">int</span> channels, <span class="keywordtype">int</span> samplesPerSec, <span class="keywordtype">int</span> bitsPerSample, std::string songName) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> AudioData(<span class="keyword">const</span> <span class="keywordtype">float</span>* audioData, <span class="keywordtype">int</span> audioDataLength, <span class="keywordtype">float</span>* freqData, <span class="keywordtype">int</span> freqDataLength) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> Render() <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line">CMyVisualization::CMyVisualization(<span class="keywordtype">void</span>* instance)</div><div class="line">  : CInstanceVisualization(instance)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyVisualization::Start(<span class="keywordtype">int</span> channels, <span class="keywordtype">int</span> samplesPerSec, <span class="keywordtype">int</span> bitsPerSample, std::string songName)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyVisualization::AudioData(<span class="keyword">const</span> <span class="keywordtype">float</span>* audioData, <span class="keywordtype">int</span> audioDataLength, <span class="keywordtype">float</span>* freqData, <span class="keywordtype">int</span> freqDataLength)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyVisualization::Render()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/*----------------------------------------------------------------------*/</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyAddon : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">::kodi::addon::CAddonBase</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyAddon() { }</div><div class="line">  ADDON_STATUS CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                              std::string instanceID,</div><div class="line">                              KODI_HANDLE instance,</div><div class="line">                              KODI_HANDLE&amp; addonInstance) <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">/* If you use only one instance in your add-on, can be instanceType and</span></div><div class="line"><span class="comment"> * instanceID ignored */</span></div><div class="line">ADDON_STATUS CMyAddon::CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                                      std::string instanceID,</div><div class="line">                                      KODI_HANDLE instance,</div><div class="line">                                      KODI_HANDLE&amp; addonInstance)</div><div class="line">{</div><div class="line">  <a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038acf862042315b7b30a2b7d395dcef3198">LOG_NOTICE</a>, <span class="stringliteral">&quot;Creating my Visualization&quot;</span>);</div><div class="line">  addonInstance = <span class="keyword">new</span> CMyVisualization(instance);</div><div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div><div class="line">}</div><div class="line"></div><div class="line">ADDONCREATOR(CMyAddon);</div></div><!-- fragment --><p>The <b>desctruction</b> of the here created example class <code>CMyVisualization</code> becomes done from Kodi's header and never for add-on instances a delete on add-on itself necessary. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group__cpp__kodi__addon__visualization___vis_track"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__visualization___vis_track.html">class VisTrack</a></td></tr>
+<tr class="memdesc:group__cpp__kodi__addon__visualization___vis_track"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Visualization track information structure</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__cpp__kodi__addon__visualization___c_b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__visualization___c_b.html">Information functions</a></td></tr>
+<tr class="memdesc:group__cpp__kodi__addon__visualization___c_b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>To get info about device, display and few other parts</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga10cd0b3f40d1054779f4619cd7920738"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CInstanceVisualization </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Visualization class constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The with <b><code>kodi::addon::CAddonBase::CreateInstance(...)</code></b> given <code>instance</code> value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Use always only <code>instance</code> value from CreateInstance call </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga307e353790dc89a0da7b94f3f3a130da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~CInstanceVisualization </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaddf5af1eac3d72a7f27f31e21b67d2cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Start </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>samplesPerSec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bitsPerSample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>songName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To notify visualization. that new song has been started. </p>
+<p>It pass the number of audio channels, sample rate, bits/sample and offcourse the songname.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">channels</td><td>Amount of channels on stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">samplesPerSec</td><td>Samples per second on stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bitsPerSample</td><td>Amount of bits on one sample </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">songName</td><td>The name of the currently played song</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Required to implement </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf6f113a64b92a63894b285b4f2a2c3a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To inform about stop of rendering control. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaff3aad561b211658e5835500eafc587d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AudioData </td>
+          <td>(</td>
+          <td class="paramtype">const float *&#160;</td>
+          <td class="paramname"><em>audioData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>audioDataLength</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>freqData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>freqDataLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pass audio data to visualization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">audioData</td><td>is short audiodata [channel][audioDataLength] containing the raw audio data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">audioDataLength</td><td>length of audiodata array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">freqData</td><td>fft-ed audio data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">freqDataLength</td><td>length of frequeny data array</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Values <b>freqData</b> and <b>freqDataLength</b> becomes used if on <a class="el" href="group__cpp__kodi__addon__visualization.html#ga5357e3fc0644da927689ec6161b2ef46" title="To get the number of buffers from the current visualization. ">GetInfo()</a> the <code>wantsFreq</code> is set to true, otherwise is <b>freqData</b> = <code>nullptr</code> and <b>freqDataLength</b> = <code>0</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>Required to implement </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae47dde92cc4cd811c8db7d851e00510c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To handle rendering time on add-on. </p>
+<dl class="section note"><dt>Note</dt><dd>Required to implement </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5357e3fc0644da927689ec6161b2ef46"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GetInfo </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>wantsFreq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>syncDelay</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To get the number of buffers from the current visualization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">wantsFreq</td><td>Fourier transform the data if the wants it. If set to true are the values <b>freqData</b> and <b>freqDataLength</b> on <a class="el" href="group__cpp__kodi__addon__visualization.html#gaff3aad561b211658e5835500eafc587d" title="Pass audio data to visualization. ">AudioData()</a> used. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">syncDelay</td><td>Number of buffers from the current</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If function becomes not used is as defaults from parent the <code>wantsFreq</code> = 0 and the <code>syncDelay</code> = 0. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga9fc679e6b90bfd44ff3ae7f0000c8de7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool HasPresets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To ask add-on about possibility with selectable presets. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return true if it becomes supported </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4d344677b35ca9a299a595ec6d9d0b6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool GetPresets </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>presets</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To get a list of selectable visualization presets on add-on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">presets</td><td>Vector list with selectable names of presets </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if successfull done </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gad51a1162377a4932079b37971282e6a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned int GetPreset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the index of currently used preset on visualization add-on. </p>
+<dl class="section return"><dt>Returns</dt><dd>Index number </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac4a06db92c95351b3478f4857bbe71be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IsLocked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To ask add-on is locked on current preset. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if locked there </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4baaca37d21ec72b65b57022ed19fa8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool PrevPreset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load previous visualization preset. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return true if it becomes used from you </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaba3f4c18a139a731f20dc018b239a425"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool NextPreset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load next visualization preset. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return true if it becomes used from you </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3d8800ff2acd0c2f242459803cacd3a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool LoadPreset </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>select</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load visualization preset. </p>
+<p>Becomes send after new select is requested.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">select</td><td>Preset index to use </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the load becomes used from you </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2797e92d4bf9b4eaef21f256a1867ed3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool RandomPreset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Switch to a new random preset. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the random becomes used from you </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0396c3e1569480032721836b7e139624"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool LockPreset </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>lockUnlock</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lock the current visualization preset on add-on if selected from user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lockUnlock</td><td>If set to true is the preset is needed to lock there </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the lock becomes used from you </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae12d00ba86095e80ec25c719592a1daa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool RatePreset </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>plusMinus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used to increase/decrease track rating in full screen playback. </p>
+<p>Press info on track and use pageplus or pageminus on keyboard/remote.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">plusMinus</td><td>If set to true is the rate increased, otherwise decreased </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the rate becomes used from you </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaa966fc12df9ac054bfd35b8969f67081"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UpdateAlbumart </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>albumart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inform the visualization of the current album art image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">albumart</td><td>Path to the current album art image </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the image becomes used from you </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga83adb1f15daf0f22b2269546d7f21c26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool UpdateTrack </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__cpp__kodi__addon__visualization___vis_track.html#classkodi_1_1addon_1_1_vis_track">VisTrack</a> &amp;&#160;</td>
+          <td class="paramname"><em>track</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inform the visualization of the current track's tag information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">track</td><td>Visualization track information structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if it becomes used from you </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

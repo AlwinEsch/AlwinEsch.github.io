@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['init',['Init',['../classkodi_1_1addon_1_1audiodecoder_1_1_c_addon.html#a43f1854a560a7b0c923a24bf2d6b06fb',1,'kodi::addon::audiodecoder::CAddon']]],
+  ['init',['Init',['../group__cpp__kodi__addon__audiodecoder.html#ga327d32b686e2e272be6c77a3a685a997',1,'kodi::addon::CInstanceAudioDecoder']]],
   ['input',['input',['../group__python___dialog.html#ga39e614212c79458d71e289d77783baeb',1,'XBMCAddon::xbmcgui::Dialog']]],
   ['inputprocess',['InputProcess',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a2aa6719cea196d8947ff98406f809155',1,'kodi::addon::adsp::CAddon']]],
   ['inputresamplegetdelay',['InputResampleGetDelay',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#ab71c6391bb49aa5175493cac0a7c877e',1,'kodi::addon::adsp::CAddon']]],
@@ -17,6 +17,7 @@ var searchData=
   ['isfinished',['IsFinished',['../group__cpp__kodi__gui___c_dialog_extended_progress.html#gaabe45b4d47077b54df0bb809eb41b8d5',1,'kodi::gui::CDialogExtendedProgress::IsFinished()'],['../group__python___dialog_progress_b_g.html#gafedd49742f1edc9ceb13de3b182413dd',1,'XBMCAddon::xbmcgui::DialogProgressBG::isFinished()']]],
   ['isfolder',['IsFolder',['../group__cpp__kodi__gui___c_list_item.html#ga83746525efaa62e4a49358f908e014db',1,'kodi::gui::CListItem::IsFolder()'],['../group__cpp__kodi__vfs___c_dir_entry.html#gabfbbb37d69862b45d0f1079ab976fa37',1,'kodi::vfs::CVFSDirEntry::IsFolder()']]],
   ['iskeyboardactivated',['IsKeyboardActivated',['../group__cpp__kodi__gui___dialog_keyboard.html#ga88cae0327fe12f1d90e68eae3f7dc6f0',1,'kodi::gui::DialogKeyboard']]],
+  ['islocked',['IsLocked',['../group__cpp__kodi__addon__visualization.html#gac4a06db92c95351b3478f4857bbe71be',1,'kodi::addon::CInstanceVisualization']]],
   ['ismuted',['IsMuted',['../group__cpp__kodi.html#ga6587a0ee5df9cbf01e0daefc51bda0ee',1,'kodi']]],
   ['isplaying',['isPlaying',['../group__python___player.html#ga56a1b42c304ff6e28459b18a237d57e1',1,'XBMCAddon::xbmc::Player']]],
   ['isplayingaudio',['isPlayingAudio',['../group__python___player.html#ga5691edc135aebc26fcb83110d23b33d2',1,'XBMCAddon::xbmc::Player']]],

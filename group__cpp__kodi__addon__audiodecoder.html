@@ -95,6 +95,350 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__audiodecoder.
 <div class="title">Audio Decoder<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__addon.html">Interface - kodi::addon</a> &raquo; <a class="el" href="group__cpp__kodi__addon__instances.html">Addon type instances</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::addon::CInstanceAudioDecoder </big></font></span></code></h4>  <b>Audio Decoder add-on instance</b> </p>
+<p>An audio codec is a add-on capable of coding or decoding a digital data stream of audio.</p>
+<p>It has the header <a class="el" href="_audio_decoder_8h_source.html">#include &lt;kodi/AudioDecoder/AudioDecoder.h&gt;</a> be included to enjoy it.</p>
+<p>The interface is small and easy usable, it have minimum two function which must be present. One for the creation with <b><code>Init()</code></b> and for the data read with <b><code>ReadPCM()</code></b>.</p>
+<hr/>
+<p><b>Here as example what is minimum required to start on a audio decoder:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/AudioDecoder/AudioDecoder.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyAudioDecoder : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_audio_decoder.html">::kodi::addon::CInstanceAudioDecoder</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyAudioDecoder(<span class="keywordtype">void</span>* instance);</div><div class="line"></div><div class="line">  <span class="keywordtype">bool</span> Init(std::string file, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> filecache,</div><div class="line">            <span class="keywordtype">int</span>&amp; channels, <span class="keywordtype">int</span>&amp; samplerate,</div><div class="line">            <span class="keywordtype">int</span>&amp; bitspersample, int64_t&amp; totaltime,</div><div class="line">            <span class="keywordtype">int</span>&amp; bitrate, <a class="code" href="group__cpp__kodi___defs.html#ga7146fb57cc9bf9ab57a74e9e146bbc6e">AudioDataFormat</a>&amp; format,</div><div class="line">            std::vector&lt;AudioChannel&gt;&amp; channellist) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">int</span> ReadPCM(uint8_t* buffer, <span class="keywordtype">int</span> size, <span class="keywordtype">int</span>&amp; actualsize) <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line">CMyAudioDecoder::CMyAudioDecoder(<span class="keywordtype">void</span>* instance)</div><div class="line">  : CInstanceAudioDecoder(instance)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> CMyAudioDecoder::Init(std::string file, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> filecache,</div><div class="line">                           <span class="keywordtype">int</span>&amp; channels, <span class="keywordtype">int</span>&amp; samplerate,</div><div class="line">                           <span class="keywordtype">int</span>&amp; bitspersample, int64_t&amp; totaltime,</div><div class="line">                           <span class="keywordtype">int</span>&amp; bitrate, <a class="code" href="group__cpp__kodi___defs.html#ga7146fb57cc9bf9ab57a74e9e146bbc6e">AudioDataFormat</a>&amp; format,</div><div class="line">                           std::vector&lt;AudioChannel&gt;&amp; channellist)</div><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">int</span> CMyAudioDecoder::ReadPCM(uint8_t* buffer, <span class="keywordtype">int</span> size, <span class="keywordtype">int</span>&amp; actualsize)</div><div class="line">{</div><div class="line">  <span class="keywordtype">int</span> length = 0;</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> length;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/*----------------------------------------------------------------------*/</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyAddon : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">::kodi::addon::CAddonBase</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyAddon() { }</div><div class="line">  ADDON_STATUS CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                              std::string instanceID,</div><div class="line">                              KODI_HANDLE instance,</div><div class="line">                              KODI_HANDLE&amp; addonInstance) <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">/* If you use only one instance in your add-on, can be instanceType and</span></div><div class="line"><span class="comment"> * instanceID ignored */</span></div><div class="line">ADDON_STATUS CMyAddon::CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                                      std::string instanceID,</div><div class="line">                                      KODI_HANDLE instance,</div><div class="line">                                      KODI_HANDLE&amp; addonInstance)</div><div class="line">{</div><div class="line">  <a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038acf862042315b7b30a2b7d395dcef3198">LOG_NOTICE</a>, <span class="stringliteral">&quot;Creating my Audio Decoder&quot;</span>);</div><div class="line">  addonInstance = <span class="keyword">new</span> CMyAudioDecoder(instance);</div><div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div><div class="line">}</div><div class="line"></div><div class="line">ADDONCREATOR(CMyAddon);</div></div><!-- fragment --><p>The <b>desctruction</b> of the here created example class <code>CMyAudioDecoder</code> becomes done from Kodi's header and never for add-on instances a delete on add-on itself necessary. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga4d0c67aadc57cfb6eeb387c0bf151eea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CInstanceAudioDecoder </td>
+          <td>(</td>
+          <td class="paramtype">KODI_HANDLE&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Class constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The with <b><code>kodi::addon::CInstanceAudioDecoderBase::CreateInstance(...)</code></b> given <code>instance</code> value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Use always only <code>instance</code> value from CreateInstance call </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga5df7339285a669b17c3b0a4ab2934d7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~CInstanceAudioDecoder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga327d32b686e2e272be6c77a3a685a997"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Init </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>filecache</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>channels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>samplerate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>bitspersample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t &amp;&#160;</td>
+          <td class="paramname"><em>totaltime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>bitrate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cpp__kodi___defs.html#ga7146fb57cc9bf9ab57a74e9e146bbc6e">AudioDataFormat</a> &amp;&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="group__cpp__kodi___defs.html#ga5e9dd5e78ab82b9a78282694d6831da5">AudioChannel</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>channellist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize a decoder. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>The file to read </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filecache</td><td>The file cache size </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">channels</td><td>Number of channels in output stream </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">samplerate</td><td>Samplerate of output stream </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">bitspersample</td><td>Bits per sample in output stream </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">totaltime</td><td>Total time for stream </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">bitrate</td><td>Average bitrate of input stream </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">format</td><td>Data format for output stream </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">channellist</td><td>Channel mapping for output stream </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successfully done, otherwise false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga56033a1416a00686fd677118c2ad29b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int ReadPCM </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>actualsize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Produce some noise. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>Output buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of output buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">actualsize</td><td>Actual number of bytes written to output buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return with following possible values: <table class="doxtable">
+<tr>
+<th align="center">Value </th><th align="left">Description  </th></tr>
+<tr>
+<td align="center">0 </td><td align="left">on success </td></tr>
+<tr>
+<td align="center">-1 </td><td align="left">on end of stream </td></tr>
+<tr>
+<td align="center">1 </td><td align="left">on failure </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab978901f9152eefcc5b6fe807fc55574"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int64_t Seek </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Seek in output stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>Time position to seek to in milliseconds </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Time position seek ended up on </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga82a244c495a2b3a9cfad1bfa9a59dee1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ReadTag </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>artist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read tag of a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>File to read tag for </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">title</td><td>Title of file </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">artist</td><td>Artist of file </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">length</td><td>Length of file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success, false on failure </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga81bd110153ec1a548b14155fa6aa3d0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int TrackCount </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get number of tracks in a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>File to read tag for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of tracks in file </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

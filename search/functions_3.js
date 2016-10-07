@@ -11,7 +11,7 @@ var searchData=
   ['demuxreset',['DemuxReset',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html#a4e1a9156a48ad4536be348fb698bc996',1,'kodi::addon::inputstream::CAddon::DemuxReset()'],['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a4e1a9156a48ad4536be348fb698bc996',1,'kodi::addon::pvr::CAddon::DemuxReset()']]],
   ['demuxseektime',['DemuxSeekTime',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html#a02964c7f1e3e29d313e890b6e0a443ee',1,'kodi::addon::inputstream::CAddon']]],
   ['demuxsetspeed',['DemuxSetSpeed',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html#a9283b013d1af58196b196ab33c0d82c6',1,'kodi::addon::inputstream::CAddon']]],
-  ['device',['Device',['../group__cpp__kodi__addon__screensaver___c_b.html#gadb328fb2add804f1393b84737d3ae45d',1,'kodi::addon::CInstanceScreensaver']]],
+  ['device',['Device',['../group__cpp__kodi__addon__screensaver___c_b.html#gadb328fb2add804f1393b84737d3ae45d',1,'kodi::addon::CInstanceScreensaver::Device()'],['../group__cpp__kodi__addon__visualization___c_b.html#gadb328fb2add804f1393b84737d3ae45d',1,'kodi::addon::CInstanceVisualization::Device()']]],
   ['directoryexists',['DirectoryExists',['../group__cpp__kodi__vfs.html#gac966dda71c24315123d968e542f7f7d5',1,'kodi::vfs']]],
   ['dirty',['Dirty',['../group__cpp__kodi__gui___c_control_rendering.html#ga7cea65505e98c9989ab92a87b2f2e99b',1,'kodi::gui::CControlRendering']]],
   ['dnslookup',['DNSLookup',['../group__cpp__kodi__network.html#ga51ae0592d1f0667f6fa1b6062427b297',1,'kodi::network']]],

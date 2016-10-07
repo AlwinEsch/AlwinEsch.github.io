@@ -8,7 +8,7 @@ var searchData=
   ['wsgiresponsebody',['WsgiResponseBody',['../group__python__xbmcwsgi___wsgi_response_body.html',1,'']]],
   ['waitforabort',['waitForAbort',['../group__python__monitor.html#ga101acf761929351fb676b05e88ddeb8d',1,'XBMCAddon::xbmc::Monitor']]],
   ['wakeonlan',['WakeOnLan',['../group__cpp__kodi__network.html#gace1e815cea9513aaf8133495a3199cf8',1,'kodi::network']]],
-  ['width',['Width',['../group__cpp__kodi__addon__screensaver___c_b.html#gad26a595463349d0214ea9c09fb31c401',1,'kodi::addon::CInstanceScreensaver']]],
+  ['width',['Width',['../group__cpp__kodi__addon__screensaver___c_b.html#gad26a595463349d0214ea9c09fb31c401',1,'kodi::addon::CInstanceScreensaver::Width()'],['../group__cpp__kodi__addon__visualization___c_b.html#gad26a595463349d0214ea9c09fb31c401',1,'kodi::addon::CInstanceVisualization::Width()']]],
   ['window',['Window',['../group__python__xbmcgui__window.html#class_x_b_m_c_addon_1_1xbmcgui_1_1_window',1,'XBMCAddon::xbmcgui']]],
   ['window',['Window',['../group__python__xbmcgui__window.html#a835a76ed343ad0fba8d55a525ee8789a',1,'XBMCAddon::xbmcgui::Window']]],
   ['windowdialog',['WindowDialog',['../group__python__xbmcgui__window__dialog.html#class_x_b_m_c_addon_1_1xbmcgui_1_1_window_dialog',1,'XBMCAddon::xbmcgui']]],

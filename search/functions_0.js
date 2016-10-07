@@ -19,6 +19,7 @@ var searchData=
   ['addtimer',['AddTimer',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#afd6aebe4d427ffe09282b83ac1220491',1,'kodi::addon::pvr::CAddon']]],
   ['allocatedemuxpacket',['AllocateDemuxPacket',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html#afb10f3666933856a50c94ca71f3c64d7',1,'kodi::addon::inputstream::CAddon::AllocateDemuxPacket()'],['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#afab3abc659d82c4f8eea839e37c1dc15',1,'kodi::addon::pvr::CAddon::AllocateDemuxPacket()']]],
   ['atime',['atime',['../group__python__stat.html#ga168004cb787954e08154d53996c3b3a1',1,'XBMCAddon::xbmcvfs::Stat']]],
+  ['audiodata',['AudioData',['../group__cpp__kodi__addon__visualization.html#gaff3aad561b211658e5835500eafc587d',1,'kodi::addon::CInstanceVisualization']]],
   ['audioresume',['AudioResume',['../group__cpp__kodi.html#gad1f31f35771a4f63351bd2bcb6840707',1,'kodi::AudioResume()'],['../group__python__xbmc.html#gadddf5ad858f0e72378115ca2ded3b933',1,'audioResume():&#160;ModuleXbmc.h']]],
   ['audiosuspend',['audioSuspend',['../group__python__xbmc.html#ga490c93d077b5fd47106630a92e0e20bb',1,'audioSuspend():&#160;ModuleXbmc.h'],['../group__cpp__kodi.html#gaf29741fcae7bf99f2bb927d745fc1c41',1,'kodi::AudioSuspend()']]],
   ['autoscroll',['autoScroll',['../group__python__xbmcgui__control__textbox.html#ga8a1b4a10e9bfd82b31d18c036349f9d9',1,'XBMCAddon::xbmcgui::ControlTextBox']]]

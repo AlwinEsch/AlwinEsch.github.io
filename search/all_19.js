@@ -15,7 +15,9 @@ var searchData=
   ['_7ecdialogextendedprogress',['~CDialogExtendedProgress',['../group__cpp__kodi__gui___c_dialog_extended_progress.html#ga60f91cfdfb63c58d75ab7bb1d8076857',1,'kodi::gui::CDialogExtendedProgress']]],
   ['_7ecdialogprogress',['~CDialogProgress',['../group__cpp__kodi__gui___c_dialog_progress.html#gaf4ebae45c5583fbefea366318f13714e',1,'kodi::gui::CDialogProgress']]],
   ['_7ecfile',['~CFile',['../group__cpp__kodi__vfs___c_file.html#gaaca978eab220d4564711e06f5d9e55b3',1,'kodi::vfs::CFile']]],
+  ['_7ecinstanceaudiodecoder',['~CInstanceAudioDecoder',['../group__cpp__kodi__addon__audiodecoder.html#ga5df7339285a669b17c3b0a4ab2934d7f',1,'kodi::addon::CInstanceAudioDecoder']]],
   ['_7ecinstancescreensaver',['~CInstanceScreensaver',['../group__cpp__kodi__addon__screensaver.html#ga59c9e9367d2415b5e47650bdc34c57e8',1,'kodi::addon::CInstanceScreensaver']]],
+  ['_7ecinstancevisualization',['~CInstanceVisualization',['../group__cpp__kodi__addon__visualization.html#ga307e353790dc89a0da7b94f3f3a130da',1,'kodi::addon::CInstanceVisualization']]],
   ['_7eclistitem',['~CListItem',['../group__cpp__kodi__gui___c_list_item.html#ga68eb737739962f347e21481e4ea3655f',1,'kodi::gui::CListItem']]],
   ['_7ecsoundplay',['~CSoundPlay',['../group__cpp__kodi___sound_play.html#ga55031a30fa0d46695ed16a869fff7dc4',1,'kodi::CSoundPlay']]],
   ['_7ecwindow',['~CWindow',['../classkodi_1_1gui_1_1_c_window.html#a1c7a4d340096bba4de74ef7ca5324457',1,'kodi::gui::CWindow']]]

@@ -7,6 +7,6 @@ var searchData=
   ['video_20control',['Video Control',['../Video_Control.html',1,'skin_controls']]],
   ['vis_5finfo',['VIS_INFO',['../struct_v_i_s___i_n_f_o.html',1,'']]],
   ['vis_5fprops',['VIS_PROPS',['../struct_v_i_s___p_r_o_p_s.html',1,'']]],
-  ['vistrack',['VisTrack',['../classkodi_1_1addon_1_1visualization_1_1_vis_track.html',1,'kodi::addon::visualization']]],
+  ['vistrack',['VisTrack',['../group__cpp__kodi__addon__visualization___vis_track.html#classkodi_1_1addon_1_1_vis_track',1,'kodi::addon']]],
   ['visualisation_20control',['Visualisation Control',['../Visualisation_Control.html',1,'skin_controls']]]
 ];
