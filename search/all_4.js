@@ -2,8 +2,8 @@ var searchData=
 [
   ['ejectopticaldrive',['EjectOpticalDrive',['../group__cpp__kodi.html#gaf4765d3d9a413a539f6c59a5dafa1773',1,'kodi']]],
   ['enablenavsounds',['enableNavSounds',['../group__python__xbmc.html#ga4eb71eb7730907d480191ef5c2be6ef0',1,'enableNavSounds():&#160;ModuleXbmc.h'],['../group__cpp__kodi.html#ga31300c4519bcb944c746d86571b0cb6d',1,'kodi::EnableNavSounds()']]],
-  ['enablestream',['EnableStream',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html#a1f46dd938cd4828e2b585dbf5b81ad1e',1,'kodi::addon::inputstream::CAddon']]],
-  ['encode',['Encode',['../classkodi_1_1addon_1_1audioencoder_1_1_c_addon.html#a079a50af4ad8549bbb4209a82497708a',1,'kodi::addon::audioencoder::CAddon']]],
+  ['enablestream',['EnableStream',['../group__cpp__kodi__addon__inputstream___i_demux.html#ga1f46dd938cd4828e2b585dbf5b81ad1e',1,'kodi::addon::CInstanceInputStream']]],
+  ['encode',['Encode',['../group__cpp__kodi__addon__audioencoder.html#ga1c5e3d6c344aaaa00324fe5d8fd9f967',1,'kodi::addon::CInstanceAudioEncoder']]],
   ['endofdirectory',['endOfDirectory',['../group__python__xbmcplugin.html#ga52a8af0460894fa918c6a20d8d77fff6',1,'ModuleXbmcplugin.h']]],
   ['endtime',['endTime',['../struct_e_p_g___t_a_g.html#a1f1e169e482467aaf615639bb3467f09',1,'EPG_TAG::endTime()'],['../struct_p_v_r___t_i_m_e_r.html#a1f1e169e482467aaf615639bb3467f09',1,'PVR_TIMER::endTime()']]],
   ['epg_5ftag',['EPG_TAG',['../struct_e_p_g___t_a_g.html',1,'']]],

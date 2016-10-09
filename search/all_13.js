@@ -7,7 +7,7 @@ var searchData=
   ['text_20box',['Text Box',['../Text_Box.html',1,'skin_controls']]],
   ['textviewer',['textviewer',['../group__python___dialog.html#gad24eabf4c8107d4674c017db09a193ae',1,'XBMCAddon::xbmcgui::Dialog']]],
   ['thumbnail',['thumbnail',['../group__cpp__kodi__gui___c_list_item___video_info_tag.html#afa9d99020b5b4bd13c18127ec535a6ce',1,'ADDON_VideoInfoTag_Cast']]],
-  ['title',['title',['../group__cpp__kodi__addon__visualization___vis_track.html#a8214780964530800368b406c681fd1d9',1,'kodi::addon::VisTrack::title()'],['../group__cpp__kodi__gui___c_dialog_extended_progress.html#ga3cb91fb7750df7982baea48c4a3de616',1,'kodi::gui::CDialogExtendedProgress::Title()']]],
+  ['title',['Title',['../group__cpp__kodi__gui___c_dialog_extended_progress.html#ga3cb91fb7750df7982baea48c4a3de616',1,'kodi::gui::CDialogExtendedProgress::Title()'],['../group__cpp__kodi__addon__visualization___vis_track.html#a8214780964530800368b406c681fd1d9',1,'kodi::addon::VisTrack::title()']]],
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
   ['togglemute',['ToggleMute',['../group__cpp__kodi.html#ga854c00891e7568e025c4a010954a7db3',1,'kodi']]],
   ['total',['total',['../group__cpp__kodi__gui___c_list_item___video_info_tag.html#a10a770f02ba0757d779ece8e2ee384f5',1,'ADDON_VideoInfoTag_Resume']]],
@@ -22,5 +22,10 @@ var searchData=
   ['triggerscan',['TriggerScan',['../classkodi_1_1addon_1_1peripheral_1_1_c_addon.html#a6e68fb96881f6f92cd2855d86abf245e',1,'kodi::addon::peripheral::CAddon']]],
   ['triggertimerupdate',['TriggerTimerUpdate',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a7a28ab2aa9e2f3191c2d6281cdc680ee',1,'kodi::addon::pvr::CAddon']]],
   ['truncate',['Truncate',['../group__cpp__kodi__vfs___c_file.html#ga7db30bce899ccc6e0d7a5b0a4cf160b7',1,'kodi::vfs::CFile']]],
-  ['type',['type',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#aca3c165e12ec3684110607f78f0c2310',1,'PERIPHERAL_INFO']]]
+  ['type',['type',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#aca3c165e12ec3684110607f78f0c2310',1,'PERIPHERAL_INFO']]],
+  ['type_5faudio',['TYPE_AUDIO',['../group__cpp__kodi__addon__inputstream___defs___i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a950d7a62f48d194fd7463162541c1492a17e2dc2b6c45bd9d56010ed4aed3fcf4',1,'INPUTSTREAM_INFO']]],
+  ['type_5fnone',['TYPE_NONE',['../group__cpp__kodi__addon__inputstream___defs___i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a950d7a62f48d194fd7463162541c1492a01a66f4d8d66e4614c1c900c5a1c37ff',1,'INPUTSTREAM_INFO']]],
+  ['type_5fsubtitle',['TYPE_SUBTITLE',['../group__cpp__kodi__addon__inputstream___defs___i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a950d7a62f48d194fd7463162541c1492a8a91498bc79e9280e4f559f91a22d41b',1,'INPUTSTREAM_INFO']]],
+  ['type_5fteletext',['TYPE_TELETEXT',['../group__cpp__kodi__addon__inputstream___defs___i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a950d7a62f48d194fd7463162541c1492a547a85357b8fec1fe696109d8de8718e',1,'INPUTSTREAM_INFO']]],
+  ['type_5fvideo',['TYPE_VIDEO',['../group__cpp__kodi__addon__inputstream___defs___i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a950d7a62f48d194fd7463162541c1492afeeff8542e46439d4b704699ff009323',1,'INPUTSTREAM_INFO']]]
 ];

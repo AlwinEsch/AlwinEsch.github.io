@@ -20,11 +20,11 @@ var NAVTREEINDEX =
 [
 "Addon_Rendering_control.html",
 "group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038ac630750884d91cb9767ef2200bbb048b",
-"group__cpp__kodi__gui___c_control_spin.html#gaf4c5b4468e16c51b0d9a163baa082acf",
-"group__cpp__kodi__gui___c_window.html#gac45d2066c403cf222cccc265371680b3",
-"group__cpp__kodi__gui___dialog_numeric.html#ga14b8750d73aa906ac18ff59a49476909",
-"group__python__monitor.html#ga5ee33edfc21fb06cfe99f892da9b234c",
-"group__python__xbmcwsgi___wsgi_response_body.html"
+"group__cpp__kodi__gui___c_control_settings_slider.html#ga16ad72259d068519b0797117275651f1",
+"group__cpp__kodi__gui___c_list_item___video_info_tag.html#gga118cdb1d768b09ce7c4e210528f59000a430512b6687fd42e1ce5d62a0ee52b64",
+"group__cpp__kodi__gui___c_window___defs.html#gga42753b64a4c9b01785035a18e768a43daed9ea17cad27f45408fb2d1f020e1db0",
+"group__python___player.html#ga5873120d3fa8ae9379ec20a4db79269f",
+"group__python__xbmcgui__window__cb.html#ga077680d40c7bc79d2b2b73c7401437b4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

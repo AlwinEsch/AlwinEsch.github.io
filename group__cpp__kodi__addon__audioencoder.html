@@ -95,6 +95,353 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__audioencoder.
 <div class="title">Audio Encoder<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__addon.html">Interface - kodi::addon</a> &raquo; <a class="el" href="group__cpp__kodi__addon__instances.html">Addon type instances</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::addon::CInstanceAudioEncoder </big></font></span></code></h4>  <b>Audio Encoder add-on instance</b> </p>
+<p>An audio codec is a add-on capable of coding or decoding a digital data stream of audio.</p>
+<p>It has the header <a class="el" href="_audio_encoder_8h_source.html">#include &lt;kodi/audioencoder/AudioEncoder.h&gt;</a> be included to enjoy it.</p>
+<hr/>
+<p><b>Here as example what is minimum required to start on a audio decoder:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/audioencoder/AudioEncoder.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyAudioEncoder : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_audio_encoder.html">::kodi::addon::CInstanceAudioEncoder</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyAudioEncoder(KODI_HANDLE instance);</div><div class="line"></div><div class="line">  <span class="keywordtype">bool</span> Start(<span class="keywordtype">int</span> inChannels, <span class="keywordtype">int</span> inRate, <span class="keywordtype">int</span> inBits, std::string title,</div><div class="line">             std::string artist, std::string albumartist, std::string album,</div><div class="line">             std::string year, std::string track, std::string genre,</div><div class="line">             std::string comment, <span class="keywordtype">int</span> trackLength) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">int</span> Encode(<span class="keywordtype">int</span> size, <span class="keyword">const</span> uint8_t* data) <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line">CMyAudioEncoder::CMyAudioEncoder(KODI_HANDLE instance)</div><div class="line">  : CInstanceAudioEncoder(instance)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> CMyAudioEncoder::Start(<span class="keywordtype">int</span> inChannels, <span class="keywordtype">int</span> inRate, <span class="keywordtype">int</span> inBits,</div><div class="line">                            std::string title, std::string artist,</div><div class="line">                            std::string albumartist, std::string album,</div><div class="line">                            std::string year, std::string track,</div><div class="line">                            std::string genre, std::string comment,</div><div class="line">                            <span class="keywordtype">int</span> trackLength)</div><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">int</span> CMyAudioEncoder::Encode(<span class="keywordtype">int</span> size, <span class="keyword">const</span> uint8_t* data)</div><div class="line">{</div><div class="line">  <span class="keywordtype">int</span> encodedSize = 0;</div><div class="line">  uint8_t* encodedData = <span class="keyword">nullptr</span>;</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> Write(encodedData, <span class="keywordtype">int</span> encodedSize);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">/*----------------------------------------------------------------------*/</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyAddon : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">::kodi::addon::CAddonBase</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyAddon() { }</div><div class="line">  ADDON_STATUS CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                              std::string instanceID,</div><div class="line">                              KODI_HANDLE instance,</div><div class="line">                              KODI_HANDLE&amp; addonInstance) <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">/* If you use only one instance in your add-on, can be instanceType and</span></div><div class="line"><span class="comment"> * instanceID ignored */</span></div><div class="line">ADDON_STATUS CMyAddon::CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                                      std::string instanceID,</div><div class="line">                                      KODI_HANDLE instance,</div><div class="line">                                      KODI_HANDLE&amp; addonInstance)</div><div class="line">{</div><div class="line">  <a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs.html#gga913895aaf2ef685961947f8d6b93e038acf862042315b7b30a2b7d395dcef3198">LOG_NOTICE</a>, <span class="stringliteral">&quot;Creating my Audio Encoder&quot;</span>);</div><div class="line">  addonInstance = <span class="keyword">new</span> CMyAudioEncoder(instance);</div><div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_OK;</div><div class="line">}</div><div class="line"></div><div class="line">ADDONCREATOR(CMyAddon);</div></div><!-- fragment --><p>The <b>desctruction</b> of the here created example class <code>CMyAudioEncoder</code> becomes done from Kodi's header and never for add-on instances a delete on add-on itself necessary. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga61c5955c5264ca0ff73ae69bf979eabc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CInstanceAudioEncoder </td>
+          <td>(</td>
+          <td class="paramtype">KODI_HANDLE&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Class constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The from Kodi given instance given be add-on CreateInstance call with instance id ADDON_INSTANCE_AUDIOENCODER. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3373df43bc23e8558a3ba84bd70a1d62"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~CInstanceAudioEncoder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga615db46e2e70899adb7ea594ae097fcb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Start </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>inChannels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>inRate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>inBits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>artist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>albumartist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>album</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>genre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>comment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>trackLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start encoder (<b>required</b>) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inChannels</td><td>Number of channels </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inRate</td><td>Sample rate of input data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inBits</td><td>Bits per sample in input data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>The title of the song </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">artist</td><td>The artist of the song </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">albumartist</td><td>The albumartist of the song </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">year</td><td>The year of the song </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">track</td><td>The track number of the song </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">genre</td><td>The genre of the song </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">comment</td><td>A comment to attach to the song </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trackLength</td><td>Total track length in seconds </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True on success, false on failure. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1c5e3d6c344aaaa00324fe5d8fd9f967"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Encode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Encode a chunk of audio (<b>required</b>) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">addonInstance</td><td>Encoder context from Create. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Number of bytes in input buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>the input buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of bytes consumed </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0e0d542d34afa30c6ae18d3b57b4ef60"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Finish </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finalize encoding (<b>optional</b>) </p>
+<dl class="section return"><dt>Returns</dt><dd>True on success, false on failure. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga9b279bf17bf8d7555fc9f996f672cfc7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Write </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write block of data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Pointer to the array of elements to be written </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size in bytes to be written. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The total number of bytes successfully written is returned. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga4f5ab52e5d2cb2e49a93e5a682ac669c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t Seek </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whence</em> = <code>SEEK_SET</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the file's current position. </p>
+<p>The whence argument is optional and defaults to SEEK_SET (0)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>the position that you want to seek to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">whence</td><td>[optional] offset relative to You can set the value of whence to one of three things: <table class="doxtable">
+<tr>
+<th align="center">Value </th><th align="center">int </th><th align="left">Description  </th></tr>
+<tr>
+<td align="center">SEEK_SET </td><td align="center">0 </td><td align="left">position is relative to the beginning of the file. This is probably what you had in mind anyway, and is the most commonly used value for whence. </td></tr>
+<tr>
+<td align="center">SEEK_CUR </td><td align="center">1 </td><td align="left">position is relative to the current file pointer position. So, in effect, you can say, "Move to my current position plus 30 bytes," or, "move to my current position minus 20 bytes." </td></tr>
+<tr>
+<td align="center">SEEK_END </td><td align="center">2 </td><td align="left">position is relative to the end of the file. Just like SEEK_SET except from the other end of the file. Be sure to use negative values for offset if you want to back up from the end of the file, instead of going past the end into oblivion. </td></tr>
+</table>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns the resulting offset location as measured in bytes from the beginning of the file. On error, the value -1 is returned. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

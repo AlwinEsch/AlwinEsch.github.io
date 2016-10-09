@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['struct_20inputstream_5fcapabilities',['struct INPUTSTREAM_CAPABILITIES',['../group__cpp__kodi__addon__inputstream___defs___i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html',1,'']]],
+  ['struct_20inputstream_5finfo',['struct INPUTSTREAM_INFO',['../group__cpp__kodi__addon__inputstream___defs___i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html',1,'']]],
+  ['stream_20handling_20_28mandatory_29',['Stream handling (mandatory)',['../group__cpp__kodi__addon__inputstream___seekable.html',1,'']]],
   ['screensaver',['Screensaver',['../group__cpp__kodi__addon__screensaver.html',1,'']]],
   ['struct_20audioengineformat',['struct AudioEngineFormat',['../group__cpp__kodi__audioengine___defs___audio_engine_format.html',1,'']]],
   ['stat',['Stat',['../group__python__stat.html',1,'']]],

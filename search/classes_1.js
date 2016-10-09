@@ -1,8 +1,6 @@
 var searchData=
 [
   ['caddon',['CAddon',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html',1,'kodi::addon::adsp']]],
-  ['caddon',['CAddon',['../classkodi_1_1addon_1_1audioencoder_1_1_c_addon.html',1,'kodi::addon::audioencoder']]],
-  ['caddon',['CAddon',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html',1,'kodi::addon::inputstream']]],
   ['caddon',['CAddon',['../classkodi_1_1addon_1_1peripheral_1_1_c_addon.html',1,'kodi::addon::peripheral']]],
   ['caddon',['CAddon',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html',1,'kodi::addon::pvr']]],
   ['caddonaestream',['CAddonAEStream',['../classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html',1,'kodi::audioengine']]],
@@ -24,6 +22,8 @@ var searchData=
   ['cdialogprogress',['CDialogProgress',['../classkodi_1_1gui_1_1_c_dialog_progress.html',1,'kodi::gui']]],
   ['cfile',['CFile',['../group__cpp__kodi__vfs___c_file.html#classkodi_1_1vfs_1_1_c_file',1,'kodi::vfs']]],
   ['cinstanceaudiodecoder',['CInstanceAudioDecoder',['../classkodi_1_1addon_1_1_c_instance_audio_decoder.html',1,'kodi::addon']]],
+  ['cinstanceaudioencoder',['CInstanceAudioEncoder',['../classkodi_1_1addon_1_1_c_instance_audio_encoder.html',1,'kodi::addon']]],
+  ['cinstanceinputstream',['CInstanceInputStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html',1,'kodi::addon']]],
   ['cinstancescreensaver',['CInstanceScreensaver',['../classkodi_1_1addon_1_1_c_instance_screensaver.html',1,'kodi::addon']]],
   ['cinstancevisualization',['CInstanceVisualization',['../classkodi_1_1addon_1_1_c_instance_visualization.html',1,'kodi::addon']]],
   ['clistitem',['CListItem',['../classkodi_1_1gui_1_1_c_list_item.html',1,'kodi::gui']]],

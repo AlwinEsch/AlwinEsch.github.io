@@ -9,6 +9,6 @@ var searchData=
   ['updatealbumart',['UpdateAlbumart',['../group__cpp__kodi__addon__visualization.html#gaa966fc12df9ac054bfd35b8969f67081',1,'kodi::addon::CInstanceVisualization']]],
   ['updatetimer',['UpdateTimer',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a2fb079f099725c0caeec2a8a8d9fc392',1,'kodi::addon::pvr::CAddon']]],
   ['updatetrack',['UpdateTrack',['../group__cpp__kodi__addon__visualization.html#ga83adb1f15daf0f22b2269546d7f21c26',1,'kodi::addon::CInstanceVisualization']]],
-  ['url',['URL',['../classkodi_1_1addon_1_1inputstream_1_1_c_addon.html#a59c42333938921f7d046ca9c786393a3',1,'kodi::addon::inputstream::CAddon']]],
+  ['url',['URL',['../group__cpp__kodi__addon__inputstream___callbacks.html#ga59c42333938921f7d046ca9c786393a3',1,'kodi::addon::CInstanceInputStream']]],
   ['urlencode',['URLEncode',['../group__cpp__kodi__network.html#gac4320b320b1871e24d37f6bab266f368',1,'kodi::network']]]
 ];

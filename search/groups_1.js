@@ -2,6 +2,7 @@ var searchData=
 [
   ['c_2b_2b',['C++',['../group__cpp.html',1,'']]],
   ['class_20caddonbase',['class CAddonBase',['../group__cpp__kodi__addon__addonbase.html',1,'']]],
+  ['callbacks_20to_20kodi_20and_20to_20this_20class',['Callbacks to Kodi and to this class',['../group__cpp__kodi__addon__inputstream___callbacks.html',1,'']]],
   ['class_20vistrack',['class VisTrack',['../group__cpp__kodi__addon__visualization___vis_track.html',1,'']]],
   ['class_20caddonaestream',['class CAddonAEStream',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html',1,'']]],
   ['control_20button',['Control Button',['../group__cpp__kodi__gui___c_control_button.html',1,'']]],
