@@ -25,6 +25,7 @@ var searchData=
   ['allocateencrypteddemuxpacket',['AllocateEncryptedDemuxPacket',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a772d255c7349b167929c22d80de57437',1,'kodi::addon::CInstanceInputStream']]],
   ['atend',['AtEnd',['../group__cpp__kodi__vfs___c_file.html#gaf5fd2a2591a0f355dd78bb9a5c6d4120',1,'kodi::vfs::CFile']]],
   ['atime',['atime',['../group__python__stat.html#ga168004cb787954e08154d53996c3b3a1',1,'XBMCAddon::xbmcvfs::Stat']]],
+  ['audiodata',['AudioData',['../group__cpp__kodi__addon__visualization.html#ga5c8b4d62952a520f13d70c9133e65d2a',1,'kodi::addon::CInstanceVisualization']]],
   ['audioresume',['audioResume',['../group__python__xbmc.html#gadddf5ad858f0e72378115ca2ded3b933',1,'ModuleXbmc.h']]],
   ['audiosuspend',['audioSuspend',['../group__python__xbmc.html#ga490c93d077b5fd47106630a92e0e20bb',1,'ModuleXbmc.h']]],
   ['autoscroll',['autoScroll',['../group__python__xbmcgui__control__textbox.html#ga8a1b4a10e9bfd82b31d18c036349f9d9',1,'XBMCAddon::xbmcgui::ControlTextBox']]]

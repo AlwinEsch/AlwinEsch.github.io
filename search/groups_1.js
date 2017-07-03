@@ -2,6 +2,7 @@ var searchData=
 [
   ['c_2b_2b',['C++',['../group__cpp.html',1,'']]],
   ['class_20caddonbase',['class CAddonBase',['../group__cpp__kodi__addon__addonbase.html',1,'']]],
+  ['class_20vistrack',['class VisTrack',['../group__cpp__kodi__addon__visualization___vis_track.html',1,'']]],
   ['class_20caddonaestream',['class CAddonAEStream',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html',1,'']]],
   ['control_20button',['Control Button',['../group__cpp__kodi__gui__controls___c_button.html',1,'']]],
   ['control_20edit',['Control Edit',['../group__cpp__kodi__gui__controls___c_edit.html',1,'']]],

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['get_5fname',['get_name',['../struct_kodi_to_addon_func_table___video_codec.html#a010c30b7e5d1248095d05fbba3ad2e17',1,'KodiToAddonFuncTable_VideoCodec']]],
+  ['getactivepreset',['GetActivePreset',['../group__cpp__kodi__addon__visualization.html#ga8e9a79d794d95fdd88c2700982e2f622',1,'kodi::addon::CInstanceVisualization']]],
   ['getaddoninfo',['getAddonInfo',['../group__python__xbmcaddon.html#ga19050fb2822da5f0cbd8cdaad40b8b3f',1,'XBMCAddon::xbmcaddon::Addon']]],
   ['getalbum',['getAlbum',['../group__python___info_tag_music.html#gaee148d665bb21d0319499d90186605b2',1,'XBMCAddon::xbmc::InfoTagMusic::getAlbum()'],['../group__python___info_tag_radio_r_d_s.html#gaee148d665bb21d0319499d90186605b2',1,'XBMCAddon::xbmc::InfoTagRadioRDS::getAlbum()']]],
   ['getalbumartist',['getAlbumArtist',['../group__python___info_tag_music.html#gaf49ce9703600649cd1f8c58cb989de66',1,'XBMCAddon::xbmc::InfoTagMusic']]],
@@ -81,6 +82,7 @@ var searchData=
   ['getimage',['getImage',['../group__python__xbmc___render_capture.html#ga14ed670fcc4ff3b544898bb2b46d10e7',1,'XBMCAddon::xbmc::RenderCapture']]],
   ['getimageformat',['getImageFormat',['../group__python__xbmc___render_capture.html#gac086fcc7f9619fb51436af767561dd7e',1,'XBMCAddon::xbmc::RenderCapture']]],
   ['getimdbnumber',['getIMDBNumber',['../group__python___info_tag_video.html#ga778d9b665187c5aa28955341a51ac3db',1,'XBMCAddon::xbmc::InfoTagVideo']]],
+  ['getinfo',['GetInfo',['../group__cpp__kodi__addon__visualization.html#ga5357e3fc0644da927689ec6161b2ef46',1,'kodi::addon::CInstanceVisualization']]],
   ['getinfocinema',['getInfoCinema',['../group__python___info_tag_radio_r_d_s.html#ga32edc9b3c6f71d1a3969a68f256e43e3',1,'XBMCAddon::xbmc::InfoTagRadioRDS']]],
   ['getinfohoroscope',['getInfoHoroscope',['../group__python___info_tag_radio_r_d_s.html#ga67b8e058c5e8fa20a8c58ef2d09c8d7c',1,'XBMCAddon::xbmc::InfoTagRadioRDS']]],
   ['getinfoimage',['getInfoImage',['../group__python__xbmc.html#gae3bb866b782b6176d413a41b16c7fe13',1,'ModuleXbmc.h']]],
@@ -128,6 +130,7 @@ var searchData=
   ['getplotoutline',['getPlotOutline',['../group__python___info_tag_video.html#ga74772b07895cacb92c3ecb7e8fd72795',1,'XBMCAddon::xbmc::InfoTagVideo']]],
   ['getposition',['GetPosition',['../classkodi_1_1addon_1_1_c_instance_v_f_s.html#af5e9036c42f02f6f199d75623db57c69',1,'kodi::addon::CInstanceVFS::GetPosition()'],['../group__cpp__kodi__vfs___c_file.html#gaab98661a2483587df5d85e6ec8699bce',1,'kodi::vfs::CFile::GetPosition()'],['../group__python___play_list.html#gaf043e2c7bc131891594ef9aaff03187a',1,'XBMCAddon::xbmc::PlayList::getposition()']]],
   ['getpremiered',['getPremiered',['../group__python___info_tag_video.html#ga4357cb648b24c9f43457531021afa554',1,'XBMCAddon::xbmc::InfoTagVideo']]],
+  ['getpresets',['GetPresets',['../group__cpp__kodi__addon__visualization.html#ga4d344677b35ca9a299a595ec6d9d0b6b',1,'kodi::addon::CInstanceVisualization']]],
   ['getproghost',['getProgHost',['../group__python___info_tag_radio_r_d_s.html#ga4e7bacbb37b28a324ebf114f9e623f17',1,'XBMCAddon::xbmc::InfoTagRadioRDS']]],
   ['getprognext',['getProgNext',['../group__python___info_tag_radio_r_d_s.html#ga620f8d648adfb768d2ea8ca2d45b52a8',1,'XBMCAddon::xbmc::InfoTagRadioRDS']]],
   ['getprognow',['getProgNow',['../group__python___info_tag_radio_r_d_s.html#ga3720237417ff73c2387a5d2cee79db83',1,'XBMCAddon::xbmc::InfoTagRadioRDS']]],

@@ -10,6 +10,7 @@ var searchData=
   ['demuxreset',['DemuxReset',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a4e1a9156a48ad4536be348fb698bc996',1,'kodi::addon::CInstanceInputStream']]],
   ['demuxseektime',['DemuxSeekTime',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a313d275a2f08c9fd786b5a09edf431a8',1,'kodi::addon::CInstanceInputStream']]],
   ['demuxsetspeed',['DemuxSetSpeed',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a9283b013d1af58196b196ab33c0d82c6',1,'kodi::addon::CInstanceInputStream']]],
+  ['device',['Device',['../group__cpp__kodi__addon__visualization___c_b.html#gadb328fb2add804f1393b84737d3ae45d',1,'kodi::addon::CInstanceVisualization']]],
   ['directoryexists',['DirectoryExists',['../classkodi_1_1addon_1_1_c_instance_v_f_s.html#a9320e6c76fb3b3694da7b7c926849eee',1,'kodi::addon::CInstanceVFS::DirectoryExists()'],['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#ad4787a143ca40c47338def3401051d40',1,'ADDON::CHelper_libXBMC_addon::DirectoryExists()'],['../group__cpp__kodi__vfs.html#gac966dda71c24315123d968e542f7f7d5',1,'kodi::vfs::DirectoryExists()']]],
   ['dirty',['Dirty',['../group__cpp__kodi__gui__controls___c_rendering.html#ga7cea65505e98c9989ab92a87b2f2e99b',1,'kodi::gui::controls::CRendering']]],
   ['disconnectall',['DisconnectAll',['../classkodi_1_1addon_1_1_c_instance_v_f_s.html#a63e4714a25299e480224b20d25b824ea',1,'kodi::addon::CInstanceVFS']]],

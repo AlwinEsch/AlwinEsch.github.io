@@ -2,6 +2,9 @@ var searchData=
 [
   ['rendercapture',['RenderCapture',['../group__python__xbmc___render_capture.html',1,'']]],
   ['radio_20button_20control',['Radio button control',['../_radio_button_control.html',1,'skin_controls']]],
+  ['randompreset',['RandomPreset',['../group__cpp__kodi__addon__visualization.html#ga2797e92d4bf9b4eaef21f256a1867ed3',1,'kodi::addon::CInstanceVisualization']]],
+  ['ratepreset',['RatePreset',['../group__cpp__kodi__addon__visualization.html#gae12d00ba86095e80ec25c719592a1daa',1,'kodi::addon::CInstanceVisualization']]],
+  ['rating',['rating',['../group__cpp__kodi__addon__visualization___vis_track.html#af3602a84a798e599503b72bb040edeaf',1,'VisTrack']]],
   ['read',['read',['../group__python__file.html#ga09536b9e99d54e4160097d953cbd2eda',1,'XBMCAddon::xbmcvfs::File::read()'],['../group__python__xbmcwsgi___wsgi_input_stream.html#ga09536b9e99d54e4160097d953cbd2eda',1,'XBMCAddon::xbmcwsgi::WsgiInputStreamIterator::read(...)'],['../class_x_b_m_c_addon_1_1xbmcwsgi_1_1_wsgi_input_stream_iterator.html#ga09536b9e99d54e4160097d953cbd2eda',1,'XBMCAddon::xbmcwsgi::WsgiInputStreamIterator::read(...)'],['../class_x_b_m_c_addon_1_1xbmcwsgi_1_1_wsgi_input_stream_iterator.html#ga09536b9e99d54e4160097d953cbd2eda',1,'XBMCAddon::xbmcwsgi::WsgiInputStreamIterator::read(...)'],['../classkodi_1_1addon_1_1_c_instance_v_f_s.html#a9be8e612609a10a43e379850a652d2d7',1,'kodi::addon::CInstanceVFS::Read()'],['../group__cpp__kodi__vfs___c_file.html#gaedcb929f8b3206c85df4c1c658d9bbbc',1,'kodi::vfs::CFile::Read()']]],
   ['read_5fafter_5fwrite',['READ_AFTER_WRITE',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a99026c18c02ce8d720936b1f2a6cb74a',1,'Filesystem.h']]],
   ['read_5faudio_5fvideo',['READ_AUDIO_VIDEO',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149ae86a34d876dbc5ea76a647535ba8cebe',1,'Filesystem.h']]],
@@ -36,7 +39,7 @@ var searchData=
   ['removemenuhook',['RemoveMenuHook',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a7afd32a1942cb64dcf6eed9a3ecd4af1',1,'kodi::addon::CInstanceAudioDSP']]],
   ['rename',['Rename',['../classkodi_1_1addon_1_1_c_instance_v_f_s.html#a986e41751d1f27a92b277b6daa099f4f',1,'kodi::addon::CInstanceVFS::Rename()'],['../group__python__xbmcvfs.html#ga54135fe88c417074dcc7d9d4ce3fa540',1,'rename():&#160;ModuleXbmcvfs.h']]],
   ['renamefile',['RenameFile',['../group__cpp__kodi__vfs.html#ga600d8ec5712c8b8350597c39368ea64f',1,'kodi::vfs']]],
-  ['render',['Render',['../group__cpp__kodi__gui__controls___c_rendering.html#ga0bc3f3606d9cf5304dac90cd7a619194',1,'kodi::gui::controls::CRendering']]],
+  ['render',['Render',['../group__cpp__kodi__addon__visualization.html#ga0bc3f3606d9cf5304dac90cd7a619194',1,'kodi::addon::CInstanceVisualization::Render()'],['../group__cpp__kodi__gui__controls___c_rendering.html#ga0bc3f3606d9cf5304dac90cd7a619194',1,'kodi::gui::controls::CRendering::Render()']]],
   ['rendercapture',['RenderCapture',['../class_x_b_m_c_addon_1_1xbmc_1_1_render_capture.html',1,'XBMCAddon::xbmc']]],
   ['renderframe',['RenderFrame',['../class_c_helper__lib_k_o_d_i__game.html#ac8d15701eb11c425bfa62f0838489b87',1,'CHelper_libKODI_game']]],
   ['requested_5fport',['requested_port',['../struct_j_o_y_s_t_i_c_k___i_n_f_o.html#ad36248343b4b585f68bbfd51f36e0899',1,'JOYSTICK_INFO']]],

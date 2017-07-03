@@ -1,0 +1,25 @@
+var group__cpp__kodi__addon__visualization =
+[
+    [ "class VisTrack", "group__cpp__kodi__addon__visualization___vis_track.html", null ],
+    [ "Information functions", "group__cpp__kodi__addon__visualization___c_b.html", "group__cpp__kodi__addon__visualization___c_b" ],
+    [ "CInstanceVisualization", "group__cpp__kodi__addon__visualization.html#gab77a4fc4d8b8c8cbb93f7a5632c5b5ee", null ],
+    [ "CInstanceVisualization", "group__cpp__kodi__addon__visualization.html#gab6ce5b7259d53ff3f97e236b906cb71d", null ],
+    [ "~CInstanceVisualization", "group__cpp__kodi__addon__visualization.html#gaa8c552b512f4584d475fc6f0ff031f7d", null ],
+    [ "Start", "group__cpp__kodi__addon__visualization.html#gaa4ba9bea676e0bccf5bcc7ac33b80f49", null ],
+    [ "Stop", "group__cpp__kodi__addon__visualization.html#gaf6f113a64b92a63894b285b4f2a2c3a5", null ],
+    [ "AudioData", "group__cpp__kodi__addon__visualization.html#ga5c8b4d62952a520f13d70c9133e65d2a", null ],
+    [ "IsDirty", "group__cpp__kodi__addon__visualization.html#ga3f36305e1f63bdf8b80aca2cad779660", null ],
+    [ "Render", "group__cpp__kodi__addon__visualization.html#ga0bc3f3606d9cf5304dac90cd7a619194", null ],
+    [ "GetInfo", "group__cpp__kodi__addon__visualization.html#ga5357e3fc0644da927689ec6161b2ef46", null ],
+    [ "GetPresets", "group__cpp__kodi__addon__visualization.html#ga4d344677b35ca9a299a595ec6d9d0b6b", null ],
+    [ "GetActivePreset", "group__cpp__kodi__addon__visualization.html#ga8e9a79d794d95fdd88c2700982e2f622", null ],
+    [ "IsLocked", "group__cpp__kodi__addon__visualization.html#gac4a06db92c95351b3478f4857bbe71be", null ],
+    [ "PrevPreset", "group__cpp__kodi__addon__visualization.html#ga4baaca37d21ec72b65b57022ed19fa8c", null ],
+    [ "NextPreset", "group__cpp__kodi__addon__visualization.html#gaba3f4c18a139a731f20dc018b239a425", null ],
+    [ "LoadPreset", "group__cpp__kodi__addon__visualization.html#ga3d8800ff2acd0c2f242459803cacd3a2", null ],
+    [ "RandomPreset", "group__cpp__kodi__addon__visualization.html#ga2797e92d4bf9b4eaef21f256a1867ed3", null ],
+    [ "LockPreset", "group__cpp__kodi__addon__visualization.html#ga0396c3e1569480032721836b7e139624", null ],
+    [ "RatePreset", "group__cpp__kodi__addon__visualization.html#gae12d00ba86095e80ec25c719592a1daa", null ],
+    [ "UpdateAlbumart", "group__cpp__kodi__addon__visualization.html#gaa966fc12df9ac054bfd35b8969f67081", null ],
+    [ "UpdateTrack", "group__cpp__kodi__addon__visualization.html#ga83adb1f15daf0f22b2269546d7f21c26", null ]
+];

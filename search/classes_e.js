@@ -8,5 +8,5 @@ var searchData=
   ['videocodec_5finitdata',['VIDEOCODEC_INITDATA',['../struct_v_i_d_e_o_c_o_d_e_c___i_n_i_t_d_a_t_a.html',1,'']]],
   ['videocodec_5fpicture',['VIDEOCODEC_PICTURE',['../struct_v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html',1,'']]],
   ['vis_5finfo',['VIS_INFO',['../struct_v_i_s___i_n_f_o.html',1,'']]],
-  ['vistrack',['VisTrack',['../struct_vis_track.html',1,'']]]
+  ['vistrack',['VisTrack',['../group__cpp__kodi__addon__visualization___vis_track.html#struct_vis_track',1,'']]]
 ];

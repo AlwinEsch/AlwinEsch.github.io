@@ -5,6 +5,7 @@ var searchData=
   ['pausestream',['PauseStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a0c6c3376d5b8e5a255acc189a45119dd',1,'kodi::addon::CInstanceInputStream']]],
   ['percentage',['Percentage',['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#gadc4517cc4837f035c5e3432542ce2b14',1,'kodi::gui::dialogs::CExtendedProgress']]],
   ['performdevicescan',['PerformDeviceScan',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a8ad848a0f528137ea22ea45db9a02bf5',1,'kodi::addon::CInstancePeripheral']]],
+  ['pixelratio',['PixelRatio',['../group__cpp__kodi__addon__visualization___c_b.html#gaed543c2faa2875e81791a9a84b76ab56',1,'kodi::addon::CInstanceVisualization']]],
   ['play',['play',['../group__python___player.html#ga84f42d1160cbf72fcaec1030225e8669',1,'XBMCAddon::xbmc::Player']]],
   ['playnext',['playnext',['../group__python___player.html#gad3fc41131784480b8d6bda2b90bbdec9',1,'XBMCAddon::xbmc::Player']]],
   ['playprevious',['playprevious',['../group__python___player.html#gad16dd426f4c538dd6dfa830445e456a3',1,'XBMCAddon::xbmc::Player']]],
@@ -19,5 +20,8 @@ var searchData=
   ['poweroffjoystick',['PowerOffJoystick',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a971f07a9b76152a5779626b5f945c6ac',1,'kodi::addon::CInstancePeripheral']]],
   ['preprocess',['PreProcess',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#ae5580f9a9783f8773729e3e067c36e1c',1,'kodi::addon::CInstanceAudioDSP']]],
   ['preprocessgetdelay',['PreProcessGetDelay',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#afdc5bd253d6f273de079bb745bad87ee',1,'kodi::addon::CInstanceAudioDSP']]],
-  ['preprocessneededsamplesize',['PreProcessNeededSamplesize',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a57ea76569392415fec0d59d45b1d1f6e',1,'kodi::addon::CInstanceAudioDSP']]]
+  ['preprocessneededsamplesize',['PreProcessNeededSamplesize',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a57ea76569392415fec0d59d45b1d1f6e',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['presets',['Presets',['../group__cpp__kodi__addon__visualization___c_b.html#ga2664b8df9b7970b2482b362c12cfe1f6',1,'kodi::addon::CInstanceVisualization']]],
+  ['prevpreset',['PrevPreset',['../group__cpp__kodi__addon__visualization.html#ga4baaca37d21ec72b65b57022ed19fa8c',1,'kodi::addon::CInstanceVisualization']]],
+  ['profile',['Profile',['../group__cpp__kodi__addon__visualization___c_b.html#ga85035689dc2f1796f5acd2fd25053e3d',1,'kodi::addon::CInstanceVisualization']]]
 ];
