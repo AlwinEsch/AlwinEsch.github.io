@@ -1,6 +1,5 @@
 var group__cpp__kodi__vfs___c_file =
 [
-    [ "Definitions, structures and enumerators", "group__cpp__kodi__vfs___c_file___defs.html", "group__cpp__kodi__vfs___c_file___defs" ],
     [ "CFile", "group__cpp__kodi__vfs___c_file.html#ga8b221739572abc22a176281ebd8e70c0", null ],
     [ "~CFile", "group__cpp__kodi__vfs___c_file.html#gaaca978eab220d4564711e06f5d9e55b3", null ],
     [ "OpenFile", "group__cpp__kodi__vfs___c_file.html#ga98a555efe0368bda93fede3e043210de", null ],
@@ -16,7 +15,8 @@ var group__cpp__kodi__vfs___c_file =
     [ "Truncate", "group__cpp__kodi__vfs___c_file.html#ga7db30bce899ccc6e0d7a5b0a4cf160b7", null ],
     [ "GetPosition", "group__cpp__kodi__vfs___c_file.html#gaab98661a2483587df5d85e6ec8699bce", null ],
     [ "GetLength", "group__cpp__kodi__vfs___c_file.html#gaf2332ee14e6eb66707939c8d9625194d", null ],
-    [ "GetDownloadSpeed", "group__cpp__kodi__vfs___c_file.html#gae25e5d65e44d4519db2cd978a928cc3b", null ],
+    [ "AtEnd", "group__cpp__kodi__vfs___c_file.html#gaf5fd2a2591a0f355dd78bb9a5c6d4120", null ],
     [ "Close", "group__cpp__kodi__vfs___c_file.html#ga7f7a3199c392465d0767c6506c1af5b4", null ],
-    [ "GetChunkSize", "group__cpp__kodi__vfs___c_file.html#gacc37d885ea67ed49de5644a572d904ee", null ]
+    [ "GetChunkSize", "group__cpp__kodi__vfs___c_file.html#gacc37d885ea67ed49de5644a572d904ee", null ],
+    [ "GetFileDownloadSpeed", "group__cpp__kodi__vfs___c_file.html#gaf8e1ef1e563ffa78efe99ee171ee4631", null ]
 ];

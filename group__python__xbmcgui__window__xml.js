@@ -9,5 +9,7 @@ var group__python__xbmcgui__window__xml =
     [ "getListItem", "group__python__xbmcgui__window__xml.html#gac0ca640f178c947fd5cdcd8bdcbc269b", null ],
     [ "getListSize", "group__python__xbmcgui__window__xml.html#ga49ec06e6c8ef6a59b55c2b7aeb9fbc73", null ],
     [ "clearList", "group__python__xbmcgui__window__xml.html#ga5421bf9d57ddded1e8e16959804626ca", null ],
-    [ "setContainerProperty", "group__python__xbmcgui__window__xml.html#gad5749c0654365381de032cc3c5c10276", null ]
+    [ "setContainerProperty", "group__python__xbmcgui__window__xml.html#gad5749c0654365381de032cc3c5c10276", null ],
+    [ "setContent", "group__python__xbmcgui__window__xml.html#gaa30572d1e5d9d589e1cd3bfc1e2318d6", null ],
+    [ "getCurrentContainerId", "group__python__xbmcgui__window__xml.html#ga911a360cfbf56db6ecee17304fd11c93", null ]
 ];

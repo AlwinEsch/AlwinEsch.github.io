@@ -1,14 +1,6 @@
 var searchData=
 [
-  ['undeleterecording',['UndeleteRecording',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#ad5446e0506474d8dd063ae497917d686',1,'kodi::addon::pvr::CAddon']]],
-  ['unknowntoutf8',['UnknownToUTF8',['../group__cpp__kodi.html#ga275a5231deebed983e67a97f50c8195e',1,'kodi']]],
-  ['unlock',['Unlock',['../group__cpp__kodi__gui.html#ga6c6c14ee83364161f2dab4233f1fd95f',1,'kodi::gui']]],
-  ['unregistermode',['UnregisterMode',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a5223217155d8b7625611fda5e5f089e8',1,'kodi::addon::adsp::CAddon']]],
-  ['unshuffle',['unshuffle',['../group__python___play_list.html#ga869185334948aa5f500d718c1c071cdd',1,'XBMCAddon::xbmc::PlayList']]],
-  ['update',['update',['../group__python___dialog_progress.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgress::update()'],['../group__python___dialog_progress_b_g.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgressBG::update()']]],
-  ['updatealbumart',['UpdateAlbumart',['../group__cpp__kodi__addon__visualization.html#gaa966fc12df9ac054bfd35b8969f67081',1,'kodi::addon::CInstanceVisualization']]],
-  ['updatetimer',['UpdateTimer',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a2fb079f099725c0caeec2a8a8d9fc392',1,'kodi::addon::pvr::CAddon']]],
-  ['updatetrack',['UpdateTrack',['../group__cpp__kodi__addon__visualization.html#ga83adb1f15daf0f22b2269546d7f21c26',1,'kodi::addon::CInstanceVisualization']]],
-  ['url',['URL',['../group__cpp__kodi__addon__inputstream___callbacks.html#ga59c42333938921f7d046ca9c786393a3',1,'kodi::addon::CInstanceInputStream']]],
-  ['urlencode',['URLEncode',['../group__cpp__kodi__network.html#gac4320b320b1871e24d37f6bab266f368',1,'kodi::network']]]
+  ['validatepath',['validatePath',['../group__python__xbmc.html#ga7d325903d7bc797f993c9df791d22c44',1,'ModuleXbmc.h']]],
+  ['videocodec_5fretval',['VIDEOCODEC_RETVAL',['../struct_kodi_to_addon_func_table___video_codec.html#af7692b7a10af339cbff35cb9aeb7440a',1,'KodiToAddonFuncTable_VideoCodec']]],
+  ['void',['void',['../struct_kodi_to_addon_func_table___video_codec.html#a460730f8ea041fda966a664f502c9a09',1,'KodiToAddonFuncTable_VideoCodec::void()'],['../struct_v_f_s_callbacks.html#af22323bc8676b7e40e40a986327034b6',1,'VFSCallbacks::void(__cdecl *SetErrorDialog)(void *ctx'],['../struct_v_f_s_callbacks.html#a780681085aa1c5130ea8798fa7e144d9',1,'VFSCallbacks::void(__cdecl *RequireAuthentication)(void *ctx'],['../struct_kodi_to_addon_func_table___v_f_s_entry.html#a9478eb1ccd01f4e902bf5841c7507508',1,'KodiToAddonFuncTable_VFSEntry::void(__cdecl *ClearOutIdle)()'],['../struct_kodi_to_addon_func_table___v_f_s_entry.html#adea2bc5b4d256addd5a9f1388257a423',1,'KodiToAddonFuncTable_VFSEntry::void(__cdecl *DisconnectAll)()'],['../struct_kodi_to_addon_func_table___v_f_s_entry.html#a28e11cd136a5b97dcd2f207d4f588f31',1,'KodiToAddonFuncTable_VFSEntry::void(__cdecl *FreeDirectory)(void *ctx)']]]
 ];

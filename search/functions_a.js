@@ -1,15 +1,20 @@
 var searchData=
 [
-  ['label',['Label',['../group__cpp__kodi__vfs___c_dir_entry.html#gaacd1b40e1b2e44d82303388beb475e84',1,'kodi::vfs::CVFSDirEntry']]],
-  ['lengthlivestream',['LengthLiveStream',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#ae6f782d7543efcc16e168d2af7589183',1,'kodi::addon::pvr::CAddon']]],
-  ['lengthrecordedstream',['LengthRecordedStream',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a0ddbf9cbfa657fb7a8b0d3c2f6d1139d',1,'kodi::addon::pvr::CAddon']]],
-  ['lengthstream',['LengthStream',['../group__cpp__kodi__addon__inputstream___seekable.html#ga6c77ac06f595e639ac95ce93f88175be',1,'kodi::addon::CInstanceInputStream']]],
-  ['libfolder',['LibFolder',['../group__cpp__kodi__addon__inputstream___callbacks.html#ga3796cfab2af7143c3646243f1e866e73',1,'kodi::addon::CInstanceInputStream']]],
-  ['listdir',['listdir',['../group__python__xbmcvfs.html#ga6fdd93a2195f65e549abb759bc151afc',1,'ModuleXbmcvfs.h']]],
-  ['load',['load',['../group__python___play_list.html#ga58df00a466baca2469ad8407c5534377',1,'XBMCAddon::xbmc::PlayList']]],
-  ['loadpreset',['LoadPreset',['../group__cpp__kodi__addon__visualization.html#ga3d8800ff2acd0c2f242459803cacd3a2',1,'kodi::addon::CInstanceVisualization']]],
-  ['lock',['Lock',['../group__cpp__kodi__gui.html#gafc92f24c22d2dff1158bad6cbc771d87',1,'kodi::gui']]],
-  ['lockinggetnextavailablewindowid',['lockingGetNextAvailableWindowId',['../group__python__xbmcgui__window__xml.html#a507ab35d41a0baaa7a32b16ca78aee24',1,'XBMCAddon::xbmcgui::WindowXML']]],
-  ['lockpreset',['LockPreset',['../group__cpp__kodi__addon__visualization.html#ga0396c3e1569480032721836b7e139624',1,'kodi::addon::CInstanceVisualization']]],
-  ['log',['Log',['../group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1',1,'kodi::Log()'],['../group__python__xbmc.html#ga3cd3eff2195727144ad6fbabd4744961',1,'log():&#160;ModuleXbmc.h']]]
+  ['makelegalfilename',['makeLegalFilename',['../group__python__xbmc.html#gac40e0ecd5b1aa66a90c5c0918cd40491',1,'makeLegalFilename():&#160;ModuleXbmc.h'],['../group__cpp__kodi__vfs.html#ga857b795585d7268e85975850144adad7',1,'kodi::vfs::MakeLegalFileName()']]],
+  ['makelegalpath',['MakeLegalPath',['../group__cpp__kodi__vfs.html#gab053f177a461b97666f395d51d9edd05',1,'kodi::vfs']]],
+  ['mapfeatures',['MapFeatures',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a400331eddb7847e58c22d3424440067c',1,'kodi::addon::CInstancePeripheral']]],
+  ['markdirtyregion',['MarkDirtyRegion',['../group__cpp__kodi__gui___c_window.html#ga60ef98c2dd24a36ab0748d21888f10b6',1,'kodi::gui::CWindow']]],
+  ['markfinished',['MarkFinished',['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#ga40af1bcedea1f61fde8cd5e70e416473',1,'kodi::gui::dialogs::CExtendedProgress']]],
+  ['masterprocess',['MasterProcess',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a48e72024810c58c129c2eba6a95c9649',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['masterprocessgetdelay',['MasterProcessGetDelay',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a08769676416189c96339ee845b2f5ad7',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['masterprocessgetoutchannels',['MasterProcessGetOutChannels',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#af02a79ef1edd492820d7f0cae39c3f56',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['masterprocessgetstreaminfostring',['MasterProcessGetStreamInfoString',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a9a25f9bfe0ad1a0945776eeaf8d79c78',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['masterprocessneededsamplesize',['MasterProcessNeededSamplesize',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a88a0ab0919fb2f008fa2ac0d29b662f5',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['masterprocesssetmode',['MasterProcessSetMode',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a2ce531556e683d0c4137291618dd6f27',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['menuhook',['MenuHook',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a2b5523680158c52a529756ed924decd7',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['mimetype',['MimeType',['../classkodi_1_1addon_1_1_c_instance_image_decoder.html#af4962a784b53f017c10c31b8e2bc03f2',1,'kodi::addon::CInstanceImageDecoder']]],
+  ['mkdir',['mkdir',['../group__python__xbmcvfs.html#ga07a90f3afa1401bd289deb4be40c2489',1,'ModuleXbmcvfs.h']]],
+  ['mkdirs',['mkdirs',['../group__python__xbmcvfs.html#gaf0a772cd125d92abecaf2da7482aa16d',1,'ModuleXbmcvfs.h']]],
+  ['mtime',['mtime',['../group__python__stat.html#ga87df9874162af616bbcd66e3f28fcd73',1,'XBMCAddon::xbmcvfs::Stat']]],
+  ['multiselect',['multiselect',['../group__python___dialog.html#ga30fb89d8f6bfa31e2b2eace4d4bd16fa',1,'XBMCAddon::xbmcgui::Dialog']]]
 ];

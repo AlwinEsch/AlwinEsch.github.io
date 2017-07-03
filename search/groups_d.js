@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['window',['Window',['../group__cpp__kodi__gui___c_window.html',1,'']]],
   ['window',['Window',['../group__python__xbmcgui__window.html',1,'']]],
   ['wsgierrorstream',['WsgiErrorStream',['../group__python__xbmcwsgi___wsgi_error_stream.html',1,'']]],
   ['wsgiinputstream',['WsgiInputStream',['../group__python__xbmcwsgi___wsgi_input_stream.html',1,'']]],

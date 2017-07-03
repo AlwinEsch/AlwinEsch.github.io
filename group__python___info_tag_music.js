@@ -1,7 +1,9 @@
 var group__python___info_tag_music =
 [
+    [ "getDbId", "group__python___info_tag_music.html#ga0106357981f84446b7c1f063408b50a1", null ],
     [ "getURL", "group__python___info_tag_music.html#ga7fab9ce25511a132269e791a5308f7b7", null ],
     [ "getTitle", "group__python___info_tag_music.html#ga95e859a4588a39a1824b717378a84c29", null ],
+    [ "getMediaType", "group__python___info_tag_music.html#gae415e4abfc18ab4178c49953159e1233", null ],
     [ "getArtist", "group__python___info_tag_music.html#ga885a8570d62e92bb6f6c83144766e7fc", null ],
     [ "getAlbum", "group__python___info_tag_music.html#gaee148d665bb21d0319499d90186605b2", null ],
     [ "getAlbumArtist", "group__python___info_tag_music.html#gaf49ce9703600649cd1f8c58cb989de66", null ],

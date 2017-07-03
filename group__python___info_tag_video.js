@@ -25,5 +25,6 @@ var group__python___info_tag_video =
     [ "getLastPlayed", "group__python___info_tag_video.html#gaf16ec95dcf0cf2f08182b703de6f2074", null ],
     [ "getOriginalTitle", "group__python___info_tag_video.html#ga40c2a978091fe91512e2aa42fd127122", null ],
     [ "getPremiered", "group__python___info_tag_video.html#ga4357cb648b24c9f43457531021afa554", null ],
-    [ "getFirstAired", "group__python___info_tag_video.html#gae42843c78f73f35b960ddee13b949561", null ]
+    [ "getFirstAired", "group__python___info_tag_video.html#gae42843c78f73f35b960ddee13b949561", null ],
+    [ "getTrailer", "group__python___info_tag_video.html#gaabd77a85dde7d432f402664f1d9ae3f9", null ]
 ];

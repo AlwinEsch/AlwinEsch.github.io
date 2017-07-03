@@ -1,20 +1,5 @@
 var searchData=
 [
-  ['makelegalfilename',['MakeLegalFileName',['../group__cpp__kodi__vfs.html#ga857b795585d7268e85975850144adad7',1,'kodi::vfs::MakeLegalFileName()'],['../group__python__xbmc.html#gac40e0ecd5b1aa66a90c5c0918cd40491',1,'makeLegalFilename():&#160;ModuleXbmc.h']]],
-  ['makelegalpath',['MakeLegalPath',['../group__cpp__kodi__vfs.html#gab053f177a461b97666f395d51d9edd05',1,'kodi::vfs']]],
-  ['mapfeatures',['MapFeatures',['../classkodi_1_1addon_1_1peripheral_1_1_c_addon.html#a0579adbfc120d5e9c76ccd8ed9380a44',1,'kodi::addon::peripheral::CAddon']]],
-  ['markdirtyregion',['MarkDirtyRegion',['../group__cpp__kodi__gui___c_window.html#ga60ef98c2dd24a36ab0748d21888f10b6',1,'kodi::gui::CWindow']]],
-  ['markfinished',['MarkFinished',['../group__cpp__kodi__gui___c_dialog_extended_progress.html#ga40af1bcedea1f61fde8cd5e70e416473',1,'kodi::gui::CDialogExtendedProgress']]],
-  ['masterprocess',['MasterProcess',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a021bf8216eb448aff7e95e86b127f060',1,'kodi::addon::adsp::CAddon']]],
-  ['masterprocessgetdelay',['MasterProcessGetDelay',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a08769676416189c96339ee845b2f5ad7',1,'kodi::addon::adsp::CAddon']]],
-  ['masterprocessgetoutchannels',['MasterProcessGetOutChannels',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#af02a79ef1edd492820d7f0cae39c3f56',1,'kodi::addon::adsp::CAddon']]],
-  ['masterprocessgetstreaminfostring',['MasterProcessGetStreamInfoString',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a9a25f9bfe0ad1a0945776eeaf8d79c78',1,'kodi::addon::adsp::CAddon']]],
-  ['masterprocessneededsamplesize',['MasterProcessNeededSamplesize',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a88a0ab0919fb2f008fa2ac0d29b662f5',1,'kodi::addon::adsp::CAddon']]],
-  ['masterprocesssetmode',['MasterProcessSetMode',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a2ce531556e683d0c4137291618dd6f27',1,'kodi::addon::adsp::CAddon']]],
-  ['menuhook',['MenuHook',['../classkodi_1_1addon_1_1adsp_1_1_c_addon.html#a2b5523680158c52a529756ed924decd7',1,'kodi::addon::adsp::CAddon::MenuHook()'],['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#abe31a35b15f56bcacb22298c3f34bc21',1,'kodi::addon::pvr::CAddon::MenuHook()']]],
-  ['mkdir',['mkdir',['../group__python__xbmcvfs.html#ga07a90f3afa1401bd289deb4be40c2489',1,'ModuleXbmcvfs.h']]],
-  ['mkdirs',['mkdirs',['../group__python__xbmcvfs.html#gaf0a772cd125d92abecaf2da7482aa16d',1,'ModuleXbmcvfs.h']]],
-  ['movechannel',['MoveChannel',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a9ca88fcd1159a649eacc31f6084743c6',1,'kodi::addon::pvr::CAddon']]],
-  ['mtime',['mtime',['../group__python__stat.html#ga87df9874162af616bbcd66e3f28fcd73',1,'XBMCAddon::xbmcvfs::Stat']]],
-  ['multiselect',['multiselect',['../group__python___dialog.html#ga30fb89d8f6bfa31e2b2eace4d4bd16fa',1,'XBMCAddon::xbmcgui::Dialog']]]
+  ['notification',['notification',['../group__python___dialog.html#gaca90e2d17ad057925f1a350a08deed85',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['numeric',['numeric',['../group__python___dialog.html#ga1575511e8ea0f9e4d4684c5b9342d191',1,'XBMCAddon::xbmcgui::Dialog']]]
 ];

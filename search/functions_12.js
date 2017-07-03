@@ -1,17 +1,10 @@
 var searchData=
 [
-  ['text',['Text',['../group__cpp__kodi__gui___c_dialog_extended_progress.html#gafdfa72709ffc1738c3c198f7ad8b61ec',1,'kodi::gui::CDialogExtendedProgress']]],
-  ['textviewer',['textviewer',['../group__python___dialog.html#gad24eabf4c8107d4674c017db09a193ae',1,'XBMCAddon::xbmcgui::Dialog']]],
-  ['title',['Title',['../group__cpp__kodi__gui___c_dialog_extended_progress.html#ga3cb91fb7750df7982baea48c4a3de616',1,'kodi::gui::CDialogExtendedProgress']]],
-  ['togglemute',['ToggleMute',['../group__cpp__kodi.html#ga854c00891e7568e025c4a010954a7db3',1,'kodi']]],
-  ['trackcount',['TrackCount',['../group__cpp__kodi__addon__audiodecoder.html#ga81bd110153ec1a548b14155fa6aa3d0a',1,'kodi::addon::CInstanceAudioDecoder']]],
-  ['translateaddonstatus',['TranslateAddonStatus',['../group__cpp__kodi.html#ga9b32dff545988b283985ca95f1daaebc',1,'kodi']]],
-  ['translatepath',['translatePath',['../group__python__xbmc.html#ga762f48b2097ec25d938bf8596023b221',1,'translatePath():&#160;ModuleXbmc.h'],['../group__cpp__kodi.html#ga4c12be421dfd42575481d1147cb73f3a',1,'kodi::TranslatePath()']]],
-  ['triggerchannelgroupsupdate',['TriggerChannelGroupsUpdate',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a935da613c39f91145b6f230728bb1df0',1,'kodi::addon::pvr::CAddon']]],
-  ['triggerchannelupdate',['TriggerChannelUpdate',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a0be8a63a1bde169779281dff66e50014',1,'kodi::addon::pvr::CAddon']]],
-  ['triggerepgupdate',['TriggerEpgUpdate',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a2497b4db59f21f2fbb2956dc016c3067',1,'kodi::addon::pvr::CAddon']]],
-  ['triggerrecordingupdate',['TriggerRecordingUpdate',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a32558a6dec1bee47462379c7fb11dc1a',1,'kodi::addon::pvr::CAddon']]],
-  ['triggerscan',['TriggerScan',['../classkodi_1_1addon_1_1peripheral_1_1_c_addon.html#a6e68fb96881f6f92cd2855d86abf245e',1,'kodi::addon::peripheral::CAddon']]],
-  ['triggertimerupdate',['TriggerTimerUpdate',['../classkodi_1_1addon_1_1pvr_1_1_c_addon.html#a7a28ab2aa9e2f3191c2d6281cdc680ee',1,'kodi::addon::pvr::CAddon']]],
-  ['truncate',['Truncate',['../group__cpp__kodi__vfs___c_file.html#ga7db30bce899ccc6e0d7a5b0a4cf160b7',1,'kodi::vfs::CFile']]]
+  ['unknowntoutf8',['UnknownToUTF8',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a072b04ab983496e37e6ab6f40abed1ee',1,'ADDON::CHelper_libXBMC_addon::UnknownToUTF8()'],['../group__cpp__kodi.html#ga275a5231deebed983e67a97f50c8195e',1,'kodi::UnknownToUTF8()']]],
+  ['unlock',['Unlock',['../group__cpp__kodi__gui.html#ga6c6c14ee83364161f2dab4233f1fd95f',1,'kodi::gui']]],
+  ['unregistermode',['UnregisterMode',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a5223217155d8b7625611fda5e5f089e8',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['unshuffle',['unshuffle',['../group__python___play_list.html#ga869185334948aa5f500d718c1c071cdd',1,'XBMCAddon::xbmc::PlayList']]],
+  ['update',['update',['../group__python___dialog_progress.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgress::update()'],['../group__python___dialog_busy.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogBusy::update()'],['../group__python___dialog_progress_b_g.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgressBG::update()']]],
+  ['urlencode',['URLEncode',['../group__cpp__kodi__network.html#gac4320b320b1871e24d37f6bab266f368',1,'kodi::network']]],
+  ['userpath',['UserPath',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a7929d298b4ee683951e2f094ef2ef1d5',1,'kodi::addon::CInstancePeripheral']]]
 ];

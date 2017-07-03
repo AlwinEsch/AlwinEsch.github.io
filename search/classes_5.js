@@ -1,12 +1,19 @@
 var searchData=
 [
-  ['iaddoninstance',['IAddonInstance',['../classkodi_1_1addon_1_1_i_addon_instance.html',1,'kodi::addon']]],
-  ['infotagmusic',['InfoTagMusic',['../group__python___info_tag_music.html#class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music',1,'XBMCAddon::xbmc']]],
-  ['infotagradiords',['InfoTagRadioRDS',['../group__python___info_tag_radio_r_d_s.html#class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_radio_r_d_s',1,'XBMCAddon::xbmc']]],
-  ['infotagvideo',['InfoTagVideo',['../group__python___info_tag_video.html#class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video',1,'XBMCAddon::xbmc']]],
-  ['inputstream',['INPUTSTREAM',['../struct_i_n_p_u_t_s_t_r_e_a_m.html',1,'']]],
-  ['inputstream_5fcapabilities',['INPUTSTREAM_CAPABILITIES',['../group__cpp__kodi__addon__inputstream___defs___i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s',1,'']]],
-  ['inputstream_5fids',['INPUTSTREAM_IDS',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_d_s.html',1,'']]],
-  ['inputstream_5finfo',['INPUTSTREAM_INFO',['../group__cpp__kodi__addon__inputstream___defs___i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o',1,'']]],
-  ['inputstream_5fprops',['INPUTSTREAM_PROPS',['../struct_i_n_p_u_t_s_t_r_e_a_m___p_r_o_p_s.html',1,'']]]
+  ['game_5fabs_5fpointer_5fevent',['game_abs_pointer_event',['../structgame__abs__pointer__event.html',1,'']]],
+  ['game_5faccelerometer_5fevent',['game_accelerometer_event',['../structgame__accelerometer__event.html',1,'']]],
+  ['game_5fanalog_5fbutton_5fevent',['game_analog_button_event',['../structgame__analog__button__event.html',1,'']]],
+  ['game_5fanalog_5fstick_5fevent',['game_analog_stick_event',['../structgame__analog__stick__event.html',1,'']]],
+  ['game_5fcontroller',['game_controller',['../structgame__controller.html',1,'']]],
+  ['game_5fdigital_5fbutton_5fevent',['game_digital_button_event',['../structgame__digital__button__event.html',1,'']]],
+  ['game_5fgeometry',['game_geometry',['../structgame__geometry.html',1,'']]],
+  ['game_5fhw_5finfo',['game_hw_info',['../structgame__hw__info.html',1,'']]],
+  ['game_5finput_5fevent',['game_input_event',['../structgame__input__event.html',1,'']]],
+  ['game_5finput_5fevent_2e_5f_5funnamed_5f_5f',['game_input_event.__unnamed__',['../uniongame__input__event_8____unnamed____.html',1,'']]],
+  ['game_5fkey_5fevent',['game_key_event',['../structgame__key__event.html',1,'']]],
+  ['game_5fmotor_5fevent',['game_motor_event',['../structgame__motor__event.html',1,'']]],
+  ['game_5frel_5fpointer_5fevent',['game_rel_pointer_event',['../structgame__rel__pointer__event.html',1,'']]],
+  ['game_5fsystem_5fav_5finfo',['game_system_av_info',['../structgame__system__av__info.html',1,'']]],
+  ['game_5fsystem_5ftiming',['game_system_timing',['../structgame__system__timing.html',1,'']]],
+  ['gui_5fcontext_5fmenu_5fpair',['gui_context_menu_pair',['../structgui__context__menu__pair.html',1,'']]]
 ];

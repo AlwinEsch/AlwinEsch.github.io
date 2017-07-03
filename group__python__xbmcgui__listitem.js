@@ -9,6 +9,7 @@ var group__python__xbmcgui__listitem =
     [ "setArt", "group__python__xbmcgui__listitem.html#ga92f9aeb062ff50badcb8792d14a37394", null ],
     [ "setUniqueIDs", "group__python__xbmcgui__listitem.html#ga6cc13c6c75adf9fa922c82f783ea0f8e", null ],
     [ "setRating", "group__python__xbmcgui__listitem.html#ga0451d6e40ac2007eced53bcec09d8fd5", null ],
+    [ "addSeason", "group__python__xbmcgui__listitem.html#ga421063e7c27878159246d5919136e4eb", null ],
     [ "getArt", "group__python__xbmcgui__listitem.html#ga20bf1738625c38184321035e7c76472a", null ],
     [ "getUniqueID", "group__python__xbmcgui__listitem.html#ga121e7248c0db07d2a6a8eecda6245bd6", null ],
     [ "getRating", "group__python__xbmcgui__listitem.html#ga0a6976d7e98b735757ddccb44da9279e", null ],
@@ -16,6 +17,9 @@ var group__python__xbmcgui__listitem =
     [ "select", "group__python__xbmcgui__listitem.html#ga7ba82954c5d17b1a821abdf753ed339e", null ],
     [ "isSelected", "group__python__xbmcgui__listitem.html#ga2887792e8b30d1fd4e5f83d27694225d", null ],
     [ "setInfo", "group__python__xbmcgui__listitem.html#ga0f1e91e1d5aa61d8dd0eac90e8edbf18", null ],
+    [ "setCast", "group__python__xbmcgui__listitem.html#gae9bdc904aeebdb3b4d1ab8ebc0326bb5", null ],
+    [ "setAvailableFanart", "group__python__xbmcgui__listitem.html#ga2fd98f8e9f11fa80350afd3e15cf2078", null ],
+    [ "addAvailableThumb", "group__python__xbmcgui__listitem.html#ga68f0442f6c1cab136ca1850826059780", null ],
     [ "addStreamInfo", "group__python__xbmcgui__listitem.html#ga99c7bf16729b18b6378ea7069ee5b138", null ],
     [ "addContextMenuItems", "group__python__xbmcgui__listitem.html#ga14712acc2994196012036f43eb2135c4", null ],
     [ "setProperty", "group__python__xbmcgui__listitem.html#ga96f1976952584c91e6d59c310ce86a25", null ],
@@ -27,6 +31,7 @@ var group__python__xbmcgui__listitem =
     [ "getdescription", "group__python__xbmcgui__listitem.html#ga2e78eac307b4464a2f0d8d35830546fd", null ],
     [ "getduration", "group__python__xbmcgui__listitem.html#ga0a7f63393d2de75e7978ded396fb29d0", null ],
     [ "getfilename", "group__python__xbmcgui__listitem.html#ga9d55cae30190423090e954af1166a34f", null ],
+    [ "getPath", "group__python__xbmcgui__listitem.html#ga30c5c67b2bf8e2e2ccc7e361faa20afe", null ],
     [ "getVideoInfoTag", "group__python__xbmcgui__listitem.html#ga240f1deb93fc70eeffb671445781ae1f", null ],
     [ "getMusicInfoTag", "group__python__xbmcgui__listitem.html#ga35824a2f064ca06e0e75900b30aa6fa4", null ]
 ];

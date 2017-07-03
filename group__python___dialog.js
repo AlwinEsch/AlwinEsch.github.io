@@ -1,6 +1,7 @@
 var group__python___dialog =
 [
     [ "yesno", "group__python___dialog.html#ga28b2225b08fccc588441336c3a4b0ca3", null ],
+    [ "info", "group__python___dialog.html#gaf23b054c909e971408db682cca170c10", null ],
     [ "select", "group__python___dialog.html#ga7ba82954c5d17b1a821abdf753ed339e", null ],
     [ "contextmenu", "group__python___dialog.html#ga4096de3747da855937f6ed7c1df3877b", null ],
     [ "multiselect", "group__python___dialog.html#ga30fb89d8f6bfa31e2b2eace4d4bd16fa", null ],

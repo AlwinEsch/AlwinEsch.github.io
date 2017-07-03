@@ -3,6 +3,8 @@ var group__python__xbmcgui__window =
     [ "Callback functions from Kodi to add-on", "group__python__xbmcgui__window__cb.html", "group__python__xbmcgui__window__cb" ],
     [ "Subclass - WindowDialog", "group__python__xbmcgui__window__dialog.html", null ],
     [ "Subclass - WindowXML", "group__python__xbmcgui__window__xml.html", "group__python__xbmcgui__window__xml" ],
+    [ "getScreenHeight", "group__python__xbmcgui__window.html#ga2238518488407df3c26d4c73074af320", null ],
+    [ "getScreenWidth", "group__python__xbmcgui__window.html#gac06ec2c7c690831b1928784588ac410f", null ],
     [ "show", "group__python__xbmcgui__window.html#ga2b8e3779f5bd8c38f70307574859bd36", null ],
     [ "setFocus", "group__python__xbmcgui__window.html#ga7e38048aa81aff64105548da594beb4b", null ],
     [ "setFocusId", "group__python__xbmcgui__window.html#ga181ca820bd49c5e596e36c9fbcb33451", null ],
