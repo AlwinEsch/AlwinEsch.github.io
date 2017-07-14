@@ -2,7 +2,7 @@ var searchData=
 [
   ['ok',['ok',['../group__python___dialog.html#gaeba4d3278eff78b902a99e63f112a9b9',1,'XBMCAddon::xbmcgui::Dialog']]],
   ['onabortrequested',['onAbortRequested',['../group__python__monitor.html#gadfe1a1b3bd1d72a94c60590cd757247c',1,'XBMCAddon::xbmc::Monitor']]],
-  ['onaction',['onAction',['../group__python__xbmcgui__window__cb.html#ga1749b41bda7533c34282371758d50764',1,'XBMCAddon::xbmcgui::Window::onAction()'],['../group__cpp__kodi__gui___c_window__callbacks.html#gad3fc2a106ba0143fa5d11d3df32d9c72',1,'kodi::gui::CWindow::OnAction()']]],
+  ['onaction',['OnAction',['../group__cpp__kodi__gui___c_window__callbacks.html#gad3fc2a106ba0143fa5d11d3df32d9c72',1,'kodi::gui::CWindow::OnAction()'],['../group__python__xbmcgui__window__cb.html#ga1749b41bda7533c34282371758d50764',1,'XBMCAddon::xbmcgui::Window::onAction()']]],
   ['oncleanfinished',['onCleanFinished',['../group__python__monitor.html#ga19798ab61e778754e7027112236024e7',1,'XBMCAddon::xbmc::Monitor']]],
   ['oncleanstarted',['onCleanStarted',['../group__python__monitor.html#gabf239f436cbd72bfff02253bd1972c7c',1,'XBMCAddon::xbmc::Monitor']]],
   ['onclick',['onClick',['../group__python__xbmcgui__window__cb.html#ga445a9dbf7b6f62d05a85c391717c2d38',1,'XBMCAddon::xbmcgui::Window::onClick()'],['../group__cpp__kodi__gui___c_window__callbacks.html#gad741fef5d9a1d2bf07449694e9a9e602',1,'kodi::gui::CWindow::OnClick()']]],
@@ -13,7 +13,7 @@ var searchData=
   ['ondoubleclick',['onDoubleClick',['../group__python__xbmcgui__window__cb.html#ga33398da13ddb2671eda8b7916a628c99',1,'XBMCAddon::xbmcgui::Window']]],
   ['ondpmsactivated',['onDPMSActivated',['../group__python__monitor.html#ga31dfaa85a323fc5cfa93ab567b105ade',1,'XBMCAddon::xbmc::Monitor']]],
   ['ondpmsdeactivated',['onDPMSDeactivated',['../group__python__monitor.html#ga02f1138d40cf000fd6e5823c2f6383e1',1,'XBMCAddon::xbmc::Monitor']]],
-  ['onfocus',['onFocus',['../group__python__xbmcgui__window__cb.html#ga60bc025eeb4f04ef3b815ae308f009d1',1,'XBMCAddon::xbmcgui::Window::onFocus()'],['../group__cpp__kodi__gui___c_window__callbacks.html#ga7f69d7353e186b8fe4a1560767721501',1,'kodi::gui::CWindow::OnFocus()']]],
+  ['onfocus',['OnFocus',['../group__cpp__kodi__gui___c_window__callbacks.html#ga7f69d7353e186b8fe4a1560767721501',1,'kodi::gui::CWindow::OnFocus()'],['../group__python__xbmcgui__window__cb.html#ga60bc025eeb4f04ef3b815ae308f009d1',1,'XBMCAddon::xbmcgui::Window::onFocus()']]],
   ['oninit',['onInit',['../group__python__xbmcgui__window__cb.html#ga077680d40c7bc79d2b2b73c7401437b4',1,'XBMCAddon::xbmcgui::Window::onInit()'],['../group__cpp__kodi__gui___c_window__callbacks.html#ga7d98c001ac8d31e48df88346e28bae16',1,'kodi::gui::CWindow::OnInit()']]],
   ['onnotification',['onNotification',['../group__python__monitor.html#ga0e49e1b7c38dd22ef51276ad4efbd7e9',1,'XBMCAddon::xbmc::Monitor']]],
   ['onplaybackended',['onPlayBackEnded',['../group__python___player_c_b.html#gae5afbf357925738748545911b81c2c93',1,'XBMCAddon::xbmc::Player']]],

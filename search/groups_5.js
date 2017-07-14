@@ -4,6 +4,7 @@ var searchData=
   ['interface_20_2d_20kodi_3a_3aaddon',['Interface - kodi::addon',['../group__cpp__kodi__addon.html',1,'']]],
   ['image_20decoder',['Image Decoder',['../group__cpp__kodi__addon__imagedecoder.html',1,'']]],
   ['inputstream',['Inputstream',['../group__cpp__kodi__addon__inputstream.html',1,'']]],
+  ['information_20functions',['Information functions',['../group__cpp__kodi__addon__screensaver___c_b.html',1,'']]],
   ['information_20functions',['Information functions',['../group__cpp__kodi__addon__visualization___c_b.html',1,'']]],
   ['interface_20_2d_20kodi_3a_3aaudioengine',['Interface - kodi::audioengine',['../group__cpp__kodi__audioengine.html',1,'']]],
   ['interface_20_2d_20kodi_3a_3agui',['Interface - kodi::gui',['../group__cpp__kodi__gui.html',1,'']]],

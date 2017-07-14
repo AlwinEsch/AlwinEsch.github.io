@@ -31,7 +31,7 @@ var searchData=
   ['demuxreset',['DemuxReset',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a4e1a9156a48ad4536be348fb698bc996',1,'kodi::addon::CInstanceInputStream']]],
   ['demuxseektime',['DemuxSeekTime',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a313d275a2f08c9fd786b5a09edf431a8',1,'kodi::addon::CInstanceInputStream']]],
   ['demuxsetspeed',['DemuxSetSpeed',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a9283b013d1af58196b196ab33c0d82c6',1,'kodi::addon::CInstanceInputStream']]],
-  ['device',['Device',['../group__cpp__kodi__addon__visualization___c_b.html#gadb328fb2add804f1393b84737d3ae45d',1,'kodi::addon::CInstanceVisualization']]],
+  ['device',['Device',['../group__cpp__kodi__addon__screensaver___c_b.html#gadb328fb2add804f1393b84737d3ae45d',1,'kodi::addon::CInstanceScreensaver::Device()'],['../group__cpp__kodi__addon__visualization___c_b.html#gadb328fb2add804f1393b84737d3ae45d',1,'kodi::addon::CInstanceVisualization::Device()']]],
   ['deviceid',['deviceId',['../group__cpp__kodi__vfs___defs.html#a21079ffa80688b89c7dd4ba646a55283',1,'STAT_STRUCTURE']]],
   ['dialog',['Dialog',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog.html',1,'XBMCAddon::xbmcgui']]],
   ['dialogbusy',['DialogBusy',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_busy.html',1,'XBMCAddon::xbmcgui']]],

@@ -1,5 +1,27 @@
 var searchData=
 [
-  ['queueformattednotification',['QueueFormattedNotification',['../group__cpp__kodi.html#ga39c65205ea763e00c402cb0f1f50b289',1,'kodi']]],
-  ['queuenotification',['QueueNotification',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#ac690f7324ed912f4928c842e4ca585f1',1,'ADDON::CHelper_libXBMC_addon::QueueNotification()'],['../group__cpp__kodi.html#gac3374c984f66b0715439aa56e717763d',1,'kodi::QueueNotification()']]]
+  ['path',['Path',['../group__cpp__kodi__vfs___c_dir_entry.html#ga62adb64db13e24a29d00d7eb1901448a',1,'kodi::vfs::CDirEntry']]],
+  ['pause',['Pause',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga70babc5227ddd16ca31dccc6cec0bb22',1,'kodi::audioengine::CAddonAEStream::Pause()'],['../group__python___player.html#gab02121d4dfeb622a4ea3db42c0cb6676',1,'XBMCAddon::xbmc::Player::pause()']]],
+  ['pausestream',['PauseStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a0c6c3376d5b8e5a255acc189a45119dd',1,'kodi::addon::CInstanceInputStream']]],
+  ['percentage',['Percentage',['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#gadc4517cc4837f035c5e3432542ce2b14',1,'kodi::gui::dialogs::CExtendedProgress']]],
+  ['performdevicescan',['PerformDeviceScan',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a8ad848a0f528137ea22ea45db9a02bf5',1,'kodi::addon::CInstancePeripheral']]],
+  ['pixelratio',['PixelRatio',['../group__cpp__kodi__addon__screensaver___c_b.html#gaed543c2faa2875e81791a9a84b76ab56',1,'kodi::addon::CInstanceScreensaver::PixelRatio()'],['../group__cpp__kodi__addon__visualization___c_b.html#gaed543c2faa2875e81791a9a84b76ab56',1,'kodi::addon::CInstanceVisualization::PixelRatio()']]],
+  ['play',['play',['../group__python___player.html#ga84f42d1160cbf72fcaec1030225e8669',1,'XBMCAddon::xbmc::Player']]],
+  ['playnext',['playnext',['../group__python___player.html#gad3fc41131784480b8d6bda2b90bbdec9',1,'XBMCAddon::xbmc::Player']]],
+  ['playprevious',['playprevious',['../group__python___player.html#gad16dd426f4c538dd6dfa830445e456a3',1,'XBMCAddon::xbmc::Player']]],
+  ['playselected',['playselected',['../group__python___player.html#ga418537b7c75355df885a94d31014855b',1,'XBMCAddon::xbmc::Player']]],
+  ['playsfx',['playSFX',['../group__python__xbmc.html#gae7630e0754ba3e3e17a380e69784e2b9',1,'ModuleXbmc.h']]],
+  ['popactivewindowid',['popActiveWindowId',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#a09309d4a53608ecb531fcc9bb4ae97b2',1,'XBMCAddon::xbmcgui::Window']]],
+  ['positionstream',['PositionStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a692d2ac25cc800876b0b5164c7b5ca3f',1,'kodi::addon::CInstanceInputStream']]],
+  ['postime',['PosTime',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#abc1f89040d8fea0db1a8778a9e68caf6',1,'kodi::addon::CInstanceInputStream']]],
+  ['postprocess',['PostProcess',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#ad1e3fa3f53891c0f87a393dfe69df933',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['postprocessgetdelay',['PostProcessGetDelay',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a77811f4f47b91b59148b981a744ada86',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['postprocessneededsamplesize',['PostProcessNeededSamplesize',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#ad332f3611bd4b2508ef63c458a5ae106',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['poweroffjoystick',['PowerOffJoystick',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a971f07a9b76152a5779626b5f945c6ac',1,'kodi::addon::CInstancePeripheral']]],
+  ['preprocess',['PreProcess',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#ae5580f9a9783f8773729e3e067c36e1c',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['preprocessgetdelay',['PreProcessGetDelay',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#afdc5bd253d6f273de079bb745bad87ee',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['preprocessneededsamplesize',['PreProcessNeededSamplesize',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a57ea76569392415fec0d59d45b1d1f6e',1,'kodi::addon::CInstanceAudioDSP']]],
+  ['presets',['Presets',['../group__cpp__kodi__addon__screensaver___c_b.html#ga2664b8df9b7970b2482b362c12cfe1f6',1,'kodi::addon::CInstanceScreensaver::Presets()'],['../group__cpp__kodi__addon__visualization___c_b.html#ga2664b8df9b7970b2482b362c12cfe1f6',1,'kodi::addon::CInstanceVisualization::Presets()']]],
+  ['prevpreset',['PrevPreset',['../group__cpp__kodi__addon__visualization.html#ga4baaca37d21ec72b65b57022ed19fa8c',1,'kodi::addon::CInstanceVisualization']]],
+  ['profile',['Profile',['../group__cpp__kodi__addon__screensaver___c_b.html#ga85035689dc2f1796f5acd2fd25053e3d',1,'kodi::addon::CInstanceScreensaver::Profile()'],['../group__cpp__kodi__addon__visualization___c_b.html#ga85035689dc2f1796f5acd2fd25053e3d',1,'kodi::addon::CInstanceVisualization::Profile()']]]
 ];

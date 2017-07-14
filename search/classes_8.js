@@ -1,6 +1,7 @@
 var searchData=
 [
   ['keyboard',['Keyboard',['../class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html',1,'XBMCAddon::xbmc']]],
+  ['kodi_5fversion_5ft',['kodi_version_t',['../group__cpp__kodi___defs.html#structkodi__version__t',1,'']]],
   ['koditoaddonfunctable_5faddon',['KodiToAddonFuncTable_Addon',['../struct_kodi_to_addon_func_table___addon.html',1,'']]],
   ['koditoaddonfunctable_5faudiodecoder',['KodiToAddonFuncTable_AudioDecoder',['../struct_kodi_to_addon_func_table___audio_decoder.html',1,'']]],
   ['koditoaddonfunctable_5faudiodsp',['KodiToAddonFuncTable_AudioDSP',['../struct_kodi_to_addon_func_table___audio_d_s_p.html',1,'']]],

@@ -91,10 +91,203 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__screensaver.h
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
 <div class="title">Screensaver<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__addon.html">Interface - kodi::addon</a> &raquo; <a class="el" href="group__cpp__kodi__addon__instances.html">Addon type instances</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::addon::CInstanceScreensaver </big></font></span></code></h4>  <b>Screensaver add-on instance</b> </p>
+<p>A screensaver (or screen saver) is a Kodi addon that blanks the screen or fills it with moving images or patterns when the computer is not in use. Initially designed to prevent phosphor burn-in on CRT and plasma computer monitors (hence the name), screensavers are now used primarily for entertainment, security or to display system status information.</p>
+<p>Include the header <a class="el" href="_screensaver_8h_source.html">#include &lt;kodi/addon-instance/ScreenSaver.h&gt;</a> to use this class.</p>
+<p>This interface allow the creating of a screensavers for Kodi, based upon <b>DirectX</b> or/and <b>OpenGL</b> rendering with <code>C++</code> code.</p>
+<p>The interface is small and easy usable, it have three function. One for the creation with <b><code>Start()</code></b> and for the render time with <b><code>Render()</code></b>, this both are required and must be implemented. Also a <b><code>Stop()</code></b> can be used to become informed for end of work.</p>
+<p>Additionally, there are several <a class="el" href="group__cpp__kodi__addon__screensaver___c_b.html">other functions</a> available in which the child class can ask about the current hardware, including the device, display and several other parts.</p>
+<hr/>
+<p><b>Here is an example of the minimum required code to start a screensaver:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/Screensaver.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyScreenSaver : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">kodi::addon::CAddonBase</a>,</div><div class="line">                       <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_screensaver.html">kodi::addon::CInstanceScreensaver</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyScreenSaver();</div><div class="line"></div><div class="line">  <span class="keywordtype">bool</span> Start() <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> Render() <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line">CMyScreenSaver::CMyScreenSaver()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> CMyScreenSaver::Start()</div><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyScreenSaver::Render()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line">ADDONCREATOR(CMyScreenSaver)</div></div><!-- fragment --><hr/>
+<p><b>Here is another example where the screensaver is used together with other instance types:</b></p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/Screensaver.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyScreenSaver : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_screensaver.html">::kodi::addon::CInstanceScreensaver</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyScreenSaver(<span class="keywordtype">void</span>* instance);</div><div class="line"></div><div class="line">  <span class="keywordtype">bool</span> Start() <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> Render() <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line">CMyScreenSaver::CMyScreenSaver(<span class="keywordtype">void</span>* instance)</div><div class="line">  : CInstanceScreensaver(instance)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> CMyScreenSaver::Start()</div><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyScreenSaver::Render()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/*----------------------------------------------------------------------*/</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyAddon : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">::kodi::addon::CAddonBase</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyAddon() { }</div><div class="line">  ADDON_STATUS CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                              std::string instanceID,</div><div class="line">                              KODI_HANDLE instance,</div><div class="line">                              KODI_HANDLE&amp; addonInstance) <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">/* If you use only one instance in your add-on, can be instanceType and</span></div><div class="line"><span class="comment"> * instanceID ignored */</span></div><div class="line">ADDON_STATUS CMyAddon::CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                                      std::string instanceID,</div><div class="line">                                      KODI_HANDLE instance,</div><div class="line">                                      KODI_HANDLE&amp; addonInstance)</div><div class="line">{</div><div class="line">  <span class="keywordflow">if</span> (instanceType == ADDON_INSTANCE_SCREENSAVER)</div><div class="line">  {</div><div class="line">    kodi::Log(ADDON_LOG_NOTICE, <span class="stringliteral">&quot;Creating my Screensaver&quot;</span>);</div><div class="line">    addonInstance = <span class="keyword">new</span> CMyScreenSaver(instance);</div><div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_OK;</div><div class="line">  }</div><div class="line">  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (...)</div><div class="line">  {</div><div class="line">    ...</div><div class="line">  }</div><div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div><div class="line">}</div><div class="line"></div><div class="line">ADDONCREATOR(CMyAddon)</div></div><!-- fragment --><p>The destruction of the example class <code>CMyScreenSaver</code> is called from Kodi's header. Manually deleting the add-on instance is not required. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group__cpp__kodi__addon__screensaver___c_b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__screensaver___c_b.html">Information functions</a></td></tr>
+<tr class="memdesc:group__cpp__kodi__addon__screensaver___c_b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>To get info about device, display and few other parts</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga1aea828e7f23e2a5837d34bb2b3d48f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1aea828e7f23e2a5837d34bb2b3d48f9">&#9670;&nbsp;</a></span>CInstanceScreensaver() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkodi_1_1addon_1_1_c_instance_screensaver.html">CInstanceScreensaver</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Screensaver class constructor. </p>
+<p>Used by an add-on that only supports screensavers. </p>
+
+</div>
+</div>
+<a id="gad09651fc5f7621db1fe5390eb3573b44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad09651fc5f7621db1fe5390eb3573b44">&#9670;&nbsp;</a></span>CInstanceScreensaver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkodi_1_1addon_1_1_c_instance_screensaver.html">CInstanceScreensaver</a> </td>
+          <td>(</td>
+          <td class="paramtype">KODI_HANDLE&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Screensaver class constructor used to support multiple instance types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The instance value given to <b><code>kodi::addon::CAddonBase::CreateInstance(...)</code></b>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Only use <code>instance</code> from the CreateInstance call </dd></dl>
+
+</div>
+</div>
+<a id="ga7168a70cecb9b102d950c9fc1fa19270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7168a70cecb9b102d950c9fc1fa19270">&#9670;&nbsp;</a></span>~CInstanceScreensaver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classkodi_1_1addon_1_1_c_instance_screensaver.html">CInstanceScreensaver</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<a id="ga5ece6330cf785d6fcdc95c43ebfdcb9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ece6330cf785d6fcdc95c43ebfdcb9b">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used to notify the screensaver that it has been started. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if start successful done </dd></dl>
+
+</div>
+</div>
+<a id="gaf6f113a64b92a63894b285b4f2a2c3a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf6f113a64b92a63894b285b4f2a2c3a5">&#9670;&nbsp;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used to inform the screensaver that the rendering control was stopped. </p>
+
+</div>
+</div>
+<a id="ga0bc3f3606d9cf5304dac90cd7a619194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0bc3f3606d9cf5304dac90cd7a619194">&#9670;&nbsp;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Used to indicate when the add-on should render. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -99,14 +99,14 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__visualization
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::addon::CInstanceVisualization </big></font></span></code></h4>  <b>Visualization add-on instance</b> </p>
-<p><a href="https://en.wikipedia.org/wiki/Music_visualization">Music visualization</a> or music visualisation, a feature in Kodi, generates animated imagery based on a piece of music. The imagery is usually generated and rendered in real time and in a way synchronized with the music as it is played.</p>
+<p><a href="https://en.wikipedia.org/wiki/Music_visualization">Music visualization</a>, or music visualisation, is a feature in Kodi that generates animated imagery based on a piece of music. The imagery is usually generated and rendered in real time synchronized to the music.</p>
 <p>Visualization techniques range from simple ones (e.g., a simulation of an oscilloscope display) to elaborate ones, which often include a plurality of composited effects. The changes in the music's loudness and frequency spectrum are among the properties used as input to the visualization.</p>
-<p>It has the header <a class="el" href="_visualization_8h_source.html">#include &lt;kodi/visualization/Visualization.h&gt;</a> be included to enjoy it.</p>
-<p>This interface allow the creating of a visualizations for Kodi, based upon <b>DirectX</b> or/and <b>OpenGL</b> rendering with <code>C++</code> code.</p>
-<p>The interface have big possibility. By transferring the many different data, almost everything can be possible to use items of the respective title.</p>
-<p>Further are several <a class="el" href="group__cpp__kodi__addon__visualization___c_b.html">other functions</a> available where the child class can ask about used device, display and few other parts. </p><hr/>
-<p><b>Here as example what is minimum required to start on a visualization:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/visualization/Visualization.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyVisualization : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">kodi::addon::CAddonBase</a>,</div><div class="line">                         <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_visualization.html">kodi::addon::CInstanceVisualization</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyVisualization();</div><div class="line"></div><div class="line">  <span class="keywordtype">bool</span> Start(<span class="keywordtype">int</span> channels, <span class="keywordtype">int</span> samplesPerSec, <span class="keywordtype">int</span> bitsPerSample, std::string songName) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> AudioData(<span class="keyword">const</span> <span class="keywordtype">float</span>* audioData, <span class="keywordtype">int</span> audioDataLength, <span class="keywordtype">float</span>* freqData, <span class="keywordtype">int</span> freqDataLength) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> Render() <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line">CMyVisualization::CMyVisualization()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> CMyVisualization::Start(<span class="keywordtype">int</span> channels, <span class="keywordtype">int</span> samplesPerSec, <span class="keywordtype">int</span> bitsPerSample, std::string songName)</div><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyVisualization::AudioData(<span class="keyword">const</span> <span class="keywordtype">float</span>* audioData, <span class="keywordtype">int</span> audioDataLength, <span class="keywordtype">float</span>* freqData, <span class="keywordtype">int</span> freqDataLength)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyVisualization::Render()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line">ADDONCREATOR(CMyVisualization)</div></div><!-- fragment --><hr/>
-<p><b>Here another example where visualization becomes used together with other instance types:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/visualization/Visualization.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyVisualization : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_visualization.html">::kodi::addon::CInstanceVisualization</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyVisualization(<span class="keywordtype">void</span>* instance);</div><div class="line"></div><div class="line">  <span class="keywordtype">bool</span> Start(<span class="keywordtype">int</span> channels, <span class="keywordtype">int</span> samplesPerSec, <span class="keywordtype">int</span> bitsPerSample, std::string songName) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> AudioData(<span class="keyword">const</span> <span class="keywordtype">float</span>* audioData, <span class="keywordtype">int</span> audioDataLength, <span class="keywordtype">float</span>* freqData, <span class="keywordtype">int</span> freqDataLength) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> Render() <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line">CMyVisualization::CMyVisualization(<span class="keywordtype">void</span>* instance)</div><div class="line">  : CInstanceVisualization(instance)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> CMyVisualization::Start(<span class="keywordtype">int</span> channels, <span class="keywordtype">int</span> samplesPerSec, <span class="keywordtype">int</span> bitsPerSample, std::string songName)</div><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyVisualization::AudioData(<span class="keyword">const</span> <span class="keywordtype">float</span>* audioData, <span class="keywordtype">int</span> audioDataLength, <span class="keywordtype">float</span>* freqData, <span class="keywordtype">int</span> freqDataLength)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyVisualization::Render()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/*----------------------------------------------------------------------*/</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyAddon : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">::kodi::addon::CAddonBase</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyAddon() { }</div><div class="line">  ADDON_STATUS CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                              std::string instanceID,</div><div class="line">                              KODI_HANDLE instance,</div><div class="line">                              KODI_HANDLE&amp; addonInstance) <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">/* If you use only one instance in your add-on, can be instanceType and</span></div><div class="line"><span class="comment"> * instanceID ignored */</span></div><div class="line">ADDON_STATUS CMyAddon::CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                                      std::string instanceID,</div><div class="line">                                      KODI_HANDLE instance,</div><div class="line">                                      KODI_HANDLE&amp; addonInstance)</div><div class="line">{</div><div class="line">  <span class="keywordflow">if</span> (instanceType == ADDON_INSTANCE_VISUALIZATION)</div><div class="line">  {</div><div class="line">    kodi::Log(LOG_NOTICE, <span class="stringliteral">&quot;Creating my Visualization&quot;</span>);</div><div class="line">    addonInstance = <span class="keyword">new</span> CMyVisualization(instance);</div><div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_OK;</div><div class="line">  }</div><div class="line">  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (...)</div><div class="line">  {</div><div class="line">    ...</div><div class="line">  }</div><div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div><div class="line">}</div><div class="line"></div><div class="line">ADDONCREATOR(CMyAddon);</div></div><!-- fragment --><p>The <b>desctruction</b> of the here created example class <code>CMyVisualization</code> becomes done from Kodi's header and never for add-on instances a delete on add-on itself necessary. </p>
+<p>Include the header <a class="el" href="_visualization_8h_source.html">#include &lt;kodi/addon-instance/Visualization.h&gt;</a> to use this class.</p>
+<p>This interface allows the creation of visualizations for Kodi, based upon <b>DirectX</b> or/and <b>OpenGL</b> rendering with <code>C++</code> code.</p>
+<p>Additionally, there are several <a class="el" href="group__cpp__kodi__addon__visualization___c_b.html">other functions</a> available in which the child class can ask about the current hardware, including the device, display and several other parts. </p><hr/>
+<p><b>Here is an example of the minimum required code to start a visualization:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/Visualization.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyVisualization : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">kodi::addon::CAddonBase</a>,</div><div class="line">                         <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_visualization.html">kodi::addon::CInstanceVisualization</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyVisualization();</div><div class="line"></div><div class="line">  <span class="keywordtype">bool</span> Start(<span class="keywordtype">int</span> channels, <span class="keywordtype">int</span> samplesPerSec, <span class="keywordtype">int</span> bitsPerSample, std::string songName) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> AudioData(<span class="keyword">const</span> <span class="keywordtype">float</span>* audioData, <span class="keywordtype">int</span> audioDataLength, <span class="keywordtype">float</span>* freqData, <span class="keywordtype">int</span> freqDataLength) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> Render() <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line">CMyVisualization::CMyVisualization()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> CMyVisualization::Start(<span class="keywordtype">int</span> channels, <span class="keywordtype">int</span> samplesPerSec, <span class="keywordtype">int</span> bitsPerSample, std::string songName)</div><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyVisualization::AudioData(<span class="keyword">const</span> <span class="keywordtype">float</span>* audioData, <span class="keywordtype">int</span> audioDataLength, <span class="keywordtype">float</span>* freqData, <span class="keywordtype">int</span> freqDataLength)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyVisualization::Render()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line">ADDONCREATOR(CMyVisualization)</div></div><!-- fragment --><hr/>
+<p><b>Here is another example where the visualization is used together with other instance types:</b></p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/Visualization.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyVisualization : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_visualization.html">::kodi::addon::CInstanceVisualization</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyVisualization(<span class="keywordtype">void</span>* instance);</div><div class="line"></div><div class="line">  <span class="keywordtype">bool</span> Start(<span class="keywordtype">int</span> channels, <span class="keywordtype">int</span> samplesPerSec, <span class="keywordtype">int</span> bitsPerSample, std::string songName) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> AudioData(<span class="keyword">const</span> <span class="keywordtype">float</span>* audioData, <span class="keywordtype">int</span> audioDataLength, <span class="keywordtype">float</span>* freqData, <span class="keywordtype">int</span> freqDataLength) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> Render() <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line">CMyVisualization::CMyVisualization(<span class="keywordtype">void</span>* instance)</div><div class="line">  : CInstanceVisualization(instance)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> CMyVisualization::Start(<span class="keywordtype">int</span> channels, <span class="keywordtype">int</span> samplesPerSec, <span class="keywordtype">int</span> bitsPerSample, std::string songName)</div><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyVisualization::AudioData(<span class="keyword">const</span> <span class="keywordtype">float</span>* audioData, <span class="keywordtype">int</span> audioDataLength, <span class="keywordtype">float</span>* freqData, <span class="keywordtype">int</span> freqDataLength)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyVisualization::Render()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">/*----------------------------------------------------------------------*/</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyAddon : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">::kodi::addon::CAddonBase</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyAddon() { }</div><div class="line">  ADDON_STATUS CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                              std::string instanceID,</div><div class="line">                              KODI_HANDLE instance,</div><div class="line">                              KODI_HANDLE&amp; addonInstance) <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">/* If you use only one instance in your add-on, can be instanceType and</span></div><div class="line"><span class="comment"> * instanceID ignored */</span></div><div class="line">ADDON_STATUS CMyAddon::CreateInstance(<span class="keywordtype">int</span> instanceType,</div><div class="line">                                      std::string instanceID,</div><div class="line">                                      KODI_HANDLE instance,</div><div class="line">                                      KODI_HANDLE&amp; addonInstance)</div><div class="line">{</div><div class="line">  <span class="keywordflow">if</span> (instanceType == ADDON_INSTANCE_VISUALIZATION)</div><div class="line">  {</div><div class="line">    kodi::Log(ADDON_LOG_NOTICE, <span class="stringliteral">&quot;Creating my Visualization&quot;</span>);</div><div class="line">    addonInstance = <span class="keyword">new</span> CMyVisualization(instance);</div><div class="line">    <span class="keywordflow">return</span> ADDON_STATUS_OK;</div><div class="line">  }</div><div class="line">  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (...)</div><div class="line">  {</div><div class="line">    ...</div><div class="line">  }</div><div class="line">  <span class="keywordflow">return</span> ADDON_STATUS_UNKNOWN;</div><div class="line">}</div><div class="line"></div><div class="line">ADDONCREATOR(CMyAddon)</div></div><!-- fragment --><p>The destruction of the example class <code>CMyVisualization</code> is called from Kodi's header. Manually deleting the add-on instance is not required. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
@@ -114,7 +114,7 @@ Modules</h2></td></tr>
 <tr class="memdesc:group__cpp__kodi__addon__visualization___vis_track"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Visualization track information structure</b> <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__cpp__kodi__addon__visualization___c_b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__visualization___c_b.html">Information functions</a></td></tr>
-<tr class="memdesc:group__cpp__kodi__addon__visualization___c_b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>To get info about device, display and few other parts</b> <br /></td></tr>
+<tr class="memdesc:group__cpp__kodi__addon__visualization___c_b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>To get info about the device, display and several other parts</b> <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -142,7 +142,7 @@ Modules</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Visualization class constructor. </p>
-<p>Used on addon who supports only visualization and <a class="el" href="classkodi_1_1addon_1_1_c_addon_base.html" title="Add-on main instance class. ">CAddonBase</a> is also included as parent. </p>
+<p>Used by an add-on that only supports visualizations. </p>
 
 </div>
 </div>
@@ -173,11 +173,11 @@ Modules</h2></td></tr>
 <p>Visualization class constructor used to support multiple instance types. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The with <b><code>kodi::addon::CAddonBase::CreateInstance(...)</code></b> given <code>instance</code> value.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The instance value given to <b><code>kodi::addon::CAddonBase::CreateInstance(...)</code></b>.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>Use always only <code>instance</code> value from CreateInstance call </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Only use <code>instance</code> from the CreateInstance call </dd></dl>
 
 </div>
 </div>
@@ -254,17 +254,17 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>To notify visualization. that new song has been started. </p>
-<p>It pass the number of audio channels, sample rate, bits/sample and offcourse the songname.</p>
+<p>Used to notify the visualization that a new song has been started. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">channels</td><td>Amount of channels on stream </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">samplesPerSec</td><td>Samples per second on stream </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bitsPerSample</td><td>Amount of bits on one sample </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">songName</td><td>The name of the currently played song </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">channels</td><td>Number of channels in the stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">samplesPerSec</td><td>Samples per second of stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bitsPerSample</td><td>Number of bits in one sample </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">songName</td><td>The name of the currently-playing song </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if start successful done </dd></dl>
 
 </div>
 </div>
@@ -291,7 +291,7 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>To inform about stop of rendering control. </p>
+<p>Used to inform the visualization that the rendering control was stopped. </p>
 
 </div>
 </div>
@@ -341,17 +341,17 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pass audio data to visualization. </p>
+<p>Pass audio data to the visualization. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">audioData</td><td>is short audiodata [channel][audioDataLength] containing the raw audio data </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">audioDataLength</td><td>length of audiodata array </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">freqData</td><td>fft-ed audio data </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">freqDataLength</td><td>length of frequeny data array</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">audioData</td><td>The raw audio data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">audioDataLength</td><td>Length of the audioData array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">freqData</td><td>The <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">FFT</a> of the audio data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">freqDataLength</td><td>Length of frequency data array</td></tr>
   </table>
   </dd>
 </dl>
-<p>Values <b>freqData</b> and <b>freqDataLength</b> becomes used if on <a class="el" href="group__cpp__kodi__addon__visualization.html#ga5357e3fc0644da927689ec6161b2ef46" title="To get the number of buffers from the current visualization. ">GetInfo()</a> the <code>wantsFreq</code> is set to true, otherwise is <b>freqData</b> = <code>nullptr</code> and <b>freqDataLength</b> = <code>0</code>. </p>
+<p>Values <b>freqData</b> and <b>freqDataLength</b> are used if <a class="el" href="group__cpp__kodi__addon__visualization.html#ga5357e3fc0644da927689ec6161b2ef46" title="Used to get the number of buffers from the current visualization. ">GetInfo()</a> returns true for the <code>wantsFreq</code> parameter. Otherwise, <b>freqData</b> is set to <code>nullptr</code> and <b>freqDataLength</b> is <code>0</code>. </p>
 
 </div>
 </div>
@@ -378,8 +378,8 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>To inform Kodi rendered region is dirty and need update. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if dirty </dd></dl>
+<p>Used to inform Kodi that the rendered region is dirty and need an update. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if dirty </dd></dl>
 
 </div>
 </div>
@@ -406,7 +406,7 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>To handle rendering time on add-on. </p>
+<p>Used to indicate when the add-on should render. </p>
 
 </div>
 </div>
@@ -444,15 +444,15 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get the number of buffers from the current visualization. </p>
+<p>Used to get the number of buffers from the current visualization. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">wantsFreq</td><td>Fourier transform the data if the wants it. If set to true are the values <b>freqData</b> and <b>freqDataLength</b> on <a class="el" href="group__cpp__kodi__addon__visualization.html#ga5c8b4d62952a520f13d70c9133e65d2a" title="Pass audio data to visualization. ">AudioData()</a> used. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">syncDelay</td><td>Number of buffers from the current</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">wantsFreq</td><td>Indicates whether the add-on wants FFT data. If set to true, the <b>freqData</b> and <b>freqDataLength</b> parameters of <a class="el" href="group__cpp__kodi__addon__visualization.html#ga5c8b4d62952a520f13d70c9133e65d2a" title="Pass audio data to the visualization. ">AudioData()</a> are used </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">syncDelay</td><td>The number of buffers to delay before calling <a class="el" href="group__cpp__kodi__addon__visualization.html#ga5c8b4d62952a520f13d70c9133e65d2a" title="Pass audio data to the visualization. ">AudioData()</a></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>If function becomes not used is as defaults from parent the <code>wantsFreq</code> = false and the <code>syncDelay</code> = 0. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If this function is not implemented, it will default to <code>wantsFreq</code> = false and <code>syncDelay</code> = 0. </dd></dl>
 
 </div>
 </div>
@@ -480,14 +480,14 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>To get a list of selectable visualization presets on add-on. </p>
+<p>Used to get a list of visualization presets the user can select from. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">presets</td><td>Vector list with selectable names of presets </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">presets</td><td>The vector list containing the names of presets that the user can select </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if successfull done </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if successful, or false if there are no presets to choose from </dd></dl>
 
 </div>
 </div>
@@ -514,8 +514,8 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the index of currently used preset on visualization add-on. </p>
-<dl class="section return"><dt>Returns</dt><dd>Index number </dd></dl>
+<p>Get the index of the current preset. </p>
+<dl class="section return"><dt>Returns</dt><dd>Index number of the current preset </dd></dl>
 
 </div>
 </div>
@@ -542,8 +542,8 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>To ask add-on is locked on current preset. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if locked there </dd></dl>
+<p>Check if the add-on is locked to the current preset. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if locked to the current preset </dd></dl>
 
 </div>
 </div>
@@ -570,8 +570,8 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Load previous visualization preset. </p>
-<dl class="section return"><dt>Returns</dt><dd>Return true if it becomes used from you </dd></dl>
+<p>Load the previous visualization preset. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the previous preset was loaded </dd></dl>
 
 </div>
 </div>
@@ -598,8 +598,8 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Load next visualization preset. </p>
-<dl class="section return"><dt>Returns</dt><dd>Return true if it becomes used from you </dd></dl>
+<p>Load the next visualization preset. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the next preset was loaded </dd></dl>
 
 </div>
 </div>
@@ -627,15 +627,15 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Load visualization preset. </p>
-<p>Becomes send after new select is requested.</p>
+<p>Load a visualization preset. </p>
+<p>This function is called after a new preset is selected.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">select</td><td>Preset index to use </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if the load becomes used from you </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the preset is loaded </dd></dl>
 
 </div>
 </div>
@@ -663,7 +663,7 @@ Modules</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Switch to a new random preset. </p>
-<dl class="section return"><dt>Returns</dt><dd>Return true if the random becomes used from you </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if a random preset was loaded </dd></dl>
 
 </div>
 </div>
@@ -691,14 +691,14 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Lock the current visualization preset on add-on if selected from user. </p>
+<p>Lock the current visualization preset, preventing it from changing. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">lockUnlock</td><td>If set to true is the preset is needed to lock there </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lockUnlock</td><td>If set to true, the preset should be locked </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if the lock becomes used from you </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the current preset is locked </dd></dl>
 
 </div>
 </div>
@@ -726,15 +726,14 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Used to increase/decrease track rating in full screen playback. </p>
-<p>Press info on track and use pageplus or pageminus on keyboard/remote.</p>
+<p>Used to increase/decrease the visualization preset rating. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">plusMinus</td><td>If set to true is the rate increased, otherwise decreased </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">plusMinus</td><td>If set to true the rating is increased, otherwise decreased </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if the rate becomes used from you </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the rating is modified </dd></dl>
 
 </div>
 </div>
@@ -769,7 +768,7 @@ Modules</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if the image becomes used from you </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the image is used </dd></dl>
 
 </div>
 </div>
@@ -804,7 +803,7 @@ Modules</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if it becomes used from you </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if the track information is used </dd></dl>
 
 </div>
 </div>

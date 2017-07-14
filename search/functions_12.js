@@ -1,12 +1,23 @@
 var searchData=
 [
-  ['unknowntoutf8',['UnknownToUTF8',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a072b04ab983496e37e6ab6f40abed1ee',1,'ADDON::CHelper_libXBMC_addon::UnknownToUTF8()'],['../group__cpp__kodi.html#ga275a5231deebed983e67a97f50c8195e',1,'kodi::UnknownToUTF8()']]],
-  ['unlock',['Unlock',['../group__cpp__kodi__gui.html#ga6c6c14ee83364161f2dab4233f1fd95f',1,'kodi::gui']]],
-  ['unregistermode',['UnregisterMode',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a5223217155d8b7625611fda5e5f089e8',1,'kodi::addon::CInstanceAudioDSP']]],
-  ['unshuffle',['unshuffle',['../group__python___play_list.html#ga869185334948aa5f500d718c1c071cdd',1,'XBMCAddon::xbmc::PlayList']]],
-  ['update',['update',['../group__python___dialog_progress.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgress::update()'],['../group__python___dialog_busy.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogBusy::update()'],['../group__python___dialog_progress_b_g.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgressBG::update()']]],
-  ['updatealbumart',['UpdateAlbumart',['../group__cpp__kodi__addon__visualization.html#gaa966fc12df9ac054bfd35b8969f67081',1,'kodi::addon::CInstanceVisualization']]],
-  ['updatetrack',['UpdateTrack',['../group__cpp__kodi__addon__visualization.html#ga83adb1f15daf0f22b2269546d7f21c26',1,'kodi::addon::CInstanceVisualization']]],
-  ['urlencode',['URLEncode',['../group__cpp__kodi__network.html#gac4320b320b1871e24d37f6bab266f368',1,'kodi::network']]],
-  ['userpath',['UserPath',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a7929d298b4ee683951e2f094ef2ef1d5',1,'kodi::addon::CInstancePeripheral']]]
+  ['text',['Text',['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#ga8c95c8fd22c77bce27a4798f2490d381',1,'kodi::gui::dialogs::CExtendedProgress']]],
+  ['textviewer',['textviewer',['../group__python___dialog.html#gad24eabf4c8107d4674c017db09a193ae',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['title',['Title',['../group__cpp__kodi__vfs___c_dir_entry.html#ga9865f7d9426ae988fdcd66ff3a5c5bcd',1,'kodi::vfs::CDirEntry::Title()'],['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#ga642f961321a4b17ae79f39fa2c2e4c43',1,'kodi::gui::dialogs::CExtendedProgress::Title()']]],
+  ['trackcount',['TrackCount',['../group__cpp__kodi__addon__audiodecoder.html#gad339b85b3566aee42195d3b101ca9afa',1,'kodi::addon::CInstanceAudioDecoder']]],
+  ['transferchannelentry',['TransferChannelEntry',['../class_c_helper__lib_x_b_m_c__pvr.html#a04ffac2ac47aedd6ff4a1bee0cefce5d',1,'CHelper_libXBMC_pvr']]],
+  ['transferchannelgroup',['TransferChannelGroup',['../class_c_helper__lib_x_b_m_c__pvr.html#a08f0209217e1be65f53640d5cf3696f0',1,'CHelper_libXBMC_pvr']]],
+  ['transferchannelgroupmember',['TransferChannelGroupMember',['../class_c_helper__lib_x_b_m_c__pvr.html#a1205a688982b92eb38023497b10c485a',1,'CHelper_libXBMC_pvr']]],
+  ['transferepgentry',['TransferEpgEntry',['../class_c_helper__lib_x_b_m_c__pvr.html#a9442ee00f607d0502cd0014593113cd2',1,'CHelper_libXBMC_pvr']]],
+  ['transferrecordingentry',['TransferRecordingEntry',['../class_c_helper__lib_x_b_m_c__pvr.html#a5e5c881f2881d9064ff20abbc5265b36',1,'CHelper_libXBMC_pvr']]],
+  ['transfertimerentry',['TransferTimerEntry',['../class_c_helper__lib_x_b_m_c__pvr.html#a8a8ee378c5984eb2682c335006d5c681',1,'CHelper_libXBMC_pvr']]],
+  ['translatepath',['translatePath',['../group__python__xbmc.html#ga762f48b2097ec25d938bf8596023b221',1,'ModuleXbmc.h']]],
+  ['translatespecialprotocol',['TranslateSpecialProtocol',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a5e6e04ac0e1a45a9c46124ea62cbf312',1,'ADDON::CHelper_libXBMC_addon::TranslateSpecialProtocol()'],['../group__cpp__kodi__vfs.html#ga02bc64066031bc37d5aeb96cb4ee69d9',1,'kodi::vfs::TranslateSpecialProtocol()']]],
+  ['triggerchannelgroupsupdate',['TriggerChannelGroupsUpdate',['../class_c_helper__lib_x_b_m_c__pvr.html#a935da613c39f91145b6f230728bb1df0',1,'CHelper_libXBMC_pvr']]],
+  ['triggerchannelupdate',['TriggerChannelUpdate',['../class_c_helper__lib_x_b_m_c__pvr.html#a0be8a63a1bde169779281dff66e50014',1,'CHelper_libXBMC_pvr']]],
+  ['triggerepgupdate',['TriggerEpgUpdate',['../class_c_helper__lib_x_b_m_c__pvr.html#adfc6994bba6d6595b2a6db76979cf398',1,'CHelper_libXBMC_pvr']]],
+  ['triggerrecordingupdate',['TriggerRecordingUpdate',['../class_c_helper__lib_x_b_m_c__pvr.html#a32558a6dec1bee47462379c7fb11dc1a',1,'CHelper_libXBMC_pvr']]],
+  ['triggerscan',['TriggerScan',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a6e68fb96881f6f92cd2855d86abf245e',1,'kodi::addon::CInstancePeripheral']]],
+  ['triggertimerupdate',['TriggerTimerUpdate',['../class_c_helper__lib_x_b_m_c__pvr.html#a7a28ab2aa9e2f3191c2d6281cdc680ee',1,'CHelper_libXBMC_pvr']]],
+  ['truncate',['Truncate',['../classkodi_1_1addon_1_1_c_instance_v_f_s.html#acce61e986c54515af51058c5bd6caf32',1,'kodi::addon::CInstanceVFS::Truncate()'],['../group__cpp__kodi__vfs___c_file.html#ga7db30bce899ccc6e0d7a5b0a4cf160b7',1,'kodi::vfs::CFile::Truncate()']]],
+  ['truncatefile',['TruncateFile',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#ad03b7227dd2ebd28785edbe965d549cf',1,'ADDON::CHelper_libXBMC_addon']]]
 ];

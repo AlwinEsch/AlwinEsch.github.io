@@ -8,7 +8,7 @@ var searchData=
   ['wsgiresponsebody',['WsgiResponseBody',['../group__python__xbmcwsgi___wsgi_response_body.html',1,'']]],
   ['waitforabort',['waitForAbort',['../group__python__monitor.html#ga101acf761929351fb676b05e88ddeb8d',1,'XBMCAddon::xbmc::Monitor']]],
   ['wakeonlan',['WakeOnLan',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a4a97993a3e06e1fbd03f195969faba3c',1,'ADDON::CHelper_libXBMC_addon::WakeOnLan()'],['../group__cpp__kodi__network.html#gace1e815cea9513aaf8133495a3199cf8',1,'kodi::network::WakeOnLan()']]],
-  ['width',['Width',['../group__cpp__kodi__addon__visualization___c_b.html#gad26a595463349d0214ea9c09fb31c401',1,'kodi::addon::CInstanceVisualization']]],
+  ['width',['Width',['../group__cpp__kodi__addon__screensaver___c_b.html#gad26a595463349d0214ea9c09fb31c401',1,'kodi::addon::CInstanceScreensaver::Width()'],['../group__cpp__kodi__addon__visualization___c_b.html#gad26a595463349d0214ea9c09fb31c401',1,'kodi::addon::CInstanceVisualization::Width()']]],
   ['window',['Window',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html',1,'Window'],['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#a835a76ed343ad0fba8d55a525ee8789a',1,'XBMCAddon::xbmcgui::Window::Window()']]],
   ['windowdialog',['WindowDialog',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window_dialog.html',1,'XBMCAddon::xbmcgui']]],
   ['windowxml',['WindowXML',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window_x_m_l.html',1,'XBMCAddon::xbmcgui']]],
