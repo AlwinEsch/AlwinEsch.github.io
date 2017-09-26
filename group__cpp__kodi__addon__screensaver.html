@@ -99,10 +99,15 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__screensaver.h
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::addon::CInstanceScreensaver </big></font></span></code></h4>  <b>Screensaver add-on instance</b> </p>
-<p>A screensaver (or screen saver) is a Kodi addon that blanks the screen or fills it with moving images or patterns when the computer is not in use. Initially designed to prevent phosphor burn-in on CRT and plasma computer monitors (hence the name), screensavers are now used primarily for entertainment, security or to display system status information.</p>
+<p>A screensaver is a Kodi addon that fills the screen with moving images or patterns when the computer is not in use. Initially designed to prevent phosphor burn-in on CRT and plasma computer monitors (hence the name), screensavers are now used primarily for entertainment, security or to display system status information.</p>
 <p>Include the header <a class="el" href="_screensaver_8h_source.html">#include &lt;kodi/addon-instance/ScreenSaver.h&gt;</a> to use this class.</p>
-<p>This interface allow the creating of a screensavers for Kodi, based upon <b>DirectX</b> or/and <b>OpenGL</b> rendering with <code>C++</code> code.</p>
-<p>The interface is small and easy usable, it have three function. One for the creation with <b><code>Start()</code></b> and for the render time with <b><code>Render()</code></b>, this both are required and must be implemented. Also a <b><code>Stop()</code></b> can be used to become informed for end of work.</p>
+<p>This interface allows the creating of screensavers for Kodi, based upon <b>DirectX</b> or/and <b>OpenGL</b> rendering with <code>C++</code> code.</p>
+<p>The interface is small and easy usable. It has three functions:</p>
+<ul>
+<li><b><code>Start()</code></b> - Called on creation</li>
+<li><b><code>Render()</code></b> - Called at render time</li>
+<li><b><code>Stop()</code></b> - Called when the screensaver has no work</li>
+</ul>
 <p>Additionally, there are several <a class="el" href="group__cpp__kodi__addon__screensaver___c_b.html">other functions</a> available in which the child class can ask about the current hardware, including the device, display and several other parts.</p>
 <hr/>
 <p><b>Here is an example of the minimum required code to start a screensaver:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/Screensaver.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyScreenSaver : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">kodi::addon::CAddonBase</a>,</div><div class="line">                       <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_screensaver.html">kodi::addon::CInstanceScreensaver</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyScreenSaver();</div><div class="line"></div><div class="line">  <span class="keywordtype">bool</span> Start() <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> Render() <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line">CMyScreenSaver::CMyScreenSaver()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">bool</span> CMyScreenSaver::Start()</div><div class="line">{</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyScreenSaver::Render()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line">ADDONCREATOR(CMyScreenSaver)</div></div><!-- fragment --><hr/>
@@ -163,7 +168,7 @@ Modules</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -230,7 +235,7 @@ Modules</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Used to notify the screensaver that it has been started. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if start successful done </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the screensaver was started successfully, false otherwise </dd></dl>
 
 </div>
 </div>

@@ -1,7 +1,8 @@
 var searchData=
 [
+  ['selected',['selected',['../struct_s_selection_entry.html#a9ee682957ef18956fbe33afe9b6222fa',1,'SSelectionEntry']]],
   ['size',['size',['../struct_v_f_s_dir_entry.html#af931a8871310b4dad23f0f0b0f623560',1,'VFSDirEntry::size()'],['../group__cpp__kodi__vfs___defs.html#af931a8871310b4dad23f0f0b0f623560',1,'STAT_STRUCTURE::size()']]],
-  ['starttime',['startTime',['../struct_e_p_g___t_a_g.html#aaf564fc30a2a8624cf917e282281a500',1,'EPG_TAG::startTime()'],['../struct_p_v_r___t_i_m_e_r.html#aaf564fc30a2a8624cf917e282281a500',1,'PVR_TIMER::startTime()']]],
+  ['starttime',['startTime',['../struct_e_p_g___t_a_g.html#aaf564fc30a2a8624cf917e282281a500',1,'EPG_TAG::startTime()'],['../struct_p_v_r___t_i_m_e_r.html#aaf564fc30a2a8624cf917e282281a500',1,'PVR_TIMER::startTime()'],['../struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#aaf564fc30a2a8624cf917e282281a500',1,'PVR_STREAM_TIMES::startTime()']]],
   ['state',['state',['../struct_p_v_r___t_i_m_e_r.html#a048327d0a31f8b2eb735730588de39cc',1,'PVR_TIMER']]],
   ['statustime',['statusTime',['../group__cpp__kodi__vfs___defs.html#a420af14c1ca9bdaeebe32b47f56fd061',1,'STAT_STRUCTURE']]],
   ['stradaptername',['strAdapterName',['../struct_p_v_r___s_i_g_n_a_l___s_t_a_t_u_s.html#a4713f46bad1cb0c606bcdc18b43ac250',1,'PVR_SIGNAL_STATUS']]],
@@ -28,7 +29,7 @@ var searchData=
   ['strlanguage',['strLanguage',['../struct_a_e___d_s_p___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#a9e1df99958e242a6dd620bc6da70acee',1,'AE_DSP_STREAM_PROPERTIES::strLanguage()'],['../struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#ae9eaf923082ad49a0b511336fa749bd6',1,'PVR_STREAM_PROPERTIES::PVR_STREAM::strLanguage()']]],
   ['strmodename',['strModeName',['../struct_a_e___d_s_p___m_o_d_e_s.html#ae9fceb77d4151995f39fd8948ee96cfe',1,'AE_DSP_MODES::AE_DSP_MODE']]],
   ['strmuxname',['strMuxName',['../struct_p_v_r___s_i_g_n_a_l___s_t_a_t_u_s.html#aefa2ff2e595146260bf8c538b967420c',1,'PVR_SIGNAL_STATUS']]],
-  ['strname',['strName',['../struct_a_e___d_s_p___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#a219adbfa6c8f46720e9d471cfa5b046f',1,'AE_DSP_STREAM_PROPERTIES']]],
+  ['strname',['strName',['../struct_a_e___d_s_p___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#a219adbfa6c8f46720e9d471cfa5b046f',1,'AE_DSP_STREAM_PROPERTIES::strName()'],['../struct_p_v_r___n_a_m_e_d___v_a_l_u_e.html#a42cec024be36590e54af8475ee12399c',1,'PVR_NAMED_VALUE::strName()']]],
   ['stroriginaltitle',['strOriginalTitle',['../struct_e_p_g___t_a_g.html#a6c7ed5bd2f2053d2a56768aef693b6d8',1,'EPG_TAG']]],
   ['stroverridemodeimage',['strOverrideModeImage',['../struct_a_e___d_s_p___m_o_d_e_s.html#a7770d4775ae92e4a1a4ccad889fd7483',1,'AE_DSP_MODES::AE_DSP_MODE']]],
   ['strownmodeimage',['strOwnModeImage',['../struct_a_e___d_s_p___m_o_d_e_s.html#afac73b3e3faecbdc944691eab54ac580',1,'AE_DSP_MODES::AE_DSP_MODE']]],
@@ -38,12 +39,13 @@ var searchData=
   ['strprovidername',['strProviderName',['../struct_p_v_r___s_i_g_n_a_l___s_t_a_t_u_s.html#a7c7edbb51f3a3c067322ed7875ef323e',1,'PVR_SIGNAL_STATUS']]],
   ['strreader',['strReader',['../struct_p_v_r___d_e_s_c_r_a_m_b_l_e___i_n_f_o.html#a16ecb61da021740d82279c91662d52da',1,'PVR_DESCRAMBLE_INFO']]],
   ['strrecordingid',['strRecordingId',['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#aef4e94454575c3e4cd40ad4e42bed2e5',1,'PVR_RECORDING']]],
+  ['strserieslink',['strSeriesLink',['../struct_e_p_g___t_a_g.html#a3442c328abd5df708a7d89b3855ccf9b',1,'EPG_TAG::strSeriesLink()'],['../struct_p_v_r___t_i_m_e_r.html#a5b27cf7b89189ff4a2e0d0b7ddca68ff',1,'PVR_TIMER::strSeriesLink()']]],
   ['strservicename',['strServiceName',['../struct_p_v_r___s_i_g_n_a_l___s_t_a_t_u_s.html#ac5e510a3deaf4b8fb53601d4947ccb2e',1,'PVR_SIGNAL_STATUS']]],
-  ['strstreamurl',['strStreamURL',['../struct_p_v_r___c_h_a_n_n_e_l.html#a460ea988e5a8fdc57281755e6e5e8bcd',1,'PVR_CHANNEL::strStreamURL()'],['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#a460ea988e5a8fdc57281755e6e5e8bcd',1,'PVR_RECORDING::strStreamURL()']]],
   ['strsummary',['strSummary',['../struct_p_v_r___t_i_m_e_r.html#ab2313b47118e67d09bd32a710fcbd6f4',1,'PVR_TIMER']]],
   ['strthumbnailpath',['strThumbnailPath',['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#ac60767abe31db53cf4733563ee44c3a3',1,'PVR_RECORDING']]],
   ['strtitle',['strTitle',['../struct_e_p_g___t_a_g.html#a1b5060e9a4adc43d68b7c0efbc160d42',1,'EPG_TAG::strTitle()'],['../struct_p_v_r___t_i_m_e_r.html#a18dde00b3f85145c5749e79f4dbbb4e4',1,'PVR_TIMER::strTitle()'],['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#a18dde00b3f85145c5749e79f4dbbb4e4',1,'PVR_RECORDING::strTitle()']]],
   ['struserpath',['strUserPath',['../struct_addon_props___audio_d_s_p.html#ad643b2065b40fbfcfaf4d32824e2a4d5',1,'AddonProps_AudioDSP::strUserPath()'],['../struct_p_v_r___p_r_o_p_e_r_t_i_e_s.html#ad643b2065b40fbfcfaf4d32824e2a4d5',1,'PVR_PROPERTIES::strUserPath()']]],
+  ['strvalue',['strValue',['../struct_p_v_r___n_a_m_e_d___v_a_l_u_e.html#a6f691874c6b66a0638a027785f3b2d44',1,'PVR_NAMED_VALUE']]],
   ['strwriter',['strWriter',['../struct_e_p_g___t_a_g.html#a7bcae282a0ced201072101d0b84dbcc6',1,'EPG_TAG']]],
   ['supports_5fpoweroff',['supports_poweroff',['../struct_j_o_y_s_t_i_c_k___i_n_f_o.html#aada82c5a7c890d306f6b3d691244e126',1,'JOYSTICK_INFO']]],
   ['supports_5fvfs',['supports_vfs',['../struct_addon_props___game.html#a8e8e2f9080b614d0cdf295b2b85541c1',1,'AddonProps_Game']]]

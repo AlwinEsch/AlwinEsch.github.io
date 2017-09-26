@@ -19,6 +19,7 @@ var group__python__xbmcgui__control =
     [ "getWidth", "group__python__xbmcgui__control.html#gae7fba4c8be1972cf80dc1a95f390df23", null ],
     [ "setEnabled", "group__python__xbmcgui__control.html#ga695a544f6dcb58c11b39fce8227d7663", null ],
     [ "setVisible", "group__python__xbmcgui__control.html#ga07596c1122ca6aa8df20d7a27de410a9", null ],
+    [ "isVisible", "group__python__xbmcgui__control.html#ga13f0d1327712c41f0675c8772b9080f9", null ],
     [ "setVisibleCondition", "group__python__xbmcgui__control.html#gaa6b1940ccbf6218ffa64880e83b4f3bb", null ],
     [ "setEnableCondition", "group__python__xbmcgui__control.html#ga81fed56530fe135d86f34f623a3c0ae5", null ],
     [ "setAnimations", "group__python__xbmcgui__control.html#ga0bbd1670b66db429f7336ab67ed2534d", null ],

@@ -1,9 +1,11 @@
 var NAVTREEINDEX1 =
 {
-"group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gab3d46de490a5bf82b850152e275da128":[5,0,3,1,5],
-"group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gace16071b2201eed2f0d3d850e100a419":[5,0,3,1,20],
-"group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gad2f3302fdee3ed4ab1558bc373498057":[5,0,3,1,11],
-"group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gad73881a75581b006c60e609011c2b94f":[5,0,3,1,9],
+"group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gaa2f74168cc58c5ac84a4a1e507702d68":[5,0,3,1,23],
+"group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gaaefbc6478432a56415b3b43d1ead7f93":[5,0,3,1,1],
+"group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gab3d46de490a5bf82b850152e275da128":[5,0,3,1,6],
+"group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gac7431168a186c4a4c75a987c24629116":[5,0,3,1,19],
+"group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gad2f3302fdee3ed4ab1558bc373498057":[5,0,3,1,12],
+"group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gae6081b87d3e3b00fc5cbeabb9b148d4c":[5,0,3,1,10],
 "group__cpp__kodi__audioengine___defs.html":[5,0,3,0],
 "group__cpp__kodi__audioengine___defs.html#ga103e605fdf8113e6c00087e3e58ac00b":[5,0,3,0,1],
 "group__cpp__kodi__audioengine___defs.html#gga103e605fdf8113e6c00087e3e58ac00ba15a299c138182eaae51a77cb93102432":[5,0,3,0,1,3],
@@ -242,12 +244,10 @@ var NAVTREEINDEX1 =
 "group__cpp__kodi__gui__dialogs___c_progress.html#gaf6377691fa79c14e16aebaeb9d340b33":[5,0,2,18,3],
 "group__cpp__kodi__gui__dialogs___context_menu.html":[5,0,2,12],
 "group__cpp__kodi__gui__dialogs___context_menu.html#ga071fae5f83b1ee17d613a840aaf96f24":[5,0,2,12,0],
+"group__cpp__kodi__gui__dialogs___context_menu.html#ga7e0c7481b3da07e8b9ee8318a4c021b8":[5,0,2,12,2],
+"group__cpp__kodi__gui__dialogs___context_menu.html#gacba5cd75441d82534569081cace5c009":[5,0,2,12,1],
 "group__cpp__kodi__gui__dialogs___file_browser.html":[5,0,2,14],
 "group__cpp__kodi__gui__dialogs___file_browser.html#ga1f84e78d86667b04256d37c9f31d6648":[5,0,2,14,2],
 "group__cpp__kodi__gui__dialogs___file_browser.html#ga355ba05c9940e2df9a0d1187d6611bb6":[5,0,2,14,3],
-"group__cpp__kodi__gui__dialogs___file_browser.html#ga4afada23dc67708d5568c61b27d72b83":[5,0,2,14,5],
-"group__cpp__kodi__gui__dialogs___file_browser.html#ga62ac8022b9eb72f1ca6ec4f14a88743b":[5,0,2,14,6],
-"group__cpp__kodi__gui__dialogs___file_browser.html#gaa0396a73b227207f919627152b447b32":[5,0,2,14,0],
-"group__cpp__kodi__gui__dialogs___file_browser.html#gac9f7be0f59be3ad5aa2479a262449fb1":[5,0,2,14,1],
-"group__cpp__kodi__gui__dialogs___file_browser.html#gad84380e3f81aa5f2e9739460a89f1e52":[5,0,2,14,4]
+"group__cpp__kodi__gui__dialogs___file_browser.html#ga4afada23dc67708d5568c61b27d72b83":[5,0,2,14,5]
 };

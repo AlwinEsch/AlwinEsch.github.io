@@ -17,11 +17,13 @@ var searchData=
   ['pvr_5fedl_5fentry',['PVR_EDL_ENTRY',['../struct_p_v_r___e_d_l___e_n_t_r_y.html',1,'']]],
   ['pvr_5fmenuhook',['PVR_MENUHOOK',['../struct_p_v_r___m_e_n_u_h_o_o_k.html',1,'']]],
   ['pvr_5fmenuhook_5fdata',['PVR_MENUHOOK_DATA',['../struct_p_v_r___m_e_n_u_h_o_o_k___d_a_t_a.html',1,'']]],
+  ['pvr_5fnamed_5fvalue',['PVR_NAMED_VALUE',['../struct_p_v_r___n_a_m_e_d___v_a_l_u_e.html',1,'']]],
   ['pvr_5fproperties',['PVR_PROPERTIES',['../struct_p_v_r___p_r_o_p_e_r_t_i_e_s.html',1,'']]],
   ['pvr_5frecording',['PVR_RECORDING',['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html',1,'']]],
   ['pvr_5fsignal_5fstatus',['PVR_SIGNAL_STATUS',['../struct_p_v_r___s_i_g_n_a_l___s_t_a_t_u_s.html',1,'']]],
   ['pvr_5fstream',['PVR_STREAM',['../struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s_1_1_p_v_r___s_t_r_e_a_m',1,'PVR_STREAM_PROPERTIES']]],
   ['pvr_5fstream_5fproperties',['PVR_STREAM_PROPERTIES',['../struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html',1,'']]],
+  ['pvr_5fstream_5ftimes',['PVR_STREAM_TIMES',['../struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html',1,'']]],
   ['pvr_5ftimer',['PVR_TIMER',['../struct_p_v_r___t_i_m_e_r.html',1,'']]],
   ['pvr_5ftimer_5ftype',['PVR_TIMER_TYPE',['../struct_p_v_r___t_i_m_e_r___t_y_p_e.html',1,'']]]
 ];

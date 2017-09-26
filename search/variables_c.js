@@ -12,5 +12,8 @@ var searchData=
   ['provides_5fbuttonmaps',['provides_buttonmaps',['../struct_p_e_r_i_p_h_e_r_a_l___c_a_p_a_b_i_l_i_t_i_e_s.html#a9cd4e1b9c03034c8e4907cf15b707bd1',1,'PERIPHERAL_CAPABILITIES']]],
   ['provides_5fjoysticks',['provides_joysticks',['../struct_p_e_r_i_p_h_e_r_a_l___c_a_p_a_b_i_l_i_t_i_e_s.html#a76bc75dca5d64e9d870b6b7c18982fe3',1,'PERIPHERAL_CAPABILITIES']]],
   ['proxy_5fdll_5fcount',['proxy_dll_count',['../struct_addon_props___game.html#a35be46f1a9f34eccc02eca2442e32ef1',1,'AddonProps_Game']]],
-  ['proxy_5fdll_5fpaths',['proxy_dll_paths',['../struct_addon_props___game.html#ab5a0257b876443f7358367d79acbde0b',1,'AddonProps_Game']]]
+  ['proxy_5fdll_5fpaths',['proxy_dll_paths',['../struct_addon_props___game.html#ab5a0257b876443f7358367d79acbde0b',1,'AddonProps_Game']]],
+  ['ptsbegin',['ptsBegin',['../struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#a0ebdf60b4fe91362f9ef5ae5a4e54cb4',1,'PVR_STREAM_TIMES']]],
+  ['ptsend',['ptsEnd',['../struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#a964acd3efb10b946dd90e59b37a9a004',1,'PVR_STREAM_TIMES']]],
+  ['ptsstart',['ptsStart',['../struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#ad7bb1ef2554cb29a1ec25c3672bc8dd9',1,'PVR_STREAM_TIMES']]]
 ];

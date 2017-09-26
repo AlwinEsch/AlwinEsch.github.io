@@ -1,7 +1,7 @@
 var searchData=
 [
   ['path',['Path',['../group__cpp__kodi__vfs___c_dir_entry.html#ga62adb64db13e24a29d00d7eb1901448a',1,'kodi::vfs::CDirEntry']]],
-  ['pause',['Pause',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga70babc5227ddd16ca31dccc6cec0bb22',1,'kodi::audioengine::CAddonAEStream::Pause()'],['../group__python___player.html#gab02121d4dfeb622a4ea3db42c0cb6676',1,'XBMCAddon::xbmc::Player::pause()']]],
+  ['pause',['pause',['../group__python___player.html#gab02121d4dfeb622a4ea3db42c0cb6676',1,'XBMCAddon::xbmc::Player::pause()'],['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga70babc5227ddd16ca31dccc6cec0bb22',1,'kodi::audioengine::CAddonAEStream::Pause()']]],
   ['pausestream',['PauseStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a0c6c3376d5b8e5a255acc189a45119dd',1,'kodi::addon::CInstanceInputStream']]],
   ['percentage',['Percentage',['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#gadc4517cc4837f035c5e3432542ce2b14',1,'kodi::gui::dialogs::CExtendedProgress']]],
   ['performdevicescan',['PerformDeviceScan',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a8ad848a0f528137ea22ea45db9a02bf5',1,'kodi::addon::CInstancePeripheral']]],

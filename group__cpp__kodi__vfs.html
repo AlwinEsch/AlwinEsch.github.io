@@ -537,6 +537,41 @@ Modules</h2></td></tr>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/Filesystem.h&gt;</span></div><div class="line">...</div><div class="line">std::string dirName = <a class="code" href="group__cpp__kodi__vfs.html#ga5dba5415b439919e066fc0fbd9e168e4">kodi::vfs::GetDirectoryName</a>(<span class="stringliteral">&quot;special://temp/kodi.log&quot;</span>);</div><div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory name is &#39;%s&#39;\n&quot;</span>, dirName.c_str());</div></div><!-- fragment --> 
 </div>
 </div>
+<a id="gae425c7a614df9ec6ff1a246bfba924f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae425c7a614df9ec6ff1a246bfba924f0">&#9670;&nbsp;</a></span>RemoveSlashAtEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kodi::vfs::RemoveSlashAtEnd </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove the slash on given path name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">path</td><td>The complete path</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/Filesystem.h&gt;</span></div><div class="line">...</div><div class="line">std::string dirName = <span class="stringliteral">&quot;special://temp/&quot;</span>;</div><div class="line"><a class="code" href="group__cpp__kodi__vfs.html#gae425c7a614df9ec6ff1a246bfba924f0">kodi::vfs::RemoveSlashAtEnd</a>(dirName);</div><div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory name is &#39;%s&#39;\n&quot;</span>, dirName.c_str());</div></div><!-- fragment --> 
+</div>
+</div>
 <a id="ga09e1c44942b50e4cd897774e91efde89"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga09e1c44942b50e4cd897774e91efde89">&#9670;&nbsp;</a></span>GetChunkSize()</h2>
 
@@ -677,7 +712,7 @@ Modules</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, tru is returned. On error, fale is returned</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/Filesystem.h&gt;</span></div><div class="line">...</div><div class="line">STAT_STRUCTURE statFile;</div><div class="line"><span class="keywordtype">int</span> ret = <a class="code" href="group__cpp__kodi__vfs.html#gaf2a98540b3fa6538417288622eded26f">kodi::vfs::StatFile</a>(<span class="stringliteral">&quot;special://temp/kodi.log&quot;</span>, &amp;statFile);</div><div class="line">fprintf(stderr, <span class="stringliteral">&quot;deviceId (ID of device containing file)       = %u\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;size (total size, in bytes)                   = %lu\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;accessTime (time of last access)              = %lu\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;modificationTime (time of last modification)  = %lu\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;statusTime (time of last status change)       = %lu\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;isDirectory (The stat url is a directory)     = %s\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;isSymLink (The stat url is a symbolic link)   = %s\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;Return value                                  = %i\n&quot;</span>,</div><div class="line">                     statFile.deviceId,</div><div class="line">                     statFile.size,</div><div class="line">                     statFile.accessTime,</div><div class="line">                     statFile.modificationTime,</div><div class="line">                     statFile.statusTime,</div><div class="line">                     statFile.isDirectory ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div><div class="line">                     statFile.isSymLink ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div><div class="line">                     ret);</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/Filesystem.h&gt;</span></div><div class="line">...</div><div class="line">STAT_STRUCTURE statFile;</div><div class="line"><span class="keywordtype">int</span> ret = <a class="code" href="group__cpp__kodi__vfs.html#gaf2a98540b3fa6538417288622eded26f">kodi::vfs::StatFile</a>(<span class="stringliteral">&quot;special://temp/kodi.log&quot;</span>, statFile);</div><div class="line">fprintf(stderr, <span class="stringliteral">&quot;deviceId (ID of device containing file)       = %u\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;size (total size, in bytes)                   = %lu\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;accessTime (time of last access)              = %lu\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;modificationTime (time of last modification)  = %lu\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;statusTime (time of last status change)       = %lu\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;isDirectory (The stat url is a directory)     = %s\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;isSymLink (The stat url is a symbolic link)   = %s\n&quot;</span></div><div class="line">                <span class="stringliteral">&quot;Return value                                  = %i\n&quot;</span>,</div><div class="line">                     statFile.deviceId,</div><div class="line">                     statFile.size,</div><div class="line">                     statFile.accessTime,</div><div class="line">                     statFile.modificationTime,</div><div class="line">                     statFile.statusTime,</div><div class="line">                     statFile.isDirectory ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div><div class="line">                     statFile.isSymLink ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div><div class="line">                     ret);</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ga5c2686614c3508ecda78609725f123ad"></a>

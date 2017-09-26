@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['langformats',['LangFormats',['../group__cpp__kodi___defs.html#ga40942faafc2e9ae4d9b76e2f19362327',1,'General.h']]]
+  ['filepropertytypes',['FilePropertyTypes',['../group__cpp__kodi__vfs___defs.html#ga48e8218ccc16c09e02390cc14901b583',1,'Filesystem.h']]]
 ];

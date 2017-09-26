@@ -18,5 +18,7 @@ var group__cpp__kodi__vfs___c_file =
     [ "AtEnd", "group__cpp__kodi__vfs___c_file.html#gaf5fd2a2591a0f355dd78bb9a5c6d4120", null ],
     [ "Close", "group__cpp__kodi__vfs___c_file.html#ga7f7a3199c392465d0767c6506c1af5b4", null ],
     [ "GetChunkSize", "group__cpp__kodi__vfs___c_file.html#gacc37d885ea67ed49de5644a572d904ee", null ],
+    [ "GetPropertyValue", "group__cpp__kodi__vfs___c_file.html#gae120fa7cf603a9d340b1b98f4ecf3585", null ],
+    [ "GetPropertyValues", "group__cpp__kodi__vfs___c_file.html#ga1f13dec88de47dcd0b9eba75222cc2eb", null ],
     [ "GetFileDownloadSpeed", "group__cpp__kodi__vfs___c_file.html#gaf8e1ef1e563ffa78efe99ee171ee4631", null ]
 ];

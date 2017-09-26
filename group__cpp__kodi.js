@@ -13,5 +13,6 @@ var group__cpp__kodi =
     [ "GetRegion", "group__cpp__kodi.html#ga7b98a686abbbd711c76a1e3892b6c0be", null ],
     [ "GetFreeMem", "group__cpp__kodi.html#ga2dc05ae2b766c3710db48b48b257f951", null ],
     [ "GetGlobalIdleTime", "group__cpp__kodi.html#ga156210ce2221a5a160f51cc044e841a1", null ],
+    [ "GetCurrentSkinId", "group__cpp__kodi.html#gaa2b38e3e192a404565552416049c4d30", null ],
     [ "KodiVersion", "group__cpp__kodi.html#ga5417d9134259da3d79f40e9a20a48617", null ]
 ];

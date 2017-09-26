@@ -148,16 +148,43 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 <tr>
 <th align="right">enum AEStreamOptions </th><th align="center">Value: </th><th align="left">Description:  </th></tr>
 <tr>
-<td align="right">AE_STREAM_FORCE_RESAMPLE </td><td align="center">1 &lt;&lt; 0 </td><td align="left">Force resample even if rates match </td></tr>
+<td align="right">AUDIO_STREAM_FORCE_RESAMPLE </td><td align="center">1 &lt;&lt; 0 </td><td align="left">Force resample even if rates match </td></tr>
 <tr>
-<td align="right">AE_STREAM_PAUSED </td><td align="center">1 &lt;&lt; 1 </td><td align="left">Create the stream paused </td></tr>
+<td align="right">AUDIO_STREAM_PAUSED </td><td align="center">1 &lt;&lt; 1 </td><td align="left">Create the stream paused </td></tr>
 <tr>
-<td align="right">AE_STREAM_AUTOSTART </td><td align="center">1 &lt;&lt; 2 </td><td align="left">Autostart the stream when enough data is buffered </td></tr>
+<td align="right">AUDIO_STREAM_AUTOSTART </td><td align="center">1 &lt;&lt; 2 </td><td align="left">Autostart the stream when enough data is buffered </td></tr>
 <tr>
-<td align="right">AE_STREAM_BYPASS_ADSP </td><td align="center">1 &lt;&lt; 3 </td><td align="left">if this option is set the ADSP-System is bypassed and the raw stream will be passed through IAESink. </td></tr>
+<td align="right">AUDIO_STREAM_BYPASS_ADSP </td><td align="center">1 &lt;&lt; 3 </td><td align="left">if this option is set the ADSP-System is bypassed and the raw stream will be passed through IAESink. </td></tr>
 </table>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/AudioEngine.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacekodi_1_1audioengine.html">kodi::audioengine</a>;</div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line"><a class="code" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">CAddonAEStream</a>* stream = <span class="keyword">new</span> <a class="code" href="group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga8d36f190546da3e1c48d973aeac34bab">CAddonAEStream</a>(AE_FMT_S16LE, AE_STREAM_AUTOSTART | AE_STREAM_BYPASS_ADSP);</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/AudioEngine.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacekodi_1_1audioengine.html">kodi::audioengine</a>;</div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">AudioEngineFormat format;</div><div class="line">format.m_dataFormat = AE_FMT_FLOAT;</div><div class="line">format.m_channelCount = 2;</div><div class="line">format.m_channels[0] = AE_CH_FL;</div><div class="line">format.m_channels[1] = AE_CH_FR;</div><div class="line">format.m_channels[2] = AE_CH_NULL;</div><div class="line">format.m_sampleRate = 48000;</div><div class="line">format.m_frameSize = <span class="keyword">sizeof</span>(float)*format.m_channelCount;</div><div class="line">format.m_frames = 512;</div><div class="line"><a class="code" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">CAddonAEStream</a>* stream = <span class="keyword">new</span> <a class="code" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">CAddonAEStream</a>(format, AE_STREAM_AUTOSTART | AE_STREAM_BYPASS_ADSP);</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="gaaefbc6478432a56415b3b43d1ead7f93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaefbc6478432a56415b3b43d1ead7f93">&#9670;&nbsp;</a></span>~CAddonAEStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">CAddonAEStream</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Class destructor. </p>
+
 </div>
 </div>
 <a id="ga8febfd989aa187d9a122ff8597820d53"></a>
@@ -188,8 +215,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 
 </div>
 </div>
-<a id="ga19c193ed705f4c3f497e3d2c1a701237"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga19c193ed705f4c3f497e3d2c1a701237">&#9670;&nbsp;</a></span>AddData()</h2>
+<a id="ga6a05d7b8c5e84715308fd9a9d15be9ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a05d7b8c5e84715308fd9a9d15be9ff">&#9670;&nbsp;</a></span>AddData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +240,13 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>frames</em>&#160;</td>
+          <td class="paramname"><em>frames</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pts</em> = <code>0.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -231,9 +264,10 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 <p>Add planar or interleaved PCM data to the stream. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>array of pointers to the planes </td></tr>
-    <tr><td class="paramname">offset</td><td>to frame in frames </td></tr>
-    <tr><td class="paramname">frames</td><td>number of frames </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>array of pointers to the planes </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>to frame in frames </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frames</td><td>number of frames </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pts</td><td>presentation timestamp </td></tr>
   </table>
   </dd>
 </dl>
@@ -407,8 +441,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 
 </div>
 </div>
-<a id="gad73881a75581b006c60e609011c2b94f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad73881a75581b006c60e609011c2b94f">&#9670;&nbsp;</a></span>Drain()</h2>
+<a id="gae6081b87d3e3b00fc5cbeabb9b148d4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6081b87d3e3b00fc5cbeabb9b148d4c">&#9670;&nbsp;</a></span>Drain()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,7 +454,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
           <td class="memname">void Drain </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>wait</em></td><td>)</td>
+          <td class="paramname"><em>wait</em> = <code>true</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -647,8 +681,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 
 </div>
 </div>
-<a id="ga47734be828ccd1000cb5df62135af08b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga47734be828ccd1000cb5df62135af08b">&#9670;&nbsp;</a></span>GetFrameSize()</h2>
+<a id="ga3f6e70c65cc5bffabcbf56a00910599e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f6e70c65cc5bffabcbf56a00910599e">&#9670;&nbsp;</a></span>GetFrameSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -657,7 +691,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned int GetFrameSize </td>
+          <td class="memname">unsigned int GetFrameSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -675,8 +709,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 
 </div>
 </div>
-<a id="ga72d0968c7e4a84361104f4458fecd0be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga72d0968c7e4a84361104f4458fecd0be">&#9670;&nbsp;</a></span>GetChannelCount()</h2>
+<a id="gac7431168a186c4a4c75a987c24629116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac7431168a186c4a4c75a987c24629116">&#9670;&nbsp;</a></span>GetChannelCount()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -685,7 +719,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned int GetChannelCount </td>
+          <td class="memname">unsigned int GetChannelCount </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -703,8 +737,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 
 </div>
 </div>
-<a id="ga2ef28fae57dd08160e2a8c8dda59d015"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2ef28fae57dd08160e2a8c8dda59d015">&#9670;&nbsp;</a></span>GetSampleRate()</h2>
+<a id="ga939b81a0c83f7be81f12fabaa7347183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga939b81a0c83f7be81f12fabaa7347183">&#9670;&nbsp;</a></span>GetSampleRate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -713,7 +747,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned int GetSampleRate </td>
+          <td class="memname">unsigned int GetSampleRate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -731,8 +765,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 
 </div>
 </div>
-<a id="gace16071b2201eed2f0d3d850e100a419"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gace16071b2201eed2f0d3d850e100a419">&#9670;&nbsp;</a></span>GetDataFormat()</h2>
+<a id="ga0dcdf2ab692dfe678712e65ec688a484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0dcdf2ab692dfe678712e65ec688a484">&#9670;&nbsp;</a></span>GetDataFormat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -741,7 +775,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const AEDataFormat GetDataFormat </td>
+          <td class="memname">AEDataFormat GetDataFormat </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -816,7 +850,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 <dl class="section note"><dt>Note</dt><dd>This function may return false if the stream is not resampling, if you wish to use this be sure to set the AESTREAM_FORCE_RESAMPLE option</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ratio</td><td>the new sample rate ratio, calculated by ((double)desiredRate / (double)<a class="el" href="group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga2ef28fae57dd08160e2a8c8dda59d015" title="Returns the stream&#39;s sample rate, if the stream is using a dynamic sample rate, this value will NOT r...">GetSampleRate()</a>) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ratio</td><td>the new sample rate ratio, calculated by ((double)desiredRate / (double)<a class="el" href="group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga939b81a0c83f7be81f12fabaa7347183" title="Returns the stream&#39;s sample rate, if the stream is using a dynamic sample rate, this value will NOT r...">GetSampleRate()</a>) </td></tr>
   </table>
   </dd>
 </dl>

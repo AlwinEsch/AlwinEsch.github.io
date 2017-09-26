@@ -20,7 +20,7 @@ var searchData=
   ['m_5flanguage',['m_language',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#afaf7f861e2293bea2045d88165451a30',1,'INPUTSTREAM_INFO']]],
   ['m_5fmask',['m_mask',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#afba3f0af06383f1e09233a85fdb70762',1,'INPUTSTREAM_CAPABILITIES']]],
   ['m_5fpid',['m_pID',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a63d0aefe29935879fc60a31e360c3cfe',1,'INPUTSTREAM_INFO']]],
-  ['m_5fsamplerate',['m_SampleRate',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#aa25502b5777587f37017952a872e02cc',1,'INPUTSTREAM_INFO::m_SampleRate()'],['../struct_audio_engine_format.html#a046d570c56fd2ae9b813340816ebfdec',1,'AudioEngineFormat::m_sampleRate()']]],
+  ['m_5fsamplerate',['m_sampleRate',['../struct_audio_engine_format.html#a046d570c56fd2ae9b813340816ebfdec',1,'AudioEngineFormat::m_sampleRate()'],['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#aa25502b5777587f37017952a872e02cc',1,'INPUTSTREAM_INFO::m_SampleRate()']]],
   ['m_5fwidth',['m_Width',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a3bb87b799112e60d2d7c3376101fb3e2',1,'INPUTSTREAM_INFO']]],
   ['major',['major',['../group__cpp__kodi___defs.html#ac8947941479c38403a09c14a60b03f01',1,'kodi_version_t']]],
   ['makelegalfilename',['makeLegalFilename',['../group__python__xbmc.html#gac40e0ecd5b1aa66a90c5c0918cd40491',1,'makeLegalFilename():&#160;ModuleXbmc.h'],['../group__cpp__kodi__vfs.html#ga857b795585d7268e85975850144adad7',1,'kodi::vfs::MakeLegalFileName()']]],

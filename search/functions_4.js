@@ -5,7 +5,7 @@ var searchData=
   ['enablestream',['EnableStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#ac969dd970a8c48ce6d6e1560deaf0705',1,'kodi::addon::CInstanceInputStream']]],
   ['encode',['Encode',['../classkodi_1_1addon_1_1_c_instance_audio_encoder.html#afa6d8608cb24378d305ad733232bcdfb',1,'kodi::addon::CInstanceAudioEncoder']]],
   ['endofdirectory',['endOfDirectory',['../group__python__xbmcplugin.html#ga52a8af0460894fa918c6a20d8d77fff6',1,'ModuleXbmcplugin.h']]],
-  ['epgeventstatechange',['EpgEventStateChange',['../class_c_helper__lib_x_b_m_c__pvr.html#aa89a08d1aa15de45041d3272a1a7efab',1,'CHelper_libXBMC_pvr']]],
+  ['epgeventstatechange',['EpgEventStateChange',['../class_c_helper__lib_x_b_m_c__pvr.html#a8c54ad38ec31bbb9b367c47f771bffec',1,'CHelper_libXBMC_pvr']]],
   ['executebuiltin',['executebuiltin',['../group__python__xbmc.html#ga2809d4c435f713c6cf4f95c14e926015',1,'ModuleXbmc.h']]],
   ['executejsonrpc',['executeJSONRPC',['../group__python__xbmc.html#gacbdcb8982550fbbe24c7b79ed84ed846',1,'ModuleXbmc.h']]],
   ['executescript',['executescript',['../group__python__xbmc.html#gae2596d5254d09353c42c59a41894fd77',1,'ModuleXbmc.h']]],

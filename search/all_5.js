@@ -3,8 +3,10 @@ var searchData=
   ['fade_20label_20control',['Fade label control',['../_fade__label__control.html',1,'skin_controls']]],
   ['faspect',['fAspect',['../struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#ac931aee4046d54e485fa60f7c6442dfe',1,'PVR_STREAM_PROPERTIES::PVR_STREAM']]],
   ['featurecount',['FeatureCount',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a72e3e1dec26c69d21c338197fa42d9c0',1,'kodi::addon::CInstancePeripheral']]],
+  ['featuretype',['FeatureType',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a81e396dcd7320198601047042aaf7654',1,'kodi::addon::CInstancePeripheral']]],
   ['file',['File',['../class_x_b_m_c_addon_1_1xbmcvfs_1_1_file.html',1,'XBMCAddon::xbmcvfs']]],
   ['fileexists',['FileExists',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a866368a7ff8b9b7be4c861642d24549e',1,'ADDON::CHelper_libXBMC_addon::FileExists()'],['../group__cpp__kodi__vfs.html#ga0798cbafda16704e211763e4f76b997b',1,'kodi::vfs::FileExists()']]],
+  ['filepropertytypes',['FilePropertyTypes',['../group__cpp__kodi__vfs___defs.html#ga48e8218ccc16c09e02390cc14901b583',1,'Filesystem.h']]],
   ['finish',['Finish',['../classkodi_1_1addon_1_1_c_instance_audio_encoder.html#a0e0d542d34afa30c6ae18d3b57b4ef60',1,'kodi::addon::CInstanceAudioEncoder']]],
   ['firstaired',['firstAired',['../struct_e_p_g___t_a_g.html#a0f9232c962fb6c79dad0f330925a835a',1,'EPG_TAG']]],
   ['firstday',['firstDay',['../struct_p_v_r___t_i_m_e_r.html#a822c10930696006667ef88dd7e164e45',1,'PVR_TIMER']]],
@@ -21,5 +23,6 @@ var searchData=
   ['freeprimitives',['FreePrimitives',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a1310abb52714c2cd9d409d76af5cd473',1,'kodi::addon::CInstancePeripheral']]],
   ['freescanresults',['FreeScanResults',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#af4294af66a59923b8de14553713ba122',1,'kodi::addon::CInstancePeripheral']]],
   ['freestring',['FreeString',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a2103b7d4728d40e2771373cd05f0ebb3',1,'ADDON::CHelper_libXBMC_addon']]],
+  ['freestringarray',['FreeStringArray',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a22d9975aa575d8cde6d0747f7f32ba8a',1,'ADDON::CHelper_libXBMC_addon']]],
   ['file',['File',['../group__python__file.html',1,'']]]
 ];

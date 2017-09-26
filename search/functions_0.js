@@ -7,7 +7,7 @@ var searchData=
   ['addcontextmenuitems',['addContextMenuItems',['../group__python__xbmcgui__listitem.html#ga14712acc2994196012036f43eb2135c4',1,'XBMCAddon::xbmcgui::ListItem']]],
   ['addcontrol',['addControl',['../group__python__xbmcgui__window.html#ga6929fc18ad27f656a658eb3f4ffe9bf4',1,'XBMCAddon::xbmcgui::Window']]],
   ['addcontrols',['addControls',['../group__python__xbmcgui__window.html#ga8837c3f411bff116608f584e4d82f9ad',1,'XBMCAddon::xbmcgui::Window']]],
-  ['adddata',['AddData',['../classkodi_1_1addon_1_1_c_instance_video_codec.html#ab934321d556db18f79d5f5160f3a1a9d',1,'kodi::addon::CInstanceVideoCodec::AddData()'],['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga19c193ed705f4c3f497e3d2c1a701237',1,'kodi::audioengine::CAddonAEStream::AddData()']]],
+  ['adddata',['AddData',['../classkodi_1_1addon_1_1_c_instance_video_codec.html#ab934321d556db18f79d5f5160f3a1a9d',1,'kodi::addon::CInstanceVideoCodec::AddData()'],['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga6a05d7b8c5e84715308fd9a9d15be9ff',1,'kodi::audioengine::CAddonAEStream::AddData()']]],
   ['adddirectoryitem',['addDirectoryItem',['../group__python__xbmcplugin.html#ga4c357cf7d3dbd4e2823755ecfd7dfa01',1,'ModuleXbmcplugin.h']]],
   ['adddirectoryitems',['addDirectoryItems',['../group__python__xbmcplugin.html#ga3a00602b6bcfdc77ca0c56362c84540c',1,'ModuleXbmcplugin.h']]],
   ['additem',['addItem',['../group__python__xbmcgui__window__xml.html#ga3cf94a2cf4dee919f08589c667135645',1,'XBMCAddon::xbmcgui::WindowXML::addItem()'],['../group__python__xbmcgui__control__list.html#ga3cf94a2cf4dee919f08589c667135645',1,'XBMCAddon::xbmcgui::ControlList::addItem()']]],

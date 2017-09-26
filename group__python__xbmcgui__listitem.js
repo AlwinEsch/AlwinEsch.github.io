@@ -1,5 +1,6 @@
 var group__python__xbmcgui__listitem =
 [
+    [ "~ListItem", "group__python__xbmcgui__listitem.html#gaf6aa55a29477176be50fa8e504c02207", null ],
     [ "getLabel", "group__python__xbmcgui__listitem.html#ga14c4e7420d903d3e40342266333d2ecf", null ],
     [ "getLabel2", "group__python__xbmcgui__listitem.html#ga855de4c2af40094f9f8cae4d9d35378e", null ],
     [ "setLabel", "group__python__xbmcgui__listitem.html#ga002b6bcb81f2510c34983101ea0c8cc7", null ],

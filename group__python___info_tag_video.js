@@ -1,5 +1,6 @@
 var group__python___info_tag_video =
 [
+    [ "~InfoTagVideo", "group__python___info_tag_video.html#ga4a232a70bc8ac59e1b26d09f60246fe9", null ],
     [ "getDbId", "group__python___info_tag_video.html#ga0106357981f84446b7c1f063408b50a1", null ],
     [ "getDirector", "group__python___info_tag_video.html#ga6c1806128638b0e6304e195d6dced5c4", null ],
     [ "getWritingCredits", "group__python___info_tag_video.html#ga70edf983a463457e38ebc7a1c98d9695", null ],
