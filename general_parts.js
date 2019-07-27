@@ -1,28 +1,42 @@
 var general_parts =
 [
-    [ "List of GUI access messages", "modules___general___list_of_gui_access.html", [
-      [ "Description", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Description", null ],
-      [ "Player", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Player", null ],
-      [ "Weather", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Weather", null ],
-      [ "System", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_System", null ],
-      [ "Network", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Network", null ],
-      [ "Music party mode", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_musicpartymode", null ],
-      [ "Music player", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_MusicPlayer", null ],
-      [ "Video player", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Videoplayer", null ],
-      [ "Container", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Container", null ],
-      [ "ListItem", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_ListItem", null ],
-      [ "Visualisation", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Visualisation", null ],
-      [ "Fanart", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Fanart", null ],
-      [ "Skin", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Skin", null ],
-      [ "Window", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Window", null ],
-      [ "Control", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Control", null ],
-      [ "Playlist", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Playlist", null ],
-      [ "Pvr", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_Pvr", null ],
-      [ "ADSP", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_ADSP", null ],
-      [ "Radio RDS", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_RDS", null ],
-      [ "Slideshow", "modules___general___list_of_gui_access.html#modules__General__List_of_gui_access_slideshow", null ]
+    [ "Infolabels and Boolean conditions", "modules__infolabels_boolean_conditions.html", [
+      [ "Description", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Description", null ],
+      [ "List of Infolabels and Boolean conditions", "modules__infolabels_boolean_conditions.html#modules_list_infolabels_booleans", [
+        [ "Global", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_GlobalBools", null ],
+        [ "String", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_String", null ],
+        [ "Integer", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Integer", null ],
+        [ "Player", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Player", null ],
+        [ "Weather", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Weather", null ],
+        [ "System", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_System", null ],
+        [ "Network", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Network", null ],
+        [ "Music party mode", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_musicpartymode", null ],
+        [ "Music player", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_MusicPlayer", null ],
+        [ "Video player", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Videoplayer", null ],
+        [ "RetroPlayer", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_RetroPlayer", null ],
+        [ "Container", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Container", null ],
+        [ "ListItem", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_ListItem", null ],
+        [ "Visualisation", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Visualisation", null ],
+        [ "Fanart", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Fanart", null ],
+        [ "Skin", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Skin", null ],
+        [ "Window", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Window", null ],
+        [ "Control", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Control", null ],
+        [ "Playlist", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Playlist", null ],
+        [ "Pvr", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Pvr", null ],
+        [ "RDS", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_RDS", null ],
+        [ "Slideshow", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_slideshow", null ],
+        [ "Library", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Library", null ]
+      ] ],
+      [ "Additional revision history for Infolabels and Boolean Conditions", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans", [
+        [ "Kodi v18 (Leia)", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans_v18", null ],
+        [ "Kodi v17 (Krypton)", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans_v17", null ],
+        [ "Kodi v16 (Jarvis)", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans_v16", null ],
+        [ "Kodi v15 (Isengard)", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans_v15", null ],
+        [ "Kodi v14 (Helix)", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans_v14", null ],
+        [ "XBMC v13 (Gotham)", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans_v13", null ]
+      ] ]
     ] ],
-    [ "List of build in functions", "page__list_of_built_in_functions.html", [
+    [ "List of built-in functions", "page__list_of_built_in_functions.html", [
       [ "Add-on built-in's", "page__list_of_built_in_functions.html#built_in_functions_1", null ],
       [ "Android built-in's", "page__list_of_built_in_functions.html#built_in_functions_2", null ],
       [ "Application built-in's", "page__list_of_built_in_functions.html#built_in_functions_3", null ],

@@ -1,6 +1,6 @@
 var group__cpp__kodi__vfs___c_file =
 [
-    [ "CFile", "group__cpp__kodi__vfs___c_file.html#ga8b221739572abc22a176281ebd8e70c0", null ],
+    [ "CFile", "group__cpp__kodi__vfs___c_file.html#gaaa76a3447d8acb1bdf12fda53db583da", null ],
     [ "~CFile", "group__cpp__kodi__vfs___c_file.html#gaaca978eab220d4564711e06f5d9e55b3", null ],
     [ "OpenFile", "group__cpp__kodi__vfs___c_file.html#ga98a555efe0368bda93fede3e043210de", null ],
     [ "OpenFileForWrite", "group__cpp__kodi__vfs___c_file.html#ga791aab50c47c2f6420a90b943e39683d", null ],

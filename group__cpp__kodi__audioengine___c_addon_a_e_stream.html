@@ -153,11 +153,9 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 <td align="right">AUDIO_STREAM_PAUSED </td><td align="center">1 &lt;&lt; 1 </td><td align="left">Create the stream paused </td></tr>
 <tr>
 <td align="right">AUDIO_STREAM_AUTOSTART </td><td align="center">1 &lt;&lt; 2 </td><td align="left">Autostart the stream when enough data is buffered </td></tr>
-<tr>
-<td align="right">AUDIO_STREAM_BYPASS_ADSP </td><td align="center">1 &lt;&lt; 3 </td><td align="left">if this option is set the ADSP-System is bypassed and the raw stream will be passed through IAESink. </td></tr>
 </table>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/AudioEngine.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacekodi_1_1audioengine.html">kodi::audioengine</a>;</div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">AudioEngineFormat format;</div><div class="line">format.m_dataFormat = AE_FMT_FLOAT;</div><div class="line">format.m_channelCount = 2;</div><div class="line">format.m_channels[0] = AE_CH_FL;</div><div class="line">format.m_channels[1] = AE_CH_FR;</div><div class="line">format.m_channels[2] = AE_CH_NULL;</div><div class="line">format.m_sampleRate = 48000;</div><div class="line">format.m_frameSize = <span class="keyword">sizeof</span>(float)*format.m_channelCount;</div><div class="line">format.m_frames = 512;</div><div class="line"><a class="code" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">CAddonAEStream</a>* stream = <span class="keyword">new</span> <a class="code" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">CAddonAEStream</a>(format, AE_STREAM_AUTOSTART | AE_STREAM_BYPASS_ADSP);</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/AudioEngine.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacekodi_1_1audioengine.html">kodi::audioengine</a>;</div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">AudioEngineFormat format;</div><div class="line">format.m_dataFormat = AE_FMT_FLOAT;</div><div class="line">format.m_channelCount = 2;</div><div class="line">format.m_channels[0] = AE_CH_FL;</div><div class="line">format.m_channels[1] = AE_CH_FR;</div><div class="line">format.m_channels[2] = AE_CH_NULL;</div><div class="line">format.m_sampleRate = 48000;</div><div class="line">format.m_frameSize = <span class="keyword">sizeof</span>(float)*format.m_channelCount;</div><div class="line">format.m_frames = 512;</div><div class="line"><a class="code" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">CAddonAEStream</a>* stream = <span class="keyword">new</span> <a class="code" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">CAddonAEStream</a>(format, AE_STREAM_AUTOSTART);</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="gaaefbc6478432a56415b3b43d1ead7f93"></a>
@@ -215,8 +213,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 
 </div>
 </div>
-<a id="ga6a05d7b8c5e84715308fd9a9d15be9ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6a05d7b8c5e84715308fd9a9d15be9ff">&#9670;&nbsp;</a></span>AddData()</h2>
+<a id="ga90bd0f93c447654f61aa7494ab8c83ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga90bd0f93c447654f61aa7494ab8c83ae">&#9670;&nbsp;</a></span>AddData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +244,19 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>pts</em> = <code>0.0</code>&#160;</td>
+          <td class="paramname"><em>pts</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hasDownmix</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>centerMixLevel</em> = <code>1.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -267,7 +277,9 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
     <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>array of pointers to the planes </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>to frame in frames </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frames</td><td>number of frames </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pts</td><td>presentation timestamp </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pts</td><td>[opt] presentation timestamp, default is 0 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hasDownmix</td><td>[opt] set true if downmix is present, default is false </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">centerMixLevel</td><td>[opt] level to mix left and right to center default is 1.0 </td></tr>
   </table>
   </dd>
 </dl>

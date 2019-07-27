@@ -7,8 +7,6 @@ var group__python__monitor =
     [ "onDPMSDeactivated", "group__python__monitor.html#ga02f1138d40cf000fd6e5823c2f6383e1", null ],
     [ "onScanStarted", "group__python__monitor.html#gaa08a1673d8347425816859666a5edd01", null ],
     [ "onScanFinished", "group__python__monitor.html#ga05a62d4886798d1cdb2a23e979249250", null ],
-    [ "onDatabaseScanStarted", "group__python__monitor.html#ga5ee33edfc21fb06cfe99f892da9b234c", null ],
-    [ "onDatabaseUpdated", "group__python__monitor.html#ga006bbf59838d69f0e686a4c9bde2288f", null ],
     [ "onCleanStarted", "group__python__monitor.html#gabf239f436cbd72bfff02253bd1972c7c", null ],
     [ "onCleanFinished", "group__python__monitor.html#ga19798ab61e778754e7027112236024e7", null ],
     [ "onAbortRequested", "group__python__monitor.html#gadfe1a1b3bd1d72a94c60590cd757247c", null ],

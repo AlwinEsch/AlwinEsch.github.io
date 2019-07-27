@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('group__python__xbmcgui__control__edit.
 </td></tr>
     <tr><td class="paramname">focusTexture</td><td>[opt] string - filename for focus texture. </td></tr>
     <tr><td class="paramname">noFocusTexture</td><td>[opt] string - filename for no focus texture. </td></tr>
-    <tr><td class="paramname">isPassword</td><td>[opt] bool - True=mask text value with <code>****</code>.</td></tr>
+    <tr><td class="paramname">isPassword</td><td>[opt] bool - True=mask text value with <code>****</code>(deprecated, use setType()).</td></tr>
   </table>
   </dd>
 </dl>
@@ -142,6 +142,7 @@ $(document).ready(function(){initNavTree('group__python__xbmcgui__control__edit.
  After you create the control, you need to add it to the window with addControl().<br />
 </dd></dl>
 <hr/>
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000044">v18 Python API changes:</a></b></dt><dd>Deprecated <b>isPassword</b></dd></dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line">...</div><div class="line">self.edit = xbmcgui.ControlEdit(100, 250, 125, 75, <span class="stringliteral">&#39;Status&#39;</span>)</div><div class="line">...</div></div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
 <a id="ga002b6bcb81f2510c34983101ea0c8cc7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga002b6bcb81f2510c34983101ea0c8cc7">&#9670;&nbsp;</a></span>setLabel()</h2>
@@ -246,8 +247,58 @@ $(document).ready(function(){initNavTree('group__python__xbmcgui__control__edit.
 <p> Returns the text value for this edit control. </p>
 <dl class="section return"><dt>Returns</dt><dd>Text value of control</dd></dl>
 <hr/>
- <dl class="python_v14"><dt><b><a class="el" href="python_v14.html#_python_v14000015">v14 Python API changes:</a></b></dt><dd>New function added.</dd></dl>
+ <dl class="python_v14"><dt><b><a class="el" href="python_v14.html#_python_v14000012">v14 Python API changes:</a></b></dt><dd>New function added.</dd></dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line">...</div><div class="line">value = self.edit.getText()</div><div class="line">...</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="gad8ee5098d32cffda2868d72f1ff9e54c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad8ee5098d32cffda2868d72f1ff9e54c">&#9670;&nbsp;</a></span>setType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">setType </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> setType(type, heading) </big></font></span></code></h4> </p><hr/>
+<p> Sets the type of this edit control. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>integer - type of the edit control. <table class="doxtable">
+<tr>
+<th>Param </th><th align="left">Definition  </th></tr>
+<tr>
+<td>xbmcgui.INPUT_TYPE_TEXT </td><td align="left">(standard keyboard) </td></tr>
+<tr>
+<td>xbmcgui.INPUT_TYPE_NUMBER </td><td align="left">(format: #) </td></tr>
+<tr>
+<td>xbmcgui.INPUT_TYPE_DATE </td><td align="left">(format: DD/MM/YYYY) </td></tr>
+<tr>
+<td>xbmcgui.INPUT_TYPE_TIME </td><td align="left">(format: HH:MM) </td></tr>
+<tr>
+<td>xbmcgui.INPUT_TYPE_IPADDRESS </td><td align="left">(format: #.#.#.#) </td></tr>
+<tr>
+<td>xbmcgui.INPUT_TYPE_PASSWORD </td><td align="left">(input is masked) </td></tr>
+<tr>
+<td>xbmcgui.INPUT_TYPE_PASSWORD_MD5 </td><td align="left">(input is masked, return md5 hash of input) </td></tr>
+<tr>
+<td>xbmcgui.INPUT_TYPE_SECONDS </td><td align="left">(format: SS or MM:SS or HH:MM:SS or MM min) </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramname">heading</td><td>string or unicode - heading that will be used for to numeric or keyboard dialog when the edit control is clicked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/>
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000046">v18 Python API changes:</a></b></dt><dd>New function added.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">...</div><div class="line">self.edit.setType(xbmcgui.INPUT_TYPE_TIME, <span class="stringliteral">&#39;Please enter the time&#39;</span>)</div><div class="line">...</div></div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

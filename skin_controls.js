@@ -117,6 +117,7 @@ var skin_controls =
     [ "Slider Control", "_slider__control.html", [
       [ "Example", "_slider__control.html#Slider_Control_sect1", null ],
       [ "Available tags", "_slider__control.html#Slider_Control_sect2", null ],
+      [ "Revision History", "_slider__control.html#Slider_Control_revhistory", null ],
       [ "See also", "_slider__control.html#Slider_Control_sect3", null ]
     ] ],
     [ "Spin Control", "_spin__control.html", [

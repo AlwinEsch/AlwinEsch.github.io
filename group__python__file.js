@@ -5,5 +5,6 @@ var group__python__file =
     [ "write", "group__python__file.html#ga3df61f0669ef30181e65bbe5b0bb663c", null ],
     [ "size", "group__python__file.html#ga775bfb88c1bb7975d67f277eade2a1b7", null ],
     [ "seek", "group__python__file.html#ga699e6bdc888b7ab94d1cf47b1000147d", null ],
+    [ "tell", "group__python__file.html#ga8153e55ed7b27a62988843a2dd66c845", null ],
     [ "close", "group__python__file.html#gaa69c8bf1f1dcf4e72552efff1fe3e87e", null ]
 ];

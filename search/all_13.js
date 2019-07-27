@@ -3,6 +3,7 @@ var searchData=
   ['toggle_20button_20control',['Toggle button control',['../skin__toggle_button_control.html',1,'skin_controls']]],
   ['tag',['tag',['../group__cpp__kodi___defs.html#ae120f732e7e1c5e4a16fa31d89f655df',1,'kodi_version_t']]],
   ['tag_5frevision',['tag_revision',['../group__cpp__kodi___defs.html#a14e85f5a1bb888b4325a87984bccfe81',1,'kodi_version_t']]],
+  ['tell',['tell',['../group__python__file.html#ga8153e55ed7b27a62988843a2dd66c845',1,'XBMCAddon::xbmcvfs::File']]],
   ['text',['Text',['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#ga8c95c8fd22c77bce27a4798f2490d381',1,'kodi::gui::dialogs::CExtendedProgress']]],
   ['text_20box',['Text Box',['../_text__box.html',1,'skin_controls']]],
   ['textviewer',['textviewer',['../group__python___dialog.html#gad24eabf4c8107d4674c017db09a193ae',1,'XBMCAddon::xbmcgui::Dialog']]],
@@ -26,5 +27,5 @@ var searchData=
   ['triggertimerupdate',['TriggerTimerUpdate',['../class_c_helper__lib_x_b_m_c__pvr.html#a7a28ab2aa9e2f3191c2d6281cdc680ee',1,'CHelper_libXBMC_pvr']]],
   ['truncate',['Truncate',['../classkodi_1_1addon_1_1_c_instance_v_f_s.html#acce61e986c54515af51058c5bd6caf32',1,'kodi::addon::CInstanceVFS::Truncate()'],['../group__cpp__kodi__vfs___c_file.html#ga7db30bce899ccc6e0d7a5b0a4cf160b7',1,'kodi::vfs::CFile::Truncate()']]],
   ['truncatefile',['TruncateFile',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#ad03b7227dd2ebd28785edbe965d549cf',1,'ADDON::CHelper_libXBMC_addon']]],
-  ['type',['type',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#aca3c165e12ec3684110607f78f0c2310',1,'PERIPHERAL_INFO']]]
+  ['type',['type',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#aca3c165e12ec3684110607f78f0c2310',1,'PERIPHERAL_INFO::type()'],['../struct_p_e_r_i_p_h_e_r_a_l___e_v_e_n_t.html#af39d74bd68df5c490edb1366aa2b433b',1,'PERIPHERAL_EVENT::type()']]]
 ];

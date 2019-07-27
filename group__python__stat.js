@@ -7,7 +7,7 @@ var group__python__stat =
     [ "st_uid", "group__python__stat.html#gad6259c69684d706fd336135f09f564cb", null ],
     [ "st_gid", "group__python__stat.html#gaf1e7c61c293a4f4e22ecae5201f8cd3b", null ],
     [ "st_size", "group__python__stat.html#ga17864766255f6ac868e2989d6f22dd69", null ],
-    [ "atime", "group__python__stat.html#ga168004cb787954e08154d53996c3b3a1", null ],
-    [ "mtime", "group__python__stat.html#ga87df9874162af616bbcd66e3f28fcd73", null ],
-    [ "ctime", "group__python__stat.html#ga34df1aecadd90270554265b33142de72", null ]
+    [ "st_atime", "group__python__stat.html#ga94cd7c3c6fc3d5803ae302aa86dc2e17", null ],
+    [ "st_mtime", "group__python__stat.html#ga9e47e351e4b4f7b722059bb52e3c2788", null ],
+    [ "st_ctime", "group__python__stat.html#ga7dae83326ab7bc51a1b364755cd8b570", null ]
 ];

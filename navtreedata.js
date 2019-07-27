@@ -4,8 +4,16 @@ var NAVTREE =
     [ "General", "general.html", "general" ],
     [ "General Development parts", "general_parts.html", "general_parts" ],
     [ "Revisions", "revisions.html", "revisions" ],
+    [ "Python API v19", "python_v19.html", null ],
+    [ "Python API v18", "python_v18.html", null ],
     [ "Skin Development", "skin_parts.html", "skin_parts" ],
+    [ "python_v15", "python_v15.html", null ],
+    [ "python_v16", "python_v16.html", null ],
+    [ "python_v17", "python_v17.html", null ],
     [ "Todo List", "todo.html", null ],
+    [ "python_v12", "python_v12.html", null ],
+    [ "python_v13", "python_v13.html", null ],
+    [ "python_v14", "python_v14.html", null ],
     [ "Language Development", "modules.html", "modules" ],
     [ "Older versions", "usergroup0.html", [
       [ "Kodi 16.x Jarvis", "^http://mirrors.kodi.tv/docs/python-docs/16.x-jarvis/", null ],
@@ -20,10 +28,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_addon__rendering_control.html",
-"group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gaa2f74168cc58c5ac84a4a1e507702d68",
-"group__cpp__kodi__gui__dialogs___file_browser.html#ga62ac8022b9eb72f1ca6ec4f14a88743b",
-"group__python___info_tag_video.html#gae415e4abfc18ab4178c49953159e1233",
-"group__python__xbmcgui__listitem.html#ga2887792e8b30d1fd4e5f83d27694225d"
+"group__cpp__kodi__gui___c_list_item.html#ga4a03d7c94fa02df112558bc30818e413",
+"group__cpp__kodi__gui__dialogs___o_k.html",
+"group__python___player.html#ga240f1deb93fc70eeffb671445781ae1f",
+"group__python__xbmcgui__listitem.html#ga5856235a9611ec3b081d20c896d1c732"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

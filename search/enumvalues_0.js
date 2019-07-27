@@ -6,6 +6,7 @@ var searchData=
   ['addon_5fcurl_5foption_5fprotocol',['ADDON_CURL_OPTION_PROTOCOL',['../group__cpp__kodi__vfs___defs.html#gga8fd8d9cf7b1dd293423b7194ff86d6a9a34c8dcfdf540f7c1c6da9f4121e53ea4',1,'Filesystem.h']]],
   ['addon_5ffile_5fproperty_5fcontent_5fcharset',['ADDON_FILE_PROPERTY_CONTENT_CHARSET',['../group__cpp__kodi__vfs___defs.html#gga48e8218ccc16c09e02390cc14901b583a8c73dc333536874af0c736910e4b9484',1,'Filesystem.h']]],
   ['addon_5ffile_5fproperty_5fcontent_5ftype',['ADDON_FILE_PROPERTY_CONTENT_TYPE',['../group__cpp__kodi__vfs___defs.html#gga48e8218ccc16c09e02390cc14901b583a26126f6a6b2d31c28d4b12d03e0daa2c',1,'Filesystem.h']]],
+  ['addon_5ffile_5fproperty_5feffective_5furl',['ADDON_FILE_PROPERTY_EFFECTIVE_URL',['../group__cpp__kodi__vfs___defs.html#gga48e8218ccc16c09e02390cc14901b583a4313299f5b3ebcfa742f966476cd6d97',1,'Filesystem.h']]],
   ['addon_5ffile_5fproperty_5fmime_5ftype',['ADDON_FILE_PROPERTY_MIME_TYPE',['../group__cpp__kodi__vfs___defs.html#gga48e8218ccc16c09e02390cc14901b583a8cfb2a01e60439b55855c66208ae7a2b',1,'Filesystem.h']]],
   ['addon_5ffile_5fproperty_5fresponse_5fheader',['ADDON_FILE_PROPERTY_RESPONSE_HEADER',['../group__cpp__kodi__vfs___defs.html#gga48e8218ccc16c09e02390cc14901b583a921a5b4e6e22be10a258cc733fa465e6',1,'Filesystem.h']]],
   ['addon_5ffile_5fproperty_5fresponse_5fprotocol',['ADDON_FILE_PROPERTY_RESPONSE_PROTOCOL',['../group__cpp__kodi__vfs___defs.html#gga48e8218ccc16c09e02390cc14901b583ab82137f3d92b526ff14337f6e8577a61',1,'Filesystem.h']]],
@@ -25,7 +26,6 @@ var searchData=
   ['addon_5fspin_5fcontrol_5ftype_5fpage',['ADDON_SPIN_CONTROL_TYPE_PAGE',['../group__cpp__kodi__gui__controls___c_spin.html#ggaa4d6f1679508cd43d05a49afbb340856a3f510cccb46cc58792588ee49b2a1109',1,'kodi::gui::controls']]],
   ['addon_5fspin_5fcontrol_5ftype_5ftext',['ADDON_SPIN_CONTROL_TYPE_TEXT',['../group__cpp__kodi__gui__controls___c_spin.html#ggaa4d6f1679508cd43d05a49afbb340856a14200e6f0c348e2eb9b63ddc54fe1e3a',1,'kodi::gui::controls']]],
   ['audio_5fstream_5fautostart',['AUDIO_STREAM_AUTOSTART',['../group__cpp__kodi__audioengine___defs.html#gga103e605fdf8113e6c00087e3e58ac00ba72be2b92a3f4b1a653cae5badfb8a220',1,'AudioEngine.h']]],
-  ['audio_5fstream_5fbypass_5fadsp',['AUDIO_STREAM_BYPASS_ADSP',['../group__cpp__kodi__audioengine___defs.html#gga103e605fdf8113e6c00087e3e58ac00ba15a299c138182eaae51a77cb93102432',1,'AudioEngine.h']]],
   ['audio_5fstream_5fforce_5fresample',['AUDIO_STREAM_FORCE_RESAMPLE',['../group__cpp__kodi__audioengine___defs.html#gga103e605fdf8113e6c00087e3e58ac00ba3a8044489a1c32159d4fa6ccf37e887a',1,'AudioEngine.h']]],
   ['audio_5fstream_5fpaused',['AUDIO_STREAM_PAUSED',['../group__cpp__kodi__audioengine___defs.html#gga103e605fdf8113e6c00087e3e58ac00ba9ef0733ef780f008a2a730d671c7722e',1,'AudioEngine.h']]]
 ];

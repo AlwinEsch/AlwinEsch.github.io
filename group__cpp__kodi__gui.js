@@ -22,6 +22,7 @@ var group__cpp__kodi__gui =
     [ "Dialog Select", "group__cpp__kodi__gui__dialogs___select.html", "group__cpp__kodi__gui__dialogs___select" ],
     [ "Dialog Text Viewer", "group__cpp__kodi__gui__dialogs___text_viewer.html", "group__cpp__kodi__gui__dialogs___text_viewer" ],
     [ "Dialog Yes/No", "group__cpp__kodi__gui__dialogs___yes_no.html", "group__cpp__kodi__gui__dialogs___yes_no" ],
+    [ "Kodi OpenGL helpers", "group__cpp__kodi__gui__gl.html", null ],
     [ "List Item", "group__cpp__kodi__gui___c_list_item.html", "group__cpp__kodi__gui___c_list_item" ],
     [ "Window", "group__cpp__kodi__gui___c_window.html", "group__cpp__kodi__gui___c_window" ],
     [ "Lock", "group__cpp__kodi__gui.html#gafc92f24c22d2dff1158bad6cbc771d87", null ],
@@ -30,5 +31,6 @@ var group__cpp__kodi__gui =
     [ "GetScreenWidth", "group__cpp__kodi__gui.html#ga4d8891c85b766bddbd2386184e892acd", null ],
     [ "GetVideoResolution", "group__cpp__kodi__gui.html#gadf2199dfe26657ae194c79e18e41edd8", null ],
     [ "GetCurrentWindowDialogId", "group__cpp__kodi__gui.html#gadf76157bc1390d4ecde633fceb1f6a60", null ],
-    [ "GetCurrentWindowId", "group__cpp__kodi__gui.html#ga77c37316fbb989c04e58cc10c0631627", null ]
+    [ "GetCurrentWindowId", "group__cpp__kodi__gui.html#ga77c37316fbb989c04e58cc10c0631627", null ],
+    [ "GetHWContext", "group__cpp__kodi__gui.html#gaecc0ab7a7a2fae9d399698dd4caefd03", null ]
 ];

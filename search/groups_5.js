@@ -9,6 +9,7 @@ var searchData=
   ['interface_20_2d_20kodi_3a_3aaudioengine',['Interface - kodi::audioengine',['../group__cpp__kodi__audioengine.html',1,'']]],
   ['interface_20_2d_20kodi_3a_3agui',['Interface - kodi::gui',['../group__cpp__kodi__gui.html',1,'']]],
   ['interface_20_2d_20kodi_3a_3anetwork',['Interface - kodi::network',['../group__cpp__kodi__network.html',1,'']]],
+  ['interface_20_2d_20kodi_3a_3aplatform',['Interface - kodi::platform',['../group__cpp__kodi__platform.html',1,'']]],
   ['interface_20_2d_20kodi_3a_3avfs',['Interface - kodi::vfs',['../group__cpp__kodi__vfs.html',1,'']]],
   ['infotagmusic',['InfoTagMusic',['../group__python___info_tag_music.html',1,'']]],
   ['infotagradiords',['InfoTagRadioRDS',['../group__python___info_tag_radio_r_d_s.html',1,'']]],

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kodi Development: List of build in functions</title>
+<title>Kodi Development: List of built-in functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('page__list_of_built_in_functions.html'
 
 <div class="header">
   <div class="headertitle">
-<div class="title">List of build in functions </div>  </div>
+<div class="title">List of built-in functions </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="built_in_functions_1"></a>
@@ -133,6 +133,8 @@ Add-on built-in's</h1>
   </dd>
 </dl>
 </td></tr>
+<tr bgcolor="white">
+<td width="40%" align="left"><b><code>InstallFromZip</code></b> </td><td width="60%" align="left">Opens the "Install from zip" dialog if "Unknown sources" is enabled. Prompts the warning message if not.  </td></tr>
 <tr bgcolor="white">
 <td width="40%" align="left"><b><code>RunAddon(id[,opt])</code></b> </td><td width="60%" align="left">Runs the specified plugin/script <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -248,7 +250,7 @@ Application built-in's</h1>
 </dl>
 </td></tr>
 <tr bgcolor="white">
-<td width="40%" align="left"><b><code>Skin.ToggleDebug</code></b> </td><td width="60%" align="left">Toggles skin debug info on/off  </td></tr>
+<td width="40%" align="left"><b><code>ToggleDebug</code></b> </td><td width="60%" align="left">Toggles debug mode on/off  </td></tr>
 <tr bgcolor="white">
 <td width="40%" align="left"><b><code>ToggleDPMS</code></b> </td><td width="60%" align="left">Toggle DPMS mode manually  </td></tr>
 <tr bgcolor="white">
@@ -557,7 +559,7 @@ Library built-in's</h1>
 <tr bgcolor="white">
 <td width="40%" align="left"><b><code>cleanlibrary(type)</code></b> </td><td width="60%" align="left">Clean the video/music library <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>"video" or "music".  </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>"video", "movies", "tvshows", "musicvideos" or "music".  </td></tr>
   </table>
   </dd>
 </dl>
@@ -566,10 +568,29 @@ Library built-in's</h1>
 <td width="40%" align="left"><b><code>exportlibrary(type [, exportSingeFile, exportThumbs, overwrite, exportActorThumbs])</code></b> </td><td width="60%" align="left">Export the video/music library <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>"video" or "music". </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">exportSingleFile</td><td>Add "true" to export to a single file (optional). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">exportSingleFile</td><td>Add "true" to export to separate files (optional). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">exportThumbs</td><td>Add "true" to export thumbs (optional). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">overwrite</td><td>Add "true" to overwrite existing files (optional). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">exportActorThumbs</td><td>Add "true" to export actor thumbs (optional).  </td></tr>
+  </table>
+  </dd>
+</dl>
+</td></tr>
+<tr bgcolor="white">
+<td width="40%" align="left"><b><code>exportlibrary2(library, exportFiletype, path [, unscraped][, overwrite][, artwork][, skipnfo] [, albums][, albumartists][, songartists][, otherartists][, actorthumbs])</code></b> </td><td width="60%" align="left">Export the video/music library with extended parameters <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">library</td><td>"video" or "music". </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">exportFiletype</td><td>"singlefile", "separate" or "library". </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to destination folder. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">unscraped</td><td>Add "unscraped" to include unscraped items. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">overwrite</td><td>Add "overwrite" to overwrite exitsing files. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">artwork</td><td>Add "artwork" to include images such as thumbs and fanart. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">skipnfo</td><td>Add "skipnfo" to not include nfo files(just art). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">albums</td><td>Add "ablums" to include albums. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">albumartists</td><td>Add "albumartists" to include album artists. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">songartists</td><td>Add "songartists" to include song artists. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">otherartists</td><td>Add "otherartists" to include other artists. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">actorthumbs</td><td>Add "actorthumbs" to include other actor thumbs.  </td></tr>
   </table>
   </dd>
 </dl>
@@ -653,13 +674,76 @@ Player built-in's</h1>
 </dl>
 </td></tr>
 <tr bgcolor="white">
-<td width="40%" align="left"><b><code>PlayerControl(command[,param])</code></b> </td><td width="60%" align="left">Allows control of music and videos. The command may be one of Play, Stop, Forward, Rewind, Next, Previous, BigSkipForward, BigSkipBackward, SmallSkipForward, SmallSkipBackward, Random, RandomOn, RandomOff, Repeat, RepeatOne, RepeatAll, RepeatOff, Partymode(music) or Partymode(video) or Partymode(path to .xsp file), and Record. Play will either pause, resume, or stop ffwding or rewinding. Random toggles random playback and Repeat cycles through the repeat modes (these both take an optional second parameter, Notify, that notifies the user of the new state). Partymode(music/video) toggles the appropriate partymode, defaults to music if no parameter is given, besides the default music or video partymode you can also pass a path to a custom smartplaylist (.xsp) as parameter. <dl class="params"><dt>Parameters</dt><dd>
+<td width="40%" align="left"><b><code>PlayerControl(control[,param])</code></b> </td><td width="60%" align="left">Allows control of music and videos. <br />
+ <br />
+ <table class="doxtable">
+<tr>
+<th align="left">Control </th><th align="left">Video playback behaviour </th><th align="left">Audio playback behaviour </th><th align="left">Added in  </th></tr>
+<tr>
+<td align="left">Play </td><td align="left">Play/Pause </td><td align="left">Play/Pause </td><td align="left"></td></tr>
+<tr>
+<td align="left">Stop </td><td align="left">Stop </td><td align="left">Stop </td><td align="left"></td></tr>
+<tr>
+<td align="left">Forward </td><td align="left">Fast Forward </td><td align="left">Fast Forward </td><td align="left"></td></tr>
+<tr>
+<td align="left">Rewind </td><td align="left">Rewind </td><td align="left">Rewind </td><td align="left"></td></tr>
+<tr>
+<td align="left">Next </td><td align="left">Next chapter or movie in playlists </td><td align="left">Next track </td><td align="left"></td></tr>
+<tr>
+<td align="left">Previous </td><td align="left">Previous chapter or movie in playlists </td><td align="left">Previous track </td><td align="left"></td></tr>
+<tr>
+<td align="left">TempoUp </td><td align="left">Increases playback speed </td><td align="left">none </td><td align="left">Kodi v18 </td></tr>
+<tr>
+<td align="left">TempoDown </td><td align="left">Decreases playback speed </td><td align="left">none </td><td align="left">Kodi v18 </td></tr>
+<tr>
+<td align="left">BigSkipForward </td><td align="left">Big Skip Forward </td><td align="left">Big Skip Forward </td><td align="left">Kodi v15 </td></tr>
+<tr>
+<td align="left">BigSkipBackward </td><td align="left">Big Skip Backward </td><td align="left">Big Skip Backward </td><td align="left">Kodi v15 </td></tr>
+<tr>
+<td align="left">SmallSkipForward </td><td align="left">Small Skip Forward </td><td align="left">Small Skip Forward </td><td align="left">Kodi v15 </td></tr>
+<tr>
+<td align="left">SmallSkipBackward </td><td align="left">Small Skip Backward </td><td align="left">Small Skip Backward </td><td align="left">Kodi v15 </td></tr>
+<tr>
+<td align="left">SeekPercentage(n) </td><td align="left">Seeks to given percentage </td><td align="left">Seeks to given percentage </td><td align="left"></td></tr>
+<tr>
+<td align="left">Random * </td><td align="left">Toggle Random Playback </td><td align="left">Toggle Random Playback </td><td align="left"></td></tr>
+<tr>
+<td align="left">RandomOn </td><td align="left">Sets 'Random' to 'on' </td><td align="left">Sets 'Random' to 'on' </td><td align="left"></td></tr>
+<tr>
+<td align="left">RandomOff </td><td align="left">Sets 'Random' to 'off' </td><td align="left">Sets 'Random' to 'off' </td><td align="left"></td></tr>
+<tr>
+<td align="left">Repeat * </td><td align="left">Cycles through repeat modes </td><td align="left">Cycles through repeat modes </td><td align="left"></td></tr>
+<tr>
+<td align="left">RepeatOne </td><td align="left">Repeats a single video </td><td align="left">Repeats a single track </td><td align="left"></td></tr>
+<tr>
+<td align="left">RepeatAll </td><td align="left">Repeat all videos in a list </td><td align="left">Repeats all tracks in a list</td><td align="left"></td></tr>
+<tr>
+<td align="left">RepeatOff </td><td align="left">Sets 'Repeat' to 'off' </td><td align="left">Sets 'Repeat' to 'off' </td><td align="left"></td></tr>
+<tr>
+<td align="left">Partymode(music) ** </td><td align="left">none </td><td align="left">Toggles music partymode </td><td align="left"></td></tr>
+<tr>
+<td align="left">Partymode(video) ** </td><td align="left">Toggles video partymode </td><td align="left">none </td><td align="left"></td></tr>
+<tr>
+<td align="left">Partymode(path to .xsp) </td><td align="left">Partymode for *.xsp-file </td><td align="left">Partymode for *.xsp-file </td><td align="left"></td></tr>
+<tr>
+<td align="left">ShowVideoMenu </td><td align="left">Shows the DVD/BR menu if available </td><td align="left">none </td><td align="left"></td></tr>
+<tr>
+<td align="left">FrameAdvance(n) *** </td><td align="left">Advance video by <em>n</em> frames </td><td align="left">none </td><td align="left">Kodi v18 </td></tr>
+</table>
+<br />
+ '*' = For these controls, the PlayerControl built-in function can make use of the 'notify'-parameter. For example: PlayerControl(random, notify) <br />
+ '**' = If no argument is given for 'partymode', the control will default to music. <br />
+ '***' = This only works if the player is paused. <br />
+ <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">control</td><td>Control to execute. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>"notify" to notify user (optional, certain controls).  </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">param</td><td>"notify" to notify user (optional, certain controls). / </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>'TempoUp' or 'TempoDown' only works if "Sync playback to display" is enabled. </dd>
+<dd>
+'Next' will behave differently while using video playlists. In those, chapters will be ignored and the next movie will be played.  </dd></dl>
 </td></tr>
 <tr bgcolor="white">
 <td width="40%" align="left"><b><code>Playlist.Clear</code></b> </td><td width="60%" align="left">Clear the current playlist <dl class="params"><dt>Parameters</dt><dd>
@@ -736,6 +820,10 @@ PVR built-in's</h1>
 <th width="40%" align="left">Function</th><th width="60%" align="left">Description  </th></tr>
 <tr bgcolor="white">
 <td width="40%" align="left"><b><code>PVR.SearchMissingChannelIcons</code></b> </td><td width="60%" align="left">Will start a search for missing channel icons  </td></tr>
+<tr bgcolor="white">
+<td width="40%" align="left"><b><code>PVR.ToggleRecordPlayingChannel</code></b> </td><td width="60%" align="left">Will toggle recording on playing channel, if any  </td></tr>
+<tr bgcolor="white">
+<td width="40%" align="left"><b><code>PVR.SeekPercentage</code></b> </td><td width="60%" align="left">Performs a seek to the given percentage in timeshift buffer, if timeshifting is supported  </td></tr>
 </table>
 <h1><a class="anchor" id="built_in_functions_14"></a>
 Skin built-in's</h1>

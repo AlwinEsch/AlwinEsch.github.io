@@ -7,5 +7,7 @@ var searchData=
   ['inputstream',['INPUTSTREAM',['../struct_i_n_p_u_t_s_t_r_e_a_m.html',1,'']]],
   ['inputstream_5fcapabilities',['INPUTSTREAM_CAPABILITIES',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html',1,'']]],
   ['inputstream_5fids',['INPUTSTREAM_IDS',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_d_s.html',1,'']]],
-  ['inputstream_5finfo',['INPUTSTREAM_INFO',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html',1,'']]]
+  ['inputstream_5finfo',['INPUTSTREAM_INFO',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html',1,'']]],
+  ['inputstream_5ftimes',['INPUTSTREAM_TIMES',['../struct_i_n_p_u_t_s_t_r_e_a_m___t_i_m_e_s.html',1,'']]],
+  ['irenderhelper',['IRenderHelper',['../structkodi_1_1gui_1_1_i_render_helper.html',1,'kodi::gui']]]
 ];

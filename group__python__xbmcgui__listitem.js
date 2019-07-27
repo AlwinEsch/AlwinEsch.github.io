@@ -1,6 +1,5 @@
 var group__python__xbmcgui__listitem =
 [
-    [ "~ListItem", "group__python__xbmcgui__listitem.html#gaf6aa55a29477176be50fa8e504c02207", null ],
     [ "getLabel", "group__python__xbmcgui__listitem.html#ga14c4e7420d903d3e40342266333d2ecf", null ],
     [ "getLabel2", "group__python__xbmcgui__listitem.html#ga855de4c2af40094f9f8cae4d9d35378e", null ],
     [ "setLabel", "group__python__xbmcgui__listitem.html#ga002b6bcb81f2510c34983101ea0c8cc7", null ],
@@ -8,6 +7,7 @@ var group__python__xbmcgui__listitem =
     [ "setIconImage", "group__python__xbmcgui__listitem.html#ga5856235a9611ec3b081d20c896d1c732", null ],
     [ "setThumbnailImage", "group__python__xbmcgui__listitem.html#gaa67ecad5a54d996f37ea94e2a67bea81", null ],
     [ "setArt", "group__python__xbmcgui__listitem.html#ga92f9aeb062ff50badcb8792d14a37394", null ],
+    [ "setIsFolder", "group__python__xbmcgui__listitem.html#ga2f4e9085bf705ae1bff96b466e3927a6", null ],
     [ "setUniqueIDs", "group__python__xbmcgui__listitem.html#ga6cc13c6c75adf9fa922c82f783ea0f8e", null ],
     [ "setRating", "group__python__xbmcgui__listitem.html#ga0451d6e40ac2007eced53bcec09d8fd5", null ],
     [ "addSeason", "group__python__xbmcgui__listitem.html#ga421063e7c27878159246d5919136e4eb", null ],
@@ -20,10 +20,11 @@ var group__python__xbmcgui__listitem =
     [ "setInfo", "group__python__xbmcgui__listitem.html#ga0f1e91e1d5aa61d8dd0eac90e8edbf18", null ],
     [ "setCast", "group__python__xbmcgui__listitem.html#gae9bdc904aeebdb3b4d1ab8ebc0326bb5", null ],
     [ "setAvailableFanart", "group__python__xbmcgui__listitem.html#ga2fd98f8e9f11fa80350afd3e15cf2078", null ],
-    [ "addAvailableThumb", "group__python__xbmcgui__listitem.html#ga68f0442f6c1cab136ca1850826059780", null ],
+    [ "addAvailableArtwork", "group__python__xbmcgui__listitem.html#gad5dfc6f76921e0127594d1744685eb56", null ],
     [ "addStreamInfo", "group__python__xbmcgui__listitem.html#ga99c7bf16729b18b6378ea7069ee5b138", null ],
     [ "addContextMenuItems", "group__python__xbmcgui__listitem.html#ga14712acc2994196012036f43eb2135c4", null ],
     [ "setProperty", "group__python__xbmcgui__listitem.html#ga96f1976952584c91e6d59c310ce86a25", null ],
+    [ "setProperties", "group__python__xbmcgui__listitem.html#ga29777336ef26b461359666cc8ec8b2bd", null ],
     [ "getProperty", "group__python__xbmcgui__listitem.html#ga2427c41a5cdc6069d42ecd582cf7d78d", null ],
     [ "setPath", "group__python__xbmcgui__listitem.html#gafd4e4c73f458f83daba71d7ee8355d73", null ],
     [ "setMimeType", "group__python__xbmcgui__listitem.html#gafa251bbcb64789ddb73cf2d8d62534e0", null ],

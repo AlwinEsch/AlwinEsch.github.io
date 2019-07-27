@@ -1,6 +1,5 @@
 var group__python___info_tag_video =
 [
-    [ "~InfoTagVideo", "group__python___info_tag_video.html#ga4a232a70bc8ac59e1b26d09f60246fe9", null ],
     [ "getDbId", "group__python___info_tag_video.html#ga0106357981f84446b7c1f063408b50a1", null ],
     [ "getDirector", "group__python___info_tag_video.html#ga6c1806128638b0e6304e195d6dced5c4", null ],
     [ "getWritingCredits", "group__python___info_tag_video.html#ga70edf983a463457e38ebc7a1c98d9695", null ],
@@ -27,5 +26,9 @@ var group__python___info_tag_video =
     [ "getOriginalTitle", "group__python___info_tag_video.html#ga40c2a978091fe91512e2aa42fd127122", null ],
     [ "getPremiered", "group__python___info_tag_video.html#ga4357cb648b24c9f43457531021afa554", null ],
     [ "getFirstAired", "group__python___info_tag_video.html#gae42843c78f73f35b960ddee13b949561", null ],
-    [ "getTrailer", "group__python___info_tag_video.html#gaabd77a85dde7d432f402664f1d9ae3f9", null ]
+    [ "getTrailer", "group__python___info_tag_video.html#gaabd77a85dde7d432f402664f1d9ae3f9", null ],
+    [ "getArtist", "group__python___info_tag_video.html#ga885a8570d62e92bb6f6c83144766e7fc", null ],
+    [ "getAlbum", "group__python___info_tag_video.html#gaee148d665bb21d0319499d90186605b2", null ],
+    [ "getTrack", "group__python___info_tag_video.html#ga86cb4c526de526dad142d5e945e4d6f3", null ],
+    [ "getDuration", "group__python___info_tag_video.html#gab46fe3d2750728c84bd71ae1bfd08ee8", null ]
 ];

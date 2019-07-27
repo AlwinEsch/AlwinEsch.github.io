@@ -99,24 +99,24 @@ $(document).ready(function(){initNavTree('struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s
 </div><!--header-->
 <div class="contents">
 
-<p>times of playing stream  
+<p>times of playing stream (Live TV and recordings)  
  <a href="struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>times of playing stream </p>
+<div class="textblock"><p>times of playing stream (Live TV and recordings) </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a0ebdf60b4fe91362f9ef5ae5a4e54cb4"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#a0ebdf60b4fe91362f9ef5ae5a4e54cb4">ptsBegin</a></td></tr>
-<tr class="memdesc:a0ebdf60b4fe91362f9ef5ae5a4e54cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">erliest pts player can seek back  <a href="#a0ebdf60b4fe91362f9ef5ae5a4e54cb4">More...</a><br /></td></tr>
+<tr class="memdesc:a0ebdf60b4fe91362f9ef5ae5a4e54cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">earliest pts player can seek back. Value is in micro seconds, relative to ptsStart. For recordings, this must be zero. For Live TV, this must be zero if not timeshifting and must point to begin of the timeshift buffer, otherwise.  <a href="#a0ebdf60b4fe91362f9ef5ae5a4e54cb4">More...</a><br /></td></tr>
 <tr class="separator:a0ebdf60b4fe91362f9ef5ae5a4e54cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a964acd3efb10b946dd90e59b37a9a004"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#a964acd3efb10b946dd90e59b37a9a004">ptsEnd</a></td></tr>
-<tr class="memdesc:a964acd3efb10b946dd90e59b37a9a004"><td class="mdescLeft">&#160;</td><td class="mdescRight">latest pts player can seek forward  <a href="#a964acd3efb10b946dd90e59b37a9a004">More...</a><br /></td></tr>
+<tr class="memdesc:a964acd3efb10b946dd90e59b37a9a004"><td class="mdescLeft">&#160;</td><td class="mdescRight">latest pts player can seek forward. Value is in micro seconds, relative to ptsStart. For recordings, this must be the total length. For Live TV, this must be zero if not timeshifting and must point to end of the timeshift buffer, otherwise.  <a href="#a964acd3efb10b946dd90e59b37a9a004">More...</a><br /></td></tr>
 <tr class="separator:a964acd3efb10b946dd90e59b37a9a004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7bb1ef2554cb29a1ec25c3672bc8dd9"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#ad7bb1ef2554cb29a1ec25c3672bc8dd9">ptsStart</a></td></tr>
-<tr class="memdesc:ad7bb1ef2554cb29a1ec25c3672bc8dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">pts of startTime  <a href="#ad7bb1ef2554cb29a1ec25c3672bc8dd9">More...</a><br /></td></tr>
+<tr class="memdesc:ad7bb1ef2554cb29a1ec25c3672bc8dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">the pts of startTime  <a href="#ad7bb1ef2554cb29a1ec25c3672bc8dd9">More...</a><br /></td></tr>
 <tr class="separator:ad7bb1ef2554cb29a1ec25c3672bc8dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf564fc30a2a8624cf917e282281a500"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#aaf564fc30a2a8624cf917e282281a500">startTime</a></td></tr>
-<tr class="memdesc:aaf564fc30a2a8624cf917e282281a500"><td class="mdescLeft">&#160;</td><td class="mdescRight">time (UTC) time elapsed refers to. Ideally start of tv show  <a href="#aaf564fc30a2a8624cf917e282281a500">More...</a><br /></td></tr>
+<tr class="memdesc:aaf564fc30a2a8624cf917e282281a500"><td class="mdescLeft">&#160;</td><td class="mdescRight">For recordings, this must be zero. For Live TV, this is a reference time in units of time_t (UTC) from which time elapsed starts. Ideally start of tv show, but can be any other value.  <a href="#aaf564fc30a2a8624cf917e282281a500">More...</a><br /></td></tr>
 <tr class="separator:aaf564fc30a2a8624cf917e282281a500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -132,7 +132,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>time (UTC) time elapsed refers to. Ideally start of tv show </p>
+<p>For recordings, this must be zero. For Live TV, this is a reference time in units of time_t (UTC) from which time elapsed starts. Ideally start of tv show, but can be any other value. </p>
 
 </div>
 </div>
@@ -148,7 +148,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>pts of startTime </p>
+<p>the pts of startTime </p>
 
 </div>
 </div>
@@ -164,7 +164,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>erliest pts player can seek back </p>
+<p>earliest pts player can seek back. Value is in micro seconds, relative to ptsStart. For recordings, this must be zero. For Live TV, this must be zero if not timeshifting and must point to begin of the timeshift buffer, otherwise. </p>
 
 </div>
 </div>
@@ -180,12 +180,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>latest pts player can seek forward </p>
+<p>latest pts player can seek forward. Value is in micro seconds, relative to ptsStart. For recordings, this must be the total length. For Live TV, this must be zero if not timeshifting and must point to end of the timeshift buffer, otherwise. </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/alwin/Development/kodi/xbmc/addons/kodi-addon-dev-kit/include/kodi/<a class="el" href="xbmc__pvr__types_8h_source.html">xbmc_pvr_types.h</a></li>
+<li>/home/alwin/Development/Kodi/ACTION_ID/kodi/xbmc/addons/kodi-addon-dev-kit/include/kodi/<a class="el" href="xbmc__pvr__types_8h_source.html">xbmc_pvr_types.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

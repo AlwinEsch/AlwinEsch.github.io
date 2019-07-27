@@ -5,6 +5,8 @@ var searchData=
   ['visualization',['Visualization',['../group__cpp__kodi__addon__visualization.html',1,'']]],
   ['validatepath',['validatePath',['../group__python__xbmc.html#ga7d325903d7bc797f993c9df791d22c44',1,'ModuleXbmc.h']]],
   ['vendor_5fid',['vendor_id',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#abd60aba7846c925f784c3e89e2f54e45',1,'PERIPHERAL_INFO']]],
+  ['version_5fmajor',['version_major',['../structgame__stream__hw__framebuffer__properties.html#a6540c97b3ede3afedc3eddb99863867e',1,'game_stream_hw_framebuffer_properties']]],
+  ['version_5fminor',['version_minor',['../structgame__stream__hw__framebuffer__properties.html#a2b05ec596787f44679509e7558525ed5',1,'game_stream_hw_framebuffer_properties']]],
   ['vfscallbacks',['VFSCallbacks',['../struct_v_f_s_callbacks.html',1,'']]],
   ['vfsdirentry',['VFSDirEntry',['../struct_v_f_s_dir_entry.html',1,'']]],
   ['vfsgetdirectorycallbacks',['VFSGetDirectoryCallbacks',['../struct_v_f_s_get_directory_callbacks.html',1,'']]],

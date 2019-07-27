@@ -3,7 +3,7 @@ var group__cpp__kodi__audioengine___c_addon_a_e_stream =
     [ "CAddonAEStream", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga8d36f190546da3e1c48d973aeac34bab", null ],
     [ "~CAddonAEStream", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gaaefbc6478432a56415b3b43d1ead7f93", null ],
     [ "GetSpace", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga8febfd989aa187d9a122ff8597820d53", null ],
-    [ "AddData", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga6a05d7b8c5e84715308fd9a9d15be9ff", null ],
+    [ "AddData", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga90bd0f93c447654f61aa7494ab8c83ae", null ],
     [ "GetDelay", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gaa1f58e1e8571b43d51783f0c6629bbd8", null ],
     [ "IsBuffering", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga0a04f8b3e045b68d509dab0b67d077a8", null ],
     [ "GetCacheTime", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gab3d46de490a5bf82b850152e275da128", null ],

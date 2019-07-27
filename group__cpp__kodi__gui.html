@@ -172,6 +172,9 @@ Modules</h2></td></tr>
 <tr class="memitem:group__cpp__kodi__gui__dialogs___yes_no"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__gui__dialogs___yes_no.html">Dialog Yes/No</a></td></tr>
 <tr class="memdesc:group__cpp__kodi__gui__dialogs___yes_no"><td class="mdescLeft">&#160;</td><td class="mdescRight"> <h4><code><span style="font-style: italic;">Namespace: </span><span style="font-style: bold;"><font color=31363b><big> kodi::gui::dialogs::YesNo </big></font></span></code></h4>  <b>Yes / No dialog</b> <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__cpp__kodi__gui__gl"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__gui__gl.html">Kodi OpenGL helpers</a></td></tr>
+<tr class="memdesc:group__cpp__kodi__gui__gl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxiliary functions for Open GL. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__cpp__kodi__gui___c_list_item"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__gui___c_list_item.html">List Item</a></td></tr>
 <tr class="memdesc:group__cpp__kodi__gui___c_list_item"><td class="mdescLeft">&#160;</td><td class="mdescRight"> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::gui::CListItem </big></font></span></code></h4>  <b>Selectable window list item</b> <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -341,7 +344,7 @@ Modules</h2></td></tr>
 <p>Returns the id for the current 'active' dialog as an integer. </p>
 <dl class="section return"><dt>Returns</dt><dd>The currently active dialog Id</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line"><span class="keywordtype">int</span> wid = <a class="code" href="group__cpp__kodi__gui.html#gadf76157bc1390d4ecde633fceb1f6a60">kodi::gui::GetCurrentWindowDialogId</a>()</div><div class="line">..</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line"><span class="keywordtype">int</span> wid = <a class="code" href="group__cpp__kodi__gui.html#gadf76157bc1390d4ecde633fceb1f6a60">kodi::gui::GetCurrentWindowDialogId</a>();</div><div class="line">..</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ga77c37316fbb989c04e58cc10c0631627"></a>
@@ -370,7 +373,38 @@ Modules</h2></td></tr>
 <p>Returns the id for the current 'active' window as an integer. </p>
 <dl class="section return"><dt>Returns</dt><dd>The currently active window Id</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line"><span class="keywordtype">int</span> wid = <a class="code" href="group__cpp__kodi__gui.html#ga77c37316fbb989c04e58cc10c0631627">kodi::gui::GetCurrentWindowId</a>()</div><div class="line">..</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line"><span class="keywordtype">int</span> wid = <a class="code" href="group__cpp__kodi__gui.html#ga77c37316fbb989c04e58cc10c0631627">kodi::gui::GetCurrentWindowId</a>();</div><div class="line">..</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="gaecc0ab7a7a2fae9d399698dd4caefd03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaecc0ab7a7a2fae9d399698dd4caefd03">&#9670;&nbsp;</a></span>GetHWContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* kodi::gui::GetHWContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To get hardware specific device context interface. </p>
+<dl class="section return"><dt>Returns</dt><dd>The currently active device context</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function is only be supported under Windows, on all other OS it return <code>nullptr</code>!</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Returned Windows class pointer is <code>ID3D11DeviceContext1</code>.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;d3d11_1.h&gt;</span></div><div class="line">..</div><div class="line">ID3D11DeviceContext1* context = <span class="keyword">static_cast&lt;</span>ID3D11DeviceContext1*<span class="keyword">&gt;</span>(<a class="code" href="group__cpp__kodi__gui.html#gaecc0ab7a7a2fae9d399698dd4caefd03">kodi::gui::GetHWContext</a>());</div><div class="line">..</div></div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

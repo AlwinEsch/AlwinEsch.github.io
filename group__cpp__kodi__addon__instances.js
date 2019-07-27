@@ -1,6 +1,5 @@
 var group__cpp__kodi__addon__instances =
 [
-    [ "Audio DSP", "group__cpp__kodi__addon__audiodsp.html", null ],
     [ "Audio Decoder", "group__cpp__kodi__addon__audiodecoder.html", "group__cpp__kodi__addon__audiodecoder" ],
     [ "Audio Encoder", "group__cpp__kodi__addon__audioencoder.html", null ],
     [ "Game", "group__cpp__kodi__addon__game.html", null ],

@@ -1,6 +1,8 @@
 var group__python___player_c_b =
 [
     [ "onPlayBackStarted", "group__python___player_c_b.html#gac7d191ced791c2c2b1cbc5057012fe24", null ],
+    [ "onAVStarted", "group__python___player_c_b.html#ga6f15de95d3de124318625918d4762108", null ],
+    [ "onAVChange", "group__python___player_c_b.html#gaaedaca90525697c21287f87a56063aa1", null ],
     [ "onPlayBackEnded", "group__python___player_c_b.html#gae5afbf357925738748545911b81c2c93", null ],
     [ "onPlayBackStopped", "group__python___player_c_b.html#ga52c1f7e52f9cb6db7f3314359801ceb7", null ],
     [ "onPlayBackError", "group__python___player_c_b.html#ga607b028ba0625154f593aab586b7dcc0", null ],

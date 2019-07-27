@@ -14,13 +14,7 @@ var searchData=
   ['popactivewindowid',['popActiveWindowId',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#a09309d4a53608ecb531fcc9bb4ae97b2',1,'XBMCAddon::xbmcgui::Window']]],
   ['positionstream',['PositionStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a692d2ac25cc800876b0b5164c7b5ca3f',1,'kodi::addon::CInstanceInputStream']]],
   ['postime',['PosTime',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#abc1f89040d8fea0db1a8778a9e68caf6',1,'kodi::addon::CInstanceInputStream']]],
-  ['postprocess',['PostProcess',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#ad1e3fa3f53891c0f87a393dfe69df933',1,'kodi::addon::CInstanceAudioDSP']]],
-  ['postprocessgetdelay',['PostProcessGetDelay',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a77811f4f47b91b59148b981a744ada86',1,'kodi::addon::CInstanceAudioDSP']]],
-  ['postprocessneededsamplesize',['PostProcessNeededSamplesize',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#ad332f3611bd4b2508ef63c458a5ae106',1,'kodi::addon::CInstanceAudioDSP']]],
   ['poweroffjoystick',['PowerOffJoystick',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a971f07a9b76152a5779626b5f945c6ac',1,'kodi::addon::CInstancePeripheral']]],
-  ['preprocess',['PreProcess',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#ae5580f9a9783f8773729e3e067c36e1c',1,'kodi::addon::CInstanceAudioDSP']]],
-  ['preprocessgetdelay',['PreProcessGetDelay',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#afdc5bd253d6f273de079bb745bad87ee',1,'kodi::addon::CInstanceAudioDSP']]],
-  ['preprocessneededsamplesize',['PreProcessNeededSamplesize',['../classkodi_1_1addon_1_1_c_instance_audio_d_s_p.html#a57ea76569392415fec0d59d45b1d1f6e',1,'kodi::addon::CInstanceAudioDSP']]],
   ['presets',['Presets',['../group__cpp__kodi__addon__screensaver___c_b.html#ga2664b8df9b7970b2482b362c12cfe1f6',1,'kodi::addon::CInstanceScreensaver::Presets()'],['../group__cpp__kodi__addon__visualization___c_b.html#ga2664b8df9b7970b2482b362c12cfe1f6',1,'kodi::addon::CInstanceVisualization::Presets()']]],
   ['prevpreset',['PrevPreset',['../group__cpp__kodi__addon__visualization.html#ga4baaca37d21ec72b65b57022ed19fa8c',1,'kodi::addon::CInstanceVisualization']]],
   ['profile',['Profile',['../group__cpp__kodi__addon__screensaver___c_b.html#ga85035689dc2f1796f5acd2fd25053e3d',1,'kodi::addon::CInstanceScreensaver::Profile()'],['../group__cpp__kodi__addon__visualization___c_b.html#ga85035689dc2f1796f5acd2fd25053e3d',1,'kodi::addon::CInstanceVisualization::Profile()']]]

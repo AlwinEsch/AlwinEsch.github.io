@@ -110,6 +110,31 @@ Public Types</h2></td></tr>
 <tr class="memitem:aaa881480475ad533da0f341574fcdc3a"><td class="memItemLeft" align="right" valign="top"><a id="aaa881480475ad533da0f341574fcdc3a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Codec_FEATURES</b> : uint32_t { <b>FEATURE_DECODE</b> = 1
  }</td></tr>
 <tr class="separator:aaa881480475ad533da0f341574fcdc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d9d17bbf458027afadde81b5162f29"><td class="memItemLeft" align="right" valign="top"><a id="ad4d9d17bbf458027afadde81b5162f29"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>INPUTSTREAM_COLORRANGE</b> { <b>COLORRANGE_UNKNOWN</b>, 
+<b>COLORRANGE_LIMITED</b>, 
+<b>COLORRANGE_FULLRANGE</b>
+ }</td></tr>
+<tr class="separator:ad4d9d17bbf458027afadde81b5162f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b245215cd51438148b7f7524bc8f00e"><td class="memItemLeft" align="right" valign="top"><a id="a3b245215cd51438148b7f7524bc8f00e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>INPUTSTREAM_COLORSPACE</b> { <br />
+&#160;&#160;<b>COLORSPACE_UNKNOWN</b>, 
+<b>COLORSPACE_BT709</b>, 
+<b>COLORSPACE_BT470M</b>, 
+<b>COLORSPACE_BT470BG</b>, 
+<br />
+&#160;&#160;<b>COLORSPACE_SMPTE170M</b>, 
+<b>COLORSPACE_SMPTE240M</b>, 
+<b>COLORSPACE_FILM</b>, 
+<b>COLORSPACE_BT2020</b>, 
+<br />
+&#160;&#160;<b>COLORSPACE_SMPTE428</b>, 
+<b>COLORSPACE_SMPTEST428_1</b>, 
+<b>COLORSPACE_SMPTE431</b>, 
+<b>COLORSPACE_SMPTE432</b>, 
+<br />
+&#160;&#160;<b>COLORSPACE_JEDEC_P22</b>
+<br />
+ }</td></tr>
+<tr class="separator:a3b245215cd51438148b7f7524bc8f00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a40aa948ee774e8783a2248e8df7e5c"><td class="memItemLeft" align="right" valign="top"><a id="a5a40aa948ee774e8783a2248e8df7e5c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>STREAM_FLAGS</b> : uint32_t { <br />
 &#160;&#160;<b>FLAG_NONE</b> = 0x0000, 
 <b>FLAG_DEFAULT</b> = 0x0001, 
@@ -154,6 +179,9 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>m_BlockAlign<
 <tr class="memitem:ac1663a37a4b40375a098c888d911e085"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#ac1663a37a4b40375a098c888d911e085">m_Channels</a></td></tr>
 <tr class="memdesc:ac1663a37a4b40375a098c888d911e085"><td class="mdescLeft">&#160;</td><td class="mdescRight">(required) amount of channels  <a href="#ac1663a37a4b40375a098c888d911e085">More...</a><br /></td></tr>
 <tr class="separator:ac1663a37a4b40375a098c888d911e085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f1aa7348aa3415364f82266e4c73a9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#aa5f1aa7348aa3415364f82266e4c73a9">m_codecFourCC</a></td></tr>
+<tr class="memdesc:aa5f1aa7348aa3415364f82266e4c73a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codec If available, the fourcc code codec.  <a href="#aa5f1aa7348aa3415364f82266e4c73a9">More...</a><br /></td></tr>
+<tr class="separator:aa5f1aa7348aa3415364f82266e4c73a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3c5b0feaf5acdec36f6457118973609"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#ab3c5b0feaf5acdec36f6457118973609">m_codecInternalName</a> [32]</td></tr>
 <tr class="memdesc:ab3c5b0feaf5acdec36f6457118973609"><td class="mdescLeft">&#160;</td><td class="mdescRight">(optional) internal name of codec (selectionstream info)  <a href="#ab3c5b0feaf5acdec36f6457118973609">More...</a><br /></td></tr>
 <tr class="separator:ab3c5b0feaf5acdec36f6457118973609"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,6 +191,12 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>m_BlockAlign<
 <tr class="memitem:a369d67050d5628e7e1d1877533957432"><td class="memItemLeft" align="right" valign="top">STREAMCODEC_PROFILE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a369d67050d5628e7e1d1877533957432">m_codecProfile</a></td></tr>
 <tr class="memdesc:a369d67050d5628e7e1d1877533957432"><td class="mdescLeft">&#160;</td><td class="mdescRight">(optional) the profile of the codec  <a href="#a369d67050d5628e7e1d1877533957432">More...</a><br /></td></tr>
 <tr class="separator:a369d67050d5628e7e1d1877533957432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79be34eb552b8c8018367b877e2757fe"><td class="memItemLeft" align="right" valign="top">INPUTSTREAM_COLORRANGE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a79be34eb552b8c8018367b877e2757fe">m_colorRange</a></td></tr>
+<tr class="memdesc:a79be34eb552b8c8018367b877e2757fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">color range if available  <a href="#a79be34eb552b8c8018367b877e2757fe">More...</a><br /></td></tr>
+<tr class="separator:a79be34eb552b8c8018367b877e2757fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956dab26a14508dc8b0d0d0ad874d026"><td class="memItemLeft" align="right" valign="top">INPUTSTREAM_COLORSPACE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a956dab26a14508dc8b0d0d0ad874d026">m_colorSpace</a></td></tr>
+<tr class="memdesc:a956dab26a14508dc8b0d0d0ad874d026"><td class="mdescLeft">&#160;</td><td class="mdescRight">definition of colorspace  <a href="#a956dab26a14508dc8b0d0d0ad874d026">More...</a><br /></td></tr>
+<tr class="separator:a956dab26a14508dc8b0d0d0ad874d026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310b7f8d4a0c6f4f695d056affba3722"><td class="memItemLeft" align="right" valign="top"><a id="a310b7f8d4a0c6f4f695d056affba3722"></a>
 <a class="el" href="struct_c_r_y_p_t_o___i_n_f_o.html">CRYPTO_INFO</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_cryptoInfo</b></td></tr>
 <tr class="separator:a310b7f8d4a0c6f4f695d056affba3722"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,9 +221,12 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>m_FpsRate</b>
 <tr class="memitem:aef9dcdfa5b0b55eef60129fae1334669"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#aef9dcdfa5b0b55eef60129fae1334669">m_Height</a></td></tr>
 <tr class="memdesc:aef9dcdfa5b0b55eef60129fae1334669"><td class="mdescLeft">&#160;</td><td class="mdescRight">height of the stream reported by the demuxer  <a href="#aef9dcdfa5b0b55eef60129fae1334669">More...</a><br /></td></tr>
 <tr class="separator:aef9dcdfa5b0b55eef60129fae1334669"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaf7f861e2293bea2045d88165451a30"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#afaf7f861e2293bea2045d88165451a30">m_language</a> [4]</td></tr>
-<tr class="memdesc:afaf7f861e2293bea2045d88165451a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISO 639 3-letter language code (empty string if undefined)  <a href="#afaf7f861e2293bea2045d88165451a30">More...</a><br /></td></tr>
-<tr class="separator:afaf7f861e2293bea2045d88165451a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac174f4beef50eb1cc00c9e616b0d9343"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#ac174f4beef50eb1cc00c9e616b0d9343">m_language</a> [64]</td></tr>
+<tr class="memdesc:ac174f4beef50eb1cc00c9e616b0d9343"><td class="mdescLeft">&#160;</td><td class="mdescRight">RFC 5646 language code (empty string if undefined)  <a href="#ac174f4beef50eb1cc00c9e616b0d9343">More...</a><br /></td></tr>
+<tr class="separator:ac174f4beef50eb1cc00c9e616b0d9343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab13522e73b8ca2b242489227a1070753"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#ab13522e73b8ca2b242489227a1070753">m_name</a> [256]</td></tr>
+<tr class="memdesc:ab13522e73b8ca2b242489227a1070753"><td class="mdescLeft">&#160;</td><td class="mdescRight">(optinal) name of the stream, \0 for default handling  <a href="#ab13522e73b8ca2b242489227a1070753">More...</a><br /></td></tr>
+<tr class="separator:ab13522e73b8ca2b242489227a1070753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63d0aefe29935879fc60a31e360c3cfe"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a63d0aefe29935879fc60a31e360c3cfe">m_pID</a></td></tr>
 <tr class="memdesc:a63d0aefe29935879fc60a31e360c3cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">(required) physical index  <a href="#a63d0aefe29935879fc60a31e360c3cfe">More...</a><br /></td></tr>
 <tr class="separator:a63d0aefe29935879fc60a31e360c3cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,6 +241,22 @@ enum INPUTSTREAM_INFO::STREAM_TYPE&#160;</td><td class="memItemRight" valign="bo
 <tr class="separator:a3bb87b799112e60d2d7c3376101fb3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab13522e73b8ca2b242489227a1070753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab13522e73b8ca2b242489227a1070753">&#9670;&nbsp;</a></span>m_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char m_name[256]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(optinal) name of the stream, \0 for default handling </p>
+
+</div>
+</div>
 <a id="aaf1367d8bd8dc2a740021f9f133f0665"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf1367d8bd8dc2a740021f9f133f0665">&#9670;&nbsp;</a></span>m_codecName</h2>
 
@@ -268,19 +321,19 @@ enum INPUTSTREAM_INFO::STREAM_TYPE&#160;</td><td class="memItemRight" valign="bo
 
 </div>
 </div>
-<a id="afaf7f861e2293bea2045d88165451a30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaf7f861e2293bea2045d88165451a30">&#9670;&nbsp;</a></span>m_language</h2>
+<a id="ac174f4beef50eb1cc00c9e616b0d9343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac174f4beef50eb1cc00c9e616b0d9343">&#9670;&nbsp;</a></span>m_language</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char m_language[4]</td>
+          <td class="memname">char m_language[64]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>ISO 639 3-letter language code (empty string if undefined) </p>
+<p>RFC 5646 language code (empty string if undefined) </p>
 
 </div>
 </div>
@@ -412,8 +465,56 @@ enum INPUTSTREAM_INFO::STREAM_TYPE&#160;</td><td class="memItemRight" valign="bo
 
 </div>
 </div>
+<a id="aa5f1aa7348aa3415364f82266e4c73a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f1aa7348aa3415364f82266e4c73a9">&#9670;&nbsp;</a></span>m_codecFourCC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int m_codecFourCC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Codec If available, the fourcc code codec. </p>
+
+</div>
+</div>
+<a id="a956dab26a14508dc8b0d0d0ad874d026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a956dab26a14508dc8b0d0d0ad874d026">&#9670;&nbsp;</a></span>m_colorSpace</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INPUTSTREAM_COLORSPACE m_colorSpace</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>definition of colorspace </p>
+
+</div>
+</div>
+<a id="a79be34eb552b8c8018367b877e2757fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79be34eb552b8c8018367b877e2757fe">&#9670;&nbsp;</a></span>m_colorRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INPUTSTREAM_COLORRANGE m_colorRange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>color range if available </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/alwin/Development/kodi/xbmc/addons/kodi-addon-dev-kit/include/kodi/addon-instance/<a class="el" href="_inputstream_8h_source.html">Inputstream.h</a></li>
+<li>/home/alwin/Development/Kodi/ACTION_ID/kodi/xbmc/addons/kodi-addon-dev-kit/include/kodi/addon-instance/<a class="el" href="_inputstream_8h_source.html">Inputstream.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

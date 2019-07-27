@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['enablehardwarerendering',['EnableHardwareRendering',['../class_c_helper__lib_k_o_d_i__game.html#acb19c08dd1d3719d5b13a6d73f7f6a93',1,'CHelper_libKODI_game']]],
   ['enablenavsounds',['enableNavSounds',['../group__python__xbmc.html#ga4eb71eb7730907d480191ef5c2be6ef0',1,'ModuleXbmc.h']]],
   ['enablestream',['EnableStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#ac969dd970a8c48ce6d6e1560deaf0705',1,'kodi::addon::CInstanceInputStream']]],
   ['encode',['Encode',['../classkodi_1_1addon_1_1_c_instance_audio_encoder.html#afa6d8608cb24378d305ad733232bcdfb',1,'kodi::addon::CInstanceAudioEncoder']]],

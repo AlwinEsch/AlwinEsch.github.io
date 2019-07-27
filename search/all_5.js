@@ -2,8 +2,8 @@ var searchData=
 [
   ['fade_20label_20control',['Fade label control',['../_fade__label__control.html',1,'skin_controls']]],
   ['faspect',['fAspect',['../struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#ac931aee4046d54e485fa60f7c6442dfe',1,'PVR_STREAM_PROPERTIES::PVR_STREAM']]],
-  ['featurecount',['FeatureCount',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a72e3e1dec26c69d21c338197fa42d9c0',1,'kodi::addon::CInstancePeripheral']]],
-  ['featuretype',['FeatureType',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a81e396dcd7320198601047042aaf7654',1,'kodi::addon::CInstancePeripheral']]],
+  ['featurecount',['FeatureCount',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a1ff163511ccd603fd2788414933461d3',1,'kodi::addon::CInstancePeripheral']]],
+  ['featuretype',['FeatureType',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a73250856de613d39bcf8868abc471569',1,'kodi::addon::CInstancePeripheral']]],
   ['file',['File',['../class_x_b_m_c_addon_1_1xbmcvfs_1_1_file.html',1,'XBMCAddon::xbmcvfs']]],
   ['fileexists',['FileExists',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a866368a7ff8b9b7be4c861642d24549e',1,'ADDON::CHelper_libXBMC_addon::FileExists()'],['../group__cpp__kodi__vfs.html#ga0798cbafda16704e211763e4f76b997b',1,'kodi::vfs::FileExists()']]],
   ['filepropertytypes',['FilePropertyTypes',['../group__cpp__kodi__vfs___defs.html#ga48e8218ccc16c09e02390cc14901b583',1,'Filesystem.h']]],
