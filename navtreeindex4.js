@@ -1,5 +1,9 @@
 var NAVTREEINDEX4 =
 {
+"group__cpp__kodi__vfs___defs.html#ga48e8218ccc16c09e02390cc14901b583":[5,0,3,19,0,2],
+"group__cpp__kodi__vfs___defs.html#ga8fd8d9cf7b1dd293423b7194ff86d6a9":[5,0,5,0,1],
+"group__cpp__kodi__vfs___defs.html#ga8fd8d9cf7b1dd293423b7194ff86d6a9":[5,0,3,19,0,1],
+"group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a0117d00cee180a144993f511596b3284":[5,0,5,0,0,3],
 "group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a0117d00cee180a144993f511596b3284":[5,0,3,19,0,0,3],
 "group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a116483eace1c9338615a1ae348fbe106":[5,0,5,0,0,8],
 "group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a116483eace1c9338615a1ae348fbe106":[5,0,3,19,0,0,8],
@@ -245,9 +249,5 @@ var NAVTREEINDEX4 =
 "group__python__xbmc.html#ga04efad52a8903be517a8310db6a8505f":[5,1,0,33],
 "group__python__xbmc.html#ga0780c15cfe5ff86f132134bb8af5204c":[5,1,0,16],
 "group__python__xbmc.html#ga0795673f2f204420f40063cb79caef6f":[5,1,0,26],
-"group__python__xbmc.html#ga0a3a3b7fcc83ea29533ca9c586923db8":[5,1,0,18],
-"group__python__xbmc.html#ga1397c08b756b3b62eb98d67946db7882":[5,1,0,34],
-"group__python__xbmc.html#ga1ab0cfec6da121d4d719fe0adaff4e65":[5,1,0,19],
-"group__python__xbmc.html#ga1ad25bd789506cdb434cbea1703b3866":[5,1,0,21],
-"group__python__xbmc.html#ga2809d4c435f713c6cf4f95c14e926015":[5,1,0,12]
+"group__python__xbmc.html#ga0a3a3b7fcc83ea29533ca9c586923db8":[5,1,0,18]
 };

@@ -4,7 +4,7 @@ var searchData=
   ['enablemouse',['EnableMouse',['../group__cpp__kodi__addon__game___input_operations.html#gab7fd5996d938c40317abcc9b2b038349',1,'kodi::addon::CInstanceGame']]],
   ['enablenavsounds',['enableNavSounds',['../group__python__xbmc.html#ga4eb71eb7730907d480191ef5c2be6ef0',1,'ModuleXbmc.h']]],
   ['enableshader',['EnableShader',['../group__cpp__kodi__gui__gl___c_shader_program.html#ga8d0e110ebaed5445c794d764422d6cd4',1,'kodi::gui::gl::CShaderProgram']]],
-  ['enablestream',['EnableStream',['../group__cpp__kodi__addon__inputstream.html#gac969dd970a8c48ce6d6e1560deaf0705',1,'kodi::addon::CInstanceInputStream']]],
+  ['enablestream',['EnableStream',['../group__cpp__kodi__addon__inputstream___demux.html#ga1f46dd938cd4828e2b585dbf5b81ad1e',1,'kodi::addon::CInstanceInputStream']]],
   ['encode',['Encode',['../classkodi_1_1addon_1_1_c_instance_audio_encoder.html#afa6d8608cb24378d305ad733232bcdfb',1,'kodi::addon::CInstanceAudioEncoder']]],
   ['endofdirectory',['endOfDirectory',['../group__python__xbmcplugin.html#ga52a8af0460894fa918c6a20d8d77fff6',1,'ModuleXbmcplugin.h']]],
   ['endtime',['endTime',['../struct_e_p_g___t_a_g.html#a1f1e169e482467aaf615639bb3467f09',1,'EPG_TAG::endTime()'],['../struct_p_v_r___t_i_m_e_r.html#a1f1e169e482467aaf615639bb3467f09',1,'PVR_TIMER::endTime()']]],

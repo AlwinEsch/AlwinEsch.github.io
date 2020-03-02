@@ -1,7 +1,7 @@
 var searchData=
 [
   ['label',['Label',['../group__cpp__kodi__vfs___c_dir_entry.html#ga154d00821a136494d7afc14b6755143a',1,'kodi::vfs::CDirEntry']]],
-  ['lengthstream',['LengthStream',['../group__cpp__kodi__addon__inputstream.html#ga6c77ac06f595e639ac95ce93f88175be',1,'kodi::addon::CInstanceInputStream']]],
+  ['lengthstream',['LengthStream',['../group__cpp__kodi__addon__inputstream___read.html#ga6c77ac06f595e639ac95ce93f88175be',1,'kodi::addon::CInstanceInputStream']]],
   ['listdir',['listdir',['../group__python__xbmcvfs.html#ga6fdd93a2195f65e549abb759bc151afc',1,'ModuleXbmcvfs.h']]],
   ['load',['load',['../group__python___play_list.html#ga58df00a466baca2469ad8407c5534377',1,'XBMCAddon::xbmc::PlayList']]],
   ['loaddll',['LoadDll',['../class_c_dll_helper.html#a78620e0a96f9b4aed23a760b9ae96b2d',1,'CDllHelper']]],

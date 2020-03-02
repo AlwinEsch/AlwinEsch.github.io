@@ -26,7 +26,7 @@ var searchData=
   ['m_5fmasteringmetadata',['m_masteringMetadata',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#af075831446cfb9dbfa8bac699d193050',1,'INPUTSTREAM_INFO']]],
   ['m_5fname',['m_name',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a58b7d7564d6932cf50e44e101e4c9fdb',1,'INPUTSTREAM_INFO']]],
   ['m_5fpid',['m_pID',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a63d0aefe29935879fc60a31e360c3cfe',1,'INPUTSTREAM_INFO']]],
-  ['m_5fsamplerate',['m_SampleRate',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#aa25502b5777587f37017952a872e02cc',1,'INPUTSTREAM_INFO::m_SampleRate()'],['../struct_audio_engine_format.html#a046d570c56fd2ae9b813340816ebfdec',1,'AudioEngineFormat::m_sampleRate()']]],
+  ['m_5fsamplerate',['m_sampleRate',['../struct_audio_engine_format.html#a046d570c56fd2ae9b813340816ebfdec',1,'AudioEngineFormat::m_sampleRate()'],['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#aa25502b5777587f37017952a872e02cc',1,'INPUTSTREAM_INFO::m_SampleRate()']]],
   ['m_5fwidth',['m_Width',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a3bb87b799112e60d2d7c3376101fb3e2',1,'INPUTSTREAM_INFO']]],
   ['major',['major',['../group__cpp__kodi___defs.html#ac8947941479c38403a09c14a60b03f01',1,'kodi_version_t']]],
   ['max_5fheight',['max_height',['../group__cpp__kodi__addon__game___defs___video_stream.html#aa359881e928cd3f4c3386bc004a0ba94',1,'game_stream_video_properties']]],

@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"group__python__xbmcwsgi___wsgi_response.html":[5,1,5,3],
+"group__python__xbmcwsgi___wsgi_response.html#ga2d4599fb7cfd91c737dee41f02f1e4cd":[5,1,5,3,0],
+"group__python__xbmcwsgi___wsgi_response_body.html":[5,1,5,2],
+"group__python__xbmcwsgi___wsgi_response_body.html#gaeb7237dc841d5477b789ffd871d15fbb":[5,1,5,2,0],
 "index.html":[],
 "modules.html":[5],
 "modules__infolabels_boolean_conditions.html":[1,0],

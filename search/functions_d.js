@@ -17,7 +17,7 @@ var searchData=
   ['ondpmsdeactivated',['onDPMSDeactivated',['../group__python__monitor.html#ga02f1138d40cf000fd6e5823c2f6383e1',1,'XBMCAddon::xbmc::Monitor']]],
   ['onenabled',['OnEnabled',['../group__cpp__kodi__gui__gl___c_shader_program__child.html#gadf9ec68249c33a69bbfd5ea24c916e4b',1,'kodi::gui::gl::CShaderProgram']]],
   ['onfocus',['onFocus',['../group__python__xbmcgui__window__cb.html#ga60bc025eeb4f04ef3b815ae308f009d1',1,'XBMCAddon::xbmcgui::Window::onFocus()'],['../group__cpp__kodi__gui___c_window__callbacks.html#ga7f69d7353e186b8fe4a1560767721501',1,'kodi::gui::CWindow::OnFocus()']]],
-  ['oninit',['onInit',['../group__python__xbmcgui__window__cb.html#ga077680d40c7bc79d2b2b73c7401437b4',1,'XBMCAddon::xbmcgui::Window::onInit()'],['../group__cpp__kodi__gui___c_window__callbacks.html#ga7d98c001ac8d31e48df88346e28bae16',1,'kodi::gui::CWindow::OnInit()']]],
+  ['oninit',['OnInit',['../group__cpp__kodi__gui___c_window__callbacks.html#ga7d98c001ac8d31e48df88346e28bae16',1,'kodi::gui::CWindow::OnInit()'],['../group__python__xbmcgui__window__cb.html#ga077680d40c7bc79d2b2b73c7401437b4',1,'XBMCAddon::xbmcgui::Window::onInit()']]],
   ['onnotification',['onNotification',['../group__python__monitor.html#ga0e49e1b7c38dd22ef51276ad4efbd7e9',1,'XBMCAddon::xbmc::Monitor']]],
   ['onplaybackended',['onPlayBackEnded',['../group__python___player_c_b.html#gae5afbf357925738748545911b81c2c93',1,'XBMCAddon::xbmc::Player']]],
   ['onplaybackerror',['onPlayBackError',['../group__python___player_c_b.html#ga607b028ba0625154f593aab586b7dcc0',1,'XBMCAddon::xbmc::Player']]],
@@ -39,7 +39,7 @@ var searchData=
   ['openfileforwrite',['OpenFileForWrite',['../group__cpp__kodi__vfs___c_file.html#ga791aab50c47c2f6420a90b943e39683d',1,'kodi::vfs::CFile::OpenFileForWrite()'],['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a23e84bc437e2895e5f230875f876ba71',1,'ADDON::CHelper_libXBMC_addon::OpenFileForWrite()']]],
   ['openforwrite',['OpenForWrite',['../classkodi_1_1addon_1_1_c_instance_v_f_s.html#ad2794b102fa6ebf250e0188e143d0ef2',1,'kodi::addon::CInstanceVFS::OpenForWrite()'],['../struct_kodi_to_addon_func_table___v_f_s_entry.html#a2badb54fc39b72621813b90137265596',1,'KodiToAddonFuncTable_VFSEntry::OpenForWrite()']]],
   ['opensettings',['openSettings',['../group__python__xbmcaddon.html#ga33b8229f80033148116f0cff2dca9d50',1,'XBMCAddon::xbmcaddon::Addon::openSettings()'],['../group__cpp__kodi.html#ga981f36ea378461d67c0f0502f678b5b5',1,'kodi::OpenSettings()']]],
-  ['openstream',['OpenStream',['../group__cpp__kodi__addon__inputstream.html#gadbea4124ed012c7be8f5937b3fd45545',1,'kodi::addon::CInstanceInputStream']]],
+  ['openstream',['OpenStream',['../group__cpp__kodi__addon__inputstream___demux.html#ga018dc26a458fca5eb956f5654d733a4b',1,'kodi::addon::CInstanceInputStream']]],
   ['operator',['operator',['../group__python__xbmcwsgi___wsgi_response.html#ga2d4599fb7cfd91c737dee41f02f1e4cd',1,'XBMCAddon::xbmcwsgi::WsgiResponse']]],
   ['operator_28_29',['operator()',['../group__python__xbmcwsgi___wsgi_response_body.html#gaeb7237dc841d5477b789ffd871d15fbb',1,'XBMCAddon::xbmcwsgi::WsgiResponseBody']]]
 ];

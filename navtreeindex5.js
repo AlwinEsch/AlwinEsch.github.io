@@ -1,5 +1,9 @@
 var NAVTREEINDEX5 =
 {
+"group__python__xbmc.html#ga1397c08b756b3b62eb98d67946db7882":[5,1,0,34],
+"group__python__xbmc.html#ga1ab0cfec6da121d4d719fe0adaff4e65":[5,1,0,19],
+"group__python__xbmc.html#ga1ad25bd789506cdb434cbea1703b3866":[5,1,0,21],
+"group__python__xbmc.html#ga2809d4c435f713c6cf4f95c14e926015":[5,1,0,12],
 "group__python__xbmc.html#ga2d754739550a956d6d2380acf8f32be0":[5,1,0,28],
 "group__python__xbmc.html#ga3cd3eff2195727144ad6fbabd4744961":[5,1,0,8],
 "group__python__xbmc.html#ga482087c71391537bfe6fece68a58d420":[5,1,0,9],
@@ -245,9 +249,5 @@ var NAVTREEINDEX5 =
 "group__python__xbmcwsgi___wsgi_error_stream.html#ga7751f77b5263bcf940ece6e824a05b38":[5,1,5,0,0],
 "group__python__xbmcwsgi___wsgi_error_stream.html#gae748f1fec85745ea724f9005630a9a63":[5,1,5,0,2],
 "group__python__xbmcwsgi___wsgi_input_stream.html":[5,1,5,1],
-"group__python__xbmcwsgi___wsgi_input_stream.html#ga09536b9e99d54e4160097d953cbd2eda":[5,1,5,1,0],
-"group__python__xbmcwsgi___wsgi_response.html":[5,1,5,3],
-"group__python__xbmcwsgi___wsgi_response.html#ga2d4599fb7cfd91c737dee41f02f1e4cd":[5,1,5,3,0],
-"group__python__xbmcwsgi___wsgi_response_body.html":[5,1,5,2],
-"group__python__xbmcwsgi___wsgi_response_body.html#gaeb7237dc841d5477b789ffd871d15fbb":[5,1,5,2,0]
+"group__python__xbmcwsgi___wsgi_input_stream.html#ga09536b9e99d54e4160097d953cbd2eda":[5,1,5,1,0]
 };

@@ -2,8 +2,6 @@ var searchData=
 [
   ['caddonaestream',['CAddonAEStream',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga8d36f190546da3e1c48d973aeac34bab',1,'kodi::audioengine::CAddonAEStream']]],
   ['canopendirectory',['CanOpenDirectory',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a4c519441f142a79b40b6cb54a305055b',1,'ADDON::CHelper_libXBMC_addon']]],
-  ['canpausestream',['CanPauseStream',['../group__cpp__kodi__addon__inputstream.html#ga86e12689cdfcd579b9e5d360c1b5aeff',1,'kodi::addon::CInstanceInputStream']]],
-  ['canseekstream',['CanSeekStream',['../group__cpp__kodi__addon__inputstream.html#gafd8b23e2807b46abb712ec1cfcee6ac8',1,'kodi::addon::CInstanceInputStream']]],
   ['capture',['capture',['../group__python__xbmc___render_capture.html#gadc8ab8d7cb0feab6099f9ee3b3d06e36',1,'XBMCAddon::xbmc::RenderCapture']]],
   ['cbutton',['CButton',['../classkodi_1_1gui_1_1controls_1_1_c_button.html#a2a687530c34920523ccb700e984fc6be',1,'kodi::gui::controls::CButton']]],
   ['cdirentry',['CDirEntry',['../group__cpp__kodi__vfs___c_dir_entry.html#gadd179e0fb2754158acb633a32ab1a1ee',1,'kodi::vfs::CDirEntry']]],

@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"group__cpp__kodi__gui__controls___c_progress.html":[5,0,3,5],
+"group__cpp__kodi__gui__controls___c_progress.html#ga123bcc2a09c1b721c04b4bc0dd32953d":[5,0,3,5,3],
+"group__cpp__kodi__gui__controls___c_progress.html#ga1996e3926c15f4e151d1d7acdf3b224c":[5,0,3,5,1],
+"group__cpp__kodi__gui__controls___c_progress.html#ga31a33a129d6304483ac90829d9311f58":[5,0,3,5,0],
 "group__cpp__kodi__gui__controls___c_progress.html#ga71a209185b7a98adf0a310d2c44cdbe6":[5,0,3,5,2],
 "group__cpp__kodi__gui__controls___c_progress.html#ga8988a51166f10530d1e2147cf5306a07":[5,0,3,5,4],
 "group__cpp__kodi__gui__controls___c_radio_button.html":[5,0,3,6],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "group__cpp__kodi__vfs___defs.html":[5,0,3,19,0],
 "group__cpp__kodi__vfs___defs.html#ga0f3cb31b9b23debe1fc0d5a47bfbb149":[5,0,5,0,0],
 "group__cpp__kodi__vfs___defs.html#ga0f3cb31b9b23debe1fc0d5a47bfbb149":[5,0,3,19,0,0],
-"group__cpp__kodi__vfs___defs.html#ga48e8218ccc16c09e02390cc14901b583":[5,0,5,0,2],
-"group__cpp__kodi__vfs___defs.html#ga48e8218ccc16c09e02390cc14901b583":[5,0,3,19,0,2],
-"group__cpp__kodi__vfs___defs.html#ga8fd8d9cf7b1dd293423b7194ff86d6a9":[5,0,5,0,1],
-"group__cpp__kodi__vfs___defs.html#ga8fd8d9cf7b1dd293423b7194ff86d6a9":[5,0,3,19,0,1],
-"group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a0117d00cee180a144993f511596b3284":[5,0,5,0,0,3]
+"group__cpp__kodi__vfs___defs.html#ga48e8218ccc16c09e02390cc14901b583":[5,0,5,0,2]
 };

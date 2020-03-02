@@ -14,8 +14,6 @@ var searchData=
   ['caddonlistitem',['CAddonListItem',['../class_c_addon_list_item.html',1,'']]],
   ['calleraddress',['callerAddress',['../struct_a_d_d_o_n___h_a_n_d_l_e___s_t_r_u_c_t.html#ae075bd3f3792ba4d768f39b30c0b01b3',1,'ADDON_HANDLE_STRUCT']]],
   ['canopendirectory',['CanOpenDirectory',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a4c519441f142a79b40b6cb54a305055b',1,'ADDON::CHelper_libXBMC_addon']]],
-  ['canpausestream',['CanPauseStream',['../group__cpp__kodi__addon__inputstream.html#ga86e12689cdfcd579b9e5d360c1b5aeff',1,'kodi::addon::CInstanceInputStream']]],
-  ['canseekstream',['CanSeekStream',['../group__cpp__kodi__addon__inputstream.html#gafd8b23e2807b46abb712ec1cfcee6ac8',1,'kodi::addon::CInstanceInputStream']]],
   ['capture',['capture',['../group__python__xbmc___render_capture.html#gadc8ab8d7cb0feab6099f9ee3b3d06e36',1,'XBMCAddon::xbmc::RenderCapture']]],
   ['category',['category',['../struct_p_v_r___m_e_n_u_h_o_o_k.html#a6accd1c44c08c0ada2443c1775428a95',1,'PVR_MENUHOOK']]],
   ['cb_5faddonlib',['CB_AddOnLib',['../struct_c_b___add_on_lib.html',1,'']]],

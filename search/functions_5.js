@@ -6,7 +6,7 @@ var searchData=
   ['finish',['Finish',['../classkodi_1_1addon_1_1_c_instance_audio_encoder.html#a0e0d542d34afa30c6ae18d3b57b4ef60',1,'kodi::addon::CInstanceAudioEncoder']]],
   ['flush',['Flush',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga0e2644b2df3c228e8d71a55b60723f31',1,'kodi::audioengine::CAddonAEStream::Flush()'],['../group__cpp__kodi__vfs___c_file.html#ga0e2644b2df3c228e8d71a55b60723f31',1,'kodi::vfs::CFile::Flush()'],['../group__python__xbmcwsgi___wsgi_error_stream.html#ga7751f77b5263bcf940ece6e824a05b38',1,'XBMCAddon::xbmcwsgi::WsgiErrorStream::flush()']]],
   ['flushfile',['FlushFile',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#aeca537b0f3deb7b41c19a04e34d773b7',1,'ADDON::CHelper_libXBMC_addon']]],
-  ['freedemuxpacket',['FreeDemuxPacket',['../group__cpp__kodi__addon__inputstream.html#ga27de47f3d3787e878ab521d9ca3cf479',1,'kodi::addon::CInstanceInputStream']]],
+  ['freedemuxpacket',['FreeDemuxPacket',['../group__cpp__kodi__addon__inputstream___demux.html#ga27de47f3d3787e878ab521d9ca3cf479',1,'kodi::addon::CInstanceInputStream']]],
   ['freedirectory',['FreeDirectory',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a8ae5b67b4057c7a23db5c2a39da6c78f',1,'ADDON::CHelper_libXBMC_addon']]],
   ['freeevents',['FreeEvents',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a3a794dc472061369fdbf16b499a4b955',1,'kodi::addon::CInstancePeripheral']]],
   ['freefeatures',['FreeFeatures',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a19aaceb1285a7c44163271d409f903ed',1,'kodi::addon::CInstancePeripheral']]],

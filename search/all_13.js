@@ -1,13 +1,13 @@
 var searchData=
 [
   ['list_20item',['List Item',['../group__cpp__kodi__gui___c_list_item.html',1,'']]],
-  ['label',['Label',['../group__cpp__kodi__vfs___c_dir_entry.html#ga154d00821a136494d7afc14b6755143a',1,'kodi::vfs::CDirEntry::Label()'],['../struct_v_f_s_dir_entry.html#ae62629c530499094c8d2cf37f33038b6',1,'VFSDirEntry::label()']]],
+  ['label',['label',['../struct_v_f_s_dir_entry.html#ae62629c530499094c8d2cf37f33038b6',1,'VFSDirEntry::label()'],['../group__cpp__kodi__vfs___c_dir_entry.html#ga154d00821a136494d7afc14b6755143a',1,'kodi::vfs::CDirEntry::Label()']]],
   ['label_20control',['Label Control',['../_label__control.html',1,'skin_controls']]],
   ['lang_5ffmt_5fenglish_5fname',['LANG_FMT_ENGLISH_NAME',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635',1,'General.h']]],
   ['lang_5ffmt_5fiso_5f639_5f1',['LANG_FMT_ISO_639_1',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51',1,'General.h']]],
   ['lang_5ffmt_5fiso_5f639_5f2',['LANG_FMT_ISO_639_2',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a93ccac5fa6affc3908cbd62584c2e92b',1,'General.h']]],
   ['langformats',['LangFormats',['../group__cpp__kodi___defs.html#ga40942faafc2e9ae4d9b76e2f19362327',1,'General.h']]],
-  ['lengthstream',['LengthStream',['../group__cpp__kodi__addon__inputstream.html#ga6c77ac06f595e639ac95ce93f88175be',1,'kodi::addon::CInstanceInputStream']]],
+  ['lengthstream',['LengthStream',['../group__cpp__kodi__addon__inputstream___read.html#ga6c77ac06f595e639ac95ce93f88175be',1,'kodi::addon::CInstanceInputStream']]],
   ['libbasepath',['libBasePath',['../struct_addon_c_b.html#a98ec276559c160628aa1d824344acc0d',1,'AddonCB']]],
   ['lifetimes',['lifetimes',['../struct_p_v_r___t_i_m_e_r___t_y_p_e.html#ab937ef36e7447eb32bdc2f2e45d81921',1,'PVR_TIMER_TYPE']]],
   ['list_20container',['List Container',['../_list__container.html',1,'skin_controls']]],
