@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kodi Development: Kodi OpenGL helpers</title>
+<title>Kodi Development: OpenGL helpers</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="kodi-dev.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kodi Development
-   &#160;<span id="projectnumber">17.0</span>
+   &#160;<span id="projectnumber">19.0</span>
    </div>
    <div id="projectbrief">for Binary and Script based Add-Ons</div>
   </td>
@@ -91,18 +91,30 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__gl.html','');})
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">Kodi OpenGL helpers<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__gui.html">Interface - kodi::gui</a></div></div>  </div>
+<div class="title">OpenGL helpers<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__gui.html">Interface - kodi::gui</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Auxiliary functions for Open GL. </p>
 <p>This group includes help for definitions, functions, and classes for OpenGL.</p>
 <p>To use OpenGL for your system, add the <a class="el" href="_g_l_8h_source.html">#include &lt;kodi/gui/gl/GL.h&gt;</a>.</p>
 <hr/>
 <p>The HAS_GL is declared if Open GL is required and HAS_GLES if Open GL Embedded Systems (ES) is required, with ES the version is additionally given in the definition, this can be "2" or "3".</p>
 <hr/>
-<p>Following GL_TYPE_STRING define can be used, for example, to manage different folders for GL and GLES and make the selection easier. This are on OpenGL **"`GL`"** and on Open GL|ES **"`GLES`"**. <b>Example:</b> </p><div class="fragment"><div class="line">kodi::GetAddonPath(<span class="stringliteral">&quot;resources/shaders/&quot;</span> GL_TYPE_STRING <span class="stringliteral">&quot;/frag.glsl&quot;</span>);</div></div><!-- fragment --><hr/>
-<p>In addition, BUFFER_OFFSET is declared in it which can be used to give an offset on the array to GL. <b>Example:</b> </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">struct </span>PackedVertex {</div><div class="line">  <span class="keywordtype">float</span> position[3]; <span class="comment">// Position x, y, z</span></div><div class="line">  <span class="keywordtype">float</span> color[4]; <span class="comment">// Color r, g, b, a</span></div><div class="line">} vertices[3] = {</div><div class="line">  { { -0.5f, -0.5f, 0.0f }, { 1.0f, 0.0f, 0.0f, 1.0f } },</div><div class="line">  { {  0.5f, -0.5f, 0.0f }, { 0.0f, 1.0f, 0.0f, 1.0f } },</div><div class="line">  { {  0.0f,  0.5f, 0.0f }, { 0.0f, 0.0f, 1.0f, 1.0f } }</div><div class="line">};</div><div class="line"></div><div class="line">glVertexAttribPointer(m_aPosition, 3, GL_FLOAT, GL_FALSE, <span class="keyword">sizeof</span>(PackedVertex), BUFFER_OFFSET(offsetof(PackedVertex, position)));</div><div class="line">glEnableVertexAttribArray(m_aPosition);</div><div class="line"></div><div class="line">glVertexAttribPointer(m_aColor, 4, GL_FLOAT, GL_FALSE, <span class="keyword">sizeof</span>(PackedVertex), BUFFER_OFFSET(offsetof(PackedVertex, color)));</div><div class="line">glEnableVertexAttribArray(m_aColor);</div></div><!-- fragment --> </div><!-- contents -->
+<p>Following GL_TYPE_STRING define can be used, for example, to manage different folders for GL and GLES and make the selection easier. This are on OpenGL <b>"GL"</b> and on Open GL|ES <b>"GLES"</b>.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">kodi::GetAddonPath(<span class="stringliteral">&quot;resources/shaders/&quot;</span> GL_TYPE_STRING <span class="stringliteral">&quot;/frag.glsl&quot;</span>);</div></div><!-- fragment --><hr/>
+<p>In addition, BUFFER_OFFSET is declared in it which can be used to give an offset on the array to GL.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keyword">struct </span>PackedVertex {</div><div class="line">  <span class="keywordtype">float</span> position[3]; <span class="comment">// Position x, y, z</span></div><div class="line">  <span class="keywordtype">float</span> color[4]; <span class="comment">// Color r, g, b, a</span></div><div class="line">} vertices[3] = {</div><div class="line">  { { -0.5f, -0.5f, 0.0f }, { 1.0f, 0.0f, 0.0f, 1.0f } },</div><div class="line">  { {  0.5f, -0.5f, 0.0f }, { 0.0f, 1.0f, 0.0f, 1.0f } },</div><div class="line">  { {  0.0f,  0.5f, 0.0f }, { 0.0f, 0.0f, 1.0f, 1.0f } }</div><div class="line">};</div><div class="line"></div><div class="line">glVertexAttribPointer(m_aPosition, 3, GL_FLOAT, GL_FALSE, <span class="keyword">sizeof</span>(PackedVertex), BUFFER_OFFSET(offsetof(PackedVertex, position)));</div><div class="line">glEnableVertexAttribArray(m_aPosition);</div><div class="line"></div><div class="line">glVertexAttribPointer(m_aColor, 4, GL_FLOAT, GL_FALSE, <span class="keyword">sizeof</span>(PackedVertex), BUFFER_OFFSET(offsetof(PackedVertex, color)));</div><div class="line">glEnableVertexAttribArray(m_aColor);</div></div><!-- fragment --> <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group__cpp__kodi__gui__gl___c_shader_program"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__gui__gl___c_shader_program.html">GL Shader Program</a></td></tr>
+<tr class="memdesc:group__cpp__kodi__gui__gl___c_shader_program"><td class="mdescLeft">&#160;</td><td class="mdescRight"> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::gui::gl::CShaderProgram </big></font></span></code></h4>  <b>Class to manage an OpenGL shader program</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

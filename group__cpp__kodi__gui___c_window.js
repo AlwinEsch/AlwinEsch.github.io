@@ -9,6 +9,8 @@ var group__cpp__kodi__gui___c_window =
     [ "SetFocusId", "group__cpp__kodi__gui___c_window.html#gae4612cf096752b43db2312280b7cf6dc", null ],
     [ "GetFocusId", "group__cpp__kodi__gui___c_window.html#gaf38c4d162d02658d52f49cf4ffa38a45", null ],
     [ "SetControlLabel", "group__cpp__kodi__gui___c_window.html#ga609a14f7e58e2182470595d9a6dcfca6", null ],
+    [ "SetControlVisible", "group__cpp__kodi__gui___c_window.html#ga63c9e76a7137db691384e1dfbf574f8b", null ],
+    [ "SetControlSelected", "group__cpp__kodi__gui___c_window.html#ga74af5cdd1b4a4ce8a44427cc1b5a9047", null ],
     [ "SetProperty", "group__cpp__kodi__gui___c_window.html#ga7d553225fe861e34410148ca3bbd70fc", null ],
     [ "GetProperty", "group__cpp__kodi__gui___c_window.html#ga986d355fe9f44c346566388418011478", null ],
     [ "SetPropertyInt", "group__cpp__kodi__gui___c_window.html#ga3d68ad750393fd5293be9d0650cd30a9", null ],

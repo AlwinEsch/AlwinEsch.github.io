@@ -1,23 +1,10 @@
 var searchData=
 [
-  ['vfs',['VFS',['../group__cpp__kodi__addon__vfs.html',1,'']]],
-  ['video_20codec',['Video Codec',['../group__cpp__kodi__addon__videocodec.html',1,'']]],
-  ['visualization',['Visualization',['../group__cpp__kodi__addon__visualization.html',1,'']]],
-  ['validatepath',['validatePath',['../group__python__xbmc.html#ga7d325903d7bc797f993c9df791d22c44',1,'ModuleXbmc.h']]],
-  ['vendor_5fid',['vendor_id',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#abd60aba7846c925f784c3e89e2f54e45',1,'PERIPHERAL_INFO']]],
-  ['version_5fmajor',['version_major',['../structgame__stream__hw__framebuffer__properties.html#a6540c97b3ede3afedc3eddb99863867e',1,'game_stream_hw_framebuffer_properties']]],
-  ['version_5fminor',['version_minor',['../structgame__stream__hw__framebuffer__properties.html#a2b05ec596787f44679509e7558525ed5',1,'game_stream_hw_framebuffer_properties']]],
-  ['vfscallbacks',['VFSCallbacks',['../struct_v_f_s_callbacks.html',1,'']]],
-  ['vfsdirentry',['VFSDirEntry',['../struct_v_f_s_dir_entry.html',1,'']]],
-  ['vfsgetdirectorycallbacks',['VFSGetDirectoryCallbacks',['../struct_v_f_s_get_directory_callbacks.html',1,'']]],
-  ['vfsproperty',['VFSProperty',['../struct_v_f_s_property.html',1,'']]],
-  ['vfsurl',['VFSURL',['../struct_v_f_s_u_r_l.html',1,'']]],
-  ['video_20control',['Video Control',['../_video__control.html',1,'skin_controls']]],
-  ['videocodec_5finitdata',['VIDEOCODEC_INITDATA',['../struct_v_i_d_e_o_c_o_d_e_c___i_n_i_t_d_a_t_a.html',1,'']]],
-  ['videocodec_5fpicture',['VIDEOCODEC_PICTURE',['../struct_v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html',1,'']]],
-  ['videocodec_5fretval',['VIDEOCODEC_RETVAL',['../struct_kodi_to_addon_func_table___video_codec.html#af7692b7a10af339cbff35cb9aeb7440a',1,'KodiToAddonFuncTable_VideoCodec']]],
-  ['vis_5finfo',['VIS_INFO',['../struct_v_i_s___i_n_f_o.html',1,'']]],
-  ['vistrack',['VisTrack',['../group__cpp__kodi__addon__visualization___vis_track.html#struct_vis_track',1,'']]],
-  ['visualisation_20control',['Visualisation Control',['../_visualisation__control.html',1,'skin_controls']]],
-  ['void',['void',['../struct_kodi_to_addon_func_table___video_codec.html#a460730f8ea041fda966a664f502c9a09',1,'KodiToAddonFuncTable_VideoCodec::void()'],['../struct_v_f_s_callbacks.html#af22323bc8676b7e40e40a986327034b6',1,'VFSCallbacks::void(__cdecl *SetErrorDialog)(void *ctx'],['../struct_v_f_s_callbacks.html#a780681085aa1c5130ea8798fa7e144d9',1,'VFSCallbacks::void(__cdecl *RequireAuthentication)(void *ctx'],['../struct_kodi_to_addon_func_table___v_f_s_entry.html#a9478eb1ccd01f4e902bf5841c7507508',1,'KodiToAddonFuncTable_VFSEntry::void(__cdecl *ClearOutIdle)()'],['../struct_kodi_to_addon_func_table___v_f_s_entry.html#adea2bc5b4d256addd5a9f1388257a423',1,'KodiToAddonFuncTable_VFSEntry::void(__cdecl *DisconnectAll)()'],['../struct_kodi_to_addon_func_table___v_f_s_entry.html#a28e11cd136a5b97dcd2f207d4f588f31',1,'KodiToAddonFuncTable_VFSEntry::void(__cdecl *FreeDirectory)(void *ctx)']]]
+  ['name',['name',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#a5ac083a645d964373f022d03df4849c8',1,'PERIPHERAL_INFO::name()'],['../struct_s_selection_entry.html#a9b45b3e13bd9167aab02e17e08916231',1,'SSelectionEntry::name()'],['../group__cpp__kodi__addon__screensaver___c_b.html#gaea85a30f7330f34848f1ca2313fcbc62',1,'kodi::addon::CInstanceScreensaver::Name()'],['../group__cpp__kodi__addon__visualization___c_b.html#gaea85a30f7330f34848f1ca2313fcbc62',1,'kodi::addon::CInstanceVisualization::Name()']]],
+  ['nextpreset',['NextPreset',['../group__cpp__kodi__addon__visualization.html#gaba3f4c18a139a731f20dc018b239a425',1,'kodi::addon::CInstanceVisualization']]],
+  ['nominal_5fheight',['nominal_height',['../group__cpp__kodi__addon__game___defs___video_stream.html#aed93af630fab310ac8ef9a7996d52cd8',1,'game_stream_video_properties']]],
+  ['nominal_5fwidth',['nominal_width',['../group__cpp__kodi__addon__game___defs___video_stream.html#a892bb65fda99eae2fa1aa88bf9fbed11',1,'game_stream_video_properties']]],
+  ['notification',['notification',['../group__python___dialog.html#gaca90e2d17ad057925f1a350a08deed85',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['num_5fprops',['num_props',['../struct_v_f_s_dir_entry.html#a622489b7a77434a90c579641fc6747f4',1,'VFSDirEntry']]],
+  ['numeric',['numeric',['../group__python___dialog.html#ga1575511e8ea0f9e4d4684c5b9342d191',1,'XBMCAddon::xbmcgui::Dialog']]]
 ];

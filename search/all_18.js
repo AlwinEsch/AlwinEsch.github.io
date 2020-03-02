@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['y',['Y',['../group__cpp__kodi__addon__screensaver___c_b.html#gae17c4a6c158b5533f640b52d757b5519',1,'kodi::addon::CInstanceScreensaver::Y()'],['../group__cpp__kodi__addon__visualization___c_b.html#gae17c4a6c158b5533f640b52d757b5519',1,'kodi::addon::CInstanceVisualization::Y()']]],
-  ['year',['year',['../group__cpp__kodi__addon__visualization___vis_track.html#abeac221e38b7b9ce7df8722c842bf671',1,'VisTrack']]],
-  ['yesno',['yesno',['../group__python___dialog.html#ga28b2225b08fccc588441336c3a4b0ca3',1,'XBMCAddon::xbmcgui::Dialog']]]
+  ['queue_5ferror',['QUEUE_ERROR',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94ad2f91e8feff864772fb0a394bb60cdc5',1,'General.h']]],
+  ['queue_5finfo',['QUEUE_INFO',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a337175e2eb3336df26c7e387e56cfb6b',1,'General.h']]],
+  ['queue_5fown_5fstyle',['QUEUE_OWN_STYLE',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a73ef8e6ac545537aab78d269d462365c',1,'General.h']]],
+  ['queue_5fwarning',['QUEUE_WARNING',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712',1,'General.h']]],
+  ['queueformattednotification',['QueueFormattedNotification',['../group__cpp__kodi.html#ga39c65205ea763e00c402cb0f1f50b289',1,'kodi']]],
+  ['queuemsg',['QueueMsg',['../group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94',1,'General.h']]],
+  ['queuenotification',['QueueNotification',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#ac690f7324ed912f4928c842e4ca585f1',1,'ADDON::CHelper_libXBMC_addon::QueueNotification()'],['../group__cpp__kodi.html#gac3374c984f66b0715439aa56e717763d',1,'kodi::QueueNotification()']]]
 ];

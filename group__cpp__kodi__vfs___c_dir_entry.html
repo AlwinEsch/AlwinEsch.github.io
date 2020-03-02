@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="kodi-dev.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kodi Development
-   &#160;<span id="projectnumber">17.0</span>
+   &#160;<span id="projectnumber">19.0</span>
    </div>
    <div id="projectbrief">for Binary and Script based Add-Ons</div>
   </td>
@@ -101,8 +101,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__vfs___c_dir_entry.ht
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/Filesystem.h&gt;</span></div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">std::vector&lt;<a class="code" href="classkodi_1_1vfs_1_1_c_dir_entry.html">kodi::vfs::CDirEntry</a>&gt; items;</div><div class="line"><a class="code" href="group__cpp__kodi__vfs.html#ga1c005a636b4eb628e206b0af551ae90e">kodi::vfs::GetDirectory</a>(<span class="stringliteral">&quot;special://temp&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, items);</div><div class="line"></div><div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory have %lu entries\n&quot;</span>, items.size());</div><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; items.size(); i++)</div><div class="line">{</div><div class="line">  <span class="keywordtype">char</span> buff[20];</div><div class="line">  time_t now = items[i].<a class="code" href="group__cpp__kodi__vfs___c_dir_entry.html#gacb723fc09f9b9d6f0d69c7dd04e485cd">DateTime</a>();</div><div class="line">  strftime(buff, 20, <span class="stringliteral">&quot;%Y-%m-%d %H:%M:%S&quot;</span>, gmtime(&amp;now));</div><div class="line">  fprintf(stderr, <span class="stringliteral">&quot; - %04lu -- Folder: %s -- Name: %s -- Path: %s -- Time: %s\n&quot;</span>,</div><div class="line">            i+1,</div><div class="line">            items[i].IsFolder() ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no &quot;</span>,</div><div class="line">            items[i].Label().c_str(),</div><div class="line">            items[i].Path().c_str(),</div><div class="line">            buff);</div><div class="line">}</div></div><!-- fragment --><p>It has the header <a class="el" href="_filesystem_8h_source.html">#include &lt;kodi/Filesystem.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gae77499c5ce2d1bba5babf18d1f6acd77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae77499c5ce2d1bba5babf18d1f6acd77">&#9670;&nbsp;</a></span>CDirEntry()</h2>
+<a id="gadd179e0fb2754158acb633a32ab1a1ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd179e0fb2754158acb633a32ab1a1ee">&#9670;&nbsp;</a></span>CDirEntry()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -132,7 +132,13 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__vfs___c_dir_entry.ht
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>size</em> = <code>-1</code>&#160;</td>
+          <td class="paramname"><em>size</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">time_t&#160;</td>
+          <td class="paramname"><em>dateTime</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -154,6 +160,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__vfs___c_dir_entry.ht
     <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>[opt] Used path of the entry </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">folder</td><td>[opt] If set entry used as folder </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>[opt] If used as file, his size defined there </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dateTime</td><td>[opt] Date time of the entry </td></tr>
   </table>
   </dd>
 </dl>

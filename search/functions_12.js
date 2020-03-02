@@ -9,6 +9,7 @@ var searchData=
   ['transferchannelgroup',['TransferChannelGroup',['../class_c_helper__lib_x_b_m_c__pvr.html#a08f0209217e1be65f53640d5cf3696f0',1,'CHelper_libXBMC_pvr']]],
   ['transferchannelgroupmember',['TransferChannelGroupMember',['../class_c_helper__lib_x_b_m_c__pvr.html#a1205a688982b92eb38023497b10c485a',1,'CHelper_libXBMC_pvr']]],
   ['transferepgentry',['TransferEpgEntry',['../class_c_helper__lib_x_b_m_c__pvr.html#a9442ee00f607d0502cd0014593113cd2',1,'CHelper_libXBMC_pvr']]],
+  ['transferpresets',['TransferPresets',['../group__cpp__kodi__addon__visualization___c_b.html#gaac44c10f69e74cf7da9109240a0de178',1,'kodi::addon::CInstanceVisualization']]],
   ['transferrecordingentry',['TransferRecordingEntry',['../class_c_helper__lib_x_b_m_c__pvr.html#a5e5c881f2881d9064ff20abbc5265b36',1,'CHelper_libXBMC_pvr']]],
   ['transfertimerentry',['TransferTimerEntry',['../class_c_helper__lib_x_b_m_c__pvr.html#a8a8ee378c5984eb2682c335006d5c681',1,'CHelper_libXBMC_pvr']]],
   ['translatepath',['translatePath',['../group__python__xbmc.html#ga762f48b2097ec25d938bf8596023b221',1,'ModuleXbmc.h']]],

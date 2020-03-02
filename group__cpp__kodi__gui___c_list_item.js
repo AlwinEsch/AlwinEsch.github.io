@@ -7,8 +7,6 @@ var group__cpp__kodi__gui___c_list_item =
     [ "SetLabel", "group__cpp__kodi__gui___c_list_item.html#gab825756e641ba839bfae908492165481", null ],
     [ "GetLabel2", "group__cpp__kodi__gui___c_list_item.html#gaca764077c10877a5c50ff334ca2da1a0", null ],
     [ "SetLabel2", "group__cpp__kodi__gui___c_list_item.html#gadaa65016e969bb31fc41a93e657e79db", null ],
-    [ "GetIconImage", "group__cpp__kodi__gui___c_list_item.html#ga7e0c3206898d32ef6220258a5df473a5", null ],
-    [ "SetIconImage", "group__cpp__kodi__gui___c_list_item.html#gacc81dfb53a4e1222cda54b4bcf67e4f2", null ],
     [ "GetArt", "group__cpp__kodi__gui___c_list_item.html#ga20785f408e377d20a4b5f6a58d35a873", null ],
     [ "SetArt", "group__cpp__kodi__gui___c_list_item.html#ga2d21e6c9e7a2262741f5ba92757c9528", null ],
     [ "GetPath", "group__cpp__kodi__gui___c_list_item.html#ga8dec429daa79c8453d141ac037d847b4", null ],

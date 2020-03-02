@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['audio_20decoder',['Audio Decoder',['../group__cpp__kodi__addon__audiodecoder.html',1,'']]],
-  ['audio_20encoder',['Audio Encoder',['../group__cpp__kodi__addon__audioencoder.html',1,'']]],
-  ['addon_20type_20instances',['Addon type instances',['../group__cpp__kodi__addon__instances.html',1,'']]],
-  ['action',['Action',['../group__python__xbmcgui__action.html',1,'']]]
+  ['1_2e_20basic_20functions',['1. Basic functions',['../group__cpp__kodi__addon__game___base.html',1,'']]],
+  ['1_2e_20audio_20stream',['1. Audio stream',['../group__cpp__kodi__addon__game___defs___audio_stream.html',1,'']]]
 ];

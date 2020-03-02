@@ -1,6 +1,6 @@
 var group__cpp__kodi__vfs___c_dir_entry =
 [
-    [ "CDirEntry", "group__cpp__kodi__vfs___c_dir_entry.html#gae77499c5ce2d1bba5babf18d1f6acd77", null ],
+    [ "CDirEntry", "group__cpp__kodi__vfs___c_dir_entry.html#gadd179e0fb2754158acb633a32ab1a1ee", null ],
     [ "Label", "group__cpp__kodi__vfs___c_dir_entry.html#ga154d00821a136494d7afc14b6755143a", null ],
     [ "Title", "group__cpp__kodi__vfs___c_dir_entry.html#ga9865f7d9426ae988fdcd66ff3a5c5bcd", null ],
     [ "Path", "group__cpp__kodi__vfs___c_dir_entry.html#ga62adb64db13e24a29d00d7eb1901448a", null ],

@@ -15,5 +15,7 @@ var group__cpp__kodi =
     [ "GetFreeMem", "group__cpp__kodi.html#ga2dc05ae2b766c3710db48b48b257f951", null ],
     [ "GetGlobalIdleTime", "group__cpp__kodi.html#ga156210ce2221a5a160f51cc044e841a1", null ],
     [ "GetCurrentSkinId", "group__cpp__kodi.html#gaa2b38e3e192a404565552416049c4d30", null ],
-    [ "KodiVersion", "group__cpp__kodi.html#ga5417d9134259da3d79f40e9a20a48617", null ]
+    [ "KodiVersion", "group__cpp__kodi.html#ga5417d9134259da3d79f40e9a20a48617", null ],
+    [ "GetKeyboardLayout", "group__cpp__kodi.html#ga324988f038efe6fec487718361fb8aa6", null ],
+    [ "ChangeKeyboardLayout", "group__cpp__kodi.html#ga6f46744b30f0daf04a1f60f5be35290d", null ]
 ];

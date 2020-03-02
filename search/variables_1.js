@@ -8,7 +8,7 @@ var searchData=
   ['bisdeleted',['bIsDeleted',['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#a48daaa3f4c00e4bacd799898340a2ddc',1,'PVR_RECORDING']]],
   ['bishidden',['bIsHidden',['../struct_p_v_r___c_h_a_n_n_e_l.html#a29794a095012cb573c1cbe24e0d63284',1,'PVR_CHANNEL']]],
   ['bisradio',['bIsRadio',['../struct_p_v_r___c_h_a_n_n_e_l.html#a8d3f2d7f3e790706074c60af62610987',1,'PVR_CHANNEL::bIsRadio()'],['../struct_p_v_r___c_h_a_n_n_e_l___g_r_o_u_p.html#a8d3f2d7f3e790706074c60af62610987',1,'PVR_CHANNEL_GROUP::bIsRadio()']]],
-  ['bottom_5fleft_5forigin',['bottom_left_origin',['../structgame__stream__hw__framebuffer__properties.html#a80e85b810ae38c95621e67b51e47f9bb',1,'game_stream_hw_framebuffer_properties']]],
+  ['bottom_5fleft_5forigin',['bottom_left_origin',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#a80e85b810ae38c95621e67b51e47f9bb',1,'game_stream_hw_framebuffer_properties']]],
   ['bstartanytime',['bStartAnyTime',['../struct_p_v_r___t_i_m_e_r.html#a3d040da25edfd9c7b30e47f641fa1db8',1,'PVR_TIMER']]],
   ['bsupportsasyncepgtransfer',['bSupportsAsyncEPGTransfer',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a12d2f5989602ea6dbf715d8947bb3b3a',1,'PVR_ADDON_CAPABILITIES']]],
   ['bsupportschannelgroups',['bSupportsChannelGroups',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a8e4d51f8fa63513d7311e835b65d584a',1,'PVR_ADDON_CAPABILITIES']]],

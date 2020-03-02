@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['vfs',['VFS',['../group__cpp__kodi__addon__vfs.html',1,'']]],
-  ['video_20codec',['Video Codec',['../group__cpp__kodi__addon__videocodec.html',1,'']]],
-  ['visualization',['Visualization',['../group__cpp__kodi__addon__visualization.html',1,'']]]
+  ['game',['Game',['../group__cpp__kodi__addon__game.html',1,'']]],
+  ['gl_20shader_20program',['GL Shader Program',['../group__cpp__kodi__gui__gl___c_shader_program.html',1,'']]]
 ];

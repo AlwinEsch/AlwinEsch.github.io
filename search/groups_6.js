@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['kodi_20opengl_20helpers',['Kodi OpenGL helpers',['../group__cpp__kodi__gui__gl.html',1,'']]],
-  ['keyboard',['Keyboard',['../group__python__keyboard.html',1,'']]]
+  ['7_2e_20input_20types',['7. Input types',['../group__cpp__kodi__addon__game___defs___input_types.html',1,'']]]
 ];

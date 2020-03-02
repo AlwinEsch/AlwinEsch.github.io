@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['openfileflags',['OpenFileFlags',['../group__cpp__kodi__vfs___defs.html#ga0f3cb31b9b23debe1fc0d5a47bfbb149',1,'Filesystem.h']]]
+  ['langformats',['LangFormats',['../group__cpp__kodi___defs.html#ga40942faafc2e9ae4d9b76e2f19362327',1,'General.h']]]
 ];

@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="kodi-dev.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kodi Development
-   &#160;<span id="projectnumber">17.0</span>
+   &#160;<span id="projectnumber">19.0</span>
    </div>
    <div id="projectbrief">for Binary and Script based Add-Ons</div>
   </td>
@@ -865,6 +865,99 @@ The length sub-specifier modifies the length of the data type. This is a chart s
 </dl>
 <hr/>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line">...</div><div class="line">kodi_version_t version;</div><div class="line"><a class="code" href="group__cpp__kodi.html#ga5417d9134259da3d79f40e9a20a48617">kodi::KodiVersion</a>(version);</div><div class="line">fprintf(stderr,</div><div class="line">    <span class="stringliteral">&quot;kodi_version_t version;\n&quot;</span></div><div class="line">    <span class="stringliteral">&quot;kodi::KodiVersion(version);\n&quot;</span></div><div class="line">    <span class="stringliteral">&quot; - version.compile_name = %s\n&quot;</span></div><div class="line">    <span class="stringliteral">&quot; - version.major        = %i\n&quot;</span></div><div class="line">    <span class="stringliteral">&quot; - version.minor        = %i\n&quot;</span></div><div class="line">    <span class="stringliteral">&quot; - version.revision     = %s\n&quot;</span></div><div class="line">    <span class="stringliteral">&quot; - version.tag          = %s\n&quot;</span></div><div class="line">    <span class="stringliteral">&quot; - version.tag_revision = %s\n&quot;</span>,</div><div class="line">            version.compile_name.c_str(), version.major, version.minor,</div><div class="line">            version.revision.c_str(), version.tag.c_str(), version.tag_revision.c_str());</div><div class="line">...</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="ga324988f038efe6fec487718361fb8aa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga324988f038efe6fec487718361fb8aa6">&#9670;&nbsp;</a></span>GetKeyboardLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kodi::GetKeyboardLayout </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>modifierKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>layout_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>layout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To get keyboard layout characters. </p>
+<p>This is used to get the keyboard layout currently used from Kodi by the there set language.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">modifierKey</td><td>the key to define the needed layout (uppercase, symbols...) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">layout_name</td><td>name of used layout </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">layout</td><td>list of selected keyboard layout </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if request successed</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line">...</div><div class="line">std::string layout_name;</div><div class="line">std::vector&lt;std::vector&lt;std::string&gt;&gt; layout;</div><div class="line"><a class="code" href="group__cpp__kodi.html#ga324988f038efe6fec487718361fb8aa6">kodi::GetKeyboardLayout</a>(<a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0">STD_KB_MODIFIER_KEY_SHIFT</a> | <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed">STD_KB_MODIFIER_KEY_SYMBOL</a>, layout_name, layout);</div><div class="line">fprintf(stderr, <span class="stringliteral">&quot;Layout: &#39;%s&#39;\n&quot;</span>, layout_name.c_str());</div><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row = 0; row &lt; <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">STD_KB_BUTTONS_MAX_ROWS</a>; row++)</div><div class="line">{</div><div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> column = 0; column &lt; <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">STD_KB_BUTTONS_PER_ROW</a>; column++)</div><div class="line">  {</div><div class="line">    fprintf(stderr, <span class="stringliteral">&quot; - Row: &#39;%02i&#39;; Column: &#39;%02i&#39;; Text: &#39;%s&#39;\n&quot;</span>, row, column, layout[row][column].c_str());</div><div class="line">  }</div><div class="line">}</div><div class="line">...</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="ga6f46744b30f0daf04a1f60f5be35290d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6f46744b30f0daf04a1f60f5be35290d">&#9670;&nbsp;</a></span>ChangeKeyboardLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kodi::ChangeKeyboardLayout </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>layout_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To change keyboard layout characters. </p>
+<p>This is used to change the keyboard layout currently used from Kodi</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">layout_name</td><td>new name of used layout (input string not used!) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if request successed</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>GetKeyboardLayout must be called afterwards.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div><div class="line">...</div><div class="line">std::string layout_name;</div><div class="line"><a class="code" href="group__cpp__kodi.html#ga6f46744b30f0daf04a1f60f5be35290d">kodi::ChangeKeyboardLayout</a>(layout_name);</div><div class="line"></div><div class="line">std::vector&lt;std::vector&lt;std::string&gt;&gt; layout;</div><div class="line"><a class="code" href="group__cpp__kodi.html#ga324988f038efe6fec487718361fb8aa6">kodi::GetKeyboardLayout</a>(<a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0">STD_KB_MODIFIER_KEY_SHIFT</a> | <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed">STD_KB_MODIFIER_KEY_SYMBOL</a>, layout_name, layout);</div><div class="line">fprintf(stderr, <span class="stringliteral">&quot;Layout: &#39;%s&#39;\n&quot;</span>, layout_name.c_str());</div><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row = 0; row &lt; <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">STD_KB_BUTTONS_MAX_ROWS</a>; row++)</div><div class="line">{</div><div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> column = 0; column &lt; <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">STD_KB_BUTTONS_PER_ROW</a>; column++)</div><div class="line">  {</div><div class="line">    fprintf(stderr, <span class="stringliteral">&quot; - Row: &#39;%02i&#39;; Column: &#39;%02i&#39;; Text: &#39;%s&#39;\n&quot;</span>, row, column, layout[row][column].c_str());</div><div class="line">  }</div><div class="line">}</div><div class="line">...</div></div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

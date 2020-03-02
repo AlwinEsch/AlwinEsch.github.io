@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="kodi-dev.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kodi Development
-   &#160;<span id="projectnumber">17.0</span>
+   &#160;<span id="projectnumber">19.0</span>
    </div>
    <div id="projectbrief">for Binary and Script based Add-Ons</div>
   </td>
@@ -108,11 +108,12 @@ $(document).ready(function(){initNavTree('group__python__file.html','');});
 <td align="center">w </td><td align="left">Open for write </td></tr>
 </table>
 <hr/>
-</td></tr>
+ </td></tr>
   </table>
   </dd>
 </dl>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file, <span class="stringliteral">&#39;w&#39;</span>)</div><div class="line">..</div></div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<dl class="python_v19"><dt><b><a class="el" href="python_v19.html#_python_v19000001">v19 Python API changes:</a></b></dt><dd>Added context manager support</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file, <span class="stringliteral">&#39;w&#39;</span>)</div><div class="line">..</div></div><!-- fragment --><p><b>Example (v19 and up):</b> </p><div class="fragment"><div class="line">..</div><div class="line">with xbmcvfs.File(file, <span class="stringliteral">&#39;w&#39;</span>) <span class="keyword">as</span> f:</div><div class="line">  ..</div><div class="line">..</div></div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
 <a id="ga09536b9e99d54e4160097d953cbd2eda"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga09536b9e99d54e4160097d953cbd2eda">&#9670;&nbsp;</a></span>read()</h2>
 
@@ -139,7 +140,7 @@ $(document).ready(function(){initNavTree('group__python__file.html','');});
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">b = f.read()</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">b = f.read()</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --><p><b>Example (v19 and up):</b> </p><div class="fragment"><div class="line">..</div><div class="line">with xbmcvfs.File(file) <span class="keyword">as</span> file:</div><div class="line">  b = f.read()</div><div class="line">..</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ga8ec9b4c6916b0ff50fe31a0bcd94e489"></a>
@@ -168,7 +169,7 @@ $(document).ready(function(){initNavTree('group__python__file.html','');});
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bytearray</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">b = f.readBytes()</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">b = f.readBytes()</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --><p><b>Example (v19 and up):</b> </p><div class="fragment"><div class="line">..</div><div class="line">with xbmcvfs.File(file) <span class="keyword">as</span> f:</div><div class="line">  b = f.readBytes()</div><div class="line">..</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ga3df61f0669ef30181e65bbe5b0bb663c"></a>
@@ -197,7 +198,7 @@ $(document).ready(function(){initNavTree('group__python__file.html','');});
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True on success.</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file, <span class="stringliteral">&#39;w&#39;</span>)</div><div class="line">result = f.write(buffer)</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file, <span class="stringliteral">&#39;w&#39;</span>)</div><div class="line">result = f.write(buffer)</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --><p><b>Example (v19 and up):</b> </p><div class="fragment"><div class="line">..</div><div class="line">whith xbmcvfs.File(file, <span class="stringliteral">&#39;w&#39;</span>) <span class="keyword">as</span> f:</div><div class="line">  result = f.write(buffer)</div><div class="line">..</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ga775bfb88c1bb7975d67f277eade2a1b7"></a>
@@ -219,7 +220,7 @@ $(document).ready(function(){initNavTree('group__python__file.html','');});
 <p> Get the file size. </p>
 <dl class="section return"><dt>Returns</dt><dd>The file size</dd></dl>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">s = f.size()</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">s = f.size()</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --><p><b>Example (v19 and up):</b> </p><div class="fragment"><div class="line">..</div><div class="line">with xbmcvfs.File(file) <span class="keyword">as</span> f:</div><div class="line">  s = f.size()</div><div class="line">..</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ga699e6bdc888b7ab94d1cf47b1000147d"></a>
@@ -248,8 +249,8 @@ $(document).ready(function(){initNavTree('group__python__file.html','');});
   </dd>
 </dl>
 <hr/>
-<p>  Function changed. param <b>iWhence</b> is now optional.</p>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">result = f.seek(8129, 0)</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --> 
+ <dl class="python_v19"><dt><b><a class="el" href="python_v19.html#_python_v19000002">v19 Python API changes:</a></b></dt><dd>Function changed. param <b>iWhence</b> is now optional.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">result = f.seek(8129, 0)</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --><p><b>Example (v19 and up):</b> </p><div class="fragment"><div class="line">..</div><div class="line">with xbmcvfs.File(file) <span class="keyword">as</span> f:</div><div class="line">  result = f.seek(8129, 0)</div><div class="line">..</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ga8153e55ed7b27a62988843a2dd66c845"></a>
@@ -271,8 +272,8 @@ $(document).ready(function(){initNavTree('group__python__file.html','');});
 <p> Get the current position in the file. </p>
 <dl class="section return"><dt>Returns</dt><dd>The file position</dd></dl>
 <hr/>
-<p>  New function added</p>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">s = f.tell()</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --> 
+ <dl class="python_v19"><dt><b><a class="el" href="python_v19.html#_python_v19000003">v19 Python API changes:</a></b></dt><dd>New function added</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">s = f.tell()</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --><p><b>Example (v19 and up):</b> </p><div class="fragment"><div class="line">..</div><div class="line">with xbmcvfs.File(file) <span class="keyword">as</span> f:</div><div class="line">  s = f.tell()</div><div class="line">..</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="gaa69c8bf1f1dcf4e72552efff1fe3e87e"></a>
@@ -293,7 +294,7 @@ $(document).ready(function(){initNavTree('group__python__file.html','');});
 <p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> close() </big></font></span></code></h4> </p><hr/>
 <p> Close opened file. </p>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div><div class="line">f = xbmcvfs.File(file)</div><div class="line">f.close()</div><div class="line">..</div></div><!-- fragment --><p><b>Example (v19 and up):</b> </p><div class="fragment"><div class="line">..</div><div class="line">with xbmcvfs.File(file) <span class="keyword">as</span> f:</div><div class="line">  ..</div><div class="line">..</div></div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

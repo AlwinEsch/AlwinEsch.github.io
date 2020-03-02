@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="kodi-dev.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kodi Development
-   &#160;<span id="projectnumber">17.0</span>
+   &#160;<span id="projectnumber">19.0</span>
    </div>
    <div id="projectbrief">for Binary and Script based Add-Ons</div>
   </td>
@@ -227,9 +227,9 @@ void(*&#160;</td><td class="memItemRight" valign="bottom"><b>remove_list_item</b
 <tr class="memitem:a22f79d68aacfd6f3dedae85533af0361"><td class="memItemLeft" align="right" valign="top"><a id="a22f79d68aacfd6f3dedae85533af0361"></a>
 void(*&#160;</td><td class="memItemRight" valign="bottom"><b>remove_list_item_from_position</b> )(void *kodiBase, void *handle, int list_position)</td></tr>
 <tr class="separator:a22f79d68aacfd6f3dedae85533af0361"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5b8d93e6b32b0d3db01e806f32b3496"><td class="memItemLeft" align="right" valign="top"><a id="ae5b8d93e6b32b0d3db01e806f32b3496"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>set_callbacks</b> )(void *kodiBase, void *handle, void *clienthandle, bool(*)(void *handle), bool(*)(void *handle, int), bool(*)(void *handle, int), bool(*)(void *handle, int), void(*)(void *handle, int, <a class="el" href="structgui__context__menu__pair.html">gui_context_menu_pair</a> *, unsigned int *), bool(*)(void *handle, int, unsigned int))</td></tr>
-<tr class="separator:ae5b8d93e6b32b0d3db01e806f32b3496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df55b61ce69840827154f7bfa9352a5"><td class="memItemLeft" align="right" valign="top"><a id="a4df55b61ce69840827154f7bfa9352a5"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><b>set_callbacks</b> )(void *kodiBase, void *handle, void *clienthandle, bool(*CBInit)(void *), bool(*CBFocus)(void *, int), bool(*CBClick)(void *, int), bool(*CBOnAction)(void *, int, uint32_t, wchar_t), void(*CBGetContextButtons)(void *, int, <a class="el" href="structgui__context__menu__pair.html">gui_context_menu_pair</a> *, unsigned int *), bool(*CBOnContextButton)(void *, int, unsigned int))</td></tr>
+<tr class="separator:a4df55b61ce69840827154f7bfa9352a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ce939a9617e97f7c39c31bc6ad91d50"><td class="memItemLeft" align="right" valign="top"><a id="a7ce939a9617e97f7c39c31bc6ad91d50"></a>
 void(*&#160;</td><td class="memItemRight" valign="bottom"><b>set_container_content</b> )(void *kodiBase, void *handle, const char *value)</td></tr>
 <tr class="separator:a7ce939a9617e97f7c39c31bc6ad91d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,6 +239,12 @@ void(*&#160;</td><td class="memItemRight" valign="bottom"><b>set_container_prope
 <tr class="memitem:a591b5663c0b1b223b7cb6559f27dd215"><td class="memItemLeft" align="right" valign="top"><a id="a591b5663c0b1b223b7cb6559f27dd215"></a>
 void(*&#160;</td><td class="memItemRight" valign="bottom"><b>set_control_label</b> )(void *kodiBase, void *handle, int control_id, const char *label)</td></tr>
 <tr class="separator:a591b5663c0b1b223b7cb6559f27dd215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22650d6f07a5384acf83288e90403b72"><td class="memItemLeft" align="right" valign="top"><a id="a22650d6f07a5384acf83288e90403b72"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><b>set_control_selected</b> )(void *kodiBase, void *handle, int control_id, bool selected)</td></tr>
+<tr class="separator:a22650d6f07a5384acf83288e90403b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2322944ea2f1e4f707c7f8e68bd7a0e1"><td class="memItemLeft" align="right" valign="top"><a id="a2322944ea2f1e4f707c7f8e68bd7a0e1"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><b>set_control_visible</b> )(void *kodiBase, void *handle, int control_id, bool visible)</td></tr>
+<tr class="separator:a2322944ea2f1e4f707c7f8e68bd7a0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af61321a4c8939c48535272c9ec4e61cd"><td class="memItemLeft" align="right" valign="top"><a id="af61321a4c8939c48535272c9ec4e61cd"></a>
 void(*&#160;</td><td class="memItemRight" valign="bottom"><b>set_current_list_position</b> )(void *kodiBase, void *handle, int list_position)</td></tr>
 <tr class="separator:af61321a4c8939c48535272c9ec4e61cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,7 +268,7 @@ bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>show</b> )(void *ko
 <tr class="separator:aa7ac5e2eb074acb5d8feddacd6998800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/home/alwin/Development/Kodi/ACTION_ID/kodi/xbmc/addons/kodi-addon-dev-kit/include/kodi/gui/<a class="el" href="definitions_8h_source.html">definitions.h</a></li>
+<li>/home/alwin/Development/Kodi/kodi-Matrix/xbmc/addons/kodi-addon-dev-kit/include/kodi/gui/<a class="el" href="definitions_8h_source.html">definitions.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -4,16 +4,8 @@ var NAVTREE =
     [ "General", "general.html", "general" ],
     [ "General Development parts", "general_parts.html", "general_parts" ],
     [ "Revisions", "revisions.html", "revisions" ],
-    [ "Python API v19", "python_v19.html", null ],
-    [ "Python API v18", "python_v18.html", null ],
     [ "Skin Development", "skin_parts.html", "skin_parts" ],
-    [ "python_v15", "python_v15.html", null ],
-    [ "python_v16", "python_v16.html", null ],
-    [ "python_v17", "python_v17.html", null ],
     [ "Todo List", "todo.html", null ],
-    [ "python_v12", "python_v12.html", null ],
-    [ "python_v13", "python_v13.html", null ],
-    [ "python_v14", "python_v14.html", null ],
     [ "Language Development", "modules.html", "modules" ],
     [ "Older versions", "usergroup0.html", [
       [ "Kodi 16.x Jarvis", "^http://mirrors.kodi.tv/docs/python-docs/16.x-jarvis/", null ],
@@ -28,10 +20,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_addon__rendering_control.html",
-"group__cpp__kodi__gui___c_list_item.html#ga4a03d7c94fa02df112558bc30818e413",
-"group__cpp__kodi__gui__dialogs___o_k.html",
-"group__python___player.html#ga240f1deb93fc70eeffb671445781ae1f",
-"group__python__xbmcgui__listitem.html#ga5856235a9611ec3b081d20c896d1c732"
+"group__cpp__kodi__addon__game___defs___game_types.html#ggae227c65af490275c3e3c9b885457ac38a2277738f3dcf28e715b821cd1a1b13c3",
+"group__cpp__kodi__addon__inputstream___defs___info.html#ggabd87fb7320c921a5bb0f2759aad18882ab8a407441d7c73b11d63ba2c6bb53320",
+"group__cpp__kodi__gui__controls___c_progress.html#ga71a209185b7a98adf0a310d2c44cdbe6",
+"group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a0117d00cee180a144993f511596b3284",
+"group__python__xbmc.html#ga2d754739550a956d6d2380acf8f32be0",
+"index.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -22,7 +22,7 @@ var group__cpp__kodi__gui =
     [ "Dialog Select", "group__cpp__kodi__gui__dialogs___select.html", "group__cpp__kodi__gui__dialogs___select" ],
     [ "Dialog Text Viewer", "group__cpp__kodi__gui__dialogs___text_viewer.html", "group__cpp__kodi__gui__dialogs___text_viewer" ],
     [ "Dialog Yes/No", "group__cpp__kodi__gui__dialogs___yes_no.html", "group__cpp__kodi__gui__dialogs___yes_no" ],
-    [ "Kodi OpenGL helpers", "group__cpp__kodi__gui__gl.html", null ],
+    [ "OpenGL helpers", "group__cpp__kodi__gui__gl.html", "group__cpp__kodi__gui__gl" ],
     [ "List Item", "group__cpp__kodi__gui___c_list_item.html", "group__cpp__kodi__gui___c_list_item" ],
     [ "Window", "group__cpp__kodi__gui___c_window.html", "group__cpp__kodi__gui___c_window" ],
     [ "Lock", "group__cpp__kodi__gui.html#gafc92f24c22d2dff1158bad6cbc771d87", null ],

@@ -1,5 +1,12 @@
 var group__cpp__kodi___defs =
 [
+    [ "StdKbButtons", "group__cpp__kodi___defs.html#gae0eb66cdc2244c78a912b68c09a04fee", [
+      [ "STD_KB_BUTTONS_PER_ROW", "group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465", null ],
+      [ "STD_KB_BUTTONS_MAX_ROWS", "group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38", null ],
+      [ "STD_KB_MODIFIER_KEY_NONE", "group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeacadbebe388526b489067002add50ff70", null ],
+      [ "STD_KB_MODIFIER_KEY_SHIFT", "group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0", null ],
+      [ "STD_KB_MODIFIER_KEY_SYMBOL", "group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed", null ]
+    ] ],
     [ "QueueMsg", "group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94", [
       [ "QUEUE_INFO", "group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a337175e2eb3336df26c7e387e56cfb6b", null ],
       [ "QUEUE_WARNING", "group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712", null ],
