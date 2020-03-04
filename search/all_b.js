@@ -2,6 +2,7 @@ var searchData=
 [
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__addon__game___defs.html',1,'']]],
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__addon__inputstream___defs.html',1,'']]],
+  ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__addon__videocodec___defs.html',1,'']]],
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__audioengine___defs.html',1,'']]],
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi___defs.html',1,'']]],
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__gui___c_list_item___defs.html',1,'']]],
@@ -26,6 +27,8 @@ var searchData=
   ['datetime',['DateTime',['../group__cpp__kodi__vfs___c_dir_entry.html#gacb723fc09f9b9d6f0d69c7dd04e485cd',1,'kodi::vfs::CDirEntry']]],
   ['debug_5fcontext',['debug_context',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#adc79ea799f6f6ee7f7c300185412aaa0',1,'game_stream_hw_framebuffer_properties']]],
   ['decode',['Decode',['../classkodi_1_1addon_1_1_c_instance_image_decoder.html#a1d01b5506feace5ee36978ce57a59761',1,'kodi::addon::CInstanceImageDecoder']]],
+  ['decodeddata',['decodedData',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#adfc09fd6b8b1fb6adbea8be4ec8b1489',1,'VIDEOCODEC_PICTURE']]],
+  ['decodeddatasize',['decodedDataSize',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#a5a3ecb28f2e6ce37a4a9f63cec78aaef',1,'VIDEOCODEC_PICTURE']]],
   ['default_5fport_5fid',['DEFAULT_PORT_ID',['../group__cpp__kodi__addon__game___defs.html#ga370e0babee290007b7a2f4fc29aa84cb',1,'Game.h']]],
   ['delete',['Delete',['../classkodi_1_1addon_1_1_c_instance_v_f_s.html#ac7f9f211b82b4fb634263d31c6e87521',1,'kodi::addon::CInstanceVFS::Delete()'],['../group__python__xbmcvfs.html#ga79c1763dd4900bc72458ca27cac60c65',1,'delete():&#160;ModuleXbmcvfs.h']]],
   ['deletefile',['DeleteFile',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#aba0fb0efdd105859543d5812ea19a2ec',1,'ADDON::CHelper_libXBMC_addon::DeleteFile()'],['../group__cpp__kodi__vfs.html#ga5c2686614c3508ecda78609725f123ad',1,'kodi::vfs::DeleteFile()']]],

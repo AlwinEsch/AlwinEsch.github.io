@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['read_5fafter_5fwrite',['READ_AFTER_WRITE',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a99026c18c02ce8d720936b1f2a6cb74a',1,'Filesystem.h']]],
-  ['read_5faudio_5fvideo',['READ_AUDIO_VIDEO',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149ae86a34d876dbc5ea76a647535ba8cebe',1,'Filesystem.h']]],
-  ['read_5fbitrate',['READ_BITRATE',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149aecbbd43a4bbd7f13cb97153d189e0b6c',1,'Filesystem.h']]],
-  ['read_5fcached',['READ_CACHED',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149aa0785bb4f2786c4644f61f2bc7d1fd1a',1,'Filesystem.h']]],
-  ['read_5fchunked',['READ_CHUNKED',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149acce42704eea3714240c41933681dc85a',1,'Filesystem.h']]],
-  ['read_5fmulti_5fstream',['READ_MULTI_STREAM',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a2356de52da5efa28928870c6dcc1bb72',1,'Filesystem.h']]],
-  ['read_5fno_5fcache',['READ_NO_CACHE',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a0117d00cee180a144993f511596b3284',1,'Filesystem.h']]],
-  ['read_5freopen',['READ_REOPEN',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a116483eace1c9338615a1ae348fbe106',1,'Filesystem.h']]],
-  ['read_5ftruncated',['READ_TRUNCATED',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a736ecac673f5d20033e9b3fb1f1c072d',1,'Filesystem.h']]]
+  ['lang_5ffmt_5fenglish_5fname',['LANG_FMT_ENGLISH_NAME',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635',1,'General.h']]],
+  ['lang_5ffmt_5fiso_5f639_5f1',['LANG_FMT_ISO_639_1',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51',1,'General.h']]],
+  ['lang_5ffmt_5fiso_5f639_5f2',['LANG_FMT_ISO_639_2',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a93ccac5fa6affc3908cbd62584c2e92b',1,'General.h']]]
 ];

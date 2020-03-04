@@ -9,6 +9,6 @@ var group__cpp__kodi__addon__instances =
     [ "PVR", "group__cpp__kodi__addon__pvr.html", null ],
     [ "Screensaver", "group__cpp__kodi__addon__screensaver.html", "group__cpp__kodi__addon__screensaver" ],
     [ "VFS", "group__cpp__kodi__addon__vfs.html", null ],
-    [ "Video Codec", "group__cpp__kodi__addon__videocodec.html", null ],
+    [ "Video Codec", "group__cpp__kodi__addon__videocodec.html", "group__cpp__kodi__addon__videocodec" ],
     [ "Visualization", "group__cpp__kodi__addon__visualization.html", "group__cpp__kodi__addon__visualization" ]
 ];

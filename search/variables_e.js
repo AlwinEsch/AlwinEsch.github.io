@@ -24,6 +24,7 @@ var searchData=
   ['strgenredescription',['strGenreDescription',['../struct_e_p_g___t_a_g.html#a5de560629a7aa22145e0187d407aa297',1,'EPG_TAG::strGenreDescription()'],['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#a00cadc01f85e0ccf449b0981de86a02f',1,'PVR_RECORDING::strGenreDescription()']]],
   ['strgroupname',['strGroupName',['../struct_p_v_r___c_h_a_n_n_e_l___g_r_o_u_p.html#adeca7a080cb80fd8bb21dab18c2302d3',1,'PVR_CHANNEL_GROUP::strGroupName()'],['../struct_p_v_r___c_h_a_n_n_e_l___g_r_o_u_p___m_e_m_b_e_r.html#adeca7a080cb80fd8bb21dab18c2302d3',1,'PVR_CHANNEL_GROUP_MEMBER::strGroupName()']]],
   ['striconpath',['strIconPath',['../struct_e_p_g___t_a_g.html#afdf2a45883a5736c00278c88c23c7a38',1,'EPG_TAG::strIconPath()'],['../struct_p_v_r___c_h_a_n_n_e_l.html#a36c179b6d0f370d4744c6d0393d1318b',1,'PVR_CHANNEL::strIconPath()'],['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#a36c179b6d0f370d4744c6d0393d1318b',1,'PVR_RECORDING::strIconPath()']]],
+  ['stride',['stride',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#a136e8e78229ecd4a0329f6b1eb757a2f',1,'VIDEOCODEC_PICTURE']]],
   ['strimdbnumber',['strIMDBNumber',['../struct_e_p_g___t_a_g.html#a2009296928299a11f0e324d4be9ab194',1,'EPG_TAG']]],
   ['strinputformat',['strInputFormat',['../struct_p_v_r___c_h_a_n_n_e_l.html#add25fb92e953231b966fcb9a2b8826d9',1,'PVR_CHANNEL']]],
   ['strlanguage',['strLanguage',['../struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#ae9eaf923082ad49a0b511336fa749bd6',1,'PVR_STREAM_PROPERTIES::PVR_STREAM']]],

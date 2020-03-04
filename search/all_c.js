@@ -16,5 +16,7 @@ var searchData=
   ['exists',['Exists',['../classkodi_1_1addon_1_1_c_instance_v_f_s.html#a1c362e8c2a5fdba8852d475df90e5c1b',1,'kodi::addon::CInstanceVFS::Exists()'],['../group__python__xbmcvfs.html#ga34ed07fb93392411ddc215762485a3b9',1,'exists():&#160;ModuleXbmcvfs.h']]],
   ['extension_5fcount',['extension_count',['../struct_addon_props___game.html#a817c34f57faa15e2d9d1bdd2b1a90cf3',1,'AddonProps_Game']]],
   ['extensions',['Extensions',['../group__cpp__kodi__addon__game___base.html#gac94d3caff821fb8e4441a758302f3f87',1,'kodi::addon::CInstanceGame::Extensions()'],['../struct_addon_props___game.html#ac6209137d42d2820bfd247a0c57f1dc3',1,'AddonProps_Game::extensions()']]],
+  ['extradata',['extraData',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___i_n_i_t_d_a_t_a.html#a94740cff4226d6369d931fa4fb059fba',1,'VIDEOCODEC_INITDATA']]],
+  ['extradatasize',['extraDataSize',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___i_n_i_t_d_a_t_a.html#a20ac30cabfe687e6c4c2769cd2bf3d20',1,'VIDEOCODEC_INITDATA']]],
   ['edit_20control',['Edit control',['../skin__edit_control.html',1,'skin_controls']]]
 ];

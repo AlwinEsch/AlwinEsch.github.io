@@ -133,7 +133,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 <dl class="section return"><dt>Returns</dt><dd>true if successfully done, otherwise false</dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>This id's are used to identify wanted data on <a class="el" href="group__cpp__kodi__addon__inputstream___demux.html#ga3e9e6cb9dce8878ed5dcf3d030a72d8c">GetStream</a> call.</dd></dl>
 <hr/>
- 
+<p><b>Example:</b></p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> CMyInputstream::GetStreamIds(std::vector&lt;unsigned int&gt;&amp; ids)</div><div class="line">{</div><div class="line">  kodi::Log(ADDON_LOG_DEBUG, <span class="stringliteral">&quot;GetStreamIds(...)&quot;</span>);</div><div class="line"></div><div class="line">  <span class="keywordflow">if</span> (m_opened)</div><div class="line">  {</div><div class="line">    <span class="comment">// This check not needed to have, the ABI checks also about, but make</span></div><div class="line">    <span class="comment">// sure you not give more as 32 streams.</span></div><div class="line">    <span class="keywordflow">if</span> (m_myStreams.size() &gt; MAX_STREAM_COUNT)</div><div class="line">    {</div><div class="line">      kodi::Log(ADDON_LOG_ERROR, <span class="stringliteral">&quot;Too many streams, only %u supported&quot;</span>, MAX_STREAM_COUNT);</div><div class="line">      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line">    }</div><div class="line"></div><div class="line">    ids.push_back(m_myAudioStreamId);</div><div class="line"></div><div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; streamPair : m_myOtherStreams)</div><div class="line">    {</div><div class="line">      ids.push_back(streamPair.second-&gt;uniqueId);</div><div class="line">    }</div><div class="line">  }</div><div class="line"></div><div class="line">  <span class="keywordflow">return</span> !ids.empty();</div><div class="line">}</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ga3e9e6cb9dce8878ed5dcf3d030a72d8c"></a>
@@ -170,7 +171,9 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 </table>
 </div><div class="memdoc">
 
-<p>Get IDs of available streams. </p>
+<p>Function for giving detailed stream information. </p>
+<p>The associated information is set here for IDs previously given with <a class="el" href="group__cpp__kodi__addon__inputstream___demux.html#ga9d104882627cedd66502fb821e916445">GetStreamIds</a>.</p>
+<p>This data is required to identify the associated codec and, if necessary, to refer to your own codec (if available in the addon).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">streamid</td><td>unique id of stream </td></tr>
@@ -185,7 +188,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 <tr>
 <th>Name </th><th>Type used </th><th>Required </th><th>Set call </th><th>Get call  </th></tr>
 <tr>
-<td><b>Stream type</b> </td><td>all </td><td>yes </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___info.html#ga1204498bda368d6e3547f35c49860d20">SetStreamType</a> </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___info.html#gad2c202aed9589a19a11925b1d89acd06">GetStreamType</a> </td></tr>
+<td><b>Stream type</b> </td><td>all </td><td>yes </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___info.html#ga40b477f4b7e15fa7d500faa65293f7e6">SetStreamType</a> </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___info.html#gaefadc65e81b993751480ebc3f057af47">GetStreamType</a> </td></tr>
 <tr>
 <td><b>Feature flags</b> </td><td>all </td><td>yes </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___info.html#gaf2306f32e7862982c05a130f6544b856">SetFeatures</a> </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___info.html#ga9d8bdd2d150723f2e4ba22dd4cee3f08">GetFeatures</a> </td></tr>
 <tr>
@@ -242,7 +245,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 <td><b>Content light metadata</b> </td><td></td><td>no </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___info.html#ga854b7c54519fa89ccfb86c61045c2cdd">SetContentLightMetadata</a> </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___info.html#ga991f5d98c99856322290f2043852b5bd">GetContentLightMetadata</a> </td></tr>
 </table>
 <hr/>
- 
+<p><b>Example:</b></p>
+<div class="fragment"><div class="line"><span class="keywordtype">bool</span> CMyInputstream::GetStream(<span class="keywordtype">int</span> streamid, InputstreamInfo&amp; stream)</div><div class="line">{</div><div class="line">  <span class="comment">// This is just a small example, this type will be significantly larger</span></div><div class="line">  <span class="comment">// for larger and more complex streams.</span></div><div class="line">  <span class="keywordflow">if</span> (streamid == m_myAudioStreamId)</div><div class="line">  {</div><div class="line">    <span class="comment">// This only a minimal exampl</span></div><div class="line">    stream.SetStreamType(<a class="code" href="group__cpp__kodi__addon__inputstream___defs___info.html#gga920b02e64b11c6019d2b7eab48cc089ca6e49a2451e60455af3f50b7d822e1d9e">INPUTSTREAM_TYPE_AUDIO</a>);</div><div class="line">    stream.SetFeatures(<a class="code" href="group__cpp__kodi__addon__inputstream___defs___info.html#gga313a45242e7514bf08104b00ad52d965aca66e97a148f0901c31e16a3b90c9c44">INPUTSTREAM_FEATURE_NONE</a>); <span class="comment">// Only added to example, INPUTSTREAM_FEATURE_NONE is default and no need to call</span></div><div class="line">    stream.SetFlags(<a class="code" href="group__cpp__kodi__addon__inputstream___defs___info.html#gga58c5eb78a2d00ebeac21a48ac290a9cca0ae0a43006b3bd2a5f9e0360807d371e">INPUTSTREAM_FLAG_NONE</a>); <span class="comment">// Only added to example, INPUTSTREAM_FLAG_NONE is default and no need to call</span></div><div class="line">    stream.SetCodecName(<span class="stringliteral">&quot;mp2&quot;</span>); <span class="comment">// Codec name, string must by equal with FFmpeg, see https://github.com/FFmpeg/FFmpeg/blob/master/libavcodec/codec_desc.c</span></div><div class="line">    stream.SetPhysicalIndex(1); <span class="comment">// Identifier required to set</span></div><div class="line">    stream.SetLanguage(<span class="stringliteral">&quot;en&quot;</span>);</div><div class="line">    stream.SetChannels(2);</div><div class="line">    stream.SetSampleRate(48000);</div><div class="line">    stream.SetBitRate(0);</div><div class="line">    stream.SetBitsPerSample(16);</div><div class="line">  }</div><div class="line">  <span class="keywordflow">else</span> ...</div><div class="line">  ...</div><div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line">}</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ga1f46dd938cd4828e2b585dbf5b81ad1e"></a>

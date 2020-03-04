@@ -26,6 +26,8 @@ var searchData=
   ['lockinggetnextavailablewindowid',['lockingGetNextAvailableWindowId',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window_x_m_l.html#a507ab35d41a0baaa7a32b16ca78aee24',1,'XBMCAddon::xbmcgui::WindowXML']]],
   ['lockpreset',['LockPreset',['../group__cpp__kodi__addon__visualization.html#ga0396c3e1569480032721836b7e139624',1,'kodi::addon::CInstanceVisualization']]],
   ['log',['Log',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a7d4369fe432c5e0a701d7a6e481af349',1,'ADDON::CHelper_libXBMC_addon::Log()'],['../group__python__xbmc.html#ga3cd3eff2195727144ad6fbabd4744961',1,'log():&#160;ModuleXbmc.h']]],
+  ['luminance_5fmax',['luminance_max',['../group__cpp__kodi__addon__inputstream___defs___info.html#ac0dfcaad6575e8a3c2e159873212f67a',1,'INPUTSTREAM_MASTERING_METADATA']]],
+  ['luminance_5fmin',['luminance_min',['../group__cpp__kodi__addon__inputstream___defs___info.html#aa71310406aba3d684ff9502cfc0e49ad',1,'INPUTSTREAM_MASTERING_METADATA']]],
   ['lyrics',['lyrics',['../group__cpp__kodi__addon__visualization___vis_track.html#a5b53a046cd78b3d3813f8690b14eb8e7',1,'VisTrack']]],
   ['list_20of_20built_2din_20functions',['List of built-in functions',['../page__list_of_built_in_functions.html',1,'general_parts']]],
   ['library_20_2d_20xbmc',['Library - xbmc',['../group__python__xbmc.html',1,'']]],

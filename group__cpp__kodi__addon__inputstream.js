@@ -12,5 +12,7 @@ var group__cpp__kodi__addon__inputstream =
     [ "GetCapabilities", "group__cpp__kodi__addon__inputstream.html#ga9adc530abc838115884bf1c5b5b2beb3", null ],
     [ "Open", "group__cpp__kodi__addon__inputstream.html#ga6139b1c7f6267c3434b74ef85602b2d5", null ],
     [ "Close", "group__cpp__kodi__addon__inputstream.html#gaacb6d0e5e6d570cdc2b0da14c3921ff0", null ],
-    [ "IsRealTimeStream", "group__cpp__kodi__addon__inputstream.html#gaad550e498369f3a406296779a162ec04", null ]
+    [ "IsRealTimeStream", "group__cpp__kodi__addon__inputstream.html#gaad550e498369f3a406296779a162ec04", null ],
+    [ "CanPauseStream", "group__cpp__kodi__addon__inputstream.html#ga86e12689cdfcd579b9e5d360c1b5aeff", null ],
+    [ "CanSeekStream", "group__cpp__kodi__addon__inputstream.html#gafd8b23e2807b46abb712ec1cfcee6ac8", null ]
 ];

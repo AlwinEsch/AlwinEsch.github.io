@@ -99,7 +99,28 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream.h
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::addon::CInstanceInputStream </big></font></span></code></h4>  <b>Inputstream add-on instance</b> </p>
-<p>Include the header <a class="el" href="_inputstream_8h_source.html">#include &lt;kodi/addon-instance/Inputstream.h&gt;</a> to use this class.</p>
+<p>This instance type is for using input streams to video and audio, to process and then give them to Kodi.</p>
+<p>This usage can be requested under various conditions, for example explicitly by another addon, by a Mimetype protocol defined in <code>addon.xml</code> or supported file extensions.</p>
+<p>In addition, stream files (* .strm) can be linked to an inputstream addon using <b><code>#KODIPROP:inputstreamclass=&lt;ADDON_NAME&gt;</code></b>.</p>
+<p>Include the header <a class="el" href="_inputstream_8h_source.html">#include &lt;kodi/addon-instance/Inputstream.h&gt;</a> to use this class. </p><hr/>
+<p>Here is an example of what the <b><code>addon.xml.in</code></b> would look like for an inputstream addon:</p>
+<div class="fragment"><div class="line">&lt;?<span class="keyword">xml</span> <span class="keyword">version</span>=<span class="stringliteral">&quot;1.0&quot;</span> <span class="keyword">encoding</span>=<span class="stringliteral">&quot;UTF-8&quot;</span>?&gt;</div><div class="line">&lt;<span class="keywordtype">addon</span></div><div class="line">  <span class="keyword">id</span>=<span class="stringliteral">&quot;inputstream.myspecialnamefor&quot;</span></div><div class="line">  <span class="keyword">version</span>=<span class="stringliteral">&quot;1.0.0&quot;</span></div><div class="line">  <span class="keyword">name</span>=<span class="stringliteral">&quot;My InputStream addon&quot;</span></div><div class="line">  <span class="keyword">provider-name</span>=<span class="stringliteral">&quot;Your Name&quot;</span>&gt;</div><div class="line">  &lt;<span class="keywordtype">requires</span>&gt;@<span class="keyword">ADDON_DEPENDS</span>@&lt;/<span class="keywordtype">requires</span>&gt;</div><div class="line">  &lt;<span class="keywordtype">extension</span></div><div class="line">    <span class="keyword">point</span>=<span class="stringliteral">&quot;kodi.inputstream&quot;</span></div><div class="line">    <span class="keyword">extension</span>=<span class="stringliteral">&quot;.xyz|.zyx&quot;</span></div><div class="line">    <span class="keyword">listitemprops</span>=<span class="stringliteral">&quot;license_type|license_key|license_data|license_flags&quot;</span></div><div class="line">    <span class="keyword">protocols</span>=<span class="stringliteral">&quot;myspecialnamefor|myspecialnamefors&quot;</span></div><div class="line">    <span class="keyword">library_</span>@<span class="keyword">PLATFORM</span>@=<span class="stringliteral">&quot;@LIBRARY_FILENAME@&quot;</span>/&gt;</div><div class="line">  &lt;<span class="keywordtype">extension</span> <span class="keyword">point</span>=<span class="stringliteral">&quot;xbmc.addon.metadata&quot;</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">summary</span> <span class="keyword">lang</span>=<span class="stringliteral">&quot;en_GB&quot;</span>&gt;<span class="keyword">My</span> <span class="keyword">InputStream</span> <span class="keyword">addon</span>&lt;/<span class="keywordtype">summary</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">description</span> <span class="keyword">lang</span>=<span class="stringliteral">&quot;en_GB&quot;</span>&gt;<span class="keyword">My</span> <span class="keyword">InputStream</span> <span class="keyword">description</span>&lt;/<span class="keywordtype">description</span>&gt;</div><div class="line">    &lt;<span class="keywordtype">platform</span>&gt;@<span class="keyword">PLATFORM</span>@&lt;/<span class="keywordtype">platform</span>&gt;</div><div class="line">  &lt;/<span class="keywordtype">extension</span>&gt;</div><div class="line">&lt;/<span class="keywordtype">addon</span>&gt;</div></div><!-- fragment --><p>At <b><code>&lt;extension point="kodi.inputstream" ...&gt;</code></b> the basic instance definition is declared, this is intended to identify the addon as an input stream and to see its supported types: </p><table class="doxtable">
+<tr>
+<th>Name </th><th>Description  </th></tr>
+<tr>
+<td><b><code>point</code></b> </td><td>The identification of the addon instance to inputstream is mandatory <b><code>kodi.inputstream</code></b>. In addition, the instance declared in the first <b><code>&lt;extension ... /&gt;</code></b> is also the main type of addon. </td></tr>
+<tr>
+<td><b><code>extension</code></b> </td><td>A filename extension is an identifier specified as a suffix to the name of a computer file where supported by addon. </td></tr>
+<tr>
+<td><b><code>listitemprops</code></b> </td><td>Values that are available to the addon at <a class="el" href="group__cpp__kodi__addon__inputstream___defs___property.html#ga6e6bff07f1689c0e65c455314699e419">InputstreamProperty::GetProperties()</a> and that can be passed to <a class="el" href="group__cpp__kodi__addon__inputstream.html#ga6139b1c7f6267c3434b74ef85602b2d5">CInstanceInputStream::Open()</a> with the respective values.<br />
+<dl class="section note"><dt>Note</dt><dd>At <a class="el" href="group__cpp__kodi__addon__inputstream___defs___property.html#ga6e6bff07f1689c0e65c455314699e419">InputstreamProperty::GetProperties()</a>, the addon id is also added to its values, e.g. the first pass with <b><code>inputstream.myspecialnamefor.license_type</code></b>. </dd></dl>
+</td></tr>
+<tr>
+<td><b><code>protocols</code></b> </td><td>The streaming protocol is a special protocol supported by the addon for the transmission of streaming media data over a network. </td></tr>
+<tr>
+<td><b><code>library_@PLATFORM@</code></b> </td><td>The runtime library used for the addon. This is usually declared by cmake and correctly displayed in the translated <code>addon.xml</code>. </td></tr>
+</table>
+<dl class="section remark"><dt>Remarks</dt><dd>For more detailed description of the <b><code>addon.xml</code></b>, see also <a href="https://kodi.wiki/view/Addon.xml">https://kodi.wiki/view/Addon.xml</a>.</dd></dl>
 <hr/>
 <p><b>Example:</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/Inputstream.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">class </span>CMyInputstream : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_input_stream.html">::kodi::addon::CInstanceInputStream</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyInputstream(KODI_HANDLE instance, <span class="keyword">const</span> std::string&amp; kodiVersion);</div><div class="line"></div><div class="line">  <span class="keywordtype">void</span> GetCapabilities(InputstreamCapabilities&amp; capabilities) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">bool</span> Open(<span class="keyword">const</span> InputstreamProperty&amp; props) <span class="keyword">override</span>;</div><div class="line">  <span class="keywordtype">void</span> Close() <span class="keyword">override</span>;</div><div class="line">  ...</div><div class="line">};</div><div class="line"></div><div class="line">CMyInputstream::CMyInputstream(KODI_HANDLE instance, <span class="keyword">const</span> std::string&amp; kodiVersion)</div><div class="line">  : CInstanceInputStream(instance, kodiVersion)</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyInputstream::GetCapabilities(InputstreamCapabilities&amp; capabilities)</div><div class="line">{</div><div class="line">  capabilities.SetMask(<a class="code" href="group__cpp__kodi__addon__inputstream___defs___capabilities.html#gga96a4bced98abeef652140c93f2ea8ca6a9264e169e3e62cbc9b88b27a07a9a7e1">INPUTSTREAM_SUPPORTS_IDEMUX</a> | <a class="code" href="group__cpp__kodi__addon__inputstream___defs___capabilities.html#gga96a4bced98abeef652140c93f2ea8ca6a27f6a3b10087f9aa27e43d05f167fef8">INPUTSTREAM_SUPPORTS_PAUSE</a>);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyInputstream::Open(<span class="keyword">const</span> InputstreamProperty&amp; props)</div><div class="line">{</div><div class="line">  std::string url = props.GetURL();</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keywordtype">void</span> CMyInputstream::Close()</div><div class="line">{</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line"><span class="comment">/*----------------------------------------------------------------------*/</span></div><div class="line"></div><div class="line">class CMyAddon : public ::kodi::addon::CAddonBase</div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CMyAddon() { }</div><div class="line">  <a class="code" href="group__cpp__kodi__addon__addonbase.html#ga335347495ed00620451a69cfe3494502">ADDON_STATUS</a> CreateInstanceEx(<span class="keywordtype">int</span> instanceType,</div><div class="line">                                std::string instanceID,</div><div class="line">                                KODI_HANDLE instance,</div><div class="line">                                KODI_HANDLE&amp; addonInstance,</div><div class="line">                                <span class="keyword">const</span> std::string&amp; version) <span class="keyword">override</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">/* If you use only one instance in your add-on, can be instanceType and</span></div><div class="line"><span class="comment"> * instanceID ignored */</span></div><div class="line"><a class="code" href="group__cpp__kodi__addon__addonbase.html#ga335347495ed00620451a69cfe3494502">ADDON_STATUS</a> CMyAddon::CreateInstanceEx(<span class="keywordtype">int</span> instanceType,</div><div class="line">                                        std::string instanceID,</div><div class="line">                                        KODI_HANDLE instance,</div><div class="line">                                        KODI_HANDLE&amp; addonInstance,</div><div class="line">                                        <span class="keyword">const</span> std::string&amp; version)</div><div class="line">{</div><div class="line">  <span class="keywordflow">if</span> (instanceType == <a class="code" href="group__cpp__kodi__addon__addonbase.html#ggada0b4c3c9f9c168e5e1c27145ec72357ace831275103d15bc666b5f2d8e6112bb">ADDON_INSTANCE_INPUTSTREAM</a>)</div><div class="line">  {</div><div class="line">    kodi::Log(ADDON_LOG_NOTICE, <span class="stringliteral">&quot;Creating my Inputstream&quot;</span>);</div><div class="line">    addonInstance = <span class="keyword">new</span> CMyInputstream(instance, version);</div><div class="line">    <span class="keywordflow">return</span> <a class="code" href="group__cpp__kodi__addon__addonbase.html#gga335347495ed00620451a69cfe3494502a6925909b93ca05098ca5272f16e091c0">ADDON_STATUS_OK</a>;</div><div class="line">  }</div><div class="line">  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (...)</div><div class="line">  {</div><div class="line">    ...</div><div class="line">  }</div><div class="line">  <span class="keywordflow">return</span> <a class="code" href="group__cpp__kodi__addon__addonbase.html#gga335347495ed00620451a69cfe3494502ac0720dbdce3dcb194f12a0eceb59a501">ADDON_STATUS_UNKNOWN</a>;</div><div class="line">}</div><div class="line"></div><div class="line">ADDONCREATOR(CMyAddon)</div></div><!-- fragment --><p>The destruction of the example class <code>CMyInputstream</code> is called from Kodi's header. Manually deleting the add-on instance is not required. </p>
@@ -287,7 +308,7 @@ Modules</h2></td></tr>
 <tr>
 <td><b>The wanted stream URL</b> </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___property.html#ga7039e6306f93705f66e9f3581d62e793">GetURL</a> </td></tr>
 <tr>
-<td><b>Special stream properties given by string id and string value</b> </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___property.html#ga6a19eaad32639b9d6fca18a37bcc49c0">GetProperties</a> </td></tr>
+<td><b>Special stream properties given by string id and string value</b> </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___property.html#ga6e6bff07f1689c0e65c455314699e419">GetProperties</a> </td></tr>
 <tr>
 <td><b>The folder where addon library stored</b> </td><td><a class="el" href="group__cpp__kodi__addon__inputstream___defs___property.html#ga0e5a75725e7297e8c572c4d84c1fa495">GetLibFolder</a> </td></tr>
 <tr>
@@ -298,7 +319,7 @@ Modules</h2></td></tr>
  <dl class="section note"><dt>Note</dt><dd>Valid implementation required.</dd></dl>
 <hr/>
 <p><b>Example:</b></p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> CMyInputstream::Open(<span class="keyword">const</span> InputstreamProperty&amp; props)</div><div class="line">{</div><div class="line">  std::string url = props.GetURL();</div><div class="line">  std::string license_key = props.GetProperties()[<span class="stringliteral">&quot;inputstream.license_key&quot;</span>];</div><div class="line">  ...</div><div class="line">}</div></div><!-- fragment --> 
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> CMyInputstream::Open(<span class="keyword">const</span> InputstreamProperty&amp; props)</div><div class="line">{</div><div class="line">  std::string url = props.GetURL();</div><div class="line">  std::string license_key = props.GetProperties()[<span class="stringliteral">&quot;inputstream.myspecialnamefor.license_key&quot;</span>];</div><div class="line">  ...</div><div class="line">}</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="gaacb6d0e5e6d570cdc2b0da14c3921ff0"></a>
@@ -356,6 +377,64 @@ Modules</h2></td></tr>
 
 <p>Check for real-time streaming. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if current stream is real-time </dd></dl>
+
+</div>
+</div>
+<a id="ga86e12689cdfcd579b9e5d360c1b5aeff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86e12689cdfcd579b9e5d360c1b5aeff">&#9670;&nbsp;</a></span>CanPauseStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CanPauseStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the backend support pausing the currently playing stream. </p>
+<p>This will enable/disable the pause button in Kodi based on the return value</p>
+<dl class="section return"><dt>Returns</dt><dd>false if the InputStream addon/backend does not support pausing, true if possible </dd></dl>
+
+</div>
+</div>
+<a id="gafd8b23e2807b46abb712ec1cfcee6ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd8b23e2807b46abb712ec1cfcee6ac8">&#9670;&nbsp;</a></span>CanSeekStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CanSeekStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the backend supports seeking for the currently playing stream. </p>
+<p>This will enable/disable the rewind/forward buttons in Kodi based on the return value</p>
+<dl class="section return"><dt>Returns</dt><dd>false if the InputStream addon/backend does not support seeking, true if possible </dd></dl>
 
 </div>
 </div>

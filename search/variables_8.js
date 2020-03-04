@@ -46,7 +46,7 @@ var searchData=
   ['iorder',['iOrder',['../struct_p_v_r___c_h_a_n_n_e_l.html#a657641affb2008f2e5a8c8f8c1f53ba1',1,'PVR_CHANNEL::iOrder()'],['../struct_p_v_r___c_h_a_n_n_e_l___g_r_o_u_p___m_e_m_b_e_r.html#a657641affb2008f2e5a8c8f8c1f53ba1',1,'PVR_CHANNEL_GROUP_MEMBER::iOrder()']]],
   ['iparentalrating',['iParentalRating',['../struct_e_p_g___t_a_g.html#a11861e0214df81ce6441703d8ae97b35',1,'EPG_TAG']]],
   ['iparentclientindex',['iParentClientIndex',['../struct_p_v_r___t_i_m_e_r.html#aaea32d052ba6903e3da08f64942719ee',1,'PVR_TIMER']]],
-  ['ipid',['iPid',['../struct_p_v_r___d_e_s_c_r_a_m_b_l_e___i_n_f_o.html#a0a3e63cd64bedd5a6e9d351a02d04b10',1,'PVR_DESCRAMBLE_INFO::iPid()'],['../struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#aa648b78816994b9303a2bb9dc221ffef',1,'PVR_STREAM_PROPERTIES::PVR_STREAM::iPID()']]],
+  ['ipid',['iPID',['../struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#aa648b78816994b9303a2bb9dc221ffef',1,'PVR_STREAM_PROPERTIES::PVR_STREAM::iPID()'],['../struct_p_v_r___d_e_s_c_r_a_m_b_l_e___i_n_f_o.html#a0a3e63cd64bedd5a6e9d351a02d04b10',1,'PVR_DESCRAMBLE_INFO::iPid()']]],
   ['iplaycount',['iPlayCount',['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#ad2bc04443aa68b56ab718cf44598ddb2',1,'PVR_RECORDING']]],
   ['iposition',['iPosition',['../struct_p_v_r___c_h_a_n_n_e_l___g_r_o_u_p.html#aab0783fabb4f089378070baa9c5b5ce1',1,'PVR_CHANNEL_GROUP']]],
   ['ipreventduplicateepisodes',['iPreventDuplicateEpisodes',['../struct_p_v_r___t_i_m_e_r.html#a256bc20804cb086eeffa3f9fc4f76648',1,'PVR_TIMER']]],

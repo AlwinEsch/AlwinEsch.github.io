@@ -56,7 +56,7 @@ var searchData=
   ['cradiobutton',['CRadioButton',['../classkodi_1_1gui_1_1controls_1_1_c_radio_button.html',1,'kodi::gui::controls']]],
   ['crenderhelperstub',['CRenderHelperStub',['../structkodi_1_1gui_1_1_c_render_helper_stub.html',1,'kodi::gui']]],
   ['crendering',['CRendering',['../classkodi_1_1gui_1_1controls_1_1_c_rendering.html',1,'kodi::gui::controls']]],
-  ['crypto_5finfo',['CRYPTO_INFO',['../struct_c_r_y_p_t_o___i_n_f_o.html',1,'']]],
+  ['crypto_5finfo',['CRYPTO_INFO',['../group__cpp__kodi__addon__inputstream___defs___info___c_r_y_p_t_o___i_n_f_o.html#struct_c_r_y_p_t_o___i_n_f_o',1,'']]],
   ['csettingsslider',['CSettingsSlider',['../classkodi_1_1gui_1_1controls_1_1_c_settings_slider.html',1,'kodi::gui::controls']]],
   ['csettingvalue',['CSettingValue',['../classkodi_1_1_c_setting_value.html',1,'kodi']]],
   ['cshader',['CShader',['../classkodi_1_1gui_1_1gl_1_1_c_shader.html',1,'kodi::gui::gl']]],
