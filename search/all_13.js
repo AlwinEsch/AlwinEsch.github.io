@@ -1,7 +1,7 @@
 var searchData=
 [
   ['list_20item',['List Item',['../group__cpp__kodi__gui___c_list_item.html',1,'']]],
-  ['label',['label',['../struct_v_f_s_dir_entry.html#ae62629c530499094c8d2cf37f33038b6',1,'VFSDirEntry::label()'],['../group__cpp__kodi__vfs___c_dir_entry.html#ga154d00821a136494d7afc14b6755143a',1,'kodi::vfs::CDirEntry::Label()']]],
+  ['label',['Label',['../group__cpp__kodi__vfs___c_dir_entry.html#ga154d00821a136494d7afc14b6755143a',1,'kodi::vfs::CDirEntry::Label()'],['../struct_v_f_s_dir_entry.html#ae62629c530499094c8d2cf37f33038b6',1,'VFSDirEntry::label()']]],
   ['label_20control',['Label Control',['../_label__control.html',1,'skin_controls']]],
   ['lang_5ffmt_5fenglish_5fname',['LANG_FMT_ENGLISH_NAME',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635',1,'General.h']]],
   ['lang_5ffmt_5fiso_5f639_5f1',['LANG_FMT_ISO_639_1',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51',1,'General.h']]],

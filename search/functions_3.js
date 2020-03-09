@@ -6,7 +6,7 @@ var searchData=
   ['deletefile',['DeleteFile',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#aba0fb0efdd105859543d5812ea19a2ec',1,'ADDON::CHelper_libXBMC_addon::DeleteFile()'],['../group__cpp__kodi__vfs.html#ga5c2686614c3508ecda78609725f123ad',1,'kodi::vfs::DeleteFile()']]],
   ['demuxabort',['DemuxAbort',['../group__cpp__kodi__addon__inputstream___demux.html#ga9ba868e65400538851ce66f19d901191',1,'kodi::addon::CInstanceInputStream']]],
   ['demuxflush',['DemuxFlush',['../group__cpp__kodi__addon__inputstream___demux.html#gaaae5d8cdca2d570c01adcf7c7b5e8f75',1,'kodi::addon::CInstanceInputStream']]],
-  ['demuxread',['DemuxRead',['../group__cpp__kodi__addon__inputstream___demux.html#gad2c257fded197ec1a78bf3c9d9f9fa78',1,'kodi::addon::CInstanceInputStream']]],
+  ['demuxread',['DemuxRead',['../group__cpp__kodi__addon__inputstream___demux.html#gaa228f4f31cc7a46bbb4054aa31c3d2ae',1,'kodi::addon::CInstanceInputStream']]],
   ['demuxreset',['DemuxReset',['../group__cpp__kodi__addon__inputstream___demux.html#ga4e1a9156a48ad4536be348fb698bc996',1,'kodi::addon::CInstanceInputStream']]],
   ['demuxseektime',['DemuxSeekTime',['../group__cpp__kodi__addon__inputstream___demux.html#ga313d275a2f08c9fd786b5a09edf431a8',1,'kodi::addon::CInstanceInputStream']]],
   ['demuxsetspeed',['DemuxSetSpeed',['../group__cpp__kodi__addon__inputstream___demux.html#ga9283b013d1af58196b196ab33c0d82c6',1,'kodi::addon::CInstanceInputStream']]],

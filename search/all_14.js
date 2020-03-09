@@ -4,7 +4,7 @@ var searchData=
   ['m_5fbitrate',['m_BitRate',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#abf96854d3f3d04a3248730aa15c75855',1,'INPUTSTREAM_INFO']]],
   ['m_5fbitspersample',['m_BitsPerSample',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a6e78aae20d2e1b753e00f9c2b7db8eeb',1,'INPUTSTREAM_INFO']]],
   ['m_5fchannelcount',['m_channelCount',['../struct_audio_engine_format.html#a98e4ea22d72d3c5dce2821ae10a802f8',1,'AudioEngineFormat']]],
-  ['m_5fchannels',['m_Channels',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#ac1663a37a4b40375a098c888d911e085',1,'INPUTSTREAM_INFO::m_Channels()'],['../struct_audio_engine_format.html#a4a53bc9bcf5fe0c7d808858463f370f7',1,'AudioEngineFormat::m_channels()']]],
+  ['m_5fchannels',['m_channels',['../struct_audio_engine_format.html#a4a53bc9bcf5fe0c7d808858463f370f7',1,'AudioEngineFormat::m_channels()'],['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#ac1663a37a4b40375a098c888d911e085',1,'INPUTSTREAM_INFO::m_Channels()']]],
   ['m_5fcodecfourcc',['m_codecFourCC',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#aa5f1aa7348aa3415364f82266e4c73a9',1,'INPUTSTREAM_INFO']]],
   ['m_5fcodecinternalname',['m_codecInternalName',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#a8e832db8d5fd88e14f5f882522cddb0e',1,'INPUTSTREAM_INFO']]],
   ['m_5fcodecname',['m_codecName',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html#affacf2953263e8616d6b58061ebdde36',1,'INPUTSTREAM_INFO']]],

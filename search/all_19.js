@@ -31,7 +31,7 @@ var searchData=
   ['registerme',['RegisterMe',['../class_c_helper__lib_x_b_m_c__pvr.html#a25ef0dce5313b9199027af2463a64e28',1,'CHelper_libXBMC_pvr']]],
   ['registersymbol',['RegisterSymbol',['../class_c_dll_helper.html#aa9382313baaf2d673c753130a55d3de5',1,'CDllHelper']]],
   ['releasebuffer',['ReleaseBuffer',['../group__cpp__kodi__addon__game___operation___c_stream.html#ga214c1c73a55e8bebb3e3a2331d592e02',1,'kodi::addon::CInstanceGame::CStream']]],
-  ['releaseframebuffer',['ReleaseFrameBuffer',['../group__cpp__kodi__addon__videocodec.html#ga8101baa77dbb1a8adefd30c2842e3136',1,'kodi::addon::CInstanceVideoCodec']]],
+  ['releaseframebuffer',['ReleaseFrameBuffer',['../group__cpp__kodi__addon__videocodec.html#ga5a578889ff1096d8d4ff46d058aa1929',1,'kodi::addon::CInstanceVideoCodec']]],
   ['remove',['remove',['../group__python___play_list.html#ga2c737a7d7cded298377ca2aeda23d3ab',1,'XBMCAddon::xbmc::PlayList']]],
   ['removecontrol',['removeControl',['../group__python__xbmcgui__window.html#ga1d2ebb433f21bd658058f878a54f3da6',1,'XBMCAddon::xbmcgui::Window']]],
   ['removecontrols',['removeControls',['../group__python__xbmcgui__window.html#ga05a596ff87552e160dabcdf2ea4a6951',1,'XBMCAddon::xbmcgui::Window']]],

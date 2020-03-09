@@ -130,22 +130,30 @@ Modules</h2></td></tr>
 
 <p><b>Masktypes</b><br />
 This values are needed to tell Kodi which options are supported on the addon. </p>
-<p>If one of this is defined, then the corresponding methods from <a class="el" href="classkodi_1_1addon_1_1_c_instance_input_stream.html">kodi::addon::CInstanceInputStream</a> need to be implemented.</p>
+<p>If one of this is defined, then the corresponding methods from <a class="el" href="group__cpp__kodi__addon__inputstream.html">kodi::addon::CInstanceInputStream</a> need to be implemented.</p>
 <p>Used on <a class="el" href="group__cpp__kodi__addon__inputstream.html#ga9adc530abc838115884bf1c5b5b2beb3">kodi::addon::CInstanceInputStream::GetCapabilities()</a>. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a9264e169e3e62cbc9b88b27a07a9a7e1"></a>INPUTSTREAM_SUPPORTS_IDEMUX&#160;</td><td class="fielddoc"><p>supports interface IDemux </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a9264e169e3e62cbc9b88b27a07a9a7e1"></a>INPUTSTREAM_SUPPORTS_IDEMUX&#160;</td><td class="fielddoc"><p>Supports interface for demuxing. </p>
+<p>If set must be <a class="el" href="group__cpp__kodi__addon__inputstream___demux.html">Demux support</a> included. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a2398f2726273e22e747ab76a28151b23"></a>INPUTSTREAM_SUPPORTS_IPOSTIME&#160;</td><td class="fielddoc"><p>supports interface IPosTime </p>
+<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a2398f2726273e22e747ab76a28151b23"></a>INPUTSTREAM_SUPPORTS_IPOSTIME&#160;</td><td class="fielddoc"><p>Supports interface position time. </p>
+<p>This means that the start time and the current stream time are used.</p>
+<p>If set must be <a class="el" href="group__cpp__kodi__addon__inputstream___time.html">Time support</a> included. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a56061383bc45d2a1b2886b3860f9498e"></a>INPUTSTREAM_SUPPORTS_IDISPLAYTIME&#160;</td><td class="fielddoc"><p>supports interface IDisplayTime </p>
+<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a56061383bc45d2a1b2886b3860f9498e"></a>INPUTSTREAM_SUPPORTS_IDISPLAYTIME&#160;</td><td class="fielddoc"><p>Supports interface for display time. </p>
+<p>This will call up the complete stream time information. The start time and the individual PTS times are then given using <a class="el" href="group__cpp__kodi__addon__inputstream___defs___times.html">class InputstreamTimes</a>.</p>
+<p>If set must be <a class="el" href="group__cpp__kodi__addon__inputstream___times.html">Times support</a> included. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a747b64a0ce06735d694d691ce814e27b"></a>INPUTSTREAM_SUPPORTS_SEEK&#160;</td><td class="fielddoc"><p>supports seek </p>
+<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a747b64a0ce06735d694d691ce814e27b"></a>INPUTSTREAM_SUPPORTS_SEEK&#160;</td><td class="fielddoc"><p>Supports seek. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a27f6a3b10087f9aa27e43d05f167fef8"></a>INPUTSTREAM_SUPPORTS_PAUSE&#160;</td><td class="fielddoc"><p>supports pause </p>
+<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a27f6a3b10087f9aa27e43d05f167fef8"></a>INPUTSTREAM_SUPPORTS_PAUSE&#160;</td><td class="fielddoc"><p>Supports pause. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6ae3d5ecc25ee4bb63485e77a9f24f5478"></a>INPUTSTREAM_SUPPORTS_ITIME&#160;</td><td class="fielddoc"><p>supports interface ITime </p>
+<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6ae3d5ecc25ee4bb63485e77a9f24f5478"></a>INPUTSTREAM_SUPPORTS_ITIME&#160;</td><td class="fielddoc"><p>Supports interface to give position time. </p>
+<p>This will only ask for the current time of the stream, not for length or start.</p>
+<p>If set must be <a class="el" href="group__cpp__kodi__addon__inputstream___pos_time.html">Position time support</a> included. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a60bd702ac84cf53544ebab3446c1943c"></a>INPUTSTREAM_SUPPORTS_ICHAPTER&#160;</td><td class="fielddoc"><p>supports interface IChapter </p>
+<tr><td class="fieldname"><a id="gga96a4bced98abeef652140c93f2ea8ca6a60bd702ac84cf53544ebab3446c1943c"></a>INPUTSTREAM_SUPPORTS_ICHAPTER&#160;</td><td class="fielddoc"><p>Supports interface for chapter selection. </p>
+<p>If set must be <a class="el" href="group__cpp__kodi__addon__inputstream___chapter.html">Chapter support</a> included. </p>
 </td></tr>
 </table>
 

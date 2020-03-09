@@ -7,11 +7,11 @@ var group__cpp__kodi__addon__inputstream___demux =
     [ "DemuxReset", "group__cpp__kodi__addon__inputstream___demux.html#ga4e1a9156a48ad4536be348fb698bc996", null ],
     [ "DemuxAbort", "group__cpp__kodi__addon__inputstream___demux.html#ga9ba868e65400538851ce66f19d901191", null ],
     [ "DemuxFlush", "group__cpp__kodi__addon__inputstream___demux.html#gaaae5d8cdca2d570c01adcf7c7b5e8f75", null ],
-    [ "DemuxRead", "group__cpp__kodi__addon__inputstream___demux.html#gad2c257fded197ec1a78bf3c9d9f9fa78", null ],
+    [ "DemuxRead", "group__cpp__kodi__addon__inputstream___demux.html#gaa228f4f31cc7a46bbb4054aa31c3d2ae", null ],
     [ "DemuxSeekTime", "group__cpp__kodi__addon__inputstream___demux.html#ga313d275a2f08c9fd786b5a09edf431a8", null ],
     [ "DemuxSetSpeed", "group__cpp__kodi__addon__inputstream___demux.html#ga9283b013d1af58196b196ab33c0d82c6", null ],
     [ "SetVideoResolution", "group__cpp__kodi__addon__inputstream___demux.html#ga5a04a0793d39221218478c9388ee0446", null ],
-    [ "AllocateDemuxPacket", "group__cpp__kodi__addon__inputstream___demux.html#ga979e566ec25f4ecc5b1f0cebc4594fdc", null ],
-    [ "AllocateEncryptedDemuxPacket", "group__cpp__kodi__addon__inputstream___demux.html#ga772d255c7349b167929c22d80de57437", null ],
-    [ "FreeDemuxPacket", "group__cpp__kodi__addon__inputstream___demux.html#ga27de47f3d3787e878ab521d9ca3cf479", null ]
+    [ "AllocateDemuxPacket", "group__cpp__kodi__addon__inputstream___demux.html#ga701b127618c63ac665cdee37fb2e5fb3", null ],
+    [ "AllocateEncryptedDemuxPacket", "group__cpp__kodi__addon__inputstream___demux.html#ga954bc5f4acc8da0dc7d7bc7da03ce3d6", null ],
+    [ "FreeDemuxPacket", "group__cpp__kodi__addon__inputstream___demux.html#ga40e2c64bb7728acae4d1406e8b21d8ec", null ]
 ];

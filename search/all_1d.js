@@ -23,6 +23,7 @@ var searchData=
   ['vfsproperty',['VFSProperty',['../struct_v_f_s_property.html',1,'']]],
   ['vfsurl',['VFSURL',['../struct_v_f_s_u_r_l.html',1,'']]],
   ['video_20control',['Video Control',['../_video__control.html',1,'skin_controls']]],
+  ['videobufferhandle',['videoBufferHandle',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#aa953e130fd82a1285283dd46f83107c4',1,'VIDEOCODEC_PICTURE']]],
   ['videocodec_5fformat',['VIDEOCODEC_FORMAT',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___i_n_i_t_d_a_t_a.html#gab0b1f25d1429b3c487d46b53c53d0712',1,'VideoCodec.h']]],
   ['videocodec_5fformat_5fi420',['VIDEOCODEC_FORMAT_I420',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___i_n_i_t_d_a_t_a.html#ggab0b1f25d1429b3c487d46b53c53d0712a6daec632afb29872690d34f100d39139',1,'VideoCodec.h']]],
   ['videocodec_5fformat_5fmaxformats',['VIDEOCODEC_FORMAT_MAXFORMATS',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___i_n_i_t_d_a_t_a.html#ggab0b1f25d1429b3c487d46b53c53d0712aa59c495b3de149dd22d74cd6a085cbd0',1,'VideoCodec.h']]],

@@ -7,7 +7,7 @@ var searchData=
   ['text',['Text',['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#ga8c95c8fd22c77bce27a4798f2490d381',1,'kodi::gui::dialogs::CExtendedProgress']]],
   ['text_20box',['Text Box',['../_text__box.html',1,'skin_controls']]],
   ['textviewer',['textviewer',['../group__python___dialog.html#gad24eabf4c8107d4674c017db09a193ae',1,'XBMCAddon::xbmcgui::Dialog']]],
-  ['title',['Title',['../group__cpp__kodi__vfs___c_dir_entry.html#ga9865f7d9426ae988fdcd66ff3a5c5bcd',1,'kodi::vfs::CDirEntry::Title()'],['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#ga642f961321a4b17ae79f39fa2c2e4c43',1,'kodi::gui::dialogs::CExtendedProgress::Title()'],['../group__cpp__kodi__addon__visualization___vis_track.html#a8214780964530800368b406c681fd1d9',1,'VisTrack::title()'],['../struct_v_f_s_dir_entry.html#a2c766446078ffdca7f6f9871086655f8',1,'VFSDirEntry::title()']]],
+  ['title',['title',['../group__cpp__kodi__addon__visualization___vis_track.html#a8214780964530800368b406c681fd1d9',1,'VisTrack::title()'],['../struct_v_f_s_dir_entry.html#a2c766446078ffdca7f6f9871086655f8',1,'VFSDirEntry::title()'],['../group__cpp__kodi__vfs___c_dir_entry.html#ga9865f7d9426ae988fdcd66ff3a5c5bcd',1,'kodi::vfs::CDirEntry::Title()'],['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#ga642f961321a4b17ae79f39fa2c2e4c43',1,'kodi::gui::dialogs::CExtendedProgress::Title()']]],
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
   ['trackcount',['TrackCount',['../group__cpp__kodi__addon__audiodecoder.html#gad339b85b3566aee42195d3b101ca9afa',1,'kodi::addon::CInstanceAudioDecoder']]],
   ['tracknumber',['trackNumber',['../group__cpp__kodi__addon__visualization___vis_track.html#aae897b77f023327f257102d04dbb46f1',1,'VisTrack']]],

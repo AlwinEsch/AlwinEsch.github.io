@@ -17,7 +17,7 @@ var searchData=
   ['folder',['folder',['../struct_v_f_s_dir_entry.html#a92b6fb05a7568b9a345d53f6b600f56d',1,'VFSDirEntry']]],
   ['format',['format',['../group__cpp__kodi__addon__game___defs___video_stream.html#ae58cee32b99bdf0ef4b56bf7e76a4238',1,'game_stream_video_properties']]],
   ['fps',['fps',['../group__cpp__kodi__addon__game___defs___environment_types.html#a63da2a617b72a1630998a4d8b4d26cd3',1,'game_system_timing']]],
-  ['freedemuxpacket',['FreeDemuxPacket',['../group__cpp__kodi__addon__inputstream___demux.html#ga27de47f3d3787e878ab521d9ca3cf479',1,'kodi::addon::CInstanceInputStream']]],
+  ['freedemuxpacket',['FreeDemuxPacket',['../group__cpp__kodi__addon__inputstream___demux.html#ga40e2c64bb7728acae4d1406e8b21d8ec',1,'kodi::addon::CInstanceInputStream']]],
   ['freedirectory',['FreeDirectory',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#a8ae5b67b4057c7a23db5c2a39da6c78f',1,'ADDON::CHelper_libXBMC_addon']]],
   ['freeevents',['FreeEvents',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a3a794dc472061369fdbf16b499a4b955',1,'kodi::addon::CInstancePeripheral']]],
   ['freefeatures',['FreeFeatures',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a19aaceb1285a7c44163271d409f903ed',1,'kodi::addon::CInstancePeripheral']]],

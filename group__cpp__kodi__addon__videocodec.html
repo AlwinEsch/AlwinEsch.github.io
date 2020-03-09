@@ -141,11 +141,10 @@ Modules</h2></td></tr>
 <p>Video codec class constructor used to support multiple instance types. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The instance value given to <b><code><a class="el" href="group__cpp__kodi__addon__addonbase.html#gab8bfc4658e61f5bde8265d99a0447fee" title="Instance created. ">kodi::addon::CAddonBase::CreateInstance</a>(...)</code></b>, or by a inputstream instance if them declared as parent.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The instance value given to <b><code><a class="el" href="group__cpp__kodi__addon__addonbase.html#gab8bfc4658e61f5bde8265d99a0447fee" title="Instance created. ">kodi::addon::CAddonBase::CreateInstance</a>(...)</code></b>, or by a inputstream instance if them declared as parent. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>Only use <code>instance</code> from the <a class="el" href="group__cpp__kodi__addon__addonbase.html#gab8bfc4658e61f5bde8265d99a0447fee">CAddonBase::CreateInstance</a> </dd></dl>
 
 </div>
 </div>
@@ -201,7 +200,7 @@ Modules</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open the decoder, returns true on success. </p>
-<p>Decoders not capable of runnung multiple instances should return false in case there is already a instance open.</p>
+<p>Decoders not capable of running multiple instances should return false in case there is already a instance open.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">initData</td><td>Video codec init data </td></tr>
@@ -240,7 +239,7 @@ Modules</h2></td></tr>
 <p>Decoders not capable of runnung multiple instances may be capable of reconfiguring the running instance. If Reconfigure returns false, player will close / open the decoder</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">initData</td><td>Video codec init data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initData</td><td>Video codec reconfigure data </td></tr>
   </table>
   </dd>
 </dl>
@@ -248,8 +247,8 @@ Modules</h2></td></tr>
 
 </div>
 </div>
-<a id="gab934321d556db18f79d5f5160f3a1a9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab934321d556db18f79d5f5160f3a1a9d">&#9670;&nbsp;</a></span>AddData()</h2>
+<a id="gafaf3a8ecda903ec6ddb59c387a14e08d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafaf3a8ecda903ec6ddb59c387a14e08d">&#9670;&nbsp;</a></span>AddData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +259,7 @@ Modules</h2></td></tr>
         <tr>
           <td class="memname">virtual bool AddData </td>
           <td>(</td>
-          <td class="paramtype">const DemuxPacket &amp;&#160;</td>
+          <td class="paramtype">const DEMUX_PACKET &amp;&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>
@@ -401,12 +400,20 @@ Modules</h2></td></tr>
 <p>AddonToKodi interface. </p>
 <p>All picture members can be expected to be set correctly except decodedData and pts.</p>
 <p>GetFrameBuffer has to set decodedData to a valid memory address and return true.</p>
-<dl class="section return"><dt>Returns</dt><dd>In case buffer allocation fails, it return false. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">picture</td><td>The buffer, or unmodified if false is returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>In case buffer allocation fails, it return false.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If this returns true, buffer must be freed using <a class="el" href="group__cpp__kodi__addon__videocodec.html#ga5a578889ff1096d8d4ff46d058aa1929">ReleaseFrameBuffer()</a>.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Only called from addon itself </dd></dl>
 
 </div>
 </div>
-<a id="ga8101baa77dbb1a8adefd30c2842e3136"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8101baa77dbb1a8adefd30c2842e3136">&#9670;&nbsp;</a></span>ReleaseFrameBuffer()</h2>
+<a id="ga5a578889ff1096d8d4ff46d058aa1929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a578889ff1096d8d4ff46d058aa1929">&#9670;&nbsp;</a></span>ReleaseFrameBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -417,8 +424,8 @@ Modules</h2></td></tr>
         <tr>
           <td class="memname">void ReleaseFrameBuffer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#struct_v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e">VIDEOCODEC_PICTURE</a> &amp;&#160;</td>
-          <td class="paramname"><em>picture</em></td><td>)</td>
+          <td class="paramtype">KODI_HANDLE&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -429,13 +436,14 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Release the with <a class="el" href="group__cpp__kodi__addon__videocodec.html#ga550c99cd8784c4e57a3479936cc6cf61">GetFrameBuffer</a> given framebuffer. </p>
+<p>Release the with <a class="el" href="group__cpp__kodi__addon__videocodec.html#ga550c99cd8784c4e57a3479936cc6cf61">GetFrameBuffer()</a> given framebuffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">picture</td><td>the used picture framebuffer to release </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>the on <a class="el" href="group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#aa953e130fd82a1285283dd46f83107c4">VIDEOCODEC_PICTURE::videoBufferHandle</a> defined buffer handle</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Only called from addon itself </dd></dl>
 
 </div>
 </div>

@@ -284,7 +284,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 </div><div class="memdoc">
 
 <p>Enable or disable a stream. </p>
-<p>A disabled stream does not send demux packets</p>
+<p>A disabled stream does not send demux packets.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">streamid</td><td>unique id of stream </td></tr>
@@ -419,8 +419,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 
 </div>
 </div>
-<a id="gad2c257fded197ec1a78bf3c9d9f9fa78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad2c257fded197ec1a78bf3c9d9f9fa78">&#9670;&nbsp;</a></span>DemuxRead()</h2>
+<a id="gaa228f4f31cc7a46bbb4054aa31c3d2ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa228f4f31cc7a46bbb4054aa31c3d2ae">&#9670;&nbsp;</a></span>DemuxRead()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -429,7 +429,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual DemuxPacket* DemuxRead </td>
+          <td class="memname">virtual DEMUX_PACKET* DemuxRead </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -443,7 +443,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 </div><div class="memdoc">
 
 <p>Read the next packet from the demultiplexer, if there is one. </p>
-<dl class="section return"><dt>Returns</dt><dd>The next packet. If there is no next packet, then the add-on should return the packet created by calling <a class="el" href="group__cpp__kodi__addon__inputstream___demux.html#ga979e566ec25f4ecc5b1f0cebc4594fdc">AllocateDemuxPacket(0)</a> on the callback. If the stream changed and Kodi's player needs to be reinitialised, then, the add-on should call <a class="el" href="group__cpp__kodi__addon__inputstream___demux.html#ga979e566ec25f4ecc5b1f0cebc4594fdc">AllocateDemuxPacket(0)</a> on the callback, and set the streamid to DMX_SPECIALID_STREAMCHANGE and return the value. The add-on should return <b><code>nullptr</code></b> if an error occured.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The next packet. If there is no next packet, then the add-on should return the packet created by calling <a class="el" href="group__cpp__kodi__addon__inputstream___demux.html#ga701b127618c63ac665cdee37fb2e5fb3">AllocateDemuxPacket(0)</a> on the callback. If the stream changed and Kodi's player needs to be reinitialised, then, the add-on should call <a class="el" href="group__cpp__kodi__addon__inputstream___demux.html#ga701b127618c63ac665cdee37fb2e5fb3">AllocateDemuxPacket(0)</a> on the callback, and set the streamid to DMX_SPECIALID_STREAMCHANGE and return the value. The add-on should return <b><code>nullptr</code></b> if an error occured.</dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>Return <b><code>nullptr</code></b> if this add-on won't provide this function. </dd></dl>
 
 </div>
@@ -489,7 +489,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 </div><div class="memdoc">
 
 <p>Notify the InputStream addon/demuxer that Kodi wishes to seek the stream by time. </p>
-<p>Demuxer is required to set stream to an IDR frame</p>
+<p>Demuxer is required to set stream to an IDR frame.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>The absolute time since stream start </td></tr>
@@ -583,8 +583,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 
 </div>
 </div>
-<a id="ga979e566ec25f4ecc5b1f0cebc4594fdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga979e566ec25f4ecc5b1f0cebc4594fdc">&#9670;&nbsp;</a></span>AllocateDemuxPacket()</h2>
+<a id="ga701b127618c63ac665cdee37fb2e5fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga701b127618c63ac665cdee37fb2e5fb3">&#9670;&nbsp;</a></span>AllocateDemuxPacket()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -593,7 +593,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">DemuxPacket* AllocateDemuxPacket </td>
+          <td class="memname">DEMUX_PACKET* AllocateDemuxPacket </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>dataSize</em></td><td>)</td>
@@ -607,7 +607,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 </table>
 </div><div class="memdoc">
 
-<p>Allocate a demux packet. Free with <a class="el" href="group__cpp__kodi__addon__inputstream___demux.html#ga27de47f3d3787e878ab521d9ca3cf479">FreeDemuxPacket</a>. </p>
+<p>Allocate a demux packet. Free with <a class="el" href="group__cpp__kodi__addon__inputstream___demux.html#ga40e2c64bb7728acae4d1406e8b21d8ec">FreeDemuxPacket</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dataSize</td><td>The size of the data that will go into the packet </td></tr>
@@ -619,8 +619,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 
 </div>
 </div>
-<a id="ga772d255c7349b167929c22d80de57437"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga772d255c7349b167929c22d80de57437">&#9670;&nbsp;</a></span>AllocateEncryptedDemuxPacket()</h2>
+<a id="ga954bc5f4acc8da0dc7d7bc7da03ce3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga954bc5f4acc8da0dc7d7bc7da03ce3d6">&#9670;&nbsp;</a></span>AllocateEncryptedDemuxPacket()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -629,7 +629,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">DemuxPacket* AllocateEncryptedDemuxPacket </td>
+          <td class="memname">DEMUX_PACKET* AllocateEncryptedDemuxPacket </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>dataSize</em>, </td>
@@ -653,7 +653,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 </table>
 </div><div class="memdoc">
 
-<p>Allocate a encrypted demux packet. Free with <a class="el" href="group__cpp__kodi__addon__inputstream___demux.html#ga27de47f3d3787e878ab521d9ca3cf479">FreeDemuxPacket</a>. </p>
+<p>Allocate a encrypted demux packet. Free with <a class="el" href="group__cpp__kodi__addon__inputstream___demux.html#ga40e2c64bb7728acae4d1406e8b21d8ec">FreeDemuxPacket</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dataSize</td><td>The size of the data that will go into the packet </td></tr>
@@ -666,8 +666,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
 
 </div>
 </div>
-<a id="ga27de47f3d3787e878ab521d9ca3cf479"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga27de47f3d3787e878ab521d9ca3cf479">&#9670;&nbsp;</a></span>FreeDemuxPacket()</h2>
+<a id="ga40e2c64bb7728acae4d1406e8b21d8ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40e2c64bb7728acae4d1406e8b21d8ec">&#9670;&nbsp;</a></span>FreeDemuxPacket()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -678,7 +678,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__inputstream__
         <tr>
           <td class="memname">void FreeDemuxPacket </td>
           <td>(</td>
-          <td class="paramtype">DemuxPacket *&#160;</td>
+          <td class="paramtype">DEMUX_PACKET *&#160;</td>
           <td class="paramname"><em>packet</em></td><td>)</td>
           <td></td>
         </tr>

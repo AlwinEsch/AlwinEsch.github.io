@@ -31,7 +31,6 @@ var searchData=
   ['bsupportsrecordingsundelete',['bSupportsRecordingsUndelete',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a2f249ff14666a73871ea11c9cd07a8f9',1,'PVR_ADDON_CAPABILITIES']]],
   ['bsupportstimers',['bSupportsTimers',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a400c1c7be9832ea40324ba02b68dd973',1,'PVR_ADDON_CAPABILITIES']]],
   ['bsupportstv',['bSupportsTV',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a081d8e4e19a1b04eb19569f2f807eccf',1,'PVR_ADDON_CAPABILITIES']]],
-  ['buffer',['buffer',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#a368f7094dc38acca20612bbb392552f4',1,'VIDEOCODEC_PICTURE']]],
   ['button_5fcount',['button_count',['../struct_j_o_y_s_t_i_c_k___i_n_f_o.html#aa48e30e57e011a82e69acddf5e3760fe',1,'JOYSTICK_INFO']]],
   ['button_20control',['Button control',['../skin__button_control.html',1,'skin_controls']]]
 ];
