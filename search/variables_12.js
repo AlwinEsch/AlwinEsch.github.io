@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['unicode',['unicode',['../group__cpp__kodi__addon__game___defs___input_types.html#aaae9388f37ef1126f69786fbf8e3da01',1,'game_key_event']]],
-  ['url',['url',['../group__cpp__kodi__addon__vfs___defs.html#a05d2db9f2dd75d18170f192bd1cc9b4e',1,'VFSURL']]],
-  ['user_5fpath',['user_path',['../struct_addon_props___peripheral.html#a8f1a2234f2571276a0d84c5eec8fec67',1,'AddonProps_Peripheral']]],
-  ['username',['username',['../group__cpp__kodi__addon__vfs___defs.html#a5389d939c3316982842a29d3694f2e23',1,'VFSURL']]]
+  ['vendor_5fid',['vendor_id',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#abd60aba7846c925f784c3e89e2f54e45',1,'PERIPHERAL_INFO']]],
+  ['version_5fmajor',['version_major',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#a6540c97b3ede3afedc3eddb99863867e',1,'game_stream_hw_framebuffer_properties']]],
+  ['version_5fminor',['version_minor',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#a2b05ec596787f44679509e7558525ed5',1,'game_stream_hw_framebuffer_properties']]]
 ];

@@ -1,7 +1,6 @@
 var searchData=
 [
   ['keyboard',['Keyboard',['../class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html',1,'XBMCAddon::xbmc']]],
-  ['kid',['kid',['../group__cpp__kodi__addon__inputstream___d_e_m_u_x___p_a_c_k_e_t.html#a0872ba5fa91dee64b6dbd69925582fde',1,'DEMUX_CRYPTO_INFO']]],
   ['kodi_5fversion_5ft',['kodi_version_t',['../group__cpp__kodi___defs.html#structkodi__version__t',1,'']]],
   ['kodiinputevent',['KodiInputEvent',['../group__cpp__kodi__addon__game___input_operations.html#gaf10afcef9698c5e378276016b42dac63',1,'kodi::addon::CInstanceGame']]],
   ['koditoaddonfunctable_5faddon',['KodiToAddonFuncTable_Addon',['../struct_kodi_to_addon_func_table___addon.html',1,'']]],

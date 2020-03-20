@@ -24,7 +24,7 @@ var searchData=
   ['isplayingaudio',['isPlayingAudio',['../group__python___player.html#ga5691edc135aebc26fcb83110d23b33d2',1,'XBMCAddon::xbmc::Player']]],
   ['isplayingrds',['isPlayingRDS',['../group__python___player.html#gadb60d29bad8cb1214883e6344fbe11cc',1,'XBMCAddon::xbmc::Player']]],
   ['isplayingvideo',['isPlayingVideo',['../group__python___player.html#ga4d8d2d0daa6149cb36fc72a7bcb6a509',1,'XBMCAddon::xbmc::Player']]],
-  ['isrealtimestream',['IsRealTimeStream',['../group__cpp__kodi__addon__inputstream.html#gaad550e498369f3a406296779a162ec04',1,'kodi::addon::CInstanceInputStream']]],
+  ['isrealtimestream',['IsRealTimeStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#aad550e498369f3a406296779a162ec04',1,'kodi::addon::CInstanceInputStream']]],
   ['isselected',['IsSelected',['../group__cpp__kodi__gui__controls___c_radio_button.html#ga1a06af1358e62deeb3dfc305d9b69e53',1,'kodi::gui::controls::CRadioButton::IsSelected()'],['../group__cpp__kodi__gui___c_list_item.html#ga8bd3773d1e4bc4a38c419fd6c92bdee2',1,'kodi::gui::CListItem::IsSelected()'],['../group__python__xbmcgui__listitem.html#ga2887792e8b30d1fd4e5f83d27694225d',1,'XBMCAddon::xbmcgui::ListItem::isSelected()'],['../group__python__xbmcgui__control__radiobutton.html#ga2887792e8b30d1fd4e5f83d27694225d',1,'XBMCAddon::xbmcgui::ControlRadioButton::isSelected()']]],
   ['isvisible',['isVisible',['../group__python__xbmcgui__control.html#ga13f0d1327712c41f0675c8772b9080f9',1,'XBMCAddon::xbmcgui::Control']]]
 ];

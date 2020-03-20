@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['queue_5ferror',['QUEUE_ERROR',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94ad2f91e8feff864772fb0a394bb60cdc5',1,'General.h']]],
-  ['queue_5finfo',['QUEUE_INFO',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a337175e2eb3336df26c7e387e56cfb6b',1,'General.h']]],
-  ['queue_5fown_5fstyle',['QUEUE_OWN_STYLE',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a73ef8e6ac545537aab78d269d462365c',1,'General.h']]],
-  ['queue_5fwarning',['QUEUE_WARNING',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712',1,'General.h']]]
+  ['vfs_5fioctrl_5fcache_5fsetrate',['VFS_IOCTRL_CACHE_SETRATE',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da9c96dd241e2b868a333291de609bf0f1',1,'VFS.h']]],
+  ['vfs_5fioctrl_5fcache_5fstatus',['VFS_IOCTRL_CACHE_STATUS',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da16bf6c6589956fcf14ee2f2dfd592b47',1,'VFS.h']]],
+  ['vfs_5fioctrl_5finvalid',['VFS_IOCTRL_INVALID',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da625387cb90a99d72a1b8d7b0616cb5cb',1,'VFS.h']]],
+  ['vfs_5fioctrl_5fnative',['VFS_IOCTRL_NATIVE',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da8de16ef84833e1fd186b5ac4d8977a99',1,'VFS.h']]],
+  ['vfs_5fioctrl_5fseek_5fpossible',['VFS_IOCTRL_SEEK_POSSIBLE',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075dac9228f1112ac13033806a3d99437f70a',1,'VFS.h']]],
+  ['vfs_5fioctrl_5fset_5fretry',['VFS_IOCTRL_SET_RETRY',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075dadcc1347c7eb1092e75b48ded8dc4537c',1,'VFS.h']]]
 ];

@@ -1,4 +1,27 @@
 var searchData=
 [
-  ['options',['options',['../group__cpp__kodi__addon__vfs___defs.html#aad0b02dced4088eb693e2be2e96e3750',1,'VFSURL']]]
+  ['password',['password',['../group__cpp__kodi__addon__vfs___defs.html#ae4d148f7db46d680450af5042cb65793',1,'VFSURL']]],
+  ['path',['path',['../struct_v_f_s_dir_entry.html#a38dcf0baefa35c1961c23cf3e06002b5',1,'VFSDirEntry']]],
+  ['peripheral',['peripheral',['../struct_j_o_y_s_t_i_c_k___i_n_f_o.html#ad27e60f6eeefa71f68b936d908f67f07',1,'JOYSTICK_INFO']]],
+  ['peripheral_5findex',['peripheral_index',['../struct_p_e_r_i_p_h_e_r_a_l___e_v_e_n_t.html#a279571443ce876bd3f9117b9a9631881',1,'PERIPHERAL_EVENT']]],
+  ['player_5flimit',['player_limit',['../group__cpp__kodi__addon__game___defs___input_types.html#ad4a353829ac4dedea6c2e5b5613c23f6',1,'game_input_topology']]],
+  ['port',['port',['../group__cpp__kodi__addon__vfs___defs.html#a938bdc6ae46c346147b6d4f67ad1e704',1,'VFSURL']]],
+  ['port_5fcount',['port_count',['../group__cpp__kodi__addon__game___defs___input_types.html#a3bdcbe88317cbb9920d90e3036f132d3',1,'game_input_topology']]],
+  ['port_5fid',['port_id',['../group__cpp__kodi__addon__game___defs___input_types.html#ae0c1039fda3c3113d40e2761e2defecb',1,'game_input_port']]],
+  ['ports',['ports',['../group__cpp__kodi__addon__game___defs___input_types.html#a4239d1ee0492303d5c0f887425d40477',1,'game_input_topology']]],
+  ['preventduplicateepisodes',['preventDuplicateEpisodes',['../struct_p_v_r___t_i_m_e_r___t_y_p_e.html#a8938b0ac41528e6d7602c293c068a81f',1,'PVR_TIMER_TYPE']]],
+  ['priorities',['priorities',['../struct_p_v_r___t_i_m_e_r___t_y_p_e.html#a66e695e8decc3b4efb651237a3f2ec62',1,'PVR_TIMER_TYPE']]],
+  ['product_5fid',['product_id',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#a215e5feaef08c77d8e9f17ab421e8a66',1,'PERIPHERAL_INFO']]],
+  ['profile_5fdirectory',['profile_directory',['../struct_addon_props___game.html#a59457b1e6b0b76384b927bb06a717e82',1,'AddonProps_Game']]],
+  ['properties',['properties',['../struct_v_f_s_dir_entry.html#afabab0dd1abb98a7855b3c905e26cdd9',1,'VFSDirEntry']]],
+  ['protocol',['protocol',['../group__cpp__kodi__addon__vfs___defs.html#a1f48bab08c0f17729249368e88587b71',1,'VFSURL']]],
+  ['provider',['provider',['../struct_j_o_y_s_t_i_c_k___i_n_f_o.html#a6d6ade3edddbe532ebc74202b6d9625e',1,'JOYSTICK_INFO']]],
+  ['provides_5fbuttonmaps',['provides_buttonmaps',['../struct_p_e_r_i_p_h_e_r_a_l___c_a_p_a_b_i_l_i_t_i_e_s.html#a9cd4e1b9c03034c8e4907cf15b707bd1',1,'PERIPHERAL_CAPABILITIES']]],
+  ['provides_5finput',['provides_input',['../group__cpp__kodi__addon__game___defs___input_types.html#a45d221de8a4dc3dec6ed70a28d314c0d',1,'AddonGameControllerLayout']]],
+  ['provides_5fjoysticks',['provides_joysticks',['../struct_p_e_r_i_p_h_e_r_a_l___c_a_p_a_b_i_l_i_t_i_e_s.html#a76bc75dca5d64e9d870b6b7c18982fe3',1,'PERIPHERAL_CAPABILITIES']]],
+  ['proxy_5fdll_5fcount',['proxy_dll_count',['../struct_addon_props___game.html#a35be46f1a9f34eccc02eca2442e32ef1',1,'AddonProps_Game']]],
+  ['proxy_5fdll_5fpaths',['proxy_dll_paths',['../struct_addon_props___game.html#ab5a0257b876443f7358367d79acbde0b',1,'AddonProps_Game']]],
+  ['ptsbegin',['ptsBegin',['../struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#a0ebdf60b4fe91362f9ef5ae5a4e54cb4',1,'PVR_STREAM_TIMES']]],
+  ['ptsend',['ptsEnd',['../struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#a964acd3efb10b946dd90e59b37a9a004',1,'PVR_STREAM_TIMES']]],
+  ['ptsstart',['ptsStart',['../struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#ad7bb1ef2554cb29a1ec25c3672bc8dd9',1,'PVR_STREAM_TIMES']]]
 ];

@@ -1,9 +1,7 @@
 var searchData=
 [
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__addon__game___defs.html',1,'']]],
-  ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__addon__inputstream___defs.html',1,'']]],
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__addon__vfs___defs.html',1,'']]],
-  ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__addon__videocodec___defs.html',1,'']]],
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__audioengine___defs.html',1,'']]],
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi___defs.html',1,'']]],
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__gui___c_list_item___defs.html',1,'']]],
