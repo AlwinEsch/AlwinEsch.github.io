@@ -8,6 +8,7 @@ var searchData=
   ['class_20inputstreaminfo',['class InputstreamInfo',['../group__cpp__kodi__addon__inputstream___defs___info.html',1,'']]],
   ['class_20inputstreamproperty',['class InputstreamProperty',['../group__cpp__kodi__addon__inputstream___defs___property.html',1,'']]],
   ['class_20inputstreamtimes',['class InputstreamTimes',['../group__cpp__kodi__addon__inputstream___defs___times.html',1,'']]],
+  ['callbacks_20getdirectory_28_29',['Callbacks GetDirectory()',['../group__cpp__kodi__addon__vfs__general__cb___get_directory.html',1,'']]],
   ['class_20vistrack',['class VisTrack',['../group__cpp__kodi__addon__visualization___vis_track.html',1,'']]],
   ['class_20caddonaestream',['class CAddonAEStream',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html',1,'']]],
   ['control_20button',['Control Button',['../group__cpp__kodi__gui__controls___c_button.html',1,'']]],

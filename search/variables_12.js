@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['white_5fpoint_5fchromaticity_5fx',['white_point_chromaticity_x',['../group__cpp__kodi__addon__inputstream___defs___info.html#afeba2d9697476d6adbd6646c2488a1fe',1,'INPUTSTREAM_MASTERING_METADATA']]],
-  ['white_5fpoint_5fchromaticity_5fy',['white_point_chromaticity_y',['../group__cpp__kodi__addon__inputstream___defs___info.html#ae35da696c494af2636ebd95ee292f504',1,'INPUTSTREAM_MASTERING_METADATA']]],
-  ['width',['width',['../group__cpp__kodi__addon__game___defs___video_stream.html#aca34d28e3d8bcbcadb8edb4e3af24f8c',1,'game_stream_video_packet::width()'],['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___i_n_i_t_d_a_t_a.html#a325272ddd9a962f05deb905101d25cbd',1,'VIDEOCODEC_INITDATA::width()'],['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#a325272ddd9a962f05deb905101d25cbd',1,'VIDEOCODEC_PICTURE::width()']]]
+  ['unicode',['unicode',['../group__cpp__kodi__addon__game___defs___input_types.html#aaae9388f37ef1126f69786fbf8e3da01',1,'game_key_event']]],
+  ['url',['url',['../group__cpp__kodi__addon__vfs___defs.html#a05d2db9f2dd75d18170f192bd1cc9b4e',1,'VFSURL']]],
+  ['user_5fpath',['user_path',['../struct_addon_props___peripheral.html#a8f1a2234f2571276a0d84c5eec8fec67',1,'AddonProps_Peripheral']]],
+  ['username',['username',['../group__cpp__kodi__addon__vfs___defs.html#a5389d939c3316982842a29d3694f2e23',1,'VFSURL']]]
 ];

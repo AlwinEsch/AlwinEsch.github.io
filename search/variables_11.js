@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['vendor_5fid',['vendor_id',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#abd60aba7846c925f784c3e89e2f54e45',1,'PERIPHERAL_INFO']]],
-  ['version_5fmajor',['version_major',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#a6540c97b3ede3afedc3eddb99863867e',1,'game_stream_hw_framebuffer_properties']]],
-  ['version_5fminor',['version_minor',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#a2b05ec596787f44679509e7558525ed5',1,'game_stream_hw_framebuffer_properties']]],
-  ['videobufferhandle',['videoBufferHandle',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#aa953e130fd82a1285283dd46f83107c4',1,'VIDEOCODEC_PICTURE']]],
-  ['videoformat',['videoFormat',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#a93f2e259372d5dff769259253b8f3fd1',1,'VIDEOCODEC_PICTURE']]],
-  ['videoformats',['videoFormats',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___i_n_i_t_d_a_t_a.html#aee8127cd2e16e8b1211374ec62ee838b',1,'VIDEOCODEC_INITDATA']]]
+  ['tag',['tag',['../group__cpp__kodi___defs.html#ae120f732e7e1c5e4a16fa31d89f655df',1,'kodi_version_t']]],
+  ['tag_5frevision',['tag_revision',['../group__cpp__kodi___defs.html#a14e85f5a1bb888b4325a87984bccfe81',1,'kodi_version_t']]],
+  ['title',['title',['../group__cpp__kodi__addon__visualization___vis_track.html#a8214780964530800368b406c681fd1d9',1,'VisTrack::title()'],['../struct_v_f_s_dir_entry.html#a2c766446078ffdca7f6f9871086655f8',1,'VFSDirEntry::title()']]],
+  ['tracknumber',['trackNumber',['../group__cpp__kodi__addon__visualization___vis_track.html#aae897b77f023327f257102d04dbb46f1',1,'VisTrack']]],
+  ['type',['type',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#aca3c165e12ec3684110607f78f0c2310',1,'PERIPHERAL_INFO::type()'],['../struct_p_e_r_i_p_h_e_r_a_l___e_v_e_n_t.html#af39d74bd68df5c490edb1366aa2b433b',1,'PERIPHERAL_EVENT::type()']]]
 ];

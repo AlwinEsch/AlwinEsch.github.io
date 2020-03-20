@@ -18,5 +18,10 @@ var group__python___info_tag_music =
     [ "getPlayCount", "group__python___info_tag_music.html#ga6b91408706d3ba78df1cf0d9fc8d7365", null ],
     [ "getLastPlayed", "group__python___info_tag_music.html#gaf16ec95dcf0cf2f08182b703de6f2074", null ],
     [ "getComment", "group__python___info_tag_music.html#gadb57c3d1b74c19589ba1d641ea1a390e", null ],
-    [ "getLyrics", "group__python___info_tag_music.html#ga51f1bf160123ec89bea5b0efdfae5366", null ]
+    [ "getLyrics", "group__python___info_tag_music.html#ga51f1bf160123ec89bea5b0efdfae5366", null ],
+    [ "getMusicBrainzTrackID", "group__python___info_tag_music.html#gad3f9d2aa15c2c5d55e5164701c799b63", null ],
+    [ "getMusicBrainzArtistID", "group__python___info_tag_music.html#ga904902d0f622c021159cc1a5d0381a98", null ],
+    [ "getMusicBrainzAlbumID", "group__python___info_tag_music.html#ga7542ba126e71a54640a43146202a46ca", null ],
+    [ "getMusicBrainzReleaseGroupID", "group__python___info_tag_music.html#ga65e6a03088bf938340da50e1396790fa", null ],
+    [ "getMusicBrainzAlbumArtistID", "group__python___info_tag_music.html#gaf7df7e7de93ac97040cff7bdaeb79175", null ]
 ];

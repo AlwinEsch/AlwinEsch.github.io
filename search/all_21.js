@@ -10,6 +10,7 @@ var searchData=
   ['_7ecinstancegame',['~CInstanceGame',['../group__cpp__kodi__addon__game___base.html#ga9f0f810a8f98e4413dc1941c05d8b39e',1,'kodi::addon::CInstanceGame']]],
   ['_7ecinstanceinputstream',['~CInstanceInputStream',['../group__cpp__kodi__addon__inputstream.html#ga779b9361ee03bb0c27cf96448f7baf82',1,'kodi::addon::CInstanceInputStream']]],
   ['_7ecinstancescreensaver',['~CInstanceScreensaver',['../group__cpp__kodi__addon__screensaver.html#ga7168a70cecb9b102d950c9fc1fa19270',1,'kodi::addon::CInstanceScreensaver']]],
+  ['_7ecinstancevfs',['~CInstanceVFS',['../group__cpp__kodi__addon__vfs.html#ga397f2048c35582199ae19d1ece876113',1,'kodi::addon::CInstanceVFS']]],
   ['_7ecinstancevideocodec',['~CInstanceVideoCodec',['../group__cpp__kodi__addon__videocodec.html#ga15de85ee100d280d2be618ce4b6b87a0',1,'kodi::addon::CInstanceVideoCodec']]],
   ['_7ecinstancevisualization',['~CInstanceVisualization',['../group__cpp__kodi__addon__visualization.html#gaa8c552b512f4584d475fc6f0ff031f7d',1,'kodi::addon::CInstanceVisualization']]],
   ['_7eclabel',['~CLabel',['../group__cpp__kodi__gui__controls___c_label.html#gadedab6af64dec4affc30b565d0f2cbcd',1,'kodi::gui::controls::CLabel']]],

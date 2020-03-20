@@ -1,6 +1,7 @@
 var searchData=
 [
   ['stream_20encryption_20data',['Stream encryption data',['../group__cpp__kodi__addon__inputstream___defs___info___c_r_y_p_t_o___i_n_f_o.html',1,'']]],
+  ['struct_20demux_5fpacket',['struct DEMUX_PACKET',['../group__cpp__kodi__addon__inputstream___d_e_m_u_x___p_a_c_k_e_t.html',1,'']]],
   ['screensaver',['Screensaver',['../group__cpp__kodi__addon__screensaver.html',1,'']]],
   ['struct_20videocodec_5finitdata',['struct VIDEOCODEC_INITDATA',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___i_n_i_t_d_a_t_a.html',1,'']]],
   ['struct_20videocodec_5fpicture',['struct VIDEOCODEC_PICTURE',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html',1,'']]],

@@ -91,10 +91,229 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__vfs.html','')
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
 <div class="title">VFS<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__addon.html">Interface - kodi::addon</a> &raquo; <a class="el" href="group__cpp__kodi__addon__instances.html">Addon type instances</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::addon::CInstanceVFS </big></font></span></code></h4>  <b>Virtual Filesystem (VFS) add-on instance</b> </p>
+<p>This instance type is used to allow Kodi various additional file system types. Be it a special file system, a compressed package or a system available over the network, everything is possible with it.</p>
+<p>This usage can be requested under various conditions, for example explicitly by another addon, by a Mimetype protocol defined in <b><code>addon.xml</code></b> or supported file extensions.</p>
+<p>Include the header <a class="el" href="_v_f_s_8h_source.html">#include &lt;kodi/addon-instance/VFS.h&gt;</a> to use this class. </p><hr/>
+<p>Here is an example of what the <b><code>addon.xml.in</code></b> would look like for an VFS addon:</p>
+<p>~~~~~~~~~~~~~{.xml} &lt;?xml version="1.0" encoding="UTF-8"?&gt; &lt;addon id="vfs.myspecialnamefor" version="1.0.0" name="My VFS addon" provider-name="Your Name"&gt; &lt;requires&gt;&lt;/requires&gt; &lt;extension point="kodi.vfs" protocols="myprot" extensions=".abc|.def" files="true" filedirectories="true" directories="true" encodedhostname="true" supportDialog="true" supportPath="true" supportUsername="true" supportPassword="true" supportPort="true" supportBrowsing="true" supportWrite="true" defaultPort="1234" label="30000" zeroconf="your_special_zeroconf_allowed_identifier" library_@="@LIBRARY_FILENAME@"/&gt; &lt;extension point="xbmc.addon.metadata"&gt; </p>
+<p>My VFS addon summary</p>
+<p>My VFS description &lt;platform&gt;&lt;/platform&gt; &lt;/extension&gt; &lt;/addon&gt; ~~~~~~~~~~~~~</p>
+<dl class="section note"><dt>Note</dt><dd>Regarding boolean values with "false", these can also be omitted, since this would be the default.</dd></dl>
+<pre class="fragment"> ### Standard values that can be declared for processing in `addon.xml`.
+
+ These values are used by Kodi to identify associated streams and file
+ extensions and then to select the associated addon.
+
+ &lt;table width="100%" style="border" bgcolor="576f9f" border="0"&gt;
+   &lt;tr bgcolor=576f9f&gt;&lt;th width=30% align=left valign=middle&gt;&lt;b&gt; Labels&lt;/b&gt;&lt;/th&gt;&lt;th width=10% align=left valign=middle&gt;&lt;b&gt; Type&lt;/b&gt;&lt;/th&gt;&lt;th width=60% align=left valign=middle&gt;&lt;span&gt;&lt;b&gt;   Description &lt;/b&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;
+</pre><p>  <tr bgcolor=white><td width= 30% align=left> <b><code>defaultPort</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_defaultPort"></a> integer </td><td width= 60% align=left> Default <a href="https://en.wikipedia.org/wiki/Port_(computer_networking)">networking port</a> to use for protocol.  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>directories</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_directories"></a> boolean </td><td width= 60% align=left> VFS entry can list directories.  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>extensions</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_extensions"></a> string </td><td width= 60% align=left> Extensions for VFS entry.<br />
+ It is possible to declare several using <b><code>|</code></b>, e.g. <b><code>.abc|.def|.ghi</code></b>.  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>encodedhostname</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_encodedhostname"></a> string </td><td width= 60% align=left> URL protocol from add-ons use encoded hostnames.  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>filedirectories</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_filedirectories"></a> boolean </td><td width= 60% align=left> VFS entry contains file directories.  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>files</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_directories"></a> boolean </td><td width= 60% align=left> Set to declare that VFS provides files.  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>protocols</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_protocols"></a> boolean </td><td width= 60% align=left> Protocols for VFS entry.<br />
+ It is possible to declare several using <b><code>|</code></b>, e.g. <b><code>myprot1|myprot2</code></b>.<br />
+ </p><dl class="section note"><dt>Note</dt><dd>This field also used to show on GUI, see <b><code>supportBrowsing</code></b> below about <b>*2:</b>. When used there, however, only a <b>single</b> protocol is possible!  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>supportWrite</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_supportWrite"></a> boolean </td><td width= 60% align=left> Protocol supports write operations.  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>zeroconf</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_zeroconf"></a> string </td><td width= 60% align=left> <a href="https://en.wikipedia.org/wiki/Zero-configuration_networking">Zero conf</a> announce string for VFS protocol.  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>library_@PLATFORM@</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_library"></a> string </td><td width= 60% align=left> The runtime library used for the addon. This is usually declared by <code>cmake</code> and correctly displayed in the translated <b><code>addon.xml</code></b>.  </td></tr> </dd></dl>
+<pre class="fragment"> ### User selectable parts of the addon.
+
+ The following table describes the values that can be defined by &lt;b&gt;`addon.xml`&lt;/b&gt;
+ and which part they relate to for user input.
+
+ &lt;table width="100%" style="border" bgcolor="576f9f" border="0"&gt;
+   &lt;tr bgcolor=576f9f&gt;&lt;th width=30% align=left valign=middle&gt;&lt;b&gt; Labels&lt;/b&gt;&lt;/th&gt;&lt;th width=10% align=left valign=middle&gt;&lt;b&gt; Type&lt;/b&gt;&lt;/th&gt;&lt;th width=60% align=left valign=middle&gt;&lt;span&gt;&lt;b&gt; Description &lt;/b&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;
+</pre><p>  <tr bgcolor=white><td width= 30% align=left> <b><code>supportBrowsing</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_protocol_supportBrowsing"></a> boolean </td><td width= 60% align=left> Protocol supports server browsing. Used to open related sources by users in the window.<br />
+<br />
+</p><table class="doxtable">
+<tr>
+<th align="left">Associated places in Kodi:  </th></tr>
+<tr>
+<td align="left"><div class="image">
+<img src="cpp_kodi_addon_vfs_protocol_1.png" alt="cpp_kodi_addon_vfs_protocol_1.png"/>
+</div>
+ </td></tr>
+</table>
+<p><br />
+ <b>*1:</b> The entry in the menu represented by this option corresponds to the text given with <b><code>label</code></b>. When the button is pressed, <a class="el" href="group__cpp__kodi__addon__vfs__general.html#gacadc62b194cf04b0d9023cb368e609e7">CInstanceVFS::GetDirectory</a> is called on the add-on to get its content.<br />
+ <b>*2:</b> Protocol name of the stream defined with <b><code>protocols</code></b> in xml.<br />
+ </p><dl class="section remark"><dt>Remarks</dt><dd>See also <b><code>supportDialog</code></b> about <b>*3:</b>.  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>supportDialog</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_protocol_supportDialog"></a> boolean </td><td width= 60% align=left> To point out that Kodi assigns a dialog to this VFS in order to compare it with other values e.g. query supportPassword in it.<br />
+ This will be available when adding sources in Kodi under <b>"Add network location..."</b>.<br />
+<br />
+<table class="doxtable">
+<tr>
+<th align="left">Associated places in Kodi:  </th></tr>
+<tr>
+<td align="left"><div class="image">
+<img src="cpp_kodi_addon_vfs_protocol_2.png" alt="cpp_kodi_addon_vfs_protocol_2.png"/>
+</div>
+ </td></tr>
+</table>
+<br />
+ <b>*1:</b> Field for selecting the VFS handler, the addon will be available if <b><code>supportDialog</code></b> is set to <b><code>true</code></b>.<br />
+ <b>*2:</b> To set the associated server address. <b>Note:</b> <em>This field is always activated and cannot be changed by the addon.</em><br />
+ <b>*3:</b> If <b><code>supportBrowsing</code></b> is set to <b><code>true</code></b>, the button for opening a file selection dialog is given here too, as in the file window.<br />
+ <b>*4:</b> This field is available if <b><code>supportPath</code></b> is set to <b><code>true</code></b>.<br />
+ <b>*5:</b> To edit the connection port. This field is available if <b><code>supportPort</code></b> is set to <b><code>true</code></b>.<br />
+ <b>*6:</b> This sets the required username and is available when <b><code>supportUsername</code></b> is set to <b><code>true</code></b>.<br />
+ <b>*7:</b> This sets the required password and is available when <b><code>supportPassword</code></b> is set to <b><code>true</code></b>.  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>supportPath</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_protocol_supportPath"></a> boolean </td><td width= 60% align=left> Protocol has path in addition to server name (see <b><code>supportDialog</code></b> about <b>*4:</b>).  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>supportPort</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_protocol_supportPort"></a> boolean </td><td width= 60% align=left> Protocol supports port customization (see <b><code>supportDialog</code></b> about <b>*5:</b>).  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>supportUsername</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_protocol_supportUsername"></a> boolean </td><td width= 60% align=left> Protocol uses logins (see <b><code>supportDialog</code></b> about <b>*6:</b>).  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>supportPassword</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_protocol_supportPassword"></a> boolean </td><td width= 60% align=left> Protocol supports passwords (see <b><code>supportDialog</code></b> about <b>*7:</b>).  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>protocols</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_protocol_protocols"></a> string </td><td width= 60% align=left> Protocols for VFS entry. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This field is not editable and only used on GUI to show his name, see <b><code>supportBrowsing</code></b> about <b>*2:</b>  </td></tr>  <tr bgcolor=white><td width= 30% align=left> <b><code>label</code></b> </td><td width= 10% align=left> <a class="anchor" id="cpp_kodi_addon_vfs_protocol_label"></a> integer </td><td width= 60% align=left> The text identification number used in Kodi for display in the menu at <b><code>supportDialog</code></b> as a selection option and at <b><code>supportBrowsing</code></b> (see his image reference <b>*1</b>) as a menu entry.<br />
+ This can be a text identifier in Kodi or from addon.<br />
+ </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>For addon within <b>30000</b>-<b>30999</b> or <b>32000</b>-<b>32999</b>.  </td></tr> </dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>For more detailed description of the <b><code>addon.xml</code></b>, see also <a href="https://kodi.wiki/view/Addon.xml">https://kodi.wiki/view/Addon.xml</a>.</dd></dl>
+<hr/>
+<pre class="fragment"> **Example:**
+
+ ~~~~~~~~~~~~~{.cpp}
+ #include &lt;kodi/addon-instance/VFS.h&gt;
+
+ class CMyVFS : public kodi::addon::CInstanceVFS
+ {
+ public:
+   CMyVFS(KODI_HANDLE instance, const std::string&amp; kodiVersion);
+
+   // Add all your required functions, the most CInstanceVFS functions of
+   // must be included to have addon working correctly.
+   ...
+ };
+
+ CMyVFS::CMyVFS(KODI_HANDLE instance, const std::string&amp; kodiVersion)
+   : CInstanceVFS(instance, kodiVersion)
+ {
+   ...
+ }
+
+ ...
+
+ /*----------------------------------------------------------------------*/
+
+ class CMyAddon : public kodi::addon::CAddonBase
+ {
+ public:
+   CMyAddon() { }
+   ADDON_STATUS CreateInstanceEx(int instanceType,
+                                 std::string instanceID,
+                                 KODI_HANDLE instance,
+                                 KODI_HANDLE&amp; addonInstance,
+                                 const std::string&amp; version) override;
+ };
+
+ // If you use only one instance in your add-on, can be instanceType and
+ // instanceID ignored
+ ADDON_STATUS CMyAddon::CreateInstanceEx(int instanceType,
+                                         std::string instanceID,
+                                         KODI_HANDLE instance,
+                                         KODI_HANDLE&amp; addonInstance,
+                                         const std::string&amp; version)
+ {
+   if (instanceType == ADDON_INSTANCE_VFS)
+   {
+     kodi::Log(ADDON_LOG_NOTICE, "Creating my VFS instance");
+     addonInstance = new CMyVFS(instance, version);
+     return ADDON_STATUS_OK;
+   }
+   else if (...)
+   {
+     ...
+   }
+   return ADDON_STATUS_UNKNOWN;
+ }
+
+ ADDONCREATOR(CMyAddon)
+ ~~~~~~~~~~~~~
+
+ The destruction of the example class `CMyVFS` is called from
+ Kodi's header. Manually deleting the add-on instance is not required.</pre> <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group__cpp__kodi__addon__vfs___defs"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__vfs___defs.html">Definitions, structures and enumerators</a></td></tr>
+<tr class="memdesc:group__cpp__kodi__addon__vfs___defs"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>VFS add-on general variables</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__cpp__kodi__addon__vfs__general"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__vfs__general.html">1. General access functions</a></td></tr>
+<tr class="memdesc:group__cpp__kodi__addon__vfs__general"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>General access functions</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__cpp__kodi__addon__vfs__filecontrol"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__vfs__filecontrol.html">2. File editing functions</a></td></tr>
+<tr class="memdesc:group__cpp__kodi__addon__vfs__filecontrol"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>File editing functions.</b> <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaea03f559cdee1a7596fdca7ae3613f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea03f559cdee1a7596fdca7ae3613f97">&#9670;&nbsp;</a></span>CInstanceVFS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkodi_1_1addon_1_1_c_instance_v_f_s.html">CInstanceVFS</a> </td>
+          <td>(</td>
+          <td class="paramtype">KODI_HANDLE&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>kodiVersion</em> = <code>&quot;0.0.0&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>VFS class constructor used to support multiple instance types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The instance value given to <b><code><a class="el" href="group__cpp__kodi__addon__addonbase.html#gab8bfc4658e61f5bde8265d99a0447fee" title="Instance created. ">kodi::addon::CAddonBase::CreateInstance</a>(...)</code></b>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kodiVersion</td><td>[opt] given from Kodi by CAddonBase::CreateInstanceEx to identify his instance API version</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Instance path as a single is not supported by this type. It must ensure that it can be called up several times.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Only use <code>instance</code> from the <a class="el" href="group__cpp__kodi__addon__addonbase.html#gab8bfc4658e61f5bde8265d99a0447fee">CAddonBase::CreateInstance</a> or CAddonBase::CreateInstanceEx call. </dd></dl>
+
+</div>
+</div>
+<a id="ga397f2048c35582199ae19d1ece876113"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga397f2048c35582199ae19d1ece876113">&#9670;&nbsp;</a></span>~CInstanceVFS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classkodi_1_1addon_1_1_c_instance_v_f_s.html">CInstanceVFS</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

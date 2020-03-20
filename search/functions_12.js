@@ -20,6 +20,6 @@ var searchData=
   ['triggerrecordingupdate',['TriggerRecordingUpdate',['../class_c_helper__lib_x_b_m_c__pvr.html#a32558a6dec1bee47462379c7fb11dc1a',1,'CHelper_libXBMC_pvr']]],
   ['triggerscan',['TriggerScan',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a6e68fb96881f6f92cd2855d86abf245e',1,'kodi::addon::CInstancePeripheral']]],
   ['triggertimerupdate',['TriggerTimerUpdate',['../class_c_helper__lib_x_b_m_c__pvr.html#a7a28ab2aa9e2f3191c2d6281cdc680ee',1,'CHelper_libXBMC_pvr']]],
-  ['truncate',['Truncate',['../classkodi_1_1addon_1_1_c_instance_v_f_s.html#acce61e986c54515af51058c5bd6caf32',1,'kodi::addon::CInstanceVFS::Truncate()'],['../group__cpp__kodi__vfs___c_file.html#ga7db30bce899ccc6e0d7a5b0a4cf160b7',1,'kodi::vfs::CFile::Truncate()']]],
+  ['truncate',['Truncate',['../group__cpp__kodi__addon__vfs__filecontrol.html#gacce61e986c54515af51058c5bd6caf32',1,'kodi::addon::CInstanceVFS::Truncate()'],['../group__cpp__kodi__vfs___c_file.html#ga7db30bce899ccc6e0d7a5b0a4cf160b7',1,'kodi::vfs::CFile::Truncate()']]],
   ['truncatefile',['TruncateFile',['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#ad03b7227dd2ebd28785edbe965d549cf',1,'ADDON::CHelper_libXBMC_addon']]]
 ];

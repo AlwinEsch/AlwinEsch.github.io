@@ -71,5 +71,6 @@ var searchData=
   ['cstructhdl_3c_20inputstreamtimes_2c_20inputstream_5ftimes_20_3e',['CStructHdl&lt; InputstreamTimes, INPUTSTREAM_TIMES &gt;',['../classkodi_1_1addon_1_1_c_struct_hdl.html',1,'kodi::addon']]],
   ['ctextbox',['CTextBox',['../classkodi_1_1gui_1_1controls_1_1_c_text_box.html',1,'kodi::gui::controls']]],
   ['cvertexshader',['CVertexShader',['../classkodi_1_1gui_1_1gl_1_1_c_vertex_shader.html',1,'kodi::gui::gl']]],
+  ['cvfscallbacks',['CVFSCallbacks',['../classkodi_1_1addon_1_1_c_instance_v_f_s_1_1_c_v_f_s_callbacks.html',1,'kodi::addon::CInstanceVFS']]],
   ['cwindow',['CWindow',['../classkodi_1_1gui_1_1_c_window.html',1,'kodi::gui']]]
 ];

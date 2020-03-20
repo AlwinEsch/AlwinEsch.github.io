@@ -8,7 +8,7 @@ var group__cpp__kodi__addon__instances =
     [ "Peripheral", "group__cpp__kodi__addon__peripheral.html", null ],
     [ "PVR", "group__cpp__kodi__addon__pvr.html", null ],
     [ "Screensaver", "group__cpp__kodi__addon__screensaver.html", "group__cpp__kodi__addon__screensaver" ],
-    [ "VFS", "group__cpp__kodi__addon__vfs.html", null ],
+    [ "VFS", "group__cpp__kodi__addon__vfs.html", "group__cpp__kodi__addon__vfs" ],
     [ "Video Codec", "group__cpp__kodi__addon__videocodec.html", "group__cpp__kodi__addon__videocodec" ],
     [ "Visualization", "group__cpp__kodi__addon__visualization.html", "group__cpp__kodi__addon__visualization" ]
 ];
