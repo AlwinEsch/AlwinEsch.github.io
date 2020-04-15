@@ -71,5 +71,6 @@ var searchData=
   ['addontokodifunctable_5fvfsentry',['AddonToKodiFuncTable_VFSEntry',['../struct_addon_to_kodi_func_table___v_f_s_entry.html',1,'']]],
   ['addontokodifunctable_5fvideocodec',['AddonToKodiFuncTable_VideoCodec',['../struct_addon_to_kodi_func_table___video_codec.html',1,'']]],
   ['addontokodifunctable_5fvisualization',['AddonToKodiFuncTable_Visualization',['../struct_addon_to_kodi_func_table___visualization.html',1,'']]],
-  ['audioengineformat',['AudioEngineFormat',['../struct_audio_engine_format.html',1,'']]]
+  ['audio_5fengine_5fformat',['AUDIO_ENGINE_FORMAT',['../struct_a_u_d_i_o___e_n_g_i_n_e___f_o_r_m_a_t.html',1,'']]],
+  ['audioengineformat',['AudioEngineFormat',['../classkodi_1_1audioengine_1_1_audio_engine_format.html',1,'kodi::audioengine']]]
 ];

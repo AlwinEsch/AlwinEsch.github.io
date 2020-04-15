@@ -41,7 +41,6 @@ var searchData=
   ['device',['Device',['../group__cpp__kodi__addon__screensaver___c_b.html#gadb328fb2add804f1393b84737d3ae45d',1,'kodi::addon::CInstanceScreensaver::Device()'],['../group__cpp__kodi__addon__visualization___c_b.html#gadb328fb2add804f1393b84737d3ae45d',1,'kodi::addon::CInstanceVisualization::Device()']]],
   ['deviceid',['deviceId',['../group__cpp__kodi__vfs___defs.html#a21079ffa80688b89c7dd4ba646a55283',1,'STAT_STRUCTURE']]],
   ['dialog',['Dialog',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog.html',1,'XBMCAddon::xbmcgui']]],
-  ['dialogbusy',['DialogBusy',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_busy.html',1,'XBMCAddon::xbmcgui']]],
   ['dialogprogress',['DialogProgress',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress.html',1,'XBMCAddon::xbmcgui']]],
   ['dialogprogressbg',['DialogProgressBG',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_dialog_progress_b_g.html',1,'XBMCAddon::xbmcgui']]],
   ['directoryexists',['DirectoryExists',['../group__cpp__kodi__addon__vfs__general.html#ga9320e6c76fb3b3694da7b7c926849eee',1,'kodi::addon::CInstanceVFS::DirectoryExists()'],['../class_a_d_d_o_n_1_1_c_helper__lib_x_b_m_c__addon.html#ad4787a143ca40c47338def3401051d40',1,'ADDON::CHelper_libXBMC_addon::DirectoryExists()'],['../group__cpp__kodi__vfs.html#gac966dda71c24315123d968e542f7f7d5',1,'kodi::vfs::DirectoryExists()']]],
@@ -53,12 +52,11 @@ var searchData=
   ['domain',['domain',['../group__cpp__kodi__addon__vfs___defs.html#a0281f885d673fd4175be39af90475f1b',1,'VFSURL']]],
   ['domodal',['DoModal',['../group__cpp__kodi__gui___c_window.html#ga856163c733aa826e2ff77a067e09b896',1,'kodi::gui::CWindow::DoModal()'],['../group__python__keyboard.html#ga5b6764b32998bbee4cbb95d927815425',1,'XBMCAddon::xbmc::Keyboard::doModal()'],['../group__python__xbmcgui__window.html#gafe4a8550ea41cbad56cab7cadc1ac9f8',1,'XBMCAddon::xbmcgui::Window::doModal()']]],
   ['doxygen_20on_20kodi_27s_20add_2don_20headers',['Doxygen on Kodi&apos;s Add-On headers',['../_doxygen__on__addon.html',1,'general']]],
-  ['drain',['Drain',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gae6081b87d3e3b00fc5cbeabb9b148d4c',1,'kodi::audioengine::CAddonAEStream']]],
+  ['drain',['Drain',['../group__cpp__kodi__audioengine___c_a_e_stream.html#gae6081b87d3e3b00fc5cbeabb9b148d4c',1,'kodi::audioengine::CAEStream']]],
   ['driver_5findex',['driver_index',['../struct_p_e_r_i_p_h_e_r_a_l___e_v_e_n_t.html#ad6f546a8e18c12469c2e5082e770a17c',1,'PERIPHERAL_EVENT']]],
   ['driverprimitive',['DriverPrimitive',['../structkodi_1_1addon_1_1_driver_primitive.html',1,'DriverPrimitive'],['../structkodi_1_1addon_1_1_driver_primitive.html#aabaf09bfac87353ae8e93cca8947b759',1,'kodi::addon::DriverPrimitive::DriverPrimitive(JOYSTICK_DRIVER_PRIMITIVE_TYPE type, unsigned int driverIndex)'],['../structkodi_1_1addon_1_1_driver_primitive.html#a0bfa6e0f2273355a373856b022c70c0e',1,'kodi::addon::DriverPrimitive::DriverPrimitive(void)=default'],['../structkodi_1_1addon_1_1_driver_primitive.html#ae5de60f576f31f7f9b8770607ed03304',1,'kodi::addon::DriverPrimitive::DriverPrimitive(unsigned int hatIndex, JOYSTICK_DRIVER_HAT_DIRECTION direction)'],['../structkodi_1_1addon_1_1_driver_primitive.html#a455b031fecd01eb90edfc05be6ec2a05',1,'kodi::addon::DriverPrimitive::DriverPrimitive(unsigned int axisIndex, int center, JOYSTICK_DRIVER_SEMIAXIS_DIRECTION direction, unsigned int range)'],['../structkodi_1_1addon_1_1_driver_primitive.html#a33398cbf1128c286c7eaf9c2634e2ebd',1,'kodi::addon::DriverPrimitive::DriverPrimitive(std::string keycode)'],['../structkodi_1_1addon_1_1_driver_primitive.html#a7225177e76cb8f9df57ea110f230ad65',1,'kodi::addon::DriverPrimitive::DriverPrimitive(JOYSTICK_DRIVER_RELPOINTER_DIRECTION direction)']]],
   ['duration',['duration',['../group__cpp__kodi__addon__visualization___vis_track.html#ac6e4b2a3cf932b33832d4e4e4e7cd0de',1,'VisTrack']]],
   ['dialog',['Dialog',['../group__python___dialog.html',1,'']]],
-  ['dialogbusy',['DialogBusy',['../group__python___dialog_busy.html',1,'']]],
   ['dialogprogress',['DialogProgress',['../group__python___dialog_progress.html',1,'']]],
   ['dialogprogressbg',['DialogProgressBG',['../group__python___dialog_progress_b_g.html',1,'']]]
 ];

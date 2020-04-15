@@ -54,7 +54,7 @@ var searchData=
   ['resource_5fdirectory_5fcount',['resource_directory_count',['../struct_addon_props___game.html#ad364ba757ea047a99138cc116e4d2686',1,'AddonProps_Game']]],
   ['resourcedirectories',['ResourceDirectories',['../group__cpp__kodi__addon__game___base.html#ga841dbbbf475e93cfeb2c3a38f318680b',1,'kodi::addon::CInstanceGame']]],
   ['restart',['restart',['../group__python__xbmc.html#gac8de9e38ce27c87f710dff42a13455cf',1,'ModuleXbmc.h']]],
-  ['resume',['Resume',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga8af8fb637c7ae9d71a23bf3ac80d3c86',1,'kodi::audioengine::CAddonAEStream']]],
+  ['resume',['Resume',['../group__cpp__kodi__audioengine___c_a_e_stream.html#ga8af8fb637c7ae9d71a23bf3ac80d3c86',1,'kodi::audioengine::CAEStream']]],
   ['revertbuttonmap',['RevertButtonMap',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a3f1a0c4adac3b19f0e3dae18c5a210a9',1,'kodi::addon::CInstancePeripheral']]],
   ['revision',['revision',['../group__cpp__kodi___defs.html#a5061ba1a268eb999ed21e0c4d7bf609e',1,'kodi_version_t']]],
   ['revisions',['Revisions',['../revisions.html',1,'']]],

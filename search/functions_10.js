@@ -33,7 +33,7 @@ var searchData=
   ['resetbuttonmap',['ResetButtonMap',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#afe47baacee20b0c2a722851d423b41c4',1,'kodi::addon::CInstancePeripheral']]],
   ['resourcedirectories',['ResourceDirectories',['../group__cpp__kodi__addon__game___base.html#ga841dbbbf475e93cfeb2c3a38f318680b',1,'kodi::addon::CInstanceGame']]],
   ['restart',['restart',['../group__python__xbmc.html#gac8de9e38ce27c87f710dff42a13455cf',1,'ModuleXbmc.h']]],
-  ['resume',['Resume',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga8af8fb637c7ae9d71a23bf3ac80d3c86',1,'kodi::audioengine::CAddonAEStream']]],
+  ['resume',['Resume',['../group__cpp__kodi__audioengine___c_a_e_stream.html#ga8af8fb637c7ae9d71a23bf3ac80d3c86',1,'kodi::audioengine::CAEStream']]],
   ['revertbuttonmap',['RevertButtonMap',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a3f1a0c4adac3b19f0e3dae18c5a210a9',1,'kodi::addon::CInstancePeripheral']]],
   ['rmdir',['rmdir',['../group__python__xbmcvfs.html#ga686ef8ff094072a27fb97b830fde8962',1,'ModuleXbmcvfs.h']]],
   ['runframe',['RunFrame',['../group__cpp__kodi__addon__game___operation.html#ga3749c6dd93b1a869e80961f8a4377272',1,'kodi::addon::CInstanceGame']]]

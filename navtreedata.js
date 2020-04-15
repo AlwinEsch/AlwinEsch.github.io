@@ -21,10 +21,10 @@ var NAVTREEINDEX =
 [
 "_addon__rendering_control.html",
 "group__cpp__kodi__addon__game___defs___game_types.html#ggae227c65af490275c3e3c9b885457ac38a2277738f3dcf28e715b821cd1a1b13c3",
-"group__cpp__kodi__gui___c_window.html#ga60ef98c2dd24a36ab0748d21888f10b6",
-"group__cpp__kodi__gui__gl___c_shader_program.html#gae916af1891e1a20c5ffaf22660a6bfba",
-"group__python___player.html#ga340cf5a8c62f5bbde6ba6cdf0ce05cba",
-"group__python__xbmcgui__listitem.html#ga7ba82954c5d17b1a821abdf753ed339e"
+"group__cpp__kodi__audioengine___defs.html#ggaa5510e87db1b47c1aa7823fae4950639a516a3be79d9805c89fd6fb57bc7f15f5",
+"group__cpp__kodi__gui__dialogs___c_progress.html#ga17b3efd7654cbeaa4e5db51fe8d828e3",
+"group__python___info_tag_radio_r_d_s.html#ga620f8d648adfb768d2ea8ca2d45b52a8",
+"group__python__xbmcgui__control__list.html#ga1bdf74c9bba50409e4cdad1c0f3f71bf"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

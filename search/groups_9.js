@@ -6,7 +6,7 @@ var searchData=
   ['class_3a_20cstream',['Class: CStream',['../group__cpp__kodi__addon__game___operation___c_stream.html',1,'']]],
   ['callbacks_20getdirectory_28_29',['Callbacks GetDirectory()',['../group__cpp__kodi__addon__vfs__general__cb___get_directory.html',1,'']]],
   ['class_20vistrack',['class VisTrack',['../group__cpp__kodi__addon__visualization___vis_track.html',1,'']]],
-  ['class_20caddonaestream',['class CAddonAEStream',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html',1,'']]],
+  ['class_20caestream',['class CAEStream',['../group__cpp__kodi__audioengine___c_a_e_stream.html',1,'']]],
   ['control_20button',['Control Button',['../group__cpp__kodi__gui__controls___c_button.html',1,'']]],
   ['control_20edit',['Control Edit',['../group__cpp__kodi__gui__controls___c_edit.html',1,'']]],
   ['control_20fade_20label',['Control Fade Label',['../group__cpp__kodi__gui__controls___c_fade_label.html',1,'']]],

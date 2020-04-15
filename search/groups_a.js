@@ -20,7 +20,6 @@ var searchData=
   ['dialog_20yes_2fno',['Dialog Yes/No',['../group__cpp__kodi__gui__dialogs___yes_no.html',1,'']]],
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__vfs___defs.html',1,'']]],
   ['dialog',['Dialog',['../group__python___dialog.html',1,'']]],
-  ['dialogbusy',['DialogBusy',['../group__python___dialog_busy.html',1,'']]],
   ['dialogprogress',['DialogProgress',['../group__python___dialog_progress.html',1,'']]],
   ['dialogprogressbg',['DialogProgressBG',['../group__python___dialog_progress_b_g.html',1,'']]]
 ];

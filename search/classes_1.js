@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['caddonaestream',['CAddonAEStream',['../classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html',1,'kodi::audioengine']]],
   ['caddonbase',['CAddonBase',['../classkodi_1_1addon_1_1_c_addon_base.html',1,'kodi::addon']]],
   ['caddonguicontrolbase',['CAddonGUIControlBase',['../class_c_addon_g_u_i_control_base.html',1,'CAddonGUIControlBase'],['../classkodi_1_1gui_1_1_c_addon_g_u_i_control_base.html',1,'CAddonGUIControlBase']]],
   ['caddonguiprogresscontrol',['CAddonGUIProgressControl',['../class_c_addon_g_u_i_progress_control.html',1,'']]],
@@ -11,6 +10,7 @@ var searchData=
   ['caddonguispincontrol',['CAddonGUISpinControl',['../class_c_addon_g_u_i_spin_control.html',1,'']]],
   ['caddonguiwindow',['CAddonGUIWindow',['../class_c_addon_g_u_i_window.html',1,'']]],
   ['caddonlistitem',['CAddonListItem',['../class_c_addon_list_item.html',1,'']]],
+  ['caestream',['CAEStream',['../classkodi_1_1audioengine_1_1_c_a_e_stream.html',1,'kodi::audioengine']]],
   ['cb_5faddonlib',['CB_AddOnLib',['../struct_c_b___add_on_lib.html',1,'']]],
   ['cb_5fguilib',['CB_GUILib',['../struct_c_b___g_u_i_lib.html',1,'']]],
   ['cbutton',['CButton',['../classkodi_1_1gui_1_1controls_1_1_c_button.html',1,'kodi::gui::controls']]],
@@ -65,6 +65,7 @@ var searchData=
   ['cspin',['CSpin',['../classkodi_1_1gui_1_1controls_1_1_c_spin.html',1,'kodi::gui::controls']]],
   ['cstream',['CStream',['../classkodi_1_1addon_1_1_c_instance_game_1_1_c_stream.html',1,'kodi::addon::CInstanceGame']]],
   ['cstructhdl',['CStructHdl',['../classkodi_1_1addon_1_1_c_struct_hdl.html',1,'kodi::addon']]],
+  ['cstructhdl_3c_20audioengineformat_2c_20audio_5fengine_5fformat_20_3e',['CStructHdl&lt; AudioEngineFormat, AUDIO_ENGINE_FORMAT &gt;',['../classkodi_1_1addon_1_1_c_struct_hdl.html',1,'kodi::addon']]],
   ['ctextbox',['CTextBox',['../classkodi_1_1gui_1_1controls_1_1_c_text_box.html',1,'kodi::gui::controls']]],
   ['cvertexshader',['CVertexShader',['../classkodi_1_1gui_1_1gl_1_1_c_vertex_shader.html',1,'kodi::gui::gl']]],
   ['cvfscallbacks',['CVFSCallbacks',['../classkodi_1_1addon_1_1_c_instance_v_f_s_1_1_c_v_f_s_callbacks.html',1,'kodi::addon::CInstanceVFS']]],

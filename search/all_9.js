@@ -26,6 +26,7 @@ var searchData=
   ['bsupportsrecordingedl',['bSupportsRecordingEdl',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a5af3fe7a6aeb16f8597e7122c3b4b749',1,'PVR_ADDON_CAPABILITIES']]],
   ['bsupportsrecordingplaycount',['bSupportsRecordingPlayCount',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a3951a15dbd390d9b61c37b9696a181b7',1,'PVR_ADDON_CAPABILITIES']]],
   ['bsupportsrecordings',['bSupportsRecordings',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a748e782ac4547cab51312991fa8c190e',1,'PVR_ADDON_CAPABILITIES']]],
+  ['bsupportsrecordingsize',['bSupportsRecordingSize',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a511c17613f0314422beabe0e48f69dcd',1,'PVR_ADDON_CAPABILITIES']]],
   ['bsupportsrecordingslifetimechange',['bSupportsRecordingsLifetimeChange',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a458042d704694021c975248c600d256a',1,'PVR_ADDON_CAPABILITIES']]],
   ['bsupportsrecordingsrename',['bSupportsRecordingsRename',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a8ae3fa0be0d3d2a97d4c83c566042ae7',1,'PVR_ADDON_CAPABILITIES']]],
   ['bsupportsrecordingsundelete',['bSupportsRecordingsUndelete',['../struct_p_v_r___a_d_d_o_n___c_a_p_a_b_i_l_i_t_i_e_s.html#a2f249ff14666a73871ea11c9cd07a8f9',1,'PVR_ADDON_CAPABILITIES']]],

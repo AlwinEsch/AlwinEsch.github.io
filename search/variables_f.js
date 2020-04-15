@@ -4,6 +4,7 @@ var searchData=
   ['selected',['selected',['../struct_s_selection_entry.html#a9ee682957ef18956fbe33afe9b6222fa',1,'SSelectionEntry']]],
   ['sharename',['sharename',['../group__cpp__kodi__addon__vfs___defs.html#ab79241025f95807ec158630df2433b1b',1,'VFSURL']]],
   ['size',['size',['../group__cpp__kodi__addon__game___defs___audio_stream.html#a854352f53b148adc24983a58a1866d66',1,'game_stream_audio_packet::size()'],['../group__cpp__kodi__addon__game___defs___video_stream.html#a854352f53b148adc24983a58a1866d66',1,'game_stream_video_packet::size()'],['../struct_v_f_s_dir_entry.html#af931a8871310b4dad23f0f0b0f623560',1,'VFSDirEntry::size()'],['../group__cpp__kodi__vfs___defs.html#af931a8871310b4dad23f0f0b0f623560',1,'STAT_STRUCTURE::size()']]],
+  ['sizeinbytes',['sizeInBytes',['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#ae3eca941e78d7144d9f2b7c2b40acdc4',1,'PVR_RECORDING']]],
   ['starttime',['startTime',['../struct_e_p_g___t_a_g.html#aaf564fc30a2a8624cf917e282281a500',1,'EPG_TAG::startTime()'],['../struct_p_v_r___t_i_m_e_r.html#aaf564fc30a2a8624cf917e282281a500',1,'PVR_TIMER::startTime()'],['../struct_p_v_r___s_t_r_e_a_m___t_i_m_e_s.html#aaf564fc30a2a8624cf917e282281a500',1,'PVR_STREAM_TIMES::startTime()']]],
   ['state',['state',['../struct_p_v_r___t_i_m_e_r.html#a048327d0a31f8b2eb735730588de39cc',1,'PVR_TIMER']]],
   ['statustime',['statusTime',['../group__cpp__kodi__vfs___defs.html#a420af14c1ca9bdaeebe32b47f56fd061',1,'STAT_STRUCTURE']]],

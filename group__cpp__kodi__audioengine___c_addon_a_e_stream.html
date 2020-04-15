@@ -97,10 +97,12 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b>Audio Engine Stream Class</b> </p>
+<p>Class that can be created by the addon in order to be able to transfer audiostream data processed on the addon to Kodi and output it audibly.</p>
+<p>This can create individually several times and performed in different processes simultaneously.</p>
 <p>It has the header <a class="el" href="_audio_engine_8h_source.html">#include &lt;kodi/AudioEngine.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga8d36f190546da3e1c48d973aeac34bab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8d36f190546da3e1c48d973aeac34bab">&#9670;&nbsp;</a></span>CAddonAEStream()</h2>
+<a id="ga26649f25ac45da0c974790ace37d4390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26649f25ac45da0c974790ace37d4390">&#9670;&nbsp;</a></span>CAddonAEStream()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -111,7 +113,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
         <tr>
           <td class="memname"><a class="el" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">CAddonAEStream</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_audio_engine_format.html">AudioEngineFormat</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classkodi_1_1audioengine_1_1_audio_engine_format.html">AudioEngineFormat</a> &amp;&#160;</td>
           <td class="paramname"><em>format</em>, </td>
         </tr>
         <tr>
@@ -142,7 +144,26 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
   </dd>
 </dl>
 <hr/>
-<p><b>Audio engine format information:</b> </p><div class="fragment"><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * Audio engine format information</span></div><div class="line"><span class="comment"> *</span></div><div class="line"><span class="comment"> * Only as example shown here! See always the original structure on related header.</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_audio_engine_format.html">AudioEngineFormat</a></div><div class="line">{</div><div class="line">  <span class="keyword">enum</span> AEDataFormat    m_dataFormat;             <span class="comment">/* The stream&#39;s data format (eg, AE_FMT_S16LE) */</span></div><div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>         m_sampleRate;             <span class="comment">/* The stream&#39;s sample rate (eg, 48000) */</span></div><div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>         m_encodedRate;            <span class="comment">/* The encoded streams sample rate if a bitstream, otherwise undefined */</span></div><div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>         m_channelCount;           <span class="comment">/* The amount of used speaker channels */</span></div><div class="line">  <span class="keyword">enum</span> AEChannel       m_channels[AE_CH_MAX];    <span class="comment">/* The stream&#39;s channel layout */</span></div><div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>         m_frames;                 <span class="comment">/* The number of frames per period */</span></div><div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>         m_frameSamples;           <span class="comment">/* The number of samples in one frame */</span></div><div class="line">  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>         m_frameSize;              <span class="comment">/* The size of one frame in bytes */</span></div><div class="line"></div><div class="line">  <span class="comment">/* Function to compare the format structure with another */</span></div><div class="line">  <span class="keywordtype">bool</span> compareFormat(<span class="keyword">const</span> <a class="code" href="struct_audio_engine_format.html">AudioEngineFormat</a> *fmt);</div><div class="line">} <a class="code" href="struct_audio_engine_format.html">AudioEngineFormat</a>;</div></div><!-- fragment --> <hr/>
+<p><b>Audio engine format information:</b> </p><hr/>
+<p><b>The following table contains values that can be set with <a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html">AudioEngineFormat</a> :</b> </p><table class="doxtable">
+<tr>
+<th>Name </th><th>Type </th><th>Set call </th><th>Get call  </th></tr>
+<tr>
+<td><b>Data format</b> </td><td>enum </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga4e00bf84c62a151a9f84d84d215a9b66">SetDataFormat</a> </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga57ab479691e01cf16d1e5e0e38f7c203">GetDataFormat</a> </td></tr>
+<tr>
+<td><b>Sample rate</b> </td><td>unsigned int </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga2d037f2da915687a63ba09fd519860a6">SetSampleRate</a> </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga939b81a0c83f7be81f12fabaa7347183">GetSampleRate</a> </td></tr>
+<tr>
+<td><b>Encoded rate</b> </td><td>unsigned int </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga5c894b0d413b253e2d691b23b0532917">SetEncodedRate</a> </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#gaef9534565dfae06ad5d765251ad36413">GetEncodedRate</a> </td></tr>
+<tr>
+<td><b>Channel count</b> </td><td>unsigned int </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#gae613aae6444ebd92954ade64f5745e87">SetChannelCount</a> </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#gac7431168a186c4a4c75a987c24629116">GetChannelCount</a> </td></tr>
+<tr>
+<td><b>Channel layout</b> </td><td>std::vector&lt;enum AEChannel&gt; </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga03880a37e7580b9114966bcbd4803a6d">SetChannelLayout</a> </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga9bba54860075a6c58bb2e59a169a38d7">GetChannelLayout</a> </td></tr>
+<tr>
+<td><b>Frames amount</b> </td><td>unsigned int </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#gad92e99780fee97cbd100035165a43d07">SetFramesAmount</a> </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga1be82c1efe6622bff620faf9c22cc916">GetFramesAmount</a> </td></tr>
+<tr>
+<td><b>Frame size</b> </td><td>unsigned int </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga1a6423f9d9eab39070d13ba430dc47b9">SetFrameSize</a> </td><td><a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga3f6e70c65cc5bffabcbf56a00910599e">GetFrameSize</a> </td></tr>
+</table>
+<p>Further is <a class="el" href="group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga42f57fe3a4fa7671186a744459c74a1b">CompareFormat</a> included to compare this class with another. </p><hr/>
 <p><b>Bit options to pass to CAELib_Stream (on Kodi by <code>IAE::MakeStream</code>)</b></p>
 <table class="doxtable">
 <tr>
@@ -155,7 +176,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine___c_addo
 <td align="right">AUDIO_STREAM_AUTOSTART </td><td align="center">1 &lt;&lt; 2 </td><td align="left">Autostart the stream when enough data is buffered </td></tr>
 </table>
 <hr/>
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/AudioEngine.h&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacekodi_1_1audioengine.html">kodi::audioengine</a>;</div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">AudioEngineFormat format;</div><div class="line">format.m_dataFormat = AE_FMT_FLOAT;</div><div class="line">format.m_channelCount = 2;</div><div class="line">format.m_channels[0] = AE_CH_FL;</div><div class="line">format.m_channels[1] = AE_CH_FR;</div><div class="line">format.m_channels[2] = AE_CH_NULL;</div><div class="line">format.m_sampleRate = 48000;</div><div class="line">format.m_frameSize = <span class="keyword">sizeof</span>(float)*format.m_channelCount;</div><div class="line">format.m_frames = 512;</div><div class="line"><a class="code" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">CAddonAEStream</a>* stream = <span class="keyword">new</span> <a class="code" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">CAddonAEStream</a>(format, AE_STREAM_AUTOSTART);</div></div><!-- fragment --> 
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/AudioEngine.h&gt;</span></div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">kodi::audioengine::AudioEngineFormat format;</div><div class="line"></div><div class="line">format.SetDataFormat(AE_FMT_FLOATP); <span class="comment">/* The stream&#39;s data format (eg, AE_FMT_S16LE) */</span></div><div class="line">format.SetChannelCount(2); <span class="comment">/* The amount of used speaker channels */</span></div><div class="line">format.SetChannelLayout(std::vector&lt;AEChannel&gt;(AE_CH_FL, AE_CH_FR)); <span class="comment">/* The stream&#39;s channel layout */</span></div><div class="line">format.SetSampleRate(48000); <span class="comment">/* The stream&#39;s sample rate (eg, 48000) */</span></div><div class="line">format.SetFrameSize(<span class="keyword">sizeof</span>(<span class="keywordtype">float</span>)*2); <span class="comment">/* The size of one frame in bytes */</span></div><div class="line">format.SetFramesAmount(882); <span class="comment">/* The number of samples in one frame */</span></div><div class="line"></div><div class="line"><a class="code" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">kodi::audioengine::CAddonAEStream</a>* stream = <span class="keyword">new</span> <a class="code" href="classkodi_1_1audioengine_1_1_c_addon_a_e_stream.html">kodi::audioengine::CAddonAEStream</a>(format, AE_STREAM_AUTOSTART);</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="gaaefbc6478432a56415b3b43d1ead7f93"></a>

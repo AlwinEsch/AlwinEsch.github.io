@@ -12,8 +12,6 @@ var group__python__xbmcgui__window =
     [ "removeControls", "group__python__xbmcgui__window.html#ga05a596ff87552e160dabcdf2ea4a6951", null ],
     [ "getHeight", "group__python__xbmcgui__window.html#gaa725283ffc599b3f6563cada4cbeb2c7", null ],
     [ "getWidth", "group__python__xbmcgui__window.html#gae7fba4c8be1972cf80dc1a95f390df23", null ],
-    [ "getResolution", "group__python__xbmcgui__window.html#ga5b16eae9fcdd38807720a0e36be4d934", null ],
-    [ "setCoordinateResolution", "group__python__xbmcgui__window.html#gafbccda2a1acec91814a135aa3c5c69de", null ],
     [ "setProperty", "group__python__xbmcgui__window.html#ga96f1976952584c91e6d59c310ce86a25", null ],
     [ "getProperty", "group__python__xbmcgui__window.html#ga2427c41a5cdc6069d42ecd582cf7d78d", null ],
     [ "clearProperty", "group__python__xbmcgui__window.html#ga20a379dd0d82ee7bab6e3caebeb956e8", null ],

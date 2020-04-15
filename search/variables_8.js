@@ -23,7 +23,7 @@ var searchData=
   ['iepguid',['iEpgUid',['../struct_p_v_r___t_i_m_e_r.html#a0e48285cdfd0e726f8f52b2c4b0db8df',1,'PVR_TIMER']]],
   ['iepisodenumber',['iEpisodeNumber',['../struct_e_p_g___t_a_g.html#a57de17dd0f1bb774def03159a67ccf1b',1,'EPG_TAG::iEpisodeNumber()'],['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#a57de17dd0f1bb774def03159a67ccf1b',1,'PVR_RECORDING::iEpisodeNumber()']]],
   ['iepisodepartnumber',['iEpisodePartNumber',['../struct_e_p_g___t_a_g.html#a261d1328df5a8e389cb6bc5f248d8b27',1,'EPG_TAG']]],
-  ['iflags',['iFlags',['../struct_e_p_g___t_a_g.html#a8a95fd3f0a636010e24d04d4fe4d9ec1',1,'EPG_TAG']]],
+  ['iflags',['iFlags',['../struct_e_p_g___t_a_g.html#a8a95fd3f0a636010e24d04d4fe4d9ec1',1,'EPG_TAG::iFlags()'],['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#a8a95fd3f0a636010e24d04d4fe4d9ec1',1,'PVR_RECORDING::iFlags()']]],
   ['ifpsrate',['iFPSRate',['../struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#a7c7110ea04a25039a5d76ac7a11ac2a6',1,'PVR_STREAM_PROPERTIES::PVR_STREAM']]],
   ['ifpsscale',['iFPSScale',['../struct_p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_i_e_s.html#a0687ae0ee77e8b4696dbe866f8ab0e0a',1,'PVR_STREAM_PROPERTIES::PVR_STREAM']]],
   ['igenresubtype',['iGenreSubType',['../struct_e_p_g___t_a_g.html#a4a59e14dd7a234942305274b4de31ec6',1,'EPG_TAG::iGenreSubType()'],['../struct_p_v_r___t_i_m_e_r.html#a4a59e14dd7a234942305274b4de31ec6',1,'PVR_TIMER::iGenreSubType()'],['../struct_p_v_r___r_e_c_o_r_d_i_n_g.html#a4a59e14dd7a234942305274b4de31ec6',1,'PVR_RECORDING::iGenreSubType()']]],

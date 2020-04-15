@@ -3,6 +3,7 @@ var searchData=
   ['vfs',['VFS',['../group__cpp__kodi__addon__vfs.html',1,'']]],
   ['video_20codec',['Video Codec',['../group__cpp__kodi__addon__videocodec.html',1,'']]],
   ['visualization',['Visualization',['../group__cpp__kodi__addon__visualization.html',1,'']]],
+  ['value_20help',['Value Help',['../group__cpp__kodi__audioengine___defs___audio_engine_format___help.html',1,'']]],
   ['validatepath',['validatePath',['../group__python__xbmc.html#ga7d325903d7bc797f993c9df791d22c44',1,'ModuleXbmc.h']]],
   ['vendor_5fid',['vendor_id',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#abd60aba7846c925f784c3e89e2f54e45',1,'PERIPHERAL_INFO']]],
   ['version_5fmajor',['version_major',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#a6540c97b3ede3afedc3eddb99863867e',1,'game_stream_hw_framebuffer_properties']]],

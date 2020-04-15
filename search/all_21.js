@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_7ecaddonaestream',['~CAddonAEStream',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gaaefbc6478432a56415b3b43d1ead7f93',1,'kodi::audioengine::CAddonAEStream']]],
+  ['_7ecaestream',['~CAEStream',['../group__cpp__kodi__audioengine___c_a_e_stream.html#ga4ad767838b18f9072212f9fd050f030b',1,'kodi::audioengine::CAEStream']]],
   ['_7ecbutton',['~CButton',['../classkodi_1_1gui_1_1controls_1_1_c_button.html#ad871cebac770bfb98186411c3bf819b5',1,'kodi::gui::controls::CButton']]],
   ['_7ecedit',['~CEdit',['../group__cpp__kodi__gui__controls___c_edit.html#ga8570eee9c1b35285e3c1a0128ec0bb59',1,'kodi::gui::controls::CEdit']]],
   ['_7ecextendedprogress',['~CExtendedProgress',['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#gaaac7abc823c2439c8521192ff8ea8271',1,'kodi::gui::dialogs::CExtendedProgress']]],
