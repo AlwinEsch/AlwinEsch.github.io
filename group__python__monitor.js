@@ -9,7 +9,6 @@ var group__python__monitor =
     [ "onScanFinished", "group__python__monitor.html#ga05a62d4886798d1cdb2a23e979249250", null ],
     [ "onCleanStarted", "group__python__monitor.html#gabf239f436cbd72bfff02253bd1972c7c", null ],
     [ "onCleanFinished", "group__python__monitor.html#ga19798ab61e778754e7027112236024e7", null ],
-    [ "onAbortRequested", "group__python__monitor.html#gadfe1a1b3bd1d72a94c60590cd757247c", null ],
     [ "onNotification", "group__python__monitor.html#ga0e49e1b7c38dd22ef51276ad4efbd7e9", null ],
     [ "waitForAbort", "group__python__monitor.html#ga101acf761929351fb676b05e88ddeb8d", null ],
     [ "abortRequested", "group__python__monitor.html#gab583bbcbf0b63bdc0241ba759985bc9b", null ]

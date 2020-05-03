@@ -1,20 +1,16 @@
 var searchData=
 [
-  ['keyboard',['Keyboard',['../class_x_b_m_c_addon_1_1xbmc_1_1_keyboard.html',1,'XBMCAddon::xbmc']]],
-  ['kodi_5fversion_5ft',['kodi_version_t',['../group__cpp__kodi___defs.html#structkodi__version__t',1,'']]],
-  ['kodiinputevent',['KodiInputEvent',['../group__cpp__kodi__addon__game___input_operations.html#gaf10afcef9698c5e378276016b42dac63',1,'kodi::addon::CInstanceGame']]],
-  ['koditoaddonfunctable_5faddon',['KodiToAddonFuncTable_Addon',['../struct_kodi_to_addon_func_table___addon.html',1,'']]],
-  ['koditoaddonfunctable_5faudiodecoder',['KodiToAddonFuncTable_AudioDecoder',['../struct_kodi_to_addon_func_table___audio_decoder.html',1,'']]],
-  ['koditoaddonfunctable_5faudioencoder',['KodiToAddonFuncTable_AudioEncoder',['../struct_kodi_to_addon_func_table___audio_encoder.html',1,'']]],
-  ['koditoaddonfunctable_5fgame',['KodiToAddonFuncTable_Game',['../struct_kodi_to_addon_func_table___game.html',1,'']]],
-  ['koditoaddonfunctable_5fimagedecoder',['KodiToAddonFuncTable_ImageDecoder',['../struct_kodi_to_addon_func_table___image_decoder.html',1,'']]],
-  ['koditoaddonfunctable_5finputstream',['KodiToAddonFuncTable_InputStream',['../struct_kodi_to_addon_func_table___input_stream.html',1,'']]],
-  ['koditoaddonfunctable_5fperipheral',['KodiToAddonFuncTable_Peripheral',['../struct_kodi_to_addon_func_table___peripheral.html',1,'']]],
-  ['koditoaddonfunctable_5fpvr',['KodiToAddonFuncTable_PVR',['../struct_kodi_to_addon_func_table___p_v_r.html',1,'']]],
-  ['koditoaddonfunctable_5fscreensaver',['KodiToAddonFuncTable_Screensaver',['../struct_kodi_to_addon_func_table___screensaver.html',1,'']]],
-  ['koditoaddonfunctable_5fvfsentry',['KodiToAddonFuncTable_VFSEntry',['../struct_kodi_to_addon_func_table___v_f_s_entry.html',1,'']]],
-  ['koditoaddonfunctable_5fvideocodec',['KodiToAddonFuncTable_VideoCodec',['../struct_kodi_to_addon_func_table___video_codec.html',1,'']]],
-  ['koditoaddonfunctable_5fvisualization',['KodiToAddonFuncTable_Visualization',['../struct_kodi_to_addon_func_table___visualization.html',1,'']]],
-  ['kodiversion',['KodiVersion',['../group__cpp__kodi.html#ga5417d9134259da3d79f40e9a20a48617',1,'kodi']]],
-  ['keyboard',['Keyboard',['../group__python__keyboard.html',1,'']]]
+  ['joystick_975',['Joystick',['../classkodi_1_1addon_1_1_joystick.html',1,'kodi::addon']]],
+  ['joystick_5fdriver_5fbutton_976',['JOYSTICK_DRIVER_BUTTON',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___b_u_t_t_o_n.html',1,'']]],
+  ['joystick_5fdriver_5fhat_977',['JOYSTICK_DRIVER_HAT',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___h_a_t.html',1,'']]],
+  ['joystick_5fdriver_5fkey_978',['JOYSTICK_DRIVER_KEY',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___k_e_y.html',1,'']]],
+  ['joystick_5fdriver_5fmotor_979',['JOYSTICK_DRIVER_MOTOR',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_t_o_r.html',1,'']]],
+  ['joystick_5fdriver_5fmouse_5fbutton_980',['JOYSTICK_DRIVER_MOUSE_BUTTON',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___b_u_t_t_o_n.html',1,'']]],
+  ['joystick_5fdriver_5fprimitive_981',['JOYSTICK_DRIVER_PRIMITIVE',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___p_r_i_m_i_t_i_v_e.html',1,'']]],
+  ['joystick_5fdriver_5fprimitive_2e_5f_5funnamed_5f_5f_982',['JOYSTICK_DRIVER_PRIMITIVE.__unnamed__',['../union_j_o_y_s_t_i_c_k___d_r_i_v_e_r___p_r_i_m_i_t_i_v_e_8____unnamed____.html',1,'']]],
+  ['joystick_5fdriver_5frelpointer_983',['JOYSTICK_DRIVER_RELPOINTER',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___r_e_l_p_o_i_n_t_e_r.html',1,'']]],
+  ['joystick_5fdriver_5fsemiaxis_984',['JOYSTICK_DRIVER_SEMIAXIS',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___s_e_m_i_a_x_i_s.html',1,'']]],
+  ['joystick_5ffeature_985',['JOYSTICK_FEATURE',['../struct_j_o_y_s_t_i_c_k___f_e_a_t_u_r_e.html',1,'']]],
+  ['joystick_5finfo_986',['JOYSTICK_INFO',['../struct_j_o_y_s_t_i_c_k___i_n_f_o.html',1,'']]],
+  ['joystickfeature_987',['JoystickFeature',['../classkodi_1_1addon_1_1_joystick_feature.html',1,'kodi::addon']]]
 ];

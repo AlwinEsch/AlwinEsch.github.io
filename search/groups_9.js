@@ -1,29 +1,7 @@
 var searchData=
 [
-  ['c_2b_2b',['C++',['../group__cpp.html',1,'']]],
-  ['cmake_20addon_20creation_20structure',['CMake addon creation structure',['../group__cpp__cmake.html',1,'']]],
-  ['class_20caddonbase',['class CAddonBase',['../group__cpp__kodi__addon__addonbase.html',1,'']]],
-  ['class_3a_20cstream',['Class: CStream',['../group__cpp__kodi__addon__game___operation___c_stream.html',1,'']]],
-  ['callbacks_20getdirectory_28_29',['Callbacks GetDirectory()',['../group__cpp__kodi__addon__vfs__general__cb___get_directory.html',1,'']]],
-  ['class_20vistrack',['class VisTrack',['../group__cpp__kodi__addon__visualization___vis_track.html',1,'']]],
-  ['class_20caestream',['class CAEStream',['../group__cpp__kodi__audioengine___c_a_e_stream.html',1,'']]],
-  ['control_20button',['Control Button',['../group__cpp__kodi__gui__controls___c_button.html',1,'']]],
-  ['control_20edit',['Control Edit',['../group__cpp__kodi__gui__controls___c_edit.html',1,'']]],
-  ['control_20fade_20label',['Control Fade Label',['../group__cpp__kodi__gui__controls___c_fade_label.html',1,'']]],
-  ['control_20image',['Control Image',['../group__cpp__kodi__gui__controls___c_image.html',1,'']]],
-  ['control_20label',['Control Label',['../group__cpp__kodi__gui__controls___c_label.html',1,'']]],
-  ['control_20progress',['Control Progress',['../group__cpp__kodi__gui__controls___c_progress.html',1,'']]],
-  ['control_20radio_20button',['Control Radio Button',['../group__cpp__kodi__gui__controls___c_radio_button.html',1,'']]],
-  ['control_20rendering',['Control Rendering',['../group__cpp__kodi__gui__controls___c_rendering.html',1,'']]],
-  ['control_20settings_20slider',['Control Settings Slider',['../group__cpp__kodi__gui__controls___c_settings_slider.html',1,'']]],
-  ['control_20slider',['Control Slider',['../group__cpp__kodi__gui__controls___c_slider.html',1,'']]],
-  ['control_20spin',['Control Spin',['../group__cpp__kodi__gui__controls___c_spin.html',1,'']]],
-  ['control_20text_20box',['Control Text Box',['../group__cpp__kodi__gui__controls___c_text_box.html',1,'']]],
-  ['callback_20functions_20from_20kodi_20to_20add_2don',['Callback functions from Kodi to add-on',['../group__cpp__kodi__gui___c_window__callbacks.html',1,'']]],
-  ['child_20functions',['Child Functions',['../group__cpp__kodi__gui__gl___c_shader_program__child.html',1,'']]],
-  ['class_20cdirentry',['class CDirEntry',['../group__cpp__kodi__vfs___c_dir_entry.html',1,'']]],
-  ['class_20cfile',['class CFile',['../group__cpp__kodi__vfs___c_file.html',1,'']]],
-  ['callback_20functions_20from_20kodi_20to_20add_2don',['Callback functions from Kodi to Add-On',['../group__python___player_c_b.html',1,'']]],
-  ['control',['Control',['../group__python__xbmcgui__control.html',1,'']]],
-  ['callback_20functions_20from_20kodi_20to_20add_2don',['Callback functions from Kodi to add-on',['../group__python__xbmcgui__window__cb.html',1,'']]]
+  ['audio_20decoder_3524',['Audio Decoder',['../group__cpp__kodi__addon__audiodecoder.html',1,'']]],
+  ['audio_20encoder_3525',['Audio Encoder',['../group__cpp__kodi__addon__audioencoder.html',1,'']]],
+  ['addon_20type_20instances_3526',['Addon type instances',['../group__cpp__kodi__addon__instances.html',1,'']]],
+  ['action_3527',['Action',['../group__python__xbmcgui__action.html',1,'']]]
 ];

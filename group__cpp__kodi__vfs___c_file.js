@@ -4,6 +4,7 @@ var group__cpp__kodi__vfs___c_file =
     [ "~CFile", "group__cpp__kodi__vfs___c_file.html#gaaca978eab220d4564711e06f5d9e55b3", null ],
     [ "OpenFile", "group__cpp__kodi__vfs___c_file.html#ga98a555efe0368bda93fede3e043210de", null ],
     [ "OpenFileForWrite", "group__cpp__kodi__vfs___c_file.html#ga791aab50c47c2f6420a90b943e39683d", null ],
+    [ "IsOpen", "group__cpp__kodi__vfs___c_file.html#ga1822528b9d87e3897acff000f0ef4629", null ],
     [ "CURLCreate", "group__cpp__kodi__vfs___c_file.html#ga819f5335d7050d8adb852df9cfb55760", null ],
     [ "CURLAddOption", "group__cpp__kodi__vfs___c_file.html#gacd6620a83c106ebfe0a8e1468aa3d292", null ],
     [ "CURLOpen", "group__cpp__kodi__vfs___c_file.html#ga784d1b01cd6bbf1fc2d858bde23fce06", null ],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['langformats',['LangFormats',['../group__cpp__kodi___defs.html#ga40942faafc2e9ae4d9b76e2f19362327',1,'General.h']]]
+  ['game_5ferror_3331',['GAME_ERROR',['../group__cpp__kodi__addon__game___defs.html#gad0fb9f502cf7b3a84f8edb0dc6cbd6ef',1,'Game.h']]]
 ];

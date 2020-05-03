@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['queue_5ferror',['QUEUE_ERROR',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94ad2f91e8feff864772fb0a394bb60cdc5',1,'General.h']]],
-  ['queue_5finfo',['QUEUE_INFO',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a337175e2eb3336df26c7e387e56cfb6b',1,'General.h']]],
-  ['queue_5fown_5fstyle',['QUEUE_OWN_STYLE',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a73ef8e6ac545537aab78d269d462365c',1,'General.h']]],
-  ['queue_5fwarning',['QUEUE_WARNING',['../group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712',1,'General.h']]]
+  ['lang_5ffmt_5fenglish_5fname_3413',['LANG_FMT_ENGLISH_NAME',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635',1,'General.h']]],
+  ['lang_5ffmt_5fiso_5f639_5f1_3414',['LANG_FMT_ISO_639_1',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51',1,'General.h']]],
+  ['lang_5ffmt_5fiso_5f639_5f2_3415',['LANG_FMT_ISO_639_2',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a93ccac5fa6affc3908cbd62584c2e92b',1,'General.h']]]
 ];

@@ -21,5 +21,6 @@ var group__cpp__kodi__addon__addonbase =
       [ "ADDON_INSTANCE_IMAGEDECODER", "group__cpp__kodi__addon__addonbase.html#ggada0b4c3c9f9c168e5e1c27145ec72357af633457378bc77dd8fc147968ab6fb7b", null ],
       [ "ADDON_INSTANCE_VIDEOCODEC", "group__cpp__kodi__addon__addonbase.html#ggada0b4c3c9f9c168e5e1c27145ec72357addcf98e1d3580c6e6859334fc23e8409", null ]
     ] ],
-    [ "CreateInstance", "group__cpp__kodi__addon__addonbase.html#gab8bfc4658e61f5bde8265d99a0447fee", null ]
+    [ "CreateInstance", "group__cpp__kodi__addon__addonbase.html#gab8bfc4658e61f5bde8265d99a0447fee", null ],
+    [ "DestroyInstance", "group__cpp__kodi__addon__addonbase.html#gaea78715d8d8620a1d6ba42a271fc70b3", null ]
 ];

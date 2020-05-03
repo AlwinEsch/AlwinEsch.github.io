@@ -1,6 +1,11 @@
 var searchData=
 [
-  ['lang_5ffmt_5fenglish_5fname',['LANG_FMT_ENGLISH_NAME',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635',1,'General.h']]],
-  ['lang_5ffmt_5fiso_5f639_5f1',['LANG_FMT_ISO_639_1',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51',1,'General.h']]],
-  ['lang_5ffmt_5fiso_5f639_5f2',['LANG_FMT_ISO_639_2',['../group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a93ccac5fa6affc3908cbd62584c2e92b',1,'General.h']]]
+  ['game_5ferror_5ffailed_3405',['GAME_ERROR_FAILED',['../group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa11cf133fce7983a6aa19d68c351c6a80',1,'Game.h']]],
+  ['game_5ferror_5finvalid_5fparameters_3406',['GAME_ERROR_INVALID_PARAMETERS',['../group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa317a70cefc1dba6d3d9ae0634b13225e',1,'Game.h']]],
+  ['game_5ferror_5fno_5ferror_3407',['GAME_ERROR_NO_ERROR',['../group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa51b865ee275ae8e392f3e9fd8594fa90',1,'Game.h']]],
+  ['game_5ferror_5fnot_5fimplemented_3408',['GAME_ERROR_NOT_IMPLEMENTED',['../group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efaf397002d4590537629461eff8b98d014',1,'Game.h']]],
+  ['game_5ferror_5fnot_5floaded_3409',['GAME_ERROR_NOT_LOADED',['../group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efabbc3840b4a211598c8e63e31731d75e8',1,'Game.h']]],
+  ['game_5ferror_5frejected_3410',['GAME_ERROR_REJECTED',['../group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa2e70ad0417fa9e84872ae765c8f2d991',1,'Game.h']]],
+  ['game_5ferror_5frestricted_3411',['GAME_ERROR_RESTRICTED',['../group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa68ead95db6f599ff034d99737ff54c92',1,'Game.h']]],
+  ['game_5ferror_5funknown_3412',['GAME_ERROR_UNKNOWN',['../group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa4e208b896403860c888821ae8477bef7',1,'Game.h']]]
 ];

@@ -1,12 +1,15 @@
 var searchData=
 [
-  ['read_5fafter_5fwrite',['READ_AFTER_WRITE',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a99026c18c02ce8d720936b1f2a6cb74a',1,'Filesystem.h']]],
-  ['read_5faudio_5fvideo',['READ_AUDIO_VIDEO',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149ae86a34d876dbc5ea76a647535ba8cebe',1,'Filesystem.h']]],
-  ['read_5fbitrate',['READ_BITRATE',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149aecbbd43a4bbd7f13cb97153d189e0b6c',1,'Filesystem.h']]],
-  ['read_5fcached',['READ_CACHED',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149aa0785bb4f2786c4644f61f2bc7d1fd1a',1,'Filesystem.h']]],
-  ['read_5fchunked',['READ_CHUNKED',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149acce42704eea3714240c41933681dc85a',1,'Filesystem.h']]],
-  ['read_5fmulti_5fstream',['READ_MULTI_STREAM',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a2356de52da5efa28928870c6dcc1bb72',1,'Filesystem.h']]],
-  ['read_5fno_5fcache',['READ_NO_CACHE',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a0117d00cee180a144993f511596b3284',1,'Filesystem.h']]],
-  ['read_5freopen',['READ_REOPEN',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a116483eace1c9338615a1ae348fbe106',1,'Filesystem.h']]],
-  ['read_5ftruncated',['READ_TRUNCATED',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a736ecac673f5d20033e9b3fb1f1c072d',1,'Filesystem.h']]]
+  ['std_5fkb_5fbuttons_5fmax_5frows_3472',['STD_KB_BUTTONS_MAX_ROWS',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38',1,'General.h']]],
+  ['std_5fkb_5fbuttons_5fper_5frow_3473',['STD_KB_BUTTONS_PER_ROW',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465',1,'General.h']]],
+  ['std_5fkb_5fmodifier_5fkey_5fnone_3474',['STD_KB_MODIFIER_KEY_NONE',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeacadbebe388526b489067002add50ff70',1,'General.h']]],
+  ['std_5fkb_5fmodifier_5fkey_5fshift_3475',['STD_KB_MODIFIER_KEY_SHIFT',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0',1,'General.h']]],
+  ['std_5fkb_5fmodifier_5fkey_5fsymbol_3476',['STD_KB_MODIFIER_KEY_SYMBOL',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed',1,'General.h']]],
+  ['supports_5fichapter_3477',['SUPPORTS_ICHAPTER',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606ad1a1a7553e6a6732fd7a19fe5445002c',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fidemux_3478',['SUPPORTS_IDEMUX',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606abcc050c4a9b02e70425861ca5f91f013',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fidisplaytime_3479',['SUPPORTS_IDISPLAYTIME',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606acedf3ce11bd2e78b942bcb2bfb7e4296',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fipostime_3480',['SUPPORTS_IPOSTIME',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606a4349e3e341ecdfaaa2f580c793446493',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fitime_3481',['SUPPORTS_ITIME',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606a523c7d3d7aa353553151bed03382f5aa',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fpause_3482',['SUPPORTS_PAUSE',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606a2e1791ceb0fd6bee7c84def28044353c',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fseek_3483',['SUPPORTS_SEEK',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606aa42e92050b3e11bcd3e04bb2f8669cce',1,'INPUTSTREAM_CAPABILITIES']]]
 ];

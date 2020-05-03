@@ -1,3 +1,25 @@
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this file.
+
+Copyright (C) 1997-2019 by Dimitri van Heesch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+@licend  The above is the entire license notice
+for the JavaScript code in this file
+*/
 var NAVTREE =
 [
   [ "Kodi Development", "index.html", [
@@ -6,6 +28,7 @@ var NAVTREE =
     [ "Revisions", "revisions.html", "revisions" ],
     [ "Skin Development", "skin_parts.html", "skin_parts" ],
     [ "Todo List", "todo.html", null ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Language Development", "modules.html", "modules" ],
     [ "Older versions", "usergroup0.html", [
       [ "Kodi 16.x Jarvis", "^http://mirrors.kodi.tv/docs/python-docs/16.x-jarvis/", null ],
@@ -20,11 +43,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_addon__rendering_control.html",
-"group__cpp__kodi__addon__game___defs___game_types.html#ggae227c65af490275c3e3c9b885457ac38a2277738f3dcf28e715b821cd1a1b13c3",
-"group__cpp__kodi__audioengine___defs.html#ggaa5510e87db1b47c1aa7823fae4950639a516a3be79d9805c89fd6fb57bc7f15f5",
-"group__cpp__kodi__gui__dialogs___c_progress.html#ga17b3efd7654cbeaa4e5db51fe8d828e3",
-"group__python___info_tag_radio_r_d_s.html#ga620f8d648adfb768d2ea8ca2d45b52a8",
-"group__python__xbmcgui__control__list.html#ga1bdf74c9bba50409e4cdad1c0f3f71bf"
+"group__cpp__kodi__addon__pvr___defs___descrample_info___p_v_r_descrample_info.html",
+"group__cpp__kodi__addon__visualization.html#gae12d00ba86095e80ec25c719592a1daa",
+"group__cpp__kodi__gui__controls___c_text_box.html#gae0206430060cbee9737ff2346c0df591",
+"group__python___info_tag_music.html#gaf16ec95dcf0cf2f08182b703de6f2074",
+"group__python__xbmcgui__control__edit.html#gaeeafc3d047cb758329d2d75401d5956b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

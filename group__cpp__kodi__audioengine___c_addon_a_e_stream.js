@@ -1,6 +1,6 @@
 var group__cpp__kodi__audioengine___c_addon_a_e_stream =
 [
-    [ "CAddonAEStream", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga26649f25ac45da0c974790ace37d4390", null ],
+    [ "CAddonAEStream", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga8d36f190546da3e1c48d973aeac34bab", null ],
     [ "~CAddonAEStream", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gaaefbc6478432a56415b3b43d1ead7f93", null ],
     [ "GetSpace", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga8febfd989aa187d9a122ff8597820d53", null ],
     [ "AddData", "group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga90bd0f93c447654f61aa7494ab8c83ae", null ],

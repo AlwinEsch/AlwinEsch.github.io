@@ -1,12 +1,12 @@
 var group__cpp__kodi__addon__game___defs =
 [
-    [ "1. Audio stream", "group__cpp__kodi__addon__game___defs___audio_stream.html", "group__cpp__kodi__addon__game___defs___audio_stream" ],
-    [ "2. Video stream", "group__cpp__kodi__addon__game___defs___video_stream.html", "group__cpp__kodi__addon__game___defs___video_stream" ],
-    [ "3. Hardware framebuffer stream", "group__cpp__kodi__addon__game___defs___hardware_framebuffer.html", "group__cpp__kodi__addon__game___defs___hardware_framebuffer" ],
-    [ "4. Software framebuffer stream", "group__cpp__kodi__addon__game___defs___software_framebuffer.html", "group__cpp__kodi__addon__game___defs___software_framebuffer" ],
-    [ "5. Stream types", "group__cpp__kodi__addon__game___defs___stream_types.html", "group__cpp__kodi__addon__game___defs___stream_types" ],
-    [ "6. Game types", "group__cpp__kodi__addon__game___defs___game_types.html", "group__cpp__kodi__addon__game___defs___game_types" ],
-    [ "7. Input types", "group__cpp__kodi__addon__game___defs___input_types.html", "group__cpp__kodi__addon__game___defs___input_types" ],
+    [ "1. Audio stream", "group__cpp__kodi__addon__game___defs___audio_stream.html", null ],
+    [ "2. Video stream", "group__cpp__kodi__addon__game___defs___video_stream.html", null ],
+    [ "3. Hardware framebuffer stream", "group__cpp__kodi__addon__game___defs___hardware_framebuffer.html", null ],
+    [ "4. Software framebuffer stream", "group__cpp__kodi__addon__game___defs___software_framebuffer.html", null ],
+    [ "5. Stream types", "group__cpp__kodi__addon__game___defs___stream_types.html", null ],
+    [ "6. Game types", "group__cpp__kodi__addon__game___defs___game_types.html", null ],
+    [ "7. Input types", "group__cpp__kodi__addon__game___defs___input_types.html", null ],
     [ "8. Environment types", "group__cpp__kodi__addon__game___defs___environment_types.html", null ],
     [ "DEFAULT_PORT_ID", "group__cpp__kodi__addon__game___defs.html#ga370e0babee290007b7a2f4fc29aa84cb", null ],
     [ "GAME_ERROR", "group__cpp__kodi__addon__game___defs.html#gad0fb9f502cf7b3a84f8edb0dc6cbd6ef", [

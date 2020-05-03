@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['vfs_5fioctrl_5fcache_5fsetrate',['VFS_IOCTRL_CACHE_SETRATE',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da9c96dd241e2b868a333291de609bf0f1',1,'VFS.h']]],
-  ['vfs_5fioctrl_5fcache_5fstatus',['VFS_IOCTRL_CACHE_STATUS',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da16bf6c6589956fcf14ee2f2dfd592b47',1,'VFS.h']]],
-  ['vfs_5fioctrl_5finvalid',['VFS_IOCTRL_INVALID',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da625387cb90a99d72a1b8d7b0616cb5cb',1,'VFS.h']]],
-  ['vfs_5fioctrl_5fnative',['VFS_IOCTRL_NATIVE',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da8de16ef84833e1fd186b5ac4d8977a99',1,'VFS.h']]],
-  ['vfs_5fioctrl_5fseek_5fpossible',['VFS_IOCTRL_SEEK_POSSIBLE',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075dac9228f1112ac13033806a3d99437f70a',1,'VFS.h']]],
-  ['vfs_5fioctrl_5fset_5fretry',['VFS_IOCTRL_SET_RETRY',['../group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075dadcc1347c7eb1092e75b48ded8dc4537c',1,'VFS.h']]]
+  ['read_5fafter_5fwrite_3463',['READ_AFTER_WRITE',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a99026c18c02ce8d720936b1f2a6cb74a',1,'Filesystem.h']]],
+  ['read_5faudio_5fvideo_3464',['READ_AUDIO_VIDEO',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149ae86a34d876dbc5ea76a647535ba8cebe',1,'Filesystem.h']]],
+  ['read_5fbitrate_3465',['READ_BITRATE',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149aecbbd43a4bbd7f13cb97153d189e0b6c',1,'Filesystem.h']]],
+  ['read_5fcached_3466',['READ_CACHED',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149aa0785bb4f2786c4644f61f2bc7d1fd1a',1,'Filesystem.h']]],
+  ['read_5fchunked_3467',['READ_CHUNKED',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149acce42704eea3714240c41933681dc85a',1,'Filesystem.h']]],
+  ['read_5fmulti_5fstream_3468',['READ_MULTI_STREAM',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a2356de52da5efa28928870c6dcc1bb72',1,'Filesystem.h']]],
+  ['read_5fno_5fcache_3469',['READ_NO_CACHE',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a0117d00cee180a144993f511596b3284',1,'Filesystem.h']]],
+  ['read_5freopen_3470',['READ_REOPEN',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a116483eace1c9338615a1ae348fbe106',1,'Filesystem.h']]],
+  ['read_5ftruncated_3471',['READ_TRUNCATED',['../group__cpp__kodi__vfs___defs.html#gga0f3cb31b9b23debe1fc0d5a47bfbb149a736ecac673f5d20033e9b3fb1f1c072d',1,'Filesystem.h']]]
 ];
