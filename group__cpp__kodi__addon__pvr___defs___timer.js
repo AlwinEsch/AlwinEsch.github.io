@@ -1,5 +1,7 @@
 var group__cpp__kodi__addon__pvr___defs___timer =
 [
+    [ "definition PVR_TIMER_TYPE", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___t_y_p_e.html", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___t_y_p_e" ],
+    [ "definition PVR_WEEKDAY", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___w_e_e_k_d_a_y.html", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___w_e_e_k_d_a_y" ],
     [ "class PVRTimer", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer.html", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer" ],
     [ "class PVRTimerType", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type" ],
     [ "PVR_TIMER_TYPE_NONE", "group__cpp__kodi__addon__pvr___defs___timer.html#ga0baf5c0f4443219f747ae8be8b8eac0b", null ],
@@ -7,8 +9,6 @@ var group__cpp__kodi__addon__pvr___defs___timer =
     [ "PVR_TIMER_NO_PARENT", "group__cpp__kodi__addon__pvr___defs___timer.html#gad5b973c58b71b2f4e5f538d7afdbd17f", null ],
     [ "PVR_TIMER_NO_EPG_UID", "group__cpp__kodi__addon__pvr___defs___timer.html#gaa28118cd59b8bca6c88c2ab4491686a5", null ],
     [ "PVR_TIMER_ANY_CHANNEL", "group__cpp__kodi__addon__pvr___defs___timer.html#ga28c2a9eb90a2201cfee4ab82f98af027", null ],
-    [ "PVR_TIMER_TYPE_ATTRIBUTE_NONE", "group__cpp__kodi__addon__pvr___defs___timer.html#ga9540933b70334c71c189e1d2ac98d530", null ],
-    [ "PVR_WEEKDAY_NONE", "group__cpp__kodi__addon__pvr___defs___timer.html#gaf07a24b1ceebac2a58065bf7740b81b8", null ],
     [ "PVR_TIMER_STATE", "group__cpp__kodi__addon__pvr___defs___timer.html#ga13841ca455933a42daf0ab20ea26895b", [
       [ "PVR_TIMER_STATE_NEW", "group__cpp__kodi__addon__pvr___defs___timer.html#gga13841ca455933a42daf0ab20ea26895ba00688c4ed4e5b30b40b98c50f5890311", null ],
       [ "PVR_TIMER_STATE_SCHEDULED", "group__cpp__kodi__addon__pvr___defs___timer.html#gga13841ca455933a42daf0ab20ea26895babd184ae5ba5aa8b2ef9a0e847337a76a", null ],

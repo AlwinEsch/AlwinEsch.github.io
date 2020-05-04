@@ -1,4 +1,30 @@
 var group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type =
 [
-    [ "<em>Value Help</em>", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___help.html", null ]
+    [ "Value Help", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___help.html", null ],
+    [ "SetId", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#gadd058a95fc034e2c2ac05fc3990c6286", null ],
+    [ "GetId", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga4d48b6bdd77f31bf94253a5cd42e2ca6", null ],
+    [ "SetAttributes", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga460e04222ba50f83f107ffcf14829181", null ],
+    [ "GetAttributes", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga36fa0b5329db5c828214ae3f6e027268", null ],
+    [ "SetDescription", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga400afd5e9bd0a3fda1f979bbeb19c1b2", null ],
+    [ "GetDescription", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga10eafac774946c9fda6acd8368e6b254", null ],
+    [ "SetPriorities", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga67fa24c277cdec12adc1fdfe4a32daf0", null ],
+    [ "GetPriorities", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga12c24dfa22155d55ebb838c6d8a6e0f1", null ],
+    [ "SetPrioritiesDefault", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga7faa026b564a1d31901ca01b42f18cf0", null ],
+    [ "GetPrioritiesDefault", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga54bce49bf39ff6e1cc9185d7d1631a0f", null ],
+    [ "SetLifetimes", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#gad0939a58b2230bfdb0225e5b0638e04c", null ],
+    [ "GetLifetimes", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga0a38434e351437128d55bbd1ce833473", null ],
+    [ "SetLifetimesDefault", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga9f3cb8b68d486b19b2c486454da36523", null ],
+    [ "GetLifetimesDefault", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga0e3253dc069333f944d586a5d3917eda", null ],
+    [ "SetPreventDuplicateEpisodes", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga6283fd11ad8c475eaa7bec3179c015a1", null ],
+    [ "GetPreventDuplicateEpisodes", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#gae0c17f466aed4de79d7a973a8d3d2ab5", null ],
+    [ "SetPreventDuplicateEpisodesDefault", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#gaed7828cdf9dc74eeac9cb326ba81e042", null ],
+    [ "GetPreventDuplicateEpisodesDefault", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga80e634a1f200abb47784c0dc37dca5ef", null ],
+    [ "SetRecordingGroups", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga3bd9944fb3e8febe356120c3a762164c", null ],
+    [ "GetRecordingGroups", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga38f3d66ed0b98934f06682be9566981f", null ],
+    [ "SetRecordingGroupDefault", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#gaeb5de15a766fc01c39f5708100d661de", null ],
+    [ "GetRecordingGroupDefault", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga658b3c79662f46fa5cc35df47922c5da", null ],
+    [ "SetMaxRecordings", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#gad60c5a395238f33ff80ee003c28f8844", null ],
+    [ "GetMaxRecordings", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga087a78cb45266086c08190c27dd4d3cd", null ],
+    [ "SetMaxRecordingsDefault", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#gaddf660e66d01429c04e9c668b4414c07", null ],
+    [ "GetMaxRecordingsDefault", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#gad140512eb581e189f0530e28c4294578", null ]
 ];

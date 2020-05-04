@@ -1,6 +1,6 @@
 var group__cpp__kodi__addon__vfs__general =
 [
-    [ "<strong>Callbacks GetDirectory()</strong>", "group__cpp__kodi__addon__vfs__general__cb___get_directory.html", "group__cpp__kodi__addon__vfs__general__cb___get_directory" ],
+    [ "Callbacks GetDirectory()", "group__cpp__kodi__addon__vfs__general__cb___get_directory.html", "group__cpp__kodi__addon__vfs__general__cb___get_directory" ],
     [ "Stat", "group__cpp__kodi__addon__vfs__general.html#gaf49133bcf40e8782db667027b0e2ca8c", null ],
     [ "Exists", "group__cpp__kodi__addon__vfs__general.html#ga1c362e8c2a5fdba8852d475df90e5c1b", null ],
     [ "ClearOutIdle", "group__cpp__kodi__addon__vfs__general.html#ga44a4256d72906e3cf2c3931c32f2043f", null ],

@@ -1,15 +1,19 @@
 var searchData=
 [
-  ['std_5fkb_5fbuttons_5fmax_5frows_3472',['STD_KB_BUTTONS_MAX_ROWS',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38',1,'General.h']]],
-  ['std_5fkb_5fbuttons_5fper_5frow_3473',['STD_KB_BUTTONS_PER_ROW',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465',1,'General.h']]],
-  ['std_5fkb_5fmodifier_5fkey_5fnone_3474',['STD_KB_MODIFIER_KEY_NONE',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeacadbebe388526b489067002add50ff70',1,'General.h']]],
-  ['std_5fkb_5fmodifier_5fkey_5fshift_3475',['STD_KB_MODIFIER_KEY_SHIFT',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0',1,'General.h']]],
-  ['std_5fkb_5fmodifier_5fkey_5fsymbol_3476',['STD_KB_MODIFIER_KEY_SYMBOL',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed',1,'General.h']]],
-  ['supports_5fichapter_3477',['SUPPORTS_ICHAPTER',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606ad1a1a7553e6a6732fd7a19fe5445002c',1,'INPUTSTREAM_CAPABILITIES']]],
-  ['supports_5fidemux_3478',['SUPPORTS_IDEMUX',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606abcc050c4a9b02e70425861ca5f91f013',1,'INPUTSTREAM_CAPABILITIES']]],
-  ['supports_5fidisplaytime_3479',['SUPPORTS_IDISPLAYTIME',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606acedf3ce11bd2e78b942bcb2bfb7e4296',1,'INPUTSTREAM_CAPABILITIES']]],
-  ['supports_5fipostime_3480',['SUPPORTS_IPOSTIME',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606a4349e3e341ecdfaaa2f580c793446493',1,'INPUTSTREAM_CAPABILITIES']]],
-  ['supports_5fitime_3481',['SUPPORTS_ITIME',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606a523c7d3d7aa353553151bed03382f5aa',1,'INPUTSTREAM_CAPABILITIES']]],
-  ['supports_5fpause_3482',['SUPPORTS_PAUSE',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606a2e1791ceb0fd6bee7c84def28044353c',1,'INPUTSTREAM_CAPABILITIES']]],
-  ['supports_5fseek_3483',['SUPPORTS_SEEK',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606aa42e92050b3e11bcd3e04bb2f8669cce',1,'INPUTSTREAM_CAPABILITIES']]]
+  ['special_5fgame_5ftype_5fbsx',['SPECIAL_GAME_TYPE_BSX',['../group__cpp__kodi__addon__game___defs___game_types.html#ggae227c65af490275c3e3c9b885457ac38a3801976e9c6eabc095cb79f162207d2b',1,'Game.h']]],
+  ['special_5fgame_5ftype_5fbsx_5fslotted',['SPECIAL_GAME_TYPE_BSX_SLOTTED',['../group__cpp__kodi__addon__game___defs___game_types.html#ggae227c65af490275c3e3c9b885457ac38a5c5d3a3152b3155d0e13bad102fb8feb',1,'Game.h']]],
+  ['special_5fgame_5ftype_5fsufami_5fturbo',['SPECIAL_GAME_TYPE_SUFAMI_TURBO',['../group__cpp__kodi__addon__game___defs___game_types.html#ggae227c65af490275c3e3c9b885457ac38a7e478e50e8d6d5a834a84cc9b6d0c6b8',1,'Game.h']]],
+  ['special_5fgame_5ftype_5fsuper_5fgame_5fboy',['SPECIAL_GAME_TYPE_SUPER_GAME_BOY',['../group__cpp__kodi__addon__game___defs___game_types.html#ggae227c65af490275c3e3c9b885457ac38a2277738f3dcf28e715b821cd1a1b13c3',1,'Game.h']]],
+  ['std_5fkb_5fbuttons_5fmax_5frows',['STD_KB_BUTTONS_MAX_ROWS',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38',1,'General.h']]],
+  ['std_5fkb_5fbuttons_5fper_5frow',['STD_KB_BUTTONS_PER_ROW',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465',1,'General.h']]],
+  ['std_5fkb_5fmodifier_5fkey_5fnone',['STD_KB_MODIFIER_KEY_NONE',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeacadbebe388526b489067002add50ff70',1,'General.h']]],
+  ['std_5fkb_5fmodifier_5fkey_5fshift',['STD_KB_MODIFIER_KEY_SHIFT',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0',1,'General.h']]],
+  ['std_5fkb_5fmodifier_5fkey_5fsymbol',['STD_KB_MODIFIER_KEY_SYMBOL',['../group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed',1,'General.h']]],
+  ['supports_5fichapter',['SUPPORTS_ICHAPTER',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606ad1a1a7553e6a6732fd7a19fe5445002c',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fidemux',['SUPPORTS_IDEMUX',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606abcc050c4a9b02e70425861ca5f91f013',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fidisplaytime',['SUPPORTS_IDISPLAYTIME',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606acedf3ce11bd2e78b942bcb2bfb7e4296',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fipostime',['SUPPORTS_IPOSTIME',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606a4349e3e341ecdfaaa2f580c793446493',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fitime',['SUPPORTS_ITIME',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606a523c7d3d7aa353553151bed03382f5aa',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fpause',['SUPPORTS_PAUSE',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606a2e1791ceb0fd6bee7c84def28044353c',1,'INPUTSTREAM_CAPABILITIES']]],
+  ['supports_5fseek',['SUPPORTS_SEEK',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606aa42e92050b3e11bcd3e04bb2f8669cce',1,'INPUTSTREAM_CAPABILITIES']]]
 ];

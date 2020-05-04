@@ -1,17 +1,14 @@
 var group__cpp__kodi__audioengine___defs___audio_engine_format =
 [
-    [ "Value Help", "group__cpp__kodi__audioengine___defs___audio_engine_format___help.html", null ],
-    [ "SetDataFormat", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#gaaa9c5a3f729a65d24010a085c6104b6e", null ],
-    [ "GetDataFormat", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga8039e107582f0d80ae25659ece3f43c8", null ],
-    [ "SetSampleRate", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga2d037f2da915687a63ba09fd519860a6", null ],
-    [ "GetSampleRate", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga939b81a0c83f7be81f12fabaa7347183", null ],
-    [ "SetEncodedRate", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga5c894b0d413b253e2d691b23b0532917", null ],
-    [ "GetEncodedRate", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#gaef9534565dfae06ad5d765251ad36413", null ],
-    [ "SetChannelLayout", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#gac1ce32491e20a6540df864b7c0b2fde9", null ],
-    [ "GetChannelLayout", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#gae51f264080963afdbcf6b0ba3e8ce69b", null ],
-    [ "SetFramesAmount", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#gad92e99780fee97cbd100035165a43d07", null ],
-    [ "GetFramesAmount", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga1be82c1efe6622bff620faf9c22cc916", null ],
-    [ "SetFrameSize", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga1a6423f9d9eab39070d13ba430dc47b9", null ],
-    [ "GetFrameSize", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga3f6e70c65cc5bffabcbf56a00910599e", null ],
-    [ "CompareFormat", "group__cpp__kodi__audioengine___defs___audio_engine_format.html#ga42f57fe3a4fa7671186a744459c74a1b", null ]
+    [ "AudioEngineFormat", "struct_audio_engine_format.html", [
+      [ "AudioEngineFormat", "struct_audio_engine_format.html#a485299b0bb8f0c1cf765321c704bcc40", null ],
+      [ "compareFormat", "struct_audio_engine_format.html#ae3b6e0d1c9f2cc3c3a4b4b809fbe3a64", null ],
+      [ "m_dataFormat", "struct_audio_engine_format.html#a8f4e236f291657200f64cd2f069a8ff7", null ],
+      [ "m_sampleRate", "struct_audio_engine_format.html#a046d570c56fd2ae9b813340816ebfdec", null ],
+      [ "m_encodedRate", "struct_audio_engine_format.html#a60bb897389267a5034ef730c956b661a", null ],
+      [ "m_channelCount", "struct_audio_engine_format.html#a98e4ea22d72d3c5dce2821ae10a802f8", null ],
+      [ "m_channels", "struct_audio_engine_format.html#a4a53bc9bcf5fe0c7d808858463f370f7", null ],
+      [ "m_frames", "struct_audio_engine_format.html#a3fa03b15b439d70dd92e726e1aac9eb5", null ],
+      [ "m_frameSize", "struct_audio_engine_format.html#a7c6321b7fd7f09478ca0bf9931009ee1", null ]
+    ] ]
 ];
