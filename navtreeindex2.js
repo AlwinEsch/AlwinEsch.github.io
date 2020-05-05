@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r___m_e_n_u_h_o_o_k___c_a_t.html#ggaec2fca812b6f20d491aba91dcb442b74a7fb9f5c4072e4cf5beb272e96006bcc7":[5,0,2,1,6,0,6,0,0,5],
 "group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r___m_e_n_u_h_o_o_k___c_a_t.html#ggaec2fca812b6f20d491aba91dcb442b74aae195587a338dff1a5ae5d3a87269026":[5,0,2,1,6,0,6,0,0,4],
 "group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r___m_e_n_u_h_o_o_k___c_a_t.html#ggaec2fca812b6f20d491aba91dcb442b74ae77aad620085a1188b8c326e7c30840a":[5,0,2,1,6,0,6,0,0,3],
 "group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html":[5,0,2,1,6,0,6,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___w_e_e_k_d_a_y.html#gad9fd8afbd1050945e1a674c7d2caedef":[5,0,2,1,6,0,5,2,7],
 "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___w_e_e_k_d_a_y.html#gaf07a24b1ceebac2a58065bf7740b81b8":[5,0,2,1,6,0,5,2,0],
 "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___w_e_e_k_d_a_y.html#gaf7edc1f62781d116ddf06d175f341398":[5,0,2,1,6,0,5,2,1],
-"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer.html":[5,0,2,1,6,0,5,4]
+"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer.html":[5,0,2,1,6,0,5,4],
+"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer.html#ga087c57da7146ca6530a099166360365f":[5,0,2,1,6,0,5,4,38]
 };

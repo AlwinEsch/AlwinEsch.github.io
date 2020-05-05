@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga7de09a8ddbf01b235ecb3a3d37cb5906":[5,0,2,1,6,0,3,3,46],
 "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga82999a6f5d4377856e50bdfdfaf27a22":[5,0,2,1,6,0,3,3,11],
 "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga82e4b60ecd7a4c80acf48205909930da":[5,0,2,1,6,0,3,3,16],
 "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga89c2aa9035f6aef2520f1138f6f0676b":[5,0,2,1,6,0,3,3,40],
@@ -113,6 +112,7 @@ var NAVTREEINDEX4 =
 "group__cpp__kodi__addon__pvr__supports_channel_edit.html#ga892697f7f629066863e83301de4cb386":[5,0,2,1,6,4,5],
 "group__cpp__kodi__addon__pvr__supports_channel_groups.html":[5,0,2,1,6,3],
 "group__cpp__kodi__addon__pvr__supports_channel_groups.html#ga1863221d2c36b1c00b4d49afe74ed18a":[5,0,2,1,6,3,0],
+"group__cpp__kodi__addon__pvr__supports_channel_groups.html#ga7d1babe65b0971470ff4d21cf71c5218":[5,0,2,1,6,3,3],
 "group__cpp__kodi__addon__pvr__supports_channel_groups.html#ga8423e49a047ceb5ea22aeb32e3bc81ad":[5,0,2,1,6,3,2],
 "group__cpp__kodi__addon__pvr__supports_channel_groups.html#ga9ce021e268578fac4909f7647f90906e":[5,0,2,1,6,3,1],
 "group__cpp__kodi__addon__screensaver.html":[5,0,2,1,7],
