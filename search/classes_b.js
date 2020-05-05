@@ -13,7 +13,7 @@ var searchData=
   ['pvr_5fchannel',['PVR_CHANNEL',['../struct_p_v_r___c_h_a_n_n_e_l.html',1,'']]],
   ['pvr_5fchannel_5fgroup',['PVR_CHANNEL_GROUP',['../struct_p_v_r___c_h_a_n_n_e_l___g_r_o_u_p.html',1,'']]],
   ['pvr_5fchannel_5fgroup_5fmember',['PVR_CHANNEL_GROUP_MEMBER',['../struct_p_v_r___c_h_a_n_n_e_l___g_r_o_u_p___m_e_m_b_e_r.html',1,'']]],
-  ['pvr_5fcodec',['PVR_CODEC',['../struct_p_v_r___c_o_d_e_c.html',1,'']]],
+  ['pvr_5fcodec',['PVR_CODEC',['../group__cpp__kodi__addon__pvr___defs___stream___p_v_r___c_o_d_e_c.html#struct_p_v_r___c_o_d_e_c',1,'']]],
   ['pvr_5fdescramble_5finfo',['PVR_DESCRAMBLE_INFO',['../struct_p_v_r___d_e_s_c_r_a_m_b_l_e___i_n_f_o.html',1,'']]],
   ['pvr_5fedl_5fentry',['PVR_EDL_ENTRY',['../struct_p_v_r___e_d_l___e_n_t_r_y.html',1,'']]],
   ['pvr_5fmenuhook',['PVR_MENUHOOK',['../struct_p_v_r___m_e_n_u_h_o_o_k.html',1,'']]],

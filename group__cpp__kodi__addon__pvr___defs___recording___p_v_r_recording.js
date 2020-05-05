@@ -1,6 +1,7 @@
 var group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording =
 [
     [ "Value Help", "group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording___help.html", null ],
+    [ "PVR_RECORDING_INVALID_SERIES_EPISODE", "group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#gace9a37ebe13a0627e4c7625a0335eb5c", null ],
     [ "SetRecordingId", "group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#gad4f84450bc8e96e7f2b9cba209d966fb", null ],
     [ "GetRecordingId", "group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga3a6274465018b1e803b8763e400d7d1b", null ],
     [ "SetTitle", "group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga54294c70e5c7d4e8edacbdde65a07ab3", null ],

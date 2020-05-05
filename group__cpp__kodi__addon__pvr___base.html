@@ -96,9 +96,9 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___base.ht
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Functions to manage the addon and get basic information about it</b> </p>
-<p>These are e.g. <a class="el" href="group__cpp__kodi__addon__pvr___base.html#ga9372606e2545340cb38f3d9b17fb7b54">GetCapabilities</a> to know supported groups at this addon or the others to get information about the source of the PVR stream</p>
-<p>The with "Valid implementation required." declared functions are mandatory, all others are an option </p>
+<p><b>Functions to manage the addon and get basic information about it</b><br />
+These are e.g. <a class="el" href="group__cpp__kodi__addon__pvr___base.html#ga9372606e2545340cb38f3d9b17fb7b54">GetCapabilities</a> to know supported groups at this addon or the others to get information about the source of the PVR stream. </p>
+<p>The with "Valid implementation required." declared functions are mandatory, all others are an option. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga83afa956a3f80dc1e0a457c57a89d66d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga83afa956a3f80dc1e0a457c57a89d66d">&#9670;&nbsp;</a></span>CInstancePVRClient() <span class="overload">[1/2]</span></h2>
@@ -126,6 +126,12 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___base.ht
 
 <p>PVR client class constructor. </p>
 <p>Used by an add-on that only supports only PVR and only in one instance.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">kodiVersion</td><td>[opt] given from Kodi by CAddonBase::CreateInstanceEx to identify his instance API version</td></tr>
+  </table>
+  </dd>
+</dl>
 <hr/>
 <p><b>Here's example about the use of this:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/PVR.h&gt;</span></div><div class="line">...</div><div class="line"></div><div class="line">class ATTRIBUTE_HIDDEN CPVRExample</div><div class="line">  : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">kodi::addon::CAddonBase</a>,</div><div class="line">    <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_p_v_r_client.html">kodi::addon::CInstancePVRClient</a></div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  CPVRExample()</div><div class="line">  {</div><div class="line">  }</div><div class="line"></div><div class="line">  ~CPVRExample() <span class="keyword">override</span>;</div><div class="line">  {</div><div class="line">  }</div><div class="line"></div><div class="line">  ...</div><div class="line">};</div><div class="line"></div><div class="line">ADDONCREATOR(CPVRExample)</div></div><!-- fragment --> 
 </div>
@@ -213,7 +219,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___base.ht
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="group__cpp__kodi__addon__pvr___defs___general.html#ga4cf1fba691fffe5b92e8f27159673894">PVR_ERROR</a> GetCapabilities </td>
+          <td class="memname">virtual <a class="el" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#ga4cf1fba691fffe5b92e8f27159673894">PVR_ERROR</a> GetCapabilities </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classkodi_1_1addon_1_1_p_v_r_capabilities.html">kodi::addon::PVRCapabilities</a> &amp;&#160;</td>
           <td class="paramname"><em>capabilities</em></td><td>)</td>
@@ -235,7 +241,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___base.ht
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__cpp__kodi__addon__pvr___defs___general.html#gga4cf1fba691fffe5b92e8f27159673894af0b0d4ad6cc0f3f31b583016cb289358">PVR_ERROR_NO_ERROR</a> if the properties were fetched successfully.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#gga4cf1fba691fffe5b92e8f27159673894af0b0d4ad6cc0f3f31b583016cb289358">PVR_ERROR_NO_ERROR</a> if the properties were fetched successfully.</dd></dl>
 <hr/>
 <p><b>The following table contains values that can be set with <a class="el" href="group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html">class PVRCapabilities</a> :</b> </p><table class="doxtable">
 <tr>
@@ -285,7 +291,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___base.ht
 </table>
 <dl class="section warning"><dt>Warning</dt><dd>This class can not be used outside of <a class="el" href="group__cpp__kodi__addon__pvr___base.html#ga9372606e2545340cb38f3d9b17fb7b54">kodi::addon::CInstancePVRClient::GetCapabilities()</a></dd></dl>
 <hr/>
- <dl class="section note"><dt>Note</dt><dd>Valid implementation required. </dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#ga4cf1fba691fffe5b92e8f27159673894">PVR_ERROR</a> CMyPVRClient::GetCapabilities(<a class="code" href="classkodi_1_1addon_1_1_p_v_r_capabilities.html">kodi::addon::PVRCapabilities</a>&amp; capabilities)</div><div class="line">{</div><div class="line">  capabilities.<a class="code" href="group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga4ee5eedf0f04a9aca791cf3d486195c7">SetSupportsTV</a>(<span class="keyword">true</span>);</div><div class="line">  capabilities.<a class="code" href="group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga6c9e22f85278c6e7c5019efd4cd197b0">SetSupportsEPG</a>(<span class="keyword">true</span>);</div><div class="line">  <span class="keywordflow">return</span> <a class="code" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#gga4cf1fba691fffe5b92e8f27159673894af0b0d4ad6cc0f3f31b583016cb289358">PVR_ERROR_NO_ERROR</a>;</div><div class="line">}</div></div><!-- fragment --> <hr/>
+<dl class="section note"><dt>Note</dt><dd>Valid implementation required. </dd></dl>
 
 </div>
 </div>
@@ -314,6 +321,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___base.ht
 
 <p>Get the name reported by the backend that will be displayed in the UI. </p>
 <dl class="section return"><dt>Returns</dt><dd>The name reported by the backend that will be displayed in the UI.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">std::string CMyPVRClient::GetBackendName()</div><div class="line">{</div><div class="line">  <span class="keywordflow">return</span> <span class="stringliteral">&quot;My special PVR client&quot;</span>;</div><div class="line">}</div></div><!-- fragment --> <hr/>
 <dl class="section note"><dt>Note</dt><dd>Valid implementation required. </dd></dl>
 
 </div>
@@ -343,6 +352,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___base.ht
 
 <p>Get the version string reported by the backend that will be displayed in the UI. </p>
 <dl class="section return"><dt>Returns</dt><dd>The version string reported by the backend that will be displayed in the UI.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">std::string CMyPVRClient::GetBackendVersion()</div><div class="line">{</div><div class="line">  <span class="keywordflow">return</span> <span class="stringliteral">&quot;1.0.0&quot;</span>;</div><div class="line">}</div></div><!-- fragment --> <hr/>
 <dl class="section note"><dt>Note</dt><dd>Valid implementation required. </dd></dl>
 
 </div>
@@ -413,7 +424,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___base.ht
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="group__cpp__kodi__addon__pvr___defs___general.html#ga4cf1fba691fffe5b92e8f27159673894">PVR_ERROR</a> GetDriveSpace </td>
+          <td class="memname">virtual <a class="el" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#ga4cf1fba691fffe5b92e8f27159673894">PVR_ERROR</a> GetDriveSpace </td>
           <td>(</td>
           <td class="paramtype">uint64_t &amp;&#160;</td>
           <td class="paramname"><em>total</em>, </td>
@@ -445,8 +456,58 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___base.ht
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__cpp__kodi__addon__pvr___defs___general.html#gga4cf1fba691fffe5b92e8f27159673894af0b0d4ad6cc0f3f31b583016cb289358">PVR_ERROR_NO_ERROR</a> if the drive space has been fetched successfully. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#gga4cf1fba691fffe5b92e8f27159673894af0b0d4ad6cc0f3f31b583016cb289358">PVR_ERROR_NO_ERROR</a> if the drive space has been fetched successfully.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#ga4cf1fba691fffe5b92e8f27159673894">PVR_ERROR</a> CMyPVRClient::GetDriveSpace(uint64_t&amp; total, uint64_t&amp; used)</div><div class="line">{</div><div class="line">  total = 10 * 1024 * 1024 * 1024; <span class="comment">// To set complete size of drive in bytes</span></div><div class="line">  used =  122324243; <span class="comment">// To set the used amount</span></div><div class="line">  <span class="keywordflow">return</span> <a class="code" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#gga4cf1fba691fffe5b92e8f27159673894af0b0d4ad6cc0f3f31b583016cb289358">PVR_ERROR_NO_ERROR</a>;</div><div class="line">}</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="ga6fdcaaac4214717f27e7101e20e64e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6fdcaaac4214717f27e7101e20e64e77">&#9670;&nbsp;</a></span>CallSettingsMenuHook()</h2>
 
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#ga4cf1fba691fffe5b92e8f27159673894">PVR_ERROR</a> CallSettingsMenuHook </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classkodi_1_1addon_1_1_p_v_r_menuhook.html">kodi::addon::PVRMenuhook</a> &amp;&#160;</td>
+          <td class="paramname"><em>menuhook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Call one of the settings related menu hooks (if supported). </p>
+<p>Supported <a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html">menu hook </a> instances have to be added in <code>constructor()</code>, by calling <a class="el" href="group__cpp__kodi__addon__pvr___base.html#ga22e633d2436a3de01bd1340fc670f4bc">AddMenuHook()</a> on the callback.</p>
+<hr/>
+<p><b>The following table contains values that can be set with <a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html">class PVRMenuhook</a> :</b> </p><table class="doxtable">
+<tr>
+<th>Name </th><th>Type </th><th>Set call </th><th>Get call </th><th>Usage  </th></tr>
+<tr>
+<td><b>This hook's identifier</b> </td><td><code>unsigned int</code> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#ga158424ab75a818273f13107f28b35d3e">SetHookId</a> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#ga352f9d7337ff0d29743eb3b3f6c070d4">GetHookId</a> </td><td><em>required to set</em> </td></tr>
+<tr>
+<td><b>Localized string Identifier</b> </td><td><code>unsigned int</code> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#gad656661d71f6014437da982f395c083e">SetLocalizedStringId</a> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#gac5b407c5061115621dcc96ed5d6d4175">GetLocalizedStringId</a> </td><td><em>required to set</em> </td></tr>
+<tr>
+<td><b>Category of menu hook</b> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r___m_e_n_u_h_o_o_k___c_a_t.html#gaec2fca812b6f20d491aba91dcb442b74">PVR_MENUHOOK_CAT</a> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#gaf27ca2903ab70dc4330c34acb750e0d5">SetCategory</a> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#ga41382407520fa1ba1b4595b8ed8e8ec8">GetCategory</a> </td><td><em>required to set</em> </td></tr>
+</table>
+<hr/>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">menuhook</td><td>The hook to call. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#gga4cf1fba691fffe5b92e8f27159673894af0b0d4ad6cc0f3f31b583016cb289358">PVR_ERROR_NO_ERROR</a> if the hook was called successfully.</dd></dl>
+<hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><a class="code" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#ga4cf1fba691fffe5b92e8f27159673894">PVR_ERROR</a> CMyPVRClient::CallSettingsMenuHook(<span class="keyword">const</span> <a class="code" href="classkodi_1_1addon_1_1_p_v_r_menuhook.html">kodi::addon::PVRMenuhook</a>&amp; menuhook)</div><div class="line">{</div><div class="line">  <span class="keywordflow">if</span> (menuhook.<a class="code" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#ga352f9d7337ff0d29743eb3b3f6c070d4">GetHookId</a>() == 2)</div><div class="line">    <a class="code" href="group__cpp__kodi.html#gac3374c984f66b0715439aa56e717763d">kodi::QueueNotification</a>(<a class="code" href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a337175e2eb3336df26c7e387e56cfb6b">QUEUE_INFO</a>, <span class="stringliteral">&quot;&quot;</span>, <a class="code" href="group__cpp__kodi.html#ga8296027856e5e592c79e45fc2af6f930">kodi::GetLocalizedString</a>(menuhook.<a class="code" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#gac5b407c5061115621dcc96ed5d6d4175">GetLocalizedStringId</a>()));</div><div class="line">  <span class="keywordflow">return</span> <a class="code" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#gga4cf1fba691fffe5b92e8f27159673894af0b0d4ad6cc0f3f31b583016cb289358">PVR_ERROR_NO_ERROR</a>;</div><div class="line">}</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ga22e633d2436a3de01bd1340fc670f4bc"></a>
@@ -473,8 +534,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___base.ht
 </table>
 </div><div class="memdoc">
 
-<p><b>Callback to Kodi Function</b><br />
-Add or replace a menu hook for the context menu for this add-on </p>
+<p><b>Callback to Kodi Function</b> or replace a menu hook for the context menu for this add-on </p>
 <p>This is a callback function, called from addon to give Kodi his context menu's.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -492,10 +552,10 @@ Add or replace a menu hook for the context menu for this add-on </p>
 <tr>
 <td><b>Localized string Identifier</b> </td><td><code>unsigned int</code> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#gad656661d71f6014437da982f395c083e">SetLocalizedStringId</a> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#gac5b407c5061115621dcc96ed5d6d4175">GetLocalizedStringId</a> </td><td><em>required to set</em> </td></tr>
 <tr>
-<td><b>Category of menu hook</b> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook.html#gaec2fca812b6f20d491aba91dcb442b74">PVR_MENUHOOK_CAT</a> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#gaf27ca2903ab70dc4330c34acb750e0d5">SetCategory</a> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#ga41382407520fa1ba1b4595b8ed8e8ec8">GetCategory</a> </td><td><em>required to set</em> </td></tr>
+<td><b>Category of menu hook</b> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r___m_e_n_u_h_o_o_k___c_a_t.html#gaec2fca812b6f20d491aba91dcb442b74">PVR_MENUHOOK_CAT</a> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#gaf27ca2903ab70dc4330c34acb750e0d5">SetCategory</a> </td><td><a class="el" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook.html#ga41382407520fa1ba1b4595b8ed8e8ec8">GetCategory</a> </td><td><em>required to set</em> </td></tr>
 </table>
 <hr/>
-<p><b>Here's an example of the use of it:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/PVR.h&gt;</span></div><div class="line">...</div><div class="line"></div><div class="line">  PVRMenuhook hook;</div><div class="line">  hook.SetHookId(1);</div><div class="line">  hook.SetCategory(<a class="code" href="group__cpp__kodi__addon__pvr___defs___menuhook.html#ggaec2fca812b6f20d491aba91dcb442b74a1c267f085281b6d3bb995b1077b24d2e">PVR_MENUHOOK_CHANNEL</a>);</div><div class="line">  hook.SetLocalizedStringId(30000);</div><div class="line">  <a class="code" href="group__cpp__kodi__addon__pvr___base.html#ga22e633d2436a3de01bd1340fc670f4bc">AddMenuHook</a>(hook);</div><div class="line">...</div></div><!-- fragment --> 
+<p><b>Here's an example of the use of it:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/PVR.h&gt;</span></div><div class="line">...</div><div class="line"></div><div class="line">  PVRMenuhook hook;</div><div class="line">  hook.SetHookId(1);</div><div class="line">  hook.SetCategory(<a class="code" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r___m_e_n_u_h_o_o_k___c_a_t.html#ggaec2fca812b6f20d491aba91dcb442b74a1c267f085281b6d3bb995b1077b24d2e">PVR_MENUHOOK_CHANNEL</a>);</div><div class="line">  hook.SetLocalizedStringId(30000);</div><div class="line">  <a class="code" href="group__cpp__kodi__addon__pvr___base.html#ga22e633d2436a3de01bd1340fc670f4bc">AddMenuHook</a>(hook);</div><div class="line"></div><div class="line">  PVRMenuhook hook;</div><div class="line">  hook.SetHookId(2);</div><div class="line">  hook.SetCategory(<a class="code" href="group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r___m_e_n_u_h_o_o_k___c_a_t.html#ggaec2fca812b6f20d491aba91dcb442b74a5f1926ee4e173a1956764bf775444507">PVR_MENUHOOK_SETTING</a>);</div><div class="line">  hook.SetLocalizedStringId(30001);</div><div class="line">  <a class="code" href="group__cpp__kodi__addon__pvr___base.html#ga22e633d2436a3de01bd1340fc670f4bc">AddMenuHook</a>(hook);</div><div class="line">...</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="ga8f7dcc9f4e59941cbdbfd47f9a7807fd"></a>
@@ -516,7 +576,7 @@ Add or replace a menu hook for the context menu for this add-on </p>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__cpp__kodi__addon__pvr___defs___general.html#gaa434a9da21b265c38eade0b452d8d58b">PVR_CONNECTION_STATE</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___c_o_n_n_e_c_t_i_o_n___s_t_a_t_e.html#gaa434a9da21b265c38eade0b452d8d58b">PVR_CONNECTION_STATE</a>&#160;</td>
           <td class="paramname"><em>newState</em>, </td>
         </tr>
         <tr>
@@ -539,18 +599,18 @@ Add or replace a menu hook for the context menu for this add-on </p>
 </div><div class="memdoc">
 
 <p><b>Callback to Kodi Function</b><br />
-Notify a state change for a PVR backend connection </p>
+Notify a state change for a PVR backend connection. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">connectionString</td><td>The connection string reported by the backend that can be displayed in the UI. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">newState</td><td>The by <a class="el" href="group__cpp__kodi__addon__pvr___defs___general.html#gaa434a9da21b265c38eade0b452d8d58b">PVR_CONNECTION_STATE</a> defined new state. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newState</td><td>The by <a class="el" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___c_o_n_n_e_c_t_i_o_n___s_t_a_t_e.html#gaa434a9da21b265c38eade0b452d8d58b">PVR_CONNECTION_STATE</a> defined new state. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>A localized addon-defined string representing the new state, that can be displayed in the UI or <b>empty</b> if the Kodi-defined default string for the new state shall be displayed.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>Only called from addon itself</dd></dl>
 <hr/>
-<p><b>Here's an example of the use of it:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/PVR.h&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span> <span class="comment">/* for kodi::GetLocalizedString(...) */</span></div><div class="line">...</div><div class="line"></div><div class="line">  <a class="code" href="group__cpp__kodi__addon__pvr___base.html#ga8f7dcc9f4e59941cbdbfd47f9a7807fd">ConnectionStateChange</a>(<span class="stringliteral">&quot;PVR demo connection lost&quot;</span>, <a class="code" href="group__cpp__kodi__addon__pvr___defs___general.html#ggaa434a9da21b265c38eade0b452d8d58ba8a929b6daf013e24e3ab3b3cb3f7841e">PVR_CONNECTION_STATE_DISCONNECTED</a>, <a class="code" href="group__cpp__kodi.html#ga8296027856e5e592c79e45fc2af6f930">kodi::GetLocalizedString</a>(30005, <span class="stringliteral">&quot;Lost connection to Server&quot;</span>););</div><div class="line">...</div></div><!-- fragment --> 
+<p><b>Here's an example of the use of it:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/PVR.h&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span> <span class="comment">/* for kodi::GetLocalizedString(...) */</span></div><div class="line">...</div><div class="line"></div><div class="line">  <a class="code" href="group__cpp__kodi__addon__pvr___base.html#ga8f7dcc9f4e59941cbdbfd47f9a7807fd">ConnectionStateChange</a>(<span class="stringliteral">&quot;PVR demo connection lost&quot;</span>, <a class="code" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___c_o_n_n_e_c_t_i_o_n___s_t_a_t_e.html#ggaa434a9da21b265c38eade0b452d8d58ba8a929b6daf013e24e3ab3b3cb3f7841e">PVR_CONNECTION_STATE_DISCONNECTED</a>, <a class="code" href="group__cpp__kodi.html#ga8296027856e5e592c79e45fc2af6f930">kodi::GetLocalizedString</a>(30005, <span class="stringliteral">&quot;Lost connection to Server&quot;</span>););</div><div class="line">...</div></div><!-- fragment --> 
 </div>
 </div>
 <a id="gad850ea86af3d01e6520889ab61e398aa"></a>
@@ -577,7 +637,7 @@ Notify a state change for a PVR backend connection </p>
 </div><div class="memdoc">
 
 <p><b>Callback to Kodi Function</b><br />
-Get user data path of the PVR addon </p>
+Get user data path of the PVR addon. </p>
 <dl class="section return"><dt>Returns</dt><dd>Path of current Kodi user</dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>Only called from addon itself</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Alternatively, kodi::GetAddonPath() can be used for this. </dd></dl>
@@ -608,9 +668,9 @@ Get user data path of the PVR addon </p>
 </div><div class="memdoc">
 
 <p><b>Callback to Kodi Function</b><br />
-Get main client path of the PVR addon </p>
+Get main client path of the PVR addon. </p>
 <dl class="section return"><dt>Returns</dt><dd>Path of addon client</dd></dl>
-<dl class="section remark"><dt>Remarks</dt><dd>Only called from addon itself</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Only called from addon itself.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Alternatively, kodi::GetBaseUserPath() can be used for this. </dd></dl>
 
 </div>

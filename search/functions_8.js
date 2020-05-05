@@ -7,7 +7,7 @@ var searchData=
   ['interceptorclear',['interceptorClear',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#a93c985f5f8fed6487de34c88dcb40b5a',1,'XBMCAddon::xbmcgui::Window']]],
   ['iocontrol',['IoControl',['../group__cpp__kodi__addon__vfs__filecontrol.html#ga541f839f4684ac62cbedeb76a1e96e6c',1,'kodi::addon::CInstanceVFS']]],
   ['isbuffering',['IsBuffering',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga0a04f8b3e045b68d509dab0b67d077a8',1,'kodi::audioengine::CAddonAEStream']]],
-  ['iscanceled',['IsCanceled',['../group__cpp__kodi__gui__dialogs___c_progress.html#gada69d2d863cb797212b8bd76488588ea',1,'kodi::gui::dialogs::CProgress::IsCanceled()'],['../group__python___dialog_progress.html#gac07285e6206ee72c89fedc797e0ceede',1,'XBMCAddon::xbmcgui::DialogProgress::iscanceled()']]],
+  ['iscanceled',['iscanceled',['../group__python___dialog_progress.html#gac07285e6206ee72c89fedc797e0ceede',1,'XBMCAddon::xbmcgui::DialogProgress::iscanceled()'],['../group__cpp__kodi__gui__dialogs___c_progress.html#gada69d2d863cb797212b8bd76488588ea',1,'kodi::gui::dialogs::CProgress::IsCanceled()']]],
   ['isconfirmed',['isConfirmed',['../group__python__keyboard.html#gaab2d1fb41e1fb7d56b43b5833e22a3f6',1,'XBMCAddon::xbmc::Keyboard']]],
   ['isdirty',['IsDirty',['../group__cpp__kodi__addon__visualization.html#ga3f36305e1f63bdf8b80aca2cad779660',1,'kodi::addon::CInstanceVisualization']]],
   ['isdrained',['IsDrained',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#gad2f3302fdee3ed4ab1558bc373498057',1,'kodi::audioengine::CAddonAEStream']]],
@@ -24,7 +24,7 @@ var searchData=
   ['isplayingaudio',['isPlayingAudio',['../group__python___player.html#ga5691edc135aebc26fcb83110d23b33d2',1,'XBMCAddon::xbmc::Player']]],
   ['isplayingrds',['isPlayingRDS',['../group__python___player.html#gadb60d29bad8cb1214883e6344fbe11cc',1,'XBMCAddon::xbmc::Player']]],
   ['isplayingvideo',['isPlayingVideo',['../group__python___player.html#ga4d8d2d0daa6149cb36fc72a7bcb6a509',1,'XBMCAddon::xbmc::Player']]],
-  ['isrealtimestream',['IsRealTimeStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#aad550e498369f3a406296779a162ec04',1,'kodi::addon::CInstanceInputStream::IsRealTimeStream()'],['../classkodi_1_1addon_1_1_c_instance_p_v_r_client.html#aad550e498369f3a406296779a162ec04',1,'kodi::addon::CInstancePVRClient::IsRealTimeStream()']]],
+  ['isrealtimestream',['IsRealTimeStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#aad550e498369f3a406296779a162ec04',1,'kodi::addon::CInstanceInputStream::IsRealTimeStream()'],['../group__cpp__kodi__addon__pvr___streams___various.html#gaad550e498369f3a406296779a162ec04',1,'kodi::addon::CInstancePVRClient::IsRealTimeStream()']]],
   ['isselected',['IsSelected',['../group__cpp__kodi__gui__controls___c_radio_button.html#ga1a06af1358e62deeb3dfc305d9b69e53',1,'kodi::gui::controls::CRadioButton::IsSelected()'],['../group__cpp__kodi__gui___c_list_item.html#ga8bd3773d1e4bc4a38c419fd6c92bdee2',1,'kodi::gui::CListItem::IsSelected()'],['../group__python__xbmcgui__listitem.html#ga2887792e8b30d1fd4e5f83d27694225d',1,'XBMCAddon::xbmcgui::ListItem::isSelected()'],['../group__python__xbmcgui__control__radiobutton.html#ga2887792e8b30d1fd4e5f83d27694225d',1,'XBMCAddon::xbmcgui::ControlRadioButton::isSelected()']]],
   ['isvisible',['isVisible',['../group__python__xbmcgui__control.html#ga13f0d1327712c41f0675c8772b9080f9',1,'XBMCAddon::xbmcgui::Control']]]
 ];

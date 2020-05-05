@@ -22,7 +22,7 @@ var searchData=
   ['addsortmethod',['addSortMethod',['../group__python__xbmcplugin.html#ga85b3bff796fd644fb28f87b136025f40',1,'ModuleXbmcplugin.h']]],
   ['addstreaminfo',['addStreamInfo',['../group__python__xbmcgui__listitem.html#ga99c7bf16729b18b6378ea7069ee5b138',1,'XBMCAddon::xbmcgui::ListItem']]],
   ['addtimer',['AddTimer',['../group__cpp__kodi__addon__pvr___timers.html#gab71c3f18f85e9ca17cb321b6b48c7721',1,'kodi::addon::CInstancePVRClient']]],
-  ['allocatedemuxpacket',['AllocateDemuxPacket',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a979e566ec25f4ecc5b1f0cebc4594fdc',1,'kodi::addon::CInstanceInputStream::AllocateDemuxPacket()'],['../classkodi_1_1addon_1_1_c_instance_p_v_r_client.html#afb10f3666933856a50c94ca71f3c64d7',1,'kodi::addon::CInstancePVRClient::AllocateDemuxPacket()']]],
+  ['allocatedemuxpacket',['AllocateDemuxPacket',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a979e566ec25f4ecc5b1f0cebc4594fdc',1,'kodi::addon::CInstanceInputStream::AllocateDemuxPacket()'],['../group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gafb10f3666933856a50c94ca71f3c64d7',1,'kodi::addon::CInstancePVRClient::AllocateDemuxPacket()']]],
   ['allocateencrypteddemuxpacket',['AllocateEncryptedDemuxPacket',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a772d255c7349b167929c22d80de57437',1,'kodi::addon::CInstanceInputStream']]],
   ['atend',['AtEnd',['../group__cpp__kodi__vfs___c_file.html#gaf5fd2a2591a0f355dd78bb9a5c6d4120',1,'kodi::vfs::CFile']]],
   ['audiodata',['AudioData',['../group__cpp__kodi__addon__visualization.html#ga5c8b4d62952a520f13d70c9133e65d2a',1,'kodi::addon::CInstanceVisualization']]],

@@ -2,7 +2,7 @@ var searchData=
 [
   ['path',['Path',['../group__cpp__kodi__vfs___c_dir_entry.html#ga62adb64db13e24a29d00d7eb1901448a',1,'kodi::vfs::CDirEntry']]],
   ['pause',['Pause',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga70babc5227ddd16ca31dccc6cec0bb22',1,'kodi::audioengine::CAddonAEStream::Pause()'],['../group__python___player.html#gab02121d4dfeb622a4ea3db42c0cb6676',1,'XBMCAddon::xbmc::Player::pause()']]],
-  ['pausestream',['PauseStream',['../classkodi_1_1addon_1_1_c_instance_p_v_r_client.html#ac2158722d1f7f740a518e47b575fb4df',1,'kodi::addon::CInstancePVRClient']]],
+  ['pausestream',['PauseStream',['../group__cpp__kodi__addon__pvr___streams___various.html#gac2158722d1f7f740a518e47b575fb4df',1,'kodi::addon::CInstancePVRClient']]],
   ['percentage',['Percentage',['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#gadc4517cc4837f035c5e3432542ce2b14',1,'kodi::gui::dialogs::CExtendedProgress']]],
   ['performdevicescan',['PerformDeviceScan',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a8ad848a0f528137ea22ea45db9a02bf5',1,'kodi::addon::CInstancePeripheral']]],
   ['pixelratio',['PixelRatio',['../group__cpp__kodi__addon__screensaver___c_b.html#gaed543c2faa2875e81791a9a84b76ab56',1,'kodi::addon::CInstanceScreensaver::PixelRatio()'],['../group__cpp__kodi__addon__visualization___c_b.html#gaed543c2faa2875e81791a9a84b76ab56',1,'kodi::addon::CInstanceVisualization::PixelRatio()']]],

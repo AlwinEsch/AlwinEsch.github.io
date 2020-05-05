@@ -144,7 +144,7 @@ var searchData=
   ['addtimer',['AddTimer',['../group__cpp__kodi__addon__pvr___timers.html#gab71c3f18f85e9ca17cb321b6b48c7721',1,'kodi::addon::CInstancePVRClient']]],
   ['album',['album',['../group__cpp__kodi__addon__visualization___vis_track.html#abd2bfb2f79c96ed742334da3edb48a79',1,'VisTrack']]],
   ['albumartist',['albumArtist',['../group__cpp__kodi__addon__visualization___vis_track.html#a1f59686054dd0133f911ae43b417a234',1,'VisTrack']]],
-  ['allocatedemuxpacket',['AllocateDemuxPacket',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a979e566ec25f4ecc5b1f0cebc4594fdc',1,'kodi::addon::CInstanceInputStream::AllocateDemuxPacket()'],['../classkodi_1_1addon_1_1_c_instance_p_v_r_client.html#afb10f3666933856a50c94ca71f3c64d7',1,'kodi::addon::CInstancePVRClient::AllocateDemuxPacket()']]],
+  ['allocatedemuxpacket',['AllocateDemuxPacket',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a979e566ec25f4ecc5b1f0cebc4594fdc',1,'kodi::addon::CInstanceInputStream::AllocateDemuxPacket()'],['../group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gafb10f3666933856a50c94ca71f3c64d7',1,'kodi::addon::CInstancePVRClient::AllocateDemuxPacket()']]],
   ['allocateencrypteddemuxpacket',['AllocateEncryptedDemuxPacket',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a772d255c7349b167929c22d80de57437',1,'kodi::addon::CInstanceInputStream']]],
   ['artist',['artist',['../group__cpp__kodi__addon__visualization___vis_track.html#a4de8da8af30c11f038a75a24cd5f7fae',1,'VisTrack']]],
   ['aspect_5fratio',['aspect_ratio',['../group__cpp__kodi__addon__game___defs___video_stream.html#a5584bdb427edfe29e0c0c3753b619161',1,'game_stream_video_properties']]],

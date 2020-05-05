@@ -1,8 +1,8 @@
 var searchData=
 [
   ['label',['Label',['../group__cpp__kodi__vfs___c_dir_entry.html#ga154d00821a136494d7afc14b6755143a',1,'kodi::vfs::CDirEntry']]],
-  ['lengthlivestream',['LengthLiveStream',['../classkodi_1_1addon_1_1_c_instance_p_v_r_client.html#afd4f8031ab06ba3597a6dd7b06aba08e',1,'kodi::addon::CInstancePVRClient']]],
-  ['lengthrecordedstream',['LengthRecordedStream',['../classkodi_1_1addon_1_1_c_instance_p_v_r_client.html#a785867c4ee582a25d43525d1d3cddb6d',1,'kodi::addon::CInstancePVRClient']]],
+  ['lengthlivestream',['LengthLiveStream',['../group__cpp__kodi__addon__pvr___streams___t_v.html#gafd4f8031ab06ba3597a6dd7b06aba08e',1,'kodi::addon::CInstancePVRClient']]],
+  ['lengthrecordedstream',['LengthRecordedStream',['../group__cpp__kodi__addon__pvr___streams___recording.html#ga785867c4ee582a25d43525d1d3cddb6d',1,'kodi::addon::CInstancePVRClient']]],
   ['lengthstream',['LengthStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a6c77ac06f595e639ac95ce93f88175be',1,'kodi::addon::CInstanceInputStream']]],
   ['listdir',['listdir',['../group__python__xbmcvfs.html#ga6fdd93a2195f65e549abb759bc151afc',1,'ModuleXbmcvfs.h']]],
   ['load',['load',['../group__python___play_list.html#ga58df00a466baca2469ad8407c5534377',1,'XBMCAddon::xbmc::PlayList']]],

@@ -8,5 +8,6 @@ var group__cpp__kodi__addon__pvr =
     [ "4. EPG methods (optional)", "group__cpp__kodi__addon__pvr___e_p_g_tag.html", "group__cpp__kodi__addon__pvr___e_p_g_tag" ],
     [ "5. Recordings (optional)", "group__cpp__kodi__addon__pvr___recordings.html", "group__cpp__kodi__addon__pvr___recordings" ],
     [ "6. Timers (optional)", "group__cpp__kodi__addon__pvr___timers.html", "group__cpp__kodi__addon__pvr___timers" ],
-    [ "7. Power management events (optional)", "group__cpp__kodi__addon__pvr___power_management.html", "group__cpp__kodi__addon__pvr___power_management" ]
+    [ "7. Power management events (optional)", "group__cpp__kodi__addon__pvr___power_management.html", "group__cpp__kodi__addon__pvr___power_management" ],
+    [ "8. Inputstream", "group__cpp__kodi__addon__pvr___streams.html", "group__cpp__kodi__addon__pvr___streams" ]
 ];

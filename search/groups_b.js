@@ -4,6 +4,7 @@ var searchData=
   ['definitions_2c_20structures_20and_20enumerators',['Definitions, structures and enumerators',['../group__cpp__kodi__addon__pvr___defs.html',1,'']]],
   ['definition_20epg_5ftag_5fflag',['definition EPG_TAG_FLAG',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___t_a_g___f_l_a_g.html',1,'']]],
   ['definition_20pvr_5frecording_5fflag',['definition PVR_RECORDING_FLAG',['../group__cpp__kodi__addon__pvr___defs___recording___p_v_r___r_e_c_o_r_d_i_n_g___f_l_a_g.html',1,'']]],
+  ['definition_20pvr_5ftimer_20_28various_29',['definition PVR_TIMER (various)',['../group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r__.html',1,'']]],
   ['definition_20pvr_5ftimer_5ftype',['definition PVR_TIMER_TYPE',['../group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___t_y_p_e.html',1,'']]],
   ['definition_20pvr_5fweekday',['definition PVR_WEEKDAY',['../group__cpp__kodi__addon__pvr___defs___timer___p_v_r___w_e_e_k_d_a_y.html',1,'']]],
   ['definition_20pvr_5fstream_5fproperty',['definition PVR_STREAM_PROPERTY',['../group__cpp__kodi__addon__pvr___defs___various___p_v_r___s_t_r_e_a_m___p_r_o_p_e_r_t_y.html',1,'']]],
