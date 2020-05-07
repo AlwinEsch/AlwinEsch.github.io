@@ -5,6 +5,7 @@ var group__cpp__kodi__vfs___c_file =
     [ "OpenFile", "group__cpp__kodi__vfs___c_file.html#ga98a555efe0368bda93fede3e043210de", null ],
     [ "OpenFileForWrite", "group__cpp__kodi__vfs___c_file.html#ga791aab50c47c2f6420a90b943e39683d", null ],
     [ "IsOpen", "group__cpp__kodi__vfs___c_file.html#ga1822528b9d87e3897acff000f0ef4629", null ],
+    [ "Close", "group__cpp__kodi__vfs___c_file.html#ga7f7a3199c392465d0767c6506c1af5b4", null ],
     [ "CURLCreate", "group__cpp__kodi__vfs___c_file.html#ga819f5335d7050d8adb852df9cfb55760", null ],
     [ "CURLAddOption", "group__cpp__kodi__vfs___c_file.html#gacd6620a83c106ebfe0a8e1468aa3d292", null ],
     [ "CURLOpen", "group__cpp__kodi__vfs___c_file.html#ga784d1b01cd6bbf1fc2d858bde23fce06", null ],
@@ -17,8 +18,8 @@ var group__cpp__kodi__vfs___c_file =
     [ "GetPosition", "group__cpp__kodi__vfs___c_file.html#gaab98661a2483587df5d85e6ec8699bce", null ],
     [ "GetLength", "group__cpp__kodi__vfs___c_file.html#gaf2332ee14e6eb66707939c8d9625194d", null ],
     [ "AtEnd", "group__cpp__kodi__vfs___c_file.html#gaf5fd2a2591a0f355dd78bb9a5c6d4120", null ],
-    [ "Close", "group__cpp__kodi__vfs___c_file.html#ga7f7a3199c392465d0767c6506c1af5b4", null ],
     [ "GetChunkSize", "group__cpp__kodi__vfs___c_file.html#gacc37d885ea67ed49de5644a572d904ee", null ],
+    [ "IoControl", "group__cpp__kodi__vfs___c_file.html#ga4ee6971167392cec8022b06476223a07", null ],
     [ "GetPropertyValue", "group__cpp__kodi__vfs___c_file.html#gae120fa7cf603a9d340b1b98f4ecf3585", null ],
     [ "GetPropertyValues", "group__cpp__kodi__vfs___c_file.html#ga1f13dec88de47dcd0b9eba75222cc2eb", null ],
     [ "GetFileDownloadSpeed", "group__cpp__kodi__vfs___c_file.html#gaf8e1ef1e563ffa78efe99ee171ee4631", null ]

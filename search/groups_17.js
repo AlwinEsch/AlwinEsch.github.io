@@ -17,5 +17,7 @@ var searchData=
   ['value_20help',['Value Help',['../group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___help.html',1,'']]],
   ['vfs',['VFS',['../group__cpp__kodi__addon__vfs.html',1,'']]],
   ['video_20codec',['Video Codec',['../group__cpp__kodi__addon__videocodec.html',1,'']]],
-  ['visualization',['Visualization',['../group__cpp__kodi__addon__visualization.html',1,'']]]
+  ['visualization',['Visualization',['../group__cpp__kodi__addon__visualization.html',1,'']]],
+  ['value_20help',['Value Help',['../group__cpp__kodi__vfs___c_dir_entry___help.html',1,'']]],
+  ['value_20help',['Value Help',['../group__cpp__kodi__vfs___defs___file_status___help.html',1,'']]]
 ];

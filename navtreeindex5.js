@@ -1,12 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"group__cpp__kodi__gui___c_list_item.html#ga4a03d7c94fa02df112558bc30818e413":[5,0,3,23,10],
-"group__cpp__kodi__gui___c_list_item.html#ga6acf8d4e2b52301fbcd80a3f74a0fab1":[5,0,3,23,13],
-"group__cpp__kodi__gui___c_list_item.html#ga77c9ef878b3a112a70759cf58a0797fd":[5,0,3,23,1],
-"group__cpp__kodi__gui___c_list_item.html#ga7d553225fe861e34410148ca3bbd70fc":[5,0,3,23,11],
-"group__cpp__kodi__gui___c_list_item.html#ga8bd3773d1e4bc4a38c419fd6c92bdee2":[5,0,3,23,14],
-"group__cpp__kodi__gui___c_list_item.html#ga8dec429daa79c8453d141ac037d847b4":[5,0,3,23,9],
-"group__cpp__kodi__gui___c_list_item.html#ga947781705d642c3b7a82450158bb6a0a":[5,0,3,23,2],
 "group__cpp__kodi__gui___c_list_item.html#gab825756e641ba839bfae908492165481":[5,0,3,23,4],
 "group__cpp__kodi__gui___c_list_item.html#gaca764077c10877a5c50ff334ca2da1a0":[5,0,3,23,5],
 "group__cpp__kodi__gui___c_list_item.html#gadaa65016e969bb31fc41a93e657e79db":[5,0,3,23,6],
@@ -249,5 +242,12 @@ var NAVTREEINDEX5 =
 "group__cpp__kodi__gui__dialogs___numeric.html#ga9445e66ca1846ba453ea30002d12b1e0":[5,0,3,16,5],
 "group__cpp__kodi__gui__dialogs___numeric.html#ga974b32a3de845c329dacecc25cc5519e":[5,0,3,16,3],
 "group__cpp__kodi__gui__dialogs___numeric.html#gae9b8974e1109c0c217e1d106f6514cfb":[5,0,3,16,6],
-"group__cpp__kodi__gui__dialogs___numeric.html#gafa3106f326efb37434c16a64747d99c3":[5,0,3,16,1]
+"group__cpp__kodi__gui__dialogs___numeric.html#gafa3106f326efb37434c16a64747d99c3":[5,0,3,16,1],
+"group__cpp__kodi__gui__dialogs___o_k.html":[5,0,3,17],
+"group__cpp__kodi__gui__dialogs___o_k.html#ga229b08c0f2b46bd272a8cbc3898d581b":[5,0,3,17,1],
+"group__cpp__kodi__gui__dialogs___o_k.html#ga745af70569dea90aeacae6029f95b86f":[5,0,3,17,0],
+"group__cpp__kodi__gui__dialogs___select.html":[5,0,3,19],
+"group__cpp__kodi__gui__dialogs___select.html#ga162c5fdb8138bca0a6d4a9e4ffb15b08":[5,0,3,19,2],
+"group__cpp__kodi__gui__dialogs___select.html#ga2db3e3d39031fb08646d36998df1d5c8":[5,0,3,19,1],
+"group__cpp__kodi__gui__dialogs___select.html#ga9fc4cfc1b7af403a57367369ad710b29":[5,0,3,19,3]
 };

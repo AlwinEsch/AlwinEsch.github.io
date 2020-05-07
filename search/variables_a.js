@@ -31,8 +31,8 @@ var searchData=
   ['major',['major',['../group__cpp__kodi___defs.html#ac8947941479c38403a09c14a60b03f01',1,'kodi_version_t']]],
   ['max_5fheight',['max_height',['../group__cpp__kodi__addon__game___defs___video_stream.html#aa359881e928cd3f4c3386bc004a0ba94',1,'game_stream_video_properties']]],
   ['max_5fwidth',['max_width',['../group__cpp__kodi__addon__game___defs___video_stream.html#ac94bbe4c69d1d19af62fa63e54d5b760',1,'game_stream_video_properties']]],
-  ['maxrate',['maxrate',['../group__cpp__kodi__addon__vfs___defs.html#a975b0a45868387d13867daeac314978a',1,'VFS_IOCTRL_CACHE_STATUS_DATA']]],
+  ['maxrate',['maxrate',['../group__cpp__kodi__vfs___defs___v_f_s___i_o_c_t_r_l.html#a975b0a45868387d13867daeac314978a',1,'VFS_IOCTRL_CACHE_STATUS_DATA']]],
   ['minor',['minor',['../group__cpp__kodi___defs.html#aec7b96885baf2e6f10efbdef9d935a0b',1,'kodi_version_t']]],
-  ['modificationtime',['modificationTime',['../group__cpp__kodi__vfs___defs.html#a9c0ea12b78e57ec6f4bcac50fc450709',1,'STAT_STRUCTURE']]],
+  ['modificationtime',['modificationTime',['../struct_s_t_a_t___s_t_r_u_c_t_u_r_e.html#ae96dfdffa32716bb47703f73475a758c',1,'STAT_STRUCTURE']]],
   ['motor_5fcount',['motor_count',['../struct_j_o_y_s_t_i_c_k___i_n_f_o.html#a02ae83835f36c01a208a5ea9ecb72cc5',1,'JOYSTICK_INFO']]]
 ];

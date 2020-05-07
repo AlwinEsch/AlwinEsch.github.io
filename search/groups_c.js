@@ -8,5 +8,9 @@ var searchData=
   ['enum_20pvr_5fmenuhook_5fcat',['enum PVR_MENUHOOK_CAT',['../group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r___m_e_n_u_h_o_o_k___c_a_t.html',1,'']]],
   ['enum_20pvr_5frecording_5fchannel_5ftype',['enum PVR_RECORDING_CHANNEL_TYPE',['../group__cpp__kodi__addon__pvr___defs___recording___p_v_r___r_e_c_o_r_d_i_n_g___c_h_a_n_n_e_l___t_y_p_e.html',1,'']]],
   ['enum_20pvr_5fcodec_5ftype',['enum PVR_CODEC_TYPE',['../group__cpp__kodi__addon__pvr___defs___stream___p_v_r___c_o_d_e_c___t_y_p_e.html',1,'']]],
-  ['enum_20pvr_5ftimer_5fstate',['enum PVR_TIMER_STATE',['../group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___s_t_a_t_e.html',1,'']]]
+  ['enum_20pvr_5ftimer_5fstate',['enum PVR_TIMER_STATE',['../group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___s_t_a_t_e.html',1,'']]],
+  ['enum_20curloptiontype',['enum CURLOptiontype',['../group__cpp__kodi__vfs___defs___c_u_r_l_optiontype.html',1,'']]],
+  ['enum_20filepropertytypes',['enum FilePropertyTypes',['../group__cpp__kodi__vfs___defs___file_property_types.html',1,'']]],
+  ['enum_20openfileflags',['enum OpenFileFlags',['../group__cpp__kodi__vfs___defs___open_file_flags.html',1,'']]],
+  ['enum_20vfs_5fioctrl',['enum VFS_IOCTRL',['../group__cpp__kodi__vfs___defs___v_f_s___i_o_c_t_r_l.html',1,'']]]
 ];

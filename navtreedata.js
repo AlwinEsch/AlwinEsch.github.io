@@ -24,10 +24,11 @@ var NAVTREEINDEX =
 "group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r___m_e_n_u_h_o_o_k___c_a_t.html#ggaec2fca812b6f20d491aba91dcb442b74aae195587a338dff1a5ae5d3a87269026",
 "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer.html#ga1682f5717a3ba8e7b5bf0edf71e6362c",
 "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga82999a6f5d4377856e50bdfdfaf27a22",
-"group__cpp__kodi__gui___c_list_item.html#ga4a03d7c94fa02df112558bc30818e413",
-"group__cpp__kodi__gui__dialogs___o_k.html",
-"group__python___info_tag_video.html#gadc6f217756d49edbac6975e1f69485d5",
-"group__python__xbmcgui__listitem.html#ga14c4e7420d903d3e40342266333d2ecf"
+"group__cpp__kodi__gui___c_list_item.html#gab825756e641ba839bfae908492165481",
+"group__cpp__kodi__gui__dialogs___text_viewer.html",
+"group__python___info_tag_music.html#ga51f1bf160123ec89bea5b0efdfae5366",
+"group__python__xbmcgui__control.html#ga8ae25902bf7f711fcf13b00e8dfb4d92",
+"skin__toggle_button_control.html#skin_Toggle_button_control_sect2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -53,6 +53,7 @@ var searchData=
   ['cspin',['CSpin',['../classkodi_1_1gui_1_1controls_1_1_c_spin.html',1,'kodi::gui::controls']]],
   ['cstream',['CStream',['../classkodi_1_1addon_1_1_c_instance_game_1_1_c_stream.html',1,'kodi::addon::CInstanceGame']]],
   ['cstructhdl',['CStructHdl',['../classkodi_1_1addon_1_1_c_struct_hdl.html',1,'kodi::addon']]],
+  ['cstructhdl_3c_20filestatus_2c_20stat_5fstructure_20_3e',['CStructHdl&lt; FileStatus, STAT_STRUCTURE &gt;',['../classkodi_1_1addon_1_1_c_struct_hdl.html',1,'kodi::addon']]],
   ['cstructhdl_3c_20pvrchannel_2c_20pvr_5fchannel_20_3e',['CStructHdl&lt; PVRChannel, PVR_CHANNEL &gt;',['../classkodi_1_1addon_1_1_c_struct_hdl.html',1,'kodi::addon']]],
   ['cstructhdl_3c_20pvrchannelgroup_2c_20pvr_5fchannel_5fgroup_20_3e',['CStructHdl&lt; PVRChannelGroup, PVR_CHANNEL_GROUP &gt;',['../classkodi_1_1addon_1_1_c_struct_hdl.html',1,'kodi::addon']]],
   ['cstructhdl_3c_20pvrchannelgroupmember_2c_20pvr_5fchannel_5fgroup_5fmember_20_3e',['CStructHdl&lt; PVRChannelGroupMember, PVR_CHANNEL_GROUP_MEMBER &gt;',['../classkodi_1_1addon_1_1_c_struct_hdl.html',1,'kodi::addon']]],

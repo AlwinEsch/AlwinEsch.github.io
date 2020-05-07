@@ -13,7 +13,7 @@ var searchData=
   ['tracknumber',['trackNumber',['../group__cpp__kodi__addon__visualization___vis_track.html#aae897b77f023327f257102d04dbb46f1',1,'VisTrack']]],
   ['transferpresets',['TransferPresets',['../group__cpp__kodi__addon__visualization___c_b.html#gaac44c10f69e74cf7da9109240a0de178',1,'kodi::addon::CInstanceVisualization']]],
   ['translatepath',['translatePath',['../group__python__xbmc.html#ga762f48b2097ec25d938bf8596023b221',1,'ModuleXbmc.h']]],
-  ['translatespecialprotocol',['TranslateSpecialProtocol',['../group__cpp__kodi__vfs.html#ga02bc64066031bc37d5aeb96cb4ee69d9',1,'kodi::vfs']]],
+  ['translatespecialprotocol',['TranslateSpecialProtocol',['../group__cpp__kodi__vfs___general.html#ga02bc64066031bc37d5aeb96cb4ee69d9',1,'kodi::vfs']]],
   ['triggerchannelgroupsupdate',['TriggerChannelGroupsUpdate',['../group__cpp__kodi__addon__pvr__supports_channel_groups.html#ga7d1babe65b0971470ff4d21cf71c5218',1,'kodi::addon::CInstancePVRClient']]],
   ['triggerchannelupdate',['TriggerChannelUpdate',['../group__cpp__kodi__addon__pvr___channels.html#ga62a1cd1433d35856f1100992c8f9542c',1,'kodi::addon::CInstancePVRClient']]],
   ['triggerepgupdate',['TriggerEpgUpdate',['../group__cpp__kodi__addon__pvr___e_p_g_tag.html#ga2497b4db59f21f2fbb2956dc016c3067',1,'kodi::addon::CInstancePVRClient']]],

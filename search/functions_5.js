@@ -2,7 +2,7 @@ var searchData=
 [
   ['featurecount',['FeatureCount',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a1ff163511ccd603fd2788414933461d3',1,'kodi::addon::CInstancePeripheral']]],
   ['featuretype',['FeatureType',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a73250856de613d39bcf8868abc471569',1,'kodi::addon::CInstancePeripheral']]],
-  ['fileexists',['FileExists',['../group__cpp__kodi__vfs.html#ga0798cbafda16704e211763e4f76b997b',1,'kodi::vfs']]],
+  ['fileexists',['FileExists',['../group__cpp__kodi__vfs___file.html#ga0798cbafda16704e211763e4f76b997b',1,'kodi::vfs']]],
   ['fillbuffer',['FillBuffer',['../group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gad0da869e469d14f0f4dadea8ddffd55c',1,'kodi::addon::CInstancePVRClient']]],
   ['finish',['Finish',['../classkodi_1_1addon_1_1_c_instance_audio_encoder.html#a0e0d542d34afa30c6ae18d3b57b4ef60',1,'kodi::addon::CInstanceAudioEncoder']]],
   ['flush',['Flush',['../group__cpp__kodi__audioengine___c_addon_a_e_stream.html#ga0e2644b2df3c228e8d71a55b60723f31',1,'kodi::audioengine::CAddonAEStream::Flush()'],['../group__cpp__kodi__vfs___c_file.html#ga0e2644b2df3c228e8d71a55b60723f31',1,'kodi::vfs::CFile::Flush()'],['../group__python__xbmcwsgi___wsgi_error_stream.html#ga7751f77b5263bcf940ece6e824a05b38',1,'XBMCAddon::xbmcwsgi::WsgiErrorStream::flush()']]],

@@ -11,7 +11,7 @@ var searchData=
   ['ports',['ports',['../group__cpp__kodi__addon__game___defs___input_types.html#a4239d1ee0492303d5c0f887425d40477',1,'game_input_topology']]],
   ['product_5fid',['product_id',['../struct_p_e_r_i_p_h_e_r_a_l___i_n_f_o.html#a215e5feaef08c77d8e9f17ab421e8a66',1,'PERIPHERAL_INFO']]],
   ['profile_5fdirectory',['profile_directory',['../struct_addon_props___game.html#a59457b1e6b0b76384b927bb06a717e82',1,'AddonProps_Game']]],
-  ['properties',['properties',['../struct_v_f_s_dir_entry.html#ac4937bfae1ac6072b83346a8334aa8dc',1,'VFSDirEntry']]],
+  ['properties',['properties',['../struct_v_f_s_dir_entry.html#a0b1e8fc03fac05d6e1ea4b11971e0391',1,'VFSDirEntry']]],
   ['protocol',['protocol',['../group__cpp__kodi__addon__vfs___defs.html#a8fb1f5d85278bb71c72ec6b85addb8a3',1,'VFSURL']]],
   ['provider',['provider',['../struct_j_o_y_s_t_i_c_k___i_n_f_o.html#a6d6ade3edddbe532ebc74202b6d9625e',1,'JOYSTICK_INFO']]],
   ['provides_5fbuttonmaps',['provides_buttonmaps',['../struct_p_e_r_i_p_h_e_r_a_l___c_a_p_a_b_i_l_i_t_i_e_s.html#a9cd4e1b9c03034c8e4907cf15b707bd1',1,'PERIPHERAL_CAPABILITIES']]],

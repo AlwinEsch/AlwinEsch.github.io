@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['vfs_5fioctrl_5fcache_5fstatus_5fdata',['VFS_IOCTRL_CACHE_STATUS_DATA',['../group__cpp__kodi__addon__vfs___defs.html#struct_v_f_s___i_o_c_t_r_l___c_a_c_h_e___s_t_a_t_u_s___d_a_t_a',1,'']]],
-  ['vfs_5fioctrl_5fnative_5fdata',['VFS_IOCTRL_NATIVE_DATA',['../group__cpp__kodi__addon__vfs___defs.html#struct_v_f_s___i_o_c_t_r_l___n_a_t_i_v_e___d_a_t_a',1,'']]],
+  ['vfs_5fioctrl_5fcache_5fstatus_5fdata',['VFS_IOCTRL_CACHE_STATUS_DATA',['../group__cpp__kodi__vfs___defs___v_f_s___i_o_c_t_r_l.html#struct_v_f_s___i_o_c_t_r_l___c_a_c_h_e___s_t_a_t_u_s___d_a_t_a',1,'']]],
+  ['vfs_5fioctrl_5fnative_5fdata',['VFS_IOCTRL_NATIVE_DATA',['../group__cpp__kodi__vfs___defs___v_f_s___i_o_c_t_r_l.html#struct_v_f_s___i_o_c_t_r_l___n_a_t_i_v_e___d_a_t_a',1,'']]],
   ['vfsdirentry',['VFSDirEntry',['../struct_v_f_s_dir_entry.html',1,'']]],
   ['vfsgetdirectorycallbacks',['VFSGetDirectoryCallbacks',['../struct_v_f_s_get_directory_callbacks.html',1,'']]],
   ['vfsproperty',['VFSProperty',['../struct_v_f_s_property.html',1,'']]],

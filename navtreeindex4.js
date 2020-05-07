@@ -136,13 +136,6 @@ var NAVTREEINDEX4 =
 "group__cpp__kodi__addon__vfs.html#ga397f2048c35582199ae19d1ece876113":[5,0,2,1,8,4],
 "group__cpp__kodi__addon__vfs.html#gaea03f559cdee1a7596fdca7ae3613f97":[5,0,2,1,8,3],
 "group__cpp__kodi__addon__vfs___defs.html":[5,0,2,1,8,0],
-"group__cpp__kodi__addon__vfs___defs.html#gaac68d7bda340dd7a7749f4311353075d":[5,0,2,1,8,0,0],
-"group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da16bf6c6589956fcf14ee2f2dfd592b47":[5,0,2,1,8,0,0,3],
-"group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da625387cb90a99d72a1b8d7b0616cb5cb":[5,0,2,1,8,0,0,0],
-"group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da8de16ef84833e1fd186b5ac4d8977a99":[5,0,2,1,8,0,0,1],
-"group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075da9c96dd241e2b868a333291de609bf0f1":[5,0,2,1,8,0,0,4],
-"group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075dac9228f1112ac13033806a3d99437f70a":[5,0,2,1,8,0,0,2],
-"group__cpp__kodi__addon__vfs___defs.html#ggaac68d7bda340dd7a7749f4311353075dadcc1347c7eb1092e75b48ded8dc4537c":[5,0,2,1,8,0,0,5],
 "group__cpp__kodi__addon__vfs__filecontrol.html":[5,0,2,1,8,2],
 "group__cpp__kodi__addon__vfs__filecontrol.html#ga479212730734d673f958fd3260f0c75f":[5,0,2,1,8,2,5],
 "group__cpp__kodi__addon__vfs__filecontrol.html#ga541f839f4684ac62cbedeb76a1e96e6c":[5,0,2,1,8,2,10],
@@ -249,5 +242,12 @@ var NAVTREEINDEX4 =
 "group__cpp__kodi__gui.html#gafc92f24c22d2dff1158bad6cbc771d87":[5,0,3,25],
 "group__cpp__kodi__gui___c_list_item.html":[5,0,3,23],
 "group__cpp__kodi__gui___c_list_item.html#ga20785f408e377d20a4b5f6a58d35a873":[5,0,3,23,7],
-"group__cpp__kodi__gui___c_list_item.html#ga2d21e6c9e7a2262741f5ba92757c9528":[5,0,3,23,8]
+"group__cpp__kodi__gui___c_list_item.html#ga2d21e6c9e7a2262741f5ba92757c9528":[5,0,3,23,8],
+"group__cpp__kodi__gui___c_list_item.html#ga4a03d7c94fa02df112558bc30818e413":[5,0,3,23,10],
+"group__cpp__kodi__gui___c_list_item.html#ga6acf8d4e2b52301fbcd80a3f74a0fab1":[5,0,3,23,13],
+"group__cpp__kodi__gui___c_list_item.html#ga77c9ef878b3a112a70759cf58a0797fd":[5,0,3,23,1],
+"group__cpp__kodi__gui___c_list_item.html#ga7d553225fe861e34410148ca3bbd70fc":[5,0,3,23,11],
+"group__cpp__kodi__gui___c_list_item.html#ga8bd3773d1e4bc4a38c419fd6c92bdee2":[5,0,3,23,14],
+"group__cpp__kodi__gui___c_list_item.html#ga8dec429daa79c8453d141ac037d847b4":[5,0,3,23,9],
+"group__cpp__kodi__gui___c_list_item.html#ga947781705d642c3b7a82450158bb6a0a":[5,0,3,23,2]
 };

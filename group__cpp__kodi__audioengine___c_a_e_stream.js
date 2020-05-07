@@ -1,0 +1,27 @@
+var group__cpp__kodi__audioengine___c_a_e_stream =
+[
+    [ "CAEStream", "group__cpp__kodi__audioengine___c_a_e_stream.html#gabcd24cc83b811dc53880ae8dbb2ae870", null ],
+    [ "~CAEStream", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga4ad767838b18f9072212f9fd050f030b", null ],
+    [ "GetSpace", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga8febfd989aa187d9a122ff8597820d53", null ],
+    [ "AddData", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga90bd0f93c447654f61aa7494ab8c83ae", null ],
+    [ "GetDelay", "group__cpp__kodi__audioengine___c_a_e_stream.html#gaa1f58e1e8571b43d51783f0c6629bbd8", null ],
+    [ "IsBuffering", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga0a04f8b3e045b68d509dab0b67d077a8", null ],
+    [ "GetCacheTime", "group__cpp__kodi__audioengine___c_a_e_stream.html#gab3d46de490a5bf82b850152e275da128", null ],
+    [ "GetCacheTotal", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga8b7bbe3cf2dc2f0a9098a3399886ed93", null ],
+    [ "Pause", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga70babc5227ddd16ca31dccc6cec0bb22", null ],
+    [ "Resume", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga8af8fb637c7ae9d71a23bf3ac80d3c86", null ],
+    [ "Drain", "group__cpp__kodi__audioengine___c_a_e_stream.html#gae6081b87d3e3b00fc5cbeabb9b148d4c", null ],
+    [ "IsDraining", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga3659870694bbf153c0faf470cb4984cc", null ],
+    [ "IsDrained", "group__cpp__kodi__audioengine___c_a_e_stream.html#gad2f3302fdee3ed4ab1558bc373498057", null ],
+    [ "Flush", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga0e2644b2df3c228e8d71a55b60723f31", null ],
+    [ "GetVolume", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga7f136ab9899c4abfeeb61d47383f1dd5", null ],
+    [ "SetVolume", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga6496c97b1bcd7301acfce8671cf90984", null ],
+    [ "GetAmplification", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga1f7fd710b8f8efdc125e3e5b8ebc7f72", null ],
+    [ "SetAmplification", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga58ae98eaff4b315af87ba9afa67db935", null ],
+    [ "GetFrameSize", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga3f6e70c65cc5bffabcbf56a00910599e", null ],
+    [ "GetChannelCount", "group__cpp__kodi__audioengine___c_a_e_stream.html#gac7431168a186c4a4c75a987c24629116", null ],
+    [ "GetSampleRate", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga939b81a0c83f7be81f12fabaa7347183", null ],
+    [ "GetDataFormat", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga75940666207b5d12162f4bfa2cfdff41", null ],
+    [ "GetResampleRatio", "group__cpp__kodi__audioengine___c_a_e_stream.html#ga6ebdf9bfe8189e5495f4ec132894e133", null ],
+    [ "SetResampleRatio", "group__cpp__kodi__audioengine___c_a_e_stream.html#gaa2f74168cc58c5ac84a4a1e507702d68", null ]
+];

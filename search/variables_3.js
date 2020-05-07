@@ -6,7 +6,7 @@ var searchData=
   ['date_5ftime',['date_time',['../struct_v_f_s_dir_entry.html#a4f0bcb4705ae487764b2984a83f19aca',1,'VFSDirEntry']]],
   ['debug_5fcontext',['debug_context',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#adc79ea799f6f6ee7f7c300185412aaa0',1,'game_stream_hw_framebuffer_properties']]],
   ['depth',['depth',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#a3c3a47e93d564d08b506d18291d5772a',1,'game_stream_hw_framebuffer_properties']]],
-  ['deviceid',['deviceId',['../group__cpp__kodi__vfs___defs.html#a21079ffa80688b89c7dd4ba646a55283',1,'STAT_STRUCTURE']]],
+  ['deviceid',['deviceId',['../struct_s_t_a_t___s_t_r_u_c_t_u_r_e.html#a21079ffa80688b89c7dd4ba646a55283',1,'STAT_STRUCTURE']]],
   ['discnumber',['discNumber',['../group__cpp__kodi__addon__visualization___vis_track.html#aecd322e93357b79d7a67f55c07c2577a',1,'VisTrack']]],
   ['domain',['domain',['../group__cpp__kodi__addon__vfs___defs.html#a52e31162553211bc239fae1a464d7751',1,'VFSURL']]],
   ['driver_5findex',['driver_index',['../struct_p_e_r_i_p_h_e_r_a_l___e_v_e_n_t.html#ad6f546a8e18c12469c2e5082e770a17c',1,'PERIPHERAL_EVENT']]],

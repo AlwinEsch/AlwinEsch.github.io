@@ -43,7 +43,7 @@ var searchData=
   ['opendialogchannelscan',['OpenDialogChannelScan',['../group__cpp__kodi__addon__pvr__supports_channel_edit.html#ga59f9e538066139807b9b7a8b54bddb5c',1,'kodi::addon::CInstancePVRClient']]],
   ['opendialogchannelsettings',['OpenDialogChannelSettings',['../group__cpp__kodi__addon__pvr__supports_channel_edit.html#ga6a73950b121c274699d973e78fd78603',1,'kodi::addon::CInstancePVRClient']]],
   ['openfile',['OpenFile',['../group__cpp__kodi__vfs___c_file.html#ga98a555efe0368bda93fede3e043210de',1,'kodi::vfs::CFile']]],
-  ['openfileflags',['OpenFileFlags',['../group__cpp__kodi__vfs___defs.html#ga0f3cb31b9b23debe1fc0d5a47bfbb149',1,'Filesystem.h']]],
+  ['openfileflags',['OpenFileFlags',['../group__cpp__kodi__vfs___defs___open_file_flags.html#ga0f3cb31b9b23debe1fc0d5a47bfbb149',1,'Filesystem.h']]],
   ['openfileforwrite',['OpenFileForWrite',['../group__cpp__kodi__vfs___c_file.html#ga791aab50c47c2f6420a90b943e39683d',1,'kodi::vfs::CFile']]],
   ['openforwrite',['OpenForWrite',['../group__cpp__kodi__addon__vfs__filecontrol.html#gad2794b102fa6ebf250e0188e143d0ef2',1,'kodi::addon::CInstanceVFS']]],
   ['openlivestream',['OpenLiveStream',['../group__cpp__kodi__addon__pvr___streams___t_v.html#ga540b124add7bcc09d74add26a60c5117',1,'kodi::addon::CInstancePVRClient']]],
