@@ -1,8 +1,6 @@
 var group__python__xbmcgui =
 [
     [ "Dialog", "group__python___dialog.html", "group__python___dialog" ],
-    [ "DialogProgress", "group__python___dialog_progress.html", "group__python___dialog_progress" ],
-    [ "DialogProgressBG", "group__python___dialog_progress_b_g.html", "group__python___dialog_progress_b_g" ],
     [ "ListItem", "group__python__xbmcgui__listitem.html", "group__python__xbmcgui__listitem" ],
     [ "Action", "group__python__xbmcgui__action.html", "group__python__xbmcgui__action" ],
     [ "Window", "group__python__xbmcgui__window.html", "group__python__xbmcgui__window" ],

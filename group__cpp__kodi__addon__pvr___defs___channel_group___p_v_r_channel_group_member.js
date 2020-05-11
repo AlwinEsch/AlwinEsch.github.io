@@ -1,6 +1,7 @@
 var group__cpp__kodi__addon__pvr___defs___channel_group___p_v_r_channel_group_member =
 [
     [ "Value Help", "group__cpp__kodi__addon__pvr___defs___channel_group___p_v_r_channel_group_member___help.html", null ],
+    [ "class PVRChannelGroupMembersResultSet", "group__cpp__kodi__addon__pvr___defs___channel_group___p_v_r_channel_group_members_result_set.html", "group__cpp__kodi__addon__pvr___defs___channel_group___p_v_r_channel_group_members_result_set" ],
     [ "SetGroupName", "group__cpp__kodi__addon__pvr___defs___channel_group___p_v_r_channel_group_member.html#gad609f2d922ae4996e53641f32e9e32ee", null ],
     [ "GetGroupName", "group__cpp__kodi__addon__pvr___defs___channel_group___p_v_r_channel_group_member.html#gae491887bdb654649b8363c8489ca72cf", null ],
     [ "SetChannelUniqueId", "group__cpp__kodi__addon__pvr___defs___channel_group___p_v_r_channel_group_member.html#ga919cff6bdb138ca04f38b0de78d3889c", null ],

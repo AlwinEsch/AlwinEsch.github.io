@@ -1,6 +1,7 @@
 var group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag =
 [
     [ "Value Help", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag___help.html", null ],
+    [ "class PVREPGTagsResultSet", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tags_result_set.html", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tags_result_set" ],
     [ "SetUniqueBroadcastId", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga124fd7694567719b0fa5f361864eb28d", null ],
     [ "GetUniqueBroadcastId", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga03a2be53d60786afdbe848c7fdeebe44", null ],
     [ "SetUniqueChannelId", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#gad6f616816d277aeb42d4b8db309e150a", null ],

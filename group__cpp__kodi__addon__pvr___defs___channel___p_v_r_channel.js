@@ -1,6 +1,7 @@
 var group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel =
 [
     [ "Value Help", "group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel___help.html", null ],
+    [ "class PVRChannelsResultSet", "group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channels_result_set.html", "group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channels_result_set" ],
     [ "SetUniqueId", "group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel.html#gaeed8afa4cf3a382808d6f24ffc86ae3b", null ],
     [ "GetUniqueId", "group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel.html#gaf9429b6e2f07313e24a3438c8c967c04", null ],
     [ "SetIsRadio", "group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel.html#ga8b3860a303aa470f357edbb6a14141a8", null ],

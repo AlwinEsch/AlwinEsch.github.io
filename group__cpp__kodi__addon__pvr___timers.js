@@ -1,8 +1,8 @@
 var group__cpp__kodi__addon__pvr___timers =
 [
     [ "GetTimerTypes", "group__cpp__kodi__addon__pvr___timers.html#gac449f7ee70e40993eab2ccbe50af05ad", null ],
-    [ "GetTimersAmount", "group__cpp__kodi__addon__pvr___timers.html#ga90276466a1a0ade0a9610466bb921b7a", null ],
-    [ "GetTimers", "group__cpp__kodi__addon__pvr___timers.html#ga9a070a71aa93ee1f46b5718078cba99c", null ],
+    [ "GetTimersAmount", "group__cpp__kodi__addon__pvr___timers.html#gabef6c43b0adc636d321488637265e5c6", null ],
+    [ "GetTimers", "group__cpp__kodi__addon__pvr___timers.html#gab7a001078495b2582d778d20700c6dc7", null ],
     [ "AddTimer", "group__cpp__kodi__addon__pvr___timers.html#gab71c3f18f85e9ca17cb321b6b48c7721", null ],
     [ "DeleteTimer", "group__cpp__kodi__addon__pvr___timers.html#gaa90d3bce1a00094d58a5fdd154111d1c", null ],
     [ "UpdateTimer", "group__cpp__kodi__addon__pvr___timers.html#ga75a6c43d1324a66c847e28704b9c6945", null ],

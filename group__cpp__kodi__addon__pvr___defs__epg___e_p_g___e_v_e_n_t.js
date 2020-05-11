@@ -17,28 +17,31 @@ var group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t =
       [ "EPG_GENRE_USE_STRING", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga0ac9430768fc11505a193241fc2d4008a7ea9f902d928269e96faafd0ca3f5447", null ]
     ] ],
     [ "EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ga1a9972f5055a3343dced61d501ab9a52", [
-      [ "EPG_EVENT_CONTENTSUBMASK_GENERAL", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52a60173a03ccf97b24d791e52f753d2d5a", null ],
-      [ "EPG_EVENT_CONTENTSUBMASK_DETECTIVE_THRILLER", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52a3c3edf992a3fd4014dc7a49b9e52d5f4", null ],
-      [ "EPG_EVENT_CONTENTSUBMASK_ADVENTURE_WESTERN_WAR", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52a060d0ab0e228632e045ae1bc3b04b73c", null ],
-      [ "EPG_EVENT_CONTENTSUBMASK_SCIENCEFICTION_FANTASY_HORROR", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52a2b7e4369af06f7c7ff2490ab0a417ab9", null ],
-      [ "EPG_EVENT_CONTENTSUBMASK_COMEDY", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52aecf9ae888c31342d857d325d92266cfc", null ],
-      [ "EPG_EVENT_CONTENTSUBMASK_SOAP_MELODRAMA_FOLKLORIC", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52a0f2097f6397de1131323e051894b19ef", null ],
-      [ "EPG_EVENT_CONTENTSUBMASK_ROMANCE", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52a20711646a7817fd55c41fb1427e91e31", null ],
-      [ "EPG_EVENT_CONTENTSUBMASK_SERIOUS_CLASSICAL_RELIGIOUS_HISTORICAL", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52ad78baa3fcef6e808403a14ed05e93b41", null ],
-      [ "EPG_EVENT_CONTENTSUBMASK_ADULT", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52a472b03020b7b50ce6febc8b85e6a5049", null ]
+      [ "EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA_GENERAL", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52adf207a203d30355d2d8a172b62e8950d", null ],
+      [ "EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA_DETECTIVE_THRILLER", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52acecaf15a12bd3c00a02906a4b7059c33", null ],
+      [ "EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA_ADVENTURE_WESTERN_WAR", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52a23acb3b7b736d652823badc57ecdd2b2", null ],
+      [ "EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA_SCIENCEFICTION_FANTASY_HORROR", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52a327010bf2e2f567c907687195a95ade8", null ],
+      [ "EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA_COMEDY", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52af98fef7a0dffbdd329c7aa1ce2c3eed5", null ],
+      [ "EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA_SOAP_MELODRAMA_FOLKLORIC", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52ae82e0aa1283254b1bed76883a3a5230b", null ],
+      [ "EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA_ROMANCE", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52ada7355a5e5f52e82ab1c8364adc90590", null ],
+      [ "EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA_SERIOUS_CLASSICAL_RELIGIOUS_HISTORICAL", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52abe8fe781f056c1156b05025253b81dd3", null ],
+      [ "EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA_ADULT", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52a1501d6150ddaf2c4b5b413f6e4b30e15", null ],
+      [ "EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA_USERDEFINED", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga1a9972f5055a3343dced61d501ab9a52a7a8dcf805f0f54828ceedfb07a3e84cd", null ]
     ] ],
     [ "EPG_EVENT_CONTENTSUBMASK_NEWSCURRENTAFFAIRS", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gab6d73622811485e2d45042d1821e3643", [
       [ "EPG_EVENT_CONTENTSUBMASK_NEWSCURRENTAFFAIRS_GENERAL", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggab6d73622811485e2d45042d1821e3643a01a648c4bbca56f3b7e12f86917f0f59", null ],
       [ "EPG_EVENT_CONTENTSUBMASK_NEWSCURRENTAFFAIRS_WEATHER", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggab6d73622811485e2d45042d1821e3643acc0a0239906ef399fc8409c6557332a6", null ],
       [ "EPG_EVENT_CONTENTSUBMASK_NEWSCURRENTAFFAIRS_MAGAZINE", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggab6d73622811485e2d45042d1821e3643ad6be20439e3e6208297688a32682a556", null ],
       [ "EPG_EVENT_CONTENTSUBMASK_NEWSCURRENTAFFAIRS_DOCUMENTARY", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggab6d73622811485e2d45042d1821e3643a038ebcf7bd8c4f5fe277775747cbc107", null ],
-      [ "EPG_EVENT_CONTENTSUBMASK_NEWSCURRENTAFFAIRS_DISCUSSION_INTERVIEW_DEBATE", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggab6d73622811485e2d45042d1821e3643abd1e2de2744b25917833f5b45fca768a", null ]
+      [ "EPG_EVENT_CONTENTSUBMASK_NEWSCURRENTAFFAIRS_DISCUSSION_INTERVIEW_DEBATE", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggab6d73622811485e2d45042d1821e3643abd1e2de2744b25917833f5b45fca768a", null ],
+      [ "EPG_EVENT_CONTENTSUBMASK_NEWSCURRENTAFFAIRS_USERDEFINED", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggab6d73622811485e2d45042d1821e3643a5fd08ca443cb1a36d876e1735922da20", null ]
     ] ],
     [ "EPG_EVENT_CONTENTSUBMASK_SHOW", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gafb4df26416fea04b5877180629d0461b", [
       [ "EPG_EVENT_CONTENTSUBMASK_SHOW_GENERAL", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggafb4df26416fea04b5877180629d0461ba79af2b4c91a95ff84bdb0702481ce70a", null ],
       [ "EPG_EVENT_CONTENTSUBMASK_SHOW_GAMESHOW_QUIZ_CONTEST", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggafb4df26416fea04b5877180629d0461badd2513fc5303b29e9bffa4912bc83326", null ],
       [ "EPG_EVENT_CONTENTSUBMASK_SHOW_VARIETY_SHOW", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggafb4df26416fea04b5877180629d0461ba5a597071c0cec2815b2dad6dc6cae9b0", null ],
-      [ "EPG_EVENT_CONTENTSUBMASK_SHOW_TALK_SHOW", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggafb4df26416fea04b5877180629d0461baa99edeaefc03bef41e9cff76d7370793", null ]
+      [ "EPG_EVENT_CONTENTSUBMASK_SHOW_TALK_SHOW", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggafb4df26416fea04b5877180629d0461baa99edeaefc03bef41e9cff76d7370793", null ],
+      [ "EPG_EVENT_CONTENTSUBMASK_SHOW_USERDEFINED", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ggafb4df26416fea04b5877180629d0461ba2b32c2ce064f087e1068e728a69a6b55", null ]
     ] ],
     [ "EPG_EVENT_CONTENTSUBMASK_SPORTS", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ga5695800b7f34a314132a8dc2a70c8f71", [
       [ "EPG_EVENT_CONTENTSUBMASK_SPORTS_GENERAL", "group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gga5695800b7f34a314132a8dc2a70c8f71a26fdbd45419e515eaa67295ec7b5cdd2", null ],

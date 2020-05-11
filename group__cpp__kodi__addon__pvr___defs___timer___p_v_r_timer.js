@@ -1,6 +1,7 @@
 var group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer =
 [
     [ "Value Help", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer___help.html", null ],
+    [ "class PVRTimersResultSet", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timers_result_set.html", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timers_result_set" ],
     [ "SetClientIndex", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer.html#ga1e1ceef7001edbe8716c8d9de13ca7c1", null ],
     [ "GetClientIndex", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer.html#ga35ca231ea12d7ea0573fec25983281bd", null ],
     [ "SetState", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer.html#ga75f3d5c6a6d0160a5db588ac754584c3", null ],

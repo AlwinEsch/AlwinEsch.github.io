@@ -1,6 +1,5 @@
 var group__cpp__kodi__vfs___c_dir_entry =
 [
-    [ "Value Help", "group__cpp__kodi__vfs___c_dir_entry___help.html", null ],
     [ "CDirEntry", "group__cpp__kodi__vfs___c_dir_entry.html#gadd179e0fb2754158acb633a32ab1a1ee", null ],
     [ "Label", "group__cpp__kodi__vfs___c_dir_entry.html#ga154d00821a136494d7afc14b6755143a", null ],
     [ "Title", "group__cpp__kodi__vfs___c_dir_entry.html#ga9865f7d9426ae988fdcd66ff3a5c5bcd", null ],

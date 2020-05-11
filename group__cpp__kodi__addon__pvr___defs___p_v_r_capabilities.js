@@ -1,5 +1,6 @@
 var group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities =
 [
+    [ "class PVRRecordingLifetimeValue", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities___p_v_r_recording_lifetime_value.html", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities___p_v_r_recording_lifetime_value" ],
     [ "Value Help", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities___help.html", null ],
     [ "SetSupportsEPG", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga6c9e22f85278c6e7c5019efd4cd197b0", null ],
     [ "GetSupportsEPG", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#gadab784a2bf3b892ae39ded13055fd5b7", null ],
@@ -41,6 +42,6 @@ var group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities =
     [ "GetSupportsAsyncEPGTransfer", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga4bd221fd1a5dc7bba6be57687737ac92", null ],
     [ "SetSupportsRecordingSize", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga554d069cdb521ff388a2f5630babe92a", null ],
     [ "GetSupportsRecordingSize", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga6fc68a55234d239bd03ec67f072efcc7", null ],
-    [ "SetRecordingsLifetimeValues", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga95a99d8f9d5553796d49bc49461ff5b2", null ],
-    [ "GetRecordingsLifetimeValues", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga3a3d845beaadf13af528017ef80bcb87", null ]
+    [ "SetRecordingsLifetimeValues", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga152b11570f97779444f1c54e4900af5d", null ],
+    [ "GetRecordingsLifetimeValues", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#gaac244b9b2a8908ea1e608c6b66f4ec96", null ]
 ];
