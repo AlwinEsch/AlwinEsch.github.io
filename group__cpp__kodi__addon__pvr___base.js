@@ -1,5 +1,7 @@
 var group__cpp__kodi__addon__pvr___base =
 [
+    [ "Group header include", "group__cpp__kodi__addon__pvr___base__header__addon__auto__check.html", null ],
+    [ "Group source include", "group__cpp__kodi__addon__pvr___base__source__addon__auto__check.html", null ],
     [ "CInstancePVRClient", "group__cpp__kodi__addon__pvr___base.html#ga83afa956a3f80dc1e0a457c57a89d66d", null ],
     [ "CInstancePVRClient", "group__cpp__kodi__addon__pvr___base.html#gaf0deb6855c0532030578742eb0d5985b", null ],
     [ "~CInstancePVRClient", "group__cpp__kodi__addon__pvr___base.html#ga6c905789be6f6df8117277d9d8558453", null ],

@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel.html#ga2e9eb372a46d80a2561b5ec944a00917":[6,0,2,1,6,0,1,0,22],
+"group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel.html#ga32be230bb593c82d7e223b1010a47cdd":[6,0,2,1,6,0,1,0,21],
+"group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel.html#ga54ee009e68538e1a6082544d625f73d9":[6,0,2,1,6,0,1,0,11],
+"group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel.html#ga6118523a6e099495afa3378d91734284":[6,0,2,1,6,0,1,0,9],
 "group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel.html#ga6c60822100d7394bb5eff26cff51addb":[6,0,2,1,6,0,1,0,6],
 "group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel.html#ga6e243824d06e122584d41154a44f65f3":[6,0,2,1,6,0,1,0,16],
 "group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel.html#ga790ccda5c0e6caba4e27f6cccc8c41c0":[6,0,2,1,6,0,1,0,8],
@@ -245,9 +249,5 @@ var NAVTREEINDEX1 =
 "group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga58336adeaecd3a730c357e8a60598b80":[6,0,2,1,6,0,4,0,57],
 "group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga58bcf93f3f96f640593547c50d6de91b":[6,0,2,1,6,0,4,0,49],
 "group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga5d4026a09a1b8c7c287b261fa0a1bdae":[6,0,2,1,6,0,4,0,7],
-"group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga5ecd40868caa27db9cc201be2a35b6df":[6,0,2,1,6,0,4,0,45],
-"group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga6de2a204a54c6b4c4bae3671ec74399b":[6,0,2,1,6,0,4,0,30],
-"group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga6e243824d06e122584d41154a44f65f3":[6,0,2,1,6,0,4,0,23],
-"group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga712a6e06b782bce72738ea6482105818":[6,0,2,1,6,0,4,0,16],
-"group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga82999a6f5d4377856e50bdfdfaf27a22":[6,0,2,1,6,0,4,0,17]
+"group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga5ecd40868caa27db9cc201be2a35b6df":[6,0,2,1,6,0,4,0,45]
 };

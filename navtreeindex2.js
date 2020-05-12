@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga6de2a204a54c6b4c4bae3671ec74399b":[6,0,2,1,6,0,4,0,30],
+"group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga6e243824d06e122584d41154a44f65f3":[6,0,2,1,6,0,4,0,23],
+"group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga712a6e06b782bce72738ea6482105818":[6,0,2,1,6,0,4,0,16],
+"group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga82999a6f5d4377856e50bdfdfaf27a22":[6,0,2,1,6,0,4,0,17],
 "group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga8689fe230475d2e54fb686d76d34e14a":[6,0,2,1,6,0,4,0,34],
 "group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga8ad1e166810eccd216c2039ffc737245":[6,0,2,1,6,0,4,0,6],
 "group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga8b87c02e2c7ddf0c9d22dca232c65e2e":[6,0,2,1,6,0,4,0,15],
@@ -245,9 +249,5 @@ var NAVTREEINDEX2 =
 "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___help.html":[6,0,2,1,6,0,5,1,1],
 "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___p_v_r_timer_type_int_value.html":[6,0,2,1,6,0,5,1,0],
 "group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___p_v_r_timer_type_int_value.html#ga021ad70d689e7798457030da8385ead4":[6,0,2,1,6,0,5,1,0,3],
-"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___p_v_r_timer_type_int_value.html#ga10eafac774946c9fda6acd8368e6b254":[6,0,2,1,6,0,5,1,0,6],
-"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___p_v_r_timer_type_int_value.html#ga244b872d985380620cdfa7b6231aa187":[6,0,2,1,6,0,5,1,0,2],
-"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___p_v_r_timer_type_int_value.html#ga352a1396951fc7c136121452d5831e6b":[6,0,2,1,6,0,5,1,0,1],
-"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___p_v_r_timer_type_int_value.html#ga400afd5e9bd0a3fda1f979bbeb19c1b2":[6,0,2,1,6,0,5,1,0,5],
-"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___p_v_r_timer_type_int_value.html#gae33a3ac7ebb9f5c0ac9d287353c6b7ff":[6,0,2,1,6,0,5,1,0,4]
+"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___p_v_r_timer_type_int_value.html#ga10eafac774946c9fda6acd8368e6b254":[6,0,2,1,6,0,5,1,0,6]
 };
