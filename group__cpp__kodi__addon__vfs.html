@@ -223,20 +223,20 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__vfs.html','')
 <div class="line"><span class="comment">{</span></div>
 <div class="line"><span class="comment">public:</span></div>
 <div class="line"><span class="comment">  CMyAddon() { }</span></div>
-<div class="line"><span class="comment">  ADDON_STATUS CreateInstanceEx(int instanceType,</span></div>
-<div class="line"><span class="comment">                                std::string instanceID,</span></div>
-<div class="line"><span class="comment">                                KODI_HANDLE instance,</span></div>
-<div class="line"><span class="comment">                                KODI_HANDLE&amp; addonInstance,</span></div>
-<div class="line"><span class="comment">                                const std::string&amp; version) override;</span></div>
+<div class="line"><span class="comment">  ADDON_STATUS CreateInstance(int instanceType,</span></div>
+<div class="line"><span class="comment">                              const std::string&amp; instanceID,</span></div>
+<div class="line"><span class="comment">                              KODI_HANDLE instance,</span></div>
+<div class="line"><span class="comment">                              const std::string&amp; version,</span></div>
+<div class="line"><span class="comment">                              KODI_HANDLE&amp; addonInstance) override;</span></div>
 <div class="line"><span class="comment">};</span></div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">// If you use only one instance in your add-on, can be instanceType and</span></div>
 <div class="line"><span class="comment">// instanceID ignored</span></div>
-<div class="line"><span class="comment">ADDON_STATUS CMyAddon::CreateInstanceEx(int instanceType,</span></div>
-<div class="line"><span class="comment">                                        std::string instanceID,</span></div>
-<div class="line"><span class="comment">                                        KODI_HANDLE instance,</span></div>
-<div class="line"><span class="comment">                                        KODI_HANDLE&amp; addonInstance,</span></div>
-<div class="line"><span class="comment">                                        const std::string&amp; version)</span></div>
+<div class="line"><span class="comment">ADDON_STATUS CMyAddon::CreateInstance(int instanceType,</span></div>
+<div class="line"><span class="comment">                                      const std::string&amp; instanceID,</span></div>
+<div class="line"><span class="comment">                                      KODI_HANDLE instance,</span></div>
+<div class="line"><span class="comment">                                      const std::string&amp; version,</span></div>
+<div class="line"><span class="comment">                                      KODI_HANDLE&amp; addonInstance)</span></div>
 <div class="line"><span class="comment">{</span></div>
 <div class="line"><span class="comment">  if (instanceType == ADDON_INSTANCE_VFS)</span></div>
 <div class="line"><span class="comment">  {</span></div>
@@ -267,8 +267,8 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gaea03f559cdee1a7596fdca7ae3613f97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaea03f559cdee1a7596fdca7ae3613f97">&#9670;&nbsp;</a></span>CInstanceVFS()</h2>
+<a id="gaf64445faf2b354ba02aea986d18eb291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf64445faf2b354ba02aea986d18eb291">&#9670;&nbsp;</a></span>CInstanceVFS()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,7 +286,7 @@ Modules</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>kodiVersion</em> = <code>&quot;0.0.0&quot;</code>&#160;</td>
+          <td class="paramname"><em>kodiVersion</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -305,12 +305,12 @@ Modules</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The instance value given to <b><code>kodi::addon::CAddonBase::CreateInstance(...)</code></b>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">kodiVersion</td><td>[opt] given from Kodi by CAddonBase::CreateInstanceEx to identify his instance API version</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kodiVersion</td><td>[opt] given from Kodi by <a class="el" href="group__cpp__kodi__addon__addonbase.html#ga74ea538a2191541a57115fa89790358c">CAddonBase::CreateInstance</a> to identify his instance API version</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Instance path as a single is not supported by this type. It must ensure that it can be called up several times.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Only use <code>instance</code> from the <a class="el" href="group__cpp__kodi__addon__addonbase.html#gaf631a0baf9f9a3aeec8cdac18817e5ab">CAddonBase::CreateInstance</a> or CAddonBase::CreateInstanceEx call. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Only use <code>instance</code> from the <a class="el" href="group__cpp__kodi__addon__addonbase.html#ga74ea538a2191541a57115fa89790358c">CAddonBase::CreateInstance</a> or <a class="el" href="group__cpp__kodi__addon__addonbase.html#ga74ea538a2191541a57115fa89790358c">CAddonBase::CreateInstance</a> call. </dd></dl>
 
 </div>
 </div>
@@ -343,7 +343,7 @@ Modules</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclasskodi_1_1addon_1_1_c_instance_v_f_s_html"><div class="ttname"><a href="classkodi_1_1addon_1_1_c_instance_v_f_s.html">kodi::addon::CInstanceVFS</a></div><div class="ttdef"><b>Definition:</b> VFS.h:540</div></div>
+<div class="ttc" id="aclasskodi_1_1addon_1_1_c_instance_v_f_s_html"><div class="ttname"><a href="classkodi_1_1addon_1_1_c_instance_v_f_s.html">kodi::addon::CInstanceVFS</a></div><div class="ttdef"><b>Definition:</b> VFS.h:551</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -108,8 +108,69 @@ Modules</h2></td></tr>
 <tr class="memitem:group__cpp__kodi___defs"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi___defs.html">Definitions, structures and enumerators</a></td></tr>
 <tr class="memdesc:group__cpp__kodi___defs"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>General definition values</b> <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__cpp__kodi__settings"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__settings.html">1. Setting control</a></td></tr>
+<tr class="memdesc:group__cpp__kodi__settings"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Functions to handle settings access</b><br  />
+This can be used to get and set the addon related values inside his settings.xml. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gab3a67917537eaaf1ea958b95e5a3e9d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3a67917537eaaf1ea958b95e5a3e9d1">&#9670;&nbsp;</a></span>Log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kodi::Log </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group__cpp__kodi___defs___addon_log.html#ga913895aaf2ef685961947f8d6b93e038">AddonLog</a>&#160;</td>
+          <td class="paramname"><em>loglevel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a message to Kodi's log. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">loglevel</td><td>The log level of the message. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">format</td><td>The format of the message to pass to Kodi. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>Additional text to insert in format text</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This method uses limited buffer (16k) for the formatted output. So data, which will not fit into it, will be silently discarded.</dd></dl>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;%s: There is an error occurred!&quot;</span>, __func__);</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a id="ga5e8c4e403f511f0c91104677a75a18d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5e8c4e403f511f0c91104677a75a18d1">&#9670;&nbsp;</a></span>GetInterface()</h2>
 
@@ -894,15 +955,9 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the currently used skin identification name from Kodi. </p>
-<dl class="section return"><dt>Returns</dt><dd>The active skin id name as a string</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This is not the full path like 'special://home/addons/MediaCenter', but only 'MediaCenter'.</dd></dl>
-<hr  />
-<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
-<div class="line">..</div>
-<div class="line">std::string skinid = <a class="code" href="group__cpp__kodi.html#gaa2b38e3e192a404565552416049c4d30">kodi::GetCurrentSkinId</a>();</div>
-<div class="line">..</div>
-</div><!-- fragment --> 
+<p>Get the currently used skin identification name from Kodi  </p>
+<h2>@return The active skin id name as a string  @note This is not the full path like 'special://home/addons/MediaCenter', but only 'MediaCenter'.   <b>Example:</b> @code{cpp} #include &lt;<a class="el" href="_general_8h_source.html">kodi/General.h</a>&gt; .. std::string skinid = <a class="el" href="group__cpp__kodi.html#gaa2b38e3e192a404565552416049c4d30" title="Get the currently used skin identification name from Kodi">kodi::GetCurrentSkinId()</a>; .. @endcode </h2>
+
 </div>
 </div>
 <a id="ga5417d9134259da3d79f40e9a20a48617"></a>
@@ -1087,26 +1142,27 @@ Modules</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi_html_ga6a93753e708e44a263a895ae65d30030"><div class="ttname"><a href="group__cpp__kodi.html#ga6a93753e708e44a263a895ae65d30030">kodi::GetAddonInfo</a></div><div class="ttdeci">std::string GetAddonInfo(const std::string &amp;id)</div><div class="ttdoc">Returns the value of an addon property as a string.</div><div class="ttdef"><b>Definition:</b> General.h:149</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga6a93753e708e44a263a895ae65d30030"><div class="ttname"><a href="group__cpp__kodi.html#ga6a93753e708e44a263a895ae65d30030">kodi::GetAddonInfo</a></div><div class="ttdeci">std::string GetAddonInfo(const std::string &amp;id)</div><div class="ttdoc">Returns the value of an addon property as a string.</div><div class="ttdef"><b>Definition:</b> General.h:150</div></div>
 <div class="ttc" id="agroup__cpp__kodi___defs_html_ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38"><div class="ttname"><a href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">STD_KB_BUTTONS_MAX_ROWS</a></div><div class="ttdeci">@ STD_KB_BUTTONS_MAX_ROWS</div><div class="ttdoc">The quantity of rows on Kodi's standard keyboard.</div><div class="ttdef"><b>Definition:</b> General.h:22</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga7b98a686abbbd711c76a1e3892b6c0be"><div class="ttname"><a href="group__cpp__kodi.html#ga7b98a686abbbd711c76a1e3892b6c0be">kodi::GetRegion</a></div><div class="ttdeci">std::string GetRegion(const std::string &amp;id)</div><div class="ttdoc">Returns your regions setting as a string for the specified id.</div><div class="ttdef"><b>Definition:</b> General.h:558</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_gga8e33c1267b3dc36c2373153ae5b65d94a73ef8e6ac545537aab78d269d462365c"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a73ef8e6ac545537aab78d269d462365c">QUEUE_OWN_STYLE</a></div><div class="ttdeci">@ QUEUE_OWN_STYLE</div><div class="ttdoc">Show with own given image and parts if set on values.</div><div class="ttdef"><b>Definition:</b> General.h:79</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51">LANG_FMT_ISO_639_1</a></div><div class="ttdeci">@ LANG_FMT_ISO_639_1</div><div class="ttdoc">two letter code as defined in ISO 639-1</div><div class="ttdef"><b>Definition:</b> General.h:92</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga7b98a686abbbd711c76a1e3892b6c0be"><div class="ttname"><a href="group__cpp__kodi.html#ga7b98a686abbbd711c76a1e3892b6c0be">kodi::GetRegion</a></div><div class="ttdeci">std::string GetRegion(const std::string &amp;id)</div><div class="ttdoc">Returns your regions setting as a string for the specified id.</div><div class="ttdef"><b>Definition:</b> General.h:559</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_gga8e33c1267b3dc36c2373153ae5b65d94a73ef8e6ac545537aab78d269d462365c"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a73ef8e6ac545537aab78d269d462365c">QUEUE_OWN_STYLE</a></div><div class="ttdeci">@ QUEUE_OWN_STYLE</div><div class="ttdoc">Show with own given image and parts if set on values.</div><div class="ttdef"><b>Definition:</b> General.h:80</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51">LANG_FMT_ISO_639_1</a></div><div class="ttdeci">@ LANG_FMT_ISO_639_1</div><div class="ttdoc">two letter code as defined in ISO 639-1</div><div class="ttdef"><b>Definition:</b> General.h:93</div></div>
 <div class="ttc" id="agroup__cpp__kodi___defs_html_ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465"><div class="ttname"><a href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">STD_KB_BUTTONS_PER_ROW</a></div><div class="ttdeci">@ STD_KB_BUTTONS_PER_ROW</div><div class="ttdoc">The quantity of buttons per row on Kodi's standard keyboard.</div><div class="ttdef"><b>Definition:</b> General.h:20</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga156210ce2221a5a160f51cc044e841a1"><div class="ttname"><a href="group__cpp__kodi.html#ga156210ce2221a5a160f51cc044e841a1">kodi::GetGlobalIdleTime</a></div><div class="ttdeci">int GetGlobalIdleTime()</div><div class="ttdoc">Returns the elapsed idle time in seconds as an integer.</div><div class="ttdef"><b>Definition:</b> General.h:629</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga6f46744b30f0daf04a1f60f5be35290d"><div class="ttname"><a href="group__cpp__kodi.html#ga6f46744b30f0daf04a1f60f5be35290d">kodi::ChangeKeyboardLayout</a></div><div class="ttdeci">bool ChangeKeyboardLayout(std::string &amp;layout_name)</div><div class="ttdoc">To change keyboard layout characters.</div><div class="ttdef"><b>Definition:</b> General.h:860</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga324988f038efe6fec487718361fb8aa6"><div class="ttname"><a href="group__cpp__kodi.html#ga324988f038efe6fec487718361fb8aa6">kodi::GetKeyboardLayout</a></div><div class="ttdeci">bool GetKeyboardLayout(int modifierKey, std::string &amp;layout_name, std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;layout)</div><div class="ttdoc">To get keyboard layout characters.</div><div class="ttdef"><b>Definition:</b> General.h:790</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga156210ce2221a5a160f51cc044e841a1"><div class="ttname"><a href="group__cpp__kodi.html#ga156210ce2221a5a160f51cc044e841a1">kodi::GetGlobalIdleTime</a></div><div class="ttdeci">int GetGlobalIdleTime()</div><div class="ttdoc">Returns the elapsed idle time in seconds as an integer.</div><div class="ttdef"><b>Definition:</b> General.h:630</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga6f46744b30f0daf04a1f60f5be35290d"><div class="ttname"><a href="group__cpp__kodi.html#ga6f46744b30f0daf04a1f60f5be35290d">kodi::ChangeKeyboardLayout</a></div><div class="ttdeci">bool ChangeKeyboardLayout(std::string &amp;layout_name)</div><div class="ttdoc">To change keyboard layout characters.</div><div class="ttdef"><b>Definition:</b> General.h:904</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga324988f038efe6fec487718361fb8aa6"><div class="ttname"><a href="group__cpp__kodi.html#ga324988f038efe6fec487718361fb8aa6">kodi::GetKeyboardLayout</a></div><div class="ttdeci">bool GetKeyboardLayout(int modifierKey, std::string &amp;layout_name, std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;layout)</div><div class="ttdoc">To get keyboard layout characters.</div><div class="ttdef"><b>Definition:</b> General.h:834</div></div>
 <div class="ttc" id="agroup__cpp__kodi___defs_html_ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed"><div class="ttname"><a href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed">STD_KB_MODIFIER_KEY_SYMBOL</a></div><div class="ttdeci">@ STD_KB_MODIFIER_KEY_SYMBOL</div><div class="ttdoc">Keyboard layout type, this to show symbols.</div><div class="ttdef"><b>Definition:</b> General.h:28</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga2dc05ae2b766c3710db48b48b257f951"><div class="ttname"><a href="group__cpp__kodi.html#ga2dc05ae2b766c3710db48b48b257f951">kodi::GetFreeMem</a></div><div class="ttdeci">void GetFreeMem(long &amp;free, long &amp;total, bool asBytes=false)</div><div class="ttdoc">Returns the amount of free memory in MByte (or as bytes) as an long integer.</div><div class="ttdef"><b>Definition:</b> General.h:600</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712">QUEUE_WARNING</a></div><div class="ttdeci">@ QUEUE_WARNING</div><div class="ttdoc">Show warning notification message.</div><div class="ttdef"><b>Definition:</b> General.h:75</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga8296027856e5e592c79e45fc2af6f930"><div class="ttname"><a href="group__cpp__kodi.html#ga8296027856e5e592c79e45fc2af6f930">kodi::GetLocalizedString</a></div><div class="ttdeci">std::string GetLocalizedString(uint32_t labelId, const std::string &amp;defaultStr=&quot;&quot;)</div><div class="ttdoc">Returns an addon's localized 'unicode string'.</div><div class="ttdef"><b>Definition:</b> General.h:221</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga2dc05ae2b766c3710db48b48b257f951"><div class="ttname"><a href="group__cpp__kodi.html#ga2dc05ae2b766c3710db48b48b257f951">kodi::GetFreeMem</a></div><div class="ttdeci">void GetFreeMem(long &amp;free, long &amp;total, bool asBytes=false)</div><div class="ttdoc">Returns the amount of free memory in MByte (or as bytes) as an long integer.</div><div class="ttdef"><b>Definition:</b> General.h:601</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712">QUEUE_WARNING</a></div><div class="ttdeci">@ QUEUE_WARNING</div><div class="ttdoc">Show warning notification message.</div><div class="ttdef"><b>Definition:</b> General.h:76</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga8296027856e5e592c79e45fc2af6f930"><div class="ttname"><a href="group__cpp__kodi.html#ga8296027856e5e592c79e45fc2af6f930">kodi::GetLocalizedString</a></div><div class="ttdeci">std::string GetLocalizedString(uint32_t labelId, const std::string &amp;defaultStr=&quot;&quot;)</div><div class="ttdoc">Returns an addon's localized 'unicode string'.</div><div class="ttdef"><b>Definition:</b> General.h:222</div></div>
 <div class="ttc" id="agroup__cpp__kodi___defs_html_ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0"><div class="ttname"><a href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0">STD_KB_MODIFIER_KEY_SHIFT</a></div><div class="ttdeci">@ STD_KB_MODIFIER_KEY_SHIFT</div><div class="ttdoc">Keyboard layout type, this for shift controled layout (uppercase)</div><div class="ttdef"><b>Definition:</b> General.h:26</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga4cd782256ea2690e86421f1466683e24"><div class="ttname"><a href="group__cpp__kodi.html#ga4cd782256ea2690e86421f1466683e24">kodi::GetMD5</a></div><div class="ttdeci">std::string GetMD5(const std::string &amp;text)</div><div class="ttdoc">Get the MD5 digest of the given text.</div><div class="ttdef"><b>Definition:</b> General.h:488</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga981f36ea378461d67c0f0502f678b5b5"><div class="ttname"><a href="group__cpp__kodi.html#ga981f36ea378461d67c0f0502f678b5b5">kodi::OpenSettings</a></div><div class="ttdeci">bool OpenSettings()</div><div class="ttdoc">Opens this Add-Ons settings dialog.</div><div class="ttdef"><b>Definition:</b> General.h:185</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga59fa55ddb5d7a6e4d53b10d7f9a1e0cf"><div class="ttname"><a href="group__cpp__kodi.html#ga59fa55ddb5d7a6e4d53b10d7f9a1e0cf">kodi::GetLanguage</a></div><div class="ttdeci">std::string GetLanguage(LangFormats format=LANG_FMT_ENGLISH_NAME, bool region=false)</div><div class="ttdoc">Returns the active language as a string.</div><div class="ttdef"><b>Definition:</b> General.h:302</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_gaa2b38e3e192a404565552416049c4d30"><div class="ttname"><a href="group__cpp__kodi.html#gaa2b38e3e192a404565552416049c4d30">kodi::GetCurrentSkinId</a></div><div class="ttdeci">std::string GetCurrentSkinId()</div><div class="ttdoc">Get the currently used skin identification name from Kodi.</div><div class="ttdef"><b>Definition:</b> General.h:660</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga275a5231deebed983e67a97f50c8195e"><div class="ttname"><a href="group__cpp__kodi.html#ga275a5231deebed983e67a97f50c8195e">kodi::UnknownToUTF8</a></div><div class="ttdeci">bool UnknownToUTF8(const std::string &amp;stringSrc, std::string &amp;utf8StringDst, bool failOnBadChar=false)</div><div class="ttdoc">Translate a string with an unknown encoding to UTF8.</div><div class="ttdef"><b>Definition:</b> General.h:260</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga5417d9134259da3d79f40e9a20a48617"><div class="ttname"><a href="group__cpp__kodi.html#ga5417d9134259da3d79f40e9a20a48617">kodi::KodiVersion</a></div><div class="ttdeci">void KodiVersion(kodi_version_t &amp;version)</div><div class="ttdoc">Get current Kodi informations and versions, returned data from the following kodi_version_t version; ...</div><div class="ttdef"><b>Definition:</b> General.h:718</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga4cd782256ea2690e86421f1466683e24"><div class="ttname"><a href="group__cpp__kodi.html#ga4cd782256ea2690e86421f1466683e24">kodi::GetMD5</a></div><div class="ttdeci">std::string GetMD5(const std::string &amp;text)</div><div class="ttdoc">Get the MD5 digest of the given text.</div><div class="ttdef"><b>Definition:</b> General.h:489</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs___addon_log_html_gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768"><div class="ttname"><a href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a></div><div class="ttdeci">@ ADDON_LOG_ERROR</div><div class="ttdoc">3 : To report error messages in the log file.</div><div class="ttdef"><b>Definition:</b> addon_base.h:129</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_gab3a67917537eaaf1ea958b95e5a3e9d1"><div class="ttname"><a href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a></div><div class="ttdeci">void Log(const AddonLog loglevel, const char *format,...)</div><div class="ttdoc">Add a message to Kodi's log.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:640</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga981f36ea378461d67c0f0502f678b5b5"><div class="ttname"><a href="group__cpp__kodi.html#ga981f36ea378461d67c0f0502f678b5b5">kodi::OpenSettings</a></div><div class="ttdeci">bool OpenSettings()</div><div class="ttdoc">Opens this Add-Ons settings dialog.</div><div class="ttdef"><b>Definition:</b> General.h:186</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga59fa55ddb5d7a6e4d53b10d7f9a1e0cf"><div class="ttname"><a href="group__cpp__kodi.html#ga59fa55ddb5d7a6e4d53b10d7f9a1e0cf">kodi::GetLanguage</a></div><div class="ttdeci">std::string GetLanguage(LangFormats format=LANG_FMT_ENGLISH_NAME, bool region=false)</div><div class="ttdoc">Returns the active language as a string.</div><div class="ttdef"><b>Definition:</b> General.h:303</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga275a5231deebed983e67a97f50c8195e"><div class="ttname"><a href="group__cpp__kodi.html#ga275a5231deebed983e67a97f50c8195e">kodi::UnknownToUTF8</a></div><div class="ttdeci">bool UnknownToUTF8(const std::string &amp;stringSrc, std::string &amp;utf8StringDst, bool failOnBadChar=false)</div><div class="ttdoc">Translate a string with an unknown encoding to UTF8.</div><div class="ttdef"><b>Definition:</b> General.h:261</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga5417d9134259da3d79f40e9a20a48617"><div class="ttname"><a href="group__cpp__kodi.html#ga5417d9134259da3d79f40e9a20a48617">kodi::KodiVersion</a></div><div class="ttdeci">void KodiVersion(kodi_version_t &amp;version)</div><div class="ttdoc">Get current Kodi informations and versions, returned data from the following kodi_version_t version; ...</div><div class="ttdef"><b>Definition:</b> General.h:762</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

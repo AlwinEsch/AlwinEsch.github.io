@@ -1,6 +1,8 @@
 var group__cpp__kodi =
 [
     [ "Definitions, structures and enumerators", "group__cpp__kodi___defs.html", "group__cpp__kodi___defs" ],
+    [ "1. Setting control", "group__cpp__kodi__settings.html", "group__cpp__kodi__settings" ],
+    [ "Log", "group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1", null ],
     [ "GetInterface", "group__cpp__kodi.html#ga5e8c4e403f511f0c91104677a75a18d1", null ],
     [ "GetAddonInfo", "group__cpp__kodi.html#ga6a93753e708e44a263a895ae65d30030", null ],
     [ "OpenSettings", "group__cpp__kodi.html#ga981f36ea378461d67c0f0502f678b5b5", null ],

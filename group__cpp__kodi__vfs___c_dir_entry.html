@@ -94,35 +94,62 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__vfs___c_dir_entry.ht
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
-<div class="title">class CDirEntry<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__vfs.html">Interface - kodi::vfs</a></div></div>  </div>
+<div class="title">class CDirEntry<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__vfs.html">Interface - kodi::vfs</a> &#124; <a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__gui.html">Interface - kodi::gui</a> &raquo; <a class="el" href="group__cpp__kodi__gui__dialogs___select.html">Dialog Select</a> &raquo; <a class="el" href="group__cpp__kodi__vfs___defs.html">Definitions, structures and enumerators</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p><b>Virtual file server directory entry</b> </p>
-<p>This class is used as an entry for files and folders in <a class="el" href="group__cpp__kodi__vfs.html#ga1c005a636b4eb628e206b0af551ae90e" title="Lists a directory.">kodi::vfs::GetDirectory()</a>.</p>
+<p><b>Virtual file server directory entry</b><br  />
+This class is used as an entry for files and folders in <a class="el" href="group__cpp__kodi__vfs___directory.html#ga65982b10aaec5abb5ebf6a1c27d28610" title="Lists a directory.">kodi::vfs::GetDirectory()</a>. </p>
 <hr  />
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/Filesystem.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line">...</div>
 <div class="line"> </div>
 <div class="line">std::vector&lt;<a class="code" href="classkodi_1_1vfs_1_1_c_dir_entry.html">kodi::vfs::CDirEntry</a>&gt; items;</div>
-<div class="line"><a class="code" href="group__cpp__kodi__vfs.html#ga1c005a636b4eb628e206b0af551ae90e">kodi::vfs::GetDirectory</a>(<span class="stringliteral">&quot;special://temp&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, items);</div>
+<div class="line"><a class="code" href="group__cpp__kodi__vfs___directory.html#ga65982b10aaec5abb5ebf6a1c27d28610">kodi::vfs::GetDirectory</a>(<span class="stringliteral">&quot;special://temp&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, items);</div>
 <div class="line"> </div>
 <div class="line">fprintf(stderr, <span class="stringliteral">&quot;Directory have %lu entries\n&quot;</span>, items.size());</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; items.size(); i++)</div>
 <div class="line">{</div>
 <div class="line">  <span class="keywordtype">char</span> buff[20];</div>
-<div class="line">  time_t now = items[i].<a class="code" href="group__cpp__kodi__vfs___c_dir_entry.html#gacb723fc09f9b9d6f0d69c7dd04e485cd">DateTime</a>();</div>
+<div class="line">  time_t now = items[i].<a class="code" href="classkodi_1_1vfs_1_1_c_dir_entry.html#acb723fc09f9b9d6f0d69c7dd04e485cd">DateTime</a>();</div>
 <div class="line">  strftime(buff, 20, <span class="stringliteral">&quot;%Y-%m-%d %H:%M:%S&quot;</span>, gmtime(&amp;now));</div>
 <div class="line">  fprintf(stderr, <span class="stringliteral">&quot; - %04lu -- Folder: %s -- Name: %s -- Path: %s -- Time: %s\n&quot;</span>,</div>
 <div class="line">            i+1,</div>
-<div class="line">            items[i].IsFolder() ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no &quot;</span>,</div>
-<div class="line">            items[i].Label().c_str(),</div>
-<div class="line">            items[i].Path().c_str(),</div>
+<div class="line">            items[i].<a class="code" href="classkodi_1_1vfs_1_1_c_dir_entry.html#adc19fd855154831cdc80a8b006a5847d">IsFolder</a>() ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no &quot;</span>,</div>
+<div class="line">            items[i].<a class="code" href="classkodi_1_1vfs_1_1_c_dir_entry.html#a154d00821a136494d7afc14b6755143a">Label</a>().c_str(),</div>
+<div class="line">            items[i].<a class="code" href="classkodi_1_1vfs_1_1_c_dir_entry.html#a62adb64db13e24a29d00d7eb1901448a">Path</a>().c_str(),</div>
 <div class="line">            buff);</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>It has the header <a class="el" href="_filesystem_8h_source.html">#include &lt;kodi/Filesystem.h&gt;</a> be included to enjoy it. </p>
+</div><!-- fragment --><p>It has the header <a class="el" href="_filesystem_8h_source.html">#include &lt;kodi/Filesystem.h&gt;</a> be included to enjoy it.</p>
+<h2></h2>
+<p><b>The following table contains values that can be set with <a class="el" href="group__cpp__kodi__vfs___c_dir_entry.html">class CDirEntry</a> :</b> </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name </th><th class="markdownTableHeadNone">Type </th><th class="markdownTableHeadNone">Set call </th><th class="markdownTableHeadNone">Get call </th><th class="markdownTableHeadNone">Clear call  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Directory entry name</b> </td><td class="markdownTableBodyNone"><code>std::string</code> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#ab825756e641ba839bfae908492165481">SetLabel</a> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#a154d00821a136494d7afc14b6755143a">Label</a> </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Title of entry</b> </td><td class="markdownTableBodyNone"><code>std::string</code> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#a54294c70e5c7d4e8edacbdde65a07ab3">SetTitle</a> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#a9865f7d9426ae988fdcd66ff3a5c5bcd">Title</a> </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Path of the entry</b> </td><td class="markdownTableBodyNone"><code>std::string</code> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#a4a03d7c94fa02df112558bc30818e413">SetPath</a> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#a62adb64db13e24a29d00d7eb1901448a">Path</a> </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Entry is folder</b> </td><td class="markdownTableBodyNone"><code>bool</code> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#aae85bb31c2e6c552ab878a718c0883b4">SetFolder</a> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#adc19fd855154831cdc80a8b006a5847d">IsFolder</a> </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>The size of the file</b> </td><td class="markdownTableBodyNone"><code>int64_t</code> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#af2fb6ea3061355a5ed4b53ca45e712ac">SetSize</a> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#adf15b7ff6355282ab63a80077dbc202a">Size</a> </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>File time and date</b> </td><td class="markdownTableBodyNone"><code>time_t</code> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#a6d3512c2bf1852df289f91fea20603c1">SetDateTime</a> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#acb723fc09f9b9d6f0d69c7dd04e485cd">DateTime</a> </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Property entries</b> </td><td class="markdownTableBodyNone"><code>std::string, std::string</code> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#a070e7bdb05483aecc70b7e8678de1011">AddProperty</a> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#af7350bb2a3f1d13c825f8678bca5e10e">GetProperties</a> </td><td class="markdownTableBodyNone"><a class="el" href="classkodi_1_1vfs_1_1_c_dir_entry.html#ac08a48ef4dc5afe79c14ffbefdd96f5d">ClearProperties</a>  </td></tr>
+</table>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group__cpp__kodi__vfs___c_dir_entry___help"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__vfs___c_dir_entry___help.html">&lt;em&gt;Value Help&lt;/em&gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gadd179e0fb2754158acb633a32ab1a1ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gadd179e0fb2754158acb633a32ab1a1ee">&#9670;&nbsp;</a></span>CDirEntry()</h2>
@@ -190,489 +217,14 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__vfs___c_dir_entry.ht
 
 </div>
 </div>
-<a id="ga154d00821a136494d7afc14b6755143a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga154d00821a136494d7afc14b6755143a">&#9670;&nbsp;</a></span>Label()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; Label </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the directory entry name. </p>
-<dl class="section return"><dt>Returns</dt><dd>Name of the entry </dd></dl>
-
-</div>
-</div>
-<a id="ga9865f7d9426ae988fdcd66ff3a5c5bcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9865f7d9426ae988fdcd66ff3a5c5bcd">&#9670;&nbsp;</a></span>Title()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; Title </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the optional title of entry. </p>
-<dl class="section return"><dt>Returns</dt><dd>Title of the entry, if exists </dd></dl>
-
-</div>
-</div>
-<a id="ga62adb64db13e24a29d00d7eb1901448a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga62adb64db13e24a29d00d7eb1901448a">&#9670;&nbsp;</a></span>Path()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; Path </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the path of the entry. </p>
-<dl class="section return"><dt>Returns</dt><dd>File system path of the entry </dd></dl>
-
-</div>
-</div>
-<a id="gadc19fd855154831cdc80a8b006a5847d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadc19fd855154831cdc80a8b006a5847d">&#9670;&nbsp;</a></span>IsFolder()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IsFolder </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Used to check entry is folder. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if entry is a folder </dd></dl>
-
-</div>
-</div>
-<a id="gadf15b7ff6355282ab63a80077dbc202a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadf15b7ff6355282ab63a80077dbc202a">&#9670;&nbsp;</a></span>Size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t Size </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>If file, the size of the file. </p>
-<dl class="section return"><dt>Returns</dt><dd>Defined file size </dd></dl>
-
-</div>
-</div>
-<a id="gacb723fc09f9b9d6f0d69c7dd04e485cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacb723fc09f9b9d6f0d69c7dd04e485cd">&#9670;&nbsp;</a></span>DateTime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">time_t DateTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get file time and date for a new entry. </p>
-<dl class="section return"><dt>Returns</dt><dd>The with time_t defined date and time of file </dd></dl>
-
-</div>
-</div>
-<a id="gab825756e641ba839bfae908492165481"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab825756e641ba839bfae908492165481">&#9670;&nbsp;</a></span>SetLabel()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetLabel </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the label name. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>name of entry </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga54294c70e5c7d4e8edacbdde65a07ab3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga54294c70e5c7d4e8edacbdde65a07ab3">&#9670;&nbsp;</a></span>SetTitle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetTitle </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>title</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the title name. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>title name of entry </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga4a03d7c94fa02df112558bc30818e413"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4a03d7c94fa02df112558bc30818e413">&#9670;&nbsp;</a></span>SetPath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetPath </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the path of the entry. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path of entry </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="gaae85bb31c2e6c552ab878a718c0883b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaae85bb31c2e6c552ab878a718c0883b4">&#9670;&nbsp;</a></span>SetFolder()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetFolder </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>folder</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the entry defined as folder. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">folder</td><td>If true becomes entry defined as folder </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="gaf2fb6ea3061355a5ed4b53ca45e712ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf2fb6ea3061355a5ed4b53ca45e712ac">&#9670;&nbsp;</a></span>SetSize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetSize </td>
-          <td>(</td>
-          <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set a file size for a new entry. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size to set for dir entry </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga6d3512c2bf1852df289f91fea20603c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6d3512c2bf1852df289f91fea20603c1">&#9670;&nbsp;</a></span>SetDateTime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetDateTime </td>
-          <td>(</td>
-          <td class="paramtype">time_t&#160;</td>
-          <td class="paramname"><em>dateTime</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set file time and date for a new entry. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">dateTime</td><td>The with time_t defined date and time of file </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga070e7bdb05483aecc70b7e8678de1011"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga070e7bdb05483aecc70b7e8678de1011">&#9670;&nbsp;</a></span>AddProperty()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AddProperty </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Add a by string defined property entry to directory entry. </p>
-<dl class="section note"><dt>Note</dt><dd>A property can be used to add some special information about a file or directory entry, this can be used on other places to do the right work of them.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>Identification name of property </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The property value to add by given id </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="gac08a48ef4dc5afe79c14ffbefdd96f5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac08a48ef4dc5afe79c14ffbefdd96f5d">&#9670;&nbsp;</a></span>ClearProperties()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ClearProperties </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Clear all present properties. </p>
-
-</div>
-</div>
-<a id="gaf7350bb2a3f1d13c825f8678bca5e10e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf7350bb2a3f1d13c825f8678bca5e10e">&#9670;&nbsp;</a></span>GetProperties()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::map&lt;std::string, std::string&gt;&amp; GetProperties </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the present properties list on directory entry. </p>
-<dl class="section return"><dt>Returns</dt><dd>map with all present properties </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi__vfs___c_dir_entry_html_gacb723fc09f9b9d6f0d69c7dd04e485cd"><div class="ttname"><a href="group__cpp__kodi__vfs___c_dir_entry.html#gacb723fc09f9b9d6f0d69c7dd04e485cd">kodi::vfs::CDirEntry::DateTime</a></div><div class="ttdeci">time_t DateTime()</div><div class="ttdoc">Get file time and date for a new entry.</div><div class="ttdef"><b>Definition:</b> Filesystem.h:425</div></div>
-<div class="ttc" id="aclasskodi_1_1vfs_1_1_c_dir_entry_html"><div class="ttname"><a href="classkodi_1_1vfs_1_1_c_dir_entry.html">kodi::vfs::CDirEntry</a></div><div class="ttdef"><b>Definition:</b> Filesystem.h:322</div></div>
-<div class="ttc" id="agroup__cpp__kodi__vfs_html_ga1c005a636b4eb628e206b0af551ae90e"><div class="ttname"><a href="group__cpp__kodi__vfs.html#ga1c005a636b4eb628e206b0af551ae90e">kodi::vfs::GetDirectory</a></div><div class="ttdeci">bool GetDirectory(const std::string &amp;path, const std::string &amp;mask, std::vector&lt; CDirEntry &gt; &amp;items)</div><div class="ttdoc">Lists a directory.</div><div class="ttdef"><b>Definition:</b> Filesystem.h:664</div></div>
+<div class="ttc" id="aclasskodi_1_1vfs_1_1_c_dir_entry_html_a154d00821a136494d7afc14b6755143a"><div class="ttname"><a href="classkodi_1_1vfs_1_1_c_dir_entry.html#a154d00821a136494d7afc14b6755143a">kodi::vfs::CDirEntry::Label</a></div><div class="ttdeci">const std::string &amp; Label(void) const</div><div class="ttdoc">Get the directory entry name.</div><div class="ttdef"><b>Definition:</b> Filesystem.h:566</div></div>
+<div class="ttc" id="aclasskodi_1_1vfs_1_1_c_dir_entry_html_acb723fc09f9b9d6f0d69c7dd04e485cd"><div class="ttname"><a href="classkodi_1_1vfs_1_1_c_dir_entry.html#acb723fc09f9b9d6f0d69c7dd04e485cd">kodi::vfs::CDirEntry::DateTime</a></div><div class="ttdeci">time_t DateTime()</div><div class="ttdoc">Get file time and date for a new entry.</div><div class="ttdef"><b>Definition:</b> Filesystem.h:606</div></div>
+<div class="ttc" id="aclasskodi_1_1vfs_1_1_c_dir_entry_html_a62adb64db13e24a29d00d7eb1901448a"><div class="ttname"><a href="classkodi_1_1vfs_1_1_c_dir_entry.html#a62adb64db13e24a29d00d7eb1901448a">kodi::vfs::CDirEntry::Path</a></div><div class="ttdeci">const std::string &amp; Path(void) const</div><div class="ttdoc">Get the path of the entry.</div><div class="ttdef"><b>Definition:</b> Filesystem.h:582</div></div>
+<div class="ttc" id="aclasskodi_1_1vfs_1_1_c_dir_entry_html"><div class="ttname"><a href="classkodi_1_1vfs_1_1_c_dir_entry.html">kodi::vfs::CDirEntry</a></div><div class="ttdef"><b>Definition:</b> Filesystem.h:500</div></div>
+<div class="ttc" id="agroup__cpp__kodi__vfs___directory_html_ga65982b10aaec5abb5ebf6a1c27d28610"><div class="ttname"><a href="group__cpp__kodi__vfs___directory.html#ga65982b10aaec5abb5ebf6a1c27d28610">kodi::vfs::GetDirectory</a></div><div class="ttdeci">bool GetDirectory(const std::string &amp;path, const std::string &amp;mask, std::vector&lt; kodi::vfs::CDirEntry &gt; &amp;items)</div><div class="ttdoc">Lists a directory.</div><div class="ttdef"><b>Definition:</b> Filesystem.h:840</div></div>
+<div class="ttc" id="aclasskodi_1_1vfs_1_1_c_dir_entry_html_adc19fd855154831cdc80a8b006a5847d"><div class="ttname"><a href="classkodi_1_1vfs_1_1_c_dir_entry.html#adc19fd855154831cdc80a8b006a5847d">kodi::vfs::CDirEntry::IsFolder</a></div><div class="ttdeci">bool IsFolder(void) const</div><div class="ttdoc">Used to check entry is folder.</div><div class="ttdef"><b>Definition:</b> Filesystem.h:590</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

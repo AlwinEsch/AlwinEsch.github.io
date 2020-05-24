@@ -1,5 +1,6 @@
 var group__cpp__kodi__addon__addonbase =
 [
+    [ "Definitions, structures and enumerators", "group__cpp__kodi__addon__addonbase___defs.html", "group__cpp__kodi__addon__addonbase___defs" ],
     [ "ADDON_STATUS", "group__cpp__kodi__addon__addonbase.html#ga335347495ed00620451a69cfe3494502", [
       [ "ADDON_STATUS_OK", "group__cpp__kodi__addon__addonbase.html#gga335347495ed00620451a69cfe3494502a6925909b93ca05098ca5272f16e091c0", null ],
       [ "ADDON_STATUS_LOST_CONNECTION", "group__cpp__kodi__addon__addonbase.html#gga335347495ed00620451a69cfe3494502a51393b8c3a7a1b1c42e19dfd307c8a77", null ],
@@ -21,6 +22,7 @@ var group__cpp__kodi__addon__addonbase =
       [ "ADDON_INSTANCE_IMAGEDECODER", "group__cpp__kodi__addon__addonbase.html#ggada0b4c3c9f9c168e5e1c27145ec72357af633457378bc77dd8fc147968ab6fb7b", null ],
       [ "ADDON_INSTANCE_VIDEOCODEC", "group__cpp__kodi__addon__addonbase.html#ggada0b4c3c9f9c168e5e1c27145ec72357addcf98e1d3580c6e6859334fc23e8409", null ]
     ] ],
-    [ "CreateInstance", "group__cpp__kodi__addon__addonbase.html#gaf631a0baf9f9a3aeec8cdac18817e5ab", null ],
+    [ "SetSetting", "group__cpp__kodi__addon__addonbase.html#ga1729a597265408b52198edba006e00fd", null ],
+    [ "CreateInstance", "group__cpp__kodi__addon__addonbase.html#ga74ea538a2191541a57115fa89790358c", null ],
     [ "DestroyInstance", "group__cpp__kodi__addon__addonbase.html#gaf503045d18aaaef1e68796c8d14fff0a", null ]
 ];

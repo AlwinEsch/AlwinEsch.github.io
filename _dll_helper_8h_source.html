@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('_dll_helper_8h_source.html',''); initR
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    m_dll = dlopen(path.c_str(), RTLD_LAZY);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (m_dll == <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      kodi::Log(ADDON_LOG_ERROR, <span class="stringliteral">&quot;Unable to load %s&quot;</span>, dlerror());</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;Unable to load %s&quot;</span>, dlerror());</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('_dll_helper_8h_source.html',''); initR
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    functionPtr = <span class="keyword">reinterpret_cast&lt;</span>T<span class="keyword">&gt;</span>(dlsym(m_dll, strFunctionPtr));</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (functionPtr == <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      kodi::Log(ADDON_LOG_ERROR, <span class="stringliteral">&quot;Unable to assign function %s&quot;</span>, dlerror());</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <a class="code" href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;Unable to assign function %s&quot;</span>, dlerror());</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -159,6 +159,8 @@ $(document).ready(function(){initNavTree('_dll_helper_8h_source.html',''); initR
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_c_dll_helper_html_a78620e0a96f9b4aed23a760b9ae96b2d"><div class="ttname"><a href="class_c_dll_helper.html#a78620e0a96f9b4aed23a760b9ae96b2d">CDllHelper::LoadDll</a></div><div class="ttdeci">bool LoadDll(const std::string &amp;path)</div><div class="ttdoc">Function to load requested library.</div><div class="ttdef"><b>Definition:</b> DllHelper.h:88</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs___addon_log_html_gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768"><div class="ttname"><a href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a></div><div class="ttdeci">@ ADDON_LOG_ERROR</div><div class="ttdoc">3 : To report error messages in the log file.</div><div class="ttdef"><b>Definition:</b> addon_base.h:129</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_gab3a67917537eaaf1ea958b95e5a3e9d1"><div class="ttname"><a href="group__cpp__kodi.html#gab3a67917537eaaf1ea958b95e5a3e9d1">kodi::Log</a></div><div class="ttdeci">void Log(const AddonLog loglevel, const char *format,...)</div><div class="ttdoc">Add a message to Kodi's log.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:640</div></div>
 <div class="ttc" id="aclass_c_dll_helper_html"><div class="ttname"><a href="class_c_dll_helper.html">CDllHelper</a></div><div class="ttdoc">Class to help with load of shared library functions.</div><div class="ttdef"><b>Definition:</b> DllHelper.h:74</div></div>
 <div class="ttc" id="aclass_c_dll_helper_html_aa9382313baaf2d673c753130a55d3de5"><div class="ttname"><a href="class_c_dll_helper.html#aa9382313baaf2d673c753130a55d3de5">CDllHelper::RegisterSymbol</a></div><div class="ttdeci">bool RegisterSymbol(T &amp;functionPtr, const char *strFunctionPtr)</div><div class="ttdoc">Function to register requested library symbol.</div><div class="ttdef"><b>Definition:</b> DllHelper.h:105</div></div>
 <!-- start footer part -->

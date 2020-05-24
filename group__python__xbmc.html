@@ -148,7 +148,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.log(msg[, level]) </big></font></span></code></h4><hr>   Write a string to Kodi's log file and the debug window. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.log(msg[, level]) </big></font></span></code></h4>   Write a string to Kodi's log file and the debug window. </p>
 <h2>@param msg string - text to output. @param level [opt] integer - log level to output at. <em>(default=LOGDEBUG)</em>    Value:  Description:    xbmc.LOGDEBUG  In depth information about the status of Kodi. This information can pretty much only be deciphered by a developer or long time Kodi power user.    xbmc.LOGINFO  Something has happened. It's not a problem, we just thought you might want to know. Fairly excessive output that most people won't care about.    xbmc.LOGWARNING  Something potentially bad has happened. If Kodi did something you didn't expect, this is probably why. Watch for errors to follow.    xbmc.LOGERROR  This event is bad. Something has failed. You likely noticed problems with the application be it skin artifacts, failure of playback a crash, etc.    xbmc.LOGFATAL  We're screwed. Kodi is about to crash.    @note Addon developers are advised to keep <code>LOGDEBUG</code> as the default logging level and to use conservative logging (log only if needed). Excessive logging makes it harder to debug kodi itself.  Logging in kodi has a global configuration level that controls how text is written to the log. This global logging behaviour can be changed in the GUI (<b>Settings -&gt; System -&gt; Logging</b>) (debug toggle) or furthered configured in advancedsettings (loglevel setting).  Text is written to the log for the following conditions:conditionsloglevel == -1 (NONE, nothing at all is logged to the log))loglevel == 0 (NORMAL, shows <code>LOGINFO</code>, <code>LOGWARNING</code>, <code>LOGERROR</code> and <code>LOGFATAL</code>) - Default kodi behaviourbehaviourloglevel == 1 (DEBUG, shows all) - Behaviour if you toggle debug log in the GUI  \xrefitem python_v17 11. \xrefitem python_v19 11.  <b>Example:</b> @code{py} .. xbmc.log(msg='This is a test string.', level=xbmc.LOGDEBUG); .. @endcode </h2>
 
 </div>
@@ -168,7 +168,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.shutdown() </big></font></span></code></h4><hr>   Shutdown the htpc. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.shutdown() </big></font></span></code></h4>   Shutdown the htpc. </p>
 <h2><b>Example:</b> @code{py} .. xbmc.shutdown() .. @endcode </h2>
 
 </div>
@@ -188,7 +188,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.restart() </big></font></span></code></h4><hr>   Restart the htpc. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.restart() </big></font></span></code></h4>   Restart the htpc. </p>
 <h2><b>Example:</b> @code{py} .. xbmc.restart() .. @endcode </h2>
 
 </div>
@@ -209,7 +209,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.executescript(script) </big></font></span></code></h4><hr>   Execute a python script. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.executescript(script) </big></font></span></code></h4>   Execute a python script. </p>
 <h2>@param script string - script filename to execute.   <b>Example:</b> @code{py} .. xbmc.executescript('special://home/scripts/update.py') .. @endcode </h2>
 
 </div>
@@ -230,7 +230,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.executebuiltin(function) </big></font></span></code></h4><hr>   Execute a built in Kodi function. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.executebuiltin(function) </big></font></span></code></h4>   Execute a built in Kodi function. </p>
 <h2>@param function string - builtin function to execute.  \ref page_List_of_built_in_functions "List of builtin functions"   <b>Example:</b> @code{py} .. xbmc.executebuiltin('Skin.SetString(abc,def)') .. @endcode </h2>
 
 </div>
@@ -251,7 +251,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.executeJSONRPC(jsonrpccommand) </big></font></span></code></h4><hr>   Execute an JSONRPC command. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.executeJSONRPC(jsonrpccommand) </big></font></span></code></h4>   Execute an JSONRPC command. </p>
 <h2>@param jsonrpccommand string - jsonrpc command to execute. @return jsonrpc return string   <b>Example:</b> @code{py} .. response = xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "JSONRPC.Introspect", "id": 1 }') .. @endcode </h2>
 
 </div>
@@ -272,7 +272,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.sleep(time) </big></font></span></code></h4><hr>   Sleeps for 'time' (msec). </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.sleep(time) </big></font></span></code></h4>   Sleeps for 'time' (msec). </p>
 <h2><a class="anchor" id="xbmc_Sleep"></a> @param time integer - number of msec to sleep.  @throws PyExc_TypeError If time is not an integer.  @warning This is useful if you need to sleep for a small amount of time (milisecond range) somewhere in your addon logic. Please note that Kodi will attempt to stop any running scripts when signaled to exit and wait for a maximum of 5 seconds before trying to force stop your script. If your addon makes use of \ref xbmc_Sleep "xbmc.sleep()" incorrectly (long periods of time, e.g. that exceed the force stop waiting time) it may lead to Kodi hanging on shutdown. In case your addon needs long sleep/idle periods use \ref xbmc_Monitor_waitForAbort "xbmc.Monitor().waitForAbort(secs)" instead.   <b>Example:</b> @code{py} .. xbmc.sleep(2000) # sleeps for 2 seconds .. @endcode </h2>
 
 </div>
@@ -293,7 +293,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getLocalizedString(id) </big></font></span></code></h4><hr>   Get a localized 'unicode string'. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getLocalizedString(id) </big></font></span></code></h4>   Get a localized 'unicode string'. </p>
 <h2>@param id integer - id# for string you want to localize. @return Localized 'unicode string'  @note See strings.po in <code>\language\{yourlanguage}\</code> for which id you need for a string.   <b>Example:</b> @code{py} .. locstr = xbmc.getLocalizedString(6) .. @endcode </h2>
 
 </div>
@@ -313,7 +313,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getSkinDir() </big></font></span></code></h4><hr>   Get the active skin directory. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getSkinDir() </big></font></span></code></h4>   Get the active skin directory. </p>
 <h2>@return The active skin directory as a string  @note This is not the full path like 'special://home/addons/MediaCenter', but only 'MediaCenter'.   <b>Example:</b> @code{py} .. skindir = xbmc.getSkinDir() .. @endcode </h2>
 
 </div>
@@ -334,7 +334,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getLanguage([format], [region]) </big></font></span></code></h4><hr>   Get the active language. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getLanguage([format], [region]) </big></font></span></code></h4>   Get the active language. </p>
 <h2>@param format [opt] format of the returned language string    Value  Description    xbmc.ISO_639_1  Two letter code as defined in ISO 639-1    xbmc.ISO_639_2  Three letter code as defined in ISO 639-2/T or ISO 639-2/B    xbmc.ENGLISH_NAME  Full language name in English (default)   @param region [opt] append the region delimited by "-" of the language (setting) to the returned language string @return The active language as a string  \xrefitem python_v13 8.  <b>Example:</b> @code{py} .. language = xbmc.getLanguage(xbmc.ENGLISH_NAME) .. @endcode </h2>
 
 </div>
@@ -354,7 +354,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getIPAddress() </big></font></span></code></h4><hr>   Get the current ip address. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getIPAddress() </big></font></span></code></h4>   Get the current ip address. </p>
 <h2>@return The current ip address as a string   <b>Example:</b> @code{py} .. ip = xbmc.getIPAddress() .. @endcode </h2>
 
 </div>
@@ -374,7 +374,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getDVDState() </big></font></span></code></h4><hr>   Returns the dvd state as an integer. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getDVDState() </big></font></span></code></h4>   Returns the dvd state as an integer. </p>
 <h2>@return Values for state are:    Value  Name    1  xbmc.DRIVE_NOT_READY    16  xbmc.TRAY_OPEN    64  xbmc.TRAY_CLOSED_NO_MEDIA    96  xbmc.TRAY_CLOSED_MEDIA_PRESENT     <b>Example:</b> @code{py} .. dvdstate = xbmc.getDVDState() .. @endcode </h2>
 
 </div>
@@ -394,7 +394,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getFreeMem() </big></font></span></code></h4><hr>   Get amount of free memory in MB. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getFreeMem() </big></font></span></code></h4>   Get amount of free memory in MB. </p>
 <h2>@return The amount of free memory in MB as an integer   <b>Example:</b> @code{py} .. freemem = xbmc.getFreeMem() .. @endcode </h2>
 
 </div>
@@ -415,7 +415,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getInfoLabel(infotag) </big></font></span></code></h4><hr>   Get a info label </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getInfoLabel(infotag) </big></font></span></code></h4>   Get a info label </p>
 <h2>@param infotag string - infoTag for value you want returned. @return InfoLabel as a string  \ref modules__infolabels_boolean_conditions "List of InfoTags"   <b>Example:</b> @code{py} .. label = xbmc.getInfoLabel('Weather.Conditions') .. @endcode </h2>
 
 </div>
@@ -436,7 +436,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getInfoImage(infotag) </big></font></span></code></h4><hr>   Get filename including path to the InfoImage's thumbnail. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getInfoImage(infotag) </big></font></span></code></h4>   Get filename including path to the InfoImage's thumbnail. </p>
 <h2>@param infotag string - infotag for value you want returned @return Filename including path to the InfoImage's thumbnail as a string  List of InfoTags - <a href="http://kodi.wiki/view/InfoLabels">http://kodi.wiki/view/InfoLabels</a>   <b>Example:</b> @code{py} .. filename = xbmc.getInfoImage('Weather.Conditions') .. @endcode </h2>
 
 </div>
@@ -457,7 +457,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.playSFX(filename,[useCached]) </big></font></span></code></h4><hr>   Plays a wav file by filename </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.playSFX(filename,[useCached]) </big></font></span></code></h4>   Plays a wav file by filename </p>
 <h2>@param filename string - filename of the wav file to play @param useCached [opt] bool - False = Dump any previously cached wav associated with filename  \xrefitem python_v14 1.  <b>Example:</b> @code{py} .. xbmc.playSFX('special://xbmc/scripts/dingdong.wav') xbmc.playSFX('special://xbmc/scripts/dingdong.wav',False) .. @endcode </h2>
 
 </div>
@@ -477,7 +477,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.stopSFX() </big></font></span></code></h4><hr>   Stops wav file </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.stopSFX() </big></font></span></code></h4>   Stops wav file </p>
 <h2>\xrefitem python_v14 2.  <b>Example:</b> @code{py} .. xbmc.stopSFX() .. @endcode </h2>
 
 </div>
@@ -498,7 +498,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.enableNavSounds(yesNo) </big></font></span></code></h4><hr>   Enables/Disables nav sounds </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.enableNavSounds(yesNo) </big></font></span></code></h4>   Enables/Disables nav sounds </p>
 <h2>@param yesNo bool - enable (True) or disable (False) nav sounds   <b>Example:</b> @code{py} .. xbmc.enableNavSounds(True) .. @endcode </h2>
 
 </div>
@@ -519,7 +519,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getCondVisibility(condition) </big></font></span></code></h4><hr>   Get visibility conditions </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getCondVisibility(condition) </big></font></span></code></h4>   Get visibility conditions </p>
 <h2>@param condition string - condition to check @return True (if the condition is verified) or False (otherwise)  \ref modules__infolabels_boolean_conditions "List of boolean conditions"  @note You can combine two (or more) of the above settings by using <b>"+"</b> as an AND operator, <b>"|"</b> as an OR operator, <b>"!"</b> as a NOT operator, and <b>"["</b> and <b>"]"</b> to bracket expressions.   <b>Example:</b> @code{py} .. visible = xbmc.getCondVisibility('[Control.IsVisible(41) + !Control.IsVisible(12)]') .. @endcode </h2>
 
 </div>
@@ -539,7 +539,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getGlobalIdleTime() </big></font></span></code></h4><hr>   Get the elapsed idle time in seconds. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getGlobalIdleTime() </big></font></span></code></h4>   Get the elapsed idle time in seconds. </p>
 <h2>@return Elapsed idle time in seconds as an integer   <b>Example:</b> @code{py} .. t = xbmc.getGlobalIdleTime() .. @endcode </h2>
 
 </div>
@@ -560,7 +560,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getCacheThumbName(path) </big></font></span></code></h4><hr>   Get thumb cache filename. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getCacheThumbName(path) </big></font></span></code></h4>   Get thumb cache filename. </p>
 <h2>@param path string - path to file @return Thumb cache filename   <b>Example:</b> @code{py} .. thumb = xbmc.getCacheThumbName('f:\videos\movie.avi') .. @endcode </h2>
 
 </div>
@@ -581,7 +581,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.translatePath(path)  </big></font></span></code></h4><hr>   Returns the translated path. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.translatePath(path)  </big></font></span></code></h4>   Returns the translated path. </p>
 <h2>@param path string - Path to format @return Translated path  @note Only useful if you are coding for both Linux and Windows. e.g. Converts 'special://home' -&gt; '/home/[username]/.kodi' on Linux.   <b>Example:</b> @code{py} .. fpath = xbmc.translatePath('special://home') .. @endcode </h2>
 
 </div>
@@ -602,7 +602,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getCleanMovieTitle(path[, usefoldername]) </big></font></span></code></h4><hr>   Get clean movie title and year string if available. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getCleanMovieTitle(path[, usefoldername]) </big></font></span></code></h4>   Get clean movie title and year string if available. </p>
 <h2>@param path string - String to clean @param usefoldername [opt] bool - use folder names (defaults to false) @return Clean movie title and year string if available.   <b>Example:</b> @code{py} .. title, year = xbmc.getCleanMovieTitle('/path/to/moviefolder/test.avi', True) .. @endcode </h2>
 
 </div>
@@ -623,7 +623,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getRegion(id) </big></font></span></code></h4><hr>   Returns your regions setting as a string for the specified id. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getRegion(id) </big></font></span></code></h4>   Returns your regions setting as a string for the specified id. </p>
 <h2>@param id string - id of setting to return @return Region setting  @note choices are (dateshort, datelong, time, meridiem, tempunit, speedunit) You can use the above as keywords for arguments.   <b>Example:</b> @code{py} .. date_long_format = xbmc.getRegion('datelong') .. @endcode </h2>
 
 </div>
@@ -644,7 +644,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getSupportedMedia(media) </big></font></span></code></h4><hr>   Get the supported file types for the specific media. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getSupportedMedia(media) </big></font></span></code></h4>   Get the supported file types for the specific media. </p>
 <h2>@param media string - media type @return Supported file types for the specific media as a string  @note Media type can be (video, music, picture). The return value is a pipe separated string of filetypes (eg. '.mov |.avi').\n You can use the above as keywords for arguments.   <b>Example:</b> @code{py} .. mTypes = xbmc.getSupportedMedia('video') .. @endcode </h2>
 
 </div>
@@ -665,7 +665,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.skinHasImage(image) </big></font></span></code></h4><hr>   Check skin for presence of Image. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.skinHasImage(image) </big></font></span></code></h4>   Check skin for presence of Image. </p>
 <h2>@param image string - image filename @return True if the image file exists in the skin  @note If the media resides in a subfolder include it. (eg. home-myfiles\home-myfiles2.png). You can use the above as keywords for arguments.   <b>Example:</b> @code{py} .. exists = xbmc.skinHasImage('ButtonFocusedTexture.png') .. @endcode </h2>
 
 </div>
@@ -686,7 +686,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.startServer(typ, bStart, bWait) </big></font></span></code></h4><hr>   Start or stop a server. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.startServer(typ, bStart, bWait) </big></font></span></code></h4>   Start or stop a server. </p>
 <h2>@param typ integer - use SERVER_* constantsconstantsUsed format of the returned language string    Value  Description    xbmc.SERVER_WEBSERVER  <a href="http://kodi.wiki/view/Webserver">To control Kodi's builtin webserver</a>    xbmc.SERVER_AIRPLAYSERVER  <a href="http://kodi.wiki/view/AirPlay">AirPlay is a proprietary protocol stack/suite developed by Apple Inc.</a>    xbmc.SERVER_JSONRPCSERVER  <a href="http://kodi.wiki/view/JSON-RPC_API">Control JSON-RPC HTTP/TCP socket-based interface</a>    xbmc.SERVER_UPNPRENDERER  <a href="http://kodi.wiki/view/UPnP/Client">UPnP client (aka UPnP renderer)</a>    xbmc.SERVER_UPNPSERVER  <a href="http://kodi.wiki/view/UPnP/Server">Control built-in UPnP A/V media server (UPnP-server)</a>    xbmc.SERVER_EVENTSERVER  <a href="http://kodi.wiki/view/EventServer">Set eventServer part that accepts remote device input on all platforms</a>    xbmc.SERVER_ZEROCONF  <a href="http://kodi.wiki/view/Zeroconf">Control Kodi's Avahi Zeroconf</a>   @param bStart bool - start (True) or stop (False) a server @param bWait [opt] bool - wait on stop before returning (not supported by all servers) @return bool - True or False   <b>Example:</b> @code{py} .. xbmc.startServer(xbmc.SERVER_AIRPLAYSERVER, False) .. @endcode </h2>
 
 </div>
@@ -706,7 +706,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.audioSuspend() </big></font></span></code></h4><hr>   Suspend Audio engine. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.audioSuspend() </big></font></span></code></h4>   Suspend Audio engine. </p>
 <h2><b>Example:</b> @code{py} .. xbmc.audioSuspend() .. @endcode </h2>
 
 </div>
@@ -726,7 +726,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.audioResume() </big></font></span></code></h4><hr>   Resume Audio engine. </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.audioResume() </big></font></span></code></h4>   Resume Audio engine. </p>
 <h2><b>Example:</b> @code{py} .. xbmc.audioResume() .. @endcode </h2>
 
 </div>
@@ -746,7 +746,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getUserAgent() </big></font></span></code></h4><hr>   </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.getUserAgent() </big></font></span></code></h4>   </p>
 <h2>Returns Kodi's HTTP UserAgent string  @return HTTP user agent   <b>Example:</b> @code{py} .. xbmc.getUserAgent() .. @endcode  example output: Kodi/17.0-ALPHA1 (X11; Linux x86_64) Ubuntu/15.10 App_Bitness/64 Version/17.0-ALPHA1-Git:2015-12-23-5770d28 </h2>
 
 </div>
@@ -767,7 +767,7 @@ Modules</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.convertLanguage(language, format) </big></font></span></code></h4><hr>   </p>
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmc.convertLanguage(language, format) </big></font></span></code></h4>   </p>
 <h2>Returns the given language converted to the given format as a string. @param language string either as name in English, two letter code (ISO 639-1), or three letter code (ISO 639-2/T(B) @param format format of the returned language string    Value  Description    xbmc.ISO_639_1  Two letter code as defined in ISO 639-1    xbmc.ISO_639_2  Three letter code as defined in ISO 639-2/T or ISO 639-2/B    xbmc.ENGLISH_NAME  Full language name in English (default)   @return Converted Language string  \xrefitem python_v13 9.  <b>Example:</b> @code{py} .. language = xbmc.convertLanguage(English, xbmc.ISO_639_2) .. @endcode </h2>
 
 </div>

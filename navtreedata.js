@@ -45,14 +45,14 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_addon__rendering_control.html",
-"group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel.html#ga2e9eb372a46d80a2561b5ec944a00917",
-"group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording.html#ga6de2a204a54c6b4c4bae3671ec74399b",
-"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___p_v_r_timer_type_int_value.html#ga244b872d985380620cdfa7b6231aa187",
-"group__cpp__kodi__addon__pvr___streams___t_v.html#gae0d0967d5a544cdf164b6a3c92102ff9",
-"group__cpp__kodi__gui__controls___c_edit.html#gac0bffd1ac815193d85aa396fcfaf2397",
-"group__cpp__kodi__vfs___c_dir_entry.html#ga6d3512c2bf1852df289f91fea20603c1",
-"group__python__file.html#ga8ec9b4c6916b0ff50fe31a0bcd94e489",
-"group__python__xbmcgui__window__xml.html#gaf7ebe4e595b860cbd984df8dab1faaac"
+"group__cpp__kodi__addon__pvr___base.html#ga4b785a037667529aa782947cbd46d141",
+"group__cpp__kodi__addon__pvr___defs___recording___p_v_r___r_e_c_o_r_d_i_n_g___f_l_a_g.html#gae03cdca64371f0641fb8ad562647955a",
+"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga0e3253dc069333f944d586a5d3917eda",
+"group__cpp__kodi__addon__pvr___recordings.html#ga06ed6c8f14c03248cca61375e7dd2f7c",
+"group__cpp__kodi__gui___c_window.html#gabd56fda84238160597c9d9aa1ad09e29",
+"group__cpp__kodi__platform.html",
+"group__python___play_list.html#ga4f172777a0871dede5515fd016ae26e6",
+"group__python__xbmcgui__listitem.html#ga2fd98f8e9f11fa80350afd3e15cf2078"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

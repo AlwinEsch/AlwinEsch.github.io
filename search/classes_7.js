@@ -1,16 +1,15 @@
 var searchData=
 [
-  ['joystick_2298',['Joystick',['../classkodi_1_1addon_1_1_joystick.html',1,'kodi::addon']]],
-  ['joystick_5fdriver_5fbutton_2299',['JOYSTICK_DRIVER_BUTTON',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___b_u_t_t_o_n.html',1,'']]],
-  ['joystick_5fdriver_5fhat_2300',['JOYSTICK_DRIVER_HAT',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___h_a_t.html',1,'']]],
-  ['joystick_5fdriver_5fkey_2301',['JOYSTICK_DRIVER_KEY',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___k_e_y.html',1,'']]],
-  ['joystick_5fdriver_5fmotor_2302',['JOYSTICK_DRIVER_MOTOR',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_t_o_r.html',1,'']]],
-  ['joystick_5fdriver_5fmouse_5fbutton_2303',['JOYSTICK_DRIVER_MOUSE_BUTTON',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___b_u_t_t_o_n.html',1,'']]],
-  ['joystick_5fdriver_5fprimitive_2304',['JOYSTICK_DRIVER_PRIMITIVE',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___p_r_i_m_i_t_i_v_e.html',1,'']]],
-  ['joystick_5fdriver_5fprimitive_2e_5f_5funnamed_5f_5f_2305',['JOYSTICK_DRIVER_PRIMITIVE.__unnamed__',['../union_j_o_y_s_t_i_c_k___d_r_i_v_e_r___p_r_i_m_i_t_i_v_e_8____unnamed____.html',1,'']]],
-  ['joystick_5fdriver_5frelpointer_2306',['JOYSTICK_DRIVER_RELPOINTER',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___r_e_l_p_o_i_n_t_e_r.html',1,'']]],
-  ['joystick_5fdriver_5fsemiaxis_2307',['JOYSTICK_DRIVER_SEMIAXIS',['../struct_j_o_y_s_t_i_c_k___d_r_i_v_e_r___s_e_m_i_a_x_i_s.html',1,'']]],
-  ['joystick_5ffeature_2308',['JOYSTICK_FEATURE',['../struct_j_o_y_s_t_i_c_k___f_e_a_t_u_r_e.html',1,'']]],
-  ['joystick_5finfo_2309',['JOYSTICK_INFO',['../struct_j_o_y_s_t_i_c_k___i_n_f_o.html',1,'']]],
-  ['joystickfeature_2310',['JoystickFeature',['../classkodi_1_1addon_1_1_joystick_feature.html',1,'kodi::addon']]]
+  ['iaddoninstance_2365',['IAddonInstance',['../classkodi_1_1addon_1_1_i_addon_instance.html',1,'kodi::addon']]],
+  ['infotagmusic_2366',['InfoTagMusic',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_music.html',1,'XBMCAddon::xbmc']]],
+  ['infotagradiords_2367',['InfoTagRadioRDS',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_radio_r_d_s.html',1,'XBMCAddon::xbmc']]],
+  ['infotagvideo_2368',['InfoTagVideo',['../class_x_b_m_c_addon_1_1xbmc_1_1_info_tag_video.html',1,'XBMCAddon::xbmc']]],
+  ['inputstream_2369',['INPUTSTREAM',['../struct_i_n_p_u_t_s_t_r_e_a_m.html',1,'']]],
+  ['inputstream_5fcapabilities_2370',['INPUTSTREAM_CAPABILITIES',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html',1,'']]],
+  ['inputstream_5fcontentlight_5fmetadata_2371',['INPUTSTREAM_CONTENTLIGHT_METADATA',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_o_n_t_e_n_t_l_i_g_h_t___m_e_t_a_d_a_t_a.html',1,'']]],
+  ['inputstream_5fids_2372',['INPUTSTREAM_IDS',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_d_s.html',1,'']]],
+  ['inputstream_5finfo_2373',['INPUTSTREAM_INFO',['../struct_i_n_p_u_t_s_t_r_e_a_m___i_n_f_o.html',1,'']]],
+  ['inputstream_5fmastering_5fmetadata_2374',['INPUTSTREAM_MASTERING_METADATA',['../struct_i_n_p_u_t_s_t_r_e_a_m___m_a_s_t_e_r_i_n_g___m_e_t_a_d_a_t_a.html',1,'']]],
+  ['inputstream_5ftimes_2375',['INPUTSTREAM_TIMES',['../struct_i_n_p_u_t_s_t_r_e_a_m___t_i_m_e_s.html',1,'']]],
+  ['irenderhelper_2376',['IRenderHelper',['../structkodi_1_1gui_1_1_i_render_helper.html',1,'kodi::gui']]]
 ];

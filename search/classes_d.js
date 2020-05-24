@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['sselectionentry_2378',['SSelectionEntry',['../struct_s_selection_entry.html',1,'']]],
-  ['stat_2379',['Stat',['../class_x_b_m_c_addon_1_1xbmcvfs_1_1_stat.html',1,'XBMCAddon::xbmcvfs']]],
-  ['stat_5fstructure_2380',['STAT_STRUCTURE',['../group__cpp__kodi__vfs___defs.html#struct_s_t_a_t___s_t_r_u_c_t_u_r_e',1,'']]]
+  ['rendercapture_2457',['RenderCapture',['../class_x_b_m_c_addon_1_1xbmc_1_1_render_capture.html',1,'XBMCAddon::xbmc']]]
 ];

@@ -3,7 +3,7 @@ var group__cpp__kodi__addon__visualization =
     [ "class VisTrack", "group__cpp__kodi__addon__visualization___vis_track.html", null ],
     [ "Information functions", "group__cpp__kodi__addon__visualization___c_b.html", "group__cpp__kodi__addon__visualization___c_b" ],
     [ "CInstanceVisualization", "group__cpp__kodi__addon__visualization.html#gab77a4fc4d8b8c8cbb93f7a5632c5b5ee", null ],
-    [ "CInstanceVisualization", "group__cpp__kodi__addon__visualization.html#gab6ce5b7259d53ff3f97e236b906cb71d", null ],
+    [ "CInstanceVisualization", "group__cpp__kodi__addon__visualization.html#gafb30eb0829c52a091a4f67ffbe232c85", null ],
     [ "~CInstanceVisualization", "group__cpp__kodi__addon__visualization.html#gaa8c552b512f4584d475fc6f0ff031f7d", null ],
     [ "Start", "group__cpp__kodi__addon__visualization.html#gaa4ba9bea676e0bccf5bcc7ac33b80f49", null ],
     [ "Stop", "group__cpp__kodi__addon__visualization.html#gaf6f113a64b92a63894b285b4f2a2c3a5", null ],
