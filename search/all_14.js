@@ -15,7 +15,7 @@ var searchData=
   ['listitem_1247',['ListItem',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_list_item.html',1,'XBMCAddon::xbmcgui']]],
   ['listitemproperty_1248',['LISTITEMPROPERTY',['../struct_i_n_p_u_t_s_t_r_e_a_m.html#struct_i_n_p_u_t_s_t_r_e_a_m_1_1_l_i_s_t_i_t_e_m_p_r_o_p_e_r_t_y',1,'INPUTSTREAM']]],
   ['load_1249',['load',['../group__python___play_list.html#ga58df00a466baca2469ad8407c5534377',1,'XBMCAddon::xbmc::PlayList']]],
-  ['loaddll_1250',['LoadDll',['../class_c_dll_helper.html#a78620e0a96f9b4aed23a760b9ae96b2d',1,'CDllHelper']]],
+  ['loaddll_1250',['LoadDll',['../group__cpp__kodi__tools___c_dll_helper.html#ga4aedb3bb425d2cf810d2f98d4ddf32c3',1,'kodi::tools::CDllHelper']]],
   ['loadgame_1251',['LoadGame',['../classkodi_1_1addon_1_1_c_instance_game.html#ae57f40435a8996393b3b151586ca8d19',1,'kodi::addon::CInstanceGame']]],
   ['loadgamespecial_1252',['LoadGameSpecial',['../classkodi_1_1addon_1_1_c_instance_game.html#a024f7ff502652263acdc28d5086e0ca6',1,'kodi::addon::CInstanceGame']]],
   ['loadimagefrommemory_1253',['LoadImageFromMemory',['../group__cpp__kodi__addon__imagedecoder.html#ga8b45c32858ccb4a32f874abe2ca2c409',1,'kodi::addon::CInstanceImageDecoder']]],

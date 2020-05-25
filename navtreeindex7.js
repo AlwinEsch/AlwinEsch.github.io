@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"group__python___play_list.html":[6,1,0,5],
+"group__python___play_list.html#ga2c737a7d7cded298377ca2aeda23d3ab":[6,1,0,5,3],
 "group__python___play_list.html#ga4f172777a0871dede5515fd016ae26e6":[6,1,0,5,1],
 "group__python___play_list.html#ga58df00a466baca2469ad8407c5534377":[6,1,0,5,2],
 "group__python___play_list.html#ga775bfb88c1bb7975d67f277eade2a1b7":[6,1,0,5,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "group__python__xbmcgui__listitem.html#ga240f1deb93fc70eeffb671445781ae1f":[6,1,1,1,29],
 "group__python__xbmcgui__listitem.html#ga2427c41a5cdc6069d42ecd582cf7d78d":[6,1,1,1,23],
 "group__python__xbmcgui__listitem.html#ga24a6b65440083e83e67e5d0fb3379369":[6,1,1,1,27],
-"group__python__xbmcgui__listitem.html#ga2887792e8b30d1fd4e5f83d27694225d":[6,1,1,1,14],
-"group__python__xbmcgui__listitem.html#ga29777336ef26b461359666cc8ec8b2bd":[6,1,1,1,22],
-"group__python__xbmcgui__listitem.html#ga2f4e9085bf705ae1bff96b466e3927a6":[6,1,1,1,5]
+"group__python__xbmcgui__listitem.html#ga2887792e8b30d1fd4e5f83d27694225d":[6,1,1,1,14]
 };

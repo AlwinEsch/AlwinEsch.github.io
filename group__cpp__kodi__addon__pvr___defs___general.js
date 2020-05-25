@@ -1,5 +1,6 @@
 var group__cpp__kodi__addon__pvr___defs___general =
 [
+    [ "class PVRTypeIntValue", "group__cpp__kodi__addon__pvr___defs___p_v_r_type_int_value.html", "group__cpp__kodi__addon__pvr___defs___p_v_r_type_int_value" ],
     [ "class PVRCapabilities", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities" ],
     [ "class PVRStreamProperty & definition PVR_STREAM_PROPERTY", "group__cpp__kodi__addon__pvr___defs___general___inputstream.html", "group__cpp__kodi__addon__pvr___defs___general___inputstream" ],
     [ "enum PVR_ERROR", "group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html", "group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r" ],

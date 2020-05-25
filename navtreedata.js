@@ -47,12 +47,12 @@ var NAVTREEINDEX =
 "_addon__rendering_control.html",
 "group__cpp__kodi__addon__pvr___base.html#ga4b785a037667529aa782947cbd46d141",
 "group__cpp__kodi__addon__pvr___defs___recording___p_v_r___r_e_c_o_r_d_i_n_g___f_l_a_g.html#gae03cdca64371f0641fb8ad562647955a",
-"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html#ga0e3253dc069333f944d586a5d3917eda",
-"group__cpp__kodi__addon__pvr___recordings.html#ga06ed6c8f14c03248cca61375e7dd2f7c",
-"group__cpp__kodi__gui___c_window.html#gabd56fda84238160597c9d9aa1ad09e29",
-"group__cpp__kodi__platform.html",
-"group__python___play_list.html#ga4f172777a0871dede5515fd016ae26e6",
-"group__python__xbmcgui__listitem.html#ga2fd98f8e9f11fa80350afd3e15cf2078"
+"group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type.html",
+"group__cpp__kodi__addon__pvr___recordings.html#ga4449397dac24ff7736b693e2d63f5608",
+"group__cpp__kodi__gui___c_window.html#gaed1cf9288647970fe4198369cae0fdfc",
+"group__cpp__kodi__settings.html#ga0f014aac138ad1d8ac51e5ecfb15e4d5",
+"group__python___play_list.html",
+"group__python__xbmcgui__listitem.html#ga29777336ef26b461359666cc8ec8b2bd"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

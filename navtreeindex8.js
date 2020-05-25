@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"group__python__xbmcgui__listitem.html#ga29777336ef26b461359666cc8ec8b2bd":[6,1,1,1,22],
+"group__python__xbmcgui__listitem.html#ga2f4e9085bf705ae1bff96b466e3927a6":[6,1,1,1,5],
 "group__python__xbmcgui__listitem.html#ga2fd98f8e9f11fa80350afd3e15cf2078":[6,1,1,1,17],
 "group__python__xbmcgui__listitem.html#ga30c5c67b2bf8e2e2ccc7e361faa20afe":[6,1,1,1,28],
 "group__python__xbmcgui__listitem.html#ga35824a2f064ca06e0e75900b30aa6fa4":[6,1,1,1,30],

@@ -279,7 +279,7 @@ $(document).ready(function(){initNavTree('_filesystem_8h_source.html',''); initR
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">if</span> (!m_handle.handle)</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      <span class="keywordflow">return</span> std::vector&lt;std::string&gt;();</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordtype">int</span> numValues;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordtype">int</span> numValues = 0;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordtype">char</span>** res(m_handle.get_values(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, m_handle.handle,</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                                   param.c_str(), &amp;numValues));</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">if</span> (res)</div>
@@ -831,7 +831,7 @@ $(document).ready(function(){initNavTree('_filesystem_8h_source.html',''); initR
 <div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;{</div>
 <div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160;  <span class="keyword">using namespace </span>::kodi::addon;</div>
 <div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160; </div>
-<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;  <span class="keywordtype">char</span>* cMimeType;</div>
+<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;  <span class="keywordtype">char</span>* cMimeType = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;  <span class="keywordtype">bool</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_filesystem-&gt;get_mime_type(</div>
 <div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, url.c_str(), &amp;cMimeType, useragent.c_str());</div>
 <div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;  <span class="keywordflow">if</span> (cMimeType != <span class="keyword">nullptr</span>)</div>
@@ -851,7 +851,7 @@ $(document).ready(function(){initNavTree('_filesystem_8h_source.html',''); initR
 <div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;{</div>
 <div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160;  <span class="keyword">using namespace </span>::kodi::addon;</div>
 <div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160; </div>
-<div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;  <span class="keywordtype">char</span>* cContent;</div>
+<div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;  <span class="keywordtype">char</span>* cContent = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;  <span class="keywordtype">bool</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_filesystem-&gt;get_content_type(</div>
 <div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, url.c_str(), &amp;cContent, useragent.c_str());</div>
 <div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;  <span class="keywordflow">if</span> (cContent != <span class="keyword">nullptr</span>)</div>
@@ -869,7 +869,7 @@ $(document).ready(function(){initNavTree('_filesystem_8h_source.html',''); initR
 <div class="line"><a name="l01670"></a><span class="lineno"> 1670</span>&#160;{</div>
 <div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;  <span class="keyword">using namespace </span>::kodi::addon;</div>
 <div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160; </div>
-<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;  <span class="keywordtype">char</span>* cCookies;</div>
+<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;  <span class="keywordtype">char</span>* cCookies = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;  <span class="keywordtype">bool</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_filesystem-&gt;get_cookies(</div>
 <div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, url.c_str(), &amp;cCookies);</div>
 <div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;  <span class="keywordflow">if</span> (cCookies != <span class="keyword">nullptr</span>)</div>
@@ -1209,7 +1209,7 @@ $(document).ready(function(){initNavTree('_filesystem_8h_source.html',''); initR
 <div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;                <span class="stringliteral">&quot;kodi::vfs::CURLCreate(...) needed to call before GetPropertyValues!&quot;</span>);</div>
 <div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160;      <span class="keywordflow">return</span> std::vector&lt;std::string&gt;();</div>
 <div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;    }</div>
-<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;    <span class="keywordtype">int</span> numValues;</div>
+<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;    <span class="keywordtype">int</span> numValues = 0;</div>
 <div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;    <span class="keywordtype">char</span>** res(CAddonBase::m_interface-&gt;toKodi-&gt;kodi_filesystem-&gt;get_property_values(</div>
 <div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;        CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, m_file, type, name.c_str(), &amp;numValues));</div>
 <div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;    <span class="keywordflow">if</span> (res)</div>
