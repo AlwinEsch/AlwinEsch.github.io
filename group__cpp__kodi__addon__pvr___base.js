@@ -12,7 +12,7 @@ var group__cpp__kodi__addon__pvr___base =
     [ "GetConnectionString", "group__cpp__kodi__addon__pvr___base.html#ga83b936465f53513ec79b854bd5769b06", null ],
     [ "GetDriveSpace", "group__cpp__kodi__addon__pvr___base.html#ga89cc357f5b4d762f326f849705c6267b", null ],
     [ "CallSettingsMenuHook", "group__cpp__kodi__addon__pvr___base.html#ga6fdcaaac4214717f27e7101e20e64e77", null ],
-    [ "AddMenuHook", "group__cpp__kodi__addon__pvr___base.html#ga22e633d2436a3de01bd1340fc670f4bc", null ],
+    [ "AddMenuHook", "group__cpp__kodi__addon__pvr___base.html#ga49efd2c6668f56457dd4fbe1361e5479", null ],
     [ "ConnectionStateChange", "group__cpp__kodi__addon__pvr___base.html#ga8f7dcc9f4e59941cbdbfd47f9a7807fd", null ],
     [ "UserPath", "group__cpp__kodi__addon__pvr___base.html#gad850ea86af3d01e6520889ab61e398aa", null ],
     [ "ClientPath", "group__cpp__kodi__addon__pvr___base.html#ga346514e04250b8f8123c5ea1d70385fd", null ]

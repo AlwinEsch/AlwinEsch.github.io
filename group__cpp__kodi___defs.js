@@ -1,5 +1,6 @@
 var group__cpp__kodi___defs =
 [
+    [ "using HardwareContext", "group__cpp__kodi___defs___hardware_context.html", null ],
     [ "enum AddonLog", "group__cpp__kodi___defs___addon_log.html", "group__cpp__kodi___defs___addon_log" ],
     [ "StdKbButtons", "group__cpp__kodi___defs.html#gae0eb66cdc2244c78a912b68c09a04fee", [
       [ "STD_KB_BUTTONS_PER_ROW", "group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465", null ],

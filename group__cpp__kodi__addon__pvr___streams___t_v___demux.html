@@ -94,6 +94,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___streams
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
   <div class="headertitle">
 <div class="title">8.1.1. Stream demuxing<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__addon.html">Interface - kodi::addon</a> &raquo; <a class="el" href="group__cpp__kodi__addon__instances.html">Addon type instances</a> &raquo; <a class="el" href="group__cpp__kodi__addon__pvr.html">PVR</a> &raquo; <a class="el" href="group__cpp__kodi__addon__pvr___streams.html">8. Inputstream</a> &raquo; <a class="el" href="group__cpp__kodi__addon__pvr___streams___t_v.html">8.1. TV stream</a></div></div>  </div>
 </div><!--header-->
@@ -101,7 +103,65 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___streams
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b>PVR stream demuxing</b><br  />
  Read TV streams with own demux within addon. </p>
-<p>This is only on Live TV streams and only if <a class="el" href="group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga37e512c476430c8024dabdab6e1d10ad">PVRCapabilities::SetHandlesDemuxing()</a> has been set to "true". </p>
+<p>This is only on Live TV streams and only if <a class="el" href="group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga37e512c476430c8024dabdab6e1d10ad">PVRCapabilities::SetHandlesDemuxing()</a> has been set to "true".</p>
+<hr  />
+<p><b>Stream demuxing parts in interface:</b><br  />
+ Copy this to your project and extend with your parts or leave functions complete away where not used or supported.</p>
+<p><em>Header parts:</em> </p><div class="fragment"><div class="line"><a class="code" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#ga4cf1fba691fffe5b92e8f27159673894">PVR_ERROR</a> <a class="code" href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#ga1fd75b1bd90c187e8102cbea6f0dbe71">GetStreamProperties</a>(std::vector&lt;kodi::addon::PVRStreamProperties&gt;&amp; properties) <span class="keyword">override</span>;</div>
+<div class="line"><a class="code" href="struct_demux_packet.html">DemuxPacket</a>* <a class="code" href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gad2c257fded197ec1a78bf3c9d9f9fa78">DemuxRead</a>() <span class="keyword">override</span>;</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#ga4e1a9156a48ad4536be348fb698bc996">DemuxReset</a>() <span class="keyword">override</span>;</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#ga9ba868e65400538851ce66f19d901191">DemuxAbort</a>() <span class="keyword">override</span>;</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gaaae5d8cdca2d570c01adcf7c7b5e8f75">DemuxFlush</a>() <span class="keyword">override</span>;</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gab20d7d09d75d3f1bf568e7d5475893bb">SetSpeed</a>(<span class="keywordtype">int</span> speed) <span class="keyword">override</span>;</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code" href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gad0da869e469d14f0f4dadea8ddffd55c">FillBuffer</a>(<span class="keywordtype">bool</span> mode) <span class="keyword">override</span>;</div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code" href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gaaddb2d9abd54c4db90cc98fa2a7ad925">SeekTime</a>(<span class="keywordtype">double</span> time, <span class="keywordtype">bool</span> backwards, <span class="keywordtype">double</span>&amp; startpts) <span class="keyword">override</span>;</div>
+</div><!-- fragment --><p> <em>Source parts:</em> </p><div class="fragment"><div class="line"><a class="code" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#ga4cf1fba691fffe5b92e8f27159673894">PVR_ERROR</a> CMyInstance::GetStreamProperties(std::vector&lt;kodi::addon::PVRStreamProperties&gt;&amp; properties)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code" href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#gga4cf1fba691fffe5b92e8f27159673894a74b91c0db41b0e83f772e2f21bdd388f">PVR_ERROR_NOT_IMPLEMENTED</a>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="struct_demux_packet.html">DemuxPacket</a>* CMyInstance::DemuxRead()</div>
+<div class="line">{</div>
+<div class="line">   <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> CMyInstance::DemuxReset()</div>
+<div class="line">{</div>
+<div class="line">  </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> CMyInstance::DemuxAbort()</div>
+<div class="line">{</div>
+<div class="line">  </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> CMyInstance::DemuxFlush()</div>
+<div class="line">{</div>
+<div class="line">  </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> CMyInstance::SetSpeed(<span class="keywordtype">int</span> speed)</div>
+<div class="line">{</div>
+<div class="line">  </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> CMyInstance::FillBuffer(<span class="keywordtype">bool</span> mode)</div>
+<div class="line">{</div>
+<div class="line">  </div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> CMyInstance::SeekTime(<span class="keywordtype">double</span> time, <span class="keywordtype">bool</span> backwards, <span class="keywordtype">double</span>&amp; startpts)</div>
+<div class="line">{</div>
+<div class="line">   <span class="keywordflow">return</span> <span class="keyword">false</span>; </div>
+<div class="line">}</div>
+</div><!-- fragment --> <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group__cpp__kodi__addon__pvr___streams___t_v___demux__header__addon__auto__check"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__pvr___streams___t_v___demux__header__addon__auto__check.html">Group header include</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__cpp__kodi__addon__pvr___streams___t_v___demux__source__addon__auto__check"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__pvr___streams___t_v___demux__source__addon__auto__check.html">Group source include</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga1fd75b1bd90c187e8102cbea6f0dbe71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1fd75b1bd90c187e8102cbea6f0dbe71">&#9670;&nbsp;</a></span>GetStreamProperties()</h2>
@@ -163,7 +223,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__pvr___streams
 </div><div class="memdoc">
 
 <p>Read the next packet from the demultiplexer, if there is one. </p>
-<dl class="section return"><dt>Returns</dt><dd>The next packet. If there is no next packet, then the add-on should return the packet created by calling AllocateDemuxPacket(0) on the callback. If the stream changed and Kodi's player needs to be reinitialised, then, the add-on should call AllocateDemuxPacket(0) on the callback, and set the streamid to DMX_SPECIALID_STREAMCHANGE and return the value. The add-on should return <code>nullptr</code> if an error occured.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The next packet. If there is no next packet, then the add-on should return the packet created by calling AllocateDemuxPacket(0) on the callback. If the stream changed and Kodi's player needs to be reinitialised, then, the add-on should call AllocateDemuxPacket(0) on the callback, and set the streamid to DMX_SPECIALID_STREAMCHANGE and return the value. The add-on should return <code>nullptr</code> if an error occurred.</dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>Required, and only used if addon has its own demuxer. Return <code>nullptr</code> if this add-on won't provide this function. </dd></dl>
 
 </div>
@@ -488,6 +548,17 @@ Free a packet that was allocated with <a class="el" href="group__cpp__kodi__addo
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="agroup__cpp__kodi__addon__pvr___streams___t_v___demux_html_gab20d7d09d75d3f1bf568e7d5475893bb"><div class="ttname"><a href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gab20d7d09d75d3f1bf568e7d5475893bb">kodi::addon::CInstancePVRClient::SetSpeed</a></div><div class="ttdeci">virtual void SetSpeed(int speed)</div><div class="ttdoc">Notify the pvr addon/demuxer that Kodi wishes to change playback speed.</div><div class="ttdef"><b>Definition:</b> PVR.h:2363</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__pvr___streams___t_v___demux_html_ga4e1a9156a48ad4536be348fb698bc996"><div class="ttname"><a href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#ga4e1a9156a48ad4536be348fb698bc996">kodi::addon::CInstancePVRClient::DemuxReset</a></div><div class="ttdeci">virtual void DemuxReset()</div><div class="ttdoc">Reset the demultiplexer in the add-on.</div><div class="ttdef"><b>Definition:</b> PVR.h:2335</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__pvr___streams___t_v___demux_html_ga9ba868e65400538851ce66f19d901191"><div class="ttname"><a href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#ga9ba868e65400538851ce66f19d901191">kodi::addon::CInstancePVRClient::DemuxAbort</a></div><div class="ttdeci">virtual void DemuxAbort()</div><div class="ttdoc">Abort the demultiplexer thread in the add-on.</div><div class="ttdef"><b>Definition:</b> PVR.h:2343</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__pvr___streams___t_v___demux_html_gaaddb2d9abd54c4db90cc98fa2a7ad925"><div class="ttname"><a href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gaaddb2d9abd54c4db90cc98fa2a7ad925">kodi::addon::CInstancePVRClient::SeekTime</a></div><div class="ttdeci">virtual bool SeekTime(double time, bool backwards, double &amp;startpts)</div><div class="ttdoc">Notify the pvr addon/demuxer that Kodi wishes to seek the stream by time.</div><div class="ttdef"><b>Definition:</b> PVR.h:2388</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__pvr___streams___t_v___demux_html_gad2c257fded197ec1a78bf3c9d9f9fa78"><div class="ttname"><a href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gad2c257fded197ec1a78bf3c9d9f9fa78">kodi::addon::CInstancePVRClient::DemuxRead</a></div><div class="ttdeci">virtual DemuxPacket * DemuxRead()</div><div class="ttdoc">Read the next packet from the demultiplexer, if there is one.</div><div class="ttdef"><b>Definition:</b> PVR.h:2327</div></div>
+<div class="ttc" id="astruct_demux_packet_html"><div class="ttname"><a href="struct_demux_packet.html">DemuxPacket</a></div><div class="ttdef"><b>Definition:</b> DemuxPacket.h:27</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__pvr___streams___t_v___demux_html_gaaae5d8cdca2d570c01adcf7c7b5e8f75"><div class="ttname"><a href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gaaae5d8cdca2d570c01adcf7c7b5e8f75">kodi::addon::CInstancePVRClient::DemuxFlush</a></div><div class="ttdeci">virtual void DemuxFlush()</div><div class="ttdoc">Flush all data that's currently in the demultiplexer buffer in the add-on.</div><div class="ttdef"><b>Definition:</b> PVR.h:2352</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__pvr___streams___t_v___demux_html_gad0da869e469d14f0f4dadea8ddffd55c"><div class="ttname"><a href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gad0da869e469d14f0f4dadea8ddffd55c">kodi::addon::CInstancePVRClient::FillBuffer</a></div><div class="ttdeci">virtual void FillBuffer(bool mode)</div><div class="ttdoc">Notify the pvr addon/demuxer that Kodi wishes to fill demux queue.</div><div class="ttdef"><b>Definition:</b> PVR.h:2373</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__pvr___streams___t_v___demux_html_ga1fd75b1bd90c187e8102cbea6f0dbe71"><div class="ttname"><a href="group__cpp__kodi__addon__pvr___streams___t_v___demux.html#ga1fd75b1bd90c187e8102cbea6f0dbe71">kodi::addon::CInstancePVRClient::GetStreamProperties</a></div><div class="ttdeci">virtual PVR_ERROR GetStreamProperties(std::vector&lt; kodi::addon::PVRStreamProperties &gt; &amp;properties)</div><div class="ttdoc">Get the stream properties of the stream that's currently being read.</div><div class="ttdef"><b>Definition:</b> PVR.h:2307</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r_html_gga4cf1fba691fffe5b92e8f27159673894a74b91c0db41b0e83f772e2f21bdd388f"><div class="ttname"><a href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#gga4cf1fba691fffe5b92e8f27159673894a74b91c0db41b0e83f772e2f21bdd388f">PVR_ERROR_NOT_IMPLEMENTED</a></div><div class="ttdeci">@ PVR_ERROR_NOT_IMPLEMENTED</div><div class="ttdoc">-2 : The method that Kodi called is not implemented by the add-on.</div><div class="ttdef"><b>Definition:</b> pvr_general.h:50</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r_html_ga4cf1fba691fffe5b92e8f27159673894"><div class="ttname"><a href="group__cpp__kodi__addon__pvr___defs___general___p_v_r___e_r_r_o_r.html#ga4cf1fba691fffe5b92e8f27159673894">PVR_ERROR</a></div><div class="ttdeci">PVR_ERROR</div><div class="ttdef"><b>Definition:</b> pvr_general.h:42</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

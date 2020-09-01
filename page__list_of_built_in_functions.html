@@ -129,14 +129,14 @@ Add-on built-in's</h1>
 </dl>
 </td></tr>
 <tr bgcolor="white">
-<td width="40%" align="left"><b><code>EnableAddon(id)</code></b> </td><td width="60%" align="left"><p class="starttd">Enable the specified plugin/script </p><dl class="params"><dt>Parameters</dt><dd>
+<td width="40%" align="left"><b><code>EnableAddon(id)</code></b> <a class="anchor" id="Builtin_EnableAddonId"></a></td><td width="60%" align="left"><p class="starttd">Enable the specified plugin/script </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>The add-on id </td></tr>
   </table>
   </dd>
 </dl>
 <hr  />
- <dl class="skinning_v19"><dt><b><a class="el" href="skinning_v19.html#_skinning_v19000090">v19 Skinning engine changes:</a></b></dt><dd><b>[New builtin]</b> </dd></dl>
+ <dl class="skinning_v19"><dt><b><a class="el" href="skinning_v19.html#_skinning_v19000105">v19 Skinning engine changes:</a></b></dt><dd><b>[New builtin]</b> <a class="el" href="page__list_of_built_in_functions.html#Builtin_EnableAddonId"><code>EnableAddon(id)</code></a> </dd></dl>
 <p class="endtd"></p>
 </td></tr>
 <tr bgcolor="white">
@@ -325,10 +325,11 @@ GUI built-in's</h1>
 </dl>
 </td></tr>
 <tr bgcolor="white">
-<td width="40%" align="left"><b><code>ActivateWindow(window[,dir])</code></b> </td><td width="60%" align="left">Opens the given window. The parameter window can either be the window's id, or in the case of a standard window, the window's name. See here for a list of window names, and their respective ids. If, furthermore, the window is Music, Video, Pictures, or Program files, then the optional dir parameter specifies which folder Kodi should default to once the window is opened. This must be a source as specified in sources.xml, or a subfolder of a valid source. For some windows (MusicLibrary and VideoLibrary), the return parameter may be specified, which indicates that Kodi should use this folder as the "root" of the level, and thus the "parent directory" action from within this folder will return the user to where they were prior to the window activating. <dl class="params"><dt>Parameters</dt><dd>
+<td width="40%" align="left"><b><code>ActivateWindow(window[,dir, return])</code></b> </td><td width="60%" align="left">Opens the given window. The parameter window can either be the window's id, or in the case of a standard window, the window's name. See here for a list of window names, and their respective ids. If, furthermore, the window is Music, Video, Pictures, or Program files, then the optional dir parameter specifies which folder Kodi should default to once the window is opened. This must be a source as specified in sources.xml, or a subfolder of a valid source. For some windows (MusicLibrary and VideoLibrary), a third parameter (return) may be specified, which indicates that Kodi should use this folder as the "root" of the level, and thus the "parent directory" action from within this folder will return the user to where they were prior to the window activating. <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">window</td><td>The window name. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>Window starting folder (optional).  </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>Window starting folder (optional). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">return</td><td>if dir should be used as the rootfolder of the level  </td></tr>
   </table>
   </dd>
 </dl>
@@ -710,38 +711,40 @@ Player built-in's</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">TempoDown </td><td class="markdownTableBodyLeft">Decreases playback speed </td><td class="markdownTableBodyLeft">none </td><td class="markdownTableBodyLeft">Kodi v18  </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Tempo(n) </td><td class="markdownTableBodyLeft">Sets playback speed to given value </td><td class="markdownTableBodyLeft">none </td><td class="markdownTableBodyLeft">Kodi v19  </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">BigSkipForward </td><td class="markdownTableBodyLeft">Big Skip Forward </td><td class="markdownTableBodyLeft">Big Skip Forward </td><td class="markdownTableBodyLeft">Kodi v15  </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">BigSkipBackward </td><td class="markdownTableBodyLeft">Big Skip Backward </td><td class="markdownTableBodyLeft">Big Skip Backward </td><td class="markdownTableBodyLeft">Kodi v15  </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">SmallSkipForward </td><td class="markdownTableBodyLeft">Small Skip Forward </td><td class="markdownTableBodyLeft">Small Skip Forward </td><td class="markdownTableBodyLeft">Kodi v15  </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">SmallSkipBackward </td><td class="markdownTableBodyLeft">Small Skip Backward </td><td class="markdownTableBodyLeft">Small Skip Backward </td><td class="markdownTableBodyLeft">Kodi v15  </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">SeekPercentage(n) </td><td class="markdownTableBodyLeft">Seeks to given percentage </td><td class="markdownTableBodyLeft">Seeks to given percentage </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Random * </td><td class="markdownTableBodyLeft">Toggle Random Playback </td><td class="markdownTableBodyLeft">Toggle Random Playback </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">RandomOn </td><td class="markdownTableBodyLeft">Sets 'Random' to 'on' </td><td class="markdownTableBodyLeft">Sets 'Random' to 'on' </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">RandomOff </td><td class="markdownTableBodyLeft">Sets 'Random' to 'off' </td><td class="markdownTableBodyLeft">Sets 'Random' to 'off' </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">Repeat * </td><td class="markdownTableBodyLeft">Cycles through repeat modes </td><td class="markdownTableBodyLeft">Cycles through repeat modes </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">RepeatOne </td><td class="markdownTableBodyLeft">Repeats a single video </td><td class="markdownTableBodyLeft">Repeats a single track </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">RepeatAll </td><td class="markdownTableBodyLeft">Repeat all videos in a list </td><td class="markdownTableBodyLeft">Repeats all tracks in a list </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">RepeatOff </td><td class="markdownTableBodyLeft">Sets 'Repeat' to 'off' </td><td class="markdownTableBodyLeft">Sets 'Repeat' to 'off' </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">Partymode(music) ** </td><td class="markdownTableBodyLeft">none </td><td class="markdownTableBodyLeft">Toggles music partymode </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Partymode(video) ** </td><td class="markdownTableBodyLeft">Toggles video partymode </td><td class="markdownTableBodyLeft">none </td><td class="markdownTableBodyLeft"></td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">Partymode(path to .xsp) </td><td class="markdownTableBodyLeft">Partymode for *.xsp-file </td><td class="markdownTableBodyLeft">Partymode for *.xsp-file </td><td class="markdownTableBodyLeft"></td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">ShowVideoMenu </td><td class="markdownTableBodyLeft">Shows the DVD/BR menu if available </td><td class="markdownTableBodyLeft">none </td><td class="markdownTableBodyLeft"></td></tr>
+<td class="markdownTableBodyLeft">Partymode(path to .xsp) </td><td class="markdownTableBodyLeft">Partymode for *.xsp-file </td><td class="markdownTableBodyLeft">Partymode for *.xsp-file </td><td class="markdownTableBodyLeft"></td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">ShowVideoMenu </td><td class="markdownTableBodyLeft">Shows the DVD/BR menu if available </td><td class="markdownTableBodyLeft">none </td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">FrameAdvance(n) <em><b> </b></em></td><td class="markdownTableBodyLeft"><em><b> Advance video by <em>n</em> frames </b></em></td><td class="markdownTableBodyLeft"><em><b> none </b></em></td><td class="markdownTableBodyLeft"><em><b> Kodi v18  </b></em></td></tr>
 </table>
 <br  />
@@ -777,11 +780,11 @@ Player built-in's</h1>
 </dl>
 </b></em></td></tr>
 <tr bgcolor="white">
-<td width="40%" align="left"><em><b> <b><code>PlayMedia(media[,isdir][,1],[playoffset=xx])</code></b> </b></em></td><td width="60%" align="left"><em><b> Plays the media. This can be a playlist, music, or video file, directory, plugin or an Url. The optional parameter ",isdir" can be used for playing a directory. ",1" will start a video in a preview window, instead of fullscreen. If media is a playlist, you can use playoffset=xx where xx is the position to start playback from. <dl class="params"><dt>Parameters</dt><dd>
+<td width="40%" align="left"><em><b> <b><code>PlayMedia(media[,isdir][,1],[playoffset=xx])</code></b> </b></em></td><td width="60%" align="left"><em><b> Plays the media. This can be a playlist, music, or video file, directory, plugin or an Url. The optional parameter ",isdir" can be used for playing a directory. ",1" will start the media without switching to fullscreen. If media is a playlist, you can use playoffset=xx where xx is the position to start playback from. <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">media</td><td>URL to media to play (optional). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">isdir</td><td>Set "isdir" if media is a directory (optional). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">fullscreen</td><td>Set "1" to start playback in fullscreen (optional). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">windowed</td><td>Set "1" to start playback without switching to fullscreen (optional). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">resume</td><td>Set "resume" to force resuming (optional). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">noresume</td><td>Set "noresume" to force not resuming (optional). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">playeroffset</td><td>Set "playoffset=&lt;offset&gt;" to start playback from a given position in a playlist (optional).  </td></tr>

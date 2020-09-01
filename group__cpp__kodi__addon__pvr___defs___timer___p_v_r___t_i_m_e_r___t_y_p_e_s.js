@@ -29,6 +29,8 @@ var group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___t_y_p_e_s 
       [ "PVR_TIMER_TYPE_SUPPORTS_ANY_CHANNEL", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___t_y_p_e_s.html#gga1844a4f6a87a84f5faee1ebe3a978fdeac24a0d6814598a1579af645d792b9a59", null ],
       [ "PVR_TIMER_TYPE_REQUIRES_EPG_SERIESLINK_ON_CREATE", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___t_y_p_e_s.html#gga1844a4f6a87a84f5faee1ebe3a978fdeae45ffb4f32e846104766ee45d30607e0", null ],
       [ "PVR_TIMER_TYPE_SUPPORTS_READONLY_DELETE", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___t_y_p_e_s.html#gga1844a4f6a87a84f5faee1ebe3a978fdeaadfd97513944f765cde6d9b619eb1297", null ],
-      [ "PVR_TIMER_TYPE_IS_REMINDER", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___t_y_p_e_s.html#gga1844a4f6a87a84f5faee1ebe3a978fdeadf17bfda23c2a7466466ed8796e61697", null ]
+      [ "PVR_TIMER_TYPE_IS_REMINDER", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___t_y_p_e_s.html#gga1844a4f6a87a84f5faee1ebe3a978fdeadf17bfda23c2a7466466ed8796e61697", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_START_MARGIN", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___t_y_p_e_s.html#gga1844a4f6a87a84f5faee1ebe3a978fdead997aa51b7e3b28d7de86970992b00a4", null ],
+      [ "PVR_TIMER_TYPE_SUPPORTS_END_MARGIN", "group__cpp__kodi__addon__pvr___defs___timer___p_v_r___t_i_m_e_r___t_y_p_e_s.html#gga1844a4f6a87a84f5faee1ebe3a978fdeacac5340cc3dac9e3cc3fd51bacd02096", null ]
     ] ]
 ];

@@ -15,6 +15,7 @@ var group__python___info_tag_video =
     [ "getCast", "group__python___info_tag_video.html#ga522f22106e586261722ff500ec28d198", null ],
     [ "getFile", "group__python___info_tag_video.html#gadf61e733be7f62a3f4bedbe7d2e02ec2", null ],
     [ "getPath", "group__python___info_tag_video.html#ga30c5c67b2bf8e2e2ccc7e361faa20afe", null ],
+    [ "getFilenameAndPath", "group__python___info_tag_video.html#ga4ea679eba27b6e46c8a6c8963931bce4", null ],
     [ "getIMDBNumber", "group__python___info_tag_video.html#ga778d9b665187c5aa28955341a51ac3db", null ],
     [ "getSeason", "group__python___info_tag_video.html#ga34bafe5bbce9e0e61044cd899ce0e611", null ],
     [ "getEpisode", "group__python___info_tag_video.html#ga67a90e64b454890c4cacd410f34873e6", null ],

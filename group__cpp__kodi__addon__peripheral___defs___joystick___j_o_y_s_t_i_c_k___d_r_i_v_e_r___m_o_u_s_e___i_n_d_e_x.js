@@ -1,0 +1,15 @@
+var group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x =
+[
+    [ "JOYSTICK_DRIVER_MOUSE_INDEX", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#ga3f9475f72dcbfec3547d7bb4fc740018", [
+      [ "JOYSTICK_DRIVER_MOUSE_INDEX_UNKNOWN", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#gga3f9475f72dcbfec3547d7bb4fc740018a7e3c05ce947feaa1b6a5add71974233e", null ],
+      [ "JOYSTICK_DRIVER_MOUSE_INDEX_LEFT", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#gga3f9475f72dcbfec3547d7bb4fc740018a2815b1f34b95d0bc3ea57907cea84e4b", null ],
+      [ "JOYSTICK_DRIVER_MOUSE_INDEX_RIGHT", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#gga3f9475f72dcbfec3547d7bb4fc740018ad1eaf47e901934f889c55c11753eab38", null ],
+      [ "JOYSTICK_DRIVER_MOUSE_INDEX_MIDDLE", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#gga3f9475f72dcbfec3547d7bb4fc740018a9bbccd3fc655e1ecf67655189cd01fbd", null ],
+      [ "JOYSTICK_DRIVER_MOUSE_INDEX_BUTTON4", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#gga3f9475f72dcbfec3547d7bb4fc740018a3f6d4ec38bd529fdf8b87657b461d819", null ],
+      [ "JOYSTICK_DRIVER_MOUSE_INDEX_BUTTON5", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#gga3f9475f72dcbfec3547d7bb4fc740018aedad86df66329652029d257adddef3f3", null ],
+      [ "JOYSTICK_DRIVER_MOUSE_INDEX_WHEEL_UP", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#gga3f9475f72dcbfec3547d7bb4fc740018ac9b8af083d6b54a04ca9304d15794c6c", null ],
+      [ "JOYSTICK_DRIVER_MOUSE_INDEX_WHEEL_DOWN", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#gga3f9475f72dcbfec3547d7bb4fc740018a0777361f524051fa092d2c82c2896e7e", null ],
+      [ "JOYSTICK_DRIVER_MOUSE_INDEX_HORIZ_WHEEL_LEFT", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#gga3f9475f72dcbfec3547d7bb4fc740018a9080a03d92969083375743f3ddafee4c", null ],
+      [ "JOYSTICK_DRIVER_MOUSE_INDEX_HORIZ_WHEEL_RIGHT", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#gga3f9475f72dcbfec3547d7bb4fc740018ad898193841c894053336eb3f3b45040b", null ]
+    ] ]
+];

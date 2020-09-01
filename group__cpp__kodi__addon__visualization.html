@@ -101,12 +101,38 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__visualization
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::addon::CInstanceVisualization </big></font></span></code></h4>  <b>Visualization add-on instance</b> </p>
-<p><a href="https://en.wikipedia.org/wiki/Music_visualization">Music visualization</a>, or music visualisation, is a feature in Kodi that generates animated imagery based on a piece of music. The imagery is usually generated and rendered in real time synchronized to the music.</p>
+<p> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> kodi::addon::CInstanceVisualization </big></font></span></code></h4>  <b>Visualization add-on instance</b><br  />
+<a href="https://en.wikipedia.org/wiki/Music_visualization">Music visualization</a>, or music visualisation, is a feature in Kodi that generates animated imagery based on a piece of music. The imagery is usually generated and rendered in real time synchronized to the music. </p>
 <p>Visualization techniques range from simple ones (e.g., a simulation of an oscilloscope display) to elaborate ones, which often include a plurality of composited effects. The changes in the music's loudness and frequency spectrum are among the properties used as input to the visualization.</p>
 <p>Include the header <a class="el" href="_visualization_8h_source.html">#include &lt;kodi/addon-instance/Visualization.h&gt;</a> to use this class.</p>
 <p>This interface allows the creation of visualizations for Kodi, based upon <b>DirectX</b> or/and <b>OpenGL</b> rendering with <code>C++</code> code.</p>
 <p>Additionally, there are several <a class="el" href="group__cpp__kodi__addon__visualization___c_b.html">other functions</a> available in which the child class can ask about the current hardware, including the device, display and several other parts.</p>
+<hr  />
+<p><b>Here's an example on addon.xml:</b> </p><div class="fragment"><div class="line">&lt;?<span class="keyword">xml</span> <span class="keyword">version</span>=<span class="stringliteral">&quot;1.0&quot;</span> <span class="keyword">encoding</span>=<span class="stringliteral">&quot;UTF-8&quot;</span>?&gt;</div>
+<div class="line">&lt;<span class="keywordtype">addon</span></div>
+<div class="line">  <span class="keyword">id</span>=<span class="stringliteral">&quot;visualization.myspecialnamefor&quot;</span></div>
+<div class="line">  <span class="keyword">version</span>=<span class="stringliteral">&quot;1.0.0&quot;</span></div>
+<div class="line">  <span class="keyword">name</span>=<span class="stringliteral">&quot;My special visualization addon&quot;</span></div>
+<div class="line">  <span class="keyword">provider-name</span>=<span class="stringliteral">&quot;Your Name&quot;</span>&gt;</div>
+<div class="line">  &lt;<span class="keywordtype">requires</span>&gt;@<span class="keyword">ADDON_DEPENDS</span>@&lt;/<span class="keywordtype">requires</span>&gt;</div>
+<div class="line">  &lt;<span class="keywordtype">extension</span></div>
+<div class="line">    <span class="keyword">point</span>=<span class="stringliteral">&quot;xbmc.player.musicviz&quot;</span></div>
+<div class="line">    <span class="keyword">library_</span>@<span class="keyword">PLATFORM</span>@=<span class="stringliteral">&quot;@LIBRARY_FILENAME@&quot;</span>/&gt;</div>
+<div class="line">  &lt;<span class="keywordtype">extension</span> <span class="keyword">point</span>=<span class="stringliteral">&quot;xbmc.addon.metadata&quot;</span>&gt;</div>
+<div class="line">    &lt;<span class="keywordtype">summary</span> <span class="keyword">lang</span>=<span class="stringliteral">&quot;en_GB&quot;</span>&gt;<span class="keyword">My</span> <span class="keyword">visualization</span> <span class="keyword">addon</span> <span class="keyword">addon</span>&lt;/<span class="keywordtype">summary</span>&gt;</div>
+<div class="line">    &lt;<span class="keywordtype">description</span> <span class="keyword">lang</span>=<span class="stringliteral">&quot;en_GB&quot;</span>&gt;<span class="keyword">My</span> <span class="keyword">visualization</span> <span class="keyword">addon</span> <span class="keyword">description</span>&lt;/<span class="keywordtype">description</span>&gt;</div>
+<div class="line">    &lt;<span class="keywordtype">platform</span>&gt;@<span class="keyword">PLATFORM</span>@&lt;/<span class="keywordtype">platform</span>&gt;</div>
+<div class="line">  &lt;/<span class="keywordtype">extension</span>&gt;</div>
+<div class="line">&lt;/<span class="keywordtype">addon</span>&gt;</div>
+</div><!-- fragment --><p>Description to visualization related addon.xml values: </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Name </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><b><code>point</code></b> </td><td class="markdownTableBodyNone">Addon type specification<br  />
+At all addon types and for this kind always <b>"xbmc.player.musicviz"</b>.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><b><code>library_@PLATFORM@</code></b> </td><td class="markdownTableBodyNone">Sets the used library name, which is automatically set by cmake at addon build.  </td></tr>
+</table>
 <hr  />
 <p><b>Here is an example of the minimum required code to start a visualization:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/Visualization.h&gt;</span></div>
 <div class="line"> </div>
@@ -147,18 +173,18 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__visualization
 <p><b>Here is another example where the visualization is used together with other instance types:</b></p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/Visualization.h&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">class </span>CMyVisualization : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_visualization.html">::kodi::addon::CInstanceVisualization</a></div>
+<div class="line"><span class="keyword">class </span>CMyVisualization : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_visualization.html">kodi::addon::CInstanceVisualization</a></div>
 <div class="line">{</div>
 <div class="line"><span class="keyword">public</span>:</div>
-<div class="line">  CMyVisualization(KODI_HANDLE instance);</div>
+<div class="line">  CMyVisualization(KODI_HANDLE instance, <span class="keyword">const</span> std::string&amp; version);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">bool</span> Start(<span class="keywordtype">int</span> channels, <span class="keywordtype">int</span> samplesPerSec, <span class="keywordtype">int</span> bitsPerSample, std::string songName) <span class="keyword">override</span>;</div>
 <div class="line">  <span class="keywordtype">void</span> AudioData(<span class="keyword">const</span> <span class="keywordtype">float</span>* audioData, <span class="keywordtype">int</span> audioDataLength, <span class="keywordtype">float</span>* freqData, <span class="keywordtype">int</span> freqDataLength) <span class="keyword">override</span>;</div>
 <div class="line">  <span class="keywordtype">void</span> Render() <span class="keyword">override</span>;</div>
 <div class="line">};</div>
 <div class="line"> </div>
-<div class="line">CMyVisualization::CMyVisualization(KODI_HANDLE instance)</div>
-<div class="line">  : CInstanceVisualization(instance)</div>
+<div class="line">CMyVisualization::CMyVisualization(KODI_HANDLE instance, <span class="keyword">const</span> std::string&amp; version)</div>
+<div class="line">  : kodi::addon::CInstanceAudioDecoder(instance, version)</div>
 <div class="line">{</div>
 <div class="line">  ...</div>
 <div class="line">}</div>
@@ -180,48 +206,52 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__visualization
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line"><span class="comment">/*----------------------------------------------------------------------*&amp;zwj;/</span></div>
-<div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="comment">class CMyAddon : public ::kodi::addon::CAddonBase</span></div>
-<div class="line"><span class="comment">{</span></div>
-<div class="line"><span class="comment">public:</span></div>
-<div class="line"><span class="comment">  CMyAddon() { }</span></div>
-<div class="line"><span class="comment">  ADDON_STATUS CreateInstance(int instanceType,</span></div>
-<div class="line"><span class="comment">                              std::string instanceID,</span></div>
-<div class="line"><span class="comment">                              KODI_HANDLE instance,</span></div>
-<div class="line"><span class="comment">                              KODI_HANDLE&amp; addonInstance) override;</span></div>
-<div class="line"><span class="comment">};</span></div>
-<div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="comment">/* If you use only one instance in your add-on, can be instanceType and</span></div>
-<div class="line"><span class="comment"> * instanceID ignored *&amp;zwj;/</span></div>
-<div class="line"><span class="comment">ADDON_STATUS CMyAddon::CreateInstance(int instanceType,</span></div>
-<div class="line"><span class="comment">                                      std::string instanceID,</span></div>
-<div class="line"><span class="comment">                                      KODI_HANDLE instance,</span></div>
-<div class="line"><span class="comment">                                      KODI_HANDLE&amp; addonInstance)</span></div>
-<div class="line"><span class="comment">{</span></div>
-<div class="line"><span class="comment">  if (instanceType == ADDON_INSTANCE_VISUALIZATION)</span></div>
-<div class="line"><span class="comment">  {</span></div>
-<div class="line"><span class="comment">    kodi::Log(ADDON_LOG_NOTICE, &quot;Creating my Visualization&quot;);</span></div>
-<div class="line"><span class="comment">    addonInstance = new CMyVisualization(instance);</span></div>
-<div class="line"><span class="comment">    return ADDON_STATUS_OK;</span></div>
-<div class="line"><span class="comment">  }</span></div>
-<div class="line"><span class="comment">  else if (...)</span></div>
-<div class="line"><span class="comment">  {</span></div>
-<div class="line"><span class="comment">    ...</span></div>
-<div class="line"><span class="comment">  }</span></div>
-<div class="line"><span class="comment">  return ADDON_STATUS_UNKNOWN;</span></div>
-<div class="line"><span class="comment">}</span></div>
-<div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="comment">ADDONCREATOR(CMyAddon)</span></div>
+<div class="line"><span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>CMyAddon : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_addon_base.html">kodi::addon::CAddonBase</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  CMyAddon() { }</div>
+<div class="line">  <a class="code" href="group__cpp__kodi__addon__addonbase.html#ga335347495ed00620451a69cfe3494502">ADDON_STATUS</a> CreateInstance(<span class="keywordtype">int</span> instanceType,</div>
+<div class="line">                              <span class="keyword">const</span> std::string&amp; instanceID,</div>
+<div class="line">                              KODI_HANDLE instance,</div>
+<div class="line">                              <span class="keyword">const</span> std::string&amp; version,</div>
+<div class="line">                              KODI_HANDLE&amp; addonInstance) <span class="keyword">override</span>;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// If you use only one instance in your add-on, can be instanceType and</span></div>
+<div class="line"><span class="comment">// instanceID ignored</span></div>
+<div class="line"><a class="code" href="group__cpp__kodi__addon__addonbase.html#ga335347495ed00620451a69cfe3494502">ADDON_STATUS</a> CMyAddon::CreateInstance(<span class="keywordtype">int</span> instanceType,</div>
+<div class="line">                                      <span class="keyword">const</span> std::string&amp; instanceID,</div>
+<div class="line">                                      KODI_HANDLE instance,</div>
+<div class="line">                                      <span class="keyword">const</span> std::string&amp; version,</div>
+<div class="line">                                      KODI_HANDLE&amp; addonInstance)</div>
+<div class="line">{</div>
+<div class="line">  <span class="keywordflow">if</span> (instanceType == <a class="code" href="group__cpp__kodi__addon__addonbase.html#ggada0b4c3c9f9c168e5e1c27145ec72357a83120cb2f02fe5a4759f5bf0209bdfb5">ADDON_INSTANCE_VISUALIZATION</a>)</div>
+<div class="line">  {</div>
+<div class="line">    <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">kodi::Log</a>(ADDON_LOG_NOTICE, <span class="stringliteral">&quot;Creating my visualization&quot;</span>);</div>
+<div class="line">    addonInstance = <span class="keyword">new</span> CMyVisualization(instance, version);</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code" href="group__cpp__kodi__addon__addonbase.html#gga335347495ed00620451a69cfe3494502a6925909b93ca05098ca5272f16e091c0">ADDON_STATUS_OK</a>;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (...)</div>
+<div class="line">  {</div>
+<div class="line">    ...</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code" href="group__cpp__kodi__addon__addonbase.html#gga335347495ed00620451a69cfe3494502ac0720dbdce3dcb194f12a0eceb59a501">ADDON_STATUS_UNKNOWN</a>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">ADDONCREATOR(CMyAddon)</div>
 </div><!-- fragment --><p>The destruction of the example class <code>CMyVisualization</code> is called from Kodi's header. Manually deleting the add-on instance is not required. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
-<tr class="memitem:group__cpp__kodi__addon__visualization___vis_track"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__visualization___vis_track.html">class VisTrack</a></td></tr>
-<tr class="memdesc:group__cpp__kodi__addon__visualization___vis_track"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Visualization track information structure</b> <br /></td></tr>
+<tr class="memitem:group__cpp__kodi__addon__visualization___defs"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__visualization___defs.html">Definitions, structures and enumerators</a></td></tr>
+<tr class="memdesc:group__cpp__kodi__addon__visualization___defs"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Visualization add-on instance definition values</b><br  />
+All visualization functions associated data structures. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__cpp__kodi__addon__visualization___c_b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__kodi__addon__visualization___c_b.html">Information functions</a></td></tr>
-<tr class="memdesc:group__cpp__kodi__addon__visualization___c_b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>To get info about the device, display and several other parts</b> <br /></td></tr>
+<tr class="memdesc:group__cpp__kodi__addon__visualization___c_b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>To get info about the device, display and several other parts</b><br  />
+ These are functions to query any values or to transfer them to Kodi. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -291,13 +321,35 @@ Modules</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>The instance value given to <b><code>kodi::addon::CAddonBase::CreateInstance(...)</code></b>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">kodiVersion</td><td>[opt] Version used in Kodi for this instance, to allow compatibility to older Kodi versions. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kodiVersion</td><td>[opt] Version used in Kodi for this instance, to allow compatibility to older Kodi versions.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Recommended to set.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Only use <code>instance</code> from the CreateInstance call </dd></dl>
-
+<dl class="section note"><dt>Note</dt><dd>Recommended to set <b><code>kodiVersion</code></b>.</dd></dl>
+<hr  />
+<p><b>Here's example about the use of this:</b> </p><div class="fragment"><div class="line"><span class="keyword">class </span>CMyVisualization : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_audio_decoder.html">kodi::addon::CInstanceAudioDecoder</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  CMyVisualization(KODI_HANDLE instance, <span class="keyword">const</span> std::string&amp; kodiVersion)</div>
+<div class="line">    : kodi::addon::CInstanceAudioDecoder(instance, kodiVersion)</div>
+<div class="line">  {</div>
+<div class="line">     ...</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  ...</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="group__cpp__kodi__addon__addonbase.html#ga335347495ed00620451a69cfe3494502">ADDON_STATUS</a> CMyAddon::CreateInstance(<span class="keywordtype">int</span> instanceType,</div>
+<div class="line">                                      <span class="keyword">const</span> std::string&amp; instanceID,</div>
+<div class="line">                                      KODI_HANDLE instance,</div>
+<div class="line">                                      <span class="keyword">const</span> std::string&amp; version,</div>
+<div class="line">                                      KODI_HANDLE&amp; addonInstance)</div>
+<div class="line">{</div>
+<div class="line">  <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">kodi::Log</a>(ADDON_LOG_NOTICE, <span class="stringliteral">&quot;Creating my visualization&quot;</span>);</div>
+<div class="line">  addonInstance = <span class="keyword">new</span> CMyVisualization(instance, version);</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code" href="group__cpp__kodi__addon__addonbase.html#gga335347495ed00620451a69cfe3494502a6925909b93ca05098ca5272f16e091c0">ADDON_STATUS_OK</a>;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gaa8c552b512f4584d475fc6f0ff031f7d"></a>
@@ -566,8 +618,8 @@ Modules</h2></td></tr>
 <p>Used to get the number of buffers from the current visualization. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">wantsFreq</td><td>Indicates whether the add-on wants FFT data. If set to true, the <b>freqData</b> and <b>freqDataLength</b> parameters of <a class="el" href="group__cpp__kodi__addon__visualization.html#ga5c8b4d62952a520f13d70c9133e65d2a" title="Pass audio data to the visualization.">AudioData()</a> are used </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">syncDelay</td><td>The number of buffers to delay before calling <a class="el" href="group__cpp__kodi__addon__visualization.html#ga5c8b4d62952a520f13d70c9133e65d2a" title="Pass audio data to the visualization.">AudioData()</a></td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">wantsFreq</td><td>Indicates whether the add-on wants FFT data. If set to true, the <b>freqData</b> and <b>freqDataLength</b> parameters of <a class="el" href="group__cpp__kodi__addon__visualization.html#ga5c8b4d62952a520f13d70c9133e65d2a">AudioData()</a> are used </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">syncDelay</td><td>The number of buffers to delay before calling <a class="el" href="group__cpp__kodi__addon__visualization.html#ga5c8b4d62952a520f13d70c9133e65d2a">AudioData()</a></td></tr>
   </table>
   </dd>
 </dl>
@@ -599,7 +651,7 @@ Modules</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Used to get a list of visualization presets the user can select from. </p>
+<p>Used to get a list of visualization presets the user can select. from. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">presets</td><td>The vector list containing the names of presets that the user can select </td></tr>
@@ -891,8 +943,8 @@ Modules</h2></td></tr>
 
 </div>
 </div>
-<a id="ga83adb1f15daf0f22b2269546d7f21c26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga83adb1f15daf0f22b2269546d7f21c26">&#9670;&nbsp;</a></span>UpdateTrack()</h2>
+<a id="ga4b6accb100116250a962c345e8c36d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b6accb100116250a962c345e8c36d7b">&#9670;&nbsp;</a></span>UpdateTrack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -903,7 +955,7 @@ Modules</h2></td></tr>
         <tr>
           <td class="memname">virtual bool UpdateTrack </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_vis_track.html">VisTrack</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classkodi_1_1addon_1_1_visualization_track.html">kodi::addon::VisualizationTrack</a> &amp;&#160;</td>
           <td class="paramname"><em>track</em></td><td>)</td>
           <td></td>
         </tr>
@@ -922,14 +974,69 @@ Modules</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Return true if the track information is used </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>Return true if the track information is used</dd></dl>
+<hr  />
+<p><b>The following table contains values that can be set with <a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html">class VisualizationTrack</a> :</b> </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name </th><th class="markdownTableHeadNone">Type </th><th class="markdownTableHeadNone">Set call </th><th class="markdownTableHeadNone">Get call  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Title of the current song.</b> </td><td class="markdownTableBodyNone"><code>std::string</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga54294c70e5c7d4e8edacbdde65a07ab3">SetTitle</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaeb3ac9b59cc3df1debe0ea758725cc8e">GetTitle</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Artist names, as a single string</b> </td><td class="markdownTableBodyNone"><code>std::string</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga5e75607d7b90b2fbd342203e0562530b">SetArtist</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga4bbce7b9d999d32415ff8e1e4663562b">GetArtist</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Album that the current song is from.</b> </td><td class="markdownTableBodyNone"><code>std::string</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga0b92a57fe710507ef937de56e12c6c88">SetAlbum</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga55803565d1b187d6fe1c9e4f36c404f6">GetAlbum</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Album artist names, as a single string</b> </td><td class="markdownTableBodyNone"><code>std::string</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga71090416a4d71dfd72639badbcb0b112">SetAlbumArtist</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf38bbbd17f7b2e3c9635ec23d04adb81">GetAlbumArtist</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>The genre name from the music tag, if present</b> </td><td class="markdownTableBodyNone"><code>std::string</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf319c22917674b7f0c5584465b39c0c6">SetGenre</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#gae20ab752ab482acdb38664a742b9ed82">GetGenre</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Duration of the current song, in seconds</b> </td><td class="markdownTableBodyNone"><code>int</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga2a8c7b8b61c091d2ae6763b123805f2a">SetDuration</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga99c2eca8985fb3522ff6d815537da2ca">GetDuration</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Track number of the current song</b> </td><td class="markdownTableBodyNone"><code>int</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga0d08f3902fc7a7d7c9321b986cf09505">SetTrack</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#gae4ab98f56d54ab92a0230d66cf0a9055">GetTrack</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Disc number of the current song stored in the ID tag info</b> </td><td class="markdownTableBodyNone"><code>int</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#gab182b5fe23194300ab9e8f884549e549">SetDisc</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga00b0b46ded8db251c6937047df33ac2f">GetDisc</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>Year that the current song was released</b> </td><td class="markdownTableBodyNone"><code>int</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#gad248b0d121f5add96356c5e469ce983f">SetYear</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga2db2a6f455cbf2cc0011da9326edae5f">GetYear</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Lyrics of the current song, if available</b> </td><td class="markdownTableBodyNone"><code>std::string</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga303498a405847125d7da25275612045e">SetLyrics</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga8b204053b83b041fb34d4eb41404ee14">GetLyrics</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>The user-defined rating of the current song</b> </td><td class="markdownTableBodyNone"><code>int</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#gad0195fec98c12836339be97684ee47f7">SetRating</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga3a90c28fb1501523e660d51f2b44df40">GetRating</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>Comment of the current song stored in the ID tag info</b> </td><td class="markdownTableBodyNone"><code>std::string</code> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga172c10e306c608ed9687a06d065dcf7d">SetComment</a> </td><td class="markdownTableBodyNone"><a class="el" href="group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf6675a1e224eee3f3b8a6ef0923e77b0">GetComment</a>  </td></tr>
+</table>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/addon-instance/Visualization.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>CMyVisualization : <span class="keyword">public</span> <a class="code" href="classkodi_1_1addon_1_1_c_instance_visualization.html">kodi::addon::CInstanceVisualization</a></div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  CMyVisualization(KODI_HANDLE instance, <span class="keyword">const</span> std::string&amp; version);</div>
+<div class="line"> </div>
+<div class="line">  ...</div>
+<div class="line"> </div>
+<div class="line">private:</div>
+<div class="line">  <a class="code" href="classkodi_1_1addon_1_1_visualization_track.html">kodi::addon::VisualizationTrack</a> m_runningTrack;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> CMyVisualization::UpdateTrack(<span class="keyword">const</span> <a class="code" href="classkodi_1_1addon_1_1_visualization_track.html">kodi::addon::VisualizationTrack</a>&amp; track)</div>
+<div class="line">{</div>
+<div class="line">  m_runningTrack = track;</div>
+<div class="line">  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclasskodi_1_1addon_1_1_c_instance_visualization_html"><div class="ttname"><a href="classkodi_1_1addon_1_1_c_instance_visualization.html">kodi::addon::CInstanceVisualization</a></div><div class="ttdef"><b>Definition:</b> Visualization.h:302</div></div>
-<div class="ttc" id="aclasskodi_1_1addon_1_1_c_addon_base_html"><div class="ttname"><a href="classkodi_1_1addon_1_1_c_addon_base.html">kodi::addon::CAddonBase</a></div><div class="ttdoc">Add-on main instance class.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:283</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_gaaa1f205f9375cd086229a1455ede11cc"><div class="ttname"><a href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">kodi::Log</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN Log(const AddonLog loglevel, const char *format,...)</div><div class="ttdoc">Add a message to Kodi's log.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:694</div></div>
+<div class="ttc" id="aclasskodi_1_1addon_1_1_c_instance_visualization_html"><div class="ttname"><a href="classkodi_1_1addon_1_1_c_instance_visualization.html">kodi::addon::CInstanceVisualization</a></div><div class="ttdef"><b>Definition:</b> Visualization.h:396</div></div>
+<div class="ttc" id="aclasskodi_1_1addon_1_1_visualization_track_html"><div class="ttname"><a href="classkodi_1_1addon_1_1_visualization_track.html">kodi::addon::VisualizationTrack</a></div><div class="ttdef"><b>Definition:</b> Visualization.h:40</div></div>
+<div class="ttc" id="aclasskodi_1_1addon_1_1_c_addon_base_html"><div class="ttname"><a href="classkodi_1_1addon_1_1_c_addon_base.html">kodi::addon::CAddonBase</a></div><div class="ttdoc">Add-on main instance class.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:314</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__addonbase_html_ga335347495ed00620451a69cfe3494502"><div class="ttname"><a href="group__cpp__kodi__addon__addonbase.html#ga335347495ed00620451a69cfe3494502">ADDON_STATUS</a></div><div class="ttdeci">ADDON_STATUS</div><div class="ttdoc">Return value of functions in kodi::addon::CAddonBase and associated classes.</div><div class="ttdef"><b>Definition:</b> addon_base.h:80</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__addonbase_html_gga335347495ed00620451a69cfe3494502a6925909b93ca05098ca5272f16e091c0"><div class="ttname"><a href="group__cpp__kodi__addon__addonbase.html#gga335347495ed00620451a69cfe3494502a6925909b93ca05098ca5272f16e091c0">ADDON_STATUS_OK</a></div><div class="ttdeci">@ ADDON_STATUS_OK</div><div class="ttdoc">For everything OK and no error.</div><div class="ttdef"><b>Definition:</b> addon_base.h:82</div></div>
+<div class="ttc" id="aclasskodi_1_1addon_1_1_c_instance_audio_decoder_html"><div class="ttname"><a href="classkodi_1_1addon_1_1_c_instance_audio_decoder.html">kodi::addon::CInstanceAudioDecoder</a></div><div class="ttdef"><b>Definition:</b> AudioDecoder.h:380</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__addonbase_html_ggada0b4c3c9f9c168e5e1c27145ec72357a83120cb2f02fe5a4759f5bf0209bdfb5"><div class="ttname"><a href="group__cpp__kodi__addon__addonbase.html#ggada0b4c3c9f9c168e5e1c27145ec72357a83120cb2f02fe5a4759f5bf0209bdfb5">ADDON_INSTANCE_VISUALIZATION</a></div><div class="ttdeci">@ ADDON_INSTANCE_VISUALIZATION</div><div class="ttdoc">Music visualization instance, see kodi::addon::CInstanceVisualization.</div><div class="ttdef"><b>Definition:</b> versions.h:211</div></div>
+<div class="ttc" id="agroup__cpp__kodi__addon__addonbase_html_gga335347495ed00620451a69cfe3494502ac0720dbdce3dcb194f12a0eceb59a501"><div class="ttname"><a href="group__cpp__kodi__addon__addonbase.html#gga335347495ed00620451a69cfe3494502ac0720dbdce3dcb194f12a0eceb59a501">ADDON_STATUS_UNKNOWN</a></div><div class="ttdeci">@ ADDON_STATUS_UNKNOWN</div><div class="ttdoc">Unknown and incomprehensible error.</div><div class="ttdef"><b>Definition:</b> addon_base.h:94</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

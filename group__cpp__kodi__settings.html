@@ -103,8 +103,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__settings.html',''); 
 This can be used to get and set the addon related values inside his settings.xml. </p>
 <p>The settings style is given with installed part on e.g. <b><code>$HOME/.kodi/addons/myspecial.addon/resources/settings.xml</code></b>. The related edit becomes then stored inside <b><code>$HOME/.kodi/userdata/addon_data/myspecial.addon/settings.xml</code></b>. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga76aab1b49ad0a022dd64f5102758b2f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga76aab1b49ad0a022dd64f5102758b2f3">&#9670;&nbsp;</a></span>CheckSettingString()</h2>
+<a id="gafdfce08e2f545e1951011b9a59b4e3f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafdfce08e2f545e1951011b9a59b4e3f3">&#9670;&nbsp;</a></span>IsSettingUsingDefault()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,7 +113,43 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool kodi::CheckSettingString </td>
+          <td class="memname">bool ATTRIBUTE_HIDDEN kodi::IsSettingUsingDefault </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>settingName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check the given setting name is set to default value. </p>
+<p>The setting name relate to names used in his <b>settings.xml</b> file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">settingName</td><td>The name of asked setting </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if setting is the default </dd></dl>
+
+</div>
+</div>
+<a id="ga0fa39ae77ecaebdbca29a9eb12def5b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0fa39ae77ecaebdbca29a9eb12def5b5">&#9670;&nbsp;</a></span>CheckSettingString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ATTRIBUTE_HIDDEN kodi::CheckSettingString </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>settingName</em>, </td>
@@ -152,13 +188,13 @@ This can be used to get and set the addon related values inside his settings.xml
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line">std::string value;</div>
-<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__settings.html#ga76aab1b49ad0a022dd64f5102758b2f3">kodi::CheckSettingString</a>(<span class="stringliteral">&quot;my_string_value&quot;</span>, value))</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__settings.html#ga0fa39ae77ecaebdbca29a9eb12def5b5">kodi::CheckSettingString</a>(<span class="stringliteral">&quot;my_string_value&quot;</span>, value))</div>
 <div class="line">  value = <span class="stringliteral">&quot;my_default_if_setting_not_work&quot;</span>;</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="ga347854e2a98376232a9836dadc27b93f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga347854e2a98376232a9836dadc27b93f">&#9670;&nbsp;</a></span>GetSettingString()</h2>
+<a id="ga3ceb7548f335e4219e4be53c0813d0ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3ceb7548f335e4219e4be53c0813d0ea">&#9670;&nbsp;</a></span>GetSettingString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,11 +203,21 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string kodi::GetSettingString </td>
+          <td class="memname">std::string ATTRIBUTE_HIDDEN kodi::GetSettingString </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>settingName</em></td><td>)</td>
+          <td class="paramname"><em>settingName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>defaultValue</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -186,6 +232,7 @@ This can be used to get and set the addon related values inside his settings.xml
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">settingName</td><td>The name of asked setting </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>[opt] Default value if not found </td></tr>
   </table>
   </dd>
 </dl>
@@ -193,12 +240,12 @@ This can be used to get and set the addon related values inside his settings.xml
 <hr  />
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
-<div class="line">std::string value = <a class="code" href="group__cpp__kodi__settings.html#ga347854e2a98376232a9836dadc27b93f">kodi::GetSettingString</a>(<span class="stringliteral">&quot;my_string_value&quot;</span>);</div>
+<div class="line">std::string value = <a class="code" href="group__cpp__kodi__settings.html#ga3ceb7548f335e4219e4be53c0813d0ea">kodi::GetSettingString</a>(<span class="stringliteral">&quot;my_string_value&quot;</span>);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="ga373f1f68c7665c399a9422e40c9e0925"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga373f1f68c7665c399a9422e40c9e0925">&#9670;&nbsp;</a></span>SetSettingString()</h2>
+<a id="ga80d769921d3f3bbe2113fadec5812f34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80d769921d3f3bbe2113fadec5812f34">&#9670;&nbsp;</a></span>SetSettingString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +254,7 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void kodi::SetSettingString </td>
+          <td class="memname">void ATTRIBUTE_HIDDEN kodi::SetSettingString </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>settingName</em>, </td>
@@ -244,12 +291,12 @@ This can be used to get and set the addon related values inside his settings.xml
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line">std::string value = <span class="stringliteral">&quot;my_new_name for&quot;</span>;</div>
-<div class="line"><a class="code" href="group__cpp__kodi__settings.html#ga373f1f68c7665c399a9422e40c9e0925">kodi::SetSettingString</a>(<span class="stringliteral">&quot;my_string_value&quot;</span>, value);</div>
+<div class="line"><a class="code" href="group__cpp__kodi__settings.html#ga80d769921d3f3bbe2113fadec5812f34">kodi::SetSettingString</a>(<span class="stringliteral">&quot;my_string_value&quot;</span>, value);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="gadfe67549d9f0ab6e3401113223827457"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadfe67549d9f0ab6e3401113223827457">&#9670;&nbsp;</a></span>CheckSettingInt()</h2>
+<a id="ga7d65f40b5bbd6bf5aaee1a4b163da3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d65f40b5bbd6bf5aaee1a4b163da3d2">&#9670;&nbsp;</a></span>CheckSettingInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,7 +305,7 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool kodi::CheckSettingInt </td>
+          <td class="memname">bool ATTRIBUTE_HIDDEN kodi::CheckSettingInt </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>settingName</em>, </td>
@@ -297,13 +344,13 @@ This can be used to get and set the addon related values inside his settings.xml
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> value = 0;</div>
-<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__settings.html#gadfe67549d9f0ab6e3401113223827457">kodi::CheckSettingInt</a>(<span class="stringliteral">&quot;my_integer_value&quot;</span>, value))</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__settings.html#ga7d65f40b5bbd6bf5aaee1a4b163da3d2">kodi::CheckSettingInt</a>(<span class="stringliteral">&quot;my_integer_value&quot;</span>, value))</div>
 <div class="line">  value = 123; <span class="comment">// My default of them</span></div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="ga0f014aac138ad1d8ac51e5ecfb15e4d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0f014aac138ad1d8ac51e5ecfb15e4d5">&#9670;&nbsp;</a></span>GetSettingInt()</h2>
+<a id="ga98644f28dcb8d375446d66d2c99d69cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga98644f28dcb8d375446d66d2c99d69cb">&#9670;&nbsp;</a></span>GetSettingInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,11 +359,21 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int kodi::GetSettingInt </td>
+          <td class="memname">int ATTRIBUTE_HIDDEN kodi::GetSettingInt </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>settingName</em></td><td>)</td>
+          <td class="paramname"><em>settingName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>defaultValue</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -331,19 +388,20 @@ This can be used to get and set the addon related values inside his settings.xml
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">settingName</td><td>The name of asked setting </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>[opt] Default value if not found </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The value of setting, <b><code>0</code></b> if not found;</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The value of setting, <b><code>0</code></b> or defaultValue if not found</dd></dl>
 <hr  />
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> value = <a class="code" href="group__cpp__kodi__settings.html#ga0f014aac138ad1d8ac51e5ecfb15e4d5">kodi::GetSettingInt</a>(<span class="stringliteral">&quot;my_integer_value&quot;</span>);</div>
+<div class="line"><span class="keywordtype">int</span> value = <a class="code" href="group__cpp__kodi__settings.html#ga98644f28dcb8d375446d66d2c99d69cb">kodi::GetSettingInt</a>(<span class="stringliteral">&quot;my_integer_value&quot;</span>);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="ga1050b631255ee435734ae0d10fa4ac9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1050b631255ee435734ae0d10fa4ac9c">&#9670;&nbsp;</a></span>SetSettingInt()</h2>
+<a id="gabb36374fc18ac27da7b07395a4b2010a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb36374fc18ac27da7b07395a4b2010a">&#9670;&nbsp;</a></span>SetSettingInt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +410,7 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void kodi::SetSettingInt </td>
+          <td class="memname">void ATTRIBUTE_HIDDEN kodi::SetSettingInt </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>settingName</em>, </td>
@@ -389,12 +447,12 @@ This can be used to get and set the addon related values inside his settings.xml
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> value = 123;</div>
-<div class="line"><a class="code" href="group__cpp__kodi__settings.html#ga1050b631255ee435734ae0d10fa4ac9c">kodi::SetSettingInt</a>(<span class="stringliteral">&quot;my_integer_value&quot;</span>, value);</div>
+<div class="line"><a class="code" href="group__cpp__kodi__settings.html#gabb36374fc18ac27da7b07395a4b2010a">kodi::SetSettingInt</a>(<span class="stringliteral">&quot;my_integer_value&quot;</span>, value);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="gaaffb4c51d85ec3f6f4b7c0f98d990917"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaffb4c51d85ec3f6f4b7c0f98d990917">&#9670;&nbsp;</a></span>CheckSettingBoolean()</h2>
+<a id="ga91dbcd080212d8f236b72845df9c98cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91dbcd080212d8f236b72845df9c98cc">&#9670;&nbsp;</a></span>CheckSettingBoolean()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -403,7 +461,7 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool kodi::CheckSettingBoolean </td>
+          <td class="memname">bool ATTRIBUTE_HIDDEN kodi::CheckSettingBoolean </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>settingName</em>, </td>
@@ -442,13 +500,13 @@ This can be used to get and set the addon related values inside his settings.xml
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">bool</span> value = <span class="keyword">false</span>;</div>
-<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__settings.html#gaaffb4c51d85ec3f6f4b7c0f98d990917">kodi::CheckSettingBoolean</a>(<span class="stringliteral">&quot;my_boolean_value&quot;</span>, value))</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__settings.html#ga91dbcd080212d8f236b72845df9c98cc">kodi::CheckSettingBoolean</a>(<span class="stringliteral">&quot;my_boolean_value&quot;</span>, value))</div>
 <div class="line">  value = <span class="keyword">true</span>; <span class="comment">// My default of them</span></div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="gac9b5bb48021789d00409a173f03eed48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac9b5bb48021789d00409a173f03eed48">&#9670;&nbsp;</a></span>GetSettingBoolean()</h2>
+<a id="gac99ff742b7c9f18bd61808464ed7e644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac99ff742b7c9f18bd61808464ed7e644">&#9670;&nbsp;</a></span>GetSettingBoolean()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -457,11 +515,21 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool kodi::GetSettingBoolean </td>
+          <td class="memname">bool ATTRIBUTE_HIDDEN kodi::GetSettingBoolean </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>settingName</em></td><td>)</td>
+          <td class="paramname"><em>settingName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>defaultValue</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -476,19 +544,20 @@ This can be used to get and set the addon related values inside his settings.xml
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">settingName</td><td>The name of asked setting </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>[opt] Default value if not found </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The value of setting, <b><code>false</code></b> if not found;</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The value of setting, <b><code>false</code></b> or defaultValue if not found</dd></dl>
 <hr  />
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">bool</span> value = <a class="code" href="group__cpp__kodi__settings.html#gac9b5bb48021789d00409a173f03eed48">kodi::GetSettingBoolean</a>(<span class="stringliteral">&quot;my_boolean_value&quot;</span>);</div>
+<div class="line"><span class="keywordtype">bool</span> value = <a class="code" href="group__cpp__kodi__settings.html#gac99ff742b7c9f18bd61808464ed7e644">kodi::GetSettingBoolean</a>(<span class="stringliteral">&quot;my_boolean_value&quot;</span>);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="gac743de36b0b5095fce08100e9b332fc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac743de36b0b5095fce08100e9b332fc5">&#9670;&nbsp;</a></span>SetSettingBoolean()</h2>
+<a id="ga96cf17c7e640ddf4a48f30170d5b2e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96cf17c7e640ddf4a48f30170d5b2e0e">&#9670;&nbsp;</a></span>SetSettingBoolean()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -497,7 +566,7 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void kodi::SetSettingBoolean </td>
+          <td class="memname">void ATTRIBUTE_HIDDEN kodi::SetSettingBoolean </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>settingName</em>, </td>
@@ -534,12 +603,12 @@ This can be used to get and set the addon related values inside his settings.xml
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">bool</span> value = <span class="keyword">true</span>;</div>
-<div class="line"><a class="code" href="group__cpp__kodi__settings.html#gac743de36b0b5095fce08100e9b332fc5">kodi::SetSettingBoolean</a>(<span class="stringliteral">&quot;my_boolean_value&quot;</span>, value);</div>
+<div class="line"><a class="code" href="group__cpp__kodi__settings.html#ga96cf17c7e640ddf4a48f30170d5b2e0e">kodi::SetSettingBoolean</a>(<span class="stringliteral">&quot;my_boolean_value&quot;</span>, value);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="ga81046b870e9ec9351475c28eefd48a76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga81046b870e9ec9351475c28eefd48a76">&#9670;&nbsp;</a></span>CheckSettingFloat()</h2>
+<a id="ga5a0ff70a8ef49304808f9ef4c05164eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a0ff70a8ef49304808f9ef4c05164eb">&#9670;&nbsp;</a></span>CheckSettingFloat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -548,7 +617,7 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool kodi::CheckSettingFloat </td>
+          <td class="memname">bool ATTRIBUTE_HIDDEN kodi::CheckSettingFloat </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>settingName</em>, </td>
@@ -587,13 +656,13 @@ This can be used to get and set the addon related values inside his settings.xml
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">float</span> value = 0.0f;</div>
-<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__settings.html#gaaffb4c51d85ec3f6f4b7c0f98d990917">kodi::CheckSettingBoolean</a>(<span class="stringliteral">&quot;my_float_value&quot;</span>, value))</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__settings.html#ga91dbcd080212d8f236b72845df9c98cc">kodi::CheckSettingBoolean</a>(<span class="stringliteral">&quot;my_float_value&quot;</span>, value))</div>
 <div class="line">  value = 1.0f; <span class="comment">// My default of them</span></div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="gad71dc84d559872fa621d05d525317f22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad71dc84d559872fa621d05d525317f22">&#9670;&nbsp;</a></span>GetSettingFloat()</h2>
+<a id="ga8df463677c7530e577438a21b65884c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8df463677c7530e577438a21b65884c0">&#9670;&nbsp;</a></span>GetSettingFloat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -602,11 +671,21 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float kodi::GetSettingFloat </td>
+          <td class="memname">float ATTRIBUTE_HIDDEN kodi::GetSettingFloat </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>settingName</em></td><td>)</td>
+          <td class="paramname"><em>settingName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>defaultValue</em> = <code>0.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -621,19 +700,20 @@ This can be used to get and set the addon related values inside his settings.xml
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">settingName</td><td>The name of asked setting </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>[opt] Default value if not found </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The value of setting, <b><code>0.0</code></b> if not found;</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The value of setting, <b><code>0.0</code></b> or defaultValue if not found</dd></dl>
 <hr  />
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">float</span> value = <a class="code" href="group__cpp__kodi__settings.html#gad71dc84d559872fa621d05d525317f22">kodi::GetSettingFloat</a>(<span class="stringliteral">&quot;my_float_value&quot;</span>);</div>
+<div class="line"><span class="keywordtype">float</span> value = <a class="code" href="group__cpp__kodi__settings.html#ga8df463677c7530e577438a21b65884c0">kodi::GetSettingFloat</a>(<span class="stringliteral">&quot;my_float_value&quot;</span>);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="ga9ba4021b4dd99fb951d9d2b5fd3cb0bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9ba4021b4dd99fb951d9d2b5fd3cb0bf">&#9670;&nbsp;</a></span>SetSettingFloat()</h2>
+<a id="ga19f37ddffcf939ca03da266f0b3db9f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga19f37ddffcf939ca03da266f0b3db9f4">&#9670;&nbsp;</a></span>SetSettingFloat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -642,7 +722,7 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void kodi::SetSettingFloat </td>
+          <td class="memname">void ATTRIBUTE_HIDDEN kodi::SetSettingFloat </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>settingName</em>, </td>
@@ -679,12 +759,12 @@ This can be used to get and set the addon related values inside his settings.xml
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">float</span> value = 1.0f;</div>
-<div class="line"><a class="code" href="group__cpp__kodi__settings.html#ga9ba4021b4dd99fb951d9d2b5fd3cb0bf">kodi::SetSettingFloat</a>(<span class="stringliteral">&quot;my_float_value&quot;</span>, value);</div>
+<div class="line"><a class="code" href="group__cpp__kodi__settings.html#ga19f37ddffcf939ca03da266f0b3db9f4">kodi::SetSettingFloat</a>(<span class="stringliteral">&quot;my_float_value&quot;</span>, value);</div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="ga2b444088e9585f5bf6c0ecd076e50412"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2b444088e9585f5bf6c0ecd076e50412">&#9670;&nbsp;</a></span>CheckSettingEnum()</h2>
+<a id="gad382c63b67d853965c599f909b359b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad382c63b67d853965c599f909b359b54">&#9670;&nbsp;</a></span>CheckSettingEnum()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -693,7 +773,7 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool kodi::CheckSettingEnum </td>
+          <td class="memname">bool ATTRIBUTE_HIDDEN kodi::CheckSettingEnum </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>settingName</em>, </td>
@@ -745,8 +825,8 @@ This can be used to get and set the addon related values inside his settings.xml
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="ga74413fcdd1fa7d510d4f5e116e7e73f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga74413fcdd1fa7d510d4f5e116e7e73f3">&#9670;&nbsp;</a></span>GetSettingEnum()</h2>
+<a id="ga72a7a2a3c9311be0e67ef4d9919a624d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga72a7a2a3c9311be0e67ef4d9919a624d">&#9670;&nbsp;</a></span>GetSettingEnum()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -755,11 +835,21 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enumType kodi::GetSettingEnum </td>
+          <td class="memname">enumType ATTRIBUTE_HIDDEN kodi::GetSettingEnum </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>settingName</em></td><td>)</td>
+          <td class="paramname"><em>settingName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">enumType&#160;</td>
+          <td class="paramname"><em>defaultValue</em> = <code>static_cast&lt;enumType&gt;(0)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -774,10 +864,11 @@ This can be used to get and set the addon related values inside his settings.xml
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">settingName</td><td>The name of asked setting </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defaultValue</td><td>[opt] Default value if not found </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The value of setting, forced to <b><code>0</code></b> if not found;</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The value of setting, forced to <b><code>0</code></b> or defaultValue if not found</dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>The enums are used as integer inside settings.xml.</dd></dl>
 <hr  />
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
@@ -793,8 +884,8 @@ This can be used to get and set the addon related values inside his settings.xml
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="ga4bbae043d4154992a64c6b10c0051d90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4bbae043d4154992a64c6b10c0051d90">&#9670;&nbsp;</a></span>SetSettingEnum()</h2>
+<a id="ga5fc604a44c4dfe08aea4772fc212c99a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5fc604a44c4dfe08aea4772fc212c99a">&#9670;&nbsp;</a></span>SetSettingEnum()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -803,7 +894,7 @@ This can be used to get and set the addon related values inside his settings.xml
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void kodi::SetSettingEnum </td>
+          <td class="memname">void ATTRIBUTE_HIDDEN kodi::SetSettingEnum </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>settingName</em>, </td>
@@ -854,17 +945,17 @@ This can be used to get and set the addon related values inside his settings.xml
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi__settings_html_ga0f014aac138ad1d8ac51e5ecfb15e4d5"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga0f014aac138ad1d8ac51e5ecfb15e4d5">kodi::GetSettingInt</a></div><div class="ttdeci">int GetSettingInt(const std::string &amp;settingName)</div><div class="ttdoc">Get integer setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:812</div></div>
-<div class="ttc" id="agroup__cpp__kodi__settings_html_gaaffb4c51d85ec3f6f4b7c0f98d990917"><div class="ttname"><a href="group__cpp__kodi__settings.html#gaaffb4c51d85ec3f6f4b7c0f98d990917">kodi::CheckSettingBoolean</a></div><div class="ttdeci">bool CheckSettingBoolean(const std::string &amp;settingName, bool &amp;settingValue)</div><div class="ttdoc">Check and get a boolean setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:871</div></div>
-<div class="ttc" id="agroup__cpp__kodi__settings_html_ga373f1f68c7665c399a9422e40c9e0925"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga373f1f68c7665c399a9422e40c9e0925">kodi::SetSettingString</a></div><div class="ttdeci">void SetSettingString(const std::string &amp;settingName, const std::string &amp;settingValue)</div><div class="ttdoc">Set string setting of addon.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:753</div></div>
-<div class="ttc" id="agroup__cpp__kodi__settings_html_ga76aab1b49ad0a022dd64f5102758b2f3"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga76aab1b49ad0a022dd64f5102758b2f3">kodi::CheckSettingString</a></div><div class="ttdeci">bool CheckSettingString(const std::string &amp;settingName, std::string &amp;settingValue)</div><div class="ttdoc">Check and get a string setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:691</div></div>
-<div class="ttc" id="agroup__cpp__kodi__settings_html_gac743de36b0b5095fce08100e9b332fc5"><div class="ttname"><a href="group__cpp__kodi__settings.html#gac743de36b0b5095fce08100e9b332fc5">kodi::SetSettingBoolean</a></div><div class="ttdeci">void SetSettingBoolean(const std::string &amp;settingName, bool settingValue)</div><div class="ttdoc">Set boolean setting of addon.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:925</div></div>
-<div class="ttc" id="agroup__cpp__kodi__settings_html_gadfe67549d9f0ab6e3401113223827457"><div class="ttname"><a href="group__cpp__kodi__settings.html#gadfe67549d9f0ab6e3401113223827457">kodi::CheckSettingInt</a></div><div class="ttdeci">bool CheckSettingInt(const std::string &amp;settingName, int &amp;settingValue)</div><div class="ttdoc">Check and get a integer setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:785</div></div>
-<div class="ttc" id="agroup__cpp__kodi__settings_html_ga347854e2a98376232a9836dadc27b93f"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga347854e2a98376232a9836dadc27b93f">kodi::GetSettingString</a></div><div class="ttdeci">std::string GetSettingString(const std::string &amp;settingName)</div><div class="ttdoc">Get string setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:726</div></div>
-<div class="ttc" id="agroup__cpp__kodi__settings_html_gad71dc84d559872fa621d05d525317f22"><div class="ttname"><a href="group__cpp__kodi__settings.html#gad71dc84d559872fa621d05d525317f22">kodi::GetSettingFloat</a></div><div class="ttdeci">float GetSettingFloat(const std::string &amp;settingName)</div><div class="ttdoc">Get floating point setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:984</div></div>
-<div class="ttc" id="agroup__cpp__kodi__settings_html_ga1050b631255ee435734ae0d10fa4ac9c"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga1050b631255ee435734ae0d10fa4ac9c">kodi::SetSettingInt</a></div><div class="ttdeci">void SetSettingInt(const std::string &amp;settingName, int settingValue)</div><div class="ttdoc">Set integer setting of addon.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:839</div></div>
-<div class="ttc" id="agroup__cpp__kodi__settings_html_ga9ba4021b4dd99fb951d9d2b5fd3cb0bf"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga9ba4021b4dd99fb951d9d2b5fd3cb0bf">kodi::SetSettingFloat</a></div><div class="ttdeci">void SetSettingFloat(const std::string &amp;settingName, float settingValue)</div><div class="ttdoc">Set floating point setting of addon.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:1011</div></div>
-<div class="ttc" id="agroup__cpp__kodi__settings_html_gac9b5bb48021789d00409a173f03eed48"><div class="ttname"><a href="group__cpp__kodi__settings.html#gac9b5bb48021789d00409a173f03eed48">kodi::GetSettingBoolean</a></div><div class="ttdeci">bool GetSettingBoolean(const std::string &amp;settingName)</div><div class="ttdoc">Get boolean setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:898</div></div>
+<div class="ttc" id="agroup__cpp__kodi__settings_html_ga96cf17c7e640ddf4a48f30170d5b2e0e"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga96cf17c7e640ddf4a48f30170d5b2e0e">kodi::SetSettingBoolean</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN SetSettingBoolean(const std::string &amp;settingName, bool settingValue)</div><div class="ttdoc">Set boolean setting of addon.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:1002</div></div>
+<div class="ttc" id="agroup__cpp__kodi__settings_html_ga3ceb7548f335e4219e4be53c0813d0ea"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga3ceb7548f335e4219e4be53c0813d0ea">kodi::GetSettingString</a></div><div class="ttdeci">std::string ATTRIBUTE_HIDDEN GetSettingString(const std::string &amp;settingName, const std::string &amp;defaultValue=&quot;&quot;)</div><div class="ttdoc">Get string setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:798</div></div>
+<div class="ttc" id="agroup__cpp__kodi__settings_html_ga98644f28dcb8d375446d66d2c99d69cb"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga98644f28dcb8d375446d66d2c99d69cb">kodi::GetSettingInt</a></div><div class="ttdeci">int ATTRIBUTE_HIDDEN GetSettingInt(const std::string &amp;settingName, int defaultValue=0)</div><div class="ttdoc">Get integer setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:887</div></div>
+<div class="ttc" id="agroup__cpp__kodi__settings_html_ga7d65f40b5bbd6bf5aaee1a4b163da3d2"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga7d65f40b5bbd6bf5aaee1a4b163da3d2">kodi::CheckSettingInt</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN CheckSettingInt(const std::string &amp;settingName, int &amp;settingValue)</div><div class="ttdoc">Check and get a integer setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:859</div></div>
+<div class="ttc" id="agroup__cpp__kodi__settings_html_ga19f37ddffcf939ca03da266f0b3db9f4"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga19f37ddffcf939ca03da266f0b3db9f4">kodi::SetSettingFloat</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN SetSettingFloat(const std::string &amp;settingName, float settingValue)</div><div class="ttdoc">Set floating point setting of addon.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:1090</div></div>
+<div class="ttc" id="agroup__cpp__kodi__settings_html_gac99ff742b7c9f18bd61808464ed7e644"><div class="ttname"><a href="group__cpp__kodi__settings.html#gac99ff742b7c9f18bd61808464ed7e644">kodi::GetSettingBoolean</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN GetSettingBoolean(const std::string &amp;settingName, bool defaultValue=false)</div><div class="ttdoc">Get boolean setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:974</div></div>
+<div class="ttc" id="agroup__cpp__kodi__settings_html_ga0fa39ae77ecaebdbca29a9eb12def5b5"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga0fa39ae77ecaebdbca29a9eb12def5b5">kodi::CheckSettingString</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN CheckSettingString(const std::string &amp;settingName, std::string &amp;settingValue)</div><div class="ttdoc">Check and get a string setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:761</div></div>
+<div class="ttc" id="agroup__cpp__kodi__settings_html_ga8df463677c7530e577438a21b65884c0"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga8df463677c7530e577438a21b65884c0">kodi::GetSettingFloat</a></div><div class="ttdeci">float ATTRIBUTE_HIDDEN GetSettingFloat(const std::string &amp;settingName, float defaultValue=0.0f)</div><div class="ttdoc">Get floating point setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:1062</div></div>
+<div class="ttc" id="agroup__cpp__kodi__settings_html_gabb36374fc18ac27da7b07395a4b2010a"><div class="ttname"><a href="group__cpp__kodi__settings.html#gabb36374fc18ac27da7b07395a4b2010a">kodi::SetSettingInt</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN SetSettingInt(const std::string &amp;settingName, int settingValue)</div><div class="ttdoc">Set integer setting of addon.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:914</div></div>
+<div class="ttc" id="agroup__cpp__kodi__settings_html_ga80d769921d3f3bbe2113fadec5812f34"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga80d769921d3f3bbe2113fadec5812f34">kodi::SetSettingString</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN SetSettingString(const std::string &amp;settingName, const std::string &amp;settingValue)</div><div class="ttdoc">Set string setting of addon.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:826</div></div>
+<div class="ttc" id="agroup__cpp__kodi__settings_html_ga91dbcd080212d8f236b72845df9c98cc"><div class="ttname"><a href="group__cpp__kodi__settings.html#ga91dbcd080212d8f236b72845df9c98cc">kodi::CheckSettingBoolean</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN CheckSettingBoolean(const std::string &amp;settingName, bool &amp;settingValue)</div><div class="ttdoc">Check and get a boolean setting value.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:946</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

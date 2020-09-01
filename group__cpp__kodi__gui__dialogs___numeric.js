@@ -1,11 +1,11 @@
 var group__cpp__kodi__gui__dialogs___numeric =
 [
-    [ "ShowAndVerifyNewPassword", "group__cpp__kodi__gui__dialogs___numeric.html#ga0c792789766c8ecaac157c5f902bab36", null ],
-    [ "ShowAndVerifyPassword", "group__cpp__kodi__gui__dialogs___numeric.html#gafa3106f326efb37434c16a64747d99c3", null ],
-    [ "ShowAndVerifyInput", "group__cpp__kodi__gui__dialogs___numeric.html#ga33d68c3e3296be91571eb70c9cd992c5", null ],
-    [ "ShowAndGetTime", "group__cpp__kodi__gui__dialogs___numeric.html#ga974b32a3de845c329dacecc25cc5519e", null ],
-    [ "ShowAndGetDate", "group__cpp__kodi__gui__dialogs___numeric.html#ga3a0a6c1301925b42ba7b332d08d81e2f", null ],
-    [ "ShowAndGetIPAddress", "group__cpp__kodi__gui__dialogs___numeric.html#ga9445e66ca1846ba453ea30002d12b1e0", null ],
-    [ "ShowAndGetNumber", "group__cpp__kodi__gui__dialogs___numeric.html#gae9b8974e1109c0c217e1d106f6514cfb", null ],
-    [ "ShowAndGetSeconds", "group__cpp__kodi__gui__dialogs___numeric.html#ga370bf8cd65734bb2efba9a85e0493162", null ]
+    [ "ShowAndVerifyNewPassword", "group__cpp__kodi__gui__dialogs___numeric.html#gac5660e6f567b412cbca6521965d918ca", null ],
+    [ "ShowAndVerifyPassword", "group__cpp__kodi__gui__dialogs___numeric.html#ga9319b6e466cc92dcc7841c4fe6a5e3db", null ],
+    [ "ShowAndVerifyInput", "group__cpp__kodi__gui__dialogs___numeric.html#ga2b844f3169029f78d26c33204a3c0e52", null ],
+    [ "ShowAndGetTime", "group__cpp__kodi__gui__dialogs___numeric.html#ga1311dc13c1ae788a7c3d0996b276baff", null ],
+    [ "ShowAndGetDate", "group__cpp__kodi__gui__dialogs___numeric.html#ga1a879555190a5a2938d2439c9b41b2ef", null ],
+    [ "ShowAndGetIPAddress", "group__cpp__kodi__gui__dialogs___numeric.html#gadcf13d0205ffd72306efa378092ab4bc", null ],
+    [ "ShowAndGetNumber", "group__cpp__kodi__gui__dialogs___numeric.html#ga74ffa355c9960637aa9b67dac59171e9", null ],
+    [ "ShowAndGetSeconds", "group__cpp__kodi__gui__dialogs___numeric.html#ga9745e68de75ddf54b37a49533dfb1707", null ]
 ];

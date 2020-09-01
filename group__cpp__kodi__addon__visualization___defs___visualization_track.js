@@ -1,0 +1,28 @@
+var group__cpp__kodi__addon__visualization___defs___visualization_track =
+[
+    [ "Value Help", "group__cpp__kodi__addon__visualization___defs___visualization_track___help.html", null ],
+    [ "SetTitle", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga54294c70e5c7d4e8edacbdde65a07ab3", null ],
+    [ "GetTitle", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaeb3ac9b59cc3df1debe0ea758725cc8e", null ],
+    [ "SetArtist", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga5e75607d7b90b2fbd342203e0562530b", null ],
+    [ "GetArtist", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga4bbce7b9d999d32415ff8e1e4663562b", null ],
+    [ "SetAlbum", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga0b92a57fe710507ef937de56e12c6c88", null ],
+    [ "GetAlbum", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga55803565d1b187d6fe1c9e4f36c404f6", null ],
+    [ "SetAlbumArtist", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga71090416a4d71dfd72639badbcb0b112", null ],
+    [ "GetAlbumArtist", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf38bbbd17f7b2e3c9635ec23d04adb81", null ],
+    [ "SetGenre", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf319c22917674b7f0c5584465b39c0c6", null ],
+    [ "GetGenre", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gae20ab752ab482acdb38664a742b9ed82", null ],
+    [ "SetDuration", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga2a8c7b8b61c091d2ae6763b123805f2a", null ],
+    [ "GetDuration", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga99c2eca8985fb3522ff6d815537da2ca", null ],
+    [ "SetTrack", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga0d08f3902fc7a7d7c9321b986cf09505", null ],
+    [ "GetTrack", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gae4ab98f56d54ab92a0230d66cf0a9055", null ],
+    [ "SetDisc", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gab182b5fe23194300ab9e8f884549e549", null ],
+    [ "GetDisc", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga00b0b46ded8db251c6937047df33ac2f", null ],
+    [ "SetYear", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gad248b0d121f5add96356c5e469ce983f", null ],
+    [ "GetYear", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga2db2a6f455cbf2cc0011da9326edae5f", null ],
+    [ "SetLyrics", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga303498a405847125d7da25275612045e", null ],
+    [ "GetLyrics", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga8b204053b83b041fb34d4eb41404ee14", null ],
+    [ "SetRating", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gad0195fec98c12836339be97684ee47f7", null ],
+    [ "GetRating", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga3a90c28fb1501523e660d51f2b44df40", null ],
+    [ "SetComment", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#ga172c10e306c608ed9687a06d065dcf7d", null ],
+    [ "GetComment", "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf6675a1e224eee3f3b8a6ef0923e77b0", null ]
+];

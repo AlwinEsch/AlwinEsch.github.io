@@ -1,6 +1,6 @@
 var group__cpp__kodi__addon__visualization =
 [
-    [ "class VisTrack", "group__cpp__kodi__addon__visualization___vis_track.html", null ],
+    [ "Definitions, structures and enumerators", "group__cpp__kodi__addon__visualization___defs.html", "group__cpp__kodi__addon__visualization___defs" ],
     [ "Information functions", "group__cpp__kodi__addon__visualization___c_b.html", "group__cpp__kodi__addon__visualization___c_b" ],
     [ "CInstanceVisualization", "group__cpp__kodi__addon__visualization.html#gab77a4fc4d8b8c8cbb93f7a5632c5b5ee", null ],
     [ "CInstanceVisualization", "group__cpp__kodi__addon__visualization.html#gafb30eb0829c52a091a4f67ffbe232c85", null ],
@@ -21,5 +21,5 @@ var group__cpp__kodi__addon__visualization =
     [ "LockPreset", "group__cpp__kodi__addon__visualization.html#ga0396c3e1569480032721836b7e139624", null ],
     [ "RatePreset", "group__cpp__kodi__addon__visualization.html#gae12d00ba86095e80ec25c719592a1daa", null ],
     [ "UpdateAlbumart", "group__cpp__kodi__addon__visualization.html#gaa966fc12df9ac054bfd35b8969f67081", null ],
-    [ "UpdateTrack", "group__cpp__kodi__addon__visualization.html#ga83adb1f15daf0f22b2269546d7f21c26", null ]
+    [ "UpdateTrack", "group__cpp__kodi__addon__visualization.html#ga4b6accb100116250a962c345e8c36d7b", null ]
 ];

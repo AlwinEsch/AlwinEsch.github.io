@@ -1,6 +1,6 @@
 var group__cpp__kodi__addon__screensaver___c_b =
 [
-    [ "Device", "group__cpp__kodi__addon__screensaver___c_b.html#gadb328fb2add804f1393b84737d3ae45d", null ],
+    [ "Device", "group__cpp__kodi__addon__screensaver___c_b.html#ga8172434167b6832d9b0a16e520de0e32", null ],
     [ "X", "group__cpp__kodi__addon__screensaver___c_b.html#gaafabadb78034330e508ebff9c58e0839", null ],
     [ "Y", "group__cpp__kodi__addon__screensaver___c_b.html#gae17c4a6c158b5533f640b52d757b5519", null ],
     [ "Width", "group__cpp__kodi__addon__screensaver___c_b.html#gad26a595463349d0214ea9c09fb31c401", null ],

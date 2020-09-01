@@ -1,15 +1,19 @@
 var searchData=
 [
-  ['undeleterecording_3558',['UndeleteRecording',['../group__cpp__kodi__addon__pvr___recordings.html#gac7837819333cfaae34027ab8f2be50b5',1,'kodi::addon::CInstancePVRClient']]],
-  ['unknowntoutf8_3559',['UnknownToUTF8',['../group__cpp__kodi.html#ga275a5231deebed983e67a97f50c8195e',1,'kodi']]],
-  ['unloadgame_3560',['UnloadGame',['../classkodi_1_1addon_1_1_c_instance_game.html#a03d0df14967c92b5ae74ab7e322f74ba',1,'kodi::addon::CInstanceGame']]],
-  ['unlock_3561',['Unlock',['../group__cpp__kodi__gui.html#ga6c6c14ee83364161f2dab4233f1fd95f',1,'kodi::gui']]],
-  ['unshuffle_3562',['unshuffle',['../group__python___play_list.html#ga869185334948aa5f500d718c1c071cdd',1,'XBMCAddon::xbmc::PlayList']]],
-  ['update_3563',['update',['../group__python___dialog_progress.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgress::update()'],['../group__python___dialog_progress_b_g.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476',1,'XBMCAddon::xbmcgui::DialogProgressBG::update()']]],
-  ['updatealbumart_3564',['UpdateAlbumart',['../group__cpp__kodi__addon__visualization.html#gaa966fc12df9ac054bfd35b8969f67081',1,'kodi::addon::CInstanceVisualization']]],
-  ['updateinfotag_3565',['updateInfoTag',['../group__python___player.html#ga84bc29443d5f5b999750f933afd6ff14',1,'XBMCAddon::xbmc::Player']]],
-  ['updatetimer_3566',['UpdateTimer',['../group__cpp__kodi__addon__pvr___timers.html#ga75a6c43d1324a66c847e28704b9c6945',1,'kodi::addon::CInstancePVRClient']]],
-  ['updatetrack_3567',['UpdateTrack',['../group__cpp__kodi__addon__visualization.html#ga83adb1f15daf0f22b2269546d7f21c26',1,'kodi::addon::CInstanceVisualization']]],
-  ['urlencode_3568',['URLEncode',['../group__cpp__kodi__network.html#gac4320b320b1871e24d37f6bab266f368',1,'kodi::network']]],
-  ['userpath_3569',['UserPath',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a7929d298b4ee683951e2f094ef2ef1d5',1,'kodi::addon::CInstancePeripheral::UserPath()'],['../group__cpp__kodi__addon__pvr___base.html#gad850ea86af3d01e6520889ab61e398aa',1,'kodi::addon::CInstancePVRClient::UserPath()']]]
+  ['tell_3902',['tell',['../group__python__file.html#ga8153e55ed7b27a62988843a2dd66c845',1,'XBMCAddon::xbmcvfs::File']]],
+  ['text_3903',['Text',['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#ga8c95c8fd22c77bce27a4798f2490d381',1,'kodi::gui::dialogs::CExtendedProgress']]],
+  ['textviewer_3904',['textviewer',['../group__python___dialog.html#gad24eabf4c8107d4674c017db09a193ae',1,'XBMCAddon::xbmcgui::Dialog']]],
+  ['title_3905',['Title',['../classkodi_1_1vfs_1_1_c_dir_entry.html#a9865f7d9426ae988fdcd66ff3a5c5bcd',1,'kodi::vfs::CDirEntry::Title()'],['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#ga642f961321a4b17ae79f39fa2c2e4c43',1,'kodi::gui::dialogs::CExtendedProgress::Title()']]],
+  ['trackcount_3906',['TrackCount',['../group__cpp__kodi__addon__audiodecoder.html#gad339b85b3566aee42195d3b101ca9afa',1,'kodi::addon::CInstanceAudioDecoder']]],
+  ['transferpresets_3907',['TransferPresets',['../group__cpp__kodi__addon__visualization___c_b.html#gaac44c10f69e74cf7da9109240a0de178',1,'kodi::addon::CInstanceVisualization']]],
+  ['translatepath_3908',['translatePath',['../group__python__xbmc.html#ga762f48b2097ec25d938bf8596023b221',1,'translatePath(...):&#160;ModuleXbmc.h'],['../group__python__xbmcvfs.html#ga762f48b2097ec25d938bf8596023b221',1,'translatePath(...):&#160;ModuleXbmcvfs.h']]],
+  ['translatespecialprotocol_3909',['TranslateSpecialProtocol',['../group__cpp__kodi__vfs___general.html#ga007920c11cec77c5b7e8b3393d142733',1,'kodi::vfs']]],
+  ['triggerchannelgroupsupdate_3910',['TriggerChannelGroupsUpdate',['../group__cpp__kodi__addon__pvr__supports_channel_groups.html#ga7d1babe65b0971470ff4d21cf71c5218',1,'kodi::addon::CInstancePVRClient']]],
+  ['triggerchannelupdate_3911',['TriggerChannelUpdate',['../group__cpp__kodi__addon__pvr___channels.html#ga62a1cd1433d35856f1100992c8f9542c',1,'kodi::addon::CInstancePVRClient']]],
+  ['triggerepgupdate_3912',['TriggerEpgUpdate',['../group__cpp__kodi__addon__pvr___e_p_g_tag.html#ga2497b4db59f21f2fbb2956dc016c3067',1,'kodi::addon::CInstancePVRClient']]],
+  ['triggerrecordingupdate_3913',['TriggerRecordingUpdate',['../group__cpp__kodi__addon__pvr___recordings.html#ga47bf532518d0f429f0a344e193913072',1,'kodi::addon::CInstancePVRClient']]],
+  ['triggerscan_3914',['TriggerScan',['../group__cpp__kodi__addon__peripheral__callbacks.html#ga6e68fb96881f6f92cd2855d86abf245e',1,'kodi::addon::CInstancePeripheral']]],
+  ['triggertimerupdate_3915',['TriggerTimerUpdate',['../group__cpp__kodi__addon__pvr___timers.html#ga04eaaf8a767e85a2267ad96430510ef6',1,'kodi::addon::CInstancePVRClient']]],
+  ['truncate_3916',['Truncate',['../group__cpp__kodi__addon__vfs__filecontrol.html#gacce61e986c54515af51058c5bd6caf32',1,'kodi::addon::CInstanceVFS::Truncate()'],['../group__cpp__kodi__vfs___c_file.html#ga7db30bce899ccc6e0d7a5b0a4cf160b7',1,'kodi::vfs::CFile::Truncate()']]],
+  ['type_3917',['Type',['../group__cpp__kodi__addon__peripheral___defs___peripheral___peripheral.html#gaf4545b5b838c3a7f05ea4bf7a0e1fdac',1,'kodi::addon::Peripheral::Type()'],['../group__cpp__kodi__addon__peripheral___defs___peripheral___peripheral_event.html#gab948479e2a5aa57426b581625e1b1feb',1,'kodi::addon::PeripheralEvent::Type()'],['../group__cpp__kodi__addon__peripheral___defs___joystick___driver_primitive.html#gaf51cb534e3800b068424a4d41d058c93',1,'kodi::addon::DriverPrimitive::Type()'],['../group__cpp__kodi__addon__peripheral___defs___joystick___joystick_feature.html#ga76e046f53835694c392aedd01f5dd9d3',1,'kodi::addon::JoystickFeature::Type()']]]
 ];

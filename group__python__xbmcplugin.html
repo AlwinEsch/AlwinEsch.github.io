@@ -118,9 +118,24 @@ $(document).ready(function(){initNavTree('group__python__xbmcplugin.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.addDirectoryItem(handle, url, listitem [,isFolder, totalItems]) </big></font></span></code></h4>   Callback function to pass directory contents back to Kodi. </p>
-<h2>@param handle integer - handle the plugin was started with. @param url string - url of the entry. would be <code>plugin://</code> for another virtual directory @param listitem ListItem - item to add. @param isFolder [opt] bool - True=folder / False=not a folder(default). @param totalItems [opt] integer - total number of items that will be passed.(used for progressbar) @return Returns a bool for successful completion.  @note You can use the above as keywords for arguments and skip certain optional arguments. Once you use a keyword, all following arguments require the keyword.   <b>Example:</b> @code{py} .. if not xbmcplugin.addDirectoryItem(int(sys.argv[1]), 'F:\Trailers\300.mov', listitem, totalItems=50): break .. @endcode </h2>
-
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.addDirectoryItem(handle, url, listitem [,isFolder, totalItems]) </big></font></span></code></h4><hr>  Callback function to pass directory contents back to Kodi. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramname">url</td><td>string - url of the entry. would be <code>plugin://</code> for another virtual directory </td></tr>
+    <tr><td class="paramname">listitem</td><td>ListItem - item to add. </td></tr>
+    <tr><td class="paramname">isFolder</td><td>[opt] bool - True=folder / False=not a folder(default). </td></tr>
+    <tr><td class="paramname">totalItems</td><td>[opt] integer - total number of items that will be passed.(used for progressbar) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a bool for successful completion.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as keywords for arguments and skip certain optional arguments. Once you use a keyword, all following arguments require the keyword.</dd></dl>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line"><span class="keywordflow">if</span> <span class="keywordflow">not</span> xbmcplugin.addDirectoryItem(int(sys.argv[1]), <span class="stringliteral">&#39;F:\\Trailers\\300.mov&#39;</span>, listitem, totalItems=50): <span class="keywordflow">break</span></div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga3a00602b6bcfdc77ca0c56362c84540c"></a>
@@ -139,9 +154,22 @@ $(document).ready(function(){initNavTree('group__python__xbmcplugin.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.addDirectoryItems(handle, items[, totalItems]) </big></font></span></code></h4>   Callback function to pass directory contents back to Kodi as a list. </p>
-<h2>@param handle integer - handle the plugin was started with. @param items List - list of (url, listitem[, isFolder]) as a tuple to add. @param totalItems [opt] integer - total number of items that will be passed.(used for progressbar) @return Returns a bool for successful completion.  @remark Large lists benefit over using the standard <a class="el" href="group__python__xbmcplugin.html#ga4c357cf7d3dbd4e2823755ecfd7dfa01" title="&lt;h4&gt;&lt;code&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;Function: &lt;/span&gt;&lt;span style=&quot;font-style: bold;&quot;&gt;&lt;font co...">addDirectoryItem()</a>. You may call this more than once to add items in chunks.   <b>Example:</b> @code{py} .. if not xbmcplugin.addDirectoryItems(int(sys.argv[1]), [(url, listitem, False,)]: raise .. @endcode </h2>
-
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.addDirectoryItems(handle, items[, totalItems]) </big></font></span></code></h4><hr>  Callback function to pass directory contents back to Kodi as a list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramname">items</td><td>List - list of (url, listitem[, isFolder]) as a tuple to add. </td></tr>
+    <tr><td class="paramname">totalItems</td><td>[opt] integer - total number of items that will be passed.(used for progressbar) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns a bool for successful completion.</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Large lists benefit over using the standard <a class="el" href="group__python__xbmcplugin.html#ga4c357cf7d3dbd4e2823755ecfd7dfa01" title="&lt;h4&gt;&lt;code&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;Function: &lt;/span&gt;&lt;span style=&quot;font-style: bold;&quot;&gt;&lt;font co...">addDirectoryItem()</a>. You may call this more than once to add items in chunks.</dd></dl>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line"><span class="keywordflow">if</span> <span class="keywordflow">not</span> xbmcplugin.addDirectoryItems(int(sys.argv[1]), [(url, listitem, <span class="keyword">False</span>,)]: <span class="keywordflow">raise</span></div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga52a8af0460894fa918c6a20d8d77fff6"></a>
@@ -160,9 +188,21 @@ $(document).ready(function(){initNavTree('group__python__xbmcplugin.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.endOfDirectory(handle[, succeeded, updateListing, cacheToDisc]) </big></font></span></code></h4>   Callback function to tell Kodi that the end of the directory listing in a virtualPythonFolder module is reached. </p>
-<h2>@param handle integer - handle the plugin was started with. @param succeeded [opt] bool - True=script completed successfully(Default)/False=Script did not. @param updateListing [opt] bool - True=this folder should update the current listing/False=Folder is a subfolder(Default). @param cacheToDisc [opt] bool - True=Folder will cache if extended time(default)/False=this folder will never cache to disc.   <b>Example:</b> @code{py} .. xbmcplugin.endOfDirectory(int(sys.argv[1]), cacheToDisc=False) .. @endcode </h2>
-
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.endOfDirectory(handle[, succeeded, updateListing, cacheToDisc]) </big></font></span></code></h4><hr>  Callback function to tell Kodi that the end of the directory listing in a virtualPythonFolder module is reached. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramname">succeeded</td><td>[opt] bool - True=script completed successfully(Default)/False=Script did not. </td></tr>
+    <tr><td class="paramname">updateListing</td><td>[opt] bool - True=this folder should update the current listing/False=Folder is a subfolder(Default). </td></tr>
+    <tr><td class="paramname">cacheToDisc</td><td>[opt] bool - True=Folder will cache if extended time(default)/False=this folder will never cache to disc.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line">xbmcplugin.endOfDirectory(int(sys.argv[1]), cacheToDisc=<span class="keyword">False</span>)</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gaa03ad528583db7d5277eae3977acde0f"></a>
@@ -181,9 +221,20 @@ $(document).ready(function(){initNavTree('group__python__xbmcplugin.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setResolvedUrl(handle, succeeded, listitem) </big></font></span></code></h4>   Callback function to tell Kodi that the file plugin has been resolved to a url </p>
-<h2>@param handle integer - handle the plugin was started with. @param succeeded bool - True=script completed successfully/False=Script did not. @param listitem ListItem - item the file plugin resolved to for playback.   <b>Example:</b> @code{py} .. xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, listitem) .. @endcode </h2>
-
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setResolvedUrl(handle, succeeded, listitem) </big></font></span></code></h4><hr>  Callback function to tell Kodi that the file plugin has been resolved to a url </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramname">succeeded</td><td>bool - True=script completed successfully/False=Script did not. </td></tr>
+    <tr><td class="paramname">listitem</td><td>ListItem - item the file plugin resolved to for playback.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line">xbmcplugin.setResolvedUrl(int(sys.argv[1]), <span class="keyword">True</span>, listitem)</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga85b3bff796fd644fb28f87b136025f40"></a>
@@ -202,9 +253,130 @@ $(document).ready(function(){initNavTree('group__python__xbmcplugin.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.addSortMethod(handle, sortMethod [,label2Mask]) </big></font></span></code></h4>   Adds a sorting method for the media list. </p>
-<h2>@param handle integer - handle the plugin was started with. @param sortMethod integer - see available sort methods at the bottom (or see \ref List_of_sort_methods "SortUtils").    Value  Description    xbmcplugin.SORT_METHOD_NONE  Do not sort    xbmcplugin.SORT_METHOD_LABEL  Sort by label    xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE  Sort by the label and ignore "The" before    xbmcplugin.SORT_METHOD_DATE  Sort by the date    xbmcplugin.SORT_METHOD_SIZE  Sort by the size    xbmcplugin.SORT_METHOD_FILE  Sort by the file    xbmcplugin.SORT_METHOD_DRIVE_TYPE  Sort by the drive type    xbmcplugin.SORT_METHOD_TRACKNUM  Sort by the track number    xbmcplugin.SORT_METHOD_DURATION  Sort by the duration    xbmcplugin.SORT_METHOD_TITLE  Sort by the title    xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE  Sort by the title and ignore "The" before    xbmcplugin.SORT_METHOD_ARTIST  Sort by the artist    xbmcplugin.SORT_METHOD_ARTIST_IGNORE_THE  Sort by the artist and ignore "The" before    xbmcplugin.SORT_METHOD_ALBUM  Sort by the album    xbmcplugin.SORT_METHOD_ALBUM_IGNORE_THE  Sort by the album and ignore "The" before    xbmcplugin.SORT_METHOD_GENRE  Sort by the genre    xbmcplugin.SORT_SORT_METHOD_VIDEO_YEAR, xbmcplugin.SORT_METHOD_YEAR  Sort by the year    xbmcplugin.SORT_METHOD_VIDEO_RATING  Sort by the video rating    xbmcplugin.SORT_METHOD_PROGRAM_COUNT  Sort by the program count    xbmcplugin.SORT_METHOD_PLAYLIST_ORDER  Sort by the playlist order    xbmcplugin.SORT_METHOD_EPISODE  Sort by the episode    xbmcplugin.SORT_METHOD_VIDEO_TITLE  Sort by the video title    xbmcplugin.SORT_METHOD_VIDEO_SORT_TITLE  Sort by the video sort title    xbmcplugin.SORT_METHOD_VIDEO_SORT_TITLE_IGNORE_THE  Sort by the video sort title and ignore "The" before    xbmcplugin.SORT_METHOD_PRODUCTIONCODE  Sort by the production code    xbmcplugin.SORT_METHOD_SONG_RATING  Sort by the song rating    xbmcplugin.SORT_METHOD_MPAA_RATING  Sort by the mpaa rating    xbmcplugin.SORT_METHOD_VIDEO_RUNTIME  Sort by video runtime    xbmcplugin.SORT_METHOD_STUDIO  Sort by the studio    xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE  Sort by the studio and ignore "The" before    xbmcplugin.SORT_METHOD_UNSORTED  Use list not sorted    xbmcplugin.SORT_METHOD_BITRATE  Sort by the bitrate    xbmcplugin.SORT_METHOD_LISTENERS  Sort by the listeners    xbmcplugin.SORT_METHOD_COUNTRY  Sort by the country    xbmcplugin.SORT_METHOD_DATEADDED  Sort by the added date    xbmcplugin.SORT_METHOD_FULLPATH  Sort by the full path name    xbmcplugin.SORT_METHOD_LABEL_IGNORE_FOLDERS  Sort by the label names and ignore related folder names    xbmcplugin.SORT_METHOD_LASTPLAYED  Sort by last played date    xbmcplugin.SORT_METHOD_PLAYCOUNT  Sort by the play count    xbmcplugin.SORT_METHOD_CHANNEL  Sort by the channel    xbmcplugin.SORT_METHOD_DATE_TAKEN  Sort by the taken date    xbmcplugin.SORT_METHOD_VIDEO_USER_RATING  Sort by the rating of the user of video    xbmcplugin.SORT_METHOD_SONG_USER_RATING  Sort by the rating of the user of song   @param label2Mask [opt] string - the label mask to use for the second label. Defaults to <code>%D</code>ttapplies to:            SORT_METHOD_NONE  SORT_METHOD_UNSORTED  SORT_METHOD_VIDEO_TITLE    SORT_METHOD_TRACKNUM  SORT_METHOD_FILE  SORT_METHOD_TITLE    SORT_METHOD_TITLE_IGNORE_THE  SORT_METHOD_LABEL  SORT_METHOD_LABEL_IGNORE_THE    SORT_METHOD_VIDEO_SORT_TITLE  SORT_METHOD_FULLPATH  SORT_METHOD_VIDEO_SORT_TITLE_IGNORE_THE    SORT_METHOD_LABEL_IGNORE_FOLDERS  SORT_METHOD_CHANNEL     @note to add multiple sort methods just call the method multiple times.  \xrefitem python_v13 12. \xrefitem python_v17 17.  <b>Example:</b> @code{py} .. xbmcplugin.addSortMethod(int(sys.argv[1]), xbmcplugin.SORTMETHOD_DATEADDED) .. @endcode </h2>
-
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.addSortMethod(handle, sortMethod [,label2Mask]) </big></font></span></code></h4><hr>  Adds a sorting method for the media list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramname">sortMethod</td><td>integer - see available sort methods at the bottom (or see SortUtils). <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Value </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_NONE </td><td class="markdownTableBodyNone">Do not sort  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_LABEL </td><td class="markdownTableBodyNone">Sort by label  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE </td><td class="markdownTableBodyNone">Sort by the label and ignore "The" before  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_DATE </td><td class="markdownTableBodyNone">Sort by the date  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_SIZE </td><td class="markdownTableBodyNone">Sort by the size  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_FILE </td><td class="markdownTableBodyNone">Sort by the file  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_DRIVE_TYPE </td><td class="markdownTableBodyNone">Sort by the drive type  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_TRACKNUM </td><td class="markdownTableBodyNone">Sort by the track number  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_DURATION </td><td class="markdownTableBodyNone">Sort by the duration  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_TITLE </td><td class="markdownTableBodyNone">Sort by the title  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE </td><td class="markdownTableBodyNone">Sort by the title and ignore "The" before  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_ARTIST </td><td class="markdownTableBodyNone">Sort by the artist  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_ARTIST_IGNORE_THE </td><td class="markdownTableBodyNone">Sort by the artist and ignore "The" before  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_ALBUM </td><td class="markdownTableBodyNone">Sort by the album  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_ALBUM_IGNORE_THE </td><td class="markdownTableBodyNone">Sort by the album and ignore "The" before  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_GENRE </td><td class="markdownTableBodyNone">Sort by the genre  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_SORT_METHOD_VIDEO_YEAR, xbmcplugin.SORT_METHOD_YEAR </td><td class="markdownTableBodyNone">Sort by the year  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_VIDEO_RATING </td><td class="markdownTableBodyNone">Sort by the video rating  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_PROGRAM_COUNT </td><td class="markdownTableBodyNone">Sort by the program count  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_PLAYLIST_ORDER </td><td class="markdownTableBodyNone">Sort by the playlist order  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_EPISODE </td><td class="markdownTableBodyNone">Sort by the episode  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_VIDEO_TITLE </td><td class="markdownTableBodyNone">Sort by the video title  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_VIDEO_SORT_TITLE </td><td class="markdownTableBodyNone">Sort by the video sort title  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_VIDEO_SORT_TITLE_IGNORE_THE </td><td class="markdownTableBodyNone">Sort by the video sort title and ignore "The" before  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_PRODUCTIONCODE </td><td class="markdownTableBodyNone">Sort by the production code  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_SONG_RATING </td><td class="markdownTableBodyNone">Sort by the song rating  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_MPAA_RATING </td><td class="markdownTableBodyNone">Sort by the mpaa rating  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_VIDEO_RUNTIME </td><td class="markdownTableBodyNone">Sort by video runtime  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_STUDIO </td><td class="markdownTableBodyNone">Sort by the studio  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_STUDIO_IGNORE_THE </td><td class="markdownTableBodyNone">Sort by the studio and ignore "The" before  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_UNSORTED </td><td class="markdownTableBodyNone">Use list not sorted  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_BITRATE </td><td class="markdownTableBodyNone">Sort by the bitrate  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_LISTENERS </td><td class="markdownTableBodyNone">Sort by the listeners  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_COUNTRY </td><td class="markdownTableBodyNone">Sort by the country  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_DATEADDED </td><td class="markdownTableBodyNone">Sort by the added date  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_FULLPATH </td><td class="markdownTableBodyNone">Sort by the full path name  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_LABEL_IGNORE_FOLDERS </td><td class="markdownTableBodyNone">Sort by the label names and ignore related folder names  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_LASTPLAYED </td><td class="markdownTableBodyNone">Sort by last played date  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_PLAYCOUNT </td><td class="markdownTableBodyNone">Sort by the play count  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_CHANNEL </td><td class="markdownTableBodyNone">Sort by the channel  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_DATE_TAKEN </td><td class="markdownTableBodyNone">Sort by the taken date  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_VIDEO_USER_RATING </td><td class="markdownTableBodyNone">Sort by the rating of the user of video  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">xbmcplugin.SORT_METHOD_SONG_USER_RATING </td><td class="markdownTableBodyNone">Sort by the rating of the user of song  </td></tr>
+</table>
+</td></tr>
+    <tr><td class="paramname">label2Mask</td><td>[opt] string - the label mask to use for the second label. Defaults to <code>%D</code><ul>
+<li>applies to: <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"></th><th class="markdownTableHeadNone"></th><th class="markdownTableHeadNone"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">SORT_METHOD_NONE </td><td class="markdownTableBodyNone">SORT_METHOD_UNSORTED </td><td class="markdownTableBodyNone">SORT_METHOD_VIDEO_TITLE  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">SORT_METHOD_TRACKNUM </td><td class="markdownTableBodyNone">SORT_METHOD_FILE </td><td class="markdownTableBodyNone">SORT_METHOD_TITLE  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">SORT_METHOD_TITLE_IGNORE_THE </td><td class="markdownTableBodyNone">SORT_METHOD_LABEL </td><td class="markdownTableBodyNone">SORT_METHOD_LABEL_IGNORE_THE  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">SORT_METHOD_VIDEO_SORT_TITLE </td><td class="markdownTableBodyNone">SORT_METHOD_FULLPATH </td><td class="markdownTableBodyNone">SORT_METHOD_VIDEO_SORT_TITLE_IGNORE_THE  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">SORT_METHOD_LABEL_IGNORE_FOLDERS </td><td class="markdownTableBodyNone">SORT_METHOD_CHANNEL </td><td class="markdownTableBodyNone"></td></tr>
+</table>
+</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>to add multiple sort methods just call the method multiple times.</dd></dl>
+<hr  />
+ <dl class="python_v13"><dt><b><a class="el" href="python_v13.html#_python_v13000012">v13 Python API changes:</a></b></dt><dd>Added new sort <b>SORT_METHOD_DATE_TAKEN</b>, <b>SORT_METHOD_COUNTRY</b>, <b>SORT_METHOD_DATEADDED</b>, <b>SORT_METHOD_FULLPATH</b>, <b>SORT_METHOD_LABEL_IGNORE_FOLDERS</b>, <b>SORT_METHOD_LASTPLAYED</b>, <b>SORT_METHOD_PLAYCOUNT</b>, <b>SORT_METHOD_CHANNEL</b>. </dd></dl>
+<dl class="python_v17"><dt><b><a class="el" href="python_v17.html#_python_v17000017">v17 Python API changes:</a></b></dt><dd>Added new sort <b>SORT_METHOD_VIDEO_USER_RATING</b>.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line">xbmcplugin.addSortMethod(int(sys.argv[1]), xbmcplugin.SORTMETHOD_DATEADDED)</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga8739303a25018f275578b17e35602793"></a>
@@ -223,9 +395,21 @@ $(document).ready(function(){initNavTree('group__python__xbmcplugin.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.getSetting(handle, id) </big></font></span></code></h4>   Returns the value of a setting as a string. </p>
-<h2>@param handle integer - handle the plugin was started with. @param id string - id of the setting that the module needs to access. @return Setting value as string  @note You can use the above as a keyword.   <b>Example:</b> @code{py} .. apikey = xbmcplugin.getSetting(int(sys.argv[1]), 'apikey') .. @endcode </h2>
-
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.getSetting(handle, id) </big></font></span></code></h4><hr>  Returns the value of a setting as a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramname">id</td><td>string - id of the setting that the module needs to access. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Setting value as string</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>You can use the above as a keyword.</dd></dl>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line">apikey = xbmcplugin.getSetting(int(sys.argv[1]), <span class="stringliteral">&#39;apikey&#39;</span>)</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga81abff05565e5e9aa156439646a91758"></a>
@@ -244,9 +428,20 @@ $(document).ready(function(){initNavTree('group__python__xbmcplugin.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setSetting(handle, id, value) </big></font></span></code></h4>   Sets a plugin setting for the current running plugin. </p>
-<h2>@param handle integer - handle the plugin was started with. @param id string - id of the setting that the module needs to access. @param value string or unicode - value of the setting.   <b>Example:</b> @code{py} .. xbmcplugin.setSetting(int(sys.argv[1]), id='username', value='teamxbmc') .. @endcode </h2>
-
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setSetting(handle, id, value) </big></font></span></code></h4><hr>  Sets a plugin setting for the current running plugin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramname">id</td><td>string - id of the setting that the module needs to access. </td></tr>
+    <tr><td class="paramname">value</td><td>string or unicode - value of the setting.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line">xbmcplugin.setSetting(int(sys.argv[1]), id=<span class="stringliteral">&#39;username&#39;</span>, value=<span class="stringliteral">&#39;teamxbmc&#39;</span>)</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gaa30572d1e5d9d589e1cd3bfc1e2318d6"></a>
@@ -265,9 +460,32 @@ $(document).ready(function(){initNavTree('group__python__xbmcplugin.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setContent(handle, content) </big></font></span></code></h4>   Sets the plugins content. </p>
-<h2>@param handle integer - handle the plugin was started with. @param content string - content type (eg. movies)  @par Available content strings              files  songs  artists  albums    movies  tvshows  episodes  musicvideos    videos  images  games  &ndash;    @remark Use <b>videos</b> for all videos which do not apply to the more specific mentioned ones like "movies", "episodes" etc. A good example is youtube.  \xrefitem python_v18 27.  <b>Example:</b> @code{py} .. xbmcplugin.setContent(int(sys.argv[1]), 'movies') .. @endcode </h2>
-
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setContent(handle, content) </big></font></span></code></h4><hr>  Sets the plugins content. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramname">content</td><td>string - content type (eg. movies)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Available content strings</dt><dd><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter"></th><th class="markdownTableHeadCenter"></th><th class="markdownTableHeadCenter"></th><th class="markdownTableHeadCenter"></th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">files </td><td class="markdownTableBodyCenter">songs </td><td class="markdownTableBodyCenter">artists </td><td class="markdownTableBodyCenter">albums  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">movies </td><td class="markdownTableBodyCenter">tvshows </td><td class="markdownTableBodyCenter">episodes </td><td class="markdownTableBodyCenter">musicvideos  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">videos </td><td class="markdownTableBodyCenter">images </td><td class="markdownTableBodyCenter">games </td><td class="markdownTableBodyCenter">&ndash;  </td></tr>
+</table>
+</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Use <b>videos</b> for all videos which do not apply to the more specific mentioned ones like "movies", "episodes" etc. A good example is youtube.</dd></dl>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000027">v18 Python API changes:</a></b></dt><dd>Added new <b>games</b> content</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line">xbmcplugin.setContent(int(sys.argv[1]), <span class="stringliteral">&#39;movies&#39;</span>)</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga968dc429e59e063cbd43ecbd7a4b2f5c"></a>
@@ -286,9 +504,19 @@ $(document).ready(function(){initNavTree('group__python__xbmcplugin.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setPluginCategory(handle, category) </big></font></span></code></h4>   Sets the plugins name for skins to display. </p>
-<h2>@param handle integer - handle the plugin was started with. @param category string or unicode - plugins sub category.   <b>Example:</b> @code{py} .. xbmcplugin.setPluginCategory(int(sys.argv[1]), 'Comedy') .. @endcode </h2>
-
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setPluginCategory(handle, category) </big></font></span></code></h4><hr>  Sets the plugins name for skins to display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramname">category</td><td>string or unicode - plugins sub category.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line">xbmcplugin.setPluginCategory(int(sys.argv[1]), <span class="stringliteral">&#39;Comedy&#39;</span>)</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gad10f44171571c303357ff4ee326a4a45"></a>
@@ -307,9 +535,22 @@ $(document).ready(function(){initNavTree('group__python__xbmcplugin.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setPluginFanart(handle, image, color1, color2, color3) </big></font></span></code></h4>   Sets the plugins fanart and color for skins to display. </p>
-<h2>@param handle integer - handle the plugin was started with. @param image [opt] string - path to fanart image. @param color1 [opt] hexstring - color1. (e.g. '0xFFFFFFFF') @param color2 [opt] hexstring - color2. (e.g. '0xFFFF3300') @param color3 [opt] hexstring - color3. (e.g. '0xFF000000')   <b>Example:</b> @code{py} .. xbmcplugin.setPluginFanart(int(sys.argv[1]), 'special://home/addons/plugins/video/Apple movie trailers II/fanart.png', color2='0xFFFF3300') .. @endcode </h2>
-
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setPluginFanart(handle, image, color1, color2, color3) </big></font></span></code></h4><hr>  Sets the plugins fanart and color for skins to display. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramname">image</td><td>[opt] string - path to fanart image. </td></tr>
+    <tr><td class="paramname">color1</td><td>[opt] hexstring - color1. (e.g. '0xFFFFFFFF') </td></tr>
+    <tr><td class="paramname">color2</td><td>[opt] hexstring - color2. (e.g. '0xFFFF3300') </td></tr>
+    <tr><td class="paramname">color3</td><td>[opt] hexstring - color3. (e.g. '0xFF000000')</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line">xbmcplugin.setPluginFanart(int(sys.argv[1]), <span class="stringliteral">&#39;special://home/addons/plugins/video/Apple movie trailers II/fanart.png&#39;</span>, color2=<span class="stringliteral">&#39;0xFFFF3300&#39;</span>)</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga96f1976952584c91e6d59c310ce86a25"></a>
@@ -328,9 +569,21 @@ $(document).ready(function(){initNavTree('group__python__xbmcplugin.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setProperty(handle, key, value) </big></font></span></code></h4>   Sets a container property for this plugin. </p>
-<h2>@param handle integer - handle the plugin was started with. @param key string - property name. @param value string or unicode - value of property.  @note Key is NOT case sensitive.   <b>Example:</b> @code{py} .. xbmcplugin.setProperty(int(sys.argv[1]), 'Emulator', 'M.A.M.E.') .. @endcode </h2>
-
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> xbmcplugin.setProperty(handle, key, value) </big></font></span></code></h4><hr>  Sets a container property for this plugin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>integer - handle the plugin was started with. </td></tr>
+    <tr><td class="paramname">key</td><td>string - property name. </td></tr>
+    <tr><td class="paramname">value</td><td>string or unicode - value of property.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Key is NOT case sensitive.</dd></dl>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line">xbmcplugin.setProperty(int(sys.argv[1]), <span class="stringliteral">&#39;Emulator&#39;</span>, <span class="stringliteral">&#39;M.A.M.E.&#39;</span>)</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

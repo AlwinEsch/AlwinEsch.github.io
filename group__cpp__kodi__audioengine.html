@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__audioengine.html',''
 <p><b>Audio engine functions</b><br  />
 This interface contains auxiliary functions and classes which allow an addon to play their own individual audio stream in Kodi. </p>
 <p>Using <a class="el" href="group__cpp__kodi__audioengine___c_a_e_stream.html">kodi::audioengine::CAEStream</a>, a class can be created in this regard, about which the necessary stream data and information are given to Kodi.</p>
-<p>Via <a class="el" href="group__cpp__kodi__audioengine.html#ga07f879a5e25a6eccefa3a7771f68a157">kodi::audioengine::GetCurrentSinkFormat()</a>, the audio formats currently processed in Kodi can be called up beforehand in order to adapt your own stream to them.</p>
+<p>Via <a class="el" href="group__cpp__kodi__audioengine.html#ga238c66d0552af583498f4dc367f08d3d">kodi::audioengine::GetCurrentSinkFormat()</a>, the audio formats currently processed in Kodi can be called up beforehand in order to adapt your own stream to them.</p>
 <p>However, the created stream can also differ from this because Kodi changes it to suit it.</p>
 <hr  />
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/AudioEngine.h&gt;</span></div>
@@ -112,17 +112,17 @@ This interface contains auxiliary functions and classes which allow an addon to 
 <div class="line">...</div>
 <div class="line"> </div>
 <div class="line">kodi::audioengine::AudioEngineFormat format;</div>
-<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__audioengine.html#ga07f879a5e25a6eccefa3a7771f68a157">kodi::audioengine::GetCurrentSinkFormat</a>(format))</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__audioengine.html#ga238c66d0552af583498f4dc367f08d3d">kodi::audioengine::GetCurrentSinkFormat</a>(format))</div>
 <div class="line">  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"> </div>
-<div class="line">format.SetDataFormat(AUDIOENGINE_FMT_FLOATP);</div>
-<div class="line">format.SetChannelLayout(std::vector&lt;AudioEngineChannel&gt;(AUDIOENGINE_CH_FL, AUDIOENGINE_CH_FR));</div>
+<div class="line">format.SetDataFormat(<a class="code" href="group__cpp__kodi__audioengine___defs___audio_engine_data_format.html#ggaa5510e87db1b47c1aa7823fae4950639af00d1c0e3e5c9045d402a459b6d335b3">AUDIOENGINE_FMT_FLOATP</a>);</div>
+<div class="line">format.SetChannelLayout(std::vector&lt;AudioEngineChannel&gt;(<a class="code" href="group__cpp__kodi__audioengine___defs___audio_engine_channel.html#gga61a3226eaf763fd899a00f4d7cfdda4aa9ee4ae5ed5af9fbc6f58042d49229780">AUDIOENGINE_CH_FL</a>, <a class="code" href="group__cpp__kodi__audioengine___defs___audio_engine_channel.html#gga61a3226eaf763fd899a00f4d7cfdda4aa733043f5865faebbded5e1c0b65e760d">AUDIOENGINE_CH_FR</a>));</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> myUsedSampleRate = format.GetSampleRate();</div>
 <div class="line"> </div>
 <div class="line">...</div>
 <div class="line"> </div>
-<div class="line">kodi::audioengine::CAEStream* stream = <span class="keyword">new</span> <a class="code" href="classkodi_1_1audioengine_1_1_c_a_e_stream.html">kodi::audioengine::CAEStream</a>(format, AUDIO_STREAM_AUTOSTART);</div>
+<div class="line">kodi::audioengine::CAEStream* stream = <span class="keyword">new</span> <a class="code" href="classkodi_1_1audioengine_1_1_c_a_e_stream.html">kodi::audioengine::CAEStream</a>(format, <a class="code" href="group__cpp__kodi__audioengine___defs___audio_engine_stream_options.html#gga103e605fdf8113e6c00087e3e58ac00ba72be2b92a3f4b1a653cae5badfb8a220">AUDIO_STREAM_AUTOSTART</a>);</div>
 </div><!-- fragment --><hr  />
 <p>It has the header <a class="el" href="_audio_engine_8h_source.html">#include &lt;kodi/AudioEngine.h&gt;</a> be included to enjoy it. </p>
 <table class="memberdecls">
@@ -138,8 +138,8 @@ Class that can be created by the addon in order to be able to transfer audiostre
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga07f879a5e25a6eccefa3a7771f68a157"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga07f879a5e25a6eccefa3a7771f68a157">&#9670;&nbsp;</a></span>GetCurrentSinkFormat()</h2>
+<a id="ga238c66d0552af583498f4dc367f08d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga238c66d0552af583498f4dc367f08d3d">&#9670;&nbsp;</a></span>GetCurrentSinkFormat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,7 +148,7 @@ Class that can be created by the addon in order to be able to transfer audiostre
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool kodi::audioengine::GetCurrentSinkFormat </td>
+          <td class="memname">bool ATTRIBUTE_HIDDEN kodi::audioengine::GetCurrentSinkFormat </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classkodi_1_1audioengine_1_1_audio_engine_format.html">AudioEngineFormat</a> &amp;&#160;</td>
           <td class="paramname"><em>format</em></td><td>)</td>
@@ -176,7 +176,7 @@ Class that can be created by the addon in order to be able to transfer audiostre
 <div class="line">...</div>
 <div class="line"> </div>
 <div class="line">kodi::audioengine::AudioEngineFormat format;</div>
-<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__audioengine.html#ga07f879a5e25a6eccefa3a7771f68a157">kodi::audioengine::GetCurrentSinkFormat</a>(format))</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code" href="group__cpp__kodi__audioengine.html#ga238c66d0552af583498f4dc367f08d3d">kodi::audioengine::GetCurrentSinkFormat</a>(format))</div>
 <div class="line">  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"> </div>
 <div class="line">std::vector&lt;AudioEngineChannel&gt; layout = format.GetChannelLayout();</div>
@@ -188,8 +188,12 @@ Class that can be created by the addon in order to be able to transfer audiostre
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclasskodi_1_1audioengine_1_1_c_a_e_stream_html"><div class="ttname"><a href="classkodi_1_1audioengine_1_1_c_a_e_stream.html">kodi::audioengine::CAEStream</a></div><div class="ttdef"><b>Definition:</b> AudioEngine.h:257</div></div>
-<div class="ttc" id="agroup__cpp__kodi__audioengine_html_ga07f879a5e25a6eccefa3a7771f68a157"><div class="ttname"><a href="group__cpp__kodi__audioengine.html#ga07f879a5e25a6eccefa3a7771f68a157">kodi::audioengine::GetCurrentSinkFormat</a></div><div class="ttdeci">bool GetCurrentSinkFormat(AudioEngineFormat &amp;format)</div><div class="ttdoc">Get the current sink data format.</div><div class="ttdef"><b>Definition:</b> AudioEngine.h:606</div></div>
+<div class="ttc" id="agroup__cpp__kodi__audioengine___defs___audio_engine_channel_html_gga61a3226eaf763fd899a00f4d7cfdda4aa9ee4ae5ed5af9fbc6f58042d49229780"><div class="ttname"><a href="group__cpp__kodi__audioengine___defs___audio_engine_channel.html#gga61a3226eaf763fd899a00f4d7cfdda4aa9ee4ae5ed5af9fbc6f58042d49229780">AUDIOENGINE_CH_FL</a></div><div class="ttdeci">@ AUDIOENGINE_CH_FL</div><div class="ttdoc">Front left.</div><div class="ttdef"><b>Definition:</b> audio_engine.h:78</div></div>
+<div class="ttc" id="agroup__cpp__kodi__audioengine___defs___audio_engine_channel_html_gga61a3226eaf763fd899a00f4d7cfdda4aa733043f5865faebbded5e1c0b65e760d"><div class="ttname"><a href="group__cpp__kodi__audioengine___defs___audio_engine_channel.html#gga61a3226eaf763fd899a00f4d7cfdda4aa733043f5865faebbded5e1c0b65e760d">AUDIOENGINE_CH_FR</a></div><div class="ttdeci">@ AUDIOENGINE_CH_FR</div><div class="ttdoc">Front right.</div><div class="ttdef"><b>Definition:</b> audio_engine.h:80</div></div>
+<div class="ttc" id="agroup__cpp__kodi__audioengine_html_ga238c66d0552af583498f4dc367f08d3d"><div class="ttname"><a href="group__cpp__kodi__audioengine.html#ga238c66d0552af583498f4dc367f08d3d">kodi::audioengine::GetCurrentSinkFormat</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN GetCurrentSinkFormat(AudioEngineFormat &amp;format)</div><div class="ttdoc">Get the current sink data format.</div><div class="ttdef"><b>Definition:</b> AudioEngine.h:606</div></div>
+<div class="ttc" id="agroup__cpp__kodi__audioengine___defs___audio_engine_stream_options_html_gga103e605fdf8113e6c00087e3e58ac00ba72be2b92a3f4b1a653cae5badfb8a220"><div class="ttname"><a href="group__cpp__kodi__audioengine___defs___audio_engine_stream_options.html#gga103e605fdf8113e6c00087e3e58ac00ba72be2b92a3f4b1a653cae5badfb8a220">AUDIO_STREAM_AUTOSTART</a></div><div class="ttdeci">@ AUDIO_STREAM_AUTOSTART</div><div class="ttdoc">autostart the stream when enough data is buffered</div><div class="ttdef"><b>Definition:</b> audio_engine.h:50</div></div>
+<div class="ttc" id="agroup__cpp__kodi__audioengine___defs___audio_engine_data_format_html_ggaa5510e87db1b47c1aa7823fae4950639af00d1c0e3e5c9045d402a459b6d335b3"><div class="ttname"><a href="group__cpp__kodi__audioengine___defs___audio_engine_data_format.html#ggaa5510e87db1b47c1aa7823fae4950639af00d1c0e3e5c9045d402a459b6d335b3">AUDIOENGINE_FMT_FLOATP</a></div><div class="ttdeci">@ AUDIOENGINE_FMT_FLOATP</div><div class="ttdef"><b>Definition:</b> audio_engine.h:219</div></div>
+<div class="ttc" id="aclasskodi_1_1audioengine_1_1_c_a_e_stream_html"><div class="ttname"><a href="classkodi_1_1audioengine_1_1_c_a_e_stream.html">kodi::audioengine::CAEStream</a></div><div class="ttdef"><b>Definition:</b> AudioEngine.h:258</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

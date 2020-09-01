@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kodi Development: /home/alwin/Development/Kodi/kodi-Matrix/xbmc/addons/kodi-addon-dev-kit/include/kodi/General.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/Kodi/kodi-Matrix/xbmc/addons/kodi-dev-kit/include/kodi/General.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -109,449 +109,394 @@ $(document).ready(function(){initNavTree('_general_8h_source.html',''); initResi
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;AddonBase.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#gae0eb66cdc2244c78a912b68c09a04fee">   17</a></span>&#160;<span class="comment"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__cpp__kodi___defs.html#gae0eb66cdc2244c78a912b68c09a04fee">StdKbButtons</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">   20</a></span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">STD_KB_BUTTONS_PER_ROW</a> = 20,</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">   22</a></span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">STD_KB_BUTTONS_MAX_ROWS</a> = 4,</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeacadbebe388526b489067002add50ff70">   24</a></span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeacadbebe388526b489067002add50ff70">STD_KB_MODIFIER_KEY_NONE</a> = 0x00,</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0">   26</a></span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0">STD_KB_MODIFIER_KEY_SHIFT</a> = 0x01,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed">STD_KB_MODIFIER_KEY_SYMBOL</a> = 0x02</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed">   29</a></span>&#160;} <a class="code" href="group__cpp__kodi___defs.html#gae0eb66cdc2244c78a912b68c09a04fee">StdKbButtons</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> * For interface between add-on and kodi.</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * This structure defines the addresses of functions stored inside Kodi which</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * are then available for the add-on to call</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * All function pointers there are used by the C++ interface functions below.</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> * You find the set of them on xbmc/addons/interfaces/General.cpp</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> * Note: For add-on development itself this is not needed</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_addon_keyboard_key_table.html">   43</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_addon_keyboard_key_table.html">AddonKeyboardKeyTable</a></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">char</span>* keys[<a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">STD_KB_BUTTONS_MAX_ROWS</a>][<a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">STD_KB_BUTTONS_PER_ROW</a>];</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <a class="code" href="struct_addon_keyboard_key_table.html">AddonKeyboardKeyTable</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_addon_to_kodi_func_table__kodi.html">   47</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_addon_to_kodi_func_table__kodi.html">AddonToKodiFuncTable_kodi</a></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">char</span>* (*get_addon_info)(<span class="keywordtype">void</span>* kodiBase, <span class="keyword">const</span> <span class="keywordtype">char</span>* id);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  bool (*open_settings_dialog)(<span class="keywordtype">void</span>* kodiBase);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">char</span>* (*unknown_to_utf8)(<span class="keywordtype">void</span>* kodiBase, <span class="keyword">const</span> <span class="keywordtype">char</span>* source, <span class="keywordtype">bool</span>* ret, <span class="keywordtype">bool</span> failOnBadChar);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">char</span>* (*get_localized_string)(<span class="keywordtype">void</span>* kodiBase, <span class="keywordtype">long</span> label_id);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">char</span>* (*get_language)(<span class="keywordtype">void</span>* kodiBase, <span class="keywordtype">int</span> format, <span class="keywordtype">bool</span> region);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  bool (*queue_notification)(<span class="keywordtype">void</span>* kodiBase, <span class="keywordtype">int</span> type, <span class="keyword">const</span> <span class="keywordtype">char</span>* header, <span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keyword">const</span> <span class="keywordtype">char</span>* imageFile, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> displayTime, <span class="keywordtype">bool</span> withSound, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> messageTime);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  void (*get_md5)(<span class="keywordtype">void</span>* kodiBase, <span class="keyword">const</span> <span class="keywordtype">char</span>* text, <span class="keywordtype">char</span>* md5);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">char</span>* (*get_temp_path)(<span class="keywordtype">void</span>* kodiBase);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">char</span>* (*get_region)(<span class="keywordtype">void</span>* kodiBase, <span class="keyword">const</span> <span class="keywordtype">char</span>* id);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  void (*get_free_mem)(<span class="keywordtype">void</span>* kodiBase, <span class="keywordtype">long</span>* free, <span class="keywordtype">long</span>* total, <span class="keywordtype">bool</span> as_bytes);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  int  (*get_global_idle_time)(<span class="keywordtype">void</span>* kodiBase);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  bool (*is_addon_avilable)(<span class="keywordtype">void</span>* kodiBase, <span class="keyword">const</span> <span class="keywordtype">char</span>* id, <span class="keywordtype">char</span>** version, <span class="keywordtype">bool</span>* enabled);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  void (*kodi_version)(<span class="keywordtype">void</span>* kodiBase, <span class="keywordtype">char</span>** compile_name, <span class="keywordtype">int</span>* major, <span class="keywordtype">int</span>* minor, <span class="keywordtype">char</span>** revision, <span class="keywordtype">char</span>** tag, <span class="keywordtype">char</span>** tagversion);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">char</span>* (*get_current_skin_id)(<span class="keywordtype">void</span>* kodiBase);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  bool (*get_keyboard_layout)(<span class="keywordtype">void</span>* kodiBase, <span class="keywordtype">char</span>** layout_name, <span class="keywordtype">int</span> modifier_key, <a class="code" href="struct_addon_keyboard_key_table.html">AddonKeyboardKeyTable</a>* layout);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  bool (*change_keyboard_layout)(<span class="keywordtype">void</span>* kodiBase, <span class="keywordtype">char</span>** layout_name);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <a class="code" href="struct_addon_to_kodi_func_table__kodi.html">AddonToKodiFuncTable_kodi</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94">   71</a></span>&#160;<span class="comment"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94">QueueMsg</a></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a337175e2eb3336df26c7e387e56cfb6b">   74</a></span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a337175e2eb3336df26c7e387e56cfb6b">QUEUE_INFO</a>,</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712">   76</a></span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712">QUEUE_WARNING</a>,</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94ad2f91e8feff864772fb0a394bb60cdc5">   78</a></span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94ad2f91e8feff864772fb0a394bb60cdc5">QUEUE_ERROR</a>,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a73ef8e6ac545537aab78d269d462365c">QUEUE_OWN_STYLE</a></div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a73ef8e6ac545537aab78d269d462365c">   81</a></span>&#160;} <a class="code" href="group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94">QueueMsg</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;c-api/general.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html">   20</a></span>&#160;<span class="comment"></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="group__cpp__kodi___defs.html#structkodi__version__t">kodi_version_t</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#afe9672e29db448c9cc47fbb6cbb5a8f4">   23</a></span>&#160;  std::string <a class="code" href="group__cpp__kodi___defs.html#afe9672e29db448c9cc47fbb6cbb5a8f4">compile_name</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#ac8947941479c38403a09c14a60b03f01">   25</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="group__cpp__kodi___defs.html#ac8947941479c38403a09c14a60b03f01">major</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#aec7b96885baf2e6f10efbdef9d935a0b">   27</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="group__cpp__kodi___defs.html#aec7b96885baf2e6f10efbdef9d935a0b">minor</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#a5061ba1a268eb999ed21e0c4d7bf609e">   29</a></span>&#160;  std::string <a class="code" href="group__cpp__kodi___defs.html#a5061ba1a268eb999ed21e0c4d7bf609e">revision</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#ae120f732e7e1c5e4a16fa31d89f655df">   31</a></span>&#160;  std::string <a class="code" href="group__cpp__kodi___defs.html#ae120f732e7e1c5e4a16fa31d89f655df">tag</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#a14e85f5a1bb888b4325a87984bccfe81">   33</a></span>&#160;  std::string <a class="code" href="group__cpp__kodi___defs.html#a14e85f5a1bb888b4325a87984bccfe81">tag_revision</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;} <a class="code" href="group__cpp__kodi___defs.html#structkodi__version__t">kodi_version_t</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>kodi</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga24b78044dc4971cb1ec3dc6633f92d2b">   66</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> std::string ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#ga24b78044dc4971cb1ec3dc6633f92d2b">GetAddonInfo</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = CAddonBase::m_interface-&gt;toKodi;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  std::string strReturn;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">char</span>* strMsg = toKodi-&gt;kodi-&gt;get_addon_info(toKodi-&gt;kodiBase, <span class="keywordtype">id</span>.c_str());</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">if</span> (strMsg != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (std::strlen(strMsg))</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      strReturn = strMsg;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, strMsg);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">return</span> strReturn;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#ga40942faafc2e9ae4d9b76e2f19362327">   90</a></span>&#160;<span class="comment"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="group__cpp__kodi___defs.html#ga40942faafc2e9ae4d9b76e2f19362327">LangFormats</a></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51">   93</a></span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51">LANG_FMT_ISO_639_1</a>,</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a93ccac5fa6affc3908cbd62584c2e92b">   95</a></span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a93ccac5fa6affc3908cbd62584c2e92b">LANG_FMT_ISO_639_2</a>,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635">LANG_FMT_ENGLISH_NAME</a></div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635">   98</a></span>&#160;} <a class="code" href="group__cpp__kodi___defs.html#ga40942faafc2e9ae4d9b76e2f19362327">LangFormats</a>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html">  105</a></span>&#160;<span class="comment"></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="group__cpp__kodi___defs.html#structkodi__version__t">kodi_version_t</a></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#afe9672e29db448c9cc47fbb6cbb5a8f4">  108</a></span>&#160;  std::string <a class="code" href="group__cpp__kodi___defs.html#afe9672e29db448c9cc47fbb6cbb5a8f4">compile_name</a>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#ac8947941479c38403a09c14a60b03f01">  110</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="group__cpp__kodi___defs.html#ac8947941479c38403a09c14a60b03f01">major</a>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#aec7b96885baf2e6f10efbdef9d935a0b">  112</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="group__cpp__kodi___defs.html#aec7b96885baf2e6f10efbdef9d935a0b">minor</a>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#a5061ba1a268eb999ed21e0c4d7bf609e">  114</a></span>&#160;  std::string <a class="code" href="group__cpp__kodi___defs.html#a5061ba1a268eb999ed21e0c4d7bf609e">revision</a>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#ae120f732e7e1c5e4a16fa31d89f655df">  116</a></span>&#160;  std::string <a class="code" href="group__cpp__kodi___defs.html#ae120f732e7e1c5e4a16fa31d89f655df">tag</a>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="group__cpp__kodi___defs.html#a14e85f5a1bb888b4325a87984bccfe81">  118</a></span>&#160;  std::string <a class="code" href="group__cpp__kodi___defs.html#a14e85f5a1bb888b4325a87984bccfe81">tag_revision</a>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;} <a class="code" href="group__cpp__kodi___defs.html#structkodi__version__t">kodi_version_t</a>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga6a93753e708e44a263a895ae65d30030">  150</a></span>&#160;<span class="keyword">inline</span> std::string <a class="code" href="group__cpp__kodi.html#ga6a93753e708e44a263a895ae65d30030">GetAddonInfo</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#gaede57551d559f9949a2e94c956a10e6c">  101</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#gaede57551d559f9949a2e94c956a10e6c">OpenSettings</a>()</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordflow">return</span> CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;open_settings_dialog(</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga0afd37570f44097a3bb06566c0459247">  136</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> std::string ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#ga0afd37570f44097a3bb06566c0459247">GetLocalizedString</a>(uint32_t labelId,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                                                       <span class="keyword">const</span> std::string&amp; defaultStr = <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;{</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  std::string retString = defaultStr;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">char</span>* strMsg = CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;get_localized_string(</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, labelId);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordflow">if</span> (strMsg != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">if</span> (std::strlen(strMsg))</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      retString = strMsg;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    CAddonBase::m_interface-&gt;toKodi-&gt;free_string(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, strMsg);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordflow">return</span> retString;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  std::string strReturn;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordtype">char</span>* strMsg = toKodi-&gt;kodi-&gt;get_addon_info(toKodi-&gt;kodiBase, <span class="keywordtype">id</span>.c_str());</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordflow">if</span> (strMsg != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (std::strlen(strMsg))</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      strReturn = strMsg;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, strMsg);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordflow">return</span> strReturn;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga981f36ea378461d67c0f0502f678b5b5">  186</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="group__cpp__kodi.html#ga981f36ea378461d67c0f0502f678b5b5">OpenSettings</a>()</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;{</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  return ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;open_settings_dialog(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga8296027856e5e592c79e45fc2af6f930">  222</a></span>&#160;<span class="keyword">inline</span> std::string <a class="code" href="group__cpp__kodi.html#ga8296027856e5e592c79e45fc2af6f930">GetLocalizedString</a>(uint32_t labelId, <span class="keyword">const</span> std::string&amp; defaultStr = <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;{</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  std::string retString = defaultStr;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keywordtype">char</span>* strMsg = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;get_localized_string(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, labelId);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keywordflow">if</span> (strMsg != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  {</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">if</span> (std::strlen(strMsg))</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      retString = strMsg;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;free_string(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, strMsg);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  }</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keywordflow">return</span> retString;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga275a5231deebed983e67a97f50c8195e">  261</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="group__cpp__kodi.html#ga275a5231deebed983e67a97f50c8195e">UnknownToUTF8</a>(<span class="keyword">const</span> std::string&amp; stringSrc, std::string&amp; utf8StringDst, <span class="keywordtype">bool</span> failOnBadChar = <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;{</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordtype">bool</span> ret = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordtype">char</span>* retString = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;unknown_to_utf8(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase,</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                                                                                          stringSrc.c_str(), &amp;ret, failOnBadChar);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keywordflow">if</span> (retString != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">if</span> (ret)</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      utf8StringDst = retString;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;free_string(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, retString);</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga59fa55ddb5d7a6e4d53b10d7f9a1e0cf">  303</a></span>&#160;<span class="keyword">inline</span> std::string <a class="code" href="group__cpp__kodi.html#ga59fa55ddb5d7a6e4d53b10d7f9a1e0cf">GetLanguage</a>(<a class="code" href="group__cpp__kodi___defs.html#ga40942faafc2e9ae4d9b76e2f19362327">LangFormats</a> format = <a class="code" href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635">LANG_FMT_ENGLISH_NAME</a>, <span class="keywordtype">bool</span> region = <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;{</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  std::string language;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  <span class="keywordtype">char</span>* retString = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;get_language(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, format, region);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keywordflow">if</span> (retString != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  {</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">if</span> (std::strlen(retString))</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      language = retString;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;free_string(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, retString);</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  }</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keywordflow">return</span> language;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00396"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga39c65205ea763e00c402cb0f1f50b289">  396</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__cpp__kodi.html#ga39c65205ea763e00c402cb0f1f50b289">QueueFormattedNotification</a>(<a class="code" href="group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94">QueueMsg</a> type, <span class="keyword">const</span> <span class="keywordtype">char</span>* format, ... )</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;{</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  va_list args;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="keywordtype">char</span> buffer[16384];</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  va_start(args, format);</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  vsprintf(buffer, format, args);</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  va_end(args);</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;queue_notification(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase,</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                                                                           type, <span class="stringliteral">&quot;&quot;</span>, buffer, <span class="stringliteral">&quot;&quot;</span>, 5000, <span class="keyword">false</span>, 1000);</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;}</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00456"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#gac3374c984f66b0715439aa56e717763d">  456</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__cpp__kodi.html#gac3374c984f66b0715439aa56e717763d">QueueNotification</a>(<a class="code" href="group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94">QueueMsg</a> type, <span class="keyword">const</span> std::string&amp; header,</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                              <span class="keyword">const</span> std::string&amp; message, <span class="keyword">const</span> std::string&amp; imageFile = <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;                              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> displayTime = 5000, <span class="keywordtype">bool</span> withSound = <span class="keyword">true</span>,</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> messageTime = 1000)</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;{</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;queue_notification(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase,</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                                                                           type, header.c_str(), message.c_str(), imageFile.c_str(), displayTime,</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                                                                           withSound, messageTime);</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;}</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00489"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga4cd782256ea2690e86421f1466683e24">  489</a></span>&#160;<span class="keyword">inline</span> std::string <a class="code" href="group__cpp__kodi.html#ga4cd782256ea2690e86421f1466683e24">GetMD5</a>(<span class="keyword">const</span> std::string&amp; text)</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;{</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;  <span class="keywordtype">char</span>* md5ret = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(malloc(40*<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>))); <span class="comment">// md5 size normally 32 bytes</span></div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;  ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;get_md5(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, text.c_str(), md5ret);</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;  std::string md5 = md5ret;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;  free(md5ret);</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;  <span class="keywordflow">return</span> md5;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;}</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;<span class="comment">//----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160; </div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00513"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga437ac949d8c4dbe95e9cb04830dd6ff8">  513</a></span>&#160;<span class="keyword">inline</span> std::string <a class="code" href="group__cpp__kodi.html#ga437ac949d8c4dbe95e9cb04830dd6ff8">GetTempAddonPath</a>(<span class="keyword">const</span> std::string&amp; append = <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;{</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;  <span class="keywordtype">char</span>* str = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;get_temp_path(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase);</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;  std::string ret = str;</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;  ::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;free_string(::kodi::addon::CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, str);</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;  <span class="keywordflow">if</span> (!append.empty())</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;  {</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    <span class="keywordflow">if</span> (append.at(0) != <span class="charliteral">&#39;\\&#39;</span> &amp;&amp;</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        append.at(0) != <span class="charliteral">&#39;/&#39;</span>)</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;<span class="preprocessor">#ifdef TARGET_WINDOWS</span></div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;      ret.append(<span class="stringliteral">&quot;\\&quot;</span>);</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;      ret.append(<span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    ret.append(append);</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;  }</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;  <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;}</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160; </div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00559"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga7b98a686abbbd711c76a1e3892b6c0be">  559</a></span>&#160;<span class="keyword">inline</span> std::string <a class="code" href="group__cpp__kodi.html#ga7b98a686abbbd711c76a1e3892b6c0be">GetRegion</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;{</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi;</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160; </div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;  std::string strReturn;</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;  <span class="keywordtype">char</span>* strMsg = toKodi-&gt;kodi-&gt;get_region(toKodi-&gt;kodiBase, <span class="keywordtype">id</span>.c_str());</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;  <span class="keywordflow">if</span> (strMsg != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;  {</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    <span class="keywordflow">if</span> (std::strlen(strMsg))</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;      strReturn = strMsg;</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, strMsg);</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;  }</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;  <span class="keywordflow">return</span> strReturn;</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;}</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160; </div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00601"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga2dc05ae2b766c3710db48b48b257f951">  601</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__cpp__kodi.html#ga2dc05ae2b766c3710db48b48b257f951">GetFreeMem</a>(<span class="keywordtype">long</span>&amp; free, <span class="keywordtype">long</span>&amp; total, <span class="keywordtype">bool</span> asBytes = <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;{</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;  free = -1;</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;  total = -1;</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi;</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;  toKodi-&gt;kodi-&gt;get_free_mem(toKodi-&gt;kodiBase, &amp;free, &amp;total, asBytes);</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;}</div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160; </div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00630"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga156210ce2221a5a160f51cc044e841a1">  630</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="group__cpp__kodi.html#ga156210ce2221a5a160f51cc044e841a1">GetGlobalIdleTime</a>()</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;{</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi;</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;  <span class="keywordflow">return</span> toKodi-&gt;kodi-&gt;get_global_idle_time(toKodi-&gt;kodiBase);</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;}</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160; </div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00662"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#gaa2b38e3e192a404565552416049c4d30">  662</a></span>&#160;<span class="keyword">inline</span> std::string <a class="code" href="group__cpp__kodi.html#gaa2b38e3e192a404565552416049c4d30">GetCurrentSkinId</a>()</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;{</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi;</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160; </div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;  std::string strReturn;</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;  <span class="keywordtype">char</span>* strMsg = toKodi-&gt;kodi-&gt;get_current_skin_id(toKodi-&gt;kodiBase);</div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;  <span class="keywordflow">if</span> (strMsg != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;  {</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <span class="keywordflow">if</span> (std::strlen(strMsg))</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;      strReturn = strMsg;</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, strMsg);</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;  }</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;  <span class="keywordflow">return</span> strReturn;</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;}</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga8e565f6801e5b1b05a34ad3ae0ff9f7c">  176</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#ga8e565f6801e5b1b05a34ad3ae0ff9f7c">UnknownToUTF8</a>(<span class="keyword">const</span> std::string&amp; stringSrc,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                           std::string&amp; utf8StringDst,</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                                           <span class="keywordtype">bool</span> failOnBadChar = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keywordtype">bool</span> ret = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordtype">char</span>* retString = CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;unknown_to_utf8(</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, stringSrc.c_str(), &amp;ret, failOnBadChar);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordflow">if</span> (retString != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">if</span> (ret)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      utf8StringDst = retString;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    CAddonBase::m_interface-&gt;toKodi-&gt;free_string(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase,</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                                                 retString);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#gaaa1d254a8615b005cb1a612b9f783d2a">  220</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> std::string ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#gaaa1d254a8615b005cb1a612b9f783d2a">GetLanguage</a>(<a class="code" href="group__cpp__kodi___defs.html#ga40942faafc2e9ae4d9b76e2f19362327">LangFormats</a> format = <a class="code" href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635">LANG_FMT_ENGLISH_NAME</a>,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                                                <span class="keywordtype">bool</span> region = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  std::string language;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keywordtype">char</span>* retString = CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;get_language(</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, format, region);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordflow">if</span> (retString != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">if</span> (std::strlen(retString))</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      language = retString;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    CAddonBase::m_interface-&gt;toKodi-&gt;free_string(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase,</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                                                 retString);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keywordflow">return</span> language;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#gab58654626db3afbe80b9de5fffff9e4b">  315</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">void</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#gab58654626db3afbe80b9de5fffff9e4b">QueueFormattedNotification</a>(<a class="code" href="group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94">QueueMsg</a> type, <span class="keyword">const</span> <span class="keywordtype">char</span>* format, ...)</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;{</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  va_list args;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordtype">char</span> buffer[16384];</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  va_start(args, format);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  vsprintf(buffer, format, args);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  va_end(args);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;queue_notification(</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, type, <span class="stringliteral">&quot;&quot;</span>, buffer, <span class="stringliteral">&quot;&quot;</span>, 5000, <span class="keyword">false</span>, 1000);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#gae565b1abcc346e1a97a98707d5c107a7">  374</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">void</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#gae565b1abcc346e1a97a98707d5c107a7">QueueNotification</a>(<a class="code" href="group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94">QueueMsg</a> type,</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                                               <span class="keyword">const</span> std::string&amp; header,</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                                               <span class="keyword">const</span> std::string&amp; message,</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                                               <span class="keyword">const</span> std::string&amp; imageFile = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                                               <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> displayTime = 5000,</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                                               <span class="keywordtype">bool</span> withSound = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                                               <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> messageTime = 1000)</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;{</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;queue_notification(</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, type, header.c_str(), message.c_str(),</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;      imageFile.c_str(), displayTime, withSound, messageTime);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;}</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="comment">//============================================================================</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga26de39eee45315a3cda7aceb601a8bad">  409</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> std::string ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#ga26de39eee45315a3cda7aceb601a8bad">GetMD5</a>(<span class="keyword">const</span> std::string&amp; text)</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;{</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  <span class="keywordtype">char</span>* md5ret = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(malloc(40 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>))); <span class="comment">// md5 size normally 32 bytes</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;get_md5(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase,</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                                                 text.c_str(), md5ret);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  std::string md5 = md5ret;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  free(md5ret);</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  <span class="keywordflow">return</span> md5;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;}</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="comment">//----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga9e77def6869d4d2bb47c1a9fc300603d">  433</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> std::string ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#ga9e77def6869d4d2bb47c1a9fc300603d">GetTempAddonPath</a>(<span class="keyword">const</span> std::string&amp; append = <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;{</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  <span class="keywordtype">char</span>* str = CAddonBase::m_interface-&gt;toKodi-&gt;kodi-&gt;get_temp_path(</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  std::string ret = str;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  CAddonBase::m_interface-&gt;toKodi-&gt;free_string(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, str);</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  <span class="keywordflow">if</span> (!append.empty())</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  {</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    <span class="keywordflow">if</span> (append.at(0) != <span class="charliteral">&#39;\\&#39;</span> &amp;&amp; append.at(0) != <span class="charliteral">&#39;/&#39;</span>)</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="preprocessor">#ifdef TARGET_WINDOWS</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;      ret.append(<span class="stringliteral">&quot;\\&quot;</span>);</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;      ret.append(<span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    ret.append(append);</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  }</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;}</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160; </div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00478"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga999b45568e7ff08f0f448305828cd9f0">  478</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> std::string ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#ga999b45568e7ff08f0f448305828cd9f0">GetRegion</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;{</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160; </div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = CAddonBase::m_interface-&gt;toKodi;</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160; </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;  std::string strReturn;</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;  <span class="keywordtype">char</span>* strMsg = toKodi-&gt;kodi-&gt;get_region(toKodi-&gt;kodiBase, <span class="keywordtype">id</span>.c_str());</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;  <span class="keywordflow">if</span> (strMsg != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;  {</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;    <span class="keywordflow">if</span> (std::strlen(strMsg))</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;      strReturn = strMsg;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, strMsg);</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;  }</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;  <span class="keywordflow">return</span> strReturn;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;}</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160; </div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00519"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga670fd06bfd1b1ca5b428884eba485222">  519</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">void</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#ga670fd06bfd1b1ca5b428884eba485222">GetFreeMem</a>(<span class="keywordtype">long</span>&amp; free, <span class="keywordtype">long</span>&amp; total, <span class="keywordtype">bool</span> asBytes = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;{</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160; </div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;  free = -1;</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;  total = -1;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = CAddonBase::m_interface-&gt;toKodi;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;  toKodi-&gt;kodi-&gt;get_free_mem(toKodi-&gt;kodiBase, &amp;free, &amp;total, asBytes);</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;}</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160; </div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00547"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga4877f9e5cf86203cdd2c63e5694bc813">  547</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">int</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#ga4877f9e5cf86203cdd2c63e5694bc813">GetGlobalIdleTime</a>()</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;{</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160; </div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = CAddonBase::m_interface-&gt;toKodi;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;  <span class="keywordflow">return</span> toKodi-&gt;kodi-&gt;get_global_idle_time(toKodi-&gt;kodiBase);</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;}</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160; </div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00577"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#gaf34dcddcd086965b2e1788984271c095">  577</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> std::string ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#gaf34dcddcd086965b2e1788984271c095">GetCurrentSkinId</a>()</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;{</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160; </div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = CAddonBase::m_interface-&gt;toKodi;</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160; </div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;  std::string strReturn;</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;  <span class="keywordtype">char</span>* strMsg = toKodi-&gt;kodi-&gt;get_current_skin_id(toKodi-&gt;kodiBase);</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;  <span class="keywordflow">if</span> (strMsg != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;  {</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    <span class="keywordflow">if</span> (std::strlen(strMsg))</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;      strReturn = strMsg;</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, strMsg);</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;  }</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;  <span class="keywordflow">return</span> strReturn;</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;}</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160; </div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> ATTRIBUTE_HIDDEN IsAddonAvailable(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>,</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                                              std::string&amp; version,</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;                                              <span class="keywordtype">bool</span>&amp; enabled)</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;{</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160; </div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = CAddonBase::m_interface-&gt;toKodi;</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160; </div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;  <span class="keywordtype">char</span>* cVersion = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;  <span class="keywordtype">bool</span> ret = toKodi-&gt;kodi-&gt;is_addon_avilable(toKodi-&gt;kodiBase, <span class="keywordtype">id</span>.c_str(), &amp;cVersion, &amp;enabled);</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;  <span class="keywordflow">if</span> (cVersion)</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;  {</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    version = cVersion;</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, cVersion);</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;  }</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;  <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;}</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160; </div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00675"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#gac13d92a923bef182657f4d42680c27a3">  675</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">void</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#gac13d92a923bef182657f4d42680c27a3">KodiVersion</a>(<a class="code" href="group__cpp__kodi___defs.html#structkodi__version__t">kodi_version_t</a>&amp; version)</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;{</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160; </div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;<span class="keyword">namespace </span>kodi</div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;{</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160; </div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> IsAddonAvailable(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, std::string&amp; version, <span class="keywordtype">bool</span>&amp; enabled)</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;{</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi;</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160; </div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;  <span class="keywordtype">char</span>* cVersion = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;  <span class="keywordtype">bool</span> ret = toKodi-&gt;kodi-&gt;is_addon_avilable(toKodi-&gt;kodiBase, <span class="keywordtype">id</span>.c_str(), &amp;cVersion, &amp;enabled);</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;  <span class="keywordflow">if</span> (cVersion)</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;  {</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    version = cVersion;</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, cVersion);</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;  }</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;  <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;}</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160; </div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160; </div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00762"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga5417d9134259da3d79f40e9a20a48617">  762</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="group__cpp__kodi.html#ga5417d9134259da3d79f40e9a20a48617">KodiVersion</a>(<a class="code" href="group__cpp__kodi___defs.html#structkodi__version__t">kodi_version_t</a>&amp; version)</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;{</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;  <span class="keywordtype">char</span>* compile_name = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;  <span class="keywordtype">char</span>* revision = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;  <span class="keywordtype">char</span>* tag = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;  <span class="keywordtype">char</span>* tag_revision = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160; </div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi;</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;  toKodi-&gt;kodi-&gt;kodi_version(toKodi-&gt;kodiBase, &amp;compile_name, &amp;version.<a class="code" href="group__cpp__kodi___defs.html#ac8947941479c38403a09c14a60b03f01">major</a>, &amp;version.<a class="code" href="group__cpp__kodi___defs.html#aec7b96885baf2e6f10efbdef9d935a0b">minor</a>, &amp;revision, &amp;tag, &amp;tag_revision);</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;  <span class="keywordflow">if</span> (compile_name != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;  {</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    version.<a class="code" href="group__cpp__kodi___defs.html#afe9672e29db448c9cc47fbb6cbb5a8f4">compile_name</a>  = compile_name;</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    toKodi-&gt;free_string</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    (</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;      toKodi-&gt;kodiBase,</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;      compile_name</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;    );</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;  }</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;  <span class="keywordflow">if</span> (revision != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;  {</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    version.<a class="code" href="group__cpp__kodi___defs.html#a5061ba1a268eb999ed21e0c4d7bf609e">revision</a> = revision;</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, revision);</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;  }</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;  <span class="keywordflow">if</span> (tag != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;  {</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    version.<a class="code" href="group__cpp__kodi___defs.html#ae120f732e7e1c5e4a16fa31d89f655df">tag</a> = tag;</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, tag);</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;  }</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;  <span class="keywordflow">if</span> (tag_revision != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;  {</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    version.<a class="code" href="group__cpp__kodi___defs.html#a14e85f5a1bb888b4325a87984bccfe81">tag_revision</a> = tag_revision;</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, tag_revision);</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;  }</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;}</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00834"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga324988f038efe6fec487718361fb8aa6">  834</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="group__cpp__kodi.html#ga324988f038efe6fec487718361fb8aa6">GetKeyboardLayout</a>(<span class="keywordtype">int</span> modifierKey, std::string&amp; layout_name, std::vector&lt;std::vector&lt;std::string&gt;&gt;&amp; layout)</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;{</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi;</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;  <a class="code" href="struct_addon_keyboard_key_table.html">AddonKeyboardKeyTable</a> c_layout;</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;  <span class="keywordtype">char</span>* c_layout_name = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;  <span class="keywordtype">bool</span> ret = toKodi-&gt;kodi-&gt;get_keyboard_layout(toKodi-&gt;kodiBase, &amp;c_layout_name, modifierKey, &amp;c_layout);</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;  <span class="keywordflow">if</span> (ret)</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;  {</div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    <span class="keywordflow">if</span> (c_layout_name)</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;    {</div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;      layout_name = c_layout_name;</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;      toKodi-&gt;free_string(toKodi-&gt;kodiBase, c_layout_name);</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;    }</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160; </div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;    layout.resize(<a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">STD_KB_BUTTONS_MAX_ROWS</a>);</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row = 0; row &lt; <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">STD_KB_BUTTONS_MAX_ROWS</a>; row++)</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;    {</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;      layout[row].resize(<a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">STD_KB_BUTTONS_PER_ROW</a>);</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> column = 0; column &lt; <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">STD_KB_BUTTONS_PER_ROW</a>; column++)</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;      {</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        <span class="keywordtype">char</span>* button = c_layout.keys[row][column];</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;        <span class="keywordflow">if</span> (button)</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;        {</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;          layout[row][column] = button;</div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;          toKodi-&gt;free_string(toKodi-&gt;kodiBase, button);</div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;        }</div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;      }</div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;    }</div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;  }</div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;  <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;}</div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160; </div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;<span class="comment">//==============================================================================</span></div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;<span class="keyword">namespace </span>kodi {</div>
-<div class="line"><a name="l00904"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga6f46744b30f0daf04a1f60f5be35290d">  904</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="group__cpp__kodi.html#ga6f46744b30f0daf04a1f60f5be35290d">ChangeKeyboardLayout</a>(std::string&amp; layout_name)</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;{</div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = ::kodi::addon::CAddonBase::m_interface-&gt;toKodi;</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;  <span class="keywordtype">char</span>* c_layout_name = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;  <span class="keywordtype">bool</span> ret = toKodi-&gt;kodi-&gt;change_keyboard_layout(toKodi-&gt;kodiBase, &amp;c_layout_name);</div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;  <span class="keywordflow">if</span> (c_layout_name)</div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;  {</div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;    layout_name = c_layout_name;</div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, c_layout_name);</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;  }</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160; </div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;  <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;}</div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;  <span class="keywordtype">char</span>* compile_name = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;  <span class="keywordtype">char</span>* revision = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;  <span class="keywordtype">char</span>* tag = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;  <span class="keywordtype">char</span>* tag_revision = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160; </div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = CAddonBase::m_interface-&gt;toKodi;</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;  toKodi-&gt;kodi-&gt;kodi_version(toKodi-&gt;kodiBase, &amp;compile_name, &amp;version.<a class="code" href="group__cpp__kodi___defs.html#ac8947941479c38403a09c14a60b03f01">major</a>, &amp;version.<a class="code" href="group__cpp__kodi___defs.html#aec7b96885baf2e6f10efbdef9d935a0b">minor</a>,</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;                             &amp;revision, &amp;tag, &amp;tag_revision);</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;  <span class="keywordflow">if</span> (compile_name != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;  {</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    version.<a class="code" href="group__cpp__kodi___defs.html#afe9672e29db448c9cc47fbb6cbb5a8f4">compile_name</a> = compile_name;</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, compile_name);</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;  }</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;  <span class="keywordflow">if</span> (revision != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;  {</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    version.<a class="code" href="group__cpp__kodi___defs.html#a5061ba1a268eb999ed21e0c4d7bf609e">revision</a> = revision;</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, revision);</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;  }</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  <span class="keywordflow">if</span> (tag != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;  {</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    version.<a class="code" href="group__cpp__kodi___defs.html#ae120f732e7e1c5e4a16fa31d89f655df">tag</a> = tag;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, tag);</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;  }</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;  <span class="keywordflow">if</span> (tag_revision != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;  {</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    version.<a class="code" href="group__cpp__kodi___defs.html#a14e85f5a1bb888b4325a87984bccfe81">tag_revision</a> = tag_revision;</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, tag_revision);</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;  }</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;}</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160; </div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00743"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#gabedabd2d05e57a6517fa9d5db21f61a9">  743</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#gabedabd2d05e57a6517fa9d5db21f61a9">GetKeyboardLayout</a>(<span class="keywordtype">int</span> modifierKey,</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;                                               std::string&amp; layout_name,</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;                                               std::vector&lt;std::vector&lt;std::string&gt;&gt;&amp; layout)</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;{</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160; </div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = CAddonBase::m_interface-&gt;toKodi;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;  <a class="code" href="struct_addon_keyboard_key_table.html">AddonKeyboardKeyTable</a> c_layout;</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;  <span class="keywordtype">char</span>* c_layout_name = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;  <span class="keywordtype">bool</span> ret =</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;      toKodi-&gt;kodi-&gt;get_keyboard_layout(toKodi-&gt;kodiBase, &amp;c_layout_name, modifierKey, &amp;c_layout);</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;  <span class="keywordflow">if</span> (ret)</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;  {</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    <span class="keywordflow">if</span> (c_layout_name)</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;    {</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;      layout_name = c_layout_name;</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;      toKodi-&gt;free_string(toKodi-&gt;kodiBase, c_layout_name);</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    }</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160; </div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;    layout.resize(<a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">STD_KB_BUTTONS_MAX_ROWS</a>);</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> row = 0; row &lt; <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">STD_KB_BUTTONS_MAX_ROWS</a>; row++)</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    {</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;      layout[row].resize(<a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">STD_KB_BUTTONS_PER_ROW</a>);</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> column = 0; column &lt; <a class="code" href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">STD_KB_BUTTONS_PER_ROW</a>; column++)</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;      {</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        <span class="keywordtype">char</span>* button = c_layout.keys[row][column];</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;        <span class="keywordflow">if</span> (button)</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        {</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;          layout[row][column] = button;</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;          toKodi-&gt;free_string(toKodi-&gt;kodiBase, button);</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;        }</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;      }</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    }</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;  }</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;  <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;}</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160; </div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00815"></a><span class="lineno"><a class="line" href="group__cpp__kodi.html#ga6e6d370c32d023e6fc175479b3d60594">  815</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi.html#ga6e6d370c32d023e6fc175479b3d60594">ChangeKeyboardLayout</a>(std::string&amp; layout_name)</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;{</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;  <span class="keyword">using namespace </span>kodi::addon;</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160; </div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;  <a class="code" href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a>* toKodi = CAddonBase::m_interface-&gt;toKodi;</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;  <span class="keywordtype">char</span>* c_layout_name = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;  <span class="keywordtype">bool</span> ret = toKodi-&gt;kodi-&gt;change_keyboard_layout(toKodi-&gt;kodiBase, &amp;c_layout_name);</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;  <span class="keywordflow">if</span> (c_layout_name)</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;  {</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;    layout_name = c_layout_name;</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;    toKodi-&gt;free_string(toKodi-&gt;kodiBase, c_layout_name);</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;  }</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160; </div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;  <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;}</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160; </div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160; </div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi_html_ga6a93753e708e44a263a895ae65d30030"><div class="ttname"><a href="group__cpp__kodi.html#ga6a93753e708e44a263a895ae65d30030">kodi::GetAddonInfo</a></div><div class="ttdeci">std::string GetAddonInfo(const std::string &amp;id)</div><div class="ttdoc">Returns the value of an addon property as a string.</div><div class="ttdef"><b>Definition:</b> General.h:150</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38"><div class="ttname"><a href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">STD_KB_BUTTONS_MAX_ROWS</a></div><div class="ttdeci">@ STD_KB_BUTTONS_MAX_ROWS</div><div class="ttdoc">The quantity of rows on Kodi's standard keyboard.</div><div class="ttdef"><b>Definition:</b> General.h:22</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga7b98a686abbbd711c76a1e3892b6c0be"><div class="ttname"><a href="group__cpp__kodi.html#ga7b98a686abbbd711c76a1e3892b6c0be">kodi::GetRegion</a></div><div class="ttdeci">std::string GetRegion(const std::string &amp;id)</div><div class="ttdoc">Returns your regions setting as a string for the specified id.</div><div class="ttdef"><b>Definition:</b> General.h:559</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_gga8e33c1267b3dc36c2373153ae5b65d94a73ef8e6ac545537aab78d269d462365c"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a73ef8e6ac545537aab78d269d462365c">QUEUE_OWN_STYLE</a></div><div class="ttdeci">@ QUEUE_OWN_STYLE</div><div class="ttdoc">Show with own given image and parts if set on values.</div><div class="ttdef"><b>Definition:</b> General.h:80</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a282b7d25014247cf5f26f5ee0fe6ea51">LANG_FMT_ISO_639_1</a></div><div class="ttdeci">@ LANG_FMT_ISO_639_1</div><div class="ttdoc">two letter code as defined in ISO 639-1</div><div class="ttdef"><b>Definition:</b> General.h:93</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_a5061ba1a268eb999ed21e0c4d7bf609e"><div class="ttname"><a href="group__cpp__kodi___defs.html#a5061ba1a268eb999ed21e0c4d7bf609e">kodi_version_t::revision</a></div><div class="ttdeci">std::string revision</div><div class="ttdoc">The Revision contains a id and the build date, e.g. 20170706-c6b22fe217-dirty.</div><div class="ttdef"><b>Definition:</b> General.h:114</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465"><div class="ttname"><a href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">STD_KB_BUTTONS_PER_ROW</a></div><div class="ttdeci">@ STD_KB_BUTTONS_PER_ROW</div><div class="ttdoc">The quantity of buttons per row on Kodi's standard keyboard.</div><div class="ttdef"><b>Definition:</b> General.h:20</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_gga40942faafc2e9ae4d9b76e2f19362327a93ccac5fa6affc3908cbd62584c2e92b"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a93ccac5fa6affc3908cbd62584c2e92b">LANG_FMT_ISO_639_2</a></div><div class="ttdeci">@ LANG_FMT_ISO_639_2</div><div class="ttdoc">three letter code as defined in ISO 639-2/T or ISO 639-2/B</div><div class="ttdef"><b>Definition:</b> General.h:95</div></div>
-<div class="ttc" id="astruct_addon_keyboard_key_table_html"><div class="ttname"><a href="struct_addon_keyboard_key_table.html">AddonKeyboardKeyTable</a></div><div class="ttdef"><b>Definition:</b> General.h:44</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_gac3374c984f66b0715439aa56e717763d"><div class="ttname"><a href="group__cpp__kodi.html#gac3374c984f66b0715439aa56e717763d">kodi::QueueNotification</a></div><div class="ttdeci">void QueueNotification(QueueMsg type, const std::string &amp;header, const std::string &amp;message, const std::string &amp;imageFile=&quot;&quot;, unsigned int displayTime=5000, bool withSound=true, unsigned int messageTime=1000)</div><div class="ttdoc">Queue a notification in the GUI.</div><div class="ttdef"><b>Definition:</b> General.h:456</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_gga8e33c1267b3dc36c2373153ae5b65d94ad2f91e8feff864772fb0a394bb60cdc5"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94ad2f91e8feff864772fb0a394bb60cdc5">QUEUE_ERROR</a></div><div class="ttdeci">@ QUEUE_ERROR</div><div class="ttdoc">Show error notification message.</div><div class="ttdef"><b>Definition:</b> General.h:78</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga156210ce2221a5a160f51cc044e841a1"><div class="ttname"><a href="group__cpp__kodi.html#ga156210ce2221a5a160f51cc044e841a1">kodi::GetGlobalIdleTime</a></div><div class="ttdeci">int GetGlobalIdleTime()</div><div class="ttdoc">Returns the elapsed idle time in seconds as an integer.</div><div class="ttdef"><b>Definition:</b> General.h:630</div></div>
-<div class="ttc" id="astruct_addon_to_kodi_func_table___addon_html"><div class="ttname"><a href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a></div><div class="ttdef"><b>Definition:</b> addon_base.h:162</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_afe9672e29db448c9cc47fbb6cbb5a8f4"><div class="ttname"><a href="group__cpp__kodi___defs.html#afe9672e29db448c9cc47fbb6cbb5a8f4">kodi_version_t::compile_name</a></div><div class="ttdeci">std::string compile_name</div><div class="ttdoc">Application name, normally 'Kodi'.</div><div class="ttdef"><b>Definition:</b> General.h:108</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_ae120f732e7e1c5e4a16fa31d89f655df"><div class="ttname"><a href="group__cpp__kodi___defs.html#ae120f732e7e1c5e4a16fa31d89f655df">kodi_version_t::tag</a></div><div class="ttdeci">std::string tag</div><div class="ttdoc">The version canditate e.g. alpha, beta or release.</div><div class="ttdef"><b>Definition:</b> General.h:116</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga6f46744b30f0daf04a1f60f5be35290d"><div class="ttname"><a href="group__cpp__kodi.html#ga6f46744b30f0daf04a1f60f5be35290d">kodi::ChangeKeyboardLayout</a></div><div class="ttdeci">bool ChangeKeyboardLayout(std::string &amp;layout_name)</div><div class="ttdoc">To change keyboard layout characters.</div><div class="ttdef"><b>Definition:</b> General.h:904</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_aec7b96885baf2e6f10efbdef9d935a0b"><div class="ttname"><a href="group__cpp__kodi___defs.html#aec7b96885baf2e6f10efbdef9d935a0b">kodi_version_t::minor</a></div><div class="ttdeci">int minor</div><div class="ttdoc">Minor code version of Kodi.</div><div class="ttdef"><b>Definition:</b> General.h:112</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga437ac949d8c4dbe95e9cb04830dd6ff8"><div class="ttname"><a href="group__cpp__kodi.html#ga437ac949d8c4dbe95e9cb04830dd6ff8">kodi::GetTempAddonPath</a></div><div class="ttdeci">std::string GetTempAddonPath(const std::string &amp;append=&quot;&quot;)</div><div class="ttdoc">To get a temporary path for the addon.</div><div class="ttdef"><b>Definition:</b> General.h:513</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga324988f038efe6fec487718361fb8aa6"><div class="ttname"><a href="group__cpp__kodi.html#ga324988f038efe6fec487718361fb8aa6">kodi::GetKeyboardLayout</a></div><div class="ttdeci">bool GetKeyboardLayout(int modifierKey, std::string &amp;layout_name, std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;layout)</div><div class="ttdoc">To get keyboard layout characters.</div><div class="ttdef"><b>Definition:</b> General.h:834</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed"><div class="ttname"><a href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafd087dc92a4aa41295a4ddc46d36caed">STD_KB_MODIFIER_KEY_SYMBOL</a></div><div class="ttdeci">@ STD_KB_MODIFIER_KEY_SYMBOL</div><div class="ttdoc">Keyboard layout type, this to show symbols.</div><div class="ttdef"><b>Definition:</b> General.h:28</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga2dc05ae2b766c3710db48b48b257f951"><div class="ttname"><a href="group__cpp__kodi.html#ga2dc05ae2b766c3710db48b48b257f951">kodi::GetFreeMem</a></div><div class="ttdeci">void GetFreeMem(long &amp;free, long &amp;total, bool asBytes=false)</div><div class="ttdoc">Returns the amount of free memory in MByte (or as bytes) as an long integer.</div><div class="ttdef"><b>Definition:</b> General.h:601</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a2ffaf3e648ad752d53c2739eeea1f712">QUEUE_WARNING</a></div><div class="ttdeci">@ QUEUE_WARNING</div><div class="ttdoc">Show warning notification message.</div><div class="ttdef"><b>Definition:</b> General.h:76</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_gga8e33c1267b3dc36c2373153ae5b65d94a337175e2eb3336df26c7e387e56cfb6b"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga8e33c1267b3dc36c2373153ae5b65d94a337175e2eb3336df26c7e387e56cfb6b">QUEUE_INFO</a></div><div class="ttdeci">@ QUEUE_INFO</div><div class="ttdoc">Show info notification message.</div><div class="ttdef"><b>Definition:</b> General.h:74</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_a14e85f5a1bb888b4325a87984bccfe81"><div class="ttname"><a href="group__cpp__kodi___defs.html#a14e85f5a1bb888b4325a87984bccfe81">kodi_version_t::tag_revision</a></div><div class="ttdeci">std::string tag_revision</div><div class="ttdoc">The revision of tag before.</div><div class="ttdef"><b>Definition:</b> General.h:118</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga8296027856e5e592c79e45fc2af6f930"><div class="ttname"><a href="group__cpp__kodi.html#ga8296027856e5e592c79e45fc2af6f930">kodi::GetLocalizedString</a></div><div class="ttdeci">std::string GetLocalizedString(uint32_t labelId, const std::string &amp;defaultStr=&quot;&quot;)</div><div class="ttdoc">Returns an addon's localized 'unicode string'.</div><div class="ttdef"><b>Definition:</b> General.h:222</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0"><div class="ttname"><a href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeafcb1ae72afbcc02fe3508d495b7056c0">STD_KB_MODIFIER_KEY_SHIFT</a></div><div class="ttdeci">@ STD_KB_MODIFIER_KEY_SHIFT</div><div class="ttdoc">Keyboard layout type, this for shift controled layout (uppercase)</div><div class="ttdef"><b>Definition:</b> General.h:26</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_gae0eb66cdc2244c78a912b68c09a04fee"><div class="ttname"><a href="group__cpp__kodi___defs.html#gae0eb66cdc2244c78a912b68c09a04fee">StdKbButtons</a></div><div class="ttdeci">StdKbButtons</div><div class="ttdoc">For kodi::CurrentKeyboardLayout used defines.</div><div class="ttdef"><b>Definition:</b> General.h:18</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga4cd782256ea2690e86421f1466683e24"><div class="ttname"><a href="group__cpp__kodi.html#ga4cd782256ea2690e86421f1466683e24">kodi::GetMD5</a></div><div class="ttdeci">std::string GetMD5(const std::string &amp;text)</div><div class="ttdoc">Get the MD5 digest of the given text.</div><div class="ttdef"><b>Definition:</b> General.h:489</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga39c65205ea763e00c402cb0f1f50b289"><div class="ttname"><a href="group__cpp__kodi.html#ga39c65205ea763e00c402cb0f1f50b289">kodi::QueueFormattedNotification</a></div><div class="ttdeci">void QueueFormattedNotification(QueueMsg type, const char *format,...)</div><div class="ttdoc">Writes the C string pointed by format in the GUI. If format includes format specifiers (subsequences ...</div><div class="ttdef"><b>Definition:</b> General.h:396</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635">LANG_FMT_ENGLISH_NAME</a></div><div class="ttdeci">@ LANG_FMT_ENGLISH_NAME</div><div class="ttdoc">full language name in English</div><div class="ttdef"><b>Definition:</b> General.h:97</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_structkodi__version__t"><div class="ttname"><a href="group__cpp__kodi___defs.html#structkodi__version__t">kodi_version_t</a></div><div class="ttdoc">For kodi::Version used structure.</div><div class="ttdef"><b>Definition:</b> General.h:106</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga981f36ea378461d67c0f0502f678b5b5"><div class="ttname"><a href="group__cpp__kodi.html#ga981f36ea378461d67c0f0502f678b5b5">kodi::OpenSettings</a></div><div class="ttdeci">bool OpenSettings()</div><div class="ttdoc">Opens this Add-Ons settings dialog.</div><div class="ttdef"><b>Definition:</b> General.h:186</div></div>
-<div class="ttc" id="astruct_addon_to_kodi_func_table__kodi_html"><div class="ttname"><a href="struct_addon_to_kodi_func_table__kodi.html">AddonToKodiFuncTable_kodi</a></div><div class="ttdef"><b>Definition:</b> General.h:48</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_ggae0eb66cdc2244c78a912b68c09a04feeacadbebe388526b489067002add50ff70"><div class="ttname"><a href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeacadbebe388526b489067002add50ff70">STD_KB_MODIFIER_KEY_NONE</a></div><div class="ttdeci">@ STD_KB_MODIFIER_KEY_NONE</div><div class="ttdoc">Keyboard layout type, this for initial standard.</div><div class="ttdef"><b>Definition:</b> General.h:24</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_ga8e33c1267b3dc36c2373153ae5b65d94"><div class="ttname"><a href="group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94">QueueMsg</a></div><div class="ttdeci">QueueMsg</div><div class="ttdoc">For kodi::QueueNotification() used message types.</div><div class="ttdef"><b>Definition:</b> General.h:72</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga59fa55ddb5d7a6e4d53b10d7f9a1e0cf"><div class="ttname"><a href="group__cpp__kodi.html#ga59fa55ddb5d7a6e4d53b10d7f9a1e0cf">kodi::GetLanguage</a></div><div class="ttdeci">std::string GetLanguage(LangFormats format=LANG_FMT_ENGLISH_NAME, bool region=false)</div><div class="ttdoc">Returns the active language as a string.</div><div class="ttdef"><b>Definition:</b> General.h:303</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_gaa2b38e3e192a404565552416049c4d30"><div class="ttname"><a href="group__cpp__kodi.html#gaa2b38e3e192a404565552416049c4d30">kodi::GetCurrentSkinId</a></div><div class="ttdeci">std::string GetCurrentSkinId()</div><div class="ttdoc">Get the currently used skin identification name from Kodi</div><div class="ttdef"><b>Definition:</b> General.h:662</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_ga40942faafc2e9ae4d9b76e2f19362327"><div class="ttname"><a href="group__cpp__kodi___defs.html#ga40942faafc2e9ae4d9b76e2f19362327">LangFormats</a></div><div class="ttdeci">LangFormats</div><div class="ttdoc">Format codes to get string from them.</div><div class="ttdef"><b>Definition:</b> General.h:91</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga275a5231deebed983e67a97f50c8195e"><div class="ttname"><a href="group__cpp__kodi.html#ga275a5231deebed983e67a97f50c8195e">kodi::UnknownToUTF8</a></div><div class="ttdeci">bool UnknownToUTF8(const std::string &amp;stringSrc, std::string &amp;utf8StringDst, bool failOnBadChar=false)</div><div class="ttdoc">Translate a string with an unknown encoding to UTF8.</div><div class="ttdef"><b>Definition:</b> General.h:261</div></div>
-<div class="ttc" id="agroup__cpp__kodi_html_ga5417d9134259da3d79f40e9a20a48617"><div class="ttname"><a href="group__cpp__kodi.html#ga5417d9134259da3d79f40e9a20a48617">kodi::KodiVersion</a></div><div class="ttdeci">void KodiVersion(kodi_version_t &amp;version)</div><div class="ttdoc">Get current Kodi informations and versions, returned data from the following kodi_version_t version; ...</div><div class="ttdef"><b>Definition:</b> General.h:762</div></div>
-<div class="ttc" id="agroup__cpp__kodi___defs_html_ac8947941479c38403a09c14a60b03f01"><div class="ttname"><a href="group__cpp__kodi___defs.html#ac8947941479c38403a09c14a60b03f01">kodi_version_t::major</a></div><div class="ttdeci">int major</div><div class="ttdoc">Major code version of Kodi.</div><div class="ttdef"><b>Definition:</b> General.h:110</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38"><div class="ttname"><a href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feeac8b06acd72be956332dded75f5080a38">STD_KB_BUTTONS_MAX_ROWS</a></div><div class="ttdeci">@ STD_KB_BUTTONS_MAX_ROWS</div><div class="ttdoc">The quantity of rows on Kodi's standard keyboard.</div><div class="ttdef"><b>Definition:</b> general.h:30</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga670fd06bfd1b1ca5b428884eba485222"><div class="ttname"><a href="group__cpp__kodi.html#ga670fd06bfd1b1ca5b428884eba485222">kodi::GetFreeMem</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN GetFreeMem(long &amp;free, long &amp;total, bool asBytes=false)</div><div class="ttdoc">Returns the amount of free memory in MByte (or as bytes) as an long integer.</div><div class="ttdef"><b>Definition:</b> General.h:519</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_a5061ba1a268eb999ed21e0c4d7bf609e"><div class="ttname"><a href="group__cpp__kodi___defs.html#a5061ba1a268eb999ed21e0c4d7bf609e">kodi_version_t::revision</a></div><div class="ttdeci">std::string revision</div><div class="ttdoc">The Revision contains a id and the build date, e.g. 20170706-c6b22fe217-dirty.</div><div class="ttdef"><b>Definition:</b> General.h:29</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465"><div class="ttname"><a href="group__cpp__kodi___defs.html#ggae0eb66cdc2244c78a912b68c09a04feea2f1b3e48a671bcba5f3b806398fc3465">STD_KB_BUTTONS_PER_ROW</a></div><div class="ttdeci">@ STD_KB_BUTTONS_PER_ROW</div><div class="ttdoc">The quantity of buttons per row on Kodi's standard keyboard.</div><div class="ttdef"><b>Definition:</b> general.h:28</div></div>
+<div class="ttc" id="astruct_addon_keyboard_key_table_html"><div class="ttname"><a href="struct_addon_keyboard_key_table.html">AddonKeyboardKeyTable</a></div><div class="ttdef"><b>Definition:</b> general.h:86</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga26de39eee45315a3cda7aceb601a8bad"><div class="ttname"><a href="group__cpp__kodi.html#ga26de39eee45315a3cda7aceb601a8bad">kodi::GetMD5</a></div><div class="ttdeci">std::string ATTRIBUTE_HIDDEN GetMD5(const std::string &amp;text)</div><div class="ttdoc">Get the MD5 digest of the given text.</div><div class="ttdef"><b>Definition:</b> General.h:409</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga8e565f6801e5b1b05a34ad3ae0ff9f7c"><div class="ttname"><a href="group__cpp__kodi.html#ga8e565f6801e5b1b05a34ad3ae0ff9f7c">kodi::UnknownToUTF8</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN UnknownToUTF8(const std::string &amp;stringSrc, std::string &amp;utf8StringDst, bool failOnBadChar=false)</div><div class="ttdoc">Translate a string with an unknown encoding to UTF8.</div><div class="ttdef"><b>Definition:</b> General.h:176</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_gae565b1abcc346e1a97a98707d5c107a7"><div class="ttname"><a href="group__cpp__kodi.html#gae565b1abcc346e1a97a98707d5c107a7">kodi::QueueNotification</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN QueueNotification(QueueMsg type, const std::string &amp;header, const std::string &amp;message, const std::string &amp;imageFile=&quot;&quot;, unsigned int displayTime=5000, bool withSound=true, unsigned int messageTime=1000)</div><div class="ttdoc">Queue a notification in the GUI.</div><div class="ttdef"><b>Definition:</b> General.h:374</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga9e77def6869d4d2bb47c1a9fc300603d"><div class="ttname"><a href="group__cpp__kodi.html#ga9e77def6869d4d2bb47c1a9fc300603d">kodi::GetTempAddonPath</a></div><div class="ttdeci">std::string ATTRIBUTE_HIDDEN GetTempAddonPath(const std::string &amp;append=&quot;&quot;)</div><div class="ttdoc">To get a temporary path for the addon.</div><div class="ttdef"><b>Definition:</b> General.h:433</div></div>
+<div class="ttc" id="astruct_addon_to_kodi_func_table___addon_html"><div class="ttname"><a href="struct_addon_to_kodi_func_table___addon.html">AddonToKodiFuncTable_Addon</a></div><div class="ttdef"><b>Definition:</b> addon_base.h:168</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_afe9672e29db448c9cc47fbb6cbb5a8f4"><div class="ttname"><a href="group__cpp__kodi___defs.html#afe9672e29db448c9cc47fbb6cbb5a8f4">kodi_version_t::compile_name</a></div><div class="ttdeci">std::string compile_name</div><div class="ttdoc">Application name, normally 'Kodi'.</div><div class="ttdef"><b>Definition:</b> General.h:23</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_ae120f732e7e1c5e4a16fa31d89f655df"><div class="ttname"><a href="group__cpp__kodi___defs.html#ae120f732e7e1c5e4a16fa31d89f655df">kodi_version_t::tag</a></div><div class="ttdeci">std::string tag</div><div class="ttdoc">The version canditate e.g. alpha, beta or release.</div><div class="ttdef"><b>Definition:</b> General.h:31</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga6e6d370c32d023e6fc175479b3d60594"><div class="ttname"><a href="group__cpp__kodi.html#ga6e6d370c32d023e6fc175479b3d60594">kodi::ChangeKeyboardLayout</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN ChangeKeyboardLayout(std::string &amp;layout_name)</div><div class="ttdoc">To change keyboard layout characters.</div><div class="ttdef"><b>Definition:</b> General.h:815</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_aec7b96885baf2e6f10efbdef9d935a0b"><div class="ttname"><a href="group__cpp__kodi___defs.html#aec7b96885baf2e6f10efbdef9d935a0b">kodi_version_t::minor</a></div><div class="ttdeci">int minor</div><div class="ttdoc">Minor code version of Kodi.</div><div class="ttdef"><b>Definition:</b> General.h:27</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_gabedabd2d05e57a6517fa9d5db21f61a9"><div class="ttname"><a href="group__cpp__kodi.html#gabedabd2d05e57a6517fa9d5db21f61a9">kodi::GetKeyboardLayout</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN GetKeyboardLayout(int modifierKey, std::string &amp;layout_name, std::vector&lt; std::vector&lt; std::string &gt;&gt; &amp;layout)</div><div class="ttdoc">To get keyboard layout characters.</div><div class="ttdef"><b>Definition:</b> General.h:743</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga999b45568e7ff08f0f448305828cd9f0"><div class="ttname"><a href="group__cpp__kodi.html#ga999b45568e7ff08f0f448305828cd9f0">kodi::GetRegion</a></div><div class="ttdeci">std::string ATTRIBUTE_HIDDEN GetRegion(const std::string &amp;id)</div><div class="ttdoc">Returns your regions setting as a string for the specified id.</div><div class="ttdef"><b>Definition:</b> General.h:478</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_a14e85f5a1bb888b4325a87984bccfe81"><div class="ttname"><a href="group__cpp__kodi___defs.html#a14e85f5a1bb888b4325a87984bccfe81">kodi_version_t::tag_revision</a></div><div class="ttdeci">std::string tag_revision</div><div class="ttdoc">The revision of tag before.</div><div class="ttdef"><b>Definition:</b> General.h:33</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga24b78044dc4971cb1ec3dc6633f92d2b"><div class="ttname"><a href="group__cpp__kodi.html#ga24b78044dc4971cb1ec3dc6633f92d2b">kodi::GetAddonInfo</a></div><div class="ttdeci">std::string ATTRIBUTE_HIDDEN GetAddonInfo(const std::string &amp;id)</div><div class="ttdoc">Returns the value of an addon property as a string.</div><div class="ttdef"><b>Definition:</b> General.h:66</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_gaf34dcddcd086965b2e1788984271c095"><div class="ttname"><a href="group__cpp__kodi.html#gaf34dcddcd086965b2e1788984271c095">kodi::GetCurrentSkinId</a></div><div class="ttdeci">std::string ATTRIBUTE_HIDDEN GetCurrentSkinId()</div><div class="ttdoc">Get the currently used skin identification name from Kodi.</div><div class="ttdef"><b>Definition:</b> General.h:577</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_gaede57551d559f9949a2e94c956a10e6c"><div class="ttname"><a href="group__cpp__kodi.html#gaede57551d559f9949a2e94c956a10e6c">kodi::OpenSettings</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN OpenSettings()</div><div class="ttdoc">Opens this Add-Ons settings dialog.</div><div class="ttdef"><b>Definition:</b> General.h:101</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_gac13d92a923bef182657f4d42680c27a3"><div class="ttname"><a href="group__cpp__kodi.html#gac13d92a923bef182657f4d42680c27a3">kodi::KodiVersion</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN KodiVersion(kodi_version_t &amp;version)</div><div class="ttdoc">Get current Kodi informations and versions, returned data from the following kodi_version_t version; ...</div><div class="ttdef"><b>Definition:</b> General.h:675</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga0afd37570f44097a3bb06566c0459247"><div class="ttname"><a href="group__cpp__kodi.html#ga0afd37570f44097a3bb06566c0459247">kodi::GetLocalizedString</a></div><div class="ttdeci">std::string ATTRIBUTE_HIDDEN GetLocalizedString(uint32_t labelId, const std::string &amp;defaultStr=&quot;&quot;)</div><div class="ttdoc">Returns an addon's localized 'unicode string'.</div><div class="ttdef"><b>Definition:</b> General.h:136</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635"><div class="ttname"><a href="group__cpp__kodi___defs.html#gga40942faafc2e9ae4d9b76e2f19362327a8e9dbb43889202ef570c318560f52635">LANG_FMT_ENGLISH_NAME</a></div><div class="ttdeci">@ LANG_FMT_ENGLISH_NAME</div><div class="ttdoc">full language name in English</div><div class="ttdef"><b>Definition:</b> general.h:70</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_structkodi__version__t"><div class="ttname"><a href="group__cpp__kodi___defs.html#structkodi__version__t">kodi_version_t</a></div><div class="ttdoc">For kodi::Version used structure.</div><div class="ttdef"><b>Definition:</b> General.h:21</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_gaaa1d254a8615b005cb1a612b9f783d2a"><div class="ttname"><a href="group__cpp__kodi.html#gaaa1d254a8615b005cb1a612b9f783d2a">kodi::GetLanguage</a></div><div class="ttdeci">std::string ATTRIBUTE_HIDDEN GetLanguage(LangFormats format=LANG_FMT_ENGLISH_NAME, bool region=false)</div><div class="ttdoc">Returns the active language as a string.</div><div class="ttdef"><b>Definition:</b> General.h:220</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_ga4877f9e5cf86203cdd2c63e5694bc813"><div class="ttname"><a href="group__cpp__kodi.html#ga4877f9e5cf86203cdd2c63e5694bc813">kodi::GetGlobalIdleTime</a></div><div class="ttdeci">int ATTRIBUTE_HIDDEN GetGlobalIdleTime()</div><div class="ttdoc">Returns the elapsed idle time in seconds as an integer.</div><div class="ttdef"><b>Definition:</b> General.h:547</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_ga8e33c1267b3dc36c2373153ae5b65d94"><div class="ttname"><a href="group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94">QueueMsg</a></div><div class="ttdeci">QueueMsg</div><div class="ttdoc">For kodi::QueueNotification() used message types.</div><div class="ttdef"><b>Definition:</b> general.h:45</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_ga40942faafc2e9ae4d9b76e2f19362327"><div class="ttname"><a href="group__cpp__kodi___defs.html#ga40942faafc2e9ae4d9b76e2f19362327">LangFormats</a></div><div class="ttdeci">LangFormats</div><div class="ttdoc">Format codes to get string from them.</div><div class="ttdef"><b>Definition:</b> general.h:64</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_gab58654626db3afbe80b9de5fffff9e4b"><div class="ttname"><a href="group__cpp__kodi.html#gab58654626db3afbe80b9de5fffff9e4b">kodi::QueueFormattedNotification</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN QueueFormattedNotification(QueueMsg type, const char *format,...)</div><div class="ttdoc">Writes the C string pointed by format in the GUI. If format includes format specifiers (subsequences ...</div><div class="ttdef"><b>Definition:</b> General.h:315</div></div>
+<div class="ttc" id="agroup__cpp__kodi___defs_html_ac8947941479c38403a09c14a60b03f01"><div class="ttname"><a href="group__cpp__kodi___defs.html#ac8947941479c38403a09c14a60b03f01">kodi_version_t::major</a></div><div class="ttdeci">int major</div><div class="ttdoc">Major code version of Kodi.</div><div class="ttdef"><b>Definition:</b> General.h:25</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_417a2be0c703372bef72d21c17ad7704.html">include</a></li><li class="navelem"><a class="el" href="dir_7634b8811587c1aba1020e9b1cc54725.html">kodi</a></li><li class="navelem"><b>General.h</b></li>
+    <li class="navelem"><a class="el" href="dir_818aca8f237de2dab4b332e67c44f0ac.html">include</a></li><li class="navelem"><a class="el" href="dir_e2893ada97b5f5ed70c6c1eae148df10.html">kodi</a></li><li class="navelem"><b>General.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

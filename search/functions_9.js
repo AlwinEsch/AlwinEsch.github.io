@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['kodiinputevent_3075',['KodiInputEvent',['../classkodi_1_1addon_1_1_c_instance_game.html#af10afcef9698c5e378276016b42dac63',1,'kodi::addon::CInstanceGame']]],
-  ['kodiversion_3076',['KodiVersion',['../group__cpp__kodi.html#ga5417d9134259da3d79f40e9a20a48617',1,'kodi']]]
+  ['joystick_3380',['Joystick',['../group__cpp__kodi__addon__peripheral___defs___joystick___joystick.html#gab30d2ff346e75dcf5dcdf5990f336577',1,'kodi::addon::Joystick::Joystick(const std::string &amp;provider=&quot;&quot;, const std::string &amp;strName=&quot;&quot;)'],['../group__cpp__kodi__addon__peripheral___defs___joystick___joystick.html#ga4a6dc60dcee75d920dce75e7cfb94d81',1,'kodi::addon::Joystick::Joystick(const Joystick &amp;other)']]],
+  ['joystickfeature_3381',['JoystickFeature',['../group__cpp__kodi__addon__peripheral___defs___joystick___joystick_feature.html#gacb20f0f30329c9fab014832c94ff9699',1,'kodi::addon::JoystickFeature::JoystickFeature(const std::string &amp;name=&quot;&quot;, JOYSTICK_FEATURE_TYPE type=JOYSTICK_FEATURE_TYPE_UNKNOWN)'],['../group__cpp__kodi__addon__peripheral___defs___joystick___joystick_feature.html#gaf91c5144d92888fdd3370c53dfae94b4',1,'kodi::addon::JoystickFeature::JoystickFeature(const JoystickFeature &amp;other)']]]
 ];

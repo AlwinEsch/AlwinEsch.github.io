@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kodi Development: /home/alwin/Development/Kodi/kodi-Matrix/xbmc/addons/kodi-addon-dev-kit/include/kodi/gui/dialogs/ContextMenu.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/Kodi/kodi-Matrix/xbmc/addons/kodi-dev-kit/include/kodi/gui/dialogs/ContextMenu.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -122,64 +122,68 @@ $(document).ready(function(){initNavTree('_context_menu_8h_source.html',''); ini
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span>  <span class="keyword">namespace </span>ContextMenu</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___context_menu.html#ga071fae5f83b1ee17d613a840aaf96f24">   69</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="group__cpp__kodi__gui__dialogs___context_menu.html#ga7e0c7481b3da07e8b9ee8318a4c021b8">Show</a>(<span class="keyword">const</span> std::string&amp; heading, <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; entries)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntries = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>**)));</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        cEntries[i] = entries[i].c_str();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordtype">int</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogContextMenu-&gt;open(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(), cEntries, size);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      free(cEntries);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___context_menu.html#gacba5cd75441d82534569081cace5c009">  116</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="group__cpp__kodi__gui__dialogs___context_menu.html#ga7e0c7481b3da07e8b9ee8318a4c021b8">Show</a>(<span class="keyword">const</span> std::string&amp; heading, <span class="keyword">const</span> std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;&amp; entries)</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntries = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>**)));</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        cEntries[i] = entries[i].second.c_str();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordtype">int</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogContextMenu-&gt;open(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(), cEntries, size);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      free(cEntries);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___context_menu.html#ga7e0c7481b3da07e8b9ee8318a4c021b8">  163</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="group__cpp__kodi__gui__dialogs___context_menu.html#ga7e0c7481b3da07e8b9ee8318a4c021b8">Show</a>(<span class="keyword">const</span> std::string&amp; heading, <span class="keyword">const</span> std::vector&lt;std::pair&lt;int, std::string&gt;&gt;&amp; entries)</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntries = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>**)));</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        cEntries[i] = entries[i].second.c_str();</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordtype">int</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogContextMenu-&gt;open(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(), cEntries, size);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      free(cEntries);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  };</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;} <span class="comment">/* namespace dialogs */</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;} <span class="comment">/* namespace gui */</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___context_menu.html#ga56ee6fca3c5ee198a0668909a5d169d4">   69</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi__gui__dialogs___context_menu.html#ga56c1800fe2a7448ef89a61d08a5ffab3">Show</a>(<span class="keyword">const</span> std::string&amp; heading,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                     <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; entries)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntries = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size * <span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>**)));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        cEntries[i] = entries[i].c_str();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordtype">int</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogContextMenu-&gt;open(</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(), cEntries, size);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      free(cEntries);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___context_menu.html#gad3526a385ba5c1bd26432efa77d0e443">  118</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi__gui__dialogs___context_menu.html#ga56c1800fe2a7448ef89a61d08a5ffab3">Show</a>(</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">const</span> std::string&amp; heading, <span class="keyword">const</span> std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt;&amp; entries)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntries = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>**)));</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        cEntries[i] = entries[i].second.c_str();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordtype">int</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogContextMenu-&gt;open(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(), cEntries, size);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      free(cEntries);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___context_menu.html#ga56c1800fe2a7448ef89a61d08a5ffab3">  166</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi__gui__dialogs___context_menu.html#ga56c1800fe2a7448ef89a61d08a5ffab3">Show</a>(<span class="keyword">const</span> std::string&amp; heading,</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                                     <span class="keyword">const</span> std::vector&lt;std::pair&lt;int, std::string&gt;&gt;&amp; entries)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntries = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>**)));</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        cEntries[i] = entries[i].second.c_str();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      <span class="keywordtype">int</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogContextMenu-&gt;open(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(), cEntries, size);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      free(cEntries);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  };</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;} <span class="comment">/* namespace dialogs */</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;} <span class="comment">/* namespace gui */</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi__gui__dialogs___context_menu_html_ga7e0c7481b3da07e8b9ee8318a4c021b8"><div class="ttname"><a href="group__cpp__kodi__gui__dialogs___context_menu.html#ga7e0c7481b3da07e8b9ee8318a4c021b8">kodi::gui::dialogs::ContextMenu::Show</a></div><div class="ttdeci">int Show(const std::string &amp;heading, const std::vector&lt; std::pair&lt; int, std::string &gt;&gt; &amp;entries)</div><div class="ttdoc">Show a context menu dialog about given parts.</div><div class="ttdef"><b>Definition:</b> ContextMenu.h:163</div></div>
+<div class="ttc" id="agroup__cpp__kodi__gui__dialogs___context_menu_html_ga56c1800fe2a7448ef89a61d08a5ffab3"><div class="ttname"><a href="group__cpp__kodi__gui__dialogs___context_menu.html#ga56c1800fe2a7448ef89a61d08a5ffab3">kodi::gui::dialogs::ContextMenu::Show</a></div><div class="ttdeci">int ATTRIBUTE_HIDDEN Show(const std::string &amp;heading, const std::vector&lt; std::pair&lt; int, std::string &gt;&gt; &amp;entries)</div><div class="ttdoc">Show a context menu dialog about given parts.</div><div class="ttdef"><b>Definition:</b> ContextMenu.h:166</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_417a2be0c703372bef72d21c17ad7704.html">include</a></li><li class="navelem"><a class="el" href="dir_7634b8811587c1aba1020e9b1cc54725.html">kodi</a></li><li class="navelem"><a class="el" href="dir_84a7bc4f716231e4ce5669c58f159913.html">gui</a></li><li class="navelem"><a class="el" href="dir_2c776b4d4b4614af89deb335dd4522c0.html">dialogs</a></li><li class="navelem"><b>ContextMenu.h</b></li>
+    <li class="navelem"><a class="el" href="dir_818aca8f237de2dab4b332e67c44f0ac.html">include</a></li><li class="navelem"><a class="el" href="dir_e2893ada97b5f5ed70c6c1eae148df10.html">kodi</a></li><li class="navelem"><a class="el" href="dir_f20743b7ecfd828f89a669a2f72f5b2b.html">gui</a></li><li class="navelem"><a class="el" href="dir_2932e6522a2be82a262747ff8956f1aa.html">dialogs</a></li><li class="navelem"><b>ContextMenu.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

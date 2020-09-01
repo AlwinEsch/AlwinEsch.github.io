@@ -1,0 +1,25 @@
+var group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e =
+[
+    [ "JOYSTICK_FEATURE_PRIMITIVE", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#gaffb1977d8eac82b9196fa6830dbb0742", [
+      [ "JOYSTICK_SCALAR_PRIMITIVE", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a302d91ceb7d861e1e9e91b6ff7cb86c7", null ],
+      [ "JOYSTICK_ANALOG_STICK_UP", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a61179d8699ccec57a6604e0081befc23", null ],
+      [ "JOYSTICK_ANALOG_STICK_DOWN", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a3f234e9f98228cb9c9960e3bc6c44793", null ],
+      [ "JOYSTICK_ANALOG_STICK_RIGHT", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742aed097561102059d4059ff2e61517bb73", null ],
+      [ "JOYSTICK_ANALOG_STICK_LEFT", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742acfa46b1ce04c6040229e86c9e0ce9f4a", null ],
+      [ "JOYSTICK_ACCELEROMETER_POSITIVE_X", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a3271470dfbfbad2d3b3e5e7e2d05fbc6", null ],
+      [ "JOYSTICK_ACCELEROMETER_POSITIVE_Y", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a383c21ffadacdb6d20a00c4f8300e6a5", null ],
+      [ "JOYSTICK_ACCELEROMETER_POSITIVE_Z", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742af18bc6e1582ea9b42c1ab373527e5eb1", null ],
+      [ "JOYSTICK_MOTOR_PRIMITIVE", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742ab53ee692dc3bb638a518315f7c543dc4", null ],
+      [ "JOYSTICK_WHEEL_LEFT", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a109be79d2c2279f49c5cf0349e92bce2", null ],
+      [ "JOYSTICK_WHEEL_RIGHT", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a93dbdb8b1f184d5e609153790eb43020", null ],
+      [ "JOYSTICK_THROTTLE_UP", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a0f09f745af77d6e33566760b73536a07", null ],
+      [ "JOYSTICK_THROTTLE_DOWN", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a4836ee9ada439c6c451cf0fe0ec0f894", null ],
+      [ "JOYSTICK_KEY_PRIMITIVE", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a499b562ced53a945d5e78d3481ebb59e", null ],
+      [ "JOYSTICK_MOUSE_BUTTON", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742ab61f2937351d62bcf96e9dcdf70737e3", null ],
+      [ "JOYSTICK_RELPOINTER_UP", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a1331b4c2b360ec0500caf39717eac68d", null ],
+      [ "JOYSTICK_RELPOINTER_DOWN", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a11222e3bd6adde28958e754af2a2acce", null ],
+      [ "JOYSTICK_RELPOINTER_RIGHT", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742ace5b18ab5887827d0a7d7c2847c7f70d", null ],
+      [ "JOYSTICK_RELPOINTER_LEFT", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a80331f2953a45fa612066d02965b865b", null ],
+      [ "JOYSTICK_PRIMITIVE_MAX", "group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#ggaffb1977d8eac82b9196fa6830dbb0742a94a4822f7aa1b1b8c33092165e608826", null ]
+    ] ]
+];

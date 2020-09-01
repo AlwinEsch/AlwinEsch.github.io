@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['waitforabort_3574',['waitForAbort',['../group__python__monitor.html#ga101acf761929351fb676b05e88ddeb8d',1,'XBMCAddon::xbmc::Monitor']]],
-  ['wakeonlan_3575',['WakeOnLan',['../group__cpp__kodi__network.html#gace1e815cea9513aaf8133495a3199cf8',1,'kodi::network']]],
-  ['width_3576',['Width',['../group__cpp__kodi__addon__screensaver___c_b.html#gad26a595463349d0214ea9c09fb31c401',1,'kodi::addon::CInstanceScreensaver::Width()'],['../group__cpp__kodi__addon__visualization___c_b.html#gad26a595463349d0214ea9c09fb31c401',1,'kodi::addon::CInstanceVisualization::Width()']]],
-  ['window_3577',['Window',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window.html#a835a76ed343ad0fba8d55a525ee8789a',1,'XBMCAddon::xbmcgui::Window']]],
-  ['write_3578',['write',['../group__python__file.html#ga3df61f0669ef30181e65bbe5b0bb663c',1,'XBMCAddon::xbmcvfs::File::write()'],['../group__python__xbmcwsgi___wsgi_error_stream.html#ga3df61f0669ef30181e65bbe5b0bb663c',1,'XBMCAddon::xbmcwsgi::WsgiErrorStream::write()'],['../classkodi_1_1addon_1_1_c_instance_audio_encoder.html#acb7c778c8e87509a84c13992682739f1',1,'kodi::addon::CInstanceAudioEncoder::Write()'],['../group__cpp__kodi__addon__vfs__filecontrol.html#ga84c0b70fc7aab687e47888ae819222b3',1,'kodi::addon::CInstanceVFS::Write()'],['../group__cpp__kodi__vfs___c_file.html#gac56b00da6c3afc554f8eafa33406f30a',1,'kodi::vfs::CFile::Write()']]],
-  ['writelines_3579',['writelines',['../group__python__xbmcwsgi___wsgi_error_stream.html#gae748f1fec85745ea724f9005630a9a63',1,'XBMCAddon::xbmcwsgi::WsgiErrorStream']]]
+  ['validatepath_3930',['validatePath',['../group__python__xbmcvfs.html#ga7d325903d7bc797f993c9df791d22c44',1,'ModuleXbmcvfs.h']]],
+  ['vendorid_3931',['VendorID',['../group__cpp__kodi__addon__peripheral___defs___peripheral___peripheral.html#ga046a9be65feb2fb23bdaab0ca511f21e',1,'kodi::addon::Peripheral']]],
+  ['vertexshader_3932',['VertexShader',['../group__cpp__kodi__gui__gl___c_shader_program.html#ga66a721e72efb0ef0fef912810a9b4a63',1,'kodi::gui::gl::CShaderProgram']]],
+  ['videocodec_5fretval_3933',['VIDEOCODEC_RETVAL',['../struct_kodi_to_addon_func_table___video_codec.html#af7692b7a10af339cbff35cb9aeb7440a',1,'KodiToAddonFuncTable_VideoCodec']]],
+  ['void_3934',['void',['../struct_kodi_to_addon_func_table___video_codec.html#a460730f8ea041fda966a664f502c9a09',1,'KodiToAddonFuncTable_VideoCodec']]]
 ];

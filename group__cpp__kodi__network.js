@@ -1,11 +1,11 @@
 var group__cpp__kodi__network =
 [
-    [ "WakeOnLan", "group__cpp__kodi__network.html#gace1e815cea9513aaf8133495a3199cf8", null ],
-    [ "GetIPAddress", "group__cpp__kodi__network.html#ga348badb393c7613e4cd5bdb849515019", null ],
-    [ "GetHostname", "group__cpp__kodi__network.html#ga5d26fe0944835cc2d85d0b0cf490cff5", null ],
-    [ "GetUserAgent", "group__cpp__kodi__network.html#ga72673186186832200895a00dd36e6885", null ],
-    [ "IsLocalHost", "group__cpp__kodi__network.html#ga744651c550478dc22f418d838be989cc", null ],
-    [ "IsHostOnLAN", "group__cpp__kodi__network.html#gaa758052264007c1251ed361f8089d94a", null ],
-    [ "URLEncode", "group__cpp__kodi__network.html#gac4320b320b1871e24d37f6bab266f368", null ],
-    [ "DNSLookup", "group__cpp__kodi__network.html#gaa4dfb240badbab73880c0d3c02ffa734", null ]
+    [ "WakeOnLan", "group__cpp__kodi__network.html#gae8b351705eb98547b93cbc7a3075fe76", null ],
+    [ "GetIPAddress", "group__cpp__kodi__network.html#ga9489694a7f37becb821e5f78caafdb96", null ],
+    [ "GetHostname", "group__cpp__kodi__network.html#gac6047f2a95074172a74e04222b12dbf1", null ],
+    [ "GetUserAgent", "group__cpp__kodi__network.html#gafd933badc94bd2018f6d10bb6d769d33", null ],
+    [ "IsLocalHost", "group__cpp__kodi__network.html#ga1d4dcecf88e63ba5e57d46f948c46989", null ],
+    [ "IsHostOnLAN", "group__cpp__kodi__network.html#ga5116d65ba3d416945629c838223198b0", null ],
+    [ "URLEncode", "group__cpp__kodi__network.html#gaf0674d7dc6da798d08c9a60f9ba85676", null ],
+    [ "DNSLookup", "group__cpp__kodi__network.html#gaac97f66507f9b9cf53eecf01132d27b8", null ]
 ];

@@ -101,8 +101,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__screensaver__
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b>To get info about the device, display and several other parts</b> </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gadb328fb2add804f1393b84737d3ae45d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadb328fb2add804f1393b84737d3ae45d">&#9670;&nbsp;</a></span>Device()</h2>
+<a id="ga8172434167b6832d9b0a16e520de0e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8172434167b6832d9b0a16e520de0e32">&#9670;&nbsp;</a></span>Device()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__screensaver__
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void* Device </td>
+          <td class="memname">kodi::HardwareContext Device </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -126,8 +126,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__screensaver__
 
 <p>Device that represents the display adapter. </p>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the device</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This is only available on <b>DirectX</b>, It us unused (<code>nullptr</code>) on <b>OpenGL</b> </dd></dl>
-
+<dl class="section note"><dt>Note</dt><dd>This is only available on <b>DirectX</b>, It us unused (<code>nullptr</code>) on <b>OpenGL</b></dd></dl>
+<p>This value can also be becomed by <a class="el" href="group__cpp__kodi__gui.html#gaecc0ab7a7a2fae9d399698dd4caefd03">kodi::gui::GetHWContext()</a> and is recommended to use.</p>
+<hr  />
+<p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;d3d11_1.h&gt;</span></div>
+<div class="line">..</div>
+<div class="line"><span class="comment">// Note: Device() there is used inside addon child class about</span></div>
+<div class="line"><span class="comment">// kodi::addon::CInstanceVisualization</span></div>
+<div class="line">ID3D11DeviceContext1* context = <span class="keyword">static_cast&lt;</span>ID3D11DeviceContext1*<span class="keyword">&gt;</span>(<a class="code" href="group__cpp__kodi__addon__visualization___c_b.html#ga8172434167b6832d9b0a16e520de0e32">kodi::addon::CInstanceVisualization::Device</a>());</div>
+<div class="line">..</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gaafabadb78034330e508ebff9c58e0839"></a>
@@ -293,7 +301,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__screensaver__
 </table>
 </div><div class="memdoc">
 
-<p>Used to get the name of the add-on defined in <code>addon.xml</code> </p>
+<p>Used to get the name of the add-on defined in <code>addon.xml</code>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The add-on name </dd></dl>
 
 </div>
@@ -350,13 +358,14 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__screensaver__
 </div><div class="memdoc">
 
 <p>Used to get the full path to the add-on's user profile. </p>
-<dl class="section note"><dt>Note</dt><dd>The trailing folder (consisting of the add-on's ID) is not created by default. If it is needed, you must call <a class="el" href="group__cpp__kodi__vfs___directory.html#ga460ba0ff6f9b5c736ed5267a2b9e1f6d" title="Make a directory.">kodi::vfs::CreateDirectory()</a> to create the folder.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The trailing folder (consisting of the add-on's ID) is not created by default. If it is needed, you must call <a class="el" href="group__cpp__kodi__vfs___directory.html#ga17aaaa3f6cdbebfe788b25a4685d1cf0" title="Make a directory.">kodi::vfs::CreateDirectory()</a> to create the folder.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Path to the user profile </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="agroup__cpp__kodi__addon__visualization___c_b_html_ga8172434167b6832d9b0a16e520de0e32"><div class="ttname"><a href="group__cpp__kodi__addon__visualization___c_b.html#ga8172434167b6832d9b0a16e520de0e32">kodi::addon::CInstanceVisualization::Device</a></div><div class="ttdeci">kodi::HardwareContext Device()</div><div class="ttdoc">Device that represents the display adapter.</div><div class="ttdef"><b>Definition:</b> Visualization.h:750</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -1,12 +1,20 @@
 var searchData=
 [
-  ['makelegalfilename_3094',['makeLegalFilename',['../group__python__xbmcvfs.html#gac40e0ecd5b1aa66a90c5c0918cd40491',1,'makeLegalFilename():&#160;ModuleXbmcvfs.h'],['../group__cpp__kodi__vfs___general.html#ga857b795585d7268e85975850144adad7',1,'kodi::vfs::MakeLegalFileName()']]],
-  ['makelegalpath_3095',['MakeLegalPath',['../group__cpp__kodi__vfs___general.html#gab053f177a461b97666f395d51d9edd05',1,'kodi::vfs']]],
-  ['mapfeatures_3096',['MapFeatures',['../classkodi_1_1addon_1_1_c_instance_peripheral.html#a400331eddb7847e58c22d3424440067c',1,'kodi::addon::CInstancePeripheral']]],
-  ['markdirtyregion_3097',['MarkDirtyRegion',['../group__cpp__kodi__gui___c_window.html#ga60ef98c2dd24a36ab0748d21888f10b6',1,'kodi::gui::CWindow']]],
-  ['markfinished_3098',['MarkFinished',['../group__cpp__kodi__gui__dialogs___c_extended_progress.html#ga40af1bcedea1f61fde8cd5e70e416473',1,'kodi::gui::dialogs::CExtendedProgress']]],
-  ['mimetype_3099',['MimeType',['../group__cpp__kodi__addon__imagedecoder.html#gaf4962a784b53f017c10c31b8e2bc03f2',1,'kodi::addon::CInstanceImageDecoder']]],
-  ['mkdir_3100',['mkdir',['../group__python__xbmcvfs.html#ga07a90f3afa1401bd289deb4be40c2489',1,'ModuleXbmcvfs.h']]],
-  ['mkdirs_3101',['mkdirs',['../group__python__xbmcvfs.html#gaf0a772cd125d92abecaf2da7482aa16d',1,'ModuleXbmcvfs.h']]],
-  ['multiselect_3102',['multiselect',['../group__python___dialog.html#ga30fb89d8f6bfa31e2b2eace4d4bd16fa',1,'XBMCAddon::xbmcgui::Dialog']]]
+  ['label_3385',['Label',['../classkodi_1_1vfs_1_1_c_dir_entry.html#a154d00821a136494d7afc14b6755143a',1,'kodi::vfs::CDirEntry']]],
+  ['lengthlivestream_3386',['LengthLiveStream',['../group__cpp__kodi__addon__pvr___streams___t_v.html#gafd4f8031ab06ba3597a6dd7b06aba08e',1,'kodi::addon::CInstancePVRClient']]],
+  ['lengthrecordedstream_3387',['LengthRecordedStream',['../group__cpp__kodi__addon__pvr___streams___recording.html#ga785867c4ee582a25d43525d1d3cddb6d',1,'kodi::addon::CInstancePVRClient']]],
+  ['lengthstream_3388',['LengthStream',['../classkodi_1_1addon_1_1_c_instance_input_stream.html#a6c77ac06f595e639ac95ce93f88175be',1,'kodi::addon::CInstanceInputStream']]],
+  ['listdir_3389',['listdir',['../group__python__xbmcvfs.html#ga6fdd93a2195f65e549abb759bc151afc',1,'ModuleXbmcvfs.h']]],
+  ['load_3390',['load',['../group__python___play_list.html#ga58df00a466baca2469ad8407c5534377',1,'XBMCAddon::xbmc::PlayList']]],
+  ['loaddll_3391',['LoadDll',['../group__cpp__kodi__tools___c_dll_helper.html#ga4aedb3bb425d2cf810d2f98d4ddf32c3',1,'kodi::tools::CDllHelper']]],
+  ['loadgame_3392',['LoadGame',['../classkodi_1_1addon_1_1_c_instance_game.html#ae57f40435a8996393b3b151586ca8d19',1,'kodi::addon::CInstanceGame']]],
+  ['loadgamespecial_3393',['LoadGameSpecial',['../classkodi_1_1addon_1_1_c_instance_game.html#a024f7ff502652263acdc28d5086e0ca6',1,'kodi::addon::CInstanceGame']]],
+  ['loadimagefrommemory_3394',['LoadImageFromMemory',['../group__cpp__kodi__addon__imagedecoder.html#ga8b45c32858ccb4a32f874abe2ca2c409',1,'kodi::addon::CInstanceImageDecoder']]],
+  ['loadpreset_3395',['LoadPreset',['../group__cpp__kodi__addon__visualization.html#ga3d8800ff2acd0c2f242459803cacd3a2',1,'kodi::addon::CInstanceVisualization']]],
+  ['loadshaderfiles_3396',['LoadShaderFiles',['../group__cpp__kodi__gui__gl___c_shader_program.html#ga4f8823be999af29c68f6d1b4c9a6f2ea',1,'kodi::gui::gl::CShaderProgram']]],
+  ['loadstandalone_3397',['LoadStandalone',['../classkodi_1_1addon_1_1_c_instance_game.html#a88b7876256d63c652dd8743c255380f9',1,'kodi::addon::CInstanceGame']]],
+  ['lock_3398',['Lock',['../group__cpp__kodi__gui.html#gade957f0fbb1d6b29f56235d4c2ec4601',1,'kodi::gui']]],
+  ['lockinggetnextavailablewindowid_3399',['lockingGetNextAvailableWindowId',['../class_x_b_m_c_addon_1_1xbmcgui_1_1_window_x_m_l.html#a507ab35d41a0baaa7a32b16ca78aee24',1,'XBMCAddon::xbmcgui::WindowXML']]],
+  ['lockpreset_3400',['LockPreset',['../group__cpp__kodi__addon__visualization.html#ga0396c3e1569480032721836b7e139624',1,'kodi::addon::CInstanceVisualization']]],
+  ['log_3401',['log',['../group__python__xbmc.html#ga3cd3eff2195727144ad6fbabd4744961',1,'log():&#160;ModuleXbmc.h'],['../group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc',1,'kodi::Log()']]]
 ];

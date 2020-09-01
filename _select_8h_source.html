@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kodi Development: /home/alwin/Development/Kodi/kodi-Matrix/xbmc/addons/kodi-addon-dev-kit/include/kodi/gui/dialogs/Select.h Source File</title>
+<title>Kodi Development: /home/alwin/Development/Kodi/kodi-Matrix/xbmc/addons/kodi-dev-kit/include/kodi/gui/dialogs/Select.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -140,90 +140,100 @@ $(document).ready(function(){initNavTree('_select_8h_source.html',''); initResiz
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span>  <span class="keyword">namespace </span>Select</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___select.html#ga2db3e3d39031fb08646d36998df1d5c8">  107</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="group__cpp__kodi__gui__dialogs___select.html#ga162c5fdb8138bca0a6d4a9e4ffb15b08">Show</a>(<span class="keyword">const</span> std::string&amp; heading, <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; entries, <span class="keywordtype">int</span> selected = -1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> autoclose = 0)</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntries = (<span class="keyword">const</span> <span class="keywordtype">char</span>**)malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>**));</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        cEntries[i] = entries[i].c_str();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keywordtype">int</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogSelect-&gt;open(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(), cEntries, size, selected, autoclose);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      free(cEntries);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___select.html#ga162c5fdb8138bca0a6d4a9e4ffb15b08">  162</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="group__cpp__kodi__gui__dialogs___select.html#ga162c5fdb8138bca0a6d4a9e4ffb15b08">Show</a>(<span class="keyword">const</span> std::string&amp; heading, std::vector&lt;SSelectionEntry&gt;&amp; entries, <span class="keywordtype">int</span> selected = -1, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> autoclose = 0)</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntries = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>*)));</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        cEntries[i] = entries[i].name.c_str();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> (selected == -1 &amp;&amp; entries[i].selected)</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;          selected = i;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordtype">int</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogSelect-&gt;open(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(),</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                                                              cEntries, size, selected, autoclose);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <span class="keywordflow">if</span> (ret &gt;= 0)</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___select.html#ga7b54683c91df5b9c8fd19a74003f08a8">  107</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi__gui__dialogs___select.html#gaa0ccf5b9cc0a3d09142fe38e148723ae">Show</a>(<span class="keyword">const</span> std::string&amp; heading,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                     <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; entries,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                     <span class="keywordtype">int</span> selected = -1,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> autoclose = 0)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntries = (<span class="keyword">const</span> <span class="keywordtype">char</span>**)malloc(size * <span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>**));</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        cEntries[i] = entries[i].c_str();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keywordtype">int</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogSelect-&gt;open(</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;          CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(), cEntries, size, selected,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;          autoclose);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      free(cEntries);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___select.html#gaa0ccf5b9cc0a3d09142fe38e148723ae">  167</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi__gui__dialogs___select.html#gaa0ccf5b9cc0a3d09142fe38e148723ae">Show</a>(<span class="keyword">const</span> std::string&amp; heading,</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                                     std::vector&lt;SSelectionEntry&gt;&amp; entries,</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                     <span class="keywordtype">int</span> selected = -1,</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                                     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> autoclose = 0)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntries = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>*)));</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        entries[ret].selected = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      free(cEntries);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___select.html#ga9fc4cfc1b7af403a57367369ad710b29">  227</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="group__cpp__kodi__gui__dialogs___select.html#ga9fc4cfc1b7af403a57367369ad710b29">ShowMultiSelect</a>(<span class="keyword">const</span> std::string&amp; heading, std::vector&lt;SSelectionEntry&gt;&amp; entries, <span class="keywordtype">int</span> autoclose = 0)</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntryIDs = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>*)));</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntryNames = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>*)));</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordtype">bool</span>* cEntriesSelected = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span>*<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>)));</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        cEntryIDs[i] = entries[i].id.c_str();</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        cEntryNames[i] = entries[i].name.c_str();</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        cEntriesSelected[i] = entries[i].selected;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      }</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      <span class="keywordtype">bool</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogSelect-&gt;open_multi_select(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase,</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                                                                                            heading.c_str(), cEntryIDs, cEntryNames,</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                                                                                            cEntriesSelected, size, autoclose);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      <span class="keywordflow">if</span> (ret)</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;          entries[i].selected = cEntriesSelected[i];</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;       }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      free(cEntryNames);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      free(cEntryIDs);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      free(cEntriesSelected);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    }</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  };</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;} <span class="comment">/* namespace dialogs */</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;} <span class="comment">/* namespace gui */</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        cEntries[i] = entries[i].name.c_str();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span> (selected == -1 &amp;&amp; entries[i].selected)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;          selected = i;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      <span class="keywordtype">int</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogSelect-&gt;open(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(),</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                                                                              cEntries, size, selected, autoclose);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <span class="keywordflow">if</span> (ret &gt;= 0)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        entries[ret].selected = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      free(cEntries);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="comment">//==========================================================================</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___select.html#ga106543fc4c1250be7d3683ab42e11f74">  235</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi__gui__dialogs___select.html#ga106543fc4c1250be7d3683ab42e11f74">ShowMultiSelect</a>(<span class="keyword">const</span> std::string&amp; heading,</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                                                 std::vector&lt;SSelectionEntry&gt;&amp; entries,</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                                                 <span class="keywordtype">int</span> autoclose = 0)</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(entries.size());</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntryIDs = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>*)));</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">char</span>** cEntryNames = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>**<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keyword">const</span> <span class="keywordtype">char</span>*)));</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      <span class="keywordtype">bool</span>* cEntriesSelected = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span>*<span class="keyword">&gt;</span>(malloc(size*<span class="keyword">sizeof</span>(<span class="keywordtype">bool</span>)));</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        cEntryIDs[i] = entries[i].id.c_str();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        cEntryNames[i] = entries[i].name.c_str();</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        cEntriesSelected[i] = entries[i].selected;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      <span class="keywordtype">bool</span> ret = CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogSelect-&gt;open_multi_select(CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase,</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                                                                                            heading.c_str(), cEntryIDs, cEntryNames,</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                                                                                            cEntriesSelected, size, autoclose);</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <span class="keywordflow">if</span> (ret)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; size; ++i)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;          entries[i].selected = cEntriesSelected[i];</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;       }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      free(cEntryNames);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      free(cEntryIDs);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      free(cEntriesSelected);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  };</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;} <span class="comment">/* namespace dialogs */</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;} <span class="comment">/* namespace gui */</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi__gui__dialogs___select_html_ga162c5fdb8138bca0a6d4a9e4ffb15b08"><div class="ttname"><a href="group__cpp__kodi__gui__dialogs___select.html#ga162c5fdb8138bca0a6d4a9e4ffb15b08">kodi::gui::dialogs::Select::Show</a></div><div class="ttdeci">int Show(const std::string &amp;heading, std::vector&lt; SSelectionEntry &gt; &amp;entries, int selected=-1, unsigned int autoclose=0)</div><div class="ttdoc">Show a selection dialog about given parts.</div><div class="ttdef"><b>Definition:</b> Select.h:162</div></div>
 <div class="ttc" id="astruct_s_selection_entry_html_a9b45b3e13bd9167aab02e17e08916231"><div class="ttname"><a href="struct_s_selection_entry.html#a9b45b3e13bd9167aab02e17e08916231">SSelectionEntry::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Entry name to show on GUI dialog.</div><div class="ttdef"><b>Definition:</b> Select.h:38</div></div>
+<div class="ttc" id="agroup__cpp__kodi__gui__dialogs___select_html_gaa0ccf5b9cc0a3d09142fe38e148723ae"><div class="ttname"><a href="group__cpp__kodi__gui__dialogs___select.html#gaa0ccf5b9cc0a3d09142fe38e148723ae">kodi::gui::dialogs::Select::Show</a></div><div class="ttdeci">int ATTRIBUTE_HIDDEN Show(const std::string &amp;heading, std::vector&lt; SSelectionEntry &gt; &amp;entries, int selected=-1, unsigned int autoclose=0)</div><div class="ttdoc">Show a selection dialog about given parts.</div><div class="ttdef"><b>Definition:</b> Select.h:167</div></div>
 <div class="ttc" id="astruct_s_selection_entry_html"><div class="ttname"><a href="struct_s_selection_entry.html">SSelectionEntry</a></div><div class="ttdoc">Selection entry structure</div><div class="ttdef"><b>Definition:</b> Select.h:25</div></div>
-<div class="ttc" id="agroup__cpp__kodi__gui__dialogs___select_html_ga9fc4cfc1b7af403a57367369ad710b29"><div class="ttname"><a href="group__cpp__kodi__gui__dialogs___select.html#ga9fc4cfc1b7af403a57367369ad710b29">kodi::gui::dialogs::Select::ShowMultiSelect</a></div><div class="ttdeci">bool ShowMultiSelect(const std::string &amp;heading, std::vector&lt; SSelectionEntry &gt; &amp;entries, int autoclose=0)</div><div class="ttdoc">Show a multiple selection dialog about given parts.</div><div class="ttdef"><b>Definition:</b> Select.h:227</div></div>
+<div class="ttc" id="agroup__cpp__kodi__gui__dialogs___select_html_ga106543fc4c1250be7d3683ab42e11f74"><div class="ttname"><a href="group__cpp__kodi__gui__dialogs___select.html#ga106543fc4c1250be7d3683ab42e11f74">kodi::gui::dialogs::Select::ShowMultiSelect</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN ShowMultiSelect(const std::string &amp;heading, std::vector&lt; SSelectionEntry &gt; &amp;entries, int autoclose=0)</div><div class="ttdoc">Show a multiple selection dialog about given parts.</div><div class="ttdef"><b>Definition:</b> Select.h:235</div></div>
 <div class="ttc" id="astruct_s_selection_entry_html_a9ee682957ef18956fbe33afe9b6222fa"><div class="ttname"><a href="struct_s_selection_entry.html#a9ee682957ef18956fbe33afe9b6222fa">SSelectionEntry::selected</a></div><div class="ttdeci">bool selected</div><div class="ttdef"><b>Definition:</b> Select.h:42</div></div>
 <div class="ttc" id="astruct_s_selection_entry_html_afd0d68c6d31ff249f3ae8662162663c3"><div class="ttname"><a href="struct_s_selection_entry.html#afd0d68c6d31ff249f3ae8662162663c3">SSelectionEntry::id</a></div><div class="ttdeci">std::string id</div><div class="ttdoc">Entry identfication string.</div><div class="ttdef"><b>Definition:</b> Select.h:35</div></div>
 <div class="ttc" id="astruct_s_selection_entry_html_aee5725b0ad65b8eef2836a0b9e571fb1"><div class="ttname"><a href="struct_s_selection_entry.html#aee5725b0ad65b8eef2836a0b9e571fb1">SSelectionEntry::SSelectionEntry</a></div><div class="ttdeci">SSelectionEntry()=default</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_417a2be0c703372bef72d21c17ad7704.html">include</a></li><li class="navelem"><a class="el" href="dir_7634b8811587c1aba1020e9b1cc54725.html">kodi</a></li><li class="navelem"><a class="el" href="dir_84a7bc4f716231e4ce5669c58f159913.html">gui</a></li><li class="navelem"><a class="el" href="dir_2c776b4d4b4614af89deb335dd4522c0.html">dialogs</a></li><li class="navelem"><b>Select.h</b></li>
+    <li class="navelem"><a class="el" href="dir_818aca8f237de2dab4b332e67c44f0ac.html">include</a></li><li class="navelem"><a class="el" href="dir_e2893ada97b5f5ed70c6c1eae148df10.html">kodi</a></li><li class="navelem"><a class="el" href="dir_f20743b7ecfd828f89a669a2f72f5b2b.html">gui</a></li><li class="navelem"><a class="el" href="dir_2932e6522a2be82a262747ff8956f1aa.html">dialogs</a></li><li class="navelem"><b>Select.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>

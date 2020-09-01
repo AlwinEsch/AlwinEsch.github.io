@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['openfileflags_3769',['OpenFileFlags',['../group__cpp__kodi__vfs___defs___open_file_flags.html#ga0f3cb31b9b23debe1fc0d5a47bfbb149',1,'filesystem.h']]]
+  ['masktype_4135',['MASKTYPE',['../struct_i_n_p_u_t_s_t_r_e_a_m___c_a_p_a_b_i_l_i_t_i_e_s.html#ab461f04bc6e71599f91d6c4eb3a26606',1,'INPUTSTREAM_CAPABILITIES']]]
 ];
