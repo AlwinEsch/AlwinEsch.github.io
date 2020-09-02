@@ -1,5 +1,11 @@
 var NAVTREEINDEX6 =
 {
+"group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf38bbbd17f7b2e3c9635ec23d04adb81":[6,0,2,1,10,0,0,8],
+"group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf6675a1e224eee3f3b8a6ef0923e77b0":[6,0,2,1,10,0,0,24],
+"group__cpp__kodi__addon__visualization___defs___visualization_track___help.html":[6,0,2,1,10,0,0,0],
+"group__cpp__kodi__audioengine.html":[6,0,5],
+"group__cpp__kodi__audioengine.html#ga238c66d0552af583498f4dc367f08d3d":[6,0,5,2],
+"group__cpp__kodi__audioengine___c_a_e_stream.html":[6,0,5,1],
 "group__cpp__kodi__audioengine___c_a_e_stream.html#ga0a04f8b3e045b68d509dab0b67d077a8":[6,0,5,1,5],
 "group__cpp__kodi__audioengine___c_a_e_stream.html#ga0e2644b2df3c228e8d71a55b60723f31":[6,0,5,1,13],
 "group__cpp__kodi__audioengine___c_a_e_stream.html#ga1f7fd710b8f8efdc125e3e5b8ebc7f72":[6,0,5,1,16],
@@ -243,11 +249,5 @@ var NAVTREEINDEX6 =
 "group__cpp__kodi__gui__controls___c_settings_slider.html#ga1642356ec708ec660d47175a676d2b59":[6,0,3,8,15],
 "group__cpp__kodi__gui__controls___c_settings_slider.html#ga16ad72259d068519b0797117275651f1":[6,0,3,8,6],
 "group__cpp__kodi__gui__controls___c_settings_slider.html#ga1bc4fce2dc8738a08b6a9458d66351a1":[6,0,3,8,7],
-"group__cpp__kodi__gui__controls___c_settings_slider.html#ga372de693ad40b3f42839c8ec6ac845f4":[6,0,3,8,5],
-"group__cpp__kodi__gui__controls___c_settings_slider.html#ga6fda2eca316cbf595cb653610e9323e7":[6,0,3,8,14],
-"group__cpp__kodi__gui__controls___c_settings_slider.html#ga71a209185b7a98adf0a310d2c44cdbe6":[6,0,3,8,2],
-"group__cpp__kodi__gui__controls___c_settings_slider.html#ga8008c108280948ebd79830f222068455":[6,0,3,8,4],
-"group__cpp__kodi__gui__controls___c_settings_slider.html#ga893343ffa1ead0bed0192c07d32fc15b":[6,0,3,8,0],
-"group__cpp__kodi__gui__controls___c_settings_slider.html#ga8988a51166f10530d1e2147cf5306a07":[6,0,3,8,11],
-"group__cpp__kodi__gui__controls___c_settings_slider.html#ga937c558d8f32a5dcb8d1843f4f818c38":[6,0,3,8,1]
+"group__cpp__kodi__gui__controls___c_settings_slider.html#ga372de693ad40b3f42839c8ec6ac845f4":[6,0,3,8,5]
 };

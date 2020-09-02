@@ -1,5 +1,11 @@
 var NAVTREEINDEX5 =
 {
+"group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga82999a6f5d4377856e50bdfdfaf27a22":[6,0,2,1,6,0,3,0,12],
+"group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga82e4b60ecd7a4c80acf48205909930da":[6,0,2,1,6,0,3,0,17],
+"group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga89c2aa9035f6aef2520f1138f6f0676b":[6,0,2,1,6,0,3,0,41],
+"group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga8ad1e166810eccd216c2039ffc737245":[6,0,2,1,6,0,3,0,7],
+"group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga8f1aa29de3a82d33101dd85e6f43a047":[6,0,2,1,6,0,3,0,49],
+"group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga8f2ea319bba70466fe9af20e6f357021":[6,0,2,1,6,0,3,0,35],
 "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga9a2118d918c92f75d2500ed0135b8d81":[6,0,2,1,6,0,3,0,21],
 "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga9aeed62278e3217b9d20f403ca0262ea":[6,0,2,1,6,0,3,0,40],
 "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga9f0d34aae2ea164673e0d956bffc6dc4":[6,0,2,1,6,0,3,0,43],
@@ -243,11 +249,5 @@ var NAVTREEINDEX5 =
 "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gae20ab752ab482acdb38664a742b9ed82":[6,0,2,1,10,0,0,10],
 "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gae4ab98f56d54ab92a0230d66cf0a9055":[6,0,2,1,10,0,0,14],
 "group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaeb3ac9b59cc3df1debe0ea758725cc8e":[6,0,2,1,10,0,0,2],
-"group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf319c22917674b7f0c5584465b39c0c6":[6,0,2,1,10,0,0,9],
-"group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf38bbbd17f7b2e3c9635ec23d04adb81":[6,0,2,1,10,0,0,8],
-"group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf6675a1e224eee3f3b8a6ef0923e77b0":[6,0,2,1,10,0,0,24],
-"group__cpp__kodi__addon__visualization___defs___visualization_track___help.html":[6,0,2,1,10,0,0,0],
-"group__cpp__kodi__audioengine.html":[6,0,5],
-"group__cpp__kodi__audioengine.html#ga238c66d0552af583498f4dc367f08d3d":[6,0,5,2],
-"group__cpp__kodi__audioengine___c_a_e_stream.html":[6,0,5,1]
+"group__cpp__kodi__addon__visualization___defs___visualization_track.html#gaf319c22917674b7f0c5584465b39c0c6":[6,0,2,1,10,0,0,9]
 };

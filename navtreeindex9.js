@@ -1,5 +1,11 @@
 var NAVTREEINDEX9 =
 {
+"group__python__stat.html#ga94cd7c3c6fc3d5803ae302aa86dc2e17":[6,1,4,1,7],
+"group__python__stat.html#ga9e47e351e4b4f7b722059bb52e3c2788":[6,1,4,1,8],
+"group__python__stat.html#gad6259c69684d706fd336135f09f564cb":[6,1,4,1,4],
+"group__python__stat.html#gaee338e4df5b1e269a26889811731d00c":[6,1,4,1,3],
+"group__python__stat.html#gaf1e7c61c293a4f4e22ecae5201f8cd3b":[6,1,4,1,5],
+"group__python__xbmc.html":[6,1,0],
 "group__python__xbmc.html#ga04efad52a8903be517a8310db6a8505f":[6,1,0,31],
 "group__python__xbmc.html#ga0780c15cfe5ff86f132134bb8af5204c":[6,1,0,16],
 "group__python__xbmc.html#ga0795673f2f204420f40063cb79caef6f":[6,1,0,26],
@@ -243,11 +249,5 @@ var NAVTREEINDEX9 =
 "group__python__xbmcvfs.html#gaf0a772cd125d92abecaf2da7482aa16d":[6,1,4,10],
 "group__python__xbmcwsgi.html":[6,1,5],
 "group__python__xbmcwsgi___wsgi_error_stream.html":[6,1,5,0],
-"group__python__xbmcwsgi___wsgi_error_stream.html#ga3df61f0669ef30181e65bbe5b0bb663c":[6,1,5,0,1],
-"group__python__xbmcwsgi___wsgi_error_stream.html#ga7751f77b5263bcf940ece6e824a05b38":[6,1,5,0,0],
-"group__python__xbmcwsgi___wsgi_error_stream.html#gae748f1fec85745ea724f9005630a9a63":[6,1,5,0,2],
-"group__python__xbmcwsgi___wsgi_input_stream.html":[6,1,5,1],
-"group__python__xbmcwsgi___wsgi_input_stream.html#ga09536b9e99d54e4160097d953cbd2eda":[6,1,5,1,0],
-"group__python__xbmcwsgi___wsgi_response.html":[6,1,5,3],
-"group__python__xbmcwsgi___wsgi_response.html#ga2d4599fb7cfd91c737dee41f02f1e4cd":[6,1,5,3,0]
+"group__python__xbmcwsgi___wsgi_error_stream.html#ga3df61f0669ef30181e65bbe5b0bb663c":[6,1,5,0,1]
 };

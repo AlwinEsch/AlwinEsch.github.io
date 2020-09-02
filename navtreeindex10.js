@@ -1,5 +1,11 @@
 var NAVTREEINDEX10 =
 {
+"group__python__xbmcwsgi___wsgi_error_stream.html#ga7751f77b5263bcf940ece6e824a05b38":[6,1,5,0,0],
+"group__python__xbmcwsgi___wsgi_error_stream.html#gae748f1fec85745ea724f9005630a9a63":[6,1,5,0,2],
+"group__python__xbmcwsgi___wsgi_input_stream.html":[6,1,5,1],
+"group__python__xbmcwsgi___wsgi_input_stream.html#ga09536b9e99d54e4160097d953cbd2eda":[6,1,5,1,0],
+"group__python__xbmcwsgi___wsgi_response.html":[6,1,5,3],
+"group__python__xbmcwsgi___wsgi_response.html#ga2d4599fb7cfd91c737dee41f02f1e4cd":[6,1,5,3,0],
 "group__python__xbmcwsgi___wsgi_response_body.html":[6,1,5,2],
 "group__python__xbmcwsgi___wsgi_response_body.html#gaeb7237dc841d5477b789ffd871d15fbb":[6,1,5,2,0],
 "index.html":[],
