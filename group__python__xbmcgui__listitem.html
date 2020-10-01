@@ -1161,7 +1161,7 @@ $(document).ready(function(){initNavTree('group__python__xbmcgui__listitem.html'
 <hr  />
  <dl class="python_v17"><dt><b><a class="el" href="python_v17.html#_python_v17000015">v17 Python API changes:</a></b></dt><dd>Completely removed previously available argument <b>replaceItems</b>.</dd></dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line">...</div>
-<div class="line">listitem.addContextMenuItems([(<span class="stringliteral">&#39;Theater Showtimes&#39;</span>, <span class="stringliteral">&#39;RunScript(special://home/scripts/showtimes/default.py,Iron Man)&#39;</span>)])</div>
+<div class="line">listitem.addContextMenuItems([(<span class="stringliteral">&#39;Theater Showtimes&#39;</span>, <span class="stringliteral">&#39;RunScript(script.myaddon,title=Iron Man)&#39;</span>)])</div>
 <div class="line">...</div>
 </div><!-- fragment --> 
 </div>
@@ -1195,6 +1195,31 @@ $(document).ready(function(){initNavTree('group__python__xbmcgui__listitem.html'
  Once you use a keyword, all following arguments require the keyword.<br  />
  <br  />
  Some of these are treated internally by Kodi, such as the 'StartOffset' property, which is the offset in seconds at which to start playback of an item. Others may be used in the skin to add extra information, such as 'WatchedCount' for tvshow items</dd></dl>
+<ul>
+<li><b>Internal Properties</b> <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadRight">Key </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">inputstream </td><td class="markdownTableBodyLeft">string (inputstream.adaptive) - Set the inputstream add-on that will be used to play the item  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight">IsPlayable </td><td class="markdownTableBodyLeft">string - "true", "false" - Mark the item as playable, <b>mandatory for playable items</b>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">MimeType </td><td class="markdownTableBodyLeft">string (application/x-mpegURL) - Set the MimeType of the item before playback  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight">ResumeTime </td><td class="markdownTableBodyLeft">float (1962.0) - Set the resume point of the item in seconds  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">SpecialSort </td><td class="markdownTableBodyLeft">string - "top", "bottom" - The item will remain at the top or bottom of the current list  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight">StartOffset </td><td class="markdownTableBodyLeft">float (60.0) - Set the offset in seconds at which to start playback of the item  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">StartPercent </td><td class="markdownTableBodyLeft">float (15.0) - Set the percentage at which to start playback of the item  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyRight">StationName </td><td class="markdownTableBodyLeft">string ("My Station Name") - Used to enforce/override MusicPlayer.StationName infolabel from addons (e.g. in radio addons)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyRight">TotalTime </td><td class="markdownTableBodyLeft">float (7848.0) - Set the total time of the item in seconds  </td></tr>
+</table>
+</li>
+</ul>
 <hr  />
 <p><b>Example:</b> </p><div class="fragment"><div class="line">...</div>
 <div class="line">listitem.setProperty(<span class="stringliteral">&#39;AspectRatio&#39;</span>, <span class="stringliteral">&#39;1.85 : 1&#39;</span>)</div>

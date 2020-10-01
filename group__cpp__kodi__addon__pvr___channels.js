@@ -1,7 +1,5 @@
 var group__cpp__kodi__addon__pvr___channels =
 [
-    [ "Group header include", "group__cpp__kodi__addon__pvr___channels__header__addon__auto__check.html", null ],
-    [ "Group source include", "group__cpp__kodi__addon__pvr___channels__source__addon__auto__check.html", null ],
     [ "GetChannelsAmount", "group__cpp__kodi__addon__pvr___channels.html#gac37743f0b35937ae76e74a0f6529313f", null ],
     [ "GetChannels", "group__cpp__kodi__addon__pvr___channels.html#ga79be86754ba037c8b2130835138ce749", null ],
     [ "GetChannelStreamProperties", "group__cpp__kodi__addon__pvr___channels.html#ga28f2f3c1628697428b23e87cd99807cd", null ],

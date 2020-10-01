@@ -108,35 +108,39 @@ $(document).ready(function(){initNavTree('_text_viewer_8h_source.html',''); init
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../definitions.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../../AddonBase.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../AddonBase.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../../c-api/gui/dialogs/text_viewer.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>kodi</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>gui</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>kodi</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>dialogs</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>gui</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">//============================================================================</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span>  <span class="keyword">namespace </span>TextViewer</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">//==========================================================================</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___text_viewer.html#gabed1c74c41956fbd6bba949aba60b93c">   96</a></span>&#160;<span class="comment"></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi__gui__dialogs___text_viewer.html#gabed1c74c41956fbd6bba949aba60b93c">Show</a>(<span class="keyword">const</span> std::string&amp; heading, <span class="keyword">const</span> std::string&amp; text)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keyword">using namespace </span>::kodi::addon;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogTextViewer-&gt;open(</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;          CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(), text.c_str());</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">//--------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  };</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;} <span class="comment">/* namespace dialogs */</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <span class="comment">/* namespace gui */</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span>dialogs</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span><span class="keyword">namespace </span>TextViewer</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//==============================================================================</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="group__cpp__kodi__gui__dialogs___text_viewer.html#gabed1c74c41956fbd6bba949aba60b93c">   95</a></span>&#160;<span class="comment"></span><span class="keyword">inline</span> <span class="keywordtype">void</span> ATTRIBUTE_HIDDEN <a class="code" href="group__cpp__kodi__gui__dialogs___text_viewer.html#gabed1c74c41956fbd6bba949aba60b93c">Show</a>(<span class="keyword">const</span> std::string&amp; heading, <span class="keyword">const</span> std::string&amp; text)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">using namespace </span>::kodi::addon;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  CAddonBase::m_interface-&gt;toKodi-&gt;kodi_gui-&gt;dialogTextViewer-&gt;open(</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      CAddonBase::m_interface-&gt;toKodi-&gt;kodiBase, heading.c_str(), text.c_str());</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">//------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}; <span class="comment">// namespace TextViewer</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;} <span class="comment">/* namespace dialogs */</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;} <span class="comment">/* namespace gui */</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi__gui__dialogs___text_viewer_html_gabed1c74c41956fbd6bba949aba60b93c"><div class="ttname"><a href="group__cpp__kodi__gui__dialogs___text_viewer.html#gabed1c74c41956fbd6bba949aba60b93c">kodi::gui::dialogs::TextViewer::Show</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN Show(const std::string &amp;heading, const std::string &amp;text)</div><div class="ttdoc">Show info text dialog.</div><div class="ttdef"><b>Definition:</b> TextViewer.h:96</div></div>
+<div class="ttc" id="agroup__cpp__kodi__gui__dialogs___text_viewer_html_gabed1c74c41956fbd6bba949aba60b93c"><div class="ttname"><a href="group__cpp__kodi__gui__dialogs___text_viewer.html#gabed1c74c41956fbd6bba949aba60b93c">kodi::gui::dialogs::TextViewer::Show</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN Show(const std::string &amp;heading, const std::string &amp;text)</div><div class="ttdoc">Show info text dialog.</div><div class="ttdef"><b>Definition:</b> TextViewer.h:95</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

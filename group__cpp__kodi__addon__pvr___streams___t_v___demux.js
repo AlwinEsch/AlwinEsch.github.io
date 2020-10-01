@@ -1,7 +1,5 @@
 var group__cpp__kodi__addon__pvr___streams___t_v___demux =
 [
-    [ "Group header include", "group__cpp__kodi__addon__pvr___streams___t_v___demux__header__addon__auto__check.html", null ],
-    [ "Group source include", "group__cpp__kodi__addon__pvr___streams___t_v___demux__source__addon__auto__check.html", null ],
     [ "GetStreamProperties", "group__cpp__kodi__addon__pvr___streams___t_v___demux.html#ga1fd75b1bd90c187e8102cbea6f0dbe71", null ],
     [ "DemuxRead", "group__cpp__kodi__addon__pvr___streams___t_v___demux.html#gad2c257fded197ec1a78bf3c9d9f9fa78", null ],
     [ "DemuxReset", "group__cpp__kodi__addon__pvr___streams___t_v___demux.html#ga4e1a9156a48ad4536be348fb698bc996", null ],

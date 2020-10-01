@@ -98,7 +98,132 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__game___serial
 <div class="title">5. Serialization operations<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__addon.html">Interface - kodi::addon</a> &raquo; <a class="el" href="group__cpp__kodi__addon__instances.html">Addon type instances</a> &raquo; <a class="el" href="group__cpp__kodi__addon__game.html">Game</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b>Serialization operations</b> </p>
+<hr  />
+<p><b>Serialization operation parts in interface:</b><br  />
+ Copy this to your project and extend with your parts or leave functions complete away where not used or supported.</p>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaf0254c7fbd753075e9c0bc12e3ecfb0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf0254c7fbd753075e9c0bc12e3ecfb0b">&#9670;&nbsp;</a></span>SerializeSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual size_t SerializeSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the number of bytes required to serialize the game. </p>
+<dl class="section return"><dt>Returns</dt><dd>the number of bytes, or 0 if serialization is not supported </dd></dl>
+
+</div>
+</div>
+<a id="gac1698fb22cc7e719995e4bc71418c2ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac1698fb22cc7e719995e4bc71418c2ae">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__cpp__kodi__addon__game___defs.html#gad0fb9f502cf7b3a84f8edb0dc6cbd6ef">GAME_ERROR</a> Serialize </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Serialize the state of the game. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>The buffer receiving the serialized game data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>The size of the buffer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the error, or <a class="el" href="group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa51b865ee275ae8e392f3e9fd8594fa90">GAME_ERROR_NO_ERROR</a> if the game was serialized into the buffer </dd></dl>
+
+</div>
+</div>
+<a id="ga7b93aa80da19bedc83c5711f86ed087a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b93aa80da19bedc83c5711f86ed087a">&#9670;&nbsp;</a></span>Deserialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__cpp__kodi__addon__game___defs.html#gad0fb9f502cf7b3a84f8edb0dc6cbd6ef">GAME_ERROR</a> Deserialize </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deserialize the game from the given state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>A buffer containing the game's new state </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>The size of the buffer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the error, or <a class="el" href="group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa51b865ee275ae8e392f3e9fd8594fa90">GAME_ERROR_NO_ERROR</a> if the game deserialized </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

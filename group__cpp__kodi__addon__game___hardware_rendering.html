@@ -98,7 +98,107 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__addon__game___hardwa
 <div class="title">3. Hardware rendering operations<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__addon.html">Interface - kodi::addon</a> &raquo; <a class="el" href="group__cpp__kodi__addon__instances.html">Addon type instances</a> &raquo; <a class="el" href="group__cpp__kodi__addon__game.html">Game</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p><b>Hardware rendering operations</b> </p>
+<hr  />
+<p><b>Hardware rendering operation parts in interface:</b><br  />
+ Copy this to your project and extend with your parts or leave functions complete away where not used or supported.</p>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga4e62b5e5f8c681379c267c21d8e68969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e62b5e5f8c681379c267c21d8e68969">&#9670;&nbsp;</a></span>HwContextReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__cpp__kodi__addon__game___defs.html#gad0fb9f502cf7b3a84f8edb0dc6cbd6ef">GAME_ERROR</a> HwContextReset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Invalidates the current HW context and reinitializes GPU resources. </p>
+<p>Any GL state is lost, and must not be deinitialized explicitly.</p>
+<dl class="section return"><dt>Returns</dt><dd>the error, or <a class="el" href="group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa51b865ee275ae8e392f3e9fd8594fa90">GAME_ERROR_NO_ERROR</a> if the HW context was reset </dd></dl>
+
+</div>
+</div>
+<a id="ga2ae79c17e174f773ae0a228faa475400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ae79c17e174f773ae0a228faa475400">&#9670;&nbsp;</a></span>HwContextDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="group__cpp__kodi__addon__game___defs.html#gad0fb9f502cf7b3a84f8edb0dc6cbd6ef">GAME_ERROR</a> HwContextDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called before the context is destroyed. </p>
+<p>Resources can be deinitialized at this step.</p>
+<dl class="section return"><dt>Returns</dt><dd>the error, or <a class="el" href="group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa51b865ee275ae8e392f3e9fd8594fa90">GAME_ERROR_NO_ERROR</a> if the HW context was destroyed </dd></dl>
+
+</div>
+</div>
+<a id="gae56ab5b89b821a5e84dc163fe424c8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae56ab5b89b821a5e84dc163fe424c8f7">&#9670;&nbsp;</a></span>HwGetProcAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#ga7e99c45dc3001a78b3d5fcdb38515d53">game_proc_address_t</a> HwGetProcAddress </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>sym</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><b>Callback to Kodi Function</b><br  />
+Get a symbol from the hardware context </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sym</td><td>The symbol's name</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A function pointer for the specified symbol</dd></dl>
+<dl class="section remark"><dt>Remarks</dt><dd>Only called from addon itself </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

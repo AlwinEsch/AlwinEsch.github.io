@@ -244,10 +244,10 @@ var NAVTREEINDEX0 =
 "group__cpp__kodi__addon__audioencoder.html#gafa6d8608cb24378d305ad733232bcdfb":[6,0,2,1,1,2],
 "group__cpp__kodi__addon__game.html":[6,0,2,1,2],
 "group__cpp__kodi__addon__game___base.html":[6,0,2,1,2,1],
-"group__cpp__kodi__addon__game___cheat_operations.html":[6,0,2,1,2,6],
-"group__cpp__kodi__addon__game___defs.html":[6,0,2,1,2,0],
-"group__cpp__kodi__addon__game___defs.html#ga370e0babee290007b7a2f4fc29aa84cb":[6,0,2,1,2,0,8],
-"group__cpp__kodi__addon__game___defs.html#gad0fb9f502cf7b3a84f8edb0dc6cbd6ef":[6,0,2,1,2,0,9],
-"group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa11cf133fce7983a6aa19d68c351c6a80":[6,0,2,1,2,0,9,5],
-"group__cpp__kodi__addon__game___defs.html#ggad0fb9f502cf7b3a84f8edb0dc6cbd6efa2e70ad0417fa9e84872ae765c8f2d991":[6,0,2,1,2,0,9,3]
+"group__cpp__kodi__addon__game___base.html#ga1ce87a740156e6b074e3044f32f077a1":[6,0,2,1,2,1,0],
+"group__cpp__kodi__addon__game___base.html#ga1f8da488d17cd096375c2b648275732d":[6,0,2,1,2,1,2],
+"group__cpp__kodi__addon__game___base.html#ga7ed3d7c7f56095df2431233e38f8937b":[6,0,2,1,2,1,3],
+"group__cpp__kodi__addon__game___base.html#ga841dbbbf475e93cfeb2c3a38f318680b":[6,0,2,1,2,1,4],
+"group__cpp__kodi__addon__game___base.html#ga8f7eb8c92fcbb605c1d21c31df6bc77c":[6,0,2,1,2,1,5],
+"group__cpp__kodi__addon__game___base.html#ga9c94053e1fa1e3a06fb860f9e4d556f8":[6,0,2,1,2,1,6]
 };

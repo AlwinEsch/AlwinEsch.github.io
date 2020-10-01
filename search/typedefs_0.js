@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['guihandle_4104',['GUIHANDLE',['../group__cpp__kodi__gui___c_window___defs.html#ga3e3a75682bddc7d2ee995d4e7a37daec',1,'definitions.h']]]
+  ['clienthandle_4573',['ClientHandle',['../group__cpp__kodi__gui__windows__window___defs.html#ga8a5bac3fcc6ef2dbd81bbe6c4acb7f78',1,'kodi::gui']]]
 ];

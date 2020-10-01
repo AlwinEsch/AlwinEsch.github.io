@@ -1,7 +1,5 @@
 var group__cpp__kodi__addon__pvr__supports_channel_edit =
 [
-    [ "Group header include", "group__cpp__kodi__addon__pvr__supports_channel_edit__header__addon__auto__check.html", null ],
-    [ "Group source include", "group__cpp__kodi__addon__pvr__supports_channel_edit__source__addon__auto__check.html", null ],
     [ "DeleteChannel", "group__cpp__kodi__addon__pvr__supports_channel_edit.html#ga84952062c5a8d77415fe7ead4d0e3aa5", null ],
     [ "RenameChannel", "group__cpp__kodi__addon__pvr__supports_channel_edit.html#ga41b5a1a4eee72f993782b08cc166c106", null ],
     [ "OpenDialogChannelSettings", "group__cpp__kodi__addon__pvr__supports_channel_edit.html#ga6a73950b121c274699d973e78fd78603", null ],

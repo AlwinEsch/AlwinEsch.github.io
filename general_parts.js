@@ -28,6 +28,7 @@ var general_parts =
         [ "Library", "modules__infolabels_boolean_conditions.html#modules__infolabels_boolean_conditions_Library", null ]
       ] ],
       [ "Additional revision history for Infolabels and Boolean Conditions", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans", [
+        [ "Kodi v19 (Matrix)", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans_v19", null ],
         [ "Kodi v18 (Leia)", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans_v18", null ],
         [ "Kodi v17 (Krypton)", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans_v17", null ],
         [ "Kodi v16 (Jarvis)", "modules__infolabels_boolean_conditions.html#modules_rm_infolabels_booleans_v16", null ],

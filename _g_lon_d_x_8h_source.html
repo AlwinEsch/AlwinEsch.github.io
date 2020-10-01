@@ -108,372 +108,392 @@ $(document).ready(function(){initNavTree('_g_lon_d_x_8h_source.html',''); initRe
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;angle_gl.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;d3d11.h&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;d3dcompiler.h&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;EGL/egl.h&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;EGL/eglext.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;kodi/AddonBase.h&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;kodi/gui/General.h&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;wrl/client.h&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#pragma comment( lib, &quot;d3dcompiler.lib&quot; )</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef GL_CLIENT_VERSION</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define GL_CLIENT_VERSION 3</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>kodi</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>gui</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;EGL/egl.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;EGL/eglext.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;angle_gl.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;d3d11.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;d3dcompiler.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;kodi/AddonBase.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;kodi/gui/General.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;wrl/client.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#pragma comment(lib, &quot;d3dcompiler.lib&quot;)</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifndef GL_CLIENT_VERSION</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define GL_CLIENT_VERSION 3</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>kodi</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>gl</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>gui</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">   32</a></span>&#160;<span class="keyword">class </span>ATTRIBUTE_HIDDEN <a class="code" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">CGLonDX</a> : <span class="keyword">public</span> <a class="code" href="structkodi_1_1gui_1_1_i_render_helper.html">kodi::gui::IRenderHelper</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">CGLonDX</a>() : m_pContext(<span class="keyword">reinterpret_cast&lt;</span>ID3D11DeviceContext*<span class="keyword">&gt;</span>(<a class="code" href="group__cpp__kodi__gui.html#gaecc0ab7a7a2fae9d399698dd4caefd03">kodi::gui::GetHWContext</a>())) {}</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  ~<a class="code" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">CGLonDX</a>()<span class="keyword"> override </span>{ destruct(); }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">bool</span> Init()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    EGLint egl_display_attrs[] =</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      EGL_PLATFORM_ANGLE_TYPE_ANGLE, EGL_PLATFORM_ANGLE_TYPE_D3D11_ANGLE,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      EGL_PLATFORM_ANGLE_MAX_VERSION_MAJOR_ANGLE, EGL_DONT_CARE,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      EGL_PLATFORM_ANGLE_MAX_VERSION_MAJOR_ANGLE, EGL_DONT_CARE,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      EGL_EXPERIMENTAL_PRESENT_PATH_ANGLE, EGL_EXPERIMENTAL_PRESENT_PATH_FAST_ANGLE,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      EGL_NONE</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    };</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    EGLint egl_config_attrs[] =</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      EGL_RED_SIZE, 8, EGL_GREEN_SIZE, 8, EGL_BLUE_SIZE, 8, EGL_ALPHA_SIZE, 8,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      EGL_BIND_TO_TEXTURE_RGBA, EGL_TRUE,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      EGL_RENDERABLE_TYPE, GL_CLIENT_VERSION == 3 ? EGL_OPENGL_ES3_BIT : EGL_OPENGL_ES2_BIT,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      EGL_SURFACE_TYPE, EGL_PBUFFER_BIT,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      EGL_NONE</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    };</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    EGLint egl_context_attrs[] =</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      EGL_CONTEXT_CLIENT_VERSION, GL_CLIENT_VERSION, EGL_NONE</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    };</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    m_eglDisplay = eglGetPlatformDisplayEXT(EGL_PLATFORM_ANGLE_ANGLE, EGL_DEFAULT_DISPLAY, egl_display_attrs);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (m_eglDisplay == EGL_NO_DISPLAY)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to get EGL display (%s)&quot;</span>, eglGetErrorString());</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (eglInitialize(m_eglDisplay, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>) != EGL_TRUE)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to init EGL display (%s)&quot;</span>, eglGetErrorString());</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    EGLint numConfigs = 0;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (eglChooseConfig(m_eglDisplay, egl_config_attrs, &amp;m_eglConfig, 1, &amp;numConfigs) != EGL_TRUE || numConfigs == 0)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to get EGL config (%s)&quot;</span>, eglGetErrorString());</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    m_eglContext = eglCreateContext(m_eglDisplay, m_eglConfig, <span class="keyword">nullptr</span>, egl_context_attrs);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (m_eglContext == EGL_NO_CONTEXT)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create EGL context (%s)&quot;</span>, eglGetErrorString());</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (!createD3DResources())</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>gl</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">   34</a></span>&#160;<span class="keyword">class </span>ATTRIBUTE_HIDDEN <a class="code" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">CGLonDX</a> : <span class="keyword">public</span> <a class="code" href="structkodi_1_1gui_1_1_i_render_helper.html">kodi::gui::IRenderHelper</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">CGLonDX</a>() : m_pContext(<span class="keyword">reinterpret_cast&lt;</span>ID3D11DeviceContext*<span class="keyword">&gt;</span>(<a class="code" href="group__cpp__kodi__gui__general.html#gaec912a9f8b3b133803fc2672cb60f87f">kodi::gui::GetHWContext</a>()))</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  ~<a class="code" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">CGLonDX</a>()<span class="keyword"> override </span>{ destruct(); }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">bool</span> Init()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    EGLint egl_display_attrs[] = {EGL_PLATFORM_ANGLE_TYPE_ANGLE,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                  EGL_PLATFORM_ANGLE_TYPE_D3D11_ANGLE,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                  EGL_PLATFORM_ANGLE_MAX_VERSION_MAJOR_ANGLE,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                  EGL_DONT_CARE,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                  EGL_PLATFORM_ANGLE_MAX_VERSION_MAJOR_ANGLE,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                  EGL_DONT_CARE,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                                  EGL_EXPERIMENTAL_PRESENT_PATH_ANGLE,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                  EGL_EXPERIMENTAL_PRESENT_PATH_FAST_ANGLE,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                  EGL_NONE};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    EGLint egl_config_attrs[] = {EGL_RED_SIZE,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                 8,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                 EGL_GREEN_SIZE,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                 8,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                 EGL_BLUE_SIZE,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                 8,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                 EGL_ALPHA_SIZE,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                 8,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                 EGL_BIND_TO_TEXTURE_RGBA,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                 EGL_TRUE,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                 EGL_RENDERABLE_TYPE,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                 GL_CLIENT_VERSION == 3 ? EGL_OPENGL_ES3_BIT : EGL_OPENGL_ES2_BIT,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                 EGL_SURFACE_TYPE,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                 EGL_PBUFFER_BIT,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                 EGL_NONE};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    EGLint egl_context_attrs[] = {EGL_CONTEXT_CLIENT_VERSION, GL_CLIENT_VERSION, EGL_NONE};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    m_eglDisplay =</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        eglGetPlatformDisplayEXT(EGL_PLATFORM_ANGLE_ANGLE, EGL_DEFAULT_DISPLAY, egl_display_attrs);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (m_eglDisplay == EGL_NO_DISPLAY)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to get EGL display (%s)&quot;</span>, eglGetErrorString());</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span> (eglInitialize(m_eglDisplay, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>) != EGL_TRUE)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to init EGL display (%s)&quot;</span>, eglGetErrorString());</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    EGLint numConfigs = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (eglChooseConfig(m_eglDisplay, egl_config_attrs, &amp;m_eglConfig, 1, &amp;numConfigs) != EGL_TRUE ||</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        numConfigs == 0)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to get EGL config (%s)&quot;</span>, eglGetErrorString());</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (eglMakeCurrent(m_eglDisplay, m_eglBuffer, m_eglBuffer, m_eglContext) != EGL_TRUE)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to make current EGL (%s)&quot;</span>, eglGetErrorString());</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    m_eglContext = eglCreateContext(m_eglDisplay, m_eglConfig, <span class="keyword">nullptr</span>, egl_context_attrs);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (m_eglContext == EGL_NO_CONTEXT)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create EGL context (%s)&quot;</span>, eglGetErrorString());</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">void</span> CheckGL(ID3D11DeviceContext* device)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (m_pContext != device)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      m_pSRView = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      m_pVShader = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      m_pPShader = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      m_pContext = device;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="keywordflow">if</span> (m_eglBuffer != EGL_NO_SURFACE)</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        eglMakeCurrent(m_eglDisplay, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        eglDestroySurface(m_eglDisplay, m_eglBuffer);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        m_eglBuffer = EGL_NO_SURFACE;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="comment">// create new resources</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keywordflow">if</span> (!createD3DResources())</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">if</span> (!createD3DResources())</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (eglMakeCurrent(m_eglDisplay, m_eglBuffer, m_eglBuffer, m_eglContext) != EGL_TRUE)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to make current EGL (%s)&quot;</span>, eglGetErrorString());</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> CheckGL(ID3D11DeviceContext* device)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (m_pContext != device)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      m_pSRView = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      m_pVShader = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      m_pPShader = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      m_pContext = device;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      eglMakeCurrent(m_eglDisplay, m_eglBuffer, m_eglBuffer, m_eglContext);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">void</span> Begin()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">// confirm on begin D3D context is correct</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    CheckGL(<span class="keyword">reinterpret_cast&lt;</span>ID3D11DeviceContext*<span class="keyword">&gt;</span>(<a class="code" href="group__cpp__kodi__gui.html#gaecc0ab7a7a2fae9d399698dd4caefd03">kodi::gui::GetHWContext</a>()));</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    glClear(GL_COLOR_BUFFER_BIT);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">void</span> End()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    glFlush();</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">// set our primitive shaders</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    m_pContext-&gt;VSSetShader(m_pVShader.Get(), <span class="keyword">nullptr</span>, 0);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    m_pContext-&gt;PSSetShader(m_pPShader.Get(), <span class="keyword">nullptr</span>, 0);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    m_pContext-&gt;PSSetShaderResources(0, 1, m_pSRView.GetAddressOf());</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">// draw texture</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    m_pContext-&gt;IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    m_pContext-&gt;IASetVertexBuffers(0, 0, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    m_pContext-&gt;IASetInputLayout(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    m_pContext-&gt;Draw(4, 0);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="comment">// unset shaders</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    m_pContext-&gt;PSSetShader(<span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, 0);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    m_pContext-&gt;VSSetShader(<span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, 0);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">// unbind our view</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    ID3D11ShaderResourceView* views[1] = {};</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    m_pContext-&gt;PSSetShaderResources(0, 1, views);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">enum</span> ShaderType</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    VERTEX_SHADER,</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    PIXEL_SHADER</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  };</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordtype">bool</span> createD3DResources()</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    HANDLE sharedHandle;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11Device&gt; pDevice;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11RenderTargetView&gt; pRTView;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11Resource&gt; pRTResource;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11Texture2D&gt; pRTTexture;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11Texture2D&gt; pOffScreenTexture;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    Microsoft::WRL::ComPtr&lt;IDXGIResource&gt;  dxgiResource;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    m_pContext-&gt;GetDevice(&amp;pDevice);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    m_pContext-&gt;OMGetRenderTargets(1, &amp;pRTView, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">if</span> (!pRTView)</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    pRTView-&gt;GetResource(&amp;pRTResource);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">if</span> (FAILED(pRTResource.As(&amp;pRTTexture)))</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    D3D11_TEXTURE2D_DESC texDesc;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    pRTTexture-&gt;GetDesc(&amp;texDesc);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    texDesc.Format = DXGI_FORMAT_B8G8R8A8_UNORM;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    texDesc.BindFlags = D3D11_BIND_SHADER_RESOURCE | D3D11_BIND_RENDER_TARGET;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    texDesc.MiscFlags = D3D11_RESOURCE_MISC_SHARED;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">if</span> (FAILED(pDevice-&gt;CreateTexture2D(&amp;texDesc, <span class="keyword">nullptr</span>, &amp;pOffScreenTexture)))</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create intermediate texture&quot;</span>);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keywordflow">if</span> (m_eglBuffer != EGL_NO_SURFACE)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        eglMakeCurrent(m_eglDisplay, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        eglDestroySurface(m_eglDisplay, m_eglBuffer);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        m_eglBuffer = EGL_NO_SURFACE;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <span class="comment">// create new resources</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">if</span> (!createD3DResources())</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      eglMakeCurrent(m_eglDisplay, m_eglBuffer, m_eglBuffer, m_eglContext);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">void</span> Begin()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">// confirm on begin D3D context is correct</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    CheckGL(<span class="keyword">reinterpret_cast&lt;</span>ID3D11DeviceContext*<span class="keyword">&gt;</span>(<a class="code" href="group__cpp__kodi__gui__general.html#gaec912a9f8b3b133803fc2672cb60f87f">kodi::gui::GetHWContext</a>()));</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    glClear(GL_COLOR_BUFFER_BIT);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">void</span> End()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    glFlush();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">// set our primitive shaders</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    m_pContext-&gt;VSSetShader(m_pVShader.Get(), <span class="keyword">nullptr</span>, 0);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    m_pContext-&gt;PSSetShader(m_pPShader.Get(), <span class="keyword">nullptr</span>, 0);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    m_pContext-&gt;PSSetShaderResources(0, 1, m_pSRView.GetAddressOf());</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">// draw texture</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    m_pContext-&gt;IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    m_pContext-&gt;IASetVertexBuffers(0, 0, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    m_pContext-&gt;IASetInputLayout(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    m_pContext-&gt;Draw(4, 0);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">// unset shaders</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    m_pContext-&gt;PSSetShader(<span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, 0);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    m_pContext-&gt;VSSetShader(<span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, 0);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">// unbind our view</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    ID3D11ShaderResourceView* views[1] = {};</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    m_pContext-&gt;PSSetShaderResources(0, 1, views);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keyword">enum</span> ShaderType</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    VERTEX_SHADER,</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    PIXEL_SHADER</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  };</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordtype">bool</span> createD3DResources()</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    HANDLE sharedHandle;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11Device&gt; pDevice;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11RenderTargetView&gt; pRTView;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11Resource&gt; pRTResource;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11Texture2D&gt; pRTTexture;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3D11Texture2D&gt; pOffScreenTexture;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    Microsoft::WRL::ComPtr&lt;IDXGIResource&gt; dxgiResource;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    m_pContext-&gt;GetDevice(&amp;pDevice);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    m_pContext-&gt;OMGetRenderTargets(1, &amp;pRTView, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span> (!pRTView)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    pRTView-&gt;GetResource(&amp;pRTResource);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">if</span> (FAILED(pRTResource.As(&amp;pRTTexture)))</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    CD3D11_SHADER_RESOURCE_VIEW_DESC srvDesc(pOffScreenTexture.Get(), D3D11_SRV_DIMENSION_TEXTURE2D);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">if</span> (FAILED(pDevice-&gt;CreateShaderResourceView(pOffScreenTexture.Get(), &amp;srvDesc, &amp;m_pSRView)))</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create shader view&quot;</span>);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">if</span> (FAILED(pOffScreenTexture.As(&amp;dxgiResource)) ||</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        FAILED(dxgiResource-&gt;GetSharedHandle(&amp;sharedHandle)))</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable get shared handle for texture&quot;</span>);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">// initiate simple shaders</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">if</span> (FAILED(d3dCreateShader(VERTEX_SHADER, vs_out_shader_text, &amp;m_pVShader)))</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create vertex shader view&quot;</span>);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">if</span> (FAILED(d3dCreateShader(PIXEL_SHADER, ps_out_shader_text, &amp;m_pPShader)))</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create pixel shader view&quot;</span>);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="comment">// create EGL buffer from D3D shared texture</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    EGLint egl_buffer_attrs[] =</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      EGL_WIDTH, <span class="keyword">static_cast&lt;</span>EGLint<span class="keyword">&gt;</span>(texDesc.Width),</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      EGL_HEIGHT, <span class="keyword">static_cast&lt;</span>EGLint<span class="keyword">&gt;</span>(texDesc.Height),</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      EGL_TEXTURE_TARGET, EGL_TEXTURE_2D,</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      EGL_TEXTURE_FORMAT, EGL_TEXTURE_RGBA,</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      EGL_NONE</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    };</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    m_eglBuffer = eglCreatePbufferFromClientBuffer(m_eglDisplay,</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      EGL_D3D_TEXTURE_2D_SHARE_HANDLE_ANGLE,</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      sharedHandle, m_eglConfig, egl_buffer_attrs);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">if</span> (m_eglBuffer == EGL_NO_SURFACE)</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    {</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create EGL buffer (%s)&quot;</span>, eglGetErrorString());</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  }</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  HRESULT d3dCreateShader(ShaderType shaderType, <span class="keyword">const</span> std::string&amp; source, IUnknown** ppShader)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">  </span>{</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3DBlob&gt; pBlob;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3DBlob&gt; pErrors;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    D3D11_TEXTURE2D_DESC texDesc;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    pRTTexture-&gt;GetDesc(&amp;texDesc);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    texDesc.Format = DXGI_FORMAT_B8G8R8A8_UNORM;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    texDesc.BindFlags = D3D11_BIND_SHADER_RESOURCE | D3D11_BIND_RENDER_TARGET;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    texDesc.MiscFlags = D3D11_RESOURCE_MISC_SHARED;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">if</span> (FAILED(pDevice-&gt;CreateTexture2D(&amp;texDesc, <span class="keyword">nullptr</span>, &amp;pOffScreenTexture)))</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create intermediate texture&quot;</span>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    CD3D11_SHADER_RESOURCE_VIEW_DESC srvDesc(pOffScreenTexture.Get(),</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                                             D3D11_SRV_DIMENSION_TEXTURE2D);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">if</span> (FAILED(pDevice-&gt;CreateShaderResourceView(pOffScreenTexture.Get(), &amp;srvDesc, &amp;m_pSRView)))</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create shader view&quot;</span>);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">if</span> (FAILED(pOffScreenTexture.As(&amp;dxgiResource)) ||</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        FAILED(dxgiResource-&gt;GetSharedHandle(&amp;sharedHandle)))</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable get shared handle for texture&quot;</span>);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="comment">// initiate simple shaders</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">if</span> (FAILED(d3dCreateShader(VERTEX_SHADER, vs_out_shader_text, &amp;m_pVShader)))</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create vertex shader view&quot;</span>);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">if</span> (FAILED(d3dCreateShader(PIXEL_SHADER, ps_out_shader_text, &amp;m_pPShader)))</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create pixel shader view&quot;</span>);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="comment">// create EGL buffer from D3D shared texture</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    EGLint egl_buffer_attrs[] = {EGL_WIDTH,</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                                 <span class="keyword">static_cast&lt;</span>EGLint<span class="keyword">&gt;</span>(texDesc.Width),</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                                 EGL_HEIGHT,</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                                 <span class="keyword">static_cast&lt;</span>EGLint<span class="keyword">&gt;</span>(texDesc.Height),</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                                 EGL_TEXTURE_TARGET,</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                                 EGL_TEXTURE_2D,</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                                 EGL_TEXTURE_FORMAT,</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                                 EGL_TEXTURE_RGBA,</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                                 EGL_NONE};</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    m_eglBuffer =</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        eglCreatePbufferFromClientBuffer(m_eglDisplay, EGL_D3D_TEXTURE_2D_SHARE_HANDLE_ANGLE,</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                                         sharedHandle, m_eglConfig, egl_buffer_attrs);</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">auto</span> hr = D3DCompile(source.c_str(), source.length(), <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;main&quot;</span>,</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      shaderType == PIXEL_SHADER ? <span class="stringliteral">&quot;ps_4_0&quot;</span> : <span class="stringliteral">&quot;vs_4_0&quot;</span>, 0, 0, &amp;pBlob, &amp;pErrors);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">if</span> (SUCCEEDED(hr))</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      Microsoft::WRL::ComPtr&lt;ID3D11Device&gt; pDevice;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      m_pContext-&gt;GetDevice(&amp;pDevice);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">if</span> (m_eglBuffer == EGL_NO_SURFACE)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    {</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create EGL buffer (%s)&quot;</span>, eglGetErrorString());</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  }</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordflow">if</span> (shaderType == PIXEL_SHADER)</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        hr = pDevice-&gt;CreatePixelShader(pBlob-&gt;GetBufferPointer(), pBlob-&gt;GetBufferSize(), <span class="keyword">nullptr</span>,</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;          <span class="keyword">reinterpret_cast&lt;</span>ID3D11PixelShader**<span class="keyword">&gt;</span>(ppShader));</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      {</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        hr = pDevice-&gt;CreateVertexShader(pBlob-&gt;GetBufferPointer(), pBlob-&gt;GetBufferSize(), <span class="keyword">nullptr</span>,</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;          <span class="keyword">reinterpret_cast&lt;</span>ID3D11VertexShader**<span class="keyword">&gt;</span>(ppShader));</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <span class="keywordflow">if</span> (FAILED(hr))</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create %s shader&quot;</span>,</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;          shaderType == PIXEL_SHADER ? <span class="stringliteral">&quot;pixel&quot;</span> : <span class="stringliteral">&quot;vertex&quot;</span>);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      }</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to compile shader (%s)&quot;</span>, pErrors-&gt;GetBufferPointer());</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span> hr;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* eglGetErrorString()</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">#define CASE_STR( value ) case value: return #value</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">switch</span> (eglGetError())</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      CASE_STR(EGL_SUCCESS);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      CASE_STR(EGL_NOT_INITIALIZED);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;      CASE_STR(EGL_BAD_ACCESS);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      CASE_STR(EGL_BAD_ALLOC);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      CASE_STR(EGL_BAD_ATTRIBUTE);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      CASE_STR(EGL_BAD_CONTEXT);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      CASE_STR(EGL_BAD_CONFIG);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      CASE_STR(EGL_BAD_CURRENT_SURFACE);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      CASE_STR(EGL_BAD_DISPLAY);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      CASE_STR(EGL_BAD_SURFACE);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      CASE_STR(EGL_BAD_MATCH);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      CASE_STR(EGL_BAD_PARAMETER);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      CASE_STR(EGL_BAD_NATIVE_PIXMAP);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      CASE_STR(EGL_BAD_NATIVE_WINDOW);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      CASE_STR(EGL_CONTEXT_LOST);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Unknown&quot;</span>;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    }</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#undef CASE_STR</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <span class="keywordtype">void</span> destruct()</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">if</span> (m_eglDisplay != EGL_NO_DISPLAY)</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      eglMakeCurrent(m_eglDisplay, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <span class="keywordflow">if</span> (m_eglBuffer != EGL_NO_SURFACE)</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        eglDestroySurface(m_eglDisplay, m_eglBuffer);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        m_eglBuffer = EGL_NO_SURFACE;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      }</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;      <span class="keywordflow">if</span> (m_eglContext != EGL_NO_CONTEXT)</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        eglDestroyContext(m_eglDisplay, m_eglContext);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        m_eglContext = EGL_NO_CONTEXT;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      }</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      eglTerminate(m_eglDisplay);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;      m_eglDisplay = EGL_NO_DISPLAY;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    }</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    m_pSRView = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    m_pVShader = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    m_pPShader = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    m_pContext = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  EGLConfig m_eglConfig = EGL_NO_CONFIG_KHR;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  EGLDisplay m_eglDisplay = EGL_NO_DISPLAY;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  EGLContext m_eglContext = EGL_NO_CONTEXT;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  EGLSurface m_eglBuffer = EGL_NO_SURFACE;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  ID3D11DeviceContext* m_pContext = <span class="keyword">nullptr</span>; <span class="comment">// don&#39;t hold context</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  Microsoft::WRL::ComPtr&lt;ID3D11ShaderResourceView&gt; m_pSRView = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  Microsoft::WRL::ComPtr&lt;ID3D11VertexShader&gt; m_pVShader = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  Microsoft::WRL::ComPtr&lt;ID3D11PixelShader&gt; m_pPShader = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">#define TO_STRING(...) #__VA_ARGS__</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  std::string vs_out_shader_text = TO_STRING(</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  <span class="keywordtype">void</span> main(uint <span class="keywordtype">id</span> : SV_VertexId, out float2 tex : TEXCOORD0, out float4 pos : SV_POSITION)</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  {</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    tex = float2(<span class="keywordtype">id</span> % 2, (<span class="keywordtype">id</span> % 4) &gt;&gt; 1);</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    pos = float4((tex.x - 0.5f) * 2, -(tex.y - 0.5f) * 2, 0, 1);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  });</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  std::string ps_out_shader_text = TO_STRING(</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  Texture2D texMain : <span class="keyword">register</span>(t0);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  SamplerState Sampler</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  {</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    Filter = MIN_MAG_MIP_LINEAR;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    AddressU = CLAMP;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    AddressV = CLAMP;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    Comparison = NEVER;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  };</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  float4 main(in float2 tex : TEXCOORD0) : SV_TARGET</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  {</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">return</span> texMain.Sample(Sampler, tex);</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  });</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">#undef TO_STRING</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;}; <span class="comment">/* class CGLonDX */</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;} <span class="comment">/* namespace gl */</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="keyword">using</span> <a class="code" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">CRenderHelper</a> = <a class="code" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">gl::CGLonDX</a>;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;} <span class="comment">/* namespace gui */</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  HRESULT d3dCreateShader(ShaderType shaderType,</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                          <span class="keyword">const</span> std::string&amp; source,</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                          IUnknown** ppShader)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3DBlob&gt; pBlob;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    Microsoft::WRL::ComPtr&lt;ID3DBlob&gt; pErrors;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keyword">auto</span> hr = D3DCompile(source.c_str(), source.length(), <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>, <span class="stringliteral">&quot;main&quot;</span>,</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                         shaderType == PIXEL_SHADER ? <span class="stringliteral">&quot;ps_4_0&quot;</span> : <span class="stringliteral">&quot;vs_4_0&quot;</span>, 0, 0, &amp;pBlob, &amp;pErrors);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">if</span> (SUCCEEDED(hr))</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      Microsoft::WRL::ComPtr&lt;ID3D11Device&gt; pDevice;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      m_pContext-&gt;GetDevice(&amp;pDevice);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      <span class="keywordflow">if</span> (shaderType == PIXEL_SHADER)</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        hr = pDevice-&gt;CreatePixelShader(pBlob-&gt;GetBufferPointer(), pBlob-&gt;GetBufferSize(), <span class="keyword">nullptr</span>,</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                                        <span class="keyword">reinterpret_cast&lt;</span>ID3D11PixelShader**<span class="keyword">&gt;</span>(ppShader));</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        hr = pDevice-&gt;CreateVertexShader(pBlob-&gt;GetBufferPointer(), pBlob-&gt;GetBufferSize(), <span class="keyword">nullptr</span>,</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                                         <span class="keyword">reinterpret_cast&lt;</span>ID3D11VertexShader**<span class="keyword">&gt;</span>(ppShader));</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      <span class="keywordflow">if</span> (FAILED(hr))</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to create %s shader&quot;</span>,</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            shaderType == PIXEL_SHADER ? <span class="stringliteral">&quot;pixel&quot;</span> : <span class="stringliteral">&quot;vertex&quot;</span>);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      <a class="code" href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">Log</a>(<a class="code" href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a>, <span class="stringliteral">&quot;GLonDX: unable to compile shader (%s)&quot;</span>, pErrors-&gt;GetBufferPointer());</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">return</span> hr;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* eglGetErrorString()</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">#define CASE_STR(value) \</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="preprocessor">  case value: \</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">    return #value</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">switch</span> (eglGetError())</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      CASE_STR(EGL_SUCCESS);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      CASE_STR(EGL_NOT_INITIALIZED);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      CASE_STR(EGL_BAD_ACCESS);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      CASE_STR(EGL_BAD_ALLOC);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      CASE_STR(EGL_BAD_ATTRIBUTE);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      CASE_STR(EGL_BAD_CONTEXT);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      CASE_STR(EGL_BAD_CONFIG);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      CASE_STR(EGL_BAD_CURRENT_SURFACE);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      CASE_STR(EGL_BAD_DISPLAY);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      CASE_STR(EGL_BAD_SURFACE);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      CASE_STR(EGL_BAD_MATCH);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      CASE_STR(EGL_BAD_PARAMETER);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      CASE_STR(EGL_BAD_NATIVE_PIXMAP);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      CASE_STR(EGL_BAD_NATIVE_WINDOW);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      CASE_STR(EGL_CONTEXT_LOST);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;      <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Unknown&quot;</span>;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="preprocessor">#undef CASE_STR</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="keywordtype">void</span> destruct()</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">if</span> (m_eglDisplay != EGL_NO_DISPLAY)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      eglMakeCurrent(m_eglDisplay, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      <span class="keywordflow">if</span> (m_eglBuffer != EGL_NO_SURFACE)</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        eglDestroySurface(m_eglDisplay, m_eglBuffer);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        m_eglBuffer = EGL_NO_SURFACE;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <span class="keywordflow">if</span> (m_eglContext != EGL_NO_CONTEXT)</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        eglDestroyContext(m_eglDisplay, m_eglContext);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        m_eglContext = EGL_NO_CONTEXT;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      eglTerminate(m_eglDisplay);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;      m_eglDisplay = EGL_NO_DISPLAY;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    m_pSRView = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    m_pVShader = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    m_pPShader = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    m_pContext = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  }</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  EGLConfig m_eglConfig = EGL_NO_CONFIG_KHR;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  EGLDisplay m_eglDisplay = EGL_NO_DISPLAY;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  EGLContext m_eglContext = EGL_NO_CONTEXT;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  EGLSurface m_eglBuffer = EGL_NO_SURFACE;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  ID3D11DeviceContext* m_pContext = <span class="keyword">nullptr</span>; <span class="comment">// don&#39;t hold context</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  Microsoft::WRL::ComPtr&lt;ID3D11ShaderResourceView&gt; m_pSRView = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  Microsoft::WRL::ComPtr&lt;ID3D11VertexShader&gt; m_pVShader = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  Microsoft::WRL::ComPtr&lt;ID3D11PixelShader&gt; m_pPShader = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="preprocessor">#define TO_STRING(...) #__VA_ARGS__</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  std::string vs_out_shader_text = TO_STRING(<span class="keywordtype">void</span> main(uint <span class="keywordtype">id</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                                                       : SV_VertexId, out float2 tex</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                                                       : TEXCOORD0, out float4 pos</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                                                       : SV_POSITION) {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    tex = float2(<span class="keywordtype">id</span> % 2, (<span class="keywordtype">id</span> % 4) &gt;&gt; 1);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    pos = float4((tex.x - 0.5f) * 2, -(tex.y - 0.5f) * 2, 0, 1);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  });</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  std::string ps_out_shader_text = TO_STRING(</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  Texture2D texMain : <span class="keyword">register</span>(t0);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  SamplerState Sampler</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    Filter = MIN_MAG_MIP_LINEAR;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    AddressU = CLAMP;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    AddressV = CLAMP;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    Comparison = NEVER;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  };</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  float4 main(in float2 tex : TEXCOORD0) : SV_TARGET</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">return</span> texMain.Sample(Sampler, tex);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  });</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor">#undef TO_STRING</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;}; <span class="comment">/* class CGLonDX */</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;} <span class="comment">/* namespace gl */</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="keyword">using</span> <a class="code" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">CRenderHelper</a> = <a class="code" href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">gl::CGLonDX</a>;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;} <span class="comment">/* namespace gui */</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;} <span class="comment">/* namespace kodi */</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __cplusplus */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi_html_gaaa1f205f9375cd086229a1455ede11cc"><div class="ttname"><a href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">kodi::Log</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN Log(const AddonLog loglevel, const char *format,...)</div><div class="ttdoc">Add a message to Kodi's log.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:694</div></div>
-<div class="ttc" id="aclasskodi_1_1gui_1_1gl_1_1_c_g_lon_d_x_html"><div class="ttname"><a href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">kodi::gui::gl::CGLonDX</a></div><div class="ttdef"><b>Definition:</b> GLonDX.h:33</div></div>
-<div class="ttc" id="agroup__cpp__kodi__gui_html_gaecc0ab7a7a2fae9d399698dd4caefd03"><div class="ttname"><a href="group__cpp__kodi__gui.html#gaecc0ab7a7a2fae9d399698dd4caefd03">kodi::gui::GetHWContext</a></div><div class="ttdeci">void * GetHWContext()</div><div class="ttdoc">To get hardware specific device context interface.</div><div class="ttdef"><b>Definition:</b> General.h:167</div></div>
+<div class="ttc" id="agroup__cpp__kodi_html_gaaa1f205f9375cd086229a1455ede11cc"><div class="ttname"><a href="group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc">kodi::Log</a></div><div class="ttdeci">void ATTRIBUTE_HIDDEN Log(const AddonLog loglevel, const char *format,...)</div><div class="ttdoc">Add a message to Kodi's log.</div><div class="ttdef"><b>Definition:</b> AddonBase.h:696</div></div>
+<div class="ttc" id="aclasskodi_1_1gui_1_1gl_1_1_c_g_lon_d_x_html"><div class="ttname"><a href="classkodi_1_1gui_1_1gl_1_1_c_g_lon_d_x.html">kodi::gui::gl::CGLonDX</a></div><div class="ttdef"><b>Definition:</b> GLonDX.h:35</div></div>
+<div class="ttc" id="agroup__cpp__kodi__gui__general_html_gaec912a9f8b3b133803fc2672cb60f87f"><div class="ttname"><a href="group__cpp__kodi__gui__general.html#gaec912a9f8b3b133803fc2672cb60f87f">kodi::gui::GetHWContext</a></div><div class="ttdeci">kodi::HardwareContext GetHWContext()</div><div class="ttdoc">To get hardware specific device context interface.</div><div class="ttdef"><b>Definition:</b> General.h:165</div></div>
 <div class="ttc" id="agroup__cpp__kodi___defs___addon_log_html_gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768"><div class="ttname"><a href="group__cpp__kodi___defs___addon_log.html#gga913895aaf2ef685961947f8d6b93e038aca7f81a0bb28ea4deb9a9a61cead5768">ADDON_LOG_ERROR</a></div><div class="ttdeci">@ ADDON_LOG_ERROR</div><div class="ttdoc">3 : To report error messages in the log file.</div><div class="ttdef"><b>Definition:</b> addon_base.h:135</div></div>
-<div class="ttc" id="astructkodi_1_1gui_1_1_i_render_helper_html"><div class="ttname"><a href="structkodi_1_1gui_1_1_i_render_helper.html">kodi::gui::IRenderHelper</a></div><div class="ttdef"><b>Definition:</b> renderHelper.h:18</div></div>
+<div class="ttc" id="astructkodi_1_1gui_1_1_i_render_helper_html"><div class="ttname"><a href="structkodi_1_1gui_1_1_i_render_helper.html">kodi::gui::IRenderHelper</a></div><div class="ttdef"><b>Definition:</b> renderHelper.h:20</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

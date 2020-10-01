@@ -1,7 +1,5 @@
 var group__cpp__kodi__addon__pvr___recordings =
 [
-    [ "Group header include", "group__cpp__kodi__addon__pvr___recordings__header__addon__auto__check.html", null ],
-    [ "Group source include", "group__cpp__kodi__addon__pvr___recordings__source__addon__auto__check.html", null ],
     [ "GetRecordingsAmount", "group__cpp__kodi__addon__pvr___recordings.html#gaa04e5d75ddae230f1b9856f46a5295cd", null ],
     [ "GetRecordings", "group__cpp__kodi__addon__pvr___recordings.html#ga1568c19fc96fb24c7363d9f5fbd1b259", null ],
     [ "DeleteRecording", "group__cpp__kodi__addon__pvr___recordings.html#gafa03bcfbd638bb43b563121cf1f784ee", null ],

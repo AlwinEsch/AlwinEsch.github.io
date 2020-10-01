@@ -1,7 +1,5 @@
 var group__cpp__kodi__addon__pvr___timers =
 [
-    [ "Group header include", "group__cpp__kodi__addon__pvr___timers__header__addon__auto__check.html", null ],
-    [ "Group source include", "group__cpp__kodi__addon__pvr___timers__source__addon__auto__check.html", null ],
     [ "GetTimerTypes", "group__cpp__kodi__addon__pvr___timers.html#gac449f7ee70e40993eab2ccbe50af05ad", null ],
     [ "GetTimersAmount", "group__cpp__kodi__addon__pvr___timers.html#gabef6c43b0adc636d321488637265e5c6", null ],
     [ "GetTimers", "group__cpp__kodi__addon__pvr___timers.html#gab7a001078495b2582d778d20700c6dc7", null ],

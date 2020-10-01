@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['label_4017',['label',['../struct_v_f_s_dir_entry.html#acf60de4c64d60c1b9449c056bc6bfcf7',1,'VFSDirEntry']]],
-  ['lowspeed_4018',['lowspeed',['../group__cpp__kodi__addon__vfs___defs.html#a4027218db45685eadd800ee6fbb671df',1,'VFS_IOCTRL_CACHE_STATUS_DATA']]]
+  ['keys_4493',['keys',['../group__cpp__kodi__addon__game___defs___input_types___game_controller_layout.html#aa97499ee2d1b88d53a6da452d4e5029a',1,'kodi::addon::GameControllerLayout']]]
 ];

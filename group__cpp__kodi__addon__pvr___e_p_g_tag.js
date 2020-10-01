@@ -1,7 +1,5 @@
 var group__cpp__kodi__addon__pvr___e_p_g_tag =
 [
-    [ "Group header include", "group__cpp__kodi__addon__pvr___e_p_g_tag__header__addon__auto__check.html", null ],
-    [ "Group source include", "group__cpp__kodi__addon__pvr___e_p_g_tag__source__addon__auto__check.html", null ],
     [ "GetEPGForChannel", "group__cpp__kodi__addon__pvr___e_p_g_tag.html#ga167bc00c711995eb0a337b8f5712449a", null ],
     [ "IsEPGTagRecordable", "group__cpp__kodi__addon__pvr___e_p_g_tag.html#gada030667f27515a1696a8ecd9a1f8879", null ],
     [ "IsEPGTagPlayable", "group__cpp__kodi__addon__pvr___e_p_g_tag.html#ga531b0e1e66adb92b69c34895e1e5db3e", null ],

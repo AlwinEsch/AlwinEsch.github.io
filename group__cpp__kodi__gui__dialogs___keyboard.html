@@ -95,12 +95,12 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Dialog Keyboard<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__gui.html">Interface - kodi::gui</a></div></div>  </div>
+<div class="title">Dialog Keyboard<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__gui.html">Interface - kodi::gui</a> &raquo; <a class="el" href="group__cpp__kodi__gui__dialogs.html">2. Dialogs</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p> <h4><code><span style="font-style: italic;">Namespace: </span><span style="font-style: bold;"><font color=31363b><big> kodi::gui::dialogs::Keyboard </big></font></span></code></h4>  <b>Keyboard dialogs</b> </p>
-<p>The functions listed below have to be permitted by the user for the representation of a keyboard around an input.</p>
+<p> <h4><code><span style="font-style: italic;">Namespace: </span><span style="font-style: bold;"><font color=31363b><big> kodi::gui::dialogs::Keyboard </big></font></span></code></h4>  <b>Keyboard dialogs</b><br  />
+The functions listed below have to be permitted by the user for the representation of a keyboard around an input. </p>
 <p>The class supports several kinds, from an easy text choice up to the passport Word production and their confirmation for add-on.</p>
 <p>It has the header #include &lt;kodi/gui/dialogs/Keyboard.h&gt; be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
@@ -162,8 +162,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
     <tr><td class="paramdir">[in,out]</td><td class="paramname">text</td><td>Overwritten with user input if return=true. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">allowEmptyResult</td><td>Whether a blank password is valid or not. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">hiddenInput</td><td>The inserted input is not shown as text. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hiddenInput</td><td>[opt] The inserted input is not shown as text. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>[opt] To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
@@ -171,20 +171,17 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
 <hr  />
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/gui/dialogs/Keyboard.h&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * The example shows the display of keyboard call dialog at Kodi from the add-on.</span></div>
-<div class="line"><span class="comment"> * Below all values are set, however, can last two (hidden input = false and autoCloseMs = 0)</span></div>
-<div class="line"><span class="comment"> * to be released if not needed.</span></div>
-<div class="line"><span class="comment"> *&amp;zwj;/</span></div>
-<div class="line"><span class="comment">std::string text = &quot;Please change me to them want you want&quot;; /*&lt; It can be leaved empty or a</span></div>
-<div class="line"><span class="comment">                                                                 entry text added *&amp;zwj;/</span></div>
-<div class="line"><span class="comment">bool bRet = ::kodi::gui::dialogs::Keyboard::ShowAndGetInput(text,</span></div>
-<div class="line"><span class="comment">                                                     &quot;Demonstration text entry&quot;,</span></div>
-<div class="line"><span class="comment">                                                     true,</span></div>
-<div class="line"><span class="comment">                                                     false,</span></div>
-<div class="line"><span class="comment">                                                     0);</span></div>
-<div class="line"><span class="comment">fprintf(stderr, &quot;Written keyboard input is : &#39;%s&#39; and was %s\n&quot;,</span></div>
-<div class="line"><span class="comment">                  text.c_str(), bRet ? &quot;OK&quot; : &quot;Canceled&quot;);</span></div>
+<div class="line"><span class="comment">// The example shows the display of keyboard call dialog at Kodi from the add-on.</span></div>
+<div class="line"><span class="comment">// Below all values are set, however, can last two (hidden input = false and autoCloseMs = 0)</span></div>
+<div class="line"><span class="comment">// to be released if not needed.</span></div>
+<div class="line">std::string text = <span class="stringliteral">&quot;Please change me to them want you want&quot;</span>; <span class="comment">// It can be leaved empty or a entry text added</span></div>
+<div class="line"><span class="keywordtype">bool</span> bRet = <a class="code" href="group__cpp__kodi__gui__dialogs___keyboard.html#ga167eba07f115af03700df889fa08cc54">::kodi::gui::dialogs::Keyboard::ShowAndGetInput</a>(text,</div>
+<div class="line">                                                     <span class="stringliteral">&quot;Demonstration text entry&quot;</span>,</div>
+<div class="line">                                                     <span class="keyword">true</span>,</div>
+<div class="line">                                                     <span class="keyword">false</span>,</div>
+<div class="line">                                                     0);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Written keyboard input is : &#39;%s&#39; and was %s\n&quot;</span>,</div>
+<div class="line">                  text.c_str(), bRet ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -233,7 +230,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">text</td><td>Overwritten with user input if return=true. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">allowEmptyResult</td><td>If set to true keyboard can also exited without entered text. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>[opt] To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
@@ -293,7 +290,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
     <tr><td class="paramdir">[in,out]</td><td class="paramname">newPassword</td><td>Overwritten with user input if return=true. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">allowEmptyResult</td><td>Whether a blank password is valid or not. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>[opt] To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
@@ -339,7 +336,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">newPassword</td><td>Overwritten with user input if return=true. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>[opt] To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
@@ -399,7 +396,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
     <tr><td class="paramdir">[out]</td><td class="paramname">newPassword</td><td>Overwritten with user input if return=true. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">allowEmptyResult</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>[opt] To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
@@ -408,46 +405,38 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/General.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;kodi/gui/dialogs/Keyboard.h&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * The example below shows the complete use of keyboard dialog for password</span></div>
-<div class="line"><span class="comment"> * check. If only one check from add-on needed can be function with retries</span></div>
-<div class="line"><span class="comment"> * set to &#39;0&#39; called alone.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * The use of MD5 translated password is always required for the check on Kodi!</span></div>
-<div class="line"><span class="comment"> *&amp;zwj;/</span></div>
-<div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="comment">int maxretries = 3;</span></div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Password names need to be send as md5 sum to kodi.</span></div>
-<div class="line"><span class="comment"> *&amp;zwj;/</span></div>
-<div class="line"><span class="comment">std::string password;</span></div>
-<div class="line"><span class="comment">kodi::GetMD5(&quot;kodi&quot;, password);</span></div>
-<div class="line"><span class="comment"></span> </div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * To the loop about password checks.</span></div>
-<div class="line"><span class="comment"> *&amp;zwj;/</span></div>
-<div class="line"><span class="comment">int ret;</span></div>
-<div class="line"><span class="comment">for (unsigned int i = 0; i &lt; maxretries; i++)</span></div>
-<div class="line"><span class="comment">{</span></div>
-<div class="line"><span class="comment">  /*</span></div>
-<div class="line"><span class="comment">   * Ask the user about the password.</span></div>
-<div class="line"><span class="comment">   *&amp;zwj;/</span></div>
-<div class="line"><span class="comment">  ret = ::kodi::gui::dialogs::Keyboard::ShowAndVerifyPassword(password, &quot;Demo password call for PW &#39;kodi&#39;&quot;, i, 0);</span></div>
-<div class="line"><span class="comment">  if (ret == 0)</span></div>
-<div class="line"><span class="comment">  {</span></div>
-<div class="line"><span class="comment">    fprintf(stderr, &quot;Password successfull confirmed after &#39;%i&#39; tries\n&quot;, i+1);</span></div>
-<div class="line"><span class="comment">    break;</span></div>
-<div class="line"><span class="comment">  }</span></div>
-<div class="line"><span class="comment">  else if (ret &lt; 0)</span></div>
-<div class="line"><span class="comment">  {</span></div>
-<div class="line"><span class="comment">    fprintf(stderr, &quot;Canceled editing on try &#39;%i&#39;\n&quot;, i+1);</span></div>
-<div class="line"><span class="comment">    break;</span></div>
-<div class="line"><span class="comment">  }</span></div>
-<div class="line"><span class="comment">  else /* if (ret &gt; 0) *&amp;zwj;/</span></div>
-<div class="line"><span class="comment">  {</span></div>
-<div class="line"><span class="comment">    fprintf(stderr, &quot;Wrong password entered on try &#39;%i&#39;\n&quot;, i+1);</span></div>
-<div class="line"><span class="comment">  }</span></div>
-<div class="line"><span class="comment">}</span></div>
+<div class="line"><span class="comment">// The example below shows the complete use of keyboard dialog for password</span></div>
+<div class="line"><span class="comment">// check. If only one check from add-on needed can be function with retries</span></div>
+<div class="line"><span class="comment">// set to &#39;0&#39; called alone.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// The use of MD5 translated password is always required for the check on Kodi!</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> maxretries = 3;</div>
+<div class="line"><span class="comment">// Password names need to be send as md5 sum to kodi.</span></div>
+<div class="line">std::string password;</div>
+<div class="line"><a class="code" href="group__cpp__kodi.html#ga26de39eee45315a3cda7aceb601a8bad">kodi::GetMD5</a>(<span class="stringliteral">&quot;kodi&quot;</span>, password);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// To the loop about password checks.</span></div>
+<div class="line"><span class="keywordtype">int</span> ret;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; maxretries; i++)</div>
+<div class="line">{</div>
+<div class="line">  <span class="comment">// Ask the user about the password.</span></div>
+<div class="line">  ret = <a class="code" href="group__cpp__kodi__gui__dialogs___keyboard.html#gab0a3eeadeb872871bf3618939b1328f7">::kodi::gui::dialogs::Keyboard::ShowAndVerifyPassword</a>(password, <span class="stringliteral">&quot;Demo password call for PW &#39;kodi&#39;&quot;</span>, i, 0);</div>
+<div class="line">  <span class="keywordflow">if</span> (ret == 0)</div>
+<div class="line">  {</div>
+<div class="line">    fprintf(stderr, <span class="stringliteral">&quot;Password successfull confirmed after &#39;%i&#39; tries\n&quot;</span>, i+1);</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ret &lt; 0)</div>
+<div class="line">  {</div>
+<div class="line">    fprintf(stderr, <span class="stringliteral">&quot;Canceled editing on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span> <span class="comment">// if (ret &gt; 0)</span></div>
+<div class="line">  {</div>
+<div class="line">    fprintf(stderr, <span class="stringliteral">&quot;Wrong password entered on try &#39;%i&#39;\n&quot;</span>, i+1);</div>
+<div class="line">  }</div>
+<div class="line">}</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -489,7 +478,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">newPassword</td><td>Overwritten with user input if return=true. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>[opt] To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
@@ -548,9 +537,9 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">password</td><td>Value to compare against user input. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>String shown on dialog title. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">retries</td><td>If greater than 0, shows "Incorrect
-                           password,  %d retries left" on dialog line 2, else line 2 is blank. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">retries</td><td>If greater than 0, shows "Incorrect password, %d retries
+                   left" on dialog line 2, else line 2 is blank. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">autoCloseMs</td><td>[opt] To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
@@ -607,7 +596,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
 <li>header name if false is "Enter value" </li>
 </ul>
 </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">autoCloseMs</td><td>To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">autoCloseMs</td><td>[opt] To close the dialog after a specified time, in milliseconds, default is 0 which keeps the dialog open indefinitely. </td></tr>
   </table>
   </dd>
 </dl>
@@ -653,7 +642,7 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>Overwritten with user input if return=true. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">closeKeyboard</td><td>The open dialog is if also closed on 'true'. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">closeKeyboard</td><td>[opt] The open dialog is if also closed on 'true'. </td></tr>
   </table>
   </dd>
 </dl>
@@ -691,6 +680,9 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___keybo
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="agroup__cpp__kodi_html_ga26de39eee45315a3cda7aceb601a8bad"><div class="ttname"><a href="group__cpp__kodi.html#ga26de39eee45315a3cda7aceb601a8bad">kodi::GetMD5</a></div><div class="ttdeci">std::string ATTRIBUTE_HIDDEN GetMD5(const std::string &amp;text)</div><div class="ttdoc">Get the MD5 digest of the given text.</div><div class="ttdef"><b>Definition:</b> General.h:409</div></div>
+<div class="ttc" id="agroup__cpp__kodi__gui__dialogs___keyboard_html_ga167eba07f115af03700df889fa08cc54"><div class="ttname"><a href="group__cpp__kodi__gui__dialogs___keyboard.html#ga167eba07f115af03700df889fa08cc54">kodi::gui::dialogs::Keyboard::ShowAndGetInput</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN ShowAndGetInput(std::string &amp;text, const std::string &amp;heading, bool allowEmptyResult, bool hiddenInput=false, unsigned int autoCloseMs=0)</div><div class="ttdoc">Show keyboard with initial value text and replace with result string.</div><div class="ttdef"><b>Definition:</b> Keyboard.h:74</div></div>
+<div class="ttc" id="agroup__cpp__kodi__gui__dialogs___keyboard_html_gab0a3eeadeb872871bf3618939b1328f7"><div class="ttname"><a href="group__cpp__kodi__gui__dialogs___keyboard.html#gab0a3eeadeb872871bf3618939b1328f7">kodi::gui::dialogs::Keyboard::ShowAndVerifyPassword</a></div><div class="ttdeci">int ATTRIBUTE_HIDDEN ShowAndVerifyPassword(std::string &amp;password, const std::string &amp;heading, int retries, unsigned int autoCloseMs=0)</div><div class="ttdoc">Show keyboard and verify user input against password.</div><div class="ttdef"><b>Definition:</b> Keyboard.h:314</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

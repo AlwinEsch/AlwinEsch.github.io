@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['using_20hardwarecontext_4867',['using HardwareContext',['../group__cpp__kodi___defs___hardware_context.html',1,'']]]
+  ['time_20value_20processing_5669',['Time value processing',['../group__cpp__kodi__tools___string_utils___time_control.html',1,'']]]
 ];

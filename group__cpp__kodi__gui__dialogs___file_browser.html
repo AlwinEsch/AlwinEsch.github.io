@@ -95,12 +95,12 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___file_
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Dialog File Browser<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__gui.html">Interface - kodi::gui</a></div></div>  </div>
+<div class="title">Dialog File Browser<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__gui.html">Interface - kodi::gui</a> &raquo; <a class="el" href="group__cpp__kodi__gui__dialogs.html">2. Dialogs</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p> <h4><code><span style="font-style: italic;">Namespace: </span><span style="font-style: bold;"><font color=31363b><big> kodi::gui::dialogs::FileBrowser </big></font></span></code></h4>  <b>File browser dialog</b> </p>
-<p>The functions listed below of the class "FileBrowser" offer the possibility to select to a file by the user of the add-on.</p>
+<p> <h4><code><span style="font-style: italic;">Namespace: </span><span style="font-style: bold;"><font color=31363b><big> kodi::gui::dialogs::FileBrowser </big></font></span></code></h4>  <b>File browser dialog</b><br  />
+The functions listed below of the class "FileBrowser" offer the possibility to select to a file by the user of the add-on. </p>
 <p>It allows all the options that are possible in Kodi itself and offers all support file types.</p>
 <p>It has the header <a class="el" href="_file_browser_8h_source.html">#include &lt;kodi/gui/dialogs/FileBrowser.h&gt;</a> be included to enjoy it. </p>
 <h2 class="groupheader">Function Documentation</h2>
@@ -153,32 +153,30 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___file_
 <p>Directory selection dialog. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shares</td><td>With Shares becomes the available start folders be set </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog header name </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">path</td><td>As in the path to start and return value about selected directory </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">writeOnly</td><td>If set only writeable folders are shown. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">writeOnly</td><td>[opt] If set only writeable folders are shown </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled</dd></dl>
 <p><b>Example:</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/gui/dialogs/FileBrowser.h&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Example show directory selection dialog with on &#39;share&#39; (first value)</span></div>
-<div class="line"><span class="comment"> * defined directory types.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * If this becomes leaved empty and &#39;directory&#39; is empty goes it to the</span></div>
-<div class="line"><span class="comment"> * base path of the hard disk.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * Also can be with path written to &#39;directory&#39; before the dialog forced</span></div>
-<div class="line"><span class="comment"> * to a start place.</span></div>
-<div class="line"><span class="comment"> *&amp;zwj;/</span></div>
-<div class="line"><span class="comment">std::string directory;</span></div>
-<div class="line"><span class="comment">bool ret = kodi::gui::dialogs::FileBrowser::ShowAndGetDirectory(&quot;local|network|removable&quot;,</span></div>
-<div class="line"><span class="comment">                                                   &quot;Test directory selection&quot;,</span></div>
-<div class="line"><span class="comment">                                                   directory,</span></div>
-<div class="line"><span class="comment">                                                   false);</span></div>
-<div class="line"><span class="comment">fprintf(stderr, &quot;Selected directory is : %s and was %s\n&quot;, directory.c_str(), ret ? &quot;OK&quot; : &quot;Canceled&quot;);</span></div>
+<div class="line"><span class="comment">// Example show directory selection dialog with on &#39;share&#39; (first value)</span></div>
+<div class="line"><span class="comment">// defined directory types.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// If this becomes leaved empty and &#39;directory&#39; is empty goes it to the</span></div>
+<div class="line"><span class="comment">// base path of the hard disk.</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// Also can be with path written to &#39;directory&#39; before the dialog forced</span></div>
+<div class="line"><span class="comment">// to a start place.</span></div>
+<div class="line">std::string directory;</div>
+<div class="line"><span class="keywordtype">bool</span> ret = <a class="code" href="group__cpp__kodi__gui__dialogs___file_browser.html#ga2baa1e2f8395518f5eaa669143f055fa">kodi::gui::dialogs::FileBrowser::ShowAndGetDirectory</a>(<span class="stringliteral">&quot;local|network|removable&quot;</span>,</div>
+<div class="line">                                                   <span class="stringliteral">&quot;Test directory selection&quot;</span>,</div>
+<div class="line">                                                   directory,</div>
+<div class="line">                                                   <span class="keyword">false</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Selected directory is : %s and was %s\n&quot;</span>, directory.c_str(), ret ? <span class="stringliteral">&quot;OK&quot;</span> : <span class="stringliteral">&quot;Canceled&quot;</span>);</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -244,15 +242,15 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___file_
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl" </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog header name </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">path</td><td>As in the path to start and Return value about selected file </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useThumbs</td><td>[opt] If set show thumbs if possible on dialog </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useFileDirectories</td><td>[opt] If set also packages (e.g. *.zip) are handled as directories. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled </dd></dl>
 
 </div>
 </div>
@@ -323,17 +321,17 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___file_
 <p>File selection from a directory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">directory</td><td>The directory name where the dialog start, possible are normal names and kodi's special names. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">directory</td><td>The directory name where the dialog start, possible are normal names and kodi's special names </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl" </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog header name </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">path</td><td>As in the path to start and Return value about selected file </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">singleList</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useThumbs</td><td>[opt] If set show thumbs if possible on dialog </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useFileDirectories</td><td>[opt] If set also packages (e.g. *.zip) are handled as directories </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">singleList</td><td>[opt] </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled </dd></dl>
 
 </div>
 </div>
@@ -399,11 +397,11 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___file_
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl". </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The mask to filter visible files, e.g. ".m3u|.pls|.b4s|.wpl" </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog header name </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">fileList</td><td>Return value about selected files </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">useThumbs</td><td>If set show thumbs if possible on dialog. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">useFileDirectories</td><td>If set also packages (e.g. *.zip) are handled as directories. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useThumbs</td><td>[opt] If set show thumbs if possible on dialog. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useFileDirectories</td><td>[opt] If set also packages (e.g. *.zip) are handled as directories. </td></tr>
   </table>
   </dd>
 </dl>
@@ -462,12 +460,12 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___file_
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">path</td><td>As in the path to start and Return value about selected source </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">allowNetworkShares</td><td>Allow also access to network </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">additionalShare</td><td>With additionalShare becomes the available start folders be set (optional). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">additionalShare</td><td>[opt] With additionalShare becomes the available start folders be set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>[opt] </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled </dd></dl>
 
 </div>
 </div>
@@ -514,13 +512,13 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___file_
 <p>Image selection dialog. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shares</td><td>With Shares becomes the available start folders be set </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog header name </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">path</td><td>Return value about selected image </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled </dd></dl>
 
 </div>
 </div>
@@ -567,18 +565,19 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__gui__dialogs___file_
 <p>Image selection dialog to get several in to a list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">shares</td><td>With Shares becomes the available start folders be set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shares</td><td>With Shares becomes the available start folders be set </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">heading</td><td>Dialog header name </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">file_list</td><td>Return value about selected images </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>False if selection becomes canceled </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="agroup__cpp__kodi__gui__dialogs___file_browser_html_ga2baa1e2f8395518f5eaa669143f055fa"><div class="ttname"><a href="group__cpp__kodi__gui__dialogs___file_browser.html#ga2baa1e2f8395518f5eaa669143f055fa">kodi::gui::dialogs::FileBrowser::ShowAndGetDirectory</a></div><div class="ttdeci">bool ATTRIBUTE_HIDDEN ShowAndGetDirectory(const std::string &amp;shares, const std::string &amp;heading, std::string &amp;path, bool writeOnly=false)</div><div class="ttdoc">Directory selection dialog.</div><div class="ttdef"><b>Definition:</b> FileBrowser.h:70</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vfs_5fioctrl_4158',['VFS_IOCTRL',['../group__cpp__kodi__addon__vfs___defs.html#gaac68d7bda340dd7a7749f4311353075d',1,'VFS.h']]]
+  ['time_5fformat_4643',['TIME_FORMAT',['../group__cpp__kodi__tools___string_utils___defs___t_i_m_e___f_o_r_m_a_t.html#gab9571277e5727124056a1f61978fd393',1,'kodi::tools']]]
 ];
