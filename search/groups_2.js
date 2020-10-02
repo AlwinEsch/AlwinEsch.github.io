@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['3_2e_20hardware_20framebuffer_20stream_5430',['3. Hardware framebuffer stream',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html',1,'']]],
-  ['3_2e_20hardware_20rendering_20operations_5431',['3. Hardware rendering operations',['../group__cpp__kodi__addon__game___hardware_rendering.html',1,'']]],
-  ['3_2e_20callback_20functions_5432',['3. Callback functions',['../group__cpp__kodi__addon__peripheral__callbacks.html',1,'']]],
-  ['3_2e_20event_5433',['3. Event',['../group__cpp__kodi__addon__peripheral___defs___event.html',1,'']]],
-  ['3_2e_20button_20maps_5434',['3. Button maps',['../group__cpp__kodi__addon__peripheral___docs___controller_input___button_maps.html',1,'']]],
-  ['3_2e_20handling_20events_5435',['3. Handling events',['../group__cpp__kodi__addon__peripheral___docs___lifetime___events.html',1,'']]],
-  ['3_2e_20channel_20group_5436',['3. Channel Group',['../group__cpp__kodi__addon__pvr___defs___channel_group.html',1,'']]],
-  ['3_2e_20channel_20groups_20_28optional_29_5437',['3. Channel Groups (optional)',['../group__cpp__kodi__addon__pvr__supports_channel_groups.html',1,'']]],
-  ['3_2e_20windows_5438',['3. Windows',['../group__cpp__kodi__gui__windows.html',1,'']]],
-  ['3_2e_20gui_20controls_20_28kodi_3a_3agui_3a_3acontrols_3a_3ac_2e_2e_2e_29_5439',['3. GUI controls (kodi::gui::controls::C...)',['../group__cpp__kodi__gui__windows__controls.html',1,'']]],
-  ['3_2e_20general_20functions_5440',['3. General functions',['../group__cpp__kodi__vfs___general.html',1,'']]]
+  ['3_2e_20hardware_20framebuffer_20stream_5432',['3. Hardware framebuffer stream',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html',1,'']]],
+  ['3_2e_20hardware_20rendering_20operations_5433',['3. Hardware rendering operations',['../group__cpp__kodi__addon__game___hardware_rendering.html',1,'']]],
+  ['3_2e_20callback_20functions_5434',['3. Callback functions',['../group__cpp__kodi__addon__peripheral__callbacks.html',1,'']]],
+  ['3_2e_20event_5435',['3. Event',['../group__cpp__kodi__addon__peripheral___defs___event.html',1,'']]],
+  ['3_2e_20button_20maps_5436',['3. Button maps',['../group__cpp__kodi__addon__peripheral___docs___controller_input___button_maps.html',1,'']]],
+  ['3_2e_20handling_20events_5437',['3. Handling events',['../group__cpp__kodi__addon__peripheral___docs___lifetime___events.html',1,'']]],
+  ['3_2e_20channel_20group_5438',['3. Channel Group',['../group__cpp__kodi__addon__pvr___defs___channel_group.html',1,'']]],
+  ['3_2e_20channel_20groups_20_28optional_29_5439',['3. Channel Groups (optional)',['../group__cpp__kodi__addon__pvr__supports_channel_groups.html',1,'']]],
+  ['3_2e_20windows_5440',['3. Windows',['../group__cpp__kodi__gui__windows.html',1,'']]],
+  ['3_2e_20gui_20controls_20_28kodi_3a_3agui_3a_3acontrols_3a_3ac_2e_2e_2e_29_5441',['3. GUI controls (kodi::gui::controls::C...)',['../group__cpp__kodi__gui__windows__controls.html',1,'']]],
+  ['3_2e_20general_20functions_5442',['3. General functions',['../group__cpp__kodi__vfs___general.html',1,'']]]
 ];

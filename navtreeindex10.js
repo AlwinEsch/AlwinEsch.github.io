@@ -68,6 +68,7 @@ var NAVTREEINDEX10 =
 "group__cpp__kodi__tools___string_utils___compare_control.html#gae44088ade65dff86d1d4c2ab64ca15b2":[6,0,5,1,3,13],
 "group__cpp__kodi__tools___string_utils___compare_control.html#gaf2d20a88ed278b72f7d3664d7be49599":[6,0,5,1,3,21],
 "group__cpp__kodi__tools___string_utils___defs.html":[6,0,5,1,0],
+"group__cpp__kodi__tools___string_utils___defs.html#gac65b789a01606b367f4466caf984f07b":[6,0,5,1,0,1],
 "group__cpp__kodi__tools___string_utils___defs___t_i_m_e___f_o_r_m_a_t.html":[6,0,5,1,0,0],
 "group__cpp__kodi__tools___string_utils___defs___t_i_m_e___f_o_r_m_a_t.html#gab9571277e5727124056a1f61978fd393":[6,0,5,1,0,0,0],
 "group__cpp__kodi__tools___string_utils___defs___t_i_m_e___f_o_r_m_a_t.html#ggab9571277e5727124056a1f61978fd393a11d0fb813dd40639f88defd4d0ccf25d":[6,0,5,1,0,0,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "group__python___dialog_progress.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476":[6,1,1,0,0,2],
 "group__python___dialog_progress.html#gaa68d6863c83c0c1cab65be8c683053a5":[6,1,1,0,0,3],
 "group__python___dialog_progress.html#gac07285e6206ee72c89fedc797e0ceede":[6,1,1,0,0,4],
-"group__python___dialog_progress_b_g.html":[6,1,1,0,0,0],
-"group__python___dialog_progress_b_g.html#ga51dead1cfadfb0c6438ed3a44639ea5e":[6,1,1,0,0,0,0]
+"group__python___dialog_progress_b_g.html":[6,1,1,0,0,0]
 };

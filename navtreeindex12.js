@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"group__python__xbmcgui__control.html#ga13f0d1327712c41f0675c8772b9080f9":[6,1,1,4,19],
 "group__python__xbmcgui__control.html#ga2f13cad8a59d85da8680ea3a3dd81b0a":[6,1,1,4,23],
 "group__python__xbmcgui__control.html#ga402bd0a7fd8f85c3609034616da9129d":[6,1,1,4,30],
 "group__python__xbmcgui__control.html#ga403d7c3dc9b308567cf859a67b1cf1e5":[6,1,1,4,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "python_v17.html":[2,0,2],
 "python_v18.html":[2,0,1],
 "python_v19.html":[2,0,0],
-"revisions.html":[2],
-"skin__button_control.html":[3,0,1]
+"revisions.html":[2]
 };
