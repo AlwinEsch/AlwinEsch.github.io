@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"skin__button_control.html#skin_Button_control_sect1":[3,0,1,0],
 "skin__button_control.html#skin_Button_control_sect2":[3,0,1,1],
 "skin__button_control.html#skin_Button_control_sect3":[3,0,1,2],
 "skin__edit_control.html":[3,0,2],

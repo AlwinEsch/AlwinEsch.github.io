@@ -144,8 +144,24 @@ With this, either simple vectors or lists defined by templates can be given for 
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A string consisting of the elements of values, separated by the separator character. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>A string consisting of the elements of values, separated by the separator character.</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr, varstr;</div>
+<div class="line">std::vector&lt;std::string&gt; strarray;</div>
+<div class="line"> </div>
+<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;b&quot;</span>);</div>
+<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;c&quot;</span>);</div>
+<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;de&quot;</span>);</div>
+<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;fg&quot;</span>);</div>
+<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line">refstr = <span class="stringliteral">&quot;a,b,c,de,,,fg,,&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___list_control.html#ga87f7e767b9d7889b5c04a7cc85507f34">kodi::tools::StringUtils::Join</a>(strarray, <span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gafe7ff63172025f550bbbed1d10d050b4"></a>
@@ -198,8 +214,21 @@ With this, either simple vectors or lists defined by templates can be given for 
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>List of splitted strings </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>List of splitted strings</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::vector&lt;std::string&gt; varresults;</div>
+<div class="line"> </div>
+<div class="line">varresults = <a class="code" href="group__cpp__kodi__tools___string_utils___list_control.html#gafe7ff63172025f550bbbed1d10d050b4">kodi::tools::StringUtils::Split</a>(<span class="stringliteral">&quot;g,h,ij,k,lm,,n&quot;</span>, <span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;g&quot;</span>, varresults.at(0).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;h&quot;</span>, varresults.at(1).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;ij&quot;</span>, varresults.at(2).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;k&quot;</span>, varresults.at(3).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;lm&quot;</span>, varresults.at(4).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;&quot;</span>, varresults.at(5).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;n&quot;</span>, varresults.at(6).c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga2fcd8aa4ec636073d9c24a7406faef24"></a>
@@ -737,6 +766,8 @@ With this, either simple vectors or lists defined by templates can be given for 
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___list_control_html_ga87f7e767b9d7889b5c04a7cc85507f34"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___list_control.html#ga87f7e767b9d7889b5c04a7cc85507f34">kodi::tools::StringUtils::Join</a></div><div class="ttdeci">static std::string Join(const CONTAINER &amp;strings, const std::string &amp;delimiter)</div><div class="ttdoc">Concatenates the elements of a specified array or the members of a collection and uses the specified ...</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2483</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___list_control_html_gafe7ff63172025f550bbbed1d10d050b4"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___list_control.html#gafe7ff63172025f550bbbed1d10d050b4">kodi::tools::StringUtils::Split</a></div><div class="ttdeci">static std::vector&lt; std::string &gt; Split(const std::string &amp;input, const std::string &amp;delimiter, unsigned int iMaxStrings=0)</div><div class="ttdoc">Splits the given input string using the given delimiter into separate strings.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2525</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

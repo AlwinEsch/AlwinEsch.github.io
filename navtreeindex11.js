@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"group__python___dialog_progress_b_g.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476":[6,1,1,0,0,0,1],
 "group__python___dialog_progress_b_g.html#gaa68d6863c83c0c1cab65be8c683053a5":[6,1,1,0,0,0,2],
 "group__python___dialog_progress_b_g.html#gafedd49742f1edc9ceb13de3b182413dd":[6,1,1,0,0,0,3],
 "group__python___info_tag_music.html":[6,1,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "group__python__xbmcgui__control.html":[6,1,1,4],
 "group__python__xbmcgui__control.html#ga07596c1122ca6aa8df20d7a27de410a9":[6,1,1,4,18],
 "group__python__xbmcgui__control.html#ga0bbd1670b66db429f7336ab67ed2534d":[6,1,1,4,22],
-"group__python__xbmcgui__control.html#ga13f0d1327712c41f0675c8772b9080f9":[6,1,1,4,19],
-"group__python__xbmcgui__control.html#ga2f13cad8a59d85da8680ea3a3dd81b0a":[6,1,1,4,23]
+"group__python__xbmcgui__control.html#ga13f0d1327712c41f0675c8772b9080f9":[6,1,1,4,19]
 };

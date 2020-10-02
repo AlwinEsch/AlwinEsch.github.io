@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kodi Development: String edit control</title>
+<title>Kodi Development: String edit</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,10 +95,12 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
 
 <div class="header">
   <div class="headertitle">
-<div class="title">String edit control<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__tools.html">Interface - kodi::tools</a> &raquo; <a class="el" href="group__cpp__kodi__tools___string_utils.html">class StringUtils</a></div></div>  </div>
+<div class="title">String edit<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__tools.html">Interface - kodi::tools</a> &raquo; <a class="el" href="group__cpp__kodi__tools___string_utils.html">class StringUtils</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p><b>Edits given texts</b><br  />
+This is used to revise the respective strings and to get them in the desired format. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga8bd26dba1942f812c343020358d77668"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga8bd26dba1942f812c343020358d77668">&#9670;&nbsp;</a></span>ToUpper() <span class="overload">[1/2]</span></h2>
@@ -127,11 +129,19 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
 <p>Convert a string to uppercase. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>String to convert </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>String to convert</td></tr>
   </table>
   </dd>
 </dl>
-
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot;TEST&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">std::string varstr = <span class="stringliteral">&quot;TeSt&quot;</span>;</div>
+<div class="line"><a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga8bd26dba1942f812c343020358d77668">kodi::tools::StringUtils::ToUpper</a>(varstr);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga32c4ccd1f29015c10b4e64357a03e428"></a>
@@ -195,11 +205,19 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
 <p>Convert a string to lowercase. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>String to convert </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>String to convert</td></tr>
   </table>
   </dd>
 </dl>
-
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">std::string varstr = <span class="stringliteral">&quot;TeSt&quot;</span>;</div>
+<div class="line"><a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#gaab7e9de65b9cc5cc39217bfd7a314cb9">kodi::tools::StringUtils::ToLower</a>(varstr);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga15333c5fed6c8643145189be58c24a55"></a>
@@ -313,8 +331,25 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The left part string in amount of given count or complete if it was higher. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>The left part string in amount of given count or complete if it was higher.</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr, varstr;</div>
+<div class="line">std::string origstr = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga95ec927b1dead43f08cebed75a946da4">kodi::tools::StringUtils::Left</a>(origstr, 0);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;te&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga95ec927b1dead43f08cebed75a946da4">kodi::tools::StringUtils::Left</a>(origstr, 2);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga95ec927b1dead43f08cebed75a946da4">kodi::tools::StringUtils::Left</a>(origstr, 10);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gabc6fa8f252272933a06a365d59e7d7d3"></a>
@@ -366,8 +401,37 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The substring taken from middle of input string </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>The substring taken from middle of input string</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr, varstr;</div>
+<div class="line">std::string origstr = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#gabc6fa8f252272933a06a365d59e7d7d3">kodi::tools::StringUtils::Mid</a>(origstr, 0, 0);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;te&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#gabc6fa8f252272933a06a365d59e7d7d3">kodi::tools::StringUtils::Mid</a>(origstr, 0, 2);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#gabc6fa8f252272933a06a365d59e7d7d3">kodi::tools::StringUtils::Mid</a>(origstr, 0, 10);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;st&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#gabc6fa8f252272933a06a365d59e7d7d3">kodi::tools::StringUtils::Mid</a>(origstr, 2);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;st&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#gabc6fa8f252272933a06a365d59e7d7d3">kodi::tools::StringUtils::Mid</a>(origstr, 2, 2);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;es&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#gabc6fa8f252272933a06a365d59e7d7d3">kodi::tools::StringUtils::Mid</a>(origstr, 1, 2);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga9de29a427caf29d830e4ac3c451b49f7"></a>
@@ -412,8 +476,25 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The right part string in amount of given count or complete if it was higher. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>The right part string in amount of given count or complete if it was higher.</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr, varstr;</div>
+<div class="line">std::string origstr = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga9de29a427caf29d830e4ac3c451b49f7">kodi::tools::StringUtils::Right</a>(origstr, 0);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;st&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga9de29a427caf29d830e4ac3c451b49f7">kodi::tools::StringUtils::Right</a>(origstr, 2);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line">varstr = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga9de29a427caf29d830e4ac3c451b49f7">kodi::tools::StringUtils::Right</a>(origstr, 10);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gaffa613aff588e05167ad55f598af9502"></a>
@@ -447,8 +528,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The changed string </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>The changed string</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot;test test&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">std::string varstr = <span class="stringliteral">&quot; test test   &quot;</span>;</div>
+<div class="line"><a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#gaffa613aff588e05167ad55f598af9502">kodi::tools::StringUtils::Trim</a>(varstr);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga7bb05eb0ea602129952bc43e1d24e36d"></a>
@@ -528,8 +617,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The changed string </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>The changed string</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot;test test   &quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">std::string varstr = <span class="stringliteral">&quot; test test   &quot;</span>;</div>
+<div class="line"><a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga14a990671cc5a38468b7b918aad745f2">kodi::tools::StringUtils::TrimLeft</a>(varstr);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gaa8c49ef032150e9039391da5c7213f55"></a>
@@ -609,8 +706,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The changed string </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>The changed string</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot; test test&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">std::string varstr = <span class="stringliteral">&quot; test test   &quot;</span>;</div>
+<div class="line"><a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#gadee7a596199237eb1a463b700c0a4055">kodi::tools::StringUtils::TrimRight</a>(varstr);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga8277f2b5ea5f22854799134eae71e22e"></a>
@@ -682,6 +787,8 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Cleanup string by remove of duplicates of spaces and tabs. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>String to remove duplicates, becomes also changed and given further on return </td></tr>
@@ -741,8 +848,19 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Amount of replaced characters </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>Amount of replaced characters</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot;text text&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">std::string varstr = <span class="stringliteral">&quot;test test&quot;</span>;</div>
+<div class="line">EXPECT_EQ(<a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga0b2c0cc22cb57345fbe462a4fe2b639e">kodi::tools::StringUtils::Replace</a>(varstr, <span class="charliteral">&#39;s&#39;</span>, <span class="charliteral">&#39;x&#39;</span>), 2);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+<div class="line"> </div>
+<div class="line">EXPECT_EQ(<a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga0b2c0cc22cb57345fbe462a4fe2b639e">kodi::tools::StringUtils::Replace</a>(varstr, <span class="charliteral">&#39;s&#39;</span>, <span class="charliteral">&#39;x&#39;</span>), 0);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gaa51c64b54ee2bd3c68c8477157f8fcdd"></a>
@@ -794,8 +912,19 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Amount of replaced text fields </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>Amount of replaced text fields</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot;text text&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">std::string varstr = <span class="stringliteral">&quot;test test&quot;</span>;</div>
+<div class="line">EXPECT_EQ(<a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga0b2c0cc22cb57345fbe462a4fe2b639e">kodi::tools::StringUtils::Replace</a>(varstr, <span class="stringliteral">&quot;s&quot;</span>, <span class="stringliteral">&quot;x&quot;</span>), 2);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+<div class="line"> </div>
+<div class="line">EXPECT_EQ(<a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga0b2c0cc22cb57345fbe462a4fe2b639e">kodi::tools::StringUtils::Replace</a>(varstr, <span class="stringliteral">&quot;s&quot;</span>, <span class="stringliteral">&quot;x&quot;</span>), 0);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga33b051c7c8733e441181810ccd5ccef6"></a>
@@ -875,14 +1004,23 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
 </table>
 </div><div class="memdoc">
 
-<p>Remove all carriage returns and line feeds with string. </p>
+<p>Remove carriage return and line feeds on string ends. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>String where CR and LF becomes removed </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>String where CR and LF becomes removed on end</td></tr>
   </table>
   </dd>
 </dl>
-
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr, varstr;</div>
+<div class="line"> </div>
+<div class="line">refstr = <span class="stringliteral">&quot;test\r\nstring\nblah blah&quot;</span>;</div>
+<div class="line">varstr = <span class="stringliteral">&quot;test\r\nstring\nblah blah\n&quot;</span>;</div>
+<div class="line"><a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#ga5f298bc206a6d11c37461d3b79d48128">kodi::tools::StringUtils::RemoveCRLF</a>(varstr);</div>
+<div class="line">EXPECT_STREQ(refstr.c_str(), varstr.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gac92e1a6e80f2ab285f275ba361084330"></a>
@@ -958,13 +1096,30 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Escaped/Paramified string </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>Escaped/Paramified string</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *input = <span class="stringliteral">&quot;some, very \\ odd \&quot;string\&quot;&quot;</span>;</div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span> *ref   = <span class="stringliteral">&quot;\&quot;some, very \\\\ odd \\\&quot;string\\\&quot;\&quot;&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">std::string result = <a class="code" href="group__cpp__kodi__tools___string_utils___edit_control.html#gabacc7dda817be914443bf90fa812558e">kodi::tools::StringUtils::Paramify</a>(input);</div>
+<div class="line">EXPECT_STREQ(ref, result.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_gac92e1a6e80f2ab285f275ba361084330"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#gac92e1a6e80f2ab285f275ba361084330">kodi::tools::StringUtils::WordToDigits</a></div><div class="ttdeci">static void WordToDigits(std::string &amp;word)</div><div class="ttdoc">Convert a word to a digit numerical string.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1135</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_gaab7e9de65b9cc5cc39217bfd7a314cb9"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#gaab7e9de65b9cc5cc39217bfd7a314cb9">kodi::tools::StringUtils::ToLower</a></div><div class="ttdeci">static void ToLower(std::string &amp;str)</div><div class="ttdoc">Convert a string to lowercase.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:908</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_ga8bd26dba1942f812c343020358d77668"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#ga8bd26dba1942f812c343020358d77668">kodi::tools::StringUtils::ToUpper</a></div><div class="ttdeci">static void ToUpper(std::string &amp;str)</div><div class="ttdoc">Convert a string to uppercase.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:873</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_ga0b2c0cc22cb57345fbe462a4fe2b639e"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#ga0b2c0cc22cb57345fbe462a4fe2b639e">kodi::tools::StringUtils::Replace</a></div><div class="ttdeci">static int Replace(std::string &amp;str, char oldChar, char newChar)</div><div class="ttdoc">Replace a character with another inside text string.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1269</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_gac92e1a6e80f2ab285f275ba361084330"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#gac92e1a6e80f2ab285f275ba361084330">kodi::tools::StringUtils::WordToDigits</a></div><div class="ttdeci">static void WordToDigits(std::string &amp;word)</div><div class="ttdoc">Convert a word to a digit numerical string.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1396</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_gaffa613aff588e05167ad55f598af9502"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#gaffa613aff588e05167ad55f598af9502">kodi::tools::StringUtils::Trim</a></div><div class="ttdeci">static std::string &amp; Trim(std::string &amp;str)</div><div class="ttdoc">Trim a string with remove of not wanted spaces at begin and end of string.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1097</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_gabacc7dda817be914443bf90fa812558e"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#gabacc7dda817be914443bf90fa812558e">kodi::tools::StringUtils::Paramify</a></div><div class="ttdeci">static std::string Paramify(const std::string &amp;param)</div><div class="ttdoc">Escapes the given string to be able to be used as a parameter.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1435</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_ga5f298bc206a6d11c37461d3b79d48128"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#ga5f298bc206a6d11c37461d3b79d48128">kodi::tools::StringUtils::RemoveCRLF</a></div><div class="ttdeci">static void RemoveCRLF(std::string &amp;strLine)</div><div class="ttdoc">Remove carriage return and line feeds on string ends.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1376</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_ga95ec927b1dead43f08cebed75a946da4"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#ga95ec927b1dead43f08cebed75a946da4">kodi::tools::StringUtils::Left</a></div><div class="ttdeci">static std::string Left(const std::string &amp;str, size_t count)</div><div class="ttdoc">Returns a string from start with givent count.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:973</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_ga14a990671cc5a38468b7b918aad745f2"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#ga14a990671cc5a38468b7b918aad745f2">kodi::tools::StringUtils::TrimLeft</a></div><div class="ttdeci">static std::string &amp; TrimLeft(std::string &amp;str)</div><div class="ttdoc">Trim a string with remove of not wanted spaces at begin of string.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1140</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_ga9de29a427caf29d830e4ac3c451b49f7"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#ga9de29a427caf29d830e4ac3c451b49f7">kodi::tools::StringUtils::Right</a></div><div class="ttdeci">static std::string Right(const std::string &amp;str, size_t count)</div><div class="ttdoc">Returns a string from end with givent count.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1069</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_gabc6fa8f252272933a06a365d59e7d7d3"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#gabc6fa8f252272933a06a365d59e7d7d3">kodi::tools::StringUtils::Mid</a></div><div class="ttdeci">static std::string Mid(const std::string &amp;str, size_t first, size_t count=std::string::npos)</div><div class="ttdoc">Get substring from mid of given string.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1023</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___edit_control_html_gadee7a596199237eb1a463b700c0a4055"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___edit_control.html#gadee7a596199237eb1a463b700c0a4055">kodi::tools::StringUtils::TrimRight</a></div><div class="ttdeci">static std::string &amp; TrimRight(std::string &amp;str)</div><div class="ttdoc">Trim a string with remove of not wanted spaces at end of string.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1185</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

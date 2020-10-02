@@ -132,9 +132,10 @@ var NAVTREEINDEX10 =
 "group__cpp__kodi__tools___string_utils___list_control.html#gaefbc243b5e92984d51f15926ee9b648d":[6,0,5,1,5,8],
 "group__cpp__kodi__tools___string_utils___list_control.html#gafe7ff63172025f550bbbed1d10d050b4":[6,0,5,1,5,1],
 "group__cpp__kodi__tools___string_utils___search_control.html":[6,0,5,1,4],
-"group__cpp__kodi__tools___string_utils___search_control.html#ga08b4fc40d3b801462f736b5ad65c857d":[6,0,5,1,4,2],
-"group__cpp__kodi__tools___string_utils___search_control.html#ga850efdca0fc9e1ceffe2d7d251aefa78":[6,0,5,1,4,0],
-"group__cpp__kodi__tools___string_utils___search_control.html#gac91f616ea18ca276f3b7271e9376f601":[6,0,5,1,4,1],
+"group__cpp__kodi__tools___string_utils___search_control.html#ga08b4fc40d3b801462f736b5ad65c857d":[6,0,5,1,4,3],
+"group__cpp__kodi__tools___string_utils___search_control.html#ga850efdca0fc9e1ceffe2d7d251aefa78":[6,0,5,1,4,1],
+"group__cpp__kodi__tools___string_utils___search_control.html#gaaecf54d44ec6d38cc760775afefb4a86":[6,0,5,1,4,0],
+"group__cpp__kodi__tools___string_utils___search_control.html#gac91f616ea18ca276f3b7271e9376f601":[6,0,5,1,4,2],
 "group__cpp__kodi__tools___string_utils___time_control.html":[6,0,5,1,6],
 "group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9":[6,0,5,1,6,0],
 "group__cpp__kodi__tools___string_utils___time_control.html#gab929738f15d3883d78c51c8a9dc7c03b":[6,0,5,1,6,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "group__python___dialog_progress.html#gaa68d6863c83c0c1cab65be8c683053a5":[6,1,1,0,0,3],
 "group__python___dialog_progress.html#gac07285e6206ee72c89fedc797e0ceede":[6,1,1,0,0,4],
 "group__python___dialog_progress_b_g.html":[6,1,1,0,0,0],
-"group__python___dialog_progress_b_g.html#ga51dead1cfadfb0c6438ed3a44639ea5e":[6,1,1,0,0,0,0],
-"group__python___dialog_progress_b_g.html#ga6bfa818f28a3ff9fbe3ea0bb71c64476":[6,1,1,0,0,0,1]
+"group__python___dialog_progress_b_g.html#ga51dead1cfadfb0c6438ed3a44639ea5e":[6,1,1,0,0,0,0]
 };

@@ -138,8 +138,23 @@ This is used to process the respective time formats in text fields. </p>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Time in seconds </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>Time in seconds</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">EXPECT_EQ(77455, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;21:30:55&quot;</span>));</div>
+<div class="line">EXPECT_EQ(7*60, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;7 min&quot;</span>));</div>
+<div class="line">EXPECT_EQ(7*60, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;7 min\t&quot;</span>));</div>
+<div class="line">EXPECT_EQ(154*60, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;   154 min&quot;</span>));</div>
+<div class="line">EXPECT_EQ(1*60+1, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;1:01&quot;</span>));</div>
+<div class="line">EXPECT_EQ(4*60+3, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;4:03&quot;</span>));</div>
+<div class="line">EXPECT_EQ(2*3600+4*60+3, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;2:04:03&quot;</span>));</div>
+<div class="line">EXPECT_EQ(2*3600+4*60+3, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;   2:4:3&quot;</span>));</div>
+<div class="line">EXPECT_EQ(2*3600+4*60+3, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;  \t\t 02:04:03 \n &quot;</span>));</div>
+<div class="line">EXPECT_EQ(1*3600+5*60+2, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;01:05:02:04:03 \n &quot;</span>));</div>
+<div class="line">EXPECT_EQ(0, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;blah&quot;</span>));</div>
+<div class="line">EXPECT_EQ(0, <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a>(<span class="stringliteral">&quot;ля-ля&quot;</span>));</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gade25019434250dc3d3e3d5abbd9ff9d5"></a>
@@ -185,8 +200,16 @@ This is used to process the respective time formats in text fields. </p>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The formatted time</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>TIME_FORMAT </dd></dl>
-
+<dl class="section see"><dt>See also</dt><dd>TIME_FORMAT</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string ref, var;</div>
+<div class="line"> </div>
+<div class="line">ref = <span class="stringliteral">&quot;21:30:55&quot;</span>;</div>
+<div class="line">var = <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gade25019434250dc3d3e3d5abbd9ff9d5">kodi::tools::StringUtils::SecondsToTimeString</a>(77455);</div>
+<div class="line">EXPECT_STREQ(ref.c_str(), var.c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gab929738f15d3883d78c51c8a9dc7c03b"></a>
@@ -225,12 +248,23 @@ This is used to process the respective time formats in text fields. </p>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Corresponding integer, e.g. "2020-12-24" return as integer value 20201224 </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>Corresponding integer, e.g. "2020-12-24" return as integer value 20201224</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> ref, var;</div>
+<div class="line"> </div>
+<div class="line">ref = 20120706;</div>
+<div class="line">var = <a class="code" href="group__cpp__kodi__tools___string_utils___time_control.html#gab929738f15d3883d78c51c8a9dc7c03b">kodi::tools::StringUtils::DateStringToYYYYMMDD</a>(<span class="stringliteral">&quot;2012-07-06&quot;</span>);</div>
+<div class="line">EXPECT_EQ(ref, var);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___time_control_html_gab929738f15d3883d78c51c8a9dc7c03b"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___time_control.html#gab929738f15d3883d78c51c8a9dc7c03b">kodi::tools::StringUtils::DateStringToYYYYMMDD</a></div><div class="ttdeci">static int DateStringToYYYYMMDD(const std::string &amp;dateString)</div><div class="ttdoc">Converts a string in the format YYYYMMDD to the corresponding integer value.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:3005</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___time_control_html_gade25019434250dc3d3e3d5abbd9ff9d5"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___time_control.html#gade25019434250dc3d3e3d5abbd9ff9d5">kodi::tools::StringUtils::SecondsToTimeString</a></div><div class="ttdeci">static std::string SecondsToTimeString(long seconds, TIME_FORMAT format=TIME_FORMAT_GUESS)</div><div class="ttdoc">Convert a time in seconds to a string based on the given time format.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2939</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___time_control_html_gaa9faaf7387849667f58c9312c70d7bd9"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___time_control.html#gaa9faaf7387849667f58c9312c70d7bd9">kodi::tools::StringUtils::TimeStringToSeconds</a></div><div class="ttdeci">static long TimeStringToSeconds(const std::string &amp;timeString)</div><div class="ttdoc">Converts a time string to the respective integer value.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2893</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

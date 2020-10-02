@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Kodi Development: String compare control</title>
+<title>Kodi Development: String compare</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,10 +95,12 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
 
 <div class="header">
   <div class="headertitle">
-<div class="title">String compare control<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__tools.html">Interface - kodi::tools</a> &raquo; <a class="el" href="group__cpp__kodi__tools___string_utils.html">class StringUtils</a></div></div>  </div>
+<div class="title">String compare<div class="ingroups"><a class="el" href="group__cpp.html">C++</a> &raquo; <a class="el" href="group__cpp__kodi__tools.html">Interface - kodi::tools</a> &raquo; <a class="el" href="group__cpp__kodi__tools___string_utils.html">class StringUtils</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p><b>Check strings for the desired state</b><br  />
+With this, texts can be checked to see that they correspond to a required format. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gab9759272795b3332001777bb7b1732d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gab9759272795b3332001777bb7b1732d3">&#9670;&nbsp;</a></span>EqualsNoCase() <span class="overload">[1/3]</span></h2>
@@ -133,15 +135,24 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Compare two strings with ignore of lower-/uppercase. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>C++ string to compare </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td>C++ string to compare </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>True if the strings are equal, false otherwise</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot;TeSt&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">EXPECT_TRUE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#gab9759272795b3332001777bb7b1732d3">kodi::tools::StringUtils::EqualsNoCase</a>(refstr, <span class="stringliteral">&quot;TeSt&quot;</span>));</div>
+<div class="line">EXPECT_TRUE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#gab9759272795b3332001777bb7b1732d3">kodi::tools::StringUtils::EqualsNoCase</a>(refstr, <span class="stringliteral">&quot;tEsT&quot;</span>));</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga5edcab83c10da0696ff26d693c5d6b0b"></a>
@@ -177,14 +188,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Compare two strings with ignore of lower-/uppercase. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>C++ string to compare </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td>C string to compare </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the strings are equal, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -221,14 +234,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Compare two strings with ignore of lower-/uppercase. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">s1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s1</td><td>C string to compare </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td>C string to compare </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the strings are equal, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -271,15 +286,18 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Compare two strings with ignore of lower-/uppercase with given size. </p>
+<p>Equal to <a class="el" href="group__cpp__kodi__tools___string_utils___compare_control.html#gab9759272795b3332001777bb7b1732d3">EqualsNoCase</a> only that size can defined and on return the difference between compared character becomes given.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>[opt] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>C++ string to compare </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td>C++ string to compare </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>[opt] Length to check, 0 as default to make complete </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if equal, otherwise difference of failed character in string to other ("a" - "b" = -1) </dd></dl>
 
 </div>
 </div>
@@ -322,15 +340,18 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Compare two strings with ignore of lower-/uppercase with given size. </p>
+<p>Equal to <a class="el" href="group__cpp__kodi__tools___string_utils___compare_control.html#gab9759272795b3332001777bb7b1732d3">EqualsNoCase</a> only that size can defined and on return the difference between compared character becomes given.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">s1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>[opt] </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s1</td><td>C string to compare </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td>C string to compare </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>[opt] Length to check, 0 as default to make complete </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if equal, otherwise difference of failed character in string to other ("a" - "b" = -1) </dd></dl>
 
 </div>
 </div>
@@ -367,15 +388,28 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks a string for the begin of another string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>C++ string to be checked </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td>C++ string with which text defined in str1 is checked at the beginning </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>True if string started with asked text, false otherwise</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> ret;</div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">ret = <a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#gaa8106135f0a2181123ef690a4a896319">kodi::tools::StringUtils::StartsWith</a>(refstr, <span class="stringliteral">&quot;te&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Excpect true for here and is &#39;%s&#39;\n&quot;</span>, ret ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">ret = <a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#gaa8106135f0a2181123ef690a4a896319">kodi::tools::StringUtils::StartsWith</a>(refstr, <span class="stringliteral">&quot;abc&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Excpect false for here and is &#39;%s&#39;\n&quot;</span>, ret ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga4155966655d38242fe3662889c4620a4"></a>
@@ -411,14 +445,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks a string for the begin of another string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>C++ string to be checked </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td>C string with which text defined in str1 is checked at the beginning </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if string started with asked text, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -455,14 +491,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks a string for the begin of another string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">s1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s1</td><td>C string to be checked </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td>C string with which text defined in str1 is checked at the beginning </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if string started with asked text, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -499,15 +537,31 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks a string for the begin of another string by ignore of upper-/lowercase. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>C++ string to be checked </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td>C++ string with which text defined in str1 is checked at the beginning </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>True if string started with asked text, false otherwise</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> ret;</div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">ret = <a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga61907fa636b79835b48487dbd6a4831e">kodi::tools::StringUtils::StartsWithNoCase</a>(refstr, <span class="stringliteral">&quot;te&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Excpect true for here and is &#39;%s&#39;\n&quot;</span>, ret ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">ret = <a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga61907fa636b79835b48487dbd6a4831e">kodi::tools::StringUtils::StartsWithNoCase</a>(refstr, <span class="stringliteral">&quot;TEs&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Excpect true for here and is &#39;%s&#39;\n&quot;</span>, ret ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">ret = <a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga61907fa636b79835b48487dbd6a4831e">kodi::tools::StringUtils::StartsWithNoCase</a>(refstr, <span class="stringliteral">&quot;abc&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Excpect false for here and is &#39;%s&#39;\n&quot;</span>, ret ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gacee5da53facca732ec98f4817fa8a2ea"></a>
@@ -543,14 +597,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks a string for the begin of another string by ignore of upper-/lowercase. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>C++ string to be checked </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td>C string with which text defined in str1 is checked at the beginning </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if string started with asked text, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -587,14 +643,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks a string for the begin of another string by ignore of upper-/lowercase. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">s1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s1</td><td>C string to be checked </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td>C string with which text defined in str1 is checked at the beginning </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if string started with asked text, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -631,15 +689,28 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks a string for the ending of another string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>C++ string to be checked </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td>C++ string with which text defined in str1 is checked at the ending </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>True if string ended with asked text, false otherwise</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> ret;</div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">ret = <a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#gaab02a5700a93019a691fa0838d126556">kodi::tools::StringUtils::EndsWith</a>(refstr, <span class="stringliteral">&quot;st&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Excpect true for here and is &#39;%s&#39;\n&quot;</span>, ret ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">ret = <a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#gaab02a5700a93019a691fa0838d126556">kodi::tools::StringUtils::EndsWith</a>(refstr, <span class="stringliteral">&quot;abc&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Excpect false for here and is &#39;%s&#39;\n&quot;</span>, ret ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga18e8e7f89cba1a9be3aa7fed66d1d584"></a>
@@ -675,14 +746,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks a string for the ending of another string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>C++ string to be checked </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td>C string with which text defined in str1 is checked at the ending </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if string ended with asked text, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -719,15 +792,28 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks a string for the ending of another string by ignore of upper-/lowercase. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>C++ string to be checked </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str2</td><td>C++ string with which text defined in str1 is checked at the ending </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>True if string ended with asked text, false otherwise</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">bool</span> ret;</div>
+<div class="line">std::string refstr = <span class="stringliteral">&quot;test&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">ret = <a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#gae44088ade65dff86d1d4c2ab64ca15b2">kodi::tools::StringUtils::EndsWithNoCase</a>(refstr, <span class="stringliteral">&quot;ST&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Excpect true for here and is &#39;%s&#39;\n&quot;</span>, ret ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">ret = <a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#gae44088ade65dff86d1d4c2ab64ca15b2">kodi::tools::StringUtils::EndsWithNoCase</a>(refstr, <span class="stringliteral">&quot;ABC&quot;</span>);</div>
+<div class="line">fprintf(stderr, <span class="stringliteral">&quot;Excpect false for here and is &#39;%s&#39;\n&quot;</span>, ret ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gad758f9ebfb1dec85a3bb55b5230bbf70"></a>
@@ -763,14 +849,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks a string for the ending of another string by ignore of upper-/lowercase. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str1</td><td>C++ string to be checked </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s2</td><td>C string with which text defined in str1 is checked at the ending </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if string ended with asked text, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -807,15 +895,32 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Compare two strings by his calculated alpha numeric values. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>Left string to compare with right </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>Right string to compare with left </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>Return about compare<ul>
+<li>0 if left and right the same</li>
+<li>-1 if right is longer</li>
+<li>1 if left is longer</li>
+<li>&lt; 0 if less equal</li>
+<li>&gt; 0 if more equal</li>
+</ul>
+</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">int64_t ref, var;</div>
+<div class="line"> </div>
+<div class="line">ref = 0;</div>
+<div class="line">var = <a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#gac69e1d8cef9aa3c9555ad1d3c72aace7">kodi::tools::StringUtils::AlphaNumericCompare</a>(L<span class="stringliteral">&quot;123abc&quot;</span>, L<span class="stringliteral">&quot;abc123&quot;</span>);</div>
+<div class="line">EXPECT_LT(var, ref);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga3fcd76a80a6e6eff6f3d3a893d37642a"></a>
@@ -877,14 +982,16 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Check given character is a space. </p>
+<p>Hack to check only first byte of UTF-8 character without this hack "TrimX" functions failed on Win32 and OS X with UTF-8 strings</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>Character to check </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<p>hack to check only first byte of UTF-8 character without this hack "TrimX" functions failed on Win32 and OS X with UTF-8 strings </p>
+<dl class="section return"><dt>Returns</dt><dd>true if space, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -911,9 +1018,11 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks given pointer in string is a UTF8 letter. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Given character values to check, must be minimum array of 2 </td></tr>
   </table>
   </dd>
 </dl>
@@ -953,8 +1062,22 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the string is a natural number, false otherwise. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>true if the string is a natural number, false otherwise.</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">EXPECT_TRUE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a>(<span class="stringliteral">&quot;10&quot;</span>));</div>
+<div class="line">EXPECT_TRUE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a>(<span class="stringliteral">&quot; 10&quot;</span>));</div>
+<div class="line">EXPECT_TRUE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a>(<span class="stringliteral">&quot;0&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a>(<span class="stringliteral">&quot; 1 0&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a>(<span class="stringliteral">&quot;1.0&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a>(<span class="stringliteral">&quot;1.1&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a>(<span class="stringliteral">&quot;0x1&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a>(<span class="stringliteral">&quot;blah&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a>(<span class="stringliteral">&quot;120 h&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a>(<span class="stringliteral">&quot; &quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a>(<span class="stringliteral">&quot;&quot;</span>));</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ga5aea0a7ab232e7cb976bd9e09094012a"></a>
@@ -989,8 +1112,22 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the string is an integer, false otherwise. </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>true if the string is an integer, false otherwise.</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">EXPECT_TRUE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a>(<span class="stringliteral">&quot;10&quot;</span>));</div>
+<div class="line">EXPECT_TRUE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a>(<span class="stringliteral">&quot; -10&quot;</span>));</div>
+<div class="line">EXPECT_TRUE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a>(<span class="stringliteral">&quot;0&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a>(<span class="stringliteral">&quot; 1 0&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a>(<span class="stringliteral">&quot;1.0&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a>(<span class="stringliteral">&quot;1.1&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a>(<span class="stringliteral">&quot;0x1&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a>(<span class="stringliteral">&quot;blah&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a>(<span class="stringliteral">&quot;120 h&quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a>(<span class="stringliteral">&quot; &quot;</span>));</div>
+<div class="line">EXPECT_FALSE(<a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a>(<span class="stringliteral">&quot;&quot;</span>));</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gaf2d20a88ed278b72f7d3664d7be49599"></a>
@@ -1329,7 +1466,9 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Matching value. The higher, the more identical the strings</dd></dl>
 <hr  />
-<p> Example: </p><div class="fragment"><div class="line"><span class="keywordtype">double</span> ref, var;</div>
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">double</span> ref, var;</div>
 <div class="line"> </div>
 <div class="line">ref = 6.25f;</div>
 <div class="line">var = <a class="code" href="group__cpp__kodi__tools___string_utils___compare_control.html#ga3f5e6e8edc3cf2c7a5538b6a24ec565f">kodi::tools::StringUtils::CompareFuzzy</a>(<span class="stringliteral">&quot;test string&quot;</span>, <span class="stringliteral">&quot;string test&quot;</span>);</div>
@@ -1339,7 +1478,15 @@ $(document).ready(function(){initNavTree('group__cpp__kodi__tools___string_utils
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___compare_control_html_ga3f5e6e8edc3cf2c7a5538b6a24ec565f"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___compare_control.html#ga3f5e6e8edc3cf2c7a5538b6a24ec565f">kodi::tools::StringUtils::CompareFuzzy</a></div><div class="ttdeci">static double CompareFuzzy(const std::string &amp;left, const std::string &amp;right)</div><div class="ttdoc">Approximate string matching.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1778</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___compare_control_html_gab9759272795b3332001777bb7b1732d3"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___compare_control.html#gab9759272795b3332001777bb7b1732d3">kodi::tools::StringUtils::EqualsNoCase</a></div><div class="ttdeci">static bool EqualsNoCase(const std::string &amp;str1, const std::string &amp;str2)</div><div class="ttdoc">Compare two strings with ignore of lower-/uppercase.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1478</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___compare_control_html_ga5aea0a7ab232e7cb976bd9e09094012a"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___compare_control.html#ga5aea0a7ab232e7cb976bd9e09094012a">kodi::tools::StringUtils::IsInteger</a></div><div class="ttdeci">static bool IsInteger(const std::string &amp;str)</div><div class="ttdoc">Check whether a string is an integer.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2058</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___compare_control_html_ga8aba8d666243b1bc91f89b468c3554f6"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___compare_control.html#ga8aba8d666243b1bc91f89b468c3554f6">kodi::tools::StringUtils::IsNaturalNumber</a></div><div class="ttdeci">static bool IsNaturalNumber(const std::string &amp;str)</div><div class="ttdoc">Check whether a string is a natural number.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2014</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___compare_control_html_gaa8106135f0a2181123ef690a4a896319"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___compare_control.html#gaa8106135f0a2181123ef690a4a896319">kodi::tools::StringUtils::StartsWith</a></div><div class="ttdeci">static bool StartsWith(const std::string &amp;str1, const std::string &amp;str2)</div><div class="ttdoc">Checks a string for the begin of another string.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1599</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___compare_control_html_gaab02a5700a93019a691fa0838d126556"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___compare_control.html#gaab02a5700a93019a691fa0838d126556">kodi::tools::StringUtils::EndsWith</a></div><div class="ttdeci">static bool EndsWith(const std::string &amp;str1, const std::string &amp;str2)</div><div class="ttdoc">Checks a string for the ending of another string.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1735</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___compare_control_html_ga3f5e6e8edc3cf2c7a5538b6a24ec565f"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___compare_control.html#ga3f5e6e8edc3cf2c7a5538b6a24ec565f">kodi::tools::StringUtils::CompareFuzzy</a></div><div class="ttdeci">static double CompareFuzzy(const std::string &amp;left, const std::string &amp;right)</div><div class="ttdoc">Approximate string matching.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2216</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___compare_control_html_ga61907fa636b79835b48487dbd6a4831e"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___compare_control.html#ga61907fa636b79835b48487dbd6a4831e">kodi::tools::StringUtils::StartsWithNoCase</a></div><div class="ttdeci">static bool StartsWithNoCase(const std::string &amp;str1, const std::string &amp;str2)</div><div class="ttdoc">Checks a string for the begin of another string by ignore of upper-/lowercase.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1668</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___compare_control_html_gae44088ade65dff86d1d4c2ab64ca15b2"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___compare_control.html#gae44088ade65dff86d1d4c2ab64ca15b2">kodi::tools::StringUtils::EndsWithNoCase</a></div><div class="ttdeci">static bool EndsWithNoCase(const std::string &amp;str1, const std::string &amp;str2)</div><div class="ttdoc">Checks a string for the ending of another string by ignore of upper-/lowercase.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1785</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___compare_control_html_gac69e1d8cef9aa3c9555ad1d3c72aace7"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___compare_control.html#gac69e1d8cef9aa3c9555ad1d3c72aace7">kodi::tools::StringUtils::AlphaNumericCompare</a></div><div class="ttdeci">static int64_t AlphaNumericCompare(const wchar_t *left, const wchar_t *right)</div><div class="ttdoc">Compare two strings by his calculated alpha numeric values.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:1853</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

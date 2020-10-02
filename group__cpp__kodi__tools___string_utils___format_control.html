@@ -381,14 +381,57 @@ The length sub-specifier modifies the length of the data type. This is a chart s
 
 <p>Returns bytes in a human readable format using the smallest unit that will fit <code>bytes</code> in at most three digits. The number of decimals are adjusted with significance such that 'small' numbers will have more decimals than larger ones. </p>
 <p>For example: 1024 bytes will be formatted as "1.00kB", 10240 bytes as "10.0kB" and 102400 bytes as "100kB". See TestStringUtils for more examples.</p>
+<p>Supported file sizes: </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Value </th><th class="markdownTableHeadNone">Short </th><th class="markdownTableHeadNone">Metric  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1 </td><td class="markdownTableBodyNone">B </td><td class="markdownTableBodyNone">byte  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">1024¹ </td><td class="markdownTableBodyNone">kB </td><td class="markdownTableBodyNone">kilobyte  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1024² </td><td class="markdownTableBodyNone">MB </td><td class="markdownTableBodyNone">megabyte  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">1024³ </td><td class="markdownTableBodyNone">GB </td><td class="markdownTableBodyNone">gigabyte  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1024 exp 4 </td><td class="markdownTableBodyNone">TB </td><td class="markdownTableBodyNone">terabyte  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">1024 exp 5 </td><td class="markdownTableBodyNone">PB </td><td class="markdownTableBodyNone">petabyte  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1024 exp 6 </td><td class="markdownTableBodyNone">EB </td><td class="markdownTableBodyNone">exabyte  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">1024 exp 7 </td><td class="markdownTableBodyNone">ZB </td><td class="markdownTableBodyNone">zettabyte  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1024 exp 8 </td><td class="markdownTableBodyNone">YB </td><td class="markdownTableBodyNone">yottabyte  </td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">bytes</td><td>Bytes amount to return as human readable string </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Size as string </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>Size as string</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;0B&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(0).c_str());</div>
+<div class="line"> </div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;999B&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(999).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;0.98kB&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(1000).c_str());</div>
+<div class="line"> </div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;1.00kB&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(1024).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;9.99kB&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(10229).c_str());</div>
+<div class="line"> </div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;10.1kB&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(10387).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;99.9kB&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(102297).c_str());</div>
+<div class="line"> </div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;100kB&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(102400).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;999kB&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(1023431).c_str());</div>
+<div class="line"> </div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;0.98MB&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(1023897).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;0.98MB&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(1024000).c_str());</div>
+<div class="line"> </div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;5.30EB&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a>(6115888293969133568).c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="gabcad6af74090ef3329feb592b4c30ba7"></a>
@@ -459,13 +502,26 @@ The length sub-specifier modifies the length of the data type. This is a chart s
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Converted string </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>Converted string</dd></dl>
+<hr  />
+<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gacc9a99ad9b64eb7f0cfb1eda1b5d9ce1">kodi::tools::StringUtils::ToHexadecimal</a>(<span class="stringliteral">&quot;&quot;</span>).c_str());</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;616263&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gacc9a99ad9b64eb7f0cfb1eda1b5d9ce1">kodi::tools::StringUtils::ToHexadecimal</a>(<span class="stringliteral">&quot;abc&quot;</span>).c_str());</div>
+<div class="line">std::string a{<span class="stringliteral">&quot;a\0b\n&quot;</span>, 4};</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;6100620a&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gacc9a99ad9b64eb7f0cfb1eda1b5d9ce1">kodi::tools::StringUtils::ToHexadecimal</a>(a).c_str());</div>
+<div class="line">std::string nul{<span class="stringliteral">&quot;\0&quot;</span>, 1};</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;00&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gacc9a99ad9b64eb7f0cfb1eda1b5d9ce1">kodi::tools::StringUtils::ToHexadecimal</a>(nul).c_str());</div>
+<div class="line">std::string ff{<span class="stringliteral">&quot;\xFF&quot;</span>, 1};</div>
+<div class="line">EXPECT_STREQ(<span class="stringliteral">&quot;ff&quot;</span>, <a class="code" href="group__cpp__kodi__tools___string_utils___format_control.html#gacc9a99ad9b64eb7f0cfb1eda1b5d9ce1">kodi::tools::StringUtils::ToHexadecimal</a>(ff).c_str());</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___format_control_html_gaf26d49bc605ab3f53c043450da3c94f7"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___format_control.html#gaf26d49bc605ab3f53c043450da3c94f7">kodi::tools::StringUtils::Format</a></div><div class="ttdeci">static std::string Format(const char *fmt,...)</div><div class="ttdoc">Returns the C++ string pointed by given format. If format includes format specifiers (subsequences be...</div><div class="ttdef"><b>Definition:</b> StringUtils.h:539</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___format_control_html_gaf26d49bc605ab3f53c043450da3c94f7"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___format_control.html#gaf26d49bc605ab3f53c043450da3c94f7">kodi::tools::StringUtils::Format</a></div><div class="ttdeci">static std::string Format(const char *fmt,...)</div><div class="ttdoc">Returns the C++ string pointed by given format. If format includes format specifiers (subsequences be...</div><div class="ttdef"><b>Definition:</b> StringUtils.h:553</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___format_control_html_gae7684e39fbded4ae2fddbc51e3853776"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___format_control.html#gae7684e39fbded4ae2fddbc51e3853776">kodi::tools::StringUtils::FormatFileSize</a></div><div class="ttdeci">static std::string FormatFileSize(uint64_t bytes)</div><div class="ttdoc">Returns bytes in a human readable format using the smallest unit that will fit bytes in at most three...</div><div class="ttdef"><b>Definition:</b> StringUtils.h:751</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___format_control_html_gacc9a99ad9b64eb7f0cfb1eda1b5d9ce1"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___format_control.html#gacc9a99ad9b64eb7f0cfb1eda1b5d9ce1">kodi::tools::StringUtils::ToHexadecimal</a></div><div class="ttdeci">static std::string ToHexadecimal(const std::string &amp;in)</div><div class="ttdoc">Convert each character in the string to its hexadecimal representation and return the concatenated re...</div><div class="ttdef"><b>Definition:</b> StringUtils.h:833</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
