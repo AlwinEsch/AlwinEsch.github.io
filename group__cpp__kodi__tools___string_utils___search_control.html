@@ -230,80 +230,6 @@ Various functions are defined in here which allow you to search through a text i
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="gac91f616ea18ca276f3b7271e9376f601"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac91f616ea18ca276f3b7271e9376f601">&#9670;&nbsp;</a></span>FindBestMatch()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static int FindBestMatch </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>strings</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>matchscore</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Check a text with the given list of strings and find the one that best matches it. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>String to search for best match </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strings</td><td>List of strings to search with </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">matchscore</td><td>Score how much it match for asked strings<ul>
-<li>0.0 = nothing</li>
-<li>1.0 = Match complete </li>
-</ul>
-</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of most matching value in strings list, -1 if nothing</dd></dl>
-<hr  />
-<p> Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;kodi/tools/StringUtils.h&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">double</span> refdouble, vardouble;</div>
-<div class="line"><span class="keywordtype">int</span> refint, varint;</div>
-<div class="line">std::vector&lt;std::string&gt; strarray;</div>
-<div class="line"> </div>
-<div class="line">refint = 3;</div>
-<div class="line">refdouble = 0.5625f;</div>
-<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;a&quot;</span>);</div>
-<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;e&quot;</span>);</div>
-<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;es&quot;</span>);</div>
-<div class="line">strarray.emplace_back(<span class="stringliteral">&quot;t&quot;</span>);</div>
-<div class="line">varint = <a class="code" href="group__cpp__kodi__tools___string_utils___search_control.html#gac91f616ea18ca276f3b7271e9376f601">kodi::tools::StringUtils::FindBestMatch</a>(<span class="stringliteral">&quot;test&quot;</span>, strarray, vardouble);</div>
-<div class="line">EXPECT_EQ(refint, varint);</div>
-<div class="line">EXPECT_EQ(refdouble, vardouble);</div>
-</div><!-- fragment --> 
-</div>
-</div>
 <a id="ga08b4fc40d3b801462f736b5ad65c857d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga08b4fc40d3b801462f736b5ad65c857d">&#9670;&nbsp;</a></span>FindNumber()</h2>
 
@@ -357,10 +283,9 @@ Various functions are defined in here which allow you to search through a text i
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___search_control_html_gac91f616ea18ca276f3b7271e9376f601"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___search_control.html#gac91f616ea18ca276f3b7271e9376f601">kodi::tools::StringUtils::FindBestMatch</a></div><div class="ttdeci">static int FindBestMatch(const std::string &amp;str, const std::vector&lt; std::string &gt; &amp;strings, double &amp;matchscore)</div><div class="ttdoc">Check a text with the given list of strings and find the one that best matches it.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2390</div></div>
-<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___search_control_html_gaaecf54d44ec6d38cc760775afefb4a86"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___search_control.html#gaaecf54d44ec6d38cc760775afefb4a86">kodi::tools::StringUtils::FindWords</a></div><div class="ttdeci">static size_t FindWords(const char *str, const char *wordLowerCase)</div><div class="ttdoc">Search for a single word within a text.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2264</div></div>
-<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___search_control_html_ga08b4fc40d3b801462f736b5ad65c857d"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___search_control.html#ga08b4fc40d3b801462f736b5ad65c857d">kodi::tools::StringUtils::FindNumber</a></div><div class="ttdeci">static int FindNumber(const std::string &amp;strInput, const std::string &amp;strFind)</div><div class="ttdoc">Search a text and return the number of parts found as a number.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2430</div></div>
-<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___search_control_html_ga850efdca0fc9e1ceffe2d7d251aefa78"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___search_control.html#ga850efdca0fc9e1ceffe2d7d251aefa78">kodi::tools::StringUtils::FindEndBracket</a></div><div class="ttdeci">static int FindEndBracket(const std::string &amp;str, char opener, char closer, int startPos=0)</div><div class="ttdoc">Search a string for a given bracket and give its end position.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2335</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___search_control_html_gaaecf54d44ec6d38cc760775afefb4a86"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___search_control.html#gaaecf54d44ec6d38cc760775afefb4a86">kodi::tools::StringUtils::FindWords</a></div><div class="ttdeci">static size_t FindWords(const char *str, const char *wordLowerCase)</div><div class="ttdoc">Search for a single word within a text.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2232</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___search_control_html_ga08b4fc40d3b801462f736b5ad65c857d"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___search_control.html#ga08b4fc40d3b801462f736b5ad65c857d">kodi::tools::StringUtils::FindNumber</a></div><div class="ttdeci">static int FindNumber(const std::string &amp;strInput, const std::string &amp;strFind)</div><div class="ttdoc">Search a text and return the number of parts found as a number.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2342</div></div>
+<div class="ttc" id="agroup__cpp__kodi__tools___string_utils___search_control_html_ga850efdca0fc9e1ceffe2d7d251aefa78"><div class="ttname"><a href="group__cpp__kodi__tools___string_utils___search_control.html#ga850efdca0fc9e1ceffe2d7d251aefa78">kodi::tools::StringUtils::FindEndBracket</a></div><div class="ttdeci">static int FindEndBracket(const std::string &amp;str, char opener, char closer, int startPos=0)</div><div class="ttdoc">Search a string for a given bracket and give its end position.</div><div class="ttdef"><b>Definition:</b> StringUtils.h:2303</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

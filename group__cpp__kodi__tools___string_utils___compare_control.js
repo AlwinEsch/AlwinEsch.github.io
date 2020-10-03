@@ -28,6 +28,5 @@ var group__cpp__kodi__tools___string_utils___compare_control =
     [ "IsAsciiUppercaseLetter", "group__cpp__kodi__tools___string_utils___compare_control.html#ga1bcd07bc0c542b3b2c80502ccfd59888", null ],
     [ "IsAsciiLowercaseLetter", "group__cpp__kodi__tools___string_utils___compare_control.html#ga6b2392175b552a3bb64e0ebc2916ceed", null ],
     [ "IsAsciiAlphaNum", "group__cpp__kodi__tools___string_utils___compare_control.html#ga30c47850b7171eb40245b1358b8b9093", null ],
-    [ "ContainsKeyword", "group__cpp__kodi__tools___string_utils___compare_control.html#ga244e0e12cf966a61691ba52e7e9694c5", null ],
-    [ "CompareFuzzy", "group__cpp__kodi__tools___string_utils___compare_control.html#ga3f5e6e8edc3cf2c7a5538b6a24ec565f", null ]
+    [ "ContainsKeyword", "group__cpp__kodi__tools___string_utils___compare_control.html#ga244e0e12cf966a61691ba52e7e9694c5", null ]
 ];

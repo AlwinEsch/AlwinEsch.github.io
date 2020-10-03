@@ -55,9 +55,9 @@ var NAVTREEINDEX =
 "group__cpp__kodi__gui___defs__action__ids.html#gga62be855be162fe7ce2ceaf15fcb53a4aa997208c1c7cc4554f8b4f8e7f6ec758d",
 "group__cpp__kodi__gui__dialogs___numeric.html#gadcf13d0205ffd72306efa378092ab4bc",
 "group__cpp__kodi__network.html#ga9489694a7f37becb821e5f78caafdb96",
-"group__python___dialog_progress_b_g.html#ga51dead1cfadfb0c6438ed3a44639ea5e",
-"group__python__xbmcgui__control.html#ga13f0d1327712c41f0675c8772b9080f9",
-"skin__button_control.html"
+"group__cpp__kodi__vfs___general.html#gaab200806b3d98114df47dce140dcbcf9",
+"group__python__xbmcaddon.html#ga19050fb2822da5f0cbd8cdaad40b8b3f",
+"page__list_of_built_in_functions.html#built_in_functions_12"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
