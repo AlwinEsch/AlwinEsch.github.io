@@ -1,12 +1,14 @@
 var group__python__xbmc =
 [
-    [ "Keyboard", "group__python__keyboard.html", "group__python__keyboard" ],
+    [ "InfoTagGame", "group__python___info_tag_game.html", "group__python___info_tag_game" ],
     [ "InfoTagMusic", "group__python___info_tag_music.html", "group__python___info_tag_music" ],
-    [ "Actor", "group__python__xbmc__actor.html", "group__python__xbmc__actor" ],
-    [ "Monitor", "group__python__monitor.html", "group__python__monitor" ],
+    [ "InfoTagPicture", "group__python___info_tag_picture.html", "group__python___info_tag_picture" ],
     [ "InfoTagRadioRDS", "group__python___info_tag_radio_r_d_s.html", "group__python___info_tag_radio_r_d_s" ],
-    [ "PlayList", "group__python___play_list.html", "group__python___play_list" ],
+    [ "Actor", "group__python__xbmc__actor.html", "group__python__xbmc__actor" ],
+    [ "Keyboard", "group__python__keyboard.html", "group__python__keyboard" ],
+    [ "Monitor", "group__python__monitor.html", "group__python__monitor" ],
     [ "Player", "group__python___player.html", "group__python___player" ],
+    [ "PlayList", "group__python___play_list.html", "group__python___play_list" ],
     [ "RenderCapture", "group__python__xbmc___render_capture.html", "group__python__xbmc___render_capture" ],
     [ "log", "group__python__xbmc.html#ga3cd3eff2195727144ad6fbabd4744961", null ],
     [ "shutdown", "group__python__xbmc.html#ga482087c71391537bfe6fece68a58d420", null ],

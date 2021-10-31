@@ -98,6 +98,336 @@ $(document).ready(function(){initNavTree('group__python__xbmcdrm.html',''); init
 <div class="title">Library - xbmcdrm<div class="ingroups"><a class="el" href="group__python.html">Python</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p><b>Kodi's DRM class.</b> </p>
+<p>Offers classes and functions that allow a developer to work with DRM-protected contents like Widevine.</p>
+<p>This type of functionality is closely related to the type of DRM used and the service to be implemented.</p>
+<p>Using the <a class="el" href="group__python__xbmcdrm.html#xbmcdrm_CryptoSession">CryptoSession</a> constructor allow you to have access to a DRM session. With a DRM session you can read and write the DRM properties <a class="el" href="group__python__xbmcdrm.html#xbmcdrm_GetPropertyString">GetPropertyString</a>, <a class="el" href="group__python__xbmcdrm.html#xbmcdrm_SetPropertyString">SetPropertyString</a> and establish session keys with GetKeyRequest and <a class="el" href="group__python__xbmcdrm.html#xbmcdrm_ProvideKeyResponse">ProvideKeyResponse</a>, or resume previous session keys with <a class="el" href="group__python__xbmcdrm.html#xbmcdrm_RestoreKeys">RestoreKeys</a>.</p>
+<p>When the session keys are established you can use these methods to perform various operations: <a class="el" href="group__python__xbmcdrm.html#xbmcdrm_Encrypt">Encrypt</a> / <a class="el" href="group__python__xbmcdrm.html#xbmcdrm_Decrypt">Decrypt</a> for data encryption / decryption, <a class="el" href="group__python__xbmcdrm.html#xbmcdrm_Sign">Sign</a> / <a class="el" href="group__python__xbmcdrm.html#xbmcdrm_Verify">Verify</a> for make or verify data-signature. Useful for example to implement encrypted communication between a client and the server.</p>
+<p>An example where such functionality is useful is the Message Security Layer (MSL) transmission protocol used in some VOD applications. This protocol (or rather framework) is used to increase the level of security in the exchange of messages (such as licences, manifests or other data), which defines a security extension / layer on top of the HTTP protocol.</p>
+<hr  />
+<p> Constructor for DRM crypto session</p>
+<p><a class="anchor" id="xbmcdrm_CryptoSession"></a> <h4><code><span style="font-style: italic;">Class: </span><span style="font-style: bold;"><font color=31363b><big> xbmcdrm.CryptoSession(UUID, cipherAlgorithm, macAlgorithm) </big></font></span></code></h4> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">UUID</td><td>string - 16 byte UUID of the DRM system to use </td></tr>
+    <tr><td class="paramname">cipherAlgorithm</td><td>string - Algorithm used for encryption / decryption ciphers </td></tr>
+    <tr><td class="paramname">macAlgorithm</td><td>string - Algorithm used for sign / verify</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RuntimeException</td><td>If the session can not be established</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000020">v18 Python API changes:</a></b></dt><dd>New class added.</dd></dl>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">..</div>
+<div class="line">uuid_widevine = <span class="stringliteral">&#39;edef8ba9-79d6-4ace-a3c8-27dcd51d21ed&#39;</span></div>
+<div class="line">crypto_session = xbmcdrm.CryptoSession(uuid_widevine, <span class="stringliteral">&#39;AES/CBC/NoPadding&#39;</span>, <span class="stringliteral">&#39;HmacSHA256&#39;</span>)</div>
+<div class="line">..</div>
+</div><!-- fragment --> <h2 class="groupheader">Function Documentation</h2>
+<a id="ga47390e5708270f8039930f96533395c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga47390e5708270f8039930f96533395c5">&#9670;&nbsp;</a></span>GetKeyRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GetKeyRequest </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> GetKeyRequest(init, mimeType, offlineKey, optionalParameters) </big></font></span></code></h4><hr>  Generate a key request </p>
+<p>Generate a key request, used for request/response exchange between the app and a license server to obtain or release keys used to decrypt encrypted content. After the app has received the key request response from the license server, it should deliver to the response to the DRM instance using the method <a class="el" href="group__python__xbmcdrm.html#xbmcdrm_ProvideKeyResponse">ProvideKeyResponse</a>, to activate the keys. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">init</td><td>byte - Initialization bytes container-specific data, its meaning is interpreted based on the mime type provided in the mimeType parameter. It could contain, for example, the content ID, key ID or other data required in generating the key request. </td></tr>
+    <tr><td class="paramname">mimeType</td><td>string - Type of media which is exchanged (e.g. "application/xml", "video/mp4") </td></tr>
+    <tr><td class="paramname">offlineKey</td><td>bool - Specifies the type of the request. The request may be to acquire keys for Streaming or Offline content </td></tr>
+    <tr><td class="paramname">optionalParameters</td><td>[opt] map - Will be included in the key request message to allow a client application to provide additional message parameters to the server</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>byte - The opaque key request data (challenge) which is send to key server</dd></dl>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000021">v18 Python API changes:</a></b></dt><dd>New function added. </dd></dl>
+<dl class="python_v19"><dt><b><a class="el" href="python_v19.html#_python_v19000013">v19 Python API changes:</a></b></dt><dd>With python 3 the init param must be a bytearray instead of byte.</dd></dl>
+
+</div>
+</div>
+<a id="ga307a97af88ea582704f4cf1376cb9ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga307a97af88ea582704f4cf1376cb9ce0">&#9670;&nbsp;</a></span>GetPropertyString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GetPropertyString </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> GetPropertyString(name) </big></font></span></code></h4><hr>  Request a system specific property value of the DRM system. </p>
+<p><a class="anchor" id="xbmcdrm_GetPropertyString"></a></p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Name</td><td>string - Name of the property to query</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Value of the requested property</dd></dl>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000022">v18 Python API changes:</a></b></dt><dd>New function added.</dd></dl>
+
+</div>
+</div>
+<a id="gabc2eb6294bc37c292fcc7514e9006fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc2eb6294bc37c292fcc7514e9006fbf">&#9670;&nbsp;</a></span>ProvideKeyResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProvideKeyResponse </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> ProvideKeyResponse(response) </big></font></span></code></h4><hr>  Provide a key response </p>
+<p><a class="anchor" id="xbmcdrm_ProvideKeyResponse"></a> When a key response is received from the license server, must be sent to the DRM instance by using provideKeyResponse. See also GetKeyRequest.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">response</td><td>byte - Key data returned from the license server</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A keySetId if the response is for an offline key requests which can be used later with restoreKeys, else return empty for streaming key requests.</dd></dl>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000023">v18 Python API changes:</a></b></dt><dd>New function added. </dd></dl>
+<dl class="python_v19"><dt><b><a class="el" href="python_v19.html#_python_v19000014">v19 Python API changes:</a></b></dt><dd>With python 3 the response argument must be a bytearray instead of byte.</dd></dl>
+
+</div>
+</div>
+<a id="ga46218c5bbaf8981215e88eb2390009bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga46218c5bbaf8981215e88eb2390009bf">&#9670;&nbsp;</a></span>RemoveKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RemoveKeys </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> RemoveKeys() </big></font></span></code></h4><hr>  Removes all keys currently loaded in a session. </p>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000024">v18 Python API changes:</a></b></dt><dd>New function added.</dd></dl>
+
+</div>
+</div>
+<a id="ga66788d6a81a9525a0bef8b28288de6ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66788d6a81a9525a0bef8b28288de6ec">&#9670;&nbsp;</a></span>RestoreKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RestoreKeys </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> RestoreKeys(keySetId) </big></font></span></code></h4><hr>  Restores session keys stored during previous <a class="el" href="group__python__xbmcdrm.html#xbmcdrm_ProvideKeyResponse">ProvideKeyResponse</a> call. <a class="anchor" id="xbmcdrm_RestoreKeys"></a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keySetId</td><td>string - Identifies the saved key set to restore. This value must never be null.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000025">v18 Python API changes:</a></b></dt><dd>New function added.</dd></dl>
+
+</div>
+</div>
+<a id="gadf0f272f658820dc3a37efc403442433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf0f272f658820dc3a37efc403442433">&#9670;&nbsp;</a></span>SetPropertyString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SetPropertyString </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> SetPropertyString(name, value) </big></font></span></code></h4><hr>  Set a system specific property value in the DRM system. </p>
+<p><a class="anchor" id="xbmcdrm_SetPropertyString"></a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>string - Name of the property. This value must never be null. </td></tr>
+    <tr><td class="paramname">value</td><td>string - Value of the property to set. This value must never be null.</td></tr>
+  </table>
+  </dd>
+</dl>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000026">v18 Python API changes:</a></b></dt><dd>New function added.</dd></dl>
+
+</div>
+</div>
+<a id="gab0c377c08ff8b79aca4157c8da659005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0c377c08ff8b79aca4157c8da659005">&#9670;&nbsp;</a></span>Decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Decrypt </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> Decrypt(cipherKeyId, input, iv) </big></font></span></code></h4><hr>  Decrypt an encrypted data by using session keys. </p>
+<p><a class="anchor" id="xbmcdrm_Decrypt"></a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cipherKeyId</td><td>byte - Encryption key id (provided from a service handshake) </td></tr>
+    <tr><td class="paramname">input</td><td>byte - Cipher text to decrypt </td></tr>
+    <tr><td class="paramname">iv</td><td>byte - Initialization vector of cipher text</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Decrypted input data</dd></dl>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000027">v18 Python API changes:</a></b></dt><dd>New function added. </dd></dl>
+<dl class="python_v19"><dt><b><a class="el" href="python_v19.html#_python_v19000015">v19 Python API changes:</a></b></dt><dd>With python 3 all arguments need to be of type bytearray instead of byte.</dd></dl>
+
+</div>
+</div>
+<a id="gad3859268c49aea4b66295579254a460a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3859268c49aea4b66295579254a460a">&#9670;&nbsp;</a></span>Encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Encrypt </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> Encrypt(cipherKeyId, input, iv) </big></font></span></code></h4><hr>  Encrypt data by using session keys. </p>
+<p><a class="anchor" id="xbmcdrm_Encrypt"></a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cipherKeyId</td><td>byte - Encryption key id (provided from a service handshake) </td></tr>
+    <tr><td class="paramname">input</td><td>byte - Encrypted text </td></tr>
+    <tr><td class="paramname">iv</td><td>byte - Initialization vector of encrypted text</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>byte - Encrypted input data</dd></dl>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000028">v18 Python API changes:</a></b></dt><dd>New function added. </dd></dl>
+<dl class="python_v19"><dt><b><a class="el" href="python_v19.html#_python_v19000016">v19 Python API changes:</a></b></dt><dd>With python 3 all arguments need to be of type bytearray instead of byte.</dd></dl>
+
+</div>
+</div>
+<a id="ga091b2d2e1d43ca16400ff0d83b4d2ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga091b2d2e1d43ca16400ff0d83b4d2ac5">&#9670;&nbsp;</a></span>Sign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sign </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> Sign(macKeyId, message) </big></font></span></code></h4><hr>  Generate a DRM encrypted signature for a text message. </p>
+<p><a class="anchor" id="xbmcdrm_Sign"></a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">macKeyId</td><td>byte - HMAC key id (provided from a service handshake) </td></tr>
+    <tr><td class="paramname">message</td><td>byte - Message text on which to base the signature</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>byte - Signature</dd></dl>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000029">v18 Python API changes:</a></b></dt><dd>New function added. </dd></dl>
+<dl class="python_v19"><dt><b><a class="el" href="python_v19.html#_python_v19000017">v19 Python API changes:</a></b></dt><dd>With python 3 all arguments need to be of type bytearray instead of byte.</dd></dl>
+
+</div>
+</div>
+<a id="ga45f3393207589bb8c5dbef238fb6a303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga45f3393207589bb8c5dbef238fb6a303">&#9670;&nbsp;</a></span>Verify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Verify </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p> <h4><code><span style="font-style: italic;">Function: </span><span style="font-style: bold;"><font color=31363b><big> Verify(macKeyId, message, signature) </big></font></span></code></h4><hr>  Verify the validity of a DRM signature of a text message. </p>
+<p><a class="anchor" id="xbmcdrm_Verify"></a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">macKeyId</td><td>byte - HMAC key id (provided from a service handshake) </td></tr>
+    <tr><td class="paramname">message</td><td>byte - Message text on which the signature is based </td></tr>
+    <tr><td class="paramname">signature</td><td>byte - The signature to verify</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true when the signature is valid</dd></dl>
+<hr  />
+ <dl class="python_v18"><dt><b><a class="el" href="python_v18.html#_python_v18000030">v18 Python API changes:</a></b></dt><dd>New function added. </dd></dl>
+<dl class="python_v19"><dt><b><a class="el" href="python_v19.html#_python_v19000018">v19 Python API changes:</a></b></dt><dd>With python 3 for all arguments is needed to pass bytearray instead of byte.</dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

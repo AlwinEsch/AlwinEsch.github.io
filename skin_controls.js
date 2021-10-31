@@ -10,6 +10,16 @@ var skin_controls =
       [ "Available tags", "skin__button_control.html#skin_Button_control_sect2", null ],
       [ "See also", "skin__button_control.html#skin_Button_control_sect3", null ]
     ] ],
+    [ "Color button control", "_color_button_control.html", [
+      [ "Example", "_color_button_control.html#Color_button_control_sect1", null ],
+      [ "Available tags", "_color_button_control.html#Color_button_control_sect2", null ],
+      [ "See also", "_color_button_control.html#Color_button_control_sect3", null ]
+    ] ],
+    [ "EPGGrid control", "_e_p_g_grid_control.html", [
+      [ "Example", "_e_p_g_grid_control.html#EPGGrid_control_sect1", null ],
+      [ "Available tags", "_e_p_g_grid_control.html#EPGGrid_control_sect2", null ],
+      [ "See also", "_e_p_g_grid_control.html#EPGGrid_control_sect3", null ]
+    ] ],
     [ "Edit control", "skin__edit_control.html", [
       [ "Example", "skin__edit_control.html#skin_Edit_control_sect1", null ],
       [ "Available tags", "skin__edit_control.html#skin_Edit_control_sect2", null ],
@@ -23,6 +33,11 @@ var skin_controls =
     [ "Fixed List Container", "_fixed__list__container.html", [
       [ "Available tags", "_fixed__list__container.html#Fixed_List_Container_sect2", null ],
       [ "See also", "_fixed__list__container.html#Fixed_List_Container_sect3", null ]
+    ] ],
+    [ "Game Control", "_game__control.html", [
+      [ "Example", "_game__control.html#Game_Control_sect1", null ],
+      [ "Available tags", "_game__control.html#Game_Control_sect2", null ],
+      [ "See also", "_game__control.html#Game_Control_sect3", null ]
     ] ],
     [ "Group Control", "_group__control.html", [
       [ "Example", "_group__control.html#Group_Control_sect1", null ],
@@ -87,6 +102,12 @@ var skin_controls =
         [ "RssFeeds.xml", "_r_s_s_feed__control.html#RSS_feed_Control_sect2_3", null ]
       ] ],
       [ "See also", "_r_s_s_feed__control.html#RSS_feed_Control_sect3", null ]
+    ] ],
+    [ "Ranges Control", "_ranges__control.html", [
+      [ "Example", "_ranges__control.html#Ranges_Control_sect1", null ],
+      [ "Available tags", "_ranges__control.html#Ranges_Control_sect2", null ],
+      [ "Revision History", "_ranges__control.html#Ranges_Control_sect3", null ],
+      [ "See also", "_ranges__control.html#Ranges_Control_sect4", null ]
     ] ],
     [ "Radio button control", "_radio_button_control.html", [
       [ "Example", "_radio_button_control.html#Radio_button_control_sect1", null ],

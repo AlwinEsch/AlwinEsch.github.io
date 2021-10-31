@@ -1,5 +1,6 @@
 var group__python__xbmcaddon =
 [
+    [ "Settings", "group__python__settings.html", "group__python__settings" ],
     [ "getLocalizedString", "group__python__xbmcaddon.html#ga82834997987f068af982d91feb40bf9f", null ],
     [ "getSettings", "group__python__xbmcaddon.html#ga0e0ca349df84319ef8864fdb615ac138", null ],
     [ "getSetting", "group__python__xbmcaddon.html#ga8739303a25018f275578b17e35602793", null ],
