@@ -1,0 +1,25 @@
+var group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata =
+[
+    [ "Value Help", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata___help.html", null ],
+    [ "operator==", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#gaff3b519f4e2adea9cda04dd898cf22b7", null ],
+    [ "SetPrimaryR_ChromaticityX", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#ga92b0dbff947020516ace04d5b374368a", null ],
+    [ "GetPrimaryR_ChromaticityX", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#gae3ceaf9ad66ce0d92b22f912e15b6621", null ],
+    [ "SetPrimaryR_ChromaticityY", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#gacf10cddda959072376c9b67b5bbcc97e", null ],
+    [ "GetPrimaryR_ChromaticityY", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#ga45e2eece1cbba0774af3a2f4878b5100", null ],
+    [ "SetPrimaryG_ChromaticityX", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#gabf4b0f5914e55631a4eb9cd4cd27ae93", null ],
+    [ "GetPrimaryG_ChromaticityX", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#ga0312e29fbb233806d0bffd053a48f215", null ],
+    [ "SetPrimaryG_ChromaticityY", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#ga81b8ef315b8109fa97274657b5d62f20", null ],
+    [ "GetPrimaryG_ChromaticityY", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#ga3143f93f809e14d2dd676a7854983ff0", null ],
+    [ "SetPrimaryB_ChromaticityX", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#gad78b535a06a7c8c2076fd3ff11ace838", null ],
+    [ "GetPrimaryB_ChromaticityX", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#gad2fc0b5ee21b8b635c145b9d03b359c0", null ],
+    [ "SetPrimaryB_ChromaticityY", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#ga6c80fe165bdb99c8f348878770aad392", null ],
+    [ "GetPrimaryB_ChromaticityY", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#ga517cfda6c3a91b537e3f316dd5ce6c96", null ],
+    [ "SetWhitePoint_ChromaticityX", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#ga69ebcbf12ff8b4e3491a04b2dd02ac14", null ],
+    [ "GetWhitePoint_ChromaticityX", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#gad6c6233f7b602da5d351c2fa1e75026e", null ],
+    [ "SetWhitePoint_ChromaticityY", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#ga5a29e44f3fd38fd44838f656f94289a8", null ],
+    [ "GetWhitePoint_ChromaticityY", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#gaf5164af8932be8239a5306946cafb44a", null ],
+    [ "SetLuminanceMax", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#gac45b04ee0b825524a73b03d9c5542648", null ],
+    [ "GetLuminanceMax", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#ga712b360ff552feb75637f4c163296c79", null ],
+    [ "SetLuminanceMin", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#gaa9770e6af90b94fe0e16f8ce608b6695", null ],
+    [ "GetLuminanceMin", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html#ga284adfb3b554aada1994e5e589643e0a", null ]
+];

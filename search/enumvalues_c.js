@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['vc_5fbuffer_6586',['VC_BUFFER',['../group__cpp__kodi__addon__videocodec___defs.html#gga04d2d16cda11704bd44448cee4a8de0baf11de39b8315926151996458ac3f1365',1,'video_codec.h']]],
+  ['vc_5feof_6587',['VC_EOF',['../group__cpp__kodi__addon__videocodec___defs.html#gga04d2d16cda11704bd44448cee4a8de0ba005cc270b68a4f902e01b7c15a1fc9e3',1,'video_codec.h']]],
+  ['vc_5ferror_6588',['VC_ERROR',['../group__cpp__kodi__addon__videocodec___defs.html#gga04d2d16cda11704bd44448cee4a8de0badbf26bff027ee33db7ee786d642aeeb4',1,'video_codec.h']]],
+  ['vc_5fnone_6589',['VC_NONE',['../group__cpp__kodi__addon__videocodec___defs.html#gga04d2d16cda11704bd44448cee4a8de0ba7336af52daff15b113eedc662b785652',1,'video_codec.h']]],
+  ['vc_5fpicture_6590',['VC_PICTURE',['../group__cpp__kodi__addon__videocodec___defs.html#gga04d2d16cda11704bd44448cee4a8de0baef9562bc32ab6f36824e8a79edbe6933',1,'video_codec.h']]],
+  ['videocodec_5fformat_5fi420_6591',['VIDEOCODEC_FORMAT_I420',['../group__cpp__kodi__addon__videocodec___defs___video_codec_initdata.html#ggab0b1f25d1429b3c487d46b53c53d0712a6daec632afb29872690d34f100d39139',1,'video_codec.h']]],
+  ['videocodec_5fformat_5fmaxformats_6592',['VIDEOCODEC_FORMAT_MAXFORMATS',['../group__cpp__kodi__addon__videocodec___defs___video_codec_initdata.html#ggab0b1f25d1429b3c487d46b53c53d0712aa59c495b3de149dd22d74cd6a085cbd0',1,'video_codec.h']]],
+  ['videocodec_5fformat_5funknown_6593',['VIDEOCODEC_FORMAT_UNKNOWN',['../group__cpp__kodi__addon__videocodec___defs___video_codec_initdata.html#ggab0b1f25d1429b3c487d46b53c53d0712ae26a7a8e846e6ce7d80137a5be514916',1,'video_codec.h']]],
+  ['videocodec_5fformat_5fyv12_6594',['VIDEOCODEC_FORMAT_YV12',['../group__cpp__kodi__addon__videocodec___defs___video_codec_initdata.html#ggab0b1f25d1429b3c487d46b53c53d0712addf0aaae45ead923640c6dbe631a59d7',1,'video_codec.h']]],
+  ['videocodec_5fh264_6595',['VIDEOCODEC_H264',['../group__cpp__kodi__addon__videocodec___defs___video_codec_initdata.html#gga738f95706f29677c1ff083607222fb4fa04a44e2818ad0ef41df1343062bc4da6',1,'video_codec.h']]],
+  ['videocodec_5fpicture_5fflag_5fdrain_6596',['VIDEOCODEC_PICTURE_FLAG_DRAIN',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#gga3d32604183c9f5a31eeff6eee9ec5076a142cf5cc9bf59059d9dd704f83bd0d42',1,'video_codec.h']]],
+  ['videocodec_5fpicture_5fflag_5fdrop_6597',['VIDEOCODEC_PICTURE_FLAG_DROP',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#gga3d32604183c9f5a31eeff6eee9ec5076ab7fafcc0e87543cbbc2e9433caa10b1e',1,'video_codec.h']]],
+  ['videocodec_5fpicture_5fflag_5fnone_6598',['VIDEOCODEC_PICTURE_FLAG_NONE',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#gga3d32604183c9f5a31eeff6eee9ec5076aee539f2483e40cd6ba1ee01514adef63',1,'video_codec.h']]],
+  ['videocodec_5fpicture_5fmaxplanes_6599',['VIDEOCODEC_PICTURE_MAXPLANES',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#ggadad964ed3eac5457d9dc3cce3523c9f3af97bbaa09946a09e7f0dd7369c81456f',1,'video_codec.h']]],
+  ['videocodec_5fpicture_5fu_5fplane_6600',['VIDEOCODEC_PICTURE_U_PLANE',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#ggadad964ed3eac5457d9dc3cce3523c9f3a6100685075139c8ab1a7cebe62c3c22e',1,'video_codec.h']]],
+  ['videocodec_5fpicture_5fv_5fplane_6601',['VIDEOCODEC_PICTURE_V_PLANE',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#ggadad964ed3eac5457d9dc3cce3523c9f3a1008369a90351e01ef6d774afe26b612',1,'video_codec.h']]],
+  ['videocodec_5fpicture_5fy_5fplane_6602',['VIDEOCODEC_PICTURE_Y_PLANE',['../group__cpp__kodi__addon__videocodec___defs___v_i_d_e_o_c_o_d_e_c___p_i_c_t_u_r_e.html#ggadad964ed3eac5457d9dc3cce3523c9f3a9df9b4b32b40a8e4e967c74f864d5f41',1,'video_codec.h']]],
+  ['videocodec_5funknown_6603',['VIDEOCODEC_UNKNOWN',['../group__cpp__kodi__addon__videocodec___defs___video_codec_initdata.html#gga738f95706f29677c1ff083607222fb4fa67d052c1e7f16be721a7e652871896cc',1,'video_codec.h']]],
+  ['videocodec_5fvp8_6604',['VIDEOCODEC_VP8',['../group__cpp__kodi__addon__videocodec___defs___video_codec_initdata.html#gga738f95706f29677c1ff083607222fb4fa4b591798402c81dc46e899077788a262',1,'video_codec.h']]],
+  ['videocodec_5fvp9_6605',['VIDEOCODEC_VP9',['../group__cpp__kodi__addon__videocodec___defs___video_codec_initdata.html#gga738f95706f29677c1ff083607222fb4fa69e4b68bb7775f253a2e394b1f0f6e48',1,'video_codec.h']]],
+  ['vp9codecprofile0_6606',['VP9CodecProfile0',['../group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m_c_o_d_e_c___p_r_o_f_i_l_e.html#gga0736c500ed84b4d79f616d573ad7994ea997ca26d34c0a24cdfcfcb99e8f8bf5f',1,'stream_codec.h']]],
+  ['vp9codecprofile1_6607',['VP9CodecProfile1',['../group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m_c_o_d_e_c___p_r_o_f_i_l_e.html#gga0736c500ed84b4d79f616d573ad7994eac18062ba312481315d2f1b199c2023ba',1,'stream_codec.h']]],
+  ['vp9codecprofile2_6608',['VP9CodecProfile2',['../group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m_c_o_d_e_c___p_r_o_f_i_l_e.html#gga0736c500ed84b4d79f616d573ad7994ea74cbd7c7e945f7bacb1a02d55bc20dac',1,'stream_codec.h']]],
+  ['vp9codecprofile3_6609',['VP9CodecProfile3',['../group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m_c_o_d_e_c___p_r_o_f_i_l_e.html#gga0736c500ed84b4d79f616d573ad7994eabe6290221b30257b500574a9fda77262',1,'stream_codec.h']]]
+];

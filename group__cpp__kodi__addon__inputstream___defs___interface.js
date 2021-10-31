@@ -1,0 +1,17 @@
+var group__cpp__kodi__addon__inputstream___defs___interface =
+[
+    [ "class InputstreamProperty", "group__cpp__kodi__addon__inputstream___defs___inputstream_property.html", "group__cpp__kodi__addon__inputstream___defs___inputstream_property" ],
+    [ "class InputstreamCapabilities", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_capabilities.html", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_capabilities" ],
+    [ "class InputstreamMasteringMetadata", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata.html", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_mastering_metadata" ],
+    [ "class InputstreamContentlightMetadata", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_contentlight_metadata.html", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_contentlight_metadata" ],
+    [ "class InputstreamInfo", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_info.html", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_info" ],
+    [ "class InputstreamTimes", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_times.html", "group__cpp__kodi__addon__inputstream___defs___interface___inputstream_times" ],
+    [ "struct DEMUX_PACKET", "group__cpp__kodi__addon__inputstream___defs___interface___d_e_m_u_x___p_a_c_k_e_t.html", null ],
+    [ "enum INPUTSTREAM_TYPE", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___t_y_p_e.html", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___t_y_p_e" ],
+    [ "enum INPUTSTREAM_CODEC_FEATURES", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_d_e_c___f_e_a_t_u_r_e_s.html", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_d_e_c___f_e_a_t_u_r_e_s" ],
+    [ "enum INPUTSTREAM_FLAGS", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___f_l_a_g_s.html", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___f_l_a_g_s" ],
+    [ "enum INPUTSTREAM_COLORSPACE", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_s_p_a_c_e.html", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_s_p_a_c_e" ],
+    [ "enum INPUTSTREAM_COLORPRIMARIES", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_p_r_i_m_a_r_i_e_s.html", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_p_r_i_m_a_r_i_e_s" ],
+    [ "enum INPUTSTREAM_COLORRANGE", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_r_a_n_g_e.html", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_r_a_n_g_e" ],
+    [ "enum INPUTSTREAM_COLORTRC", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c" ]
+];

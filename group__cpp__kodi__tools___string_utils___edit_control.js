@@ -18,6 +18,9 @@ var group__cpp__kodi__tools___string_utils___edit_control =
     [ "Replace", "group__cpp__kodi__tools___string_utils___edit_control.html#ga0b2c0cc22cb57345fbe462a4fe2b639e", null ],
     [ "Replace", "group__cpp__kodi__tools___string_utils___edit_control.html#gaa51c64b54ee2bd3c68c8477157f8fcdd", null ],
     [ "Replace", "group__cpp__kodi__tools___string_utils___edit_control.html#ga33b051c7c8733e441181810ccd5ccef6", null ],
+    [ "MakeSafeUrl", "group__cpp__kodi__tools___string_utils___edit_control.html#gab548ac83223c4ffdab739a60a363b980", null ],
+    [ "MakeSafeString", "group__cpp__kodi__tools___string_utils___edit_control.html#ga69bf3d40a1e2dc4dfb03e7103e339bc3", null ],
+    [ "RemoveMACAddress", "group__cpp__kodi__tools___string_utils___edit_control.html#ga6df17c9b47e36782f0d4990ce02b4e53", null ],
     [ "RemoveCRLF", "group__cpp__kodi__tools___string_utils___edit_control.html#ga5f298bc206a6d11c37461d3b79d48128", null ],
     [ "WordToDigits", "group__cpp__kodi__tools___string_utils___edit_control.html#gac92e1a6e80f2ab285f275ba361084330", null ],
     [ "Paramify", "group__cpp__kodi__tools___string_utils___edit_control.html#gabacc7dda817be914443bf90fa812558e", null ]

@@ -6,7 +6,8 @@ var group__cpp__kodi__addon__pvr___defs =
     [ "4. EPG Tag", "group__cpp__kodi__addon__pvr___defs__epg.html", "group__cpp__kodi__addon__pvr___defs__epg" ],
     [ "5. Recording", "group__cpp__kodi__addon__pvr___defs___recording.html", "group__cpp__kodi__addon__pvr___defs___recording" ],
     [ "6. Timer", "group__cpp__kodi__addon__pvr___defs___timer.html", "group__cpp__kodi__addon__pvr___defs___timer" ],
-    [ "7. Menuhook", "group__cpp__kodi__addon__pvr___defs___menuhook.html", "group__cpp__kodi__addon__pvr___defs___menuhook" ],
-    [ "8. Edit decision list (EDL)", "group__cpp__kodi__addon__pvr___defs___e_d_l_entry.html", "group__cpp__kodi__addon__pvr___defs___e_d_l_entry" ],
-    [ "9. Inputstream", "group__cpp__kodi__addon__pvr___defs___stream.html", "group__cpp__kodi__addon__pvr___defs___stream" ]
+    [ "7. Provider", "group__cpp__kodi__addon__pvr___defs___provider.html", "group__cpp__kodi__addon__pvr___defs___provider" ],
+    [ "8. Menuhook", "group__cpp__kodi__addon__pvr___defs___menuhook.html", "group__cpp__kodi__addon__pvr___defs___menuhook" ],
+    [ "9. Edit decision list (EDL)", "group__cpp__kodi__addon__pvr___defs___e_d_l_entry.html", "group__cpp__kodi__addon__pvr___defs___e_d_l_entry" ],
+    [ "10. Inputstream", "group__cpp__kodi__addon__pvr___defs___stream.html", "group__cpp__kodi__addon__pvr___defs___stream" ]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['special_5fgame_5ftype_4680',['SPECIAL_GAME_TYPE',['../group__cpp__kodi__addon__game___defs___game_types.html#gae227c65af490275c3e3c9b885457ac38',1,'game.h']]],
-  ['stdkbbuttons_4681',['StdKbButtons',['../group__cpp__kodi___defs.html#gae0eb66cdc2244c78a912b68c09a04fee',1,'general.h']]]
+  ['queuemsg_5704',['QueueMsg',['../group__cpp__kodi___defs.html#ga8e33c1267b3dc36c2373153ae5b65d94',1,'general.h']]]
 ];

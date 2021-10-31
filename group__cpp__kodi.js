@@ -2,7 +2,12 @@ var group__cpp__kodi =
 [
     [ "Definitions, structures and enumerators", "group__cpp__kodi___defs.html", "group__cpp__kodi___defs" ],
     [ "1. Setting control", "group__cpp__kodi__settings.html", "group__cpp__kodi__settings" ],
+    [ "GetKodiTypeVersion", "group__cpp__kodi.html#ga3f6e41fe0bc423ec7d065fbdf3f47e98", null ],
+    [ "GetAddonPath", "group__cpp__kodi.html#ga2781900156274d2865c19a553e6827b7", null ],
+    [ "GetBaseUserPath", "group__cpp__kodi.html#ga4359d2b581989bb9670a725ad248a505", null ],
+    [ "GetLibPath", "group__cpp__kodi.html#gac14be189194d589bc9f23e23168849e7", null ],
     [ "Log", "group__cpp__kodi.html#gaaa1f205f9375cd086229a1455ede11cc", null ],
+    [ "TranslateAddonStatus", "group__cpp__kodi.html#ga6d42f2bf354215e0460162d34dd68574", null ],
     [ "GetInterface", "group__cpp__kodi.html#ga5e8c4e403f511f0c91104677a75a18d1", null ],
     [ "GetAddonInfo", "group__cpp__kodi.html#ga24b78044dc4971cb1ec3dc6633f92d2b", null ],
     [ "OpenSettings", "group__cpp__kodi.html#gaede57551d559f9949a2e94c956a10e6c", null ],

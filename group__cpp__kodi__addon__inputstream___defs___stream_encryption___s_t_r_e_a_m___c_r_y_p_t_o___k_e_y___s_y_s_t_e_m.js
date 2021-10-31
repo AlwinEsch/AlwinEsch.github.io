@@ -1,0 +1,10 @@
+var group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m___c_r_y_p_t_o___k_e_y___s_y_s_t_e_m =
+[
+    [ "STREAM_CRYPTO_KEY_SYSTEM", "group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m___c_r_y_p_t_o___k_e_y___s_y_s_t_e_m.html#ga2841619bf1cafeb89c05f394bf2a4074", [
+      [ "STREAM_CRYPTO_KEY_SYSTEM_NONE", "group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m___c_r_y_p_t_o___k_e_y___s_y_s_t_e_m.html#gga2841619bf1cafeb89c05f394bf2a4074ac2cfa51d363c326ea07b5f81ec773ac7", null ],
+      [ "STREAM_CRYPTO_KEY_SYSTEM_WIDEVINE", "group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m___c_r_y_p_t_o___k_e_y___s_y_s_t_e_m.html#gga2841619bf1cafeb89c05f394bf2a4074a7833e22339d896ba313f9657c390ef63", null ],
+      [ "STREAM_CRYPTO_KEY_SYSTEM_PLAYREADY", "group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m___c_r_y_p_t_o___k_e_y___s_y_s_t_e_m.html#gga2841619bf1cafeb89c05f394bf2a4074adbb2668340806ce11299b9f30fc48bd5", null ],
+      [ "STREAM_CRYPTO_KEY_SYSTEM_WISEPLAY", "group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m___c_r_y_p_t_o___k_e_y___s_y_s_t_e_m.html#gga2841619bf1cafeb89c05f394bf2a4074a99e051a240d3c0912deef382b6746f8a", null ],
+      [ "STREAM_CRYPTO_KEY_SYSTEM_COUNT", "group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m___c_r_y_p_t_o___k_e_y___s_y_s_t_e_m.html#gga2841619bf1cafeb89c05f394bf2a4074af1e3f441ede9d950c673de5798e19ba3", null ]
+    ] ]
+];

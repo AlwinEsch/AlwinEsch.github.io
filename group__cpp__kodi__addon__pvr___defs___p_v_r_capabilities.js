@@ -15,6 +15,8 @@ var group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities =
     [ "GetSupportsRecordingsUndelete", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga1b35b1664ecd732f86368c61e3218174", null ],
     [ "SetSupportsTimers", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#gaa723ec849b8b95267c44ccabbf2a2742", null ],
     [ "GetSupportsTimers", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#gafb2cf612d3718bb30f2deae83429b92f", null ],
+    [ "SetSupportsProviders", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga1297bbc987fc3b36cba099faa21901df", null ],
+    [ "GetSupportsProviders", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga5cf920a6cfec0c6ef505058071d5f04f", null ],
     [ "SetSupportsChannelGroups", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga3b6d35a66f3bb9279f2b4ad9f1746657", null ],
     [ "GetSupportsChannelGroups", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#gaeed3490f81d5e153608335d648390c52", null ],
     [ "SetSupportsChannelScan", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#gada470e0cb72ba410b8bff139ae184e02", null ],
@@ -41,6 +43,8 @@ var group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities =
     [ "GetSupportsAsyncEPGTransfer", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga4bd221fd1a5dc7bba6be57687737ac92", null ],
     [ "SetSupportsRecordingSize", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga554d069cdb521ff388a2f5630babe92a", null ],
     [ "GetSupportsRecordingSize", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga6fc68a55234d239bd03ec67f072efcc7", null ],
+    [ "SetSupportsRecordingsDelete", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga002092561f5409a8c34a86e8fa8f813c", null ],
+    [ "GetSupportsRecordingsDelete", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga27f0d0c417e5a5f0f225120b739f3035", null ],
     [ "SetRecordingsLifetimeValues", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#gaca0451b3b265775a795a4ad6b626e0a4", null ],
     [ "GetRecordingsLifetimeValues", "group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities.html#ga04dcfd4a326aacfdfde1eb47549f741e", null ]
 ];

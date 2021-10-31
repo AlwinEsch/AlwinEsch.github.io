@@ -1,7 +1,7 @@
 var group__cpp__kodi__tools___c_timer =
 [
     [ "class ITimerCallback", "group__cpp__kodi__tools___c_timer___c_b.html", "group__cpp__kodi__tools___c_timer___c_b" ],
-    [ "CTimer", "group__cpp__kodi__tools___c_timer.html#ga24889456797c1923ec8c48416b675cf2", null ],
+    [ "CTimer", "group__cpp__kodi__tools___c_timer.html#gac2e43475af367621d8bbb86a36585eed", null ],
     [ "CTimer", "group__cpp__kodi__tools___c_timer.html#gadc72d1acf055d88e95329ce636bedca9", null ],
     [ "~CTimer", "group__cpp__kodi__tools___c_timer.html#gacddf8231d5ae3ad256081b54a5018443", null ],
     [ "Start", "group__cpp__kodi__tools___c_timer.html#ga5b5e8b032695751f99e4e615e7fc7162", null ],

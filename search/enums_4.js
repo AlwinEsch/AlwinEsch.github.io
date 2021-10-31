@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['joystick_5fdriver_5fhat_5fdirection_4654',['JOYSTICK_DRIVER_HAT_DIRECTION',['../group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___h_a_t___d_i_r_e_c_t_i_o_n.html#gafb579bd5f622835ceda4935f88436e19',1,'peripheral.h']]],
-  ['joystick_5fdriver_5fmouse_5findex_4655',['JOYSTICK_DRIVER_MOUSE_INDEX',['../group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___m_o_u_s_e___i_n_d_e_x.html#ga3f9475f72dcbfec3547d7bb4fc740018',1,'peripheral.h']]],
-  ['joystick_5fdriver_5fprimitive_5ftype_4656',['JOYSTICK_DRIVER_PRIMITIVE_TYPE',['../group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___p_r_i_m_i_t_i_v_e___t_y_p_e.html#ga16d8583e62cf2e80fd93e8eb03f3c071',1,'peripheral.h']]],
-  ['joystick_5fdriver_5frelpointer_5fdirection_4657',['JOYSTICK_DRIVER_RELPOINTER_DIRECTION',['../group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___r_e_l_p_o_i_n_t_e_r___d_i_r_e_c_t_i_o_n.html#ga71fc4fd5902a282ef6c35edcf70635f9',1,'peripheral.h']]],
-  ['joystick_5fdriver_5fsemiaxis_5fdirection_4658',['JOYSTICK_DRIVER_SEMIAXIS_DIRECTION',['../group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___d_r_i_v_e_r___s_e_m_i_a_x_i_s___d_i_r_e_c_t_i_o_n.html#ga9c5339e6514da81427b278d72826481d',1,'peripheral.h']]],
-  ['joystick_5ffeature_5fprimitive_4659',['JOYSTICK_FEATURE_PRIMITIVE',['../group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___p_r_i_m_i_t_i_v_e.html#gaffb1977d8eac82b9196fa6830dbb0742',1,'peripheral.h']]],
-  ['joystick_5ffeature_5ftype_4660',['JOYSTICK_FEATURE_TYPE',['../group__cpp__kodi__addon__peripheral___defs___joystick___j_o_y_s_t_i_c_k___f_e_a_t_u_r_e___t_y_p_e.html#gab9c890fb10d00739767a71a15410740b',1,'peripheral.h']]],
-  ['joystick_5fstate_5fbutton_4661',['JOYSTICK_STATE_BUTTON',['../group__cpp__kodi__addon__peripheral___defs___event___j_o_y_s_t_i_c_k___s_t_a_t_e___b_u_t_t_o_n.html#ga1ad58f944130f0b15f4997131ca90bef',1,'peripheral.h']]],
-  ['joystick_5fstate_5fhat_4662',['JOYSTICK_STATE_HAT',['../group__cpp__kodi__addon__peripheral___defs___event___j_o_y_s_t_i_c_k___s_t_a_t_e___h_a_t.html#gac132a5883dd3733f3a993f03bb855e7f',1,'peripheral.h']]]
+  ['game_5faudio_5fchannel_5659',['GAME_AUDIO_CHANNEL',['../group__cpp__kodi__addon__game___defs___audio_stream.html#ga0c7ad6598f4f3504ce65091e6d64dd24',1,'game.h']]],
+  ['game_5ferror_5660',['GAME_ERROR',['../group__cpp__kodi__addon__game___defs.html#gad0fb9f502cf7b3a84f8edb0dc6cbd6ef',1,'game.h']]],
+  ['game_5fhw_5fcontext_5ftype_5661',['GAME_HW_CONTEXT_TYPE',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#gac0851e563ca9dfc6597f66a4b0f8feee',1,'game.h']]],
+  ['game_5fmemory_5662',['GAME_MEMORY',['../group__cpp__kodi__addon__game___defs___game_types.html#gaf52d501cc2ba9de915c80313887b2a87',1,'game.h']]],
+  ['game_5fpcm_5fformat_5663',['GAME_PCM_FORMAT',['../group__cpp__kodi__addon__game___defs___audio_stream.html#ga57e2a7a29cc0350c25d5ec8b0751d335',1,'game.h']]],
+  ['game_5fpixel_5fformat_5664',['GAME_PIXEL_FORMAT',['../group__cpp__kodi__addon__game___defs___video_stream.html#ga10510fc672666b51dc499ecb5349c572',1,'game.h']]],
+  ['game_5fport_5ftype_5665',['GAME_PORT_TYPE',['../group__cpp__kodi__addon__game___defs___input_types.html#ga9e16a589ec2009cca63e623675fcd3a7',1,'game.h']]],
+  ['game_5fregion_5666',['GAME_REGION',['../group__cpp__kodi__addon__game___defs___game_types.html#gac33f5cc9e9651c9cb1693afb1b884e60',1,'game.h']]],
+  ['game_5fsimd_5667',['GAME_SIMD',['../group__cpp__kodi__addon__game___defs___game_types.html#ga0f464ca45f942699d2d030d021db77d4',1,'game.h']]],
+  ['game_5fstream_5ftype_5668',['GAME_STREAM_TYPE',['../group__cpp__kodi__addon__game___defs___stream_types.html#gae6efb6e0ceca199b37bf1d59a51aec4d',1,'game.h']]],
+  ['game_5fvideo_5frotation_5669',['GAME_VIDEO_ROTATION',['../group__cpp__kodi__addon__game___defs___video_stream.html#ga10a84be972c12f87ae2a665782efdfd0',1,'game.h']]]
 ];

@@ -1,6 +1,6 @@
 var group__cpp__kodi__vfs___defs___http_header =
 [
-    [ "<em>Value Help</em>", "group__cpp__kodi__vfs___defs___http_header___help.html", null ],
+    [ "Value Help", "group__cpp__kodi__vfs___defs___http_header___help.html", null ],
     [ "GetValue", "group__cpp__kodi__vfs___defs___http_header.html#ga2018874e376ca69ceb4b156d50911319", null ],
     [ "GetValues", "group__cpp__kodi__vfs___defs___http_header.html#ga3d6ab5076c77232e16c74284c6b4d61c", null ],
     [ "GetHeader", "group__cpp__kodi__vfs___defs___http_header.html#ga4053cb1078ddc77e12543729f58d8e6a", null ],

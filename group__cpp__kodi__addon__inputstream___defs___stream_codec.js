@@ -1,0 +1,4 @@
+var group__cpp__kodi__addon__inputstream___defs___stream_codec =
+[
+    [ "enum STREAMCODEC_PROFILE", "group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m_c_o_d_e_c___p_r_o_f_i_l_e.html", "group__cpp__kodi__addon__inputstream___defs___stream_encryption___s_t_r_e_a_m_c_o_d_e_c___p_r_o_f_i_l_e" ]
+];

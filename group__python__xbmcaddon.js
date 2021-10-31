@@ -1,6 +1,7 @@
 var group__python__xbmcaddon =
 [
     [ "getLocalizedString", "group__python__xbmcaddon.html#ga82834997987f068af982d91feb40bf9f", null ],
+    [ "getSettings", "group__python__xbmcaddon.html#ga0e0ca349df84319ef8864fdb615ac138", null ],
     [ "getSetting", "group__python__xbmcaddon.html#ga8739303a25018f275578b17e35602793", null ],
     [ "getSettingBool", "group__python__xbmcaddon.html#ga8b2b9a6b4b08f6e79c893e5255e0bf7a", null ],
     [ "getSettingInt", "group__python__xbmcaddon.html#ga00008a45dd398125010e7cee4fe6527c", null ],

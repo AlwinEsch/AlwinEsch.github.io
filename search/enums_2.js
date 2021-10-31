@@ -1,14 +1,17 @@
 var searchData=
 [
-  ['game_5faudio_5fchannel_4642',['GAME_AUDIO_CHANNEL',['../group__cpp__kodi__addon__game___defs___audio_stream.html#ga0c7ad6598f4f3504ce65091e6d64dd24',1,'game.h']]],
-  ['game_5ferror_4643',['GAME_ERROR',['../group__cpp__kodi__addon__game___defs.html#gad0fb9f502cf7b3a84f8edb0dc6cbd6ef',1,'game.h']]],
-  ['game_5fhw_5fcontext_5ftype_4644',['GAME_HW_CONTEXT_TYPE',['../group__cpp__kodi__addon__game___defs___hardware_framebuffer.html#gac0851e563ca9dfc6597f66a4b0f8feee',1,'game.h']]],
-  ['game_5fmemory_4645',['GAME_MEMORY',['../group__cpp__kodi__addon__game___defs___game_types.html#gaf52d501cc2ba9de915c80313887b2a87',1,'game.h']]],
-  ['game_5fpcm_5fformat_4646',['GAME_PCM_FORMAT',['../group__cpp__kodi__addon__game___defs___audio_stream.html#ga57e2a7a29cc0350c25d5ec8b0751d335',1,'game.h']]],
-  ['game_5fpixel_5fformat_4647',['GAME_PIXEL_FORMAT',['../group__cpp__kodi__addon__game___defs___video_stream.html#ga10510fc672666b51dc499ecb5349c572',1,'game.h']]],
-  ['game_5fport_5ftype_4648',['GAME_PORT_TYPE',['../group__cpp__kodi__addon__game___defs___input_types.html#ga9e16a589ec2009cca63e623675fcd3a7',1,'game.h']]],
-  ['game_5fregion_4649',['GAME_REGION',['../group__cpp__kodi__addon__game___defs___game_types.html#gac33f5cc9e9651c9cb1693afb1b884e60',1,'game.h']]],
-  ['game_5fsimd_4650',['GAME_SIMD',['../group__cpp__kodi__addon__game___defs___game_types.html#ga0f464ca45f942699d2d030d021db77d4',1,'game.h']]],
-  ['game_5fstream_5ftype_4651',['GAME_STREAM_TYPE',['../group__cpp__kodi__addon__game___defs___stream_types.html#gae6efb6e0ceca199b37bf1d59a51aec4d',1,'game.h']]],
-  ['game_5fvideo_5frotation_4652',['GAME_VIDEO_ROTATION',['../group__cpp__kodi__addon__game___defs___video_stream.html#ga10a84be972c12f87ae2a665782efdfd0',1,'game.h']]]
+  ['epg_5fevent_5fcontentmask_5644',['EPG_EVENT_CONTENTMASK',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ga0ac9430768fc11505a193241fc2d4008',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fcontentsubmask_5fartsculture_5645',['EPG_EVENT_CONTENTSUBMASK_ARTSCULTURE',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ga5a32817d058b385d6a5ac777cd9d7396',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fcontentsubmask_5fchildrenyouth_5646',['EPG_EVENT_CONTENTSUBMASK_CHILDRENYOUTH',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ga3805fb1199504e3f08124870d8f0fa91',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fcontentsubmask_5feducationalscience_5647',['EPG_EVENT_CONTENTSUBMASK_EDUCATIONALSCIENCE',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gac197999febb8ff84a31e847671381ccf',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fcontentsubmask_5fleisurehobbies_5648',['EPG_EVENT_CONTENTSUBMASK_LEISUREHOBBIES',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ga19cfe74721e9e46aca1909d78bad8cc2',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fcontentsubmask_5fmoviedrama_5649',['EPG_EVENT_CONTENTSUBMASK_MOVIEDRAMA',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ga1a9972f5055a3343dced61d501ab9a52',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fcontentsubmask_5fmusicballetdance_5650',['EPG_EVENT_CONTENTSUBMASK_MUSICBALLETDANCE',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ga30a4ab1fff93a2d66da4805f5908d994',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fcontentsubmask_5fnewscurrentaffairs_5651',['EPG_EVENT_CONTENTSUBMASK_NEWSCURRENTAFFAIRS',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gab6d73622811485e2d45042d1821e3643',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fcontentsubmask_5fshow_5652',['EPG_EVENT_CONTENTSUBMASK_SHOW',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gafb4df26416fea04b5877180629d0461b',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fcontentsubmask_5fsocialpoliticaleconomics_5653',['EPG_EVENT_CONTENTSUBMASK_SOCIALPOLITICALECONOMICS',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#gaef59c31a1a81a48fba9d0d6e99614e54',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fcontentsubmask_5fspecial_5654',['EPG_EVENT_CONTENTSUBMASK_SPECIAL',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ga4b91c040c1f9c6b8a0940cbfc9a37e47',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fcontentsubmask_5fsports_5655',['EPG_EVENT_CONTENTSUBMASK_SPORTS',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t.html#ga5695800b7f34a314132a8dc2a70c8f71',1,'pvr_epg.h']]],
+  ['epg_5fevent_5fstate_5656',['EPG_EVENT_STATE',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___e_v_e_n_t___s_t_a_t_e.html#gab9a32f0552ea4eae988d3facad471f95',1,'pvr_epg.h']]],
+  ['epg_5ftag_5fflag_5657',['EPG_TAG_FLAG',['../group__cpp__kodi__addon__pvr___defs__epg___e_p_g___t_a_g___f_l_a_g.html#ga11b3a8ba9ae55fdad23e5068c18c89f9',1,'pvr_epg.h']]]
 ];

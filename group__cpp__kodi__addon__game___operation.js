@@ -1,5 +1,7 @@
 var group__cpp__kodi__addon__game___operation =
 [
+    [ "Group header include", "group__cpp__kodi__addon__game___operation__header__addon__auto__check.html", null ],
+    [ "Group source include", "group__cpp__kodi__addon__game___operation__source__addon__auto__check.html", null ],
     [ "Class: CStream", "group__cpp__kodi__addon__game___operation___c_stream.html", "group__cpp__kodi__addon__game___operation___c_stream" ],
     [ "LoadGame", "group__cpp__kodi__addon__game___operation.html#gae57f40435a8996393b3b151586ca8d19", null ],
     [ "LoadGameSpecial", "group__cpp__kodi__addon__game___operation.html#ga024f7ff502652263acdc28d5086e0ca6", null ],

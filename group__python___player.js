@@ -13,6 +13,7 @@ var group__python___player =
     [ "isPlayingRDS", "group__python___player.html#gadb60d29bad8cb1214883e6344fbe11cc", null ],
     [ "isExternalPlayer", "group__python___player.html#ga3ed9dd8079c927a13874fd21369e3678", null ],
     [ "getPlayingFile", "group__python___player.html#gae8a50dfcb3835158f4cfc713bf730ca9", null ],
+    [ "getPlayingItem", "group__python___player.html#gac57f7adc24202e93deac345c4c2a094a", null ],
     [ "getTime", "group__python___player.html#ga57c78d9f0aa316ee2fdd6995e2a06ce3", null ],
     [ "seekTime", "group__python___player.html#gac48fa5e726cce08b644232c3c0abc868", null ],
     [ "setSubtitles", "group__python___player.html#ga24a6b65440083e83e67e5d0fb3379369", null ],

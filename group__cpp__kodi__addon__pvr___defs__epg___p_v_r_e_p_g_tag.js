@@ -40,6 +40,8 @@ var group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag =
     [ "GetFirstAired", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga54fc21c18ea26d4f29bb1a16da5ecc55", null ],
     [ "SetParentalRating", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#gac90f1c16abbdbb4374fab0c64f6fd166", null ],
     [ "GetParentalRating", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga7b6840eea60cde1349fed9411849ccaf", null ],
+    [ "SetParentalRatingCode", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga70a50171d439d9f32a692ebd1bc0cc30", null ],
+    [ "GetParentalRatingCode", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#gab6eeec9702e7a4cc6ebea6f4e6ecfccf", null ],
     [ "SetStarRating", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga9aeed62278e3217b9d20f403ca0262ea", null ],
     [ "GetStarRating", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga89c2aa9035f6aef2520f1138f6f0676b", null ],
     [ "SetSeriesNumber", "group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag.html#ga535d9b6e8fb10f36e68ab0d22ce13021", null ],

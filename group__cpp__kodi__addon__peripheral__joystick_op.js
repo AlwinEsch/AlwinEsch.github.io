@@ -1,5 +1,7 @@
 var group__cpp__kodi__addon__peripheral__joystick_op =
 [
+    [ "Group header include", "group__cpp__kodi__addon__peripheral__joystick_op__header__addon__auto__check.html", null ],
+    [ "Group source include", "group__cpp__kodi__addon__peripheral__joystick_op__source__addon__auto__check.html", null ],
     [ "GetJoystickInfo", "group__cpp__kodi__addon__peripheral__joystick_op.html#gaf851c51d9b5e0f9618ede38a1ec3d0a5", null ],
     [ "GetFeatures", "group__cpp__kodi__addon__peripheral__joystick_op.html#gaefe210d984b25f95af4f3fef76ff17be", null ],
     [ "MapFeatures", "group__cpp__kodi__addon__peripheral__joystick_op.html#ga43cb256eb7abc19327502f4e403954ef", null ],

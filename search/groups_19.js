@@ -1,31 +1,4 @@
 var searchData=
 [
-  ['value_20help_5713',['Value Help',['../group__cpp__kodi__addon__addonbase___defs___c_setting_value___help.html',1,'']]],
-  ['value_20help_5714',['Value Help',['../group__cpp__kodi__addon__audiodecoder___defs___audio_decoder_info_tag___help.html',1,'']]],
-  ['value_20help_5715',['Value Help',['../group__cpp__kodi__addon__peripheral___defs___joystick___joystick___help.html',1,'']]],
-  ['value_20help_5716',['Value Help',['../group__cpp__kodi__addon__peripheral___defs___peripheral___peripheral___help.html',1,'']]],
-  ['value_20help_5717',['Value Help',['../group__cpp__kodi__addon__peripheral___defs___peripheral___peripheral_event___help.html',1,'']]],
-  ['value_20help_5718',['Value Help',['../group__cpp__kodi__addon__peripheral___defs___peripheral_capabilities___help.html',1,'']]],
-  ['value_20help_5719',['Value Help',['../group__cpp__kodi__addon__pvr___defs___channel___p_v_r_channel___help.html',1,'']]],
-  ['value_20help_5720',['Value Help',['../group__cpp__kodi__addon__pvr___defs___channel___p_v_r_descramble_info___help.html',1,'']]],
-  ['value_20help_5721',['Value Help',['../group__cpp__kodi__addon__pvr___defs___channel___p_v_r_signal_status___help.html',1,'']]],
-  ['value_20help_5722',['Value Help',['../group__cpp__kodi__addon__pvr___defs___channel_group___p_v_r_channel_group___help.html',1,'']]],
-  ['value_20help_5723',['Value Help',['../group__cpp__kodi__addon__pvr___defs___channel_group___p_v_r_channel_group_member___help.html',1,'']]],
-  ['value_20help_5724',['Value Help',['../group__cpp__kodi__addon__pvr___defs___e_d_l_entry___p_v_r_e_d_l_entry___help.html',1,'']]],
-  ['value_20help_5725',['Value Help',['../group__cpp__kodi__addon__pvr___defs__epg___p_v_r_e_p_g_tag___help.html',1,'']]],
-  ['value_20help_5726',['Value Help',['../group__cpp__kodi__addon__pvr___defs___general___inputstream___p_v_r_stream_property___help.html',1,'']]],
-  ['value_20help_5727',['Value Help',['../group__cpp__kodi__addon__pvr___defs___menuhook___p_v_r_menuhook___help.html',1,'']]],
-  ['value_20help_5728',['Value Help',['../group__cpp__kodi__addon__pvr___defs___p_v_r_capabilities___help.html',1,'']]],
-  ['value_20help_5729',['Value Help',['../group__cpp__kodi__addon__pvr___defs___p_v_r_type_int_value___help.html',1,'']]],
-  ['value_20help_5730',['Value Help',['../group__cpp__kodi__addon__pvr___defs___recording___p_v_r_recording___help.html',1,'']]],
-  ['value_20help_5731',['Value Help',['../group__cpp__kodi__addon__pvr___defs___stream___p_v_r_codec___help.html',1,'']]],
-  ['value_20help_5732',['Value Help',['../group__cpp__kodi__addon__pvr___defs___stream___p_v_r_stream_properties___help.html',1,'']]],
-  ['value_20help_5733',['Value Help',['../group__cpp__kodi__addon__pvr___defs___stream___p_v_r_stream_times___help.html',1,'']]],
-  ['value_20help_5734',['Value Help',['../group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer___help.html',1,'']]],
-  ['value_20help_5735',['Value Help',['../group__cpp__kodi__addon__pvr___defs___timer___p_v_r_timer_type___help.html',1,'']]],
-  ['vfs_5736',['VFS',['../group__cpp__kodi__addon__vfs.html',1,'']]],
-  ['value_20help_5737',['Value Help',['../group__cpp__kodi__addon__vfs___defs___v_f_s_url___help.html',1,'']]],
-  ['video_20codec_5738',['Video Codec',['../group__cpp__kodi__addon__videocodec.html',1,'']]],
-  ['visualization_5739',['Visualization',['../group__cpp__kodi__addon__visualization.html',1,'']]],
-  ['value_20help_5740',['Value Help',['../group__cpp__kodi__addon__visualization___defs___visualization_track___help.html',1,'']]]
+  ['using_20hardwarecontext_6907',['using HardwareContext',['../group__cpp__kodi___defs___hardware_context.html',1,'']]]
 ];

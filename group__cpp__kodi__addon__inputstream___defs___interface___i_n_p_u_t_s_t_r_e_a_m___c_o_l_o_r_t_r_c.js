@@ -1,0 +1,27 @@
+var group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c =
+[
+    [ "INPUTSTREAM_COLORTRC", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#gabd87fb7320c921a5bb0f2759aad18882", [
+      [ "INPUTSTREAM_COLORTRC_RESERVED0", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a882a6fe8bffea1d5eddeb6404c6d9f6a", null ],
+      [ "INPUTSTREAM_COLORTRC_BT709", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a96c5a0c3f57ddc7f32791b0a4119e318", null ],
+      [ "INPUTSTREAM_COLORTRC_UNSPECIFIED", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a2e704d1e4a0abd5315919bb3906bfaa3", null ],
+      [ "INPUTSTREAM_COLORTRC_RESERVED", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882abd6d1e64dae7d8eb91058eb3df6aada7", null ],
+      [ "INPUTSTREAM_COLORTRC_GAMMA22", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a1d65c76ec9e49c3c012566a2540fc541", null ],
+      [ "INPUTSTREAM_COLORTRC_GAMMA28", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882aa048550f29e0ae8bbbd4af83360b0323", null ],
+      [ "INPUTSTREAM_COLORTRC_SMPTE170M", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a7abeb4741039a81ed26ea580269e61a2", null ],
+      [ "INPUTSTREAM_COLORTRC_SMPTE240M", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a5203be668cf54d980a9a888e9e637995", null ],
+      [ "INPUTSTREAM_COLORTRC_LINEAR", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a8598d1caa0b3579831c167252473ca7b", null ],
+      [ "INPUTSTREAM_COLORTRC_LOG", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882ac87016b974f6c494aa9ab8bc4a678dbc", null ],
+      [ "INPUTSTREAM_COLORTRC_LOG_SQRT", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882ab4566a304cd570011a689b140d26d09c", null ],
+      [ "INPUTSTREAM_COLORTRC_IEC61966_2_4", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a9888d0b8d9eda8fd029efad048d7fabd", null ],
+      [ "INPUTSTREAM_COLORTRC_BT1361_ECG", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a89b6391cbdbb56edf59506df08e629f8", null ],
+      [ "INPUTSTREAM_COLORTRC_IEC61966_2_1", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a095534aadf21a16d48a9fce956b72472", null ],
+      [ "INPUTSTREAM_COLORTRC_BT2020_10", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a379d7e8628a0818f9252eb6ccc16262b", null ],
+      [ "INPUTSTREAM_COLORTRC_BT2020_12", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882aeac0134751aaf101fff158846e46a695", null ],
+      [ "INPUTSTREAM_COLORTRC_SMPTE2084", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a14d240505308e82f5c9e500aa81ba5db", null ],
+      [ "INPUTSTREAM_COLORTRC_SMPTEST2084", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a324322f752f71ed463c0c4c615116267", null ],
+      [ "INPUTSTREAM_COLORTRC_SMPTE428", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a745639bf8ec9d8d8ad17c97f0ec6b088", null ],
+      [ "INPUTSTREAM_COLORTRC_SMPTEST428_1", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882ae758f496d1b7170f7a4ff87f0064b3fe", null ],
+      [ "INPUTSTREAM_COLORTRC_ARIB_STD_B67", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882a4db6271ab64e505f44013a1baf233e1a", null ],
+      [ "INPUTSTREAM_COLORTRC_MAX", "group__cpp__kodi__addon__inputstream___defs___interface___i_n_p_u_t_s_t_r_e_a_m___c_o_l_o_r_t_r_c.html#ggabd87fb7320c921a5bb0f2759aad18882aee37dfdbd40e2bcd0e5d473334baf354", null ]
+    ] ]
+];

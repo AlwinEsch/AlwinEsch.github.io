@@ -1,5 +1,7 @@
 var group__cpp__kodi__addon__game___input_operations =
 [
+    [ "Group header include", "group__cpp__kodi__addon__game___input_operations__header__addon__auto__check.html", null ],
+    [ "Group source include", "group__cpp__kodi__addon__game___input_operations__source__addon__auto__check.html", null ],
     [ "HasFeature", "group__cpp__kodi__addon__game___input_operations.html#ga0caf17539e0b322620d9a2762f20e63d", null ],
     [ "GetTopology", "group__cpp__kodi__addon__game___input_operations.html#ga516f68885c3c89262d67eb12fb442e06", null ],
     [ "FreeTopology", "group__cpp__kodi__addon__game___input_operations.html#ga21ff044859563b6907f00c68dea113b6", null ],

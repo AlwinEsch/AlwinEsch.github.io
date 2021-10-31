@@ -1,5 +1,6 @@
 var python_revisions =
 [
+    [ "Python API v20", "python_v20.html", null ],
     [ "Python API v19", "python_v19.html", null ],
     [ "Python API v18", "python_v18.html", null ],
     [ "Python API v17", "python_v17.html", null ],

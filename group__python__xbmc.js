@@ -2,7 +2,7 @@ var group__python__xbmc =
 [
     [ "Keyboard", "group__python__keyboard.html", "group__python__keyboard" ],
     [ "InfoTagMusic", "group__python___info_tag_music.html", "group__python___info_tag_music" ],
-    [ "InfoTagVideo", "group__python___info_tag_video.html", "group__python___info_tag_video" ],
+    [ "Actor", "group__python__xbmc__actor.html", "group__python__xbmc__actor" ],
     [ "Monitor", "group__python__monitor.html", "group__python__monitor" ],
     [ "InfoTagRadioRDS", "group__python___info_tag_radio_r_d_s.html", "group__python___info_tag_radio_r_d_s" ],
     [ "PlayList", "group__python___play_list.html", "group__python___play_list" ],
@@ -29,7 +29,6 @@ var group__python__xbmc =
     [ "getCondVisibility", "group__python__xbmc.html#ga0795673f2f204420f40063cb79caef6f", null ],
     [ "getGlobalIdleTime", "group__python__xbmc.html#gacf5023844b59b59c4d81d05b052efc51", null ],
     [ "getCacheThumbName", "group__python__xbmc.html#ga2d754739550a956d6d2380acf8f32be0", null ],
-    [ "translatePath", "group__python__xbmc.html#ga762f48b2097ec25d938bf8596023b221", null ],
     [ "getCleanMovieTitle", "group__python__xbmc.html#ga4ca42037c1fee742659906a18d57bea4", null ],
     [ "getRegion", "group__python__xbmc.html#ga04efad52a8903be517a8310db6a8505f", null ],
     [ "getSupportedMedia", "group__python__xbmc.html#ga1397c08b756b3b62eb98d67946db7882", null ],
